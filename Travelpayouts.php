@@ -10,5 +10,5 @@ License: A "Slug" license name e.g. GPL2
 */
 require_once __DIR__ . '/kpd.config.php';
 require_once __DIR__ . '/core/KPDAutoload.php';
-require_once __DIR__ . '/includes/TPInit.php';
-require_once __DIR__ . '/includes/TPPlugin.php';
+require_once __DIR__ . '/app/includes/TPInit.php';
+require_once __DIR__ . '/app/includes/TPPlugin.php';

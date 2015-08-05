@@ -1,21 +1,30 @@
 <?php
 class KPDInit {
+    public static $path;
+    public static $url;
     public static $plugin_slug;
     public static $textdomain;
-    public static $path;
-    public static $path_localization;
-    public static $url;
     public static $option_version;
     public static $option_name;
-    public static $version;
     public static $ajaxUrl;
+    /**
+     *
+     */
     public function __construct(){
         self::init();
     }
 
-    private static function init()
+    /**
+     *
+     */
+    protected static function init()
     {
         self::init_path();
+        self::$plugin_slug = preg_replace( '/[^\da-zA-Z]/i', '_',  basename(KPDPlUGIN_DIR));
+        self::$textdomain = str_replace( '_', '-', self::$plugin_slug );
+        self::$option_version = self::$plugin_slug . '_version';
+        self::$option_name = self::$plugin_slug . '_options';
+        self::$ajaxUrl = admin_url('admin-ajax.php');
     }
     /**
      * @param string $path
@@ -23,9 +32,14 @@ class KPDInit {
      * @return mixed
      */
     private static function init_path( $path = KPDPlUGIN_DIR, $url = array() ) {
-        $path               =   dirname( $path );
+        self::$path = KPDPlUGIN_DIR;
+        self::$url = get_bloginfo('url') . basename(KPDPlUGIN_DIR);
+        /*$path               =   dirname( $path );
+        error_log(print_r($path, true));
         $path               =   str_replace( '\\', '/', $path );
+        error_log(print_r($path, true));
         $explode_path       =   explode( '/', $path );
+
 
         $current_dir        =   $explode_path[count( $explode_path ) - 1];
         array_push( $url, $current_dir );
@@ -40,6 +54,6 @@ class KPDInit {
             self::$url      =   get_bloginfo('url') . $path;
         } else {
             return self::init_path( $path, $url );
-        }
+        }*/
     }
 }

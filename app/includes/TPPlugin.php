@@ -7,7 +7,11 @@
  */
 final class TPPlugin extends KPDPlugin{
     public function __construct() {
-        new TPInit();
+        /*error_log(TPInit::$url);
+        error_log(TPInit::$path);
+        error_log(TPInit::$textdomain);*/
+        error_log(KPDPlUGIN_DIR);
+        error_log(KPDPlUGIN_URL);
     }
     public function activation()
     {
