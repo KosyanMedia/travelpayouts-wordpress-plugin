@@ -1,6 +1,7 @@
 <?php
 abstract class KPDPlugin {
-    abstract public function activation();
-    abstract public function deactivation();
-    abstract public function uninstall();
+    public static $options;
+    protected function __construct(){
+        self::$options = get_option(KPDPlUGIN_OPTION_NAME);
+    }
 }

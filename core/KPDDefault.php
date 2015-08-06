@@ -7,8 +7,5 @@
  */
 
 abstract class KPDDefault {
-    protected static function defaultOptions($defaults){
-        $defaults = apply_filters('travelpayouts_defaults', $defaults );
-        return $defaults;
-    }
+    abstract public static function defaultOptions();
 }
