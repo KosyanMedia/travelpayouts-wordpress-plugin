@@ -6,7 +6,7 @@
  * Time: 11:43
  */
 
-abstract class KPDBaseControllers {
+abstract class KPDBaseController {
     abstract public function __construct();
     abstract public function action();
     abstract public function render();

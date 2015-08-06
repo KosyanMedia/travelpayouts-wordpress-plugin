@@ -22,7 +22,7 @@ class TPLoader extends KPDLoader{
     protected function admin()
     {
         // TODO: Implement admin() method.
-        new TPAdminMenuController();
+        new TPDashboardController();
     }
 
     protected function site()

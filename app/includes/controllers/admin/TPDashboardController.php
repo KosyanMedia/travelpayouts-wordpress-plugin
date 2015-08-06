@@ -1,19 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: freeman
- * Date: 06.08.15
- * Time: 12:41
+ * Class TPDashboardController
  */
-
-class TPAdminMenuController extends KPDBaseControllers{
-
-    public function __construct()
-    {
-        // TODO: Implement __construct() method.
-        add_action('admin_menu', array( &$this, 'action'));
-    }
-
+class TPDashboardController extends KPDAdminMenuController{
     public function action()
     {
         // TODO: Implement action() method.
@@ -21,12 +10,15 @@ class TPAdminMenuController extends KPDBaseControllers{
             _x('Travelpayouts',  'add_menu_page page title' , KPDPlUGIN_TEXTDOMAIN ),
             _x('Travelpayouts',     'add_menu_page menu title' , KPDPlUGIN_TEXTDOMAIN ),
             'manage_options',
-            KPDPlUGIN_TEXTDOMAIN
-            );
+            KPDPlUGIN_TEXTDOMAIN,
+            array(&$this,'render')
+        );
     }
 
     public function render()
     {
         // TODO: Implement render() method.
+        $pathView = KPDPlUGIN_DIR."/app/includes/views/TPDashboard.view.php";
+        parent::loadView($pathView);
     }
 }
