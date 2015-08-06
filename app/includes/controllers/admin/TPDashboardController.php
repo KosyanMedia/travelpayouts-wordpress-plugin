@@ -18,7 +18,7 @@ class TPDashboardController extends KPDAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/TPDashboard.view.php";
+        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/TPDashboard.view.php";
         parent::loadView($pathView);
     }
 }
