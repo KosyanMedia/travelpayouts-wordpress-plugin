@@ -11,7 +11,8 @@ class TPDashboardController extends KPDAdminMenuController{
             _x('Travelpayouts',     'add_menu_page menu title' , KPDPlUGIN_TEXTDOMAIN ),
             'manage_options',
             KPDPlUGIN_TEXTDOMAIN,
-            array(&$this,'render')
+            array(&$this,'render'),
+            KPDPlUGIN_URL .'/app/public/images/tp.png'
         );
     }
 
