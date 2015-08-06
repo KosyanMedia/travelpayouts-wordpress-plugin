@@ -9,13 +9,15 @@
 abstract class KPDLoaderScripts{
     public function __construct(){
         if ( is_admin() ) :
-            add_action('admin_head', array(&$this, 'headScript'));
-            add_action('admin_enqueue_scripts', array(&$this, 'loadScript' ) );
+            add_action('admin_enqueue_scripts', array(&$this, 'loadScriptAdmin' ) );
+            add_action('admin_head', array(&$this, 'headScriptAdmin'));
         else:
-            add_action('wp_head', array(&$this, 'headScript'));
-            add_action( 'wp_enqueue_scripts', array(&$this, 'loadScript' ) );
+            add_action( 'wp_enqueue_scripts', array(&$this, 'loadScriptSite' ) );
+            add_action('wp_head', array(&$this, 'headScriptSite'));
         endif;
     }
-    abstract public function loadScript($hook);
-    abstract public function headScript();
+    abstract public function loadScriptAdmin($hook);
+    abstract public function headScriptAdmin();
+    abstract public function loadScriptSite($hook);
+    abstract public function headScriptSite();
 }

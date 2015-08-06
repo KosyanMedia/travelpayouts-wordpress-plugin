@@ -6,7 +6,7 @@
  * Time: 13:50
  */
 
-class TPDefault extends KPDDefault{
+class TPDefault implements  KPDDefault{
 
     public static function defaultOptions()
     {

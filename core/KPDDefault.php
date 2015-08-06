@@ -2,10 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: freeman
- * Date: 05.08.15
- * Time: 16:13
+ * Date: 07.08.15
+ * Time: 0:41
  */
 
-abstract class KPDDefault {
-    abstract public static function defaultOptions();
+interface KPDDefault {
+    public static function defaultOptions();
 }

@@ -25,5 +25,6 @@ class TPLoader extends KPDLoader{
     protected function all()
     {
         // TODO: Implement all() method.
+        new TPLoaderScripts();
     }
 }

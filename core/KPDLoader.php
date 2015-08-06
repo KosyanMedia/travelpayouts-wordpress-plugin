@@ -11,6 +11,7 @@ abstract class KPDLoader {
         else:
             $this->site();
             endif;
+        $this->all();
     }
     abstract protected function admin();
     abstract protected function site();
