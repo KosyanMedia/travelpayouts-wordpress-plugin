@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: freeman
- * Date: 06.08.15
- * Time: 11:58
+ * Class KPDLoader
  */
 
 abstract class KPDLoader {
@@ -17,4 +14,5 @@ abstract class KPDLoader {
     }
     abstract protected function admin();
     abstract protected function site();
+    abstract protected function all();
 }

@@ -23,10 +23,16 @@ class TPLoader extends KPDLoader{
     {
         // TODO: Implement admin() method.
         new TPDashboardController();
+        new TPFlightTicketsController();
     }
 
     protected function site()
     {
         // TODO: Implement site() method.
+    }
+
+    protected function all()
+    {
+        // TODO: Implement all() method.
     }
 }
