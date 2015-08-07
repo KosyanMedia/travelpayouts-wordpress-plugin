@@ -48,7 +48,7 @@ jQuery(function($){
         buttonFontStyle('.UnderlineTracing');
         $( "#TP-tabs" ).tabs();
         $( "#tabs-flights" ).tabs({
-            active: 1
+            active: 0
         });
         $(".TPMainMenuA").click(function () {
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");
@@ -59,9 +59,6 @@ jQuery(function($){
         TPStatsSave(TPStatsTableSort());
         TPShortcodeTableSort();
     });
-    //$( "#checkboxFontStyleTitle" ).buttonset();
-    //$("#checkboxFontStyleTable").buttonset();
-    //doc.find('[data-color]').wpColorPicker();
     $(".btnColor").click(function(){
         $(this).prev('.color').trigger('click');
     });
@@ -102,8 +99,6 @@ jQuery(function($){
             if(!ui.item.find('input').is('.itemSortableSelected')){
                 ui.item.append('<input type="hidden" class="itemSortableSelected" ' +
                 'name="'+ui.item.data('input-name')+'" value="'+ui.item.data('key')+'">');
-                //ui.item.removeClass('ui-state-default');
-                //ui.item.addClass('ui-state-highlight');
             }
 
         }
@@ -244,25 +239,6 @@ jQuery(function($){
      *
      */
     function selectLocalizationFields() {
-        /*switch (doc.find('select.TPFieldLocalization').val()){
-            case "1":
-                doc.find('select.TPFieldTitleCase').parent('label').parent('td').parent('tr').show();
-                break;
-            case "2":
-                doc.find('select.TPFieldTitleCase').parent('label').parent('td').parent('tr').hide();
-                break;
-        }
-        $('td').on('change', 'select.TPFieldLocalization', function (e) {
-            e.preventDefault();
-            switch ($(this).val()){
-                case "1":
-                    doc.find('select.TPFieldTitleCase').parent('label').parent('td').parent('tr').show();
-                    break;
-                case "2":
-                    doc.find('select.TPFieldTitleCase').parent('label').parent('td').parent('tr').hide();
-                    break;
-            }
-        });*/
         $('label').on('change', 'select.TPFieldLocalization', function (e) {
             e.preventDefault();
             doc.find('.TPFields_ru').addClass('TP-ListRowColumNot');
@@ -370,34 +346,11 @@ jQuery(function($){
                         '<td>'+totals[10]+'</td>' +
                         //'<td>'+totals[11]+'</td>'+
                         '</tr></tfoot>');
-
-
-                          /*  $('#TPListReportTotal').replaceWith( '<div id="TPListReportTotal">' +
-                            '<table class="TP-ListBalance TP-ListReport">' +
-                            '<tbody><tr class="TP-rowAllCountMonth">' +
-                                '<td colspan="3">'+TPStatsTotalTrText+'</td>' +
-                                '<td>'+totals[3]+'</td>' +
-                                '<td>'+totals[4]+'</td>' +
-                                '<td>'+totals[5]+'</td>' +
-                                '<td>'+totals[6]+'</td>' +
-                                '<td>'+totals[7]+'</td>' +
-                                '<td>'+totals[8]+'</td>' +
-                                '<td>'+totals[9]+'</td>' +
-                                '<td>'+totals[10]+'</td>' +
-                                '<td>'+totals[11]+'</td>'+
-                            '</tr></tbody>' +
-                            '</table>' +
-                        '</div>' );*/
-
-
-
-
                     }
                 }
 
 
             });
-
 
         doc.find("select#TP-ListReportType").change( function () {
             if($(this).val() != 'none'){

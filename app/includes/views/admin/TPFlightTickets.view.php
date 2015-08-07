@@ -18,10 +18,24 @@
             </ul>
         </nav>
         <div id="tabs-tickets_config">
-            tabs-tickets_config
+            <?php
+                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/TPFlightsTablesContent.view.php";
+                $this->loadView($pathView);
+            ?>
         </div>
         <div id="tabs-tickets_style">
-            tabs-tickets_style
+            <form action="options.php" class="formSettings" method="POST">
+                <div class="TPmainContent TP-BalanceContent TP-SettingContent">
+                    <?php settings_fields('TPFlightTickets'); ?>
+                    <?php do_settings_fields('tp_settings_style_table', 'tp_settings_style_table_id'); ?>
+
+                </div>
+                <div class="TP-navsPan">
+                    <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                    <input type="submit" name="submit" id="TPSaveSettingsStyle" class="TP-BtnTab"
+                           value="<?php _e('Save changes', KPDPlUGIN_TEXTDOMAIN ); ?>">
+                </div>
+            </form>
         </div>
     </div>
 </div>

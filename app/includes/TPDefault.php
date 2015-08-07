@@ -7,7 +7,27 @@
  */
 
 class TPDefault implements  KPDDefault{
-
+    public  static $defaultTableStyle = array(
+        'title_style' => array(
+            'color' => '#191e23',
+            'font_style' => array(),
+            'font_size' => 22,
+            'font_family' => 'Roboto',
+        ),
+        'table' => array(
+            'color' => '#262626',
+            'font_style' => array(),
+            'font_size' => 13,
+            'font_family' => 'Roboto',
+            'line_type' => 'solid',
+            'line_size' => 1,
+            'line_color' => '#f2f2f2',
+            'background_color' => '#f2f2f2',
+        ),
+        'button' => array(
+            ''
+        )
+    );
     public static function defaultOptions()
     {
         // TODO: Implement defaultOptions() method.

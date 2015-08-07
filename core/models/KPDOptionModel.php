@@ -11,5 +11,5 @@ abstract class KPDOptionModel {
         add_action( 'admin_init', array( &$this, 'create_option' ) );
     }
     abstract public function create_option();
-    abstract protected function save_option($input);
+    abstract public function save_option($input);
 }

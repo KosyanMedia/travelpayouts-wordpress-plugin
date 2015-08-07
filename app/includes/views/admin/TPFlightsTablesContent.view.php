@@ -1,0 +1,166 @@
+<form action="options.php" class="formSettings" method="POST" id="TPTicketsConfig">
+    <?php settings_fields('TPFlightTickets'); ?>
+    <div class="TPmainContent TP-BalanceContent">
+        <div class="bellows default">
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Flight Prices for a Month from origin to destination, One Way',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_1', 'tp_settings_shortcode_1_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_1" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Flights from Origin to Destination for the Next Few Days',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_2', 'tp_settings_shortcode_2_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_2" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('The Cheapest Round-trip Tickets from origin to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_4', 'tp_settings_shortcode_4_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_4" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('The Cheapest Flights for this Month from origin to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_5', 'tp_settings_shortcode_5_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_5" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('The Cheapest Flights from origin to destination for the Year Ahead',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_6', 'tp_settings_shortcode_6_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_6" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Direct Flights from origin to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_7', 'tp_settings_shortcode_7_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_7" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Direct Flights from origin',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_8', 'tp_settings_shortcode_8_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_8" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <?php if(TPPlugin::$options['local']['currency'] == 1){ ?>
+                <div class="bellows__item">
+                    <div class="bellows__header">
+                        <h3><?php _e('Popular Destinations from origin',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    </div>
+                    <div class="bellows__content">
+                        <?php do_settings_fields('tp_settings_shortcode_9', 'tp_settings_shortcode_9_id'); ?>
+                        <div class="TP-navsPan">
+                            <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                            <input type="submit" name="submit" id="TPSaveSettingsTickets_9" class="TP-BtnTab"
+                                   value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Airline\'s popular flights',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_10', 'tp_settings_shortcode_10_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_10" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Flights That Have Been Found on Our Website',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_12', 'tp_settings_shortcode_12_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_12" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Cheap Flights from origin',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_13', 'tp_settings_shortcode_13_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_13" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3><?php _e('Cheap Flights to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_shortcode_14', 'tp_settings_shortcode_14_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsTickets_14" class="TP-BtnTab"
+                               value="<?php _e('Save changes',KPDPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
