@@ -26,7 +26,7 @@ class TPFlightTicketsController extends KPDAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/TPFlightTickets.view.php";
+        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
         parent::loadView($pathView);
     }
 }

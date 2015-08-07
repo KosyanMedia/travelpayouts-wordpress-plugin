@@ -16,6 +16,9 @@ class TPLoader extends KPDLoader{
         new TPDashboardController();
         new TPFlightTicketsController();
         new TPWidgetsController();
+        new TPSearchFormsController();
+        new TPStatisticController();
+        new TPSettingsController();
 
     }
 

@@ -19,7 +19,7 @@
         </nav>
         <div id="tabs-tickets_config">
             <?php
-                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/TPFlightsTablesContent.view.php";
+                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightsTablesContent.view.php";
                 $this->loadView($pathView);
             ?>
         </div>

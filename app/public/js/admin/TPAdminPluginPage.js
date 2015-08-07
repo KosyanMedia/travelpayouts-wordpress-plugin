@@ -50,6 +50,9 @@ jQuery(function($){
         $( "#tabs-flights" ).tabs({
             active: 0
         });
+        $( "#tabs-settings" ).tabs({
+            active: 0
+        });
         $(".TPMainMenuA").click(function () {
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");
             $(this).parent('li').addClass("TPNavActive");
