@@ -34,18 +34,28 @@
       <file leaf-file-name="TPLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5555553" vertical-offset="66" max-vertical-offset="630">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="648">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPSettingsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSettingsController.php">
+      <file leaf-file-name="TPDashboardController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93466425" vertical-offset="43" max-vertical-offset="702">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="180" max-vertical-offset="540">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPAdminBarMenuController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPAdminBarMenuController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10638298" vertical-offset="300" max-vertical-offset="864">
+              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -96,14 +106,16 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPFlightTickets.view.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSettings.view.php" />
         <option value="$PROJECT_DIR$/app/public/js/admin/TPAdminPluginPage.js" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php" />
         <option value="$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPFlightTicketsController.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php" />
+        <option value="$PROJECT_DIR$/core/controllers/KPDAdminBarMenuController.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSettingsController.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPFlightTicketsController.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php" />
+        <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPAdminBarMenuController.php" />
       </list>
     </option>
   </component>
@@ -708,66 +720,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminBarMenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="774">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.555555" vertical-offset="318" max-vertical-offset="972">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.037037" vertical-offset="107" max-vertical-offset="720">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPFlightTicketsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93466425" vertical-offset="97" max-vertical-offset="756">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89361703" vertical-offset="0" max-vertical-offset="648">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93466425" vertical-offset="7" max-vertical-offset="666">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81669694" vertical-offset="0" max-vertical-offset="666">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553" vertical-offset="66" max-vertical-offset="630">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.65" vertical-offset="54" max-vertical-offset="414">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSettingsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93466425" vertical-offset="43" max-vertical-offset="702">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.6368876" vertical-offset="175" max-vertical-offset="522">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65" vertical-offset="126" max-vertical-offset="486">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65" vertical-offset="126" max-vertical-offset="486">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65" vertical-offset="108" max-vertical-offset="468">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPFlightTicketsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65" vertical-offset="216" max-vertical-offset="576">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="180" max-vertical-offset="540">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="648">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPAdminBarMenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10638298" vertical-offset="300" max-vertical-offset="864">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
           <folding />
         </state>
       </provider>

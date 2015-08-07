@@ -26,14 +26,4 @@ class TPSettingsController extends KPDAdminMenuController{
         parent::loadView($pathView);
     }
 
-    public function admin_bar_menu()
-    {
-        // TODO: Implement admin_bar_menu() method.
-        $this->admin_bar_add_sub_menu(
-            __('Settings', KPDPlUGIN_TEXTDOMAIN ),
-            'admin.php?page=tp_control_settings',
-            'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_settings'
-        );
-    }
 }

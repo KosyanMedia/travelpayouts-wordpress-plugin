@@ -29,14 +29,4 @@ class TPFlightTicketsController extends KPDAdminMenuController{
         $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
         parent::loadView($pathView);
     }
-
-    public function admin_bar_menu()
-    {
-        // TODO: Implement admin_bar_menu() method.
-        $this->admin_bar_add_sub_menu(
-            __('Flight Tickets', KPDPlUGIN_TEXTDOMAIN ),
-            'admin.php?page=tp_control_tickets',
-            'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_tickets');
-    }
 }

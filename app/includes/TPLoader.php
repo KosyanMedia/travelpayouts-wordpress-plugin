@@ -31,5 +31,6 @@ class TPLoader extends KPDLoader{
     {
         // TODO: Implement all() method.
         new TPLoaderScripts();
+        new TPAdminBarMenuController();
     }
 }
