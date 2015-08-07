@@ -23,4 +23,15 @@ class TPStatisticController extends KPDAdminMenuController{
     {
         // TODO: Implement render() method.
     }
+
+    public function admin_bar_menu()
+    {
+        // TODO: Implement admin_bar_menu() method.
+        $this->admin_bar_add_sub_menu(
+            __('Statistic', KPDPlUGIN_TEXTDOMAIN ),
+            'admin.php?page=tp_control_stats',
+            'tp_admin_bar_menu',
+            KPDPlUGIN_TEXTDOMAIN.'_tp_control_stats'
+        );
+    }
 }
