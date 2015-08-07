@@ -1,0 +1,16 @@
+#select_shortcodes, #select_widgets, #select_search_form{
+    width: 350px;
+}
+#tr_title, #tr_origin, #tr_destination, #tr_depart_date,
+#tr_return_date, #tr_airline, #tr_limit, #tr_trip_class,
+#tr_origin_search_form, #tr_destination_search_form,
+#tr_origin_widget, #tr_size_widget, #tr_direct_widget,
+#tr_destination_widget, #tr_one_way_widget,
+#tr_responsive_widget, #tr_hotel_id_widget,
+#tr_hotel_id_widget_size, #tr_popular_routes_widget,
+.TPPopularRoutes{
+    display: none;
+}
+.constructorShortcodesError{
+    border: 1px solid #dd3d36 !important;
+}

@@ -1,0 +1,248 @@
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+    line-height: normal !important;
+    hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    -webkit-hyphens: none !important;
+}
+* table {
+    border-collapse: separate !important;
+}
+
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.table-section h2 {
+  color: #262626;
+  font-weight: 300;
+  font-size: 19px;
+  margin-bottom: 35px;
+}
+
+.w-table {
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+    line-height: inherit !important;
+}
+.w-table thead tr {
+  height: 44px;
+  background: #1db1db;
+}
+.w-table thead tr td {
+  padding: 0 20px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 400;
+  vertical-align: middle !important;
+    position: relative;
+    hyphens: none !important;
+    -ms-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -webkit-hyphens: none !important;
+}
+.w-table thead tr td.active-w {
+  background: #0fa0d2;
+}
+.w-table thead tr td:last-of-type {
+  width: 100px !important;
+}
+.w-table tbody tr {
+  height: 45px;
+}
+.w-table tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.w-table tbody tr:nth-child(even) td p:after {
+  background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), #F2F2F2) repeat scroll 0% 0%;
+}
+.w-table tbody tr:hover {
+  background: #fff0cc;
+}
+.w-table tbody tr:hover p:after {
+  background: -webkit-linear-gradient(left, rgba(255, 240, 204, 0), #fff0cc) !important;
+  background: linear-gradient(to right, rgba(255, 240, 204, 0), #fff0cc) !important;
+}
+.w-table tbody tr:hover .btn-table {
+  display: block;
+}
+/*.w-table tbody tr:hover td:last-of-type p {*/
+  /*display: none;*/
+/*}*/
+.w-table tbody tr td {
+  padding: 0 20px;
+  font-size: 13px;
+  color: #262626;
+  font-weight: normal;
+    vertical-align: middle !important;
+    position: relative;
+
+}
+.w-table tbody tr td p {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  /*width: 100px;*/
+}
+.w-table tbody tr td p:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), #FFF) repeat scroll 0% 0%;
+}
+.w-table tbody tr td:last-of-type {
+  width: 100px;
+}
+
+.btn-table {
+  /*width: 100px;*/
+  padding: 0 10px;
+  height: 30px;
+  display: none;
+    position: absolute;
+    margin-top: 7px;
+    top: 0;
+    right: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-bottom: 1px solid #ce6408;
+  text-align: center;
+  background: #fd8a27;
+  font-size: 13px;
+  color: #571601 !important;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+    white-space: nowrap;
+}
+.btn-table span {
+    line-height: 30px;
+}
+.btn-table:hover {
+    background: #ce6408;
+    text-decoration: none;
+    color: #fff !important;
+}
+.TPTableHead{
+    cursor: pointer;
+}
+.TPTableTbodyTr > td > p{
+    margin: 0px !important;
+}
+.sorting_asc:after{
+    content: " ▴" !important;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin-top: 12px;
+}
+.sorting_desc:after{
+    content: " ▾" !important;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin-top: 12px;
+
+}
+.dataTables_paginate span a {
+    margin-right: 5px;
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    color: black;
+}
+span.ellipsis {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    text-align: center;
+}
+a.paginate_button.current {
+    border-color: #1db1db;
+    background: #1db1db;
+    color: #fff;
+}
+a.paginate_button:hover {
+    border-color: #1db1db;
+    text-decoration: none;
+    cursor: pointer;
+    color: #1db1db !important;
+}
+a.paginate_button.current:hover {
+    color: #fff !important;
+}
+.TPPlaceTD{
+    width: 15% !important;
+}
+.TPDirectionTD{
+    width: 85% !important;
+}
+
+.TPFlightNumberTD > p::after{
+    display: none !important;
+}
+.w-table tbody tr:first-of-type td {
+    border-top: 0px none;
+}
+.w-table tbody tr td img {
+    width: 100px;
+    height: auto;
+}
+.TPCurrencyIco{
+    font-size: 14px;
+    font-weight: normal;
+    font-family: ALSRubl, sans-serif;
+    font-style: normal;
+    line-height: 26px;
+    margin-left: 5px;
+}
+.w-table thead tr td.tp-price-column {
+    min-width: 100px !important;
+    width: auto;
+}
+.TP-TitleTablezs{
+    white-space: nowrap !important;
+}
+@font-face {
+    font-family: 'ALSRubl';
+    src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.TP-PopularRoutesWidgets{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.TP-PopularRoutesWidget{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}

@@ -1,0 +1,8 @@
+.btn-table {
+    margin-top: 7px;
+    top: 0;
+}
+.sorting_asc::after, .sorting_desc::after {
+    top: 0;
+    margin-top: 12px;
+}

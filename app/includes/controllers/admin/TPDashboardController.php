@@ -12,7 +12,7 @@ class TPDashboardController extends KPDAdminMenuController{
             'manage_options',
             KPDPlUGIN_TEXTDOMAIN,
             array(&$this,'render'),
-            KPDPlUGIN_URL .'/app/public/images/tp.png'
+            KPDPlUGIN_URL .'app/public/images/tp.png'
         );
     }
 

@@ -15,6 +15,7 @@ class TPLoader extends KPDLoader{
         // TODO: Implement admin() method.
         new TPDashboardController();
         new TPFlightTicketsController();
+
     }
 
     protected function site()
