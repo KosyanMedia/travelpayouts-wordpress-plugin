@@ -7,7 +7,12 @@
  */
 
 class TPSearchFormsController extends KPDAdminMenuController{
-
+    public $model;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->model = new TPSearchFormsModel();
+    }
     public function action()
     {
         // TODO: Implement action() method.
@@ -22,6 +27,10 @@ class TPSearchFormsController extends KPDAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
+        $action = isset($_GET['action']) ? $_GET['action'] : null ;
+        switch($action){
+
+        }
     }
 
 }
