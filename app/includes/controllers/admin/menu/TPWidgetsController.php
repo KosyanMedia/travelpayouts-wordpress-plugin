@@ -7,7 +7,11 @@
  */
 
 class TPWidgetsController extends KPDAdminMenuController{
-
+    public $model;
+    public function __construct(){
+        parent::__construct();
+        $this->model = new TPWidgetsModel();
+    }
     public function action()
     {
         // TODO: Implement action() method.
@@ -22,5 +26,7 @@ class TPWidgetsController extends KPDAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
+        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWidgets.view.php";
+        parent::loadView($pathView);
     }
 }

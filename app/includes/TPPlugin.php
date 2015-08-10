@@ -1,5 +1,6 @@
 <?php
 class TPPlugin extends KPDPlugin implements KPDPluginInterface{
+    public static $TPRequestApi;
     public function __construct() {
         parent::__construct();
         new TPLoader();

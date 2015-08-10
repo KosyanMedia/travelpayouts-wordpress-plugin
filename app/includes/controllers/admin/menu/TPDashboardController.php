@@ -3,6 +3,13 @@
  * Class TPDashboardController
  */
 class TPDashboardController extends KPDAdminMenuController{
+    public $model;
+    public $view;
+    public function __construct(){
+        parent::__construct();
+        $this->model = new TPDashboardModel();
+        $this->view = new TPDashboardView($this->model);
+    }
     public function action()
     {
         // TODO: Implement action() method.
