@@ -85,4 +85,38 @@ class TPDashboardView extends TPView{
         }
         return $TPMonth;
     }
+
+    public function tpGetNews(){
+        $output = '';
+        $output .= '<ul class="TP-ListNewsMin">';
+        if(!empty($this->model->rss["data"]["item"])) {
+            foreach ($this->model->rss["data"]["item"] as $tpNews) {
+                $output .= '<li>
+                    <div class="TP-NewsDate">
+                        <p>' . date('d.m', strtotime($tpNews["pubDate"])) . '</p>
+                        <span>' . date('Y', strtotime($tpNews["pubDate"])) . '</span>
+                    </div>
+                    <div class="TP-NewsContentMin">
+                        ' . $this->tpDashboardNewsLink($tpNews["title"], $tpNews["link"]) . '
+                        <p>
+
+                        </p>
+                    </div>
+                </li>';
+            }
+        }
+        //strip_tags($tpNews["description"]);
+        $output .= '</ul>';
+        echo $output;
+    }
+    /**
+     * @param string $title
+     * @param string $link
+     * @return string
+     */
+    public function tpDashboardNewsLink($title = "", $link =""){
+        $target_url = '';
+        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        return '<a href="'.$link.'?utm_source=wp_plugin" '.$target_url.'>'.$title.'</a>';
+    }
 }

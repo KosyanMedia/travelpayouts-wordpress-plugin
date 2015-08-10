@@ -41,9 +41,7 @@
             <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wp_plugin&utm_medium=dashboard" target="_blank">
                 <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
             </a>
-            <ul class="TP-ListNewsMin">
-
-            </ul>
+            <?php $this->view->tpGetNews(); ?>
         </div>
     </div>
 </div>
