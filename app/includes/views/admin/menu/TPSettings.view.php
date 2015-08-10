@@ -35,8 +35,40 @@
                 </li>
             </ul>
         </nav>
-        <div id="tabs-account">tabs-account</div>
-        <div id="tabs-config">tabs-config</div>
-        <div id="tabs-localization">tabs-localization</div>
+        <div class="TP-SettingContent">
+            <form action="options.php" class="formSettings" method="POST">
+                <?php settings_fields('TPSettings'); ?>
+                <div class="TPmainContent TP-SettingContent">
+                    <div id="tabs-account">
+                        <p class="TP-SettingTitle">
+                            <?php _e('Account', KPDPlUGIN_TEXTDOMAIN ); ?>
+                        </p>
+                        <div class="TP-RowForm">
+                            <?php do_settings_fields('tp_settings_account', 'tp_settings_account_id'); ?>
+                        </div>
+                    </div>
+                    <div id="tabs-config">
+                        <p class="TP-SettingTitle">
+                            <?php _e('Settings', KPDPlUGIN_TEXTDOMAIN ); ?>
+                        </p>
+                        <div class="TP-RowForm">
+                            <?php do_settings_fields('tp_settings_config', 'tp_settings_config_id'); ?>
+                        </div>
+                    </div>
+                    <div id="tabs-localization">
+                        <p class="TP-SettingTitle">
+                            <?php _e('Localization', KPDPlUGIN_TEXTDOMAIN ); ?>
+                        </p>
+                        <?php do_settings_fields('tp_settings_local', 'tp_settings_local_id'); ?>
+                    </div>
+                </div>
+                <div class="TP-navsPan">
+                    <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                    <!--<button class="TP-BtnTab">сохранить изменения</button>-->
+                    <input type="submit" name="submit" id="TPSaveSettings" class="TP-BtnTab"
+                           value="<?php _e('Save changes', KPDPlUGIN_TEXTDOMAIN ); ?>">
+                </div>
+            </form>
+        </div>
     </div>
 </div>

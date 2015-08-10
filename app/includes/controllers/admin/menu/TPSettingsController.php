@@ -7,7 +7,10 @@
  */
 
 class TPSettingsController extends KPDAdminMenuController{
-
+    public function __construct(){
+        parent::__construct();
+        $this->model = new TPSettingsModel();
+    }
     public function action()
     {
         // TODO: Implement action() method.
