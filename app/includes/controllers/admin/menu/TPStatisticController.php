@@ -22,6 +22,8 @@ class TPStatisticController extends KPDAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
+        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPStatistic.view.php";
+        parent::loadView($pathView);
     }
 
 }
