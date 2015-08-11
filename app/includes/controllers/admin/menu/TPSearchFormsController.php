@@ -8,6 +8,7 @@
 
 class TPSearchFormsController extends KPDAdminMenuController{
     public $model;
+    public $data;
     public function __construct()
     {
         parent::__construct();
@@ -30,6 +31,7 @@ class TPSearchFormsController extends KPDAdminMenuController{
         $action = isset($_GET['action']) ? $_GET['action'] : null ;
         switch($action){
             default:
+                $this->data = $this->model->get_data();
                 $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchForms.view.php";
                 break;
         }

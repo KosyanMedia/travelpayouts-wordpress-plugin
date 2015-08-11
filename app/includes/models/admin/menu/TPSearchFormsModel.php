@@ -36,13 +36,17 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         $tableName = $wpdb->prefix .self::$tableName;
     }
 
+    /**
+     * @return bool
+     */
     public function get_data()
     {
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
-        $wpdb->get_results( "SELECT * FROM ".$tableName."
-                                                        ORDER BY date_add DESC", ARRAY_A);
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
+        if(count($data) < 0) return false;
+        return $data;
     }
 
     /**

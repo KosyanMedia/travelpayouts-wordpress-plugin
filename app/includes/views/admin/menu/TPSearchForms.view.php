@@ -45,7 +45,32 @@
             </thead>
 
             <tbody>
+            <?php if ($this->data): ?>
+                <?php foreach ($this->data as $key => $record): ?>
+                    <tr>
+                        <td class="showTableTdCheckbox">
+                            <input  class="checkedId" id="chekTableS-<?php echo $record['id'];?>" type="checkbox" name="<?php echo $record['id'];?>"  value="1" hidden="">
+                            <label for="chekTableS-<?php echo $record['id'];?>"></label>
+                        </td>
+                        <td>
+                            <a href="admin.php?page=tp_control_search_shortcodes&action=edit_search_shortcode&id=<?php echo $record['id'];?>"
+                               class="row-title" title="<?php _e('Edit', KPDPlUGIN_TEXTDOMAIN) ?> «<?php echo $record['title'];?>»">
+                                <?php echo $record['title'];?></a>
+                        </td>
+                        <td>
+                            <p data-tptime="<?php echo $record['date_add']; ?>">
+                                <?php echo date('d.m.Y', $record['date_add']);?>
+                            </p>
+                        </td>
+                        <td>[tp_search_shortcodes id="<?php echo $record['id'];?>"]</td>
+                        <td>
+                            <a class="TP-icoDeleteShortTable" href="admin.php?page=tp_control_search_shortcodes&action=delete_search_shortcode&id=<?php echo $record['id'];?>"></a>
+                            <a class="TP-icoFormatShortTable" href="admin.php?page=tp_control_search_shortcodes&action=edit_search_shortcode&id=<?php echo $record['id'];?>"></a>
+                        </td>
 
+                    </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
             </tbody>
         </table>
     </div>
