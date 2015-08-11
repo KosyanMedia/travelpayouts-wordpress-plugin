@@ -7,7 +7,7 @@
  */
 
 abstract class KPDWPTableModel {
-    abstract public function insert();
+    abstract public function insert($data);
     abstract public function update();
     abstract public function delete();
     abstract public function query();

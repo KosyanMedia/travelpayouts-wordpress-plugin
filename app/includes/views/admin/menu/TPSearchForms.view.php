@@ -26,7 +26,7 @@
             </div>
             <a class="TP-AllLincksShort" href="javascript:void(0)">
                 <?php _e('All', KPDPlUGIN_TEXTDOMAIN);?>
-                (<span><?php //echo count($data['search_shortcodes']); ?></span>)
+                (<span><?php echo count($this->data); ?></span>)
             </a>
         </div>
 

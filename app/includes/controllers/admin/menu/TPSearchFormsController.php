@@ -29,7 +29,26 @@ class TPSearchFormsController extends KPDAdminMenuController{
     {
         // TODO: Implement render() method.
         $action = isset($_GET['action']) ? $_GET['action'] : null ;
+        $pathView = "";
         switch($action){
+            case "add_search_shortcode":
+                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchFormsAdd.view.php";
+                break;
+            case "save_search_shortcode":
+                if(isset($_POST)){
+                    $this->model->insert($_POST);
+                    $this->redirect('admin.php?page=tp_control_search_shortcodes');
+                }
+                break;
+            case "edit_search_shortcode":
+                $this->data = $this->model->get_dataID((int)$_GET['id']);
+                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchFormsEdit.view.php";
+                break;
+            case "update_search_shortcode":
+                if(isset($_POST)){
+                    $this->redirect('admin.php?page=tp_control_search_shortcodes');
+                }
+                break;
             default:
                 $this->data = $this->model->get_data();
                 $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchForms.view.php";

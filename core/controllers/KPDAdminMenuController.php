@@ -15,4 +15,9 @@ abstract class KPDAdminMenuController {
             wp_die(__("View ".$view." not found"));
         }
     }
+    public function redirect($page = ''){
+        echo '<script type="text/javascript">
+                  document.location.href="'.$page.'";
+           </script>';
+    }
 }

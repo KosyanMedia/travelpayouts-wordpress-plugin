@@ -8,11 +8,45 @@
 
 class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceModel{
     public static $tableName = "tp_search_shortcodes";
-    public function insert()
+    public function insert($data)
     {
         // TODO: Implement insert() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
+        $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
+        if(!empty($_POST["search_shortcode_from"])){
+            preg_match('/\[(.+)\]/', $_POST["search_shortcode_from"], $from_iata);
+            if(!empty($from_iata[1])){
+                $from_city = explode(',', $_POST["search_shortcode_from"]);
+                $origin = '"origin": {
+                                            "name": "'.$from_city[0].'",
+                                            "iata": "'.$from_iata[1].'"
+                                        }';
+                $code_form = preg_replace('/"origin": \{.*?\}/s', $origin, $code_form);
+            }
+
+        }
+        if(!empty( $_POST["search_shortcode_to"])){
+            preg_match('/\[(.+)\]/',  $_POST["search_shortcode_to"], $to_iata);
+            if(!empty($to_iata[1])){
+                $to_city = explode(',',  $_POST["search_shortcode_to"]);
+                $destination = '"destination": {
+                                            "name": "'.$to_city[0].'",
+                                            "iata": "'.$to_iata[1].'"
+                                        }';
+                $code_form = preg_replace('/"destination": \{.*?\}/s', $destination, $code_form);
+            }
+
+        }
+        $inputData = array(
+            'title' => $_POST["search_shortcode_title"],
+            'date_add' => time(),
+            'type_shortcode' => $_POST["search_shortcode_type"],
+            'code_form' => $code_form,
+            'from_city' => $_POST["search_shortcode_from"],
+            'to_city' => $_POST["search_shortcode_to"]
+        );
+        $wpdb->insert($tableName, $inputData);
     }
 
     public function update()
@@ -45,10 +79,21 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) < 0) return false;
-        return $data;
+        if(count($data) > 0) return $data;
+        return false;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
+    public function get_dataID($id){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE id= ". $id, ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
     /**
      *
      */
@@ -83,5 +128,16 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $wpdb->query("DROP TABLE IF EXISTS $tableName");
+    }
+
+    /**
+     * @return mixed
+     */
+    public function get_nextId(){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $next_id = $wpdb->get_var("SELECT MAX(id) FROM ".$tableName);
+        $next_id++;
+        return $next_id;
     }
 }
