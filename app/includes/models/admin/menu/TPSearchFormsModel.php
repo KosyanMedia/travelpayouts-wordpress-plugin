@@ -49,20 +49,60 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         $wpdb->insert($tableName, $inputData);
     }
 
-    public function update()
+    public function update($data)
     {
         // TODO: Implement update() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
+        $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
+        if(!empty($_POST["search_shortcode_from"])){
+            preg_match('/\[(.+)\]/', $_POST["search_shortcode_from"], $from_iata);
+            if(!empty($from_iata[1])){
+                $from_city = explode(',', $_POST["search_shortcode_from"]);
+                $origin = '"origin": {
+                                            "name": "'.$from_city[0].'",
+                                            "iata": "'.$from_iata[1].'"
+                                        }';
+                $code_form = preg_replace('/"origin": \{.*?\}/s', $origin, $code_form);
+            }
+
+        }
+        if(!empty( $_POST["search_shortcode_to"])){
+            preg_match('/\[(.+)\]/',  $_POST["search_shortcode_to"], $to_iata);
+            if(!empty($to_iata[1])){
+                $to_city = explode(',',  $_POST["search_shortcode_to"]);
+                $destination = '"destination": {
+                                            "name": "'.$to_city[0].'",
+                                            "iata": "'.$to_iata[1].'"
+                                        }';
+                $code_form = preg_replace('/"destination": \{.*?\}/s', $destination, $code_form);
+            }
+
+        }
+        $inputData = array(
+            'title' => $_POST["search_shortcode_title"],
+            'date_add' => time(),
+            'type_shortcode' => $_POST["search_shortcode_type"],
+            'code_form' => $code_form,
+            'from_city' => $_POST["search_shortcode_from"],
+            'to_city' => $_POST["search_shortcode_to"]
+        );
+        $wpdb->update($tableName, $inputData ,array('id' => $_POST['search_shortcodes_id']));
     }
 
-    public function delete()
+    public function deleteAll()
     {
         // TODO: Implement delete() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
     }
-
+    public function deleteId($id)
+    {
+        // TODO: Implement deleteId() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $wpdb->query("DELETE FROM ".$tableName." WHERE id = '".$id ."'");
+    }
     public function query()
     {
         // TODO: Implement query() method.
@@ -140,4 +180,6 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         $next_id++;
         return $next_id;
     }
+
+
 }

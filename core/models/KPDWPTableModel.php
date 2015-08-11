@@ -8,8 +8,9 @@
 
 abstract class KPDWPTableModel {
     abstract public function insert($data);
-    abstract public function update();
-    abstract public function delete();
+    abstract public function update($data);
+    abstract public function deleteAll();
+    abstract public function deleteId($id);
     abstract public function query();
     abstract public function get_data();
 }

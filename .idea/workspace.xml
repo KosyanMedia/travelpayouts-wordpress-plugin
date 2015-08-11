@@ -31,27 +31,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPSearchFormsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPSearchFormsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.666666" vertical-offset="0" max-vertical-offset="1080">
-              <caret line="48" column="83" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.72958255" vertical-offset="588" max-vertical-offset="1278">
+              <caret line="60" column="79" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPSearchFormsModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPSearchFormsModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7876712" vertical-offset="0" max-vertical-offset="2574">
-              <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+            <state vertical-scroll-proportion="-10.296296" vertical-offset="1486" max-vertical-offset="3330">
+              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
               <folding>
-                <marker date="1439287758438" expanded="true" signature="2771:2822" placeholder="SELECT * FRO..." />
-                <marker date="1439287758438" expanded="true" signature="3106:3145" placeholder="SELECT * FRO..." />
-                <marker date="1439287758438" expanded="true" signature="4441:4462" placeholder="DROP TABLE I..." />
-                <marker date="1439287758438" expanded="true" signature="4665:4685" placeholder="SELECT MAX(i..." />
+                <marker date="1439326539212" expanded="true" signature="4275:4323" placeholder="DELETE FROM ..." />
+                <marker date="1439326539212" expanded="true" signature="4725:4776" placeholder="SELECT * FRO..." />
+                <marker date="1439326539212" expanded="true" signature="5060:5099" placeholder="SELECT * FRO..." />
+                <marker date="1439326539212" expanded="true" signature="6395:6416" placeholder="DROP TABLE I..." />
+                <marker date="1439326539212" expanded="true" signature="6619:6639" placeholder="SELECT MAX(i..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KPDWPTableModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/models/KPDWPTableModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="288">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,7 +70,7 @@
       <file leaf-file-name="TPSearchForms.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchForms.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1476">
               <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="96" />
               <folding />
             </state>
@@ -69,7 +80,7 @@
       <file leaf-file-name="TPSearchFormsEdit.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsEdit.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4814814" vertical-offset="86" max-vertical-offset="1260">
+            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="1260">
               <caret line="7" column="110" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="110" />
               <folding />
             </state>
@@ -127,10 +138,10 @@
         <option value="$PROJECT_DIR$/../../debug.log" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchForms.view.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsAdd.view.php" />
-        <option value="$PROJECT_DIR$/core/models/KPDWPTableModel.php" />
         <option value="$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsEdit.view.php" />
+        <option value="$PROJECT_DIR$/core/models/KPDWPTableModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php" />
       </list>
     </option>
@@ -140,10 +151,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="57" />
     <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="width" value="1309" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -168,6 +179,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,7 +380,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,6 +414,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -410,9 +424,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -431,28 +442,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="57" y="24" width="1309" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498618" sideWeight="0.30439442" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25415677" sideWeight="0.41062802" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498618" sideWeight="0.6956056" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25415677" sideWeight="0.589372" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -805,21 +816,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/KPDWPTableModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08219178" vertical-offset="0" max-vertical-offset="876">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43150684" vertical-offset="0" max-vertical-offset="876">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <marker date="1439279149706" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -827,13 +828,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.25144842" vertical-offset="343" max-vertical-offset="1206">
           <caret line="7" column="108" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="108" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchForms.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1476">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1476">
           <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="96" />
           <folding />
         </state>
@@ -849,30 +849,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsEdit.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4814814" vertical-offset="86" max-vertical-offset="1260">
+        <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="1260">
           <caret line="7" column="110" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
+    <entry file="file://$PROJECT_DIR$/core/models/KPDWPTableModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.666666" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="48" column="83" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+        <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7876712" vertical-offset="0" max-vertical-offset="2574">
-          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+        <state vertical-scroll-proportion="-10.296296" vertical-offset="1486" max-vertical-offset="3330">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
           <folding>
-            <marker date="1439287758438" expanded="true" signature="2771:2822" placeholder="SELECT * FRO..." />
-            <marker date="1439287758438" expanded="true" signature="3106:3145" placeholder="SELECT * FRO..." />
-            <marker date="1439287758438" expanded="true" signature="4441:4462" placeholder="DROP TABLE I..." />
-            <marker date="1439287758438" expanded="true" signature="4665:4685" placeholder="SELECT MAX(i..." />
+            <marker date="1439326539212" expanded="true" signature="4275:4323" placeholder="DELETE FROM ..." />
+            <marker date="1439326539212" expanded="true" signature="4725:4776" placeholder="SELECT * FRO..." />
+            <marker date="1439326539212" expanded="true" signature="5060:5099" placeholder="SELECT * FRO..." />
+            <marker date="1439326539212" expanded="true" signature="6395:6416" placeholder="DROP TABLE I..." />
+            <marker date="1439326539212" expanded="true" signature="6619:6639" placeholder="SELECT MAX(i..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72958255" vertical-offset="588" max-vertical-offset="1278">
+          <caret line="60" column="79" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
