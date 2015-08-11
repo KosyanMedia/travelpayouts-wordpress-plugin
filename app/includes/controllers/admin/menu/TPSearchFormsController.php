@@ -29,8 +29,11 @@ class TPSearchFormsController extends KPDAdminMenuController{
         // TODO: Implement render() method.
         $action = isset($_GET['action']) ? $_GET['action'] : null ;
         switch($action){
-
+            default:
+                $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchForms.view.php";
+                break;
         }
+        parent::loadView($pathView);
     }
 
 }

@@ -28,6 +28,10 @@ class TPDefault implements  KPDDefault{
             ''
         )
     );
+
+    /**
+     * @return array
+     */
     public static function defaultOptions()
     {
         // TODO: Implement defaultOptions() method.

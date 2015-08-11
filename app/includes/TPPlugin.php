@@ -11,6 +11,7 @@ class TPPlugin extends KPDPlugin implements KPDPluginInterface{
         // TODO: Implement activation() method.
         if( ! get_option(KPDPlUGIN_OPTION_NAME) )
             update_option( KPDPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+        TPSearchFormsModel::createTable();
     }
 
     static public function deactivation()
@@ -22,6 +23,7 @@ class TPPlugin extends KPDPlugin implements KPDPluginInterface{
     static public function uninstall()
     {
         // TODO: Implement uninstall() method.
+        TPSearchFormsModel::deleteTable();
     }
 }
 $TPPlugin = new TPPlugin();
