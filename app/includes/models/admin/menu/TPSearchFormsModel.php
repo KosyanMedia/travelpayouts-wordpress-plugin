@@ -8,6 +8,11 @@
 
 class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceModel{
     public static $tableName = "tp_search_shortcodes";
+    public function __construct()
+    {
+        add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
+        add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
+    }
     public function insert($data)
     {
         // TODO: Implement insert() method.
@@ -95,6 +100,15 @@ class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceM
         // TODO: Implement delete() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
+        if(isset($_POST)) {
+            switch ($_POST['type']) {
+                case "search_shortcodes":
+                    foreach ($_POST['id'] as $id) {
+                        $wpdb->query("DELETE FROM " .$tableName. " WHERE id = '" . (int)$id . "'");
+                    }
+                    break;
+            }
+        }
     }
     public function deleteId($id)
     {
