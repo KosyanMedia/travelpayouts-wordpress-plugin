@@ -6,8 +6,12 @@
  * Time: 11:43
  */
 
-abstract class KPDBaseController {
-    abstract public function __construct();
-    abstract public function action();
-    abstract public function render();
+class KPDBaseController {
+    protected function loadView($view){
+        if (file_exists($view)) {
+            require_once $view;
+        } else {
+            wp_die(__("View ".$view." not found"));
+        }
+    }
 }

@@ -13,12 +13,15 @@ class TPLoader extends KPDLoader{
     protected function admin()
     {
         // TODO: Implement admin() method.
+        // Admin menu
         new TPDashboardController();
         new TPFlightTicketsController();
         new TPWidgetsController();
         new TPSearchFormsController();
         new TPStatisticController();
         new TPSettingsController();
+        // Media buttons
+        new TPShortcodeButtonsController();
 
     }
 
