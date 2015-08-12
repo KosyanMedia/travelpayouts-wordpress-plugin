@@ -30,6 +30,8 @@ class TPLoader extends KPDLoader{
     protected function site()
     {
         // TODO: Implement site() method.
+        //Shortcodes
+        new TPSearchFormShortcodeController();
     }
 
     protected function all()
