@@ -7,7 +7,13 @@
  */
 
 class TPStatisticController extends KPDAdminMenuController{
-
+    public $model;
+    public $view;
+    public function __construct(){
+        parent::__construct();
+        $this->model = new TPStatisticModel();
+        $this->view = new TPStatisticView($this->model);
+    }
     public function action()
     {
         // TODO: Implement action() method.

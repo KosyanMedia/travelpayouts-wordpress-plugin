@@ -9,6 +9,10 @@
 class TPSettingsModel extends KPDOptionModel{
     public function __construct(){
         parent::__construct();
+        add_action('wp_ajax_export_settings',      array( &$this, 'exportSettings'));
+        add_action('wp_ajax_nopriv_export_settings',array( &$this, 'exportSettings'));
+        add_action('wp_ajax_import_settings',      array( &$this, 'importSettings'));
+        add_action('wp_ajax_nopriv_import_settings',array( &$this, 'importSettings'));
     }
     public function create_option()
     {
@@ -35,5 +39,26 @@ class TPSettingsModel extends KPDOptionModel{
         // TODO: Implement save_option() method.
         $result = array_merge(TPPlugin::$options, $input);
         return $result;
+    }
+    public function exportSettings(){
+        $export = json_encode(get_option( KPDPlUGIN_OPTION_NAME ));
+        $fileName = KPDPlUGIN_DIR."/TravelpayoutsSettings.txt";
+        $file = fopen($fileName , "w");
+        fwrite($file, $export);
+        fclose($file);
+        chmod(TPInit::$path."/TravelpayoutsSettings.txt", 0777);
+        echo  TPInit::$url."/TravelpayoutsSettings.txt";
+    }
+    public function importSettings(){
+        $base64 = $_POST['value'];
+        if ( strpos($base64, 'text/plain') ) {
+            $file = str_replace('data:text/plain;base64,', '', $base64);
+            $file = str_replace(' ', '+', $file);
+            $data = base64_decode($file);
+            $options = json_decode($data,true);
+            if(is_array($options)){
+                update_option( TPInit::$option_name, $options);
+            }
+        }
     }
 }

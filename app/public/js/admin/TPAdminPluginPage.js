@@ -349,8 +349,8 @@ jQuery(function($){
                         '<td>'+totals[6]+'</td>' +
                         '<td>'+totals[7]+'</td>' +
                         '<td>'+totals[8]+'</td>' +
-                        '<td>'+totals[9]+'</td>' +
-                        '<td>'+totals[10]+'</td>' +
+                        '<td>'+totals[9].toFixed(2)+'</td>' +
+                        '<td>'+totals[10].toFixed(2)+'</td>' +
                         //'<td>'+totals[11]+'</td>'+
                         '</tr></tfoot>');
                     }

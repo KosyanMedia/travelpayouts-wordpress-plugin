@@ -49,7 +49,7 @@
                         <?php _e('show', KPDPlUGIN_TEXTDOMAIN ); ?>
                     </button>
                 </div>
-                <?php //echo $this->TPReturnOutput->tpReturnOutputReportStats($this->TPStatsData["detailed_sales"]); ?>
+                <?php echo TPStatisticView::tableReport($this->model->detailed_sales); ?>
                 <a download="TPListReport.xls" href="#"  class="TP-BtnTab exportBtn btnBalance"
                    onclick="return ExcellentExport.excel(this, 'TPListReport', '<?php _e('Report on income', KPDPlUGIN_TEXTDOMAIN ); ?>');">
                     <?php _e('download report in table', KPDPlUGIN_TEXTDOMAIN ); ?>
@@ -60,10 +60,9 @@
             <div class="TPmainContent TP-BalanceContent">
                 <p class="TP-SettingTitle"><?php _e('Balance and payments', KPDPlUGIN_TEXTDOMAIN ); ?></p>
                 <p class="TP-OurBalance"><?php _e('Your balance', KPDPlUGIN_TEXTDOMAIN ); ?>: <span>
-                            <?php //echo $this->TPStatsData["balance"]["data"]["balance"]." "
-                                //.$this->TPReturnOutput->getCurrencyView($this->TPStatsData["balance"]["data"]["currency"]);?>
+                            <?php echo $this->view->balanceLabel(); ?>
                         </span></p>
-                <?php //echo $this->TPReturnOutput->tpReturnOutputListBalanceStats($this->TPStatsData["payments"]); ?>
+                <?php echo $this->view->tableBalance($this->model->payments); ?>
                 <a download="TPListBalance.xls" href="#"  class="TP-BtnTab exportBtn btnBalance"
                    onclick="return ExcellentExport.excel(this, 'TPListBalance', '<?php _e('Balance and payments', KPDPlUGIN_TEXTDOMAIN ); ?>');">
                     <?php _e('download report in table', KPDPlUGIN_TEXTDOMAIN ); ?>
