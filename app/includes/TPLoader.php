@@ -22,6 +22,8 @@ class TPLoader extends KPDLoader{
         new TPSettingsController();
         // Media buttons
         new TPShortcodeButtonsController();
+        new TPWidgetButtonsController();
+        new TPSearchFormButtonsController();
 
     }
 

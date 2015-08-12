@@ -56,7 +56,7 @@ class TPSearchFormsController extends KPDAdminMenuController{
                 break;
             case "delete_search_shortcode":
                 if(isset($_GET['id']) && !empty($_GET['id'])){
-                    $this->data = $this->model->deleteId((int)$_GET['id']);
+                    $this->model->deleteId((int)$_GET['id']);
                 }
                 $this->redirect('admin.php?page=tp_control_search_shortcodes');
                 break;
