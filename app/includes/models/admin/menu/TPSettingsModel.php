@@ -41,13 +41,13 @@ class TPSettingsModel extends KPDOptionModel{
         return $result;
     }
     public function exportSettings(){
-        $export = json_encode(get_option( KPDPlUGIN_OPTION_NAME ));
-        $fileName = KPDPlUGIN_DIR."/TravelpayoutsSettings.txt";
+        $export = json_encode(TPPlugin::$options);
+        $fileName = KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt";
         $file = fopen($fileName , "w");
         fwrite($file, $export);
         fclose($file);
-        chmod(TPInit::$path."/TravelpayoutsSettings.txt", 0777);
-        echo  TPInit::$url."/TravelpayoutsSettings.txt";
+        chmod(KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt", 0777);
+        echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";
     }
     public function importSettings(){
         $base64 = $_POST['value'];
@@ -57,7 +57,7 @@ class TPSettingsModel extends KPDOptionModel{
             $data = base64_decode($file);
             $options = json_decode($data,true);
             if(is_array($options)){
-                update_option( TPInit::$option_name, $options);
+                update_option( KPDPlUGIN_OPTION_NAME, $options);
             }
         }
     }

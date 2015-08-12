@@ -13,3 +13,4 @@ if ( ! function_exists( 'get_plugins' ) ) {
 $KPDPlugins = get_plugin_data(KPDPlUGIN_DIR.'/'.basename(KPDPlUGIN_DIR).'.php', false, false);
 //error_log(print_r($KPDPlugins, true));
 define("KPDPlUGIN_VERSION", $KPDPlugins['Version']);
+define("KPDPlUGIN_NAME", $KPDPlugins['Name']);
