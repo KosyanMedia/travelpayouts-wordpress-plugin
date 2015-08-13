@@ -47,8 +47,14 @@ jQuery(function($){
         buttonFontStyle('.ItalicTracing');
         buttonFontStyle('.UnderlineTracing');
         $( "#TP-tabs" ).tabs();
+        var selectedTabFlightsId = sessionStorage.getItem("selectedTabFlights");
+        selectedTabFlightsId = selectedTabFlightsId === null ? 0 : selectedTabFlightsId;
         $( "#tabs-flights" ).tabs({
-            active: 0
+            active: selectedTabFlightsId,
+            activate : function( event, ui ) {
+                selectedTabFlightsId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabFlights", selectedTabFlightsId);
+            }
         });
         $( "#tabs-settings" ).tabs({
             active: 0
@@ -56,6 +62,7 @@ jQuery(function($){
         $( "#tabs-statistic" ).tabs({
             active: 0
         });
+
 
         $(".TPMainMenuA").click(function () {
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");

@@ -88,6 +88,12 @@ class TPLoaderScripts extends KPDLoaderScripts{
             KPDPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
+        wp_enqueue_script(
+            KPDPlUGIN_SLUG.'-jquery-cookie',
+            KPDPlUGIN_URL.'app/public/js/lib/jquery.cookie.js',
+            array( 'jquery' ),
+            '1.3.1'
+        );
         wp_register_script(
             KPDPlUGIN_SLUG.'-TPAdminPluginPage', //$handle
             KPDPlUGIN_URL.'app/public/js/admin/TPAdminPluginPage.js', //$src
@@ -95,7 +101,8 @@ class TPLoaderScripts extends KPDLoaderScripts{
                 'jquery-ui-accordion','jquery-ui-sortable',
                 'jquery-ui-button','jquery-form', 'jquery-ui-tabs',
                 KPDPlUGIN_SLUG.'-fileDownload', KPDPlUGIN_SLUG.'-jqColorPicker',
-                KPDPlUGIN_SLUG.'-excellentexport', KPDPlUGIN_SLUG.'-dataTables'), //$deps
+                KPDPlUGIN_SLUG.'-excellentexport', KPDPlUGIN_SLUG.'-dataTables',
+                KPDPlUGIN_SLUG.'-jquery-cookie'), //$deps
             KPDPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
