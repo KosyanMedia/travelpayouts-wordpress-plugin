@@ -3,7 +3,7 @@
     <div id="tabs-flights">
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
-                <li class="TPNavActive">
+                <li>
                     <a href="#tabs-tickets_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
                         <span><?php _e('Tables\' content', KPDPlUGIN_TEXTDOMAIN ); ?></span>

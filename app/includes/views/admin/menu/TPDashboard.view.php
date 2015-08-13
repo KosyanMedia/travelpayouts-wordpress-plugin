@@ -23,10 +23,15 @@
                     <li><a href="#tabs-3"><?php _e('This month', KPDPlUGIN_TEXTDOMAIN ); ?></a></li>
                     <li><a href="#tabs-4"><?php _e('Last month', KPDPlUGIN_TEXTDOMAIN ); ?></a></li>
                 </ul>
-                <?php $this->view->tpTabsDay(1, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")]); ?>
-                <?php $this->view->tpTabsDay(2, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)]); ?>
-                <?php $this->view->tpTabsMonth(3, $this->model->detailed_sales["current_month"]["sales"]); ?>
-                <?php $this->view->tpTabsMonth(4, $this->model->detailed_sales["last_month"]["sales"]); ?>
+                <?php
+                    if($this->model->detailed_sales["current_month"]["sales"] != false){
+                        $this->view->tpTabsDay(1, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")]);
+                        $this->view->tpTabsDay(2, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)]);
+                        $this->view->tpTabsMonth(3, $this->model->detailed_sales["current_month"]["sales"]);
+                        $this->view->tpTabsMonth(4, $this->model->detailed_sales["last_month"]["sales"]);
+                    }
+
+                ?>
             </div>
         </div>
         <p class="TP-deteiledIncome">

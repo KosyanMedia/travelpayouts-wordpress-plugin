@@ -3,7 +3,7 @@
         <p class="TPMainTitle"><?php _e('Statistic', KPDPlUGIN_TEXTDOMAIN ); ?></p>
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
-                <li class="TPNavActive">
+                <li>
                     <a href="#tabs-report" class="TPMainMenuA">
                         <i class="icoItemNav ico-report"></i>
                         <span><?php _e('Sales Report', KPDPlUGIN_TEXTDOMAIN ); ?></span>

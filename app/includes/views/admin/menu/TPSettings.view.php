@@ -18,7 +18,7 @@
         </div>
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
-                <li class="TPNavActive">
+                <li>
                     <a href="#tabs-account" class="TPMainMenuA">
                         <span><?php _e('Account', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     </a>

@@ -56,18 +56,30 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabFlights", selectedTabFlightsId);
             }
         });
+        var selectedTabSettingsId = sessionStorage.getItem("selectedTabSettings");
+        selectedTabSettingsId = selectedTabSettingsId === null ? 0 : selectedTabSettingsId;
         $( "#tabs-settings" ).tabs({
-            active: 0
+            active: selectedTabSettingsId,
+            activate : function( event, ui ) {
+                selectedTabSettingsId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabSettings", selectedTabSettingsId);
+            }
         });
+        var selectedTabStatisticId = sessionStorage.getItem("selectedTabStatistic");
+        selectedTabStatisticId = selectedTabStatisticId === null ? 0 : selectedTabStatisticId;
         $( "#tabs-statistic" ).tabs({
-            active: 0
+            active: selectedTabStatisticId,
+            activate : function( event, ui ) {
+                selectedTabStatisticId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabStatistic", selectedTabStatisticId);
+            }
         });
 
 
-        $(".TPMainMenuA").click(function () {
+        /*$(".TPMainMenuA").click(function () {
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");
             $(this).parent('li').addClass("TPNavActive");
-        });
+        });*/
         TPSettingsSave('.TPFormNotReload');
         TPSettingsSave('#TPWidgetConfig');
         TPStatsSave(TPStatsTableSort());
