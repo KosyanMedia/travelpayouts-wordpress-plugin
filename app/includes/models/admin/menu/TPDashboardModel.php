@@ -48,7 +48,11 @@ class TPDashboardModel {
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
             $TPDetailedSales['current_month'] = TPPlugin::$TPRequestApi->get_detailed_sales();
+            if( !$TPDetailedSales['current_month'])
+                return false;
             $TPDetailedSales['last_month'] = TPPlugin::$TPRequestApi->get_detailed_sales(array('date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y")))));
+            if( !$TPDetailedSales['last_month'])
+                return false;
             $TPDetailedSales['time'] = current_time('timestamp',0);
             set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 10);
         }

@@ -1,4 +1,4 @@
-<form action="options.php" class="formSettings" method="POST" id="TPTicketsConfig">
+<form action="options.php" class="formSettings TPFormNotReload" method="POST" id="TPTicketsConfig">
     <?php settings_fields('TPFlightTickets'); ?>
     <div class="TPmainContent TP-BalanceContent">
         <div class="bellows default">

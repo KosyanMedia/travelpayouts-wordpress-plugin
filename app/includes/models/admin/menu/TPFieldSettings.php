@@ -69,24 +69,24 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Something went worng, please reload page', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('If an error in the API instead of the output table', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error]"
                                value="<?php echo esc_attr(TPPlugin::$options['config']['message_error']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('After clicking on the link', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('After clicking the Search button', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
-                            <label for="rchek1"><?php _e('Show completed forms', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek1"><?php _e('Pass on the completed forms', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
-                            <label for="rchek2"><?php _e('Show search results', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek2"><?php _e('Initiate new search', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -126,17 +126,33 @@ class TPFieldSettings {
                         <li>
                             <input id="chek1" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][redirect]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['redirect']), 1) ?> hidden />
-                            <label for="chek1"><?php _e('Redirect', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek1"><?php _e('Switch to the results via a redirect', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <div class="svg-img-1">
+                                <a href="#" class="tooltip-settings">
+                                    <span><?php _e('In the transition is given the code 301, which is well accepted by search engines. We recommend not to change this setting.', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                            <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                            <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
+                                </a></div>
                         </li>
                         <li>
                             <input id="chek2" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][target_url]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['target_url']), 1) ?> hidden />
-                            <label for="chek2"><?php _e('A link in a new window', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek2"><?php _e('Open results in new window', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chek3" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][nofollow]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
-                            <label for="chek3"><?php _e('Attribute for links nofollow', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek3"><?php _e('Add the nofollow attribute for links', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <div class="svg-img-1">
+                                <a href="#" class="tooltip-settings">
+                                    <span><?php _e('Attribute helps to avoid undesirable results in the index of search engines. We recommend not to change this setting.', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                                    <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                                    <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
+                                </a></div>
                         </li>
                     </ul>
                 </div>
@@ -145,7 +161,7 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem mb--cus">
                 <div class="ItemSub">
-                    <span><?php _e('Cache through', KPDPlUGIN_TEXTDOMAIN);?></span>
+                    <span><?php _e('Update rate tables', KPDPlUGIN_TEXTDOMAIN);?></span>
                     <div class="TP-childF">
                         <div class="spinnerW clearfix" data-trigger="spinner">
                             <label>
@@ -173,28 +189,52 @@ class TPFieldSettings {
                     </div>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('Scripts', KPDPlUGIN_TEXTDOMAIN);?></span>
+                    <span class="clearfix">
+                        <div class="box-span-1">
+                            <?php _e('Placing the plugin scripts', KPDPlUGIN_TEXTDOMAIN);?>
+                        </div>
+                        <div class="svg-img-1">
+                            <a href="#" class="tooltip-settings"><span>
+                                    <?php _e('For faster injection test page, select &lt;head&gt;. If pages are loading slowly, try to rearrange the &lt;footer&gt;', KPDPlUGIN_TEXTDOMAIN);?>
+                                </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                        <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                        <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek5" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
-                            <label for="rchek5"><?php _e('Header', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek5"><?php _e('Inside the tag ', KPDPlUGIN_TEXTDOMAIN); echo  htmlspecialchars('<head>');?></label>
                         </li>
                         <li>
                             <input id="rchek6" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
-                            <label for="rchek6"><?php _e('Footer', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek6"><?php _e('Inside the tag ', KPDPlUGIN_TEXTDOMAIN); echo  htmlspecialchars('<head>');?></label>
                         </li>
                     </ul>
                 </div>
                 <div class="ItemSub">
-                    <span>
-                        <?php _e('Format date', KPDPlUGIN_TEXTDOMAIN); ?>
-                        <?php
-                        //$TPReturnOutput = new TPReturnOutput();
-                        //echo $TPReturnOutput->tpDate();
-                        ?>
-                    </span>
+
+                     <span>
+                         <div class="box-span">
+                             <?php _e('Format date', KPDPlUGIN_TEXTDOMAIN); ?>
+                         </div>
+                         <div class="svg-img-1"><a href="#" class="tooltip-settings">
+                                 <span>
+                                     <ul>
+                                         <li><?php _e('Use variables to set the date:', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>d - <?php _e('month day', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>f - <?php _e('month name in small letters', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>F - <?php _e('month name with a capital letter', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>m - <?php _e('month number', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>M - <?php _e('month 3 letters', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>y - <?php _e('last 2 digits of the year', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>Y - <?php _e('full year', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                     </ul>
+
+                                 </span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                         <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][format_date]"
                                value="<?php echo esc_attr(TPPlugin::$options['config']['format_date']) ?>"

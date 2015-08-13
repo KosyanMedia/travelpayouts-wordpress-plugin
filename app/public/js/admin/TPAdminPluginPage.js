@@ -61,7 +61,7 @@ jQuery(function($){
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");
             $(this).parent('li').addClass("TPNavActive");
         });
-        TPSettingsSave('#TPTicketsConfig');
+        TPSettingsSave('.TPFormNotReload');
         TPSettingsSave('#TPWidgetConfig');
         TPStatsSave(TPStatsTableSort());
         TPShortcodeTableSort();

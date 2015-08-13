@@ -1,6 +1,6 @@
 <div class="TPWrapper">
     <p class="TPMainTitle"><?php _e('Widgets', KPDPlUGIN_TEXTDOMAIN ); ?></p>
-    <div class="TPmainContent">
+    <div class="TPmainContent clearfix">
         <form action="options.php" class="formSettings" method="POST" id="TPWidgetConfig">
             <?php settings_fields('TPWidgets'); ?>
             <div class="bellows default">

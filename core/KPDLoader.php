@@ -5,7 +5,6 @@
 
 abstract class KPDLoader {
     protected function __construct(){
-        new KPDLocalization();
         if ( is_admin() ) :
             $this->admin();
         else:

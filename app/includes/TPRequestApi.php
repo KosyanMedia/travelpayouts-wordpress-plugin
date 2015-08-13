@@ -19,11 +19,30 @@ class TPRequestApi {
     private function __construct() {
         if( empty( TPPlugin::$options ) ) {
             $this->status = false;
+            /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin '.KPDPlUGIN_NAME.' returned an error', KPDPlUGIN_TEXTDOMAIN),
+                'message_notice' => __('The settings are not tasks', KPDPlUGIN_TEXTDOMAIN),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page=tp_control_settings'),
+                    'title' => __('Set the options', KPDPlUGIN_TEXTDOMAIN)
+                ),
+            ));*/
             //new TPAdminNotice("error", "Настройки не заданы.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "settings");
         }elseif( ! isset( TPPlugin::$options['account']['marker'] ) || empty( TPPlugin::$options['account']['marker'] )
             || ! is_string( TPPlugin::$options['account']['marker'] ) ) {
             $this->status = false;
+            //_e('Marker missing or incorrect', KPDPlUGIN_TEXTDOMAIN);
+            /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin '.KPDPlUGIN_NAME.' returned an error', KPDPlUGIN_TEXTDOMAIN),
+                'message_notice' => __('Marker missing or incorrect', KPDPlUGIN_TEXTDOMAIN),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page=tp_control_settings'),
+                    'title' => __('Set the options', KPDPlUGIN_TEXTDOMAIN)
+                ),
+            ));*/
             //new TPAdminNotice("error", "Маркер не указан или указан не верно.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "marker");
         }elseif( ! isset( TPPlugin::$options['account']['token'] ) || empty( TPPlugin::$options['account']['token'] )

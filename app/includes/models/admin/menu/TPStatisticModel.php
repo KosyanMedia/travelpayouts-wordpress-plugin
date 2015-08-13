@@ -27,6 +27,8 @@ class TPStatisticModel extends TPDashboardModel{
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
             $TPDetailedSales = TPPlugin::$TPRequestApi->get_detailed_sales();
+            if( !$TPDetailedSales)
+                return false;
             $TPDetailedSales = array_reverse($TPDetailedSales["sales"]);
             set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 10);
         }
@@ -37,6 +39,8 @@ class TPStatisticModel extends TPDashboardModel{
         $TPpayments = array();
         if ( false === ( $TPpayments = get_transient($cacheKey) ) ) {
             $TPpayments = TPPlugin::$TPRequestApi->get_payments();
+            if( !$TPpayments)
+                return false;
             $TPpayments = array_reverse($TPpayments["payments"]);
             set_transient( $cacheKey, $TPpayments, DAY_IN_SECONDS);
         }

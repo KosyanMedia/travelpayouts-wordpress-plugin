@@ -36,7 +36,7 @@
             </ul>
         </nav>
         <div class="TP-SettingContent">
-            <form action="options.php" class="formSettings" method="POST">
+            <form action="options.php" class="formSettings TPFormNotReload" method="POST">
                 <?php settings_fields('TPSettings'); ?>
                 <div class="TPmainContent TP-SettingContent">
                     <div id="tabs-account">
