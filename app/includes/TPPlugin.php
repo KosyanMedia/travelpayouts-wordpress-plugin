@@ -18,6 +18,7 @@ class TPPlugin extends KPDPlugin implements KPDPluginInterface{
     {
         // TODO: Implement deactivation() method.
         delete_option( KPDPlUGIN_OPTION_NAME);
+        self::deleteCacheAll();
     }
 
     static public function uninstall()

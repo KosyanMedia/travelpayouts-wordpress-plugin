@@ -32,6 +32,26 @@ class TPLoader extends KPDLoader{
         // TODO: Implement site() method.
         //Shortcodes
         new TPSearchFormShortcodeController();
+        new TPCheapestFlightsShortcodeController();
+        new TPDirectFlightsRouteShortcodeController();
+        new TPDirectFlightsShortcodeController();
+        new TPPopularDestinationsAirlinesShortcodeController();
+        new TPPriceCalendarMonthShortcodeController();
+        new TPPriceCalendarWeekShortcodeController();
+        new TPCheapestTicketsEachMonthShortcodeController();
+        new TPCheapestTicketEachDayMonthShortcodeController();
+        new TPPopularRoutesFromCityShortcodeController();
+        new TPOurSiteSearchShortcodeController();
+        new TPFromOurCityFlyShortcodeController();
+        new TPInOurCityFlyShortcodeController();
+        //Widgets
+        new TPMapWidgetController();
+        new TPHotelMapWidgetController();
+        new TPCalendarWidgetController();
+        new TPSubscriptionsWidgetController();
+        new TPHotelWidgetController();
+        new TPPopularRoutesWidgetController();
+
     }
 
     protected function all()

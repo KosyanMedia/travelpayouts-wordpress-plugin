@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-07-30 14:26+0300\n"
+"POT-Creation-Date: 2015-08-13 13:42+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -23,192 +23,507 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: views/TPTravelpayoutsView.php:8
-msgid "Go to "
-msgstr "Перейти на"
+#: app/includes/TPLoaderScripts.php:169
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:46
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:110
+#: app/includes/models/admin/menu/TPFieldWidgets.php:171
+#: app/includes/models/admin/menu/TPFieldWidgets.php:305
+#: app/includes/models/admin/menu/TPFieldSettings.php:344
+msgid "Destination"
+msgstr "Куда"
 
-#: views/TPTravelpayoutsView.php:17
-msgid "Your income"
-msgstr "Ваш доход"
+#: app/includes/TPLoaderScripts.php:170
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:40
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
+#: app/includes/models/admin/menu/TPFieldWidgets.php:162
+#: app/includes/models/admin/menu/TPFieldWidgets.php:296
+#: app/includes/models/admin/menu/TPFieldSettings.php:321
+msgid "Origin"
+msgstr "Откуда"
 
-#: views/TPTravelpayoutsView.php:22
-msgid "today"
-msgstr "за сегодня"
+#: app/includes/TPLoaderScripts.php:171
+msgid "Location"
+msgstr "Местоположение"
 
-#: views/TPTravelpayoutsView.php:27
-msgid "yesterday"
-msgstr "за вчера"
+#: app/includes/TPLoaderScripts.php:183
+msgid "No payments!"
+msgstr "Нет выплат!"
 
-#: views/TPTravelpayoutsView.php:32
-msgid "this month"
-msgstr "за этот месяц"
+#: app/includes/TPLoaderScripts.php:184
+msgid "Grand total this month"
+msgstr "Общий итог за месяц"
 
-#: views/TPTravelpayoutsView.php:37
-msgid "for the last month"
-msgstr "за прошлый месяц"
+#: app/includes/TPLoaderScripts.php:187
+msgid "Create"
+msgstr "Создать"
 
-#: views/TPTravelpayoutsView.php:42
-msgid "unpaid earnings"
-msgstr "невыплаченные доходы"
+#: app/includes/TPLoaderScripts.php:188
+msgid "Cancel"
+msgstr "Отмена"
 
-#: views/TPTravelpayoutsView.php:52
-msgid "Today"
-msgstr "Сегодня"
-
-#: views/TPTravelpayoutsView.php:53
-msgid "Yesterday"
-msgstr "Вчера"
-
-#: views/TPTravelpayoutsView.php:54
-msgid "This month"
-msgstr "Этот месяц"
-
-#: views/TPTravelpayoutsView.php:55
-msgid "Last month"
-msgstr "Прошлый месяц"
-
-#: views/TPTravelpayoutsView.php:65
-msgid "Data updated at "
-msgstr "Данные обновлены в "
-
-#: views/TPTravelpayoutsView.php:67
-msgid " by local time."
-msgstr " по местному времени."
-
-#: views/TPTravelpayoutsView.php:69
-msgid "A detailed report on payments can be found in the section "
-msgstr "Подробный отчет о выплатах можно посмотреть в разделе "
-
-#: views/TPTravelpayoutsView.php:70
-msgid "Statistics"
-msgstr "Статистика"
-
-#: views/TPTravelpayoutsView.php:74
-msgid "News from Travelpayouts"
-msgstr "Новости Travelpayouts"
-
-#: views/TPTravelpayoutsView.php:76
-msgid "All news"
-msgstr "Все новости"
-
-#: views/TPSettingsView.php:13
-msgid "Enter the following information from your account on the site"
-msgstr "Введите ниже данные из вашего кабинета на сайте"
-
-#: views/TPSettingsView.php:17
-msgid ""
-"If you do not have an account in Travelpayouts - you first need to register. "
-"Marker and the token can be seen here - "
+#: app/includes/TPRequestApi.php:426
+msgid "Переменная $origin не задана или задана не верно."
 msgstr ""
-" Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо "
-"зарегистрироваться.  Маркер и токен можно посмотреть здесь -"
 
-#: views/TPSettingsView.php:21
-msgid " White Label - here"
-msgstr "White Label - тут"
+#: app/includes/TPRequestApi.php:427
+msgid "Переменная $destination не задана или задана не верно."
+msgstr ""
 
-#: views/TPSettingsView.php:31 views/TPSettingsView.php:55
-msgid "Account"
-msgstr "Аккаунт"
+#: app/includes/TPRequestApi.php:428
+msgid ""
+"Переменная $currency не задана или задана не верно. Допустимые значения:\n"
+"                                        \"RUB\", \"USD\", \"EUR\"."
+msgstr ""
 
-#: views/TPSettingsView.php:36 views/TPSettingsView.php:65
-#: includes/control_panel/TPControlPanel.php:52
-msgid "Settings"
-msgstr "Настройки"
+#: app/includes/TPRequestApi.php:430
+msgid "Переменная $departure_at не задана или задана не верно."
+msgstr ""
 
-#: views/TPSettingsView.php:41 views/TPSettingsView.php:75
-msgid "Localization"
-msgstr "Локализация"
+#: app/includes/TPRequestApi.php:431
+msgid ""
+"Переменная $calendar_type не задана или задана не верно.\n"
+"                                        Допустимые значения: \"departure_date"
+"\", \"return_date\"."
+msgstr ""
 
-#: views/TPSettingsView.php:89 views/TPWidgetView.php:20
-#: views/TPWidgetView.php:34 views/TPWidgetView.php:48
-#: views/TPWidgetView.php:61 views/TPWidgetView.php:74
-#: views/TPWidgetView.php:87 views/TPTicketsView.php:47
-#: views/TPTicketsView.php:60 views/TPTicketsView.php:73
-#: views/TPTicketsView.php:86 views/TPTicketsView.php:99
-#: views/TPTicketsView.php:112 views/TPTicketsView.php:125
-#: views/TPTicketsView.php:139 views/TPTicketsView.php:153
-#: views/TPTicketsView.php:179 views/TPTicketsView.php:192
-#: views/TPTicketsView.php:205 views/TPTicketsView.php:224
+#: app/includes/TPRequestApi.php:433
+msgid "Переменная $return_at не задана или задана не верно."
+msgstr ""
+
+#: app/includes/TPRequestApi.php:434
+msgid "Переменная $airline не задана или задана не верно."
+msgstr ""
+
+#: app/includes/TPRequestApi.php:438
+msgid "Произошла неизвестная ошибка."
+msgstr ""
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
+msgid "Constructor search form"
+msgstr "Конструктор поисковых форм"
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:6
+msgid "Select search form"
+msgstr "Выберите поисковую форму"
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:19
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:30
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:30
+msgid "City of departure default"
+msgstr "Город вылета по-умолчанию"
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:35
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:34
+msgid "City Arrival default"
+msgstr "Город прилета по-умолчанию"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:1
+msgid "Constructor tables"
+msgstr "Конструктор таблиц"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:11
+msgid "Select the table"
+msgstr "Выберите таблицу"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:12
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:7
+msgid "Flight Prices for a Month from origin to destination, One Way"
+msgstr "Цены на месяц по направлению, в одну сторону"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:13
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:20
+msgid "Flights from Origin to Destination for the Next Few Days"
+msgstr "Билеты по направлению на ближайшие дни"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:15
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:33
+msgid "The Cheapest Round-trip Tickets from origin to destination"
+msgstr "Самые дешевые билеты по направлению"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:16
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:46
+msgid "The Cheapest Flights for this Month from origin to destination"
+msgstr "Самые дешевые билеты по направлению в этом месяце"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:17
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:59
+msgid "The Cheapest Flights from origin to destination for the Year Ahead"
+msgstr "Цены на билеты по месяцам"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:18
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:72
+msgid "Direct Flights from origin to destination"
+msgstr "Билеты без пересадок по направлению"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:19
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:85
+msgid "Direct Flights from origin"
+msgstr "Билеты без пересадок ИЗ"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:21
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:99
+msgid "Popular Destinations from origin"
+msgstr "Популярные направления из города"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:23
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:113
+msgid "Airline's popular flights"
+msgstr "Популярные направления авиакомпании"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:25
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:126
+msgid "Flights That Have Been Found on Our Website"
+msgstr "На нашем сайте искали"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:26
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:139
+msgid "Cheap Flights from origin"
+msgstr "Дешевые перелеты из города"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:27
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:152
+msgid "Cheap Flights to destination"
+msgstr "Дешевые перелеты в город"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:34
+msgid "Alternate title"
+msgstr "Альтернативный заголовок"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:64
+msgid "Airline"
+msgstr "Авиакомпания"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:69
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:418
+msgid "Limit"
+msgstr "Лимит"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:77
+msgid "Economy"
+msgstr "Эконом"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:78
+msgid "Business"
+msgstr "Бизнес"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:79
+msgid "First"
+msgstr "Первый"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:1
+msgid "Constructor widgets"
+msgstr "Конструктор виджетов"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:24
+msgid "Select widget"
+msgstr "Выберите виджет"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:25
+#: app/includes/views/admin/menu/TPWidgets.view.php:10
+msgid "Widget map"
+msgstr "Виджет карты"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:26
+msgid "Hotel buildings map"
+msgstr "Отельная карта"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:27
+msgid "Widget calendar"
+msgstr "Виджет календаря"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:29
+msgid "Widget subscriptions"
+msgstr "Виджет подписок "
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:31
+msgid "Widget hotel"
+msgstr "Виджет отеля"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:32
+msgid "Widget popular destinations"
+msgstr "Виджет популярных направлений"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
+msgid "Hotel"
+msgstr "Отель"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
+#: app/includes/models/admin/menu/TPFieldWidgets.php:35
+#: app/includes/models/admin/menu/TPFieldWidgets.php:128
+msgid "Size"
+msgstr "Размер"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:65
+#: app/includes/models/admin/menu/TPFieldWidgets.php:27
+#: app/includes/models/admin/menu/TPFieldWidgets.php:272
+msgid "Direct Flights Only"
+msgstr "Только прямые рейсы"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
+#: app/includes/models/admin/menu/TPFieldWidgets.php:275
+msgid "One way"
+msgstr "В одну сторону"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:81
+#: app/includes/models/admin/menu/TPFieldWidgets.php:211
+#: app/includes/models/admin/menu/TPFieldWidgets.php:327
+#: app/includes/models/admin/menu/TPFieldWidgets.php:368
+msgid "Responsive"
+msgstr "Резиновая"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:85
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:92
+#: app/includes/models/admin/menu/TPFieldWidgets.php:200
+#: app/includes/models/admin/menu/TPFieldWidgets.php:331
+#: app/includes/models/admin/menu/TPFieldWidgets.php:357
+#: app/includes/models/admin/menu/TPFieldWidgets.php:389
+msgid "Width"
+msgstr "Ширина"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:100
+msgid "Count"
+msgstr "Количество"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:2
+#: app/includes/views/admin/menu/TPStatisticView.php:154
+#: app/includes/views/admin/menu/TPDashboardView.php:176
+#: app/includes/views/admin/menu/TPDashboardView.php:280
+msgid "Flights"
+msgstr "Авиабилеты"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:9
+msgid "Tables' content"
+msgstr "Содержание таблиц"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:15
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:32
+msgid "Layout"
+msgstr "Внешний вид таблиц"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:36
+#: app/includes/views/admin/menu/TPWidgets.view.php:17
+#: app/includes/views/admin/menu/TPWidgets.view.php:31
+#: app/includes/views/admin/menu/TPWidgets.view.php:45
+#: app/includes/views/admin/menu/TPWidgets.view.php:58
+#: app/includes/views/admin/menu/TPWidgets.view.php:71
+#: app/includes/views/admin/menu/TPWidgets.view.php:84
+#: app/includes/views/admin/menu/TPSettings.view.php:69
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:53
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:66
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:79
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:92
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:106
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:120
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:133
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:146
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:159
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: views/TPStatsView.php:9 includes/control_panel/TPControlPanel.php:49
-#: includes/control_panel/TPControlPanel.php:120
-#: includes/control_panel/TPControlPanel.php:121
-msgid "Statistic"
+#: app/includes/views/admin/menu/TPStatisticView.php:28
+#: app/includes/views/admin/menu/TPStatisticView.php:191
+msgid "Date"
+msgstr "Дата"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:29
+#: app/includes/views/admin/menu/TPStatisticView.php:151
+msgid "Type"
+msgstr "Тип"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:30
+#: app/includes/views/admin/menu/TPStatisticView.php:159
+#: app/includes/models/admin/menu/TPFieldSettings.php:28
+msgid "Marker"
+msgstr "Маркер"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:31
+msgid "Visitors"
+msgstr "Посетители"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:32
+#: app/includes/views/admin/menu/TPDashboardView.php:154
+#: app/includes/views/admin/menu/TPDashboardView.php:258
+msgid "Search"
+msgstr "Поиски"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:33
+#: app/includes/views/admin/menu/TPDashboardView.php:155
+#: app/includes/views/admin/menu/TPDashboardView.php:259
+msgid "Clicks"
+msgstr "Клики"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:34
+#: app/includes/views/admin/menu/TPDashboardView.php:157
+#: app/includes/views/admin/menu/TPDashboardView.php:261
+msgid "Income clicks"
+msgstr "Доход c кликов"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:35
+msgid "Booking"
+msgstr "Брон."
+
+#: app/includes/views/admin/menu/TPStatisticView.php:36
+#: app/includes/views/admin/menu/TPDashboardView.php:159
+#: app/includes/views/admin/menu/TPDashboardView.php:263
+msgid "Paid booking"
+msgstr "Опл. брон."
+
+#: app/includes/views/admin/menu/TPStatisticView.php:37
+#: app/includes/views/admin/menu/TPDashboardView.php:160
+#: app/includes/views/admin/menu/TPDashboardView.php:264
+msgid "Income booking"
+msgstr "Доход c брон."
+
+#: app/includes/views/admin/menu/TPStatisticView.php:38
+#: app/includes/views/admin/menu/TPDashboardView.php:161
+#: app/includes/views/admin/menu/TPDashboardView.php:265
+msgid "Possible. income"
+msgstr "Возмож. доход"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:108
+#: app/includes/views/admin/menu/TPStatisticView.php:148
+#: app/includes/views/admin/menu/TPDashboardView.php:202
+#: app/includes/views/admin/menu/TPDashboardView.php:306
+msgid "Total"
+msgstr "Итого"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:153
+#: app/includes/views/admin/menu/TPStatisticView.php:161
+#: app/includes/views/admin/menu/TPSearchForms.view.php:28
+msgid "All"
+msgstr "Все"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:155
+#: app/includes/views/admin/menu/TPDashboardView.php:179
+#: app/includes/views/admin/menu/TPDashboardView.php:283
+msgid "Hotels"
+msgstr "Отели"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:192
+msgid "Sum"
+msgstr "Сумма"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:193
+msgid "Status"
+msgstr "Статус"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:194
+msgid "Comment"
+msgstr "Комментарий"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:2
+msgid "Widgets"
+msgstr "Виджеты"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:24
+msgid "Hotels map"
+msgstr "Отельная карта"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:38
+msgid "Calendar"
+msgstr "Календарь"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:51
+msgid "Subscriptions"
+msgstr "Виджет подписок"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:64
+msgid "Hotel widget"
+msgstr "Виджет отеля"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:77
+msgid "Widget popular routes"
+msgstr "Виджет популярных направлений "
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:9
+msgid "Go to "
+msgstr "Перейти на"
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:21
+msgid "Today"
+msgstr "Сегодня"
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:22
+msgid "Yesterday"
+msgstr "Вчера"
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:23
+msgid "This month"
+msgstr "Этот месяц"
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:24
+msgid "Last month"
+msgstr "Прошлый месяц"
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:34
+msgid "Data updated at "
+msgstr "Данные обновлены в "
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:36
+msgid " by local time."
+msgstr " по местному времени."
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:38
+msgid "A detailed report on payments can be found in the section "
+msgstr "Подробный отчет о выплатах можно посмотреть в разделе "
+
+#: app/includes/views/admin/menu/TPDashboard.view.php:39
+msgid "Statistics"
 msgstr "Статистика"
 
-#: views/TPStatsView.php:15 views/TPStatsView.php:31
-msgid "Sales Report"
-msgstr "Отчет по доходам"
+#: app/includes/views/admin/menu/TPDashboard.view.php:43
+msgid "News from Travelpayouts"
+msgstr "Новости Travelpayouts"
 
-#: views/TPStatsView.php:21 views/TPStatsView.php:80 views/TPStatsView.php:87
-msgid "Balance and payments"
-msgstr "Баланс и выплаты"
+#: app/includes/views/admin/menu/TPDashboard.view.php:45
+msgid "All news"
+msgstr "Все новости"
 
-#: views/TPStatsView.php:33
-msgid "Show report for your account -"
-msgstr "Показан отчет по вашему аккаунту за -"
-
-#: views/TPStatsView.php:39
-msgid "Select other month"
-msgstr "Выбрать другой месяц"
-
-#: views/TPStatsView.php:66
-msgid "show"
-msgstr "показать"
-
-#: views/TPStatsView.php:71
-msgid "Report on income"
-msgstr "Отчет по доходам"
-
-#: views/TPStatsView.php:72 views/TPStatsView.php:88
-msgid "download report in table"
-msgstr "скачать отчет в таблице"
-
-#: views/TPStatsView.php:81
-msgid "Your balance"
-msgstr "Ваш баланс"
-
-#: views/TPEditSearchShortcodesView.php:3
-#: views/TPAddSearchShortcodesView.php:3 views/TPSearchShortcodesView.php:3
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:3
+#: app/includes/views/admin/menu/TPSearchForms.view.php:3
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:3
 msgid "Search forms"
 msgstr "Поисковые формы"
 
-#: views/TPEditSearchShortcodesView.php:6
-#: views/TPAddSearchShortcodesView.php:6
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:6
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:6
 msgid "Adding shortcode"
 msgstr "Добавление шорткода"
 
-#: views/TPEditSearchShortcodesView.php:12
-#: views/TPAddSearchShortcodesView.php:12 views/TPSearchShortcodesView.php:40
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:12
+#: app/includes/views/admin/menu/TPSearchForms.view.php:40
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:12
 msgid "Title "
 msgstr "Название"
 
-#: views/TPEditSearchShortcodesView.php:16
-#: views/TPAddSearchShortcodesView.php:16
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:16
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:16
 msgid "Type shortcode"
 msgstr "Тип шорткода"
 
-#: views/TPEditSearchShortcodesView.php:18
-#: views/TPAddSearchShortcodesView.php:18
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:18
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:18
 msgctxt "select_search_form"
 msgid "Search Form"
 msgstr "Поисковая форма"
 
-#: views/TPEditSearchShortcodesView.php:19
-#: views/TPAddSearchShortcodesView.php:19
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:19
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:19
 msgid "Other"
 msgstr "Другой"
 
-#: views/TPEditSearchShortcodesView.php:24
-#: views/TPAddSearchShortcodesView.php:24
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:24
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:24
 msgid "Code form TravelPayouts"
 msgstr "Код формы TravelPayouts"
 
-#: views/TPEditSearchShortcodesView.php:25
-#: views/TPAddSearchShortcodesView.php:25
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:25
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:25
 msgid ""
 "Make sure you have removed the tick \"Compact code to insert\" and \"Iframe "
 "code to insert\""
@@ -216,25 +531,14 @@ msgstr ""
 "Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe "
 "код для вставки\""
 
-#: views/TPEditSearchShortcodesView.php:30
-#: views/TPAddSearchShortcodesView.php:30
-#: includes/control_panel/TPControlPanel.php:451
-msgid "City of departure default"
-msgstr "Город вылета по-умолчанию"
-
-#: views/TPEditSearchShortcodesView.php:35
-#: views/TPAddSearchShortcodesView.php:34
-#: includes/control_panel/TPControlPanel.php:458
-msgid "City Arrival default"
-msgstr "Город прилета по-умолчанию"
-
-#: views/TPEditSearchShortcodesView.php:40
-#: views/TPAddSearchShortcodesView.php:38 views/TPSearchShortcodesView.php:42
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:40
+#: app/includes/views/admin/menu/TPSearchForms.view.php:42
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:38
 msgid "Shortcode"
 msgstr "Шорткод"
 
-#: views/TPEditSearchShortcodesView.php:46
-#: views/TPAddSearchShortcodesView.php:44
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:46
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:44
 msgid ""
 "Shortcode generated automatically when you save and available for insertion "
 "into the posts"
@@ -242,45 +546,17 @@ msgstr ""
 "Шорткод генерируется автоматически при сохранении и доступен для вставки в "
 "записях"
 
-#: views/TPEditSearchShortcodesView.php:51
-#: views/TPAddSearchShortcodesView.php:49
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:51
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:49
 msgid "cancel"
 msgstr "отменить"
 
-#: views/TPEditSearchShortcodesView.php:55
-#: views/TPAddSearchShortcodesView.php:52
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:55
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:52
 msgid "save changes"
 msgstr "сохранить изменения"
 
-#: views/TPWidgetView.php:5
-msgid "Widgets"
-msgstr "Виджеты"
-
-#: views/TPWidgetView.php:13 includes/control_panel/TPControlPanel.php:312
-msgid "Widget map"
-msgstr "Виджет карты"
-
-#: views/TPWidgetView.php:27
-msgid "Hotels map"
-msgstr "Отельная карта"
-
-#: views/TPWidgetView.php:41
-msgid "Calendar"
-msgstr "Календарь"
-
-#: views/TPWidgetView.php:54
-msgid "Subscriptions"
-msgstr "Виджет подписок"
-
-#: views/TPWidgetView.php:67
-msgid "Hotel widget"
-msgstr "Виджет отеля"
-
-#: views/TPWidgetView.php:80
-msgid "Widget popular routes"
-msgstr "Виджет популярных направлений "
-
-#: views/TPSearchShortcodesView.php:7
+#: app/includes/views/admin/menu/TPSearchForms.view.php:7
 msgid ""
 "In this section you can add shortcodes for search forms, set up in the admin "
 "account Travelpayouts"
@@ -288,772 +564,537 @@ msgstr ""
 "В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных "
 "в админке аккаунта Travelpayouts"
 
-#: views/TPSearchShortcodesView.php:15
+#: app/includes/views/admin/menu/TPSearchForms.view.php:15
 msgid "Shortcodes for forms"
 msgstr "Шорткоды для форм"
 
-#: views/TPSearchShortcodesView.php:20
+#: app/includes/views/admin/menu/TPSearchForms.view.php:20
 msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
-#: views/TPSearchShortcodesView.php:24
+#: app/includes/views/admin/menu/TPSearchForms.view.php:24
 msgid "Remove checked"
 msgstr "Удалить отмеченные"
 
-#: views/TPSearchShortcodesView.php:28 includes/TPReturnOutput.php:991
-#: includes/TPReturnOutput.php:999
-msgid "All"
-msgstr "Все"
-
-#: views/TPSearchShortcodesView.php:41
+#: app/includes/views/admin/menu/TPSearchForms.view.php:41
 msgid "Date added"
 msgstr "Дата добавления"
 
-#: views/TPSearchShortcodesView.php:57
+#: app/includes/views/admin/menu/TPSearchForms.view.php:57
 msgid "Edit"
 msgstr "Редактировать "
 
-#: views/TPTicketsView.php:11 includes/TPReturnOutput.php:992
-#: includes/control_panel/TPDashboard.php:101
-#: includes/control_panel/TPDashboard.php:205
-msgid "Flights"
-msgstr "Авиабилеты"
+#: app/includes/views/admin/menu/TPSettings.view.php:5
+msgid "Enter the following information from your account on the site"
+msgstr "Введите ниже данные из вашего кабинета на сайте"
 
-#: views/TPTicketsView.php:18
-msgid "Tables' content"
-msgstr "Содержание таблиц"
-
-#: views/TPTicketsView.php:24 includes/TPFields.php:313
-msgid "Layout"
-msgstr "Внешний вид таблиц"
-
-#: views/TPTicketsView.php:40 includes/control_panel/TPControlPanel.php:192
-msgid "Flight Prices for a Month from origin to destination, One Way"
-msgstr "Цены на месяц по направлению, в одну сторону"
-
-#: views/TPTicketsView.php:53 includes/control_panel/TPControlPanel.php:193
-msgid "Flights from Origin to Destination for the Next Few Days"
-msgstr "Билеты по направлению на ближайшие дни"
-
-#: views/TPTicketsView.php:66 includes/control_panel/TPControlPanel.php:195
-msgid "The Cheapest Round-trip Tickets from origin to destination"
-msgstr "Самые дешевые билеты по направлению"
-
-#: views/TPTicketsView.php:79 includes/control_panel/TPControlPanel.php:196
-msgid "The Cheapest Flights for this Month from origin to destination"
-msgstr "Самые дешевые билеты по направлению в этом месяце"
-
-#: views/TPTicketsView.php:92 includes/control_panel/TPControlPanel.php:197
-msgid "The Cheapest Flights from origin to destination for the Year Ahead"
-msgstr "Цены на билеты по месяцам"
-
-#: views/TPTicketsView.php:105 includes/control_panel/TPControlPanel.php:198
-msgid "Direct Flights from origin to destination"
-msgstr "Билеты без пересадок по направлению"
-
-#: views/TPTicketsView.php:118 includes/control_panel/TPControlPanel.php:199
-msgid "Direct Flights from origin"
-msgstr "Билеты без пересадок ИЗ"
-
-#: views/TPTicketsView.php:132 includes/control_panel/TPControlPanel.php:201
-msgid "Popular Destinations from origin"
-msgstr "Популярные направления из города"
-
-#: views/TPTicketsView.php:146 includes/control_panel/TPControlPanel.php:203
-msgid "Airline's popular flights"
-msgstr "Популярные направления авиакомпании"
-
-#: views/TPTicketsView.php:172 includes/control_panel/TPControlPanel.php:205
-msgid "Flights That Have Been Found on Our Website"
-msgstr "На нашем сайте искали"
-
-#: views/TPTicketsView.php:185 includes/control_panel/TPControlPanel.php:206
-msgid "Cheap Flights from origin"
-msgstr "Дешевые перелеты из города"
-
-#: views/TPTicketsView.php:198 includes/control_panel/TPControlPanel.php:207
-msgid "Cheap Flights to destination"
-msgstr "Дешевые перелеты в город"
-
-#: includes/TPAdminNotice.php:20
-msgid "Плагин "
-msgstr ""
-
-#: includes/TPAdminNotice.php:22
-#, php-format
+#: app/includes/views/admin/menu/TPSettings.view.php:9
 msgid ""
-"Перейдите на <a href=\"%s\">страницу</a> плагина и отредактируйте настройки."
+"If you do not have an account in Travelpayouts - you first need to register. "
+"Marker and the token can be seen here - "
 msgstr ""
+" Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо "
+"зарегистрироваться.  Маркер и токен можно посмотреть здесь -"
 
-#: includes/TPWidget.php:29
-msgid "Title:"
-msgstr "Заголовок:"
+#: app/includes/views/admin/menu/TPSettings.view.php:13
+msgid " White Label - here"
+msgstr "White Label - тут"
 
-#: includes/TPWidget.php:36
-msgid "Виджет:"
-msgstr ""
+#: app/includes/views/admin/menu/TPSettings.view.php:23
+#: app/includes/views/admin/menu/TPSettings.view.php:44
+msgid "Account"
+msgstr "Аккаунт"
 
-#: includes/TPWidget.php:38
-msgid "Выберете виджет"
-msgstr ""
+#: app/includes/views/admin/menu/TPSettings.view.php:28
+#: app/includes/views/admin/menu/TPSettings.view.php:52
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:42
+msgid "Settings"
+msgstr "Настройки"
 
-#: includes/TPWidget.php:39
-msgid "Календарь цен на месяц по маршруту"
-msgstr ""
+#: app/includes/views/admin/menu/TPSettings.view.php:33
+#: app/includes/views/admin/menu/TPSettings.view.php:60
+msgid "Localization"
+msgstr "Локализация"
 
-#: includes/TPWidget.php:40
-msgid "Спецпредложения авиакомпаний"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:3
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:36
+msgid "Statistic"
+msgstr "Статистика"
 
-#: includes/TPWidget.php:41
-msgid "Самый дешевый авиабилет в каждом месяце"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:9
+#: app/includes/views/admin/menu/TPStatistic.view.php:22
+msgid "Sales Report"
+msgstr "Отчет по доходам"
 
-#: includes/TPWidget.php:42
-msgid "Из нашего города летят"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:15
+#: app/includes/views/admin/menu/TPStatistic.view.php:61
+#: app/includes/views/admin/menu/TPStatistic.view.php:67
+msgid "Balance and payments"
+msgstr "Баланс и выплаты"
 
-#: includes/TPWidget.php:43
-msgid "В наш город летят"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:24
+msgid "Show report for your account -"
+msgstr "Показан отчет по вашему аккаунту за -"
 
-#: includes/TPWidget.php:48
-msgid "Откуда:"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:30
+msgid "Select other month"
+msgstr "Выбрать другой месяц"
 
-#: includes/TPWidget.php:54
-msgid "Куда:"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:49
+msgid "show"
+msgstr "показать"
 
-#: includes/TPWidget.php:60
-msgid "Лимит:"
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:54
+msgid "Report on income"
+msgstr "Отчет по доходам"
 
-#: includes/TPRequestApi.php:417
-msgid "Переменная $origin не задана или задана не верно."
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:55
+#: app/includes/views/admin/menu/TPStatistic.view.php:68
+msgid "download report in table"
+msgstr "скачать отчет в таблице"
 
-#: includes/TPRequestApi.php:418
-msgid "Переменная $destination не задана или задана не верно."
-msgstr ""
+#: app/includes/views/admin/menu/TPStatistic.view.php:62
+msgid "Your balance"
+msgstr "Ваш баланс"
 
-#: includes/TPRequestApi.php:419
-msgid ""
-"Переменная $currency не задана или задана не верно. Допустимые значения:\n"
-"                                        \"RUB\", \"USD\", \"EUR\"."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:20
+msgid "Your income"
+msgstr "Ваш доход"
 
-#: includes/TPRequestApi.php:421
-msgid "Переменная $departure_at не задана или задана не верно."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:25
+msgid "today"
+msgstr "за сегодня"
 
-#: includes/TPRequestApi.php:422
-msgid ""
-"Переменная $calendar_type не задана или задана не верно.\n"
-"                                        Допустимые значения: \"departure_date"
-"\", \"return_date\"."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:30
+msgid "yesterday"
+msgstr "за вчера"
 
-#: includes/TPRequestApi.php:424
-msgid "Переменная $return_at не задана или задана не верно."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:35
+msgid "this month"
+msgstr "за этот месяц"
 
-#: includes/TPRequestApi.php:425
-msgid "Переменная $airline не задана или задана не верно."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:40
+msgid "for the last month"
+msgstr "за прошлый месяц"
 
-#: includes/TPRequestApi.php:429
-msgid "Произошла неизвестная ошибка."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:45
+msgid "unpaid earnings"
+msgstr "невыплаченные доходы"
 
-#: includes/TPFields.php:21 includes/TPReturnOutput.php:852
-#: includes/TPReturnOutput.php:997
-msgid "Marker"
-msgstr "Маркер"
+#: app/includes/views/admin/menu/TPDashboardView.php:153
+#: app/includes/views/admin/menu/TPDashboardView.php:257
+msgid "Visit."
+msgstr "Посет."
 
-#: includes/TPFields.php:28 includes/TPFields.php:766
-#: includes/TPFields.php:789 includes/TPFields.php:804
-#: includes/TPFields.php:834 includes/TPFields.php:861
-#: includes/TPFields.php:888 includes/TPFields.php:915
-#: includes/TPFields.php:942 includes/TPFields.php:970
-#: includes/TPFields.php:997 includes/TPFields.php:1052
-#: includes/TPFields.php:1099 includes/TPFields.php:1145
-#: includes/TPFields.php:1237 includes/TPFields.php:1411
-#: includes/TPFields.php:1512 includes/TPFields.php:1538
+#: app/includes/views/admin/menu/TPDashboardView.php:158
+#: app/includes/views/admin/menu/TPDashboardView.php:262
+msgid "Bookings"
+msgstr "Брон."
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:15
+#: app/includes/models/admin/menu/TPFieldWidgets.php:59
+#: app/includes/models/admin/menu/TPFieldWidgets.php:152
+#: app/includes/models/admin/menu/TPFieldWidgets.php:286
+#: app/includes/models/admin/menu/TPFieldWidgets.php:347
+#: app/includes/models/admin/menu/TPFieldWidgets.php:379
+#: app/includes/models/admin/menu/TPFieldSettings.php:35
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:485
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:512
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:542
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:569
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:596
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:623
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:650
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:678
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:705
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:760
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:807
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:853
 msgid "Extra marker"
 msgstr "Дополнительный маркер"
 
-#: includes/TPFields.php:39
-msgid "Token"
-msgstr "Токен"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:30
+msgid "Hide Logo"
+msgstr "Скрыть логотип"
 
-#: includes/TPFields.php:46
-msgid "White Lable"
-msgstr "White Lable"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:71
+msgid "Draggable"
+msgstr "Возможность перетаскивать"
 
-#: includes/TPFields.php:61
-msgid "Something went worng, please reload page"
-msgstr "Сообщение об ошибке"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:75
+msgid "Disable zoom"
+msgstr "Отключить зуммирование"
 
-#: includes/TPFields.php:68
-msgid "After clicking on the link"
-msgstr "После перехода по ссылке"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:78
+msgid "Scroll wheel"
+msgstr "Увеличение при прокрутке"
 
-#: includes/TPFields.php:73
-msgid "Show completed forms"
-msgstr "Отображать заполненные формы"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:84
+msgid "Markers size"
+msgstr "Размер маркера"
 
-#: includes/TPFields.php:78
-msgid "Show search results"
-msgstr "Отображать результаты поиска"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:97
+msgid "Map styled"
+msgstr "Раскрасить карту"
 
-#: includes/TPFields.php:83
-msgid "Unit distances"
-msgstr "Единица измерения расстояния"
-
-#: includes/TPFields.php:86
-msgid "km"
-msgstr "км"
-
-#: includes/TPFields.php:89
-msgid "m"
-msgstr "м"
-
-#: includes/TPFields.php:94
-msgid "Size logo Airlines"
-msgstr "Размер лого Авиакомпании"
-
-#: includes/TPFields.php:118
-msgid "Redirect"
-msgstr "Редирект"
-
-#: includes/TPFields.php:123
-msgid "A link in a new window"
-msgstr "Переход по ссылке в новом окне"
-
-#: includes/TPFields.php:128
-msgid "Attribute for links nofollow"
-msgstr "Атрибут для ссылок nofollow"
-
-#: includes/TPFields.php:137
-msgid "Cache through"
-msgstr "Кэшировать через"
-
-#: includes/TPFields.php:154
-msgid "Day"
-msgstr "День"
-
-#: includes/TPFields.php:159
-msgid "Hour"
-msgstr "Час"
-
-#: includes/TPFields.php:165
-msgid "Scripts"
-msgstr "Скрипты"
-
-#: includes/TPFields.php:170
-msgid "Header"
-msgstr "Header"
-
-#: includes/TPFields.php:175
-msgid "Footer"
-msgstr "Footer"
-
-#: includes/TPFields.php:181
-msgid "Format date"
-msgstr "Формат даты"
-
-#: includes/TPFields.php:200
-msgid "Import settings"
-msgstr "Импорт настроек"
-
-#: includes/TPFields.php:204
-msgid "Browse"
-msgstr "Обзор"
-
-#: includes/TPFields.php:207
-msgid "Import"
-msgstr "Импорт"
-
-#: includes/TPFields.php:208
-msgid "The file is not selected"
-msgstr "Файл не выбран"
-
-#: includes/TPFields.php:211
-msgid "Export"
-msgstr "Экспорт"
-
-#: includes/TPFields.php:223
-msgid "Language tables"
-msgstr "Язык таблиц"
-
-#: includes/TPFields.php:226
-msgid "Russian"
-msgstr "Русский"
-
-#: includes/TPFields.php:229
-msgid "English"
-msgstr "Английский"
-
-#: includes/TPFields.php:234
-msgid "Currency"
-msgstr "Валюта"
-
-#: includes/TPFields.php:237
-msgid "Ruble"
-msgstr "Рубль"
-
-#: includes/TPFields.php:240
-msgid "US dollar"
-msgstr "доллар США"
-
-#: includes/TPFields.php:243
-msgid "Euro"
-msgstr "Евро"
-
-#: includes/TPFields.php:253
-msgid "Names cells"
-msgstr "Названия ячеек"
-
-#: includes/TPFields.php:315
-msgid "Reset to Default styles"
-msgstr "Стили по умолчанию"
-
-#: includes/TPFields.php:321
-msgid "Header style"
-msgstr "Стили заголовка"
-
-#: includes/TPFields.php:371 includes/TPFields.php:428
-#: includes/TPFields.php:464 includes/TPFields.php:477
-#: includes/TPFields.php:1315 includes/TPFields.php:1323
-#: includes/TPFields.php:1332 includes/TPFields.php:1485
+#: app/includes/models/admin/menu/TPFieldWidgets.php:104
+#: app/includes/models/admin/menu/TPFieldWidgets.php:112
+#: app/includes/models/admin/menu/TPFieldWidgets.php:121
+#: app/includes/models/admin/menu/TPFieldWidgets.php:320
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:90
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:147
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:183
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:196
 msgid "select color"
 msgstr "выбрать цвет"
 
-#: includes/TPFields.php:378
+#: app/includes/models/admin/menu/TPFieldWidgets.php:181
+msgid "Range, days"
+msgstr "Период, дни"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:221
+msgid "Year"
+msgstr "Год"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:224
+msgid "Current month"
+msgstr "Текущий месяц"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:262
+msgid "Period"
+msgstr "Период"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:400
+msgid "Count widgets"
+msgstr "Количество виджетов"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:46
+msgid "Token"
+msgstr "Токен"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:53
+msgid "White Lable"
+msgstr "White Lable"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:72
+msgid "Something went worng, please reload page"
+msgstr "Сообщение об ошибке"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:79
+msgid "After clicking on the link"
+msgstr "После перехода по ссылке"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:84
+msgid "Show completed forms"
+msgstr "Отображать заполненные формы"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:89
+msgid "Show search results"
+msgstr "Отображать результаты поиска"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:94
+msgid "Unit distances"
+msgstr "Единица измерения расстояния"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:97
+msgid "km"
+msgstr "км"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:100
+msgid "m"
+msgstr "м"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:105
+msgid "Size logo Airlines"
+msgstr "Размер лого Авиакомпании"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:129
+msgid "Redirect"
+msgstr "Редирект"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:134
+msgid "A link in a new window"
+msgstr "Переход по ссылке в новом окне"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:139
+msgid "Attribute for links nofollow"
+msgstr "Атрибут для ссылок nofollow"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:148
+msgid "Cache through"
+msgstr "Кэшировать через"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:165
+msgid "Day"
+msgstr "День"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:170
+msgid "Hour"
+msgstr "Час"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:176
+msgid "Scripts"
+msgstr "Скрипты"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:181
+msgid "Header"
+msgstr "Header"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:186
+msgid "Footer"
+msgstr "Footer"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:192
+msgid "Format date"
+msgstr "Формат даты"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:211
+msgid "Import settings"
+msgstr "Импорт настроек"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:215
+msgid "Browse"
+msgstr "Обзор"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:218
+msgid "Import"
+msgstr "Импорт"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:219
+msgid "The file is not selected"
+msgstr "Файл не выбран"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:222
+msgid "Export"
+msgstr "Экспорт"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:238
+msgid "Language tables"
+msgstr "Язык таблиц"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:241
+msgid "Russian"
+msgstr "Русский"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:244
+msgid "English"
+msgstr "Английский"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:249
+msgid "Currency"
+msgstr "Валюта"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:252
+msgid "Ruble"
+msgstr "Рубль"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:255
+msgid "US dollar"
+msgstr "доллар США"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:258
+msgid "Euro"
+msgstr "Евро"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:268
+msgid "Names cells"
+msgstr "Названия ячеек"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:327
+#: app/includes/models/admin/menu/TPFieldSettings.php:350
+msgid "Genitive"
+msgstr "Родительный"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:330
+#: app/includes/models/admin/menu/TPFieldSettings.php:353
+msgid "Dative"
+msgstr "Дательный"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:333
+#: app/includes/models/admin/menu/TPFieldSettings.php:356
+msgid "Accusative"
+msgstr "Винительный"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:336
+#: app/includes/models/admin/menu/TPFieldSettings.php:359
+msgid "Ablative"
+msgstr "Творительный"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:339
+#: app/includes/models/admin/menu/TPFieldSettings.php:362
+msgid "Prepositional"
+msgstr "Предложный"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:34
+msgid "Reset to Default styles"
+msgstr "Стили по умолчанию"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:40
+msgid "Header style"
+msgstr "Стили заголовка"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:97
 msgid "Content"
 msgstr "Шрифт в таблицах"
 
-#: includes/TPFields.php:435
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:154
 msgid "Borders"
 msgstr "Границы таблиц"
 
-#: includes/TPFields.php:439
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:158
 msgctxt "select_type_table"
 msgid "solid"
 msgstr "Сплошная"
 
-#: includes/TPFields.php:442
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:161
 msgctxt "select_type_table"
 msgid "dotted"
 msgstr "С точками"
 
-#: includes/TPFields.php:445
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:164
 msgctxt "select_type_table"
 msgid "dashed"
 msgstr "Пунктир"
 
-#: includes/TPFields.php:472
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:191
 msgid "Background"
 msgstr "Фон таблицы"
 
-#: includes/TPFields.php:493
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:212
 msgid "Title"
 msgstr "Заголовок"
 
-#: includes/TPFields.php:504
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:223
 msgid "Use variables of airline  for automatic substitution Airlines"
 msgstr ""
 "Используйте переменные airline для автоматической подстановки авиакомпании"
 
-#: includes/TPFields.php:507
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:226
 msgid ""
 "Use variables of origin, destination for automatic substitution of the city"
 msgstr ""
 "Используйте переменные origin, destination для автоматической подстановки "
 "города"
 
-#: includes/TPFields.php:521
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:240
 msgid "The title tag"
 msgstr "Тег заголовка"
 
-#: includes/TPFields.php:545
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:264
 msgid "Title button"
 msgstr "Текст кнопки"
 
-#: includes/TPFields.php:555
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:274
 msgid "You can use a variable price"
 msgstr "Можно использовать переменную price"
 
-#: includes/TPFields.php:583
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:302
 msgid "Order by price"
 msgstr "Сортировка по цене"
 
-#: includes/TPFields.php:590
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:309
 msgid "Ascending"
 msgstr "по возрастанию"
 
-#: includes/TPFields.php:595
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:314
 msgid "Descending"
 msgstr "по убыванию"
 
-#: includes/TPFields.php:600
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:319
 msgid "Do not sort"
 msgstr "не сортировать"
 
-#: includes/TPFields.php:649
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:368
 msgid "Columns table"
 msgstr "Колонки таблицы"
 
-#: includes/TPFields.php:652
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:371
 msgid "Not selected"
 msgstr "Не выбранные"
 
-#: includes/TPFields.php:659
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:378
 msgid "Selected"
 msgstr "Выбранные"
 
-#: includes/TPFields.php:676
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:395
 msgid "Number of lines per page"
 msgstr "Количество строк на странице"
 
-#: includes/TPFields.php:699 includes/control_panel/TPControlPanel.php:249
-msgid "Limit"
-msgstr "Лимит"
-
-#: includes/TPFields.php:722
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:441
 msgid "Departure date"
 msgstr "Дата отправления"
 
-#: includes/TPFields.php:738
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
 msgid "Return date"
 msgstr "Дата возвращения"
 
-#: includes/TPFields.php:1184 includes/TPFields.php:1362
-#: includes/TPFields.php:1461 includes/TPConnectionScriptAdmin.php:177
-#: includes/control_panel/TPControlPanel.php:220
-#: includes/control_panel/TPControlPanel.php:325
-msgid "Origin"
-msgstr "Откуда"
+#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
+msgid "Insert search form"
+msgstr "Вставить поисковую форму"
 
-#: includes/TPFields.php:1190 includes/TPFields.php:1213
-msgid "Genitive"
-msgstr "Родительный"
+#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:16
+msgid "Insert widget"
+msgstr "Вставить виджет"
 
-#: includes/TPFields.php:1193 includes/TPFields.php:1216
-msgid "Dative"
-msgstr "Дательный"
+#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
+msgid "Insert table"
+msgstr "Вставить таблицу"
 
-#: includes/TPFields.php:1196 includes/TPFields.php:1219
-msgid "Accusative"
-msgstr "Винительный"
-
-#: includes/TPFields.php:1199 includes/TPFields.php:1222
-msgid "Ablative"
-msgstr "Творительный"
-
-#: includes/TPFields.php:1202 includes/TPFields.php:1225
-msgid "Prepositional"
-msgstr "Предложный"
-
-#: includes/TPFields.php:1207 includes/TPFields.php:1371
-#: includes/TPFields.php:1470 includes/TPConnectionScriptAdmin.php:176
-#: includes/control_panel/TPControlPanel.php:226
-#: includes/control_panel/TPControlPanel.php:331
-#: includes/control_panel/TPControlPanel.php:395
-msgid "Destination"
-msgstr "Куда"
-
-#: includes/TPFields.php:1249 includes/TPFields.php:1449
-#: includes/control_panel/TPControlPanel.php:346
-msgid "Direct Flights Only"
-msgstr "Только прямые рейсы"
-
-#: includes/TPFields.php:1252
-msgid "Hide Logo"
-msgstr "Скрыть логотип"
-
-#: includes/TPFields.php:1257 includes/TPFields.php:1339
-#: includes/control_panel/TPControlPanel.php:336
-msgid "Size"
-msgstr "Размер"
-
-#: includes/TPFields.php:1282
-msgid "Draggable"
-msgstr "Возможность перетаскивать"
-
-#: includes/TPFields.php:1286
-msgid "Disable zoom"
-msgstr "Отключить зуммирование"
-
-#: includes/TPFields.php:1289
-msgid "Scroll wheel"
-msgstr "Увеличение при прокрутке"
-
-#: includes/TPFields.php:1295
-msgid "Markers size"
-msgstr "Размер маркера"
-
-#: includes/TPFields.php:1308
-msgid "Map styled"
-msgstr "Раскрасить карту"
-
-#: includes/TPFields.php:1381
-msgid "Range, days"
-msgstr "Период, дни"
-
-#: includes/TPFields.php:1400 includes/TPFields.php:1496
-#: includes/TPFields.php:1522 includes/TPFields.php:1548
-#: includes/control_panel/TPControlPanel.php:366
-#: includes/control_panel/TPControlPanel.php:379
-msgid "Width"
-msgstr "Ширина"
-
-#: includes/TPFields.php:1426
-msgid "Year"
-msgstr "Год"
-
-#: includes/TPFields.php:1429
-msgid "Current month"
-msgstr "Текущий месяц"
-
-#: includes/TPFields.php:1439
-msgid "Period"
-msgstr "Период"
-
-#: includes/TPFields.php:1452 includes/control_panel/TPControlPanel.php:354
-msgid "One way"
-msgstr "В одну сторону"
-
-#: includes/TPFields.php:1492 includes/control_panel/TPControlPanel.php:362
-msgid "Responsive"
-msgstr "Резиновая"
-
-#: includes/TPReturnOutput.php:850 includes/TPReturnOutput.php:1021
-msgid "Date"
-msgstr "Дата"
-
-#: includes/TPReturnOutput.php:851 includes/TPReturnOutput.php:989
-msgid "Type"
-msgstr "Тип"
-
-#: includes/TPReturnOutput.php:853
-msgid "Visitors"
-msgstr "Посетители"
-
-#: includes/TPReturnOutput.php:854 includes/control_panel/TPDashboard.php:79
-#: includes/control_panel/TPDashboard.php:183
-msgid "Search"
-msgstr "Поиски"
-
-#: includes/TPReturnOutput.php:855 includes/control_panel/TPDashboard.php:80
-#: includes/control_panel/TPDashboard.php:184
-msgid "Clicks"
-msgstr "Клики"
-
-#: includes/TPReturnOutput.php:856 includes/control_panel/TPDashboard.php:82
-#: includes/control_panel/TPDashboard.php:186
-msgid "Income clicks"
-msgstr "Доход c кликов"
-
-#: includes/TPReturnOutput.php:857
-msgid "Booking"
-msgstr "Брон."
-
-#: includes/TPReturnOutput.php:858 includes/control_panel/TPDashboard.php:84
-#: includes/control_panel/TPDashboard.php:188
-msgid "Paid booking"
-msgstr "Опл. брон."
-
-#: includes/TPReturnOutput.php:859 includes/control_panel/TPDashboard.php:85
-#: includes/control_panel/TPDashboard.php:189
-msgid "Income booking"
-msgstr "Доход c брон."
-
-#: includes/TPReturnOutput.php:860 includes/control_panel/TPDashboard.php:86
-#: includes/control_panel/TPDashboard.php:190
-msgid "Possible. income"
-msgstr "Возмож. доход"
-
-#: includes/TPReturnOutput.php:930 includes/TPReturnOutput.php:986
-#: includes/control_panel/TPDashboard.php:127
-#: includes/control_panel/TPDashboard.php:231
-msgid "Total"
-msgstr "Итого"
-
-#: includes/TPReturnOutput.php:993 includes/control_panel/TPDashboard.php:104
-#: includes/control_panel/TPDashboard.php:208
-msgid "Hotels"
-msgstr "Отели"
-
-#: includes/TPReturnOutput.php:1022
-msgid "Sum"
-msgstr "Сумма"
-
-#: includes/TPReturnOutput.php:1023
-msgid "Status"
-msgstr "Статус"
-
-#: includes/TPReturnOutput.php:1024
-msgid "Comment"
-msgstr "Комментарий"
-
-#: includes/TPConnectionScriptAdmin.php:178
-msgid "Location"
-msgstr "Местоположение"
-
-#: includes/TPConnectionScriptAdmin.php:190
-msgid "No payments!"
-msgstr "Нет выплат!"
-
-#: includes/TPConnectionScriptAdmin.php:191
-msgid "Grand total this month"
-msgstr "Общий итог за месяц"
-
-#: includes/TPConnectionScriptAdmin.php:194
-msgid "Create"
-msgstr "Создать"
-
-#: includes/TPConnectionScriptAdmin.php:195
-msgid "Cancel"
-msgstr "Отмена"
-
-#: includes/control_panel/TPDashboard.php:78
-#: includes/control_panel/TPDashboard.php:182
-msgid "Visit."
-msgstr "Посет."
-
-#: includes/control_panel/TPDashboard.php:83
-#: includes/control_panel/TPDashboard.php:187
-msgid "Bookings"
-msgstr "Брон."
-
-#: includes/control_panel/TPControlPanel.php:41
-msgid "Flight Tickets"
-msgstr "Авиабилеты"
-
-#: includes/control_panel/TPControlPanel.php:43
-#: includes/control_panel/TPControlPanel.php:107
-#: includes/control_panel/TPControlPanel.php:108
-msgctxt "add_menu_page page title"
-msgid "Widgets"
-msgstr "Виджеты"
-
-#: includes/control_panel/TPControlPanel.php:46
-msgid "Search Forms"
-msgstr "Поисковые формы"
-
-#: includes/control_panel/TPControlPanel.php:94
-msgctxt "add_menu_page page title"
-msgid "Travelpayouts"
-msgstr "Travelpayouts"
-
-#: includes/control_panel/TPControlPanel.php:95
-msgctxt "add_menu_page menu title"
-msgid "Travelpayouts"
-msgstr "Travelpayouts"
-
-#: includes/control_panel/TPControlPanel.php:101
-#: includes/control_panel/TPControlPanel.php:102
-msgctxt "add_menu_page page title"
-msgid "Flight Tickets"
-msgstr "Авиабилеты"
-
-#: includes/control_panel/TPControlPanel.php:113
-#: includes/control_panel/TPControlPanel.php:114
+#: app/includes/controllers/admin/menu/TPSearchFormsController.php:21
+#: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
 msgctxt "add_menu_page page title"
 msgid "Search Forms"
 msgstr "Поисковые формы"
 
-#: includes/control_panel/TPControlPanel.php:127
-#: includes/control_panel/TPControlPanel.php:128
+#: app/includes/controllers/admin/menu/TPSettingsController.php:18
+#: app/includes/controllers/admin/menu/TPSettingsController.php:19
 msgctxt "add_menu_page page title"
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/control_panel/TPControlPanel.php:161
-msgid "Insert table"
-msgstr "Вставить таблицу"
+#: app/includes/controllers/admin/menu/TPWidgetsController.php:19
+#: app/includes/controllers/admin/menu/TPWidgetsController.php:20
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:25
+msgctxt "add_menu_page page title"
+msgid "Widgets"
+msgstr "Виджеты"
 
-#: includes/control_panel/TPControlPanel.php:181
-msgid "Constructor tables"
-msgstr "Конструктор таблиц"
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:20
+msgid "Flight Tickets"
+msgstr "Авиабилеты"
 
-#: includes/control_panel/TPControlPanel.php:191
-msgid "Select the table"
-msgstr "Выберите таблицу"
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:30
+msgid "Search Forms"
+msgstr "Поисковые формы"
 
-#: includes/control_panel/TPControlPanel.php:214
-msgid "Alternate title"
-msgstr "Альтернативный заголовок"
+#: app/includes/controllers/admin/menu/TPDashboardController.php:17
+msgctxt "add_menu_page page title"
+msgid "Travelpayouts"
+msgstr "Travelpayouts"
 
-#: includes/control_panel/TPControlPanel.php:244
-msgid "Airline"
-msgstr "Авиакомпания"
+#: app/includes/controllers/admin/menu/TPDashboardController.php:18
+msgctxt "add_menu_page menu title"
+msgid "Travelpayouts"
+msgstr "Travelpayouts"
 
-#: includes/control_panel/TPControlPanel.php:257
-msgid "Economy"
-msgstr "Эконом"
+#: app/includes/controllers/admin/menu/TPFlightTicketsController.php:19
+#: app/includes/controllers/admin/menu/TPFlightTicketsController.php:20
+msgctxt "add_menu_page page title"
+msgid "Flight Tickets"
+msgstr "Авиабилеты"
 
-#: includes/control_panel/TPControlPanel.php:258
-msgid "Business"
-msgstr "Бизнес"
+#: app/includes/controllers/admin/menu/TPStatisticController.php:21
+#: app/includes/controllers/admin/menu/TPStatisticController.php:22
+msgctxt "add_menu_page page title"
+msgid "Statistic"
+msgstr "Статистика"
 
-#: includes/control_panel/TPControlPanel.php:259
-msgid "First"
-msgstr "Первый"
+#: core/controllers/KPDBaseController.php:14
+msgid "View "
+msgstr ""
 
-#: includes/control_panel/TPControlPanel.php:275
-msgid "Insert widget"
-msgstr "Вставить виджет"
-
-#: includes/control_panel/TPControlPanel.php:294
-msgid "Constructor widgets"
-msgstr "Конструктор виджетов"
-
-#: includes/control_panel/TPControlPanel.php:311
-msgid "Select widget"
-msgstr "Выберите виджет"
-
-#: includes/control_panel/TPControlPanel.php:313
-msgid "Hotel buildings map"
-msgstr "Отельная карта"
-
-#: includes/control_panel/TPControlPanel.php:314
-msgid "Widget calendar"
-msgstr "Виджет календаря"
-
-#: includes/control_panel/TPControlPanel.php:316
-msgid "Widget subscriptions"
-msgstr "Виджет подписок "
-
-#: includes/control_panel/TPControlPanel.php:318
-msgid "Widget hotel"
-msgstr "Виджет отеля"
-
-#: includes/control_panel/TPControlPanel.php:319
-msgid "Widget popular destinations"
-msgstr "Виджет популярных направлений"
-
-#: includes/control_panel/TPControlPanel.php:373
-msgid "Hotel"
-msgstr "Отель"
-
-#: includes/control_panel/TPControlPanel.php:387
-msgid "Count"
-msgstr "Количество"
-
-#: includes/control_panel/TPControlPanel.php:411
-msgid "Insert search form"
-msgstr "Вставить поисковую форму"
-
-#: includes/control_panel/TPControlPanel.php:433
-msgid "Constructor search form"
-msgstr "Конструктор поисковых форм"
-
-#: includes/control_panel/TPControlPanel.php:438
-msgid "Select search form"
-msgstr "Выберите поисковую форму"
+#~ msgid "Title:"
+#~ msgstr "Заголовок:"
 
 #~ msgid "Error message"
 #~ msgstr "Сообщение об ошибке"
