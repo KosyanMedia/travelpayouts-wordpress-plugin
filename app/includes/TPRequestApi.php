@@ -7,6 +7,7 @@
  */
 
 class TPRequestApi {
+    protected $status;
     protected $marker;
     protected $token;
     protected $api_url;
@@ -17,17 +18,21 @@ class TPRequestApi {
     private static $instance = null;
     private function __construct() {
         if( empty( TPPlugin::$options ) ) {
+            $this->status = false;
             //new TPAdminNotice("error", "Настройки не заданы.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "settings");
         }elseif( ! isset( TPPlugin::$options['account']['marker'] ) || empty( TPPlugin::$options['account']['marker'] )
             || ! is_string( TPPlugin::$options['account']['marker'] ) ) {
+            $this->status = false;
             //new TPAdminNotice("error", "Маркер не указан или указан не верно.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "marker");
         }elseif( ! isset( TPPlugin::$options['account']['token'] ) || empty( TPPlugin::$options['account']['token'] )
             || ! is_string( TPPlugin::$options['account']['token'] ) ){
+            $this->status = false;
             //new TPAdminNotice("error", "Токен не указан или указан не верно.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "token");
         }else{
+            $this->status = true;
             $this->marker = TPPlugin::$options['account']['marker'];
             $this->token = TPPlugin::$options['account']['token'];
             $this->api_url = rtrim('http://api.travelpayouts.com/v1', '/' );
@@ -46,6 +51,7 @@ class TPRequestApi {
      * Функция возвращает самые дешевые авиабилеты
      **/
     public function get_cheapest( $args = array() ) {
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -70,6 +76,7 @@ class TPRequestApi {
      * Функция возвращает билеты без пересадок
      **/
     public function get_direct( $args = array() ) {
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -95,6 +102,7 @@ class TPRequestApi {
      * Функция возвращает популярные направления авиакомпании
      **/
     public function get_popular( $args = array() ) {
+        if(!isset($this->status)) return false;
         $defaults = array( 'airline' => false, 'limit' => false);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $airline || empty( $airline ) ) {
@@ -111,6 +119,7 @@ class TPRequestApi {
      * Календарь цен на месяц по маршруту
      **/
     public function get_price_mounth_calendar($args = array()){
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
@@ -152,6 +161,7 @@ class TPRequestApi {
      **/
     public function get_price_week_calendar($args = array())
     {
+        if(!isset($this->status)) return false;
         $defaults = array('origin' => false, 'destination' => false, 'currency' => 'RUB',
             'depart_date' => date('Y-m-d'),
             'return_date' => date('Y-m-d'));
@@ -188,6 +198,7 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_cheap_flights_holidays($args = array()){
+        if(!isset($this->status)) return false;
         $token = '&token=' .$this->token;
         $request_string = "$this->api_url_2/prices/holidays-by-routes?{$token}";
         return $this->objectToArray($this->request($request_string));
@@ -198,6 +209,7 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_cheapest_tickets_each_month($args = array()){
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
@@ -227,6 +239,7 @@ class TPRequestApi {
      * Функция возвращает Самые дешевый билеты на каждый день месяца
      **/
     public function get_calendar( $args = array() ) {
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false,
             'calendar_type' => 'departure_date', 'currency' => 'RUB');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -263,6 +276,7 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_popular_routes_from_city( $args = array() ) {
+        if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'currency' => 'RUB');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -314,6 +328,7 @@ class TPRequestApi {
      *      Длительность пребывания в неделях или днях (для period_type=day). false.
      */
     public function get_latest($args = array()){
+        if(!isset($this->status)) return false;
         $defaults = array( 'currency' => 'RUB', 'origin' => false, 'destination' => false, 'beginning_of_period' => false,
             'period_type' => 'year', 'one_way' => false, 'page' => 1, 'limit' => 100, 'sorting' => 'price',
             'trip_class' => 0, 'trip_duration' => false);
@@ -337,10 +352,12 @@ class TPRequestApi {
     }
     /** **/
     public function get_balance($args = array()){
+        if(!isset($this->status)) return false;
         $request_string = "$this->api_url_2/statistics/balance";
         return $this->objectToArray($this->request_two($request_string));
     }
     public function get_detailed_sales($args = array()){
+        if(!isset($this->status)) return false;
         $defaults = array( 'date' => date("Y-m-d"));
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $request_string = "$this->api_url_2/statistics/detailed-sales?group_by=date_marker&month="
