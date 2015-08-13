@@ -172,7 +172,8 @@ class TPLoaderScripts extends KPDLoaderScripts{
         ?>
         <script type="text/javascript">
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
-                TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt;
+                TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
+                TPTableEmptyBalance, TPTableEmptySearchShortcode;
             TPDestinationTitle = '<?php _e('Destination', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', KPDPlUGIN_TEXTDOMAIN ); ?>';
@@ -187,7 +188,9 @@ class TPLoaderScripts extends KPDLoaderScripts{
             <?php
                 }
             ?>
-            TPTableEmpty = '<?php _e('No payments!', KPDPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptyReport = '<?php _e('No data, enter API token and marker', KPDPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptyBalance = '<?php _e('No payments!', KPDPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptySearchShortcode = '<?php _e('No search form.', KPDPlUGIN_TEXTDOMAIN); ?>';
             TPStatsTotalTrText = '<?php _e('Grand total this month', KPDPlUGIN_TEXTDOMAIN); ?>';
             wpLocale = '<?php echo get_locale(); ?>';
             ajaxurl = '<?php echo KPDPlUGIN_AJAX_URL; ?>';

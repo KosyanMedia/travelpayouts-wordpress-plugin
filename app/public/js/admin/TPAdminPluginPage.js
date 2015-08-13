@@ -301,11 +301,20 @@ jQuery(function($){
     });
     /** **/
     function TPStatsTableSort(){
-        var dataTable;
-        dataTable = doc.find('.sortable').dataTable( {
+        var dataTable, tableEmpty;
+        doc.find('.sortable').each(function(){
+            switch ($(this).attr('id')){
+                case "TPListReport":
+                    tableEmpty = TPTableEmptyReport;
+                    break;
+                case "TPListBalance":
+                    tableEmpty = TPTableEmptyBalance;
+                    break;
+            }
+            dataTable = $(this).dataTable( {
                 ordering: true,
                 "order": [[ 0, "asc" ]],
-                 paging: false,
+                paging: false,
                 //iDisplayLength : $(this).data("paginate"),
                 "bLengthChange": false,
                 searching: true,
@@ -329,7 +338,7 @@ jQuery(function($){
                         "sPrevious": null,
                         "sSearch": "Filter Data"
                     },
-                    "sEmptyTable": TPTableEmpty
+                    "sEmptyTable": tableEmpty
                 },
                 "fnFooterCallback": function (nRow, aasData, iStart, iEnd, aiDisplay) {
 
@@ -358,14 +367,12 @@ jQuery(function($){
                         '<td>'+totals[8]+'</td>' +
                         '<td>'+totals[9].toFixed(2)+'</td>' +
                         '<td>'+totals[10].toFixed(2)+'</td>' +
-                        //'<td>'+totals[11]+'</td>'+
+                            //'<td>'+totals[11]+'</td>'+
                         '</tr></tfoot>');
                     }
                 }
-
-
             });
-
+        });
         doc.find("select#TP-ListReportType").change( function () {
             if($(this).val() != 'none'){
                 dataTable.fnFilter($(this).val(),1,false, true)
@@ -411,7 +418,7 @@ jQuery(function($){
                     "sPrevious": null,
                     "sSearch": "Filter Data"
                 },
-                "sEmptyTable": TPTableEmpty
+                "sEmptyTable": TPTableEmptySearchShortcode
             }
         });
         //console.log( dataTable.rowCount())
