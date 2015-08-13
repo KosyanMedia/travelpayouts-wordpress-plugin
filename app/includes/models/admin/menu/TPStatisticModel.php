@@ -23,7 +23,7 @@ class TPStatisticModel extends TPDashboardModel{
         $this->payments = $this->tpGetPayments();
     }
     public function tpGetDetailedSales(){
-        $cacheKey = "TPCacheKey_TPDetailedSalesStats";
+        $cacheKey = KPDPlUGIN_NAME."_TPDetailedSalesStats";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
             $TPDetailedSales = TPPlugin::$TPRequestApi->get_detailed_sales();
@@ -33,7 +33,7 @@ class TPStatisticModel extends TPDashboardModel{
         return $TPDetailedSales;
     }
     public function tpGetPayments(){
-        $cacheKey = "TPCacheKey_TPPaymentsStats";
+        $cacheKey = KPDPlUGIN_NAME."_TPPaymentsStats";
         $TPpayments = array();
         if ( false === ( $TPpayments = get_transient($cacheKey) ) ) {
             $TPpayments = TPPlugin::$TPRequestApi->get_payments();

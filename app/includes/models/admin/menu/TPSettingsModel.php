@@ -38,6 +38,7 @@ class TPSettingsModel extends KPDOptionModel{
     {
         // TODO: Implement save_option() method.
         $result = array_merge(TPPlugin::$options, $input);
+        TPPlugin::deleteCacheAll();
         return $result;
     }
     public function exportSettings(){
