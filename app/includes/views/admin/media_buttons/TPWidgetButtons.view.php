@@ -23,13 +23,13 @@
                         >
                         <option selected="selected" value="0"><?php _e('Select widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1"><?php _e('Flights Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="2"><?php _e('Hotel buildings map', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="3"><?php _e('Widget calendar', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="2"><?php _e('Hotels Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="3"><?php _e('Calendar Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <?php if(TPPlugin::$options['local']['localization'] == 1){ ?>
-                            <option value="4"><?php _e('Widget subscriptions', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                            <option value="4"><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <?php } ?>
-                        <option value="5"><?php _e('Widget hotel', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="6"><?php _e('Widget popular destinations', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="5"><?php _e('Hotel Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="6"><?php _e('Popular Routes Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
             </tr>
             <tr id="tr_origin_widget">
@@ -76,11 +76,11 @@
             </tr>
             <tr id="tr_responsive_widget">
                 <td>
-                    <label>
+                    <label id="responsive_label">
                         <input type="checkbox" id="responsive_widget" value="1">
                         <?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?>
                     </label>
-                    <label>
+                    <label id="responsive_width_label">
                         <input type="width" id="responsive_width" value="1">
                         <?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?>
                     </label>

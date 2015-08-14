@@ -187,6 +187,7 @@ class TPLoaderScripts extends KPDLoaderScripts{
                 TPStatsTotal = false;
             <?php
                 }
+                global $locale;
             ?>
             TPTableEmptyReport = '<?php _e('No data, enter API token and marker', KPDPlUGIN_TEXTDOMAIN); ?>';
             TPTableEmptyBalance = '<?php _e('No payments!', KPDPlUGIN_TEXTDOMAIN); ?>';
@@ -196,12 +197,12 @@ class TPLoaderScripts extends KPDLoaderScripts{
             ajaxurl = '<?php echo KPDPlUGIN_AJAX_URL; ?>';
             button_ok = '<?php _e( 'Create', KPDPlUGIN_TEXTDOMAIN); ?>';
             button_cancel = '<?php _e( 'Cancel', KPDPlUGIN_TEXTDOMAIN); ?>';
-            switch ( <?php echo TPPlugin::$options['local']['localization'] ?>){
-                case 1:
+            switch ('<?php echo $locale ?>'){
+                case "ru_RU":
                     tpLocale = 'ru';
 
                     break;
-                case 2:
+                case "en_US":
                     tpLocale = 'en';
                     break;
             }

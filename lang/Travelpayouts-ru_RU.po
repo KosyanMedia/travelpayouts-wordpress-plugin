@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-14 11:03+0300\n"
+"POT-Creation-Date: 2015-08-14 11:45+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -225,28 +225,34 @@ msgid "Select widget"
 msgstr "Выберите виджет"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:25
+#: app/includes/views/admin/menu/TPWidgets.view.php:10
 msgid "Flights Map Widget"
 msgstr "Виджет карты"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:26
-msgid "Hotel buildings map"
+#: app/includes/views/admin/menu/TPWidgets.view.php:24
+msgid "Hotels Map Widget"
 msgstr "Отельная карта"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:27
-msgid "Widget calendar"
+#: app/includes/views/admin/menu/TPWidgets.view.php:38
+msgid "Calendar Widget"
 msgstr "Виджет календаря"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:29
-msgid "Widget subscriptions"
-msgstr "Виджет подписок "
+#: app/includes/views/admin/menu/TPWidgets.view.php:51
+msgid "Subscription Widget"
+msgstr "Виджет подписок"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:31
-msgid "Widget hotel"
+#: app/includes/views/admin/menu/TPWidgets.view.php:64
+msgid "Hotel Widget"
 msgstr "Виджет отеля"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:32
-msgid "Widget popular destinations"
-msgstr "Виджет популярных направлений"
+#: app/includes/views/admin/menu/TPWidgets.view.php:77
+msgid "Popular Routes Widget"
+msgstr "Виджет популярных направлений "
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
 msgid "Hotel"
@@ -422,30 +428,6 @@ msgstr "Комментарий"
 #: app/includes/views/admin/menu/TPWidgets.view.php:2
 msgid "Widgets"
 msgstr "Виджеты"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:10
-msgid "Widget map"
-msgstr "Виджет карты"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:24
-msgid "Hotels map"
-msgstr "Отельная карта"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:38
-msgid "Calendar"
-msgstr "Календарь"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:51
-msgid "Subscriptions"
-msgstr "Виджет подписок"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:64
-msgid "Hotel widget"
-msgstr "Виджет отеля"
-
-#: app/includes/views/admin/menu/TPWidgets.view.php:77
-msgid "Widget popular routes"
-msgstr "Виджет популярных направлений "
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:9
 msgid "Go to "
@@ -1204,6 +1186,30 @@ msgstr "Статистика"
 #: core/controllers/KPDBaseController.php:14
 msgid "View "
 msgstr ""
+
+#~ msgid "Widget popular destinations"
+#~ msgstr "Виджет популярных направлений"
+
+#~ msgid "Widget popular routes"
+#~ msgstr "Виджет популярных направлений "
+
+#~ msgid "Widget hotel"
+#~ msgstr "Виджет отеля"
+
+#~ msgid "Widget subscriptions"
+#~ msgstr "Виджет подписок "
+
+#~ msgid "Widget calendar"
+#~ msgstr "Виджет календаря"
+
+#~ msgid "Hotel buildings map"
+#~ msgstr "Отельная карта"
+
+#~ msgid "Widget map"
+#~ msgstr "Виджет карты"
+
+#~ msgid "Hotels map"
+#~ msgstr "Отельная карта"
 
 #~ msgid "Count widgets"
 #~ msgstr "Количество виджетов"

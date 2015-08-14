@@ -41,10 +41,10 @@ class TPCalendarWidgetController  extends TPWigetsShortcodesController{
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
 
         $output = '';
-        $output = '<script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets).'
-            &origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
-            .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way.'
-            &only_direct='.$direct.'&locale='.$this->view->locale
+        $output = '<script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets)
+            .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
+            .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
+            .'&only_direct='.$direct.'&locale='.$this->view->locale
             .'&period='.TPPlugin::$options['widgets'][$widgets]['period'].'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script>';
         return $output;

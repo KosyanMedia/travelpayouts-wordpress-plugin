@@ -440,7 +440,6 @@ jQuery(function($) {
                                 break;
                             case '6':
                                 count = parseInt(doc.find('#popular_routes_widget_count').val());
-                                console.log(count);
                                 if(count == 1){
                                     //tr_popular_routes_destination-0
                                     var destination_r = doc.find('#popular_routes_destination-0').val();
@@ -516,6 +515,7 @@ jQuery(function($) {
                 doc.find('#tr_responsive_widget').hide();
             }else{
                 doc.find('#tr_responsive_widget').show();
+                doc.find('#responsive_width').val(doc.find('#select_widgets').data('widgets-size-width-6'));
             }
 
             doc.find('.TPPopularRoutes').remove();
@@ -540,7 +540,16 @@ jQuery(function($) {
             tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         });
         doc.find('#td_select_widgets').on('change', '#select_widgets', function(e) {
-            e.preventDefault();
+            doc.find('#responsive_label').on('change', '#responsive_widget', function(e) {
+                if($(this).is(":checked")) {
+                    doc.find('#responsive_width_label').hide();
+                }else{
+                    doc.find('#responsive_width_label').show();
+
+                }
+
+            });
+                e.preventDefault();
             var tbody;
             tbody = $(this).parent('#td_select_widgets').parent('#tr_select_widgets').parent('tbody');
             $(this).removeClass('constructorShortcodesError');
@@ -558,10 +567,10 @@ jQuery(function($) {
                     doc.find('#size_widget_width').val($(this).data('widgets-size-width-1'));
                     doc.find('#size_widget_height').val($(this).data('widgets-size-height-1'));
                     switch ($(this).data('widgets-direct-1')){
-                        case '0':
+                        case 0:
                             doc.find('#direct_widget').attr('checked', false);
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#direct_widget').attr('checked', true);
                             break;
                     }
@@ -581,29 +590,31 @@ jQuery(function($) {
                     doc.find('#tr_one_way_widget').show();
 
                     switch ($(this).data('widgets-direct-3')){
-                        case '0':
+                        case 0:
                             doc.find('#direct_widget').attr('checked', false);
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#direct_widget').attr('checked', true);
                             break;
                     }
                     switch ($(this).data('widgets-one_way-3')){
-                        case '0':
+                        case 0:
                             doc.find('#one_way_widget').attr('checked', false);
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#one_way_widget').attr('checked', true);
                             break;
                     }
                     doc.find('#tr_responsive_widget').show();
                     doc.find('#responsive_width').val($(this).data('widgets-size-width-3'));
                     switch ($(this).data('widgets-responsive-3')){
-                        case '0':
+                        case 0:
                             doc.find('#responsive_widget').attr('checked', false);
+                            doc.find('#responsive_width_label').show();
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#responsive_widget').attr('checked', true);
+                            doc.find('#responsive_width_label').hide();
                             break;
                     }
                     break;
@@ -613,11 +624,13 @@ jQuery(function($) {
                     doc.find('#tr_responsive_widget').show();
                     doc.find('#responsive_width').val($(this).data('widgets-size-width-4'));
                     switch ($(this).data('widgets-responsive-4')){
-                        case '0':
+                        case 0:
                             doc.find('#responsive_widget').attr('checked', false);
+                            doc.find('#responsive_width_label').show();
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#responsive_widget').attr('checked', true);
+                            doc.find('#responsive_width_label').hide();
                             break;
                     }
                     break;
@@ -628,11 +641,13 @@ jQuery(function($) {
                     doc.find('#tr_responsive_widget').show();
                     doc.find('#responsive_width').val($(this).data('widgets-size-width-5'));
                     switch ($(this).data('widgets-responsive-5')){
-                        case '0':
+                        case 0:
                             doc.find('#responsive_widget').attr('checked', false);
+                            doc.find('#responsive_width_label').show();
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#responsive_widget').attr('checked', true);
+                            doc.find('#responsive_width_label').hide();
                             break;
                     }
                     break;
@@ -647,11 +662,13 @@ jQuery(function($) {
                     }
 
                     switch ($(this).data('widgets-responsive-6')){
-                        case '0':
+                        case 0:
                             doc.find('#responsive_widget').attr('checked', false);
+                            doc.find('#responsive_width_label').show();
                             break;
-                        case '1':
+                        case 1:
                             doc.find('#responsive_widget').attr('checked', true);
+                            doc.find('#responsive_width_label').hide();
                             break;
                     }
                     //doc.find('#tr_hotel_id_widget_size').show();

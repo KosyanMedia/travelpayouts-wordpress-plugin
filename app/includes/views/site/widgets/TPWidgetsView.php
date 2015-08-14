@@ -27,38 +27,38 @@ class TPWidgetsView {
         if(!empty(TPPlugin::$options['account']['extra_marker']))
             $marker = $marker .'.'.TPPlugin::$options['account']['extra_marker'];
         if(!empty(TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
-            $marker = $marker.'_'.TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'].'_';
+            $marker = $marker.'_'.TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
         }
         switch($widgetType){
             case 1:
                 //map
-                $marker .= 'map';
+                $marker .= '_map';
                 break;
             case 2:
                 //hotelsmap
-                $marker .= 'hotelsmap';
+                $marker .= '_hotelsmap';
                 break;
             case 3:
                 //calendar
-                $marker .= 'calendar';
+                $marker .= '_calendar';
                 break;
             case 4:
                 //subscriptions
-                $marker .= 'subscriptions';
+                $marker .= '_subscr';
                 break;
             case 5:
                 //chansey
-                $marker .= 'chansey';
+                $marker .= '_hotel';
                 break;
             case 6:
                 //weedle
-                $marker .= 'weedle';
+                $marker .= '_populardest';
                 break;
         }
 
 
         $marker = $marker.'.$69';
-        return $marker;
+        return rawurlencode($marker);
     }
 
     /**

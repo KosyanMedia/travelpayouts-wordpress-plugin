@@ -302,12 +302,12 @@ class TPFieldWidgets {
             <label></label>
         </div>
         <div class="TP-HeadTable TPCheckBoxWidget">
-            <input id="chek6" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][only_direct]"
+            <input id="chek63" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][only_direct]"
                    value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['only_direct']), 1) ?> hidden />
-            <label for="chek6"><?php _e('Direct Flights Only', KPDPlUGIN_TEXTDOMAIN ); ?></label>
-            <input id="chek7" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][one_way]"
+            <label for="chek63"><?php _e('Direct Flights Only', KPDPlUGIN_TEXTDOMAIN ); ?></label>
+            <input id="chek73" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][one_way]"
                    value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['one_way']), 1) ?> hidden />
-            <label for="chek7"><?php _e('One way', KPDPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek73"><?php _e('One way', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
 

@@ -7,7 +7,7 @@
 
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Widget map', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Flights Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_1', 'tp_settings_widget_1_id'); ?>
@@ -21,7 +21,7 @@
 
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Hotels map', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Hotels Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_2', 'tp_settings_widget_2_id'); ?>
@@ -35,7 +35,7 @@
 
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Calendar', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Calendar Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_3', 'tp_settings_widget_3_id'); ?>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Subscriptions', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_4', 'tp_settings_widget_4_id'); ?>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Hotel widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Hotel Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_5', 'tp_settings_widget_5_id'); ?>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Widget popular routes', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Popular Routes Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_6', 'tp_settings_widget_6_id'); ?>

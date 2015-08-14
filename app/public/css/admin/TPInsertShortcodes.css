@@ -14,3 +14,7 @@
 .constructorShortcodesError{
     border: 1px solid #dd3d36 !important;
 }
+#constructorShortcodesButton img{
+    padding: 0 4px;
+    padding-top: 4px;
+}
