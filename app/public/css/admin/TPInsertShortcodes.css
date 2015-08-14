@@ -15,6 +15,11 @@
     border: 1px solid #dd3d36 !important;
 }
 #constructorShortcodesButton img{
-    padding: 0 4px;
-    padding-top: 4px;
+    margin-top: -3px;
+}
+#constructorWidgetButton img{
+    margin-top: -3px;
+}
+#constructorSearchFormButton img{
+    margin-top: -3px;
 }
