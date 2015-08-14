@@ -2125,13 +2125,15 @@ thead tr td.active-w {
     margin-top: 1px;
 }
 .tooltip-img {
-    width: 150px;
+    width: 130px;
     position: relative;
     cursor: help;
     display: inline-block;
     outline: none;
     color: #00abfd;
     margin-bottom: 15px;
+    float: left;
+    margin-right: 10px;
 }
 .tooltip-img:hover{
     text-decoration: none;
@@ -2164,7 +2166,7 @@ thead tr td.active-w {
     visibility: hidden;
     position: absolute;
     bottom: -160px;
-    left: 290px;
+    left: 270px;
     z-index: 999;
     margin-left: -127px;
     padding: 10px;
@@ -2341,4 +2343,10 @@ thead tr td.active-w {
     float: left;
     width: 95px;
     margin-bottom: 10px;
+}
+.TP-WidgetHelpImgSubsc img{
+    height: 200px;
+}
+.TP-WidgetHelpImgSubsc{
+    bottom: -110px !important;
 }

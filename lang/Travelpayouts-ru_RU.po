@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-14 11:45+0300\n"
+"POT-Creation-Date: 2015-08-14 16:31+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -42,27 +42,27 @@ msgstr "Откуда"
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:191
+#: app/includes/TPLoaderScripts.php:192
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:192
+#: app/includes/TPLoaderScripts.php:193
 msgid "No payments!"
 msgstr "Нет выплат!"
 
-#: app/includes/TPLoaderScripts.php:193
+#: app/includes/TPLoaderScripts.php:194
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:194
+#: app/includes/TPLoaderScripts.php:195
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:197
+#: app/includes/TPLoaderScripts.php:198
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:198
+#: app/includes/TPLoaderScripts.php:199
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -259,35 +259,35 @@ msgid "Hotel"
 msgstr "Отель"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
-#: app/includes/models/admin/menu/TPFieldWidgets.php:46
-#: app/includes/models/admin/menu/TPFieldWidgets.php:151
+#: app/includes/models/admin/menu/TPFieldWidgets.php:36
+#: app/includes/models/admin/menu/TPFieldWidgets.php:132
 msgid "Size"
 msgstr "Размер"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:65
-#: app/includes/models/admin/menu/TPFieldWidgets.php:38
-#: app/includes/models/admin/menu/TPFieldWidgets.php:307
+#: app/includes/models/admin/menu/TPFieldWidgets.php:28
+#: app/includes/models/admin/menu/TPFieldWidgets.php:279
 msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
-#: app/includes/models/admin/menu/TPFieldWidgets.php:310
+#: app/includes/models/admin/menu/TPFieldWidgets.php:282
 msgid "One way"
 msgstr "В одну сторону"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:81
-#: app/includes/models/admin/menu/TPFieldWidgets.php:246
-#: app/includes/models/admin/menu/TPFieldWidgets.php:374
-#: app/includes/models/admin/menu/TPFieldWidgets.php:425
+#: app/includes/models/admin/menu/TPFieldWidgets.php:218
+#: app/includes/models/admin/menu/TPFieldWidgets.php:338
+#: app/includes/models/admin/menu/TPFieldWidgets.php:380
 msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:85
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:92
-#: app/includes/models/admin/menu/TPFieldWidgets.php:235
-#: app/includes/models/admin/menu/TPFieldWidgets.php:378
-#: app/includes/models/admin/menu/TPFieldWidgets.php:414
-#: app/includes/models/admin/menu/TPFieldWidgets.php:456
+#: app/includes/models/admin/menu/TPFieldWidgets.php:207
+#: app/includes/models/admin/menu/TPFieldWidgets.php:342
+#: app/includes/models/admin/menu/TPFieldWidgets.php:369
+#: app/includes/models/admin/menu/TPFieldWidgets.php:402
 msgid "Width"
 msgstr "Ширина"
 
@@ -680,34 +680,113 @@ msgstr "Посет."
 msgid "Bookings"
 msgstr "Брон."
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:13
-#: app/includes/models/admin/menu/TPFieldWidgets.php:68
-#: app/includes/models/admin/menu/TPFieldWidgets.php:173
-#: app/includes/models/admin/menu/TPFieldWidgets.php:319
-#: app/includes/models/admin/menu/TPFieldWidgets.php:392
-#: app/includes/models/admin/menu/TPFieldWidgets.php:434
-msgid "Help Travepayouts"
-msgstr "Справка Travelpayouts"
-
 #: app/includes/models/admin/menu/TPFieldWidgets.php:15
 msgid "map-wiget-eng.png"
 msgstr "map-wiget.png"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:16
-#: app/includes/models/admin/menu/TPFieldWidgets.php:71
-#: app/includes/models/admin/menu/TPFieldWidgets.php:176
-#: app/includes/models/admin/menu/TPFieldWidgets.php:322
-#: app/includes/models/admin/menu/TPFieldWidgets.php:395
-#: app/includes/models/admin/menu/TPFieldWidgets.php:437
+#: app/includes/models/admin/menu/TPFieldWidgets.php:61
+#: app/includes/models/admin/menu/TPFieldWidgets.php:157
+#: app/includes/models/admin/menu/TPFieldWidgets.php:295
+#: app/includes/models/admin/menu/TPFieldWidgets.php:359
+#: app/includes/models/admin/menu/TPFieldWidgets.php:392
 msgid "Example widget"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:26
+#: app/includes/models/admin/menu/TPFieldWidgets.php:23
+#: app/includes/models/admin/menu/TPFieldWidgets.php:68
+#: app/includes/models/admin/menu/TPFieldWidgets.php:164
+#: app/includes/models/admin/menu/TPFieldWidgets.php:302
+#: app/includes/models/admin/menu/TPFieldWidgets.php:366
+#: app/includes/models/admin/menu/TPFieldWidgets.php:399
+msgid "Help Travepayouts"
+msgstr "Справка Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:31
+msgid "Hide Logo"
+msgstr "Скрыть логотип"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:60
+msgid "hotel-widget-eng.png"
+msgstr "hotel-wiget.png"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:73
+msgid "Draggable"
+msgstr "Возможность перетаскивать"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:77
+msgid "Disable zoom"
+msgstr "Отключить зуммирование"
+
 #: app/includes/models/admin/menu/TPFieldWidgets.php:80
-#: app/includes/models/admin/menu/TPFieldWidgets.php:185
+msgid "Scroll wheel"
+msgstr "Увеличение при прокрутке"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:86
+msgid "Markers size"
+msgstr "Размер маркера"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:101
+msgid "Map styled"
+msgstr "Раскрасить карту"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:108
+#: app/includes/models/admin/menu/TPFieldWidgets.php:116
+#: app/includes/models/admin/menu/TPFieldWidgets.php:125
 #: app/includes/models/admin/menu/TPFieldWidgets.php:331
-#: app/includes/models/admin/menu/TPFieldWidgets.php:404
-#: app/includes/models/admin/menu/TPFieldWidgets.php:446
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:90
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:147
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:183
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:196
+msgid "select color"
+msgstr "выбрать цвет"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:156
+msgid "calendar-wiget-eng.png"
+msgstr "calendar-wiget.png"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:169
+#: app/includes/models/admin/menu/TPFieldWidgets.php:307
+msgid "Departure city"
+msgstr "Город вылета"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:179
+#: app/includes/models/admin/menu/TPFieldWidgets.php:317
+msgid "City arrival"
+msgstr "Город прилета"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:188
+msgid "Range, days"
+msgstr "Период, дни"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:228
+msgid "Year"
+msgstr "Год"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:231
+msgid "Current month"
+msgstr "Текущий месяц"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:269
+msgid "Period"
+msgstr "Период"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:294
+msgid "subscribe-wiget.png"
+msgstr ""
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:358
+msgid "one-hotel-wiget-eng.png"
+msgstr "one-hotel-wiget.png"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:391
+msgid "popular-destination-wiget-eng.png"
+msgstr "popular-destination-wiget.png"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:413
+msgid "Number of widgets when you insert into the post"
+msgstr "Количество виджетов при вставке в запись"
+
 #: app/includes/models/admin/menu/TPFieldSettings.php:35
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:485
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:512
@@ -723,91 +802,6 @@ msgstr "Пример виджета"
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:853
 msgid "Extra marker"
 msgstr "Дополнительный маркер"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:41
-msgid "Hide Logo"
-msgstr "Скрыть логотип"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:70
-msgid "hotel-wiget-eng.png"
-msgstr "hotel-wiget.png"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:92
-msgid "Draggable"
-msgstr "Возможность перетаскивать"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:96
-msgid "Disable zoom"
-msgstr "Отключить зуммирование"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:99
-msgid "Scroll wheel"
-msgstr "Увеличение при прокрутке"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:105
-msgid "Markers size"
-msgstr "Размер маркера"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:120
-msgid "Map styled"
-msgstr "Раскрасить карту"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:127
-#: app/includes/models/admin/menu/TPFieldWidgets.php:135
-#: app/includes/models/admin/menu/TPFieldWidgets.php:144
-#: app/includes/models/admin/menu/TPFieldWidgets.php:367
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:90
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:147
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:183
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:196
-msgid "select color"
-msgstr "выбрать цвет"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:175
-msgid "calendar-wiget-eng.png"
-msgstr "calendar-wiget.png"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:197
-#: app/includes/models/admin/menu/TPFieldWidgets.php:343
-msgid "Departure city"
-msgstr "Город вылета"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:207
-#: app/includes/models/admin/menu/TPFieldWidgets.php:353
-msgid "City arrival"
-msgstr "Город прилета"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:216
-msgid "Range, days"
-msgstr "Период, дни"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:256
-msgid "Year"
-msgstr "Год"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:259
-msgid "Current month"
-msgstr "Текущий месяц"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:297
-msgid "Period"
-msgstr "Период"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:321
-msgid "subscribe-wiget.png"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:394
-msgid "one-hotel-wiget-eng.png"
-msgstr "one-hotel-wiget.png"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:436
-msgid "popular-destination-wiget-eng.png"
-msgstr "popular-destination-wiget.png"
-
-#: app/includes/models/admin/menu/TPFieldWidgets.php:467
-msgid "Number of widgets when you insert into the post"
-msgstr "Количество виджетов при вставке в запись"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:46
 msgid "Token"
