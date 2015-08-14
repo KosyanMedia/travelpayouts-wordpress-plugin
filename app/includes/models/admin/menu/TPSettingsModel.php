@@ -45,9 +45,10 @@ class TPSettingsModel extends KPDOptionModel{
         $export = json_encode(TPPlugin::$options);
         $fileName = KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt";
         $file = fopen($fileName , "w");
+        chmod(KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt", 0777);
         fwrite($file, $export);
         fclose($file);
-        chmod(KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt", 0777);
+
         echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";
     }
     public function importSettings(){

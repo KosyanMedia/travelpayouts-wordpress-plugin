@@ -22,7 +22,7 @@
                             data-widgets-responsive-6 = "<?php echo (isset(TPPlugin::$options['widgets']['6']['responsive']))? 1 : 0;?>"
                         >
                         <option selected="selected" value="0"><?php _e('Select widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="1"><?php _e('Widget map', KPDPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="1"><?php _e('Flights Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="2"><?php _e('Hotel buildings map', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="3"><?php _e('Widget calendar', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <?php if(TPPlugin::$options['local']['localization'] == 1){ ?>
