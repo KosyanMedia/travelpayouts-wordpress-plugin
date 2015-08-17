@@ -183,13 +183,14 @@ class TPLoaderScripts extends KPDLoaderScripts{
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
-                TPMesgUpdateSettings;
+                TPMesgUpdateSettings, TPLabelAutocomplete;
             TPDestinationTitle = '<?php _e('Destination', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPFileNameExport = '<?php echo KPDPlUGIN_NAME."Settings.txt"; ?>';
             TPPluginName = '<?php echo KPDPlUGIN_NAME; ?>';
             TPMesgUpdateSettings = '<?php _e('Settings saved.', KPDPlUGIN_TEXTDOMAIN ); ?>';
+            TPLabelAutocomplete = '<?php _e('hotels', KPDPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

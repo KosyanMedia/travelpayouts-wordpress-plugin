@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-17 14:46+0300\n"
+"POT-Creation-Date: 2015-08-17 17:37+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -46,27 +46,31 @@ msgstr "Местоположение"
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:205
+#: app/includes/TPLoaderScripts.php:193
+msgid "hotels"
+msgstr "отелей"
+
+#: app/includes/TPLoaderScripts.php:206
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:206
+#: app/includes/TPLoaderScripts.php:207
 msgid "No payments!"
 msgstr "Нет выплат!"
 
-#: app/includes/TPLoaderScripts.php:207
+#: app/includes/TPLoaderScripts.php:208
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:208
+#: app/includes/TPLoaderScripts.php:209
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:211
+#: app/includes/TPLoaderScripts.php:212
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:212
+#: app/includes/TPLoaderScripts.php:213
 msgid "Cancel"
 msgstr "Отмена"
 

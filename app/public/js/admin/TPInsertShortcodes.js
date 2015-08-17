@@ -576,9 +576,9 @@ jQuery(function($) {
                     }
                     break;
                 case '2':
-                    tbody.children('#tr_origin_widget').children('td').children('input').addClass('TPCoordinatesAutocomplete');
-                    tbody.children('#tr_origin_widget').children('td').children('input').attr("placeholder", TPLocationTitlt);
-                    doc.find('#tr_origin_widget').show();
+                    tbody.children('#tr_hotel_id_widget').children('td').children('input').addClass('TPCoordinatesAutocomplete');
+                    tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPLocationTitlt);
+                    doc.find('#tr_hotel_id_widget').show();
                     doc.find('#tr_size_widget').show();
                     doc.find('#size_widget_width').val($(this).data('widgets-size-width-2'));
                     doc.find('#size_widget_height').val($(this).data('widgets-size-height-2'));
