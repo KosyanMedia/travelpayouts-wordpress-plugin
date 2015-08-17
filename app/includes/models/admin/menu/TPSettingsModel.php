@@ -50,17 +50,20 @@ class TPSettingsModel extends KPDOptionModel{
         fclose($file);
 
         echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";*/
-        $export = TPPlugin::$options;
-        $fileName = KPDPlUGIN_NAME."Settings.txt";
-        echo json_encode(array('export_settings'=>$export, 'filename' => $fileName));
+        $export = json_encode(TPPlugin::$options);
+
+        echo $export;
     }
     public function importSettings(){
         $base64 = $_POST['value'];
+
         if ( strpos($base64, 'text/plain') ) {
             $file = str_replace('data:text/plain;base64,', '', $base64);
             $file = str_replace(' ', '+', $file);
             $data = base64_decode($file);
+
             $options = json_decode($data,true);
+            error_log(print_r($options,true));
             if(is_array($options)){
                 update_option( KPDPlUGIN_OPTION_NAME, $options);
             }

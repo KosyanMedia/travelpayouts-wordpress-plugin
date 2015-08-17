@@ -137,9 +137,8 @@ jQuery(function($){
             type: "post", // Делаем POST запрос
             success: function(data) {
                 //downloadFile(data.substring(0, data.length - 1))
-                var result = JSON.parse(data.substring(0, data.length - 1));
-                var text = JSON.stringify(result.export_settings);
-                var filename = result.filename;
+                var text = data.substring(0, data.length - 1);
+                var filename = TPFileNameExport;
                 var export_settings = new Blob([text], {type: "text/plain;charset=utf-8"});
                 saveAs(export_settings, filename);
             }
