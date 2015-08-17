@@ -131,11 +131,17 @@ jQuery(function($){
     }).disableSelection();
     /** **/
     doc.find('#exportSettings').click(function () {
+
         $.ajax({
             url: ajaxurl+'?action=export_settings',
             type: "post", // Делаем POST запрос
             success: function(data) {
-                downloadFile(data.substring(0, data.length - 1))
+                //downloadFile(data.substring(0, data.length - 1))
+                var result = JSON.parse(data.substring(0, data.length - 1));
+                var text = JSON.stringify(result.export_settings);
+                var filename = result.filename;
+                var export_settings = new Blob([text], {type: "text/plain;charset=utf-8"});
+                saveAs(export_settings, filename+".txt");
             }
         });
     });

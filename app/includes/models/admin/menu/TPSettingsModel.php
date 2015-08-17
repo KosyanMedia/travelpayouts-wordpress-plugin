@@ -42,14 +42,17 @@ class TPSettingsModel extends KPDOptionModel{
         return $result;
     }
     public function exportSettings(){
-        $export = json_encode(TPPlugin::$options);
-        $fileName = KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt";
+        /*$export = json_encode(TPPlugin::$options);
+        $fileName = KPDPlUGIN_NAME."Settings.txt";
         $file = fopen($fileName , "w");
         chmod(KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt", 0777);
         fwrite($file, $export);
         fclose($file);
 
-        echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";
+        echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";*/
+        $export = TPPlugin::$options;
+        $fileName = KPDPlUGIN_NAME."Settings.txt";
+        echo json_encode(array('export_settings'=>$export, 'filename' => $fileName));
     }
     public function importSettings(){
         $base64 = $_POST['value'];
