@@ -92,7 +92,7 @@ function TPCityAutocomplete(){
                         $.get("http://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
 
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
-                                response(
+                                /*response(
                                     $.map(data.cities, function(item){
                                         return {
                                             label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
@@ -100,13 +100,14 @@ function TPCityAutocomplete(){
                                             val: item.location//item.name+" "+airport+" ["+item.iata+"]"
                                         }
                                     })
-                                )
-                                /*$.map(data, function(items, keys){
+                                )*/
+                                $.map(data, function(items, keys){
+                                    console.log(keys);
                                     response(
                                         $.map(items, function(item, key){
-                                            console.log(keys);
                                             switch (keys){
                                                 case 'cities':
+                                                    console.log(item.fullname);
                                                     return {
                                                         label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
                                                         value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
@@ -114,6 +115,7 @@ function TPCityAutocomplete(){
                                                     }
                                                     break;
                                                 case 'hotels':
+                                                    console.log(item.hotelFullName);
                                                     return {
                                                         label: item.hotelFullName,//"+item.city+", "+item.country+"
                                                         value: item.hotelFullName,
@@ -124,34 +126,8 @@ function TPCityAutocomplete(){
 
                                         })
                                     )
-                                })*/
-                                /*response(
-                                    $.map(data.cities, function(item){
-                                        return {
-                                            label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
-                                            value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
-                                            val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    }),
-                                    $.map(data.hotels, function(item){
-                                        return {
-                                            label: item.hotelFullName,//"+item.city+", "+item.country+"
-                                            value: item.hotelFullName,
-                                            val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    })
+                                })
 
-                                )*/
-                                /*response(
-                                    $.map(data.hotels, function(item){
-                                        return {
-                                            label: item.hotelFullName,//"+item.city+", "+item.country+"
-                                            value: item.hotelFullName,
-                                            val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    })
-
-                                )*/
                             }else{
                                 response(
                                     $.map(data.hotels, function(item){
