@@ -153,6 +153,7 @@ jQuery(function($){
             importFileDiv.children('.infoFile').hide();
             doc.find('#importSettings').click(function () {
                 var files = $(this).parent('.TP-NavRow').children('.input_button_style').children('#importFile')[0].files;
+
                 loadInView(files);
             });
         }else{
@@ -170,8 +171,22 @@ jQuery(function($){
             $.each(files, function(index, file) {
                 // Создаем новый экземпляра FileReader
                 var fileReader = new FileReader();
-                // Инициируем функцию FileReader
+                fileReader.readAsText(file);
                 fileReader.onload = (function(file) {
+                    return function(e) {
+                        $.ajax({
+                            url: ajaxurl+'?action=import_settings',
+                            type: "post", // Делаем POST запрос
+                            data: ({name : file.name, value : JSON.parse(this.result)}),
+                            success: function(data) {
+                                //console.log(data.substring(0, data.length - 1));
+                                document.location.href = "";
+                            }
+                        });
+                    };
+                })(files[index]);
+                // Инициируем функцию FileReader
+                /*fileReader.onload = (function(file) {
                     return function(e) {
                         // Помещаем URI изображения в массив
                         // dataArray.push({name : file.name, value : this.result});
@@ -187,7 +202,7 @@ jQuery(function($){
                         });
                     };
                 })(files[index]);
-                fileReader.readAsDataURL(file);
+                fileReader.readAsDataURL(file);*/
             });
         } else
             alert('Вы не можете загружать больше 1 файла!');

@@ -55,7 +55,11 @@ class TPSettingsModel extends KPDOptionModel{
         echo $export;
     }
     public function importSettings(){
-        $base64 = $_POST['value'];
+        if(is_array($_POST['value'])){
+            update_option( KPDPlUGIN_OPTION_NAME, $_POST['value']);
+        }
+        //error_log(print_r($_POST, true));
+        /*$base64 = $_POST['value'];
 
         if ( strpos($base64, 'text/plain') ) {
             $file = str_replace('data:text/plain;base64,', '', $base64);
@@ -67,6 +71,6 @@ class TPSettingsModel extends KPDOptionModel{
             if(is_array($options)){
                 update_option( KPDPlUGIN_OPTION_NAME, $options);
             }
-        }
+        }*/
     }
 }
