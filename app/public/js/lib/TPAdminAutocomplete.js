@@ -101,7 +101,7 @@ function TPCityAutocomplete(){
                                         }
                                     })
                                 )*/
-                                $.map(data, function(items, keys){
+                                /*$.map(data, function(items, keys){
                                     console.log(keys);
                                     response(
                                         $.map(items, function(item, key){
@@ -126,7 +126,10 @@ function TPCityAutocomplete(){
 
                                         })
                                     )
-                                })
+                                })*/
+                                response(
+                                return {label: 'test'}
+                                )
 
                             }else{
                                 response(
