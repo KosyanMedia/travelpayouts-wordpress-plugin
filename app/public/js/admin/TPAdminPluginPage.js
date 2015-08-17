@@ -451,9 +451,38 @@ jQuery(function($){
         });
         $(this).addClass("active-w");
     });
+    /**
+     *
+     * @param class_notice
+     * * ***********************************************************
+     * Классы которые можно использовать для блока:
+     * * class="updated" - для успешных операций. Белый фон, зеленая полоска слева;
+     * * class="error" - для ошибок. Белый фон, красная полоска слева;
+     * * class="notice" - для сообщений. Белый фон, никакой маркировки;
+     * * class="notice notice-warning" - для предупреждений. Белый фон,
+     *   оранжевая полоска слева;
+     * * class="update-nag" - блок с оранжевой полоской слева. Блок
+     *   будет расположен перед заголовком <h2> (а не после) и будет
+     *   иметь css свойство inline-block (а не block).
+     * * class="notice is-dismissible"' - эти два класса можно дописать
+     *   к любому из вышеперечисленных и в конце сообщения появится крестик,
+     *   чтобы удалить (убрать из вида) блок сообщения. С версии 4.2.
+     * @param title_notice
+     * @param message_notice
+     * @returns {string}
+     */
+    function adminNotice(class_notice, title_notice, message_notice){
+        var output = '';
+        output = '<div class="'+class_notice+'">' +
+                    '<p>'+title_notice+'</p>'
+                 '</div>'
+        return output;
+    }
     /** **/
     function TPSettingsSave(selector){
         doc.find(selector).submit(function() {
+            doc.find('#wpbody').append(adminNotice('update', 'test', 'test'));
+            console.log(111);
             $(this).ajaxSubmit({
                 success: function(data){
 
