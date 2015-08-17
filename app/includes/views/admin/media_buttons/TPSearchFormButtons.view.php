@@ -20,7 +20,10 @@
                         <?php endforeach; ?>
                         </label>
                     <?php } ?>
-                <?php } else{ _e("No customized search form", KPDPlUGIN_TEXTDOMAIN); } ?>
+                <?php } else{
+                    _e("No customized search form. ", KPDPlUGIN_TEXTDOMAIN);
+                    ?><a href="admin.php?page=tp_control_search_shortcodes"><?php _e("Go to setting.", KPDPlUGIN_TEXTDOMAIN); ?></a><?php
+                } ?>
             </td>
         </tr>
         <tr id="tr_origin_search_form">

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-17 11:09+0300\n"
+"POT-Creation-Date: 2015-08-17 11:43+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -107,17 +107,21 @@ msgstr ""
 msgid "Constructor search form"
 msgstr "Конструктор поисковых форм"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:21
-msgid "No customized search form"
-msgstr "Нет настроенных Поисковых форм"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:24
+msgid "No customized search form. "
+msgstr "Нет настроенных Поисковых форм. "
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:28
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:25
+msgid "Go to setting."
+msgstr "Перейти к настройке."
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:33
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:30
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:30
 msgid "City of departure default"
 msgstr "Город вылета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:35
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:40
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:35
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:34
 msgid "City Arrival default"
