@@ -2,14 +2,25 @@
     <table>
         <tr>
             <td id="td_select_search_form">
-                <select name="select_search_form" id="select_search_form">
-                    <option selected="selected"><?php _e('Select search form', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                    <?php if(!empty($this->data)): ?>
+                <?php if(!empty($this->data)){ ?>
+                    <?php if(count($this->data)>1){ ?>
+                        <select name="select_search_form" id="select_search_form">
+                            <?php foreach($this->data as $key => $record): ?>
+                                <option value="<?php echo $record['id'];?>"
+                                    <?php echo selected($key, 0); ?>>
+                                    <?php echo $record['title'];?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php }else{ ?>
+                        <label>
                         <?php foreach($this->data as $key => $record): ?>
-                            <option value="<?php echo $record['id'];?>"><?php echo $record['title'];?></option>
+                            <?php echo $record['title'];  ?>
+                            <input type="hidden" name="select_search_form"
+                                   id="select_search_form" value="<?php echo $record['id'];?>">
                         <?php endforeach; ?>
-                    <?php endif; ?>
-                </select>
+                        </label>
+                    <?php } ?>
+                <?php } else{ _e("No customized search form", KPDPlUGIN_TEXTDOMAIN); } ?>
             </td>
         </tr>
         <tr id="tr_origin_search_form">

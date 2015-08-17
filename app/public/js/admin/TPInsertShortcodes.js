@@ -727,17 +727,21 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorSearchFormModal");
+        if (doc.find('#select_search_form').length > 0) {
+            doc.find('#tr_origin_search_form').show();
+            doc.find('#tr_destination_search_form').show();
+        }
         doc.find('#td_select_search_form').on('change', '#select_search_form', function(e) {
             e.preventDefault();
             doc.find('#select_search_form').removeClass('constructorShortcodesError');
-            doc.find('#tr_origin_search_form').hide();
-            doc.find('#tr_destination_search_form').hide();
-            if(!isNaN($(this).val())){
+            //doc.find('#tr_origin_search_form').hide();
+            //doc.find('#tr_destination_search_form').hide();
+            /*if(!isNaN($(this).val())){
                 doc.find('#tr_origin_search_form').show();
                 doc.find('#tr_destination_search_form').show();
             }else{
                 doc.find('#select_search_form').addClass('constructorShortcodesError');
-            }
+            }*/
         });
     });
     function resetConstructorWidgetModal(){

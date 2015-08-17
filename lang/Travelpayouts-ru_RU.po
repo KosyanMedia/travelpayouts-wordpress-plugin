@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-14 16:31+0300\n"
+"POT-Creation-Date: 2015-08-17 11:09+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: app/includes/TPLoaderScripts.php:177
+#: app/includes/TPLoaderScripts.php:186
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:46
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:110
@@ -31,38 +31,38 @@ msgstr ""
 msgid "Destination"
 msgstr "Куда"
 
-#: app/includes/TPLoaderScripts.php:178
+#: app/includes/TPLoaderScripts.php:187
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:40
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
 #: app/includes/models/admin/menu/TPFieldSettings.php:361
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPLoaderScripts.php:179
+#: app/includes/TPLoaderScripts.php:188
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:192
+#: app/includes/TPLoaderScripts.php:202
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:193
+#: app/includes/TPLoaderScripts.php:203
 msgid "No payments!"
 msgstr "Нет выплат!"
 
-#: app/includes/TPLoaderScripts.php:194
+#: app/includes/TPLoaderScripts.php:204
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:195
+#: app/includes/TPLoaderScripts.php:205
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:198
+#: app/includes/TPLoaderScripts.php:208
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:199
+#: app/includes/TPLoaderScripts.php:209
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -107,17 +107,17 @@ msgstr ""
 msgid "Constructor search form"
 msgstr "Конструктор поисковых форм"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:6
-msgid "Select search form"
-msgstr "Выберите поисковую форму"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:21
+msgid "No customized search form"
+msgstr "Нет настроенных Поисковых форм"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:19
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:28
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:30
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:30
 msgid "City of departure default"
 msgstr "Город вылета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:35
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:35
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:34
 msgid "City Arrival default"
@@ -1180,6 +1180,9 @@ msgstr "Статистика"
 #: core/controllers/KPDBaseController.php:14
 msgid "View "
 msgstr ""
+
+#~ msgid "Select search form"
+#~ msgstr "Выберите поисковую форму"
 
 #~ msgid "Widget popular destinations"
 #~ msgstr "Виджет популярных направлений"
