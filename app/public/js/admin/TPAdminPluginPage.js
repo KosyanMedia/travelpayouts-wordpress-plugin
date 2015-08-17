@@ -141,7 +141,7 @@ jQuery(function($){
                 var text = JSON.stringify(result.export_settings);
                 var filename = result.filename;
                 var export_settings = new Blob([text], {type: "text/plain;charset=utf-8"});
-                saveAs(export_settings, filename+".txt");
+                saveAs(export_settings, filename);
             }
         });
     });
