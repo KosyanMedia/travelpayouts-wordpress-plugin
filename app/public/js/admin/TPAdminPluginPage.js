@@ -471,6 +471,9 @@ jQuery(function($){
         });
         $(this).addClass("active-w");
     });
+    function isEmpty(str) {
+        return (!str || 0 === str.length);
+    }
     /**
      *
      * @param class_notice
@@ -493,16 +496,21 @@ jQuery(function($){
      */
     function adminNotice(class_notice, title_notice, message_notice){
         var output = '';
-        output = '<div class="'+class_notice+'">' +
-                    '<p>'+title_notice+'</p>'
+        message_notice = (isEmpty(message_notice))?'':'<p>'+message_notice+'</p>';
+        output = '<div class="'+class_notice+'" id="'+TPPluginName+'AdminNotice">' +
+                    '<p><strong>'+title_notice+'</strong></p>' +message_notice+
                  '</div>'
         return output;
     }
     /** **/
     function TPSettingsSave(selector){
         doc.find(selector).submit(function() {
-            doc.find('#wpbody').append(adminNotice('update', 'test', 'test'));
-            console.log(111);
+            //$(adminNotice('updated', 'test', 'test')).insertAfter('#wpbody');
+            if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+                doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('updated', TPMesgUpdateSettings , ''));
+            }else{
+                $('#wpbody-content').before(adminNotice('updated', TPMesgUpdateSettings , ''));
+            }
             $(this).ajaxSubmit({
                 success: function(data){
 

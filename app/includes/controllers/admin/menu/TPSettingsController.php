@@ -20,11 +20,17 @@ class TPSettingsController extends KPDAdminMenuController{
             'manage_options',
             'tp_control_settings',
             array(&$this, 'render'));
+        /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
+            'class_notice' => 'updated',
+            'title_notice' => 'Test',
+            'message_notice' => 'Test',
+        ));*/
     }
 
     public function render()
     {
         // TODO: Implement render() method.
+
         $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPSettings.view.php";
         parent::loadView($pathView);
     }
