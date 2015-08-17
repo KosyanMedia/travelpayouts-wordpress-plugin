@@ -46,19 +46,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="bellows__item">
-                    <div class="bellows__header">
-                        <h3><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
-                    </div>
-                    <div class="bellows__content">
-                        <?php do_settings_fields('tp_settings_widget_4', 'tp_settings_widget_4_id'); ?>
-                        <div class="TP-navsPan">
-                            <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
-                            <input type="submit" name="submit" id="TPSaveSettingsWidget_4" class="TP-BtnTab"
-                                   value="<?php _e('Save changes', KPDPlUGIN_TEXTDOMAIN ); ?>">
+                <?php if(TPPlugin::$options['local']['localization'] == 1){ ?>
+                    <div class="bellows__item">
+                        <div class="bellows__header">
+                            <h3><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        </div>
+                        <div class="bellows__content">
+                            <?php do_settings_fields('tp_settings_widget_4', 'tp_settings_widget_4_id'); ?>
+                            <div class="TP-navsPan">
+                                <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                                <input type="submit" name="submit" id="TPSaveSettingsWidget_4" class="TP-BtnTab"
+                                       value="<?php _e('Save changes', KPDPlUGIN_TEXTDOMAIN ); ?>">
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
                 <div class="bellows__item">
                     <div class="bellows__header">
                         <h3><?php _e('Hotel Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
