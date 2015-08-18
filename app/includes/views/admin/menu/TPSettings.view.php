@@ -2,15 +2,16 @@
     <div id="tabs-settings">
         <div class="TP-TopImportantInfo">
             <p>
-                <?php _e('Enter the following information from your account on the site' , KPDPlUGIN_TEXTDOMAIN);?>
+                <?php _e('Please, enter your ' , KPDPlUGIN_TEXTDOMAIN);?>
                 <a href="https://www.travelpayouts.com?utm_source=wp_plugin&utm_medium=settings" target="_blank">
-                    Travelpayouts.com
-                </a><br/>
-                <?php _e('If you do not have an account in Travelpayouts - you first need to register. Marker and the token can be seen here - ' , KPDPlUGIN_TEXTDOMAIN);?>
+                    travelpayouts.com
+                </a>
+                <?php _e('account data below. ' , KPDPlUGIN_TEXTDOMAIN);?>
+                <?php _e('Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at -' , KPDPlUGIN_TEXTDOMAIN);?>
                 <a href="https://www.travelpayouts.com/developers/api?utm_source=wp_plugin&utm_medium=settings" target="_blank">
                     travelpayouts.com/developers/api
                 </a>,
-                <?php _e(' White Label - here', KPDPlUGIN_TEXTDOMAIN); ?>
+                <?php _e(' White Label - ', KPDPlUGIN_TEXTDOMAIN); ?>
                 <a href="https://www.travelpayouts.com/white_labels?utm_source=wp_plugin&utm_medium=settings" target="_blank">
                     travelpayouts.com/white_labels
                 </a>

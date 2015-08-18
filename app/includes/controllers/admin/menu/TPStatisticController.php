@@ -18,8 +18,8 @@ class TPStatisticController extends KPDAdminMenuController{
     {
         // TODO: Implement action() method.
         add_submenu_page( KPDPlUGIN_TEXTDOMAIN,
-            _x('Statistic',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
-            _x('Statistic',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
+            _x('Statistics',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
+            _x('Statistics',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_stats',
             array(&$this, 'render'));

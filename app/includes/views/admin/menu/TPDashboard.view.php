@@ -3,7 +3,26 @@
     <div class="TP-headIn">
         <div class="TP-logoTrav">
             <a href="https://www.travelpayouts.com" target="_blank">
-                <img src="<?php echo KPDPlUGIN_URL?>app/public/images/logo.png" alt=""/>
+                <?php
+                global $locale;
+                switch($locale){
+                    case "ru_RU":
+                        ?>
+                        <img src="<?php echo KPDPlUGIN_URL?>app/public/images/tp-logo.png" alt=""/>
+                        <?php
+                        break;
+                    case "en_US":
+                        ?>
+                        <img src="<?php echo KPDPlUGIN_URL?>app/public/images/tp-logo-eng.png" alt=""/>
+                        <?php
+                        break;
+                    default:
+                        ?>
+                        <img src="<?php echo KPDPlUGIN_URL?>app/public/images/tp-logo-eng.png" alt=""/>
+                        <?php
+                        break;
+                } ?>
+
             </a>
         </div>
         <p class="TP-goToSite"><?php _e('Go to ', KPDPlUGIN_TEXTDOMAIN)?>
@@ -36,16 +55,15 @@
         </div>
         <p class="TP-deteiledIncome">
             <span>
-                <?php _e('Data updated at ', KPDPlUGIN_TEXTDOMAIN ); ?>
+                <?php _e('Last updated at ', KPDPlUGIN_TEXTDOMAIN ); ?>
                 <strong><?php echo date('H:i:s', $this->model->detailed_sales["time"]); ?></strong>
-                <?php _e(' by local time.', KPDPlUGIN_TEXTDOMAIN ); ?>
+                <?php _e(' (Local time)', KPDPlUGIN_TEXTDOMAIN ); ?>
             </span><br/>
-            <?php _e('A detailed report on payments can be found in the section ', KPDPlUGIN_TEXTDOMAIN ); ?>
-            <a href="admin.php?page=tp_control_stats"><?php _e('Statistics', KPDPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php printf(__('Go to %s section to get a detailed report', KPDPlUGIN_TEXTDOMAIN ), '<a href="admin.php?page=tp_control_stats">'.__('Statistics', KPDPlUGIN_TEXTDOMAIN ).'</a>'); ?>
         </p>
 
         <div class="TP-NewsSection">
-            <h2 class="TP-titleNews"><?php _e('News from Travelpayouts', KPDPlUGIN_TEXTDOMAIN ); ?></h2>
+            <h2 class="TP-titleNews"><?php _e('Travelpayouts News', KPDPlUGIN_TEXTDOMAIN ); ?></h2>
             <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wp_plugin&utm_medium=dashboard" target="_blank">
                 <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
             </a>

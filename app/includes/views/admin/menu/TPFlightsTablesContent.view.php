@@ -4,7 +4,7 @@
         <div class="bellows default">
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('Flight Prices for a Month from origin to destination, One Way',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Flights from origin to destination, One Way (next month)',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_1', 'tp_settings_shortcode_1_id'); ?>
@@ -17,7 +17,7 @@
             </div>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('Flights from Origin to Destination for the Next Few Days',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Flights from Origin to Destination (next few days)',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_2', 'tp_settings_shortcode_2_id'); ?>
@@ -30,7 +30,7 @@
             </div>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('The Cheapest Round-trip Tickets from origin to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Cheapest Flights from origin to destination, Round-trip',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_4', 'tp_settings_shortcode_4_id'); ?>
@@ -43,7 +43,7 @@
             </div>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('The Cheapest Flights for this Month from origin to destination',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Cheapest Flights from origin to destination (next month)',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_5', 'tp_settings_shortcode_5_id'); ?>
@@ -56,7 +56,7 @@
             </div>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('The Cheapest Flights from origin to destination for the Year Ahead',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Cheapest Flights from origin to destination (next year)',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_6', 'tp_settings_shortcode_6_id'); ?>
@@ -110,7 +110,7 @@
             <?php } ?>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('Airline\'s popular flights',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Most popular flights within this Airlines',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_10', 'tp_settings_shortcode_10_id'); ?>
@@ -123,7 +123,7 @@
             </div>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('Flights That Have Been Found on Our Website',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Searched on our website',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_12', 'tp_settings_shortcode_12_id'); ?>

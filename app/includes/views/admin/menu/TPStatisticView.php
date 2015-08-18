@@ -189,7 +189,7 @@ class TPStatisticView extends TPView{
                         <thead>
                         <tr>
                             <td class="TPTableHead tp-date-column">'.__('Date', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-price-column">'.__('Sum', KPDPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-price-column">'.__('Amount', KPDPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'.__('Status', KPDPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'.__('Comment', KPDPlUGIN_TEXTDOMAIN ).'</td>
                         </tr>

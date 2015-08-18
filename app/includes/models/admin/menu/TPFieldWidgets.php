@@ -25,7 +25,6 @@ class TPFieldWidgets {
                 $this->local_img = '-eng';
                 break;
         }
-        error_log($locale);
     }
     public function TPFieldWidget_1(){
         $widgets = 1;
@@ -120,7 +119,7 @@ class TPFieldWidgets {
 
             <input id="chek6" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][map_styled]"
                    value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['map_styled']), 1) ?> hidden />
-            <label for="chek6" class="TPLabelMapStyled"><?php _e('Map styled', KPDPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek6" class="TPLabelMapStyled"><?php _e('Map Style', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
             <div class="TP-ColorStyle TP-ColorStyleWidget">
                 <label>
@@ -440,7 +439,7 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('Number of widgets when you insert into the post', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                <span><?php _e('Number of Widgets', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][count]" class="TP-Zelect">
                     <option <?php selected( TPPlugin::$options["widgets"][$widgets]['count'], 1 ); ?>
                         value="1">1</option>

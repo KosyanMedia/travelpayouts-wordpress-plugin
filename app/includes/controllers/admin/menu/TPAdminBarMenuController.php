@@ -33,7 +33,7 @@ class TPAdminBarMenuController extends KPDAdminBarMenuController{
             KPDPlUGIN_TEXTDOMAIN.'_tp_search_shortcodes'
         );
         $this->admin_bar_add_sub_menu(
-            __('Statistic', KPDPlUGIN_TEXTDOMAIN ),
+            __('Statistics', KPDPlUGIN_TEXTDOMAIN ),
             'admin.php?page=tp_control_stats',
             'tp_admin_bar_menu',
             KPDPlUGIN_TEXTDOMAIN.'_tp_control_stats'

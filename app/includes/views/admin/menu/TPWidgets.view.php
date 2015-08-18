@@ -7,7 +7,7 @@
 
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Flights Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_1', 'tp_settings_widget_1_id'); ?>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Popular Routes Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Popular Destinations Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_6', 'tp_settings_widget_6_id'); ?>

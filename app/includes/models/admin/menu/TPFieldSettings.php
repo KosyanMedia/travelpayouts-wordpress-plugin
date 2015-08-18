@@ -50,7 +50,7 @@ class TPFieldSettings {
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('White Lable', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _e('White Label', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][white_label]"
                                value="<?php echo esc_attr(TPPlugin::$options['account']['white_label']) ?>"/>
@@ -69,29 +69,29 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('If an error in the API instead of the output table', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('Text to display if the API error occurs', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error]"
                                value="<?php echo esc_attr(TPPlugin::$options['config']['message_error']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('After clicking the Search button', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('Search button Action', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
-                            <label for="rchek1"><?php _e('Pass on the completed forms', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek1"><?php _e('Follow to filled out forms', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
-                            <label for="rchek2"><?php _e('Initiate new search', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek2"><?php _e('Start new Search', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('Unit distances', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('Distance Units', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][distance]" class="TP-Zelect">
                         <option <?php selected( TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
                             <?php _e('km', KPDPlUGIN_TEXTDOMAIN); ?>
@@ -102,7 +102,7 @@ class TPFieldSettings {
                     </select>
                 </div>
                 <div class="TP-ListSub ListSub--cust list--db">
-                    <span class="TP-titleSub--custom"><?php _e('Size logo Airlines', KPDPlUGIN_TEXTDOMAIN); ?> (px)</span>
+                    <span class="TP-titleSub--custom"><?php _e('Airlines logo size', KPDPlUGIN_TEXTDOMAIN); ?> (px)</span>
                     <div class="ItemSub">
                         <label>
                             <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][width]"
@@ -129,7 +129,7 @@ class TPFieldSettings {
                             <label for="chek1"><?php _e('Switch to the results via a redirect', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
-                                    <span><?php _e('In the transition is given the code 301, which is well accepted by search engines. We recommend not to change this setting.', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                                    <span><?php _e('In this case the 301 Redirect, which is more preferable for search engines, will be activated. We recommend that you don’t change this option.', KPDPlUGIN_TEXTDOMAIN); ?></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                             <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -147,7 +147,7 @@ class TPFieldSettings {
                             <label for="chek3"><?php _e('Add the nofollow attribute for links', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
-                                    <span><?php _e('Attribute helps to avoid undesirable results in the index of search engines. We recommend not to change this setting.', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                                    <span><?php _e('This attribute avoids getting undesirable search results into the search engines index. We recommend that you don’t change this option.', KPDPlUGIN_TEXTDOMAIN); ?></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                     <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -161,7 +161,7 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem mb--cus">
                 <div class="ItemSub">
-                    <span><?php _e('Update rate tables', KPDPlUGIN_TEXTDOMAIN);?></span>
+                    <span><?php _e('Table Updates', KPDPlUGIN_TEXTDOMAIN);?></span>
                     <div class="TP-childF">
                         <div class="spinnerW clearfix" data-trigger="spinner">
                             <label>
@@ -195,7 +195,7 @@ class TPFieldSettings {
                         </div>
                         <div class="svg-img-1">
                             <a href="#" class="tooltip-settings"><span>
-                                    <?php _e('For faster injection test page, select &lt;head&gt;. If pages are loading slowly, try to rearrange the &lt;footer&gt;', KPDPlUGIN_TEXTDOMAIN);?>
+                                    <?php _e('Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching to &lt;footer&gt;', KPDPlUGIN_TEXTDOMAIN);?>
                                 </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
                                         <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
@@ -203,12 +203,12 @@ class TPFieldSettings {
                         <li>
                             <input id="rchek5" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
-                            <label for="rchek5"><?php _e('Inside the tag ', KPDPlUGIN_TEXTDOMAIN); echo  htmlspecialchars('<head>');?></label>
+                            <label for="rchek5"><?php _e('Inside &lt;head&gt; tag ', KPDPlUGIN_TEXTDOMAIN);?></label>
                         </li>
                         <li>
                             <input id="rchek6" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
-                            <label for="rchek6"><?php _e('Inside the tag ', KPDPlUGIN_TEXTDOMAIN); echo  htmlspecialchars('<head>');?></label>
+                            <label for="rchek6"><?php _e('Inside &lt;footer&gt; tag ', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -216,19 +216,19 @@ class TPFieldSettings {
 
                      <span>
                          <div class="box-span">
-                             <?php _e('Format date', KPDPlUGIN_TEXTDOMAIN); ?>
+                             <?php _e('Date Format', KPDPlUGIN_TEXTDOMAIN); ?>
                          </div>
                          <div class="svg-img-1"><a href="#" class="tooltip-settings">
                                  <span>
                                      <ul>
                                          <li><?php _e('Use variables to set the date:', KPDPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>d - <?php _e('month day', KPDPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>f - <?php _e('month name in small letters', KPDPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>F - <?php _e('month name with a capital letter', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>d - <?php _e('day', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>f - <?php _e('month name (small letters)', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>F - <?php _e('month name (capital letters)', KPDPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>m - <?php _e('month number', KPDPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>M - <?php _e('month 3 letters', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>M - <?php _e('month (3 letters)', KPDPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>y - <?php _e('last 2 digits of the year', KPDPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>Y - <?php _e('full year', KPDPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>Y - <?php _e('year', KPDPlUGIN_TEXTDOMAIN); ?></li>
                                      </ul>
 
                                  </span>
@@ -275,7 +275,7 @@ class TPFieldSettings {
         ?>
         <div class="TP-LocalHead">
             <label>
-                <span><?php _e('Language tables', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                <span><?php _e('Tables and Widgets Language', KPDPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[local][localization]" class="TP-Zelect TPFieldLocalization">
                     <option <?php selected( TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
                         <?php _e('Russian', KPDPlUGIN_TEXTDOMAIN); ?>
@@ -305,7 +305,7 @@ class TPFieldSettings {
             <?php $this->TPFieldTitleCase(); ?>
         </div>
         <div class="TP-listColum">
-            <span><?php _e('Names cells', KPDPlUGIN_TEXTDOMAIN); ?></span>
+            <span><?php _e('Fields', KPDPlUGIN_TEXTDOMAIN); ?></span>
             <?php
             $local_table_fields = '<ul class="titleHeadTable">
                            <li class="TPLangFieldsLi">'.$this->local[TPPlugin::$options['local']['localization']].'</li>

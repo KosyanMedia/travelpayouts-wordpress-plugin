@@ -204,7 +204,7 @@ class TPLoaderScripts extends KPDLoaderScripts{
                 global $locale;
             ?>
             TPTableEmptyReport = '<?php _e('No data, enter API token and marker', KPDPlUGIN_TEXTDOMAIN); ?>';
-            TPTableEmptyBalance = '<?php _e('No payments!', KPDPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptyBalance = '<?php _e('There are no payments yet', KPDPlUGIN_TEXTDOMAIN); ?>';
             TPTableEmptySearchShortcode = '<?php _e('No search form.', KPDPlUGIN_TEXTDOMAIN); ?>';
             TPStatsTotalTrText = '<?php _e('Grand total this month', KPDPlUGIN_TEXTDOMAIN); ?>';
             wpLocale = '<?php echo get_locale(); ?>';

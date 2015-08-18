@@ -4,7 +4,7 @@
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _e('In this section you can add shortcodes for search forms, set up in the admin account Travelpayouts', KPDPlUGIN_TEXTDOMAIN); ?>
+            <?php _e('Here you can add shortcodes for each search form set up in your Travelpayouts account', KPDPlUGIN_TEXTDOMAIN); ?>
             <a href="https://www.travelpayouts.com/tools/forms?utm_source=wp_plugin&utm_medium=forms" target="_blank">
                 https://www.travelpayouts.com/tools/forms
             </a>
@@ -21,7 +21,7 @@
                 </a>
                 <a href="admin.php?page=tp_control_search_shortcodes&action=add_search_shortcode" class="TP-deleteShortLincks deleteChecked"
                    data-type="search_shortcodes">
-                    <i></i><?php _e('Remove checked', KPDPlUGIN_TEXTDOMAIN) ?>
+                    <i></i><?php _e('Remove', KPDPlUGIN_TEXTDOMAIN) ?>
                 </a>
             </div>
             <a class="TP-AllLincksShort" href="javascript:void(0)">
@@ -38,7 +38,7 @@
                     <label for="chekTableS-all"></label>
                 </td>
                 <td class="TPTableHead"><?php _e('Title ', KPDPlUGIN_TEXTDOMAIN) ?></td>
-                <td class="TPTableHead tp-date-column"><?php _e('Date added', KPDPlUGIN_TEXTDOMAIN) ?></td>
+                <td class="TPTableHead tp-date-column"><?php _e('Add Date', KPDPlUGIN_TEXTDOMAIN) ?></td>
                 <td class="tp-notsort-column"><?php _e('Shortcode', KPDPlUGIN_TEXTDOMAIN) ?></td>
                 <td class="tp-notsort-column"></td>
             </tr>

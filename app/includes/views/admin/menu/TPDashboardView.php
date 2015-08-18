@@ -38,7 +38,7 @@ class TPDashboardView extends TPView{
                         <div class="itemIncome">
                             <p>' . $this->tpGetMonth($this->model->detailed_sales["last_month"]["sales"])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('for the last month', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('last month', KPDPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->model->balance["data"]["balance"]
@@ -156,10 +156,10 @@ class TPDashboardView extends TPView{
                     <td><?php _e('Search', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <!--<td><?php //_e('Paid clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Income clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Clicks income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Bookings', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Paid booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Income booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Booking income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Possible. income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>
@@ -260,10 +260,10 @@ class TPDashboardView extends TPView{
                     <td><?php _e('Search', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <!--<td><?php //_e('Paid clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Income clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Clicks income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Bookings', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Paid booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Income booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Booking income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php _e('Possible. income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>

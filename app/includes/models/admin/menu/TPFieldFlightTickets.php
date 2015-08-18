@@ -220,10 +220,10 @@ class TPFieldFlightTickets {
             }
             switch($shortcode){
                 case 10:
-                    ?><p><?php _e('Use variables of airline  for automatic substitution Airlines', KPDPlUGIN_TEXTDOMAIN ); ?></p><?php
+                    ?><p><?php _e('Use "airline" variable to add the Airlines automatically', KPDPlUGIN_TEXTDOMAIN ); ?></p><?php
                     break;
                 default:
-                    ?><p><?php _e('Use variables of origin, destination for automatic substitution of the city', KPDPlUGIN_TEXTDOMAIN ); ?></p><?php
+                    ?><p><?php _e('Use "origin" and "destination" variables to add the city automatically', KPDPlUGIN_TEXTDOMAIN ); ?></p><?php
                     break;
             }
             ?>
@@ -237,7 +237,7 @@ class TPFieldFlightTickets {
     public function TPFieldTitleTag($shortcode, $type = 'shortcodes'){
         ?>
         <label>
-            <span><?php _e('The title tag', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+            <span><?php _e('Title tag', KPDPlUGIN_TEXTDOMAIN ); ?></span>
 
             <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
                 <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
@@ -261,7 +261,7 @@ class TPFieldFlightTickets {
     public function TPFieldTitleButton($shortcode){
         ?>
         <label>
-            <span><?php _e('Title button', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+            <span><?php _e('Button Title', KPDPlUGIN_TEXTDOMAIN ); ?></span>
             <?php
             foreach(TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
                 $typeFields = ($this->local[TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
@@ -271,7 +271,7 @@ class TPFieldFlightTickets {
             <?php
             }
             ?>
-            <p><?php _e('You can use a variable price', KPDPlUGIN_TEXTDOMAIN ); ?></p>
+            <p><?php _e('"Price" variable can be used', KPDPlUGIN_TEXTDOMAIN ); ?></p>
         </label>
     <?php
     }
@@ -392,7 +392,7 @@ class TPFieldFlightTickets {
     public function TPFieldPaginate($shortcode){
         ?>
         <div class="ItemSub">
-            <span><?php _e('Number of lines per page', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+            <span><?php _e('Rows per page', KPDPlUGIN_TEXTDOMAIN ); ?></span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
                     <label>
