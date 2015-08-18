@@ -74,18 +74,7 @@
                     </label>
                 </td>
             </tr>
-            <tr id="tr_responsive_widget">
-                <td>
-                    <label id="responsive_label">
-                        <input type="checkbox" id="responsive_widget" value="1">
-                        <?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?>
-                    </label>
-                    <label id="responsive_width_label">
-                        <input type="width" id="responsive_width" value="1">
-                        <?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?>
-                    </label>
-                </td>
-            </tr>
+
             <tr id="tr_hotel_id_widget_size">
                 <td>
                     <label>
@@ -112,6 +101,18 @@
                     </td>
                 </tr>
             <?php } ?>
+            <tr id="tr_responsive_widget">
+                <td>
+                    <label id="responsive_label">
+                        <input type="checkbox" id="responsive_widget" value="1">
+                        <?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?>
+                    </label>
+                    <label id="responsive_width_label">
+                        <input type="width" id="responsive_width" value="1">
+                        <?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?>
+                    </label>
+                </td>
+            </tr>
             </tbody>
         </table>
     </form>

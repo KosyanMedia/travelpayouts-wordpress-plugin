@@ -518,13 +518,21 @@ jQuery(function($) {
             }else{
                 doc.find('#tr_responsive_widget').show();
                 doc.find('#responsive_width').val(doc.find('#select_widgets').data('widgets-size-width-6'));
+                switch ($(this).data('widgets-responsive-6')){
+                    case 0:
+                        doc.find('#responsive_widget').attr('checked', false);
+                        break;
+                    case 1:
+                        doc.find('#responsive_widget').attr('checked', true);
+                        break;
+                }
             }
 
             doc.find('.TPPopularRoutes').remove();
             for(var i = 0; i < $(this).val(); i++){
                 if(!$('tr').is('#tr_popular_routes_destination-'+i)){
-                    doc.find('#constructorWidgetModalTable > tbody:last-child')
-                        .append('<tr id="tr_popular_routes_destination-'+i+'" class="TPPopularRoutes">' +
+                    doc.find('#tr_responsive_widget')
+                        .before('<tr id="tr_popular_routes_destination-'+i+'" class="TPPopularRoutes">' +
                         '<td>' +
                         '<input type="text" name="popular_routes_destination-'+i+'"' +
                         'id="popular_routes_destination-'+i+'" value=""' +
