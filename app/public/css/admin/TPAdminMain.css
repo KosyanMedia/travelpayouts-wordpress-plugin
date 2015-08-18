@@ -2337,12 +2337,12 @@ thead tr td.active-w {
 }
 .box-span-1 {
     float: left;
-    width: 200px;
+    width: 205px;
 }
 .box-span {
     float: left;
     width: 95px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .TP-WidgetHelpImgSubsc img{
     height: 200px;
