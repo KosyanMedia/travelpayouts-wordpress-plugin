@@ -225,7 +225,12 @@ class TPFieldWidgets {
                 </label>
             </div>
         </div>
+        <div class="TP-HeadTable  TPCheckBoxWidget">
+            <input id="chek73" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+            <label for="chek73"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
+        </div>
         <div class="TP-ListSub ListSub--cust list--db">
             <span class="TP-titleSub--custom"><?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?> (px)</span>
             <div class="ItemSub">
@@ -234,11 +239,6 @@ class TPFieldWidgets {
                            type="text"
                            value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
-            </div>
-            <div class="ItemSub-5">
-                <input id="chek7" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                       value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-                <label for="chek7"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
             </div>
         </div>
 
@@ -356,9 +356,9 @@ class TPFieldWidgets {
             </div>
         </div>
         <div class="TP-HeadTable  TPCheckBoxWidget">
-            <input id="chek7" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+            <input id="chek74" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek7"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek74"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
@@ -388,7 +388,12 @@ class TPFieldWidgets {
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/205451067-Hotel-widget" target="_blank" class="tooltip-img-2">
             <?php _e('Help Travepayouts', KPDPlUGIN_TEXTDOMAIN ); ?></a>
+        <div class="TP-HeadTable  TPCheckBoxWidget">
+            <input id="chek75" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+            <label for="chek75"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
+        </div>
         <div class="TP-ListSub ListSub--cust list--db">
             <span class="TP-titleSub--custom"><?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?> (px)</span>
             <div class="ItemSub ItemSub-3">
@@ -397,11 +402,6 @@ class TPFieldWidgets {
                            type="text"
                            value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
-            </div>
-            <div class="ItemSub-5">
-                <input id="chek7" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                       value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-                <label for="chek7"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
             </div>
         </div>
 
@@ -422,7 +422,12 @@ class TPFieldWidgets {
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/205670418" target="_blank" class="tooltip-img-2">
             <?php _e('Help Travepayouts', KPDPlUGIN_TEXTDOMAIN ); ?></a>
+        <div class="TP-HeadTable  TPCheckBoxWidget">
+            <input id="chek76" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+            <label for="chek76"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
+        </div>
         <div class="TP-ListSub ListSub--cust list--db">
             <span class="TP-titleSub--custom"><?php _e('Width', KPDPlUGIN_TEXTDOMAIN ); ?> (px)</span>
             <div class="ItemSub  ItemSub-3">

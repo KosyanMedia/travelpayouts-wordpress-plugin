@@ -2276,10 +2276,10 @@ thead tr td.active-w {
 }
 
 .svg-img-1 {
-    width: 17px;
+    width: 15px;
+    height: 15px;
     float: left;
-    margin-left: 10px;
-    margin-top: 1px;
+    margin-left: 5px;
 }
 .tooltip-settings {
     width: 15px;
@@ -2349,4 +2349,7 @@ thead tr td.active-w {
 }
 .TP-WidgetHelpImgSubsc{
     bottom: -110px !important;
+}
+.TP-listSet li .svg-img-1 a svg{
+    padding-top: 5px!important;
 }
