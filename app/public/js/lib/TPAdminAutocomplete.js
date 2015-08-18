@@ -92,6 +92,36 @@ function TPCityAutocomplete(){
                         $.get("http://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
 
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
+                                var locations=[];
+                                $.map(data, function(items, keys){
+                                    $.map(items, function(item, key){
+                                        var location = new Object();
+                                        switch (keys){
+                                            case 'cities':
+                                                //console.log(item.fullname);
+                                                location.label = item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]";
+                                                location.val = '{'+item.location.lat+', '+item.location.lon+'}';
+                                                break;
+                                            case 'hotels':
+                                                //console.log(item.hotelFullName);
+                                                location.label = item.hotelFullName;
+                                                location.val = '{'+item.location.lat+', '+item.location.lon+'}';
+                                                break;
+                                        }
+                                        locations.push(location);
+                                    })
+                                })
+                                response(
+                                    $.map(locations, function(item, key){
+                                        return {
+                                            label: item.label,
+                                            value: item.label+item.val,
+                                            val: item.val
+                                        }
+                                    })
+                                )
+
+                                //console.log(locations);
                                 /*response(
                                     $.map(data.cities, function(item){
                                         return {
@@ -127,9 +157,7 @@ function TPCityAutocomplete(){
                                         })
                                     )
                                 })*/
-                                response(
-                                return {label: 'test'}
-                                )
+
 
                             }else{
                                 response(

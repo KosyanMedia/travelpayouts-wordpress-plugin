@@ -343,7 +343,7 @@ jQuery(function($) {
                     id: "constructorWidgetButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, width, height, direct, one_way, responsive, hotel_id, count;
+                        var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location;
                         origin = doc.find('#origin_widget').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_widget').val();
@@ -371,10 +371,12 @@ jQuery(function($) {
                                 }
                                 break
                             case '2':
-                                if(origin == ""){
-                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                location = doc.find('#hotel_id_widget').val();
+                                location = location.substring(location.indexOf('{')+1,location.indexOf('}'));
+                                if(location == ""){
+                                    doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else {
-                                    setShortcodes("[tp_hotelmap_widget coordinates=\"" + origin + "\" width="+width+" height="+height+"]",
+                                    setShortcodes("[tp_hotelmap_widget coordinates=\"" + location + "\" width="+width+" height="+height+"]",
                                         $(this));
                                 }
                                 break;
@@ -555,8 +557,8 @@ jQuery(function($) {
             $(this).removeClass('constructorShortcodesError');
             resetConstructorWidgetModal();
 
-            tbody.children('#tr_origin_widget').children('td').children('input').removeClass('TPCoordinatesAutocomplete');
-            tbody.children('#tr_origin_widget').children('td').children('input').attr("placeholder", TPOriginTitle);
+            tbody.children('#tr_hotel_id_widget').children('td').children('input').removeClass('TPCoordinatesAutocomplete');
+            tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPOriginTitle);
             switch($(this).val()) {
                 case '0':
                     break;
