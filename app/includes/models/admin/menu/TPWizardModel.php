@@ -29,6 +29,7 @@ class TPWizardModel extends KPDOptionModel{
     {
         // TODO: Implement save_option() method.
         $result = array_merge(TPPlugin::$options, $input);
+        //if(){}
         TPPlugin::deleteCacheAll();
         return $result;
     }

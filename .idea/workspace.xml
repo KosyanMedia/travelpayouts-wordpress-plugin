@@ -34,24 +34,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPWizardTabReg.view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php">
+      <file leaf-file-name="TPWizardModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67332125" vertical-offset="997" max-vertical-offset="1656">
-              <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
-              <folding>
-                <marker date="1440025936351" expanded="true" signature="5023:5037" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="648">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPWizard.view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php">
+      <file leaf-file-name="TPAdminMain.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="900">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="-55.553635" vertical-offset="41956" max-vertical-offset="43398">
+              <caret line="547" column="26" selection-start-line="547" selection-start-column="26" selection-end-line="547" selection-end-column="26" />
+              <folding>
+                <element signature="e#3846#4403#2" expanded="true" />
+                <element signature="e#4469#4926#2" expanded="true" />
+                <element signature="e#4994#6599#2" expanded="true" />
+                <element signature="e#6667#7232#2" expanded="true" />
+                <element signature="e#7298#7511#2" expanded="true" />
+                <element signature="e#7938#8495#2" expanded="true" />
+                <element signature="e#8566#9023#2" expanded="true" />
+                <element signature="e#9096#10701#2" expanded="true" />
+                <element signature="e#10774#11339#2" expanded="true" />
+                <element signature="e#11410#11623#2" expanded="true" />
+                <element signature="e#12346#12903#2" expanded="true" />
+                <element signature="e#12963#13420#2" expanded="true" />
+                <element signature="e#13482#15087#2" expanded="true" />
+                <element signature="e#15149#15714#2" expanded="true" />
+                <element signature="e#15774#15987#2" expanded="true" />
+                <element signature="e#16191#16752#2" expanded="true" />
+                <element signature="e#16805#17266#2" expanded="true" />
+                <element signature="e#17321#18930#2" expanded="true" />
+                <element signature="e#18985#19554#2" expanded="true" />
+                <element signature="e#19607#19824#2" expanded="true" />
+                <element signature="e#20344#20701#2" expanded="true" />
+                <element signature="e#21109#21466#2" expanded="true" />
+                <element signature="e#21759#22116#2" expanded="true" />
+                <element signature="e#24356#24713#2" expanded="true" />
+                <element signature="e#24965#25322#2" expanded="true" />
+                <element signature="e#27585#29138#2" expanded="true" />
+                <element signature="e#29364#30917#2" expanded="true" />
+                <element signature="e#35402#35759#2" expanded="true" />
+                <element signature="e#35799#36156#2" expanded="true" />
+                <element signature="e#45137#45702#2" expanded="true" />
+                <element signature="e#45762#46067#2" expanded="true" />
+                <element signature="e#47495#48196#2" expanded="true" />
+                <element signature="e#48277#48978#2" expanded="true" />
+                <element signature="e#61454#62059#2" expanded="true" />
+                <element signature="e#62117#62722#2" expanded="true" />
+                <element signature="e#62921#63298#2" expanded="true" />
+                <element signature="e#63356#63733#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,13 +141,13 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldWizard.php" />
         <option value="$PROJECT_DIR$/core/models/KPDOptionModel.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php" />
       </list>
     </option>
   </component>
@@ -449,7 +485,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24689165" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24637681" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20348378" sideWeight="0.47310126" order="4" side_tool="false" content_ui="tabs" />
@@ -886,17 +922,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16333938" vertical-offset="0" max-vertical-offset="551">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78402907" vertical-offset="0" max-vertical-offset="1656">
+          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+          <folding>
+            <marker date="1440026163619" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39201453" vertical-offset="0" max-vertical-offset="900">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7513612" vertical-offset="18" max-vertical-offset="630">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        <state vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="648">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5017301" vertical-offset="9556" max-vertical-offset="43398">
+        <state vertical-scroll-proportion="-55.553635" vertical-offset="41956" max-vertical-offset="43398">
           <caret line="547" column="26" selection-start-line="547" selection-start-column="26" selection-end-line="547" selection-end-column="26" />
           <folding>
             <element signature="e#3846#4403#2" expanded="true" />
@@ -936,32 +998,6 @@
             <element signature="e#62117#62722#2" expanded="true" />
             <element signature="e#62921#63298#2" expanded="true" />
             <element signature="e#63356#63733#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16333938" vertical-offset="0" max-vertical-offset="551">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67332125" vertical-offset="997" max-vertical-offset="1656">
-          <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
-          <folding>
-            <marker date="1440025936351" expanded="true" signature="5023:5037" placeholder="..." />
           </folding>
         </state>
       </provider>
