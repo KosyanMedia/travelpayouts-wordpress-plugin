@@ -8,6 +8,7 @@
 
 class KPDAdminNotice {
     protected $adminNotice = array();
+    protected $adminNoticeCustom = array();
     public function __construct(){
         /**
          * admin_notices
@@ -34,7 +35,12 @@ class KPDAdminNotice {
          *   чтобы удалить (убрать из вида) блок сообщения. С версии 4.2.
          */
         add_action( 'admin_notices', array( &$this, 'adminNotice'));
+        add_action( 'admin_notices', array( &$this, 'adminNoticeCustom'));
     }
+
+    /**
+     *
+     */
     public function adminNotice(){
         if(!empty($this->adminNotice)){
             $output = '';
@@ -50,10 +56,23 @@ class KPDAdminNotice {
             echo $output;
         }
     }
+    public function adminNoticeCustom(){
+        if(!empty($this->adminNoticeCustom)){
+            $output = '';
+            foreach($this->adminNoticeCustom as $adminNotice){
+                $output .= $adminNotice;
+            }
+            echo $output;
+        }
+    }
     /**
+     * @param $key
      * @param $args
      */
     public function adminNoticePush($key, $args){
         $this->adminNotice[$key] = $args;
+    }
+    public function adminNoticePushCustom($key, $args){
+        $this->adminNoticeCustom[$key] = $args;
     }
 }

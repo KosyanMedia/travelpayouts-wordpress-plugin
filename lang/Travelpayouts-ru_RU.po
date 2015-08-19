@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-19 13:39+0300\n"
+"POT-Creation-Date: 2015-08-19 17:39+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -74,37 +74,50 @@ msgstr "Создать"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: app/includes/TPRequestApi.php:462
+#: app/includes/TPRequestApi.php:466
 msgid "The variable $origin parameters not set or incorrectly."
 msgstr "Переменная $origin не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:463
+#: app/includes/TPRequestApi.php:467
 msgid "The variable $destination parameters not set or incorrectly."
 msgstr "Переменная $destination не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:464
+#: app/includes/TPRequestApi.php:468
 msgid "The variable $currency parameters not set or incorrectly."
 msgstr "Переменная $currency не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:465
+#: app/includes/TPRequestApi.php:469
 msgid "The variable $departure_at parameters not set or incorrectly."
 msgstr "Переменная $departure_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:466
+#: app/includes/TPRequestApi.php:470
 msgid "The variable $calendar_type parameters not set or incorrectly."
 msgstr "Переменная $calendar_type не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:467
+#: app/includes/TPRequestApi.php:471
 msgid "The variable $return_at parameters not set or incorrectly."
 msgstr "Переменная $return_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:468
+#: app/includes/TPRequestApi.php:472
 msgid "The variable $airline parameters not set or incorrectly."
 msgstr "Переменная $airline не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:472
+#: app/includes/TPRequestApi.php:476
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
+
+#: app/includes/TPLoader.php:83
+msgid "Customize plugin to get started"
+msgstr "Настроить плагин для начала работы"
+
+#: app/includes/TPLoader.php:87
+#, php-format
+msgid ""
+"Enter your account details in the %s and start earning money by selling "
+"tourism services."
+msgstr ""
+"Введите данные вашего аккаунта в  %s  и начните зарабатывать на продаже "
+"туристических услуг."
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
 msgid "Constructor search form"
@@ -1161,6 +1174,12 @@ msgstr "Travelpayouts"
 msgctxt "add_menu_page page title"
 msgid "Flight Tickets"
 msgstr "Авиабилеты"
+
+#: app/includes/controllers/admin/menu/TPWizardController.php:16
+#: app/includes/controllers/admin/menu/TPWizardController.php:17
+msgctxt "add_menu_page page title"
+msgid "Wizard"
+msgstr ""
 
 #: app/includes/controllers/admin/menu/TPStatisticController.php:21
 #: app/includes/controllers/admin/menu/TPStatisticController.php:22

@@ -10,12 +10,8 @@ class TPLoader extends KPDLoader{
     public function __construct(){
         parent::__construct();
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
-        if(TPPlugin::$TPRequestApi->get_status()){
-            error_log(1);
-        }else{
-            error_log(2);
-        }
     }
+
     protected function admin()
     {
         // TODO: Implement admin() method.
@@ -30,6 +26,7 @@ class TPLoader extends KPDLoader{
         new TPShortcodeButtonsController();
         new TPWidgetButtonsController();
         new TPSearchFormButtonsController();
+
 
     }
 
@@ -66,5 +63,30 @@ class TPLoader extends KPDLoader{
         new TPLoaderScripts();
         new TPAdminBarMenuController();
 
+
+    }
+
+    public function pluginsLoaded()
+    {
+        // TODO: Implement pluginsLoaded() method.
+        if(!TPPlugin::$TPRequestApi->get_status()){
+            new TPWizardController();
+            TPPlugin::$adminNotice->adminNoticePushCustom(
+                get_class($this),
+                '<div class="TP-Activate">
+                <div class="TP-Activate_a">
+                    <div class="TP-ico-avia"></div>
+                </div>
+                <div class="TP-Activate_button_container">
+                    <div class="TP-Activate_button_border">
+                        <div class="TP-Activate_button">
+                            <a href="admin.php?page=tp_control_wizard">'.__('Customize plugin to get started', KPDPlUGIN_TEXTDOMAIN).'</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="TP-Activate_description">'.sprintf(__('Enter your account details in the %s and start earning money by selling tourism services.', KPDPlUGIN_TEXTDOMAIN), ' <strong> Travelpayouts </strong>').'</div>
+            </div>'
+            );
+        }
     }
 }

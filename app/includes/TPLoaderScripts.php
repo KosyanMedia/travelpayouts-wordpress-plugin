@@ -235,6 +235,100 @@ class TPLoaderScripts extends KPDLoaderScripts{
             }
 
         </script>
+        <style type="text/css">
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
+
+            .TP-Activate {
+                position: relative;
+                overflow: auto;
+                border: 1px solid #4f800d;
+                padding: 5px;
+                margin: 10px 20px 0 2px;
+                background: #83af24;
+                background-image: -webkit-gradient(linear,0% 0,80% 100%,from(#83AF24),to(#4F800D));
+                background-image: -moz-gradient(linear,0% 0,80% 100%,from(#83AF24),to(#4F800D));
+                background-image: -ms-gradient(linear,0% 0,80% 100%,from(#83AF24),to(#4F800D));
+                background-image: -o-gradient(linear,0% 0,80% 100%,from(#83AF24),to(#4F800D));
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;position: relative;
+                overflow: hidden;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .TP-Activate_button_container {
+                cursor: pointer;
+                display: inline-block;
+                background: #def1b8;
+                padding: 5px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                width: 266px;
+            }
+            .TP-Activate_button_border {
+                background: #029dd6;
+                background-image: -webkit-gradient(linear,0% 0,0% 100%,from(#029DD6),to(#0079B1));
+                background-image: -moz-gradient(linear,0% 0,0% 100%,from(#029DD6),to(#0079B1));
+                background-image: -ms-gradient(linear,0% 0,0% 100%,from(#029DD6),to(#0079B1));
+                background-image: -o-gradient(linear,0% 0,0% 100%,from(#029DD6),to(#0079B1));
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+            }
+            .TP-Activate_button {
+                font-size: 17px;
+                text-align: center;
+                padding: 9px 0 8px 0;
+                color: #fff;
+                background: #69c7f4;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                text-transform: uppercase;
+                -webkit-transition: all ease .3s;
+                -moz-transition: all ease .3s;
+                -ms-transition: all ease .3s;
+                -o-transition: all ease .3s;
+                transition: all ease .3s;
+            }
+            .TP-Activate_button:hover {
+                text-decoration: none !important;
+                background: #00abfd;
+                -webkit-transition: all ease .3s;
+                -moz-transition: all ease .3s;
+                -ms-transition: all ease .3s;
+                -o-transition: all ease .3s;
+                transition: all ease .3s;
+            }
+            .TP-Activate_button a{
+                text-decoration: none !important;
+                color: #fff;
+                font-size: 17px;
+            }
+            .TP-Activate_description {
+                position: absolute;
+                top: 10px;
+                left: 285px;
+                margin-left: 25px;
+                color: #e5f2b1;
+                font-size: 15px;
+                z-index: 1000;
+            }
+            .TP-Activate_a {
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                color: #769f33;
+                z-index: 1;
+            }
+            .TP-ico-avia {
+                width: 55px;
+                height: 55px;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjYzBjN2NhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI1IDI0Ij48cGF0aCBkPSJNNS4wOTMgMGwxMS41NSA2LjY1YzEuMjM2LS42MjggMy4wNDItMS41NDggNC4yODgtMi4xNTMgMS41NTctLjc1NiAyLjU2LS40MzMgMi45MzcuMzQ1LjM3OC43NzgtLjAxMiAxLjcxNy0xLjU2OCAyLjQ3Mi0xLjI0Ny42MDUtMy4wNjQgMS41MDItNC4zMiAyLjA4NEwxNS43NDcgMjIuNjlsLTEuODg1LjktMS40MDMtMTEuNzI0LTYuNjggMi43OTQtLjY5NCA0LjA4Ni0xLjMuNjMtLjc0NC00LjQ3M0wwIDExLjU3NWwxLjMtLjYzIDMuNjQgMS45OCA2LjM2My0zLjQ0NC04LjM3Ny04LjQzTDQuODEuMTUzIi8+PC9zdmc+");
+                background-size: cover;
+            }
+        </style>
     <?php
     }
 
