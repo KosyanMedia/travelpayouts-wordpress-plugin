@@ -80,11 +80,14 @@ class TPLoader extends KPDLoader{
                 <div class="TP-Activate_button_container">
                     <div class="TP-Activate_button_border">
                         <div class="TP-Activate_button">
-                            <a href="admin.php?page=tp_control_wizard">'.__('Customize plugin to get started', KPDPlUGIN_TEXTDOMAIN).'</a>
+                            <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', KPDPlUGIN_TEXTDOMAIN).'</a>
                         </div>
                     </div>
                 </div>
-                <div class="TP-Activate_description">'.sprintf(__('Enter your account details in the %s and start earning money by selling tourism services.', KPDPlUGIN_TEXTDOMAIN), ' <strong> Travelpayouts </strong>').'</div>
+                <div class="TP-Activate_description">
+                    '.__('Welcome! Travelpayouts plugin is almost ready.', KPDPlUGIN_TEXTDOMAIN).'<br/>'
+                    .__('Enter your Travelpayouts authorization details and start earning now.', KPDPlUGIN_TEXTDOMAIN)
+                .'</div>
             </div>'
             );
         }

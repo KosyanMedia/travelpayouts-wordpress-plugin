@@ -1,7 +1,11 @@
 <div class="TPWrapper">
     <div id="tabs-wizard">
-        <p class="TP-SettingTitle TP-DashboardTitle">Зарабатывайте на продаже туристических услуг</p>
-        <p class="TP-titleNews TP-titleNewsR">Данный плагин позволяет встраивать виджеты и таблицы на основе Travelpayouts Data API в ваш Wordpress сайт.</p>
+        <p class="TP-SettingTitle TP-DashboardTitle">
+            <?php _e('Earn by selling tourist services', KPDPlUGIN_TEXTDOMAIN); ?>
+        </p>
+        <p class="TP-titleNews TP-titleNewsR">
+            <?php _e('Install our convenient and useful tools to your website and help your visitors to find the cheapest flights and hotels. Earn on commission for each booking.', KPDPlUGIN_TEXTDOMAIN); ?>
+        </p>
 
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
@@ -18,14 +22,23 @@
             </ul>
         </nav>
         <div class="TP-SettingContent">
-            <div class="TPmainContent TP-SettingContent">
-                <div id="tabs-waccount">
-                    11
-                </div>
-                <div id="tabs-wreg">
-                    1122
+
+            <div id="tabs-waccount">
+                <?php
+                    $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabAccount.view.php";
+                    $this->loadView($pathView);
+                ?>
+            </div>
+
+            <div id="tabs-wreg">
+                <div class="TPmainContent">
+                <?php
+                    $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabReg.view.php";
+                    $this->loadView($pathView);
+                ?>
                 </div>
             </div>
+
         </div>
     </div>
 
