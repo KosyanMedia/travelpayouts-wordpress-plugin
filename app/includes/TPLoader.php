@@ -9,6 +9,12 @@
 class TPLoader extends KPDLoader{
     public function __construct(){
         parent::__construct();
+        TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
+        if(TPPlugin::$TPRequestApi->get_status()){
+            error_log(1);
+        }else{
+            error_log(2);
+        }
     }
     protected function admin()
     {
@@ -59,6 +65,6 @@ class TPLoader extends KPDLoader{
         // TODO: Implement all() method.
         new TPLoaderScripts();
         new TPAdminBarMenuController();
-        TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
+
     }
 }

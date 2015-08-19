@@ -16,7 +16,7 @@ class TPFromOurCityFlyShortcodeModel extends TPShortcodesChacheModel{
             'limit' => TPPlugin::$options['shortcodes']['14']['limit'], 'trip_class' => 0, 'title' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'currency' => $this->typeCurrency(),
-            'destination' => $destination, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
+            'origin' => $origin, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
             'one_way' => $one_way);
         if($this->cacheSecund()){
             if ( false === ($rows = get_transient($this->cacheKey('tpInOurCityFlyShortcodes', $destination)))) {
@@ -34,7 +34,7 @@ class TPFromOurCityFlyShortcodeModel extends TPShortcodesChacheModel{
             $rows = array();
             $rows = $return;
         }
-        return array('rows' => $rows,'destination' => $destination,
-            'type' => 14, 'title' => $title);
+
+        return array('rows' => $rows,'origin' => $origin, 'type' => 13, 'title' => $title);
     }
 }
