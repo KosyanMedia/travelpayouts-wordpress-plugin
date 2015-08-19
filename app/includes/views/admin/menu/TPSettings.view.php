@@ -2,19 +2,16 @@
     <div id="tabs-settings">
         <div class="TP-TopImportantInfo">
             <p>
-                <?php _e('Please, enter your ' , KPDPlUGIN_TEXTDOMAIN);?>
-                <a href="https://www.travelpayouts.com?utm_source=wp_plugin&utm_medium=settings" target="_blank">
-                    travelpayouts.com
-                </a>
-                <?php _e('account data below. ' , KPDPlUGIN_TEXTDOMAIN);?>
-                <?php _e('Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at -' , KPDPlUGIN_TEXTDOMAIN);?>
-                <a href="https://www.travelpayouts.com/developers/api?utm_source=wp_plugin&utm_medium=settings" target="_blank">
+                <?php printf(__('Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s' , KPDPlUGIN_TEXTDOMAIN),
+                    '<a href="https://www.travelpayouts.com?utm_source=wp_plugin&utm_medium=settings" target="_blank">
+                        travelpayouts.com
+                    </a>',
+                    '<a href="https://www.travelpayouts.com/developers/api?utm_source=wp_plugin&utm_medium=settings" target="_blank">
                     travelpayouts.com/developers/api
-                </a>,
-                <?php _e(' White Label - ', KPDPlUGIN_TEXTDOMAIN); ?>
-                <a href="https://www.travelpayouts.com/white_labels?utm_source=wp_plugin&utm_medium=settings" target="_blank">
-                    travelpayouts.com/white_labels
-                </a>
+                    </a>,',
+                    '<a href="https://www.travelpayouts.com/white_labels?utm_source=wp_plugin&utm_medium=settings" target="_blank">
+                        travelpayouts.com/white_labels
+                    </a>');?>
             </p>
         </div>
         <nav class="TPNavigation">

@@ -69,7 +69,7 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Text to display if the API error occurs', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('If an error occurs in the API instead of the output table', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error]"
                                value="<?php echo esc_attr(TPPlugin::$options['config']['message_error']) ?>"/>

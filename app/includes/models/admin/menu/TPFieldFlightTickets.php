@@ -271,7 +271,7 @@ class TPFieldFlightTickets {
             <?php
             }
             ?>
-            <p><?php _e('"Price" variable can be used', KPDPlUGIN_TEXTDOMAIN ); ?></p>
+            <p><?php _e('"price" variable can be used', KPDPlUGIN_TEXTDOMAIN ); ?></p>
         </label>
     <?php
     }

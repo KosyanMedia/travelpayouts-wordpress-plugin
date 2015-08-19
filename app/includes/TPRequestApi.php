@@ -459,18 +459,16 @@ class TPRequestApi {
      */
     public function get_error( $error ) {
         $errors = array(
-            'origin'        =>  __( 'Переменная $origin не задана или задана не верно.', KPDPlUGIN_TEXTDOMAIN ),
-            'destination'   =>  __( 'Переменная $destination не задана или задана не верно.', KPDPlUGIN_TEXTDOMAIN ),
-            'currency'      =>  __( 'Переменная $currency не задана или задана не верно. Допустимые значения:
-                                        "RUB", "USD", "EUR".', KPDPlUGIN_TEXTDOMAIN ),
-            'departure_at'  =>  __( 'Переменная $departure_at не задана или задана не верно.', KPDPlUGIN_TEXTDOMAIN ),
-            'calendar_type' =>  __( 'Переменная $calendar_type не задана или задана не верно.
-                                        Допустимые значения: "departure_date", "return_date".', KPDPlUGIN_TEXTDOMAIN ),
-            'return_at'     =>  __( 'Переменная $return_at не задана или задана не верно.', KPDPlUGIN_TEXTDOMAIN ),
-            'airline'       =>  __( 'Переменная $airline не задана или задана не верно.', KPDPlUGIN_TEXTDOMAIN ),
+            'origin'        =>  __( 'The variable $origin parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'destination'   =>  __( 'The variable $destination parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'currency'      =>  __( 'The variable $currency parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'departure_at'  =>  __( 'The variable $departure_at parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'calendar_type' =>  __( 'The variable $calendar_type parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'return_at'     =>  __( 'The variable $return_at parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'airline'       =>  __( 'The variable $airline parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
         );
         if( ! empty( $error ) && isset( $errors[$error] ) )
             return $errors[$error];
-        return __( 'Произошла неизвестная ошибка.', KPDPlUGIN_TEXTDOMAIN );
+        return __( 'Unknown error.', KPDPlUGIN_TEXTDOMAIN );
     }
 }
