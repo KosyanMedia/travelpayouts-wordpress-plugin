@@ -167,7 +167,7 @@ class TPLoaderScripts extends KPDLoaderScripts{
                 wp_enqueue_script(KPDPlUGIN_SLUG.'-InsertShortcodes');
                 break;
         }
-        if(strripos($hook, 'travelpayouts') !== false ){
+        if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false ){
             wp_enqueue_style(KPDPlUGIN_SLUG.'-TPAdminNormalize');
             wp_enqueue_style(KPDPlUGIN_SLUG.'-TPAdminMain');
             wp_enqueue_script(KPDPlUGIN_SLUG.'-TPAdminPluginPage');

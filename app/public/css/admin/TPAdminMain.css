@@ -2354,3 +2354,48 @@ thead tr td.active-w {
     padding-top: 5px!important;
 }
 /*******************************/
+.TP-titleNewsR {
+    margin-top: 0;
+    font-size: 14px;
+}
+.titleSortableR {
+    text-align: left;
+}
+.TP-colFormR {
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.ItemSubR {
+    margin-bottom: 70px;
+}
+.TP-deteiledIncomeR {
+    margin-bottom: 15px;
+    line-height: 1.2;
+    counter-reset:li;
+    list-style: none;
+}
+.TP-deteiledIncomeR li {
+    list-style-type: none;
+    position: relative;
+}
+.TP-deteiledIncomeR ol {
+    counter-reset:  item;
+}
+.TP-deteiledIncomeR li:before {
+    counter-increment: li;
+    content: counter(li) ') ';
+}
+.TP-BtnTabR {
+    margin-bottom: 55px;
+    width: 285px;
+}
+.TP-deteiledIncomeRS {
+    margin-bottom: 0;
+}
+.TP-deteiledIncomeUL {
+    margin-bottom: 15px;
+}
+.TP-deteiledIncomeUL li {
+    list-style-type: disc;
+    margin-left: 17px;
+}
