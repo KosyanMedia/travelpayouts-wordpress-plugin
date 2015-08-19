@@ -11,12 +11,12 @@
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-waccount" class="TPMainMenuA">
-                        <span>Я уже есть в Travelpayouts</span>
+                        <span><?php _e('I have Travelpayouts account', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
                 <li >
                     <a href="#tabs-wreg" class="TPMainMenuA">
-                        <span>У меня нет аккаунта в Travelpayouts</span>
+                        <span><?php _e('New to Travelpayouts?', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
             </ul>

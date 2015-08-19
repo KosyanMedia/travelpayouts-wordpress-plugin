@@ -545,9 +545,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+    text-decoration: none;
 }
 .TP-BtnTab:hover {
+    color: #fff;
+    cursor: pointer;
   background-color: #3da942;
+    text-decoration: none;
 }
 .TP-BtnTab.disable {
   background-color: #ebebeb;
@@ -1390,7 +1394,8 @@ input[type="checkbox"]:checked + label::before {
     line-height: 15px;
     font-weight: 300;
     color: #6f777c;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
+    padding-top: 10px;
 }
 
 .TP-deteiledIncome a {

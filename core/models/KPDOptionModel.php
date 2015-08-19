@@ -11,5 +11,19 @@ abstract class KPDOptionModel {
         add_action( 'admin_init', array( &$this, 'create_option' ) );
     }
     abstract public function create_option();
+
+    /**
+     * @param $input
+     * @return mixed
+     */
     abstract public function save_option($input);
+
+    /**
+     * @param string $page
+     */
+    public function redirect($page = ''){
+        echo '<script type="text/javascript">
+                  document.location.href="'.$page.'";
+           </script>';
+    }
 }

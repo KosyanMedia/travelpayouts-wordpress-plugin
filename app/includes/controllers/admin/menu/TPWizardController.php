@@ -7,7 +7,12 @@
  */
 
 class TPWizardController extends KPDAdminMenuController{
-
+    public $local;
+    public $model;
+    public function __construct(){
+        parent::__construct();
+        $this->model = new TPWizardModel();
+    }
     public function action()
     {
         // TODO: Implement action() method.
@@ -23,6 +28,18 @@ class TPWizardController extends KPDAdminMenuController{
 
     public function render()
     {
+        global $locale;
+        switch($locale){
+            case "ru_RU":
+                $this->local = 'ru';
+                break;
+            case "en_US":
+                $this->local = 'en';
+                break;
+            default:
+                $this->local = 'en';
+                break;
+        }
         // TODO: Implement render() method.
         $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWizard.view.php";
         parent::loadView($pathView);

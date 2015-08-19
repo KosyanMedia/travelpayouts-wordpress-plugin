@@ -1,48 +1,86 @@
-<p class="TP-deteiledIncome TP-deteiledIncomeR">Пройдите быструю и бесплатную регистрацию.</p>
-<p class="TP-deteiledIncome">Затем вернитесь в плагин для внесения данных вашего профайла.</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <?php _e('New to Travelpayouts? Please, ', KPDPlUGIN_TEXTDOMAIN);?>
+    <a href="http://www.travelpayouts.com/?marker=85103&locale=<?php echo $this->local; ?>&utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
+        <?php _e('Register', KPDPlUGIN_TEXTDOMAIN); ?>
+    </a>
+</p>
+<p class="TP-deteiledIncome">
+    <?php _e('Registration is totally free and takes less than a minute.', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>
+<p class="TP-deteiledIncome">
+    <?php _e('Return to plugin settings to fill out your Profile.', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>
 
 <div class="TP-navsPan">
     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
-    <input type="submit" name="submit" id="" class="TP-BtnTab TP-BtnTabR"
-           value="1. Зарегистрироваться">
+    <a href="http://www.travelpayouts.com/?marker=85103&locale=<?php echo $this->local; ?>&utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>&utm_content=button" class="TP-BtnTab TP-BtnTabR">
+        <?php _e('1. Sign up ', KPDPlUGIN_TEXTDOMAIN); ?>
+    </a>
 </div>
 
 <div class="TP-navsPan">
     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
-    <input type="submit" name="submit" id="TPSaveSettings TP-BtnTabR" class="TP-BtnTab TP-BtnTabR"
-           value="2. Внести настройки">
+    <a class="TP-BtnTab TP-BtnTabR" href="#">
+        <?php _e('2. Enter settings ', KPDPlUGIN_TEXTDOMAIN); ?>
+    </a>
 </div>
 
-
-<!--*******
-__Contant__
-********-->
-<p class="TP-deteiledIncome TP-deteiledIncomeR"><strong>Travelpayouts</strong> - партнерская сеть для заработка на туристическом трафике.
-    Вы заработаете до 70% с комиссии рекламодателя за каждую продажу (работа по модели CPA).
-    В среднем доход партнера составляет 7$ c купленного авиабилета и 20$ с брони гостиницы (при сумме брони около $400).</p>
-<p class="TP-deteiledIncome TP-deteiledIncomeR"><strong>Как это работает?</strong></p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <strong>
+        <a href="http://www.travelpayouts.com/?marker=85103&locale=<?php echo $this->local; ?>&utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>">
+            Travelpayouts
+        </a>
+    </strong>
+    <?php _e(' – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$).', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <?php _e('All user purchases made within 30 days after following links in tables or using placed widgets will be credited to your account.', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <strong><?php _e('How it works?', KPDPlUGIN_TEXTDOMAIN); ?></strong>
+</p>
 <p class="TP-deteiledIncome TP-deteiledIncomeR">
 <ol class="TP-deteiledIncome TP-deteiledIncomeR">
-    <li>Разместите инструменты. Вы размещаете таблицы и виджеты с информацией о выгодных авиабилетах и отелях.</li>
-    <li>Продажа услуги. Посетители переходят с вашего ресурса и оплачивают услугу. Мы выплачиваем вам комиссию.</li>
-    <li>Получите вашу прибыль. Информация о доходе отображается в вашем личном кабинете. Выплата прибыли происходит автоматически.</li>
+    <li>
+        <?php _e('Install our Affiliate tools.  You place our widgets and tables right in your posts and help visitors to book favorable flights, hotels and other services.', KPDPlUGIN_TEXTDOMAIN); ?>
+    </li>
+    <li>
+        <?php _e('Visitor pays for the service. The client is happy to grab a great deal and gets to have an unforgettable journey, while we pay you a reward.', KPDPlUGIN_TEXTDOMAIN); ?>
+    </li>
+    <li>
+        <?php _e('You get profits. Your earnings will be displayed in your Travelpayouts Dashboard and in your plugin. We make scheduled, automated, monthly payouts. ', KPDPlUGIN_TEXTDOMAIN); ?>
+    </li>
 </ol>
 </p>
-<p class="TP-deteiledIncome TP-deteiledIncomeRS"><strong>Возможности плагина</strong></p>
-<p class="TP-deteiledIncome TP-deteiledIncomeRS">Плагин позволяет вставлять в ваши записи (через интерфейс редактирования Wordpress) следующие инструменты:</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeRS"><strong><?php _e('What features does a plugin have?', KPDPlUGIN_TEXTDOMAIN); ?></strong></p>
+<p class="TP-deteiledIncome TP-deteiledIncomeRS">
+    <?php _e('Plugin allows to get the following tools added to your Wordpress posts:', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>
 
 <ul class="TP-deteiledIncome TP-deteiledIncomeUL ">
-    <li>12 настраиваемых таблиц с информацией про авиаперелеты;</li>
-    <li>Карту дешевых авиаперелетов, отельную карту;</li>
-    <li>Календарь низких цен;</li>
-    <li>Виджет подписок на направления;</li>
-    <li>Виджет отеля;</li>
-    <li>Виджет популярных направлений перелета;</li>
+    <li><?php _e('12 customizable tables with flight information;', KPDPlUGIN_TEXTDOMAIN); ?></li>
+    <li><?php _e('Search Forms;', KPDPlUGIN_TEXTDOMAIN); ?></li>
+    <li><?php _e('Low cost flights and hotels Map', KPDPlUGIN_TEXTDOMAIN); ?></li>
+    <li><?php _e('Low prices Calendar', KPDPlUGIN_TEXTDOMAIN); ?></li>
+    <li><?php _e('Hotel Widget ', KPDPlUGIN_TEXTDOMAIN); ?></li>
+    <li><?php _e('Popular flight destinations Widget', KPDPlUGIN_TEXTDOMAIN); ?></li>
 </ul>
 
-<p class="TP-deteiledIncome TP-deteiledIncomeRS"><strong>Как заработать еще больше?</strong></p>
-<p class="TP-deteiledIncome TP-deteiledIncomeR">Рекомендуем ознакомиться с подробной информацией о настройке и возможностях WP плагина Travelpayouts.
-    Десятки полезных статей из нашей базы знаний доступны тут: <a href="https://support.travelpayouts.com/hc/ru">https://support.travelpayouts.com/hc/ru</a></p>
-<p class="TP-deteiledIncome TP-deteiledIncomeR">Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с остальным!</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeRS">
+    <strong><?php _e('How can I earn more?', KPDPlUGIN_TEXTDOMAIN); ?></strong>
+</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <?php _e('We recommend that you get acquainted to the ', KPDPlUGIN_TEXTDOMAIN); ?>
+    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local; ?>/articles/207794617?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>">
+        <?php _e('detailed information on Travelpayouts WP plugin features.', KPDPlUGIN_TEXTDOMAIN ); ?>
+    </a>
+    <?php _e('Dozens of useful articles in Travelpayouts Knowledge Base, always available at', KPDPlUGIN_TEXTDOMAIN); ?>:
+    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local; ?>?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>">
+        <?php _e('https://support.travelpayouts.com', KPDPlUGIN_TEXTDOMAIN); ?>
+    </a>
+</p>
+<p class="TP-deteiledIncome TP-deteiledIncomeR">
+    <?php _e('We wish success to all your endeavors! Do the things you love and we will take care of the rest!', KPDPlUGIN_TEXTDOMAIN); ?>
+</p>

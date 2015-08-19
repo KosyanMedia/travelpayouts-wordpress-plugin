@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-19 23:32+0300\n"
+"POT-Creation-Date: 2015-08-20 02:12+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -308,26 +308,32 @@ msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:281
+#: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:284
+#: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:289
+#: app/includes/models/admin/menu/TPFieldWizard.php:63
 msgid "Currency"
 msgstr "Валюта"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:292
+#: app/includes/models/admin/menu/TPFieldWizard.php:67
 msgid "Ruble"
 msgstr "Рубль"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:295
+#: app/includes/models/admin/menu/TPFieldWizard.php:70
 msgid "US dollar"
 msgstr "доллар США"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:298
+#: app/includes/models/admin/menu/TPFieldWizard.php:73
 msgid "Euro"
 msgstr "Евро"
 
@@ -359,6 +365,22 @@ msgstr "Творительный"
 #: app/includes/models/admin/menu/TPFieldSettings.php:402
 msgid "Prepositional"
 msgstr "Предложный"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:19
+msgid "Your partner marker"
+msgstr "Ваш партнерский маркер"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:30
+msgid "Your API token"
+msgstr "Ваш API token"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:40
+msgid "Select Tools Language and Currency"
+msgstr "Выберите язык и валюту инструментов"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:46
+msgid "Widget and Tables Language"
+msgstr "Язык таблиц и виджетов"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
 #: app/includes/models/admin/menu/TPFieldWidgets.php:85
@@ -603,8 +625,8 @@ msgstr "Вставить поисковую форму"
 msgid "Insert widget"
 msgstr "Вставить виджет"
 
-#: app/includes/controllers/admin/menu/TPWizardController.php:16
-#: app/includes/controllers/admin/menu/TPWizardController.php:17
+#: app/includes/controllers/admin/menu/TPWizardController.php:21
+#: app/includes/controllers/admin/menu/TPWizardController.php:22
 msgctxt "add_menu_page page title"
 msgid "Wizard"
 msgstr ""
@@ -869,6 +891,7 @@ msgstr "Локализация"
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:146
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:159
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:36
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:14
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
@@ -1047,6 +1070,147 @@ msgstr "Новости Travelpayouts"
 msgid "All news"
 msgstr "Все новости"
 
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
+msgid "New to Travelpayouts? Please, "
+msgstr ""
+"Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:4
+msgid "Register"
+msgstr "регистрацию."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:8
+msgid "Registration is totally free and takes less than a minute."
+msgstr "Пройдите быструю и бесплатную регистрацию."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:11
+msgid "Return to plugin settings to fill out your Profile."
+msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:18
+msgid "1. Sign up "
+msgstr "1. Зарегистрироваться "
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:26
+msgid "2. Enter settings "
+msgstr "2. Внести настройки"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:36
+#, php-format
+msgid ""
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to "
+"70% from the commission advertiser gets for each sale. On average, our "
+"Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
+"booking (with booking amount that equals to approx. 400$)."
+msgstr ""
+"- партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
+"до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
+"составляет 7$ с купленного авиабилета и 20$ с брони гостиницы (при сумме "
+"брони около $400)."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:39
+msgid ""
+"All user purchases made within 30 days after following links in tables or "
+"using placed widgets will be credited to your account."
+msgstr ""
+"Пользователь, перешедший по вашей партнерской ссылке на сайт рекламодателя, "
+"закрепляется за вами на 30 дней (cookie lifetime). Все его покупки в этот "
+"период зачисляются на ваш счет. "
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:42
+msgid "How it works?"
+msgstr "Как это работает?"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:47
+msgid ""
+"Install our Affiliate tools.  You place our widgets and tables right in your "
+"posts and help visitors to book favorable flights, hotels and other services."
+msgstr ""
+"Установите наши инструменты. Вы размещаете в ваших записях таблицы и виджеты "
+"с информацией о выгодных авиабилетах, отелях и т.д."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:50
+msgid ""
+"Visitor pays for the service. The client is happy to grab a great deal and "
+"gets to have an unforgettable journey, while we pay you a reward."
+msgstr ""
+"Посетитель оплачивает услугу. Посетители переходят с вашего ресурса и "
+"оплачивают услугу. Мы выплачиваем вам комиссию."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:53
+msgid ""
+"You get profits. Your earnings will be displayed in your Travelpayouts "
+"Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
+msgstr ""
+"Получите вашу прибыль. Информация о доходе отображается в вашем личном "
+"кабинете Travelpayouts и в плагине. Выплата прибыли происходит автоматически "
+"раз в месяц, строго по расписанию."
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:57
+msgid "What features does a plugin have?"
+msgstr "Что умеет этот плагин?"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:59
+msgid "Plugin allows to get the following tools added to your Wordpress posts:"
+msgstr ""
+"Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
+"Wordpress) следующие инструменты:"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:63
+msgid "12 customizable tables with flight information;"
+msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:64
+msgid "Search Forms;"
+msgstr "Поисковые формы;"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:65
+msgid "Low cost flights and hotels Map"
+msgstr "Карту дешевых авиаперелетов, отельную карту"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:66
+msgid "Low prices Calendar"
+msgstr "Календарь низких цен"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:67
+msgid "Hotel Widget "
+msgstr "Виджет отеля"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:68
+msgid "Popular flight destinations Widget"
+msgstr "Виджет популярных направлений перелета"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:72
+msgid "How can I earn more?"
+msgstr "Как заработать еще больше?"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:75
+msgid "We recommend that you get acquainted to the "
+msgstr "Рекомендуем ознакомиться с "
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:77
+msgid "detailed information on Travelpayouts WP plugin features."
+msgstr ""
+"подробной информацией о настройке и возможностях WP плагина Travelpayouts. "
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:79
+msgid ""
+"Dozens of useful articles in Travelpayouts Knowledge Base, always available "
+"at"
+msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:81
+msgid "https://support.travelpayouts.com"
+msgstr "https://support.travelpayouts.com/hc/ru"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:85
+msgid ""
+"We wish success to all your endeavors! Do the things you love and we will "
+"take care of the rest!"
+msgstr ""
+"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а "
+"мы поможем вам с остальным!"
+
 #: app/includes/views/admin/menu/TPWizard.view.php:4
 msgid "Earn by selling tourist services"
 msgstr "Зарабатывайте на продаже туристических услуг"
@@ -1060,6 +1224,14 @@ msgstr ""
 "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, "
 "которые помогут вашим посетителям найти самые дешевые билеты и отели, а вам "
 "– заработать на этом."
+
+#: app/includes/views/admin/menu/TPWizard.view.php:14
+msgid "I have Travelpayouts account"
+msgstr "Я зарегистрирован в Travelpayouts"
+
+#: app/includes/views/admin/menu/TPWizard.view.php:19
+msgid "New to Travelpayouts?"
+msgstr "У меня нет аккаунта Тravelpayouts"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:2
 msgid "Widgets"
@@ -1162,6 +1334,16 @@ msgstr "отменить"
 msgid "save changes"
 msgstr "сохранить изменения"
 
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
+msgid "Get your API Token and Partner Marker by following "
+msgstr ""
+"Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после "
+"регистрации"
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:7
+msgid "this link."
+msgstr "на этой странице."
+
 #: app/includes/views/admin/menu/TPDashboardView.php:21
 msgid "Your income"
 msgstr "Ваш доход"
@@ -1246,9 +1428,6 @@ msgstr "Доход c брон."
 
 #~ msgid "A detailed report on payments can be found in the section "
 #~ msgstr "Подробный отчет о выплатах можно посмотреть в разделе "
-
-#~ msgid "News from Travelpayouts"
-#~ msgstr "Новости Travelpayouts"
 
 #~ msgid "Date added"
 #~ msgstr "Дата добавления"
@@ -1525,10 +1704,6 @@ msgstr "Доход c брон."
 
 #~ msgid "Create configuration file"
 #~ msgstr "Создать файл настроек"
-
-#, fuzzy
-#~ msgid "Export settings"
-#~ msgstr "Импорт настроек"
 
 #~ msgid "Аккаунт"
 #~ msgstr "test"
