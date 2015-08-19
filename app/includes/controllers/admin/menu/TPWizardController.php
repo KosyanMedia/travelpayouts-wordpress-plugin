@@ -12,12 +12,13 @@ class TPWizardController extends KPDAdminMenuController{
     {
         // TODO: Implement action() method.
         // TODO: Implement action() method.
-        add_submenu_page( KPDPlUGIN_TEXTDOMAIN,
+        add_submenu_page( null,
             _x('Wizard',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
             _x('Wizard',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_wizard',
             array(&$this, 'render'));
+        //global $submenu;
     }
 
     public function render()

@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPLoader.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7705678" vertical-offset="793" max-vertical-offset="1656">
+            <state vertical-scroll-proportion="-24.62963" vertical-offset="793" max-vertical-offset="1656">
               <caret line="86" column="62" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
               <folding>
                 <marker date="1439995165749" expanded="true" signature="2311:2881" placeholder="..." />
@@ -68,12 +68,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPWizardController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPWizardController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="522">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.30821916" vertical-offset="0" max-vertical-offset="876">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KPDAdminMenuController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="396">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <folding>
+                <marker date="1439794438607" expanded="true" signature="377:452" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,12 +150,12 @@
         <option value="$PROJECT_DIR$/core/KPDPlugin.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css" />
         <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php" />
         <option value="$PROJECT_DIR$/core/KPDAdminNotice.php" />
         <option value="$PROJECT_DIR$/core/KPDLocalization.php" />
         <option value="$PROJECT_DIR$/core/KPDLoader.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php" />
       </list>
     </option>
   </component>
@@ -562,13 +574,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/widgets/TPCalendarWidgetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75913244" vertical-offset="37" max-vertical-offset="936">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3436073" vertical-offset="1931" max-vertical-offset="3582">
@@ -880,7 +885,7 @@
         <state vertical-scroll-proportion="-11.293103" vertical-offset="4853" max-vertical-offset="9090">
           <caret line="306" column="32" selection-start-line="306" selection-start-column="32" selection-end-line="306" selection-end-column="32" />
           <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
+            <element signature="e#6#86#0#PHP" expanded="false" />
             <element signature="e#13665#14230#2#HTML" expanded="false" />
           </folding>
         </state>
@@ -898,14 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="876">
           <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="522">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -962,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7705678" vertical-offset="793" max-vertical-offset="1656">
+        <state vertical-scroll-proportion="-24.62963" vertical-offset="793" max-vertical-offset="1656">
           <caret line="86" column="62" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
           <folding>
             <marker date="1439995165749" expanded="true" signature="2311:2881" placeholder="..." />
@@ -972,6 +969,24 @@
             <marker date="1439995165749" expanded="true" signature="2549:2803" placeholder="..." />
             <marker date="1439995165749" expanded="true" signature="2606:2776" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="396">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <marker date="1439794438607" expanded="true" signature="377:452" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30821916" vertical-offset="0" max-vertical-offset="876">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
