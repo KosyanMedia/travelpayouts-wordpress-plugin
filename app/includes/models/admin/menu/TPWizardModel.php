@@ -28,9 +28,13 @@ class TPWizardModel extends KPDOptionModel{
     public function save_option($input)
     {
         // TODO: Implement save_option() method.
-        $result = array_merge(TPPlugin::$options, $input);
+        //$result = array_merge(TPPlugin::$options, $input);
+        TPPlugin::$options['account']['marker'] = $input['account']['marker'];
+        TPPlugin::$options['account']['token'] = $input['account']['token'];
+        TPPlugin::$options['local']['localization'] = $input['local']['localization'];
+        TPPlugin::$options['local']['currency'] = $input['local']['currency'];
         //if(){}
         TPPlugin::deleteCacheAll();
-        return $result;
+        return TPPlugin::$options;
     }
 }

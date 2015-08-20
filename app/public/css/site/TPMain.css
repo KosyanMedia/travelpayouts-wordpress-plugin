@@ -246,4 +246,5 @@ a.paginate_button.current:hover {
     margin-bottom: 10px;
     float: left;
     min-width: 31.8%;
+    width: 31.6%;
 }

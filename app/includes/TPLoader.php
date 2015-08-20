@@ -10,6 +10,7 @@ class TPLoader extends KPDLoader{
     public function __construct(){
         parent::__construct();
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
+
     }
 
     protected function admin()
@@ -26,7 +27,6 @@ class TPLoader extends KPDLoader{
         new TPShortcodeButtonsController();
         new TPWidgetButtonsController();
         new TPSearchFormButtonsController();
-
 
     }
 
@@ -69,27 +69,31 @@ class TPLoader extends KPDLoader{
     public function pluginsLoaded()
     {
         // TODO: Implement pluginsLoaded() method.
+
         if(!TPPlugin::$TPRequestApi->get_status()){
             new TPWizardController();
-            TPPlugin::$adminNotice->adminNoticePushCustom(
-                get_class($this),
-                '<div class="TP-Activate">
-                <div class="TP-Activate_a">
-                    <div class="TP-ico-avia"></div>
-                </div>
-                <div class="TP-Activate_button_container">
-                    <div class="TP-Activate_button_border">
-                        <div class="TP-Activate_button">
-                            <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', KPDPlUGIN_TEXTDOMAIN).'</a>
+            if(strripos($_SERVER['REQUEST_URI'], 'tp_control_wizard') === false){
+                TPPlugin::$adminNotice->adminNoticePushCustom(
+                    get_class($this),
+                    '<div class="TP-Activate">
+                        <div class="TP-Activate_a">
+                            <div class="TP-ico-avia"></div>
                         </div>
-                    </div>
-                </div>
-                <div class="TP-Activate_description">
-                    '.__('Welcome! Travelpayouts plugin is almost ready.', KPDPlUGIN_TEXTDOMAIN).'<br/>'
-                    .__('Enter your Travelpayouts authorization details and start earning now.', KPDPlUGIN_TEXTDOMAIN)
-                .'</div>
-            </div>'
-            );
+                        <div class="TP-Activate_button_container">
+                            <div class="TP-Activate_button_border">
+                                <div class="TP-Activate_button">
+                                    <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', KPDPlUGIN_TEXTDOMAIN).'</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="TP-Activate_description">
+                            '.__('Welcome! Travelpayouts plugin is almost ready.', KPDPlUGIN_TEXTDOMAIN).'<br/>'
+                            .__('Enter your Travelpayouts authorization details and start earning now.', KPDPlUGIN_TEXTDOMAIN)
+                            .'</div>
+                    </div>'
+                );
+            }
+
         }
     }
 }
