@@ -76,14 +76,25 @@ jQuery(function($){
         });
         var selectedTabWizardId = sessionStorage.getItem("selectedTabWizard");
         selectedTabWizardId = selectedTabWizardId === null ? 0 : selectedTabWizardId;
-        $( "#tabs-wizard" ).tabs({
+        var $tabs_wizard = $( "#tabs-wizard" ).tabs({
             active: selectedTabWizardId,
             activate : function( event, ui ) {
                 selectedTabWizardId = $(this).tabs("option", "active");
                 sessionStorage.setItem("selectedTabWizard", selectedTabWizardId);
             }
         });
+        //tabs_wizard
 
+        $(".TP-BtnTabWizard").click(function () {
+            $tabs_wizard.tabs({
+                    active:0,
+                    activate : function( event, ui ) {
+                        selectedTabWizardId = $(this).tabs("option", "active");
+                        sessionStorage.setItem("selectedTabWizard", selectedTabWizardId);
+                    }}
+            );
+            return false;
+        });
         /*$(".TPMainMenuA").click(function () {
             $(".TPMainMenuA").parent('li').removeClass("TPNavActive");
             $(this).parent('li').addClass("TPNavActive");

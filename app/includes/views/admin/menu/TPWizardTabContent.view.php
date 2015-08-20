@@ -1,6 +1,6 @@
 <p class="TP-deteiledIncome TP-deteiledIncomeR">
     <strong>
-        <a href="http://www.travelpayouts.com/?marker=85103&locale=<?php echo $this->local; ?>&utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>">
+        <a href="http://www.travelpayouts.com/?marker=85103&locale=<?php echo $this->local; ?>&utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
             Travelpayouts
         </a>
     </strong>

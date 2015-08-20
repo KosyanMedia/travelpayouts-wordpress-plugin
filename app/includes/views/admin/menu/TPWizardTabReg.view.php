@@ -22,7 +22,7 @@
 <div class="TP-navsPan ">
     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
-    <a class="TP-BtnTab TP-BtnTabR" href="admin.php?page=tp_control_settings">
+    <a class="TP-BtnTab TP-BtnTabR TP-BtnTabWizard " href="#">
         <?php _e('2. Enter settings ', KPDPlUGIN_TEXTDOMAIN); ?>
     </a>
 </div>

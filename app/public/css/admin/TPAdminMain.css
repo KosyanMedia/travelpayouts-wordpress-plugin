@@ -2398,6 +2398,7 @@ thead tr td.active-w {
 }
 .TP-deteiledIncomeUL {
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .TP-deteiledIncomeUL li {
     list-style-type: disc;
