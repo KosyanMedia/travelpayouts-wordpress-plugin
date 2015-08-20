@@ -44,11 +44,11 @@
 </p>
 <p class="TP-deteiledIncome TP-deteiledIncomeR">
     <?php _e('We recommend that you get acquainted to the ', KPDPlUGIN_TEXTDOMAIN); ?>
-    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local; ?>/articles/207794617?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
+    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url; ?>/articles/207794617?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
         <?php _e('detailed information on Travelpayouts WP plugin features.', KPDPlUGIN_TEXTDOMAIN ); ?>
     </a>
     <?php _e('Dozens of useful articles in Travelpayouts Knowledge Base, always available at', KPDPlUGIN_TEXTDOMAIN); ?>:
-    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local; ?>?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
+    <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url; ?>?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
         <?php _e('https://support.travelpayouts.com', KPDPlUGIN_TEXTDOMAIN); ?>
     </a>
 </p>

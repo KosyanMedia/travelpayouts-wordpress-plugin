@@ -8,6 +8,7 @@
 
 class TPWizardController extends KPDAdminMenuController{
     public $local;
+    public $local_url;
     public $model;
     public function __construct(){
         parent::__construct();
@@ -34,12 +35,15 @@ class TPWizardController extends KPDAdminMenuController{
         switch($locale){
             case "ru_RU":
                 $this->local = 'ru';
+                $this->local_url = 'ru';
                 break;
             case "en_US":
                 $this->local = 'en';
+                $this->local_url = 'en-us';
                 break;
             default:
                 $this->local = 'en';
+                $this->local_url = 'en-us';
                 break;
         }
         // TODO: Implement render() method.

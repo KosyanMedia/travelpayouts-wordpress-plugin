@@ -44,7 +44,10 @@ class TPDefault implements  KPDDefault{
             ),
             'config' =>array(
                 'redirect' => 0,
-                'message_error' => 'Что-то пошло не так, обновите страницу',
+                'message_error' => array(
+                    'en' => 'Something went wrong, please try to update a page',
+                    'ru' =>  'Что-то пошло не так, обновите страницу',
+                ),
                 'target_url' => 0,
                 'nofollow' => 0,
                 'script' => 0,

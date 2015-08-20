@@ -71,8 +71,15 @@ class TPFieldSettings {
                 <div class="ItemSub">
                     <span><?php _e('If an error occurs in the API instead of the output table', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
-                        <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error]"
-                               value="<?php echo esc_attr(TPPlugin::$options['config']['message_error']) ?>"/>
+                        <?php
+                        foreach(TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = ($this->local[TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
+                            ?>
+                            <input type="<?php echo $typeFields; ?>" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
+                                   value="<?php echo esc_attr(TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                        <?php
+                        }
+                        ?>
                     </label>
                 </div>
                 <div class="ItemSub">

@@ -5,9 +5,32 @@
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
             <?php _e('Here you can add shortcodes for each search form set up in your Travelpayouts account', KPDPlUGIN_TEXTDOMAIN); ?>
-            <a href="https://www.travelpayouts.com/tools/forms?utm_source=wp_plugin&utm_medium=forms" target="_blank">
-                https://www.travelpayouts.com/tools/forms
-            </a>
+
+            <?php
+            global $locale;
+            switch($locale){
+                case "ru_RU":
+                    ?>
+                    <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru" target="_blank">
+                        https://www.travelpayouts.com/tools/forms
+                    </a>
+                    <?php
+                    break;
+                case "en_US":
+                    ?>
+                    <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=en" target="_blank">
+                        https://www.travelpayouts.com/tools/forms
+                    </a>
+                    <?php
+                    break;
+                default:
+                    ?>
+                    <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=en" target="_blank">
+                        https://www.travelpayouts.com/tools/forms
+                    </a>
+                    <?php
+                    break;
+            } ?>
         </p>
     </div>
 

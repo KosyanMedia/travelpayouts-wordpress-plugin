@@ -77,6 +77,7 @@ jQuery(function($) {
 
 
     });
+
     doc.find('td.TPTableHead').click(function () {
         doc.find("td.active-w").each(function(){
             $(this).removeClass("active-w");
@@ -110,5 +111,13 @@ jQuery(function($) {
         selector.html(html);
         return width;
     }
+    var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
+    PopularRoutesWidgets.each(function(){
+        var $items = $(this).find('.TP-PopularRoutesWidget');
+        var width = 100/$items.length - 3;
+        $items.each(function(i,e){
+            $(e).css('width', width+"%");
+        });
+    });
 
     });
