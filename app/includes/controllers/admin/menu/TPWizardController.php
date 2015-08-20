@@ -24,10 +24,12 @@ class TPWizardController extends KPDAdminMenuController{
             'tp_control_wizard',
             array(&$this, 'render'));
         //global $submenu;
+
     }
 
     public function render()
     {
+
         global $locale;
         switch($locale){
             case "ru_RU":

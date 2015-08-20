@@ -6,7 +6,7 @@
  * Time: 18:47
  */
 
-class TPFlightTicketsModel extends KPDOptionModel{
+class TPFlightTicketsModel extends TPOptionModel{
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_tp_default_style', array( &$this, 'tpDefaultTableStyle'));
@@ -66,16 +66,6 @@ class TPFlightTicketsModel extends KPDOptionModel{
             'tp_settings_style_table', 'tp_settings_style_table_id' );
     }
 
-    /**
-     * @param $input
-     * @return array
-     */
-    public function save_option($input)
-    {
-        // TODO: Implement save_option() method.
-        $result = array_merge(TPPlugin::$options, $input);
-        return $result;
-    }
     public function tpDefaultTableStyle(){
         if(isset($_POST)){
             TPPlugin::$options['style_table'] = TPDefault::$defaultTableStyle;

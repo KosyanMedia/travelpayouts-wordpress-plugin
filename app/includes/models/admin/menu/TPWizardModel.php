@@ -6,7 +6,7 @@
  * Time: 0:25
  */
 
-class TPWizardModel extends KPDOptionModel{
+class TPWizardModel extends TPOptionModel{
     public function __construct()
     {
         parent::__construct();
@@ -15,7 +15,7 @@ class TPWizardModel extends KPDOptionModel{
     {
         // TODO: Implement create_option() method.
         register_setting(
-            'TPSettingsWizard',
+            'TPWizard',
             KPDPlUGIN_OPTION_NAME,
             array(&$this,'save_option')
         );
@@ -25,16 +25,5 @@ class TPWizardModel extends KPDOptionModel{
             'tp_settings_wizard', 'tp_settings_wizard_id' );
     }
 
-    public function save_option($input)
-    {
-        // TODO: Implement save_option() method.
-        //$result = array_merge(TPPlugin::$options, $input);
-        TPPlugin::$options['account']['marker'] = $input['account']['marker'];
-        TPPlugin::$options['account']['token'] = $input['account']['token'];
-        TPPlugin::$options['local']['localization'] = $input['local']['localization'];
-        TPPlugin::$options['local']['currency'] = $input['local']['currency'];
-        //if(){}
-        TPPlugin::deleteCacheAll();
-        return TPPlugin::$options;
-    }
+
 }

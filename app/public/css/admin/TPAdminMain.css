@@ -2373,7 +2373,7 @@ thead tr td.active-w {
     margin-bottom: 70px;
 }
 .TP-deteiledIncomeR {
-    margin-bottom: 30px;
+    margin-bottom:15px;
     line-height: 1.2;
     counter-reset:li;
     list-style: none;

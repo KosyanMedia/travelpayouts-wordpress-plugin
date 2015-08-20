@@ -562,9 +562,11 @@ class TPShortcodesView {
         if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
         $target_url = '';
         if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
-        $redirect = '';
-        if(isset(TPPlugin::$options['config']['redirect']))
-            $redirect = TPPlugin::$options['config']['redirect'];
+        $redirect = false;
+        if(isset(TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+
 
         $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : "?origin_iata=";
         $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
@@ -575,7 +577,7 @@ class TPShortcodesView {
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
 
         $link = '';
-        if(isset($redirect) && !empty($redirect)){
+        if($redirect){
             $home = '';
             $home = get_option('home');
             $url = substr($url, 10);
@@ -702,10 +704,10 @@ class TPShortcodesView {
     }
     /** **/
     public function redirect_plugins(){
-        $redirect = '';
+        $redirect = false;
         if(isset(TPPlugin::$options['config']['redirect']))
-            $redirect = TPPlugin::$options['config']['redirect'];
-        if(isset($redirect) && !empty($redirect)){
+            $redirect = true;
+        if($redirect){
             if(isset($_GET['searches'])){
                 $white_label = TPPlugin::$options['account']['white_label'];
                 if(!empty($white_label)){

@@ -72,7 +72,6 @@ class TPLoader extends KPDLoader{
         // TODO: Implement pluginsLoaded() method.
 
         if(!TPPlugin::$TPRequestApi->get_status()){
-
             if(strripos($_SERVER['REQUEST_URI'], 'tp_control_wizard') === false){
                 TPPlugin::$adminNotice->adminNoticePushCustom(
                     get_class($this),

@@ -50,7 +50,7 @@
                             <?php _e('Settings', KPDPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <div class="TP-RowForm">
-                            <?php do_settings_fields('tp_settings_config', 'tp_settings_config_id'); ?>
+                            <?php do_settings_fields('tp_settings_plugin_config', 'tp_settings_plugin_config_id'); ?>
                         </div>
                     </div>
                     <div id="tabs-localization">

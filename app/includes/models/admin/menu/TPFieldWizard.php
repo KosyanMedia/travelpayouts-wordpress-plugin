@@ -78,6 +78,7 @@ class TPFieldWizard {
                 </div>
             </div>
         </div>
+        <input type="hidden" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[wizard]" value="1">
         <?php
     }
 }

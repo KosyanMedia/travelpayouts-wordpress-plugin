@@ -1,5 +1,5 @@
-<form action="options.php" method="post">
-    <?php settings_fields('TPSettingsWizard'); ?>
+<form action="options.php" method="post" class="formSettings TPFormNotReload">
+    <?php settings_fields('TPWizard'); ?>
     <div class="TPmainContent TPmainContentWizard TP-SettingContent">
         <p class="titleSortable titleSortableR">
             <?php _e('Get your API Token and Partner Marker by following ', KPDPlUGIN_TEXTDOMAIN); ?>

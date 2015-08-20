@@ -6,7 +6,7 @@
  * Time: 15:08
  */
 
-class TPWidgetsModel extends KPDOptionModel{
+class TPWidgetsModel extends TPOptionModel{
 
     public function create_option()
     {
@@ -37,10 +37,4 @@ class TPWidgetsModel extends KPDOptionModel{
             'tp_settings_widget_6', 'tp_settings_widget_6_id' );
     }
 
-    public function save_option($input)
-    {
-        // TODO: Implement save_option() method.
-        $result = array_merge(TPPlugin::$options, $input);
-        return $result;
-    }
 }

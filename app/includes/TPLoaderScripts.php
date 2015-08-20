@@ -305,6 +305,7 @@ class TPLoaderScripts extends KPDLoaderScripts{
                 text-decoration: none !important;
                 color: #fff;
                 font-size: 17px;
+                display: inline-block;
             }
             .TP-Activate_description {
                 position: absolute;

@@ -6,7 +6,7 @@
  * Time: 11:05
  */
 
-class TPSettingsModel extends KPDOptionModel{
+class TPSettingsModel extends TPOptionModel{
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_export_settings',      array( &$this, 'exportSettings'));
@@ -26,21 +26,14 @@ class TPSettingsModel extends KPDOptionModel{
         add_settings_section( 'tp_settings_account_id', '', '', 'tp_settings_account' );
         add_settings_field('tp_account_td', '', array(&$field ,'TPFieldAccount'),
             'tp_settings_account', 'tp_settings_account_id' );
-        add_settings_section( 'tp_settings_config_id', '', '', 'tp_settings_config' );
-        add_settings_field('tp_config_td', '', array(&$field ,'TPFieldConfig'),
-            'tp_settings_config', 'tp_settings_config_id' );
+        add_settings_section( 'tp_settings_plugin_config_id', '', '', 'tp_settings_plugin_config' );
+        add_settings_field('tp_config_plugin_td', '', array(&$field ,'TPFieldConfig'),
+            'tp_settings_plugin_config', 'tp_settings_plugin_config_id' );
         add_settings_section( 'tp_settings_local_id', '', '', 'tp_settings_local' );
         add_settings_field('tp_local_td', '', array(&$field ,'TPFieldLocal'),
             'tp_settings_local', 'tp_settings_local_id' );
     }
 
-    public function save_option($input)
-    {
-        // TODO: Implement save_option() method.
-        $result = array_merge(TPPlugin::$options, $input);
-        TPPlugin::deleteCacheAll();
-        return $result;
-    }
     public function exportSettings(){
         /*$export = json_encode(TPPlugin::$options);
         $fileName = KPDPlUGIN_NAME."Settings.txt";
