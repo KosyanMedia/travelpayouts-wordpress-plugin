@@ -27,7 +27,7 @@ class TPLoader extends KPDLoader{
         new TPShortcodeButtonsController();
         new TPWidgetButtonsController();
         new TPSearchFormButtonsController();
-
+        new TPWizardController();
     }
 
     protected function site()
@@ -55,6 +55,7 @@ class TPLoader extends KPDLoader{
         new TPHotelWidgetController();
         new TPPopularRoutesWidgetController();
 
+
     }
 
     protected function all()
@@ -71,7 +72,7 @@ class TPLoader extends KPDLoader{
         // TODO: Implement pluginsLoaded() method.
 
         if(!TPPlugin::$TPRequestApi->get_status()){
-            new TPWizardController();
+
             if(strripos($_SERVER['REQUEST_URI'], 'tp_control_wizard') === false){
                 TPPlugin::$adminNotice->adminNoticePushCustom(
                     get_class($this),

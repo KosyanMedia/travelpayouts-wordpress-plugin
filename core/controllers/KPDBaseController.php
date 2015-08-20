@@ -7,9 +7,19 @@
  */
 
 class KPDBaseController {
-    protected function loadView($view){
+    protected function loadView($view, $type = 0){
         if (file_exists($view)) {
-            require_once $view;
+            switch($type){
+                case 0:
+                    require_once $view;
+                    break;
+                case 1:
+                    require $view;
+                    break;
+                default:
+                    require_once $view;
+                    break;
+            }
         } else {
             wp_die(__("View ".$view." not found"));
         }

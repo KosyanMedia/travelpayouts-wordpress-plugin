@@ -31,7 +31,7 @@
             </div>
 
             <div id="tabs-wreg">
-                <div class="TPmainContent">
+                <div class="TPmainContent TPmainContentWizard">
                 <?php
                     $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabReg.view.php";
                     $this->loadView($pathView);

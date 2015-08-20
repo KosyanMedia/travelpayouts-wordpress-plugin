@@ -1395,7 +1395,6 @@ input[type="checkbox"]:checked + label::before {
     font-weight: 300;
     color: #6f777c;
     margin-bottom: 30px;
-    padding-top: 10px;
 }
 
 .TP-deteiledIncome a {
@@ -2374,7 +2373,7 @@ thead tr td.active-w {
     margin-bottom: 70px;
 }
 .TP-deteiledIncomeR {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     line-height: 1.2;
     counter-reset:li;
     list-style: none;
@@ -2391,7 +2390,7 @@ thead tr td.active-w {
     content: counter(li) ') ';
 }
 .TP-BtnTabR {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
     width: 285px;
 }
 .TP-deteiledIncomeRS {
@@ -2403,4 +2402,8 @@ thead tr td.active-w {
 .TP-deteiledIncomeUL li {
     list-style-type: disc;
     margin-left: 17px;
+}
+.TPmainContentWizard{
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
