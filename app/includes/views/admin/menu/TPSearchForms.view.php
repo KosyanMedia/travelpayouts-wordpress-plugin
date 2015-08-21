@@ -1,6 +1,6 @@
 <div class="TPWrapper TPWrapper-long">
 
-    <p class="TPMainTitle"><?php _e('Search forms', KPDPlUGIN_TEXTDOMAIN); ?> </p>
+    <p class="TPMainTitle TPMainTitleSF"><?php _e('Search forms', KPDPlUGIN_TEXTDOMAIN); ?> </p>
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>

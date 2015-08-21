@@ -2076,7 +2076,7 @@ thead tr td.active-w {
     margin-top: 30px;
 }
 .mb--cus .ItemSub:nth-of-type(3){
-    padding-bottom: 95px;
+    padding-bottom: 65px;
 }
 .TP-LocalHead label:nth-of-type(even) {
     float: right;
@@ -2137,7 +2137,7 @@ thead tr td.active-w {
     color: #00abfd;
     margin-bottom: 15px;
     float: left;
-    margin-right: 10px;
+    margin-right: 60px;
 }
 .tooltip-img:hover{
     text-decoration: none;
@@ -2341,11 +2341,11 @@ thead tr td.active-w {
 }
 .box-span-1 {
     float: left;
-    width: 205px;
+    width: auto;
 }
 .box-span {
     float: left;
-    width: 95px;
+    width: auto;
     margin-bottom: 8px;
 }
 .TP-WidgetHelpImgSubsc img{
@@ -2419,4 +2419,7 @@ thead tr td.active-w {
 .TPSpanFormatDate{
     font-size: 13px;
     margin-top: 5px;
+}
+.TPMainTitleSF {
+    margin-bottom: -20px !important;
 }

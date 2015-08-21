@@ -314,11 +314,13 @@ jQuery(function($){
                     //ru
                     doc.find('.TPFields_ru').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("RU");
+                    doc.find('.TPFieldTitleCaseDiv').show();
                     break;
                 case "2":
                     //en
                     doc.find('.TPFields_en').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("EN");
+                    doc.find('.TPFieldTitleCaseDiv').hide();
                     break;
                 /*case "3":
                     //en
@@ -326,6 +328,15 @@ jQuery(function($){
                     break;*/
             }
         });
+
+    }
+    switch ($('select.TPFieldLocalization').val()){
+        case "1":
+            doc.find('.TPFieldTitleCaseDiv').show();
+            break;
+        case "2":
+            doc.find('.TPFieldTitleCaseDiv').hide();
+            break;
     }
     /** **/
     doc.find('button.TPGetSalesDate').click(function (e) {

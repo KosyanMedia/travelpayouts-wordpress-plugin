@@ -55,7 +55,8 @@ body {
   background: #0fa0d2;
 }
 .w-table thead tr td:last-of-type {
-  width: 100px !important;
+ /* width: 100px !important;*/
+    width: 75px !important;
 }
 .w-table tbody tr {
   height: 45px;
@@ -224,7 +225,8 @@ a.paginate_button.current:hover {
     margin-left: 5px;
 }
 .w-table thead tr td.tp-price-column {
-    min-width: 100px !important;
+    /*min-width: 100px !important;*/
+    min-width: 75px !important;
     width: auto;
 }
 .TP-TitleTablezs{

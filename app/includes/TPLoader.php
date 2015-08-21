@@ -77,7 +77,7 @@ class TPLoader extends KPDLoader{
                     get_class($this),
                     '<div class="TP-Activate">
                         <div class="TP-Activate_a">
-                            <div class="TP-ico-avia"></div>
+                            <div class="TP-Activate-ico-avia"></div>
                         </div>
                         <div class="TP-Activate_button_container">
                             <div class="TP-Activate_button_border">

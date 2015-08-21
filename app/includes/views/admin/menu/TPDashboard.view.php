@@ -74,42 +74,33 @@
         <p class="TP-deteiledIncome">
             <span>
                 <?php _e('Last updated at ', KPDPlUGIN_TEXTDOMAIN ); ?>
-                <strong><?php echo date('H:i:s', $this->model->detailed_sales["time"]); ?></strong>
+                <strong><?php echo date('H:i', $this->model->detailed_sales["time"]); ?></strong>
                 <?php _e(' (Local time)', KPDPlUGIN_TEXTDOMAIN ); ?>
             </span><br/>
             <?php printf(__('Go to %s section to get a detailed report', KPDPlUGIN_TEXTDOMAIN ), '<a href="admin.php?page=tp_control_stats">'.__('Statistics', KPDPlUGIN_TEXTDOMAIN ).'</a>'); ?>
         </p>
 
         <div class="TP-NewsSection">
-            <h2 class="TP-titleNews"><?php _e('Travelpayouts News', KPDPlUGIN_TEXTDOMAIN ); ?></h2>
-
-
             <?php
             switch($locale) {
                 case "ru_RU":
                     ?>
-                    <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=ru" target="_blank">
-                        <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
-                    </a>
+
+                    <h2 class="TP-titleNews"><?php _e('Travelpayouts News', KPDPlUGIN_TEXTDOMAIN ); ?></h2>
+                            <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=ru" target="_blank">
+                                <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
+                            </a>
+                    <?php $this->view->tpGetNews(); ?>
+
                     <?php
                     break;
                 case "en_US":
-                    ?>
-                    <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=en" target="_blank">
-                        <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
-                    </a>
-                    <?php
                     break;
                 default:
-                    ?>
-                    <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=en" target="_blank">
-                        <?php _e('All news', KPDPlUGIN_TEXTDOMAIN ); ?>
-                    </a>
-                    <?php
                     break;
             }
             ?>
-            <?php $this->view->tpGetNews(); ?>
         </div>
+
     </div>
 </div>

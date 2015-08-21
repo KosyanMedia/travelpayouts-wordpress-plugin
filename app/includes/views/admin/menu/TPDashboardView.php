@@ -68,7 +68,7 @@ class TPDashboardView extends TPView{
             }
         }
 
-        return $TPDay;
+        return round($TPDay, 2);
     }
 
     /**
@@ -85,7 +85,7 @@ class TPDashboardView extends TPView{
                 }
             }
         }
-        return $TPMonth;
+        return round($TPMonth, 2);
     }
 
     public function tpGetNews(){
