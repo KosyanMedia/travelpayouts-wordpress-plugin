@@ -31,12 +31,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPAdminMain.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPAdminMain.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8988764" vertical-offset="42814" max-vertical-offset="43740">
+            <state vertical-scroll-proportion="0.0" vertical-offset="42814" max-vertical-offset="43740">
               <caret line="2423" column="21" selection-start-line="2423" selection-start-column="21" selection-end-line="2423" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPDefault.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.477169" vertical-offset="8284" max-vertical-offset="9774">
+              <caret line="400" column="36" selection-start-line="400" selection-start-column="36" selection-end-line="400" selection-end-column="36" />
+              <folding>
+                <element signature="e#939#1104#1#PHP" expanded="false" />
+                <element signature="e#1129#1805#1#PHP" expanded="false" />
+                <element signature="e#1935#6313#1#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,7 +157,6 @@
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFlightTicketsModel.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
         <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSettings.view.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php" />
@@ -162,6 +175,7 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboardView.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchForms.view.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css" />
+        <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
       </list>
     </option>
   </component>
@@ -749,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5262557" vertical-offset="295" max-vertical-offset="11754">
-          <caret line="47" column="78" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/site/widgets/TPWidgetsView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32876712" vertical-offset="216" max-vertical-offset="2916">
@@ -970,9 +977,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8988764" vertical-offset="42814" max-vertical-offset="43740">
+        <state vertical-scroll-proportion="0.0" vertical-offset="42814" max-vertical-offset="43740">
           <caret line="2423" column="21" selection-start-line="2423" selection-start-column="21" selection-end-line="2423" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.477169" vertical-offset="8284" max-vertical-offset="9774">
+          <caret line="400" column="36" selection-start-line="400" selection-start-column="36" selection-end-line="400" selection-end-column="36" />
+          <folding>
+            <element signature="e#939#1104#1#PHP" expanded="false" />
+            <element signature="e#1129#1805#1#PHP" expanded="false" />
+            <element signature="e#1935#6313#1#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
