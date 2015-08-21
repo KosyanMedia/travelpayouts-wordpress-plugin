@@ -4,7 +4,7 @@
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _e('Here you can add shortcodes for each search form set up in your Travelpayouts account', KPDPlUGIN_TEXTDOMAIN); ?>
+            <?php _e('Here you can add shortcodes for each search form added to your Travelpayouts account', KPDPlUGIN_TEXTDOMAIN); ?>
 
             <?php
             global $locale;
@@ -35,7 +35,7 @@
     </div>
 
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
-        <p class="TP-SettingTitle"><?php _e('Shortcodes for forms', KPDPlUGIN_TEXTDOMAIN); ?> </p>
+        <p class="TP-SettingTitle"><?php _e('Search Form Shortcodes', KPDPlUGIN_TEXTDOMAIN); ?> </p>
 
         <div class="TP-navsShort">
             <div class="TP-lincksNavShort">

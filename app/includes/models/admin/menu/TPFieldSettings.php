@@ -69,7 +69,7 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('If an error occurs in the API instead of the output table', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('Error Message', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <?php
                         foreach(TPPlugin::$options['config']['message_error'] as $key_local => $title){
@@ -83,17 +83,17 @@ class TPFieldSettings {
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _e('Search button Action', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _e('Action after click', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
-                            <label for="rchek1"><?php _e('Follow to filled out forms', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek1"><?php _e('Show Search Form', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
-                            <label for="rchek2"><?php _e('Start new Search', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="rchek2"><?php _e('Show Search Results', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -133,7 +133,7 @@ class TPFieldSettings {
                         <li>
                             <input id="chek1" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][redirect]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['redirect']), 1) ?> hidden />
-                            <label for="chek1"><?php _e('Switch to the results via a redirect', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek1"><?php echo _x('Redirect', 'settings', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
                                     <span><?php _e('In this case the 301 Redirect, which is more preferable for search engines, will be activated. We recommend that you don’t change this option.', KPDPlUGIN_TEXTDOMAIN); ?></span>
@@ -146,12 +146,12 @@ class TPFieldSettings {
                         <li>
                             <input id="chek2" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][target_url]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['target_url']), 1) ?> hidden />
-                            <label for="chek2"><?php _e('Open results in new window', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek2"><?php _e('Open in a New Window', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chek3" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][nofollow]"
                                    value="1" <?php checked(isset(TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
-                            <label for="chek3"><?php _e('Add the nofollow attribute for links', KPDPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chek3"><?php _e(' Add Nofollow Attribute', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
                                     <span><?php _e('This attribute avoids getting undesirable search results into the search engines index. We recommend that you don’t change this option.', KPDPlUGIN_TEXTDOMAIN); ?></span>
@@ -168,7 +168,7 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem mb--cus">
                 <div class="ItemSub">
-                    <span><?php _e('Table Updates', KPDPlUGIN_TEXTDOMAIN);?></span>
+                    <span><?php _e('Cache Timeout', KPDPlUGIN_TEXTDOMAIN);?></span>
                     <div class="TP-childF">
                         <div class="spinnerW clearfix" data-trigger="spinner">
                             <label>
@@ -198,7 +198,7 @@ class TPFieldSettings {
                 <div class="ItemSub">
                     <span class="clearfix">
                         <div class="box-span-1">
-                            <?php _e('Placing the plugin scripts', KPDPlUGIN_TEXTDOMAIN);?>
+                            <?php _e('Script Include', KPDPlUGIN_TEXTDOMAIN);?>
                         </div>
                         <div class="svg-img-1">
                             <a href="#" class="tooltip-settings"><span>

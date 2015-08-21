@@ -21,18 +21,18 @@
                 </label>
                 <div>
                     <label class="TP-inputTextShort">
-                        <span><?php _e('Code form TravelPayouts', KPDPlUGIN_TEXTDOMAIN) ?></span>
-                        <span><?php _e('Make sure you have removed the tick "Compact code to insert" and "Iframe code to insert"', KPDPlUGIN_TEXTDOMAIN) ?></span>
+                        <span><?php _e('TravelPayouts Form Code', KPDPlUGIN_TEXTDOMAIN) ?></span>
+                        <span><?php _e('Make sure you have unchecked the "Short Code" and "Iframe Code" boxes', KPDPlUGIN_TEXTDOMAIN) ?></span>
                         <textarea name="search_shortcode_code_form" class="TPSearchShortcodeCodeForm"><?php echo $this->data['code_form'] ?></textarea>
                     </label>
                 </div>
                 <label>
-                    <span><?php _e('City of departure default', KPDPlUGIN_TEXTDOMAIN) ?></span>
+                    <span><?php _e('Default City of Departure', KPDPlUGIN_TEXTDOMAIN) ?></span>
                     <input type="text" name="search_shortcode_from" class="searchShortcodeAutocomplete"
                            value="<?php echo $this->data['from_city'] ?>" />
                 </label>
                 <label>
-                    <span><?php _e('City Arrival default', KPDPlUGIN_TEXTDOMAIN) ?></span>
+                    <span><?php _e('Default City of Arrival', KPDPlUGIN_TEXTDOMAIN) ?></span>
                     <input type="text" name="search_shortcode_to" class="searchShortcodeAutocomplete"
                            value="<?php echo $this->data['to_city'] ?>"/>
                 </label>
@@ -43,7 +43,7 @@
             </div>
 
             <p class="TP-sescriptionShort">
-                <?php _e('Shortcode generated automatically when you save and available for insertion into the posts', KPDPlUGIN_TEXTDOMAIN) ?>
+                <?php _e('Shortcode will be automatically generated after you press the Save Changes button. It can also be placed into your posts right away', KPDPlUGIN_TEXTDOMAIN) ?>
             </p>
 
             <div class="TP-navsUserShort">

@@ -365,7 +365,7 @@ class TPFieldFlightTickets {
         ?>
 
         <div class="TP-SortableSection">
-            <p class="titleSortable"><?php _e('Columns table', KPDPlUGIN_TEXTDOMAIN ); ?></p>
+            <p class="titleSortable"><?php _e('Table Columns', KPDPlUGIN_TEXTDOMAIN ); ?></p>
             <div class="TP-ContainerSorTable">
                 <div data-force="30" class="layer TP-blockSortable" >
                     <p class="TP-titleBlockSortable"><?php _e('Not selected', KPDPlUGIN_TEXTDOMAIN ); ?></p>

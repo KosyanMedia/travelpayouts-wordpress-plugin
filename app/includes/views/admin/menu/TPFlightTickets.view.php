@@ -6,7 +6,7 @@
                 <li>
                     <a href="#tabs-tickets_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
-                        <span><?php _e('Tables\' content', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                        <span><?php _e('Tables Content', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     </a>
                 </li>
                 <li>
