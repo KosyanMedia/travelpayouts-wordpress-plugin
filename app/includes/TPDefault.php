@@ -415,7 +415,7 @@ class TPDefault implements  KPDDefault{
                 ),
                 '10' => array(
                     'title' => array(
-                        'en' => 'Airline\'s popular flights',
+                        'en' => 'Airline\'s popular flights airline',
                         'ru' =>  'Популярные направления авиакомпании airline',
                     ),
                     'tag' => 'h3',

@@ -56,7 +56,7 @@ body {
 }
 .w-table thead tr td:last-of-type {
  /* width: 100px !important;*/
-    width: 75px !important;
+    width: 100px !important;
 }
 .w-table tbody tr {
   height: 45px;

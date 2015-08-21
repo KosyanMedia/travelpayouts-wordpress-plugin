@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-21 15:33+0300\n"
+"POT-Creation-Date: 2015-08-21 16:29+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -189,7 +189,6 @@ msgid "Popular Destinations from origin"
 msgstr "Популярные направления из города"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:23
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:113
 msgid "Most popular flights within this Airlines"
 msgstr "Популярные направления авиакомпании"
 
@@ -515,13 +514,11 @@ msgstr "Подробный отчет о выплатах можно посмо�
 msgid "Statistics"
 msgstr "Статистика"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:84
+#: app/includes/views/admin/menu/TPDashboard.view.php:89
 msgid "Travelpayouts News"
 msgstr "Новости Travelpayouts"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:92
-#: app/includes/views/admin/menu/TPDashboard.view.php:99
-#: app/includes/views/admin/menu/TPDashboard.view.php:106
+#: app/includes/views/admin/menu/TPDashboard.view.php:91
 msgid "All news"
 msgstr "Все новости"
 
@@ -846,6 +843,10 @@ msgstr "Ваш баланс"
 #: app/includes/views/admin/menu/TPStatistic.view.php:67
 msgid "Balance and payments"
 msgstr "Баланс и выплаты"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:113
+msgid "Most popular flights within this Airline"
+msgstr "Популярные направления авиакомпании "
 
 #: app/includes/views/admin/menu/TPDashboardView.php:21
 msgid "Your income"

@@ -110,7 +110,7 @@
             <?php } ?>
             <div class="bellows__item">
                 <div class="bellows__header">
-                    <h3><?php _e('Most popular flights within this Airlines',KPDPlUGIN_TEXTDOMAIN); ?></h3>
+                    <h3><?php _e('Most popular flights within this Airline',KPDPlUGIN_TEXTDOMAIN); ?></h3>
                 </div>
                 <div class="bellows__content">
                     <?php do_settings_fields('tp_settings_shortcode_10', 'tp_settings_shortcode_10_id'); ?>
