@@ -2388,6 +2388,7 @@ thead tr td.active-w {
 .TP-deteiledIncomeR li:before {
     counter-increment: li;
     content: counter(li) ') ';
+    font-weight: bold;
 }
 .TP-BtnTabR {
     margin-bottom: 30px;
@@ -2408,6 +2409,13 @@ thead tr td.active-w {
     padding-top: 30px;
     padding-bottom: 10px;
 }
+.TP-deteiledIncomeROL{
+    margin-top: 0 !important;
+}
+.TP-deteiledIncomeROLTitle{
+    margin-bottom: 0 !important;
+}
+/*******************/
 .TPSpanFormatDate{
     font-size: 13px;
     margin-top: 5px;

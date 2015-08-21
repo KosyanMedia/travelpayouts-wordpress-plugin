@@ -9,22 +9,20 @@
 <p class="TP-deteiledIncome TP-deteiledIncomeR">
     <?php _e('All user purchases made within 30 days after following links in tables or using placed widgets will be credited to your account.', KPDPlUGIN_TEXTDOMAIN); ?>
 </p>
-<p class="TP-deteiledIncome TP-deteiledIncomeR">
+<p class="TP-deteiledIncome TP-deteiledIncomeR TP-deteiledIncomeROLTitle">
     <strong><?php _e('How it works?', KPDPlUGIN_TEXTDOMAIN); ?></strong>
 </p>
-<p class="TP-deteiledIncome TP-deteiledIncomeR">
-<ol class="TP-deteiledIncome TP-deteiledIncomeR">
+<ol class="TP-deteiledIncome TP-deteiledIncomeR TP-deteiledIncomeROL">
     <li>
-        <?php _e('Install our Affiliate tools.  You place our widgets and tables right in your posts and help visitors to book favorable flights, hotels and other services.', KPDPlUGIN_TEXTDOMAIN); ?>
+        <?php _e('<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your posts and help visitors to book favorable flights, hotels and other services.', KPDPlUGIN_TEXTDOMAIN); ?>
     </li>
     <li>
-        <?php _e('Visitor pays for the service. The client is happy to grab a great deal and gets to have an unforgettable journey, while we pay you a reward.', KPDPlUGIN_TEXTDOMAIN); ?>
+        <?php _e('<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets to have an unforgettable journey, while we pay you a reward.', KPDPlUGIN_TEXTDOMAIN); ?>
     </li>
     <li>
-        <?php _e('You get profits. Your earnings will be displayed in your Travelpayouts Dashboard and in your plugin. We make scheduled, automated, monthly payouts. ', KPDPlUGIN_TEXTDOMAIN); ?>
+        <?php _e('<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts Dashboard and in your plugin. We make scheduled, automated, monthly payouts. ', KPDPlUGIN_TEXTDOMAIN); ?>
     </li>
 </ol>
-</p>
 <p class="TP-deteiledIncome TP-deteiledIncomeRS"><strong><?php _e('What features does a plugin have?', KPDPlUGIN_TEXTDOMAIN); ?></strong></p>
 <p class="TP-deteiledIncome TP-deteiledIncomeRS">
     <?php _e('Plugin allows to get the following tools added to your Wordpress posts:', KPDPlUGIN_TEXTDOMAIN); ?>
@@ -45,8 +43,9 @@
 <p class="TP-deteiledIncome TP-deteiledIncomeR">
     <?php _e('We recommend that you get acquainted to the ', KPDPlUGIN_TEXTDOMAIN); ?>
     <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url; ?>/articles/207794617?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
-        <?php _e('detailed information on Travelpayouts WP plugin features.', KPDPlUGIN_TEXTDOMAIN ); ?>
+        <?php _e('detailed information', KPDPlUGIN_TEXTDOMAIN ); ?>
     </a>
+    <?php  _e('on Travelpayouts WP plugin features.', KPDPlUGIN_TEXTDOMAIN ); ?>
     <?php _e('Dozens of useful articles in Travelpayouts Knowledge Base, always available at', KPDPlUGIN_TEXTDOMAIN); ?>:
     <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url; ?>?utm_source=wpplugin&utm_medium=welcome_page&utm_campaign=<?php echo $this->local; ?>" target="_blank">
         <?php _e('https://support.travelpayouts.com', KPDPlUGIN_TEXTDOMAIN); ?>

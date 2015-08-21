@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-21 15:17+0300\n"
+"POT-Creation-Date: 2015-08-21 15:33+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -27,14 +27,14 @@ msgstr ""
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:46
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:99
-#: app/includes/models/admin/menu/TPFieldSettings.php:393
+#: app/includes/models/admin/menu/TPFieldSettings.php:394
 msgid "Destination"
 msgstr "Куда"
 
 #: app/includes/TPLoaderScripts.php:188
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:40
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
-#: app/includes/models/admin/menu/TPFieldSettings.php:370
+#: app/includes/models/admin/menu/TPFieldSettings.php:371
 msgid "Origin"
 msgstr "Откуда"
 
@@ -712,89 +712,95 @@ msgstr ""
 msgid "How it works?"
 msgstr "Как это работает?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:18
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:17
 msgid ""
-"Install our Affiliate tools.  You place our widgets and tables right in your "
-"posts and help visitors to book favorable flights, hotels and other services."
+"<strong>Install our Affiliate tools.</strong>  You place our widgets and "
+"tables right in your posts and help visitors to book favorable flights, "
+"hotels and other services."
 msgstr ""
-"Установите наши инструменты. Вы размещаете в ваших записях таблицы и виджеты "
-"с информацией о выгодных авиабилетах, отелях и т.д."
+"<strong>Установите наши инструменты..</strong>Вы размещаете в ваших записях "
+"таблицы и виджеты с информацией о выгодных авиабилетах, отелях и т.д. "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:21
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:20
 msgid ""
-"Visitor pays for the service. The client is happy to grab a great deal and "
-"gets to have an unforgettable journey, while we pay you a reward."
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab "
+"a great deal and gets to have an unforgettable journey, while we pay you a "
+"reward."
 msgstr ""
-"Посетитель оплачивает услугу. Посетители переходят с вашего ресурса и "
-"оплачивают услугу. Мы выплачиваем вам комиссию."
+"<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с "
+"вашего ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:24
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:23
 msgid ""
-"You get profits. Your earnings will be displayed in your Travelpayouts "
-"Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
+"<strong>You get profits.</strong>  Your earnings will be displayed in your "
+"Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
+"monthly payouts. "
 msgstr ""
-"Получите вашу прибыль. Информация о доходе отображается в вашем личном "
-"кабинете Travelpayouts и в плагине. Выплата прибыли происходит автоматически "
-"раз в месяц, строго по расписанию."
+"<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в "
+"вашем личном кабинете Travelpayouts и в плагине. Выплата прибыли происходит "
+"автоматически раз в месяц, строго по расписанию."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:28
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
 msgid "What features does a plugin have?"
 msgstr "Что умеет этот плагин?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:28
 msgid "Plugin allows to get the following tools added to your Wordpress posts:"
 msgstr ""
 "Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
 "Wordpress) следующие инструменты:"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:34
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:32
 msgid "12 customizable tables with flight information;"
 msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:35
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:33
 msgid "Search Forms;"
 msgstr "Поисковые формы;"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:34
 msgid "Low cost flights and hotels Map"
 msgstr "Карту дешевых авиаперелетов, отельную карту"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:37
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:35
 msgid "Low prices Calendar"
 msgstr "Календарь низких цен"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:38
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
 msgid "Hotel Widget "
 msgstr "Виджет отеля"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:39
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:37
 msgid "Popular flight destinations Widget"
 msgstr "Виджет популярных направлений перелета"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:43
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
 msgid "How can I earn more?"
 msgstr "Как заработать еще больше?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:46
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:44
 msgid "We recommend that you get acquainted to the "
 msgstr "Рекомендуем ознакомиться с "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:48
-msgid "detailed information on Travelpayouts WP plugin features."
-msgstr ""
-"подробной информацией о настройке и возможностях WP плагина Travelpayouts. "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:46
+msgid "detailed information"
+msgstr "подробной информацией"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:50
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:48
+msgid "on Travelpayouts WP plugin features."
+msgstr " о настройке и возможностях WP плагина Travelpayouts. "
+
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:49
 msgid ""
 "Dozens of useful articles in Travelpayouts Knowledge Base, always available "
 "at"
 msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:52
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
 msgid "https://support.travelpayouts.com"
 msgstr "https://support.travelpayouts.com/hc/ru"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:56
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
 msgid ""
 "We wish success to all your endeavors! Do the things you love and we will "
 "take care of the rest!"
@@ -1126,86 +1132,86 @@ msgstr "год полностью"
 msgid "Current format"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:260
+#: app/includes/models/admin/menu/TPFieldSettings.php:261
 msgid "Import settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:264
+#: app/includes/models/admin/menu/TPFieldSettings.php:265
 msgid "Browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:267
+#: app/includes/models/admin/menu/TPFieldSettings.php:268
 msgid "Import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:268
+#: app/includes/models/admin/menu/TPFieldSettings.php:269
 msgid "The file is not selected"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:271
+#: app/includes/models/admin/menu/TPFieldSettings.php:272
 msgid "Export"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:287
+#: app/includes/models/admin/menu/TPFieldSettings.php:288
 msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:290
+#: app/includes/models/admin/menu/TPFieldSettings.php:291
 #: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:293
+#: app/includes/models/admin/menu/TPFieldSettings.php:294
 #: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:298
+#: app/includes/models/admin/menu/TPFieldSettings.php:299
 #: app/includes/models/admin/menu/TPFieldWizard.php:63
 msgid "Currency"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:301
+#: app/includes/models/admin/menu/TPFieldSettings.php:302
 #: app/includes/models/admin/menu/TPFieldWizard.php:67
 msgid "Ruble"
 msgstr "Рубль"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:304
+#: app/includes/models/admin/menu/TPFieldSettings.php:305
 #: app/includes/models/admin/menu/TPFieldWizard.php:70
 msgid "US dollar"
 msgstr "доллар США"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:307
+#: app/includes/models/admin/menu/TPFieldSettings.php:308
 #: app/includes/models/admin/menu/TPFieldWizard.php:73
 msgid "Euro"
 msgstr "Евро"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:317
+#: app/includes/models/admin/menu/TPFieldSettings.php:318
 msgid "Fields"
 msgstr "Названия ячеек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:376
-#: app/includes/models/admin/menu/TPFieldSettings.php:399
+#: app/includes/models/admin/menu/TPFieldSettings.php:377
+#: app/includes/models/admin/menu/TPFieldSettings.php:400
 msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:379
-#: app/includes/models/admin/menu/TPFieldSettings.php:402
+#: app/includes/models/admin/menu/TPFieldSettings.php:380
+#: app/includes/models/admin/menu/TPFieldSettings.php:403
 msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:382
-#: app/includes/models/admin/menu/TPFieldSettings.php:405
+#: app/includes/models/admin/menu/TPFieldSettings.php:383
+#: app/includes/models/admin/menu/TPFieldSettings.php:406
 msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:385
-#: app/includes/models/admin/menu/TPFieldSettings.php:408
+#: app/includes/models/admin/menu/TPFieldSettings.php:386
+#: app/includes/models/admin/menu/TPFieldSettings.php:409
 msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:388
-#: app/includes/models/admin/menu/TPFieldSettings.php:411
+#: app/includes/models/admin/menu/TPFieldSettings.php:389
+#: app/includes/models/admin/menu/TPFieldSettings.php:412
 msgid "Prepositional"
 msgstr "Предложный"
 
