@@ -247,7 +247,10 @@ class TPFieldSettings {
                                value="<?php echo esc_attr(TPPlugin::$options['config']['format_date']) ?>"
                                class=""/>
                     </label>
-
+                    <span class="TPSpanFormatDate">
+                        <?php _e('Current format', KPDPlUGIN_TEXTDOMAIN); ?>:
+                        <?php  echo date_i18n(TPPlugin::$options['config']['format_date']); ?>
+                    </span>
                 </div>
                 <div class="ItemSub">
 
