@@ -34,6 +34,21 @@ class TPDefault implements  KPDDefault{
      */
     public static function defaultOptions()
     {
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $localization = 1;
+                $currency = 1;
+                break;
+            case "en_US":
+                $localization = 2;
+                $currency = 2;
+                break;
+            default:
+                $localization = 1;
+                $currency = 1;
+                break;
+        }
         // TODO: Implement defaultOptions() method.
         $defaults = array(
             'account' => array(
@@ -62,8 +77,8 @@ class TPDefault implements  KPDDefault{
                 'format_date' => 'd F Y',
             ),
             'local' => array(
-                'localization' => 1,
-                'currency' => 1,
+                'localization' => $localization,
+                'currency' => $currency,
                 'fields' => array(
                     'ru' => array(
                         'label_default' => array(
