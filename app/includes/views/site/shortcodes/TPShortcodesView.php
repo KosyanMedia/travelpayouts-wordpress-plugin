@@ -148,7 +148,7 @@ class TPShortcodesView {
                             $button = $this->return_link(array(
                                 'origin' => $citys[0],
                                 'destination' => $citys[1],
-                                'price' => number_format($row["price"], 0, '.', ' '),
+                                'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
                                 'type' => $type
                             ) );
                             break;
