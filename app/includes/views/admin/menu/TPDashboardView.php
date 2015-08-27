@@ -202,21 +202,21 @@ class TPDashboardView extends TPView{
 
                 <tr class="TP-rowAllCountMonth">
                     <td><?php _e('Total', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php echo round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
                     <!--<td><?php //echo $rows["flights"]["paid_clicks"] + $rows["hotels"]["paid_clicks"]; ?></td>-->
-                    <td><?php echo round($rows["flights"]["paid_clicks_profit"] + $rows["hotels"]["paid_clicks_profit"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["bookings"] + $rows["hotels"]["bookings"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["paid_bookings"] + $rows["hotels"]["paid_bookings"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["paid_bookings_profit"] + $rows["hotels"]["paid_bookings_profit"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["pending_bookings_profit"] + $rows["hotels"]["pending_bookings_profit"],2); ?></td>
-                    <td><?php echo @round((($rows["flights"]["clicks"]/$rows["flights"]["searches"]) * 100) + (($rows["hotels"]["clicks"]/$rows["hotels"]["searches"])*100), 2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_clicks_profit"] + $rows["hotels"]["paid_clicks_profit"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["bookings"] + $rows["hotels"]["bookings"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_bookings"] + $rows["hotels"]["paid_bookings"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_bookings_profit"] + $rows["hotels"]["paid_bookings_profit"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["pending_bookings_profit"] + $rows["hotels"]["pending_bookings_profit"],2); ?></td>
+                    <td><?php echo @round((($rows["flights"]["clicks"]/@$rows["flights"]["searches"]) * 100) + (($rows["hotels"]["clicks"]/$rows["hotels"]["searches"])*100), 2); ?></td>
                     <td><?php echo @(round(($rows["flights"]["paid_clicks_profit"] + $rows["flights"]["paid_bookings_profit"]) / $rows["flights"]["clicks"], 2) +
                             round(($rows["hotels"]["paid_clicks_profit"] + $rows["hotels"]["paid_bookings_profit"]) / $rows["hotels"]["clicks"], 2));?></td>
                     <td><?php echo @round((($rows["flights"]["bookings"]*100)/$rows["flights"]["clicks"]) + (($rows["hotels"]["bookings"]*100)/$rows["hotels"]["clicks"]), 2); ?></td>
                     <td><?php echo @(round(($rows["flights"]["paid_clicks_profit"] + $rows["flights"]["paid_bookings_profit"]) / $rows["flights"]["visitors"], 2) +
-                            round(($rows["hotels"]["paid_clicks_profit"] + $rows["hotels"]["paid_bookings_profit"]) / $rows["hotels"]["visitors"], 2));?></td>
+                            @round(($rows["hotels"]["paid_clicks_profit"] + $rows["hotels"]["paid_bookings_profit"]) / $rows["hotels"]["visitors"], 2));?></td>
                 </tr>
                 </tbody>
             </table>
@@ -285,15 +285,15 @@ class TPDashboardView extends TPView{
                                 $output .= '<td>' . __('Hotels', KPDPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                         }
-                        $output .= '<td>' . round($row["visitors"],2) . '</td>';
-                        $output .= '<td>' . round($row["searches"],2) . '</td>';
-                        $output .= '<td>' . round($row["clicks"],2) . '</td>';
+                        $output .= '<td>' . @round($row["visitors"],2) . '</td>';
+                        $output .= '<td>' . @round($row["searches"],2) . '</td>';
+                        $output .= '<td>' . @round($row["clicks"],2) . '</td>';
                         //$output .= '<td>' . $row["paid_clicks"] . '</td>';
-                        $output .= '<td>' . round($row["paid_clicks_profit"],2) . '</td>';
-                        $output .= '<td>' . round($row["bookings"],2) . '</td>';
-                        $output .= '<td>' . round($row["paid_bookings"],2) . '</td>';
-                        $output .= '<td>' . round($row["paid_bookings_profit"], 2) . '</td>';
-                        $output .= '<td>' . round($row["pending_bookings_profit"], 2) . '</td>';
+                        $output .= '<td>' . @round($row["paid_clicks_profit"],2) . '</td>';
+                        $output .= '<td>' . @round($row["bookings"],2) . '</td>';
+                        $output .= '<td>' . @round($row["paid_bookings"],2) . '</td>';
+                        $output .= '<td>' . @round($row["paid_bookings_profit"], 2) . '</td>';
+                        $output .= '<td>' . @round($row["pending_bookings_profit"], 2) . '</td>';
                         $output .= '<td>' . @round(($row["clicks"] / $row["searches"])*100, 2) . '</td>';
                         $output .= '<td>' . @round(($row["paid_clicks_profit"] + $row["paid_bookings_profit"]) / $row["clicks"], 2) . '</td>';
                         $output .= '<td>' . @round(($row["bookings"]*100)/$row["clicks"], 2) . '</td>';
@@ -306,15 +306,15 @@ class TPDashboardView extends TPView{
 
                 <tr class="TP-rowAllCountMonth">
                     <td><?php _e('Total', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php echo round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
                     <!--<td><?php //echo $rows["flights"]["paid_clicks"] + $rows["hotels"]["paid_clicks"]; ?></td>-->
-                    <td><?php echo round($rows["flights"]["paid_clicks_profit"] + $rows["hotels"]["paid_clicks_profit"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["bookings"] + $rows["hotels"]["bookings"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["paid_bookings"] + $rows["hotels"]["paid_bookings"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["paid_bookings_profit"] + $rows["hotels"]["paid_bookings_profit"],2); ?></td>
-                    <td><?php echo round($rows["flights"]["pending_bookings_profit"] + $rows["hotels"]["pending_bookings_profit"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_clicks_profit"] + $rows["hotels"]["paid_clicks_profit"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["bookings"] + $rows["hotels"]["bookings"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_bookings"] + $rows["hotels"]["paid_bookings"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["paid_bookings_profit"] + $rows["hotels"]["paid_bookings_profit"],2); ?></td>
+                    <td><?php echo @round($rows["flights"]["pending_bookings_profit"] + $rows["hotels"]["pending_bookings_profit"],2); ?></td>
                     <td><?php echo @round((($rows["flights"]["clicks"]+$rows["hotels"]["clicks"])/($rows["flights"]["searches"]+$rows["hotels"]["searches"]))*100, 2); ?></td>
                     <td><?php echo @(round((($rows["flights"]["paid_clicks_profit"] + $rows["hotels"]["paid_clicks_profit"]) +($rows["flights"]["paid_bookings_profit"] + $rows["hotels"]["paid_bookings_profit"])) / ( $rows["flights"]["clicks"] + $rows["hotels"]["clicks"]), 2));?></td>
                     <td><?php echo @round((($rows["flights"]["bookings"]+$rows["hotels"]["bookings"])*100)/($rows["flights"]["clicks"]+$rows["hotels"]["clicks"]), 2); ?></td>

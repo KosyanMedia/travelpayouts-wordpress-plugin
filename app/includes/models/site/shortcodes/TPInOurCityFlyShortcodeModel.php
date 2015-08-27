@@ -25,6 +25,7 @@ class TPInOurCityFlyShortcodeModel extends TPShortcodesChacheModel{
                     return false;
                 $rows = array();
                 $rows = $return;
+                $rows = $this->iataAutocomplete($rows, 13);
                 set_transient( $this->cacheKey('tpInOurCityFlyShortcodes', $destination) , $rows, $this->cacheSecund());
             }
         }else{
@@ -33,8 +34,9 @@ class TPInOurCityFlyShortcodeModel extends TPShortcodesChacheModel{
                 return false;
             $rows = array();
             $rows = $return;
+            $rows = $this->iataAutocomplete($rows, 13);
         }
-        return array('rows' => $rows,'destination' => $destination,
+        return array('rows' => $rows,'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
             'type' => 14, 'title' => $title);
     }
 }

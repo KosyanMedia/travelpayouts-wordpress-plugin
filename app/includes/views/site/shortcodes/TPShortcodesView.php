@@ -287,7 +287,7 @@ class TPShortcodesView {
                     case "airline_logo":
                         $output .= '<td class="TPTableTbodyTd">
                                                                         <img src="http://pics.avs.io/'.TPPlugin::$options['config']['airline_logo_size']['width']
-                            .'/'.TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline"].'@2x.png">
+                            .'/'.TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">
                                                                         '.$button.
                             '</td>';
                         break;
@@ -301,7 +301,7 @@ class TPShortcodesView {
                         switch($type){
                             case 8:
                                 $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$key_row.'">'.
-                                    $key_row.'</span></p>'.$button.'</td>';
+                                    $row['city'].'</span></p>'.$button.'</td>';
                                 break;
                             case 9:
                             case 12:
@@ -321,11 +321,9 @@ class TPShortcodesView {
                         break;
                     //Направление
                     case "direction":
-                        $citys = explode( '-', $key_row );
+                        //$citys = explode( '-', $key_row );
                         $output .= '<td class="TPTableTbodyTd TPDirectionTD"><p>
-                                                                        <span data-city-iata="'.$citys[0].'">'.$citys[0].
-                            '</span> → <span data-city-iata="'.$citys[1].'">'.
-                            $citys[1].'</span></p>'.$button.'</td>';
+                            <span>'.$row.'</span></p>'.$button.'</td>';
                         break;
                     //Класс перелета
                     case "trip_class":

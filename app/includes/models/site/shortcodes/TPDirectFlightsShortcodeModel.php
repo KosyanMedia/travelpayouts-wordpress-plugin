@@ -31,6 +31,7 @@ class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
                     $rows[$city] = $this->single_flight( $flights );
                 }
                 array_multisort($rows, SORT_ASC, $rows);
+                $rows = $this->iataAutocomplete($rows, 8);
                 set_transient( $this->cacheKey('tpDirectFlightsShortcodes', $origin) , $rows, $this->cacheSecund());
             }
         }else{
@@ -42,8 +43,9 @@ class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
                 $rows[$city] = $this->single_flight( $flights );
             }
             array_multisort($rows, SORT_ASC, $rows);
+            $rows = $this->iataAutocomplete($rows, 8);
         }
-        return array('rows' => $rows, 'type' => 8, 'origin' => $origin,
+        return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
             'limit' => $limit, 'title' => $title);
     }
 }

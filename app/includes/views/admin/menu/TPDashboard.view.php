@@ -50,7 +50,7 @@
     <div class="TPmainContent">
         <p class="TP-SettingTitle TP-DashboardTitle">Dashboard</p>
 
-        <?php $this->view->listIncome(); ?>
+        <?php @$this->view->listIncome(); ?>
 
         <div class="TP-TabsTable">
             <div id="TP-tabs">
@@ -62,10 +62,10 @@
                 </ul>
                 <?php
                     if($this->model->detailed_sales["current_month"]["sales"] != false){
-                        $this->view->tpTabsDay(1, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")]);
-                        $this->view->tpTabsDay(2, $this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)]);
-                        $this->view->tpTabsMonth(3, $this->model->detailed_sales["current_month"]["sales"]);
-                        $this->view->tpTabsMonth(4, $this->model->detailed_sales["last_month"]["sales"]);
+                        $this->view->tpTabsDay(1, @$this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")]);
+                        $this->view->tpTabsDay(2, @$this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)]);
+                        $this->view->tpTabsMonth(3, @$this->model->detailed_sales["current_month"]["sales"]);
+                        $this->view->tpTabsMonth(4, @$this->model->detailed_sales["last_month"]["sales"]);
                     }
 
                 ?>

@@ -27,7 +27,7 @@ class TPCheapestFlightsShortcodeModel extends TPShortcodesChacheModel{
                 $return = TPPlugin::$TPRequestApi->get_cheapest($attr);
                 if( ! $return )
                     return false;
-                $rows = $this->tpSortCheapestFlightsShortcodes($return);
+                $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
                 set_transient( $this->cacheKey('tpCheapestFlightsShortcodes',
                     $origin.$destination) , $rows, $this->cacheSecund());
             }
@@ -35,9 +35,9 @@ class TPCheapestFlightsShortcodeModel extends TPShortcodesChacheModel{
             $return = TPPlugin::$TPRequestApi->get_cheapest($attr);
             if( ! $return )
                 return false;
-            $rows = $this->tpSortCheapestFlightsShortcodes($return);
+            $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
         }
-        return array('rows' => $rows, 'type' => 4, 'origin' => $origin,
-            'destination' => $destination, 'title' => $title);
+        return array('rows' => $rows, 'type' => 4, 'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title);
     }
 }

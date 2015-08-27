@@ -30,7 +30,8 @@ class TPPriceCalendarMonthShortcodeModel extends TPShortcodesChacheModel{
             if( ! $return )
                 return false;
         }
-        return array('rows' => $return, 'type' => 1, 'origin' => $origin,
-            'destination' => $destination, 'title' => $title);
+
+        return array('rows' => $return, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title);
     }
 }

@@ -31,26 +31,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPDashboard.view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboard.view.php">
+      <file leaf-file-name="TPLoaderScripts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.0" vertical-offset="1080" max-vertical-offset="2016">
-              <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="99" selection-end-column="26" />
+            <state vertical-scroll-proportion="-16.62963" vertical-offset="6787" max-vertical-offset="9018">
+              <caret line="407" column="43" selection-start-line="407" selection-start-column="43" selection-end-line="407" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPDefault.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
+      <file leaf-file-name="TPPlugin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6369863" vertical-offset="378" max-vertical-offset="10044">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-              <folding>
-                <element signature="e#1339#1504#1#PHP" expanded="false" />
-                <element signature="e#1529#2205#1#PHP" expanded="false" />
-                <element signature="e#2355#6733#1#PHP" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.18202247" vertical-offset="0" max-vertical-offset="2322">
+              <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KPDLoaderScripts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/KPDLoaderScripts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="414">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,29 +66,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWidgets.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPAdminBarMenuController.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPStatistic.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPStatisticView.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPWidgetButtons.view.php" />
-        <option value="$PROJECT_DIR$/Travelpayouts.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPRequestApi.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPFromOurCityFlyShortcodeModel.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPPlugin.php" />
-        <option value="$PROJECT_DIR$/core/KPDPlugin.php" />
-        <option value="$PROJECT_DIR$/core/KPDAdminNotice.php" />
-        <option value="$PROJECT_DIR$/core/KPDLocalization.php" />
-        <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php" />
         <option value="$PROJECT_DIR$/core/models/KPDOptionModel.php" />
         <option value="$PROJECT_DIR$/core/KPDLoader.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php" />
         <option value="$PROJECT_DIR$/core/controllers/KPDBaseController.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizard.view.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldWizard.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPWidgetsModel.php" />
@@ -90,7 +79,6 @@
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFlightTicketsModel.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php" />
-        <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSettings.view.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPFlightTickets.view.php" />
@@ -100,17 +88,35 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsAdd.view.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldSettings.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabContent.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
         <option value="$PROJECT_DIR$/app/public/js/admin/TPAdminPluginPage.js" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboard.view.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboardView.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchForms.view.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPFlightsTablesContent.view.php" />
         <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" />
         <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
+        <option value="$PROJECT_DIR$/app/includes/controllers/site/TPShortcodesController.php" />
+        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboardView.php" />
+        <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboard.view.php" />
+        <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestFlightsShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/TPAutocomplete.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketsEachMonthShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsRouteShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularRoutesFromCityShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularDestinationsAirlinesShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPOurSiteSearchShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPFromOurCityFlyShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPInOurCityFlyShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/core/KPDLoaderScripts.php" />
+        <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
+        <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
       </list>
     </option>
   </component>
@@ -120,9 +126,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -179,6 +185,194 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autocomplete" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shortcodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -246,28 +440,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2454448" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21558872" sideWeight="0.47310126" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15201768" sideWeight="0.47310126" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.262576" sideWeight="0.52689874" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2305141" sideWeight="0.52689874" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -317,7 +511,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>705</line>
+          <line>703</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
@@ -326,231 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/KPDAdminNotice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66743916" vertical-offset="0" max-vertical-offset="1404">
-          <caret line="37" column="74" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/KPDLocalization.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="876">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPStatistic.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.62963" vertical-offset="379" max-vertical-offset="1404">
-          <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSettingsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1306715" vertical-offset="0" max-vertical-offset="684">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWidgetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22867514" vertical-offset="0" max-vertical-offset="576">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSearchFormsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3582">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09800363" vertical-offset="0" max-vertical-offset="1278">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/KPDLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14383562" vertical-offset="0" max-vertical-offset="876">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30821916" vertical-offset="0" max-vertical-offset="876">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kpd.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="378">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/controllers/KPDBaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2260274" vertical-offset="0" max-vertical-offset="876">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31170335" vertical-offset="12331" max-vertical-offset="13194">
-          <caret line="705" column="0" selection-start-line="705" selection-start-column="0" selection-end-line="705" selection-end-column="0" />
-          <folding>
-            <element signature="n#redirect_plugins#0;n#TPShortcodesView#0;n#!!top" expanded="false" />
-            <element signature="n#tpHumanTimeDiff#0;n#TPShortcodesView#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28767124" vertical-offset="0" max-vertical-offset="876">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldWizard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.62963" vertical-offset="631" max-vertical-offset="1512">
-          <caret line="80" column="88" selection-start-line="80" selection-start-column="88" selection-end-line="80" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPWizardModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="876">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPStatisticModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1422">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPFlightTicketsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7328767" vertical-offset="474" max-vertical-offset="1350">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPWidgetsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67808217" vertical-offset="0" max-vertical-offset="876">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/controllers/KPDAdminMenuController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="396">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/KPDOptionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="876">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSettingsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="1242">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1849315" vertical-offset="0" max-vertical-offset="876">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/site/widgets/TPWidgetsView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32876712" vertical-offset="216" max-vertical-offset="2916">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/TPView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5955056" vertical-offset="1306" max-vertical-offset="2322">
-          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabAccount.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="863">
-          <caret line="0" column="77" selection-start-line="0" selection-start-column="77" selection-end-line="0" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabReg.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50057936" vertical-offset="0" max-vertical-offset="863">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPWizardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="954">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldFlightTickets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33291772" vertical-offset="6249" max-vertical-offset="16002">
-          <caret line="367" column="60" selection-start-line="367" selection-start-column="47" selection-end-line="367" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldWidgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38006952" vertical-offset="1454" max-vertical-offset="8316">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWidgets.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3894231" vertical-offset="248" max-vertical-offset="1782">
-          <caret line="78" column="65" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsEdit.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47856316" vertical-offset="397" max-vertical-offset="1260">
@@ -579,20 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5422943" vertical-offset="756" max-vertical-offset="1782">
-          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87485516" vertical-offset="5005" max-vertical-offset="9018">
-          <caret line="325" column="13" selection-start-line="325" selection-start-column="13" selection-end-line="325" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPWizardTabContent.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72885287" vertical-offset="217" max-vertical-offset="1098">
@@ -611,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1815" max-vertical-offset="3078">
           <caret line="112" column="74" selection-start-line="112" selection-start-column="74" selection-end-line="112" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1505618" vertical-offset="910" max-vertical-offset="4644">
           <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8988764" vertical-offset="42814" max-vertical-offset="43740">
           <caret line="2423" column="21" selection-start-line="2423" selection-start-column="21" selection-end-line="2423" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16685979" vertical-offset="0" max-vertical-offset="863">
           <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,9 +594,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8331402" vertical-offset="4825" max-vertical-offset="7524">
           <caret line="313" column="33" selection-start-line="313" selection-start-column="33" selection-end-line="313" selection-end-column="52" />
-          <folding>
-            <marker date="1440159511604" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -653,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="36" max-vertical-offset="1890">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -661,36 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72885287" vertical-offset="523" max-vertical-offset="1440">
           <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboardView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54113555" vertical-offset="1009" max-vertical-offset="5904">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-          <folding>
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1440163097412" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPPlugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24657534" vertical-offset="0" max-vertical-offset="876">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,27 +616,315 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25028968" vertical-offset="0" max-vertical-offset="863">
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboard.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.0" vertical-offset="1080" max-vertical-offset="2016">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="99" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6369863" vertical-offset="378" max-vertical-offset="10044">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.5753425" vertical-offset="378" max-vertical-offset="10044">
+          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/controllers/KPDShortcodesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="876">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kpd.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24657534" vertical-offset="0" max-vertical-offset="876">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/KPDLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14383562" vertical-offset="0" max-vertical-offset="876">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/KPDPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/KPDAdminNotice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10273973" vertical-offset="0" max-vertical-offset="876">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/KPDAutoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1849315" vertical-offset="0" max-vertical-offset="876">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestFlightsShortcodeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboardView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64542294" vertical-offset="5041" max-vertical-offset="5904">
+          <caret line="316" column="36" selection-start-line="316" selection-start-column="36" selection-end-line="316" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/menu/TPDashboard.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.666666" vertical-offset="270" max-vertical-offset="2016">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPriceCalendarMonthShortcodeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="1818">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding>
-            <element signature="e#1339#1504#1#PHP" expanded="false" />
-            <element signature="e#1529#2205#1#PHP" expanded="false" />
-            <element signature="e#2355#6733#1#PHP" expanded="false" />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440667156476" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/TPShortcodesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28767124" vertical-offset="0" max-vertical-offset="876">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/autocomplete/cities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="863">
+          <caret line="0" column="134" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86966294" vertical-offset="4374" max-vertical-offset="6894">
+          <caret line="286" column="30" selection-start-line="286" selection-start-column="30" selection-end-line="286" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPSearchFormShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1440058834210" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/TPWigetsShortcodesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPAutocomplete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2260274" vertical-offset="0" max-vertical-offset="876">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5958904" vertical-offset="0" max-vertical-offset="876">
+          <caret line="34" column="109" selection-start-line="34" selection-start-column="109" selection-end-line="34" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestFlightsShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69863015" vertical-offset="0" max-vertical-offset="876">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="40" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsRouteShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.444445" vertical-offset="996" max-vertical-offset="1908">
+          <caret line="100" column="58" selection-start-line="100" selection-start-column="58" selection-end-line="100" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketsEachMonthShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4520548" vertical-offset="0" max-vertical-offset="876">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5958904" vertical-offset="0" max-vertical-offset="876">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularRoutesFromCityShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6164383" vertical-offset="0" max-vertical-offset="876">
+          <caret line="35" column="80" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularDestinationsAirlinesShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5753425" vertical-offset="0" max-vertical-offset="876">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPOurSiteSearchShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5958904" vertical-offset="0" max-vertical-offset="876">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPFromOurCityFlyShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6369863" vertical-offset="0" max-vertical-offset="876">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPInOurCityFlyShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67808217" vertical-offset="0" max-vertical-offset="876">
+          <caret line="38" column="107" selection-start-line="38" selection-start-column="107" selection-end-line="38" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1042874" vertical-offset="4807" max-vertical-offset="14976">
+          <caret line="325" column="35" selection-start-line="325" selection-start-column="35" selection-end-line="325" selection-end-column="35" />
+          <folding>
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440681282608" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6662804" vertical-offset="4627" max-vertical-offset="5490">
+          <caret line="294" column="45" selection-start-line="294" selection-start-column="45" selection-end-line="294" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/KPDLoaderScripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.62963" vertical-offset="6787" max-vertical-offset="9018">
+          <caret line="407" column="43" selection-start-line="407" selection-start-column="43" selection-end-line="407" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18202247" vertical-offset="0" max-vertical-offset="2322">
+          <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>

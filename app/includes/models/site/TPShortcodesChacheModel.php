@@ -176,4 +176,130 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
         }
         return $return;
     }
+
+    public function iataAutocomplete($data, $type, $title = 'origin'){
+        TPAutocomplete::getInstance();
+        switch($type){
+            case 0:
+                if($title != 'airline'){
+                    switch(TPPlugin::$options['local']['localization']) {
+                        case "1":
+                            $data = TPAutocomplete::$title[$data]['cases'][TPPlugin::$options['local']['title_case'][$title]];
+                            break;
+                        case "2":
+                            $data = TPAutocomplete::$data[$data]['name_translations']['en'];
+                            break;
+                    }
+                }else{
+                    switch(TPPlugin::$options['local']['localization']) {
+                        case "1":
+                            $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                            break;
+                        case "2":
+                            $data = TPAutocomplete::$data_airline[$data]['names']['en'];
+                            break;
+                    }
+                }
+
+                break;
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                //data_airline
+                if(!empty($data)){
+                    foreach($data as $key => $value){
+                        $value['airline_img'] = $value['airline'];
+                        switch(TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                break;
+                            case "2":
+                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+                }
+                break;
+            case 8:
+                if(!empty($data)){
+                    foreach($data as $key => $value){
+                        $value['airline_img'] = $value['airline'];
+                        switch(TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value['city'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
+                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                break;
+                            case "2":
+                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                $value['city'] = TPAutocomplete::$data[$key]['name_translations']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+                }
+                break;
+            case 9:
+                if(!empty($data)){
+                    foreach($data as $key => $value){
+                        $value['airline_img'] = $value['airline'];
+                        switch(TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
+                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                break;
+                            case "2":
+                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                                $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+                }
+                break;
+            case 10:
+                if(!empty($data)){
+                    foreach($data as $key => $value){
+                        $citys = explode( '-', $key );
+                        switch(TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value = TPAutocomplete::$data[$citys[0]]['name_translations']['ru'];
+                                $value .= ' → '.TPAutocomplete::$data[$citys[1]]['name_translations']['ru'];
+                                break;
+                            case "2":
+                                $value = TPAutocomplete::$data[$citys[0]]['name_translations']['en'];
+                                $value .= ' → '.TPAutocomplete::$data[$citys[1]]['name_translations']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+
+                }
+                break;
+            case 12:
+            case 13:
+            case 14:
+                if(!empty($data)) {
+                    foreach ($data as $key => $value) {
+                        switch(TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
+                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['ru'];
+                                break;
+                            case "2":
+                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['en'];
+                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        return $data;
+
+    }
 }

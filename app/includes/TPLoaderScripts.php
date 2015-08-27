@@ -373,7 +373,7 @@ class TPLoaderScripts extends KPDLoaderScripts{
             KPDPlUGIN_VERSION,
             $in_footer
         );
-        wp_register_script(
+        /*wp_register_script(
             KPDPlUGIN_SLUG. '-autocomplete-airlines',
             KPDPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_airlines.js',
             array(),
@@ -405,14 +405,14 @@ class TPLoaderScripts extends KPDLoaderScripts{
             ),
             KPDPlUGIN_VERSION,
             $in_footer //$in_foote
-        );
+        );KPDPlUGIN_SLUG. '-TPAutocomplete'*/
         wp_register_script(
             KPDPlUGIN_SLUG.'-TPPlugin', //$handle
             KPDPlUGIN_URL.'app/public/js/site/TPPlugin.js', //$src
             array(
                 'jquery',
                 KPDPlUGIN_SLUG.'-dataTables',
-                KPDPlUGIN_SLUG. '-TPAutocomplete'), //$deps
+                ), //$deps
             KPDPlUGIN_VERSION, //$ver
             $in_footer //$$in_footer
         );

@@ -23,6 +23,7 @@ class TPOurSiteSearchShortcodeModel extends TPShortcodesChacheModel{
                     return false;
                 $rows = array();
                 $rows = $return;
+                $rows = $this->iataAutocomplete($rows, 12);
                 set_transient( $this->cacheKey('tpOurSiteSearchShortcodes', '') , $rows, $this->cacheSecund());
             }
         }else{
@@ -31,6 +32,7 @@ class TPOurSiteSearchShortcodeModel extends TPShortcodesChacheModel{
                 return false;
             $rows = array();
             $rows = $return;
+            $rows = $this->iataAutocomplete($rows, 12);
         }
         return array('rows' => $rows, 'type' => 12, 'title' => $title);
 

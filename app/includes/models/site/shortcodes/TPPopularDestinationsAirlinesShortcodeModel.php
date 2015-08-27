@@ -21,6 +21,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPShortcodesChacheMode
                 $return = TPPlugin::$TPRequestApi->get_popular($attr);
                 if( ! $return )
                     return false;
+                $return = $this->iataAutocomplete($return, 10);
                 set_transient( $this->cacheKey('tpPopularDestinationsAirlinesShortcodes',
                     $airline) , $return, $this->cacheSecund());
             }
@@ -28,8 +29,9 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPShortcodesChacheMode
             $return = TPPlugin::$TPRequestApi->get_popular($attr);
             if( ! $return )
                 return false;
+            $return = $this->iataAutocomplete($return, 10);
         }
-        return array('rows' => $return, 'type' => 10, 'airline' => $airline,
+        return array('rows' => $return, 'type' => 10, 'airline' => $this->iataAutocomplete($airline, 0 , 'airline'),
             'title' => $title);
     }
 }

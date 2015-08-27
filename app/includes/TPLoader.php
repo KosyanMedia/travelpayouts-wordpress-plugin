@@ -28,7 +28,9 @@ class TPLoader extends KPDLoader{
         new TPWidgetButtonsController();
         new TPSearchFormButtonsController();
         new TPWizardController();
+
     }
+
 
     protected function site()
     {

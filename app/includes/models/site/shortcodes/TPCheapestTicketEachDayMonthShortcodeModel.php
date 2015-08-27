@@ -23,7 +23,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel
                 if( ! $return )
                     return false;
                 $rows = array();
-                $rows = $this->tpSortCheapestTicketEachDayMonth($return, date('Y-m'));
+                $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
                 set_transient( $this->cacheKey('tpCheapestTicketEachDayMonthShortcodes',
                     $origin.$destination) , $rows, $this->cacheSecund());
             }
@@ -32,11 +32,11 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel
             if( ! $return )
                 return false;
             $rows = array();
-            $rows = $this->tpSortCheapestTicketEachDayMonth($return, date('Y-m'));
+            $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
         }
 
         //return var_dump("<pre>", $rows, "</pre>");
-        return array('rows' => $rows, 'origin' => $origin,
-            'destination' => $destination, 'type' => 5, 'title' => $title);
+        return array('rows' => $rows, 'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 5, 'title' => $title);
     }
 }

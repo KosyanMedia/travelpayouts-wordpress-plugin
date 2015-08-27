@@ -33,7 +33,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPShortcodesChacheModel{
             if (!$return)
                 return false;
         }
-        return array('rows' => $return, 'origin' => $origin,
+        return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
                 'type' => 9, 'title' => $title);
 
     }

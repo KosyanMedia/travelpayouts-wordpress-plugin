@@ -2,12 +2,12 @@ jQuery(function($) {
     var doc, win;
     doc = $(document);
     win = $(window);
-    tpCityAutocomplete = new TPCityAutocomplete();
+    /*tpCityAutocomplete = new TPCityAutocomplete();
     tpCityAutocomplete.TPCityStandTable("[data-city-iata]", "city-iata");
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
-    
-    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");
+
+    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");

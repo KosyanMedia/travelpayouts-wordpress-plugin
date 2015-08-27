@@ -18,19 +18,19 @@ class TPCheapestTicketsEachMonthShortcodeModel extends TPShortcodesChacheModel{
         if($this->cacheSecund()) {
             if (false === ($return = get_transient($this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
                     $origin.$destination)))) {
-                $return = (array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr);
+                $return = $this->iataAutocomplete((array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
                 if( ! $return )
                     return false;
                 set_transient( $this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
-            $return = (array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr);
+            $return = $this->iataAutocomplete((array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
             if( ! $return )
                 return false;
         }
         //return var_dump("<pre>", $return, "</pre>");
-        return array('rows' => $return, 'origin' => $origin,
-            'destination' => $destination, 'type' => 6, 'title' => $title);
+        return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 6, 'title' => $title);
     }
 }

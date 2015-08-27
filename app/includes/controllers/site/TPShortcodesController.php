@@ -19,4 +19,5 @@ abstract class TPShortcodesController extends KPDShortcodesController{
         if(!$data) return false;
         return $this->view->tpReturnOutputTable($data);
     }
+
 }

@@ -65,6 +65,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPShortcodesChacheModel{
                 }
                 if( ! $return )
                     return false;
+                $return = $this->iataAutocomplete($return, 7);
                 set_transient( $this->cacheKey('tpDirectFlightsRouteShortcodes',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
@@ -97,8 +98,9 @@ class TPDirectFlightsRouteShortcodeModel extends TPShortcodesChacheModel{
             }
             if( ! $return )
                 return false;
+            $return = $this->iataAutocomplete($return, 7);
         }
-        return array('rows' => $return, 'type' => 7, 'origin' => $origin,
-            'destination' => $destination, 'title' => $title);
+        return array('rows' => $return, 'type' => 7, 'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title);
     }
 }
