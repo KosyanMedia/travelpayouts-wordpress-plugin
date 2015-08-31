@@ -165,6 +165,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
      * @return mixed
      */
     public function sort_dates( $return ) {
+
         usort($return, array(&$this, "cmpSort"));
         $date = '';
         foreach($return as $key=>$item){

@@ -23,7 +23,7 @@ class KPDAutoload {
      */
     private function autoload($className){
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(KPDPlUGIN_DIR),
-            RecursiveIteratorIterator::SELF_FIRST);
+            RecursiveIteratorIterator::CHILD_FIRST);
         foreach ($iterator as $directory){
             if (  ! $directory->isDir()) {
                 continue;
