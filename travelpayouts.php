@@ -8,9 +8,9 @@ Author: travelpayouts
 Author URI: http://www.travelpayouts.com/?locale=en
 License: GPL2
 */
-require_once __DIR__ . '/kpd.config.php';
-require_once __DIR__ . '/core/KPDAutoload.php';
-require_once __DIR__ . '/app/includes/TPPlugin.php';
+require_once dirname(__FILE__).'/kpd.config.php';
+require_once dirname(__FILE__).'/core/KPDAutoload.php';
+require_once dirname(__FILE__).'/app/includes/TPPlugin.php';
 register_activation_hook( __FILE__, array('TPPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('TPPlugin' ,  'deactivation' ) );
 register_uninstall_hook( __FILE__, array('TPPlugin' ,  'uninstall' ) );

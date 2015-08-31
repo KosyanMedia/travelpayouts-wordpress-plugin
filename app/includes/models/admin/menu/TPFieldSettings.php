@@ -104,7 +104,7 @@ class TPFieldSettings {
                             <?php _e('km', KPDPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option <?php selected( TPPlugin::$options['config']['distance'], 2 ); ?>  value="2">
-                            <?php _e('m', KPDPlUGIN_TEXTDOMAIN); ?>
+                            <?php _e('miles', KPDPlUGIN_TEXTDOMAIN); ?>
                         </option>
                     </select>
                 </div>

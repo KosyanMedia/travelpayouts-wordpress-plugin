@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-08-21 16:29+0300\n"
+"POT-Creation-Date: 2015-08-31 14:23+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -106,15 +106,15 @@ msgstr "Переменная $airline не задана или задана не
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
-#: app/includes/TPLoader.php:85
+#: app/includes/TPLoader.php:87
 msgid "Set details and enable plugin features."
 msgstr "Настроить плагин для начала работы."
 
-#: app/includes/TPLoader.php:90
+#: app/includes/TPLoader.php:92
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
-#: app/includes/TPLoader.php:91
+#: app/includes/TPLoader.php:93
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "
@@ -364,7 +364,7 @@ msgstr "Тип"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:30
 #: app/includes/views/admin/menu/TPStatisticView.php:159
-#: app/includes/models/admin/menu/TPFieldSettings.php:28
+#: app/includes/models/admin/menu/TPFieldSettings.php:46
 msgid "Marker"
 msgstr "Маркер"
 
@@ -975,6 +975,10 @@ msgstr "Период"
 msgid "Number of Widgets"
 msgstr "Количество виджетов при вставке в запись"
 
+#: app/includes/models/admin/menu/TPFieldSettings.php:28
+msgid "Token"
+msgstr "Токен"
+
 #: app/includes/models/admin/menu/TPFieldSettings.php:35
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:485
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:512
@@ -990,10 +994,6 @@ msgstr "Количество виджетов при вставке в запи�
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:853
 msgid "Extra marker"
 msgstr "Дополнительный маркер"
-
-#: app/includes/models/admin/menu/TPFieldSettings.php:46
-msgid "Token"
-msgstr "Токен"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:53
 msgid "White Label"
@@ -1024,8 +1024,8 @@ msgid "km"
 msgstr "км"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:107
-msgid "m"
-msgstr "м"
+msgid "miles"
+msgstr "мили"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:112
 msgid "Airlines logo size"
@@ -1395,7 +1395,7 @@ msgstr "Авиабилеты"
 #: app/includes/controllers/admin/menu/TPWizardController.php:23
 msgctxt "add_menu_page page title"
 msgid "Wizard"
-msgstr ""
+msgstr "Визард"
 
 #: app/includes/controllers/admin/menu/TPStatisticController.php:21
 #: app/includes/controllers/admin/menu/TPStatisticController.php:22
@@ -1406,6 +1406,9 @@ msgstr "Статистика"
 #: core/controllers/KPDBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "m"
+#~ msgstr "м"
 
 #~ msgid ""
 #~ "Shortcode generated automatically when you save and available for "
