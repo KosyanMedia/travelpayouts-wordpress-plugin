@@ -192,6 +192,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                             break;
                     }
                 }else{
+
                     switch(TPPlugin::$options['local']['localization']) {
                         case "1":
                             $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
@@ -245,6 +246,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
+                        $value['destination_iata'] = $key;
                         switch(TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
@@ -283,6 +285,8 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
             case 14:
                 if(!empty($data)) {
                     foreach ($data as $key => $value) {
+                        $value['origin_iata'] = $value['origin'];
+                        $value['destination_iata'] = $value['destination'];
                         switch(TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];

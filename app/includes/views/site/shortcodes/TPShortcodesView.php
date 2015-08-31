@@ -26,7 +26,7 @@ class TPShortcodesView {
      */
     public function tpReturnOutputTable($args = array()){
         $defaults = array( 'rows' => array(), 'type' => null, 'origin' => '', 'destination' => '', 'airline' => '',
-            'title' => '', 'limit' => '');
+            'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $output = '';
         $sortable_class = '';
@@ -106,8 +106,8 @@ class TPShortcodesView {
                     switch($type){
                         case 1:
                             $button = $this->return_link(array(
-                                'origin' => $origin,
-                                'destination' => $destination,
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
                                 'departure_at' => $row['depart_date'],
                                 //'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
@@ -116,8 +116,8 @@ class TPShortcodesView {
                             break;
                         case 2:
                             $button = $this->return_link(array(
-                                'origin' => $origin,
-                                'destination' => $destination,
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
                                 'departure_at' => $row['depart_date'],
                                 'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
@@ -127,7 +127,7 @@ class TPShortcodesView {
                         case 8:
                             $citys = explode( '-', $key_row );
                             $button = $this->return_link(array(
-                                'origin' => $origin,
+                                'origin' => $origin_iata,
                                 'destination' => $key_row,
                                 'price' => number_format($row["price"], 0, '.', ' '),
                                 'type' => $type
@@ -135,8 +135,8 @@ class TPShortcodesView {
                             break;
                         case 9:
                             $button = $this->return_link(array(
-                                'origin' => $origin,
-                                'destination' => $row['destination'],
+                                'origin' => $origin_iata,
+                                'destination' => $row['destination_iata'],
                                 'departure_at' => $row['departure_at'],
                                 'return_at' => $row['return_at'],
                                 'price' => number_format($row["price"], 0, '.', ' '),
@@ -156,8 +156,8 @@ class TPShortcodesView {
                         case 13:
                         case 14:
                             $button = $this->return_link(array(
-                                'origin' => $row['origin'],
-                                'destination' => $row['destination'],
+                                'origin' => $row['origin_iata'],
+                                'destination' => $row['destination_iata'],
                                 'departure_at' => $row['depart_date'],
                                 'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
@@ -167,8 +167,8 @@ class TPShortcodesView {
                             break;
                         default:
                             $button = $this->return_link(array(
-                                'origin' => $origin,
-                                'destination' => $destination,
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
                                 'departure_at' => $row['departure_at'],
                                 'return_at' => $row['return_at'],
                                 'price' => number_format($row["price"], 0, '.', ' '),

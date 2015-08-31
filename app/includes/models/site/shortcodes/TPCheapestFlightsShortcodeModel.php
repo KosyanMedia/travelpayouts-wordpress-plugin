@@ -38,6 +38,8 @@ class TPCheapestFlightsShortcodeModel extends TPShortcodesChacheModel{
             $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
         }
         return array('rows' => $rows, 'type' => 4, 'origin' => $this->iataAutocomplete($origin, 0),
-            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title);
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
+            'origin_iata' => $origin, 'destination_iata' => $destination
+        );
     }
 }

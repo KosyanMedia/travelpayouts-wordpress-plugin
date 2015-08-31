@@ -30,6 +30,8 @@ class TPPriceCalendarWeekShortcodeModel extends TPShortcodesChacheModel{
                 return false;
         }
         return array('rows' => $return, 'type' => 2, 'origin' => $this->iataAutocomplete($origin, 0),
-            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title);
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
+            'origin_iata' => $origin, 'destination_iata' => $destination
+        );
     }
 }

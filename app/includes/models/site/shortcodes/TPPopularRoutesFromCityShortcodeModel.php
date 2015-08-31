@@ -34,7 +34,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPShortcodesChacheModel{
                 return false;
         }
         return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
-                'type' => 9, 'title' => $title);
+                'type' => 9, 'title' => $title, 'origin_iata' => $origin);
 
     }
 }

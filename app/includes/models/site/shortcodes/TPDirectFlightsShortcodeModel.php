@@ -46,6 +46,6 @@ class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
             $rows = $this->iataAutocomplete($rows, 8);
         }
         return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
-            'limit' => $limit, 'title' => $title);
+            'limit' => $limit, 'title' => $title, 'origin_iata' => $origin);
     }
 }
