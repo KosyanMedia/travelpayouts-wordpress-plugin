@@ -50,6 +50,7 @@ class TPSettingsModel extends TPOptionModel{
     public function importSettings(){
         if(is_array($_POST['value'])){
             update_option( KPDPlUGIN_OPTION_NAME, $_POST['value']);
+            TPPlugin::deleteCacheAll();
         }
         //error_log(print_r($_POST, true));
         /*$base64 = $_POST['value'];

@@ -16,7 +16,7 @@ abstract class TPView {
         switch($currency){
             case "RUB":
             case "rub":
-                $currency = '<i class="fa fa-rub TPCurrencyIco" >i</i>';
+                $currency = '<i class="TPCurrencyIco" >i</i>';
                 break;
             case "USD":
             case "usd":

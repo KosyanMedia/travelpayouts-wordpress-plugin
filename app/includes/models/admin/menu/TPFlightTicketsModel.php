@@ -5,7 +5,6 @@
  * Date: 06.08.15
  * Time: 18:47
  */
-
 class TPFlightTicketsModel extends TPOptionModel{
     public function __construct(){
         parent::__construct();

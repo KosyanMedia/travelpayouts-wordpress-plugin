@@ -25,10 +25,10 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Marker', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _e('Token', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
-                        <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][marker]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['marker']) ?>"/>
+                        <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][token]"
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['token']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
@@ -43,10 +43,10 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Token', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _e('Marker', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
-                        <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][token]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['token']) ?>"/>
+                        <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][marker]"
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['marker']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">

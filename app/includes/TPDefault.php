@@ -195,7 +195,7 @@ class TPDefault implements  KPDDefault{
                 '2' => array(
                     //Календарь цен на неделю по маршруту из origin в destination
                     'title' => array(
-                        'en' => 'Flights from Origin to Destination for the Next Few Days',
+                        'en' => 'Flights from origin to destination for the Next Few Days',
                         'ru' => 'Билеты из origin в destination на ближайшие дни'
                     ),
                     'tag' => 'h3',

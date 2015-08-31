@@ -573,7 +573,11 @@ class TPShortcodesView {
 
 
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
-
+        switch($type){
+            case 1:
+                $url .= '&one_way=true';
+                break;
+        }
         $link = '';
         if($redirect){
             $home = '';
@@ -593,7 +597,7 @@ class TPShortcodesView {
     public function currencyView(){
         switch(TPPlugin::$options['local']['currency']){
             case "1":
-                $currency = '<i class="fa fa-rub TPCurrencyIco" >i</i>';
+                $currency = '<i class="TPCurrencyIco" >i</i>';
 
                 break;
             case "2":
@@ -615,7 +619,7 @@ class TPShortcodesView {
         switch($currency){
             case "RUB":
             case "rub":
-                $currency = '<i class="fa fa-rub TPCurrencyIco" >i</i>';
+                $currency = '<i class="TPCurrencyIco" >i</i>';
                 break;
             case "USD":
             case "usd":
