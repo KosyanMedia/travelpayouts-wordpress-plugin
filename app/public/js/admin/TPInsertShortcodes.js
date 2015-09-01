@@ -8,17 +8,21 @@ jQuery(function($) {
     });
     doc.find('#constructorShortcodesButton').click(function (e) {
         doc.find( "#constructorShortcodesModal" ).dialog({
-            resizable: true,
+            resizable: false,
+            draggable: false,
             maxHeight:400,
             maxWidth: 450,
             minWidth: 400,
             minHeight:200,
             modal: true,
-            /*position: {
-                my: "center",
-                at: "center",
-                of: "flip"
-            },*/
+            //position: { my: "center bottom", at: "center top", of: $('#constructorShortcodesButton')},
+            open : function() {
+                $(this).parent().css({   position:'absolute',
+                    left: (win.width() - $(this).parent().outerWidth())/2,
+                    top: (win.height() - $(this).parent().outerHeight())/2
+                });
+
+            },
             buttons: [
                 {
                     id: "constructorShortcodesButtonOk",
@@ -332,12 +336,20 @@ jQuery(function($) {
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
         doc.find( "#constructorWidgetModal" ).dialog({
-            resizable: true,
+            resizable: false,
+            draggable: false,
             maxHeight:400,
             maxWidth: 450,
             minWidth: 400,
             minHeight:200,
             modal: true,
+            open : function() {
+                $(this).parent().css({   position:'absolute',
+                    left: (win.width() - $(this).parent().outerWidth())/2,
+                    top: (win.height() - $(this).parent().outerHeight())/2
+                });
+
+            },
             buttons: [
                 {
                     id: "constructorWidgetButtonOk",
@@ -692,12 +704,20 @@ jQuery(function($) {
     /** **/
     doc.find('#constructorSearchFormButton').click(function (e) {
         doc.find( "#constructorSearchFormModal" ).dialog({
-            resizable: true,
+            resizable: false,
+            draggable: false,
             maxHeight:400,
             maxWidth: 450,
             minWidth: 400,
             minHeight:200,
             modal: true,
+            open : function() {
+                $(this).parent().css({   position:'absolute',
+                    left: (win.width() - $(this).parent().outerWidth())/2,
+                    top: (win.height() - $(this).parent().outerHeight())/2
+                });
+
+            },
             buttons: [
                 {
                     id: "constructorSearchFormButtonOk",

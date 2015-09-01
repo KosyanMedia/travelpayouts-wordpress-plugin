@@ -2423,3 +2423,17 @@ thead tr td.active-w {
 .TPMainTitleSF {
     margin-bottom: -20px !important;
 }
+.TP-SpinnerWSize{
+    width: 100px;
+}
+.TP-SpinnerWSize label{
+    width: 80px;
+}
+.TP-SpinnerWSize > .navSpinner{
+    width: calc(100% - 80px);
+}
+
+.TP-SpinnerWSize label input{
+    text-align: right !important;
+    margin-left: -5px;
+}

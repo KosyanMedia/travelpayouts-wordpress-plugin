@@ -111,19 +111,31 @@ class TPFieldSettings {
                 <div class="TP-ListSub ListSub--cust list--db">
                     <span class="TP-titleSub--custom"><?php _e('Airlines logo size', KPDPlUGIN_TEXTDOMAIN); ?> (px)</span>
                     <div class="ItemSub">
-                        <label>
-                            <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][width]"
-                                   type="text"
-                                   value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
-                        </label>
+                        <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
+                            <label>
+                                <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][width]"
+                                       type="text"
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
+                            </label>
+                            <div class="navSpinner">
+                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            </div>
+                        </div>
                     </div>
                     <span class="TP-titleSub TP-titleSub--sdf">X</span>
                     <div class="ItemSub">
-                        <label>
-                            <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][height]"
-                                   type="text"
-                                   value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
-                        </label>
+                        <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
+                            <label>
+                                <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][height]"
+                                       type="text"
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
+                            </label>
+                            <div class="navSpinner">
+                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

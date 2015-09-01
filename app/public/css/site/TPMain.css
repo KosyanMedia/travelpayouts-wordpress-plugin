@@ -40,7 +40,8 @@ body {
   background: #1db1db;
 }
 .w-table thead tr td {
-  padding: 0 20px;
+    word-wrap: normal;
+  padding: 0 12px;
   font-size: 13px;
   color: #fff;
   font-weight: 400;

@@ -8,23 +8,39 @@
                         data-limit-12="<?php echo TPPlugin::$options['shortcodes']['13']['limit']?>"
                         data-limit-13="<?php echo TPPlugin::$options['shortcodes']['14']['limit']?>"
                     >
-                    <option selected="selected" value="0"> <?php _e('Select the table', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="2">2. <?php _e('Flights from Origin to Destination (next few days)', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
-                    <option value="3">3. <?php _e('Cheapest Flights from origin to destination, Round-trip', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="4">4. <?php _e('Cheapest Flights from origin to destination (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="5">5. <?php _e('Cheapest Flights from origin to destination (next year)', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="6">6. <?php _e('Direct Flights from origin to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="7">7. <?php _e('Direct Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
                     <?php if(TPPlugin::$options['local']['currency'] == 1){ ?>
+                        <option selected="selected" value="0"> <?php _e('Select the table', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="2">2. <?php _e('Flights from Origin to Destination (next few days)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
+                        <option value="3">3. <?php _e('Cheapest Flights from origin to destination, Round-trip', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="4">4. <?php _e('Cheapest Flights from origin to destination (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="5">5. <?php _e('Cheapest Flights from origin to destination (next year)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="6">6. <?php _e('Direct Flights from origin to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="7">7. <?php _e('Direct Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="8">8. <?php _e('Popular Destinations from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <?php } ?>
-                    <option value="9">9. <?php _e('Most popular flights within this Airlines', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <!--<option value="10">10. <?php// _e('Special offers airline', KPDPlUGIN_TEXTDOMAIN); ?></option>-->
-                    <option value="11">11. <?php _e('Searched on our website', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="12" >12. <?php _e('Cheap Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
-                    <option value="13">13. <?php _e('Cheap Flights to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="9">9. <?php _e('Most popular flights within this Airlines', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <!--<option value="10">10. <?php// _e('Special offers airline', KPDPlUGIN_TEXTDOMAIN); ?></option>-->
+                        <option value="11">10. <?php _e('Searched on our website', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="12" >11. <?php _e('Cheap Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="13">12. <?php _e('Cheap Flights to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                    <?php } else { ?>
+                        <option selected="selected" value="0"> <?php _e('Select the table', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="2">2. <?php _e('Flights from Origin to Destination (next few days)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
+                        <option value="3">3. <?php _e('Cheapest Flights from origin to destination, Round-trip', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="4">4. <?php _e('Cheapest Flights from origin to destination (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="5">5. <?php _e('Cheapest Flights from origin to destination (next year)', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="6">6. <?php _e('Direct Flights from origin to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="7">7. <?php _e('Direct Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="9">8. <?php _e('Most popular flights within this Airlines', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <!--<option value="10">10. <?php// _e('Special offers airline', KPDPlUGIN_TEXTDOMAIN); ?></option>-->
+                        <option value="11">9. <?php _e('Searched on our website', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="12" >10. <?php _e('Cheap Flights from origin', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="13">11. <?php _e('Cheap Flights to destination', KPDPlUGIN_TEXTDOMAIN); ?></option>
+                    <?php }?>
+
                 </select>
             </td>
         </tr>
