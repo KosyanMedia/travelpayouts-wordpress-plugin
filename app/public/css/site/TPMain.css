@@ -4,14 +4,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 
-body {
-  font-family: 'Roboto', sans-serif;
-    line-height: normal !important;
-    hyphens: none !important;
-    -moz-hyphens: none !important;
-    -ms-hyphens: none !important;
-    -webkit-hyphens: none !important;
-}
+
 * table {
     border-collapse: separate !important;
 }
@@ -34,6 +27,12 @@ body {
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
     line-height: inherit !important;
+    font-family: 'Roboto', sans-serif;
+    line-height: normal !important;
+    hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    -webkit-hyphens: none !important;
 }
 .w-table thead tr {
   height: 44px;

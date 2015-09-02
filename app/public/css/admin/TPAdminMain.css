@@ -1,12 +1,4 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  padding-bottom: 50px;
-    line-height: normal !important;
-    hyphens: none !important;
-    -moz-hyphens: none !important;
-    -ms-hyphens: none !important;
-    -webkit-hyphens: none !important;
-}
+
 
 * {
   box-sizing: border-box;
@@ -43,6 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 .TPWrapper {
   width: 790px;
   margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+    line-height: normal !important;
+    hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    -webkit-hyphens: none !important;
 }
 
 .TPMainTitle {
