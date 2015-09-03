@@ -5,8 +5,8 @@
  * Date: 10.08.15
  * Time: 11:05
  */
-
-class TPSettingsModel extends TPOptionModel{
+namespace app\includes\models\admin\menu;
+class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_export_settings',      array( &$this, 'exportSettings'));

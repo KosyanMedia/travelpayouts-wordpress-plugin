@@ -5,14 +5,14 @@
  * Date: 12.08.15
  * Time: 17:18
  */
-
-class TPSearchFormButtonsController extends KPDAdminMediaButtonsController{
+namespace app\includes\controllers\admin\media_buttons;
+class TPSearchFormButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
     public $model;
     public $data;
     public function __construct()
     {
         parent::__construct();
-        $this->model = new TPSearchFormsModel();
+        $this->model = new \app\includes\models\admin\menu\TPSearchFormsModel();
     }
     public function action($args = array())
     {

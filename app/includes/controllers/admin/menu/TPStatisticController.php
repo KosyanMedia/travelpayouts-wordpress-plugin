@@ -6,13 +6,13 @@
  * Time: 16:19
  */
 namespace app\includes\controllers\admin\menu;
-class TPStatisticController extends KPDAdminMenuController{
+class TPStatisticController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPStatisticModel();
-        $this->view = new TPStatisticView($this->model);
+        $this->model = new \app\includes\models\admin\menu\TPStatisticModel();
+        $this->view = new \app\includes\views\admin\menu\TPStatisticView($this->model);
     }
     public function action()
     {

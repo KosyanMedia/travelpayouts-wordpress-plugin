@@ -13,15 +13,16 @@ class TPLoader extends \core\TPOLoader{
         // Admin menu
         new controllers\admin\menu\TPDashboardController();
         new controllers\admin\menu\TPFlightTicketsController();
-        /*new TPWidgetsController();
-        new TPSearchFormsController();
-        new TPStatisticController();
-        new TPSettingsController();
+        new controllers\admin\menu\TPWidgetsController();
+        new controllers\admin\menu\TPSearchFormsController();
+        new controllers\admin\menu\TPStatisticController();
+        new controllers\admin\menu\TPSettingsController();
+        new controllers\admin\menu\TPWizardController();
         // Media buttons
-        new TPShortcodeButtonsController();
-        new TPWidgetButtonsController();
-        new TPSearchFormButtonsController();
-        new TPWizardController();*/
+        new controllers\admin\media_buttons\TPShortcodeButtonsController();
+        new controllers\admin\media_buttons\TPWidgetButtonsController();
+        new controllers\admin\media_buttons\TPSearchFormButtonsController();
+
 
     }
 
@@ -59,7 +60,7 @@ class TPLoader extends \core\TPOLoader{
         // TODO: Implement all() method.
 
         new \app\includes\TPLoaderScripts();
-        //new TPAdminBarMenuController();
+        new controllers\admin\menu\TPAdminBarMenuController();
 
 
     }

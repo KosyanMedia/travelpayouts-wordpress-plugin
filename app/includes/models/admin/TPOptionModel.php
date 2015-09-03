@@ -19,7 +19,7 @@ abstract class TPOptionModel extends \core\models\TPOOptionModel{
                 \app\includes\TPPlugin::$options['account']['token'] = $input['account']['token'];
                 \app\includes\TPPlugin::$options['local']['localization'] = $input['local']['localization'];
                 \app\includes\TPPlugin::$options['local']['currency'] = $input['local']['currency'];
-                self::$result = TPPlugin::$options;
+                self::$result = \app\includes\TPPlugin::$options;
             }else{
                 self::$result = array_merge(\app\includes\TPPlugin::$options, $input);
             }

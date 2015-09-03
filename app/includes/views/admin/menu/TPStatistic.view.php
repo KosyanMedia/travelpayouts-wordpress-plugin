@@ -49,7 +49,7 @@
                         <?php _e('show', KPDPlUGIN_TEXTDOMAIN ); ?>
                     </button>
                 </div>
-                <?php echo TPStatisticView::tableReport($this->model->detailed_sales); ?>
+                <?php echo \app\includes\views\admin\menu\TPStatisticView::tableReport($this->model->detailed_sales); ?>
                 <a download="TPListReport.xls" href="#"  class="TP-BtnTab exportBtn btnBalance"
                    onclick="return ExcellentExport.excel(this, 'TPListReport', '<?php _e('Report on income', KPDPlUGIN_TEXTDOMAIN ); ?>');">
                     <?php _e('DOWNLOAD REPORT (XLS)', KPDPlUGIN_TEXTDOMAIN ); ?>

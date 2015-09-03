@@ -5,27 +5,27 @@
             <tr id="tr_select_widgets">
                 <td id="td_select_widgets">
                     <select name="select_widgets" id="select_widgets"
-                            data-widgets-size-width-1="<?php echo TPPlugin::$options['widgets']['1']['width'] ?>"
-                            data-widgets-size-height-1="<?php echo TPPlugin::$options['widgets']['1']['height'] ?>"
-                            data-widgets-size-width-2="<?php echo TPPlugin::$options['widgets']['2']['width'] ?>"
-                            data-widgets-size-height-2="<?php echo TPPlugin::$options['widgets']['2']['height'] ?>"
-                            data-widgets-direct-1 = "<?php echo (isset(TPPlugin::$options['widgets']['1']['direct']))? 1 : 0;?>"
-                            data-widgets-direct-3 = "<?php echo (isset(TPPlugin::$options['widgets']['3']['only_direct']))? 1 : 0;?>"
-                            data-widgets-one_way-3 = "<?php echo (isset(TPPlugin::$options['widgets']['3']['one_way']))? 1 : 0;?>"
-                            data-widgets-size-width-3 = "<?php echo TPPlugin::$options['widgets']['3']['width'] ?>"
-                            data-widgets-responsive-3 = "<?php echo (isset(TPPlugin::$options['widgets']['3']['responsive']))? 1 : 0;?>"
-                            data-widgets-responsive-4 = "<?php echo (isset(TPPlugin::$options['widgets']['4']['responsive']))? 1 : 0;?>"
-                            data-widgets-size-width-4 = "<?php echo TPPlugin::$options['widgets']['4']['width'] ?>"
-                            data-widgets-size-width-5 = "<?php echo TPPlugin::$options['widgets']['5']['width'] ?>"
-                            data-widgets-responsive-5 = "<?php echo (isset(TPPlugin::$options['widgets']['5']['responsive']))? 1 : 0;?>"
-                            data-widgets-size-width-6 = "<?php echo TPPlugin::$options['widgets']['6']['width'] ?>"
-                            data-widgets-responsive-6 = "<?php echo (isset(TPPlugin::$options['widgets']['6']['responsive']))? 1 : 0;?>"
+                            data-widgets-size-width-1="<?php echo \app\includes\TPPlugin::$options['widgets']['1']['width'] ?>"
+                            data-widgets-size-height-1="<?php echo \app\includes\TPPlugin::$options['widgets']['1']['height'] ?>"
+                            data-widgets-size-width-2="<?php echo \app\includes\TPPlugin::$options['widgets']['2']['width'] ?>"
+                            data-widgets-size-height-2="<?php echo \app\includes\TPPlugin::$options['widgets']['2']['height'] ?>"
+                            data-widgets-direct-1 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['1']['direct']))? 1 : 0;?>"
+                            data-widgets-direct-3 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['3']['only_direct']))? 1 : 0;?>"
+                            data-widgets-one_way-3 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['3']['one_way']))? 1 : 0;?>"
+                            data-widgets-size-width-3 = "<?php echo \app\includes\TPPlugin::$options['widgets']['3']['width'] ?>"
+                            data-widgets-responsive-3 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['3']['responsive']))? 1 : 0;?>"
+                            data-widgets-responsive-4 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['4']['responsive']))? 1 : 0;?>"
+                            data-widgets-size-width-4 = "<?php echo \app\includes\TPPlugin::$options['widgets']['4']['width'] ?>"
+                            data-widgets-size-width-5 = "<?php echo \app\includes\TPPlugin::$options['widgets']['5']['width'] ?>"
+                            data-widgets-responsive-5 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['5']['responsive']))? 1 : 0;?>"
+                            data-widgets-size-width-6 = "<?php echo \app\includes\TPPlugin::$options['widgets']['6']['width'] ?>"
+                            data-widgets-responsive-6 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['6']['responsive']))? 1 : 0;?>"
                         >
                         <option selected="selected" value="0"><?php _e('Select widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1"><?php _e('Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="2"><?php _e('Hotels Map Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="3"><?php _e('Calendar Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
-                        <?php if(TPPlugin::$options['local']['localization'] == 1){ ?>
+                        <?php if(\app\includes\TPPlugin::$options['local']['localization'] == 1){ ?>
                             <option value="4"><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
                         <?php } ?>
                         <option value="5"><?php _e('Hotel Widget', KPDPlUGIN_TEXTDOMAIN ); ?></option>
@@ -88,11 +88,11 @@
                     <label>
                         <?php _e('Count', KPDPlUGIN_TEXTDOMAIN ); ?>
                         <input type="number" id="popular_routes_widget_count" min="1"
-                               value="<?php echo TPPlugin::$options['widgets']['6']['count']; ?>">
+                               value="<?php echo \app\includes\TPPlugin::$options['widgets']['6']['count']; ?>">
                     </label>
                 </td>
             </tr>
-            <?php for($i = 0; $i<TPPlugin::$options['widgets']['6']['count'];$i++){ ?>
+            <?php for($i = 0; $i<\app\includes\TPPlugin::$options['widgets']['6']['count'];$i++){ ?>
                 <tr id="tr_popular_routes_destination-<?php echo $i; ?>" class="TPPopularRoutes">
                     <td>
                         <input type="text" name="popular_routes_destination-<?php echo $i; ?>"

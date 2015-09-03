@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <?php if(TPPlugin::$options['local']['localization'] == 1){ ?>
+                <?php if(\app\includes\TPPlugin::$options['local']['localization'] == 1){ ?>
                     <div class="bellows__item">
                         <div class="bellows__header">
                             <h3><?php _e('Subscription Widget', KPDPlUGIN_TEXTDOMAIN ); ?></h3>

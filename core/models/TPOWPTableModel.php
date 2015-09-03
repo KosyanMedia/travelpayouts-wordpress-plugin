@@ -5,8 +5,8 @@
  * Date: 11.08.15
  * Time: 8:21
  */
-
-abstract class KPDWPTableModel {
+namespace core\models;
+abstract class TPOWPTableModel {
     abstract public function insert($data);
     abstract public function update($data);
     abstract public function deleteAll();

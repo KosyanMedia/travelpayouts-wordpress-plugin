@@ -5,8 +5,8 @@
  * Date: 12.08.15
  * Time: 15:34
  */
-
-class TPShortcodeButtonsController extends KPDAdminMediaButtonsController{
+namespace app\includes\controllers\admin\media_buttons;
+class TPShortcodeButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
 
     public function action($args = array())
     {

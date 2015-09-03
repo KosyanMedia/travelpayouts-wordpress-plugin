@@ -5,8 +5,8 @@
  * Date: 12.08.15
  * Time: 15:43
  */
-
-class TPWidgetButtonsController extends KPDAdminMediaButtonsController{
+namespace app\includes\controllers\admin\media_buttons;
+class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
 
     public function action($args = array())
     {

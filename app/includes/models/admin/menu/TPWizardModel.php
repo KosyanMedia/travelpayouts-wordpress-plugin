@@ -5,8 +5,8 @@
  * Date: 20.08.15
  * Time: 0:25
  */
-
-class TPWizardModel extends TPOptionModel{
+namespace app\includes\models\admin\menu;
+class TPWizardModel extends \app\includes\models\admin\TPOptionModel{
     public function __construct()
     {
         parent::__construct();

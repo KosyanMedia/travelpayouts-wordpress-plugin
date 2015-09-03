@@ -5,8 +5,8 @@
  * Date: 12.08.15
  * Time: 12:24
  */
-
-class TPStatisticView extends TPView{
+namespace app\includes\views\admin\menu;
+class TPStatisticView extends \app\includes\views\admin\TPView{
     public static $model;
     public function __construct($model)
     {
@@ -87,7 +87,7 @@ class TPStatisticView extends TPView{
                     }
                 }
             }
-            $TPTotalRow = @TPPlugin::$options['admin_settings']['total_stats'] ? '' : 'style="display:none"';
+            $TPTotalRow = @\app\includes\TPPlugin::$options['admin_settings']['total_stats'] ? '' : 'style="display:none"';
             if(!empty($result)){
                 $output_total = '';
                 $total = array();
@@ -144,7 +144,7 @@ class TPStatisticView extends TPView{
         $output .= '<div class="TP-ListFilter">
                         <div class="TP-Report-total">
                             <input id="TP-Report-total-chek1" type="checkbox" name="'.KPDPlUGIN_OPTION_NAME.'[admin_settings][total_stats]"
-                                       value="1" '.checked(@TPPlugin::$options['admin_settings']['total_stats'], true, false).' hidden />
+                                       value="1" '.checked(@\app\includes\TPPlugin::$options['admin_settings']['total_stats'], true, false).' hidden />
                             <label for="TP-Report-total-chek1">'.__('Total', KPDPlUGIN_TEXTDOMAIN ).'</label>
                         </div>
                         <label>

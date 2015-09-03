@@ -6,10 +6,10 @@
  * Time: 16:34
  */
 namespace app\includes\controllers\admin\menu;
-class TPSettingsController extends KPDAdminMenuController{
+class TPSettingsController extends \core\controllers\TPOAdminMenuController{
     public function __construct(){
         parent::__construct();
-        $this->model = new TPSettingsModel();
+        $this->model = new \app\includes\models\admin\menu\TPSettingsModel();
     }
     public function action()
     {

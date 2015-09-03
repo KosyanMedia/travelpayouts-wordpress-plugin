@@ -6,7 +6,7 @@
  * Time: 0:41
  */
 namespace app\includes\controllers\admin\menu;
-class TPAdminBarMenuController extends KPDAdminBarMenuController{
+class TPAdminBarMenuController extends \core\controllers\TPOAdminBarMenuController{
 
     public function admin_bar_menu()
     {

@@ -5,8 +5,8 @@
  * Date: 10.08.15
  * Time: 22:57
  */
-
-class TPSearchFormsModel extends KPDWPTableModel implements KPDWPTableInterfaceModel{
+namespace app\includes\models\admin\menu;
+class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel{
     public static $tableName = "tp_search_shortcodes";
     public function __construct()
     {

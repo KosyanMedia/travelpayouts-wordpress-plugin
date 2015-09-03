@@ -3,12 +3,12 @@
         <tr>
             <td id="td_select_shortcodes">
                 <select name="select_shortcodes" id="select_shortcodes"
-                        data-limit-7="<?php echo TPPlugin::$options['shortcodes']['8']['limit']?>"
-                        data-limit-11="<?php echo TPPlugin::$options['shortcodes']['12']['limit']?>"
-                        data-limit-12="<?php echo TPPlugin::$options['shortcodes']['13']['limit']?>"
-                        data-limit-13="<?php echo TPPlugin::$options['shortcodes']['14']['limit']?>"
+                        data-limit-7="<?php echo \app\includes\TPPlugin::$options['shortcodes']['8']['limit']?>"
+                        data-limit-11="<?php echo \app\includes\TPPlugin::$options['shortcodes']['12']['limit']?>"
+                        data-limit-12="<?php echo \app\includes\TPPlugin::$options['shortcodes']['13']['limit']?>"
+                        data-limit-13="<?php echo \app\includes\TPPlugin::$options['shortcodes']['14']['limit']?>"
                     >
-                    <?php if(TPPlugin::$options['local']['currency'] == 1){ ?>
+                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 1){ ?>
                         <option selected="selected" value="0"> <?php _e('Select the table', KPDPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', KPDPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="2">2. <?php _e('Flights from Origin to Destination (next few days)', KPDPlUGIN_TEXTDOMAIN); ?></option>

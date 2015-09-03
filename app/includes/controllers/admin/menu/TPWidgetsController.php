@@ -6,11 +6,11 @@
  * Time: 16:08
  */
 namespace app\includes\controllers\admin\menu;
-class TPWidgetsController extends KPDAdminMenuController{
+class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPWidgetsModel();
+        $this->model = new \app\includes\models\admin\menu\TPWidgetsModel();
     }
     public function action()
     {

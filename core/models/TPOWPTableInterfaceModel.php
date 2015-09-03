@@ -5,8 +5,8 @@
  * Date: 11.08.15
  * Time: 8:40
  */
-
-interface KPDWPTableInterfaceModel {
+namespace core\models;
+interface TPOWPTableInterfaceModel {
     public static function createTable();
     public static function deleteTable();
 }

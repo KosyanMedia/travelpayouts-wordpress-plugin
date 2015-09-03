@@ -5,7 +5,7 @@
  * Date: 10.08.15
  * Time: 15:10
  */
-
+namespace app\includes\models\admin\menu;
 class TPFieldWidgets {
     public $local_url;
     public $local_img;
@@ -48,10 +48,10 @@ class TPFieldWidgets {
 
         <div class="TP-HeadTable TP-HeadTableCheckbox">
             <input id="chek1" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][direct]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['direct']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['direct']), 1) ?> hidden />
             <label for="chek1"><?php _e('Direct Flights Only', KPDPlUGIN_TEXTDOMAIN ); ?></label>
             <input id="chek2" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][hide_logo]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['hide_logo']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']), 1) ?> hidden />
             <label for="chek2"><?php _e('Hide Logo', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -62,7 +62,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
             <span class="TP-titleSub TP-titleSub--sdf">X</span>
@@ -70,7 +70,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][height]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['height']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['height']) ?>">
                 </label>
             </div>
         </div>
@@ -94,14 +94,14 @@ class TPFieldWidgets {
 
         <div class="TP-HeadTable TPCheckBoxWidget">
             <input id="chek3" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][draggable]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['draggable']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['draggable']), 1) ?> hidden />
             <label for="chek3"><?php _e('Draggable', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
             <input id="chek4" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][disable_zoom]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['disable_zoom']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['disable_zoom']), 1) ?> hidden />
             <label for="chek4"><?php _e('Disable zoom', KPDPlUGIN_TEXTDOMAIN ); ?></label>
             <input id="chek5" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][scrollwheel]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['scrollwheel']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['scrollwheel']), 1) ?> hidden />
             <label for="chek5"><?php _e('Scroll Wheel Zoom', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
 
@@ -111,7 +111,7 @@ class TPFieldWidgets {
                 <span><?php _e('Pin Size', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <div class="width-80">
                     <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][base_diameter]"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['base_diameter']) ?>"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter']) ?>"
                            class="TPFieldInputText"/>
                 </div>
             </label>
@@ -122,14 +122,14 @@ class TPFieldWidgets {
         <div class="TP-ListSub ListSub--cust list--db">
 
             <input id="chek6" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][map_styled]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['map_styled']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['map_styled']), 1) ?> hidden />
             <label for="chek6" class="TPLabelMapStyled"><?php _e('Map Style', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
             <div class="TP-ColorStyle TP-ColorStyleWidget">
                 <label>
                     <input class="TP-inColot color" type="text"
                            name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][color]"
-                           value="<?php echo TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
+                           value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
                     <a class="btnColor"><?php _e('select color', KPDPlUGIN_TEXTDOMAIN ); ?></a>
                 </label>
             </div>
@@ -137,7 +137,7 @@ class TPFieldWidgets {
                 <label>
                     <input class="TP-inColot color" type="text"
                            name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][map_color]"
-                           value="<?php echo TPPlugin::$options['widgets'][$widgets]['map_color'] ?>"/>
+                           value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['map_color'] ?>"/>
                     <a class="btnColor"><?php _e('select color', KPDPlUGIN_TEXTDOMAIN ); ?></a>
                 </label>
             </div>
@@ -146,7 +146,7 @@ class TPFieldWidgets {
                 <label>
                     <input class="TP-inColot color" type="text"
                            name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][contrast_color]"
-                           value="<?php echo TPPlugin::$options['widgets'][$widgets]['contrast_color'] ?>"/>
+                           value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['contrast_color'] ?>"/>
                     <a class="btnColor"><?php _e('select color', KPDPlUGIN_TEXTDOMAIN ); ?></a>
                 </label>
             </div>
@@ -159,7 +159,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
             <span class="TP-titleSub TP-titleSub--sdf">X</span>
@@ -167,7 +167,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][height]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['height']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['height']) ?>">
                 </label>
             </div>
         </div>
@@ -195,7 +195,7 @@ class TPFieldWidgets {
                 <span class="TP-titleSub--custom"><?php _e('City of Departure', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <label>
                     <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][origin]"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
                            class="searchShortcodeAutocomplete">
                 </label>
             </div>
@@ -205,7 +205,7 @@ class TPFieldWidgets {
                 <span class="TP-titleSub--custom"><?php _e('City of Arrival', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <label>
                     <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][destination]"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
                            class="searchShortcodeAutocomplete">
                 </label>
             </div>
@@ -216,7 +216,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][period_day][from]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['period_day']['from']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from']) ?>">
                 </label>
             </div>
             <span class="TP-titleSub TP-titleSub--sdf">-</span>
@@ -224,13 +224,13 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][period_day][to]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['period_day']['to']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to']) ?>">
                 </label>
             </div>
         </div>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek73" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
             <label for="chek73"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -240,7 +240,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
         </div>
@@ -250,14 +250,14 @@ class TPFieldWidgets {
         $output_month = '';
         $monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
         $output_month .= '<option value="year"
-                    '.selected( TPPlugin::$options['widgets'][$widgets]['period'], 'year' , false).'>
+                    '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], 'year' , false).'>
                     '.__('Year', KPDPlUGIN_TEXTDOMAIN ).'</option>';
         $output_month .= '<option value="current_month"
-                '.selected( TPPlugin::$options['widgets'][$widgets]['period'], 'current_month' , false).'>
+                '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], 'current_month' , false).'>
                 '.__('Current month', KPDPlUGIN_TEXTDOMAIN ).'</option>';
         /*foreach($monthNames as $key=>$month){
             $output_month .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"
-                                '.selected( TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>
+                                '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>
                                 '.$month.'</option>';
         }*/
         $current_date = getdate();
@@ -272,7 +272,7 @@ class TPFieldWidgets {
             }
             if($m){
                 $out_c .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"'
-                    .selected( TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>'
+                    .selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>'
                     .$month.'</option>';
                 /*$d_o[] = array(
                     'm' => $key+1,
@@ -280,7 +280,7 @@ class TPFieldWidgets {
                 );*/
             }else{
                 $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.($key+1).'-01'.'"'
-                    .selected( TPPlugin::$options['widgets'][$widgets]['period'], date('Y', strtotime('+1 year')).'-'.($key+1).'-01', false).'>'
+                    .selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y', strtotime('+1 year')).'-'.($key+1).'-01', false).'>'
                     .$month.'</option>';
                 /*$d_t[] = array(
                     'm' => $key+1,
@@ -301,10 +301,10 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable TPCheckBoxWidget">
             <input id="chek63" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][only_direct]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['only_direct']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['only_direct']), 1) ?> hidden />
             <label for="chek63"><?php _e('Direct Flights Only', KPDPlUGIN_TEXTDOMAIN ); ?></label>
             <input id="chek73" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][one_way]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['one_way']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['one_way']), 1) ?> hidden />
             <label for="chek73"><?php _e('One way', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -333,7 +333,7 @@ class TPFieldWidgets {
                 <span class="TP-titleSub--custom"><?php _e('City of Departure', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <label>
                     <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][origin]"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
                            class="searchShortcodeAutocomplete">
                 </label>
             </div>
@@ -343,7 +343,7 @@ class TPFieldWidgets {
                 <span class="TP-titleSub--custom"><?php _e('City of Arrival', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <label>
                     <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][destination]"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
                            class="searchShortcodeAutocomplete">
                 </label>
             </div>
@@ -353,14 +353,14 @@ class TPFieldWidgets {
                 <label>
                     <input class="TP-inColot color" type="text"
                            name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][color]"
-                           value="<?php echo TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
+                           value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
                     <a class="btnColor"><?php _e('select color', KPDPlUGIN_TEXTDOMAIN ); ?></a>
                 </label>
             </div>
         </div>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek74" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
             <label for="chek74"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -370,7 +370,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
         </div>
@@ -393,7 +393,7 @@ class TPFieldWidgets {
             <?php _e('Travepayouts Help', KPDPlUGIN_TEXTDOMAIN ); ?></a>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek75" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
             <label for="chek75"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -403,7 +403,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
         </div>
@@ -427,7 +427,7 @@ class TPFieldWidgets {
             <?php _e('Travepayouts Help', KPDPlUGIN_TEXTDOMAIN ); ?></a>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek76" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
-                   value="1" <?php checked(isset(TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
             <label for="chek76"><?php _e('Responsive', KPDPlUGIN_TEXTDOMAIN ); ?></label>
 
         </div>
@@ -437,7 +437,7 @@ class TPFieldWidgets {
                 <label>
                     <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
                            type="text"
-                           value="<?php echo esc_attr(TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
         </div>
@@ -445,11 +445,11 @@ class TPFieldWidgets {
             <label>
                 <span><?php _e('Number of Widgets', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                 <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][count]" class="TP-Zelect">
-                    <option <?php selected( TPPlugin::$options["widgets"][$widgets]['count'], 1 ); ?>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['count'], 1 ); ?>
                         value="1">1</option>
-                    <option <?php selected( TPPlugin::$options["widgets"][$widgets]['count'], 2 ); ?>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['count'], 2 ); ?>
                         value="2">2</option>
-                    <option <?php selected( TPPlugin::$options["widgets"][$widgets]['count'], 3 ); ?>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['count'], 3 ); ?>
                         value="3">3</option>
                 </select>
             </label>

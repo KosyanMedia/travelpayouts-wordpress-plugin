@@ -5,8 +5,8 @@
  * Date: 10.08.15
  * Time: 15:08
  */
-
-class TPWidgetsModel extends TPOptionModel{
+namespace app\includes\models\admin\menu;
+class TPWidgetsModel extends \app\includes\models\admin\TPOptionModel{
 
     public function create_option()
     {

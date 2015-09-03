@@ -5,7 +5,7 @@
  * Date: 10.08.15
  * Time: 11:04
  */
-
+namespace app\includes\models\admin\menu;
 class TPFieldSettings {
     public $local = array(
         1 => 'ru',
@@ -28,14 +28,14 @@ class TPFieldSettings {
                     <span><?php _e('Token', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][token]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['token']) ?>"/>
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['token']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
                     <span><?php _e('Extra marker', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][extra_marker]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['extra_marker']) ?>"/>
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
                     </label>
                 </div>
             </div>
@@ -46,14 +46,14 @@ class TPFieldSettings {
                     <span><?php _e('Marker', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][marker]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['marker']) ?>"/>
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['marker']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
                     <span><?php _e('White Label', KPDPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[account][white_label]"
-                               value="<?php echo esc_attr(TPPlugin::$options['account']['white_label']) ?>"/>
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label']) ?>"/>
                     </label>
                 </div>
             </div>
@@ -72,11 +72,11 @@ class TPFieldSettings {
                     <span><?php _e('Error Message', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <?php
-                        foreach(TPPlugin::$options['config']['message_error'] as $key_local => $title){
-                                $typeFields = ($this->local[TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
+                        foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
                             ?>
                             <input type="<?php echo $typeFields; ?>" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
-                                   value="<?php echo esc_attr(TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
                         <?php
                         }
                         ?>
@@ -87,12 +87,12 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                <?php checked(TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
+                                <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
                             <label for="rchek1"><?php _e('Show Search Form', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                <?php checked(TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
+                                <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
                             <label for="rchek2"><?php _e('Show Search Results', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
@@ -100,10 +100,10 @@ class TPFieldSettings {
                 <div class="ItemSub">
                     <span><?php _e('Distance Units', KPDPlUGIN_TEXTDOMAIN); ?></span>
                     <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][distance]" class="TP-Zelect">
-                        <option <?php selected( TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
+                        <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
                             <?php _e('km', KPDPlUGIN_TEXTDOMAIN); ?>
                         </option>
-                        <option <?php selected( TPPlugin::$options['config']['distance'], 2 ); ?>  value="2">
+                        <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 2 ); ?>  value="2">
                             <?php _e('miles', KPDPlUGIN_TEXTDOMAIN); ?>
                         </option>
                     </select>
@@ -115,7 +115,7 @@ class TPFieldSettings {
                             <label>
                                 <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][width]"
                                        type="text"
-                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
+                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
                             </label>
                             <div class="navSpinner">
                                 <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -129,7 +129,7 @@ class TPFieldSettings {
                             <label>
                                 <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][airline_logo_size][height]"
                                        type="text"
-                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
+                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
                             </label>
                             <div class="navSpinner">
                                 <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -144,7 +144,7 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="chek1" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][redirect]"
-                                   value="1" <?php checked(isset(TPPlugin::$options['config']['redirect']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['redirect']), 1) ?> hidden />
                             <label for="chek1"><?php echo _x('Redirect', 'settings', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
@@ -157,12 +157,12 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="chek2" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][target_url]"
-                                   value="1" <?php checked(isset(TPPlugin::$options['config']['target_url']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['target_url']), 1) ?> hidden />
                             <label for="chek2"><?php _e('Open in a New Window', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chek3" type="checkbox" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][nofollow]"
-                                   value="1" <?php checked(isset(TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
                             <label for="chek3"><?php _e(' Add Nofollow Attribute', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
@@ -185,7 +185,7 @@ class TPFieldSettings {
                         <div class="spinnerW clearfix" data-trigger="spinner">
                             <label>
                                 <input name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][cache_value]"
-                                       type="text" value="<?php echo TPPlugin::$options['config']['cache_value']; ?>"
+                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']; ?>"
                                        data-rule="quantity">
                             </label>
                             <div class="navSpinner">
@@ -196,12 +196,12 @@ class TPFieldSettings {
                         <ul class="TP-listSet TP-listSet--row">
                             <li>
                                 <input  id="rchek3" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][cache]"
-                                    <?php checked(TPPlugin::$options['config']['cache'], 0) ?> value="0" hidden/>
+                                    <?php checked(\app\includes\TPPlugin::$options['config']['cache'], 0) ?> value="0" hidden/>
                                 <label for="rchek3"><?php _e('Day', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             </li>
                             <li>
                                 <input id="rchek4" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][cache]"
-                                    <?php checked(TPPlugin::$options['config']['cache'], 1) ?> value="1" hidden/>
+                                    <?php checked(\app\includes\TPPlugin::$options['config']['cache'], 1) ?> value="1" hidden/>
                                 <label for="rchek4"><?php _e('Hour', KPDPlUGIN_TEXTDOMAIN); ?></label>
                             </li>
                         </ul>
@@ -221,12 +221,12 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek5" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
-                                <?php checked(TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
+                                <?php checked(\app\includes\TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
                             <label for="rchek5"><?php _e('Inside &lt;head&gt; tag ', KPDPlUGIN_TEXTDOMAIN);?></label>
                         </li>
                         <li>
                             <input id="rchek6" type="radio" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][script]"
-                                <?php checked(TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
+                                <?php checked(\app\includes\TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
                             <label for="rchek6"><?php _e('Inside &lt;footer&gt; tag ', KPDPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
@@ -256,12 +256,12 @@ class TPFieldSettings {
                                          <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
                     <label>
                         <input type="text" name="<?php echo KPDPlUGIN_OPTION_NAME;?>[config][format_date]"
-                               value="<?php echo esc_attr(TPPlugin::$options['config']['format_date']) ?>"
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['format_date']) ?>"
                                class=""/>
                     </label>
                     <span class="TPSpanFormatDate">
                         <?php _e('Current format', KPDPlUGIN_TEXTDOMAIN); ?>:
-                        <?php  echo date_i18n(TPPlugin::$options['config']['format_date']); ?>
+                        <?php  echo date_i18n(\app\includes\TPPlugin::$options['config']['format_date']); ?>
                     </span>
                 </div>
                 <div class="ItemSub">
@@ -299,10 +299,10 @@ class TPFieldSettings {
             <label>
                 <span><?php _e('Tables and Widgets Language', KPDPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[local][localization]" class="TP-Zelect TPFieldLocalization">
-                    <option <?php selected( TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
                         <?php _e('Russian', KPDPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
                         <?php _e('English', KPDPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>
@@ -310,13 +310,13 @@ class TPFieldSettings {
             <label>
                 <span><?php _e('Currency', KPDPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
-                    <option <?php selected( TPPlugin::$options['local']['currency'], 1 ); ?> value="1">
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 1 ); ?> value="1">
                         <?php _e('Ruble', KPDPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( TPPlugin::$options['local']['currency'], 2 ); ?>  value="2">
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 2 ); ?>  value="2">
                         <?php _e('US dollar', KPDPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( TPPlugin::$options['local']['currency'], 3 ); ?>  value="3">
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 3 ); ?>  value="3">
                         <?php _e('Euro', KPDPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>
@@ -330,10 +330,10 @@ class TPFieldSettings {
             <span><?php _e('Fields', KPDPlUGIN_TEXTDOMAIN); ?></span>
             <?php
             $local_table_fields = '<ul class="titleHeadTable">
-                           <li class="TPLangFieldsLi">'.$this->local[TPPlugin::$options['local']['localization']].'</li>
+                           <li class="TPLangFieldsLi">'.$this->local[\app\includes\TPPlugin::$options['local']['localization']].'</li>
                       </ul>';
-            foreach(TPPlugin::$options['local']['fields'] as $key_local => $fields){
-                $showFields = ($this->local[TPPlugin::$options['local']['localization']] != $key_local)?'TP-ListRowColumNot':'';
+            foreach(\app\includes\TPPlugin::$options['local']['fields'] as $key_local => $fields){
+                $showFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'TP-ListRowColumNot':'';
                 $local_table_fields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
                 $i = 0;
                 // foreach( $fields['label'] as $key_label => $label ){
@@ -382,22 +382,22 @@ class TPFieldSettings {
         <label>
             <span><?php _e('Origin', KPDPlUGIN_TEXTDOMAIN ); ?></span>
             <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[local][title_case][origin]" class="TP-Zelect">
-                <!--<option <?php //selected( TPPlugin::$options['local']['title_case']['origin'], "name" ); ?> value="name">
+                <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "name" ); ?> value="name">
                     <?php //_e('Default', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
-                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], "ro" ); ?> value="ro">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "ro" ); ?> value="ro">
                     <?php _e('Genitive', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], "da" ); ?> value="da">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "da" ); ?> value="da">
                     <?php _e('Dative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], "vi" ); ?> value="vi">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "vi" ); ?> value="vi">
                     <?php _e('Accusative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], "tv" ); ?> value="tv">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "tv" ); ?> value="tv">
                     <?php _e('Ablative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], "pr" ); ?> value="pr">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "pr" ); ?> value="pr">
                     <?php _e('Prepositional', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
             </select>
@@ -405,22 +405,22 @@ class TPFieldSettings {
         <label>
             <span><?php _e('Destination', KPDPlUGIN_TEXTDOMAIN ); ?></span>
             <select name="<?php echo KPDPlUGIN_OPTION_NAME;?>[local][title_case][destination]" class="TP-Zelect">
-                <!--<option <?php //selected( TPPlugin::$options['local']['title_case']['destination'], "name" ); ?> value="name">
+                <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "name" ); ?> value="name">
                     <?php //_e('Default', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
-                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], "ro" ); ?> value="ro">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "ro" ); ?> value="ro">
                     <?php _e('Genitive', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], "da" ); ?> value="da">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "da" ); ?> value="da">
                     <?php _e('Dative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], "vi" ); ?> value="vi">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "vi" ); ?> value="vi">
                     <?php _e('Accusative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], "tv" ); ?> value="tv">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "tv" ); ?> value="tv">
                     <?php _e('Ablative', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], "pr" ); ?> value="pr">
+                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "pr" ); ?> value="pr">
                     <?php _e('Prepositional', KPDPlUGIN_TEXTDOMAIN ); ?>
                 </option>
             </select>

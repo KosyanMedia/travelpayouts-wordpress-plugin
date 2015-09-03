@@ -5,7 +5,7 @@
  * Date: 12.08.15
  * Time: 12:05
  */
-
+namespace app\includes\models\admin\menu;
 class TPStatisticModel extends TPDashboardModel{
     public $balance;
     public $detailed_sales;
@@ -26,7 +26,7 @@ class TPStatisticModel extends TPDashboardModel{
         $cacheKey = KPDPlUGIN_NAME."_TPDetailedSalesStats";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
-            $TPDetailedSales = TPPlugin::$TPRequestApi->get_detailed_sales();
+            $TPDetailedSales = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales();
             if( !$TPDetailedSales)
                 return false;
             $TPDetailedSales = array_reverse($TPDetailedSales["sales"]);
@@ -38,7 +38,7 @@ class TPStatisticModel extends TPDashboardModel{
         $cacheKey = KPDPlUGIN_NAME."_TPPaymentsStats";
         $TPpayments = array();
         if ( false === ( $TPpayments = get_transient($cacheKey) ) ) {
-            $TPpayments = TPPlugin::$TPRequestApi->get_payments();
+            $TPpayments = \app\includes\TPPlugin::$TPRequestApi->get_payments();
             if( !$TPpayments)
                 return false;
             $TPpayments = array_reverse($TPpayments["payments"]);
@@ -51,7 +51,7 @@ class TPStatisticModel extends TPDashboardModel{
     {
         if (isset($_POST)) {
             $output = '';
-            $TPDetailedSales = TPPlugin::$TPRequestApi->get_detailed_sales(
+            $TPDetailedSales = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales(
                 array('date' => date("Y-m-d", strtotime($_POST["date"])))
             );
             $TPDetailedSalesSort = array();
@@ -66,13 +66,13 @@ class TPStatisticModel extends TPDashboardModel{
     public function tpSaveStatsTotal(){
         if(isset($_POST)){
             if($_POST["data"] === "true") {
-                TPPlugin::$options["admin_settings"]["total_stats"] = true;
+                \app\includes\TPPlugin::$options["admin_settings"]["total_stats"] = true;
             }
             else {
-                TPPlugin::$options["admin_settings"]["total_stats"] = false;
+                \app\includes\TPPlugin::$options["admin_settings"]["total_stats"] = false;
             }
 
-            update_option( KPDPlUGIN_OPTION_NAME, TPPlugin::$options);
+            update_option( KPDPlUGIN_OPTION_NAME, \app\includes\TPPlugin::$options);
             //error_log(print_r($this->TPOptions, true));
         }
     }

@@ -6,13 +6,13 @@
  * Time: 16:14
  */
 namespace app\includes\controllers\admin\menu;
-class TPSearchFormsController extends KPDAdminMenuController{
+class TPSearchFormsController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public $data;
     public function __construct()
     {
         parent::__construct();
-        $this->model = new TPSearchFormsModel();
+        $this->model = new \app\includes\models\admin\menu\TPSearchFormsModel();
     }
     public function action()
     {

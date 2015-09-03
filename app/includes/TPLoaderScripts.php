@@ -192,7 +192,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPMesgUpdateSettings = '<?php _e('Settings saved.', KPDPlUGIN_TEXTDOMAIN ); ?>';
             TPLabelAutocomplete = '<?php _e('hotels', KPDPlUGIN_TEXTDOMAIN ); ?>';
             <?php
-                if(isset(TPPlugin::$options['admin_settings']['total_stats'])){
+                if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>
                     TPStatsTotal = true;
             <?php
@@ -336,7 +336,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function loadScriptSite($hook)
     {
         // TODO: Implement loadScriptSite() method.
-        switch (TPPlugin::$options['config']['script']){
+        switch (\app\includes\TPPlugin::$options['config']['script']){
             case 0:
                 $in_footer = false;
                 break;
@@ -431,9 +431,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         <script type="text/javascript">
             var ajaxurl, title_case_destination, title_case_origin, tpLocale;
             ajaxurl = '<?php echo KPDPlUGIN_AJAX_URL; ?>';
-            title_case_origin = '<?php echo TPPlugin::$options['local']['title_case']['origin']; ?>';
-            title_case_destination = '<?php echo TPPlugin::$options['local']['title_case']['destination']; ?>';
-            switch ( <?php echo TPPlugin::$options['local']['localization'] ?>){
+            title_case_origin = '<?php echo \app\includes\TPPlugin::$options['local']['title_case']['origin']; ?>';
+            title_case_destination = '<?php echo \app\includes\TPPlugin::$options['local']['title_case']['destination']; ?>';
+            switch ( <?php echo \app\includes\TPPlugin::$options['local']['localization'] ?>){
                 case 1:
                     tpLocale = 'ru';
                     break;
@@ -444,21 +444,21 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         </script>
         <style type="text/css">
             .TP-TitleTablezs{
-                font-size: <?php echo TPPlugin::$options['style_table']['title_style']['font_size']; ?>px !important;
-                font-family: <?php echo TPPlugin::$options['style_table']['title_style']['font_family']; ?>, sans-serif !important;
-                color: <?php echo TPPlugin::$options['style_table']['title_style']['color']; ?> !important;
+                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_size']; ?>px !important;
+                font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_family']; ?>, sans-serif !important;
+                color: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['color']; ?> !important;
             <?php
-                if(isset(TPPlugin::$options['style_table']['title_style']['font_style']['bold'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['bold'])){
                     echo 'font-weight: bold !important;';
                 }else{
                     echo 'font-weight: normal !important;';
                 }
-                if(isset(TPPlugin::$options['style_table']['title_style']['font_style']['italic'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['italic'])){
                     echo 'font-style: italic !important;';
                 }else{
                     echo 'font-style: normal !important;';
                 }
-                if(isset(TPPlugin::$options['style_table']['title_style']['font_style']['underline'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['underline'])){
                     echo 'text-decoration: underline !important;';
                 }else{
                     echo 'text-decoration: none !important;';
@@ -466,34 +466,34 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             ?>
             }
             .w-table{
-                border: <?php echo TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
+                border: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
             }
             .w-table thead tr td,.w-table tbody tr td {
-                font-size: <?php echo TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
-                font-family: <?php echo TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
+                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
+                font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
             <?php
-                if(isset(TPPlugin::$options['style_table']['table']['font_style']['bold'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold'])){
                     echo 'font-weight: bold !important;';
                 }
-                if(isset(TPPlugin::$options['style_table']['table']['font_style']['italic'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic'])){
                     echo 'font-style: italic !important;';
                 }
-                if(isset(TPPlugin::$options['style_table']['table']['font_style']['underline'])){
+                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline'])){
                     echo 'text-decoration: underline !important;';
                 }
             ?>
             }
             .w-table tbody tr td {
-                color: <?php echo TPPlugin::$options['style_table']['table']['color']; ?> !important;
+                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
             }
             .w-table tbody tr:nth-child(even) {
-                background: <?php echo TPPlugin::$options['style_table']['table']['background_color']; ?> !important;
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?> !important;
             }
             .w-table tbody tr:nth-child(even) td p:after {
-                background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0% !important;
+                background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0% !important;
             }
             .TPAirlineLogoTD{
-                width: <?php echo TPPlugin::$options['config']['airline_logo_size']['width']; ?>px !important;
+                width: <?php echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>px !important;
             }
         </style>
     <?php

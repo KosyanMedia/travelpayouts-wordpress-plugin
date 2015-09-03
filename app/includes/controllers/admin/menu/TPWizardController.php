@@ -6,13 +6,13 @@
  * Time: 16:59
  */
 namespace app\includes\controllers\admin\menu;
-class TPWizardController extends KPDAdminMenuController{
+class TPWizardController extends \core\controllers\TPOAdminMenuController{
     public $local;
     public $local_url;
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPWizardModel();
+        $this->model = new \app\includes\models\admin\menu\TPWizardModel();
     }
     public function action()
     {
