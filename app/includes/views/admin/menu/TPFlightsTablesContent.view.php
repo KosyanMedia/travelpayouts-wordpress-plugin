@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <?php if(TPPlugin::$options['local']['currency'] == 1){ ?>
+            <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 1){ ?>
                 <div class="bellows__item">
                     <div class="bellows__header">
                         <h3><?php _e('Popular Destinations from origin',KPDPlUGIN_TEXTDOMAIN); ?></h3>

@@ -5,7 +5,7 @@
  * Date: 07.08.15
  * Time: 16:08
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPWidgetsController extends KPDAdminMenuController{
     public $model;
     public function __construct(){

@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: freeman
- * Date: 06.08.15
- * Time: 18:47
- */
-class TPFlightTicketsModel extends TPOptionModel{
+namespace app\includes\models\admin\menu;
+class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_tp_default_style', array( &$this, 'tpDefaultTableStyle'));

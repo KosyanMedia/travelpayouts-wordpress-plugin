@@ -5,7 +5,7 @@
  * Date: 10.08.15
  * Time: 17:18
  */
-
+namespace app\includes;
 class TPRequestApi {
     protected $status;
     protected $marker;

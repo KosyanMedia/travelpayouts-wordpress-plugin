@@ -5,8 +5,8 @@
  * Date: 10.08.15
  * Time: 17:54
  */
-
-class TPDashboardView extends TPView{
+namespace app\includes\views\admin\menu;
+class TPDashboardView extends \app\includes\views\admin\TPView{
     public $model;
     public function __construct($model)
     {
@@ -118,7 +118,7 @@ class TPDashboardView extends TPView{
      */
     public function tpDashboardNewsLink($title = "", $link =""){
         $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        if(isset(\app\includes\TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
         return '<a href="'.$link.'?utm_source=wp_plugin" '.$target_url.'>'.$title.'</a>';
     }
 

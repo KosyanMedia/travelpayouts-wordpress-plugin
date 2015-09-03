@@ -5,7 +5,7 @@
  * Date: 10.08.15
  * Time: 16:37
  */
-
+namespace app\includes\models\admin\menu;
 class TPDashboardModel {
     public $balance;
     public $detailed_sales;
@@ -31,7 +31,7 @@ class TPDashboardModel {
         $TPBalance = array();
         if ( false === ( $TPBalance = get_transient($cacheKey) ) ) {
             //$TPBalance['time'] = current_time('timestamp',1);
-            $return = TPPlugin::$TPRequestApi->get_balance();
+            $return = \app\includes\TPPlugin::$TPRequestApi->get_balance();
             if( ! $return )
                 return false;
             $TPBalance['data'] = $return;
@@ -47,10 +47,10 @@ class TPDashboardModel {
         $cacheKey = KPDPlUGIN_NAME."_TPDetailedSales";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
-            $TPDetailedSales['current_month'] = TPPlugin::$TPRequestApi->get_detailed_sales();
+            $TPDetailedSales['current_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales();
             if( !$TPDetailedSales['current_month'])
                 return false;
-            $TPDetailedSales['last_month'] = TPPlugin::$TPRequestApi->get_detailed_sales(array('date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y")))));
+            $TPDetailedSales['last_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales(array('date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y")))));
             if( !$TPDetailedSales['last_month'])
                 return false;
             $TPDetailedSales['time'] = current_time('timestamp',0);
@@ -68,7 +68,7 @@ class TPDashboardModel {
         if ( false === ( $TPRss = get_transient($cacheKey) ) ) {
             $sxml = simplexml_load_file("http://blog.travelpayouts.com/feed", 'SimpleXMLElement', LIBXML_NOCDATA);
             if($sxml !== false){
-                $TPRss['data'] = TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
+                $TPRss['data'] = \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
                 set_transient( $cacheKey, $TPRss, HOUR_IN_SECONDS * 12);
             }
 

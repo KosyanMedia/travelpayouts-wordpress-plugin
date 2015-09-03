@@ -5,7 +5,7 @@
  * Date: 08.08.15
  * Time: 0:39
  */
-
+namespace core\controllers;
 abstract class KPDAdminBarMenuController {
     public function __construct(){
         add_action('wp_before_admin_bar_render', array(&$this, 'admin_bar_menu') );

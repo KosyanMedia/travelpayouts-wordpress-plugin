@@ -5,8 +5,8 @@
  * Date: 06.08.15
  * Time: 11:43
  */
-
-class KPDBaseController {
+namespace core\controllers;
+class TPOBaseController {
     protected function loadView($view, $type = 0){
         if (file_exists($view)) {
             switch($type){

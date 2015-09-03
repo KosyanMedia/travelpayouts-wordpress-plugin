@@ -5,8 +5,8 @@
  * Date: 06.08.15
  * Time: 19:33
  */
-
-abstract class KPDLoaderScripts{
+namespace core;
+abstract class TPOLoaderScripts{
     public function __construct(){
         if ( is_admin() ) :
             add_action('admin_enqueue_scripts', array(&$this, 'loadScriptAdmin' ) );

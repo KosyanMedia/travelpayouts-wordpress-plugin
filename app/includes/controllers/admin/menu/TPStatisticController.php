@@ -5,7 +5,7 @@
  * Date: 07.08.15
  * Time: 16:19
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPStatisticController extends KPDAdminMenuController{
     public $model;
     public $view;

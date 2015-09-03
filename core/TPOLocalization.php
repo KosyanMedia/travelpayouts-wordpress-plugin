@@ -1,5 +1,6 @@
 <?php
-class KPDLocalization {
+namespace core;
+class TPOLocalization {
     public function __construct(){
         add_action('plugins_loaded', array(&$this, 'localization'));
     }

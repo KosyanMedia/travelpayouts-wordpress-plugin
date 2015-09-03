@@ -2,8 +2,8 @@
 /**
  * Class KPDLoader
  */
-
-abstract class KPDLoader {
+namespace core;
+abstract class TPOLoader {
     protected function __construct(){
         if ( is_admin() ) :
             $this->admin();

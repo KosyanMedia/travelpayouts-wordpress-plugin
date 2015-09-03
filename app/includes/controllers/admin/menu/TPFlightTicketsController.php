@@ -5,12 +5,12 @@
  * Date: 06.08.15
  * Time: 17:52
  */
-
-class TPFlightTicketsController extends KPDAdminMenuController{
+namespace app\includes\controllers\admin\menu;
+class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPFlightTicketsModel();
+        $this->model = new \app\includes\models\admin\menu\TPFlightTicketsModel();
     }
     public function action()
     {

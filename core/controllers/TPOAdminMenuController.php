@@ -2,7 +2,8 @@
 /**
  * Class KPDAdminMenuController
  */
-abstract class KPDAdminMenuController extends KPDBaseController{
+namespace core\controllers;
+abstract class TPOAdminMenuController extends TPOBaseController{
     public function __construct(){
         add_action('admin_menu', array( &$this, 'action'));
     }

@@ -5,7 +5,7 @@
  * Date: 07.08.15
  * Time: 16:14
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPSearchFormsController extends KPDAdminMenuController{
     public $model;
     public $data;

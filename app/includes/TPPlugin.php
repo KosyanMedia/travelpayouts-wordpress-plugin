@@ -1,5 +1,6 @@
 <?php
-class TPPlugin extends KPDPlugin implements KPDPluginInterface{
+namespace app\includes;
+class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public static $TPRequestApi;
     public function __construct() {
         parent::__construct();
@@ -11,7 +12,7 @@ class TPPlugin extends KPDPlugin implements KPDPluginInterface{
         // TODO: Implement activation() method.
         if( ! get_option(KPDPlUGIN_OPTION_NAME) )
             update_option( KPDPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
-        TPSearchFormsModel::createTable();
+        //TPSearchFormsModel::createTable();
     }
 
     static public function deactivation()
@@ -24,7 +25,7 @@ class TPPlugin extends KPDPlugin implements KPDPluginInterface{
     static public function uninstall()
     {
         // TODO: Implement uninstall() method.
-        TPSearchFormsModel::deleteTable();
+        //TPSearchFormsModel::deleteTable();
     }
 }
 $TPPlugin = new TPPlugin();

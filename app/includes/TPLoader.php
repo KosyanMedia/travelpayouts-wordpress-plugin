@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: freeman
- * Date: 06.08.15
- * Time: 12:03
- */
-
-class TPLoader extends KPDLoader{
+namespace app\includes;
+class TPLoader extends \core\TPOLoader{
     public function __construct(){
         parent::__construct();
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
@@ -17,9 +11,9 @@ class TPLoader extends KPDLoader{
     {
         // TODO: Implement admin() method.
         // Admin menu
-        new TPDashboardController();
-        new TPFlightTicketsController();
-        new TPWidgetsController();
+        new controllers\admin\menu\TPDashboardController();
+        new controllers\admin\menu\TPFlightTicketsController();
+        /*new TPWidgetsController();
         new TPSearchFormsController();
         new TPStatisticController();
         new TPSettingsController();
@@ -27,7 +21,7 @@ class TPLoader extends KPDLoader{
         new TPShortcodeButtonsController();
         new TPWidgetButtonsController();
         new TPSearchFormButtonsController();
-        new TPWizardController();
+        new TPWizardController();*/
 
     }
 
@@ -36,7 +30,7 @@ class TPLoader extends KPDLoader{
     {
         // TODO: Implement site() method.
         //Shortcodes
-        new TPSearchFormShortcodeController();
+       /* new TPSearchFormShortcodeController();
         new TPCheapestFlightsShortcodeController();
         new TPDirectFlightsRouteShortcodeController();
         new TPDirectFlightsShortcodeController();
@@ -55,7 +49,7 @@ class TPLoader extends KPDLoader{
         new TPCalendarWidgetController();
         new TPSubscriptionsWidgetController();
         new TPHotelWidgetController();
-        new TPPopularRoutesWidgetController();
+        new TPPopularRoutesWidgetController();*/
 
 
     }
@@ -63,8 +57,9 @@ class TPLoader extends KPDLoader{
     protected function all()
     {
         // TODO: Implement all() method.
-        new TPLoaderScripts();
-        new TPAdminBarMenuController();
+
+        new \app\includes\TPLoaderScripts();
+        //new TPAdminBarMenuController();
 
 
     }

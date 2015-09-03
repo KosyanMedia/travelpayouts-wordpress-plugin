@@ -5,8 +5,8 @@
  * Date: 07.08.15
  * Time: 0:35
  */
-
-class TPLoaderScripts extends KPDLoaderScripts{
+namespace app\includes;
+class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function loadScriptAdmin($hook)
     {

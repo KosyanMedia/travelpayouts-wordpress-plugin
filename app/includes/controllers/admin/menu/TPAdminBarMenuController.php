@@ -5,7 +5,7 @@
  * Date: 08.08.15
  * Time: 0:41
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPAdminBarMenuController extends KPDAdminBarMenuController{
 
     public function admin_bar_menu()

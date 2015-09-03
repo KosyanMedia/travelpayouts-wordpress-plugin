@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 16:29
  */
-
-class KPDAdminNotice {
+namespace core;
+class TPOAdminNotice {
     protected $adminNotice = array();
     protected $adminNoticeCustom = array();
     public function __construct(){

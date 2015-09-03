@@ -1,11 +1,12 @@
 <?php
-abstract class KPDPlugin {
+namespace core;
+abstract class TPOPlugin {
     public static $adminNotice;
     public static $options;
     protected function __construct(){
-        new KPDLocalization();
+        new TPOLocalization();
         self::$options = get_option(KPDPlUGIN_OPTION_NAME);
-        self::$adminNotice = new KPDAdminNotice();
+        self::$adminNotice = new TPOAdminNotice();
     }
     public static function deleteCacheAll(){
         global $wpdb;

@@ -5,7 +5,7 @@
  * Date: 10.08.15
  * Time: 17:52
  */
-
+namespace app\includes\views\admin;
 abstract class TPView {
     abstract public function __construct($model);
     /**

@@ -5,8 +5,8 @@
  * Date: 06.08.15
  * Time: 18:13
  */
-
-abstract class KPDOptionModel {
+namespace core\models;
+abstract class TPOOptionModel {
     public function __construct(){
         add_action( 'admin_init', array( &$this, 'create_option' ) );
     }

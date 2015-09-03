@@ -5,7 +5,7 @@
  * Date: 07.08.15
  * Time: 16:34
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPSettingsController extends KPDAdminMenuController{
     public function __construct(){
         parent::__construct();

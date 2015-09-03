@@ -5,8 +5,8 @@
  * Date: 12.08.15
  * Time: 15:30
  */
-
-abstract class KPDAdminMediaButtonsController extends KPDBaseController{
+namespace core\controllers;
+abstract class KPDAdminMediaButtonsController extends TPOBaseController{
     public function __construct(){
         add_action('media_buttons', array( &$this, 'action'));
     }

@@ -5,7 +5,7 @@
  * Date: 19.08.15
  * Time: 16:59
  */
-
+namespace app\includes\controllers\admin\menu;
 class TPWizardController extends KPDAdminMenuController{
     public $local;
     public $local_url;

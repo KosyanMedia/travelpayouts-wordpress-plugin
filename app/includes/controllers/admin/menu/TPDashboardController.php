@@ -2,13 +2,14 @@
 /**
  * Class TPDashboardController
  */
-class TPDashboardController extends KPDAdminMenuController{
+namespace app\includes\controllers\admin\menu;
+class TPDashboardController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPDashboardModel();
-        $this->view = new TPDashboardView($this->model);
+        $this->model = new \app\includes\models\admin\menu\TPDashboardModel();
+        $this->view = new \app\includes\views\admin\menu\TPDashboardView($this->model);
     }
     public function action()
     {
