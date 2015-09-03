@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 12:27
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -19,7 +19,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel
         if($this->cacheSecund()) {
             if (false === ($rows = get_transient($this->cacheKey('tpCheapestTicketEachDayMonthShortcodes',
                     $origin.$destination)))) {
-                $return = (array) TPPlugin::$TPRequestApi->get_calendar($attr);
+                $return = (array) \app\includes\TPPlugin::$TPRequestApi->get_calendar($attr);
                 if( ! $return )
                     return false;
                 $rows = array();
@@ -28,7 +28,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel
                     $origin.$destination) , $rows, $this->cacheSecund());
             }
         }else{
-            $return = (array) TPPlugin::$TPRequestApi->get_calendar($attr);
+            $return = (array) \app\includes\TPPlugin::$TPRequestApi->get_calendar($attr);
             if( ! $return )
                 return false;
             $rows = array();

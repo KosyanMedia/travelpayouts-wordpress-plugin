@@ -5,18 +5,18 @@
  * Date: 13.08.15
  * Time: 10:37
  */
-
-abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
+namespace app\includes\controllers\site;
+abstract class TPShortcodesChacheModel extends TPOShortcodesCacheModel{
     /**
      * @return bool|int
      */
     public function cacheSecund(){
-        if(TPPlugin::$options['config']['cache_value'] != 0 ) {
-            switch (TPPlugin::$options['config']['cache']) {
+        if(\app\includes\TPPlugin::$options['config']['cache_value'] != 0 ) {
+            switch (\app\includes\TPPlugin::$options['config']['cache']) {
                 case 1:
                     //time
-                    if(!empty(TPPlugin::$options['config']['cache_value'])){
-                        return HOUR_IN_SECONDS * TPPlugin::$options['config']['cache_value'];
+                    if(!empty(\app\includes\TPPlugin::$options['config']['cache_value'])){
+                        return HOUR_IN_SECONDS * \app\includes\TPPlugin::$options['config']['cache_value'];
                     }
                     else{//default
                         return DAY_IN_SECONDS;
@@ -24,8 +24,8 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                     break;
                 case 0:
                     //day
-                    if(!empty(TPPlugin::$options['config']['cache_value'])){
-                        return DAY_IN_SECONDS * TPPlugin::$options['config']['cache_value'];
+                    if(!empty(\app\includes\TPPlugin::$options['config']['cache_value'])){
+                        return DAY_IN_SECONDS * \app\includes\TPPlugin::$options['config']['cache_value'];
                     }
                     else{//default
                         return DAY_IN_SECONDS;
@@ -41,7 +41,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
      * @return string
      */
     public function typeCurrency(){
-        switch((int) TPPlugin::$options['local']['currency']){
+        switch((int) \app\includes\TPPlugin::$options['local']['currency']){
             case 1:
                 $currency = 'RUB';
                 break;
@@ -183,9 +183,9 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
         switch($type){
             case 0:
                 if($title != 'airline'){
-                    switch(TPPlugin::$options['local']['localization']) {
+                    switch(\app\includes\TPPlugin::$options['local']['localization']) {
                         case "1":
-                            $data = TPAutocomplete::$title[$data]['cases'][TPPlugin::$options['local']['title_case'][$title]];
+                            $data = TPAutocomplete::$title[$data]['cases'][\app\includes\TPPlugin::$options['local']['title_case'][$title]];
                             break;
                         case "2":
                             $data = TPAutocomplete::$data[$data]['name_translations']['en'];
@@ -193,7 +193,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                     }
                 }else{
 
-                    switch(TPPlugin::$options['local']['localization']) {
+                    switch(\app\includes\TPPlugin::$options['local']['localization']) {
                         case "1":
                             $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
                             break;
@@ -212,7 +212,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
-                        switch(TPPlugin::$options['local']['localization']) {
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
                                 break;
@@ -228,7 +228,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
-                        switch(TPPlugin::$options['local']['localization']) {
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['city'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
                                 $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
@@ -247,7 +247,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
                         $value['destination_iata'] = $key;
-                        switch(TPPlugin::$options['local']['localization']) {
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
                                 $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
@@ -265,7 +265,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $citys = explode( '-', $key );
-                        switch(TPPlugin::$options['local']['localization']) {
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value = TPAutocomplete::$data[$citys[0]]['name_translations']['ru'];
                                 $value .= ' → '.TPAutocomplete::$data[$citys[1]]['name_translations']['ru'];
@@ -287,7 +287,7 @@ abstract class TPShortcodesChacheModel extends KPDShortcodesCacheModel{
                     foreach ($data as $key => $value) {
                         $value['origin_iata'] = $value['origin'];
                         $value['destination_iata'] = $value['destination'];
-                        switch(TPPlugin::$options['local']['localization']) {
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
                                 $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['ru'];

@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 11:42
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
 
     /**
@@ -16,14 +16,14 @@ class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
     {
         // TODO: Implement get_data() method.
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB','title' => '', 'limit' => TPPlugin::$options['shortcodes']['8']['limit']);
+            'currency' => 'RUB','title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']);
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array( 'origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency() );
         if($this->cacheSecund()) {
             if ( false === ($rows = get_transient($this->cacheKey('tpDirectFlightsShortcodes', $origin)))) {
-                $return = TPPlugin::$TPRequestApi->get_direct($attr);
+                $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                 if( ! $return )
                     return false;
                 $rows = array();
@@ -35,7 +35,7 @@ class TPDirectFlightsShortcodeModel extends TPShortcodesChacheModel{
                 set_transient( $this->cacheKey('tpDirectFlightsShortcodes', $origin) , $rows, $this->cacheSecund());
             }
         }else{
-            $return = TPPlugin::$TPRequestApi->get_direct($attr);
+            $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
             if( ! $return )
                 return false;
             $rows = array();

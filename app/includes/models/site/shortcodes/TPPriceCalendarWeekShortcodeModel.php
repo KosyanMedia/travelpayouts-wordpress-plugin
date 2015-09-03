@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 12:12
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPPriceCalendarWeekShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -18,14 +18,14 @@ class TPPriceCalendarWeekShortcodeModel extends TPShortcodesChacheModel{
         if($this->cacheSecund()) {
             if (false === ($return = get_transient($this->cacheKey('tpPriceCalendarWeekShortcodes',
                     $origin.$destination)))) {
-                $return = $this->sort_dates(TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
+                $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
                 if( ! $return )
                     return false;
                 set_transient( $this->cacheKey('tpPriceCalendarWeekShortcodes',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
-            $return = $this->sort_dates(TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
+            $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
             if( ! $return )
                 return false;
         }

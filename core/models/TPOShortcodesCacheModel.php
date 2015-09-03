@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 10:08
  */
-
-abstract class KPDShortcodesCacheModel {
+namespace core\models;
+abstract class TPOShortcodesCacheModel {
     public function __construct(){
         add_action( 'save_post', array( &$this, 'deleteCache') );
     }

@@ -5,7 +5,7 @@
  * Date: 12.08.15
  * Time: 18:39
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPSearchFormShortcodeModel {
     public static $tableName = "tp_search_shortcodes";
     public function get_dataId($id)

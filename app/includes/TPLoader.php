@@ -31,9 +31,9 @@ class TPLoader extends \core\TPOLoader{
     {
         // TODO: Implement site() method.
         //Shortcodes
-       /* new TPSearchFormShortcodeController();
-        new TPCheapestFlightsShortcodeController();
-        new TPDirectFlightsRouteShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPSearchFormShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPCheapestFlightsShortcodeController();
+        /*new TPDirectFlightsRouteShortcodeController();
         new TPDirectFlightsShortcodeController();
         new TPPopularDestinationsAirlinesShortcodeController();
         new TPPriceCalendarMonthShortcodeController();

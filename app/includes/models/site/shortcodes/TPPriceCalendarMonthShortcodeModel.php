@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 12:05
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPPriceCalendarMonthShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -19,14 +19,14 @@ class TPPriceCalendarMonthShortcodeModel extends TPShortcodesChacheModel{
         if($this->cacheSecund()) {
             if (false === ($return = get_transient($this->cacheKey('tpPriceCalendarMonthShortcodes',
                     $origin.$destination)))) {
-                $return = TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
+                $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
                 if( ! $return )
                     return false;
                 set_transient( $this->cacheKey('tpPriceCalendarMonthShortcodes',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
-            $return = TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
+            $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
             if( ! $return )
                 return false;
         }

@@ -5,14 +5,14 @@
  * Date: 13.08.15
  * Time: 11:17
  */
-
-class TPDirectFlightsRouteShortcodeController extends TPShortcodesController{
+namespace app\includes\controllers\site\shortcodes;
+class TPDirectFlightsRouteShortcodeController extends \app\includes\controllers\site\TPShortcodesController{
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
         $this->model = new TPDirectFlightsRouteShortcodeModel();
-        $this->view = new TPShortcodesView();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()
     {

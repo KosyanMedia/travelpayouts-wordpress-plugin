@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 11:52
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPPopularDestinationsAirlinesShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -18,7 +18,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPShortcodesChacheMode
         if($this->cacheSecund()) {
             if (false === ($return = get_transient($this->cacheKey('tpPopularDestinationsAirlinesShortcodes',
                     $airline)))) {
-                $return = TPPlugin::$TPRequestApi->get_popular($attr);
+                $return = \app\includes\TPPlugin::$TPRequestApi->get_popular($attr);
                 if( ! $return )
                     return false;
                 $return = $this->iataAutocomplete($return, 10);
@@ -26,7 +26,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPShortcodesChacheMode
                     $airline) , $return, $this->cacheSecund());
             }
         }else{
-            $return = TPPlugin::$TPRequestApi->get_popular($attr);
+            $return = \app\includes\TPPlugin::$TPRequestApi->get_popular($attr);
             if( ! $return )
                 return false;
             $return = $this->iataAutocomplete($return, 10);

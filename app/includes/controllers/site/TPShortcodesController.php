@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 11:32
  */
-
-abstract class TPShortcodesController extends KPDShortcodesController{
+namespace app\includes\controllers\site;
+abstract class TPShortcodesController extends \core\controllers\TPOShortcodesController{
     public function action($args = array())
     {
         // TODO: Implement action() method.

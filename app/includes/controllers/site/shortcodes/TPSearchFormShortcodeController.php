@@ -5,12 +5,12 @@
  * Date: 12.08.15
  * Time: 18:27
  */
-
-class TPSearchFormShortcodeController extends KPDShortcodesController{
+namespace app\includes\controllers\site\shortcodes;
+class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPSearchFormShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPSearchFormShortcodeModel();
     }
     public function initShortcode()
     {

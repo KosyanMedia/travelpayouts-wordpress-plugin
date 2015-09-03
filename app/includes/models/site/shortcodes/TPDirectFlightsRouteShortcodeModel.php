@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 11:21
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPDirectFlightsRouteShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -40,26 +40,26 @@ class TPDirectFlightsRouteShortcodeModel extends TPShortcodesChacheModel{
                     $origin.$destination)))) {
                 $return = array();
                 if($current_day < 20){
-                    $return_null = TPPlugin::$TPRequestApi->get_direct($attr);
+                    $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                     if($return_null)
                         array_push($return, $return_null[$destination][0]);
-                    $return_one = TPPlugin::$TPRequestApi->get_direct($attr_one);
+                    $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
                         array_push($return, $return_one[$destination][0]);
-                    $return_two = TPPlugin::$TPRequestApi->get_direct($attr_two);
+                    $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
                         array_push($return, $return_two[$destination][0]);
                 }else{
-                    $return_null = TPPlugin::$TPRequestApi->get_direct($attr);
+                    $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                     if($return_null)
                         array_push($return, $return_null[$destination][0]);
-                    $return_one = TPPlugin::$TPRequestApi->get_direct($attr_one);
+                    $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
                         array_push($return, $return_one[$destination][0]);
-                    $return_two = TPPlugin::$TPRequestApi->get_direct($attr_two);
+                    $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
                         array_push($return, $return_two[$destination][0]);
-                    $return_three = TPPlugin::$TPRequestApi->get_direct($attr_three);
+                    $return_three = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_three);
                     if($return_three)
                         array_push($return, $return_three[$destination][0]);
                 }
@@ -72,27 +72,27 @@ class TPDirectFlightsRouteShortcodeModel extends TPShortcodesChacheModel{
         }else{
             $return = array();
             if($current_day < 20){
-                $return_null = TPPlugin::$TPRequestApi->get_direct($attr);
+                $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
 
                 if($return_null)
                     array_push($return, $return_null[$destination][0]);
-                $return_one = TPPlugin::$TPRequestApi->get_direct($attr_one);
+                $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                 if($return_one)
                     array_push($return, $return_one[$destination][0]);
-                $return_two = TPPlugin::$TPRequestApi->get_direct($attr_two);
+                $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                 if($return_two)
                     array_push($return, $return_two[$destination][0]);
             }else{
-                $return_null = TPPlugin::$TPRequestApi->get_direct($attr);
+                $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                 if($return_null)
                     array_push($return, $return_null[$destination][0]);
-                $return_one = TPPlugin::$TPRequestApi->get_direct($attr_one);
+                $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                 if($return_one)
                     array_push($return, $return_one[$destination][0]);
-                $return_two = TPPlugin::$TPRequestApi->get_direct($attr_two);
+                $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                 if($return_two)
                     array_push($return, $return_two[$destination][0]);
-                $return_three = TPPlugin::$TPRequestApi->get_direct($attr_three);
+                $return_three = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_three);
                 if($return_three)
                     array_push($return, $return_three[$destination][0]);
             }

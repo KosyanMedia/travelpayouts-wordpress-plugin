@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 12:18
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPCheapestTicketsEachMonthShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
@@ -18,14 +18,14 @@ class TPCheapestTicketsEachMonthShortcodeModel extends TPShortcodesChacheModel{
         if($this->cacheSecund()) {
             if (false === ($return = get_transient($this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
                     $origin.$destination)))) {
-                $return = $this->iataAutocomplete((array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
+                $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
                 if( ! $return )
                     return false;
                 set_transient( $this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
-            $return = $this->iataAutocomplete((array) TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
+            $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
             if( ! $return )
                 return false;
         }

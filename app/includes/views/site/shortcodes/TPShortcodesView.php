@@ -5,7 +5,7 @@
  * Date: 13.08.15
  * Time: 10:52
  */
-
+namespace app\includes\views\site\shortcodes;
 class TPShortcodesView {
     public $local;
     public function __construct() {

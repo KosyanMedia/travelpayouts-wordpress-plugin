@@ -5,14 +5,14 @@
  * Date: 13.08.15
  * Time: 12:25
  */
-
-class TPCheapestTicketEachDayMonthShortcodeController extends TPShortcodesController{
+namespace app\includes\controllers\site\shortcodes;
+class TPCheapestTicketEachDayMonthShortcodeController extends \app\includes\controllers\site\TPShortcodesController{
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
         $this->model = new TPCheapestTicketEachDayMonthShortcodeModel();
-        $this->view = new TPShortcodesView();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()
     {

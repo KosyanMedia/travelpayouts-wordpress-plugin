@@ -5,13 +5,13 @@
  * Date: 13.08.15
  * Time: 12:33
  */
-
+namespace app\includes\models\site\shortcodes;
 class TPPopularRoutesFromCityShortcodeModel extends TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        if(TPPlugin::$options['local']['currency'] != 1) return false;
+        if(\app\includes\TPPlugin::$options['local']['currency'] != 1) return false;
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB', 'limit' => false, 'title' => '');
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
@@ -22,14 +22,14 @@ class TPPopularRoutesFromCityShortcodeModel extends TPShortcodesChacheModel{
             if (false === ($return = get_transient($this->cacheKey('tpPopularRoutesFromCityShortcodes',
                     $origin)))
             ) {
-                $return = TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
+                $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
                 if (!$return)
                     return false;
                 set_transient($this->cacheKey('tpPopularRoutesFromCityShortcodes',
                     $origin), $return, $this->cacheSecund());
             }
         } else {
-            $return = TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
+            $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
             if (!$return)
                 return false;
         }

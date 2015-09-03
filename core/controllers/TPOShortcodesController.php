@@ -6,7 +6,7 @@
  * Time: 17:49
  */
 namespace core\controllers;
-abstract class KPDShortcodesController {
+abstract class TPOShortcodesController {
     public function __construct(){
         add_action( 'wp_loaded',  array( &$this, 'initShortcode') );
     }
