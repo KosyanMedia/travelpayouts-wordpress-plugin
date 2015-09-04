@@ -11,8 +11,8 @@ License: GPL2
 require_once dirname(__FILE__) . '/TPO.config.php';
 require_once dirname(__FILE__) . '/core/TPOAutoload.php';
 require_once dirname(__FILE__).'/app/includes/TPPlugin.php';
-register_activation_hook( __FILE__, array('TPPlugin' ,  'activation' ) );
-register_deactivation_hook( __FILE__, array('TPPlugin' ,  'deactivation' ) );
-register_uninstall_hook( __FILE__, array('TPPlugin' ,  'uninstall' ) );
+register_activation_hook( __FILE__, array('app\includes\TPPlugin' ,  'activation' ) );
+register_deactivation_hook( __FILE__, array('app\includes\TPPlugin' ,  'deactivation' ) );
+register_uninstall_hook( __FILE__, array('app\includes\TPPlugin' ,  'uninstall' ) );
 
 

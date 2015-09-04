@@ -5,8 +5,8 @@
  * Date: 06.08.15
  * Time: 13:50
  */
-
-class TPDefault implements  KPDDefault{
+namespace app\includes;
+class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
         'title_style' => array(
             'color' => '#191e23',
