@@ -19,9 +19,9 @@ class TPSearchFormButtonsController extends \core\controllers\TPOAdminMediaButto
         // TODO: Implement action() method.
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
-            'text'      => __( 'Insert search form', KPDPlUGIN_TEXTDOMAIN  ),
+            'text'      => __( 'Insert search form', TPOPlUGIN_TEXTDOMAIN  ),
             'class'     => 'button',
-            'icon'      =>  KPDPlUGIN_URL.'app/public/images/tp_button_search.png',
+            'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_search.png',
             'echo'      => true,
             'shortcode' => false
         ) );
@@ -41,7 +41,7 @@ class TPSearchFormButtonsController extends \core\controllers\TPOAdminMediaButto
     {
         // TODO: Implement render() method.
         $this->data = $this->model->get_data();
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php";
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php";
         parent::loadView($pathView);
     }
 }

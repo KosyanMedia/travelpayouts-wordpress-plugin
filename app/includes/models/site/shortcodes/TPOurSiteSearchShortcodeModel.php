@@ -6,7 +6,7 @@
  * Time: 12:42
  */
 namespace app\includes\models\site\shortcodes;
-class TPOurSiteSearchShortcodeModel extends TPShortcodesChacheModel{
+class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {

@@ -14,35 +14,35 @@ class TPAdminBarMenuController extends \core\controllers\TPOAdminBarMenuControll
         $this->admin_bar_add_root_menu(
             "Travelpayouts",
             "tp_admin_bar_menu",
-            "admin.php?page=".KPDPlUGIN_TEXTDOMAIN
+            "admin.php?page=".TPOPlUGIN_TEXTDOMAIN
         );
         $this->admin_bar_add_sub_menu(
-            __('Flight Tickets', KPDPlUGIN_TEXTDOMAIN ),
+            __('Flight Tickets', TPOPlUGIN_TEXTDOMAIN ),
             'admin.php?page=tp_control_tickets',
             'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_tickets');
+            TPOPlUGIN_TEXTDOMAIN.'_tp_control_tickets');
         $this->admin_bar_add_sub_menu(
-            _x('Widgets', 'add_menu_page page title',  KPDPlUGIN_TEXTDOMAIN),
+            _x('Widgets', 'add_menu_page page title',  TPOPlUGIN_TEXTDOMAIN),
             'admin.php?page=tp_control_widgets',
             'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_widget');
+            TPOPlUGIN_TEXTDOMAIN.'_tp_control_widget');
         $this->admin_bar_add_sub_menu(
-            __('Search Forms', KPDPlUGIN_TEXTDOMAIN),
+            __('Search Forms', TPOPlUGIN_TEXTDOMAIN),
             'admin.php?page=tp_control_search_shortcodes',
             'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_search_shortcodes'
+            TPOPlUGIN_TEXTDOMAIN.'_tp_search_shortcodes'
         );
         $this->admin_bar_add_sub_menu(
-            __('Statistics', KPDPlUGIN_TEXTDOMAIN ),
+            __('Statistics', TPOPlUGIN_TEXTDOMAIN ),
             'admin.php?page=tp_control_stats',
             'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_stats'
+            TPOPlUGIN_TEXTDOMAIN.'_tp_control_stats'
         );
         $this->admin_bar_add_sub_menu(
-            __('Settings', KPDPlUGIN_TEXTDOMAIN ),
+            __('Settings', TPOPlUGIN_TEXTDOMAIN ),
             'admin.php?page=tp_control_settings',
             'tp_admin_bar_menu',
-            KPDPlUGIN_TEXTDOMAIN.'_tp_control_settings'
+            TPOPlUGIN_TEXTDOMAIN.'_tp_control_settings'
         );
     }
 }

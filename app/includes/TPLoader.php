@@ -33,24 +33,24 @@ class TPLoader extends \core\TPOLoader{
         //Shortcodes
         new \app\includes\controllers\site\shortcodes\TPSearchFormShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPCheapestFlightsShortcodeController();
-        /*new TPDirectFlightsRouteShortcodeController();
-        new TPDirectFlightsShortcodeController();
-        new TPPopularDestinationsAirlinesShortcodeController();
-        new TPPriceCalendarMonthShortcodeController();
-        new TPPriceCalendarWeekShortcodeController();
-        new TPCheapestTicketsEachMonthShortcodeController();
-        new TPCheapestTicketEachDayMonthShortcodeController();
-        new TPPopularRoutesFromCityShortcodeController();
-        new TPOurSiteSearchShortcodeController();
-        new TPFromOurCityFlyShortcodeController();
-        new TPInOurCityFlyShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPDirectFlightsRouteShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPDirectFlightsShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPPopularDestinationsAirlinesShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPPriceCalendarMonthShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPPriceCalendarWeekShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPCheapestTicketsEachMonthShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPCheapestTicketEachDayMonthShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPPopularRoutesFromCityShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPOurSiteSearchShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPFromOurCityFlyShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPInOurCityFlyShortcodeController();
         //Widgets
-        new TPMapWidgetController();
-        new TPHotelMapWidgetController();
-        new TPCalendarWidgetController();
-        new TPSubscriptionsWidgetController();
-        new TPHotelWidgetController();
-        new TPPopularRoutesWidgetController();*/
+        new \app\includes\controllers\site\widgets\TPMapWidgetController();
+        new \app\includes\controllers\site\widgets\TPHotelMapWidgetController();
+        new \app\includes\controllers\site\widgets\TPCalendarWidgetController();
+        new \app\includes\controllers\site\widgets\TPSubscriptionsWidgetController();
+        new \app\includes\controllers\site\widgets\TPHotelWidgetController();
+        new \app\includes\controllers\site\widgets\TPPopularRoutesWidgetController();
 
 
     }
@@ -80,13 +80,13 @@ class TPLoader extends \core\TPOLoader{
                         <div class="TP-Activate_button_container">
                             <div class="TP-Activate_button_border">
                                 <div class="TP-Activate_button">
-                                    <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', KPDPlUGIN_TEXTDOMAIN).'</a>
+                                    <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', TPOPlUGIN_TEXTDOMAIN).'</a>
                                 </div>
                             </div>
                         </div>
                         <div class="TP-Activate_description">
-                            '.__('Welcome! Travelpayouts plugin is almost ready.', KPDPlUGIN_TEXTDOMAIN).'<br/>'
-                            .__('Enter your Travelpayouts authorization details and start earning now.', KPDPlUGIN_TEXTDOMAIN)
+                            '.__('Welcome! Travelpayouts plugin is almost ready.', TPOPlUGIN_TEXTDOMAIN).'<br/>'
+                            .__('Enter your Travelpayouts authorization details and start earning now.', TPOPlUGIN_TEXTDOMAIN)
                             .'</div>
                     </div>'
                 );

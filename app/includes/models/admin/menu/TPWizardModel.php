@@ -16,7 +16,7 @@ class TPWizardModel extends \app\includes\models\admin\TPOptionModel{
         // TODO: Implement create_option() method.
         register_setting(
             'TPWizard',
-            KPDPlUGIN_OPTION_NAME,
+            TPOPlUGIN_OPTION_NAME,
             array(&$this,'save_option')
         );
         $field = new TPFieldWizard();

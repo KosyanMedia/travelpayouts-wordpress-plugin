@@ -11,7 +11,7 @@ class TPPopularDestinationsAirlinesShortcodeController extends \app\includes\con
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPPopularDestinationsAirlinesShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPPopularDestinationsAirlinesShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

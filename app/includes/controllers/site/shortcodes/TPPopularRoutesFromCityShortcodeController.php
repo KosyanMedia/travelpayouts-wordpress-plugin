@@ -12,7 +12,7 @@ class TPPopularRoutesFromCityShortcodeController extends \app\includes\controlle
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPPopularRoutesFromCityShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPPopularRoutesFromCityShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

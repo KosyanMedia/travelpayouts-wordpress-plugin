@@ -18,32 +18,32 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
         if($this->model->detailed_sales["current_month"]["sales"] != false) {
             $output = '<div class="TP-incomeSection">
                 <div class="TP-ourIncome">
-                    <p class="TP-titleIncome">' . __('Your income', KPDPlUGIN_TEXTDOMAIN) . ':</p>
+                    <p class="TP-titleIncome">' . __('Your income', TPOPlUGIN_TEXTDOMAIN) . ':</p>
                     <div class="listIncome">
                         <div class="itemIncome">
                             <p>' . $this->tpGetDay($this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('today', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('today', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetDay($this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('yesterday', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('yesterday', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetMonth($this->model->detailed_sales["current_month"]["sales"])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('this month', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('this month', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetMonth($this->model->detailed_sales["last_month"]["sales"])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('last month', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('last month', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->model->balance["data"]["balance"]
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('unpaid earnings', KPDPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . __('unpaid earnings', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                     </div>
                 </div>
@@ -152,15 +152,15 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 <thead>
                 <tr>
                     <td></td>
-                    <td><?php _e('Visit.', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Search', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <!--<td><?php //_e('Paid clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Clicks income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Bookings', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Paid booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Booking income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Possible. income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Visit.', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Search', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <!--<td><?php //_e('Paid clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>-->
+                    <td><?php _e('Clicks income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Bookings', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Paid booking', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Booking income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Possible. income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>
                     <td>STR</td>
@@ -175,10 +175,10 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                         $output .= '<tr>';
                         switch ($key_row) {
                             case "flights":
-                                $output .= '<td>' . __('Flights', KPDPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . __('Flights', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                             case "hotels":
-                                $output .= '<td>' . __('Hotels', KPDPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . __('Hotels', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                         }
                         $output .= '<td>' . round($row["visitors"],2) . '</td>';
@@ -201,7 +201,7 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 ?>
 
                 <tr class="TP-rowAllCountMonth">
-                    <td><?php _e('Total', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Total', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
@@ -256,15 +256,15 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 <thead>
                 <tr>
                     <td></td>
-                    <td><?php _e('Visit.', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Search', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <!--<td><?php //_e('Paid clicks', KPDPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Clicks income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Bookings', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Paid booking', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Booking income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Possible. income', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Visit.', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Search', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <!--<td><?php //_e('Paid clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>-->
+                    <td><?php _e('Clicks income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Bookings', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Paid booking', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Booking income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Possible. income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>
                     <td>STR</td>
@@ -279,10 +279,10 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                         $output .= '<tr>';
                         switch ($key_row) {
                             case "flights":
-                                $output .= '<td>' . __('Flights', KPDPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . __('Flights', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                             case "hotels":
-                                $output .= '<td>' . __('Hotels', KPDPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . __('Hotels', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                         }
                         $output .= '<td>' . @round($row["visitors"],2) . '</td>';
@@ -305,7 +305,7 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 ?>
 
                 <tr class="TP-rowAllCountMonth">
-                    <td><?php _e('Total', KPDPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _e('Total', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>

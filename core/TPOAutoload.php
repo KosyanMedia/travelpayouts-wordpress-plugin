@@ -28,7 +28,7 @@ class TPOAutoload {
      * @param $className
      */
     public function autoloadNamespace($className){
-        $fileClass = KPDPlUGIN_DIR.'/'.str_replace("\\","/",$className).'.php';
+        $fileClass = TPOPlUGIN_DIR.'/'.str_replace("\\","/",$className).'.php';
         if (file_exists($fileClass)) {
             if (!class_exists($fileClass, FALSE)) {
                 require_once $fileClass;
@@ -39,7 +39,7 @@ class TPOAutoload {
      * @param $className
      */
     private function autoload($className){
-        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(KPDPlUGIN_DIR),
+        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(TPOPlUGIN_DIR),
             RecursiveIteratorIterator::CHILD_FIRST);
         foreach ($iterator as $directory){
             if (  ! $directory->isDir()) {
@@ -67,7 +67,7 @@ class TPOAutoload {
      * @param $className
      */
     private function autoloadOld($className){
-        $this->getDirectory(KPDPlUGIN_DIR, 0, $className);
+        $this->getDirectory(TPOPlUGIN_DIR, 0, $className);
     }
 
     /**

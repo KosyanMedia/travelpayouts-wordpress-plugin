@@ -13,9 +13,9 @@ class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsCo
         // TODO: Implement action() method.
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
-            'text'      => __( 'Insert widget', KPDPlUGIN_TEXTDOMAIN  ),
+            'text'      => __( 'Insert widget', TPOPlUGIN_TEXTDOMAIN  ),
             'class'     => 'button',
-            'icon'      =>  KPDPlUGIN_URL.'app/public/images/tp_button_widget.png',
+            'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_widget.png',
             'echo'      => true,
             'shortcode' => false
         ) );
@@ -33,7 +33,7 @@ class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsCo
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPWidgetButtons.view.php";
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPWidgetButtons.view.php";
         parent::loadView($pathView);
     }
 }

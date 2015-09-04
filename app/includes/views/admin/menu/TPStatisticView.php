@@ -25,21 +25,21 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
         $output_table .= '<table class="TP-ListBalance TP-ListReport sortable" id="TPListReport">
                     <thead>
                         <tr>
-                            <td class="TPTableHead tp-date-column">'.__('Date', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="tp-notsort-column">'.__('Type', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="tp-notsort-column">'.__('Marker', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Visitors', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Search', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Clicks', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Income clicks', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Booking', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Paid booking', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Income booking', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-data-column">'.__('Possible. income', KPDPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-date-column">'.__('Date', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="tp-notsort-column">'.__('Type', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="tp-notsort-column">'.__('Marker', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Visitors', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Search', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Clicks', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Income clicks', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Booking', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Paid booking', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Income booking', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-data-column">'.__('Possible. income', TPOPlUGIN_TEXTDOMAIN ).'</td>
                         </tr>
                     </thead>
                     <tbody>';
-        //<td class="TPTableHead tp-data-column">'.__('Paid clicks', KPDPlUGIN_TEXTDOMAIN ).'</td>
+        //<td class="TPTableHead tp-data-column">'.__('Paid clicks', TPOPlUGIN_TEXTDOMAIN ).'</td>
         if(!empty($rows)){
             $result = array();
             foreach($rows as $key_date=>$sales){
@@ -105,7 +105,7 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
                         }
 
                         $output_table .= '<tr class="TP-rowAllCountMonth TP-Report-total-row" '.$TPTotalRow.'>
-                                    <td><p data-total="">' . __('Total', KPDPlUGIN_TEXTDOMAIN) . '</p></td>
+                                    <td><p data-total="">' . __('Total', TPOPlUGIN_TEXTDOMAIN) . '</p></td>
                                     <td>
                                         <i class="TP-icoTable ' . $classType . '"></i>
                                         <span style="display:none">'.$key_res.'</span>
@@ -143,22 +143,22 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
                 </table><div id="TPListReportTotal"></div>';
         $output .= '<div class="TP-ListFilter">
                         <div class="TP-Report-total">
-                            <input id="TP-Report-total-chek1" type="checkbox" name="'.KPDPlUGIN_OPTION_NAME.'[admin_settings][total_stats]"
+                            <input id="TP-Report-total-chek1" type="checkbox" name="'.TPOPlUGIN_OPTION_NAME.'[admin_settings][total_stats]"
                                        value="1" '.checked(@\app\includes\TPPlugin::$options['admin_settings']['total_stats'], true, false).' hidden />
-                            <label for="TP-Report-total-chek1">'.__('Total', KPDPlUGIN_TEXTDOMAIN ).'</label>
+                            <label for="TP-Report-total-chek1">'.__('Total', TPOPlUGIN_TEXTDOMAIN ).'</label>
                         </div>
                         <label>
-                            <span>'.__('Type', KPDPlUGIN_TEXTDOMAIN ).'</span>
+                            <span>'.__('Type', TPOPlUGIN_TEXTDOMAIN ).'</span>
                             <select id="TP-ListReportType" class="TP-Zelect" >
-                                <option value="none">'.__('All', KPDPlUGIN_TEXTDOMAIN ).'</option>
-                                <option value="flights">'.__('Flights', KPDPlUGIN_TEXTDOMAIN ).'</option>
-                                <option value="hotels">'.__('Hotels', KPDPlUGIN_TEXTDOMAIN ).'</option>
+                                <option value="none">'.__('All', TPOPlUGIN_TEXTDOMAIN ).'</option>
+                                <option value="flights">'.__('Flights', TPOPlUGIN_TEXTDOMAIN ).'</option>
+                                <option value="hotels">'.__('Hotels', TPOPlUGIN_TEXTDOMAIN ).'</option>
                             </select>
                         </label>
                         <label>
-                            <span>'.__('Marker', KPDPlUGIN_TEXTDOMAIN ).'</span>
+                            <span>'.__('Marker', TPOPlUGIN_TEXTDOMAIN ).'</span>
                             <select id="TP-ListReportMarker" class="TP-Zelect" >
-                                <option value="none">'.__('All', KPDPlUGIN_TEXTDOMAIN ).'</option>
+                                <option value="none">'.__('All', TPOPlUGIN_TEXTDOMAIN ).'</option>
                                 '.$output_marker_option.'
                             </select>
                         </label>
@@ -188,10 +188,10 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
         $output .= '<table class="TP-ListBalance sortable" id="TPListBalance">
                         <thead>
                         <tr>
-                            <td class="TPTableHead tp-date-column">'.__('Date', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="TPTableHead tp-price-column">'.__('Amount', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="tp-notsort-column">'.__('Status', KPDPlUGIN_TEXTDOMAIN ).'</td>
-                            <td class="tp-notsort-column">'.__('Comment', KPDPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-date-column">'.__('Date', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="TPTableHead tp-price-column">'.__('Amount', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="tp-notsort-column">'.__('Status', TPOPlUGIN_TEXTDOMAIN ).'</td>
+                            <td class="tp-notsort-column">'.__('Comment', TPOPlUGIN_TEXTDOMAIN ).'</td>
                         </tr>
                         </thead>
                         <tbody>';

@@ -22,7 +22,7 @@
                     break;
             } ?>
             <p>
-                <?php printf(__('Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s' , KPDPlUGIN_TEXTDOMAIN),
+                <?php printf(__('Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s' , TPOPlUGIN_TEXTDOMAIN),
                     '<a href="'.$tp_url.'" target="_blank">
                         travelpayouts.com
                     </a>',
@@ -38,17 +38,17 @@
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-account" class="TPMainMenuA">
-                        <span><?php _e('Account', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                        <span><?php _e('Account', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
                 <li>
                     <a href="#tabs-config" class="TPMainMenuA">
-                        <span><?php _e('Settings', KPDPlUGIN_TEXTDOMAIN); ?></span>
+                        <span><?php _e('Settings', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
                 <li>
                     <a href="#tabs-localization" class="TPMainMenuA">
-                        <span><?php _e('Localization', KPDPlUGIN_TEXTDOMAIN ); ?></span>
+                        <span><?php _e('Localization', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     </a>
                 </li>
             </ul>
@@ -59,7 +59,7 @@
                 <div class="TPmainContent TP-SettingContent">
                     <div id="tabs-account">
                         <p class="TP-SettingTitle">
-                            <?php _e('Account', KPDPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _e('Account', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <div class="TP-RowForm">
                             <?php do_settings_fields('tp_settings_account', 'tp_settings_account_id'); ?>
@@ -67,7 +67,7 @@
                     </div>
                     <div id="tabs-config">
                         <p class="TP-SettingTitle">
-                            <?php _e('Settings', KPDPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _e('Settings', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <div class="TP-RowForm">
                             <?php do_settings_fields('tp_settings_plugin_config', 'tp_settings_plugin_config_id'); ?>
@@ -75,7 +75,7 @@
                     </div>
                     <div id="tabs-localization">
                         <p class="TP-SettingTitle">
-                            <?php _e('Localization', KPDPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _e('Localization', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <?php do_settings_fields('tp_settings_local', 'tp_settings_local_id'); ?>
                     </div>
@@ -84,7 +84,7 @@
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
                     <input type="submit" name="submit" id="TPSaveSettings" class="TP-BtnTab"
-                           value="<?php _e('Save changes', KPDPlUGIN_TEXTDOMAIN ); ?>">
+                           value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
                 </div>
             </form>
         </div>

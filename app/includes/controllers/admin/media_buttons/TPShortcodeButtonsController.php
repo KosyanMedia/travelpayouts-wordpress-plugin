@@ -13,9 +13,9 @@ class TPShortcodeButtonsController extends \core\controllers\TPOAdminMediaButton
         // TODO: Implement action() method.
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
-            'text'      => __( 'Insert table', KPDPlUGIN_TEXTDOMAIN  ),
+            'text'      => __( 'Insert table', TPOPlUGIN_TEXTDOMAIN  ),
             'class'     => 'button',
-            'icon'      =>  KPDPlUGIN_URL.'app/public/images/tp_button_table.png',
+            'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_table.png',
             'echo'      => true,
             'shortcode' => false
         ) );
@@ -33,7 +33,7 @@ class TPShortcodeButtonsController extends \core\controllers\TPOAdminMediaButton
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php";
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php";
         parent::loadView($pathView);
     }
 }

@@ -10,15 +10,15 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     static public function activation()
     {
         // TODO: Implement activation() method.
-        if( ! get_option(KPDPlUGIN_OPTION_NAME) )
-            update_option( KPDPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+        if( ! get_option(TPOPlUGIN_OPTION_NAME) )
+            update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
         //TPSearchFormsModel::createTable();
     }
 
     static public function deactivation()
     {
         // TODO: Implement deactivation() method.
-        delete_option( KPDPlUGIN_OPTION_NAME);
+        delete_option( TPOPlUGIN_OPTION_NAME);
         self::deleteCacheAll();
     }
 

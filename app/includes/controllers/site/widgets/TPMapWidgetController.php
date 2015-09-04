@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 12:59
  */
-
-class TPMapWidgetController extends TPWigetsShortcodesController{
+namespace app\includes\controllers\site\widgets;
+class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
     {
@@ -19,13 +19,13 @@ class TPMapWidgetController extends TPWigetsShortcodesController{
         $widgets = 1;
         $defaults = array(
             'origin' => false,
-            'width' => TPPlugin::$options['widgets'][$widgets]['width'],
-            'height' => TPPlugin::$options['widgets'][$widgets]['height'],
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
             'direct' => 'false'
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $hide_logo = false;
-        if(isset(TPPlugin::$options['widgets'][$widgets]['hide_logo']))
+        if(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']))
             $hide_logo = true;
         $output = '';
         $output = '<iframe src="//maps.avs.io/flights/?auto_fit_map=true&hide_sidebar=true&hide_reformal=true

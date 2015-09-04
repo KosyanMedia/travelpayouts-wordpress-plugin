@@ -13,7 +13,7 @@ class TPWidgetsModel extends \app\includes\models\admin\TPOptionModel{
         // TODO: Implement create_option() method.
         register_setting(
             'TPWidgets',
-            KPDPlUGIN_OPTION_NAME,
+            TPOPlUGIN_OPTION_NAME,
             array(&$this,'save_option')
         );
         $field = new TPFieldWidgets();

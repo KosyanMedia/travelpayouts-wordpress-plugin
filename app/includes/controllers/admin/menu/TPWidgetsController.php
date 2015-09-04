@@ -15,9 +15,9 @@ class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
     public function action()
     {
         // TODO: Implement action() method.
-        add_submenu_page( KPDPlUGIN_TEXTDOMAIN,
-            _x('Widgets',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
-            _x('Widgets',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
+        add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
+            _x('Widgets',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('Widgets',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_widgets',
             array(&$this, 'render'));
@@ -26,7 +26,7 @@ class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWidgets.view.php";
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWidgets.view.php";
         parent::loadView($pathView);
     }
 }

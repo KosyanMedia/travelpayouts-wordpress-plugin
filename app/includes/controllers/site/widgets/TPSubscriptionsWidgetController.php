@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 13:31
  */
-
-class TPSubscriptionsWidgetController extends TPWigetsShortcodesController{
+namespace app\includes\controllers\site\widgets;
+class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
     {
@@ -20,21 +20,21 @@ class TPSubscriptionsWidgetController extends TPWigetsShortcodesController{
         $widgets = 4;
         $origin_i = '';
         $destination_i = '';
-        if(!empty(TPPlugin::$options['widgets'][$widgets]['origin'])){
-            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
+        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin'])){
+            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
             $origin_i = $origin_iata[1];
         }
-        if(!empty(TPPlugin::$options['widgets'][$widgets]['destination'])){
-            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
+        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination'])){
+            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
             $destination_i = $destination_iata[1];
         }
         $defaults = array(
             'origin' => $origin_i,
             'destination' => $destination_i,
-            'width' => TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $color = rawurlencode(TPPlugin::$options['widgets'][$widgets]['color']);
+        $color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['color']);
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         //error_log($width);
         $output = '';

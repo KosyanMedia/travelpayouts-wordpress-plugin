@@ -5,6 +5,6 @@ class TPOLocalization {
         add_action('plugins_loaded', array(&$this, 'localization'));
     }
     public function localization(){
-        load_plugin_textdomain(KPDPlUGIN_TEXTDOMAIN, false, KPDPlUGIN_DIR_LOCALIZATION);
+        load_plugin_textdomain(TPOPlUGIN_TEXTDOMAIN, false, TPOPlUGIN_DIR_LOCALIZATION);
     }
 }

@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 10:37
  */
-namespace app\includes\controllers\site;
-abstract class TPShortcodesChacheModel extends TPOShortcodesCacheModel{
+namespace app\includes\models\site;
+abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheModel{
     /**
      * @return bool|int
      */

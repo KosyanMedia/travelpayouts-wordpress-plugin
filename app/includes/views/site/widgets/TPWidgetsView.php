@@ -5,11 +5,11 @@
  * Date: 13.08.15
  * Time: 13:03
  */
-
+namespace app\includes\views\site\widgets;
 class TPWidgetsView {
     public $locale;
     public function __construct(){
-        switch (TPPlugin::$options['local']['localization']){
+        switch (\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 $this->locale = 'ru';
                 break;
@@ -23,11 +23,11 @@ class TPWidgetsView {
      * @return string
      */
     public function getMarker($widgetType = false){
-        $marker = TPPlugin::$options['account']['marker'];
-        if(!empty(TPPlugin::$options['account']['extra_marker']))
-            $marker = $marker .'.'.TPPlugin::$options['account']['extra_marker'];
-        if(!empty(TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
-            $marker = $marker.'_'.TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
+        $marker = \app\includes\TPPlugin::$options['account']['marker'];
+        if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
+            $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
+        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
+            $marker = $marker.'_'.\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
         }
         switch($widgetType){
             case 1:
@@ -66,7 +66,7 @@ class TPWidgetsView {
      * @return string
      */
     public function getWhiteLabel($widgetType = false){
-        $white_label = TPPlugin::$options['account']['white_label'];
+        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
             if(strpos($white_label, 'http') === false){
                 $white_label = 'http://'.$white_label;
@@ -75,7 +75,7 @@ class TPWidgetsView {
         switch($widgetType){
             case 1:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'http://map.aviasales.ru';
                             break;
@@ -87,7 +87,7 @@ class TPWidgetsView {
                 break;
             case 2:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'hotellook.ru';
                             break;
@@ -99,7 +99,7 @@ class TPWidgetsView {
                 break;
             case 3:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'hydra.aviasales.ru';
                             break;
@@ -116,7 +116,7 @@ class TPWidgetsView {
                 break;
             case 5:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'hotellook.ru';
                             break;
@@ -128,7 +128,7 @@ class TPWidgetsView {
                 break;
             case 6:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'hydra.aviasales.ru';
                             break;
@@ -146,7 +146,7 @@ class TPWidgetsView {
      * @return string
      */
     public function typeCurrency(){
-        switch((int) TPPlugin::$options['local']['currency']){
+        switch((int) \app\includes\TPPlugin::$options['local']['currency']){
             case 1:
                 $currency = 'RUB';
                 break;

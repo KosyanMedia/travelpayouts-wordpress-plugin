@@ -11,7 +11,7 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
         // TODO: Implement create_option() method.
         register_setting(
             'TPFlightTickets',
-            KPDPlUGIN_OPTION_NAME,
+            TPOPlUGIN_OPTION_NAME,
             array(&$this,'save_option')
         );
         $field = new TPFieldFlightTickets();
@@ -63,7 +63,7 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
     public function tpDefaultTableStyle(){
         if(isset($_POST)){
             TPPlugin::$options['style_table'] = TPDefault::$defaultTableStyle;
-            update_option(KPDPlUGIN_OPTION_NAME, TPPlugin::$options);
+            update_option(TPOPlUGIN_OPTION_NAME, TPPlugin::$options);
         }
     }
 }

@@ -20,7 +20,7 @@ abstract class TPOShortcodesCacheModel {
     public function cacheKey($key = '', $direction = ''){
         $cacheKey = '';
         global $post;
-        $cacheKey = $key."_".$direction."_".KPDPlUGIN_NAME."_".get_post_type()."_".$post->ID;
+        $cacheKey = $key."_".$direction."_".TPOPlUGIN_NAME."_".get_post_type()."_".$post->ID;
         return $cacheKey;
     }
     /**
@@ -29,7 +29,7 @@ abstract class TPOShortcodesCacheModel {
     public function deleteCache($post_id){
         global $wpdb;
         $cacheKey = '';
-        $cacheKey = "_".KPDPlUGIN_NAME."_".get_post_type()."_".$post_id;
+        $cacheKey = "_".TPOPlUGIN_NAME."_".get_post_type()."_".$post_id;
         $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
     }
 

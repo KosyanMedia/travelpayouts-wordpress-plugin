@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 13:38
  */
-
-class TPPopularRoutesWidgetController extends TPWigetsShortcodesController{
+namespace app\includes\controllers\site\widgets;
+class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
     {
@@ -21,7 +21,7 @@ class TPPopularRoutesWidgetController extends TPWigetsShortcodesController{
         $widgets = 6;
         $defaults = array(
             'destination' => false,
-            'width' => TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";

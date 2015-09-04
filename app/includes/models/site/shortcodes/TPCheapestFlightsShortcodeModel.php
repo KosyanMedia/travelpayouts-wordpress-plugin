@@ -6,7 +6,7 @@
  * Time: 10:33
  */
 namespace app\includes\models\site\shortcodes;
-class TPCheapestFlightsShortcodeModel extends \app\includes\controllers\site\TPShortcodesChacheModel{
+class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
     /**
      * @param array $args
      * @return array|bool

@@ -11,7 +11,7 @@ class TPDirectFlightsShortcodeController extends \app\includes\controllers\site\
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPDirectFlightsShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPDirectFlightsShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

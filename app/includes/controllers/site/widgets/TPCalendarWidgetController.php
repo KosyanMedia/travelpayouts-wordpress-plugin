@@ -5,8 +5,8 @@
  * Date: 13.08.15
  * Time: 13:27
  */
-
-class TPCalendarWidgetController  extends TPWigetsShortcodesController{
+namespace app\includes\controllers\site\widgets;
+class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
     {
@@ -20,12 +20,12 @@ class TPCalendarWidgetController  extends TPWigetsShortcodesController{
         $widgets = 3;
         $origin_i = '';
         $destination_i = '';
-        if(!empty(TPPlugin::$options['widgets'][$widgets]['origin'])){
-            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
+        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin'])){
+            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
             $origin_i = $origin_iata[1];
         }
-        if(!empty(TPPlugin::$options['widgets'][$widgets]['destination'])){
-            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
+        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination'])){
+            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
             $destination_i = $destination_iata[1];
         }
         $defaults = array(
@@ -33,11 +33,11 @@ class TPCalendarWidgetController  extends TPWigetsShortcodesController{
             'destination' => $destination_i,
             'direct' => 'false',
             'one_way' => 'false',
-            'width' => TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $period_day_from = TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
-        $period_day_to = TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
+        $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
+        $period_day_to = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
 
         $output = '';
@@ -45,7 +45,7 @@ class TPCalendarWidgetController  extends TPWigetsShortcodesController{
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
             .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.$this->view->locale
-            .'&period='.TPPlugin::$options['widgets'][$widgets]['period'].'&range='.$period_day_from.'%2C'.$period_day_to.'"
+            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period'].'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script>';
         return $output;
     }

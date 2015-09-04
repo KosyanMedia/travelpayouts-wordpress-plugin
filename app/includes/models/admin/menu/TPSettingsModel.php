@@ -19,7 +19,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
         // TODO: Implement create_option() method.
         register_setting(
             'TPSettings',
-            KPDPlUGIN_OPTION_NAME,
+            TPOPlUGIN_OPTION_NAME,
             array(&$this,'save_option')
         );
         $field = new TPFieldSettings();
@@ -36,20 +36,20 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
 
     public function exportSettings(){
         /*$export = json_encode(TPPlugin::$options);
-        $fileName = KPDPlUGIN_NAME."Settings.txt";
+        $fileName = TPOPlUGIN_NAME."Settings.txt";
         $file = fopen($fileName , "w");
-        chmod(KPDPlUGIN_DIR."/".KPDPlUGIN_NAME."Settings.txt", 0777);
+        chmod(TPOPlUGIN_DIR."/".TPOPlUGIN_NAME."Settings.txt", 0777);
         fwrite($file, $export);
         fclose($file);
 
-        echo  KPDPlUGIN_URL.KPDPlUGIN_NAME."Settings.txt";*/
+        echo  TPOPlUGIN_URL.TPOPlUGIN_NAME."Settings.txt";*/
         $export = json_encode(TPPlugin::$options);
 
         echo $export;
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
-            update_option( KPDPlUGIN_OPTION_NAME, $_POST['value']);
+            update_option( TPOPlUGIN_OPTION_NAME, $_POST['value']);
             TPPlugin::deleteCacheAll();
         }
         //error_log(print_r($_POST, true));
@@ -63,7 +63,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
             $options = json_decode($data,true);
             error_log(print_r($options,true));
             if(is_array($options)){
-                update_option( KPDPlUGIN_OPTION_NAME, $options);
+                update_option( TPOPlUGIN_OPTION_NAME, $options);
             }
         }*/
     }

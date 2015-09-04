@@ -11,7 +11,7 @@ class TPShortcodesView {
     public function __construct() {
         add_action( 'wp', array( &$this, 'redirect_plugins') );
         add_filter( 'human_time_diff', array( &$this, 'tpHumanTimeDiff') , 10, 4);
-        switch (TPPlugin::$options['local']['localization']){
+        switch (\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 $this->local = 'ru';
                 break;
@@ -37,10 +37,10 @@ class TPShortcodesView {
                         <div class="table-section">
                             '.$title.'
                             <table class="w-table display '.$sortable_class.'"
-                                data-paginate="'.TPPlugin::$options['shortcodes'][$type]['paginate'].'">
+                                data-paginate="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'">
                                 <thead>
                                     <tr>';
-        foreach(TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
+        foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
             $class_sort = "";
             if($key == 0)
                 $class_sort = "TPTableTbodyTdSort";
@@ -50,39 +50,39 @@ class TPShortcodesView {
                     //Дата возвращения
                 case "return_at":
                     $output .= '<td class="TPTableHead ' . $class_sort . ' tp-date-column">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
                 //Дата поиска
                 case "found_at":
                     $output .= '<td class="TPTableHead ' . $class_sort . ' tp-found-column">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
                 case "price":
                     $output .= '<td class="TPTableHead ' . $class_sort . ' tp-price-column">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
                 case 'place':
                     $output .= '<td class="TPTableHead ' . $class_sort . ' TPPlaceTD">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
                 case 'direction':
                     $output .= '<td class="TPTableHead ' . $class_sort . ' TPDirectionTD">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
                 case 'airline_logo':
                     $output .= '<td class="TPTableHead ' . $class_sort . ' TPAirlineLogoTD">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
 
                 default:
                     $output .= '<td class="TPTableHead ' . $class_sort . '">' .
-                        TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
             }
@@ -96,13 +96,13 @@ class TPShortcodesView {
             $count_row++;
             $output .= '<tr class="TPTableTbodyTr">';
             $count = 0;
-            foreach(TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
+            foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
                 $button = "";
                 $count++;
                 /*
                  * Buttton
                  */
-                if($count == count(TPPlugin::$options['shortcodes'][$type]['selected'])){
+                if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'])){
                     switch($type){
                         case 1:
                             $button = $this->return_link(array(
@@ -286,8 +286,8 @@ class TPShortcodesView {
                     //Лого авиакомпании
                     case "airline_logo":
                         $output .= '<td class="TPTableTbodyTd">
-                                                                        <img src="http://pics.avs.io/'.TPPlugin::$options['config']['airline_logo_size']['width']
-                            .'/'.TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">
+                                                                        <img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
+                            .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">
                                                                         '.$button.
                             '</td>';
                         break;
@@ -371,7 +371,7 @@ class TPShortcodesView {
     public function tpNumberChangesView($numberChanges){
         switch($numberChanges){
             case 0:
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $numberChanges = "Без пересадок";
                         break;
@@ -381,7 +381,7 @@ class TPShortcodesView {
                 }
                 break;
             case 1:
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $numberChanges = $numberChanges." пересадка";
                         break;
@@ -391,7 +391,7 @@ class TPShortcodesView {
                 }
                 break;
             case 2:
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $numberChanges = $numberChanges." пересадки";
                         break;
@@ -408,9 +408,9 @@ class TPShortcodesView {
      * @return int
      */
     public function tpDistanceView($distance = 0){
-        switch(TPPlugin::$options['config']['distance']){
+        switch(\app\includes\TPPlugin::$options['config']['distance']){
             case 1:
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $distance = $distance." км";
                         break;
@@ -420,7 +420,7 @@ class TPShortcodesView {
                 }
                 break;
             case 2:
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $distance = ($distance * 0.62137)." м";
                         break;
@@ -438,7 +438,7 @@ class TPShortcodesView {
      */
     public function returnTripClass($trip_class){
         $class = '';
-        switch (TPPlugin::$options['local']['localization']){
+        switch (\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 switch($trip_class){
                     case "0":
@@ -480,14 +480,14 @@ class TPShortcodesView {
      */
     public function returnTitle($title, $type, $origin, $destination, $airline){
         if(empty($title)) {
-            $title = TPPlugin::$options['shortcodes'][$type]['title'][$this->local];
-            if(TPPlugin::$options['local']['title_case']['destination'] == 'vi'){
+            $title = \app\includes\TPPlugin::$options['shortcodes'][$type]['title'][$this->local];
+            if(\app\includes\TPPlugin::$options['local']['title_case']['destination'] == 'vi'){
                 $title = str_replace('в destination', 'destination', $title);
             }
         }
         if(!empty($title)){
             if(empty($airline)){
-                switch(TPPlugin::$options['local']['localization']){
+                switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case "1":
                         if(strpos($title, 'origin') !== false){
                             $title = str_replace('origin', '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' , $title);
@@ -511,7 +511,7 @@ class TPShortcodesView {
                 }
             }
         }
-        return '<'.TPPlugin::$options['shortcodes'][$type]['tag'].' class="TP-TitleTablezs">'.$title.'</'.TPPlugin::$options['shortcodes'][$type]['tag'].'>';
+        return '<'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].' class="TP-TitleTablezs">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].'>';
 
     }
 
@@ -524,21 +524,21 @@ class TPShortcodesView {
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'link_text' => '', 'price' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $link_text = "<span>".TPPlugin::$options['shortcodes'][$type]['title_button'][$this->local]."</span>";
+        $link_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$type]['title_button'][$this->local]."</span>";
         if(!empty($link_text)){
             if(strpos($link_text, 'price') !== false){
                 $link_text = str_replace('price', $price, $link_text);
                 $link_text .= $this->currencyView();
             }
         }
-        $white_label = TPPlugin::$options['account']['white_label'];
+        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
             if(strpos($white_label, 'http') === false){
                 $white_label = 'http://'.$white_label;
             }
         }
         if( ! $white_label || empty( $white_label ) ){
-            switch (TPPlugin::$options['local']['localization']){
+            switch (\app\includes\TPPlugin::$options['local']['localization']){
                 case 1:
                     $white_label = 'http://engine.aviasales.ru';
                     break;
@@ -547,21 +547,21 @@ class TPShortcodesView {
                     break;
             }
         }
-        $marker = TPPlugin::$options['account']['marker'];
+        $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
-        if(!empty(TPPlugin::$options['account']['extra_marker']))
-            $marker = $marker .'.'.TPPlugin::$options['account']['extra_marker'];
-        if(!empty(TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
-            $marker = $marker.'_'.TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
+        if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
+            $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
+        if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
+            $marker = $marker.'_'.\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
         $marker = $marker.'.$69';
-        if( (int) TPPlugin::$options['config']['after_url'] == 1 )
+        if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
             $marker = $marker . '&with_request=true';
         $rel = '';
-        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        if(isset(\app\includes\TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
         $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        if(isset(\app\includes\TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect'])){
+        if(isset(\app\includes\TPPlugin::$options['config']['redirect'])){
             $redirect = true;
         }
 
@@ -595,7 +595,7 @@ class TPShortcodesView {
      * @return string
      */
     public function currencyView(){
-        switch(TPPlugin::$options['local']['currency']){
+        switch(\app\includes\TPPlugin::$options['local']['currency']){
             case "1":
                 $currency = '<i class="TPCurrencyIco" >i</i>';
 
@@ -638,7 +638,7 @@ class TPShortcodesView {
      * @return bool|string
      */
     public function tpDate($time = "") {
-        $format = (!empty(TPPlugin::$options['config']['format_date'])) ? TPPlugin::$options['config']['format_date'] : "d.m.Y";
+        $format = (!empty(\app\includes\TPPlugin::$options['config']['format_date'])) ? \app\includes\TPPlugin::$options['config']['format_date'] : "d.m.Y";
         $translate = array(
             "am" => "дп",
             "pm" => "пп",
@@ -687,7 +687,7 @@ class TPShortcodesView {
             "rd" => "е",
             "th" => "ое"
         );
-        switch(TPPlugin::$options['local']['localization']) {
+        switch(\app\includes\TPPlugin::$options['local']['localization']) {
             case 1:
                 if (!empty($time)) {
                     return strtr(date($format, $time), $translate);
@@ -707,17 +707,17 @@ class TPShortcodesView {
     /** **/
     public function redirect_plugins(){
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect']))
+        if(isset(\app\includes\TPPlugin::$options['config']['redirect']))
             $redirect = true;
         if($redirect){
             if(isset($_GET['searches'])){
-                $white_label = TPPlugin::$options['account']['white_label'];
+                $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
                 if(!empty($white_label)){
                     if(strpos($white_label, 'http') === false){
                         $white_label = 'http://'.$white_label;
                     }
                 }else{
-                    switch (TPPlugin::$options['local']['localization']){
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'http://engine.aviasales.ru';
                             break;
@@ -745,7 +745,7 @@ class TPShortcodesView {
      * @return string
      */
     public function tpHumanTimeDiff($since, $diff, $from, $to) {
-        switch(TPPlugin::$options['local']['localization']){
+        switch(\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 $seconds = array( 'секунда', 'секунды', 'секунд' );
                 $minutes = array( 'минута', 'минуты', 'минут' );
@@ -805,7 +805,7 @@ class TPShortcodesView {
             $since = sprintf( '%s '.$this->getPhrase($years, $phrase[6]), $years );
             //$since = sprintf( _n( '%s year', '%s years', $years ), $years );
         }
-        switch(TPPlugin::$options['local']['localization']) {
+        switch(\app\includes\TPPlugin::$options['local']['localization']) {
             case 1:
                 return $since." назад";
                 break;
@@ -823,7 +823,7 @@ class TPShortcodesView {
      */
     public function getPhrase( $number, $titles ) {
         $cases = array( 2, 0, 1, 1, 1, 2 );
-        switch(TPPlugin::$options['local']['localization']) {
+        switch(\app\includes\TPPlugin::$options['local']['localization']) {
             case 1:
                 return $titles[($number % 100 > 4 && $number % 100 < 20) ? 2 : $cases[min($number % 10, 5)]];
                 break;

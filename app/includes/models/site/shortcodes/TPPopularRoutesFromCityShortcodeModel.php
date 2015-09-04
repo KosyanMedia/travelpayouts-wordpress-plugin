@@ -6,7 +6,7 @@
  * Time: 12:33
  */
 namespace app\includes\models\site\shortcodes;
-class TPPopularRoutesFromCityShortcodeModel extends TPShortcodesChacheModel{
+class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {

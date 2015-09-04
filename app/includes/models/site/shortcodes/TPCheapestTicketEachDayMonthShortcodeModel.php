@@ -6,7 +6,7 @@
  * Time: 12:27
  */
 namespace app\includes\models\site\shortcodes;
-class TPCheapestTicketEachDayMonthShortcodeModel extends TPShortcodesChacheModel{
+class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {

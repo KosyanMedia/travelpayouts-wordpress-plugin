@@ -21,11 +21,11 @@ class TPRequestApi {
             $this->status = false;
             /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
                 'class_notice' => 'error',
-                'title_notice' => __('Plugin '.KPDPlUGIN_NAME.' returned an error', KPDPlUGIN_TEXTDOMAIN),
-                'message_notice' => __('The settings are not tasks', KPDPlUGIN_TEXTDOMAIN),
+                'title_notice' => __('Plugin '.TPOPlUGIN_NAME.' returned an error', TPOPlUGIN_TEXTDOMAIN),
+                'message_notice' => __('The settings are not tasks', TPOPlUGIN_TEXTDOMAIN),
                 'link_notice' => array(
                     'url' => admin_url('admin.php?page=tp_control_settings'),
-                    'title' => __('Set the options', KPDPlUGIN_TEXTDOMAIN)
+                    'title' => __('Set the options', TPOPlUGIN_TEXTDOMAIN)
                 ),
             ));*/
             //new TPAdminNotice("error", "Настройки не заданы.");
@@ -33,14 +33,14 @@ class TPRequestApi {
         }elseif( ! isset( TPPlugin::$options['account']['marker'] ) || empty( TPPlugin::$options['account']['marker'] )
             || ! is_string( TPPlugin::$options['account']['marker'] ) ) {
             $this->status = false;
-            //_e('Marker missing or incorrect', KPDPlUGIN_TEXTDOMAIN);
+            //_e('Marker missing or incorrect', TPOPlUGIN_TEXTDOMAIN);
             /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
                 'class_notice' => 'error',
-                'title_notice' => __('Plugin '.KPDPlUGIN_NAME.' returned an error', KPDPlUGIN_TEXTDOMAIN),
-                'message_notice' => __('Marker missing or incorrect', KPDPlUGIN_TEXTDOMAIN),
+                'title_notice' => __('Plugin '.TPOPlUGIN_NAME.' returned an error', TPOPlUGIN_TEXTDOMAIN),
+                'message_notice' => __('Marker missing or incorrect', TPOPlUGIN_TEXTDOMAIN),
                 'link_notice' => array(
                     'url' => admin_url('admin.php?page=tp_control_settings'),
-                    'title' => __('Set the options', KPDPlUGIN_TEXTDOMAIN)
+                    'title' => __('Set the options', TPOPlUGIN_TEXTDOMAIN)
                 ),
             ));*/
             //new TPAdminNotice("error", "Маркер не указан или указан не верно.");
@@ -463,16 +463,16 @@ class TPRequestApi {
      */
     public function get_error( $error ) {
         $errors = array(
-            'origin'        =>  __( 'The variable $origin parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'destination'   =>  __( 'The variable $destination parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'currency'      =>  __( 'The variable $currency parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'departure_at'  =>  __( 'The variable $departure_at parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'calendar_type' =>  __( 'The variable $calendar_type parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'return_at'     =>  __( 'The variable $return_at parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
-            'airline'       =>  __( 'The variable $airline parameters not set or incorrectly.', KPDPlUGIN_TEXTDOMAIN ),
+            'origin'        =>  __( 'The variable $origin parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'destination'   =>  __( 'The variable $destination parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'currency'      =>  __( 'The variable $currency parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'departure_at'  =>  __( 'The variable $departure_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'calendar_type' =>  __( 'The variable $calendar_type parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'return_at'     =>  __( 'The variable $return_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'airline'       =>  __( 'The variable $airline parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
         );
         if( ! empty( $error ) && isset( $errors[$error] ) )
             return $errors[$error];
-        return __( 'Unknown error.', KPDPlUGIN_TEXTDOMAIN );
+        return __( 'Unknown error.', TPOPlUGIN_TEXTDOMAIN );
     }
 }

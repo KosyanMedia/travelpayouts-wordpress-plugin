@@ -1,4 +1,4 @@
-<div id="constructorSearchFormModal" title="<?php _e('Constructor search form', KPDPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
+<div id="constructorSearchFormModal" title="<?php _e('Constructor search form', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_search_form">
@@ -21,8 +21,8 @@
                         </label>
                     <?php } ?>
                 <?php } else{
-                    _e("No customized search form. ", KPDPlUGIN_TEXTDOMAIN);
-                    ?><a href="admin.php?page=tp_control_search_shortcodes"><?php _e("Go to setting.", KPDPlUGIN_TEXTDOMAIN); ?></a><?php
+                    _e("No customized search form. ", TPOPlUGIN_TEXTDOMAIN);
+                    ?><a href="admin.php?page=tp_control_search_shortcodes"><?php _e("Go to setting.", TPOPlUGIN_TEXTDOMAIN); ?></a><?php
                 } ?>
             </td>
         </tr>
@@ -30,14 +30,14 @@
             <td>
                 <input type="text" name="origin_search_form" id="origin_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _e('City of departure default', KPDPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _e('City of departure default', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_destination_search_form">
             <td>
                 <input type="text" name="destination_search_form" id="destination_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _e('City Arrival default', KPDPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _e('City Arrival default', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
     </table>

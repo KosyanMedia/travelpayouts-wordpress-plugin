@@ -12,7 +12,7 @@ class TPPriceCalendarWeekShortcodeController extends \app\includes\controllers\s
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPPriceCalendarWeekShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPPriceCalendarWeekShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

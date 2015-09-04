@@ -11,7 +11,7 @@ class TPInOurCityFlyShortcodeController extends \app\includes\controllers\site\T
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPInOurCityFlyShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPInOurCityFlyShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

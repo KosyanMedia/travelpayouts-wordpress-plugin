@@ -11,7 +11,7 @@ class TPCheapestTicketEachDayMonthShortcodeController extends \app\includes\cont
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new TPCheapestTicketEachDayMonthShortcodeModel();
+        $this->model = new \app\includes\models\site\shortcodes\TPCheapestTicketEachDayMonthShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
     public function initShortcode()

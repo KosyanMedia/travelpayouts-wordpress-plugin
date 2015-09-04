@@ -19,8 +19,8 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
         // TODO: Implement action() method.
         // TODO: Implement action() method.
         add_submenu_page( null,
-            _x('Wizard',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
-            _x('Wizard',  'add_menu_page page title', KPDPlUGIN_TEXTDOMAIN ),
+            _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_wizard',
             array(&$this, 'render'));
@@ -47,7 +47,7 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
                 break;
         }
         // TODO: Implement render() method.
-        $pathView = KPDPlUGIN_DIR."/app/includes/views/admin/menu/TPWizard.view.php";
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWizard.view.php";
         parent::loadView($pathView);
     }
 }

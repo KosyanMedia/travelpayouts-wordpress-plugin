@@ -5,7 +5,7 @@
  * Date: 27.08.15
  * Time: 10:32
  */
-
+namespace app\includes\models\site;
 class TPAutocomplete {
     private static $instance = null;
     public static $data;
@@ -23,7 +23,7 @@ class TPAutocomplete {
         return self::$instance;
     }
     private function getIataAutocomplete(){
-        $cities = file_get_contents(KPDPlUGIN_DIR.'/app/public/autocomplete/cities.json');
+        $cities = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/cities.json');
         $cities = json_decode($cities, true);
         foreach($cities as $value){
             $rows[$value['code']] = $value;
@@ -31,13 +31,13 @@ class TPAutocomplete {
         self::$data = $rows;
     }
     private function getIataAutocompleteTitle(){
-        $cases = file_get_contents(KPDPlUGIN_DIR.'/app/public/autocomplete/case.json');
+        $cases = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/case.json');
         $cases = json_decode($cases, true);
 
         self::$title = $cases[0];
     }
     private function getIataAutocompleteAir(){
-        $airlines = file_get_contents(KPDPlUGIN_DIR.'/app/public/autocomplete/airlines.json');
+        $airlines = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/airlines.json');
         $airlines = json_decode($airlines, true);
         foreach($airlines as $value){
             $rows[$value['iata']] = $value;

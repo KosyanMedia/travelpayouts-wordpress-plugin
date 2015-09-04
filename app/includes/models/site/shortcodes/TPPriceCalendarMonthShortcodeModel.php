@@ -6,7 +6,7 @@
  * Time: 12:05
  */
 namespace app\includes\models\site\shortcodes;
-class TPPriceCalendarMonthShortcodeModel extends TPShortcodesChacheModel{
+class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {

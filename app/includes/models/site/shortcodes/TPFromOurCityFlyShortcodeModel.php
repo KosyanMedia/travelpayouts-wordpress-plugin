@@ -6,7 +6,7 @@
  * Time: 12:47
  */
 namespace app\includes\models\site\shortcodes;
-class TPFromOurCityFlyShortcodeModel extends TPShortcodesChacheModel{
+class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
 
     public function get_data($args = array())
     {
