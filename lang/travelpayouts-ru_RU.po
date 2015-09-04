@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-09-04 14:32+0300\n"
+"POT-Creation-Date: 2015-09-04 17:03+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -27,14 +27,14 @@ msgstr ""
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:62
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:99
-#: app/includes/models/admin/menu/TPFieldSettings.php:406
+#: app/includes/models/admin/menu/TPFieldSettings.php:407
 msgid "Destination"
 msgstr "Куда"
 
 #: app/includes/TPLoaderScripts.php:188
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:56
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
-#: app/includes/models/admin/menu/TPFieldSettings.php:383
+#: app/includes/models/admin/menu/TPFieldSettings.php:384
 msgid "Origin"
 msgstr "Откуда"
 
@@ -1134,97 +1134,101 @@ msgid "month (3 letters)"
 msgstr "месяц 3 буквами"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:249
+msgid "month (3 small letters)"
+msgstr "месяц 3 буквами (с маленькой буквы)"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:250
 msgid "last 2 digits of the year"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:250
+#: app/includes/models/admin/menu/TPFieldSettings.php:251
 msgid "year"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:263
+#: app/includes/models/admin/menu/TPFieldSettings.php:264
 msgid "Current format"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:273
+#: app/includes/models/admin/menu/TPFieldSettings.php:274
 msgid "Import settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:277
+#: app/includes/models/admin/menu/TPFieldSettings.php:278
 msgid "Browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:280
+#: app/includes/models/admin/menu/TPFieldSettings.php:281
 msgid "Import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:281
+#: app/includes/models/admin/menu/TPFieldSettings.php:282
 msgid "The file is not selected"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:284
+#: app/includes/models/admin/menu/TPFieldSettings.php:285
 msgid "Export"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:300
+#: app/includes/models/admin/menu/TPFieldSettings.php:301
 msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:303
+#: app/includes/models/admin/menu/TPFieldSettings.php:304
 #: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:306
+#: app/includes/models/admin/menu/TPFieldSettings.php:307
 #: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:311
+#: app/includes/models/admin/menu/TPFieldSettings.php:312
 #: app/includes/models/admin/menu/TPFieldWizard.php:63
 msgid "Currency"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:314
+#: app/includes/models/admin/menu/TPFieldSettings.php:315
 #: app/includes/models/admin/menu/TPFieldWizard.php:67
 msgid "Ruble"
 msgstr "Рубль"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:317
+#: app/includes/models/admin/menu/TPFieldSettings.php:318
 #: app/includes/models/admin/menu/TPFieldWizard.php:70
 msgid "US dollar"
 msgstr "доллар США"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:320
+#: app/includes/models/admin/menu/TPFieldSettings.php:321
 #: app/includes/models/admin/menu/TPFieldWizard.php:73
 msgid "Euro"
 msgstr "Евро"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:330
+#: app/includes/models/admin/menu/TPFieldSettings.php:331
 msgid "Fields"
 msgstr "Названия ячеек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:389
-#: app/includes/models/admin/menu/TPFieldSettings.php:412
+#: app/includes/models/admin/menu/TPFieldSettings.php:390
+#: app/includes/models/admin/menu/TPFieldSettings.php:413
 msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:392
-#: app/includes/models/admin/menu/TPFieldSettings.php:415
+#: app/includes/models/admin/menu/TPFieldSettings.php:393
+#: app/includes/models/admin/menu/TPFieldSettings.php:416
 msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:395
-#: app/includes/models/admin/menu/TPFieldSettings.php:418
+#: app/includes/models/admin/menu/TPFieldSettings.php:396
+#: app/includes/models/admin/menu/TPFieldSettings.php:419
 msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:398
-#: app/includes/models/admin/menu/TPFieldSettings.php:421
+#: app/includes/models/admin/menu/TPFieldSettings.php:399
+#: app/includes/models/admin/menu/TPFieldSettings.php:422
 msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:401
-#: app/includes/models/admin/menu/TPFieldSettings.php:424
+#: app/includes/models/admin/menu/TPFieldSettings.php:402
+#: app/includes/models/admin/menu/TPFieldSettings.php:425
 msgid "Prepositional"
 msgstr "Предложный"
 

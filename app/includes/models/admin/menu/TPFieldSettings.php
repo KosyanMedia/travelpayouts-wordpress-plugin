@@ -246,6 +246,7 @@ class TPFieldSettings {
                                          <li>F - <?php _e('month name (capital letters)', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>m - <?php _e('month number', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>M - <?php _e('month (3 letters)', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>mm - <?php _e('month (3 small letters)', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>y - <?php _e('last 2 digits of the year', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                          <li>Y - <?php _e('year', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                      </ul>
@@ -261,7 +262,7 @@ class TPFieldSettings {
                     </label>
                     <span class="TPSpanFormatDate">
                         <?php _e('Current format', TPOPlUGIN_TEXTDOMAIN); ?>:
-                        <?php  echo date_i18n(\app\includes\TPPlugin::$options['config']['format_date']); ?>
+                        <?php  echo $this->tpDate(); ?>
                     </span>
                 </div>
                 <div class="ItemSub">
@@ -426,5 +427,94 @@ class TPFieldSettings {
             </select>
         </label>
     <?php
+    }
+    /**
+     * @param string $time
+     * @return bool|string
+     */
+    public function tpDate($time = "") {
+        $format = (!empty(\app\includes\TPPlugin::$options['config']['format_date'])) ? \app\includes\TPPlugin::$options['config']['format_date'] : "d.m.Y";
+        $translate = array(
+            "am" => "дп",
+            "pm" => "пп",
+            "AM" => "ДП",
+            "PM" => "ПП",
+            "Monday" => "Понедельник",
+            "Mon" => "Пн",
+            "Tuesday" => "Вторник",
+            "Tue" => "Вт",
+            "Wednesday" => "Среда",
+            "Wed" => "Ср",
+            "Thursday" => "Четверг",
+            "Thu" => "Чт",
+            "Friday" => "Пятница",
+            "Fri" => "Пт",
+            "Saturday" => "Суббота",
+            "Sat" => "Сб",
+            "Sunday" => "Воскресенье",
+            "Sun" => "Вс",
+            "January" => "Января",
+            "Jan" => "Янв",
+            "February" => "Февраля",
+            "Feb" => "Фев",
+            "March" => "Марта",
+            "Mar" => "Мар",
+            "April" => "Апреля",
+            "Apr" => "Апр",
+            "May" => "Мая",
+            "May" => "Мая",
+            "June" => "Июня",
+            "Jun" => "Июн",
+            "July" => "Июля",
+            "Jul" => "Июл",
+            "August" => "Августа",
+            "Aug" => "Авг",
+            "September" => "Сентября",
+            "Sep" => "Сен",
+            "October" => "Октября",
+            "Oct" => "Окт",
+            "November" => "Ноября",
+            "Nov" => "Ноя",
+            "December" => "Декабря",
+            "Dec" => "Дек",
+            "st" => "ое",
+            "nd" => "ое",
+            "rd" => "е",
+            "th" => "ое"
+        );
+        switch(\app\includes\TPPlugin::$options['local']['localization']) {
+            case 1:
+
+                if (!empty($time)) {
+                    if(strpos($format, 'f') !== false){
+                        $format = str_replace("f", "F", $format);
+                        return  mb_strtolower(strtr(date($format, $time), $translate));
+                    }elseif(strpos($format, 'mm') !== false){
+                        $format = str_replace("mm", "M", $format);
+                        return  mb_strtolower(strtr(date($format, $time), $translate));
+                    }else{
+                        return strtr(date($format, $time), $translate);
+                    }
+
+                } else {
+                    if(strpos($format, 'f') !== false){
+                        $format = str_replace("f", "F", $format);
+                        return  mb_strtolower(strtr(date($format), $translate));
+                    }elseif(strpos($format, 'mm') !== false){
+                        $format = str_replace("mm", "M", $format);
+                        return  mb_strtolower(strtr(date($format), $translate));
+                    }else{
+                        return strtr(date($format), $translate);
+                    }
+                }
+                break;
+            case 2:
+                if (!empty($time)) {
+                    return date($format, $time);
+                } else {
+                    return date($format);
+                }
+                break;
+        }
     }
 }

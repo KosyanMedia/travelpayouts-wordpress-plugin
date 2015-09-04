@@ -74,7 +74,7 @@ class TPDefault implements  \core\TPODefault{
                     'height' => 35
                 ),
                 'distance' => 1,
-                'format_date' => 'd.m.y',
+                'format_date' => 'd.m.Y',
             ),
             'local' => array(
                 'localization' => $localization,

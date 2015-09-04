@@ -689,10 +689,28 @@ class TPShortcodesView {
         );
         switch(\app\includes\TPPlugin::$options['local']['localization']) {
             case 1:
+
                 if (!empty($time)) {
-                    return strtr(date($format, $time), $translate);
+                    if(strpos($format, 'f') !== false){
+                        $format = str_replace("f", "F", $format);
+                        return  mb_strtolower(strtr(date($format, $time), $translate));
+                    }elseif(strpos($format, 'mm') !== false){
+                        $format = str_replace("mm", "M", $format);
+                        return  mb_strtolower(strtr(date($format, $time), $translate));
+                    }else{
+                        return strtr(date($format, $time), $translate);
+                    }
+
                 } else {
-                    return strtr(date($format), $translate);
+                    if(strpos($format, 'f') !== false){
+                        $format = str_replace("f", "F", $format);
+                        return  mb_strtolower(strtr(date($format), $translate));
+                    }elseif(strpos($format, 'mm') !== false){
+                        $format = str_replace("mm", "M", $format);
+                        return  mb_strtolower(strtr(date($format), $translate));
+                    }else{
+                        return strtr(date($format), $translate);
+                    }
                 }
                 break;
             case 2:
