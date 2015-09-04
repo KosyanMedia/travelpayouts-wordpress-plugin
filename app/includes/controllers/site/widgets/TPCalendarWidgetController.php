@@ -45,8 +45,10 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
             .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.$this->view->locale
-            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period'].'&range='.$period_day_from.'%2C'.$period_day_to.'"
+            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
+            .'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script>';
+        error_log($output);
         return $output;
     }
 }

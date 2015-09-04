@@ -68,9 +68,10 @@ class TPWidgetsView {
     public function getWhiteLabel($widgetType = false){
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
-            if(strpos($white_label, 'http') === false){
-                $white_label = 'http://'.$white_label;
-            }
+            $white_label = parse_url($white_label);
+            $white_label = $white_label['host'];
+
+
         }
         switch($widgetType){
             case 1:
@@ -83,6 +84,8 @@ class TPWidgetsView {
                             $white_label = 'http://map.jetradar.com';
                             break;
                     }
+                }else{
+                    $white_label .= '/map';
                 }
                 break;
             case 2:
@@ -95,6 +98,8 @@ class TPWidgetsView {
                             $white_label = 'hotellook.com';
                             break;
                     }
+                }else{
+                    $white_label .= '/hotels';
                 }
                 break;
             case 3:
@@ -107,6 +112,8 @@ class TPWidgetsView {
                             $white_label = 'hydra.jetradar.com';
                             break;
                     }
+                }else{
+                    $white_label .= '/flights';
                 }
                 break;
             case 4:
@@ -124,6 +131,8 @@ class TPWidgetsView {
                             $white_label = 'hotellook.com';
                             break;
                     }
+                }else{
+                    $white_label .= '/hotels';
                 }
                 break;
             case 6:

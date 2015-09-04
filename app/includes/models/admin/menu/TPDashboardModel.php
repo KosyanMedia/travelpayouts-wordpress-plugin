@@ -67,7 +67,7 @@ class TPDashboardModel {
         $TPRss = array();
         if ( false === ( $TPRss = get_transient($cacheKey) ) ) {
             try {
-                $sxml = simplexml_load_file("http://blog.travelpayouts.com/feed", 'SimpleXMLElement', LIBXML_NOCDATA);
+                $sxml = @simplexml_load_file("http://blog.travelpayouts.com/feed/", 'SimpleXMLElement', LIBXML_NOCDATA);
                 if ($sxml !== false) {
                     $TPRss['data'] = \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
                     set_transient($cacheKey, $TPRss, HOUR_IN_SECONDS * 12);

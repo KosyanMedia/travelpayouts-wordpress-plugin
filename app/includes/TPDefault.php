@@ -74,7 +74,7 @@ class TPDefault implements  \core\TPODefault{
                     'height' => 35
                 ),
                 'distance' => 1,
-                'format_date' => 'd F Y',
+                'format_date' => 'd.m.y',
             ),
             'local' => array(
                 'localization' => $localization,
@@ -490,7 +490,6 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Найти билет от price'
                     ),
                     'selected' => array(
-                        'found_at',
                         'origin',
                         'destination',
                         'departure_at',
@@ -526,7 +525,6 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Найти билет от price'
                     ),
                     'selected' => array(
-                        'found_at',
                         'destination',
                         'departure_at',
                         'return_at',
@@ -562,7 +560,6 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Найти билет от price'
                     ),
                     'selected' => array(
-                        'found_at',
                         'origin',
                         'departure_at',
                         'return_at',

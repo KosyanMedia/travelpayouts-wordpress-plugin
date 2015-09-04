@@ -80,7 +80,7 @@ class TPLoader extends \core\TPOLoader{
                         <div class="TP-Activate_button_container">
                             <div class="TP-Activate_button_border">
                                 <div class="TP-Activate_button">
-                                    <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features.', TPOPlUGIN_TEXTDOMAIN).'</a>
+                                    <a href="admin.php?page=tp_control_wizard">'.__('Set details and enable plugin features', TPOPlUGIN_TEXTDOMAIN).'</a>
                                 </div>
                             </div>
                         </div>

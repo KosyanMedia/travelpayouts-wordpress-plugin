@@ -43,14 +43,14 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
         fclose($file);
 
         echo  TPOPlUGIN_URL.TPOPlUGIN_NAME."Settings.txt";*/
-        $export = json_encode(TPPlugin::$options);
+        $export = json_encode( \app\includes\TPPlugin::$options);
 
         echo $export;
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
             update_option( TPOPlUGIN_OPTION_NAME, $_POST['value']);
-            TPPlugin::deleteCacheAll();
+            \app\includes\TPPlugin::deleteCacheAll();
         }
         //error_log(print_r($_POST, true));
         /*$base64 = $_POST['value'];
