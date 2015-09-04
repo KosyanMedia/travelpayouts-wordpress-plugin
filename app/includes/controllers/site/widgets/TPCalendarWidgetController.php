@@ -48,7 +48,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script>';
-        error_log($output);
+
         return $output;
     }
 }

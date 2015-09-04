@@ -166,10 +166,12 @@ jQuery(function($){
     /** **/
     doc.find('#importFile').change(function() {
         var importFileDiv = $(this).parent('.input_button_style').parent('.TP-NavRow');
+        var fileLabel = importFileDiv.children('.infoFile').text();
         if($(this)[0].files.length == 1){
             importFileDiv.children('.importnBtn').removeClass('disable');
             importFileDiv.children('.importnBtn').attr('id', 'importSettings');
-            importFileDiv.children('.infoFile').hide();
+            //importFileDiv.children('.infoFile').hide();
+            importFileDiv.children('.infoFile').text($(this)[0].files[0].name);
             doc.find('#importSettings').click(function () {
                 var files = $(this).parent('.TP-NavRow').children('.input_button_style').children('#importFile')[0].files;
 
@@ -178,7 +180,8 @@ jQuery(function($){
         }else{
             importFileDiv.children('.importnBtn').addClass('disable');
             importFileDiv.children('.importnBtn').removeAttr('id');
-            importFileDiv.children('.infoFile').show()
+            //importFileDiv.children('.infoFile').show()
+            importFileDiv.children('.infoFile').text(fileLabel);
         }
 
     });
