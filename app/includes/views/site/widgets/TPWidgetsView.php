@@ -68,10 +68,7 @@ class TPWidgetsView {
     public function getWhiteLabel($widgetType = false){
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
-            $white_label = parse_url($white_label);
-            $white_label = $white_label['host'];
-
-
+            $white_label = preg_replace("(^https?://)", "", $white_label );
         }
         switch($widgetType){
             case 1:
