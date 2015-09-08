@@ -12,7 +12,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         // TODO: Implement activation() method.
         if( ! get_option(TPOPlUGIN_OPTION_NAME) )
             update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
-        //TPSearchFormsModel::createTable();
+        models\admin\menu\TPSearchFormsModel::createTable();
     }
 
     static public function deactivation()
@@ -25,7 +25,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     static public function uninstall()
     {
         // TODO: Implement uninstall() method.
-        //TPSearchFormsModel::deleteTable();
+        models\admin\menu\TPSearchFormsModel::deleteTable();
     }
 }
 $TPPlugin = new TPPlugin();

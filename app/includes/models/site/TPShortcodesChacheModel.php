@@ -165,7 +165,8 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
      * @return mixed
      */
     public function sort_dates( $return ) {
-
+        if (!$return)
+            return false;
         usort($return, array(&$this, "cmpSort"));
         $date = '';
         foreach($return as $key=>$item){

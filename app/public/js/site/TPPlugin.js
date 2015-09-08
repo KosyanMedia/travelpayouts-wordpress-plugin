@@ -105,11 +105,15 @@ jQuery(function($) {
      * @param selector
      * @returns {*}
      */
-    function textWidth(text, html, selector){
-        selector.html('<span>'+text+'</span>');
+    function textWidth(text, html_data, selector){
+        console.log(text);
+        console.log(html_data);
+        console.log(selector);
+
+        /*selector.html('<span>'+text+'</span>');
         var width = selector.find('span:first').width();
-        selector.html(html);
-        return width;
+        selector.html(html_data);
+        return width;  */
     }
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){

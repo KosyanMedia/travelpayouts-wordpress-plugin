@@ -1,6 +1,6 @@
-h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0;
-  padding: 0;
+.TP-TitleTablezs h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     -moz-hyphens: none !important;
     -ms-hyphens: none !important;
     -webkit-hyphens: none !important;
+
 }
 .w-table thead tr {
   height: 44px;
@@ -65,7 +66,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
   background: #f2f2f2;
 }
 .w-table tbody tr:nth-child(even) td p:after {
-  background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), #F2F2F2) repeat scroll 0% 0%;
+  /*background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), #F2F2F2) repeat scroll 0% 0%;*/
+    background: transparent !important;
 }
 .w-table tbody tr:hover {
   background: #fff0cc;
@@ -249,4 +251,8 @@ a.paginate_button.current:hover {
     float: left;
     width: 30%;
 
+}
+
+.w-table tbody tr:nth-child(odd) {
+    background: #FFF !important;
 }
