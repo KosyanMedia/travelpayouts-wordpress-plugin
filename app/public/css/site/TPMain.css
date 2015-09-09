@@ -23,7 +23,10 @@
 }
 
 .w-table {
-  width: 100%;
+  width: 100% !important;
+    min-width: 100% !important;
+    display: block;
+    overflow-x: auto;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
     line-height: inherit !important;
