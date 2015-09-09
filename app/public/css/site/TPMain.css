@@ -256,3 +256,11 @@ a.paginate_button.current:hover {
 .w-table tbody tr:nth-child(odd) {
     background: #FFF !important;
 }
+
+p.parrentBtn {
+    overflow: visible !important;
+    position: absolute !important;
+    margin-top: 7px !important;
+    top: 0;
+    right: 10px;
+}

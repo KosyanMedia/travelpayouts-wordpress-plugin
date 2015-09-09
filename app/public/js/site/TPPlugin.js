@@ -45,6 +45,7 @@ jQuery(function($) {
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     }
     doc.ready(function(){
+        doc.find('.btn-table').parent('p').addClass('parrentBtn');
         doc.find('.sortable').each(function () {
             $(this).dataTable( {
                 ordering: true,
@@ -106,7 +107,7 @@ jQuery(function($) {
      * @returns {*}
      */
     function textWidth(text, html_data, selector){
-        console.log(text);
+        /*console.log(text);
         console.log(html_data);
         console.log(selector);
 

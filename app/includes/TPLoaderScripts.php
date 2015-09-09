@@ -214,9 +214,11 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             switch ('<?php echo $locale ?>'){
                 case "ru_RU":
                     tpLocale = 'ru';
-
                     break;
                 case "en_US":
+                    tpLocale = 'en';
+                    break;
+                default :
                     tpLocale = 'en';
                     break;
             }
