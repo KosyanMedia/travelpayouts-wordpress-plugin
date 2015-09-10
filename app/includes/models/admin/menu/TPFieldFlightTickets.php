@@ -78,7 +78,7 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle">
                     <label>
-                        <input class="TP-inColot color" type="text"
+                        <input class="TP-inColot color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][color]"
                                value="<?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['color'] ?>"/>
                         <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>

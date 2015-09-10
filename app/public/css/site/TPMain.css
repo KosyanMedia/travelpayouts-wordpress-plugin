@@ -257,7 +257,7 @@ a.paginate_button.current:hover {
 }
 
 .w-table tbody tr:nth-child(odd) {
-    background: #FFF !important;
+    background: #FFF;
 }
 
 p.parrentBtn {
