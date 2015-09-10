@@ -78,10 +78,10 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle">
                     <label>
-                        <input class="TP-inColot color no-alpha" type="text"
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][color]"
                                value="<?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['color'] ?>"/>
-                        <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                        <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
             </div>
@@ -135,10 +135,10 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle">
                     <label>
-                        <input class="TP-inColot color" type="text"
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][color]"
                                value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['color'] ?>"/>
-                        <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                        <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
             </div>
@@ -171,10 +171,10 @@ class TPFieldFlightTickets {
                     </label>
                     <div class="TP-ColorStyle TP-ColorStyle--cus">
                         <label>
-                            <input class="TP-inColot color" type="text"
+                            <input class="TP-ColorStyleInput color no-alpha" type="text"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_color]"
                                    value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color'] ?>"/>
-                            <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                            <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                         </label>
                     </div>
                 </div>
@@ -184,10 +184,10 @@ class TPFieldFlightTickets {
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span><?php _e('Background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label class="TP-BackgroundTables">
-                        <input class="TP-inColot color" type="text"
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][background_color]"
                                value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color'] ?>"/>
-                        <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                        <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
 
                     </label>
                 </div>

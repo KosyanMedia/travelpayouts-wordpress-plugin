@@ -2436,3 +2436,8 @@ thead tr td.active-w {
     text-align: right !important;
     margin-left: -5px;
 }
+.TP-ColorStyleInput{
+  height: 40px;
+  font-size: 14px;
+  width: 100px;
+}
