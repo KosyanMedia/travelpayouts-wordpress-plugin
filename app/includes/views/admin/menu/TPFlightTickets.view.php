@@ -24,7 +24,7 @@
             ?>
         </div>
         <div id="tabs-tickets_style">
-            <form action="options.php" class="formSettings" method="POST">
+            <form action="options.php" class="formSettings TPFormNotReload" method="POST">
                 <div class="TPmainContent TP-BalanceContent TP-SettingContent">
                     <?php settings_fields('TPFlightTickets'); ?>
                     <?php do_settings_fields('tp_settings_style_table', 'tp_settings_style_table_id'); ?>

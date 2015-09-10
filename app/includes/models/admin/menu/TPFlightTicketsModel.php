@@ -62,8 +62,8 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
 
     public function tpDefaultTableStyle(){
         if(isset($_POST)){
-            TPPlugin::$options['style_table'] = TPDefault::$defaultTableStyle;
-            update_option(TPOPlUGIN_OPTION_NAME, TPPlugin::$options);
+            \app\includes\TPPlugin::$options['style_table'] = \app\includes\TPDefault::$defaultTableStyle;
+            update_option(TPOPlUGIN_OPTION_NAME, \app\includes\TPPlugin::$options);
         }
     }
 }

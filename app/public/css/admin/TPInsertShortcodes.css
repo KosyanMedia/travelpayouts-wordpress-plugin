@@ -23,3 +23,121 @@
 #constructorSearchFormButton img{
     margin-top: -3px;
 }
+
+
+
+/* WP Theme */
+
+.ui-dialog.TPCustomDialog{
+    position: absolute !important;
+    z-index: 100102 !important;
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 ) !important;
+    box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 ) !important;
+
+}
+
+.TPCustomDialog .ui-dialog-titlebar  {
+    border-color: #fff;
+    background: #fcfcfc !important;
+    border-bottom: 1px solid #dfdfdf !important;
+    height: 36px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 36px !important;
+    padding: 0 36px 0 16px !important;
+    color: #666 !important;
+    border-radius: 0 !important;
+}
+
+.TPCustomDialog .ui-dialog-titlebar-close {
+    background: none !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #666 !important;
+    cursor: pointer !important;
+    display: block !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    text-align: center !important;
+}
+.TPCustomDialog .ui-button{
+    background: none !important;
+    color: #666 !important;
+    border: 1px solid #ccc; !important;
+    border-radius: 3px !important;
+    font-weight: normal !important;
+}
+.TPCustomDialog .ui-dialog-titlebar-close{
+    border: none !important;
+    background: none !important;
+    color: #666 !important;
+    width: 36px !important;
+    height: 36px !important;
+    text-align: center !important;
+}
+
+.TPCustomDialog .ui-dialog-titlebar-close:before {
+    font: normal 20px/1 'dashicons' !important;
+    vertical-align: top !important;
+    speak: none !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    line-height: 36px !important;
+    width: 36px !important;
+    height: 36px !important;
+    content: '\f158' !important;
+}
+
+.TPCustomDialog .ui-dialog-titlebar-close:hover {
+    color: #00a0d2 !important;
+}
+
+.TPCustomDialog .ui-dialog-titlebar-close .ui-button-text{
+    display: none !important;
+}
+
+.TPCustomDialog .ui-dialog-content {
+    padding: 16px !important;
+    overflow: auto !important;
+    color: #444 !important;
+}
+
+.TPCustomDialog .ui-dialog-buttonpane {
+    background: #fcfcfc !important;
+    border-top: 1px solid #dfdfdf !important;
+    padding: 16px !important;
+}
+
+.TPCustomDialog .ui-dialog-buttonpane  .TPCustomDialog .ui-button {
+    margin-left: 16px !important;
+}
+
+.TPCustomDialog .ui-dialog-buttonpane .TPCustomDialog .ui-dialog-buttonset {
+    float: right !important;
+}
+
+.TPCustomDialog .ui-draggable  .TPCustomDialog .ui-dialog-titlebar {
+    cursor: move !important;
+}
+
+.TPCustomDialog .ui-widget-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    min-height: 360px !important;
+    background: #000 !important;
+    opacity: 0.7 !important;
+    filter: alpha(opacity=70) !important;
+    z-index: 100101 !important;
+}
+.TPCustomDialog .ui-icon-closethick {
+    display: none !important;
+}

@@ -15,6 +15,7 @@ jQuery(function($) {
             minWidth: 400,
             minHeight:200,
             modal: true,
+            dialogClass:"TPCustomDialog",
             //position: { my: "center bottom", at: "center top", of: $('#constructorShortcodesButton')},
             open : function() {
                 $(this).parent().css({   position:'absolute',
@@ -343,6 +344,7 @@ jQuery(function($) {
             minWidth: 400,
             minHeight:200,
             modal: true,
+            dialogClass:"TPCustomDialog",
             open : function() {
                 $(this).parent().css({   position:'absolute',
                     left: (win.width() - $(this).parent().outerWidth())/2,
@@ -711,6 +713,7 @@ jQuery(function($) {
             minWidth: 400,
             minHeight:200,
             modal: true,
+            dialogClass:"TPCustomDialog",
             open : function() {
                 $(this).parent().css({   position:'absolute',
                     left: (win.width() - $(this).parent().outerWidth())/2,
