@@ -203,8 +203,24 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
                 global $locale;
             ?>
-            TPTableEmptyReport = '<?php _e('No data, enter API token and marker', TPOPlUGIN_TEXTDOMAIN); ?>';
-            TPTableEmptyBalance = '<?php _e('There are no payments yet', TPOPlUGIN_TEXTDOMAIN); ?>';
+            <?php
+                if(  ! isset( \app\includes\TPPlugin::$options['account']['marker'] ) || empty( \app\includes\TPPlugin::$options['account']['marker'] )) {
+                    ?>
+                        TPTableEmptyReport = '<?php _e('No data, enter API token and marker', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php _e('No data, enter API token and marker', TPOPlUGIN_TEXTDOMAIN); ?>';
+                    <?php
+                } elseif( ! isset( \app\includes\TPPlugin::$options['account']['token'] ) || empty( \app\includes\TPPlugin::$options['account']['token'] )){
+                     ?>
+                        TPTableEmptyReport = '<?php _e('No data, enter API token and marker', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php _e('No data, enter API token and marker', TPOPlUGIN_TEXTDOMAIN); ?>';
+                     <?php
+                } else {
+                      ?>
+                        TPTableEmptyReport = '<?php _e('No data', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php _e('There are no payments yet', TPOPlUGIN_TEXTDOMAIN); ?>';
+                      <?php
+                }
+            ?>
             TPTableEmptySearchShortcode = '<?php _e('No search form.', TPOPlUGIN_TEXTDOMAIN); ?>';
             TPStatsTotalTrText = '<?php _e('Grand total this month', TPOPlUGIN_TEXTDOMAIN); ?>';
             wpLocale = '<?php echo get_locale(); ?>';
