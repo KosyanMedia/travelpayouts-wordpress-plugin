@@ -16,12 +16,12 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
         if($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpPriceCalendarWeekShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('2',
                     $origin.$destination)))) {
                 $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
                 if( ! $return )
                     return false;
-                set_transient( $this->cacheKey('tpPriceCalendarWeekShortcodes',
+                set_transient( $this->cacheKey('2',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{

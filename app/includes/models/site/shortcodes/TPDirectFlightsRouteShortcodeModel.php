@@ -36,7 +36,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'currency' => $this->typeCurrency() );
 
         if($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpDirectFlightsRouteShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('7',
                     $origin.$destination)))) {
                 $return = array();
                 if($current_day < 20){
@@ -66,7 +66,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 if( ! $return )
                     return false;
                 $return = $this->iataAutocomplete($return, 7);
-                set_transient( $this->cacheKey('tpDirectFlightsRouteShortcodes',
+                set_transient( $this->cacheKey('7',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{

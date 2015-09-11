@@ -17,14 +17,14 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             'currency' => $this->typeCurrency());
 
         if($this->cacheSecund()) {
-            if (false === ($rows = get_transient($this->cacheKey('tpCheapestTicketEachDayMonthShortcodes',
+            if (false === ($rows = get_transient($this->cacheKey('5',
                     $origin.$destination)))) {
                 $return = (array) \app\includes\TPPlugin::$TPRequestApi->get_calendar($attr);
                 if( ! $return )
                     return false;
                 $rows = array();
                 $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
-                set_transient( $this->cacheKey('tpCheapestTicketEachDayMonthShortcodes',
+                set_transient( $this->cacheKey('5',
                     $origin.$destination) , $rows, $this->cacheSecund());
             }
         }else{

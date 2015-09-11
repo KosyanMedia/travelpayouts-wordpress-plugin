@@ -17,12 +17,12 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
         $attr =  array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
         if($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpPriceCalendarMonthShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('1',
                     $origin.$destination)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
                 if( ! $return )
                     return false;
-                set_transient( $this->cacheKey('tpPriceCalendarMonthShortcodes',
+                set_transient( $this->cacheKey('1',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{

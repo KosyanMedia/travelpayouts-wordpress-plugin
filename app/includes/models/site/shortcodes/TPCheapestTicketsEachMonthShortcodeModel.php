@@ -16,12 +16,12 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
         if($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('6',
                     $origin.$destination)))) {
                 $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
                 if( ! $return )
                     return false;
-                set_transient( $this->cacheKey('tpCheapestTicketsEachMonthShortcodes',
+                set_transient( $this->cacheKey('6',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{

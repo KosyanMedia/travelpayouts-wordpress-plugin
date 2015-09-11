@@ -22,7 +22,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency() );
         if($this->cacheSecund()) {
-            if ( false === ($rows = get_transient($this->cacheKey('tpDirectFlightsShortcodes', $origin)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('8', $origin)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                 if( ! $return )
                     return false;
@@ -32,7 +32,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
                 }
                 array_multisort($rows, SORT_ASC, $rows);
                 $rows = $this->iataAutocomplete($rows, 8);
-                set_transient( $this->cacheKey('tpDirectFlightsShortcodes', $origin) , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('8', $origin) , $rows, $this->cacheSecund());
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);

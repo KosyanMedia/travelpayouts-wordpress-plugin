@@ -19,14 +19,14 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
             'destination' => $destination, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
             'one_way' => $one_way);
         if($this->cacheSecund()){
-            if ( false === ($rows = get_transient($this->cacheKey('tpInOurCityFlyShortcodes', $destination)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('14', $destination)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
                 if( ! $return )
                     return false;
                 $rows = array();
                 $rows = $return;
                 $rows = $this->iataAutocomplete($rows, 13);
-                set_transient( $this->cacheKey('tpInOurCityFlyShortcodes', $destination) , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('14', $destination) , $rows, $this->cacheSecund());
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);

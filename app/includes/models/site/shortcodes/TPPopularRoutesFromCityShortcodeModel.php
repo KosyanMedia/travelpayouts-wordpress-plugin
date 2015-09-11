@@ -19,13 +19,13 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency());
         if ($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpPopularRoutesFromCityShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('9',
                     $origin)))
             ) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
                 if (!$return)
                     return false;
-                set_transient($this->cacheKey('tpPopularRoutesFromCityShortcodes',
+                set_transient($this->cacheKey('9',
                     $origin), $return, $this->cacheSecund());
             }
         } else {

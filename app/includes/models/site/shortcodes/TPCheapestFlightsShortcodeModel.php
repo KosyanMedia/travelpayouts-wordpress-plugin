@@ -21,14 +21,12 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency() );
         if($this->cacheSecund()) {
-            if (false === ($rows = get_transient($this->cacheKey('tpCheapestFlightsShortcodes',
-                    $origin . $destination)))) {
+            if (false === ($rows = get_transient($this->cacheKey('4', $origin . $destination)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
                 if( ! $return )
                     return false;
                 $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
-                set_transient( $this->cacheKey('tpCheapestFlightsShortcodes',
-                    $origin.$destination) , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('4', $origin.$destination) , $rows, $this->cacheSecund());
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);

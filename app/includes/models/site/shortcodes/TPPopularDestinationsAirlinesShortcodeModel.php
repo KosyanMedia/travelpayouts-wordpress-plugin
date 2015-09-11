@@ -16,13 +16,13 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
         $attr =  array( 'airline' => $airline,
             'limit' => $limit );
         if($this->cacheSecund()) {
-            if (false === ($return = get_transient($this->cacheKey('tpPopularDestinationsAirlinesShortcodes',
+            if (false === ($return = get_transient($this->cacheKey('10',
                     $airline)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_popular($attr);
                 if( ! $return )
                     return false;
                 $return = $this->iataAutocomplete($return, 10);
-                set_transient( $this->cacheKey('tpPopularDestinationsAirlinesShortcodes',
+                set_transient( $this->cacheKey('10',
                     $airline) , $return, $this->cacheSecund());
             }
         }else{
