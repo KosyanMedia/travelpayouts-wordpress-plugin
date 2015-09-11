@@ -25,8 +25,11 @@
 .w-table {
   width: 100% !important;
     min-width: 100% !important;
-    display: block;
+    /*display: block;
     overflow-x: auto;
+    */
+    display: table;
+
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
     line-height: inherit !important;
@@ -70,10 +73,10 @@
 }
 .w-table tbody tr:nth-child(even) td p:after {
   /*background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), #F2F2F2) repeat scroll 0% 0%;*/
-    background: transparent !important;
+  background: transparent;
 }
 .w-table tbody tr:hover {
-  background: #fff0cc;
+  background: #fff0cc !important;
 }
 .w-table tbody tr:hover p:after {
   background: -webkit-linear-gradient(left, rgba(255, 240, 204, 0), #fff0cc) !important;

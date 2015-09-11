@@ -505,10 +505,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
             }
             .w-table tbody tr:nth-child(even) {
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?> !important;
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>;
             }
             .w-table tbody tr:nth-child(even) td p:after {
-                background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0% !important;
+                background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
             }
             .TPAirlineLogoTD{
                 width: <?php echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>px !important;
