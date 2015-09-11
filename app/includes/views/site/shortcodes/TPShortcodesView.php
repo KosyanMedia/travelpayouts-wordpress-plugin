@@ -148,6 +148,7 @@ class TPShortcodesView {
                             $button = $this->return_link(array(
                                 'origin' => $citys[0],
                                 'destination' => $citys[1],
+                                'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
                                 'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
                                 'type' => $type
                             ) );
@@ -575,7 +576,8 @@ class TPShortcodesView {
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
         switch($type){
             case 1:
-                $url .= '&one_way=true';
+            case 10:
+            $url .= '&one_way=true';
                 break;
         }
         $link = '';

@@ -16,15 +16,17 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array('currency' => $this->typeCurrency(),
             'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit, 'one_way' => $one_way);
+        error_log(111);
         if($this->cacheSecund()){
-            if ( false === ($rows = get_transient($this->cacheKey('tpOurSiteSearchShortcodes', '')))) {
+            if ( false === ($rows = get_transient($this->cacheKey('tpOurSiteSearchShortcodes')))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
+                error_log(222);
                 if( ! $return )
                     return false;
                 $rows = array();
                 $rows = $return;
                 $rows = $this->iataAutocomplete($rows, 12);
-                set_transient( $this->cacheKey('tpOurSiteSearchShortcodes', '') , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('tpOurSiteSearchShortcodes') , $rows, $this->cacheSecund());
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);

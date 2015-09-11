@@ -18,6 +18,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
         $attr = array( 'currency' => $this->typeCurrency(),
             'origin' => $origin, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
             'one_way' => $one_way);
+
         if($this->cacheSecund()){
             if ( false === ($rows = get_transient($this->cacheKey('tpInOurCityFlyShortcodes', $origin)))) {
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
