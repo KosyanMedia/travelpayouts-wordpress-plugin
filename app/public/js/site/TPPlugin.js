@@ -75,7 +75,9 @@ jQuery(function($) {
                 }
             } );
         });
-
+        doc.find(".w-table").each(function(i,e){
+            $(this).parent('.dataTables_wrapper').css({'margin' : '0 auto', 'max-width': $(this).find("thead").width()})
+        });
 
     });
 
@@ -124,5 +126,7 @@ jQuery(function($) {
             $(e).css('width', width+"%");
         });
     });
+
+
 
     });

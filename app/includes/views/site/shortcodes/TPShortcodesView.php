@@ -339,6 +339,9 @@ class TPShortcodesView {
                         break;
                     //Цена за километр
                     case "price_distance":
+                        $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"]/$row['distance'].'">'
+                            . number_format($row["value"]/$row['distance'], 0, '.', ' ') .
+                            $this->currencyView() . '</p>' . $button . '</td>';
                         break;
                     //Дата поиска
                     case "found_at":

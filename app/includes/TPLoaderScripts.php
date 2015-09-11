@@ -461,6 +461,23 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             }
         </script>
         <style type="text/css">
+            <?php
+                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
+                    ?>
+                    .w-table {
+                        display: block !important;
+                        overflow-x: auto !important;
+                    }
+                    <?php
+                }else{
+                    ?>
+                    .w-table {
+                        display: table !important;
+                    }
+                    <?php
+
+                }
+             ?>
             .TP-TitleTablezs{
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_family']; ?>, sans-serif !important;

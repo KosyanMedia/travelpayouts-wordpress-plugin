@@ -181,6 +181,11 @@ class TPFieldFlightTickets {
 
             </div>
             <div class="TP-StyleItem">
+                <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
+                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
+                <label for="chek66"><?php _e('Responsive table', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            </div>
+            <div class="TP-StyleItem">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span><?php _e('Background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label class="TP-BackgroundTables">

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-09-10 17:20+0300\n"
+"POT-Creation-Date: 2015-09-11 15:42+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -54,31 +54,32 @@ msgstr "Настройки сохранены."
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:209 app/includes/TPLoaderScripts.php:213
+#: app/includes/TPLoaderScripts.php:209 app/includes/TPLoaderScripts.php:210
+#: app/includes/TPLoaderScripts.php:214 app/includes/TPLoaderScripts.php:215
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:217
+#: app/includes/TPLoaderScripts.php:219
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:222
+#: app/includes/TPLoaderScripts.php:220
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:223
+#: app/includes/TPLoaderScripts.php:224
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:224
+#: app/includes/TPLoaderScripts.php:225
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:227
+#: app/includes/TPLoaderScripts.php:228
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:228
+#: app/includes/TPLoaderScripts.php:229
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -323,96 +324,100 @@ msgctxt "select_type_table"
 msgid "dashed"
 msgstr "Пунктир"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:185
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:186
+msgid "Responsive table"
+msgstr "Адаптивные таблицы"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:190
 msgid "Background"
 msgstr "Фон таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:206
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:211
 msgid "Title"
 msgstr "Заголовок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:217
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:222
 msgid "Use \"airline\" variable to add the Airlines automatically"
 msgstr ""
 "Используйте переменные \"airline\"  для автоматической подстановки "
 "авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:220
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:225
 msgid ""
 "Use \"origin\" and \"destination\" variables to add the city automatically"
 msgstr ""
 "Используйте переменные \"origin\",  \"destination\"  для автоматической "
 "подстановки города"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:234
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:239
 msgid "Title tag"
 msgstr "Тег заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:258
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:263
 msgid "Button Title"
 msgstr "Текст кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:268
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:273
 msgid "\"price\" variable can be used"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:296
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:301
 msgid "Order by price"
 msgstr "Сортировка по цене"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:303
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:308
 msgid "Ascending"
 msgstr "по возрастанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:308
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:313
 msgid "Descending"
 msgstr "по убыванию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:313
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:318
 msgid "Do not sort"
 msgstr "не сортировать"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:362
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:367
 msgid "Table Columns"
 msgstr "Колонки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:365
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:370
 msgid "Not selected"
 msgstr "Не выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:372
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:377
 msgid "Selected"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:389
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:394
 msgid "Rows per page"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:412
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:417
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:85
 msgid "Limit"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:435
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
 msgid "Departure date"
 msgstr "Дата отправления"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:451
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:456
 msgid "Return date"
 msgstr "Дата возвращения"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:479
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:506
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:536
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:563
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:590
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:617
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:644
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:672
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:699
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:754
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:801
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:847
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:484
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:511
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:541
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:568
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:595
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:622
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:649
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:677
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:704
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:759
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:806
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:852
 #: app/includes/models/admin/menu/TPFieldSettings.php:35
 msgid "Extra marker"
 msgstr "Дополнительный маркер"

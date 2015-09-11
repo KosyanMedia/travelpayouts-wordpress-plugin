@@ -23,6 +23,7 @@ class TPDefault implements  \core\TPODefault{
             'line_size' => 1,
             'line_color' => '#f2f2f2',
             'background_color' => '#f2f2f2',
+            'responsive' => 1,
         ),
         'button' => array(
             ''
@@ -596,6 +597,7 @@ class TPDefault implements  \core\TPODefault{
                     'line_size' => 1,
                     'line_color' => '#f2f2f2',
                     'background_color' => '#f2f2f2',
+                    'responsive' => 1,
                 ),
                 'button' => array(
                     ''
