@@ -8,7 +8,7 @@
 #tr_destination_widget, #tr_one_way_widget,
 #tr_responsive_widget, #tr_hotel_id_widget,
 #tr_hotel_id_widget_size, #tr_popular_routes_widget,
-.TPPopularRoutes{
+.TPPopularRoutes, #tr_paginate{
     display: none;
 }
 .constructorShortcodesError{

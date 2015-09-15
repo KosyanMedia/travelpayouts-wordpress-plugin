@@ -32,6 +32,6 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         //return var_dump("<pre>", $return, "</pre>");
         return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 6, 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination);
+            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate);
     }
 }

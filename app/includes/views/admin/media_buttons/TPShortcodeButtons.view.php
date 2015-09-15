@@ -96,6 +96,12 @@
                 </select>
             </td>
         </tr>
+        <tr id="tr_paginate">
+            <td>
+                <input type="checkbox" id="paginate" value="1" checked="checked">
+                <?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </td>
+        </tr>
     </table>
 
 </div>

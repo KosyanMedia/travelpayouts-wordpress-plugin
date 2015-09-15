@@ -196,7 +196,27 @@ class TPFieldFlightTickets {
 
                     </label>
                 </div>
+                <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
+                    <span><?php _e('Table header background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <label class="TP-BackgroundTables">
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_color]"
+                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color'] ?>"/>
+
+                    </label>
+                </div>
+                <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
+                    <span><?php _e('Table header font', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <label class="TP-BackgroundTables">
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_text_color]"
+                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color'] ?>"/>
+
+                    </label>
+                </div>
+
             </div>
+
 
         </div>
 

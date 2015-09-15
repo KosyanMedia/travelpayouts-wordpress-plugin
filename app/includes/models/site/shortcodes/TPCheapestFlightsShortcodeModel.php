@@ -36,7 +36,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
         }
         return array('rows' => $rows, 'type' => 4, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination
+            'origin_iata' => $origin, 'destination_iata' => $destination  , 'paginate' => $paginate
         );
     }
 }

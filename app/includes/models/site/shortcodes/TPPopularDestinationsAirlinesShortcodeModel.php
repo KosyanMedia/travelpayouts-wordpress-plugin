@@ -32,6 +32,6 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
             $return = $this->iataAutocomplete($return, 10);
         }
         return array('rows' => $return, 'type' => 10, 'airline' => $this->iataAutocomplete($airline, 0 , 'airline'),
-            'title' => $title);
+            'title' => $title, 'paginate' => $paginate);
     }
 }

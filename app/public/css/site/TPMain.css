@@ -40,13 +40,11 @@
 }
 .w-table thead tr {
   height: 44px;
-  background: #1db1db;
 }
 .w-table thead tr td {
     word-wrap: normal;
   padding: 0 12px;
   font-size: 13px;
-  color: #fff;
   font-weight: 400;
   vertical-align: middle !important;
     position: relative;
@@ -55,9 +53,7 @@
     -moz-hyphens: none !important;
     -webkit-hyphens: none !important;
 }
-.w-table thead tr td.active-w {
-  background: #0fa0d2;
-}
+
 .w-table thead tr td:last-of-type {
  /* width: 100px !important;*/
     width: 100px !important;
@@ -141,10 +137,43 @@
   transition: all ease 0.3s;
     white-space: nowrap;
 }
+.btn-tableShow{
+    padding: 0 10px;
+    height: 30px;
+    display: block;
+    margin-top: 7px;
+    top: 0;
+    right: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-bottom: 1px solid #ce6408;
+    text-align: center;
+    background: #fd8a27;
+    font-size: 13px;
+    color: #571601 !important;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    white-space: nowrap;
+}
+.btn-tableShow span {
+    line-height: 30px;
+}
 .btn-table span {
     line-height: 30px;
 }
 .btn-table:hover {
+    background: #ce6408;
+    text-decoration: none;
+    color: #fff !important;
+}
+.btn-tableShow:hover {
     background: #ce6408;
     text-decoration: none;
     color: #fff !important;
@@ -190,20 +219,7 @@ span.ellipsis {
     border: 2px solid transparent;
     text-align: center;
 }
-a.paginate_button.current {
-    border-color: #1db1db;
-    background: #1db1db;
-    color: #fff;
-}
-a.paginate_button:hover {
-    border-color: #1db1db;
-    text-decoration: none;
-    cursor: pointer;
-    color: #1db1db !important;
-}
-a.paginate_button.current:hover {
-    color: #fff !important;
-}
+
 .TPPlaceTD{
     width: 15% !important;
 }

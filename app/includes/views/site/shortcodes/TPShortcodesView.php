@@ -26,7 +26,7 @@ class TPShortcodesView {
      */
     public function tpReturnOutputTable($args = array()){
         $defaults = array( 'rows' => array(), 'type' => null, 'origin' => '', 'destination' => '', 'airline' => '',
-            'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '');
+            'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '', 'paginate' => 'false');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $output = '';
         $sortable_class = '';
@@ -37,7 +37,8 @@ class TPShortcodesView {
                         <div class="table-section">
                             '.$title.'
                             <table class="w-table display '.$sortable_class.'"
-                                data-paginate="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'">
+                                data-paginate="'.$paginate.'"
+                                data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'">
                                 <thead>
                                     <tr>';
         foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
@@ -79,7 +80,11 @@ class TPShortcodesView {
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;
-
+                case 'button':
+                    $output .= '<td class="TPTableHead ' . $class_sort . ' TPAirlineLogoTD">' .
+                        \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .' </td>';
+                    break;
                 default:
                     $output .= '<td class="TPTableHead ' . $class_sort . '">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
@@ -92,6 +97,9 @@ class TPShortcodesView {
                                 </thead>
                                 <tbody>';
         $count_row = 0;
+        $buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$type]['selected']);
+        error_log(print_r(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'], true));
+        error_log(print_r($buttonOnOff, true));
         foreach($rows as $key_row => $row){
             $count_row++;
             $output .= '<tr class="TPTableTbodyTr">';
@@ -102,7 +110,7 @@ class TPShortcodesView {
                 /*
                  * Buttton
                  */
-                if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'])){
+                if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) && !$buttonOnOff){
                     switch($type){
                         case 1:
                             $button = $this->return_link(array(
@@ -350,6 +358,83 @@ class TPShortcodesView {
                             .human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp'))
                             .'</p>'.$button.'</td>';
                         break;
+                    case "button":
+                        $buttonShow = '';
+                        switch($type){
+                            case 1:
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $origin_iata,
+                                    'destination' => $destination_iata,
+                                    'departure_at' => $row['depart_date'],
+                                    //'return_at' => $row['return_date'],
+                                    'price' => number_format($row["value"], 0, '.', ' '),
+                                    'type' => $type
+                                ), 1 );
+                                break;
+                            case 2:
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $origin_iata,
+                                    'destination' => $destination_iata,
+                                    'departure_at' => $row['depart_date'],
+                                    'return_at' => $row['return_date'],
+                                    'price' => number_format($row["value"], 0, '.', ' '),
+                                    'type' => $type
+                                ), 1  );
+                                break;
+                            case 8:
+                                $citys = explode( '-', $key_row );
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $origin_iata,
+                                    'destination' => $key_row,
+                                    'price' => number_format($row["price"], 0, '.', ' '),
+                                    'type' => $type
+                                ), 1  );
+                                break;
+                            case 9:
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $origin_iata,
+                                    'destination' => $row['destination_iata'],
+                                    'departure_at' => $row['departure_at'],
+                                    'return_at' => $row['return_at'],
+                                    'price' => number_format($row["price"], 0, '.', ' '),
+                                    'type' => $type
+                                ), 1  );
+                                break;
+                            case 10:
+                                $citys = explode( '-', $key_row );
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $citys[0],
+                                    'destination' => $citys[1],
+                                    'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
+                                    'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
+                                    'type' => $type
+                                ), 1  );
+                                break;
+                            case 12:
+                            case 13:
+                            case 14:
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $row['origin_iata'],
+                                    'destination' => $row['destination_iata'],
+                                    'departure_at' => $row['depart_date'],
+                                    'return_at' => $row['return_date'],
+                                    'price' => number_format($row["value"], 0, '.', ' '),
+                                    'type' => $type
+                                ) , 1 );
+
+                                break;
+                            default:
+                                $buttonShow = $this->return_link(array(
+                                    'origin' => $origin_iata,
+                                    'destination' => $destination_iata,
+                                    'departure_at' => $row['departure_at'],
+                                    'return_at' => $row['return_at'],
+                                    'price' => number_format($row["price"], 0, '.', ' '),
+                                    'type' => $type
+                                ) , 1 );
+                        }
+                        $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
+                        break;
                 }
             }
 
@@ -524,7 +609,7 @@ class TPShortcodesView {
      * @param array $args
      * @return string
      */
-    public function return_link($args = array()){
+    public function return_link($args = array(), $type = 0){
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'link_text' => '', 'price' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -589,10 +674,27 @@ class TPShortcodesView {
             $home = get_option('home');
             $url = substr($url, 10);
             //urldecode()
-            $link = '<a class="btn-table" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
-                .$link_text.'</a>';
+            switch($type){
+                case 0:
+                    $link = '<a class="btn-table" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
+                        .$link_text.'</a>';
+                    break;
+                case 1:
+                    $link = '<a class="btn-tableShow" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
+                        .$link_text.'</a>';
+                    break;
+            }
+
         }else{
-            $link = '<a class="btn-table" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+            switch($type){
+                case 0:
+                    $link = '<a class="btn-table" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+                    break;
+                case 1:
+                    $link = '<a class="btn-tableShow" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+                    break;
+            }
+
         }
         return $link;
     }

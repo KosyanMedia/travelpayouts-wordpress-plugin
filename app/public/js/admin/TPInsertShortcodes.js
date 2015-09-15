@@ -29,7 +29,7 @@ jQuery(function($) {
                     id: "constructorShortcodesButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, airline, shortcodes, title, limit, trip_class;
+                        var origin, destination, airline, shortcodes, title, limit, trip_class,paginate;
                         shortcodes = "";
                         origin = doc.find('#origin').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
@@ -40,6 +40,11 @@ jQuery(function($) {
                         title = doc.find('#tp_title').val();
                         limit = doc.find('#limit').val();
                         trip_class = doc.find('#select_trip_class').val();
+                        if(doc.find('#paginate').is(":checked")){
+                            paginate = "paginate=true";
+                        }else{
+                            paginate = "paginate=false";
+                        }
                         switch (doc.find('#select_shortcodes').val()){
                             case '0':
                                 doc.find('#select_shortcodes').addClass('constructorShortcodesError');
@@ -53,7 +58,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -66,7 +71,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_week_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -83,7 +88,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_flights_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -96,7 +101,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -109,7 +114,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_tickets_each_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -122,7 +127,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_direct_flights_route_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -131,7 +136,7 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_direct_flights_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\" limit="+limit+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -140,7 +145,7 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_popular_routes_from_city_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\"]",
+                                        " title=\""+title+"\" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -149,7 +154,7 @@ jQuery(function($) {
                                     doc.find('#airline').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_popular_destinations_airlines_shortcodes airline="+airline+" " +
-                                        " title=\""+title+"\" limit="+limit+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -158,7 +163,7 @@ jQuery(function($) {
                                 break;
                             case '11':
                                 setShortcodes("[tp_our_site_search_shortcodes " +
-                                    " title=\""+title+"\" limit="+limit+"]",
+                                    " title=\""+title+"\" limit="+limit+" "+paginate+"]",
                                     $(this));
                                 break;
                             case '12':
@@ -166,7 +171,7 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\" limit="+limit+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -175,7 +180,7 @@ jQuery(function($) {
                                     doc.find('#destination').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
-                                        " title=\""+title+"\" limit="+limit+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
                                         $(this));
                                 }
                                 break;
@@ -208,6 +213,7 @@ jQuery(function($) {
                 doc.find('#tr_airline').hide();
                 doc.find('#tr_limit').hide();
                 doc.find('#tr_trip_class').hide();
+                doc.find('#tr_paginate').hide();
                 doc.find('#origin, #destination, #airline, #select_shortcodes').removeClass('constructorShortcodesError');
             }
         });
@@ -256,16 +262,19 @@ jQuery(function($) {
             doc.find('#tr_airline').hide();
             doc.find('#tr_limit').hide();
             doc.find('#tr_trip_class').hide();
+            doc.find('#tr_paginate').hide();
             doc.find("#limit").val("");
             switch($(this).val()) {
                 case '0':
                     break;
                 case '1':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     break;
                 case '2':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
@@ -274,50 +283,60 @@ jQuery(function($) {
                     doc.find('#tr_title').show();
                     break;*/
                 case '3':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     break;
                 case '4':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     break;
                 case '5':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     break;
                 case '6':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     break;
                 case '7':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_limit').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     break;
                 case '8':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     break;
                 case '9':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_airline').show();
                     doc.find('#tr_limit').show();
                     break;
                 case '10':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     break;
                 case '11':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_limit').show();
                     //doc.find('#tr_trip_class').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     break;
                 case '12':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_limit').show();
                     doc.find('#tr_origin').show();
@@ -325,6 +344,7 @@ jQuery(function($) {
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     break;
                 case '13':
+                    doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_limit').show();
                     doc.find('#tr_destination').show();

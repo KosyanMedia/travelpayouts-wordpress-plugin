@@ -530,6 +530,31 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             .TPAirlineLogoTD{
                 width: <?php echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>px !important;
             }
+            .w-table thead tr {
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+            }
+            .w-table thead tr td.active-w {
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;
+            }
+            .w-table thead tr td {
+                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+            }
+
+            a.paginate_button.current {
+                border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+            }
+            a.paginate_button:hover {
+                border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                text-decoration: none;
+                cursor: pointer;
+                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?> !important;
+            }
+            a.paginate_button.current:hover {
+                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?> !important;
+            }
         </style>
     <?php
     }

@@ -35,7 +35,7 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
             $rows = $return;
             $rows = $this->iataAutocomplete($rows, 12);
         }
-        return array('rows' => $rows, 'type' => 12, 'title' => $title);
+        return array('rows' => $rows, 'type' => 12, 'title' => $title, 'paginate' => $paginate);
 
     }
 }

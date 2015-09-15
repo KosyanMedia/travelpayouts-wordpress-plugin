@@ -2441,3 +2441,6 @@ thead tr td.active-w {
   font-size: 14px;
   width: 100px;
 }
+.TP-ColorStyleHead{
+  margin-left: 15px;
+}

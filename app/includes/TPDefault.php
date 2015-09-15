@@ -24,6 +24,8 @@ class TPDefault implements  \core\TPODefault{
             'line_color' => '#f2f2f2',
             'background_color' => '#f2f2f2',
             'responsive' => 1,
+            'head_color' => '#1db1db',
+            'head_text_color' => '#ffffff',
         ),
         'button' => array(
             ''
@@ -66,7 +68,7 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 'target_url' => 0,
                 'nofollow' => 0,
-                'script' => 0,
+                'script' => 1,
                 'after_url' => 1,
                 'cache' => 1,
                 'cache_value' => 1,
@@ -100,6 +102,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Цена за километр',
                             'found_at' => 'Когда найден',
                             'back_and_forth' => 'В одну/обе стороны',
+                            'button' => 'Кнопка',
                         ),
                         'label' => array(
                             'flight_number' => 'Номер рейса',
@@ -119,6 +122,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Цена за километр',
                             'found_at' => 'Когда найден',
                             'back_and_forth' => 'В одну/обе стороны',
+                            'button' => 'Найти',
                         ),
                     ),
                     'en' => array(
@@ -140,6 +144,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Price/distance',
                             'found_at' => 'When found',
                             'back_and_forth' => 'One way / Round-Trip',
+                            'button' => 'Button',
                         ),
                         'label' => array(
                             'flight_number' => 'Flight number',
@@ -159,6 +164,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Price/distance',
                             'found_at' => 'When found',
                             'back_and_forth' => 'One way / Round-Trip',
+                            'button' => 'Find',
                         ),
                     ),
                 ),
@@ -190,7 +196,8 @@ class TPDefault implements  \core\TPODefault{
                         'price',
                         'number_of_changes',
                         'trip_class',
-                        'distance'
+                        'distance',
+                        'button'
                     ),
                 ),
                 '2' => array(
@@ -220,6 +227,7 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'trip_class',
                         'distance',
+                        'button'
                     ),
 
                 ),
@@ -277,7 +285,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'price',
                         'airline',
-                        'airline_logo'
+                        'airline_logo',
+                        'button'
                     )
                 ),
                 '5' => array(
@@ -307,7 +316,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'price',
                         'airline',
-                        'airline_logo'
+                        'airline_logo',
+                        'button'
                     )
                 ),
                 '6' => array(
@@ -337,7 +347,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'price',
                         'airline',
-                        'airline_logo')
+                        'airline_logo',
+                        'button')
                 ),
                 '7' => array(
                     'title' => array(
@@ -364,7 +375,8 @@ class TPDefault implements  \core\TPODefault{
                         'return_at',
                         'price',
                         'airline',
-                        'airline_logo')
+                        'airline_logo',
+                        'button')
 
                 ),
                 '8' => array(
@@ -395,7 +407,8 @@ class TPDefault implements  \core\TPODefault{
                         'price',
                         'airline',
                         'airline_logo',
-                        'destination'
+                        'destination',
+                        'button'
                     )
 
                 ),
@@ -426,7 +439,8 @@ class TPDefault implements  \core\TPODefault{
                         'price',
                         'airline',
                         'airline_logo',
-                        'destination'
+                        'destination',
+                        'button'
                     )
                 ),
                 '10' => array(
@@ -446,6 +460,7 @@ class TPDefault implements  \core\TPODefault{
                     'fields' => array(
                         'place',
                         'direction',
+                        'button'
                     )
                 ),
                 '11' => array(
@@ -472,6 +487,7 @@ class TPDefault implements  \core\TPODefault{
                         'trip_class',
                         'back_and_forth',
                         'price',
+                        'button'
                     )
                 ),
                 //"depart_date""return_date"
@@ -507,7 +523,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'trip_class',
                         'distance',
-                        'price_distance'
+                        'price_distance',
+                        'button'
                     )
                 ),
                 '13' => array(
@@ -541,7 +558,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'trip_class',
                         'distance',
-                        'price_distance'
+                        'price_distance',
+                        'button'
                     ),
 
                 ),
@@ -576,7 +594,8 @@ class TPDefault implements  \core\TPODefault{
                         'number_of_changes',
                         'trip_class',
                         'distance',
-                        'price_distance'
+                        'price_distance',
+                        'button'
                     ),
                 ),
 
@@ -598,6 +617,8 @@ class TPDefault implements  \core\TPODefault{
                     'line_color' => '#f2f2f2',
                     'background_color' => '#f2f2f2',
                     'responsive' => 1,
+                    'head_color' => '#1db1db',
+                    'head_text_color' => '#ffffff',
                 ),
                 'button' => array(
                     ''

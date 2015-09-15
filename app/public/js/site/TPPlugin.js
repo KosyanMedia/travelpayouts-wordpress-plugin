@@ -46,12 +46,13 @@ jQuery(function($) {
     }
     doc.ready(function(){
         doc.find('.btn-table').parent('p').addClass('parrentBtn');
+
         doc.find('.sortable').each(function () {
             $(this).dataTable( {
                 ordering: true,
                 "order": [[ 0, "asc" ]],
-                paging: ($(this).data("paginate") < $(this).rowCount()),
-                iDisplayLength : $(this).data("paginate"),
+                paging: ($(this).data("paginate") && ($(this).data("paginate_limit") < $(this).rowCount())),
+                iDisplayLength: $(this).data("paginate_limit"),
                 "bLengthChange": false,
                 searching: false,
                 bFilter: false,
@@ -82,7 +83,7 @@ jQuery(function($) {
     });
 
     doc.find('td.TPTableHead').click(function () {
-        doc.find("td.active-w").each(function(){
+        $(this).parent('tr').find("td.active-w").each(function(){
             $(this).removeClass("active-w");
         });
         $(this).addClass("active-w");

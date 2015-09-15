@@ -38,6 +38,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             $rows = $this->iataAutocomplete($rows, 13);
         }
 
-        return array('rows' => $rows,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title);
+        return array('rows' => $rows,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
+        , 'paginate' => $paginate);
     }
 }

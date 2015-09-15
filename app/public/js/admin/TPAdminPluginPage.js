@@ -107,7 +107,7 @@ jQuery(function($){
     $(".btnColor").click(function(){
         $(this).prev('.color').trigger('click');
     });
-    $('.color').colorPicker({flat: true});
+    $('.color').colorPicker();
     /** **/
     function buttonFontStyle(selctor){
         doc.find(selctor).click(function () {

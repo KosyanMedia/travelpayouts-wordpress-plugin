@@ -10,12 +10,14 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     static public function activation()
     {
         // TODO: Implement activation() method.
-        if( ! get_option(TPOPlUGIN_OPTION_NAME) )
-            update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
-        models\admin\menu\TPSearchFormsModel::createTable();
-        //error_log(WP_PLUGIN_DIR);
-        //$sdirs = scandir(WP_PLUGIN_DIR);
-        //error_log(print_r($sdirs, true));
+        if (!version_compare(PHP_VERSION, '5.3.0', '>=')) {
+            deactivate_plugins(TPOPlUGIN_NAME);
+            wp_die("");
+        }else{
+            if( ! get_option(TPOPlUGIN_OPTION_NAME) )
+                update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+            models\admin\menu\TPSearchFormsModel::createTable();
+        }
     }
 
     static public function deactivation()
