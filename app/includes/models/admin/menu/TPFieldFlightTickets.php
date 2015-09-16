@@ -216,6 +216,11 @@ class TPFieldFlightTickets {
                 </div>
 
             </div>
+            <div class="TP-StyleItem">
+                <input id="chek677" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][hyperlink]"
+                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />
+                <label for="chek677"><?php _e('Show data as hyperlinks', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            </div>
 
 
         </div>

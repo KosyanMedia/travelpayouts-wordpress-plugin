@@ -98,8 +98,7 @@ class TPShortcodesView {
                                 <tbody>';
         $count_row = 0;
         $buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$type]['selected']);
-        error_log(print_r(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'], true));
-        error_log(print_r($buttonOnOff, true));
+
         foreach($rows as $key_row => $row){
             $count_row++;
             $output .= '<tr class="TPTableTbodyTr">';
@@ -189,253 +188,591 @@ class TPShortcodesView {
                 /*
                  * Fields
                  */
-                switch($selected_field){
-                    //Номер рейса
-                    case "flight_number":
-                        $output .= '<td class="TPTableTbodyTd TPFlightNumberTD"><p>' . $row['airline'].' '. $row[$selected_field].'</p>'.
-                            $button.'</td>';
-                        break;
-                    //Рейс
-                    case "flight":
-                        $output .= '<td class="TPTableTbodyTd"><p  data-airline-iata="'.$row['airline'].'">' .
-                            $row['airline'].'</p><span>('. $row['airline'].' '.
-                            $row['flight_number'].')</span>'.$button.'</td>';
-                        break;
-                    //Дата вылета
-                    case "departure_at":
-                        switch($type){
-                            case 1:
-                            case 2:
-                            case 12:
-                            case 13:
-                            case 14:
-                                $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['depart_date'] ).'">'
-                                    .$this->tpDate(strtotime(  $row['depart_date'] ))
-                                    .'</p>'.$button.'</td>';
-                                break;
-                            default:
-                                $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
-                                    .$this->tpDate(strtotime(  $row[$selected_field] ))
-                                    .'</p>'.$button.'</td>';
-                                break;
+                if(!isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink'])){
+                    switch($selected_field){
+                        //Номер рейса
+                        case "flight_number":
+                            $output .= '<td class="TPTableTbodyTd TPFlightNumberTD"><p>' . $row['airline'].' '. $row[$selected_field].'</p>'.
+                                $button.'</td>';
+                            break;
+                        //Рейс
+                        case "flight":
+                            $output .= '<td class="TPTableTbodyTd"><p  data-airline-iata="'.$row['airline'].'">' .
+                                $row['airline'].'</p><span>('. $row['airline'].' '.
+                                $row['flight_number'].')</span>'.$button.'</td>';
+                            break;
+                        //Дата вылета
+                        case "departure_at":
+                            switch($type){
+                                case 1:
+                                case 2:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['depart_date'] ).'">'
+                                        .$this->tpDate(strtotime(  $row['depart_date'] ))
+                                        .'</p>'.$button.'</td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
+                                        .$this->tpDate(strtotime(  $row[$selected_field] ))
+                                        .'</p>'.$button.'</td>';
+                                    break;
 
-                        }
-                        break;
-                    //Дата возвращения
-                    case "return_at":
-                        switch($type){
-                            case 1:
-                            case 2:
-                            case 12:
-                            case 13:
-                            case 14:
-                                $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['return_date'] ).'">'
-                                    .$this->tpDate(strtotime(  $row['return_date'] ))
-                                    .'</p>'.$button.'</td>';
-                                break;
-                            default:
-                                $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
-                                    .$this->tpDate(strtotime(  $row[$selected_field] ))
-                                    .'</p>'.$button.'</td>';
-                                break;
+                            }
+                            break;
+                        //Дата возвращения
+                        case "return_at":
+                            switch($type){
+                                case 1:
+                                case 2:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['return_date'] ).'">'
+                                        .$this->tpDate(strtotime(  $row['return_date'] ))
+                                        .'</p>'.$button.'</td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
+                                        .$this->tpDate(strtotime(  $row[$selected_field] ))
+                                        .'</p>'.$button.'</td>';
+                                    break;
 
-                        }
-                        break;
-                    //Количество пересадок
-                    case "number_of_changes":
-                        switch($type){
-                            case 4:
-                                $output .= '<td class="TPTableTbodyTd"><p>'
-                                    .$this->tpNumberChangesView(substr($key_row, -1))
-                                    .'</p>'.$button.'</td>';
-                                break;
-                            case 5:
-                            case 6:
-                                $output .= '<td class="TPTableTbodyTd"><p>'
-                                    . $this->tpNumberChangesView($row["transfers"])
-                                    .'</p>'.$button.'</td>';
-                                break;
-                            default:
-                                $output .= '<td class="TPTableTbodyTd"><p>'
-                                    . $this->tpNumberChangesView($row[$selected_field])
-                                    .'</p>'.$button.'</td>';
-                        }
-                        break;
-                    //Стоимость
-                    case "price":
-                        switch($type) {
-                            case 1:
-                                $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
-                                    . number_format($row["value"], 0, '.', ' ') .
-                                    $this->currencyView() . '</p>' . $button . '</td>';
-                                break;
-                            case 2:
-                                $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
-                                    . number_format($row["value"], 0, '.', ' ') .
-                                    $this->currencyView() . '</p>' . $button . '</td>';
-                                break;
-                            case 12:
-                            case 13:
-                            case 14:
-                                $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
-                                    . number_format($row["value"], 0, '.', ' ') .
-                                    $this->currencyView() . '</p>' . $button . '</td>';
-                                break;
-                            default:
-                                $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row[$selected_field].'">'
-                                    . number_format($row[$selected_field], 0, '.', ' ') .
-                                    $this->currencyView() . '</p>' . $button . '</td>';
-                        }
-                        break;
-                    //Авиакомпания
-                    case "airline":
-                        $output .= '<td class="TPTableTbodyTd"><p data-airline-iata="'.$row[$selected_field].'">' .
-                            $row[$selected_field].'</p>'.$button.'</td>';
-                        break;
-                    //Лого авиакомпании
-                    case "airline_logo":
-                        $output .= '<td class="TPTableTbodyTd">
+                            }
+                            break;
+                        //Количество пересадок
+                        case "number_of_changes":
+                            switch($type){
+                                case 4:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .$this->tpNumberChangesView(substr($key_row, -1))
+                                        .'</p>'.$button.'</td>';
+                                    break;
+                                case 5:
+                                case 6:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        . $this->tpNumberChangesView($row["transfers"])
+                                        .'</p>'.$button.'</td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        . $this->tpNumberChangesView($row[$selected_field])
+                                        .'</p>'.$button.'</td>';
+                            }
+                            break;
+                        //Стоимость
+                        case "price":
+                            switch($type) {
+                                case 1:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        . number_format($row["value"], 0, '.', ' ') .
+                                        $this->currencyView() . '</p>' . $button . '</td>';
+                                    break;
+                                case 2:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        . number_format($row["value"], 0, '.', ' ') .
+                                        $this->currencyView() . '</p>' . $button . '</td>';
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        . number_format($row["value"], 0, '.', ' ') .
+                                        $this->currencyView() . '</p>' . $button . '</td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row[$selected_field].'">'
+                                        . number_format($row[$selected_field], 0, '.', ' ') .
+                                        $this->currencyView() . '</p>' . $button . '</td>';
+                            }
+                            break;
+                        //Авиакомпания
+                        case "airline":
+                            $output .= '<td class="TPTableTbodyTd"><p data-airline-iata="'.$row[$selected_field].'">' .
+                                $row[$selected_field].'</p>'.$button.'</td>';
+                            break;
+                        //Лого авиакомпании
+                        case "airline_logo":
+                            $output .= '<td class="TPTableTbodyTd">
                                                                         <img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
-                            .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">
+                                .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">
                                                                         '.$button.
-                            '</td>';
-                        break;
-                    //Откуда
-                    case "origin":
-                        $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'.
-                            $row[$selected_field].'</span></p>'.$button.'</td>';
-                        break;
-                    //Куда
-                    case "destination":
-                        switch($type){
-                            case 8:
-                                $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$key_row.'">'.
-                                    $row['city'].'</span></p>'.$button.'</td>';
-                                break;
-                            case 9:
-                            case 12:
-                            case 13:
-                            case 14:
-                                $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'.
-                                    $row[$selected_field].'</span></p>'.$button.'</td>';
-                                break;
-                            default:
-                                $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$destination.'">'.
-                                    $destination.'</span></p>'.$button.'</td>';
-                        }
-                        break;
-                    //Место
-                    case "place":
-                        $output .= '<td class="TPTableTbodyTd TPPlaceTD"><p>'.$count_row.'</p>'.$button.'</td>';
-                        break;
-                    //Направление
-                    case "direction":
-                        //$citys = explode( '-', $key_row );
-                        $output .= '<td class="TPTableTbodyTd TPDirectionTD"><p>
+                                '</td>';
+                            break;
+                        //Откуда
+                        case "origin":
+                            $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'.
+                                $row[$selected_field].'</span></p>'.$button.'</td>';
+                            break;
+                        //Куда
+                        case "destination":
+                            switch($type){
+                                case 8:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$key_row.'">'.
+                                        $row['city'].'</span></p>'.$button.'</td>';
+                                    break;
+                                case 9:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'.
+                                        $row[$selected_field].'</span></p>'.$button.'</td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$destination.'">'.
+                                        $destination.'</span></p>'.$button.'</td>';
+                            }
+                            break;
+                        //Место
+                        case "place":
+                            $output .= '<td class="TPTableTbodyTd TPPlaceTD"><p>'.$count_row.'</p>'.$button.'</td>';
+                            break;
+                        //Направление
+                        case "direction":
+                            //$citys = explode( '-', $key_row );
+                            $output .= '<td class="TPTableTbodyTd TPDirectionTD"><p>
                             <span>'.$row.'</span></p>'.$button.'</td>';
-                        break;
-                    //Класс перелета
-                    case "trip_class":
-                        $output .= '<td class="TPTableTbodyTd"><p>'.
-                            $this->returnTripClass($row[$selected_field]).'</p>'.
-                            $button.'</td>';
-                        break;
-                    //Расстояние
-                    case "distance":
-                        $output .= '<td class="TPTableTbodyTd"><p>'.$this->tpDistanceView($row[$selected_field])
-                            .'</p>'.$button.'</td>';
-                        break;
-                    //Цена за километр
-                    case "price_distance":
-                        $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"]/$row['distance'].'">'
-                            . number_format($row["value"]/$row['distance'], 0, '.', ' ') .
-                            $this->currencyView() . '</p>' . $button . '</td>';
-                        break;
-                    //Дата поиска
-                    case "found_at":
-                        $output .= '<td class="TPTableTbodyTd"><p data-tptime="'.strtotime(  $row[$selected_field] ).'"
+                            break;
+                        //Класс перелета
+                        case "trip_class":
+                            $output .= '<td class="TPTableTbodyTd"><p>'.
+                                $this->returnTripClass($row[$selected_field]).'</p>'.
+                                $button.'</td>';
+                            break;
+                        //Расстояние
+                        case "distance":
+                            $output .= '<td class="TPTableTbodyTd"><p>'.$this->tpDistanceView($row[$selected_field])
+                                .'</p>'.$button.'</td>';
+                            break;
+                        //Цена за километр
+                        case "price_distance":
+                            $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"]/$row['distance'].'">'
+                                . number_format($row["value"]/$row['distance'], 0, '.', ' ') .
+                                $this->currencyView() . '</p>' . $button . '</td>';
+                            break;
+                        //Дата поиска
+                        case "found_at":
+                            $output .= '<td class="TPTableTbodyTd"><p data-tptime="'.strtotime(  $row[$selected_field] ).'"
                                                             data-tpctime="'.current_time('timestamp').'"">'
-                            .human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp'))
-                            .'</p>'.$button.'</td>';
-                        break;
-                    case "button":
-                        $buttonShow = '';
-                        switch($type){
-                            case 1:
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $origin_iata,
-                                    'destination' => $destination_iata,
-                                    'departure_at' => $row['depart_date'],
-                                    //'return_at' => $row['return_date'],
-                                    'price' => number_format($row["value"], 0, '.', ' '),
-                                    'type' => $type
-                                ), 1 );
-                                break;
-                            case 2:
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $origin_iata,
-                                    'destination' => $destination_iata,
-                                    'departure_at' => $row['depart_date'],
-                                    'return_at' => $row['return_date'],
-                                    'price' => number_format($row["value"], 0, '.', ' '),
-                                    'type' => $type
-                                ), 1  );
-                                break;
-                            case 8:
-                                $citys = explode( '-', $key_row );
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $origin_iata,
-                                    'destination' => $key_row,
-                                    'price' => number_format($row["price"], 0, '.', ' '),
-                                    'type' => $type
-                                ), 1  );
-                                break;
-                            case 9:
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $origin_iata,
-                                    'destination' => $row['destination_iata'],
-                                    'departure_at' => $row['departure_at'],
-                                    'return_at' => $row['return_at'],
-                                    'price' => number_format($row["price"], 0, '.', ' '),
-                                    'type' => $type
-                                ), 1  );
-                                break;
-                            case 10:
-                                $citys = explode( '-', $key_row );
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $citys[0],
-                                    'destination' => $citys[1],
-                                    'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
-                                    'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
-                                    'type' => $type
-                                ), 1  );
-                                break;
-                            case 12:
-                            case 13:
-                            case 14:
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $row['origin_iata'],
-                                    'destination' => $row['destination_iata'],
-                                    'departure_at' => $row['depart_date'],
-                                    'return_at' => $row['return_date'],
-                                    'price' => number_format($row["value"], 0, '.', ' '),
-                                    'type' => $type
-                                ) , 1 );
+                                .human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp'))
+                                .'</p>'.$button.'</td>';
+                            break;
+                        case "button":
+                            $buttonShow = '';
+                            switch($type){
+                                case 1:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['depart_date'],
+                                        //'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1 );
+                                    break;
+                                case 2:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['depart_date'],
+                                        'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 8:
+                                    $citys = explode( '-', $key_row );
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $key_row,
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 9:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $row['destination_iata'],
+                                        'departure_at' => $row['departure_at'],
+                                        'return_at' => $row['return_at'],
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 10:
+                                    $citys = explode( '-', $key_row );
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $citys[0],
+                                        'destination' => $citys[1],
+                                        'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
+                                        'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $row['origin_iata'],
+                                        'destination' => $row['destination_iata'],
+                                        'departure_at' => $row['depart_date'],
+                                        'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ) , 1 );
 
-                                break;
-                            default:
-                                $buttonShow = $this->return_link(array(
-                                    'origin' => $origin_iata,
-                                    'destination' => $destination_iata,
-                                    'departure_at' => $row['departure_at'],
-                                    'return_at' => $row['return_at'],
-                                    'price' => number_format($row["price"], 0, '.', ' '),
-                                    'type' => $type
-                                ) , 1 );
-                        }
-                        $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
-                        break;
+                                    break;
+                                default:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['departure_at'],
+                                        'return_at' => $row['return_at'],
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ) , 1 );
+                            }
+                            $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
+                            break;
+                    }
+                }else{
+                    $urlLink = '';
+                    switch($type){
+                        case 1:
+                            $urlLink = $this->return_link(array(
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
+                                'departure_at' => $row['depart_date'],
+                                //'return_at' => $row['return_date'],
+                                'price' => number_format($row["value"], 0, '.', ' '),
+                                'type' => $type
+                            ), 2 );
+                            break;
+                        case 2:
+                            $urlLink = $this->return_link(array(
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
+                                'departure_at' => $row['depart_date'],
+                                'return_at' => $row['return_date'],
+                                'price' => number_format($row["value"], 0, '.', ' '),
+                                'type' => $type
+                            ), 2  );
+                            break;
+                        case 8:
+                            $citys = explode( '-', $key_row );
+                            $urlLink = $this->return_link(array(
+                                'origin' => $origin_iata,
+                                'destination' => $key_row,
+                                'price' => number_format($row["price"], 0, '.', ' '),
+                                'type' => $type
+                            ), 2  );
+                            break;
+                        case 9:
+                            $urlLink = $this->return_link(array(
+                                'origin' => $origin_iata,
+                                'destination' => $row['destination_iata'],
+                                'departure_at' => $row['departure_at'],
+                                'return_at' => $row['return_at'],
+                                'price' => number_format($row["price"], 0, '.', ' '),
+                                'type' => $type
+                            ), 2  );
+                            break;
+                        case 10:
+                            $citys = explode( '-', $key_row );
+                            $urlLink = $this->return_link(array(
+                                'origin' => $citys[0],
+                                'destination' => $citys[1],
+                                'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
+                                'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
+                                'type' => $type
+                            ), 2  );
+                            break;
+                        case 12:
+                        case 13:
+                        case 14:
+                            $urlLink = $this->return_link(array(
+                                'origin' => $row['origin_iata'],
+                                'destination' => $row['destination_iata'],
+                                'departure_at' => $row['depart_date'],
+                                'return_at' => $row['return_date'],
+                                'price' => number_format($row["value"], 0, '.', ' '),
+                                'type' => $type
+                            ) , 2 );
+
+                            break;
+                        default:
+                            $urlLink = $this->return_link(array(
+                                'origin' => $origin_iata,
+                                'destination' => $destination_iata,
+                                'departure_at' => $row['departure_at'],
+                                'return_at' => $row['return_at'],
+                                'price' => number_format($row["price"], 0, '.', ' '),
+                                'type' => $type
+                            ) , 2 );
+                    }
+                   // error_log($urlLink);
+                    switch($selected_field){
+                        //Номер рейса
+                        case "flight_number":
+                            $output .= '<td class="TPTableTbodyTd TPFlightNumberTD">
+                                            <p>' .str_replace('title_link', $row['airline'].' '. $row[$selected_field], $urlLink).'</p></td>';
+                            break;
+                        //Рейс
+                        case "flight":
+                            $output .= '<td class="TPTableTbodyTd">'
+                                .str_replace('title_link', '<p  data-airline-iata="'.$row['airline'].'">' .
+                                    $row['airline'].'</p><span>('. $row['airline'].' '.
+                                    $row['flight_number'].')</span>', $urlLink)
+                                    .'</td>';
+                            break;
+                        //Дата вылета
+                        case "departure_at":
+                            //
+                            switch($type){
+                                case 1:
+                                case 2:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['depart_date'] ).'">'
+                                        .str_replace('title_link', $this->tpDate(strtotime(  $row['depart_date'] )), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
+                                        .str_replace('title_link', $this->tpDate(strtotime(  $row[$selected_field] )), $urlLink)
+                                        .'</p></td>';
+                                    break;
+
+                            }
+                            break;
+                        //Дата возвращения
+                        case "return_at":
+                            switch($type){
+                                case 1:
+                                case 2:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['return_date'] ).'">'
+                                        .str_replace('title_link', $this->tpDate(strtotime(  $row['return_date'] )), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
+                                        .str_replace('title_link', $this->tpDate(strtotime($row[$selected_field])), $urlLink)
+                                        .'</p></td>';
+                                    break;
+
+                            }
+                            break;
+                        //Количество пересадок
+                        case "number_of_changes":
+                            switch($type){
+                                case 4:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .str_replace('title_link', $this->tpNumberChangesView(substr($key_row, -1)), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                case 5:
+                                case 6:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .str_replace('title_link', $this->tpNumberChangesView($row["transfers"]), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .str_replace('title_link', $this->tpNumberChangesView($row[$selected_field]), $urlLink)
+                                        .'</p></td>';
+                            }
+                            break;
+                        //Стоимость
+                        case "price":
+                            switch($type) {
+                                case 1:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        .str_replace('title_link', number_format($row["value"], 0, '.', ' ') .$this->currencyView(), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                case 2:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        .str_replace('title_link', number_format($row["value"], 0, '.', ' ') . $this->currencyView(), $urlLink)
+                                        .'</p></td>';
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"].'">'
+                                        .str_replace('title_link', number_format($row["value"], 0, '.', ' ') . $this->currencyView(), $urlLink)
+                                        . '</p></td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row[$selected_field].'">'
+                                        .str_replace('title_link', number_format($row[$selected_field], 0, '.', ' ') . $this->currencyView(), $urlLink)
+                                        . '</p></td>';
+                            }
+                            break;
+                        //Авиакомпания
+                        case "airline":
+                            $output .= '<td class="TPTableTbodyTd"><p data-airline-iata="'.$row[$selected_field].'">'
+                                .str_replace('title_link', $row[$selected_field], $urlLink)
+                                .'</p></td>';
+                            break;
+                        //Лого авиакомпании
+                        case "airline_logo":
+                            $output .= '<td class="TPTableTbodyTd">'
+                                .str_replace('title_link', '<img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
+                                    .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">', $urlLink)
+                                .'</td>';
+                            break;
+                        //Откуда
+                        case "origin":
+                            $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'
+                                .str_replace('title_link', $row[$selected_field], $urlLink)
+                                .'</span></p></td>';
+                            break;
+                        //Куда
+                        case "destination":
+                            switch($type){
+                                case 8:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$key_row.'">'
+                                        .str_replace('title_link',  $row['city'], $urlLink)
+                                        .'</span></p></td>';
+                                    break;
+                                case 9:
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$row[$selected_field].'">'
+                                        .str_replace('title_link',  $row[$selected_field], $urlLink)
+                                        .'</span></p></td>';
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$destination.'">'
+                                        .str_replace('title_link',  $destination, $urlLink)
+                                        .'</span></p></td>';
+                            }
+                            break;
+                        //Место
+                        case "place":
+                            $output .= '<td class="TPTableTbodyTd TPPlaceTD"><p>'
+                                .str_replace('title_link',  $count_row, $urlLink)
+                                .'</p></td>';
+                            break;
+                        //Направление
+                        case "direction":
+                            //$citys = explode( '-', $key_row );
+                            $output .= '<td class="TPTableTbodyTd TPDirectionTD"><p>
+                            <span>'
+                                .str_replace('title_link',  $row, $urlLink)
+                                .'</span></p></td>';
+                            break;
+                        //Класс перелета
+                        case "trip_class":
+                            $output .= '<td class="TPTableTbodyTd"><p>'
+                                .str_replace('title_link',  $this->returnTripClass($row[$selected_field]), $urlLink)
+                                .'</p></td>';
+                            break;
+                        //Расстояние
+                        case "distance":
+                            $output .= '<td class="TPTableTbodyTd"><p>'
+                                .str_replace('title_link',  $this->tpDistanceView($row[$selected_field]), $urlLink)
+                                .'</p></td>';
+                            break;
+                        //Цена за километр
+                        case "price_distance":
+                            $output .= '<td class="TPTableTbodyTd"><p data-price="'.$row["value"]/$row['distance'].'">'
+                                .str_replace('title_link',  number_format($row["value"]/$row['distance'], 0, '.', ' ') . $this->currencyView(), $urlLink)
+                                . '</p></td>';
+                            break;
+                        //Дата поиска
+                        case "found_at":
+                            $output .= '<td class="TPTableTbodyTd"><p data-tptime="'.strtotime(  $row[$selected_field] ).'"
+                                                            data-tpctime="'.current_time('timestamp').'"">'
+                                .str_replace('title_link',  human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp')), $urlLink)
+                                .'</p></td>';
+                            break;
+                        case "button":
+                            $buttonShow = '';
+                            switch($type){
+                                case 1:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['depart_date'],
+                                        //'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1 );
+                                    break;
+                                case 2:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['depart_date'],
+                                        'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 8:
+                                    $citys = explode( '-', $key_row );
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $key_row,
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 9:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $row['destination_iata'],
+                                        'departure_at' => $row['departure_at'],
+                                        'return_at' => $row['return_at'],
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 10:
+                                    $citys = explode( '-', $key_row );
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $citys[0],
+                                        'destination' => $citys[1],
+                                        'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
+                                        'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
+                                        'type' => $type
+                                    ), 1  );
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $row['origin_iata'],
+                                        'destination' => $row['destination_iata'],
+                                        'departure_at' => $row['depart_date'],
+                                        'return_at' => $row['return_date'],
+                                        'price' => number_format($row["value"], 0, '.', ' '),
+                                        'type' => $type
+                                    ) , 1 );
+
+                                    break;
+                                default:
+                                    $buttonShow = $this->return_link(array(
+                                        'origin' => $origin_iata,
+                                        'destination' => $destination_iata,
+                                        'departure_at' => $row['departure_at'],
+                                        'return_at' => $row['return_at'],
+                                        'price' => number_format($row["price"], 0, '.', ' '),
+                                        'type' => $type
+                                    ) , 1 );
+                            }
+                            $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
+                            break;
+                    }
                 }
+
             }
 
             $output .= '</tr>';
@@ -683,6 +1020,9 @@ class TPShortcodesView {
                     $link = '<a class="btn-tableShow" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
                         .$link_text.'</a>';
                     break;
+                case 2:
+                    $link = '<a href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>title_link</a>';
+                    break;
             }
 
         }else{
@@ -692,6 +1032,9 @@ class TPShortcodesView {
                     break;
                 case 1:
                     $link = '<a class="btn-tableShow" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+                    break;
+                case 2:
+                    $link = '<a href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>title_link</a>';
                     break;
             }
 
