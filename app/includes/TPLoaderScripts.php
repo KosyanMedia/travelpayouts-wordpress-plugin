@@ -455,7 +455,37 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
     }
+    public function ak_convert_hex2rgba($color, $opacity = false) {
+        $default = 'rgb(0,0,0)';
 
+        if (empty($color))
+            return $default;
+
+        if ($color[0] == '#')
+            $color = substr($color, 1);
+
+        if (strlen($color) == 6)
+            $hex = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
+
+        elseif (strlen($color) == 3)
+            $hex = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
+
+        else
+            return $default;
+
+        $rgb = array_map('hexdec', $hex);
+        $rgb[0] -= 20;
+        $rgb[1] -= 20;
+        $rgb[2] -= 20;
+        if ($opacity) {
+            if (abs($opacity) > 1)
+                $opacity = 1.0;
+            $output = 'rgba(' . implode(",", $rgb) . ',' . $opacity . ')';
+        } else {
+            $output = 'rgb(' . implode(",", $rgb) . ')';
+        }
+        return $output;
+    }
     public function headScriptSite()
     {
         global $post;
@@ -550,8 +580,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
             }
             .w-table thead tr td.active-w {
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-                box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;
+                background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
+               /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
             }
             .w-table thead tr td {
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
