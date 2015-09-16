@@ -353,6 +353,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function loadScriptSite($hook)
     {
+        global $post;
+        if ( false === strpos( $post->post_content, '[tp' ) )  return;
         // TODO: Implement loadScriptSite() method.
         switch (\app\includes\TPPlugin::$options['config']['script']){
             case 0:
@@ -369,18 +371,30 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
-        wp_register_style(
-            TPOPlUGIN_SLUG. '-TPFontsRoboto',
-            'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
-            array(),
-            TPOPlUGIN_VERSION // $ver
-        );
-        wp_register_style(
-            TPOPlUGIN_SLUG.'-TPMain', //$handle
-            TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
-            array(TPOPlUGIN_SLUG. '-TPFontsRoboto'), //$deps,
-            TPOPlUGIN_VERSION // $ver
-        );
+
+        if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
+            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto'){
+            wp_register_style(
+                TPOPlUGIN_SLUG. '-TPFontsRoboto',
+                'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
+                array(),
+                TPOPlUGIN_VERSION // $ver
+            );
+            wp_register_style(
+                TPOPlUGIN_SLUG.'-TPMain', //$handle
+                TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
+                array(TPOPlUGIN_SLUG. '-TPFontsRoboto'), //$deps,
+                TPOPlUGIN_VERSION // $ver
+            );
+        }else{
+            wp_register_style(
+                TPOPlUGIN_SLUG.'-TPMain', //$handle
+                TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
+                array(), //$deps,
+                TPOPlUGIN_VERSION // $ver
+            );
+        }
+
         /** End register styles */
 
         /** Register scripts */
@@ -444,6 +458,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function headScriptSite()
     {
+        global $post;
+        if ( false === strpos( $post->post_content, '[tp' ) )  return;
         // TODO: Implement headScriptSite() method.
         ?>
         <script type="text/javascript">
