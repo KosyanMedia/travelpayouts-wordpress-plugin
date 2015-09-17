@@ -24,9 +24,7 @@ class TPFieldFlightTickets {
         );
         ?>
         <p class="TP-SettingTitle"><?php _e('Layout', TPOPlUGIN_TEXTDOMAIN ); ?></p>
-        <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust TP-BtnDefaultStyle">
-            <i></i><?php _e('Reset to Default styles', TPOPlUGIN_TEXTDOMAIN ); ?>
-        </a>
+
         <div class="TP-StyleTable">
 
             <div class="TP-StyleItem">
@@ -80,7 +78,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][color]"
-                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['color'] ?>"/>
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['title_style']['color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
@@ -137,7 +135,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][color]"
-                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['color'] ?>"/>
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
@@ -173,7 +171,7 @@ class TPFieldFlightTickets {
                         <label>
                             <input class="TP-ColorStyleInput color no-alpha" type="text"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_color]"
-                                   value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color'] ?>"/>
+                                   value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['line_color']) ?>"/>
                             <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                         </label>
                     </div>
@@ -191,7 +189,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][background_color]"
-                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color'] ?>"/>
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['background_color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
 
                     </label>
@@ -201,7 +199,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_color]"
-                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color'] ?>"/>
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['head_color']) ?>"/>
 
                     </label>
                 </div>
@@ -210,7 +208,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_text_color]"
-                               value="<?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color'] ?>"/>
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['head_text_color']) ?>"/>
 
                     </label>
                 </div>
@@ -222,8 +220,13 @@ class TPFieldFlightTickets {
                 <label for="chek677"><?php _e('Show data as hyperlinks', TPOPlUGIN_TEXTDOMAIN ); ?></label>
             </div>
 
-
+            <div class="TP-StyleItem">
+                <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust TP-BtnDefaultStyle">
+                    <i></i><?php _e('Reset to Default styles', TPOPlUGIN_TEXTDOMAIN ); ?>
+                </a>
+            </div>
         </div>
+
 
     <?php
     }

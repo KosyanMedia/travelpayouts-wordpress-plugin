@@ -110,6 +110,7 @@ class TPShortcodesView {
                  * Buttton
                  */
                 if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) && !$buttonOnOff){
+
                     switch($type){
                         case 1:
                             $button = $this->return_link(array(
@@ -119,7 +120,7 @@ class TPShortcodesView {
                                 //'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
                                 'type' => $type
-                            ) );
+                            ));
                             break;
                         case 2:
                             $button = $this->return_link(array(
@@ -129,7 +130,7 @@ class TPShortcodesView {
                                 'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
                                 'type' => $type
-                            ) );
+                            ));
                             break;
                         case 8:
                             $citys = explode( '-', $key_row );
@@ -946,7 +947,7 @@ class TPShortcodesView {
      * @param array $args
      * @return string
      */
-    public function return_link($args = array(), $type = 0){
+    public function return_link($args = array(), $type_link = 0){
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'link_text' => '', 'price' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -1011,7 +1012,7 @@ class TPShortcodesView {
             $home = get_option('home');
             $url = substr($url, 10);
             //urldecode()
-            switch($type){
+            switch($type_link){
                 case 0:
                     $link = '<a class="btn-table" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
                         .$link_text.'</a>';
@@ -1026,7 +1027,7 @@ class TPShortcodesView {
             }
 
         }else{
-            switch($type){
+            switch($type_link){
                 case 0:
                     $link = '<a class="btn-table" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
                     break;

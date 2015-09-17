@@ -353,8 +353,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function loadScriptSite($hook)
     {
+
         global $post;
-        if ( false === strpos( $post->post_content, '[tp' ) )  return;
+        if ( false === strpos( $post->post_content, '[tp' ) && !is_home())  return;
         // TODO: Implement loadScriptSite() method.
         switch (\app\includes\TPPlugin::$options['config']['script']){
             case 0:
@@ -455,6 +456,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
     }
+
+    /**
+     * @param $color
+     * @param bool|false $opacity
+     * @return string
+     */
     public function ak_convert_hex2rgba($color, $opacity = false) {
         $default = 'rgb(0,0,0)';
 
@@ -489,7 +496,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function headScriptSite()
     {
         global $post;
-        if ( false === strpos( $post->post_content, '[tp' ) )  return;
+        if ( false === strpos( $post->post_content, '[tp' ) && !is_home())  return;
         // TODO: Implement headScriptSite() method.
         ?>
         <script type="text/javascript">
