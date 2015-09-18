@@ -131,6 +131,13 @@
                 </label>
             </td>
         </tr>
+        <tr id="tr_one_way">
+            <td>
+                <input type="checkbox" id="one_way" value="1">
+                <?php _e('One Way', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </td>
+        </tr>
+
     </table>
 
 </div>
