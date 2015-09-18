@@ -58,7 +58,8 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+" " +
+                                        "transplant="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -101,7 +102,8 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate
+                                        +" transplant="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -163,7 +165,8 @@ jQuery(function($) {
                                 break;
                             case '11':
                                 setShortcodes("[tp_our_site_search_shortcodes " +
-                                    " title=\""+title+"\" limit="+limit+" "+paginate+"]",
+                                    " title=\""+title+"\" limit="+limit+" "+paginate
+                                    +" transplant="+doc.find('#transplant').val()+"]",
                                     $(this));
                                 break;
                             case '12':
@@ -171,7 +174,8 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate
+                                        +" transplant="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -180,7 +184,8 @@ jQuery(function($) {
                                     doc.find('#destination').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
-                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate
+                                        +" transplant="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -214,6 +219,7 @@ jQuery(function($) {
                 doc.find('#tr_limit').hide();
                 doc.find('#tr_trip_class').hide();
                 doc.find('#tr_paginate').hide();
+                doc.find('#tr_transplant').hide();
                 doc.find('#origin, #destination, #airline, #select_shortcodes').removeClass('constructorShortcodesError');
             }
         });
@@ -255,6 +261,16 @@ jQuery(function($) {
     function constructorShortcodesSelect(){
         doc.find('#td_select_shortcodes').on('change', '#select_shortcodes', function(e) {
             e.preventDefault();
+            switch ($(this).data('paginate-'+$(this).val())){
+                case 0:
+                    doc.find('#paginate').attr('checked', false);
+                    break;
+                case 1:
+                    doc.find('#paginate').attr('checked', true);
+                    break;
+            }
+            doc.find('#transplant option[value=' + $(this).data('transplant-'+$(this).val()) + ']').attr('selected', 'true');
+
             doc.find('#select_shortcodes').removeClass('constructorShortcodesError');
             doc.find('#tr_title').hide();
             doc.find('#tr_origin').hide();
@@ -263,6 +279,7 @@ jQuery(function($) {
             doc.find('#tr_limit').hide();
             doc.find('#tr_trip_class').hide();
             doc.find('#tr_paginate').hide();
+            doc.find('#tr_transplant').hide();
             doc.find("#limit").val("");
             switch($(this).val()) {
                 case '0':
@@ -272,6 +289,8 @@ jQuery(function($) {
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_transplant').show();
+
                     break;
                 case '2':
                     doc.find('#tr_paginate').show();
@@ -293,12 +312,14 @@ jQuery(function($) {
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_transplant').show();
                     break;
                 case '5':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+
                     break;
                 case '6':
                     doc.find('#tr_paginate').show();
@@ -334,6 +355,7 @@ jQuery(function($) {
                     doc.find('#tr_limit').show();
                     //doc.find('#tr_trip_class').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    doc.find('#tr_transplant').show();
                     break;
                 case '12':
                     doc.find('#tr_paginate').show();
@@ -342,6 +364,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     //doc.find('#tr_trip_class').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    doc.find('#tr_transplant').show();
                     break;
                 case '13':
                     doc.find('#tr_paginate').show();
@@ -350,6 +373,7 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     //doc.find('#tr_trip_class').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    doc.find('#tr_transplant').show();
                     break;
             }
         });

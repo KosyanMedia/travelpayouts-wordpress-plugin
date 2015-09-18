@@ -182,6 +182,8 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'cal-month',
                     'paginate' => 10,
+                    'paginate_switch' => true,
+                    'transplant' => 0,
                     'title_button' => array(
                         'en' => 'OW from price',
                         'ru' => 'Найти билет от price'
@@ -211,6 +213,7 @@ class TPDefault implements  \core\TPODefault{
                     'plus_return_date' => 12,
                     'extra_table_marker' => 'cal-week',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -266,6 +269,7 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -297,6 +301,8 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction-month',
                     'paginate' => 10,
+                    'paginate_switch' => true,
+                    'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -328,6 +334,7 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction-12months',
                     'paginate' => 12,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -358,6 +365,7 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction-nostops',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -388,6 +396,7 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'nostops-from',
                     'limit' => 10,
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -420,6 +429,7 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'extra_table_marker' => 'popular-city',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -452,6 +462,7 @@ class TPDefault implements  \core\TPODefault{
                     'limit' => 10,
                     'extra_table_marker' => 'popular-airlines',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'Find tickets',
                         'ru' => 'Узнать цену'
@@ -470,6 +481,7 @@ class TPDefault implements  \core\TPODefault{
                     ),
                     'tag' => 'h3',
                     'paginate' => 10,
+                    'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'Find tickets on price',
                         'ru' => 'Найти билет от price'
@@ -502,6 +514,8 @@ class TPDefault implements  \core\TPODefault{
                     'sort' => 0,
                     'extra_table_marker' => 'on-our-website',
                     'paginate' => 10,
+                    'paginate_switch' => true,
+                    'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -538,6 +552,8 @@ class TPDefault implements  \core\TPODefault{
                     'sort' => 2,
                     'extra_table_marker' => 'from-city',
                     'paginate' => 10,
+                    'paginate_switch' => true,
+                    'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'
@@ -574,6 +590,8 @@ class TPDefault implements  \core\TPODefault{
                     'sort' => 2,
                     'extra_table_marker' => 'to-city',
                     'paginate' => 10,
+                    'paginate_switch' => true,
+                    'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
                         'ru' => 'Найти билет от price'

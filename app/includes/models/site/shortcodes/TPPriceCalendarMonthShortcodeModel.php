@@ -11,7 +11,8 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '');
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '',
+            'transplant' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant']);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //$month
         $attr =  array( 'origin' => $origin, 'destination' => $destination,
@@ -30,8 +31,27 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             if( ! $return )
                 return false;
         }
-
-        return array('rows' => $return, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
+        $rows = array();
+        switch($transplant){
+            case 0:
+                $rows = $return;
+                break;
+            case 1:
+                foreach($return as $value){
+                    if($value['number_of_changes'] <= 1){
+                        $rows[] = $value;
+                    }
+                }
+                break;
+            case 2:
+                foreach($return as $value){
+                    if($value['number_of_changes'] == 0){
+                        $rows[] = $value;
+                    }
+                }
+                break;
+        }
+        return array('rows' => $rows, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate);
     }

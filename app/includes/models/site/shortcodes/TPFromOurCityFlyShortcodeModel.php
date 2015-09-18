@@ -12,8 +12,10 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'currency' => 'RUB', 'destination' => false,
-            'period_type' => \app\includes\TPPlugin::$options['shortcodes']['14']['period_type'], 'one_way' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['14']['limit'], 'trip_class' => 0, 'title' => '');
+            'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'], 'one_way' => false,
+            'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'], 'trip_class' => 0, 'title' => ''
+        , 'transplant' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant']
+            );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'currency' => $this->typeCurrency(),
             'origin' => $origin, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
@@ -37,8 +39,27 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             $rows = $return;
             $rows = $this->iataAutocomplete($rows, 13);
         }
-
-        return array('rows' => $rows,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
+        $rows_sort = array();
+        switch($transplant){
+            case 0:
+                $rows_sort = $rows;
+                break;
+            case 1:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] <= 1){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+            case 2:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] == 0){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+        }
+        return array('rows' => $rows_sort,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
         , 'paginate' => $paginate);
     }
 }

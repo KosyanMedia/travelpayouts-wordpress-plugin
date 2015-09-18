@@ -13,7 +13,8 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
         // TODO: Implement get_data() method.
         $defaults = array( 'currency' => 'RUB', 'destination' => false,
             'period_type' => \app\includes\TPPlugin::$options['shortcodes']['14']['period_type'], 'one_way' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['14']['limit'], 'trip_class' => 0, 'title' => '');
+            'limit' => \app\includes\TPPlugin::$options['shortcodes']['14']['limit'], 'trip_class' => 0, 'title' => ''
+        , 'transplant' => \app\includes\TPPlugin::$options['shortcodes']['14']['transplant']);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'currency' => $this->typeCurrency(),
             'destination' => $destination, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
@@ -36,7 +37,27 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
             $rows = $return;
             $rows = $this->iataAutocomplete($rows, 13);
         }
-        return array('rows' => $rows,'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
+        $rows_sort = array();
+        switch($transplant){
+            case 0:
+                $rows_sort = $rows;
+                break;
+            case 1:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] <= 1){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+            case 2:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] == 0){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+        }
+        return array('rows' => $rows_sort,'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
             'type' => 14, 'title' => $title, 'paginate' => $paginate);
     }
 }

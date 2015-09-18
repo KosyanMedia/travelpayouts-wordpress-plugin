@@ -34,9 +34,29 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             $rows = array();
             $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
         }
+        $rows_sort = array();
+        switch($transplant){
+            case 0:
+                $rows_sort = $rows;
+                break;
+            case 1:
+                foreach($rows as $value){
+                    if($value['transfers'] <= 1){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+            case 2:
+                foreach($rows as $value){
+                    if($value['transfers'] == 0){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+        }
 
         //return var_dump("<pre>", $rows, "</pre>");
-        return array('rows' => $rows, 'origin' => $this->iataAutocomplete($origin, 0),
+        return array('rows' => $rows_sort, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 5, 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate);
     }

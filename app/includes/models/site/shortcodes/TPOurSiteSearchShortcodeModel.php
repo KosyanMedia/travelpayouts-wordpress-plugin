@@ -12,7 +12,8 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'currency' => 'RUB',  'period_type' => \app\includes\TPPlugin::$options['shortcodes']['12']['period_type'],
-            'one_way' => false, 'limit' => \app\includes\TPPlugin::$options['shortcodes']['12']['limit'], 'trip_class' => 0, 'title' => '');
+            'one_way' => false, 'limit' => \app\includes\TPPlugin::$options['shortcodes']['12']['limit'], 'trip_class' => 0,
+            'title' => '', 'transplant' => \app\includes\TPPlugin::$options['shortcodes']['12']['transplant']);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array('currency' => $this->typeCurrency(),
             'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit, 'one_way' => $one_way);
@@ -35,7 +36,27 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
             $rows = $return;
             $rows = $this->iataAutocomplete($rows, 12);
         }
-        return array('rows' => $rows, 'type' => 12, 'title' => $title, 'paginate' => $paginate);
+        $rows_sort = array();
+        switch($transplant){
+            case 0:
+                $rows_sort = $rows;
+                break;
+            case 1:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] <= 1){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+            case 2:
+                foreach($rows as $value){
+                    if($value['number_of_changes'] == 0){
+                        $rows_sort[] = $value;
+                    }
+                }
+                break;
+        }
+        return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate);
 
     }
 }

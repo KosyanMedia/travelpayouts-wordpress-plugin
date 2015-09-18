@@ -433,7 +433,17 @@ class TPFieldFlightTickets {
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="TP-HeadTable">
+            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
+            <label for="chek-p1"><?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label></label>
+
+        </div>
+
+
     <?php
     }
     /**
@@ -498,7 +508,26 @@ class TPFieldFlightTickets {
         </div>
     <?php
     }
+    public function TPFieldTransplant($shortcode){
+        ?>
+        <div class="TP-HeadTable">
+            <label>
+                <span><?php _e('Transplant', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][transplant]" class="TP-Zelect">
+                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
+                        value="0"><?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
+                        value="1"><?php _e('No more than one transplant', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
+                        value="2"><?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                </select>
+            </label>
+            <label>
 
+            </label>
+        </div>
+        <?php
+    }
     //Shortcode 1
     public function TPFieldShortcode_1(){
         $shortcode = 1;
@@ -518,6 +547,7 @@ class TPFieldFlightTickets {
 
             </label>
         </div>
+        <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -547,7 +577,32 @@ class TPFieldFlightTickets {
         </div>
         <div class="TP-ListSub TP-ListSubS-2">
             <?php $this->TPFieldPlusDate($shortcode); ?>
-            <?php $this->TPFieldPaginate($shortcode); ?>
+            <?php //$this->TPFieldPaginate($shortcode); ?>
+            <div class="ItemSub">
+                <span><?php _e('Rows per page', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <div class="TP-childF">
+                    <div class="spinnerW clearfix" data-trigger="spinner">
+                        <label>
+                            <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate]"
+                                   type="text" data-rule="quantity"
+                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate']) ?>">
+                        </label>
+                        <div class="navSpinner">
+                            <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                            <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="TP-HeadTable">
+            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
+            <label for="chek-p1"><?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label></label>
+
         </div>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -602,6 +657,7 @@ class TPFieldFlightTickets {
 
             </label>
         </div>
+        <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -813,6 +869,7 @@ class TPFieldFlightTickets {
 
             </label>
         </div>-->
+        <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -859,6 +916,7 @@ class TPFieldFlightTickets {
 
             </label>
         </div>-->
+        <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -905,6 +963,7 @@ class TPFieldFlightTickets {
 
             </label>
         </div>-->
+        <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
