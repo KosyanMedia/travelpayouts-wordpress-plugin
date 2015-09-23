@@ -11,7 +11,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' );
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' , 'paginate' => true);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
@@ -35,7 +35,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
         }
         $rows_sort = array();
-        switch($transplant){
+        switch($stops){
             case 0:
                 $rows_sort = $rows;
                 break;

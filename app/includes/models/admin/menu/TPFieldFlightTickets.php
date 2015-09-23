@@ -178,11 +178,7 @@ class TPFieldFlightTickets {
                 </div>
 
             </div>
-            <div class="TP-StyleItem">
-                <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
-                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
-                <label for="chek66"><?php _e('Responsive table', TPOPlUGIN_TEXTDOMAIN ); ?></label>
-            </div>
+
             <div class="TP-StyleItem">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span><?php _e('Background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
@@ -219,12 +215,26 @@ class TPFieldFlightTickets {
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />
                 <label for="chek677"><?php _e('Show data as hyperlinks', TPOPlUGIN_TEXTDOMAIN ); ?></label>
             </div>
-
+            <div class="TP-StyleItem">
+                <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
+                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
+                <label for="chek66"><?php _e('Enable Horizontal Scroll', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                <div class="svg-img-1 svg-img-style-table">
+                    <a href="#" class="tooltip-settings">
+                        <span><?php _e("The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.", TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#00B0DD">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16"><g fill="#00B0DD">
+                                        <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                        <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
+                    </a>
+                </div>
+            </div>
             <div class="TP-StyleItem">
                 <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust TP-BtnDefaultStyle">
                     <i></i><?php _e('Reset to Default styles', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </a>
             </div>
+
         </div>
 
 
@@ -512,12 +522,12 @@ class TPFieldFlightTickets {
         ?>
         <div class="TP-HeadTable">
             <label>
-                <span><?php _e('Transplant', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span><?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][transplant]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
                         value="0"><?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
-                        value="1"><?php _e('No more than one transplant', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="1"><?php _e('No more than one stop', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
                         value="2"><?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                 </select>
@@ -525,6 +535,26 @@ class TPFieldFlightTickets {
             <label>
 
             </label>
+        </div>
+        <?php
+    }
+    public function TPFieldSortTd($shortcode){
+
+        ?>
+        <div class="TP-HeadTable">
+            <label>
+                <span><?php _e('Sort by column', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect">
+                     <?php
+                         if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])) {
+                             $selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
+                         }else{
+
+                         }
+                     ?>
+                </select>
+            </label>
+            <label></label>
         </div>
         <?php
     }
@@ -554,6 +584,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        //$this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 2

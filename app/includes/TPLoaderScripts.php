@@ -520,12 +520,19 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     .w-table {
                         display: block !important;
                         overflow-x: auto !important;
+                        border: none !important;
+                        border-left: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
                     }
+
                     <?php
                 }else{
                     ?>
                     .w-table {
                         display: table !important;
+                        border: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
+                    }
+                    .TPTdButtonShow{
+                        overflow: hidden !important;
                     }
                     <?php
 
@@ -553,9 +560,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             }
-            .w-table{
-                border: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
-            }
+
             .w-table thead tr td,.w-table tbody tr td {
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;

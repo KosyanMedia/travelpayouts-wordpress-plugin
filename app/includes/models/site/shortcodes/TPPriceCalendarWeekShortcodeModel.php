@@ -11,7 +11,7 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' );
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' , 'paginate' => true);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());

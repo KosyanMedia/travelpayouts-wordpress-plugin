@@ -102,7 +102,7 @@
             <td>
                 <label><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 <input type="number" name="limit" id="limit" value=""
-                       class="" placeholder="Лимит" min="1">
+                       class="" placeholder="<?php _e('Limit', TPOPlUGIN_TEXTDOMAIN); ?>" min="1">
             </td>
         </tr>
         <tr id="tr_trip_class">
@@ -120,23 +120,24 @@
                 <?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?>
             </td>
         </tr>
-        <tr id="tr_transplant">
-            <td>
-                <label><?php _e('Transplant', TPOPlUGIN_TEXTDOMAIN); ?>
-                    <select id="transplant">
-                        <option value="0"><?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="1"><?php _e('No more than one transplant', TPOPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="2"><?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
-                    </select>
-                </label>
-            </td>
-        </tr>
         <tr id="tr_one_way">
             <td>
                 <input type="checkbox" id="one_way" value="1">
                 <?php _e('One Way', TPOPlUGIN_TEXTDOMAIN ); ?>
             </td>
         </tr>
+        <tr id="tr_transplant">
+            <td>
+                <label><?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <select id="transplant">
+                        <option value="0"><?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="1"><?php _e('No more than one stop', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="2"><?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+
 
     </table>
 

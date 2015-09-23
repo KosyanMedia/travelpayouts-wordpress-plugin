@@ -15,7 +15,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '' );
+            'currency' => 'RUB', 'title' => '', 'paginate' => true );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => $departure_at, 'return_at' => $return_at,

@@ -13,7 +13,7 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         // TODO: Implement get_data() method.
         if(\app\includes\TPPlugin::$options['local']['currency'] != 1) return false;
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'limit' => false, 'title' => '');
+            'currency' => 'RUB', 'limit' => false, 'title' => '', 'paginate' => true);
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array('origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,

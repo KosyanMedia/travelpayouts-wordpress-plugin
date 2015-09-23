@@ -11,7 +11,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'airline' => false, 'limit' => false, 'title' => '');
+        $defaults = array( 'airline' => false, 'limit' => false, 'title' => '', 'paginate' => true);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array( 'airline' => $airline,
             'limit' => $limit );

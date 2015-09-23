@@ -56,7 +56,7 @@
 
 .w-table thead tr td:last-of-type {
  /* width: 100px !important;*/
-    width: 100px !important;
+    width: auto !important;
 }
 .w-table tbody tr {
   height: 45px;
@@ -108,6 +108,7 @@
 }
 .w-table tbody tr td:last-of-type {
   width: 100px;
+
 }
 
 .btn-table {
@@ -141,7 +142,7 @@
     padding: 0 10px;
     height: 30px;
     display: block;
-    margin-top: 7px;
+    margin-top: 2px;
     top: 0;
     right: 10px;
     -webkit-border-radius: 3px;
@@ -161,6 +162,7 @@
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
     white-space: nowrap;
+    overflow: hidden;
 }
 .btn-tableShow span {
     line-height: 30px;
@@ -251,7 +253,10 @@ span.ellipsis {
     width: auto;
 }
 .TP-TitleTablezs{
-    white-space: nowrap !important;
+   /* white-space: nowrap !important;  */
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
 }
 @font-face {
     font-family: 'ALSRubl';

@@ -28,6 +28,7 @@ class TPShortcodesView {
         $defaults = array( 'rows' => array(), 'type' => null, 'origin' => '', 'destination' => '', 'airline' => '',
             'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '', 'paginate' => 'false');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if(count($rows) < 1) return false;
         $output = '';
         $sortable_class = '';
         if(count($rows) > 1)
@@ -434,7 +435,7 @@ class TPShortcodesView {
                                         'type' => $type
                                     ) , 1 );
                             }
-                            $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
+                            $output .= '<td class="TPTableTbodyTd TPTdButtonShow">'.$buttonShow.'</td>';
                             break;
                     }
                 }else{
@@ -698,43 +699,43 @@ class TPShortcodesView {
                             $buttonShow = '';
                             switch($type){
                                 case 1:
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["value"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $destination_iata,
                                         'departure_at' => $row['depart_date'],
                                         //'return_at' => $row['return_date'],
                                         'price' => number_format($row["value"], 0, '.', ' '),
                                         'type' => $type
-                                    ), 1 );
+                                    ), 1 ).'</p>';
                                     break;
                                 case 2:
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["value"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $destination_iata,
                                         'departure_at' => $row['depart_date'],
                                         'return_at' => $row['return_date'],
                                         'price' => number_format($row["value"], 0, '.', ' '),
                                         'type' => $type
-                                    ), 1  );
+                                    ), 1  ).'</p>';
                                     break;
                                 case 8:
                                     $citys = explode( '-', $key_row );
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["price"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $key_row,
                                         'price' => number_format($row["price"], 0, '.', ' '),
                                         'type' => $type
-                                    ), 1  );
+                                    ), 1  ).'</p>';
                                     break;
                                 case 9:
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["price"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $row['destination_iata'],
                                         'departure_at' => $row['departure_at'],
                                         'return_at' => $row['return_at'],
                                         'price' => number_format($row["price"], 0, '.', ' '),
                                         'type' => $type
-                                    ), 1  );
+                                    ), 1  ).'</p>';
                                     break;
                                 case 10:
                                     $citys = explode( '-', $key_row );
@@ -749,27 +750,27 @@ class TPShortcodesView {
                                 case 12:
                                 case 13:
                                 case 14:
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["value"].'">'.$this->return_link(array(
                                         'origin' => $row['origin_iata'],
                                         'destination' => $row['destination_iata'],
                                         'departure_at' => $row['depart_date'],
                                         'return_at' => $row['return_date'],
                                         'price' => number_format($row["value"], 0, '.', ' '),
                                         'type' => $type
-                                    ) , 1 );
+                                    ) , 1 ).'</p>';
 
                                     break;
                                 default:
-                                    $buttonShow = $this->return_link(array(
+                                    $buttonShow = '<p data-price="'.$row["price"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $destination_iata,
                                         'departure_at' => $row['departure_at'],
                                         'return_at' => $row['return_at'],
                                         'price' => number_format($row["price"], 0, '.', ' '),
                                         'type' => $type
-                                    ) , 1 );
+                                    ) , 1 ).'</p>';
                             }
-                            $output .= '<td class="TPTableTbodyTd">'.$buttonShow.'</td>';
+                            $output .= '<td class="TPTableTbodyTd TPTdButtonShow">'.$buttonShow.'</td>';
                             break;
                     }
                 }

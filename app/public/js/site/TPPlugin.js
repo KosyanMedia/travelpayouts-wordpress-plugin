@@ -77,7 +77,8 @@ jQuery(function($) {
             } );
         });
         doc.find(".w-table").each(function(i,e){
-            $(this).parent('.dataTables_wrapper').css({'margin' : '0 auto', 'max-width': $(this).find("thead").width()})
+            var countTd = $(this).children('thead').children('tr').children('td').length + 5;
+            $(this).parent('.dataTables_wrapper').css({'margin' : '0 auto', 'max-width': $(this).find("thead").width() + countTd})
         });
 
     });

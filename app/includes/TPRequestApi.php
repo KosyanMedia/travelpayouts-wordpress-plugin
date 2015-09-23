@@ -370,7 +370,7 @@ class TPRequestApi {
             ."&show_to_affiliates=true".$sorting.$trip_class.$token;
         $request_string = "$this->api_url_2/prices/latest?{$extra}";
         //return $request_string;
-        error_log($request_string);
+        //error_log($request_string);
         return $this->objectToArray($this->request($request_string));
     }
     /** **/

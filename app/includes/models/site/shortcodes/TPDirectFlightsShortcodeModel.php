@@ -16,7 +16,8 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
     {
         // TODO: Implement get_data() method.
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB','title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']);
+            'currency' => 'RUB','title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']
+            , 'paginate' => true);
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array( 'origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,

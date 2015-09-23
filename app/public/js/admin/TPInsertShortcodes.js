@@ -64,7 +64,7 @@ jQuery(function($) {
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
                                         "destination="+destination+" title=\""+title+"\" "+paginate+" " +
-                                        "transplant="+doc.find('#transplant').val()+"]",
+                                        "stops="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -108,7 +108,7 @@ jQuery(function($) {
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
                                         "destination="+destination+" title=\""+title+"\" "+paginate
-                                        +" transplant="+doc.find('#transplant').val()+"]",
+                                        +" stops="+doc.find('#transplant').val()+"]",
                                         $(this));
                                 }
                                 break;
@@ -171,7 +171,7 @@ jQuery(function($) {
                             case '11':
                                 setShortcodes("[tp_our_site_search_shortcodes " +
                                     " title=\""+title+"\" limit="+limit+" "+paginate
-                                    +" transplant="+doc.find('#transplant').val()+" "+one_way+"]",
+                                    +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
                                     $(this));
                                 break;
                             case '12':
@@ -180,7 +180,7 @@ jQuery(function($) {
                                 }else{
                                     setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
                                         " title=\""+title+"\" limit="+limit+" "+paginate
-                                        +" transplant="+doc.find('#transplant').val()+" "+one_way+"]",
+                                        +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
                                         $(this));
                                 }
                                 break;
@@ -190,7 +190,7 @@ jQuery(function($) {
                                 }else{
                                     setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
                                         " title=\""+title+"\" limit="+limit+" "+paginate
-                                        +" transplant="+doc.find('#transplant').val()+" "+one_way+"]",
+                                        +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
                                         $(this));
                                 }
                                 break;

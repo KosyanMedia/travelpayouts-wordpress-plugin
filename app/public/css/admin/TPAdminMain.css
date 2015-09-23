@@ -582,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #ececec;
   height: 96px;
   line-height: 95px;
-  font-size: 35px;
+  font-size: 34px;
   font-weight: 300;
   color: #6f777c;
   margin-bottom: 28px;
@@ -2443,4 +2443,8 @@ thead tr td.active-w {
 }
 .TP-ColorStyleHead{
   margin-left: 15px;
+}
+.svg-img-style-table{
+  margin-top: 5px;
+
 }

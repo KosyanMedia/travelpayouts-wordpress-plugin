@@ -12,7 +12,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '' );
+            'currency' => 'RUB', 'title' => '' , 'paginate' => true);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $current_day = date("d",time());
         $current_month = date("m");

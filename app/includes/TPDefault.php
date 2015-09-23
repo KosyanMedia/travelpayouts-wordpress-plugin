@@ -122,7 +122,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Цена за километр',
                             'found_at' => 'Когда найден',
                             'back_and_forth' => 'В одну/обе стороны',
-                            'button' => 'Найти',
+                            'button' => 'Найти билет',
                         ),
                     ),
                     'en' => array(
@@ -164,7 +164,7 @@ class TPDefault implements  \core\TPODefault{
                             'price_distance' => 'Price/distance',
                             'found_at' => 'When found',
                             'back_and_forth' => 'One way / Round-Trip',
-                            'button' => 'Find',
+                            'button' => 'Find Ticket',
                         ),
                     ),
                 ),

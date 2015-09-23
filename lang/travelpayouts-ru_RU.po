@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-09-18 18:38+0300\n"
+"POT-Creation-Date: 2015-09-22 17:50+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -321,145 +321,162 @@ msgid "dashed"
 msgstr "Пунктир"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:184
-msgid "Responsive table"
-msgstr "Адаптивные таблицы"
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:188
 msgid "Background"
 msgstr "Фон таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:198
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:194
 msgid "Table header background"
 msgstr "Фон шапки таблицы\r"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:207
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:203
 msgid "Table header font"
 msgstr "Шрифт в шапке таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:220
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:216
 msgid "Show data as hyperlinks"
 msgstr "Отображать данные гиперссылками"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:225
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:221
+msgid "Enable Horizontal Scroll"
+msgstr "Разрешить горизонтальный скролл"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:224
+#, php-format
+msgid ""
+"The tables' width won't be 100% of your content zone. When you resize your "
+"content zone (e.g. you have a responsible WP theme) - tables won't affect "
+"your design, but will have a horizontal scroll."
+msgstr ""
+"Таблицы не растягиваются на всю ширину контент зоны (max-width не равно "
+"100%). При уменьшении ширины контент зоны (например, на мобильных "
+"устройствах, если ваша WP тема адаптивна), - таблица \"впишется\" в новый "
+"размер, но с появлением горизонтального скролла."
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:234
 msgid "Reset to Default styles"
 msgstr "Стили по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:239
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:249
 msgid "Title"
 msgstr "Заголовок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:250
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:260
 msgid "Use \"airline\" variable to add the Airlines automatically"
 msgstr ""
 "Используйте переменные \"airline\"  для автоматической подстановки "
 "авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:253
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:263
 msgid ""
 "Use \"origin\" and \"destination\" variables to add the city automatically"
 msgstr ""
 "Используйте переменные \"origin\",  \"destination\"  для автоматической "
 "подстановки города"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:267
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:277
 msgid "Title tag"
 msgstr "Тег заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:291
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:301
 msgid "Button Title"
 msgstr "Текст кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:301
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:311
 msgid "\"price\" variable can be used"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:329
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:339
 msgid "Order by price"
 msgstr "Сортировка по цене"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:336
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:346
 msgid "Ascending"
 msgstr "по возрастанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:341
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:351
 msgid "Descending"
 msgstr "по убыванию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:346
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:356
 msgid "Do not sort"
 msgstr "не сортировать"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:395
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
 msgid "Table Columns"
 msgstr "Колонки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:408
 msgid "Not selected"
 msgstr "Не выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:415
 msgid "Selected"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:422
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:582
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:432
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:613
 msgid "Rows per page"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:441
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:603
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:451
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:634
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
 msgid "Paginate"
 msgstr "Пейджинация"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:455
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:465
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:103
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:105
 msgid "Limit"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:478
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:488
 msgid "Departure date"
 msgstr "Дата отправления"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:494
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:504
 msgid "Return date"
 msgstr "Дата возвращения"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:515
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:125
-msgid "Transplant"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:525
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:131
+msgid "Number of stops"
 msgstr "Пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:518
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:528
 #: app/includes/views/admin/menu/TPSearchForms.view.php:51
 #: app/includes/views/admin/menu/TPStatisticView.php:153
 #: app/includes/views/admin/menu/TPStatisticView.php:161
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:127
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:133
 msgid "All"
 msgstr "Все"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:520
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:128
-msgid "No more than one transplant"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:530
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
+msgid "No more than one stop"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:522
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:129
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:532
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:135
 msgid "Direct"
 msgstr "без пересадок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:541
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:569
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:624
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:651
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:679
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:706
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:733
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:761
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:788
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:843
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:891
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:938
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:546
+msgid "Sort by column"
+msgstr "Сортировка по столбцу"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:571
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:600
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:655
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:682
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:710
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:737
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:764
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:792
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:819
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:874
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:922
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:969
 #: app/includes/models/admin/menu/TPFieldSettings.php:35
 msgid "Extra marker"
 msgstr "Дополнительный маркер"
@@ -1397,7 +1414,7 @@ msgstr "Бизнес"
 msgid "First"
 msgstr "Первый"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:137
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:126
 msgid "One Way"
 msgstr "В одну сторону "
 
@@ -1467,6 +1484,18 @@ msgstr "Вставить поисковую форму"
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
 msgid "Insert table"
 msgstr "Вставить таблицу"
+
+#~ msgid "Responsive table"
+#~ msgstr "Адаптивные таблицы"
+
+#~ msgid "Stops"
+#~ msgstr "Пересадки"
+
+#~ msgid "No more than one transplant"
+#~ msgstr "Не более 1 пересадки"
+
+#~ msgid "Transplant"
+#~ msgstr "Пересадки"
 
 #~ msgid "Test"
 #~ msgstr "Тест 1111"
