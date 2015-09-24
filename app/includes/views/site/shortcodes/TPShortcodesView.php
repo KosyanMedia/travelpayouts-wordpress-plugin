@@ -83,7 +83,7 @@ class TPShortcodesView {
                         .' </td>';
                     break;
                 case 'button':
-                    $output .= '<td class="TPTableHead ' . $class_sort . ' tp-price-column">' .
+                    $output .= '<td class="TPTableHead ' . $class_sort . ' tp-price-column TPAirlineLogoTD">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
                     break;

@@ -297,3 +297,6 @@ p.parrentBtn {
     top: 0;
     right: 10px;
 }
+.TPTdButtonShow > p:after{
+    display: none !important;
+}
