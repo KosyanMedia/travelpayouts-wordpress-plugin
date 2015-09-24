@@ -2448,3 +2448,6 @@ thead tr td.active-w {
   margin-top: 5px;
 
 }
+.cp-alpha{
+  display: none !important;
+}

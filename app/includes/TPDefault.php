@@ -186,13 +186,13 @@ class TPDefault implements  \core\TPODefault{
                     'transplant' => 0,
                     'title_button' => array(
                         'en' => 'OW from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
                         'departure_at',//'depart_date',
                         'number_of_changes',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'departure_at',//'depart_date',
@@ -217,13 +217,13 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
                         'departure_at',
                         'number_of_changes',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'departure_at',
@@ -274,7 +274,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -282,7 +282,7 @@ class TPDefault implements  \core\TPODefault{
                         'return_at',
                         'number_of_changes',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -308,7 +308,7 @@ class TPDefault implements  \core\TPODefault{
                     'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -316,7 +316,7 @@ class TPDefault implements  \core\TPODefault{
                         'return_at',
                         'number_of_changes',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -341,7 +341,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -349,7 +349,7 @@ class TPDefault implements  \core\TPODefault{
                         'return_at',
                         'number_of_changes',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -373,14 +373,14 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
                         'departure_at',
                         'return_at',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -405,7 +405,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -413,7 +413,7 @@ class TPDefault implements  \core\TPODefault{
                         'departure_at',
                         'return_at',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -439,7 +439,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -447,7 +447,7 @@ class TPDefault implements  \core\TPODefault{
                         'departure_at',
                         'return_at',
                         'airline_logo',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'flight_number',
@@ -476,7 +476,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Узнать цену'
                     ),
                     'sort_column' => 0,
-                    'selected' => array('place', 'direction'),
+                    'selected' => array('place', 'direction', 'button'),
                     'fields' => array(
                         'place',
                         'direction',
@@ -493,7 +493,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'Find tickets on price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -501,7 +501,7 @@ class TPDefault implements  \core\TPODefault{
                         'destination',
                         'trip_class',
                         'back_and_forth',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'origin',
@@ -528,7 +528,7 @@ class TPDefault implements  \core\TPODefault{
                     'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -536,7 +536,7 @@ class TPDefault implements  \core\TPODefault{
                         'destination',
                         'departure_at',
                         'return_at',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'origin',
@@ -567,14 +567,14 @@ class TPDefault implements  \core\TPODefault{
                     'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
                         'destination',
                         'departure_at',
                         'return_at',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'origin',
@@ -606,14 +606,14 @@ class TPDefault implements  \core\TPODefault{
                     'transplant' => 0,
                     'title_button' => array(
                         'en' => 'RT from price',
-                        'ru' => 'Найти билет от price'
+                        'ru' => 'Найти от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
                         'origin',
                         'departure_at',
                         'return_at',
-                        'price',
+                        'button',
                     ),
                     'fields' => array(
                         'origin',
