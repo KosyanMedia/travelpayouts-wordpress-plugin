@@ -586,7 +586,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
             }
             .TPAirlineLogoTD{
-                width: <?php echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>px !important;
+                width: auto !important;
+                <?php //echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>
             }
             .w-table thead tr {
                 background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
@@ -595,6 +596,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
                /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
             }
+
             .w-table thead tr td {
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
             }

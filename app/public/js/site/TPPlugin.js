@@ -50,7 +50,7 @@ jQuery(function($) {
         doc.find('.sortable').each(function () {
             $(this).dataTable( {
                 ordering: true,
-                "order": [[ 0, "asc" ]],
+                "order": [[ $(this).data('sort_column'), "asc" ]],
                 paging: ($(this).data("paginate") && ($(this).data("paginate_limit") < $(this).rowCount())),
                 iDisplayLength: $(this).data("paginate_limit"),
                 "bLengthChange": false,
@@ -59,7 +59,7 @@ jQuery(function($) {
                 bInfo: false,
                 columnDefs: [
                     {
-                        targets: 0,
+                        targets: $(this).data('sort_column'),
                         className: 'active-w'
                     },
                     { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},

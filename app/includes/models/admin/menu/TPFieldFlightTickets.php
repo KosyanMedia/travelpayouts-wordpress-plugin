@@ -541,15 +541,24 @@ class TPFieldFlightTickets {
     public function TPFieldSortTd($shortcode){
 
         ?>
-        <div class="TP-HeadTable">
-            <label>
+        <div class="TP-HeadTable TPSortFieldSelect">
+            <label class="TPSortFieldLabel">
                 <span><?php _e('Sort by column', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect">
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
                      <?php
                          if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])) {
                              $selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
+                             foreach($selected as $key => $sel){
+                                 ?>
+                                 <option value="<?php echo $key;?>" <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort_column'], $key ); ?>>
+                                     <?php echo \app\includes\TPPlugin::$options['local']['fields'][$this->local[\app\includes\TPPlugin::$options['local']['localization']]]['label_default'][$sel];?>
+                                 </option>
+                                 <?php
+                             }
                          }else{
-
+                              ?>
+                             <option disabled></option>
+                             <?php
                          }
                      ?>
                 </select>
@@ -584,7 +593,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
-        //$this->TPFieldSortTd($shortcode);
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 2
@@ -640,6 +649,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 4
@@ -667,6 +677,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 5
@@ -695,6 +706,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 6
@@ -722,6 +734,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 7
@@ -749,6 +762,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 8
@@ -777,6 +791,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 9
@@ -804,6 +819,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 10
@@ -832,6 +848,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 11
@@ -859,6 +876,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 12
@@ -907,6 +925,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 13
@@ -954,6 +973,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
     //Shortcode 14
@@ -1001,6 +1021,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
+        $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
 }

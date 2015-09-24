@@ -39,7 +39,8 @@ class TPShortcodesView {
                             '.$title.'
                             <table class="w-table display '.$sortable_class.'"
                                 data-paginate="'.$paginate.'"
-                                data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'">
+                                data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
+                                data-sort_column="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'].'">
                                 <thead>
                                     <tr>';
         foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){

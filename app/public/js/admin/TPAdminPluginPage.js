@@ -130,23 +130,82 @@ jQuery(function($){
         connectWith: ".connectedSortable",
         opacity: 0.6,
         update : function (event, ui) {
-
             if(ui.item.find('input').is('.itemSortableSelected')){
+                var selectBlock = $(this).parent('.TP-blockSortable').parent('.TP-ContainerSorTable').parent('.TP-SortableSection')
+                    .parent('div').children('.TPSortFieldSelect').children('.TPSortFieldLabel');
+                var selectOption, selectLi, selectedVal;
+                selectOption = '';
+                selectedVal = '';
+
+                selectedVal = selectBlock.children('.TPSortField').children('option:selected').text();
+                $(this).parent('.TP-blockSortable').parent('.TP-ContainerSorTable').find('.settingsShortcodeSortableSelected')
+                    .children('li').each(function(i, el){
+                        //console.log(selectedVal+' == '+$(el).text())
+                        if(selectedVal.indexOf($(el).text()) !== -1)
+                            selectOption += '<option value="'+i+'" selected="selected">'+$(el).text()+'</option>';
+                        else
+                            selectOption += '<option value="'+i+'">'+$(el).text()+'</option>';
+                    });
+
+                selectBlock.children('.TPSortField').empty().append(selectOption);
+                selectBlock.children('.zelect').remove();
+                selectBlock.children('.TPSortField').zelect({});
+
+                //selectSort.children('.TPSortField').children('option[value="0"]').remove();
+                /*console.log('_______')
+                console.log(ui.item.index());
+                console.log(ui.item.text());
+                console.log(ui.item.context.dataset.key);
+                $("#selectBox option[value='option1']").remove(); */
                 ui.item.find('input[type=hidden]').detach();
                 //ui.item.removeClass('ui-state-highlight');
                 //ui.item.addClass('ui-state-default');
             }
         }
     }).disableSelection();
+    //TPSortField
     /** **/
     doc.find( ".settingsShortcodeSortableSelected" ).sortable({
         cursor: "move",
         connectWith: ".connectedSortable",
         update : function (event, ui) {
+            var selectSort = $(this).parent('.TP-blockSortable').parent('.TP-ContainerSorTable').parent('.TP-SortableSection')
+                .parent('div').children('.TPSortFieldSelect').children('.TPSortFieldLabel');
+            var selectOption, selectLi, selectedVal;
+            selectOption = '';
+            selectLi = '';
+            selectedVal = '';
+            /*console.log('select')
+            console.log(ui.item.index());
+            console.log(ui.item.text());
+            console.log(ui.item.context.dataset.key);
+            console.log(selectSort);
+             selectSort.append($('<option>', {
+             value: ui.item.index(),
+             text: ui.item.text()
+             }));
+             */
+            selectedVal = selectSort.children('.TPSortField').children('option:selected').text();
+            $(this).children('li').each(function(i, el){
+                //console.log(selectedVal+' == '+$(el).text())
+                if(selectedVal.indexOf($(el).text()) !== -1)
+                    selectOption += '<option value="'+i+'" selected="selected">'+$(el).text()+'</option>';
+                else
+                    selectOption += '<option value="'+i+'">'+$(el).text()+'</option>';
+            });
+
+
             if(!ui.item.find('input').is('.itemSortableSelected')){
+
+                selectLi = '<li class="">'+ui.item.text()+'</li>'
+                /* */
                 ui.item.append('<input type="hidden" class="itemSortableSelected" ' +
                 'name="'+ui.item.data('input-name')+'" value="'+ui.item.data('key')+'">');
             }
+
+            selectSort.children('.TPSortField').empty().append(selectOption);
+            selectSort.children('.zelect').remove();
+            selectSort.children('.TPSortField').zelect({});
 
         }
     }).disableSelection();
