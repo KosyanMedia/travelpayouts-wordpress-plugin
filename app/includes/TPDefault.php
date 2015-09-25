@@ -310,7 +310,7 @@ class TPDefault implements  \core\TPODefault{
                         'en' => 'RT from price',
                         'ru' => 'Найти от price'
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 4,
                     'selected' => array(
                         'departure_at',
                         'return_at',
@@ -407,7 +407,7 @@ class TPDefault implements  \core\TPODefault{
                         'en' => 'RT from price',
                         'ru' => 'Найти от price'
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 4,
                     'selected' => array(
                         'destination',
                         'departure_at',
@@ -441,7 +441,7 @@ class TPDefault implements  \core\TPODefault{
                         'en' => 'RT from price',
                         'ru' => 'Найти от price'
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 4,
                     'selected' => array(
                         'destination',
                         'departure_at',
@@ -569,7 +569,7 @@ class TPDefault implements  \core\TPODefault{
                         'en' => 'RT from price',
                         'ru' => 'Найти от price'
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 3,
                     'selected' => array(
                         'destination',
                         'departure_at',
@@ -608,7 +608,7 @@ class TPDefault implements  \core\TPODefault{
                         'en' => 'RT from price',
                         'ru' => 'Найти от price'
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 3,
                     'selected' => array(
                         'origin',
                         'departure_at',
