@@ -8,7 +8,10 @@ class TPLoader extends \core\TPOLoader{
         //add_action('edit_category',  array( &$this, 'buttonCat'));
         add_action('edit_category_form',  array( &$this, 'buttonCat'));
         add_action('edit_tag_form',  array( &$this, 'buttonCat'));
-
+              //edit_tag_form_fields
+        //add_category_form_fields
+        //add_action('edit_category_form_fields',  array( &$this, 'buttonCat'));
+        add_action('add_tag_form_fields', array( &$this, 'buttonCat'));
 
     }
     public function buttonCat(){
