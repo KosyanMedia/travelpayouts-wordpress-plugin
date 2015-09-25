@@ -7,6 +7,11 @@
  */
 namespace app\includes\models\site;
 abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheModel{
+    public function __construct(){
+        parent::__construct();
+        add_filter( 'category_description',  'do_shortcode' );
+        add_filter( 'term_description',  'do_shortcode' );
+    }
     /**
      * @return bool|int
      */
