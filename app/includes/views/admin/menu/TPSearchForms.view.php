@@ -8,8 +8,10 @@
 
             <?php
             global $locale;
+            $link_help = '';
             switch($locale){
                 case "ru_RU":
+                    $link_help = 'https://support.travelpayouts.com/hc/ru/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru#11';
                     ?>
                     <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru" target="_blank">
                         https://www.travelpayouts.com/tools/forms
@@ -17,6 +19,7 @@
                     <?php
                     break;
                 case "en_US":
+                    $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
                     ?>
                     <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=en" target="_blank">
                         https://www.travelpayouts.com/tools/forms
@@ -24,6 +27,7 @@
                     <?php
                     break;
                 default:
+                    $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
                     ?>
                     <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=en" target="_blank">
                         https://www.travelpayouts.com/tools/forms
@@ -31,6 +35,10 @@
                     <?php
                     break;
             } ?>
+        </p>
+        <p>
+            <?php _e('Check our step-by-step manual ', TPOPlUGIN_TEXTDOMAIN); ?>
+            <a href="<?php echo $link_help; ?>" target="_blank"><?php _e('(here)', TPOPlUGIN_TEXTDOMAIN); ?></a>
         </p>
     </div>
 

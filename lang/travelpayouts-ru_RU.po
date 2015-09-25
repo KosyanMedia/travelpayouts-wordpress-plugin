@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-09-22 17:50+0300\n"
+"POT-Creation-Date: 2015-09-25 10:52+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -414,12 +414,12 @@ msgid "Selected"
 msgstr "Выбранные"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:432
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:613
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:622
 msgid "Rows per page"
 msgstr "Количество строк на странице"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:451
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:634
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:643
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
 msgid "Paginate"
 msgstr "Пейджинация"
@@ -444,7 +444,7 @@ msgid "Number of stops"
 msgstr "Пересадки"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:528
-#: app/includes/views/admin/menu/TPSearchForms.view.php:51
+#: app/includes/views/admin/menu/TPSearchForms.view.php:55
 #: app/includes/views/admin/menu/TPStatisticView.php:153
 #: app/includes/views/admin/menu/TPStatisticView.php:161
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:133
@@ -465,18 +465,18 @@ msgstr "без пересадок"
 msgid "Sort by column"
 msgstr "Сортировка по столбцу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:571
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:600
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:655
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:682
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:710
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:737
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:764
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:792
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:819
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:874
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:922
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:969
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:580
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:609
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:665
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:693
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:722
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:750
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:778
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:807
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:835
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:892
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:941
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:989
 #: app/includes/models/admin/menu/TPFieldSettings.php:35
 msgid "Extra marker"
 msgstr "Дополнительный маркер"
@@ -699,7 +699,7 @@ msgstr "Добавление шорткода"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:12
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:12
-#: app/includes/views/admin/menu/TPSearchForms.view.php:63
+#: app/includes/views/admin/menu/TPSearchForms.view.php:67
 msgid "Title "
 msgstr "Название"
 
@@ -744,7 +744,7 @@ msgstr "Город прилета по-умолчанию"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:38
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:40
-#: app/includes/views/admin/menu/TPSearchForms.view.php:65
+#: app/includes/views/admin/menu/TPSearchForms.view.php:69
 msgid "Shortcode"
 msgstr "Шорткод"
 
@@ -1025,23 +1025,31 @@ msgstr ""
 "В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных "
 "в админке аккаунта Travelpayouts"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:38
+#: app/includes/views/admin/menu/TPSearchForms.view.php:36
+msgid "Check our step-by-step manual "
+msgstr "Подробная инструкция доступна "
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:37
+msgid "(here)"
+msgstr "(тут)"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:42
 msgid "Search Form Shortcodes"
 msgstr "Шорткоды для форм"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:43
+#: app/includes/views/admin/menu/TPSearchForms.view.php:47
 msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:47
+#: app/includes/views/admin/menu/TPSearchForms.view.php:51
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:64
+#: app/includes/views/admin/menu/TPSearchForms.view.php:68
 msgid "Add Date"
 msgstr "Дата добавления"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:80
+#: app/includes/views/admin/menu/TPSearchForms.view.php:84
 msgid "Edit"
 msgstr "Редактировать "
 
@@ -1797,9 +1805,6 @@ msgstr "Вставить таблицу"
 
 #~ msgid "Special offers airline"
 #~ msgstr "Спецпредложения авиакомпаний"
-
-#~ msgid "There"
-#~ msgstr "Туда"
 
 #~ msgid "Default"
 #~ msgstr "По умолчанию"

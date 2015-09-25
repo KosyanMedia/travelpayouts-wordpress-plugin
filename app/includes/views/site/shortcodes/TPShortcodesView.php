@@ -994,11 +994,10 @@ class TPShortcodesView {
             $redirect = true;
         }
 
-
         $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : "?origin_iata=";
         $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
-        $departure_at = ( false !== $departure_at ) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : "";
-        $return_at = ( false !== $return_at ) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
+        $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : "";
+        $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
 
 
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;

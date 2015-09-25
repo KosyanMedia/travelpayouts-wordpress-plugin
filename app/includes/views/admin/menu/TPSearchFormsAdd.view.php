@@ -1,7 +1,26 @@
 <div class="TPWrapper TPWrapper-long">
 
-    <p class="TPMainTitle"><?php _e('Search forms', TPOPlUGIN_TEXTDOMAIN); ?> </p>
-
+    <p class="TPMainTitle  TPMainTitleSF"><?php _e('Search forms', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+    <div class="TP-TopImportantInfo TP-shortDescription">
+        <?php
+        global $locale;
+        $link_help = '';
+        switch($locale){
+            case "ru_RU":
+                $link_help = 'https://support.travelpayouts.com/hc/ru/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru#11';
+                break;
+            case "en_US":
+                $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
+                break;
+            default:
+                $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
+                break;
+        } ?>
+        <p>
+            <?php _e('Check our step-by-step manual ', TPOPlUGIN_TEXTDOMAIN); ?>
+            <a href="<?php echo $link_help; ?>" target="_blank"><?php _e('(here)', TPOPlUGIN_TEXTDOMAIN); ?></a>
+        </p>
+    </div>
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
         <p class="TP-SettingTitle"><?php _e('Adding shortcode', TPOPlUGIN_TEXTDOMAIN); ?> </p>
 
