@@ -24,7 +24,18 @@
 #constructorSearchFormButton img{
     margin-top: -3px;
 }
-
+.validate > #constructorShortcodesButton img{ margin-top: 3px !important;}
+.validate > #constructorWidgetButton img{ margin-top: 3px !important;}
+.validate > #constructorSearchFormButton img{ margin-top: 3px !important;}
+.validate > #constructorShortcodesButton{
+    margin: 5px !important;
+}
+.validate > #constructorWidgetButton{
+    margin: 5px !important;
+}
+.validate > #constructorSearchFormButton{
+    margin: 5px !important;
+}
 
 
 /* WP Theme */

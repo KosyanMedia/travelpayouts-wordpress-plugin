@@ -18,7 +18,7 @@
         } ?>
         <p>
             <?php _e('Check our step-by-step manual ', TPOPlUGIN_TEXTDOMAIN); ?>
-            <a href="<?php echo $link_help; ?>" target="_blank"><?php _e('(here)', TPOPlUGIN_TEXTDOMAIN); ?></a>
+            <a href="<?php echo $link_help; ?>" target="_blank"><?php _e('here', TPOPlUGIN_TEXTDOMAIN); ?></a>
         </p>
     </div>
 

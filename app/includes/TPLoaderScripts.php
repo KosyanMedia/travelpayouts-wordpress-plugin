@@ -159,9 +159,11 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         /** Call scripts and style **/
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteAirlines');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteScript');
+
         switch($hook) {
             case "post.php":
             case "post-new.php":
+            case "edit-tags.php":
                 wp_enqueue_style('wp-jquery-ui-dialog');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');

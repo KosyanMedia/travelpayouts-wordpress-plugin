@@ -4,20 +4,10 @@ class TPLoader extends \core\TPOLoader{
     public function __construct(){
         parent::__construct();
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
-        //add_action('taxonomy_edit_form',  array( &$this, 'buttonCat'));
-        //add_action('edit_category',  array( &$this, 'buttonCat'));
-        add_action('edit_category_form',  array( &$this, 'buttonCat'));
-        add_action('edit_tag_form',  array( &$this, 'buttonCat'));
-              //edit_tag_form_fields
-        //add_category_form_fields
-        //add_action('edit_category_form_fields',  array( &$this, 'buttonCat'));
-        add_action('add_tag_form_fields', array( &$this, 'buttonCat'));
+
 
     }
-    public function buttonCat(){
-        echo 111111;
-        error_log(111);
-    }
+
     protected function admin()
     {
 
