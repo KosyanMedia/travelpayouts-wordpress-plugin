@@ -11,6 +11,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         parent::__construct();
         add_filter( 'category_description',  'do_shortcode' );
         add_filter( 'term_description',  'do_shortcode' );
+        add_filter( 'widget_text', 'do_shortcode');
     }
     /**
      * @return bool|int

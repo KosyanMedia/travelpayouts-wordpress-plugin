@@ -11,7 +11,8 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' , 'paginate' => true);
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' , 'paginate' => true
+        , 'stops' => \app\includes\TPPlugin::$options['shortcodes']['5']['transplant']);
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());

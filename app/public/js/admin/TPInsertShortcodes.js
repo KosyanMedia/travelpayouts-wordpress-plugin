@@ -578,8 +578,6 @@ jQuery(function($) {
             $(this).removeClass('constructorShortcodesError');
 
         });
-
-
         doc.find('#tr_popular_routes_widget').on('change', '#popular_routes_widget_count', function(e) {
             //console.log($(this).val());
             if($(this).val() > 1){
@@ -832,6 +830,133 @@ jQuery(function($) {
             }*/
         });
     });
+    /** *
+     *
+     */
+    doc.find('#constructorLinkButton').click(function (e) {
+        doc.find( "#constructorLinkModal" ).dialog({
+            resizable: false,
+            draggable: false,
+            maxHeight:400,
+            maxWidth: 450,
+            minWidth: 400,
+            minHeight:200,
+            modal: true,
+            dialogClass:"TPCustomDialog",
+            open : function() {
+                $(this).parent().css({   position:'absolute',
+                    left: (win.width() - $(this).parent().outerWidth())/2,
+                    top: (win.height() - $(this).parent().outerHeight())/2
+                });
+
+            },
+            buttons: [
+                {
+                    id: "constructorLinkButtonOk",
+                    text: button_ok,
+                    click: function() {
+                        var origin, destination, one_way, hotel_id, text_link, check_out, check_in, origin_date,
+                            destination_date;
+                        origin = doc.find('#origin_link').val();
+                        origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
+                        destination = doc.find('#destination_widget').val();
+                        destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
+                        hotel_id = doc.find('#city_link').val();
+                        hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
+                        text_link =  doc.find('#text_link').val();
+                        switch (doc.find('#constructorLinkModalSelect').val()) {
+                            case '0':
+                                doc.find('#constructorLinkModalSelect').addClass('constructorShortcodesError');
+                                break;
+                            case '1':
+                                if(doc.find('#one_way_link').is(":checked")){
+                                    one_way = "one_way=true";
+                                }else{
+                                    one_way = "one_way=false";
+                                }
+                                if (origin == "") {
+                                    doc.find('#origin_link').addClass('constructorShortcodesError');
+                                }
+                                if (destination == "") {
+                                    doc.find('#destination_link').addClass('constructorShortcodesError');
+                                }
+                                if (origin != "" && destination != ""){
+                                    origin_date =  doc.find('#origin_date_link').val();
+                                    destination_date =  doc.find('#destination_date_link').val();
+
+                                    setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
+                                        "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
+                                        " destination_date="+destination_date+" "+one_way+"]",
+                                        $(this));
+                                }
+                                break
+                            case '2':
+                                if (hotel_id == "") {
+                                    doc.find('#city_link').addClass('constructorShortcodesError');
+                                }else{
+                                    check_in =  doc.find('#check_out_link').val();
+                                    check_out =  doc.find('#check_in_link').val();
+
+                                    setShortcodes("[tp_link hotel_id="+hotel_id+" text_link=\""+text_link+"\" " +
+                                        " check_in="+check_in+" check_out="+check_out+"]",
+                                        $(this));
+                                }
+                                break
+                        }
+
+                    }
+                },
+                {
+                    id: "constructorLinkButtonCancel",
+                    text: button_cancel,
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+
+            ],
+            close: function( event, ui ) {
+
+            }
+        });
+        tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
+        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
+        doc.find('.constructorDate').datepicker(TPdatepicker);
+
+        doc.find('#constructorLinkModalSelectTD').on('change', '#constructorLinkModalSelect', function(e) {
+            doc.find('#constructorLinkModalSelect').removeClass('constructorShortcodesError');
+            doc.find('#origin_link').removeClass('constructorShortcodesError');
+            doc.find('#destination_link').removeClass('constructorShortcodesError');
+            doc.find('#city_link').removeClass('constructorShortcodesError');
+            doc.find('#tr_origin_link').hide();
+            doc.find('#tr_destination_link').hide();
+            doc.find('#tr_origin_date_link').hide();
+            doc.find('#tr_destination_date_link').hide();
+            doc.find('#tr_one_way_link').hide();
+            doc.find('#tr_city_link').hide();
+            doc.find('#tr_origin_date_hotel_link').hide();
+            doc.find('#tr_destination_date_hotel_link').hide();
+            switch($(this).val()) {
+                case '0':
+                    break;
+                case '1':
+                    doc.find('#tr_origin_link').show();
+                    doc.find('#tr_destination_link').show();
+                    doc.find('#tr_origin_date_link').show();
+                    doc.find('#tr_destination_date_link').show();
+                    doc.find('#tr_one_way_link').show();
+                    break;
+                case '2':
+                    doc.find('#tr_city_link').show();
+                    doc.find('#tr_origin_date_hotel_link').show();
+                    doc.find('#tr_destination_date_hotel_link').show();
+                    break;
+            }
+        });
+    });
+    /**
+     *
+     */
     function resetConstructorWidgetModal(){
         doc.find('#tr_origin_widget').hide();
         doc.find('#tr_destination_widget').hide();

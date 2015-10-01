@@ -26,6 +26,7 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\media_buttons\TPWidgetButtonsController();
         new controllers\admin\media_buttons\TPSearchFormButtonsController();
         new models\admin\TPPostsModel();
+        new controllers\admin\media_buttons\TPLinkButtonsController();
 
 
 

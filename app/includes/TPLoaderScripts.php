@@ -165,6 +165,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             case "post-new.php":
             case "edit-tags.php":
                 wp_enqueue_style('wp-jquery-ui-dialog');
+                //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 break;
@@ -352,10 +353,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         </style>
     <?php
     }
-
+    /*public function widget_content_wrap($content) {
+        return $content;
+    } */
     public function loadScriptSite($hook)
     {
+        //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
 
+        global $widget;
+        //error_log(print_r(wp_get_sidebars_widgets(), true));
         global $post;
         if ( false === strpos( $post->post_content, '[tp' ) && !is_home())  return;
         // TODO: Implement loadScriptSite() method.

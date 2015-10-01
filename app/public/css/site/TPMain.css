@@ -300,3 +300,6 @@ p.parrentBtn {
 .TPTdButtonShow > p:after{
     display: none !important;
 }
+.w-table tr.odd td{
+    background: none;
+}
