@@ -923,6 +923,18 @@ jQuery(function($) {
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
         doc.find('.constructorDate').datepicker(TPdatepicker);
         doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
+        /*
+         $(function() {
+         var currentDate = new Date();
+         $('#datepicker').datepicker({
+         inline: true,
+         showOtherMonths: true,
+         dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+         dateFormat: 'dd/mm/yy'
+         });
+         $("#datepicker").datepicker("setDate", currentDate);
+         });
+         */
 
         doc.find('#constructorLinkModalSelectTD').on('change', '#constructorLinkModalSelect', function(e) {
             doc.find('#constructorLinkModalSelect').removeClass('constructorShortcodesError');

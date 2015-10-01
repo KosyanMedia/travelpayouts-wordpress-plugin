@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPLoaderScripts.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPLoaderScripts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6886792">
+            <state vertical-scroll-proportion="-8.222222">
               <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="32" />
               <folding />
             </state>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPInsertShortcodes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPInsertShortcodes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.129032">
-              <caret line="924" column="68" selection-start-line="924" selection-start-column="68" selection-end-line="924" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.8101266">
+              <caret line="935" column="12" selection-start-line="935" selection-start-column="12" selection-end-line="935" selection-end-column="12" />
               <folding>
                 <element signature="e#14509#19942#0" expanded="false" />
                 <element signature="e#20016#40046#0" expanded="false" />
@@ -74,8 +74,7 @@
                 <element signature="e#40138#43512#0" expanded="false" />
                 <element signature="e#42968#43504#0" expanded="false" />
                 <element signature="e#44189#47789#0" expanded="false" />
-                <element signature="e#48340#49822#0" expanded="false" />
-                <element signature="e#50881#51497#0" expanded="false" />
+                <element signature="e#51254#51870#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -615,12 +614,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js</url>
-          <line>960</line>
+          <line>972</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js</url>
-          <line>982</line>
+          <line>994</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
@@ -1086,10 +1085,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.222222">
+          <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.129032">
-          <caret line="924" column="68" selection-start-line="924" selection-start-column="68" selection-end-line="924" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.8101266">
+          <caret line="935" column="12" selection-start-line="935" selection-start-column="12" selection-end-line="935" selection-end-column="12" />
           <folding>
             <element signature="e#14509#19942#0" expanded="false" />
             <element signature="e#20016#40046#0" expanded="false" />
@@ -1104,17 +1111,8 @@
             <element signature="e#40138#43512#0" expanded="false" />
             <element signature="e#42968#43504#0" expanded="false" />
             <element signature="e#44189#47789#0" expanded="false" />
-            <element signature="e#48340#49822#0" expanded="false" />
-            <element signature="e#50881#51497#0" expanded="false" />
+            <element signature="e#51254#51870#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6886792">
-          <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
