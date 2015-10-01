@@ -28,23 +28,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPLoaderScripts.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPLoaderScripts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.37037">
-              <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.6886792">
+              <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPLinkButtons.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPLinkButtons.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5684931">
-              <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
+            <state vertical-scroll-proportion="-9.111111">
+              <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1443711442810" expanded="true" signature="2265:2405" placeholder="..." />
+                <marker date="1443711442810" expanded="true" signature="2293:2405" placeholder="..." />
+                <marker date="1443711442810" expanded="true" signature="2748:2813" placeholder="..." />
+                <marker date="1443711442810" expanded="true" signature="2776:2813" placeholder="..." />
+                <marker date="1443711442810" expanded="true" signature="3062:3095" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -53,8 +58,8 @@
       <file leaf-file-name="TPInsertShortcodes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.548388">
-              <caret line="923" column="60" selection-start-line="923" selection-start-column="60" selection-end-line="923" selection-end-column="60" />
+            <state vertical-scroll-proportion="-10.129032">
+              <caret line="924" column="68" selection-start-line="924" selection-start-column="68" selection-end-line="924" selection-end-column="68" />
               <folding>
                 <element signature="e#14509#19942#0" expanded="false" />
                 <element signature="e#20016#40046#0" expanded="false" />
@@ -69,8 +74,8 @@
                 <element signature="e#40138#43512#0" expanded="false" />
                 <element signature="e#42968#43504#0" expanded="false" />
                 <element signature="e#44189#47789#0" expanded="false" />
-                <element signature="e#48269#49751#0" expanded="false" />
-                <element signature="e#50810#51426#0" expanded="false" />
+                <element signature="e#48340#49822#0" expanded="false" />
+                <element signature="e#50881#51497#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,10 +133,10 @@
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
         <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php" />
-        <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
-        <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPInsertShortcodes.css" />
+        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php" />
+        <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
+        <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
       </list>
     </option>
   </component>
@@ -488,7 +493,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1840796" sideWeight="0.47310126" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25764894" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25723472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -610,12 +615,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js</url>
-          <line>959</line>
+          <line>960</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js</url>
-          <line>981</line>
+          <line>982</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
@@ -1048,14 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.37037">
-          <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPAdminMain.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-61.612904">
@@ -1074,10 +1071,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.111111">
+          <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1443711442810" expanded="true" signature="2265:2405" placeholder="..." />
+            <marker date="1443711442810" expanded="true" signature="2293:2405" placeholder="..." />
+            <marker date="1443711442810" expanded="true" signature="2748:2813" placeholder="..." />
+            <marker date="1443711442810" expanded="true" signature="2776:2813" placeholder="..." />
+            <marker date="1443711442810" expanded="true" signature="3062:3095" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.548388">
-          <caret line="923" column="60" selection-start-line="923" selection-start-column="60" selection-end-line="923" selection-end-column="60" />
+        <state vertical-scroll-proportion="-10.129032">
+          <caret line="924" column="68" selection-start-line="924" selection-start-column="68" selection-end-line="924" selection-end-column="68" />
           <folding>
             <element signature="e#14509#19942#0" expanded="false" />
             <element signature="e#20016#40046#0" expanded="false" />
@@ -1092,19 +1104,17 @@
             <element signature="e#40138#43512#0" expanded="false" />
             <element signature="e#42968#43504#0" expanded="false" />
             <element signature="e#44189#47789#0" expanded="false" />
-            <element signature="e#48269#49751#0" expanded="false" />
-            <element signature="e#50810#51426#0" expanded="false" />
+            <element signature="e#48340#49822#0" expanded="false" />
+            <element signature="e#50881#51497#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php">
+    <entry file="file://$PROJECT_DIR$/app/includes/TPLoaderScripts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5684931">
-          <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6886792">
+          <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -922,6 +922,7 @@ jQuery(function($) {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
         doc.find('.constructorDate').datepicker(TPdatepicker);
+        doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
 
         doc.find('#constructorLinkModalSelectTD').on('change', '#constructorLinkModalSelect', function(e) {
             doc.find('#constructorLinkModalSelect').removeClass('constructorShortcodesError');

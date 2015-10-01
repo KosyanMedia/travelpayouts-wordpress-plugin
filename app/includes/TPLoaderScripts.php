@@ -186,7 +186,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
-                TPMesgUpdateSettings, TPLabelAutocomplete;
+                TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus;
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -242,6 +242,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     break;
             }
             TPdatepicker = {};
+            TPdatepickerPlus = {};
             if(wpLocale == 'ru_RU'){
                 TPdatepicker = {
                     monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
@@ -252,6 +253,17 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     dateFormat: 'dd-mm-yy',
                     firstDay: 1,
                     isRTL: false
+                };
+                TPdatepickerPlus = {
+                    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                    monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+                    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+                    dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+                    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+                    dateFormat: 'dd-mm-yy',
+                    firstDay: 1,
+                    isRTL: false,
+                    defaultDate: +12
                 };
             }
 
