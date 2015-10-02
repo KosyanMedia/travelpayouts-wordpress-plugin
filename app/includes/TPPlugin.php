@@ -5,6 +5,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public function __construct() {
         parent::__construct();
         new TPLoader();
+        add_action('admin_footer', array(&$this, 'TPLinkHelp'));
     }
 
     static public function activation()
@@ -50,6 +51,14 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     {
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();
+    }
+    public function TPLinkHelp(){
+        $link = '';
+        $body = '22';
+        $subject = '11';
+        $link = __('The problem with the plugin? There are suggestions and ideas? Contact us at',TPOPlUGIN_TEXTDOMAIN)
+            .'<a href="mailto:wpplugin@travelpayouts.com?body='.$body.'&subject='.$subject.'"> wpplugin@travelpayouts.com</a>';
+        echo $link;
     }
 }
 $TPPlugin = new TPPlugin();

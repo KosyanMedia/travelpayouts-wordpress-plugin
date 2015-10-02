@@ -425,6 +425,19 @@ jQuery(function($){
             }
         });
     });
+    //TPDefaultSettings
+    doc.find('#TPDefaultSettings').click(function (e) {
+        e.preventDefault();
+        //document.location.href = '';
+        $.ajax({
+            url: ajaxurl + '?action=default_settings',
+            type: "POST", // Делаем POST запрос
+            success: function (data) {
+                document.location.href = '';
+            }
+        });
+
+    });
     /** **/
     function TPStatsTableSort(){
         var dataTable, tableEmpty;

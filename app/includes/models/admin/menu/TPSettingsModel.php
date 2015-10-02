@@ -13,6 +13,9 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
         add_action('wp_ajax_nopriv_export_settings',array( &$this, 'exportSettings'));
         add_action('wp_ajax_import_settings',      array( &$this, 'importSettings'));
         add_action('wp_ajax_nopriv_import_settings',array( &$this, 'importSettings'));
+
+        add_action('wp_ajax_default_settings',      array( &$this, 'defaultSettings'));
+        add_action('wp_ajax_nopriv_default_settings',array( &$this, 'defaultSettings'));
     }
     public function create_option()
     {
@@ -66,5 +69,8 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
                 update_option( TPOPlUGIN_OPTION_NAME, $options);
             }
         }*/
+    }
+    public function defaultSettings(){
+        update_option( TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
     }
 }

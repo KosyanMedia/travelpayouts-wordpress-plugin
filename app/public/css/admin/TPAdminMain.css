@@ -2095,6 +2095,13 @@ thead tr td.active-w {
     display: inline-block;
     margin-bottom: 30px;
 }
+#TPDefaultSettings{
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.TPDefaultSettingsItem{
+  margin-top: -30px;
+}
 .TP-BackgroundTables a{
     margin-right: 15px;
 }
@@ -2450,4 +2457,7 @@ thead tr td.active-w {
 }
 .cp-alpha{
   display: none !important;
+}
+.TPDefaultSettings{
+
 }

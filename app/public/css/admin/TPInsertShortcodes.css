@@ -192,6 +192,29 @@
 .TPCustomDialog .ui-icon-closethick {
     display: none !important;
 }
+
+
+.TPCustomDialog .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    background: none !important;
+    color: #666 !important;
+    border: 1px solid #ccc;
+    border-radius: 3px !important;
+    font-weight: normal !important;
+    margin:0 0 0 16px;
+    padding:0 10px 1px 10px;
+}
+.TPCustomDialog .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button .ui-button-text{
+    margin:0;
+    padding:0;
+}
+.TPCustomDialog .ui-dialog-content {
+    width: 92% !important;
+}
+.TPCustomDialog .ui-dialog-content .constructorCityShortcodesAutocomplete {
+    width: 100%!important;
+}
+
+
 .ui-datepicker {
     width: 255px;
     height: auto;
@@ -285,3 +308,4 @@
     font-weight: 300;
     color: #b5b5b9;
 }
+
