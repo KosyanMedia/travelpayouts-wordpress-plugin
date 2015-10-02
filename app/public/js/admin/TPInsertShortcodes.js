@@ -862,7 +862,7 @@ jQuery(function($) {
                         destination = doc.find('#destination_link').val();
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
                         hotel_id = doc.find('#city_link').val();
-                        hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
+                        hotel_id = hotel_id.substring(hotel_id.indexOf('{')+1,hotel_id.indexOf('}'));
                         text_link =  doc.find('#text_link').val();
                         type = doc.find('#constructorLinkModalSelect').val();
                         switch (type) {
@@ -896,10 +896,10 @@ jQuery(function($) {
                                 if (hotel_id == "") {
                                     doc.find('#city_link').addClass('constructorShortcodesError');
                                 }else{
-                                    check_in =  doc.find('#check_out_link').val();
-                                    check_out =  doc.find('#check_in_link').val();
+                                    check_in =  doc.find('#check_in_link').val();
+                                    check_out =  doc.find('#check_out_link').val();
 
-                                    setShortcodes("[tp_link hotel_id="+hotel_id+" text_link=\""+text_link+"\" " +
+                                    setShortcodes("[tp_link hotel_id=\""+hotel_id+"\" text_link=\""+text_link+"\" " +
                                         " check_in="+check_in+" check_out="+check_out+" " +
                                         "type="+type+"]",
                                         $(this));
@@ -923,7 +923,7 @@ jQuery(function($) {
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
-        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
+        tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
         doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
 

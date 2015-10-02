@@ -121,45 +121,11 @@ function TPCityAutocomplete(){
                                     })
                                 )
 
-                                //console.log(locations);
-                                /*response(
-                                    $.map(data.cities, function(item){
-                                        return {
-                                            label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
-                                            value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
-                                            val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    })
-                                )*/
-                                /*$.map(data, function(items, keys){
-                                    console.log(keys);
-                                    response(
-                                        $.map(items, function(item, key){
-                                            switch (keys){
-                                                case 'cities':
-                                                    console.log(item.fullname);
-                                                    return {
-                                                        label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
-                                                        value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
-                                                        val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                                    }
-                                                    break;
-                                                case 'hotels':
-                                                    console.log(item.hotelFullName);
-                                                    return {
-                                                        label: item.hotelFullName,//"+item.city+", "+item.country+"
-                                                        value: item.hotelFullName,
-                                                        val: item.location//item.name+" "+airport+" ["+item.iata+"]"
-                                                    }
-                                                    break;
-                                            }
 
-                                        })
-                                    )
-                                })*/
 
 
                             }else{
+
                                 response(
                                     $.map(data.hotels, function(item){
                                         return {
@@ -170,6 +136,67 @@ function TPCityAutocomplete(){
                                     })
                                 )
                             }
+                        })
+                    },
+                    select: function( event, ui ) {
+                        input.attr('value',ui.item.val).val(ui.item.val);
+                    },
+                    change: function( event, ui ) {
+                        if( ! ui.item )
+                            input.attr('value','').val('');
+                    },
+                    minLength: 1,
+                    delay: 500,
+                    autoFocus: true,
+                    appendTo: AppendTo
+                });
+            });
+        });
+    }
+    this.TPHotelTypeAutocompleteInit = function(selector, AppendTo){
+        if (typeof(AppendTo)==='undefined') AppendTo = null;
+        jQuery(function($) {
+            var doc, win;
+            doc = $(document);
+            win = $(window);
+            doc.find(selector).each(function () {
+                var input = $(this);
+                $(this).val(function(index, value){
+                    return value;
+                }).autocomplete({
+                    source: function(request, response){
+                        //console.log(request.term, AppendTo);
+                        $.get("http://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                        var locations=[];
+                        $.map(data, function(items, keys){
+                            $.map(items, function(item, key){
+                                var location = new Object();
+                                switch (keys){
+                                    case 'cities':
+                                        //console.log(item.fullname);
+                                        location.label = item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]";
+                                        location.val = '{locationId='+item.id+'}';
+                                        break;
+                                    case 'hotels':
+                                        //console.log(item.hotelFullName);
+                                        location.label = item.hotelFullName;
+                                        location.val = '{hotelId='+item.id+'}';
+                                        break;
+                                }
+                                locations.push(location);
+                            })
+                        })
+                        response(
+                            $.map(locations, function(item, key){
+                                return {
+                                    label: item.label,
+                                    value: item.label+item.val,
+                                    val: item.val
+                                }
+                            })
+                        )
+
+
                         })
                     },
                     select: function( event, ui ) {
@@ -376,3 +403,39 @@ function TPCityAutocomplete(){
     }
 
 }
+//console.log(locations);
+/*response(
+ $.map(data.cities, function(item){
+ return {
+ label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
+ value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
+ val: item.location//item.name+" "+airport+" ["+item.iata+"]"
+ }
+ })
+ )*/
+/*$.map(data, function(items, keys){
+ console.log(keys);
+ response(
+ $.map(items, function(item, key){
+ switch (keys){
+ case 'cities':
+ console.log(item.fullname);
+ return {
+ label: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",//"+item.city+", "+item.country+"
+ value: item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]",
+ val: item.location//item.name+" "+airport+" ["+item.iata+"]"
+ }
+ break;
+ case 'hotels':
+ console.log(item.hotelFullName);
+ return {
+ label: item.hotelFullName,//"+item.city+", "+item.country+"
+ value: item.hotelFullName,
+ val: item.location//item.name+" "+airport+" ["+item.iata+"]"
+ }
+ break;
+ }
+
+ })
+ )
+ })*/

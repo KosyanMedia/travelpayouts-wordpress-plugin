@@ -15,12 +15,18 @@ class TPLinkShortcodeController extends \app\includes\controllers\site\TPShortco
     {
         parent::__construct();
         $this->model = new \app\includes\models\site\shortcodes\TPLinkShortcodeModel();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
     }
-    public function action($args = array())
+
+    /**
+     * @param $data
+     * @return bool
+     */
+    public function render($data)
     {
-        // TODO: Implement action() method.
-        $data = $this->model->get_data($args);
-        return $data;
+        // TODO: Implement render() method.
+        if(!$data) return false;
+        return $this->view->returnTpLink($data);
     }
     public function initShortcode()
     {

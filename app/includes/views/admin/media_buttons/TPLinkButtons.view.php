@@ -36,7 +36,7 @@
                     <label>
                         <?php _e('Departure date', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="origin_date" id="origin_date_link"
-                               value="<?php echo date("Y-m-d"); ?>"
+                               value="<?php echo date("Y-m-d", time()+DAY_IN_SECONDS); ?>"
                                class="constructorDate code">
                     </label>
                 </td>
@@ -71,7 +71,7 @@
                     <label>
                         <?php _e('Check in', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="check_in" id="check_in_link"
-                               value="<?php echo date("Y-m-d"); ?>"
+                               value="<?php echo date("Y-m-d", time()+DAY_IN_SECONDS); ?>"
                                class="constructorDate code">
                     </label>
                 </td>
