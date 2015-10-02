@@ -50,6 +50,7 @@ class TPLoader extends \core\TPOLoader{
         new \app\includes\controllers\site\shortcodes\TPOurSiteSearchShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPFromOurCityFlyShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPInOurCityFlyShortcodeController();
+        new \app\includes\controllers\site\shortcodes\TPLinkShortcodeController();
         //Widgets
         new \app\includes\controllers\site\widgets\TPMapWidgetController();
         new \app\includes\controllers\site\widgets\TPHotelMapWidgetController();

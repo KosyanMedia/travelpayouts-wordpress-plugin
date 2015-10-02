@@ -35,7 +35,8 @@
                 <td>
                     <label>
                         <?php _e('Departure date', TPOPlUGIN_TEXTDOMAIN); ?>:
-                        <input type="text" name="origin_date" id="origin_date_link" value="<?php echo date("d-m-Y"); ?>"
+                        <input type="text" name="origin_date" id="origin_date_link"
+                               value="<?php echo date("Y-m-d"); ?>"
                                class="constructorDate code">
                     </label>
                 </td>
@@ -45,7 +46,7 @@
                     <label>
                         <?php _e('Return date', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="destination_date" id="destination_date_link"
-                            value="<?php echo date("d-m-Y", time()+(DAY_IN_SECONDS*12)); ?>"
+                            value="<?php echo date("Y-m-d", time()+(DAY_IN_SECONDS*12)); ?>"
                                class="constructorDatePlus code">
                     </label>
                 </td>
@@ -69,7 +70,8 @@
                 <td>
                     <label>
                         <?php _e('Check in', TPOPlUGIN_TEXTDOMAIN); ?>:
-                        <input type="text" name="check_in" id="check_in_link" value=""
+                        <input type="text" name="check_in" id="check_in_link"
+                               value="<?php echo date("Y-m-d"); ?>"
                                class="constructorDate code">
                     </label>
                 </td>
@@ -78,7 +80,8 @@
                 <td>
                     <label>
                         <?php _e('Check out', TPOPlUGIN_TEXTDOMAIN); ?>:
-                        <input type="text" name="check_out" id="check_out_link" value=""
+                        <input type="text" name="check_out" id="check_out_link"
+                               value="<?php echo date("Y-m-d", time()+(DAY_IN_SECONDS*12)); ?>"
                                class="constructorDatePlus code">
                     </label>
                 </td>

@@ -19,7 +19,7 @@ class TPLinkButtonsController extends \core\controllers\TPOAdminMediaButtonsCont
             'target'    => 'content',
             'text'      => __( 'Insert link', TPOPlUGIN_TEXTDOMAIN  ),
             'class'     => 'button',
-            'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_widget.png',
+            'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_link.png',
             'echo'      => true,
             'shortcode' => false
         ) );

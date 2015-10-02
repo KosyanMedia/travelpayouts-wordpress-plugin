@@ -260,10 +260,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
                     dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
                     dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-                    dateFormat: 'dd-mm-yy',
+                    dateFormat: 'yy-mm-dd',
                     firstDay: 1,
-                    isRTL: false,
-                    defaultDate: +12
+                    isRTL: false
+
                 };
             }
 

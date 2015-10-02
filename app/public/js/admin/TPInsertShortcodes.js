@@ -856,15 +856,16 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, one_way, hotel_id, text_link, check_out, check_in, origin_date,
-                            destination_date;
+                            destination_date, type;
                         origin = doc.find('#origin_link').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
-                        destination = doc.find('#destination_widget').val();
+                        destination = doc.find('#destination_link').val();
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
                         hotel_id = doc.find('#city_link').val();
                         hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
                         text_link =  doc.find('#text_link').val();
-                        switch (doc.find('#constructorLinkModalSelect').val()) {
+                        type = doc.find('#constructorLinkModalSelect').val();
+                        switch (type) {
                             case '0':
                                 doc.find('#constructorLinkModalSelect').addClass('constructorShortcodesError');
                                 break;
@@ -886,7 +887,8 @@ jQuery(function($) {
 
                                     setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
                                         "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
-                                        " destination_date="+destination_date+" "+one_way+"]",
+                                        " destination_date="+destination_date+" "+one_way+" " +
+                                        "type="+type+"]",
                                         $(this));
                                 }
                                 break
@@ -898,7 +900,8 @@ jQuery(function($) {
                                     check_out =  doc.find('#check_in_link').val();
 
                                     setShortcodes("[tp_link hotel_id="+hotel_id+" text_link=\""+text_link+"\" " +
-                                        " check_in="+check_in+" check_out="+check_out+"]",
+                                        " check_in="+check_in+" check_out="+check_out+" " +
+                                        "type="+type+"]",
                                         $(this));
                                 }
                                 break
@@ -921,20 +924,12 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
-        doc.find('.constructorDate').datepicker(TPdatepicker);
+        doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
-        /*
-         $(function() {
-         var currentDate = new Date();
-         $('#datepicker').datepicker({
-         inline: true,
-         showOtherMonths: true,
-         dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-         dateFormat: 'dd/mm/yy'
-         });
-         $("#datepicker").datepicker("setDate", currentDate);
-         });
-         */
+
+        doc.find('#origin_link, #destination_link, #city_link').focus(function() {
+            $(this).removeClass('constructorShortcodesError');
+        });
 
         doc.find('#constructorLinkModalSelectTD').on('change', '#constructorLinkModalSelect', function(e) {
             doc.find('#constructorLinkModalSelect').removeClass('constructorShortcodesError');
