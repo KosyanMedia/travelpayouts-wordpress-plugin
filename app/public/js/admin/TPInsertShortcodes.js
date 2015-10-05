@@ -833,17 +833,7 @@ jQuery(function($) {
     /** *
      *
      */
-    function getSel() {
-        var txt = '';
-        if (window.getSelection) {
-            txt = window.getSelection();
-        } else if (document.getSelection) {
-            txt = document.getSelection();
-        } else if (document.selection) {
-            txt = document.selection.createRange().text;
-        }
-        return txt;
-    }
+
     /*function ShowSelection()
     {
         var textComponent = document.getElementById('content');
@@ -864,10 +854,27 @@ jQuery(function($) {
         }
         alert("You selected: " + selectedText);
     }          */
+    function getShowSelection(){
+        if(typeof tinyMCE  != "undefined"){
+            if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                //if(QTags.insertContent(shortcodes) != true)
+                //    document.getElementById('content').value += shortcodes;
+            } else if(tinyMCE && tinyMCE.activeEditor) {
+                var selectedText = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
+                console.log(selectedText);
+                if ( selectedText != "" )
+                    tinyMCE.activeEditor.selection.setContent( "FooBar" );
+            }else{
+
+            }
+        }
+    }
     doc.find('#constructorLinkButton').click(function (e) {
         //console.log(window.getSelecrion());
         //console.log( tinyMCE.activeEditor.getContent())
         //ShowSelection()
+
+
         doc.find( "#constructorLinkModal" ).dialog({
             resizable: false,
             draggable: false,
@@ -906,8 +913,10 @@ jQuery(function($) {
                             case '1':
                                 if(doc.find('#one_way_link').is(":checked")){
                                     one_way = "one_way=true";
+                                    destination_date =  "";
                                 }else{
                                     one_way = "one_way=false";
+                                    destination_date =  "destination_date="+doc.find('#destination_date_link').val().replace(/\D/g, '');
                                 }
                                 if (origin == "") {
                                     doc.find('#origin_link').addClass('constructorShortcodesError');
@@ -916,12 +925,12 @@ jQuery(function($) {
                                     doc.find('#destination_link').addClass('constructorShortcodesError');
                                 }
                                 if (origin != "" && destination != ""){
-                                    origin_date =  doc.find('#origin_date_link').val();
-                                    destination_date =  doc.find('#destination_date_link').val();
+                                    origin_date =  doc.find('#origin_date_link').val().replace(/\D/g, '');
+
 
                                     setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
                                         "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
-                                        " destination_date="+destination_date+" "+one_way+" " +
+                                        " "+destination_date+" "+one_way+" " +
                                         "type="+type+"]",
                                         $(this));
                                 }
@@ -930,8 +939,8 @@ jQuery(function($) {
                                 if (hotel_id == "") {
                                     doc.find('#city_link').addClass('constructorShortcodesError');
                                 }else{
-                                    check_in =  doc.find('#check_in_link').val();
-                                    check_out =  doc.find('#check_out_link').val();
+                                    check_in =  doc.find('#check_in_link').val().replace(/\D/g, '');
+                                    check_out =  doc.find('#check_out_link').val().replace(/\D/g, '');
 
                                     setShortcodes("[tp_link hotel_id=\""+hotel_id+"\" text_link=\""+text_link+"\" " +
                                         " check_in="+check_in+" check_out="+check_out+" " +
@@ -958,13 +967,21 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
         tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
-        doc.find('.constructorDate').datepicker(TPdatepickerPlus);
-        doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
+        //doc.find('.constructorDate').datepicker(TPdatepickerPlus);
+        //doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
 
         doc.find('#origin_link, #destination_link, #city_link').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
+        doc.find('#label_one_way_link').on('change', '#one_way_link', function(e) {
+            if($(this).is(":checked")) {
+                doc.find('#tr_destination_date_link').hide();
+            }else{
+                doc.find('#tr_destination_date_link').show();
 
+            }
+
+        });
         doc.find('#constructorLinkModalSelectTD').on('change', '#constructorLinkModalSelect', function(e) {
             doc.find('#constructorLinkModalSelect').removeClass('constructorShortcodesError');
             doc.find('#origin_link').removeClass('constructorShortcodesError');

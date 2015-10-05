@@ -36,7 +36,7 @@
                     <label>
                         <?php _e('Departure date', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="origin_date" id="origin_date_link"
-                               value="<?php echo date("Y-m-d", time()+DAY_IN_SECONDS); ?>"
+                               value="<?php echo _x('today','insert link date', TPOPlUGIN_TEXTDOMAIN); ?>+1"
                                class="constructorDate code">
                     </label>
                 </td>
@@ -46,14 +46,14 @@
                     <label>
                         <?php _e('Return date', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="destination_date" id="destination_date_link"
-                            value="<?php echo date("Y-m-d", time()+(DAY_IN_SECONDS*12)); ?>"
+                            value="<?php echo _x('today','insert link date', TPOPlUGIN_TEXTDOMAIN); ?>+12"
                                class="constructorDatePlus code">
                     </label>
                 </td>
             </tr>
             <tr id="tr_one_way_link">
                 <td>
-                    <label>
+                    <label id="label_one_way_link">
                         <input type="checkbox" name="one_way" id="one_way_link" value="1">
                         <?php _e('One way', TPOPlUGIN_TEXTDOMAIN); ?>
                     </label>
@@ -71,7 +71,7 @@
                     <label>
                         <?php _e('Check in', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="check_in" id="check_in_link"
-                               value="<?php echo date("Y-m-d", time()+DAY_IN_SECONDS); ?>"
+                               value="<?php echo _x('today','insert link date', TPOPlUGIN_TEXTDOMAIN); ?>+1"
                                class="constructorDate code">
                     </label>
                 </td>
@@ -81,7 +81,7 @@
                     <label>
                         <?php _e('Check out', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="check_out" id="check_out_link"
-                               value="<?php echo date("Y-m-d", time()+(DAY_IN_SECONDS*12)); ?>"
+                               value="<?php echo _x('today','insert link date', TPOPlUGIN_TEXTDOMAIN); ?>+12"
                                class="constructorDatePlus code">
                     </label>
                 </td>

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-10-02 14:08+0300\n"
+"POT-Creation-Date: 2015-10-05 19:04+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -22,6 +22,11 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: core/controllers/TPOAdminMenuController.php:36
+msgid ""
+"The problem with the plugin? There are suggestions and ideas? Contact us at"
+msgstr "Проблема с плагином? Есть пожелания и идеи? Пишите нам на"
 
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
@@ -130,11 +135,6 @@ msgstr "Переменная $airline не задана или задана не
 #: app/includes/TPRequestApi.php:476
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
-
-#: app/includes/TPPlugin.php:58
-msgid ""
-"The problem with the plugin? There are suggestions and ideas? Contact us at"
-msgstr "Проблема с плагином? Есть пожелания и идеи? Пишите нам на"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
 msgid "Your API token"
@@ -832,6 +832,8 @@ msgid "Your income"
 msgstr "Ваш доход"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:26
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:74
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:84
 msgid "today"
 msgstr "за сегодня"
 
@@ -1409,6 +1411,12 @@ msgstr "Поиск авиабилетов"
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:16
 msgid "Search for hotels"
 msgstr "Поиск отелей"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:39
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:49
+msgctxt "insert link date"
+msgid "today"
+msgstr "сегодня"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"

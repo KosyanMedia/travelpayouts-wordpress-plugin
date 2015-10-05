@@ -1075,12 +1075,12 @@ class TPShortcodesView {
             'origin' => false,
             'destination' => false,
             'text_link' => '',
-            'origin_date' => date('Y-m-d'),
-            'destination_date' => date("Y-m-d", time()+(DAY_IN_SECONDS*12)),
+            'origin_date' => 1,
+            'destination_date' => 12,
             'one_way' => false,
             'hotel_id' => false,
-            'check_in' => date('Y-m-d'),
-            'check_out' => date("Y-m-d", time()+(DAY_IN_SECONDS*12)),
+            'check_in' => 1,
+            'check_out' => 12,
             'type' => 0
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -1123,11 +1123,11 @@ class TPShortcodesView {
                             break;
                     }
                 }
-
+                ;
                 $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : "?origin_iata=";
                 $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
-                $departure_at = (!empty($origin_date) && false !== $origin_date) ? '&depart_date='.$origin_date  : "";
-                $return_at = ( !empty($destination_date) && false !== $destination_date) ? '&return_date='.$destination_date : "";
+                $departure_at = (!empty($origin_date) && false !== $origin_date) ? '&depart_date='.date("Y-m-d", time()+(DAY_IN_SECONDS*$origin_date))  : "";
+                $return_at = ( !empty($destination_date) && false !== $destination_date) ? '&return_date='.date("Y-m-d", time()+(DAY_IN_SECONDS*$destination_date)) : "";
                 $one_way = "&one_way={$one_way}";
 
 

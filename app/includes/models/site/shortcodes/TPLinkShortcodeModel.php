@@ -18,12 +18,12 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'origin' => false,
             'destination' => false,
             'text_link' => '',
-            'origin_date' => date('Y-m-d'),
-            'destination_date' => date("Y-m-d", time()+(DAY_IN_SECONDS*12)),
+            'origin_date' => 1,
+            'destination_date' => 12,
             'one_way' => false,
             'hotel_id' => false,
-            'check_in' => date('Y-m-d'),
-            'check_out' => date("Y-m-d", time()+(DAY_IN_SECONDS*12)),
+            'check_in' => 1,
+            'check_out' => 12,
             'type' => 0
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
