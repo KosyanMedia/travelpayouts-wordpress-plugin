@@ -859,11 +859,19 @@ jQuery(function($) {
             if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
                 //if(QTags.insertContent(shortcodes) != true)
                 //    document.getElementById('content').value += shortcodes;
+                var txtarea = document.getElementById("content");
+                // obtain the index of the first selected character
+                var start = txtarea.selectionStart;
+                // obtain the index of the last selected character
+                var finish = txtarea.selectionEnd;
+                // obtain the selected text
+                var sel = txtarea.value.substring(start, finish);
+                console.log(sel);
             } else if(tinyMCE && tinyMCE.activeEditor) {
                 var selectedText = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
                 console.log(selectedText);
-                if ( selectedText != "" )
-                    tinyMCE.activeEditor.selection.setContent( "FooBar" );
+                /*if ( selectedText != "" )
+                    tinyMCE.activeEditor.selection.setContent( "FooBar" ); */
             }else{
 
             }
@@ -873,7 +881,7 @@ jQuery(function($) {
         //console.log(window.getSelecrion());
         //console.log( tinyMCE.activeEditor.getContent())
         //ShowSelection()
-
+        getShowSelection();
 
         doc.find( "#constructorLinkModal" ).dialog({
             resizable: false,
