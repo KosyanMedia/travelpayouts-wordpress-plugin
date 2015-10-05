@@ -15,4 +15,30 @@ abstract class TPOAdminMenuController extends TPOBaseController{
                   document.location.href="'.$page.'";
            </script>';
     }
+    public function TPLinkHelp(){
+        $link = '';
+        global $wp_version;
+        $theme = wp_get_theme();
+        $home = get_option('home');
+        $body = 'domain: '.$home.'%0A'
+            .'marker: '.\app\includes\TPPlugin::$options['account']['marker'].'%0A'
+            .'whitelabel: '.\app\includes\TPPlugin::$options['account']['white_label'].'%0A'
+            .'WP theme: '.$theme->Name.'%0A'
+            .'WP theme URI: '.$theme->ThemeURI.'%0A'
+            .'WP theme version: '.$theme->Version.'%0A'
+            .'WP version: '.$wp_version.'%0A'
+            .'PHP version: '.phpversion().'%0A'
+            .'Plugin version: '.TPOPlUGIN_VERSION.'%0A';
+        $subject = $home.' Travelpayouts WP Plugin Support Request '
+            .\app\includes\TPPlugin::$options['account']['marker'];
+        $link = '<div class="TP-AdminFooter">'
+            .'<p>'
+                .__('The problem with the plugin? There are suggestions and ideas? Contact us at',TPOPlUGIN_TEXTDOMAIN)
+                .'<a href="mailto:wpplugin@travelpayouts.com?body='.$body.'&subject='.$subject.'"> wpplugin@travelpayouts.com</a>'
+            .'</p>'
+        .'</div>';
+        echo $link;
+
+
+    }
 }

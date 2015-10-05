@@ -433,9 +433,15 @@ jQuery(function($){
             url: ajaxurl + '?action=default_settings',
             type: "POST", // Делаем POST запрос
             success: function (data) {
-                document.location.href = '';
+                //document.location.href = '';
+                location.reload();
             }
         });
+        if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+            doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('updated', TPMesgUpdateSettings , ''));
+        }else{
+            $('#wpbody-content').before(adminNotice('updated', TPMesgUpdateSettings , ''));
+        }
 
     });
     /** **/

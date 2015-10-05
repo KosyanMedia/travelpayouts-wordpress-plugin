@@ -60,6 +60,6 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
                 break;
         }
         return array('rows' => $rows_sort,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
-        , 'paginate' => $paginate);
+        , 'paginate' => $paginate, 'one_way' => $one_way);
     }
 }

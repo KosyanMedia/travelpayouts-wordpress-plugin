@@ -833,7 +833,41 @@ jQuery(function($) {
     /** *
      *
      */
+    function getSel() {
+        var txt = '';
+        if (window.getSelection) {
+            txt = window.getSelection();
+        } else if (document.getSelection) {
+            txt = document.getSelection();
+        } else if (document.selection) {
+            txt = document.selection.createRange().text;
+        }
+        return txt;
+    }
+    /*function ShowSelection()
+    {
+        var textComponent = document.getElementById('content');
+        var selectedText;
+        // IE version
+        if (document.selection != undefined)
+        {
+            textComponent.focus();
+            var sel = document.selection.createRange();
+            selectedText = sel.text;
+        }
+        // Mozilla version
+        else if (textComponent.selectionStart != undefined)
+        {
+            var startPos = textComponent.selectionStart;
+            var endPos = textComponent.selectionEnd;
+            selectedText = textComponent.value.substring(startPos, endPos)
+        }
+        alert("You selected: " + selectedText);
+    }          */
     doc.find('#constructorLinkButton').click(function (e) {
+        //console.log(window.getSelecrion());
+        //console.log( tinyMCE.activeEditor.getContent())
+        //ShowSelection()
         doc.find( "#constructorLinkModal" ).dialog({
             resizable: false,
             draggable: false,

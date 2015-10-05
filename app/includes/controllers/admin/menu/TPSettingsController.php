@@ -14,12 +14,14 @@ class TPSettingsController extends \core\controllers\TPOAdminMenuController{
     public function action()
     {
         // TODO: Implement action() method.
-        add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
+        $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
             _x('Settings',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             _x('Settings',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_settings',
             array(&$this, 'render'));
+        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+
         /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
             'class_notice' => 'updated',
             'title_notice' => 'Test',

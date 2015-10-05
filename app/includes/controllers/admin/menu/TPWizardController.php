@@ -18,12 +18,13 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         // TODO: Implement action() method.
-        add_submenu_page( null,
+        $plugin_page = add_submenu_page( null,
             _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_wizard',
             array(&$this, 'render'));
+        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
         //global $submenu;
 
     }

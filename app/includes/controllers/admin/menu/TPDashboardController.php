@@ -14,7 +14,7 @@ class TPDashboardController extends \core\controllers\TPOAdminMenuController{
     public function action()
     {
         // TODO: Implement action() method.
-        add_menu_page(
+        $plugin_page = add_menu_page(
             _x('Travelpayouts',  'add_menu_page page title' , TPOPlUGIN_TEXTDOMAIN ),
             _x('Travelpayouts',     'add_menu_page menu title' , TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
@@ -22,6 +22,7 @@ class TPDashboardController extends \core\controllers\TPOAdminMenuController{
             array(&$this,'render'),
             TPOPlUGIN_URL .'app/public/images/tp.png'
         );
+        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
     }
 
     public function render()

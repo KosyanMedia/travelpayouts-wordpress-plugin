@@ -1545,7 +1545,7 @@ msgstr "Вставить таблицу"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:20
 msgid "Insert link"
-msgstr "Вставить ссылок"
+msgstr "Вставить ссылку"
 
 #~ msgid "Responsive table"
 #~ msgstr "Адаптивные таблицы"

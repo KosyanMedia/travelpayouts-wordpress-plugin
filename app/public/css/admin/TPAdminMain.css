@@ -2461,3 +2461,13 @@ thead tr td.active-w {
 .TPDefaultSettings{
 
 }
+
+.TP-AdminFooter{
+  margin-top: -14px;
+  display: inline-block;
+  color: #777;
+  position: absolute;
+}
+.TP-AdminFooter p{
+  margin-left: 180px;
+}

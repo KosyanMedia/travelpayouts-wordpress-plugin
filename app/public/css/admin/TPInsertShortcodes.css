@@ -28,6 +28,9 @@
 #constructorSearchFormButton img{
     margin-top: -3px;
 }
+#constructorLinkButton img {
+    margin-top: -3px;
+}
 .validate > #constructorShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;

@@ -58,6 +58,6 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
                 break;
         }
         return array('rows' => $rows_sort,'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
-            'type' => 14, 'title' => $title, 'paginate' => $paginate);
+            'type' => 14, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way);
     }
 }

@@ -26,13 +26,26 @@ class TPShortcodesView {
      */
     public function tpReturnOutputTable($args = array()){
         $defaults = array( 'rows' => array(), 'type' => null, 'origin' => '', 'destination' => '', 'airline' => '',
-            'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '', 'paginate' => 'false');
+            'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '', 'paginate' => 'false',
+            'one_way' => 'false');
+
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
         if(count($rows) < 1) return false;
         $output = '';
         $sortable_class = '';
         if(count($rows) > 1)
             $sortable_class = 'sortable';
+        if($one_way === 'false'){
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+        }else{
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+            if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
+                --$sort_column;
+            }
+        }
+
+
         $title = $this ->returnTitle($title, $type, $origin, $destination, $airline);
         $output .= '<div class="table-container">
                         <div class="table-section">
@@ -40,7 +53,7 @@ class TPShortcodesView {
                             <table class="w-table display '.$sortable_class.'"
                                 data-paginate="'.$paginate.'"
                                 data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
-                                data-sort_column="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'].'">
+                                data-sort_column="'.$sort_column.'">
                                 <thead>
                                     <tr>';
         foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
@@ -50,11 +63,18 @@ class TPShortcodesView {
             switch($selected_field) {
                 //Дата вылета
                 case "departure_at":
-                    //Дата возвращения
-                case "return_at":
                     $output .= '<td class="TPTableHead ' . $class_sort . ' tp-date-column">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         .' </td>';
+                    break;
+                    //Дата возвращения
+                case "return_at":
+                    if($one_way === 'false'){
+                        $output .= '<td class="TPTableHead ' . $class_sort . ' tp-date-column">' .
+                            \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                            .' </td>';
+                    }
+
                     break;
                 //Дата поиска
                 case "found_at":
@@ -232,9 +252,11 @@ class TPShortcodesView {
                                 case 12:
                                 case 13:
                                 case 14:
-                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['return_date'] ).'">'
-                                        .$this->tpDate(strtotime(  $row['return_date'] ))
-                                        .'</p>'.$button.'</td>';
+                                    if($one_way === 'false') {
+                                        $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="' . strtotime($row['return_date']) . '">'
+                                            . $this->tpDate(strtotime($row['return_date']))
+                                            . '</p>' . $button . '</td>';
+                                    }
                                     break;
                                 default:
                                     $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
@@ -790,6 +812,7 @@ class TPShortcodesView {
                         </div>
                     </div>';
         //ob_end_clean ();
+
         return $output;
     }
 

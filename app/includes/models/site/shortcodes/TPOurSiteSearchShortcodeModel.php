@@ -56,7 +56,7 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
                 }
                 break;
         }
-        return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate);
+        return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way);
 
     }
 }
