@@ -867,22 +867,124 @@ jQuery(function($) {
                 // obtain the selected text
                 var sel = txtarea.value.substring(start, finish);
                 console.log(sel);
+                console.log(txtarea.value)
+
+                txtarea.value = 111;
             } else if(tinyMCE && tinyMCE.activeEditor) {
                 var selectedText = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
                 console.log(selectedText);
                 /*if ( selectedText != "" )
                     tinyMCE.activeEditor.selection.setContent( "FooBar" ); */
             }else{
-
+                         //  if(typeof elem != "undefined"){
             }
         }
+    }
+
+    /**
+     *
+     * @returns {string}
+     */
+    function getShowSelectionText(){
+        var txt = '';
+        if(typeof tinyMCE  != "undefined"){
+            if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                if(document.getElementById("content")){
+                    var txtarea = document.getElementById("content");
+                    // obtain the index of the first selected character
+                    var start = txtarea.selectionStart;
+                    // obtain the index of the last selected character
+                    var finish = txtarea.selectionEnd;
+                    // obtain the selected text
+                    txt = txtarea.value.substring(start, finish);
+                }
+
+            } else if(tinyMCE && tinyMCE.activeEditor) {
+                txt = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
+            }
+        }  else if(document.getElementById("tag-description")){
+            var txtarea = document.getElementById("tag-description");
+            // obtain the index of the first selected character
+            var start = txtarea.selectionStart;
+            // obtain the index of the last selected character
+            var finish = txtarea.selectionEnd;
+            // obtain the selected text
+            txt = txtarea.value.substring(start, finish);
+        } else if(document.getElementById("description")){
+            var txtarea = document.getElementById("description");
+            // obtain the index of the first selected character
+            var start = txtarea.selectionStart;
+            // obtain the index of the last selected character
+            var finish = txtarea.selectionEnd;
+            // obtain the selected text
+            txt = txtarea.value.substring(start, finish);
+        }
+        return txt;
+    }
+
+    /**
+     *
+     * @param shortcodes
+     * @param selector
+     */
+    function setShortcodesReplace(shortcodes, selector){
+        var txt = '';
+        if(typeof tinyMCE  != "undefined"){
+            if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                if(document.getElementById("content")){
+                    var txtarea = document.getElementById("content");
+                    // obtain the index of the first selected character
+                    var start = txtarea.selectionStart;
+                    // obtain the index of the last selected character
+                    var finish = txtarea.selectionEnd;
+                    // obtain the selected text
+                    txt = txtarea.value.substring(start, finish);
+                    if(txt != ''){
+                        txtarea.value = txtarea.value.replace(txt, shortcodes)
+                    }else{
+                        txtarea.value += shortcodes;
+                    }
+
+                }
+
+            } else if(tinyMCE && tinyMCE.activeEditor) {
+                tinyMCE.activeEditor.selection.setContent(shortcodes);
+            }
+        }  else if(document.getElementById("tag-description")){
+            var txtarea = document.getElementById("tag-description");
+            // obtain the index of the first selected character
+            var start = txtarea.selectionStart;
+            // obtain the index of the last selected character
+            var finish = txtarea.selectionEnd;
+            // obtain the selected text
+            txt = txtarea.value.substring(start, finish);
+            if(txt != ''){
+                txtarea.value = txtarea.value.replace(txt, shortcodes)
+            }else{
+                txtarea.value += shortcodes;
+            }
+        } else if(document.getElementById("description")){
+            var txtarea = document.getElementById("description");
+            // obtain the index of the first selected character
+            var start = txtarea.selectionStart;
+            // obtain the index of the last selected character
+            var finish = txtarea.selectionEnd;
+            // obtain the selected text
+            txt = txtarea.value.substring(start, finish);
+            if(txt != ''){
+                txtarea.value = txtarea.value.replace(txt, shortcodes)
+            }else{
+                txtarea.value += shortcodes;
+            }
+        }
+        selector.dialog( "close" );
     }
     doc.find('#constructorLinkButton').click(function (e) {
         //console.log(window.getSelecrion());
         //console.log( tinyMCE.activeEditor.getContent())
         //ShowSelection()
-        getShowSelection();
 
+        doc.find('#text_link').val(getShowSelectionText());
         doc.find( "#constructorLinkModal" ).dialog({
             resizable: false,
             draggable: false,
@@ -935,12 +1037,15 @@ jQuery(function($) {
                                 if (origin != "" && destination != ""){
                                     origin_date =  doc.find('#origin_date_link').val().replace(/\D/g, '');
 
-
-                                    setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
+                                    setShortcodesReplace("[tp_link origin="+origin+" destination="+destination+" " +
+                                        "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
+                                        " "+destination_date+" "+one_way+" " +
+                                        "type="+type+"]", $(this));
+                                    /*setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
                                         "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
                                         " "+destination_date+" "+one_way+" " +
                                         "type="+type+"]",
-                                        $(this));
+                                        $(this));*/
                                 }
                                 break
                             case '2':
@@ -977,7 +1082,6 @@ jQuery(function($) {
         tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
         //doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         //doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
-
         doc.find('#origin_link, #destination_link, #city_link').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
