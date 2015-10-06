@@ -159,6 +159,8 @@ class TPShortcodesView {
                             $button = $this->return_link(array(
                                 'origin' => $origin_iata,
                                 'destination' => $key_row,
+                                'departure_at' => $row['departure_at'],
+                                'return_at' => $row['return_at'],
                                 'price' => number_format($row["price"], 0, '.', ' '),
                                 'type' => $type
                             ) );
@@ -192,7 +194,8 @@ class TPShortcodesView {
                                 'departure_at' => $row['depart_date'],
                                 'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
-                                'type' => $type
+                                'type' => $type,
+                                'one_way' =>  '&one_way='.$one_way
                             ) );
 
                             break;
@@ -212,6 +215,7 @@ class TPShortcodesView {
                  * Fields
                  */
                 if(!isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink'])){
+
                     switch($selected_field){
                         //Номер рейса
                         case "flight_number":
@@ -411,6 +415,8 @@ class TPShortcodesView {
                                     $buttonShow = '<p data-price="'.$row["price"].'">'.$this->return_link(array(
                                             'origin' => $origin_iata,
                                             'destination' => $key_row,
+                                            'departure_at' => $row['departure_at'],
+                                            'return_at' => $row['return_at'],
                                             'price' => number_format($row["price"], 0, '.', ' '),
                                             'type' => $type
                                         ), 1  ).'</p>';
@@ -444,7 +450,8 @@ class TPShortcodesView {
                                             'departure_at' => $row['depart_date'],
                                             'return_at' => $row['return_date'],
                                             'price' => number_format($row["value"], 0, '.', ' '),
-                                            'type' => $type
+                                            'type' => $type,
+                                            'one_way' =>  '&one_way='.$one_way
                                         ) , 1 ).'</p>';
 
                                     break;
@@ -462,6 +469,7 @@ class TPShortcodesView {
                             break;
                     }
                 }else{
+
                     $urlLink = '';
                     switch($type){
                         case 1:
@@ -489,6 +497,8 @@ class TPShortcodesView {
                             $urlLink = $this->return_link(array(
                                 'origin' => $origin_iata,
                                 'destination' => $key_row,
+                                'departure_at' => $row['departure_at'],
+                                'return_at' => $row['return_at'],
                                 'price' => number_format($row["price"], 0, '.', ' '),
                                 'type' => $type
                             ), 2  );
@@ -522,7 +532,8 @@ class TPShortcodesView {
                                 'departure_at' => $row['depart_date'],
                                 'return_at' => $row['return_date'],
                                 'price' => number_format($row["value"], 0, '.', ' '),
-                                'type' => $type
+                                'type' => $type,
+                                'one_way' =>  '&one_way='.$one_way
                             ) , 2 );
 
                             break;
@@ -580,9 +591,11 @@ class TPShortcodesView {
                                 case 12:
                                 case 13:
                                 case 14:
-                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row['return_date'] ).'">'
-                                        .str_replace('title_link', $this->tpDate(strtotime(  $row['return_date'] )), $urlLink)
-                                        .'</p></td>';
+                                if($one_way === 'false') {
+                                    $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="' . strtotime($row['return_date']) . '">'
+                                        . str_replace('title_link', $this->tpDate(strtotime($row['return_date'])), $urlLink)
+                                        . '</p></td>';
+                                }
                                     break;
                                 default:
                                     $output .= '<td class="TPTableTbodyTd TPDateTD"><p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
@@ -746,6 +759,8 @@ class TPShortcodesView {
                                     $buttonShow = '<p data-price="'.$row["price"].'">'.$this->return_link(array(
                                         'origin' => $origin_iata,
                                         'destination' => $key_row,
+                                            'departure_at' => $row['departure_at'],
+                                            'return_at' => $row['return_at'],
                                         'price' => number_format($row["price"], 0, '.', ' '),
                                         'type' => $type
                                     ), 1  ).'</p>';
@@ -779,7 +794,8 @@ class TPShortcodesView {
                                         'departure_at' => $row['depart_date'],
                                         'return_at' => $row['return_date'],
                                         'price' => number_format($row["value"], 0, '.', ' '),
-                                        'type' => $type
+                                        'type' => $type,
+                                        'one_way' =>  '&one_way='.$one_way
                                     ) , 1 ).'</p>';
 
                                     break;
@@ -974,7 +990,7 @@ class TPShortcodesView {
      */
     public function return_link($args = array(), $type_link = 0){
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'link_text' => '', 'price' => '');
+            'link_text' => '', 'price' => '', 'one_way' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $link_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$type]['title_button'][$this->local]."</span>";
         if(!empty($link_text)){
@@ -1029,7 +1045,13 @@ class TPShortcodesView {
             case 10:
             $url .= '&one_way=true';
                 break;
+            case 12:
+            case 13:
+            case 14:
+            $url .= $one_way;
+                break;
         }
+
         $link = '';
         if($redirect){
             $home = '';
