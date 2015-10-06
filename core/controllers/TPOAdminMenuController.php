@@ -20,7 +20,10 @@ abstract class TPOAdminMenuController extends TPOBaseController{
         global $wp_version;
         $theme = wp_get_theme();
         $home = get_option('home');
-        $body = 'domain: '.$home.'%0A'
+        $body = '%0A%0A%0A%0A%0A'
+            .__('Please, don\'t delete the information below. It makes helping you easier', TPOPlUGIN_TEXTDOMAIN)
+            .'%0A'
+            .'domain: '.$home.'%0A'
             .'marker: '.\app\includes\TPPlugin::$options['account']['marker'].'%0A'
             .'whitelabel: '.\app\includes\TPPlugin::$options['account']['white_label'].'%0A'
             .'WP theme: '.$theme->Name.'%0A'
@@ -29,12 +32,12 @@ abstract class TPOAdminMenuController extends TPOBaseController{
             .'WP version: '.$wp_version.'%0A'
             .'PHP version: '.phpversion().'%0A'
             .'Plugin version: '.TPOPlUGIN_VERSION.'%0A';
-        $subject = $home.' Travelpayouts WP Plugin Support Request '
+        $subject = $home.' - Travelpayouts WP Plugin Support Request - '
             .\app\includes\TPPlugin::$options['account']['marker'];
         $link = '<div class="TP-AdminFooter">'
             .'<p>'
                 .__('The problem with the plugin? There are suggestions and ideas? Contact us at',TPOPlUGIN_TEXTDOMAIN)
-                .'<a href="mailto:wpplugin@travelpayouts.com?body='.$body.'&subject='.$subject.'"> wpplugin@travelpayouts.com</a>'
+                .' <a href="mailto:wpplugin@travelpayouts.com?body='.$body.'&subject='.$subject.'">wpplugin@travelpayouts.com</a>'
             .'</p>'
         .'</div>';
         echo $link;

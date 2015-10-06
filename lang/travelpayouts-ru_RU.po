@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-10-05 19:04+0300\n"
+"POT-Creation-Date: 2015-10-06 12:56+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -23,10 +23,15 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: core/controllers/TPOAdminMenuController.php:36
+#: core/controllers/TPOAdminMenuController.php:24
+msgid "Please, don't delete the information below. It makes helping you easier"
+msgstr ""
+"Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
+
+#: core/controllers/TPOAdminMenuController.php:38
 msgid ""
 "The problem with the plugin? There are suggestions and ideas? Contact us at"
-msgstr "Проблема с плагином? Есть пожелания и идеи? Пишите нам на"
+msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
@@ -832,8 +837,6 @@ msgid "Your income"
 msgstr "Ваш доход"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:26
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:74
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:84
 msgid "today"
 msgstr "за сегодня"
 
@@ -1414,6 +1417,8 @@ msgstr "Поиск отелей"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:39
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:49
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:74
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:84
 msgctxt "insert link date"
 msgid "today"
 msgstr "сегодня"
