@@ -52,7 +52,11 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
-            update_option( TPOPlUGIN_OPTION_NAME, $_POST['value']);
+            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $_POST['value']);
+            update_option( TPOPlUGIN_OPTION_NAME, $settings);
+
+            //error_log(print_r($settings,true));
+            //error_log(print_r(\app\includes\TPPlugin::$options, true));
             \app\includes\TPPlugin::deleteCacheAll();
         }
         //error_log(print_r($_POST, true));

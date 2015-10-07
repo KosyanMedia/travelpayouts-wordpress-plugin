@@ -5,9 +5,21 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public function __construct() {
         parent::__construct();
         new TPLoader();
-
+        self::check_plugin_update();
     }
 
+    static private function check_plugin_update() {
+        if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
+            if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
+                update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+            } else{
+                $settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
+                update_option( TPOPlUGIN_OPTION_NAME, $settings);
+            }
+
+            update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
+        }
+    }
     static public function activation()
     {
         // TODO: Implement activation() method.
@@ -36,6 +48,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         }else{
             if( ! get_option(TPOPlUGIN_OPTION_NAME) )
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+            if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
+                update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
             models\admin\menu\TPSearchFormsModel::createTable();
         }
     }
@@ -44,6 +58,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     {
         // TODO: Implement deactivation() method.
         delete_option( TPOPlUGIN_OPTION_NAME);
+        delete_option( TPOPlUGIN_OPTION_VERSION);
         self::deleteCacheAll();
     }
 
