@@ -83,6 +83,11 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
+                    <?php if(empty(\app\includes\TPPlugin::$options['account']['marker'])){ ?>
+                    <span class="TP-msgSend">
+                        <?php _e("By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts.", TPOPlUGIN_TEXTDOMAIN)?>
+                    </span>
+                    <?php } ?>
                     <input type="submit" name="submit" id="TPSaveSettings" class="TP-BtnTab"
                            value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
                 </div>

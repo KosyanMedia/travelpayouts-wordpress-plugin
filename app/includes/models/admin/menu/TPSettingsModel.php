@@ -77,4 +77,5 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     public function defaultSettings(){
         update_option( TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
     }
+
 }

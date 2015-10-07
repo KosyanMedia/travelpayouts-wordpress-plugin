@@ -9,12 +9,24 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     }
 
     static private function check_plugin_update() {
+
+
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
             } else{
                 $settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
                 update_option( TPOPlUGIN_OPTION_NAME, $settings);
+            }
+
+            if(!empty(self::$options['account']['marker'])){
+                $request = 'http://metrics.aviasales.ru/?goal=tp_wp_plugin_activation&data={"merker":'
+                    .self::$options['account']['marker'].',"domain":"'.preg_replace("(^https?://)", "", get_option('home')).'"}';
+                $string = htmlspecialchars($request);
+                $response = wp_remote_get( $string, array('headers' => array(
+                    'Accept-Encoding' => 'gzip, deflate',
+                )) );
+
             }
 
             update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);

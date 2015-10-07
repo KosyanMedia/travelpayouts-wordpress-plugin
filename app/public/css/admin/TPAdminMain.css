@@ -2471,3 +2471,8 @@ thead tr td.active-w {
 .TP-AdminFooter p{
   margin-left: 180px;
 }
+.TP-msgSend{
+  display: inline-block;
+  color: #6f777c;
+  margin-bottom: 5px;
+}

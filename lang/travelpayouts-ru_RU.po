@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-10-07 13:03+0300\n"
+"POT-Creation-Date: 2015-10-07 18:55+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -810,6 +810,15 @@ msgstr "на этой странице."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:13
 #: app/includes/views/admin/menu/TPSettings.view.php:87
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation "
+"data to Travelpayouts."
+msgstr ""
+"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации "
+"плагина в Travelpayouts"
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
+#: app/includes/views/admin/menu/TPSettings.view.php:90
 #: app/includes/views/admin/menu/TPWidgets.view.php:17
 #: app/includes/views/admin/menu/TPWidgets.view.php:31
 #: app/includes/views/admin/menu/TPWidgets.view.php:45

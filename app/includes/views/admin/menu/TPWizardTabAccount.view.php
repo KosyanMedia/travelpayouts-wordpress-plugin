@@ -9,6 +9,11 @@
         </p>
         <?php do_settings_fields('tp_settings_wizard', 'tp_settings_wizard_id'); ?>
         <div class="TP-navsPan">
+            <?php if(empty(\app\includes\TPPlugin::$options['account']['marker'])){ ?>
+                <span class="TP-msgSend">
+                        <?php _e("By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts.", TPOPlUGIN_TEXTDOMAIN)?>
+                    </span>
+            <?php } ?>
             <input type="submit" name="submit" id="TPSaveSettingsWizard" class="TP-BtnTab TP-BtnTabR"
                    value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
         </div>
