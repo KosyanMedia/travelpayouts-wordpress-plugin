@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-10-06 12:56+0300\n"
+"POT-Creation-Date: 2015-10-07 13:03+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -28,9 +28,9 @@ msgid "Please, don't delete the information below. It makes helping you easier"
 msgstr ""
 "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
 
-#: core/controllers/TPOAdminMenuController.php:38
+#: core/controllers/TPOAdminMenuController.php:39
 msgid ""
-"The problem with the plugin? There are suggestions and ideas? Contact us at"
+"A problem with the plugin? Have some suggestions or ideas? Contact us at"
 msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #: core/controllers/TPOBaseController.php:24

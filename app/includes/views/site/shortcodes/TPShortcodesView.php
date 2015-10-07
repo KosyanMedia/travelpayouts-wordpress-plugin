@@ -1174,8 +1174,8 @@ class TPShortcodesView {
 
                 $locationId = ( false !== $hotel_id ) ? "?{$hotel_id}" : "?locationId=";
 
-                $checkIn = (!empty($check_in) && false !== $check_in) ? '&checkIn='.$check_in  : "";
-                $checkOut = ( !empty($check_out) && false !== $check_out) ? '&checkOut='.$check_out : "";
+                $checkIn = (!empty($check_in) && false !== $check_in) ? '&checkIn='.date("Y-m-d", time()+(DAY_IN_SECONDS*$check_in )) : "";
+                $checkOut = ( !empty($check_out) && false !== $check_out) ? '&checkOut='.date("Y-m-d", time()+(DAY_IN_SECONDS*$check_out )) : "";
                 switch (\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
                         $lang = '&language=ru-ru';

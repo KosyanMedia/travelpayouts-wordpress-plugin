@@ -36,7 +36,7 @@ abstract class TPOAdminMenuController extends TPOBaseController{
             .\app\includes\TPPlugin::$options['account']['marker'];
         $link = '<div class="TP-AdminFooter">'
             .'<p>'
-                .__('The problem with the plugin? There are suggestions and ideas? Contact us at',TPOPlUGIN_TEXTDOMAIN)
+                .__('A problem with the plugin? Have some suggestions or ideas? Contact us at',TPOPlUGIN_TEXTDOMAIN)
                 .' <a href="mailto:wpplugin@travelpayouts.com?body='.$body.'&subject='.$subject.'">wpplugin@travelpayouts.com</a>'
             .'</p>'
         .'</div>';
