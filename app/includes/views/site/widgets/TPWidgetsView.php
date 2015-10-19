@@ -32,11 +32,11 @@ class TPWidgetsView {
         switch($widgetType){
             case 1:
                 //map
-                $marker .= '_map';
+                $marker .= '_map.$69';
                 break;
             case 2:
                 //hotelsmap
-                $marker .= '_hotelsmap';
+                $marker .= '_hotelsmap.$69';
                 break;
             case 3:
                 //calendar
@@ -44,7 +44,7 @@ class TPWidgetsView {
                 break;
             case 4:
                 //subscriptions
-                $marker .= '_subscr';
+                $marker .= '_subscr.$69';
                 break;
             case 5:
                 //chansey
@@ -57,7 +57,7 @@ class TPWidgetsView {
         }
 
 
-        $marker = $marker.'.$69';
+        //$marker = $marker.'.$69';
         return rawurlencode($marker);
     }
 
