@@ -160,6 +160,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteAirlines');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteScript');
 
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
+            TPOPlUGIN_URL.'app/public/js/admin/TPInsertWidgets.js', //$src
+            array('jquery', 'jquery-ui-autocomplete', 'jquery-ui-core'), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
         switch($hook) {
             case "post.php":
             case "post-new.php":
@@ -168,6 +175,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');
+                break;
+            case "widgets.php":
+                wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertWidgets');
                 break;
         }
         if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false ){
