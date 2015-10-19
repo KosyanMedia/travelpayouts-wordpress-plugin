@@ -126,6 +126,12 @@
                 <?php _e('One Way', TPOPlUGIN_TEXTDOMAIN ); ?>
             </td>
         </tr>
+        <tr id="tr_off_title">
+            <td>
+                <input type="checkbox" id="off_title" value="1">
+                <?php _e('No title', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </td>
+        </tr>
         <tr id="tr_transplant">
             <td>
                 <label><?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>

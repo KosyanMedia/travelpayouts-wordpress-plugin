@@ -29,7 +29,7 @@ jQuery(function($) {
                     id: "constructorShortcodesButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, airline, shortcodes, title, limit, trip_class,paginate, one_way;
+                        var origin, destination, airline, shortcodes, title, off_title, limit, trip_class,paginate, one_way;
                         shortcodes = "";
                         origin = doc.find('#origin').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
@@ -50,6 +50,11 @@ jQuery(function($) {
                         }else{
                             one_way = "one_way=false";
                         }
+                        if(doc.find('#off_title').is(":checked")){
+                            off_title = "off_title=true";
+                        }else{
+                            off_title = "";
+                        }
                         switch (doc.find('#select_shortcodes').val()){
                             case '0':
                                 doc.find('#select_shortcodes').addClass('constructorShortcodesError');
@@ -64,7 +69,7 @@ jQuery(function($) {
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
                                         "destination="+destination+" title=\""+title+"\" "+paginate+" " +
-                                        "stops="+doc.find('#transplant').val()+"]",
+                                        "stops="+doc.find('#transplant').val()+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -77,7 +82,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_price_calendar_week_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -94,7 +99,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_flights_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -108,7 +113,7 @@ jQuery(function($) {
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
                                         "destination="+destination+" title=\""+title+"\" "+paginate
-                                        +" stops="+doc.find('#transplant').val()+"]",
+                                        +" stops="+doc.find('#transplant').val()+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -121,7 +126,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_cheapest_tickets_each_month_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -134,7 +139,7 @@ jQuery(function($) {
                                 }
                                 if(origin != "" && destination != ""){
                                     setShortcodes("[tp_direct_flights_route_shortcodes origin="+origin+" " +
-                                        "destination="+destination+" title=\""+title+"\" "+paginate+"]",
+                                        "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -143,7 +148,7 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_direct_flights_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -152,7 +157,7 @@ jQuery(function($) {
                                     doc.find('#origin').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_popular_routes_from_city_shortcodes origin="+origin+" " +
-                                        " title=\""+title+"\" "+paginate+"]",
+                                        " title=\""+title+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -161,7 +166,7 @@ jQuery(function($) {
                                     doc.find('#airline').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_popular_destinations_airlines_shortcodes airline="+airline+" " +
-                                        " title=\""+title+"\" limit="+limit+" "+paginate+"]",
+                                        " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -171,7 +176,7 @@ jQuery(function($) {
                             case '11':
                                 setShortcodes("[tp_our_site_search_shortcodes " +
                                     " title=\""+title+"\" limit="+limit+" "+paginate
-                                    +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
+                                    +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title+"]",
                                     $(this));
                                 break;
                             case '12':
@@ -180,7 +185,7 @@ jQuery(function($) {
                                 }else{
                                     setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
                                         " title=\""+title+"\" limit="+limit+" "+paginate
-                                        +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
+                                        +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -190,7 +195,7 @@ jQuery(function($) {
                                 }else{
                                     setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
                                         " title=\""+title+"\" limit="+limit+" "+paginate
-                                        +" stops="+doc.find('#transplant').val()+" "+one_way+"]",
+                                        +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -288,6 +293,8 @@ jQuery(function($) {
             doc.find('#tr_paginate').hide();
             doc.find('#tr_transplant').hide();
             doc.find('#tr_one_way').hide();
+            doc.find('#tr_off_title').hide();
+
             doc.find("#limit").val("");
             switch($(this).val()) {
                 case '0':
@@ -298,13 +305,14 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
-
+                    doc.find('#tr_off_title').show();
                     break;
                 case '2':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 /*case '3':
                     doc.find('#tr_title').show();
@@ -314,6 +322,7 @@ jQuery(function($) {
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '4':
                     doc.find('#tr_paginate').show();
@@ -321,12 +330,14 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '5':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_off_title').show();
 
                     break;
                 case '6':
@@ -334,6 +345,7 @@ jQuery(function($) {
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '7':
                     doc.find('#tr_paginate').show();
@@ -341,21 +353,25 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_limit').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    doc.find('#tr_off_title').show();
                     break;
                 case '8':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_origin').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '9':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_airline').show();
                     doc.find('#tr_limit').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '10':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '11':
                     doc.find('#tr_paginate').show();
@@ -365,6 +381,7 @@ jQuery(function($) {
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '12':
                     doc.find('#tr_paginate').show();
@@ -375,6 +392,7 @@ jQuery(function($) {
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
+                    doc.find('#tr_off_title').show();
                     break;
                 case '13':
                     doc.find('#tr_paginate').show();
@@ -385,6 +403,7 @@ jQuery(function($) {
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
+                    doc.find('#tr_off_title').show();
                     break;
             }
         });

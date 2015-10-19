@@ -4,6 +4,7 @@
 .TP-PaginateWidget,
 .TP-StopsWidget,
 .TP-LimitWidget,
-.TP-OneWayWidget{
+.TP-OneWayWidget,
+.TP-Off_TitleWidget{
     display: none;
 }

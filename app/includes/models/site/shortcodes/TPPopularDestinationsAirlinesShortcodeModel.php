@@ -11,7 +11,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'airline' => false, 'limit' => false, 'title' => '', 'paginate' => true);
+        $defaults = array( 'airline' => false, 'limit' => false, 'title' => '', 'paginate' => true, 'off_title' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array( 'airline' => $airline,
             'limit' => $limit );
@@ -32,6 +32,6 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
             $return = $this->iataAutocomplete($return, 10);
         }
         return array('rows' => $return, 'type' => 10, 'airline' => $this->iataAutocomplete($airline, 0 , 'airline'),
-            'title' => $title, 'paginate' => $paginate);
+            'title' => $title, 'paginate' => $paginate, 'off_title' => $off_title);
     }
 }

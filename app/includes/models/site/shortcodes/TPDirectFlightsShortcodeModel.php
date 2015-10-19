@@ -17,7 +17,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
         // TODO: Implement get_data() method.
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB','title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']
-            , 'paginate' => true);
+            , 'paginate' => true, 'off_title' => '');
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array( 'origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
@@ -47,6 +47,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             $rows = $this->iataAutocomplete($rows, 8);
         }
         return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
-            'limit' => $limit, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate);
+            'limit' => $limit, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate
+        , 'off_title' => $off_title);
     }
 }

@@ -12,7 +12,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '' , 'paginate' => true);
+            'currency' => 'RUB', 'title' => '' , 'paginate' => true, 'off_title' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $current_day = date("d",time());
         $current_month = date("m");
@@ -102,6 +102,6 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
         }
         return array('rows' => $return, 'type' => 7, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate);
+            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate, 'off_title' => $off_title);
     }
 }

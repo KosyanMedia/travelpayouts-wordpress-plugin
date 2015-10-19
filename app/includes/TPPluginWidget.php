@@ -43,15 +43,15 @@ class TPPluginWidget extends WP_Widget{
         if(isset($instance['airline']))
             preg_match('/\[(.+)\]/', $instance['airline'], $airline);
 
-        $paginate = (isset($instance['paginate']))? $paginate='paginate=true': $paginate='paginate=false';
+        $paginate = (isset($instance['paginate']))? 'paginate=true':'paginate=false';
         switch($instance['select']){
             case 11:
             case 12:
             case 13:
-                $one_way = (isset($instance['one_way']))? $one_way='one_way=true': $one_way='one_way=false';
+                $one_way = (isset($instance['one_way']))? 'one_way=true': 'one_way=false';
                 break;
         }
-
+        $off_title = (isset($instance['off_title']))? 'off_title=true': '';
         switch($instance['select']){
             case 1:
                 $shortcode = '[tp_price_calendar_month_shortcodes origin='.$origin[1]
@@ -61,58 +61,58 @@ class TPPluginWidget extends WP_Widget{
             case 2:
                 $shortcode = '[tp_price_calendar_week_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
-                    .$paginate.']';
+                    .$paginate.' '.$off_title.']';
                 break;
             case 3:
                 $shortcode = '[tp_cheapest_flights_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
-                    .$paginate.']';
+                    .$paginate.' '.$off_title.']';
                 break;
             case 4:
                 $shortcode = '[tp_cheapest_ticket_each_day_month_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
-                    .$paginate.' stops='.$instance['stops'].']';
+                    .$paginate.' stops='.$instance['stops'].' '.$off_title.']';
                 break;
             case 5:
                 $shortcode = '[tp_cheapest_tickets_each_month_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
-                    .$paginate.']';
+                    .$paginate.' '.$off_title.']';
                 break;
             case 6:
                 $shortcode = '[tp_direct_flights_route_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
-                    .$paginate.']';
+                    .$paginate.' '.$off_title.']';
                 break;
             case 7:
                 $shortcode = '[tp_direct_flights_shortcodes origin='.$origin[1]
                     .' limit='.$instance['limit'].' title="'.$instance['title'] .'" '
-                    .$paginate.']';
+                    .$paginate.' '.$off_title.']';
                 break;
             case 8:
                 $shortcode = '[tp_popular_routes_from_city_shortcodes origin='.$origin[1]
-                    .' title="'.$instance['title'] .'" '.$paginate.']';
+                    .' title="'.$instance['title'] .'" '.$paginate.' '.$off_title.']';
                 break;
             case 9:
                 $shortcode = '[tp_popular_destinations_airlines_shortcodes airline='.$airline[1]
                     .'limit='.$instance['limit']
-                    .' title="'.$instance['title'] .'" '.$paginate.']';
+                    .' title="'.$instance['title'] .'" '.$paginate.' '.$off_title.']';
                 break;
             case 11:
                 $shortcode = '[tp_our_site_search_shortcodes title="'.$instance['title'] .'" '
                     .'limit='.$instance['limit']
-                    .$paginate.' stops='.$instance['stops'].' '.$one_way.']';
+                    .$paginate.' stops='.$instance['stops'].' '.$one_way.' '.$off_title.']';
                 break;
             case 12:
                 $shortcode = '[tp_from_our_city_fly_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
                     .'limit='.$instance['limit']
-                    .$paginate.' stops='.$instance['stops'].' '.$one_way.']';
+                    .$paginate.' stops='.$instance['stops'].' '.$one_way.' '.$off_title.']';
                 break;
             case 13:
                 $shortcode = '[tp_in_our_city_fly_shortcodes origin='.$origin[1]
                     .' destination='.$destination[1].' title="'.$instance['title'] .'" '
                     .'limit='.$instance['limit']
-                    .$paginate.' stops='.$instance['stops'].' '.$one_way.']';
+                    .$paginate.' stops='.$instance['stops'].' '.$one_way.' '.$off_title.']';
                 break;
         }
 
@@ -133,6 +133,7 @@ class TPPluginWidget extends WP_Widget{
         $instance['stops'] = (!empty( $new_instance['stops'])) ? $new_instance['stops'] : $old_instance['stops'];
         $instance['paginate'] = (isset($new_instance['paginate']))? true : false;
         $instance['one_way'] = (isset($new_instance['one_way']))? true : false;
+        $instance['off_title'] = (isset($new_instance['off_title']))? true : false;
         $instance['limit'] = (!empty( $new_instance['limit'])) ? $new_instance['limit'] : $old_instance['limit'];
         $instance['airline'] = (!empty( $new_instance['airline'])) ? $new_instance['airline'] : $old_instance['airline'];
 
@@ -153,6 +154,7 @@ class TPPluginWidget extends WP_Widget{
 
         $paginate = isset( $instance['paginate'] ) ? $instance['paginate']  : true;
         $one_way = isset( $instance['one_way'] ) ? $instance['one_way']  : true;
+        $off_title = isset( $instance['off_title'] ) ? $instance['off_title']  : false;
         $limit = isset( $instance['limit'] ) ? esc_attr( $instance['limit'] ) : 100;
         ?>
         <div class="TP-MainWidget">
@@ -285,6 +287,15 @@ class TPPluginWidget extends WP_Widget{
                     <?php _e('One Way', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </label>
             </p>
+            <p class="TP-Off_TitleWidget">
+                <label for="<?php echo $this->get_field_id('off_title'); ?>">
+                    <input type="checkbox" id="<?php echo $this->get_field_id('off_title'); ?>"
+                           name="<?php echo $this->get_field_name('off_title'); ?>"
+                           value="1" <?php checked($off_title, true)?>>
+                    <?php _e('No title', TPOPlUGIN_TEXTDOMAIN ); ?>
+                </label>
+            </p>
+
             <p class="TP-StopsWidget">
                 <label for="<?php echo $this->get_field_id('stops'); ?>">
                     <?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>:

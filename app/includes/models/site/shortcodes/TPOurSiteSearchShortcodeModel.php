@@ -13,7 +13,8 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
         // TODO: Implement get_data() method.
         $defaults = array( 'currency' => 'RUB',  'period_type' => \app\includes\TPPlugin::$options['shortcodes']['12']['period_type'],
             'one_way' => false, 'limit' => \app\includes\TPPlugin::$options['shortcodes']['12']['limit'], 'trip_class' => 0,
-            'title' => '', 'stops' => \app\includes\TPPlugin::$options['shortcodes']['12']['transplant'], 'paginate' => true);
+            'title' => '', 'stops' => \app\includes\TPPlugin::$options['shortcodes']['12']['transplant'], 'paginate' => true
+        , 'off_title' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array('currency' => $this->typeCurrency(),
             'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit, 'one_way' => $one_way);
@@ -56,7 +57,8 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
                 }
                 break;
         }
-        return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way);
+        return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way
+        , 'off_title' => $off_title);
 
     }
 }

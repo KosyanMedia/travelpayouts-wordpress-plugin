@@ -27,7 +27,7 @@ class TPShortcodesView {
     public function tpReturnOutputTable($args = array()){
         $defaults = array( 'rows' => array(), 'type' => null, 'origin' => '', 'destination' => '', 'airline' => '',
             'title' => '', 'limit' => '', 'origin_iata' => '', 'destination_iata' => '', 'paginate' => 'false',
-            'one_way' => 'false');
+            'one_way' => 'false', 'off_title' => '');
 
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -44,9 +44,10 @@ class TPShortcodesView {
                 --$sort_column;
             }
         }
+        $title = '';
+        if($off_title !== 'true')
+            $title = $this ->returnTitle($title, $type, $origin, $destination, $airline);
 
-
-        $title = $this ->returnTitle($title, $type, $origin, $destination, $airline);
         $output .= '<div class="table-container">
                         <div class="table-section">
                             '.$title.'

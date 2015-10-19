@@ -12,7 +12,8 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '',
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant'], 'paginate' => true);
+            'stops' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant'], 'paginate' => true
+        , 'off_title' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //$month
         $attr =  array( 'origin' => $origin, 'destination' => $destination,
@@ -53,6 +54,7 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
         }
         return array('rows' => $rows, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate);
+            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate
+        , 'off_title' => $off_title);
     }
 }

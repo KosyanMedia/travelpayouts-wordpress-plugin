@@ -13,7 +13,7 @@
 #tr_origin_date_link, #tr_destination_date_link,
 #tr_one_way_link, #tr_city_link, #tr_origin_date_link,
 #tr_destination_date_link, #tr_origin_date_hotel_link,
-#tr_destination_date_hotel_link{
+#tr_destination_date_hotel_link, #tr_off_title{
     display: none;
 }
 .constructorShortcodesError{
