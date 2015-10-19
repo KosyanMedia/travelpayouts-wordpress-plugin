@@ -1,0 +1,9 @@
+.TP-OriginWidget,
+.TP-DestinationWidget,
+.TP-AirlineWidget,
+.TP-PaginateWidget,
+.TP-StopsWidget,
+.TP-LimitWidget,
+.TP-OneWayWidget{
+    display: none;
+}

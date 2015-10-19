@@ -12,6 +12,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     {
         // TODO: Implement loadScriptAdmin() method.
         /** Register styles */
+
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
+            TPOPlUGIN_URL.'app/public/css/admin/TPInsertWidgets.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertShortcodes', //$handle
             TPOPlUGIN_URL.'app/public/css/admin/TPInsertShortcodes.css', // $src
@@ -178,6 +185,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 break;
             case "widgets.php":
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertWidgets');
+                wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
                 break;
         }
         if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false ){
@@ -378,14 +386,34 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     /*public function widget_content_wrap($content) {
         return $content;
     } */
+    public function in_array_recursive($search, $array){
+        $result = false;
+        if (in_array($search, $array)) {
+            return true;
+        }
+        foreach ($array as $value) {
+            if (is_array($value)) {
+                $result = $this->in_array_recursive($search, $value);
+                if ($result) {
+                    return TRUE;
+                }//if
+            } else {
+                return (false !== strpos( $value, $search ));
+            }//if
+        }
+        return $result;
+    }
     public function loadScriptSite($hook)
     {
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
 
-        global $widget;
-        //error_log(print_r(wp_get_sidebars_widgets(), true));
+        global $widgets;
+
+
         global $post;
-        if ( false === strpos( $post->post_content, '[tp' ) && !is_home())  return;
+        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
+
         // TODO: Implement loadScriptSite() method.
         switch (\app\includes\TPPlugin::$options['config']['script']){
             case 0:
@@ -402,6 +430,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
+
 
         if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
             \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto'){
@@ -526,7 +555,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function headScriptSite()
     {
         global $post;
-        if ( false === strpos( $post->post_content, '[tp' ) && !is_home())  return;
+        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
         // TODO: Implement headScriptSite() method.
         ?>
         <script type="text/javascript">
