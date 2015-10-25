@@ -36,9 +36,12 @@ class TPShortcodesView {
         $sortable_class = '';
         if(count($rows) > 1)
             $sortable_class = 'sortable';
+        $delimiter = ' ';
         if($one_way === 'false'){
+            $delimiter = '&#8596';
             $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
         }else{
+            $delimiter = '&#8594';
             $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
             if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
                 --$sort_column;
@@ -357,6 +360,51 @@ class TPShortcodesView {
                                     $output .= '<td class="TPTableTbodyTd"><p><span data-city-iata="'.$destination.'">'.
                                         $destination.'</span></p>'.$button.'</td>';
                             }
+                            break;
+                        case "origin_destination":
+                            error_log(print_r($row ,true));
+                            switch($type){
+                                case 8:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                        <span data-city-iata="'.$origin.'">'
+                                        .$origin
+                                        .'</span>'
+                                        .$delimiter
+                                        .'<span data-city-iata="'.$row['city'].'">'
+                                        .$row['city'].'</span></p>'.$button.'</td>';
+                                    break;
+                                case 9:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                    <span data-city-iata="'.$origin.'">'
+                                        .$origin
+                                        .'</span>'
+                                        .$delimiter
+                                        .'<span data-city-iata="'.$row['destination'].'">'
+                                        .$row['destination'].'</span></p>'.$button.'</td>';
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                    <span data-city-iata="'.$row['origin'].'">'
+                                    .$row['origin']
+                                    .'</span>'
+                                    .$delimiter
+                                    .'<span data-city-iata="'.$row['destination'].'">'
+                                    .$row['destination'].'</span></p>'.$button.'</td>';
+
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                    <span data-city-iata="'.$row['origin'].'">'
+                                        .$row['origin']
+                                        .'</span>'
+                                        .$delimiter
+                                        .'<span data-city-iata="'.$row['destination'].'">'
+                                        .$row['destination'].'</span></p>'.$button.'</td>';
+
+                            }
+
                             break;
                         //Место
                         case "place":
@@ -696,6 +744,43 @@ class TPShortcodesView {
                                         .str_replace('title_link',  $destination, $urlLink)
                                         .'</span></p></td>';
                             }
+                            break;
+                        case "origin_destination":
+
+                            switch($type){
+                                case 8:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                        <span data-city-iata="'.$origin.'">'
+                                        .$origin
+                                        .'</span>'
+                                        .$delimiter
+                                        .'<span data-city-iata="'.$row['city'].'">'
+                                        .$row['city'].'</span></p>'.$button.'</td>';
+                                    break;
+                                case 9:
+                                    $output .= '<td class="TPTableTbodyTd"><p>
+                                    <span data-city-iata="'.$origin.'">'
+                                        .$origin
+                                        .'</span>'
+                                        .$delimiter
+                                        .'<span data-city-iata="'.$row['destination'].'">'
+                                        .$row['destination'].'</span></p>'.$button.'</td>';
+                                    break;
+                                case 12:
+                                case 13:
+                                case 14:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .str_replace('title_link', $row['origin'].$delimiter.$row['destination'] , $urlLink)
+                                        .'</p>'.$button.'</td>';
+
+                                    break;
+                                default:
+                                    $output .= '<td class="TPTableTbodyTd"><p>'
+                                        .str_replace('title_link', $row['origin'].$delimiter.$row['destination'] , $urlLink)
+                                        .'</p>'.$button.'</td>';
+
+                            }
+
                             break;
                         //Место
                         case "place":

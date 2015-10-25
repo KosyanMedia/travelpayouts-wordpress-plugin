@@ -211,6 +211,26 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
                 }
 
                 break;
+            case 1:
+            case 2:
+                if(!empty($data)) {
+                    foreach ($data as $key => $value) {
+                        $value['origin_iata'] = $value['origin'];
+                        $value['destination_iata'] = $value['destination'];
+                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
+                            case "1":
+                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
+                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['ru'];
+                                break;
+                            case "2":
+                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['en'];
+                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['en'];
+                                break;
+                        }
+                        $data[$key] = $value;
+                    }
+                }
+                break;
             case 4:
             case 5:
             case 6:

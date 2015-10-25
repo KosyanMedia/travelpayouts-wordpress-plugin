@@ -22,6 +22,7 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
                 $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
                 if( ! $return )
                     return false;
+                $return = $this->iataAutocomplete($return, 2);
                 set_transient( $this->cacheKey('2',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
@@ -29,6 +30,7 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
             $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
             if( ! $return )
                 return false;
+            $return = $this->iataAutocomplete($return, 2);
         }
         return array('rows' => $return, 'type' => 2, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,

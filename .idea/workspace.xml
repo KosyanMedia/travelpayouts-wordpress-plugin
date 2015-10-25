@@ -31,66 +31,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPShortcodesView.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPShortcodesView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.777778" vertical-offset="447" max-vertical-offset="22194">
-              <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.93466425" vertical-offset="8431" max-vertical-offset="24120">
+              <caret line="767" column="42" selection-start-line="767" selection-start-column="42" selection-end-line="767" selection-end-column="42" />
               <folding>
-                <element signature="e#18166#19169#0#PHP" expanded="false" />
-                <element signature="e#26988#27532#0#PHP" expanded="false" />
-                <element signature="e#31240#48085#0#PHP" expanded="false" />
-                <element signature="e#34642#35803#0#PHP" expanded="false" />
-                <element signature="e#35864#37612#0#PHP" expanded="false" />
-                <marker date="1445780802567" expanded="true" signature="1956:2462" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="2008:2462" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="2127:2462" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="2421:2462" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="2462:2506" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="14171:14309" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="14529:14601" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="14846:14986" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="17266:17710" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="19652:19725" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="19655:19709" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="20947:21279" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="21004:21079" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="31432:31573" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="40803:40969" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="40806:40964" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="42300:42659" placeholder="..." />
-                <marker date="1445780802567" expanded="true" signature="42357:42432" placeholder="..." />
+                <element signature="e#2791#5757#0#PHP" expanded="false" />
+                <element signature="e#6412#10748#0#PHP" expanded="false" />
+                <element signature="e#18214#19300#0#PHP" expanded="false" />
+                <element signature="e#29586#33813#0#PHP" expanded="false" />
+                <element signature="e#37279#38440#0#PHP" expanded="false" />
+                <element signature="e#38501#40249#0#PHP" expanded="false" />
+                <marker date="1445788263062" expanded="true" signature="2052:2558" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="2104:2558" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="2223:2558" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="2517:2558" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="2558:2602" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="14267:14405" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="14625:14697" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="14942:15082" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="17362:17806" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="19569:19968" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="19572:19636" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="19572:19649" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="19572:19952" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20129:20538" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20132:20192" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20132:20205" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20132:20522" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20782:21185" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="20785:21169" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="21348:21771" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="21351:21431" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="21351:21755" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="22289:22362" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="22292:22346" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="23584:23916" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="23641:23716" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="34069:34210" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43109:43113" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43109:43508" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43112:43113" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43112:43113" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43669:44078" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="43672:44062" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="44322:44514" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="44325:44498" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="44850:44869" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="44850:44853" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="45480:45646" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="45483:45641" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="46977:47336" placeholder="..." />
+                <marker date="1445788263062" expanded="true" signature="47034:47109" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPInsertShortcodes.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
+      <file leaf-file-name="TPShortcodesChacheModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6885813" vertical-offset="4930" max-vertical-offset="12780">
-              <caret line="422" column="13" selection-start-line="422" selection-start-column="13" selection-end-line="422" selection-end-column="13" />
-              <folding>
-                <element signature="e#13963#14795#0" expanded="false" />
-                <element signature="e#16397#21412#0" expanded="false" />
-                <element signature="e#21942#22190#0" expanded="false" />
-                <element signature="e#22213#31773#0" expanded="false" />
-                <element signature="e#35337#41632#0" expanded="false" />
-                <element signature="e#47182#48930#0" expanded="false" />
-                <element signature="e#57025#57099#0" expanded="false" />
-                <element signature="e#57184#57395#0" expanded="false" />
-                <element signature="e#57504#58986#0" expanded="false" />
-                <element signature="e#59062#59984#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="12.259259" vertical-offset="5245" max-vertical-offset="6066">
+              <caret line="278" column="111" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="111" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPShortcodeButtons.view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
+      <file leaf-file-name="TPPriceCalendarMonthShortcodeModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.666667" vertical-offset="756" max-vertical-offset="2790">
-              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
+            <state vertical-scroll-proportion="-13.333333" vertical-offset="162" max-vertical-offset="1116">
+              <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -105,7 +118,6 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/menu/TPSearchFormsEdit.view.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php" />
         <option value="$PROJECT_DIR$/core/controllers/TPOAdminMediaButtonsController.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPLinkShortcodeController.php" />
@@ -122,7 +134,6 @@
         <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPLinkButtons.view.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPLinkShortcodeModel.php" />
         <option value="$PROJECT_DIR$/core/controllers/TPOAdminMenuController.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPSettingsModel.php" />
         <option value="$PROJECT_DIR$/app/includes/TPPlugin.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php" />
@@ -143,15 +154,17 @@
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPOurSiteSearchShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularDestinationsAirlinesShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularRoutesFromCityShortcodeModel.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php" />
-        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPInsertWidgets.css" />
         <option value="$PROJECT_DIR$/app/includes/TPPluginWidget.php" />
         <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js" />
         <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
-        <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php" />
         <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php" />
         <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
+        <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php" />
       </list>
     </option>
   </component>
@@ -237,80 +250,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -348,7 +287,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -374,7 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -383,62 +322,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shortcodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travelpayouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media_buttons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,9 +432,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25281805" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30087095" sideWeight="0.47504026" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33729216" sideWeight="0.47504026" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30087095" sideWeight="0.52495974" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33729216" sideWeight="0.52495974" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -613,7 +496,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>1346</line>
+          <line>1431</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -623,37 +506,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>63</line>
+          <line>66</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>67</line>
+          <line>70</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/TPDefault.php</url>
-          <line>175</line>
+          <line>179</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/TPDefault.php</url>
-          <line>264</line>
+          <line>268</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>570</line>
+          <line>618</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>361</line>
+          <line>409</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>298</line>
+          <line>301</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -667,12 +550,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>342</line>
+          <line>345</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php</url>
-          <line>555</line>
+          <line>603</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -701,13 +584,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41095892" vertical-offset="0" max-vertical-offset="0">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPStatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28767124" vertical-offset="0" max-vertical-offset="0">
@@ -790,17 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39041096" vertical-offset="0" max-vertical-offset="0">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44178084" vertical-offset="0" max-vertical-offset="0">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="23" />
-          <folding>
-            <element signature="e#2465#7053#1#PHP" expanded="false" />
-            <element signature="e#2500#4768#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPInOurCityFlyShortcodeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12522686" vertical-offset="129" max-vertical-offset="1134">
-          <caret line="16" column="126" selection-start-line="16" selection-start-column="126" selection-end-line="16" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPLinkShortcodeModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34574467" vertical-offset="93" max-vertical-offset="792">
@@ -991,20 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7059891" vertical-offset="169" max-vertical-offset="720">
           <caret line="36" column="124" selection-start-line="36" selection-start-column="124" selection-end-line="36" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81669694" vertical-offset="486" max-vertical-offset="1080">
-          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9800363" vertical-offset="0" max-vertical-offset="702">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1036,38 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.777778" vertical-offset="447" max-vertical-offset="22194">
-          <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
-          <folding>
-            <element signature="e#18166#19169#0#PHP" expanded="false" />
-            <element signature="e#26988#27532#0#PHP" expanded="false" />
-            <element signature="e#31240#48085#0#PHP" expanded="false" />
-            <element signature="e#34642#35803#0#PHP" expanded="false" />
-            <element signature="e#35864#37612#0#PHP" expanded="false" />
-            <marker date="1445780802567" expanded="true" signature="1956:2462" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="2008:2462" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="2127:2462" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="2421:2462" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="2462:2506" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="14171:14309" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="14529:14601" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="14846:14986" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="17266:17710" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="19652:19725" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="19655:19709" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="20947:21279" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="21004:21079" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="31432:31573" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="40803:40969" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="40806:40964" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="42300:42659" placeholder="..." />
-            <marker date="1445780802567" expanded="true" signature="42357:42432" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7474048" vertical-offset="790" max-vertical-offset="2016">
@@ -1086,17 +898,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.666667" vertical-offset="756" max-vertical-offset="2790">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6885813" vertical-offset="4930" max-vertical-offset="12780">
+        <state vertical-scroll-proportion="0.9453682" vertical-offset="4930" max-vertical-offset="12780">
           <caret line="422" column="13" selection-start-line="422" selection-start-column="13" selection-end-line="422" selection-end-column="13" />
           <folding>
             <element signature="e#13963#14795#0" expanded="false" />
@@ -1109,6 +913,110 @@
             <element signature="e#57184#57395#0" expanded="false" />
             <element signature="e#57504#58986#0" expanded="false" />
             <element signature="e#59062#59984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0050762" vertical-offset="756" max-vertical-offset="2790">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPInOurCityFlyShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.555555" vertical-offset="129" max-vertical-offset="1134">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarWeekShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34664246" vertical-offset="151" max-vertical-offset="738">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="162" max-vertical-offset="1116">
+          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9019964" vertical-offset="3103" max-vertical-offset="13050">
+          <caret line="205" column="33" selection-start-line="205" selection-start-column="33" selection-end-line="205" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="12.259259" vertical-offset="5245" max-vertical-offset="6066">
+          <caret line="278" column="111" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93466425" vertical-offset="8431" max-vertical-offset="24120">
+          <caret line="767" column="42" selection-start-line="767" selection-start-column="42" selection-end-line="767" selection-end-column="42" />
+          <folding>
+            <element signature="e#2791#5757#0#PHP" expanded="false" />
+            <element signature="e#6412#10748#0#PHP" expanded="false" />
+            <element signature="e#18214#19300#0#PHP" expanded="false" />
+            <element signature="e#29586#33813#0#PHP" expanded="false" />
+            <element signature="e#37279#38440#0#PHP" expanded="false" />
+            <element signature="e#38501#40249#0#PHP" expanded="false" />
+            <marker date="1445788263062" expanded="true" signature="2052:2558" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="2104:2558" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="2223:2558" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="2517:2558" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="2558:2602" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="14267:14405" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="14625:14697" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="14942:15082" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="17362:17806" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="19569:19968" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="19572:19636" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="19572:19649" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="19572:19952" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20129:20538" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20132:20192" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20132:20205" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20132:20522" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20782:21185" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="20785:21169" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="21348:21771" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="21351:21431" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="21351:21755" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="22289:22362" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="22292:22346" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="23584:23916" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="23641:23716" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="34069:34210" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43109:43113" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43109:43508" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43112:43113" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43112:43113" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43669:44078" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="43672:44062" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="44322:44514" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="44325:44498" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="44850:44869" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="44850:44853" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="45480:45646" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="45483:45641" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="46977:47336" placeholder="..." />
+            <marker date="1445788263062" expanded="true" signature="47034:47109" placeholder="..." />
           </folding>
         </state>
       </provider>

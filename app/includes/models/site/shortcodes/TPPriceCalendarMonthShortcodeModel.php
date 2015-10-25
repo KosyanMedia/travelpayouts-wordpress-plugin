@@ -24,6 +24,7 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
                 if( ! $return )
                     return false;
+                $return = $this->iataAutocomplete($return, 1);
                 set_transient( $this->cacheKey('1',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
@@ -31,6 +32,7 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
             if( ! $return )
                 return false;
+            $return = $this->iataAutocomplete($return, 1);
         }
         $rows = array();
         switch($stops){
