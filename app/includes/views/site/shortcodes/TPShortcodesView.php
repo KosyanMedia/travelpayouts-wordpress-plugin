@@ -45,10 +45,14 @@ class TPShortcodesView {
             }
         }
         $title = '';
-        if($off_title !== 'true')
+        $class_div = 'table-container-notitle';
+        if($off_title !== 'true'){
             $title = $this ->returnTitle($title, $type, $origin, $destination, $airline);
+            $class_div = 'table-container';
+        }
 
-        $output .= '<div class="table-container">
+
+        $output .= '<div class="'.$class_div.'">
                         <div class="table-section">
                             '.$title.'
                             <table class="w-table display '.$sortable_class.'"
