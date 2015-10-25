@@ -231,7 +231,7 @@ jQuery(function($) {
                 doc.find('#tr_paginate').hide();
                 doc.find('#tr_transplant').hide();
                 doc.find('#tr_one_way').hide();
-
+                doc.find('#tr_off_title').hide();
                 doc.find('#origin, #destination, #airline, #select_shortcodes').removeClass('constructorShortcodesError');
             }
         });
@@ -271,7 +271,19 @@ jQuery(function($) {
 
     /*** **/
     function constructorShortcodesSelect(){
+
         doc.find('#td_select_shortcodes').on('change', '#select_shortcodes', function(e) {
+
+            doc.find('#td_off_title').on('change', '#off_title', function(e) {
+                if($(this).is(":checked")) {
+                    doc.find('#tr_title').hide();
+                }else{
+                    doc.find('#tr_title').show();
+
+                }
+
+            });
+
             e.preventDefault();
             switch ($(this).data('paginate-'+$(this).val())){
                 case 0:
@@ -405,6 +417,9 @@ jQuery(function($) {
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
                     break;
+            }
+            if(doc.find('#off_title').is(":checked")) {
+                doc.find('#tr_title').hide();
             }
         });
     }

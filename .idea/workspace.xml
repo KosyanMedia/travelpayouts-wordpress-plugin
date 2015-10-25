@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPShortcodesView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPShortcodesView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6261343" vertical-offset="447" max-vertical-offset="22194">
+            <state vertical-scroll-proportion="-12.777778" vertical-offset="447" max-vertical-offset="22194">
               <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
               <folding>
                 <element signature="e#18166#19169#0#PHP" expanded="false" />
@@ -65,31 +65,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPMain.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
+      <file leaf-file-name="TPInsertShortcodes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.774194" vertical-offset="16" max-vertical-offset="5634">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.6885813" vertical-offset="4930" max-vertical-offset="12780">
+              <caret line="422" column="13" selection-start-line="422" selection-start-column="13" selection-end-line="422" selection-end-column="13" />
+              <folding>
+                <element signature="e#13963#14795#0" expanded="false" />
+                <element signature="e#16397#21412#0" expanded="false" />
+                <element signature="e#21942#22190#0" expanded="false" />
+                <element signature="e#22213#31773#0" expanded="false" />
+                <element signature="e#35337#41632#0" expanded="false" />
+                <element signature="e#47182#48930#0" expanded="false" />
+                <element signature="e#57025#57099#0" expanded="false" />
+                <element signature="e#57184#57395#0" expanded="false" />
+                <element signature="e#57504#58986#0" expanded="false" />
+                <element signature="e#59062#59984#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPInsertWidgets.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js">
+      <file leaf-file-name="TPShortcodeButtons.view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1438" max-vertical-offset="2016">
-              <caret line="100" column="153" selection-start-line="100" selection-start-column="153" selection-end-line="100" selection-end-column="153" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TPInsertWidgets.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPInsertWidgets.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="270">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+            <state vertical-scroll-proportion="-14.666667" vertical-offset="756" max-vertical-offset="2790">
+              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -131,9 +132,7 @@
         <option value="$PROJECT_DIR$/app/includes/views/site/widgets/TPWidgetsView.php" />
         <option value="$PROJECT_DIR$/travelpayouts.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
-        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPInsertShortcodes.css" />
-        <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestFlightsShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketsEachMonthShortcodeModel.php" />
@@ -151,6 +150,8 @@
         <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js" />
         <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
         <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php" />
+        <option value="$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php" />
+        <option value="$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js" />
       </list>
     </option>
   </component>
@@ -240,6 +241,10 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -259,11 +264,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,6 +405,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media_buttons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,13 +701,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPDashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4520548" vertical-offset="0" max-vertical-offset="0">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/controllers/admin/menu/TPSearchFormsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41095892" vertical-offset="0" max-vertical-offset="0">
@@ -874,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.522686" vertical-offset="2052" max-vertical-offset="2790">
-          <caret line="130" column="43" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.738657" vertical-offset="601" max-vertical-offset="1152">
@@ -965,21 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71972317" vertical-offset="520" max-vertical-offset="17676">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="56" selection-end-column="25" />
-          <folding>
-            <element signature="e#34886#41181#0" expanded="false" />
-            <element signature="e#46731#48479#0" expanded="false" />
-            <element signature="e#56574#56648#0" expanded="false" />
-            <element signature="e#56733#56944#0" expanded="false" />
-            <element signature="e#57053#58535#0" expanded="false" />
-            <element signature="e#58611#59533#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/admin/TPInsertWidgets.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
@@ -1000,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1438" max-vertical-offset="2016">
-          <caret line="100" column="153" selection-start-line="100" selection-start-column="153" selection-end-line="100" selection-end-column="153" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.774194" vertical-offset="16" max-vertical-offset="5634">
@@ -1018,7 +1038,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6261343" vertical-offset="447" max-vertical-offset="22194">
+        <state vertical-scroll-proportion="-12.777778" vertical-offset="447" max-vertical-offset="22194">
           <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
           <folding>
             <element signature="e#18166#19169#0#PHP" expanded="false" />
@@ -1044,6 +1064,51 @@
             <marker date="1445780802567" expanded="true" signature="40806:40964" placeholder="..." />
             <marker date="1445780802567" expanded="true" signature="42300:42659" placeholder="..." />
             <marker date="1445780802567" expanded="true" signature="42357:42432" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertWidgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7474048" vertical-offset="790" max-vertical-offset="2016">
+          <caret line="100" column="153" selection-start-line="100" selection-start-column="153" selection-end-line="100" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPWidgetButtons.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9401088" vertical-offset="1620" max-vertical-offset="2232">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.666667" vertical-offset="756" max-vertical-offset="2790">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPInsertShortcodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6885813" vertical-offset="4930" max-vertical-offset="12780">
+          <caret line="422" column="13" selection-start-line="422" selection-start-column="13" selection-end-line="422" selection-end-column="13" />
+          <folding>
+            <element signature="e#13963#14795#0" expanded="false" />
+            <element signature="e#16397#21412#0" expanded="false" />
+            <element signature="e#21942#22190#0" expanded="false" />
+            <element signature="e#22213#31773#0" expanded="false" />
+            <element signature="e#35337#41632#0" expanded="false" />
+            <element signature="e#47182#48930#0" expanded="false" />
+            <element signature="e#57025#57099#0" expanded="false" />
+            <element signature="e#57184#57395#0" expanded="false" />
+            <element signature="e#57504#58986#0" expanded="false" />
+            <element signature="e#59062#59984#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -127,7 +127,7 @@
             </td>
         </tr>
         <tr id="tr_off_title">
-            <td>
+            <td id="td_off_title">
                 <input type="checkbox" id="off_title" value="1">
                 <?php _e('No title', TPOPlUGIN_TEXTDOMAIN ); ?>
             </td>
