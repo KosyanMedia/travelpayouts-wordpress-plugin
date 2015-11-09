@@ -1150,28 +1150,28 @@ class TPShortcodesView {
             //urldecode()
             switch($type_link){
                 case 0:
-                    $link = '<a class="btn-table" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
+                    $link = '<a class="btn-table TPButtonTable" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
                         .$link_text.'</a>';
                     break;
                 case 1:
-                    $link = '<a class="btn-tableShow" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
+                    $link = '<a class="btn-tableShow TPButtonTable" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>'
                         .$link_text.'</a>';
                     break;
                 case 2:
-                    $link = '<a href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>title_link</a>';
+                    $link = '<a class="TPButtonTable" href="'.$home.'/?searches='.rawurlencode($url).'" '.$target_url.' '.$rel.'>title_link</a>';
                     break;
             }
 
         }else{
             switch($type_link){
                 case 0:
-                    $link = '<a class="btn-table" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+                    $link = '<a class="btn-table TPButtonTable" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
                     break;
                 case 1:
-                    $link = '<a class="btn-tableShow" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
+                    $link = '<a class="btn-tableShow TPButtonTable" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'.$link_text.'</a>';
                     break;
                 case 2:
-                    $link = '<a href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>title_link</a>';
+                    $link = '<a class="TPButtonTable" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>title_link</a>';
                     break;
             }
 

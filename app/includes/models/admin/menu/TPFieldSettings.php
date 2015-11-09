@@ -141,6 +141,13 @@ class TPFieldSettings {
             </div>
             <div class="TP-FormItem">
                 <div class="ItemSub">
+                    <span><?php _e('Google code for clicks count', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <label>
+                        <textarea  rows="3" cols="41"
+                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_ga]"><?php echo esc_attr(\app\includes\TPPlugin::$options['config']['code_ga']) ?></textarea>
+                    </label>
+                </div>
+                <div class="ItemSub">
                     <ul class="TP-listSet">
                         <li>
                             <input id="chek1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][redirect]"
@@ -274,10 +281,17 @@ class TPFieldSettings {
                     </span>
                 </div>
                 <div class="ItemSub">
-
                 </div>
+
             </div>
             <div class="TP-FormItem">
+                <div class="ItemSub">
+                    <span><?php _e('Yandex code for clicks count', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <label>
+                        <textarea  rows="3" cols="41"
+                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_ym]"><?php echo esc_attr(\app\includes\TPPlugin::$options['config']['code_ym']) ?></textarea>
+                    </label>
+                </div>
                 <div class="ItemSub">
                     <span><?php _e('Import settings', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <div class="TP-listNavsSetting">

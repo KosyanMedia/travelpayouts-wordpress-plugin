@@ -77,6 +77,8 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 'distance' => 1,
                 'format_date' => 'd.m.Y',
+                'code_ga' => '',
+                'code_ym' => '',
             ),
             'local' => array(
                 'localization' => $localization,
@@ -183,7 +185,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Цены на месяц из origin в destination, в одну сторону'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'cal-month',
+                    'extra_table_marker' => 'calMonth',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'transplant' => 0,
@@ -215,7 +217,7 @@ class TPDefault implements  \core\TPODefault{
                     'tag' => 'h3',
                     'plus_depart_date' => 1,
                     'plus_return_date' => 12,
-                    'extra_table_marker' => 'cal-week',
+                    'extra_table_marker' => 'calWeek',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -305,7 +307,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Самые дешевые билеты  из origin в destination в этом месяце'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'direction-month',
+                    'extra_table_marker' => 'directionMonth',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'transplant' => 0,
@@ -340,7 +342,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Самые дешевые авиабилеты из origin в destination на год вперед'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'direction-12months',
+                    'extra_table_marker' => 'direction12months',
                     'paginate' => 12,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -374,7 +376,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Билеты без пересадок из origin в destination'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'direction-nostops',
+                    'extra_table_marker' => 'directionNostops',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -406,7 +408,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Билеты без пересадок из origin'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'nostops-from',
+                    'extra_table_marker' => 'nostopsFrom',
                     'limit' => 10,
                     'paginate' => 10,
                     'paginate_switch' => true,
@@ -442,7 +444,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => 'Популярные направления из origin'
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'popular-city',
+                    'extra_table_marker' => 'popularCity',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -477,7 +479,7 @@ class TPDefault implements  \core\TPODefault{
                     ),
                     'tag' => 'h3',
                     'limit' => 10,
-                    'extra_table_marker' => 'popular-airlines',
+                    'extra_table_marker' => 'popularAirlines',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -532,7 +534,7 @@ class TPDefault implements  \core\TPODefault{
                     'limit' => 100,
                     'period_type' => 'year',
                     'sort' => 0,
-                    'extra_table_marker' => 'on-our-website',
+                    'extra_table_marker' => 'onOurWebsite',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'transplant' => 0,
@@ -572,7 +574,7 @@ class TPDefault implements  \core\TPODefault{
                     'period_type' => 'year',
                     'limit' => 100,
                     'sort' => 2,
-                    'extra_table_marker' => 'from-city',
+                    'extra_table_marker' => 'fromCity',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'transplant' => 0,
@@ -612,7 +614,7 @@ class TPDefault implements  \core\TPODefault{
                     'period_type' => 'year',
                     'limit' => 100,
                     'sort' => 2,
-                    'extra_table_marker' => 'to-city',
+                    'extra_table_marker' => 'toCity',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'transplant' => 0,

@@ -403,6 +403,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         }
         return $result;
     }
+
+    /**
+     * @param $hook
+     */
     public function loadScriptSite($hook)
     {
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
@@ -572,6 +576,17 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     tpLocale = 'en';
                     break;
             }
+            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga']) ||
+                        !empty(\app\includes\TPPlugin::$options['config']['code_ym'])){?>
+                        jQuery(function($) {
+                            var doc, win;
+                            doc = $(document);
+                            doc.find('.TPButtonTable').click(function () {
+                                <?php echo \app\includes\TPPlugin::$options['config']['code_ga']; ?>
+                                <?php echo \app\includes\TPPlugin::$options['config']['code_ym']; ?>
+                            });
+                        });
+            <?php }?>
         </script>
         <style type="text/css">
             <?php

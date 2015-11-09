@@ -90,6 +90,7 @@ jQuery(function($) {
         $(this).addClass("active-w");
     });
 
+
     doc.find('td.TPTableTbodyTd').hover(function() {
         $(this).children("p").each(function(){
             if(textWidth($(this).text(), $(this).html(), $(this)) > $(this).width()){
