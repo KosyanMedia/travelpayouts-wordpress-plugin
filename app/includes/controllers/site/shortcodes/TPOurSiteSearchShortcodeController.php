@@ -12,7 +12,7 @@ class TPOurSiteSearchShortcodeController extends \app\includes\controllers\site\
     public function __construct(){
         parent::__construct();
         $this->model = new \app\includes\models\site\shortcodes\TPOurSiteSearchShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
     }
     public function initShortcode()
     {

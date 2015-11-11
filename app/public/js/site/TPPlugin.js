@@ -1,4 +1,51 @@
 jQuery(function($) {
+    $(document).ready(function () {
+        var conteiner = '.TP-Plugin-Tables_wrapper';
+        var table = conteiner + ' .TP-Plugin-Tables_box';
+
+        function checkSize() {
+            var widthWrapper, widthBox, hidden, small;
+            $(table).each(function () {
+                $(this).removeClass('TP-autoWidth-plugin');
+                widthWrapper = $(conteiner).width();
+                widthBox = $(this).width();
+                if (widthBox > widthWrapper) {
+                    while (widthBox > widthWrapper) {
+                        if (!$(this).find('tr td.TP-unessential:not(.TP-hidden)').length)
+                            return false;
+                        $('td.TP-unessential:not(.TP-hidden):last', $(this).find('tr')).addClass('TP-hidden');
+                        widthWrapper = $(conteiner).width();
+                        widthBox = $(this).width();
+                    }
+                    $(this).addClass('TP-autoWidth-plugin');
+                } else {
+                    small = true;
+                    while (small) {
+                        small = false;
+                        if ($(this).find('tr td.TP-unessential.TP-hidden').length) {
+                            hidden = $('td.TP-unessential.TP-hidden:first', $(this).find('tr'));
+                            hidden.removeClass('TP-hidden');
+                            widthWrapper = $(conteiner).width();
+                            widthBox = $(this).width();
+                            if (widthBox > widthWrapper) {
+                                hidden.addClass('TP-hidden');
+                                $(this).addClass('TP-autoWidth-plugin');
+                            } else {
+                                small = true;
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        checkSize();
+        $(window).resize(checkSize);
+    });
+});
+
+
+/*jQuery(function($) {
     var doc, win;
     doc = $(document);
     win = $(window);
@@ -7,7 +54,7 @@ jQuery(function($) {
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
 
-    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
+    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
@@ -110,7 +157,7 @@ jQuery(function($) {
      * @param text
      * @param selector
      * @returns {*}
-     */
+     *
     function textWidth(text, html_data, selector){
         /*console.log(text);
         console.log(html_data);
@@ -119,7 +166,7 @@ jQuery(function($) {
         /*selector.html('<span>'+text+'</span>');
         var width = selector.find('span:first').width();
         selector.html(html_data);
-        return width;  */
+        return width;  *
     }
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){
@@ -132,4 +179,4 @@ jQuery(function($) {
 
 
 
-    });
+    });*/
