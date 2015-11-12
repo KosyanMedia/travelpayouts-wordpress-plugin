@@ -49,7 +49,7 @@ class TPShortcodeView {
                     '.$this->titleTable($off_title, $title, $type, $origin, $destination, $airline).'
                     <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio">
                         '.$this->headTable($type, $one_way).'
-                        '.$this->bodyTable($type, $one_way, $rows).'
+                        '.$this->bodyTable($type, $one_way, $rows, $origin_iata, $destination_iata).'
                     </table>
                 </div>';
         return $html;
@@ -182,12 +182,98 @@ class TPShortcodeView {
                         </thead>';*/
         return $headTable;
     }
-    public function bodyTable($type, $one_way, $rows){
+
+    /**
+     * @param $type
+     * @param $one_way
+     * @param $rows
+     * @return string
+     */
+    public function bodyTable($type, $one_way, $rows, $origin_iata, $destination_iata){
         $bodyTable = '';
         $bodyTable .= '<tbody>';
         foreach($rows as $key_row => $row){
             $bodyTable .= '<tr>';
+            $count = 0;
             foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
+                $count++;
+                // get Url
+                switch($type){
+                    case 1:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $destination_iata,
+                            'departure_at' => $row['depart_date'],
+                            //'return_at' => $row['return_date'],
+                            'price' => number_format($row["value"], 0, '.', ' '),
+                            'type' => $type
+                        ) );
+                        break;
+                    case 2:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $destination_iata,
+                            'departure_at' => $row['depart_date'],
+                            'return_at' => $row['return_date'],
+                            'price' => number_format($row["value"], 0, '.', ' '),
+                            'type' => $type
+                        ));
+                        break;
+                    case 8:
+                        $citys = explode( '-', $key_row );
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $key_row,
+                            'departure_at' => $row['departure_at'],
+                            'return_at' => $row['return_at'],
+                            'price' => number_format($row["price"], 0, '.', ' '),
+                            'type' => $type
+                        ) );
+                        break;
+                    case 9:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $row['destination_iata'],
+                            'departure_at' => $row['departure_at'],
+                            'return_at' => $row['return_at'],
+                            'price' => number_format($row["price"], 0, '.', ' '),
+                            'type' => $type
+                        ));
+                        break;
+                    case 10:
+                        $citys = explode( '-', $key_row );
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $citys[0],
+                            'destination' => $citys[1],
+                            'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
+                            'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
+                            'type' => $type
+                        ));
+                        break;
+                    case 12:
+                    case 13:
+                    case 14:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $row['origin_iata'],
+                            'destination' => $row['destination_iata'],
+                            'departure_at' => $row['depart_date'],
+                            'return_at' => $row['return_date'],
+                            'price' => number_format($row["value"], 0, '.', ' '),
+                            'type' => $type,
+                            'one_way' =>  '&one_way='.$one_way
+                        ));
+                        break;
+                    default:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $destination_iata,
+                            'departure_at' => $row['departure_at'],
+                            'return_at' => $row['return_at'],
+                            'price' => number_format($row["price"], 0, '.', ' '),
+                            'type' => $type
+                        ));
+                }
+                //Td
                 switch($selected_field){
                     //Номер рейса
                     case "flight_number":
@@ -355,6 +441,104 @@ class TPShortcodeView {
     }
 
     /**
+     * @param array $args
+     * @return string
+     */
+    public function getUrlTable($args = array()){
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'departure_at' => false,
+            'return_at' => false,
+            'link_text' => '',
+            'price' => '',
+            'one_way' => '');
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
+        if(!empty($white_label)){
+            if(strpos($white_label, 'http') === false){
+                $white_label = 'http://'.$white_label;
+            }
+        }
+        if( ! $white_label || empty( $white_label ) ){
+            switch (\app\includes\TPPlugin::$options['local']['localization']){
+                case 1:
+                    $white_label = 'http://engine.aviasales.ru';
+                    break;
+                case 2:
+                    $white_label = 'http://jetradar.com';
+                    break;
+            }
+        }
+        $marker = \app\includes\TPPlugin::$options['account']['marker'];
+        $marker = '&marker='.$marker;
+        if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
+            $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
+        if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
+            $marker = $marker.'_'.\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
+        $marker = $marker.'.$69';
+        if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
+            $marker = $marker . '&with_request=true';
+        $redirect = false;
+        if(isset(\app\includes\TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+        $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : "?origin_iata=";
+        $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
+        $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : "";
+        $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
+        $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
+        switch($type){
+            case 1:
+            case 10:
+                $url .= '&one_way=true';
+                break;
+            case 12:
+            case 13:
+            case 14:
+                $url .= $one_way;
+                break;
+        }
+        if($redirect){
+            $home = '';
+            $home = get_option('home');
+            $url = substr($url, 10);
+            return $home.'/?searches='.rawurlencode($url);
+        }else{
+            return $white_label.$url;
+        }
+    }
+
+    public function getTextTdTable($url, $text, $typeShortcode, $type = 0){
+
+        $textTd = '';
+        $rel = '';
+        if(isset(\app\includes\TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        $target_url = '';
+        if(isset(\app\includes\TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        $redirect = false;
+        if(isset(\app\includes\TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+        if(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink'])){
+            switch($type){
+                //link
+                case 0:
+                    $textTd = '<a href="'.$url.'">'.$text.'</a>';
+                    break;
+                //button
+                case 1:
+                    $textTd = '<a href="'.$url.'">'.$text.'</a>';
+                    break;
+            }
+        }else{
+            $buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected']);
+        }
+        //if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) && !$buttonOnOff){}
+        return $textTd;
+    }
+
+    /**
      * @param $type
      * @param $field
      * @return string
@@ -363,50 +547,63 @@ class TPShortcodeView {
         $fields = array(
             '1' => array(
                 'trip_class',
-                'distance'
+                'distance',
+                'price'
             ),
             '2' => array(
                 'return_at',
                 'trip_class',
                 'distance',
+                'price'
             ),
             '4' => array(
+                'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
+                'price'
             ),
             '5' => array(
+                'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
+                'price'
             ),
             '6' => array(
+                'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
+                'price'
             ),
             '7' => array(
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
+                'price'
             ),
             '8' => array(
                 'airline_logo',
+                'return_at',
                 'flight_number',
                 'flight',
                 'airline',
-                'origin_destination'
+                'origin_destination',
+                'price'
             ),
             '9' => array(
                 'airline_logo',
+                'return_at',
                 'flight_number',
                 'flight',
                 'airline',
-                'origin_destination'
+                'origin_destination',
+                'price'
             ),
             '12' => array(
                 'found_at',
@@ -414,7 +611,10 @@ class TPShortcodeView {
                 'trip_class',
                 'distance',
                 'price_distance',
-                'origin_destination'
+                'origin_destination',
+                'price',
+                'departure_at',
+                'return_at',
             ),
             '13' => array(
                 'origin',
@@ -423,7 +623,9 @@ class TPShortcodeView {
                 'trip_class',
                 'distance',
                 'price_distance',
-                'origin_destination'
+                'origin_destination',
+                'price',
+                'return_at',
             ),
             '14' => array(
                 'destination',
@@ -432,7 +634,8 @@ class TPShortcodeView {
                 'trip_class',
                 'distance',
                 'price_distance',
-                'origin_destination'
+                'origin_destination',
+                'price'
             ),
         );
         if(in_array($field, $fields[$type])) return 'TP-unessential';
