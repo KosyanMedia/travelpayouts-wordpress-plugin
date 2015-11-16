@@ -12,7 +12,7 @@ class TPCheapestFlightsShortcodeController extends \app\includes\controllers\sit
     public function __construct(){
         parent::__construct();
         $this->model = new \app\includes\models\site\shortcodes\TPCheapestFlightsShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
     }
     public function initShortcode()
     {

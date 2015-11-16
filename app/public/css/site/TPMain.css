@@ -194,6 +194,8 @@
     .TP-rwd-table .TP-Plugin-Tables_box_thead {
         display: none; } }
 
+
+
 /*# sourceMappingURL=main.css.map */
 
 
@@ -350,6 +352,7 @@
   transition: all ease 0.3s;
     white-space: nowrap;
 }
+
 .btn-tableShow{
     padding: 0 10px;
     height: 30px;
@@ -451,14 +454,7 @@ span.ellipsis {
     width: 100px;
     height: auto;
 }
-.TPCurrencyIco{
-    font-size: 14px;
-    font-weight: normal;
-    font-family: ALSRubl, sans-serif;
-    font-style: normal;
-    line-height: 26px;
-    margin-left: 5px;
-}
+
 .w-table thead tr td.tp-price-column {
     /*min-width: 100px !important;*
     min-width: 75px !important;
