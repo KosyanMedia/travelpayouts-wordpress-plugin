@@ -45,10 +45,13 @@ class TPShortcodeView {
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $html = '';
         if(count($rows) < 1) return false;
+
+
+
         $html .= '<div class="TP-Plugin-Tables_wrapper">
                     '.$this->titleTable($off_title, $title, $type, $origin, $destination, $airline).'
                     <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio">
-                        '.$this->headTable($type, $one_way).'
+                        '.$this->headTable($type, $one_way, $paginate).'
                         '.$this->bodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination).'
                     </table>
                 </div>';
@@ -108,9 +111,23 @@ class TPShortcodeView {
      * @param $type
      * @return string
      */
-    public function headTable($type, $one_way){
+    public function headTable($type, $one_way, $paginate){
+
         $headTable = '';
-        $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
+
+        if($one_way === 'false'){
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+        }else{
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+            if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
+                --$sort_column;
+            }
+        }
+
+        $headTable .= '<thead class="TP-Plugin-Tables_box_thead"
+            data-paginate="'.$paginate.'"
+            data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
+            data-sort_column="'.$sort_column.'"><tr>';
             foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
                 switch($selected_field) {
                     //Дата вылета
@@ -167,19 +184,6 @@ class TPShortcodeView {
                 }
             }
         $headTable .= '</tr></thead>';
-        /*$headTable = '<thead class="TP-Plugin-Tables_box_thead">
-                        <tr>
-                            <td class="TP-active TP-sorting_asc">Куда</td>
-                            <td>Дата вылета</td>
-                            <td>Дата возвращения</td>
-                            <td>Авиакомпания</td>
-                            <td>Найти билет</td>
-                            <td class="TP-unessential">Номер рейса</td>
-                            <td class="TP-unessential">Рейс</td>
-                            <td class="TP-unessential">Авиакомпания</td>
-                            <td class="TP-unessential">Авиакомпания</td>
-                        </tr>
-                        </thead>';*/
         return $headTable;
     }
 

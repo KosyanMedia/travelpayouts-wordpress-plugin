@@ -157,6 +157,8 @@
         display: table-cell; } }
 
 @media (max-width: 480px) {
+    .TPPopUpButtonTable {
+        display: none !important;}
     .TP-rwd-table {
         width: 100%; }
     .TP-rwd-table tbody tr {
@@ -179,10 +181,10 @@
         background: #00b443;
         padding: 10px;
         display: inline-block;
-        width: 125px;
+        width: 105px;
         min-height: inherit;
         vertical-align: middle;
-        margin-right: 10px; }
+        margin-right: 5px; }
     .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
         display: inline-block;
         overflow: inherit;
@@ -194,6 +196,58 @@
     .TP-rwd-table .TP-Plugin-Tables_box_thead {
         display: none; } }
 
+
+
+.TPPopUpButtonTable{
+    width: 100px;
+    padding: 0 10px;
+    height: 30px;
+    display: none;
+    position: absolute;
+    margin-top: 7px;
+    top: 0;
+    right: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-bottom: 1px solid #ce6408;
+    text-align: center;
+    background: #fd8a27;
+    font-size: 13px;
+    color: #571601 !important;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration: none;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    white-space: nowrap;
+}
+.TPPopUpButtonTable span {
+    line-height: 30px;
+}
+.TPPopUpButtonTable:hover {
+    background: #ce6408;
+    text-decoration: none;
+    color: #fff !important;
+}
+.TP-Plugin-Tables_box tbody tr:hover .TPPopUpButtonTable{
+    display: block;
+}
+.TPCurrencyIco {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: ALSRubl, sans-serif;
+    font-style: normal;
+    line-height: 26px;
+    margin-left: 5px;
+}
+
+.TP-Plugin-Tables_box tbody tr td p {
+    display: inline;
+}
 
 
 /*# sourceMappingURL=main.css.map */

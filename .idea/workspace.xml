@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2ac3a06-ce83-424c-bf23-ff888a8833df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestFlightsShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestFlightsShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketsEachMonthShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketsEachMonthShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPDirectFlightsRouteShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPDirectFlightsRouteShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPDirectFlightsShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPDirectFlightsShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPFromOurCityFlyShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPFromOurCityFlyShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPInOurCityFlyShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPInOurCityFlyShortcodeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/site/TPMain.css" afterPath="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPopularDestinationsAirlinesShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPopularDestinationsAirlinesShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPopularRoutesFromCityShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPopularRoutesFromCityShortcodeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPriceCalendarWeekShortcodeController.php" afterPath="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPriceCalendarWeekShortcodeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" afterPath="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" afterPath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" afterPath="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Travelpayouts.iws" />
@@ -46,8 +36,8 @@
       <file leaf-file-name="TPShortcodesView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.913793">
-              <caret line="234" column="67" selection-start-line="234" selection-start-column="67" selection-end-line="236" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="67" selection-start-line="61" selection-start-column="31" selection-end-line="63" selection-end-column="67" />
               <folding>
                 <element signature="e#2791#5757#0#PHP" expanded="false" />
                 <element signature="e#6538#10729#0#PHP" expanded="false" />
@@ -58,43 +48,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPPlugin.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TPPlugin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7574751">
+              <caret line="68" column="10" selection-start-line="43" selection-start-column="8" selection-end-line="68" selection-end-column="10" />
               <folding>
-                <marker date="1447316626562" expanded="true" signature="19:25" placeholder="{...}" />
+                <marker date="1447774404369" expanded="true" signature="19:25" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPShortcodeView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TPShortcodeView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60958904">
-              <caret line="310" column="77" selection-start-line="310" selection-start-column="77" selection-end-line="310" selection-end-column="77" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="115" column="44" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
-                <element signature="e#1880#4116#0#PHP" expanded="false" />
-                <element signature="e#9469#13367#0#PHP" expanded="false" />
-                <marker date="1447683679427" expanded="true" signature="1238:1668" placeholder="..." />
-                <marker date="1447683679427" expanded="true" signature="1429:1517" placeholder="..." />
-                <marker date="1447683679427" expanded="true" signature="1429:1645" placeholder="..." />
-                <marker date="1447683679427" expanded="true" signature="25109:25130" placeholder="..." />
-                <marker date="1447683679427" expanded="true" signature="25109:25134" placeholder="..." />
-                <marker date="1447683679427" expanded="true" signature="25268:25600" placeholder="..." />
+                <element signature="e#1894#4130#0#PHP" expanded="false" />
+                <element signature="e#9377#13275#0#PHP" expanded="false" />
+                <marker date="1447684236635" expanded="true" signature="1241:1682" placeholder="..." />
+                <marker date="1447684236635" expanded="true" signature="1432:1531" placeholder="..." />
+                <marker date="1447684236635" expanded="true" signature="1432:1659" placeholder="..." />
+                <marker date="1447684236635" expanded="true" signature="25017:25038" placeholder="..." />
+                <marker date="1447684236635" expanded="true" signature="25017:25042" placeholder="..." />
+                <marker date="1447684236635" expanded="true" signature="25176:25508" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPShortcodesChacheModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
+      <file leaf-file-name="TPMain.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.814816">
-              <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="44" />
+            <state vertical-scroll-proportion="-5.870968">
+              <caret line="160" column="34" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -143,9 +133,7 @@
         <option value="$PROJECT_DIR$/app/includes/TPDefault.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPriceCalendarMonthShortcodeController.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/TPShortcodesController.php" />
-        <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPOurSiteSearchShortcodeController.php" />
-        <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestFlightsShortcodeController.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeController.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketsEachMonthShortcodeController.php" />
@@ -159,6 +147,8 @@
         <option value="$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPPriceCalendarWeekShortcodeController.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php" />
         <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
+        <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
+        <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
       </list>
     </option>
   </component>
@@ -601,8 +591,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,13 +670,13 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27418464" sideWeight="0.52012885" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27750137" sideWeight="0.52012885" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22001106" sideWeight="0.47987118" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22001106" sideWeight="0.47987118" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25187567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -824,12 +814,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php</url>
-          <line>110</line>
+          <line>113</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php</url>
-          <line>297</line>
+          <line>301</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1062,16 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-          <folding>
-            <marker date="1447316626562" expanded="true" signature="19:25" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.666667">
@@ -1084,15 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.28310502">
           <caret line="409" column="20" selection-start-line="409" selection-start-column="20" selection-end-line="409" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325688">
-          <caret line="392" column="10" selection-start-line="392" selection-start-column="1" selection-end-line="392" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,7 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8664383">
           <caret line="61" column="124" selection-start-line="61" selection-start-column="124" selection-end-line="61" selection-end-column="124" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.061643835">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32876712">
           <caret line="21" column="66" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.061643835">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,7 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2260274">
           <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2260274">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
           <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20547946">
           <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.061643835">
           <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20547946">
           <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,14 +1183,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9609984">
+          <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodesView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.913793">
-          <caret line="234" column="67" selection-start-line="234" selection-start-column="67" selection-end-line="236" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="67" selection-start-line="61" selection-start-column="31" selection-end-line="63" selection-end-column="67" />
           <folding>
             <element signature="e#2791#5757#0#PHP" expanded="false" />
             <element signature="e#6538#10729#0#PHP" expanded="false" />
@@ -1245,28 +1206,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/site/TPShortcodesChacheModel.php">
+    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.814816">
-          <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="44" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <element signature="e#1894#4130#0#PHP" expanded="false" />
+            <element signature="e#9377#13275#0#PHP" expanded="false" />
+            <marker date="1447684236635" expanded="true" signature="1241:1682" placeholder="..." />
+            <marker date="1447684236635" expanded="true" signature="1432:1531" placeholder="..." />
+            <marker date="1447684236635" expanded="true" signature="1432:1659" placeholder="..." />
+            <marker date="1447684236635" expanded="true" signature="25017:25038" placeholder="..." />
+            <marker date="1447684236635" expanded="true" signature="25017:25042" placeholder="..." />
+            <marker date="1447684236635" expanded="true" signature="25176:25508" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.870968">
+          <caret line="160" column="34" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
+    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60958904">
-          <caret line="310" column="77" selection-start-line="310" selection-start-column="77" selection-end-line="310" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.7574751">
+          <caret line="68" column="10" selection-start-line="43" selection-start-column="8" selection-end-line="68" selection-end-column="10" />
           <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-            <element signature="e#1880#4116#0#PHP" expanded="false" />
-            <element signature="e#9469#13367#0#PHP" expanded="false" />
-            <marker date="1447683679427" expanded="true" signature="1238:1668" placeholder="..." />
-            <marker date="1447683679427" expanded="true" signature="1429:1517" placeholder="..." />
-            <marker date="1447683679427" expanded="true" signature="1429:1645" placeholder="..." />
-            <marker date="1447683679427" expanded="true" signature="25109:25130" placeholder="..." />
-            <marker date="1447683679427" expanded="true" signature="25109:25134" placeholder="..." />
-            <marker date="1447683679427" expanded="true" signature="25268:25600" placeholder="..." />
+            <marker date="1447774404369" expanded="true" signature="19:25" placeholder="{...}" />
           </folding>
         </state>
       </provider>
