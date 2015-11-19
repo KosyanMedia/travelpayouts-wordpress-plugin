@@ -41,7 +41,7 @@ jQuery(function($) {
 
         checkSize();
         $(window).resize(checkSize);
-        $(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
+        /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
             if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
                 $(this).children("td:last").hasClass('TP-hidden')){
                 //$(this).children("td:last").children('.TPPopUpButtonTable').clone();
@@ -66,14 +66,14 @@ jQuery(function($) {
                     $(".TP-Plugin-Tables_box tbody tr td:last-child").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
                 }
             }
-        })
+        })*/
 
 
     });
 });
 
 
-/*jQuery(function($) {
+jQuery(function($) {
     var doc, win;
     doc = $(document);
     win = $(window);
@@ -82,7 +82,7 @@ jQuery(function($) {
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
 
-    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*
+    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
@@ -120,22 +120,22 @@ jQuery(function($) {
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     }
     doc.ready(function(){
-        doc.find('.btn-table').parent('p').addClass('parrentBtn');
+        //doc.find('.btn-table').parent('p').addClass('parrentBtn');
 
-        doc.find('.sortable').each(function () {
-            $(this).dataTable( {
+        doc.find('.TP-Plugin-Tables_box').each(function () {
+            var table = $(this).dataTable( {
                 ordering: true,
-                "order": [[ $(this).data('sort_column'), "asc" ]],
-                paging: ($(this).data("paginate") && ($(this).data("paginate_limit") < $(this).rowCount())),
-                iDisplayLength: $(this).data("paginate_limit"),
+                "order": [[ 0, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
+                paging: ( $(this).data("paginate") && ( $(this).data("paginate_limit") < $(this).rowCount())),
+                iDisplayLength:  $(this).data("paginate_limit"),
                 "bLengthChange": false,
                 searching: false,
                 bFilter: false,
                 bInfo: false,
                 columnDefs: [
                     {
-                        targets: $(this).data('sort_column'),
-                        className: 'active-w'
+                        targets: 0,//$(this).data('sort_column'),
+                        className: 'TP-active'
                     },
                     { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
                     { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
@@ -151,22 +151,18 @@ jQuery(function($) {
                 }
             } );
         });
-        doc.find(".w-table").each(function(i,e){
-            var countTd = $(this).children('thead').children('tr').children('td').length + 5;
-            $(this).parent('.dataTables_wrapper').css({'margin' : '0 auto', 'max-width': $(this).find("thead").width() + countTd})
-        });
 
     });
 
     doc.find('td.TPTableHead').click(function () {
-        $(this).parent('tr').find("td.active-w").each(function(){
-            $(this).removeClass("active-w");
+        $(this).parent('tr').find("td.TP-active").each(function(){
+            $(this).removeClass("TP-active");
         });
-        $(this).addClass("active-w");
+        $(this).addClass("TP-active");
     });
 
 
-    doc.find('td.TPTableTbodyTd').hover(function() {
+    /*doc.find('td.TPTableTbodyTd').hover(function() {
         $(this).children("p").each(function(){
             if(textWidth($(this).text(), $(this).html(), $(this)) > $(this).width()){
                 var textIndentLeft = ((textWidth($(this).text(), $(this)) - $(this).width()+16));
@@ -203,8 +199,8 @@ jQuery(function($) {
         $items.each(function(i,e){
             $(e).css('width', width+"%");
         });
+    });**/
+
+
+
     });
-
-
-
-    });*/

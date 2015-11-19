@@ -46,13 +46,23 @@ class TPShortcodeView {
         $html = '';
         if(count($rows) < 1) return false;
 
-
+        if($one_way === 'false'){
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+        }else{
+            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
+            if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
+                --$sort_column;
+            }
+        }
 
         $html .= '<div class="TP-Plugin-Tables_wrapper">
-                    '.$this->titleTable($off_title, $title, $type, $origin, $destination, $airline).'
-                    <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio">
-                        '.$this->headTable($type, $one_way, $paginate).'
-                        '.$this->bodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination).'
+                    '.$this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline).'
+                    <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
+                        data-paginate="'.$paginate.'"
+                        data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
+                        data-sort_column="'.$sort_column.'">
+                        '.$this->renderHeadTable($type, $one_way).'
+                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination).'
                     </table>
                 </div>';
         return $html;
@@ -67,7 +77,7 @@ class TPShortcodeView {
      * @param $airline
      * @return mixed
      */
-    public function titleTable($off_title, $title, $type, $origin, $destination, $airline){
+    public function renderTitleTable($off_title, $title, $type, $origin, $destination, $airline){
         if($off_title !== 'true'){
             if(empty($title)) {
                 $title = \app\includes\TPPlugin::$options['shortcodes'][$type]['title'][$this->local];
@@ -111,35 +121,25 @@ class TPShortcodeView {
      * @param $type
      * @return string
      */
-    public function headTable($type, $one_way, $paginate){
+    public function renderHeadTable($type, $one_way){
 
         $headTable = '';
 
-        if($one_way === 'false'){
-            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
-        }else{
-            $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
-            if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
-                --$sort_column;
-            }
-        }
 
-        $headTable .= '<thead class="TP-Plugin-Tables_box_thead"
-            data-paginate="'.$paginate.'"
-            data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
-            data-sort_column="'.$sort_column.'"><tr>';
+
+        $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
             foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
                 switch($selected_field) {
                     //Дата вылета
                     case "departure_at":
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     //Дата возвращения
                     case "return_at":
                         if($one_way === 'false'){
-                            $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                            $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
                                 \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                                 .' </td>';
                         }
@@ -147,37 +147,37 @@ class TPShortcodeView {
                         break;
                     //Дата поиска
                     case "found_at":
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-found-column">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     case "price":
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     case 'place':
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     case 'direction':
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     case 'airline_logo':
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     case 'button':
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
                     default:
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">' .
+                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             .' </td>';
                         break;
@@ -193,8 +193,7 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function bodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination){
-        $limit = 5;
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination){
         $delimiter = ' ';
         if($one_way === 'false'){
             $delimiter = '&#8596';
@@ -296,24 +295,32 @@ class TPShortcodeView {
                         $price = $row["value"];
                         break;
                     default:
-                        $price = $row[$selected_field];
+                        $price = $row["price"];
                 }
+
                 //Td
                 switch($selected_field){
                     //Номер рейса
                     case "flight_number":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p>' . $row['airline_iata'].' '. $row[$selected_field].'</p>
+                            '.$this->getTextTdTable(
+                                $urlLink,
+                                '<p>' . $row['airline_iata'].' '. $row[$selected_field].'</p>',
+                                $type, $count, $price).'
                             </td>';
                         break;
                     //Рейс
                     case "flight":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p  data-airline-iata="'.$row['airline'].'">' .
-                            $row['airline'].'</p><span>('. $row['airline_iata'].' '.
-                            $row['flight_number'].')</span>
+                            '.$this->getTextTdTable(
+                                $urlLink,
+                                '<p  data-airline-iata="'.$row['airline'].'">' .
+                                $row['airline'].'</p><span>('. $row['airline_iata'].' '.
+                                $row['flight_number'].')</span>',
+                                $type, $count, $price).'
+
                             </td>';
                         break;
                     //Дата вылета
@@ -412,10 +419,12 @@ class TPShortcodeView {
                     case "price":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p data-price="'.$price.'">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $price,
                                 $type, $count, $price).'
+                            </p>
                             </td>';
                         break;
                     //Авиакомпания
@@ -589,7 +598,9 @@ class TPShortcodeView {
                     case "button":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p data-price="'.$price.'">
                             '.$this->getTextTdTable($urlLink, "", $type, $count, $price, 1).'
+                            </p>
                             </td>';
                         break;
                 }
@@ -675,6 +686,21 @@ class TPShortcodeView {
     }
 
     /**
+     * @param $typeShortcode
+     * @param $price
+     * @return mixed|string
+     */
+    public function getButtonText($typeShortcode, $price){
+        $button_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][$this->local]."</span>";
+        if(!empty($button_text)){
+            if(strpos($button_text, 'price') !== false){
+                $button_text = str_replace('price', $price, $button_text);
+                $button_text .= $this->currencyView();
+            }
+        }
+        return $button_text;
+    }
+    /**
      * @param $url
      * @param $text
      * @param $typeShortcode
@@ -695,13 +721,8 @@ class TPShortcodeView {
             $redirect = true;
         }
 
-        $button_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][$this->local]."</span>";
-        if(!empty($button_text)){
-            if(strpos($button_text, 'price') !== false){
-                $button_text = str_replace('price', $price, $button_text);
-                $button_text .= $this->currencyView();
-            }
-        }
+
+
         if(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink'])){
             //hyperlink
             switch($type){
@@ -711,22 +732,24 @@ class TPShortcodeView {
                     break;
                 //button
                 case 1:
-                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable">'.$button_text.'</a>';
+                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable">'
+                        .$this->getButtonText($typeShortcode, $price).'</a>';
                     break;
             }
         }else{
             //pop-up button
-            $buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected']);
+            /*$buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected']);
             if(!$buttonOnOff){
 
                 if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected'])){
                     //pop-up button
                     $textTd = $text.' <a href="'.$url.'" class="TPPopUpButtonTable">'.$button_text.'</a>';
+                    //error_log($textTd);
                 }else{
                     $textTd = $text;
                 }
 
-            }else{
+            }else{       */
                 switch($type){
                     //text When hyperlinks are disabled
                     case 0:
@@ -734,10 +757,13 @@ class TPShortcodeView {
                         break;
                     //button
                     case 1:
-                        $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable">'.$button_text.'</a>';
+                        //error_log($this->getButtonText($typeShortcode, $price));
+                        //error_log($price);
+                        $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable ">'
+                            .$this->getButtonText($typeShortcode, $price).'</a>';
                         break;
                 }
-            }
+           // }
 
         }
 
