@@ -69,8 +69,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     static public function deactivation()
     {
         // TODO: Implement deactivation() method.
-        delete_option( TPOPlUGIN_OPTION_NAME);
-        delete_option( TPOPlUGIN_OPTION_VERSION);
+        //delete_option( TPOPlUGIN_OPTION_NAME);
+        //delete_option( TPOPlUGIN_OPTION_VERSION);
         self::deleteCacheAll();
     }
 

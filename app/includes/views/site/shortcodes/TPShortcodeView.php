@@ -286,17 +286,20 @@ class TPShortcodeView {
                         ));
                 }
                 // get Price
-                switch($type) {
-                    case 1:
-                    case 2:
-                    case 12:
-                    case 13:
-                    case 14:
-                        $price = $row["value"];
-                        break;
-                    default:
-                        $price = $row["price"];
+                if($type != 10){
+                    switch($type) {
+                        case 1:
+                        case 2:
+                        case 12:
+                        case 13:
+                        case 14:
+                            $price = $row["value"];
+                            break;
+                        default:
+                            $price = $row["price"];
+                    }
                 }
+
 
                 //Td
                 switch($selected_field){
@@ -965,6 +968,7 @@ class TPShortcodeView {
                 'origin_destination',
                 'price'
             ),
+            '10' => array(),
             '12' => array(
                 'found_at',
                 'number_of_changes',
