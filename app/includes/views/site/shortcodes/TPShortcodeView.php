@@ -111,7 +111,7 @@ class TPShortcodeView {
                     }
                 }
             }
-            return '<'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].'>'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].'>';
+            return '<'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$type]['tag'].'>';
         }
         return '';
 

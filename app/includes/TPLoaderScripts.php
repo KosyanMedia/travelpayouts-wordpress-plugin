@@ -576,14 +576,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     tpLocale = 'en';
                     break;
             }
-            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga']) ||
-                        !empty(\app\includes\TPPlugin::$options['config']['code_ym'])){?>
+            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga_ym'])){?>
                         jQuery(function($) {
                             var doc, win;
                             doc = $(document);
                             doc.find('.TPButtonTable').click(function () {
-                                <?php echo \app\includes\TPPlugin::$options['config']['code_ga']; ?>
-                                <?php echo \app\includes\TPPlugin::$options['config']['code_ym']; ?>
+                                <?php echo \app\includes\TPPlugin::$options['config']['code_ga_ym']; ?>
                             });
                         });
             <?php }?>
@@ -592,7 +590,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             <?php
                 if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
                     ?>
-                    .w-table {
+                    .TP-Plugin-Tables_box {
                         display: block !important;
                         overflow-x: auto !important;
                         border: none !important;
@@ -602,7 +600,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     <?php
                 }else{
                     ?>
-                    .w-table {
+                    .TP-Plugin-Tables_box {
                         display: table !important;
                         border: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_size']; ?>px <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_type']; ?> <?php echo \app\includes\TPPlugin::$options['style_table']['table']['line_color']; ?> !important;
                     }
@@ -613,7 +611,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
                 }
              ?>
-            .TP-TitleTablezs{
+            .TP-TitleTables{
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['font_family']; ?>, sans-serif !important;
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['title_style']['color']; ?> !important;
@@ -636,7 +634,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             ?>
             }
 
-            .w-table thead tr td,.w-table tbody tr td {
+            .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td {
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
             <?php
@@ -651,28 +649,28 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             }
-            .w-table tbody tr td {
+            .TP-Plugin-Tables_box tbody tr td {
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
             }
-            .w-table tbody tr:nth-child(even) {
+            .TP-Plugin-Tables_box tbody tr:nth-child(even) {
                 background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>;
             }
-            .w-table tbody tr:nth-child(even) td p:after {
+            .TP-Plugin-Tables_box tbody tr:nth-child(even) td p:after {
                 background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
             }
             .TPAirlineLogoTD{
                 width: auto !important;
                 <?php //echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>
             }
-            .w-table thead tr {
+            .TP-Plugin-Tables_box thead tr td{
                 background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
             }
-            .w-table thead tr td.active-w {
+            .TP-Plugin-Tables_box thead tr td.TP-active {
                 background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
                /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
             }
 
-            .w-table thead tr td {
+            .TP-Plugin-Tables_box thead tr td {
                 color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
             }
 

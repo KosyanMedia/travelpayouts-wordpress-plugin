@@ -89,8 +89,16 @@
 .TP-Plugin-Tables_box tbody tr .TPflightTd span{
     display: block;
     white-space: nowrap;
-
 }
+.TP-Plugin-Tables_box tbody tr .TPpriceTd p{
+    display: block;
+    white-space: nowrap;
+}
+.TP-Plugin-Tables_box tbody tr .TPflight_numberTd p{
+    display: block;
+    white-space: nowrap;
+}
+
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
     min-width: 130px;
     margin: 0 auto;
