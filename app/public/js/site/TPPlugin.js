@@ -83,81 +83,117 @@ jQuery(function($) {
     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
 
     tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
+
+    /** **/
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-
     jQuery.fn.dataTableExt.oSort['tp-date-desc'] = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
-    }
+    };
+
+    /** **/
     jQuery.fn.dataTableExt.oSort['tp-found-asc']  = function(a,b) {
         var x = ($(a).data("tpctime") - $(a).data("tptime"));
         var y = ($(b).data("tpctime") - $(b).data("tptime"));
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-
     jQuery.fn.dataTableExt.oSort['tp-found-desc'] = function(a,b) {
         var x = ($(a).data("tpctime") - $(a).data("tptime"));
         var y = ($(b).data("tpctime") - $(b).data("tptime"));
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
-    }
+    };
+
+    /** **/
     jQuery.fn.rowCount = function() {
         return $('tr', $(this).find('tbody')).length;
     };
+
+    /** **/
     jQuery.fn.dataTableExt.oSort['tp-price-asc']  = function(a,b) {
         var x = $(a).data("price");
         var y = $(b).data("price");
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-
     jQuery.fn.dataTableExt.oSort['tp-price-desc'] = function(a,b) {
         var x = $(a).data("price");
         var y = $(b).data("price");
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
-    }
-    doc.ready(function(){
-        //doc.find('.btn-table').parent('p').addClass('parrentBtn');
+    };
 
-        doc.find('.TP-Plugin-Tables_box').each(function () {
-            var tpTable, tableSortColumn;
-            tableSortColumn = getSortColumn($(this));
-            console.log(tableSortColumn);
-            tpTable = $(this).dataTable( {
-                ordering: true,
-                "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
-                paging: ( $(this).data("paginate") && ( $(this).data("paginate_limit") < $(this).rowCount())),
-                iDisplayLength:  $(this).data("paginate_limit"),
-                "bLengthChange": false,
-                searching: false,
-                bFilter: false,
-                bInfo: false,
-                columnDefs: [
-                    {
-                        targets: tableSortColumn,//$(this).data('sort_column'),
-                        className: 'TP-active'
-                    },
-                    { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
-                    { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
-                    { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"}
-                ],
-                "oLanguage":{
-                    "oPaginate": {
-                        "sNext": null,
-                        "sLast": null,
-                        "sFirst": null,
-                        "sPrevious": null
-                    }
+    /** **/
+    function tpTableCod(selector){
+        var tpTable, tableSortColumn;
+        tableSortColumn = getSortColumn(selector);
+        tpTable = selector.dataTable( {
+            ordering: true,
+            "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
+            paging: ( $(this).data("paginate") && ( $(this).data("paginate_limit") < $(this).rowCount())),
+            iDisplayLength:  $(this).data("paginate_limit"),
+            "bLengthChange": false,
+            searching: false,
+            bFilter: false,
+            bInfo: false,
+            "autoWidth": false,
+            "bAutoWidth":false,
+            columnDefs: [
+                {
+                    targets: tableSortColumn,//$(this).data('sort_column'),
+                    className: 'TP-active'
+                },
+                { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
+                { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
+                { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"}
+            ],
+            "oLanguage":{
+                "oPaginate": {
+                    "sNext": null,
+                    "sLast": null,
+                    "sFirst": null,
+                    "sPrevious": null
                 }
-            } );
+            }
+        } );
+        return tpTable;
+    }
+
+    /** **/
+    function tpTableInit(){
+        doc.find('.TP-Plugin-Tables_box').each(function () {
+            var tpTable;
+            tpTable = tpTableCod($(this));
+            //console.log(tableSortColumn);
             //console.log(tpTable)
         });
+    }
 
+    /** **/
+    function tpTableResize(){
+
+        doc.find('.TP-Plugin-Tables_box').each(function () {
+            var tpTable;
+            $(this).children('thead').children('tr').find("td.TP-active").each(function(){
+                $(this).removeClass("TP-active");
+            });
+            $(this).dataTable().fnDestroy();
+            tpTable = tpTableCod($(this));
+
+        });
+    }
+
+    /** **/
+    doc.ready(function(){
+        $.fn.dataTableExt.sErrMode = 'throw';
+        //doc.find('.btn-table').parent('p').addClass('parrentBtn');
+        win.resize(tpTableResize);
+        tpTableInit();
 
     });
+
     /**
      *
      * @param selector
@@ -178,6 +214,7 @@ jQuery(function($) {
         }
 
     }
+
     doc.find('td.TPTableHead').click(function () {
         $(this).parent('tr').find("td.TP-active").each(function(){
             $(this).removeClass("TP-active");
@@ -224,7 +261,6 @@ jQuery(function($) {
             $(e).css('width', width+"%");
         });
     });**/
-
 
 
     });

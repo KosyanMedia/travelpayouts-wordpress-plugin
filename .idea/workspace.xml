@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2ac3a06-ce83-424c-bf23-ff888a8833df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/site/TPMain.css" afterPath="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" afterPath="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" afterPath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Travelpayouts.iws" />
@@ -50,11 +48,30 @@
       <file leaf-file-name="TPPlugin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5415282">
-              <caret line="166" column="50" selection-start-line="166" selection-start-column="50" selection-end-line="166" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.21594684">
+              <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
               <folding>
-                <marker date="1448025913005" expanded="true" signature="19:25" placeholder="{...}" />
+                <element signature="e#1956#3771#0" expanded="false" />
+                <element signature="e#3875#4336#0" expanded="false" />
+                <element signature="e#4615#4748#0" expanded="false" />
+                <element signature="e#4829#5012#0" expanded="false" />
+                <element signature="e#5080#5263#0" expanded="false" />
+                <element signature="e#5314#5375#0" expanded="false" />
+                <element signature="e#5456#5587#0" expanded="false" />
+                <element signature="e#8127#8639#0" expanded="false" />
+                <element signature="e#8870#10204#0" expanded="false" />
+                <marker date="1448030738625" expanded="true" signature="19:25" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPAdminPluginPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPAdminPluginPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -270,6 +287,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -839,19 +882,22 @@
           <line>272</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js</url>
+          <line>164</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js</url>
+          <line>217</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="64" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/TPOptionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09800363">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/site/widgets/TPWidgetsView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6860254">
@@ -1236,12 +1282,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/admin/TPAdminPluginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5415282">
-          <caret line="166" column="50" selection-start-line="166" selection-start-column="50" selection-end-line="166" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.21594684">
+          <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
           <folding>
-            <marker date="1448025913005" expanded="true" signature="19:25" placeholder="{...}" />
+            <element signature="e#1956#3771#0" expanded="false" />
+            <element signature="e#3875#4336#0" expanded="false" />
+            <element signature="e#4615#4748#0" expanded="false" />
+            <element signature="e#4829#5012#0" expanded="false" />
+            <element signature="e#5080#5263#0" expanded="false" />
+            <element signature="e#5314#5375#0" expanded="false" />
+            <element signature="e#5456#5587#0" expanded="false" />
+            <element signature="e#8127#8639#0" expanded="false" />
+            <element signature="e#8870#10204#0" expanded="false" />
+            <marker date="1448030738625" expanded="true" signature="19:25" placeholder="{...}" />
           </folding>
         </state>
       </provider>
