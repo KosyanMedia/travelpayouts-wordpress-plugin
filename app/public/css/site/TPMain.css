@@ -250,6 +250,12 @@
 .TP-Plugin-Tables_box tbody tr:hover .TPPopUpButtonTable{
     display: block;
 }
+@font-face {
+    font-family: 'ALSRubl';
+    src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 .TPCurrencyIco {
     font-size: 14px;
     font-weight: normal;

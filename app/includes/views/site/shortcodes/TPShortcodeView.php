@@ -423,7 +423,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $price,
-                                $type, $count, $price).'
+                                $type, $count, $price).' '.$this->currencyView().'
                             </p>
                             </td>';
                         break;
