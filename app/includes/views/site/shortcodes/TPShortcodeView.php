@@ -55,7 +55,7 @@ class TPShortcodeView {
             }
         }
 
-        $html .= '<div class="TP-Plugin-Tables_wrapper">
+        $html .= '<div class="TP-Plugin-Tables_wrapper clearfix">
                     '.$this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline).'
                     <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"

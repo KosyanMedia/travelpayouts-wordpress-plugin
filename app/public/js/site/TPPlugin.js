@@ -123,9 +123,12 @@ jQuery(function($) {
         //doc.find('.btn-table').parent('p').addClass('parrentBtn');
 
         doc.find('.TP-Plugin-Tables_box').each(function () {
-            var table = $(this).dataTable( {
+            var tpTable, tableSortColumn;
+            tableSortColumn = getSortColumn($(this));
+            console.log(tableSortColumn);
+            tpTable = $(this).dataTable( {
                 ordering: true,
-                "order": [[ 0, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
+                "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
                 paging: ( $(this).data("paginate") && ( $(this).data("paginate_limit") < $(this).rowCount())),
                 iDisplayLength:  $(this).data("paginate_limit"),
                 "bLengthChange": false,
@@ -134,7 +137,7 @@ jQuery(function($) {
                 bInfo: false,
                 columnDefs: [
                     {
-                        targets: 0,//$(this).data('sort_column'),
+                        targets: tableSortColumn,//$(this).data('sort_column'),
                         className: 'TP-active'
                     },
                     { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
@@ -150,10 +153,31 @@ jQuery(function($) {
                     }
                 }
             } );
+            //console.log(tpTable)
         });
 
-    });
 
+    });
+    /**
+     *
+     * @param selector
+     * @returns {number}
+     */
+    function getSortColumn(selector){
+        var column = selector.data('sort_column');
+        if(selector.children('thead').children('tr').children('td:eq('+column+')').hasClass("TP-hidden") === false){
+            return column;
+        } else  {
+            selector.children('thead').children('tr').children('td').each(function(index, value){
+                if(!$(this).hasClass("TP-hidden")){
+                    column = index;
+                    return false;
+                }
+            });
+            return column;
+        }
+
+    }
     doc.find('td.TPTableHead').click(function () {
         $(this).parent('tr').find("td.TP-active").each(function(){
             $(this).removeClass("TP-active");
