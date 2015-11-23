@@ -304,6 +304,18 @@ h1, h2, h3, h4, h5, h6 {
 .TP-HeadTable label input[type="text"]:focus {
   border-color: #00abfd;
 }
+
+.ItemSub label textarea {
+
+  color: #929a9f;
+}
+.ItemSub label textarea:hover {
+  border-color: #adb3b7;
+}
+.ItemSub label textarea:focus {
+  border-color: #00abfd;
+}
+
 .TP-HeadTable label input[type="number"] {
     width: 100%;
     height: 40px;
@@ -595,13 +607,15 @@ h1, h2, h3, h4, h5, h6 {
 .TP-colForm:last-of-type {
   float: right;
 }
-
+.ItemSubFormatDate{
+  margin-bottom: 10px !important;
+}
 .ItemSub {
   margin-bottom: 30px;
 }
 .ItemSub span {
   display: block;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 15px;
   font-weight: 300;
   color: #6f777c;
@@ -1688,6 +1702,7 @@ span.ellipsis {
     height: 30px;
     border: 2px solid transparent;
     text-align: center;
+  line-height: 1.25;
 }
 a.paginate_button.current {
     border-color: #1db1db;
@@ -2478,5 +2493,6 @@ thead tr td.active-w {
 }
 .ItemSub-YM-GA{
   min-width: 370px;
+  margin-bottom: 7px;
 }
 

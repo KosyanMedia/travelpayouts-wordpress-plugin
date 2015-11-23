@@ -240,7 +240,7 @@ class TPFieldSettings {
                         </li>
                     </ul>
                 </div>
-                <div class="ItemSub">
+                <div class="ItemSub ItemSubFormatDate">
 
                      <span>
                          <div class="box-span">
