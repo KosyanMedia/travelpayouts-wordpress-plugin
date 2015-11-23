@@ -38,13 +38,13 @@
     font-size: 8px; }
 
 .TP-Plugin-Tables_box {
-    margin: 0 auto;
-    width: auto;
+
+    margin-bottom: 10px;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     line-height: normal;
     border-spacing: 0;
-    margin-bottom: 1.7em;
     outline: 0;
     table-layout: auto;
 
@@ -212,7 +212,7 @@
         background: #00b443;
         padding: 10px;
         display: inline-block;
-        width: 105px;
+        width: 111px;
         min-height: inherit;
         vertical-align: middle;
         margin-right: 5px; }
@@ -322,6 +322,19 @@ span.ellipsis {
     text-align: center;
 }
 
+.TP-Plugin-Tables_wrapper .dataTables_wrapper .dataTables_paginate {
+    display: block;
+    min-height: 30px;
+    width: 100%;
+}
+
+.TP-Plugin-Tables_box tbody tr td img {
+    border: 0;
+    max-height: 30px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
 /*# sourceMappingURL=main.css.map */
 
 

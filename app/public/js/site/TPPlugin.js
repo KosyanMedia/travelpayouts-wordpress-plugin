@@ -158,6 +158,9 @@ jQuery(function($) {
                 }
             }
         } );
+        console.log(tpTable.rowCount())
+        console.log(tpTable.data("paginate_limit"))
+        console.log(tpTable.data("paginate"))
         return tpTable;
     }
 

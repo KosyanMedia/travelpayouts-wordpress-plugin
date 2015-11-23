@@ -7,6 +7,7 @@
                         data-limit-11="<?php echo \app\includes\TPPlugin::$options['shortcodes']['12']['limit']?>"
                         data-limit-12="<?php echo \app\includes\TPPlugin::$options['shortcodes']['13']['limit']?>"
                         data-limit-13="<?php echo \app\includes\TPPlugin::$options['shortcodes']['14']['limit']?>"
+                        data-limit-9="<?php echo \app\includes\TPPlugin::$options['shortcodes']['10']['limit']?>"
                         data-transplant-1 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['1']['transplant']?>"
                         data-transplant-5 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['5']['transplant']?>"
                         data-transplant-12 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['12']['transplant']?>"

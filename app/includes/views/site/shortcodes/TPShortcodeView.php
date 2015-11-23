@@ -286,7 +286,9 @@ class TPShortcodeView {
                         ));
                 }
                 // get Price
+                $price = '';
                 if($type != 10){
+
                     switch($type) {
                         case 1:
                         case 2:

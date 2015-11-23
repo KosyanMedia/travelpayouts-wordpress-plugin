@@ -166,7 +166,7 @@ jQuery(function($) {
                                     doc.find('#airline').addClass('constructorShortcodesError');
                                 }else{
                                     setShortcodes("[tp_popular_destinations_airlines_shortcodes airline="+airline+" " +
-                                        " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title+"]",
+                                        " title=\""+title+"\" limit=\""+limit+"\" "+paginate+" "+off_title+"]",
                                         $(this));
                                 }
                                 break;
@@ -379,6 +379,7 @@ jQuery(function($) {
                     doc.find('#tr_airline').show();
                     doc.find('#tr_limit').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     break;
                 case '10':
                     doc.find('#tr_paginate').show();

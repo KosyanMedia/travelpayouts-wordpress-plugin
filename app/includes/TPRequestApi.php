@@ -421,6 +421,7 @@ class TPRequestApi {
      **/
     public function request( $string ){
         $string = htmlspecialchars($string);
+        //error_log($string);
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
         )) );
@@ -442,6 +443,7 @@ class TPRequestApi {
      **/
     public function request_two( $string ){
         $string = htmlspecialchars($string);
+        //error_log($string);
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
             'X-Access-Token' => $this->token
