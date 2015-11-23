@@ -45,7 +45,10 @@
     line-height: normal;
     border-spacing: 0;
     margin-bottom: 1.7em;
-    outline: 0; }
+    outline: 0;
+    table-layout: auto;
+
+}
 .TP-Plugin-Tables_box_thead .TP-active {
     background: #099dc7; }
 .TP-Plugin-Tables_box thead tr {
@@ -197,7 +200,13 @@
     .TP-rwd-table tbody tr td {
         padding: 0; }
     .TP-rwd-table tbody tr td img{
-        max-height: 35px; }
+        max-height: 35px;
+        vertical-align: middle;
+
+    }
+    .TP-Plugin-Tables_box tbody tr td p {
+        vertical-align: middle;
+    }
     .TP-rwd-table tbody tr td:before {
         color: white;
         background: #00b443;

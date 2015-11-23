@@ -425,8 +425,8 @@ class TPShortcodeView {
                             <p data-price="'.$price.'">
                             '.$this->getTextTdTable(
                                 $urlLink,
-                                $price,
-                                $type, $count, $price).' '.$this->currencyView().'
+                                number_format($price, 0, '.', ' '),
+                                $type, $count, $price).$this->currencyView().'
                             </p>
                             </td>';
                         break;
@@ -697,6 +697,7 @@ class TPShortcodeView {
         $button_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][$this->local]."</span>";
         if(!empty($button_text)){
             if(strpos($button_text, 'price') !== false){
+                $price = number_format($price, 0, '.', ' ');
                 $button_text = str_replace('price', $price, $button_text);
                 $button_text .= $this->currencyView();
             }
