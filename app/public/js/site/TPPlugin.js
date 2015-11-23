@@ -114,6 +114,18 @@ jQuery(function($) {
     };
 
     /** **/
+    jQuery.fn.getPaginateTP = function() {
+        if($(this).data("paginate") == true){
+            if($(this).rowCount() > $(this).data("paginate_limit") ){
+               return true;
+            }
+        }
+        return false;
+
+    };
+
+
+    /** **/
     jQuery.fn.dataTableExt.oSort['tp-price-asc']  = function(a,b) {
         var x = $(a).data("price");
         var y = $(b).data("price");
@@ -125,6 +137,7 @@ jQuery(function($) {
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
+
     /** **/
     function tpTableCod(selector){
         var tpTable, tableSortColumn;
@@ -132,14 +145,12 @@ jQuery(function($) {
         tpTable = selector.dataTable( {
             ordering: true,
             "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
-            paging: ( $(this).data("paginate") && ( $(this).data("paginate_limit") < $(this).rowCount())),
-            iDisplayLength:  $(this).data("paginate_limit"),
+            paging: selector.getPaginateTP(),
+            iDisplayLength:  selector.data("paginate_limit"),
             "bLengthChange": false,
             searching: false,
             bFilter: false,
             bInfo: false,
-            "autoWidth": false,
-            "bAutoWidth":false,
             columnDefs: [
                 {
                     targets: tableSortColumn,//$(this).data('sort_column'),
@@ -158,9 +169,8 @@ jQuery(function($) {
                 }
             }
         } );
-        console.log(tpTable.rowCount())
-        console.log(tpTable.data("paginate_limit"))
-        console.log(tpTable.data("paginate"))
+        //console.log(tpTable.getPaginateTP())
+        //console.log(tpTable.rowCount())
         return tpTable;
     }
 
