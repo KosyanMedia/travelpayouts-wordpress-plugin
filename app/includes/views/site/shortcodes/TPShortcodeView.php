@@ -194,11 +194,11 @@ class TPShortcodeView {
      * @return string
      */
     public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination){
-        $delimiter = ' ';
+        $delimiter = '';
         if($one_way === 'false'){
-            $delimiter = '&#8596';
+            $delimiter = ' &#8596 ';
         }else {
-            $delimiter = '&#8594';
+            $delimiter = ' &#8594 ';
         }
         $bodyTable = '';
         $bodyTable .= '<tbody>';
