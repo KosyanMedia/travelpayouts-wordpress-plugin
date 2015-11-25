@@ -21,28 +21,57 @@ function TPCityAutocomplete(){
                     return value;
                 }).autocomplete({
                     source: function(request, response){
-                        //console.log(request.term, AppendTo);
-                        $.get("http://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
-                            response(
-                                $.map(data, function(item){
-                                    var airport = (item.airport_name !== null) ? item.airport_name : "";
-                                    if($(selector).hasClass('TPCoordinatesAutocomplete')){
-                                        return {
-                                            label: item.name+" "+airport+" ["+item.iata+"]",
-                                            value: item.name+" "+airport+" ["+item.coordinates+"]",
-                                            val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    }else{
-                                        return {
-                                            label: item.name+" "+airport+" ["+item.iata+"]",
-                                            value: item.name+" "+airport+" ["+item.iata+"]",
-                                            val: item.iata//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
-                                    }
-                                })
-                            )
+                        //console.log(tpLocale)
+                        switch (tpLocale){
+                            case 'ru':
+                                $.get("http://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                                    response(
+                                        $.map(data, function(item){
+                                            var airport = (item.airport_name !== null) ? item.airport_name : "";
+                                            if($(selector).hasClass('TPCoordinatesAutocomplete')){
+                                                return {
+                                                    label: item.name+" "+airport+" ["+item.iata+"]",
+                                                    value: item.name+" "+airport+" ["+item.coordinates+"]",
+                                                    val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                            }else{
+                                                return {
+                                                    label: item.name+" "+airport+" ["+item.iata+"]",
+                                                    value: item.name+" "+airport+" ["+item.iata+"]",
+                                                    val: item.iata//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                            }
+                                        })
+                                    )
 
-                        })
+                                })
+                                break;
+                            case 'en':
+                                $.get("http://www.jetradar.com/autocomplete/places?q=" + request.term, function(data) {
+                                    response(
+                                        $.map(data, function(item){
+                                            var airport = (item.name !== null) ? item.name : "";
+                                            if($(selector).hasClass('TPCoordinatesAutocomplete')){
+                                                return {
+                                                    label: item.city_fullname+" "+airport+" ["+item.code+"]",
+                                                    value: item.city_fullname+" "+airport+" ["+item.coordinates+"]",
+                                                    val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                            }else{
+                                                return {
+                                                    label: item.city_fullname+" "+airport+" ["+item.code+"]",
+                                                    value: item.city_fullname+" "+airport+" ["+item.code+"]",
+                                                    val: item.code//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                            }
+                                        })
+                                    )
+
+                                })
+                                break;
+                        }
+                        //console.log(request.term, AppendTo);
+
                         /*$.map(AutocompletePlaces, function(item){
                             if( matchInArray( request.term, item.name ) ||
                                 matchInArray( request.term, item.iata) ){

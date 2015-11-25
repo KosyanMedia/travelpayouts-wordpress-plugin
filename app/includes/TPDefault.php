@@ -543,8 +543,7 @@ class TPDefault implements  \core\TPODefault{
                     ),
                     'sort_column' => 0,
                     'selected' => array(
-                        'origin',
-                        'destination',
+                        'origin_destination',
                         'departure_at',
                         'return_at',
                         'button',

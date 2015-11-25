@@ -734,11 +734,11 @@ class TPShortcodeView {
             switch($type){
                 //link
                 case 0:
-                    $textTd = '<a href="'.$url.'" class="TPLinkTable">'.$text.'</a>';
+                    $textTd = '<a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$text.'</a>';
                     break;
                 //button
                 case 1:
-                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable">'
+                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable" '.$target_url.' '.$rel.'>'
                         .$this->getButtonText($typeShortcode, $price).'</a>';
                     break;
             }
@@ -765,7 +765,7 @@ class TPShortcodeView {
                     case 1:
                         //error_log($this->getButtonText($typeShortcode, $price));
                         //error_log($price);
-                        $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable ">'
+                        $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable " '.$target_url.' '.$rel.'>'
                             .$this->getButtonText($typeShortcode, $price).'</a>';
                         break;
                 }
