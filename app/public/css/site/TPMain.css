@@ -39,12 +39,13 @@
 
 .TP-Plugin-Tables_wrapper h3, .TP-Plugin-Tables_wrapper h2, .TP-Plugin-Tables_wrapper h1 {
     margin-bottom: 0 !important;
+    margin-top: 1em !important;
 }
 
 .TP-Plugin-Tables_box {
 
     margin-bottom: 10px;
-    margin-top: 30px;
+    margin-top: 15px;
 
     width: 100%;
     box-sizing: border-box;
