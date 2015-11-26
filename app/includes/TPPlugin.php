@@ -9,13 +9,12 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     }
 
     static private function check_plugin_update() {
-
-
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
             } else{
-                $settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
+                //$settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
+                $settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
                 update_option( TPOPlUGIN_OPTION_NAME, $settings);
             }
 
@@ -71,6 +70,9 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         // TODO: Implement deactivation() method.
         //delete_option( TPOPlUGIN_OPTION_NAME);
         //delete_option( TPOPlUGIN_OPTION_VERSION);
+        //$settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
+        //error_log(print_r($settings, true));
+        //error_log(print_r(self::$options, true));
         self::deleteCacheAll();
     }
 

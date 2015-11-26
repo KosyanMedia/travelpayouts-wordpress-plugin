@@ -184,11 +184,15 @@
         display: table-cell; } }
 
 @media (max-width: 480px) {
-    .TP-Plugin-Tables_box tbody tr td:first-of-type p {
+    /*.TP-Plugin-Tables_box tbody tr td:first-of-type p {
         padding-left: 4px;
     }
     .TP-rwd-table tbody tr td:nth-child(2) p {
         padding-left: 4px;
+    } */
+    .TP-tdContent {
+        position: absolute;
+        top: 32%;
     }
 
     .TPPopUpButtonTable {
@@ -223,10 +227,10 @@
         background: #00b443;
         padding: 10px;
         display: inline-block;
-        width: 111px;
+        width: 113px;
         min-height: inherit;
         vertical-align: middle;
-        margin-right: 5px; }
+        margin-right: 9px; }
     .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
         display: inline-block;
         overflow: inherit;

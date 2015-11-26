@@ -57,7 +57,7 @@ class TPDefault implements  \core\TPODefault{
                 'marker' => '',
                 'extra_marker' => 'wpplugin',
                 'token' => '',
-                'white_label' => ''
+                'white_label' => '',
             ),
             'config' =>array(
                 'redirect' => 0,
