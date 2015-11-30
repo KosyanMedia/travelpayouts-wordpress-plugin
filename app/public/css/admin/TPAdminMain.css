@@ -2496,3 +2496,39 @@ thead tr td.active-w {
   margin-bottom: 7px;
 }
 
+#adminNoticeModal{
+  margin: 0 !important;
+}
+.TPadminNoticeModal .ui-dialog-titlebar {
+  display: none;
+}
+
+.TPnotice-dismiss{
+  position: absolute;
+  top: 0;
+  right: 1px;
+  border: none;
+  margin: 0;
+  padding: 9px;
+  background: 0 0;
+  color: #b4b9be !important;
+  cursor: pointer;
+}
+
+.TPnotice-dismiss:hover:before {
+  color: #c00 !important;
+}
+
+.TPnotice-dismiss:before{
+  background: 0 0;
+  color: #b4b9be !important;
+  content: '\f153';
+  display: block;
+  font: 400 16px/20px dashicons;
+  speak: none;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

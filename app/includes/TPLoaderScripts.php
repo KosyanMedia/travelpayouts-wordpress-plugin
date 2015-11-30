@@ -112,7 +112,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-TPAdminPluginPage', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminPluginPage.js', //$src
             array('jquery', 'wp-color-picker','jquery-ui-autocomplete',
-                'jquery-ui-accordion','jquery-ui-sortable',
+                'jquery-ui-accordion','jquery-ui-sortable', 'jquery-ui-dialog',
                 'jquery-ui-button','jquery-form', 'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-fileDownload', TPOPlUGIN_SLUG.'-jqColorPicker',
                 TPOPlUGIN_SLUG.'-excellentexport', TPOPlUGIN_SLUG.'-dataTables',
@@ -174,11 +174,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
+        wp_enqueue_style('wp-jquery-ui-dialog');
         switch($hook) {
             case "post.php":
             case "post-new.php":
             case "edit-tags.php":
-                wp_enqueue_style('wp-jquery-ui-dialog');
+
                 //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');

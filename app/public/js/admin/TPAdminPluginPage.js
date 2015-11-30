@@ -41,6 +41,7 @@ jQuery(function($){
 
     $.fn.dataTable.ext.errMode = 'throw';
     /** **/
+
     doc.ready(function(){
         selectLocalizationFields();
         buttonFontStyle('.BoldTracing');
@@ -615,18 +616,69 @@ jQuery(function($){
                  '</div>'
         return output;
     }
-    /** **/
+
+    /**
+     *
+     * @param selector
+     * @param class_notice
+     * @param title_notice
+     * @param message_notice
+     */
+    function adminNoticeModal(selector, class_notice, title_notice, message_notice){
+
+        var dialogNotice = doc.find(selector).dialog({
+            resizable: false,
+            draggable: false,
+            maxHeight:100,
+            maxWidth: 1000,
+            minWidth: 700,
+            minHeight:40,
+            modal: true,
+            dialogClass:"TPadminNoticeModal",
+            //position: { my: "center bottom", at: "center top", of: $('#constructorShortcodesButton')},
+            open : function() {
+                //$(this).parent().children('.ui-dialog-titlebar').hide();
+                /*$(this).parent().css({   position:'absolute',
+                    left: (win.width() - $(this).parent().outerWidth())/2,
+                    top: (win.height() - $(this).parent().outerHeight())/2
+                });*/
+                $(this).addClass(class_notice);
+                doc.find('.ui-widget-overlay').bind('click',function(){
+                    dialogNotice.dialog('close');
+                })
+
+
+            },
+            close: function( event, ui ) {
+            }
+        });
+        doc.find('#adminNoticeModalClose').click(function (e) {
+            dialogNotice.dialog( "close" );
+        });
+        return dialogNotice;
+
+    }
+
+    /**
+     *
+     * @param selector
+     * @constructor
+     */
     function TPSettingsSave(selector){
         doc.find(selector).submit(function() {
             //$(adminNotice('updated', 'test', 'test')).insertAfter('#wpbody');
-            if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+            /*if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
                 doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('updated', TPMesgUpdateSettings , ''));
             }else{
                 $('#wpbody-content').before(adminNotice('updated', TPMesgUpdateSettings , ''));
             }
+
+
+            */
+            var dialogNotice = adminNoticeModal("#adminNoticeModal", "updated");
             $(this).ajaxSubmit({
                 success: function(data){
-
+                    dialogNotice.dialog( "close" );
                 }
             });
             return false;

@@ -234,7 +234,14 @@ jQuery(function($) {
         });
         $(this).addClass("TP-active");
     });
-
+    var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
+    PopularRoutesWidgets.each(function(){
+        var $items = $(this).find('.TP-PopularRoutesWidget');
+        var width = 100/$items.length - 3;
+        $items.each(function(i,e){
+            $(e).css('width', width+"%");
+        });
+    });
 
     /*doc.find('td.TPTableTbodyTd').hover(function() {
         $(this).children("p").each(function(){
