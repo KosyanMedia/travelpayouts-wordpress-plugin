@@ -2532,3 +2532,13 @@ thead tr td.active-w {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#TravelpayoutsAdminNotice{
+  position: fixed;
+  border-right: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  z-index: 1000;
+  min-width: 300px;
+  width: 81%;
+}
+

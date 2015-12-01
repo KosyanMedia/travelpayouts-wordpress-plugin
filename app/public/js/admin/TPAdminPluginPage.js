@@ -613,7 +613,9 @@ jQuery(function($){
         message_notice = (isEmpty(message_notice))?'':'<p>'+message_notice+'</p>';
         output = '<div class="'+class_notice+'" id="'+TPPluginName+'AdminNotice">' +
                     '<p><strong>'+title_notice+'</strong></p>' +message_notice+
-                 '</div>'
+                    '<button class="TPnotice-dismiss" id="TPAdminNoticeClose"></button>'+
+                 '</div>';
+
         return output;
     }
 
@@ -667,23 +669,31 @@ jQuery(function($){
     function TPSettingsSave(selector){
         doc.find(selector).submit(function() {
             //$(adminNotice('updated', 'test', 'test')).insertAfter('#wpbody');
-            /*if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+            if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
                 doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('updated', TPMesgUpdateSettings , ''));
             }else{
                 $('#wpbody-content').before(adminNotice('updated', TPMesgUpdateSettings , ''));
             }
 
+            doc.find('#TPAdminNoticeClose').click(function () {
+                $(this).parent().remove();
+            });
 
-            */
-            var dialogNotice = adminNoticeModal("#adminNoticeModal", "updated");
+            //$('#wpadminbar').before(adminNotice('updated', TPMesgUpdateSettings , ''));
+
+            //var dialogNotice = adminNoticeModal("#adminNoticeModal", "updated");
             $(this).ajaxSubmit({
                 success: function(data){
-                    dialogNotice.dialog( "close" );
+                  //  dialogNotice.dialog( "close" );
+                    if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+                        doc.find('#'+TPPluginName+'AdminNotice').remove();
+                    }
                 }
             });
             return false;
         });
     }
+
     /**
      *
      * @param dataTable
