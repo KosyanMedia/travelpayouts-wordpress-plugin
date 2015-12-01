@@ -33,6 +33,7 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
             if (!$return)
                 return false;
         }
+
         return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
                 'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate, 'off_title' => $off_title);
 

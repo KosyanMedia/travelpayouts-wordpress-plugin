@@ -22,6 +22,7 @@ class TPShortcodeView {
                 $this->local = 'en';
                 break;
         }
+        \app\includes\models\site\TPAutocomplete::getInstance();
     }
 
     /**
@@ -498,16 +499,16 @@ class TPShortcodeView {
                         switch($type){
                             case 8:
                                 $origin_destination .= '<p class="TP-tdContent">
-                                        <span data-city-iata="'.$origin.'">'
-                                    .$origin
+                                        <span data-city-iata="'.$origin_iata.'">'
+                                    .\app\includes\models\site\TPAutocomplete::$data[$origin_iata]['name_translations'][$this->local]
                                     .'</span>'
                                     .$delimiter
                                     .'<span data-city-iata="'.$row['city'].'">'
                                     .$row['city'].'</span></p>';
                                 break;
                             case 9:
-                                $origin_destination .= '<p class="TP-tdContent"><span data-city-iata="'.$origin.'">'
-                                    .$origin
+                                $origin_destination .= '<p class="TP-tdContent"><span data-city-iata="'.$row['origin'].'">'
+                                    .$row['origin']
                                     .'</span>'
                                     .$delimiter
                                     .'<span data-city-iata="'.$row['destination'].'">'

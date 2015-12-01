@@ -45,7 +45,9 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             }
             array_multisort($rows, SORT_ASC, $rows);
             $rows = $this->iataAutocomplete($rows, 8);
+
         }
+
         return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
             'limit' => $limit, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate
         , 'off_title' => $off_title);
