@@ -210,6 +210,38 @@ class TPFieldFlightTickets {
                 </div>
 
             </div>
+
+            <div class="TP-StyleItem">
+                <div class="TP-ColorStyle TP-ColorStyle--cus">
+                    <span><?php _e('Button background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <label class="TP-BackgroundTables">
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][background]"
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['background']) ?>"/>
+                        <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
+
+                    </label>
+                </div>
+                <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
+                    <span><?php _e('Button border', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <label class="TP-BackgroundTables">
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][border]"
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['border']) ?>"/>
+
+                    </label>
+                </div>
+                <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
+                    <span><?php _e('Button font', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <label class="TP-BackgroundTables">
+                        <input class="TP-ColorStyleInput color no-alpha" type="text"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][color]"
+                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['color']) ?>"/>
+
+                    </label>
+                </div>
+
+            </div>
             <div class="TP-StyleItem">
                 <input id="chek677" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][hyperlink]"
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />

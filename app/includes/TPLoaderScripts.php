@@ -689,6 +689,16 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             a.paginate_button.current:hover {
                 color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?> !important;
             }
+
+            .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+                border-bottom: 1px solid <?php echo \app\includes\TPPlugin::$options['style_table']['button']['border']; ?> !important;
+                background: <?php echo \app\includes\TPPlugin::$options['style_table']['button']['background']; ?> !important;
+                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['button']['color']; ?> !important;
+            }
+            .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
+                background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['button']['background'], 0.8); ?> !important;
+            }
+
         </style>
     <?php
     }

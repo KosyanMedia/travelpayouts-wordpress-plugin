@@ -27,7 +27,10 @@ class TPDefault implements  \core\TPODefault{
             'head_text_color' => '#ffffff',
         ),
         'button' => array(
-            ''
+            'background' => '#fd8a27',
+            'color' => '#571601',
+            'border' => '#ce6408'
+
         )
     );
 
@@ -664,7 +667,10 @@ class TPDefault implements  \core\TPODefault{
                     'head_text_color' => '#ffffff',
                 ),
                 'button' => array(
-                    ''
+                    'background' => '#fd8a27',
+                    'color' => '#571601',
+                    'border' => '#ce6408'
+
                 )
             ),
             'widgets' => array(
