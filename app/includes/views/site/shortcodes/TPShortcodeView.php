@@ -63,7 +63,7 @@ class TPShortcodeView {
                         data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
                         data-sort_column="'.$sort_column.'">
                         '.$this->renderHeadTable($type, $one_way).'
-                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination).'
+                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit).'
                     </table>
                 </div>';
         return $html;
@@ -194,7 +194,7 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination){
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit){
         $delimiter = '';
         if($one_way === 'false'){
             $delimiter = ' &#8596 ';
