@@ -216,6 +216,8 @@
     .TP-rwd-table tbody tr td:first-of-type {
         border-top: 1px solid #f2f2f2; }
     .TP-rwd-table tbody tr td {
+        text-align: left;
+        overflow: hidden;
         padding: 0; }
     .TP-rwd-table tbody tr td img{
         max-height: 35px;
@@ -224,6 +226,7 @@
     }
     .TP-Plugin-Tables_box tbody tr td p {
         vertical-align: middle;
+        white-space: nowrap;
     }
     .TP-rwd-table tbody tr td:before {
         color: white;
