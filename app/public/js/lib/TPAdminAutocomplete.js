@@ -24,7 +24,7 @@ function TPCityAutocomplete(){
                         //console.log(tpLocale)
                         switch (tpLocale){
                             case 'ru':
-                                $.get("http://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                                $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
                                     response(
                                         $.map(data, function(item){
 
@@ -49,7 +49,7 @@ function TPCityAutocomplete(){
                                 })
                                 break;
                             case 'en':
-                                $.get("http://www.jetradar.com/autocomplete/places?q=" + request.term, function(data) {
+                                $.get("https://www.jetradar.com/autocomplete/places?q=" + request.term, function(data) {
                                     response(
                                         $.map(data, function(item){
                                             var airport = (item.name !== null) ? item.name : "";
@@ -72,7 +72,7 @@ function TPCityAutocomplete(){
                                 })
                                 break;
                             default:
-                                $.get("http://www.jetradar.com/autocomplete/places?q=" + request.term, function(data) {
+                                $.get("https://www.jetradar.com/autocomplete/places?q=" + request.term, function(data) {
                                     response(
                                         $.map(data, function(item){
                                             var airport = (item.name !== null) ? item.name : "";
@@ -143,7 +143,7 @@ function TPCityAutocomplete(){
                 }).autocomplete({
                     source: function(request, response){
                         //console.log(request.term, AppendTo);
-                        $.get("http://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                        $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
 
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                 var locations=[];
@@ -220,7 +220,7 @@ function TPCityAutocomplete(){
                 }).autocomplete({
                     source: function(request, response){
                         //console.log(request.term, AppendTo);
-                        $.get("http://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                        $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
                         var locations=[];
                         $.map(data, function(items, keys){
                             $.map(items, function(item, key){
