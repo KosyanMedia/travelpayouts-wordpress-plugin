@@ -356,6 +356,7 @@ span.ellipsis {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+    width: initial;
 }
 .TP-PopularRoutesWidgets{
     width: 100%;
