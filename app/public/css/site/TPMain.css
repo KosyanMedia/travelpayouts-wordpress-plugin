@@ -237,6 +237,7 @@
     .TP-Plugin-Tables_box tbody tr td p {
         vertical-align: middle;
         white-space: nowrap;
+        margin: 0;
     }
     .TP-rwd-table tbody tr td:before {
         color: white;
@@ -315,6 +316,7 @@
 
 .TP-Plugin-Tables_box tbody tr td p {
     display: inline;
+
 }
 
 .sorting_asc:after{
@@ -366,6 +368,7 @@ span.ellipsis {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+    width: auto;
 }
 .TP-PopularRoutesWidgets{
     width: 100%;
