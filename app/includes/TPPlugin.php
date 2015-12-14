@@ -80,6 +80,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     {
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();
+        delete_option( TPOPlUGIN_OPTION_NAME);
+        delete_option( TPOPlUGIN_OPTION_VERSION);
     }
 
 }

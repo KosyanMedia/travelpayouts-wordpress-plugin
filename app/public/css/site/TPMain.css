@@ -218,10 +218,12 @@
     .TP-rwd-table tbody tr td {
         text-align: left;
         overflow: hidden;
-        padding: 0; }
+        padding: 0 !important; }
     .TP-rwd-table tbody tr td img{
         max-height: 35px;
         vertical-align: middle;
+        max-width: 30%;
+        display: inline-block;
 
     }
     .TP-Plugin-Tables_box tbody tr td p {

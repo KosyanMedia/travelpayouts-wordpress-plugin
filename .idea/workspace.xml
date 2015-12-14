@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2ac3a06-ce83-424c-bf23-ff888a8833df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js" afterPath="$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" afterPath="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/site/TPMain.css" afterPath="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/TPPlugin.php" afterPath="$PROJECT_DIR$/app/includes/TPPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" afterPath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Travelpayouts.iws" />
@@ -31,12 +35,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TPDirectFlightsShortcodeModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php">
+      <file leaf-file-name="TPDefault.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <caret line="278" column="54" selection-start-line="278" selection-start-column="45" selection-end-line="278" selection-end-column="54" />
+              <folding>
+                <element signature="e#2470#7627#1#PHP" expanded="false" />
+                <element signature="e#27098#28798#1#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPMain.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8012232">
+              <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPDashboardModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPPlugin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding>
+                <element signature="e#1956#3771#0" expanded="false" />
+                <element signature="e#3875#4336#0" expanded="false" />
+                <element signature="e#4829#5012#0" expanded="false" />
+                <element signature="e#5080#5263#0" expanded="false" />
+                <element signature="e#8348#8860#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,48 +87,35 @@
       <file leaf-file-name="TPShortcodeView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.568966">
+              <caret line="732" column="106" selection-start-line="732" selection-start-column="106" selection-end-line="732" selection-end-column="106" />
               <folding>
                 <element signature="e#2621#4886#0#PHP" expanded="false" />
                 <element signature="e#4950#8930#0#PHP" expanded="false" />
                 <element signature="e#9709#13607#0#PHP" expanded="false" />
                 <element signature="e#13682#14110#0#PHP" expanded="false" />
-                <element signature="e#14150#32859#0#PHP" expanded="false" />
-                <marker date="1449063648642" expanded="true" signature="1723:2409" placeholder="..." />
-                <marker date="1449063648642" expanded="true" signature="1920:2386" placeholder="..." />
-                <marker date="1449063648642" expanded="true" signature="25897:26351" placeholder="..." />
+                <marker date="1450083554756" expanded="true" signature="1723:2409" placeholder="..." />
+                <marker date="1450083554756" expanded="true" signature="1920:2386" placeholder="..." />
+                <marker date="1450083554756" expanded="true" signature="25253:25662" placeholder="..." />
+                <marker date="1450083554756" expanded="true" signature="36690:36797" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TPMain.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
+      <file leaf-file-name="TPPlugin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes/TPPlugin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TPPriceCalendarMonthShortcodeModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPriceCalendarMonthShortcodeModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TPAdminAutocomplete.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.541528">
-              <caret line="222" column="36" selection-start-line="222" selection-start-column="36" selection-end-line="222" selection-end-column="36" />
-              <folding />
+              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+              <folding>
+                <marker date="1449737069052" expanded="true" signature="1797:2103" placeholder="..." />
+                <marker date="1449737069052" expanded="true" signature="2053:2098" placeholder="..." />
+                <marker date="1449737069052" expanded="true" signature="2200:2511" placeholder="..." />
+                <marker date="1449737069052" expanded="true" signature="2467:2506" placeholder="..." />
+                <marker date="1449737069052" expanded="true" signature="2603:2914" placeholder="..." />
+                <marker date="1449737069052" expanded="true" signature="2870:2909" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/travelpayouts.php" />
         <option value="$PROJECT_DIR$/app/public/css/admin/TPInsertShortcodes.css" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestFlightsShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeModel.php" />
@@ -133,7 +162,6 @@
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPPopularDestinationsAirlinesShortcodeModel.php" />
         <option value="$PROJECT_DIR$/app/includes/TPRequestApi.php" />
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldSettings.php" />
-        <option value="$PROJECT_DIR$/app/includes/TPPlugin.php" />
         <option value="$PROJECT_DIR$/app/public/js/site/TPPlugin.js" />
         <option value="$PROJECT_DIR$/app/includes/TPLoader.php" />
         <option value="$PROJECT_DIR$/app/includes/controllers/admin/TPModalAdminNoticeController.php" />
@@ -146,9 +174,11 @@
         <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldFlightTickets.php" />
         <option value="$PROJECT_DIR$/app/includes/TPLoaderScripts.php" />
         <option value="$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php" />
+        <option value="$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js" />
+        <option value="$PROJECT_DIR$/app/includes/TPPlugin.php" />
+        <option value="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" />
         <option value="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
         <option value="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
-        <option value="$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js" />
       </list>
     </option>
   </component>
@@ -166,9 +196,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -209,7 +239,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,6 +278,10 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -271,10 +304,6 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -308,7 +337,133 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelpayouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,6 +473,7 @@
         <subPane subId="Project Files" />
         <subPane subId="Default" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,17 +548,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23880596" sideWeight="0.47481242" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25262576" sideWeight="0.47481242" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18905473" sideWeight="0.52518755" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23365487" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23365487" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -549,7 +705,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php</url>
-          <line>628</line>
+          <line>621</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -583,13 +739,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestFlightsShortcodeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32876712">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/controllers/site/shortcodes/TPCheapestTicketEachDayMonthShortcodeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1849315">
@@ -743,31 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPPlugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPSettingsModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03197158">
           <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="236" column="35" selection-start-line="236" selection-start-column="35" selection-end-line="236" selection-end-column="58" />
-          <folding>
-            <element signature="e#1956#3771#0" expanded="false" />
-            <element signature="e#3875#4336#0" expanded="false" />
-            <element signature="e#4829#5012#0" expanded="false" />
-            <element signature="e#5080#5263#0" expanded="false" />
-            <element signature="e#8348#8860#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,18 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="e#2470#7627#1#PHP" expanded="false" />
-            <element signature="e#7657#26098#1#PHP" expanded="false" />
-            <element signature="e#27098#28798#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPFieldFlightTickets.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -941,36 +1057,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php">
+    <entry file="file://$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#2621#4886#0#PHP" expanded="false" />
-            <element signature="e#4950#8930#0#PHP" expanded="false" />
-            <element signature="e#9709#13607#0#PHP" expanded="false" />
-            <element signature="e#13682#14110#0#PHP" expanded="false" />
-            <element signature="e#14150#32859#0#PHP" expanded="false" />
-            <marker date="1449063648642" expanded="true" signature="1723:2409" placeholder="..." />
-            <marker date="1449063648642" expanded="true" signature="1920:2386" placeholder="..." />
-            <marker date="1449063648642" expanded="true" signature="25897:26351" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.8604651">
+          <caret line="472" column="2" selection-start-line="472" selection-start-column="2" selection-end-line="472" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -978,14 +1068,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/site/shortcodes/TPDirectFlightsShortcodeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77397263">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+          <folding>
+            <marker date="1449737069052" expanded="true" signature="1797:2103" placeholder="..." />
+            <marker date="1449737069052" expanded="true" signature="2053:2098" placeholder="..." />
+            <marker date="1449737069052" expanded="true" signature="2200:2511" placeholder="..." />
+            <marker date="1449737069052" expanded="true" signature="2467:2506" placeholder="..." />
+            <marker date="1449737069052" expanded="true" signature="2603:2914" placeholder="..." />
+            <marker date="1449737069052" expanded="true" signature="2870:2909" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/TPDefault.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="278" column="54" selection-start-line="278" selection-start-column="45" selection-end-line="278" selection-end-column="54" />
+          <folding>
+            <element signature="e#2470#7627#1#PHP" expanded="false" />
+            <element signature="e#27098#28798#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/lib/TPAdminAutocomplete.js">
+    <entry file="file://$PROJECT_DIR$/app/public/js/site/TPPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.541528">
-          <caret line="222" column="36" selection-start-line="222" selection-start-column="36" selection-end-line="222" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="e#1956#3771#0" expanded="false" />
+            <element signature="e#3875#4336#0" expanded="false" />
+            <element signature="e#4829#5012#0" expanded="false" />
+            <element signature="e#5080#5263#0" expanded="false" />
+            <element signature="e#8348#8860#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.568966">
+          <caret line="732" column="106" selection-start-line="732" selection-start-column="106" selection-end-line="732" selection-end-column="106" />
+          <folding>
+            <element signature="e#2621#4886#0#PHP" expanded="false" />
+            <element signature="e#4950#8930#0#PHP" expanded="false" />
+            <element signature="e#9709#13607#0#PHP" expanded="false" />
+            <element signature="e#13682#14110#0#PHP" expanded="false" />
+            <marker date="1450083554756" expanded="true" signature="1723:2409" placeholder="..." />
+            <marker date="1450083554756" expanded="true" signature="1920:2386" placeholder="..." />
+            <marker date="1450083554756" expanded="true" signature="25253:25662" placeholder="..." />
+            <marker date="1450083554756" expanded="true" signature="36690:36797" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8012232">
+          <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
           <folding />
         </state>
       </provider>

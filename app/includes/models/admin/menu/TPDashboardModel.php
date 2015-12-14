@@ -30,6 +30,7 @@ class TPDashboardModel {
         $cacheKey = TPOPlUGIN_NAME."_TPBalance";
         $TPBalance = array();
         if ( false === ( $TPBalance = get_transient($cacheKey) ) ) {
+          //  error_log('tpGetBalance');
             //$TPBalance['time'] = current_time('timestamp',1);
             $return = \app\includes\TPPlugin::$TPRequestApi->get_balance();
             if( ! $return )
@@ -47,6 +48,7 @@ class TPDashboardModel {
         $cacheKey = TPOPlUGIN_NAME."_TPDetailedSales";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
+           // error_log('tpGetDetailedSales');
             $TPDetailedSales['current_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales();
             if( !$TPDetailedSales['current_month'])
                 return false;
@@ -66,6 +68,7 @@ class TPDashboardModel {
         $cacheKey = TPOPlUGIN_NAME."_TPRssNew";
         $TPRss = array();
         if ( false === ( $TPRss = get_transient($cacheKey) ) ) {
+           // error_log('tpGetXmlRss');
             try {
                 $sxml = @simplexml_load_file("http://blog.travelpayouts.com/feed/", 'SimpleXMLElement', LIBXML_NOCDATA);
                 if ($sxml !== false) {
