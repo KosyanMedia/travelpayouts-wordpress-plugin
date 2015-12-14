@@ -197,9 +197,9 @@
         position: absolute;
         top: 32%;
     }
-     .TP-AirlineLogo{
-         top: 0 !important;
-     }
+    .TP-AirlineLogo{
+        top: 0 !important;
+    }
     .TPPopUpButtonTable {
         display: none !important;}
     .TP-rwd-table {
@@ -226,6 +226,7 @@
         vertical-align: middle;
         max-width: 30%;
         display: inline-block;
+        width: auto;
 
     }
     .TP-Plugin-Tables_box tbody tr td p {
@@ -464,64 +465,90 @@ span.ellipsis {
   display: block;
 }
 /*.w-table tbody tr:hover td:last-of-type p {*/
-  /*display: none;*
+/*display: none;*
 /*}*
 .w-table tbody tr td {
-  padding: 0 20px;
-  font-size: 13px;
-  color: #262626;
-  font-weight: normal;
-    vertical-align: middle !important;
-    position: relative;
+padding: 0 20px;
+font-size: 13px;
+color: #262626;
+font-weight: normal;
+  vertical-align: middle !important;
+  position: relative;
 
 }
 .w-table tbody tr td p {
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  /*width: 100px;*
+position: relative;
+white-space: nowrap;
+overflow: hidden;
+/*width: 100px;*
 }
 .w-table tbody tr td p:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 15px;
-  background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), #FFF) repeat scroll 0% 0%;
+content: "";
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+bottom: 0;
+width: 15px;
+background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), #FFF) repeat scroll 0% 0%;
 }
 .w-table tbody tr td:last-of-type {
-  width: 100px;
+width: 100px;
 
 }
 .w-table tbody tr td:last-of-type a {
-    min-width: 130px !important;
-    margin: 0 auto;
-    margin-top: 7px;
+  min-width: 130px !important;
+  margin: 0 auto;
+  margin-top: 7px;
 }
 .w-table tbody tr td:first-of-type a {
-    width: 125px !important;
-    margin: 0 auto;
+  width: 125px !important;
+  margin: 0 auto;
 }
 
 .btn-table {
-  /*width: 100px;*
+/*width: 100px;*
+padding: 0 10px;
+height: 30px;
+display: none;
+  position: absolute;
+  margin-top: 7px;
+  top: 0;
+  right: 10px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+border-bottom: 1px solid #ce6408;
+text-align: center;
+background: #fd8a27;
+font-size: 13px;
+color: #571601 !important;
+font-weight: 400;
+line-height: 30px;
+text-decoration: none;
+-webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+-ms-transition: all ease 0.3s;
+-o-transition: all ease 0.3s;
+transition: all ease 0.3s;
+  white-space: nowrap;
+}
+
+.btn-tableShow{
   padding: 0 10px;
   height: 30px;
-  display: none;
-    position: absolute;
-    margin-top: 7px;
-    top: 0;
-    right: 10px;
+  display: block;
+  margin-top: 2px !important;
+  top: 0;
+  right: 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border-bottom: 1px solid #ce6408;
+  border-bottom: 1px solid #ce6408 ;
   text-align: center;
-  background: #fd8a27;
+  background: #fd8a27 ;
   font-size: 13px;
-  color: #571601 !important;
+  color: #571601  !important;
   font-weight: 400;
   line-height: 30px;
   text-decoration: none;
@@ -530,155 +557,129 @@ span.ellipsis {
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
-    white-space: nowrap;
-}
-
-.btn-tableShow{
-    padding: 0 10px;
-    height: 30px;
-    display: block;
-    margin-top: 2px !important;
-    top: 0;
-    right: 10px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    border-bottom: 1px solid #ce6408 ;
-    text-align: center;
-    background: #fd8a27 ;
-    font-size: 13px;
-    color: #571601  !important;
-    font-weight: 400;
-    line-height: 30px;
-    text-decoration: none;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
-    transition: all ease 0.3s;
-    white-space: nowrap;
-    overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .btn-tableShow span {
-    line-height: 30px;
+  line-height: 30px;
 }
 .btn-table span {
-    line-height: 30px;
+  line-height: 30px;
 }
 .btn-table:hover {
-    background: #ce6408;
-    text-decoration: none;
-    color: #fff !important;
+  background: #ce6408;
+  text-decoration: none;
+  color: #fff !important;
 }
 .btn-tableShow:hover {
-    background: #ce6408;
-    text-decoration: none;
-    color: #fff !important;
+  background: #ce6408;
+  text-decoration: none;
+  color: #fff !important;
 }
 .TPTableHead{
-    cursor: pointer;
+  cursor: pointer;
 }
 .TPTableTbodyTr > td > p{
-    margin: 0px !important;
+  margin: 0px !important;
 }
 .sorting_asc:after{
-    content: " ▴" !important;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    margin-top: 12px;
+  content: " ▴" !important;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  margin-top: 12px;
 }
 .sorting_desc:after{
-    content: " ▾" !important;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    margin-top: 12px;
+  content: " ▾" !important;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  margin-top: 12px;
 
 }
 .dataTables_paginate span a {
-    margin-right: 5px;
-    display: block;
-    float: left;
-    width: 30px;
-    height: 30px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 26px;
-    color: black;
+  margin-right: 5px;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  color: black;
 }
 span.ellipsis {
-    display: block;
-    float: left;
-    width: 30px;
-    height: 30px;
-    border: 2px solid transparent;
-    text-align: center;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  text-align: center;
 }
 
 .TPPlaceTD{
-    width: 15% !important;
+  width: 15% !important;
 }
 .TPDirectionTD{
-    width: 50% !important;
+  width: 50% !important;
 }
 
 .TPFlightNumberTD > p::after{
-    display: none !important;
+  display: none !important;
 }
 .w-table tbody tr:first-of-type td {
-    border-top: 0px none;
+  border-top: 0px none;
 }
 .w-table tbody tr td img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 .w-table thead tr td.tp-price-column {
-    /*min-width: 100px !important;*
-    min-width: 75px !important;
-    width: auto;
+  /*min-width: 100px !important;*
+  min-width: 75px !important;
+  width: auto;
 }
 .TP-TitleTablezs{
-   /* white-space: nowrap !important;  *
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
+ /* white-space: nowrap !important;  *
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
 }
 @font-face {
-    font-family: 'ALSRubl';
-    src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ALSRubl';
+  src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 .TP-PopularRoutesWidgets{
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
 }
 .TP-PopularRoutesWidget{
-    margin-right: 15px;
-    margin-bottom: 15px;
-    float: left;
-    width: 30%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  float: left;
+  width: 30%;
 
 }
 
 .w-table tbody tr:nth-child(odd) {
-    background: #FFF;
+  background: #FFF;
 }
 
 p.parrentBtn {
-    overflow: visible !important;
-    position: absolute !important;
-    margin-top: 7px !important;
-    top: 0;
-    right: 10px;
+  overflow: visible !important;
+  position: absolute !important;
+  margin-top: 7px !important;
+  top: 0;
+  right: 10px;
 }
 .TPTdButtonShow > p:after{
-    display: none !important;
+  display: none !important;
 }
 .w-table tr.odd td{
-    background: none;
+  background: none;
 }*/
