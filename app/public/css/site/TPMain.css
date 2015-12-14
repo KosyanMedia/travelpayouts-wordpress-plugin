@@ -173,6 +173,11 @@
     display: block; }
 .TP-rwd-table td:before {
     content: attr(data-th) ": "; }
+.TP-Plugin-Tables_box thead tr td p, .TP-Plugin-Tables_box tbody tr td p {
+    font-size: 15px !important;
+    line-height: 1 !important;
+}
+
 
 @media (min-width: 480px) {
     .TP-rwd-table td:before {
