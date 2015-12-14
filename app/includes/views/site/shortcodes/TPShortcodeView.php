@@ -310,23 +310,25 @@ class TPShortcodeView {
                     case "flight_number":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $row['airline_iata'].' '. $row[$selected_field],
                                 $type, $count, $price).'
-                            </td>';
+                            </p></td>';
                         break;
                     //Рейс
                     case "flight":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 '<p  data-airline-iata="'.$row['airline'].'">' .
                                 $row['airline'].'</p><span>('. $row['airline_iata'].' '.
                                 $row['flight_number'].')</span>',
                                 $type, $count, $price).'
-
+                            </p>
                             </td>';
                         break;
                     //Дата вылета
@@ -339,20 +341,22 @@ class TPShortcodeView {
                             case 12:
                             case 13:
                             case 14:
-                                $bodyTable .= $this->getTextTdTable(
-                                                $urlLink,
-                                                '<p data-tptime="'.strtotime(  $row['depart_date']  ).'">'
-                                                .$this->tpDate(strtotime(  $row['depart_date'] ))
-                                                .'</p>',
-                                                $type, $count, $price);
-                                break;
-                            default:
+                                $bodyTable .=  '<p data-tptime="'.strtotime(  $row['depart_date']  ).'" class="TP-tdContent">';
                                 $bodyTable .= $this->getTextTdTable(
                                     $urlLink,
-                                    '<p data-tptime="'.strtotime(  $row[$selected_field] ).'">'
-                                    .$this->tpDate(strtotime(  $row[$selected_field] ))
-                                    .'</p>',
+                                    $this->tpDate(strtotime(  $row['depart_date'] )),
                                     $type, $count, $price);
+                                $bodyTable .= '</p>';
+                                break;
+                            default:
+                                $bodyTable .= '<p data-tptime="'.strtotime(  $row[$selected_field] ).'" class="TP-tdContent">';
+
+                                $bodyTable .= $this->getTextTdTable(
+                                    $urlLink,
+                                    $this->tpDate(strtotime(  $row[$selected_field] )),
+                                    $type, $count, $price);
+                               $bodyTable .= '</p>';
+
                                 break;
                         }
 
@@ -369,7 +373,7 @@ class TPShortcodeView {
                                 if($one_way === 'false') {
                                     $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                                         class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                                        <p data-tptime="' . strtotime($row['return_date']) . '">
+                                        <p data-tptime="' . strtotime($row['return_date']) . '" class="TP-tdContent">
                                             '.$this->getTextTdTable(
                                                 $urlLink,
                                                 $this->tpDate(strtotime($row['return_date'])),
@@ -381,7 +385,7 @@ class TPShortcodeView {
                             default:
                                 $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                                     class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                                    <p data-tptime="' . strtotime($row[$selected_field]) . '">
+                                    <p data-tptime="' . strtotime($row[$selected_field]) . '" class="TP-tdContent">
                                         '.$this->getTextTdTable(
                                         $urlLink,
                                         $this->tpDate(strtotime($row[$selected_field])),
@@ -409,56 +413,64 @@ class TPShortcodeView {
                         }
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $number_of_changes,
                                 $type, $count, $price).'
+                            </p>
                             </td>';
                         break;
                     //Стоимость
                     case "price":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p data-price="'.$price.'">
-                            '.$this->getTextTdTable(
-                                $urlLink,
-                                number_format($price, 0, '.', ' '),
-                                $type, $count, $price).$this->currencyView().'
-                            </p>
+                                <p data-price="'.$price.'" class="TP-tdContent">
+                                '.$this->getTextTdTable(
+                                    $urlLink,
+                                    number_format($price, 0, '.', ' '),
+                                    $type, $count, $price).$this->currencyView().'
+                                </p>
                             </td>';
                         break;
                     //Авиакомпания
                     case "airline":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            '.$this->getTextTdTable(
-                                $urlLink,
-                                '<p data-airline-iata="'.$row[$selected_field].'">' .
-                                $row[$selected_field].'</p>',
-                                $type, $count, $price).'
+                                <p class="TP-tdContent">
+                                '.$this->getTextTdTable(
+                                    $urlLink,
+                                    '<p data-airline-iata="'.$row[$selected_field].'">' .
+                                    $row[$selected_field].'</p>',
+                                    $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Лого авиакомпании
                     case "airline_logo":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent TP-AirlineLogo">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 '<img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
                                 .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">'
                                ,
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Откуда
                     case "origin":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 '<span data-city-iata="'.$row[$selected_field].'">'.
                                 $row[$selected_field].'</span>',
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Куда
@@ -481,10 +493,12 @@ class TPShortcodeView {
                         }
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $destination_txt,
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     // ОткудаКуда
@@ -519,57 +533,67 @@ class TPShortcodeView {
 
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $origin_destination,
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Место
                     case "place":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $count_row,
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Направление
                     case "direction":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $row,
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Класс перелета
                     case "trip_class":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $this->getTripClass($row[$selected_field]),
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Расстояние
                     case "distance":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                            <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $this->tpDistanceView($row[$selected_field]),
                                 $type, $count, $price).'
+                                </p>
                             </td>';
                         break;
                     //Цена за километр
                     case "price_distance":
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p data-price="'.$row["value"]/$row['distance'].'">
+                            <p data-price="'.$row["value"]/$row['distance'].'" class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 number_format($row["value"]/$row['distance'], 0, '.', ' ').$this->currencyView(),
@@ -584,7 +608,7 @@ class TPShortcodeView {
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
                             <p data-tptime="'.strtotime(  $row[$selected_field] ).'"
-                                data-tpctime="'.current_time('timestamp').'"">
+                                data-tpctime="'.current_time('timestamp').'"" class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp')),
@@ -729,8 +753,7 @@ class TPShortcodeView {
             switch($type){
                 //link
                 case 0:
-                    $textTd = '<p class="TP-tdContent">
-                        <a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$text.'</a></p>';
+                    $textTd = '<a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$text.'</a>';
                     break;
                 //button
                 case 1:

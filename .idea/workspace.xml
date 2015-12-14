@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2ac3a06-ce83-424c-bf23-ff888a8833df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" afterPath="$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/site/TPMain.css" afterPath="$PROJECT_DIR$/app/public/css/site/TPMain.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/TPPlugin.php" afterPath="$PROJECT_DIR$/app/includes/TPPlugin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" afterPath="$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Travelpayouts.iws" />
@@ -51,18 +48,8 @@
       <file leaf-file-name="TPMain.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8012232">
-              <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TPDashboardModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/includes/models/admin/menu/TPDashboardModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.61904764">
+              <caret line="200" column="27" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -87,17 +74,16 @@
       <file leaf-file-name="TPShortcodeView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.568966">
-              <caret line="732" column="106" selection-start-line="732" selection-start-column="106" selection-end-line="732" selection-end-column="106" />
+            <state vertical-scroll-proportion="-6.148148">
+              <caret line="452" column="51" selection-start-line="452" selection-start-column="51" selection-end-line="452" selection-end-column="65" />
               <folding>
                 <element signature="e#2621#4886#0#PHP" expanded="false" />
                 <element signature="e#4950#8930#0#PHP" expanded="false" />
                 <element signature="e#9709#13607#0#PHP" expanded="false" />
                 <element signature="e#13682#14110#0#PHP" expanded="false" />
-                <marker date="1450083554756" expanded="true" signature="1723:2409" placeholder="..." />
-                <marker date="1450083554756" expanded="true" signature="1920:2386" placeholder="..." />
-                <marker date="1450083554756" expanded="true" signature="25253:25662" placeholder="..." />
-                <marker date="1450083554756" expanded="true" signature="36690:36797" placeholder="..." />
+                <marker date="1450086442064" expanded="true" signature="1723:2409" placeholder="..." />
+                <marker date="1450086442064" expanded="true" signature="1920:2386" placeholder="..." />
+                <marker date="1450086442064" expanded="true" signature="25991:26400" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -196,9 +182,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -239,6 +225,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -473,7 +460,6 @@
         <subPane subId="Project Files" />
         <subPane subId="Default" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,17 +534,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25262576" sideWeight="0.47481242" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25538972" sideWeight="0.47481242" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18905473" sideWeight="0.52518755" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23365487" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23365487" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5005359" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -705,7 +691,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php</url>
-          <line>621</line>
+          <line>645</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1128,25 +1114,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/views/site/shortcodes/TPShortcodeView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.568966">
-          <caret line="732" column="106" selection-start-line="732" selection-start-column="106" selection-end-line="732" selection-end-column="106" />
+        <state vertical-scroll-proportion="-6.148148">
+          <caret line="452" column="51" selection-start-line="452" selection-start-column="51" selection-end-line="452" selection-end-column="65" />
           <folding>
             <element signature="e#2621#4886#0#PHP" expanded="false" />
             <element signature="e#4950#8930#0#PHP" expanded="false" />
             <element signature="e#9709#13607#0#PHP" expanded="false" />
             <element signature="e#13682#14110#0#PHP" expanded="false" />
-            <marker date="1450083554756" expanded="true" signature="1723:2409" placeholder="..." />
-            <marker date="1450083554756" expanded="true" signature="1920:2386" placeholder="..." />
-            <marker date="1450083554756" expanded="true" signature="25253:25662" placeholder="..." />
-            <marker date="1450083554756" expanded="true" signature="36690:36797" placeholder="..." />
+            <marker date="1450086442064" expanded="true" signature="1723:2409" placeholder="..." />
+            <marker date="1450086442064" expanded="true" signature="1920:2386" placeholder="..." />
+            <marker date="1450086442064" expanded="true" signature="25991:26400" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/site/TPMain.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8012232">
-          <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.61904764">
+          <caret line="200" column="27" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
           <folding />
         </state>
       </provider>

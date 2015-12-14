@@ -197,7 +197,9 @@
         position: absolute;
         top: 32%;
     }
-
+     .TP-AirlineLogo{
+         top: 0 !important;
+     }
     .TPPopUpButtonTable {
         display: none !important;}
     .TP-rwd-table {
@@ -370,6 +372,9 @@ span.ellipsis {
     float: left;
     width: 30%;
 
+}
+.TP-tdContent a {
+    border: none !important;
 }
 /*# sourceMappingURL=main.css.map */
 
