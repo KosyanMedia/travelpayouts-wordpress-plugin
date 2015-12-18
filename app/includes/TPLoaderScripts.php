@@ -634,8 +634,26 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             }
-
-            .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td {
+            .TP-tdContent, .TP-tdContent a{
+                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
+                font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
+                <?php
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold'])){
+                        echo 'font-weight: bold !important;';
+                    }
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic'])){
+                        echo 'font-style: italic !important;';
+                    }
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline'])){
+                        echo 'text-decoration: underline !important;';
+                    }
+                ?>
+            }
+            .TPCurrencyIco{
+                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
+            }
+            .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td,
+            .TP-Plugin-Tables_box tbody tr td a span{
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
             <?php
