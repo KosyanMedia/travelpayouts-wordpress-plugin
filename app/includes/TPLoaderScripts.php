@@ -634,7 +634,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             }
-            .TP-tdContent, .TP-tdContent a{
+
+            .TP-tdContent a{
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
                 <?php
@@ -653,7 +654,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
             }
             .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td,
-            .TP-Plugin-Tables_box tbody tr td a span{
+            .TP-Plugin-Tables_box tbody tr td a span,
+            .TP-Plugin-Tables_box tbody tr td p
+            {
                 font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
             <?php
