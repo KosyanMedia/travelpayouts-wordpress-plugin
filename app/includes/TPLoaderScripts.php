@@ -175,6 +175,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             true //$$in_footer
         );
         wp_enqueue_style('wp-jquery-ui-dialog');
+        error_log($hook);
         switch($hook) {
             case "post.php":
             case "post-new.php":
@@ -189,7 +190,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
                 break;
         }
-        if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false ){
+        if(strripos($hook, 'tpgenerator') !== false){
+            //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
+            wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
+            wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');
+            wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertWidgets');
+            wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
+
+        }
+        if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false){
             wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminNormalize');
             wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
             wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminPluginPage');
