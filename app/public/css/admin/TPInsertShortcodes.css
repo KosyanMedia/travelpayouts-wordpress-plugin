@@ -311,4 +311,9 @@
     font-weight: 300;
     color: #b5b5b9;
 }
+#constructorShortcodesModal input[type="checkbox"],
+#constructorWidgetModalForm input[type="checkbox"],
+#constructorLinkModalTable input[type="checkbox"]{
+    display: inline-block;
+}
 
