@@ -175,7 +175,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             true //$$in_footer
         );
         wp_enqueue_style('wp-jquery-ui-dialog');
-        error_log($hook);
+
         switch($hook) {
             case "post.php":
             case "post-new.php":
