@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-12-01 16:29+0300\n"
+"POT-Creation-Date: 2016-01-04 15:16+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -37,62 +37,62 @@ msgstr "Проблема с плагином? Есть пожелания или
 msgid "View "
 msgstr ""
 
-#: app/includes/TPLoaderScripts.php:209 app/includes/TPPluginWidget.php:249
+#: app/includes/TPLoaderScripts.php:218 app/includes/TPPluginWidget.php:249
 #: app/includes/models/admin/menu/TPFieldSettings.php:439
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:99
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:45
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:100
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
 msgid "Destination"
 msgstr "Куда"
 
-#: app/includes/TPLoaderScripts.php:210 app/includes/TPPluginWidget.php:240
+#: app/includes/TPLoaderScripts.php:219 app/includes/TPPluginWidget.php:240
 #: app/includes/models/admin/menu/TPFieldSettings.php:416
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:39
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPLoaderScripts.php:211
+#: app/includes/TPLoaderScripts.php:220
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:214
+#: app/includes/TPLoaderScripts.php:223
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:215
+#: app/includes/TPLoaderScripts.php:224
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:231 app/includes/TPLoaderScripts.php:232
-#: app/includes/TPLoaderScripts.php:236 app/includes/TPLoaderScripts.php:237
+#: app/includes/TPLoaderScripts.php:240 app/includes/TPLoaderScripts.php:241
+#: app/includes/TPLoaderScripts.php:245 app/includes/TPLoaderScripts.php:246
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:241
+#: app/includes/TPLoaderScripts.php:250
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:242
+#: app/includes/TPLoaderScripts.php:251
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:246
+#: app/includes/TPLoaderScripts.php:255
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:247
+#: app/includes/TPLoaderScripts.php:256
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:250
+#: app/includes/TPLoaderScripts.php:259
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:251
+#: app/includes/TPLoaderScripts.php:260
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -357,7 +357,7 @@ msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:52
 #: app/includes/models/admin/menu/TPFieldWidgets.php:305
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:65
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:66
 msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
@@ -367,7 +367,7 @@ msgstr "Скрыть логотип"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:60
 #: app/includes/models/admin/menu/TPFieldWidgets.php:157
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:56
 msgid "Size"
 msgstr "Размер"
 
@@ -416,7 +416,7 @@ msgstr "Период, дни"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:364
 #: app/includes/models/admin/menu/TPFieldWidgets.php:397
 #: app/includes/models/admin/menu/TPFieldWidgets.php:431
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:108
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:109
 msgid "Responsive"
 msgstr "Резиновая"
 
@@ -424,8 +424,8 @@ msgstr "Резиновая"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:368
 #: app/includes/models/admin/menu/TPFieldWidgets.php:401
 #: app/includes/models/admin/menu/TPFieldWidgets.php:435
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:81
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:112
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:82
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:113
 msgid "Width"
 msgstr "Ширина"
 
@@ -443,7 +443,7 @@ msgstr "Период"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:308
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:58
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:74
 msgid "One way"
 msgstr "В одну сторону"
 
@@ -968,6 +968,7 @@ msgstr ""
 #: app/includes/views/admin/menu/TPWidgets.view.php:59
 #: app/includes/views/admin/menu/TPWidgets.view.php:73
 #: app/includes/views/admin/menu/TPWidgets.view.php:86
+#: app/includes/views/admin/menu/TPWidgets.view.php:100
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
@@ -1154,6 +1155,11 @@ msgstr "Виджет отеля"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:32
 msgid "Popular Destinations Widget"
 msgstr "Виджет популярных направлений"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:93
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
+msgid "Widget of hotel selections"
+msgstr "Виджет отельных подборок"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:3
 #: app/includes/views/admin/menu/TPDashboard.view.php:80
@@ -1530,11 +1536,11 @@ msgstr "Конструктор виджетов"
 msgid "Select widget"
 msgstr "Выберите виджет"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:51
 msgid "Hotel"
 msgstr "Отель"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:89
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:90
 msgid "Count"
 msgstr "Количество"
 
@@ -1849,9 +1855,6 @@ msgstr "Вставить ссылку"
 
 #~ msgid "Widget popular routes"
 #~ msgstr "Виджет популярных направлений "
-
-#~ msgid "Widget hotel"
-#~ msgstr "Виджет отеля"
 
 #~ msgid "Widget subscriptions"
 #~ msgstr "Виджет подписок "

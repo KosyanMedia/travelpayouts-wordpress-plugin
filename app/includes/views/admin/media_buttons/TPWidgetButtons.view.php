@@ -30,6 +30,7 @@
                         <?php } ?>
                         <option value="5"><?php _e('Hotel Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="6"><?php _e('Popular Destinations Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="7"><?php _e('Widget of hotel selections', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
             </tr>
             <tr id="tr_origin_widget">

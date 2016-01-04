@@ -35,6 +35,9 @@ class TPWidgetsModel extends \app\includes\models\admin\TPOptionModel{
         add_settings_section( 'tp_settings_widget_6_id', '', '', 'tp_settings_widget_6' );
         add_settings_field('tp_widget_6_td', '', array(&$field ,'TPFieldWidget_6'),
             'tp_settings_widget_6', 'tp_settings_widget_6_id' );
+        add_settings_section( 'tp_settings_widget_7_id', '', '', 'tp_settings_widget_7' );
+        add_settings_field('tp_widget_7_td', '', array(&$field ,'TPFieldWidget_7'),
+            'tp_settings_widget_7', 'tp_settings_widget_7_id' );
     }
 
 }

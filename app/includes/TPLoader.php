@@ -57,6 +57,7 @@ class TPLoader extends \core\TPOLoader{
         new \app\includes\controllers\site\widgets\TPSubscriptionsWidgetController();
         new \app\includes\controllers\site\widgets\TPHotelWidgetController();
         new \app\includes\controllers\site\widgets\TPPopularRoutesWidgetController();
+        new \app\includes\controllers\site\widgets\TPHotelSelectController();
 
 
     }

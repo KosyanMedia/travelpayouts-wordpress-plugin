@@ -719,6 +719,13 @@ class TPDefault implements  \core\TPODefault{
                     'width' => '260',
                     'responsive' => 1,
                     'count' => 3,
+                ),
+                '7' => array(
+                    'limit' => 10,
+                    'type' => 'full',
+                    'width' => '800',
+                    'responsive' => 1,
+
                 )
 
             ),

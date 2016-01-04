@@ -459,4 +459,8 @@ class TPFieldWidgets {
         </div>
     <?php
     }
+    public function TPFieldWidget_7(){
+        $widgets = 7;
+
+    }
 }
