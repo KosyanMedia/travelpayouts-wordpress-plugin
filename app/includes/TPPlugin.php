@@ -1,4 +1,5 @@
 <?php
+
 namespace app\includes;
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public static $TPRequestApi;
