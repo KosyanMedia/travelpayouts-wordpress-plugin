@@ -22,9 +22,14 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
     {
         // TODO: Implement render() method.
         $widgets = 7;
+       // error_log();
         $output = '';
         $output = '<script async src="//www.travelpayouts.com/blissey/scripts.js?categories=5stars%2Csea_view%2Cluxury&iata=MOW'
-        .'&type=full&currency=rub&width=800&host=search.hotellook.com&marker=17942.&limit=10" charset="UTF-8"></script>';
+        .'&type='.\app\includes\TPPlugin::$options["widgets"][$widgets]['type']
+        .'&currency='.mb_strtolower($this->view->typeCurrency())
+        .'&width=800&host=search.hotellook.com&marker=17942.&limit='
+        .\app\includes\TPPlugin::$options['widgets'][$widgets]['limit']
+        .'" charset="UTF-8"></script>';
         return $output;
     }
 }

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-04 15:16+0300\n"
+"POT-Creation-Date: 2016-01-11 11:06+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -96,15 +96,15 @@ msgstr "Создать"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: app/includes/TPLoader.php:89
+#: app/includes/TPLoader.php:90
 msgid "Set details and enable plugin features"
 msgstr "Настроить плагин для начала работы"
 
-#: app/includes/TPLoader.php:94
+#: app/includes/TPLoader.php:95
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
-#: app/includes/TPLoader.php:95
+#: app/includes/TPLoader.php:96
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "
@@ -241,6 +241,7 @@ msgid "Airline"
 msgstr "Авиакомпания"
 
 #: app/includes/TPPluginWidget.php:267
+#: app/includes/models/admin/menu/TPFieldWidgets.php:467
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:497
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:104
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:106
@@ -450,6 +451,18 @@ msgstr "В одну сторону"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:446
 msgid "Number of Widgets"
 msgstr "Количество виджетов при вставке в запись"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:482
+msgid "View widget"
+msgstr "Вид виджета"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:485
+msgid "Full"
+msgstr "Расширенный"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:487
+msgid "Compact"
+msgstr "Компактный"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:15

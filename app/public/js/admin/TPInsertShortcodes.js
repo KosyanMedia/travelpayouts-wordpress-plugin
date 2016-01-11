@@ -7,7 +7,7 @@ jQuery(function($) {
 
     });
     doc.find('#constructorShortcodesButton').click(function (e) {
-        console.log("constructorShortcodesButton");
+        //console.log("constructorShortcodesButton");
         doc.find( "#constructorShortcodesModal" ).dialog({
             resizable: false,
             draggable: false,

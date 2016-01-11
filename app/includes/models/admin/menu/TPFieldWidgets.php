@@ -461,6 +461,36 @@ class TPFieldWidgets {
     }
     public function TPFieldWidget_7(){
         $widgets = 7;
+        ?>
+        <div class="TP-HeadTable ">
+            <label>
+                <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][limit]" class="TP-Zelect">
+                    <?php for($i = 1; $i < 11; $i++){ ?>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['limit'], $i ); ?>
+                        value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
 
+                </select>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <div class="TP-HeadTable ">
+            <label>
+                <span><?php _e('View widget', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][type]" class="TP-Zelect">
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'full'); ?>
+                        value="full"><?php _e('Full', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'compact'); ?>
+                        value="compact"><?php _e('Compact', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                </select>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <?php
     }
 }
