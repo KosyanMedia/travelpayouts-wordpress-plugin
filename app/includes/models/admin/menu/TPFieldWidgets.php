@@ -491,6 +491,22 @@ class TPFieldWidgets {
 
             </label>
         </div>
+        <div class="TP-HeadTable  TPCheckBoxWidget">
+            <input id="chek77" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+            <label for="chek77"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+
+        </div>
+        <div class="TP-ListSub ListSub--cust list--db">
+            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <div class="ItemSub  ItemSub-3">
+                <label>
+                    <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
+                           type="text"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                </label>
+            </div>
+        </div>
         <?php
     }
 }

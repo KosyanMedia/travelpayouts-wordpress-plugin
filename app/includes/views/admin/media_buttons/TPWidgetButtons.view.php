@@ -20,6 +20,10 @@
                             data-widgets-responsive-5 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['5']['responsive']))? 1 : 0;?>"
                             data-widgets-size-width-6 = "<?php echo \app\includes\TPPlugin::$options['widgets']['6']['width'] ?>"
                             data-widgets-responsive-6 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['6']['responsive']))? 1 : 0;?>"
+                            data-widgets-size-width-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['width'] ?>"
+                            data-widgets-responsive-7 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['7']['responsive']))? 1 : 0;?>"
+                            data-widgets-limit-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['limit'] ?>"
+                            data-widgets-type-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['type'] ?>"
                         >
                         <option selected="selected" value="0"><?php _e('Select widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1"><?php _e('Map Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
@@ -113,6 +117,44 @@
                         <?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?>
                     </label>
                 </td>
+            </tr>
+
+
+            <tr id="tr_type_widget">
+                <td>
+                    <label>
+                        <span><?php _e('View widget', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <select name="type_widget" id="type_widget" class="TP-Zelect">
+                            <option <?php selected( \app\includes\TPPlugin::$options["widgets"][7]['type'], 'full'); ?>
+                                value="full"><?php _e('Full', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <option <?php selected( \app\includes\TPPlugin::$options["widgets"][7]['type'], 'compact'); ?>
+                                value="compact"><?php _e('Compact', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr id="tr_limit_widget">
+                <td>
+                    <label>
+                        <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <select name="limit_widget" id="limit_widget" class="TP-Zelect">
+                            <?php for($i = 1; $i < 11; $i++){ ?>
+                                <option <?php selected( \app\includes\TPPlugin::$options["widgets"][7]['limit'], $i ); ?>
+                                    value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                            <?php } ?>
+
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr id="tr_cat_widget-1">
+                <td id="td_cat_widget-1"></td>
+            </tr>
+            <tr id="tr_cat_widget-2">
+                <td id="td_cat_widget-2"></td>
+            </tr>
+            <tr id="tr_cat_widget-3">
+                <td id="td_cat_widget-3"></td>
             </tr>
             </tbody>
         </table>

@@ -54,6 +54,9 @@ class TPWidgetsView {
                 //weedle
                 $marker .= '_populardest';
                 break;
+            case 7:
+                $marker .= '_hotelsselections';
+                break;
         }
 
 
@@ -143,6 +146,11 @@ class TPWidgetsView {
                             break;
                     }    */
                     $white_label = 'hydra.aviasales.ru';
+                }
+                break;
+            case 7:
+                if( ! $white_label || empty( $white_label ) ){
+                    $white_label = 'search.hotellook.com';
                 }
                 break;
         }

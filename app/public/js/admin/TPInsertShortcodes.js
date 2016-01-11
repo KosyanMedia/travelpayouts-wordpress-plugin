@@ -457,6 +457,7 @@ jQuery(function($) {
                         hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
                         width = doc.find('#size_widget_width').val();
                         height = doc.find('#size_widget_height').val();
+                        //console.log(doc.find('#select_widgets').val());
                         switch (doc.find('#select_widgets').val()) {
                             case '0':
                                 doc.find('#select_widgets').addClass('constructorShortcodesError');
@@ -584,6 +585,16 @@ jQuery(function($) {
                                     }
                                 }
 
+
+                                break;
+                            case '7':
+                                if (origin == "") {
+                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                }else{
+
+                                    setShortcodes("[tp_hotel_selections_widget origin="+origin+"]",
+                                        $(this));
+                                }
                                 break;
                         }
 
@@ -786,6 +797,16 @@ jQuery(function($) {
                     }
                     //doc.find('#tr_hotel_id_widget_size').show();
                     //doc.find('#hotel_size_widget_width').val($(this).data('widgets-size-width-5'));
+                    break;
+                case '7':
+                    doc.find('#tr_origin_widget').show();
+                    doc.find('#tr_type_widget').show();
+                    doc.find('#tr_limit_widget').show();
+                    doc.find('#tr_cat_widget-1').show();
+                    doc.find('#tr_cat_widget-2').show();
+                    doc.find('#tr_cat_widget-3').show();
+                    //tr_type_widget
+
                     break;
             }
         });
@@ -1182,6 +1203,11 @@ jQuery(function($) {
         doc.find('#responsive_width').val();
         doc.find('#hotel_id_widget').val();
         doc.find('#hotel_size_widget_width').val();
+        doc.find('#tr_type_widget').hide();
+        doc.find('#tr_limit_widget').hide();
+        doc.find('#tr_cat_widget-1').hide();
+        doc.find('#tr_cat_widget-2').hide();
+        doc.find('#tr_cat_widget-3').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }
