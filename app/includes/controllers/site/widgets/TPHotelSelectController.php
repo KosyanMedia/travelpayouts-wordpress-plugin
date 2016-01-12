@@ -23,7 +23,7 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         // TODO: Implement render() method.
         $widgets = 7;
         $defaults = array(
-            'origin' => false,
+            'id' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'responsive' => \app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']
         );
@@ -32,9 +32,9 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         $output = '';
         $categories = '5stars%2Csea_view%2Cluxury';
         $width = (isset($responsive) )? "" : "&width={$width}px";
-        error_log($width);
-        $output = '<script async src="//www.travelpayouts.com/blissey/scripts.js?categories='.$categories.'&iata='
-        .$origin
+        //error_log($id);
+        $output = '<script async src="//www.travelpayouts.com/blissey/scripts.js?categories='.$categories.'&id='
+        .$id
         .'&type='.\app\includes\TPPlugin::$options["widgets"][$widgets]['type']
         .'&currency='.mb_strtolower($this->view->typeCurrency())
         .$width.'&host='.$this->view->getWhiteLabel($widgets)

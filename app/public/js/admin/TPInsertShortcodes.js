@@ -588,11 +588,11 @@ jQuery(function($) {
 
                                 break;
                             case '7':
-                                if (origin == "") {
-                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                if (hotel_id == "") {
+                                    doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else{
 
-                                    setShortcodes("[tp_hotel_selections_widget origin="+origin+"]",
+                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+"]",
                                         $(this));
                                 }
                                 break;
@@ -680,6 +680,7 @@ jQuery(function($) {
             resetConstructorWidgetModal();
 
             tbody.children('#tr_hotel_id_widget').children('td').children('input').removeClass('TPCoordinatesAutocomplete');
+            tbody.children('#tr_hotel_id_widget').children('td').children('input').removeClass('TPAutocompleteID');
             tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPOriginTitle);
             switch($(this).val()) {
                 case '0':
@@ -799,7 +800,12 @@ jQuery(function($) {
                     //doc.find('#hotel_size_widget_width').val($(this).data('widgets-size-width-5'));
                     break;
                 case '7':
-                    doc.find('#tr_origin_widget').show();
+                    //doc.find('#tr_origin_widget').show();
+                    //tbody.children('#tr_origin_widget').children('td').children('input').addClass('TPAutocompleteID');
+                    tbody.children('#tr_hotel_id_widget').children('td').children('input').addClass('TPAutocompleteID');
+                    tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPPHCity);
+                    //tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPLocationTitlt);
+                    doc.find('#tr_hotel_id_widget').show();
                     doc.find('#tr_type_widget').show();
                     doc.find('#tr_limit_widget').show();
                     doc.find('#tr_cat_widget-1').show();

@@ -21,7 +21,7 @@ function TPCityAutocomplete(){
                     return value;
                 }).autocomplete({
                     source: function(request, response){
-                        //console.log(tpLocale)
+                        console.log(request.term)
                         switch (tpLocale){
                             case 'ru':
                                 $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
@@ -36,6 +36,7 @@ function TPCityAutocomplete(){
                                                     value: item.name+" "+airport+" ["+item.coordinates+"]",
                                                     val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
                                                 }
+                                                //TPAutocompleteID
                                             }else{
                                                 return {
                                                     label: item.name+" "+airport+" ["+iata+"]",
@@ -144,7 +145,6 @@ function TPCityAutocomplete(){
                     source: function(request, response){
                         //console.log(request.term, AppendTo);
                         $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
-
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                 var locations=[];
                                 $.map(data, function(items, keys){
@@ -174,12 +174,19 @@ function TPCityAutocomplete(){
                                         }
                                     })
                                 )
+                            } else if($(selector).hasClass('TPAutocompleteID')){
+                                response(
+                                    $.map(data.cities, function(item){
+                                        // console.log(item)
+                                        return {
+                                            label: item.fullname+" ["+item.id+"]",//"+item.city+", "+item.country+"
+                                            value: item.fullname+" ["+item.id+"]",
+                                            val: item.id//item.name+" "+airport+" ["+item.iata+"]"
+                                        }
 
-
-
-
+                                    })
+                                )
                             }else{
-
                                 response(
                                     $.map(data.hotels, function(item){
                                         return {
@@ -193,6 +200,13 @@ function TPCityAutocomplete(){
                         })
                     },
                     select: function( event, ui ) {
+                        if($(selector).hasClass('TPAutocompleteID')){
+
+                            console.log(ui.item.val);
+                            $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
+                                console.log(data);
+                            })
+                        }
                         input.attr('value',ui.item.val).val(ui.item.val);
                     },
                     change: function( event, ui ) {

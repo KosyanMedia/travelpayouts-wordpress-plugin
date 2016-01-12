@@ -214,7 +214,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
-                TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate;
+                TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity;
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -222,6 +222,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPPluginName = '<?php echo TPOPlUGIN_NAME; ?>';
             TPMesgUpdateSettings = '<?php _e('Settings saved.', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLabelAutocomplete = '<?php _e('hotels', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPPHCity = '<?php _e('City', TPOPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>
