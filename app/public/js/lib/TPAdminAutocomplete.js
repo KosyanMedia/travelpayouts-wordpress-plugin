@@ -3,6 +3,58 @@
  * @constructor
  */
 function TPCityAutocomplete(){
+    var catHotelSelec = {
+        "ru":{
+            tophotels: "Популярные",
+            price: "Дешёвые",
+            distance: "Близко к центру",
+            rating: "Рейтинг",
+            stars0: "0 звезд",
+            stars1: "1 звезда",
+            stars2: "2 звезды",
+            stars3: "3 звезды",
+            stars4: "4 звезды",
+            stars5: "5 звёзд",
+            luxury: "Роскошные",
+            highprice: "Дорогие",
+            center: "Отели в центре",
+            pool: "С бассейном",
+            gay: "Гей френдли",
+            smoke: "Для курящих",
+            restaurant: "Ресторан",
+            pets: "Животные",
+            russians: "Для русских",
+            sea_view: "С видом на море",
+            lake_view: "С видом на озеро",
+            river_view: "С видом на реку",
+            panoramic_view: "С панорамным видом",
+        },
+        "en":{
+            tophotels: "Popular",
+            price: "Cheap",
+            distance: "Close to city center",
+            rating: "Rating",
+            stars0: "0 stars",
+            stars1: "1 star",
+            stars2: "2 stars",
+            stars3: "3 stars",
+            stars4: "4 stars",
+            stars5: "5 stars",
+            luxury: "Luxury",
+            highprice: "Expensive",
+            center: "Hotels in the center",
+            pool: "Pool",
+            gay: "Gay friendly",
+            smoke: "Smoking friendly",
+            restaurant: "Restaurant",
+            pets: "Pet friendly",
+            russians: "Russian guests",
+            sea_view: "Sea view",
+            lake_view: "Lake view",
+            river_view: "River view",
+            panoramic_view: "Panoramic view",
+        }
+    };
     /**
      *
      * @param selector
@@ -201,10 +253,22 @@ function TPCityAutocomplete(){
                     },
                     select: function( event, ui ) {
                         if($(selector).hasClass('TPAutocompleteID')){
+                            //console.log(catHotelSelec)
 
-                            console.log(ui.item.val);
+                            //console.log(ui.item.val);
                             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
-                                console.log(data);
+                                //console.log(data);
+                                var select_option = '';
+                                $.map(data, function(item){
+                                    if (typeof catHotelSelec[tpLocale][item] != "undefined"){
+                                        select_option += '<option value="'+item+'">'
+                                            +catHotelSelec[tpLocale][item]+'</option>';
+                                        //console.log(item)
+                                        //console.log(catHotelSelec[tpLocale][item])
+                                    }
+
+                                })
+                                console.log(select_option);
                             })
                         }
                         input.attr('value',ui.item.val).val(ui.item.val);

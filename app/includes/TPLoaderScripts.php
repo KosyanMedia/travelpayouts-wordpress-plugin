@@ -223,6 +223,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPMesgUpdateSettings = '<?php _e('Settings saved.', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLabelAutocomplete = '<?php _e('hotels', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPPHCity = '<?php _e('City', TPOPlUGIN_TEXTDOMAIN ); ?>';
+
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>
