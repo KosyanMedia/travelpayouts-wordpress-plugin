@@ -148,13 +148,19 @@
                 </td>
             </tr>
             <tr id="tr_cat_widget-1">
-                <td id="td_cat_widget-1"></td>
+                <td id="td_cat_widget-1">
+                    <select id="cat_widget-1"></select>
+                </td>
             </tr>
             <tr id="tr_cat_widget-2">
-                <td id="td_cat_widget-2"></td>
+                <td id="td_cat_widget-2">
+                    <select id="cat_widget-2"></select>
+                </td>
             </tr>
             <tr id="tr_cat_widget-3">
-                <td id="td_cat_widget-3"></td>
+                <td id="td_cat_widget-3">
+                    <select id="cat_widget-3"></select>
+                </td>
             </tr>
             </tbody>
         </table>

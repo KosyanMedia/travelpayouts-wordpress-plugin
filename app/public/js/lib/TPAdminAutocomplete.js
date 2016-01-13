@@ -9,12 +9,12 @@ function TPCityAutocomplete(){
             price: "Дешёвые",
             distance: "Близко к центру",
             rating: "Рейтинг",
-            stars0: "0 звезд",
-            stars1: "1 звезда",
-            stars2: "2 звезды",
-            stars3: "3 звезды",
-            stars4: "4 звезды",
-            stars5: "5 звёзд",
+            "0stars": "0 звезд",
+            "1stars": "1 звезда",
+            "2stars": "2 звезды",
+            "3stars": "3 звезды",
+            "4stars": "4 звезды",
+            "5stars": "5 звёзд",
             luxury: "Роскошные",
             highprice: "Дорогие",
             center: "Отели в центре",
@@ -34,12 +34,12 @@ function TPCityAutocomplete(){
             price: "Cheap",
             distance: "Close to city center",
             rating: "Rating",
-            stars0: "0 stars",
-            stars1: "1 star",
-            stars2: "2 stars",
-            stars3: "3 stars",
-            stars4: "4 stars",
-            stars5: "5 stars",
+            "0stars": "0 stars",
+            "1stars": "1 star",
+            "2stars": "2 stars",
+            "3stars": "3 stars",
+            "4stars": "4 stars",
+            "5stars": "5 stars",
             luxury: "Luxury",
             highprice: "Expensive",
             center: "Hotels in the center",
@@ -258,7 +258,15 @@ function TPCityAutocomplete(){
                             //console.log(ui.item.val);
                             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
                                 //console.log(data);
+                                var tbodyModal = $(selector).parent('td').parent('tr').parent('tbody');
                                 var select_option = '';
+                                /*console.log(data);
+                                console.log(data.length);
+                                console.log(catHotelSelec[tpLocale]);
+                                console.log(catHotelSelec[tpLocale].length);*/
+                                data.sort();
+                                select_option += '<option></option>';
+
                                 $.map(data, function(item){
                                     if (typeof catHotelSelec[tpLocale][item] != "undefined"){
                                         select_option += '<option value="'+item+'">'
@@ -268,7 +276,19 @@ function TPCityAutocomplete(){
                                     }
 
                                 })
-                                console.log(select_option);
+
+                                tbodyModal.children('#tr_cat_widget-1')
+                                    .children('#td_cat_widget-1')
+                                    .children('#cat_widget-1')
+                                    .append(select_option);
+                                tbodyModal.children('#tr_cat_widget-2')
+                                    .children('#td_cat_widget-2')
+                                    .children('#cat_widget-2')
+                                    .append(select_option);
+                                tbodyModal.children('#tr_cat_widget-3')
+                                    .children('#td_cat_widget-3')
+                                    .children('#cat_widget-3')
+                                    .append(select_option);
                             })
                         }
                         input.attr('value',ui.item.val).val(ui.item.val);
