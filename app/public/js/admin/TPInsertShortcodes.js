@@ -450,7 +450,7 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat1, cat2, cat3, selected;
+                            cat1, cat2, cat3, selected, zoom;
                         selected = doc.find('#select_widgets').val();
 
                         doc.find('#select_widgets option[value=0]').attr('selected','selected')
@@ -473,7 +473,7 @@ jQuery(function($) {
                         cat1 = (doc.find('#cat_widget-1').val() == "") ? '3stars' : doc.find('#cat_widget-1').val();
                         cat2 = (doc.find('#cat_widget-2').val() == "") ? 'distance' : doc.find('#cat_widget-2').val();
                         cat3 = (doc.find('#cat_widget-3').val() == "") ? 'tophotels' : doc.find('#cat_widget-3').val();
-
+                        zoom = doc.find('#zoom_widget').val();
                         switch (selected) {
                             case '0':
                                 doc.find('#select_widgets').addClass('constructorShortcodesError');
@@ -498,7 +498,7 @@ jQuery(function($) {
                                 if(location == ""){
                                     doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else {
-                                    setShortcodes("[tp_hotelmap_widget coordinates=\"" + location + "\" width="+width+" height="+height+"]",
+                                    setShortcodes("[tp_hotelmap_widget coordinates=\"" + location + "\" width="+width+" height="+height+" zoom="+zoom+"]",
                                         $(this));
                                 }
                                 break;
@@ -723,8 +723,10 @@ jQuery(function($) {
                     tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPLocationTitlt);
                     doc.find('#tr_hotel_id_widget').show();
                     doc.find('#tr_size_widget').show();
+                    doc.find('#tr_zoom_widget').show();
                     doc.find('#size_widget_width').val($(this).data('widgets-size-width-2'));
                     doc.find('#size_widget_height').val($(this).data('widgets-size-height-2'));
+
                     break;
                 case '3':
                     doc.find('#tr_origin_widget').show();
@@ -1232,6 +1234,7 @@ jQuery(function($) {
         doc.find('#tr_cat_widget-1').hide();
         doc.find('#tr_cat_widget-2').hide();
         doc.find('#tr_cat_widget-3').hide();
+        doc.find('#tr_zoom_widget').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }

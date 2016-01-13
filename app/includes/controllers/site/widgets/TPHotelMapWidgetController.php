@@ -19,6 +19,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
         // TODO: Implement render() method.
         $widgets = 2;
         $defaults = array(
+            'zoom' => \app\includes\TPPlugin::$options['widgets'][$widgets]['zoom'],
             'coordinates' => false,
             'lat' => false,
             'lon' => false,
@@ -53,7 +54,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
             .'&changeflag=0&draggable='.$draggable.'&map_styled='.$map_styled.'&map_color='.$map_color.'
                     &contrast_color='.$contrast_color.'&disable_zoom='.$disable_zoom.'
                     &base_diameter='.\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter'].'
-                    &scrollwheel='.$scrollwheel.'&host='.$this->view->getWhiteLabel($widgets).'&lat='.$lat.'&lng='.$lon.'&zoom=12"
+                    &scrollwheel='.$scrollwheel.'&host='.$this->view->getWhiteLabel($widgets).'&lat='.$lat.'&lng='.$lon.'&zoom='.$zoom.'"
                     height="'.$height.'px" width="'.$width.'px"  scrolling="no" frameborder="0"></iframe></div>';
         return $output;
     }

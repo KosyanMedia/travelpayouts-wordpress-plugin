@@ -115,6 +115,16 @@ class TPFieldWidgets {
                            class="TPFieldInputText"/>
                 </div>
             </label>
+            <label class="TPMapZoom">
+                <span><?php _e('Zoom', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][zoom]" class="TP-Zelect">
+                    <?php for($z = 0; $z < 20; $z++) {?>
+                        <option value="<?php echo $z;?>" <?php selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['zoom'], $z)?>>
+                            <?php echo $z;?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </label>
 
         </div>
 

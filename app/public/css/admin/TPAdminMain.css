@@ -2541,4 +2541,9 @@ thead tr td.active-w {
   min-width: 300px;
   width: 81%;
 }
-
+.TPMarkerSize{
+  width: 150px !important;
+}
+.TPMapZoom{
+  float: left !important;
+}

@@ -162,6 +162,20 @@
                     <select id="cat_widget-3"></select>
                 </td>
             </tr>
+            <tr id="tr_zoom_widget">
+                <td id="td_zoom_widget">
+                    <label>
+                        <span><?php _e('Zoom', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <select name="zoom_widget" id="zoom_widget" class="TP-Zelect">
+                            <?php for($z = 1; $z < 20; $z++){ ?>
+                                <option <?php selected( \app\includes\TPPlugin::$options["widgets"][2]['zoom'], $z ); ?>
+                                    value="<?php echo $z; ?>"><?php echo $z; ?></option>
+                            <?php } ?>
+
+                        </select>
+                    </label>
+                </td>
+            </tr>
             </tbody>
         </table>
     </form>

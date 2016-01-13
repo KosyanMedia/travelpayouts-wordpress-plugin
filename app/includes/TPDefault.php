@@ -687,7 +687,8 @@ class TPDefault implements  \core\TPODefault{
                     'base_diameter' => 16,
                     'color' => '#00b1dd',
                     'map_color' => '#00b1dd',
-                    'contrast_color' => '#ffffff'
+                    'contrast_color' => '#ffffff',
+                    'zoom' => 12
                 ),
                 '3' => array(
                     'extra_widget_marker' => '',
