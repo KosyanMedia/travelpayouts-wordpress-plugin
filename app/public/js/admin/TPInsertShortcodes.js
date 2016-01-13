@@ -448,7 +448,8 @@ jQuery(function($) {
                     id: "constructorWidgetButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location;
+                        var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
+                            cat1, cat2, cat3;
                         origin = doc.find('#origin_widget').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_widget').val();
@@ -458,6 +459,11 @@ jQuery(function($) {
                         width = doc.find('#size_widget_width').val();
                         height = doc.find('#size_widget_height').val();
                         //console.log(doc.find('#select_widgets').val());
+
+                        cat1 = (doc.find('#cat_widget-1').val() == "") ? '3stars' : doc.find('#cat_widget-1').val();
+                        cat2 = (doc.find('#cat_widget-2').val() == "") ? 'distance' : doc.find('#cat_widget-2').val();
+                        cat3 = (doc.find('#cat_widget-3').val() == "") ? 'tophotels' : doc.find('#cat_widget-3').val();
+
                         switch (doc.find('#select_widgets').val()) {
                             case '0':
                                 doc.find('#select_widgets').addClass('constructorShortcodesError');
@@ -592,7 +598,8 @@ jQuery(function($) {
                                     doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else{
 
-                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+"]",
+                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+" cat=\""+cat1+"%2C"
+                                        +cat2+"%2C"+cat3+"\"]",
                                         $(this));
                                 }
                                 break;
@@ -808,9 +815,9 @@ jQuery(function($) {
                     doc.find('#tr_hotel_id_widget').show();
                     doc.find('#tr_type_widget').show();
                     doc.find('#tr_limit_widget').show();
-                    doc.find('#tr_cat_widget-1').show();
-                    doc.find('#tr_cat_widget-2').show();
-                    doc.find('#tr_cat_widget-3').show();
+                    //doc.find('#tr_cat_widget-1').show();
+                    //doc.find('#tr_cat_widget-2').show();
+                    //doc.find('#tr_cat_widget-3').show();
                     //tr_type_widget
 
                     break;

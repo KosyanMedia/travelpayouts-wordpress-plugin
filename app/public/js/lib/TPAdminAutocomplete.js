@@ -265,7 +265,16 @@ function TPCityAutocomplete(){
                                 console.log(catHotelSelec[tpLocale]);
                                 console.log(catHotelSelec[tpLocale].length);*/
                                 data.sort();
-                                select_option += '<option></option>';
+
+                                switch (tpLocale){
+                                    case "ru":
+                                        select_option += '<option value="">Выберите подборку</option>';
+                                        break;
+                                    case "en":
+                                        select_option += '<option value="">Select selection</option>';
+                                        break;
+                                }
+
 
                                 $.map(data, function(item){
                                     if (typeof catHotelSelec[tpLocale][item] != "undefined"){
@@ -289,6 +298,19 @@ function TPCityAutocomplete(){
                                     .children('#td_cat_widget-3')
                                     .children('#cat_widget-3')
                                     .append(select_option);
+                                tbodyModal.children('#tr_cat_widget-1').show();
+                                tbodyModal.children('#tr_cat_widget-1')
+                                    .children('#td_cat_widget-1')
+                                    .on('change', '#cat_widget-1', function(e) {
+                                        tbodyModal.children('#tr_cat_widget-2').show();
+                                    });
+                                tbodyModal.children('#tr_cat_widget-2')
+                                    .children('#td_cat_widget-2')
+                                    .on('change', '#cat_widget-2', function(e) {
+                                        tbodyModal.children('#tr_cat_widget-3').show();
+                                    });
+
+
                             })
                         }
                         input.attr('value',ui.item.val).val(ui.item.val);
