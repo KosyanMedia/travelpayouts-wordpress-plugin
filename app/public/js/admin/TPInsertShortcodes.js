@@ -449,13 +449,20 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat1, cat2, cat3;
+                            cat1, cat2, cat3, selected;
+                        selected = doc.find('#select_widgets').val();
+
+                        doc.find('#select_widgets option[value=0]').attr('selected','selected')
                         origin = doc.find('#origin_widget').val();
+                        doc.find('#origin_widget').val("");
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_widget').val();
+                        doc.find('#destination_widget').val("");
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
                         hotel_id = doc.find('#hotel_id_widget').val();
+                        doc.find('#hotel_id_widget').val("");
                         hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
+
                         width = doc.find('#size_widget_width').val();
                         height = doc.find('#size_widget_height').val();
                         //console.log(doc.find('#select_widgets').val());
@@ -464,7 +471,7 @@ jQuery(function($) {
                         cat2 = (doc.find('#cat_widget-2').val() == "") ? 'distance' : doc.find('#cat_widget-2').val();
                         cat3 = (doc.find('#cat_widget-3').val() == "") ? 'tophotels' : doc.find('#cat_widget-3').val();
 
-                        switch (doc.find('#select_widgets').val()) {
+                        switch (selected) {
                             case '0':
                                 doc.find('#select_widgets').addClass('constructorShortcodesError');
                                 break;
