@@ -26,11 +26,13 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         $output = '';
-        $output = '<script async src="//www.travelpayouts.com/weedle/widget.js'.$width
+        $output = '
+            <div class="TPWidget TPPopularRoutesWidget">
+            <script async src="//www.travelpayouts.com/weedle/widget.js'.$width
             .'&marker='.$this->view->getMarker($widgets).'&host='.$this->view->getWhiteLabel($widgets)
             .'&locale='.$this->view->locale.'&currency='.mb_strtolower($this->view->typeCurrency())
             .'&destination='.$destination.'" charset="UTF-8">
-                   </script>';
+                   </script></div>';
         return $output;
     }
 }

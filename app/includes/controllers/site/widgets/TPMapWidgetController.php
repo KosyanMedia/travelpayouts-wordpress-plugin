@@ -28,12 +28,14 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
         if(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']))
             $hide_logo = true;
         $output = '';
-        $output = '<iframe src="//maps.avs.io/flights/?auto_fit_map=true&hide_sidebar=true&hide_reformal=true
+        $output = '
+            <div class="TPWidget TPMapWidget">
+            <iframe src="//maps.avs.io/flights/?auto_fit_map=true&hide_sidebar=true&hide_reformal=true
             &disable_googlemaps_ui=true&zoom=3&show_filters_icon=true&redirect_on_click=true&small_spinner=true
             &hide_logo='.$hide_logo.'&direct='.$direct.'&lines_type=TpLines&cluster_manager=TpWidgetClusterManager&marker='
             .$this->view->getMarker($widgets).'&show_tutorial=false&locale='.$this->view->locale.'&host='
             .$this->view->getWhiteLabel($widgets).'&origin_iata='.$origin.'" width="'.$width.'px" height="'.$height.'px"
-            scrolling="no" frameborder="0"></iframe>';
+            scrolling="no" frameborder="0"></iframe></div>';
         return $output;
     }
 }

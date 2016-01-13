@@ -38,9 +38,11 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         //error_log($width);
         $output = '';
-        $output = '<script async src="//www.travelpayouts.com/subscription_widget/widget.js'.$width.'backgroundColor='.$color
+        $output = '
+        <div class="TPWidget TPSubscriptionsWidget">
+            <script async src="//www.travelpayouts.com/subscription_widget/widget.js'.$width.'backgroundColor='.$color
             .'&marker='.$this->view->getMarker($widgets).'&host='.$this->view->getWhiteLabel($widgets).'
-            &originIata='.$origin.'&destinationIata='.$destination.'"></script>';
+            &originIata='.$origin.'&destinationIata='.$destination.'"></script></div>';
         return $output;
     }
 }
