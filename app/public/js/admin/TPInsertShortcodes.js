@@ -437,9 +437,10 @@ jQuery(function($) {
             modal: true,
             dialogClass:"TPCustomDialog",
             open : function() {
+
                 $(this).parent().css({   position:'absolute',
-                    left: (win.width() - $(this).parent().outerWidth())/2,
-                    top: (win.height() - $(this).parent().outerHeight())/2
+                    left: (win.width() - $(this).parent().outerWidth())/2,  //+ win.scrollTop(),
+                    top: (win.height() - $(this).parent().outerHeight())/2 //+ win.scrollLeft()
                 });
 
             },
@@ -460,6 +461,8 @@ jQuery(function($) {
                         doc.find('#destination_widget').val("");
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
                         hotel_id = doc.find('#hotel_id_widget').val();
+                        location = doc.find('#hotel_id_widget').val();
+                        location = location.substring(location.indexOf('{')+1,location.indexOf('}'));
                         doc.find('#hotel_id_widget').val("");
                         hotel_id = hotel_id.substring(hotel_id.indexOf('[')+1,hotel_id.indexOf(']'));
 
@@ -490,8 +493,8 @@ jQuery(function($) {
                                 }
                                 break
                             case '2':
-                                location = doc.find('#hotel_id_widget').val();
-                                location = location.substring(location.indexOf('{')+1,location.indexOf('}'));
+
+
                                 if(location == ""){
                                     doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else {
@@ -631,7 +634,8 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
-        doc.find('#origin').focus(function() {
+
+        doc.find('#origin_widget, #hotel_id_widget, #destination_widget').focus(function() {
             $(this).removeClass('constructorShortcodesError');
 
         });
