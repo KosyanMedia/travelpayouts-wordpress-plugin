@@ -137,8 +137,15 @@ class TPFieldSettings {
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="ItemSub">
+                    <input id="chek10" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][compact_button]"
+                           value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['compact_button']), 1) ?> hidden />
+                    <label for="chek10"><?php _e('Compact buttons in the editor', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </div>
             </div>
+
             <div class="TP-FormItem">
 
                 <div class="ItemSub">
@@ -274,7 +281,7 @@ class TPFieldSettings {
                         <?php  echo $this->tpDate(); ?>
                     </span>
                 </div>
-                <div class="ItemSub ItemSub-YM-GA">
+                <div class="ItemSub ItemSub-YM-GA ItemSub-YM-GA-cust">
                     <span>
                         <div class="box-span"><?php _e('Event tracking. "Find" button', TPOPlUGIN_TEXTDOMAIN); ?></div>
                         <div class="svg-img-1">
@@ -290,7 +297,7 @@ class TPFieldSettings {
 
 
                     <label>
-                        <textarea  rows="3" cols="41"
+                        <textarea  rows="4" cols="41"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_ga_ym]"><?php echo esc_attr(\app\includes\TPPlugin::$options['config']['code_ga_ym']) ?></textarea>
                     </label>
                 </div>

@@ -14,10 +14,11 @@ class TPLinkButtonsController extends \core\controllers\TPOAdminMediaButtonsCont
 
     public function action($args = array())
     {
+        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Link', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert link', TPOPlUGIN_TEXTDOMAIN  );
         // TODO: Implement action() method.
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
-            'text'      => __( 'Insert link', TPOPlUGIN_TEXTDOMAIN  ),
+            'text'      => $text,
             'class'     => 'button',
             'icon'      =>  TPOPlUGIN_URL.'app/public/images/tp_button_link.png',
             'echo'      => true,

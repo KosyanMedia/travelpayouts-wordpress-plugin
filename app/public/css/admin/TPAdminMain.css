@@ -2495,6 +2495,9 @@ thead tr td.active-w {
   min-width: 370px;
   margin-bottom: 7px;
 }
+.ItemSub-YM-GA-cust{
+  margin-bottom: 19px;
+}
 
 #adminNoticeModal{
   margin: 0 !important;
@@ -2549,7 +2552,7 @@ thead tr td.active-w {
 }
 .TP-HotelSelectWidget{
   margin-right: 30px;
-
+  width: 25%;
 }
 .TP-HotelSelectWidget label,
 .TP-HotelSelectWidget span{

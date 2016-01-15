@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-15 09:17+0300\n"
+"POT-Creation-Date: 2016-01-15 15:19+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -145,19 +145,19 @@ msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
 #: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:219
-#: app/includes/models/admin/menu/TPFieldSettings.php:416
+#: app/includes/models/admin/menu/TPFieldSettings.php:423
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:43
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:44
 msgid "Origin"
 msgstr "Откуда"
 
 #: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:218
-#: app/includes/models/admin/menu/TPFieldSettings.php:439
+#: app/includes/models/admin/menu/TPFieldSettings.php:446
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:49
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:104
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:105
 msgid "Destination"
 msgstr "Куда"
 
@@ -167,11 +167,11 @@ msgid "Airline"
 msgstr "Авиакомпания"
 
 #: app/includes/TPPluginWidget.php:267
-#: app/includes/models/admin/menu/TPFieldWidgets.php:497
+#: app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:497
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:104
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:106
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:139
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:140
 msgid "Limit"
 msgstr "Лимит"
 
@@ -365,19 +365,35 @@ msgctxt "add_menu_page page title"
 msgid "Flight Tickets"
 msgstr "Авиабилеты"
 
-#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
+#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:20
+msgid "Form"
+msgstr "Форма"
+
+#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:20
 msgid "Insert search form"
 msgstr "Вставить поисковую форму"
 
-#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:16
+#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:14
+msgid "Widget"
+msgstr "Виджет"
+
+#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:14
 msgid "Insert widget"
 msgstr "Вставить виджет"
 
-#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:20
+#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
+msgid "Link"
+msgstr "Ссылка"
+
+#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
 msgid "Insert link"
 msgstr "Вставить ссылку"
 
-#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
+#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:14
+msgid "Table"
+msgstr "Таблица"
+
+#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:14
 msgid "Insert table"
 msgstr "Вставить таблицу"
 
@@ -387,6 +403,7 @@ msgstr "Вставить таблицу"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:331
 #: app/includes/models/admin/menu/TPFieldWidgets.php:395
 #: app/includes/models/admin/menu/TPFieldWidgets.php:429
+#: app/includes/models/admin/menu/TPFieldWidgets.php:520
 msgid "Widget Example"
 msgstr "Пример виджета"
 
@@ -396,12 +413,13 @@ msgstr "Пример виджета"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:338
 #: app/includes/models/admin/menu/TPFieldWidgets.php:403
 #: app/includes/models/admin/menu/TPFieldWidgets.php:437
+#: app/includes/models/admin/menu/TPFieldWidgets.php:528
 msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:52
 #: app/includes/models/admin/menu/TPFieldWidgets.php:315
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:70
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:71
 msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
@@ -411,7 +429,7 @@ msgstr "Скрыть логотип"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:60
 #: app/includes/models/admin/menu/TPFieldWidgets.php:167
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:60
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:61
 msgid "Size"
 msgstr "Размер"
 
@@ -432,7 +450,7 @@ msgid "Pin Size"
 msgstr "Размер маркера"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:119
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:168
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:169
 msgid "Zoom"
 msgstr ""
 
@@ -465,8 +483,8 @@ msgstr "Период, дни"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:374
 #: app/includes/models/admin/menu/TPFieldWidgets.php:407
 #: app/includes/models/admin/menu/TPFieldWidgets.php:441
-#: app/includes/models/admin/menu/TPFieldWidgets.php:527
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:113
+#: app/includes/models/admin/menu/TPFieldWidgets.php:606
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:114
 msgid "Responsive"
 msgstr "Резиновая"
 
@@ -474,9 +492,9 @@ msgstr "Резиновая"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:378
 #: app/includes/models/admin/menu/TPFieldWidgets.php:411
 #: app/includes/models/admin/menu/TPFieldWidgets.php:445
-#: app/includes/models/admin/menu/TPFieldWidgets.php:531
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:86
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:117
+#: app/includes/models/admin/menu/TPFieldWidgets.php:610
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:87
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:118
 msgid "Width"
 msgstr "Ширина"
 
@@ -494,7 +512,7 @@ msgstr "Период"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:318
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:58
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:78
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:79
 msgid "One way"
 msgstr "В одну сторону"
 
@@ -502,24 +520,24 @@ msgstr "В одну сторону"
 msgid "Number of Widgets"
 msgstr "Количество виджетов при вставке в запись"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:479
-#: app/includes/models/admin/menu/TPFieldWidgets.php:484
-#: app/includes/models/admin/menu/TPFieldWidgets.php:490
+#: app/includes/models/admin/menu/TPFieldWidgets.php:533
+#: app/includes/models/admin/menu/TPFieldWidgets.php:547
+#: app/includes/models/admin/menu/TPFieldWidgets.php:561
 msgid "Select selection"
 msgstr "Выберите подборку"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:512
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:126
+#: app/includes/models/admin/menu/TPFieldWidgets.php:591
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:127
 msgid "View widget"
 msgstr "Вид виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:515
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:129
+#: app/includes/models/admin/menu/TPFieldWidgets.php:594
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:130
 msgid "Full"
 msgstr "Расширенный"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:517
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:131
+#: app/includes/models/admin/menu/TPFieldWidgets.php:596
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:132
 msgid "Compact"
 msgstr "Компактный"
 
@@ -585,12 +603,16 @@ msgstr "мили"
 msgid "Airlines logo size"
 msgstr "Размер лого Авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:149
+#: app/includes/models/admin/menu/TPFieldSettings.php:145
+msgid "Compact buttons in the editor"
+msgstr "Компактный вид кнопок в редакторе"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:156
 msgctxt "settings"
 msgid "Redirect"
 msgstr "Переходить на результаты через редирект"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:152
+#: app/includes/models/admin/menu/TPFieldSettings.php:159
 msgid ""
 "In this case the 301 Redirect, which is more preferable for search engines, "
 "will be activated. We recommend that you don’t change this option."
@@ -598,15 +620,15 @@ msgstr ""
 "При переходе отдается код 301, что хорошо воспринимается поисковиками. "
 "Рекомендуем не менять этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:162
+#: app/includes/models/admin/menu/TPFieldSettings.php:169
 msgid "Open in a New Window"
 msgstr "Открывать результаты в новом окне"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:167
+#: app/includes/models/admin/menu/TPFieldSettings.php:174
 msgid " Add Nofollow Attribute"
 msgstr "Добавлять для ссылок атрибут nofollow"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:170
+#: app/includes/models/admin/menu/TPFieldSettings.php:177
 msgid ""
 "This attribute avoids getting undesirable search results into the search "
 "engines index. We recommend that you don’t change this option."
@@ -614,27 +636,27 @@ msgstr ""
 "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. "
 "Рекомендуем не менять этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:184
+#: app/includes/models/admin/menu/TPFieldSettings.php:191
 msgid "Default settings"
 msgstr "Настройки по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:192
+#: app/includes/models/admin/menu/TPFieldSettings.php:199
 msgid "Cache Timeout"
 msgstr "Частота обновления данных для таблиц"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:209
+#: app/includes/models/admin/menu/TPFieldSettings.php:216
 msgid "Day"
 msgstr "День"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:214
+#: app/includes/models/admin/menu/TPFieldSettings.php:221
 msgid "Hour"
 msgstr "Час"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:222
+#: app/includes/models/admin/menu/TPFieldSettings.php:229
 msgid "Script Include"
 msgstr "Размещать скрипты плагина"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:226
+#: app/includes/models/admin/menu/TPFieldSettings.php:233
 msgid ""
 "Select &lt;head&gt; option to speed up the page loading. In case it still "
 "goes slow, try switching to &lt;footer&gt;"
@@ -643,63 +665,63 @@ msgstr ""
 "загружаются медленно, попробуйте переставить в &lt;"
 "footer&gt;                                "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:234
+#: app/includes/models/admin/menu/TPFieldSettings.php:241
 msgid "Inside &lt;head&gt; tag "
 msgstr "Внутри тега &lt;head&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:239
+#: app/includes/models/admin/menu/TPFieldSettings.php:246
 msgid "Inside &lt;footer&gt; tag "
 msgstr "Внутри тега &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:247
+#: app/includes/models/admin/menu/TPFieldSettings.php:254
 msgid "Date Format"
 msgstr "Формат даты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:252
+#: app/includes/models/admin/menu/TPFieldSettings.php:259
 msgid "Use variables to set the date:"
 msgstr "Используйте переменные для настройки даты:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:253
+#: app/includes/models/admin/menu/TPFieldSettings.php:260
 msgid "day"
 msgstr "день месяца"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:254
+#: app/includes/models/admin/menu/TPFieldSettings.php:261
 msgid "month name (small letters)"
 msgstr "название месяца с маленькой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:255
+#: app/includes/models/admin/menu/TPFieldSettings.php:262
 msgid "month name (capital letters)"
 msgstr "название месяца с большой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:256
+#: app/includes/models/admin/menu/TPFieldSettings.php:263
 msgid "month number"
 msgstr "месяц цифрой"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:257
+#: app/includes/models/admin/menu/TPFieldSettings.php:264
 msgid "month (3 letters)"
 msgstr "месяц 3 буквами"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:258
+#: app/includes/models/admin/menu/TPFieldSettings.php:265
 msgid "month (3 small letters)"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:259
+#: app/includes/models/admin/menu/TPFieldSettings.php:266
 msgid "last 2 digits of the year"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:260
+#: app/includes/models/admin/menu/TPFieldSettings.php:267
 msgid "year"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:273
+#: app/includes/models/admin/menu/TPFieldSettings.php:280
 msgid "Current format"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:279
+#: app/includes/models/admin/menu/TPFieldSettings.php:286
 msgid "Event tracking. \"Find\" button"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:282
+#: app/includes/models/admin/menu/TPFieldSettings.php:289
 msgid ""
 "Set a goal in Yandex Metrica or Google Analytics and paste in this field the "
 "code you need to track the event (reaching the goal). In example, "
@@ -711,86 +733,86 @@ msgstr ""
 "\"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или \"ga('send', 'event', "
 "'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:302
+#: app/includes/models/admin/menu/TPFieldSettings.php:309
 msgid "Import settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:306
+#: app/includes/models/admin/menu/TPFieldSettings.php:313
 msgid "Browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:309
+#: app/includes/models/admin/menu/TPFieldSettings.php:316
 msgid "Import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:310
+#: app/includes/models/admin/menu/TPFieldSettings.php:317
 msgid "The file is not selected"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:314
+#: app/includes/models/admin/menu/TPFieldSettings.php:321
 msgid "Export"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:333
+#: app/includes/models/admin/menu/TPFieldSettings.php:340
 msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:336
+#: app/includes/models/admin/menu/TPFieldSettings.php:343
 #: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:339
+#: app/includes/models/admin/menu/TPFieldSettings.php:346
 #: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:344
+#: app/includes/models/admin/menu/TPFieldSettings.php:351
 #: app/includes/models/admin/menu/TPFieldWizard.php:63
 msgid "Currency"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:347
+#: app/includes/models/admin/menu/TPFieldSettings.php:354
 #: app/includes/models/admin/menu/TPFieldWizard.php:67
 msgid "Ruble"
 msgstr "Рубль"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:350
+#: app/includes/models/admin/menu/TPFieldSettings.php:357
 #: app/includes/models/admin/menu/TPFieldWizard.php:70
 msgid "US dollar"
 msgstr "доллар США"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:353
+#: app/includes/models/admin/menu/TPFieldSettings.php:360
 #: app/includes/models/admin/menu/TPFieldWizard.php:73
 msgid "Euro"
 msgstr "Евро"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:363
+#: app/includes/models/admin/menu/TPFieldSettings.php:370
 msgid "Fields"
 msgstr "Названия ячеек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:422
-#: app/includes/models/admin/menu/TPFieldSettings.php:445
+#: app/includes/models/admin/menu/TPFieldSettings.php:429
+#: app/includes/models/admin/menu/TPFieldSettings.php:452
 msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:425
-#: app/includes/models/admin/menu/TPFieldSettings.php:448
+#: app/includes/models/admin/menu/TPFieldSettings.php:432
+#: app/includes/models/admin/menu/TPFieldSettings.php:455
 msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:428
-#: app/includes/models/admin/menu/TPFieldSettings.php:451
+#: app/includes/models/admin/menu/TPFieldSettings.php:435
+#: app/includes/models/admin/menu/TPFieldSettings.php:458
 msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:431
-#: app/includes/models/admin/menu/TPFieldSettings.php:454
+#: app/includes/models/admin/menu/TPFieldSettings.php:438
+#: app/includes/models/admin/menu/TPFieldSettings.php:461
 msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:434
-#: app/includes/models/admin/menu/TPFieldSettings.php:457
+#: app/includes/models/admin/menu/TPFieldSettings.php:441
+#: app/includes/models/admin/menu/TPFieldSettings.php:464
 msgid "Prepositional"
 msgstr "Предложный"
 
@@ -1515,37 +1537,37 @@ msgid "Widgets"
 msgstr "Виджеты"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:10
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:29
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:30
 msgid "Map Widget"
 msgstr "Виджет карты"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:24
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:30
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:31
 msgid "Hotels Map Widget"
 msgstr "Отельная карта"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:38
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:31
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:32
 msgid "Calendar Widget"
 msgstr "Виджет календаря"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:52
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:34
 msgid "Subscription Widget"
 msgstr "Виджет подписок"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:66
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:35
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:36
 msgid "Hotel Widget"
 msgstr "Виджет отеля"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:79
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:36
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
 msgid "Popular Destinations Widget"
 msgstr "Виджет популярных направлений"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:93
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
 msgid "Hotels Selections Widget"
 msgstr "Виджет отельных подборок"
 
@@ -1654,15 +1676,15 @@ msgstr "Первый"
 msgid "Constructor widgets"
 msgstr "Конструктор виджетов"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:28
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:29
 msgid "Select widget"
 msgstr "Выберите виджет"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:56
 msgid "Hotel"
 msgstr "Отель"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:94
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:95
 msgid "Count"
 msgstr "Количество"
 
