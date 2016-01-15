@@ -471,7 +471,95 @@ class TPFieldWidgets {
     }
     public function TPFieldWidget_7(){
         $widgets = 7;
+        $cat = array(
+            'ru' => array(
+                "0stars" => "0 звезд",
+                "1stars" => "1 звезда",
+                "2stars" => "2 звезды",
+                "3stars" => "3 звезды",
+                "4stars" => "4 звезды",
+                "5stars" => "5 звёзд",
+                "price" => "Дешёвые",
+                "distance" => "Близко к центру",
+                "center" => "Отели в центре",
+                "rating" => "Рейтинг",
+                "tophotels" => "Популярные",
+                "highprice" => "Дорогие",
+            ),
+            'en' => array(
+                "0stars" => "0 stars",
+                "1stars" => "1 star",
+                "2stars" => "2 stars",
+                "3stars" => "3 stars",
+                "4stars" => "4 stars",
+                "5stars" => "5 stars",
+                "distance" => "Close to city center",
+                "price" => "Cheap",
+                "rating" => "Rating",
+                "center" => "Hotels in the center",
+                "highprice" => "Expensive",
+                "tophotels" => "Popular",
+            ),
+        );
+        $loc = '';
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $loc = 'ru';
+                break;
+            case "en_US":
+                $loc = 'en';
+                break;
+            default:
+                $loc = 'ru';
+                break;
+        }
         ?>
+        <div class="TP-ListSub ListSub--cust list--db">
+
+            <div class="TP-ColorStyle TP-HotelSelectWidget">
+                <label>
+                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+
+                </label>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat1]" class="TP-Zelect TP-ZelectCat">
+                    <?php foreach($cat[$loc] as $key=>$cat_val){ ?>
+                        <option value="<?php echo $key ?>"
+                            <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['cat1'], $key ); ?>>
+                            <?php echo $cat_val ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="TP-ColorStyle TP-HotelSelectWidget">
+                <label>
+                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+                </label>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat2]" class="TP-Zelect TP-ZelectCat">
+                    <?php foreach($cat[$loc] as $key=>$cat_val){ ?>
+                        <option value="<?php echo $key ?>"
+                            <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['cat2'], $key ); ?>>
+                            <?php echo $cat_val ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="TP-ColorStyle TP-HotelSelectWidget">
+                <label>
+                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+                </label>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat3]" class="TP-Zelect TP-ZelectCat">
+                    <?php foreach($cat[$loc] as $key=>$cat_val){ ?>
+                        <option value="<?php echo $key ?>"
+                            <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['cat3'], $key ); ?>>
+                            <?php echo $cat_val ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+
+        </div>
         <div class="TP-HeadTable ">
             <label>
                 <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>

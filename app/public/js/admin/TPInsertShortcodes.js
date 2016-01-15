@@ -425,9 +425,10 @@ jQuery(function($) {
             }
         });
     }
+
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
-        doc.find( "#constructorWidgetModal" ).dialog({
+        var constructorWidgetModal = doc.find( "#constructorWidgetModal" ).dialog({
             resizable: false,
             draggable: false,
             maxHeight:400,
@@ -436,13 +437,24 @@ jQuery(function($) {
             minHeight:200,
             modal: true,
             dialogClass:"TPCustomDialog",
-            open : function() {
+            position: "absolute",
+            create: function (event, ui) {
 
-                $(this).parent().css({   position:'absolute',
-                    left: (win.width() - $(this).parent().outerWidth())/2,  //+ win.scrollTop(),
-                    top: (win.height() - $(this).parent().outerHeight())/2 //+ win.scrollLeft()
+               $(event.target).parent().css({
+                    left: (win.width() - $(this).parent().outerWidth())/2,  //+ win.scrollTop()//+ win.scrollLeft(),
+                    top: (win.height() - $(this).parent().outerHeight())/2 //+ win.scrollTop(),
+
                 });
+            },
+            open : function() {
+                //var p = $(this).position();
+                //win.scrollTop(500);
+                //console.log($('#selector').dialog('option', 'position')[0]);
+               // console.log($(this).parent());
 
+
+
+                //window.scrollTo($('#selector').dialog('option', 'position')[0],$('#selector').dialog('option', 'position')[1]);
             },
             buttons: [
                 {
@@ -450,7 +462,7 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat1, cat2, cat3, selected, zoom;
+                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit;
                         selected = doc.find('#select_widgets').val();
 
                         doc.find('#select_widgets option[value=0]').attr('selected','selected')
@@ -470,10 +482,14 @@ jQuery(function($) {
                         height = doc.find('#size_widget_height').val();
                         //console.log(doc.find('#select_widgets').val());
 
-                        cat1 = (doc.find('#cat_widget-1').val() == "") ? '3stars' : doc.find('#cat_widget-1').val();
-                        cat2 = (doc.find('#cat_widget-2').val() == "") ? 'distance' : doc.find('#cat_widget-2').val();
-                        cat3 = (doc.find('#cat_widget-3').val() == "") ? 'tophotels' : doc.find('#cat_widget-3').val();
+                        cat1 = (doc.find('#cat_widget-1').val() == "") ? '' : " cat1=\""+doc.find('#cat_widget-1').val()+"\" ";
+                        cat2 = (doc.find('#cat_widget-2').val() == "") ? '' : " cat2=\""+doc.find('#cat_widget-2').val()+"\" ";
+                        cat3 = (doc.find('#cat_widget-3').val() == "") ? '' : " cat1=\""+doc.find('#cat_widget-3').val()+"\" ";
+                        cat = cat1 + cat2 + cat3;
                         zoom = doc.find('#zoom_widget').val();
+
+                        typeHotelSelectView = doc.find('#type_widget').val();
+                        limit =  doc.find('#limit_widget').val();
                         switch (selected) {
                             case '0':
                                 doc.find('#select_widgets').addClass('constructorShortcodesError');
@@ -608,8 +624,7 @@ jQuery(function($) {
                                     doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
                                 }else{
 
-                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+" cat=\""+cat1+"%2C"
-                                        +cat2+"%2C"+cat3+"\"]",
+                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+" "+cat+" type="+typeHotelSelectView+" limit="+limit+"]",
                                         $(this));
                                 }
                                 break;
@@ -628,10 +643,16 @@ jQuery(function($) {
 
             ],
             close: function( event, ui ) {
+                //var p = $(this).position();
+                //console.log(p.top);
+                //win.scrollTop(p.top);
                 resetConstructorWidgetModal();
                 $("#select_widgets :first").attr("selected", "selected");
             }
         });
+
+        //console.log(constructorWidgetModal.top);
+        //console.log(constructorWidgetModal.left);
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
 

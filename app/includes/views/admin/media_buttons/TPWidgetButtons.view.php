@@ -24,7 +24,8 @@
                             data-widgets-responsive-7 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['7']['responsive']))? 1 : 0;?>"
                             data-widgets-limit-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['limit'] ?>"
                             data-widgets-type-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['type'] ?>"
-                        >
+
+                    >
                         <option selected="selected" value="0"><?php _e('Select widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1"><?php _e('Map Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="2"><?php _e('Hotels Map Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
@@ -34,7 +35,7 @@
                         <?php } ?>
                         <option value="5"><?php _e('Hotel Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="6"><?php _e('Popular Destinations Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
-                        <option value="7"><?php _e('Widget of hotel selections', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="7"><?php _e('Hotels Selections Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
             </tr>
             <tr id="tr_origin_widget">

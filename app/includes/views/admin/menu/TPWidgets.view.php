@@ -90,7 +90,7 @@
 
                 <div class="bellows__item">
                     <div class="bellows__header">
-                        <h3><?php _e('Widget of hotel selections', TPOPlUGIN_TEXTDOMAIN ); ?></h3>
+                        <h3><?php _e('Hotels Selections Widget', TPOPlUGIN_TEXTDOMAIN ); ?></h3>
                     </div>
                     <div class="bellows__content">
                         <?php do_settings_fields('tp_settings_widget_7', 'tp_settings_widget_7_id'); ?>

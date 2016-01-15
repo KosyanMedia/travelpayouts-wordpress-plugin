@@ -726,6 +726,9 @@ class TPDefault implements  \core\TPODefault{
                     'type' => 'full',
                     'width' => '800',
                     'responsive' => 1,
+                    'cat1' => '3stars',
+                    'cat2' => 'distance',
+                    'cat3' => 'tophotels'
 
                 )
 
