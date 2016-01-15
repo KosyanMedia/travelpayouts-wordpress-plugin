@@ -473,7 +473,7 @@ class TPFieldWidgets {
         $widgets = 7;
         $cat = array(
             'ru' => array(
-                "" => "",
+                "0" => "-----",
                 "1stars" => "1 звезда",
                 "2stars" => "2 звезды",
                 "3stars" => "3 звезды",
@@ -487,7 +487,7 @@ class TPFieldWidgets {
                 "highprice" => "Дорогие",
             ),
             'en' => array(
-                "" => "",
+                "0" => "-----",
                 "1stars" => "1 star",
                 "2stars" => "2 stars",
                 "3stars" => "3 stars",

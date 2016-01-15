@@ -214,7 +214,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
-                TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity;
+                TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
+                TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3;
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -223,7 +224,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPMesgUpdateSettings = '<?php _e('Settings saved.', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLabelAutocomplete = '<?php _e('hotels', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPPHCity = '<?php _e('City', TPOPlUGIN_TEXTDOMAIN ); ?>';
-
+            TPHotelSelectWidgetCat1 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat1']; ?>';
+            TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
+            TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

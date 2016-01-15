@@ -288,6 +288,7 @@ function TPCityAutocomplete(){
                                     .children('#td_cat_widget-1')
                                     .children('#cat_widget-1')
                                     .append(select_option);
+
                                 tbodyModal.children('#tr_cat_widget-2')
                                     .children('#td_cat_widget-2')
                                     .children('#cat_widget-2')
@@ -297,6 +298,23 @@ function TPCityAutocomplete(){
                                     .children('#cat_widget-3')
                                     .append(select_option);
                                 tbodyModal.children('#tr_cat_widget-1').show();
+                                if(TPHotelSelectWidgetCat1 != '0'){
+                                    doc.find('#cat_widget-1 option[value='+TPHotelSelectWidgetCat1+']')
+                                        .attr('selected','selected')
+                                    tbodyModal.children('#tr_cat_widget-2').show();
+
+                                }
+                                if(TPHotelSelectWidgetCat2 != '0'){
+                                    doc.find('#cat_widget-2 option[value='+TPHotelSelectWidgetCat2+']')
+                                        .attr('selected','selected')
+                                    tbodyModal.children('#tr_cat_widget-3').show();
+
+                                }
+                                if(TPHotelSelectWidgetCat3 != '0'){
+                                    doc.find('#cat_widget-3 option[value='+TPHotelSelectWidgetCat3+']')
+                                        .attr('selected','selected')
+
+                                }
                                 tbodyModal.children('#tr_cat_widget-1')
                                     .children('#td_cat_widget-1')
                                     .on('change', '#cat_widget-1', function(e) {
