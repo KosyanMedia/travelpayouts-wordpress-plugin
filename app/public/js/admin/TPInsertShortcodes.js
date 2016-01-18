@@ -484,7 +484,7 @@ jQuery(function($) {
 
                         cat1 = (doc.find('#cat_widget-1').val() == "") ? '' : " cat1=\""+doc.find('#cat_widget-1').val()+"\" ";
                         cat2 = (doc.find('#cat_widget-2').val() == "") ? '' : " cat2=\""+doc.find('#cat_widget-2').val()+"\" ";
-                        cat3 = (doc.find('#cat_widget-3').val() == "") ? '' : " cat1=\""+doc.find('#cat_widget-3').val()+"\" ";
+                        cat3 = (doc.find('#cat_widget-3').val() == "") ? '' : " cat3=\""+doc.find('#cat_widget-3').val()+"\" ";
                         doc.find('#cat_widget-1 option:first').attr('selected','selected');
                         doc.find('#cat_widget-2 option:first').attr('selected','selected');
                         doc.find('#cat_widget-3 option:first').attr('selected','selected');
