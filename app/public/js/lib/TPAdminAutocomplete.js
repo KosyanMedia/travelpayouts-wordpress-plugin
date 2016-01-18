@@ -197,7 +197,7 @@ function TPCityAutocomplete(){
                         $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                 var locations=[];
-                                $.map(data, function(items, keys){
+                                /*$.map(data, function(items, keys){
                                     $.map(items, function(item, key){
                                         var location = new Object();
                                         switch (keys){
@@ -205,6 +205,7 @@ function TPCityAutocomplete(){
                                                 //console.log(item.fullname);
                                                 location.label = item.fullname+" ["+item.hotelsCount+" "+TPLabelAutocomplete+"]";
                                                 location.val = '{'+item.location.lat+', '+item.location.lon+'}';
+
                                                 break;
                                             case 'hotels':
                                                 //console.log(item.hotelFullName);
@@ -212,8 +213,23 @@ function TPCityAutocomplete(){
                                                 location.val = '{'+item.location.lat+', '+item.location.lon+'}';
                                                 break;
                                         }
+                                        location.type = keys
                                         locations.push(location);
                                     })
+                                })*/
+                                $.map(data.cities, function(city, key_city){
+                                    var location = new Object();
+                                    location.label = city.fullname+" ["+city.hotelsCount+" "+TPLabelAutocomplete+"]";
+                                    location.val = '{'+city.location.lat+', '+city.location.lon+'}';
+                                    locations.push(location);
+
+                                })
+                                $.map(data.hotels, function(hotel, key_hotel){
+                                    var location = new Object();
+                                    location.label = hotel.hotelFullName;
+                                    location.val = '{'+hotel.location.lat+', '+hotel.location.lon+'}';
+                                    locations.push(location);
+
                                 })
                                 response(
                                     $.map(locations, function(item, key){
