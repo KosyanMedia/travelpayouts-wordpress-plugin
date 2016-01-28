@@ -8,7 +8,9 @@ jQuery(function($) {
     });
     doc.find('#constructorShortcodesButton').click(function (e) {
         //console.log("constructorShortcodesButton");
+
         doc.find( "#constructorShortcodesModal" ).dialog({
+            autoOpen: true,
             resizable: false,
             draggable: false,
             maxHeight:400,
@@ -17,12 +19,28 @@ jQuery(function($) {
             minHeight:200,
             modal: true,
             dialogClass:"TPCustomDialog",
-            //position: { my: "center bottom", at: "center top", of: $('#constructorShortcodesButton')},
-            open : function() {
-                $(this).parent().css({   position:'absolute',
-                    left: (win.width() - $(this).parent().outerWidth())/2,
-                    top: (win.height() - $(this).parent().outerHeight())/2
+            position: "absolute",
+            //appendTo: "#post-body-content",
+            create: function (event) {
+
+               $(event.target).parent().css({
+                    'left': (win.width() - $(this).parent().outerWidth())/2,
+                    'top': (win.height() - $(this).parent().outerHeight())/2,
+                    'transition': 'none'
+
                 });
+
+
+            },
+
+            open : function() {
+
+               // $('body').scrollTop(110);
+                //win.scrollTop(150);
+                /*$(this).parent().css({   position:'fixed',
+                    left: '50%', //(win.width() - $(this).parent().outerWidth())/2,
+                    top: '50%'//(win.height() - $(this).parent().outerHeight())/2
+                });*/
 
             },
             buttons: [
@@ -221,6 +239,7 @@ jQuery(function($) {
 
             ],
             close: function( event, ui ) {
+                $('body').css({'overflow': 'auto'});
                 doc.find("#limit").val("");
                 $("#select_shortcodes :first").attr("selected", "selected");
                 doc.find('#tr_title').hide();
@@ -438,6 +457,7 @@ jQuery(function($) {
             modal: true,
             dialogClass:"TPCustomDialog",
             position: "absolute",
+
             create: function (event, ui) {
 
                $(event.target).parent().css({

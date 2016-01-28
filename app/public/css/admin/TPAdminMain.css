@@ -308,6 +308,9 @@ h1, h2, h3, h4, h5, h6 {
 .ItemSub label textarea {
 
   color: #929a9f;
+  font-size: 11px;
+  width: 98%;
+
 }
 .ItemSub label textarea:hover {
   border-color: #adb3b7;
@@ -2496,7 +2499,7 @@ thead tr td.active-w {
   margin-bottom: 7px;
 }
 .ItemSub-YM-GA-cust{
-  margin-bottom: 19px;
+  margin-bottom: 51px;
 }
 
 #adminNoticeModal{
@@ -2562,4 +2565,7 @@ thead tr td.active-w {
   font-weight: 300;
   color: #6f777c;
   margin-bottom: 8px;
+}
+.TPItemSubCompactButtons{
+  margin-bottom: 50px;
 }

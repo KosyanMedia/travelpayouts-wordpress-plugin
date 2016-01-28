@@ -139,8 +139,8 @@ class TPFieldSettings {
                     </div>
 
                 </div>
-                <div class="ItemSub">
-                    <input id="chek10" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][compact_button]"
+                <div class="ItemSub TPItemSubCompactButtons">
+                    <input id="chek10" class="TPChekCompactButtons" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][compact_button]"
                            value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['compact_button']), 1) ?> hidden />
                     <label for="chek10"><?php _e('Compact buttons in the editor', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </div>
