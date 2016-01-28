@@ -43,11 +43,35 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     public function insert($data)
     {
         // TODO: Implement insert() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $arl_nofollow = (isset($_POST["arl_nofollow"]))?1:0;
+        $arl_replace = (isset($_POST["arl_replace"]))?1:0;
+        $inputData = array(
+            'arl_url' => $_POST["arl_url"],
+            'arl_anchor' => $_POST["arl_anchor"],
+            'arl_nofollow' => $arl_nofollow,
+            'arl_replace' => $arl_replace,
+            'date_add' => time(),
+        );
+        $wpdb->insert($tableName, $inputData);
     }
 
     public function update($data)
     {
         // TODO: Implement update() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $arl_nofollow = (isset($_POST["arl_nofollow"]))?1:0;
+        $arl_replace = (isset($_POST["arl_replace"]))?1:0;
+        $inputData = array(
+            'arl_url' => $_POST["arl_url"],
+            'arl_anchor' => $_POST["arl_anchor"],
+            'arl_nofollow' => $arl_nofollow,
+            'arl_replace' => $arl_replace,
+            'date_add' => time(),
+        );
+        $wpdb->update($tableName, $inputData ,array('id' => $_POST['link_id']));
     }
 
     public function deleteAll()

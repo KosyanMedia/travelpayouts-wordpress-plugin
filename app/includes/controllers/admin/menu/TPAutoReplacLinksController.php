@@ -44,9 +44,23 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 break;
             case "save_link":
                 if(isset($_POST)){
-                    var_dump($_POST);
+                    $this->model->insert($_POST);
                 }
-                //$this->redirect('admin.php?page=tp_control_substitution_links');
+                $this->redirect('admin.php?page=tp_control_substitution_links');
+                break;
+            case "edit_link":
+                if(isset($_GET['id']) && !empty($_GET['id'])){
+                    $this->data = $this->model->get_dataID((int)$_GET['id']);
+                    $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php";
+                }else{
+                    $this->redirect('admin.php?page=tp_control_substitution_links');
+                }
+                break;
+            case "update_link":
+                if(isset($_POST)){
+                    $this->model->update($_POST);
+                }
+                $this->redirect('admin.php?page=tp_control_substitution_links');
                 break;
             default:
                 $this->data = $this->model->get_data();
