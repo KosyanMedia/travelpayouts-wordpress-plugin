@@ -15,6 +15,7 @@ class TPLoader extends \core\TPOLoader{
         // TODO: Implement admin() method.
         // Admin menu
         new controllers\admin\menu\TPDashboardController();
+        new controllers\admin\menu\TPAutoReplacLinksController();
         new controllers\admin\menu\TPFlightTicketsController();
         new controllers\admin\menu\TPWidgetsController();
         new controllers\admin\menu\TPSearchFormsController();

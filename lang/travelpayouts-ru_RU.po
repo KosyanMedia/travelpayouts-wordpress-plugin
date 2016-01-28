@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-15 15:19+0300\n"
+"POT-Creation-Date: 2016-01-28 10:57+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -37,15 +37,15 @@ msgstr "Проблема с плагином? Есть пожелания или
 msgid "View "
 msgstr ""
 
-#: app/includes/TPLoader.php:90
+#: app/includes/TPLoader.php:91
 msgid "Set details and enable plugin features"
 msgstr "Настроить плагин для начала работы"
 
-#: app/includes/TPLoader.php:95
+#: app/includes/TPLoader.php:96
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
-#: app/includes/TPLoader.php:96
+#: app/includes/TPLoader.php:97
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "
@@ -144,7 +144,7 @@ msgstr "Дешевые перелеты из города"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:219
+#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:220
 #: app/includes/models/admin/menu/TPFieldSettings.php:423
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
@@ -152,7 +152,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:218
+#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:219
 #: app/includes/models/admin/menu/TPFieldSettings.php:446
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
@@ -251,50 +251,50 @@ msgstr "Переменная $airline не задана или задана не
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
-#: app/includes/TPLoaderScripts.php:220
+#: app/includes/TPLoaderScripts.php:221
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:223
+#: app/includes/TPLoaderScripts.php:224
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:224
+#: app/includes/TPLoaderScripts.php:225
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:225
+#: app/includes/TPLoaderScripts.php:226
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:242 app/includes/TPLoaderScripts.php:243
-#: app/includes/TPLoaderScripts.php:247 app/includes/TPLoaderScripts.php:248
+#: app/includes/TPLoaderScripts.php:245 app/includes/TPLoaderScripts.php:246
+#: app/includes/TPLoaderScripts.php:250 app/includes/TPLoaderScripts.php:251
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:252
+#: app/includes/TPLoaderScripts.php:255
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:253
+#: app/includes/TPLoaderScripts.php:256
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:257
+#: app/includes/TPLoaderScripts.php:260
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:258
+#: app/includes/TPLoaderScripts.php:261
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:261
+#: app/includes/TPLoaderScripts.php:264
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:262
+#: app/includes/TPLoaderScripts.php:265
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -303,6 +303,12 @@ msgstr "Отмена"
 msgctxt "add_menu_page page title"
 msgid "Settings"
 msgstr "Настройки"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:23
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:24
+msgctxt "add_menu_page page title"
+msgid "Substitution links"
+msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPStatisticController.php:21
 #: app/includes/controllers/admin/menu/TPStatisticController.php:22
