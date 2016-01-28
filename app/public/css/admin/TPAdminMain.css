@@ -2072,6 +2072,27 @@ thead tr td.active-w {
     clear: both;
     display: inline-block;
 }
+.TP-LocalHead label.TP-inputTextShortCust{
+  width: 50%;
+  float: none;
+  clear: both;
+  display: inline-block;
+}
+.TP-LocalHead label.TP-inputTextShortCust textarea{
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-color: transparent;
+  border: 1px solid #E6E6E6;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #929a9f;
+  resize: none;
+}
 .TP-LocalHead label.TP-inputTextShort textarea {
     width: 100%;
     height: 200px;

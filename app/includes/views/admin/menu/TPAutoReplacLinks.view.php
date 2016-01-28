@@ -4,17 +4,15 @@
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php //_e('Here you can add referral links that you want to substitute to the specified anchor phrase',
-                //TPOPlUGIN_TEXTDOMAIN);
-            //Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы
-            // ?>
             <?php _e('Here you can put down automatically links for a given phrase in all posts',
                 TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
 
     <div class="TPmainContent TP-BalanceContent TP-SettingContent TPAutoLink">
-        <p class="TP-SettingTitle"><?php _e('List of links', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+        <p class="TP-SettingTitle">
+            <?php _e('List of links', TPOPlUGIN_TEXTDOMAIN); ?>
+        </p>
 
         <div class="TP-navsShort">
             <div class="TP-lincksNavShortCust">

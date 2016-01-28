@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-28 17:00+0300\n"
+"POT-Creation-Date: 2016-01-28 19:00+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -388,7 +388,7 @@ msgid "Insert widget"
 msgstr "Вставить виджет"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:43
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:41
 msgid "Link"
 msgstr "Ссылка"
 
@@ -1087,11 +1087,13 @@ msgstr ""
 "записях"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:53
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:56
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
 msgid "save changes"
 msgstr "сохранить изменения"
@@ -1113,7 +1115,7 @@ msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:55
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:30
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:28
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
@@ -1122,7 +1124,7 @@ msgid "Add Date"
 msgstr "Дата добавления"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:56
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:54
 msgid "Edit"
 msgstr "Редактировать "
 
@@ -1189,6 +1191,41 @@ msgstr "Новости Travelpayouts"
 msgid "All news"
 msgstr "Все новости"
 
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
+msgid "Substitution links"
+msgstr "Подстановка ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:8
+msgid ""
+"Here you can add referral links that you want to substitute to the specified "
+"anchor phrase"
+msgstr ""
+"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
+"заданные якорные фразы"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:13
+msgid "Adding links"
+msgstr "Добавление ссылки"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:23
+msgid "Link "
+msgstr "Ссылка"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:31
+msgid "Anchor phrase"
+msgstr "Якорные фразы"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:45
+msgctxt "settings"
+msgid "Adding attribute nofollow"
+msgstr "Добавлять атрибут nofollow"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:48
+msgctxt "settings"
+msgid "Replace the existing links"
+msgstr "Заменять существующие ссылки"
+
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
 msgid ""
@@ -1244,34 +1281,30 @@ msgstr ""
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
-msgid "Substitution links"
-msgstr "Подстановка ссылок"
-
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:11
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:7
 msgid ""
 "Here you can put down automatically links for a given phrase in all posts"
 msgstr ""
 "Здесь вы можете автоматически проставить ссылки  по заданным фразам во всех "
 "постах"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:14
 msgid "List of links"
 msgstr "Список ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:22
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:20
 msgid "Add link"
 msgstr "Добавить ссылку"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:23
 msgid "Import links"
 msgstr "Импорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:42
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:40
 msgid "Anchor"
 msgstr "Анкор"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:74
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:72
 msgid "Affix links"
 msgstr "Проставить ссылки"
 
@@ -1736,13 +1769,6 @@ msgstr "Отель"
 msgid "Count"
 msgstr "Количество"
 
-#~ msgid ""
-#~ "Here you can add referral links that you want to substitute to the "
-#~ "specified anchor phrase"
-#~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-#~ "заданные якорные фразы"
-
 #~ msgid "Widget of hotel selections"
 #~ msgstr "Виджет отельных подборок"
 
@@ -1981,9 +2007,6 @@ msgstr "Количество"
 
 #~ msgid "Count widgets"
 #~ msgstr "Количество виджетов"
-
-#~ msgid "Attribute for links nofollow"
-#~ msgstr "Атрибут для ссылок nofollow"
 
 #~ msgid "Scripts"
 #~ msgstr "Скрипты"
