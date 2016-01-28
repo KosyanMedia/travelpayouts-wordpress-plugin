@@ -39,6 +39,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $action = isset($_GET['action']) ? $_GET['action'] : null ;
         $pathView = "";
         switch($action){
+            case "add_link":
+                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php";
+                break;
             default:
                 $this->data = $this->model->get_data();
                 $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPAutoReplacLinks.view.php";
