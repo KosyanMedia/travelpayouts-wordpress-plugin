@@ -63,6 +63,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
                 update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
             models\admin\menu\TPSearchFormsModel::createTable();
+            models\admin\menu\TPAutoReplacLinksModel::createTable();
         }
     }
 
@@ -81,6 +82,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     {
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();
+        models\admin\menu\TPAutoReplacLinksModel::deleteTable();
         delete_option( TPOPlUGIN_OPTION_NAME);
         delete_option( TPOPlUGIN_OPTION_VERSION);
     }

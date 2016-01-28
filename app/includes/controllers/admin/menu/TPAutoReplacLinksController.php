@@ -37,8 +37,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $pathView = "";
         switch($action){
             default:
-                $this->data = $this->model->get_data();
-                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchForms.view.php";
+                //$this->data = $this->model->get_data();
+                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPAutoReplacLinks.view.php";
                 break;
         }
         parent::loadView($pathView);
