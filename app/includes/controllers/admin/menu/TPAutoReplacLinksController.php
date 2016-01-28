@@ -11,6 +11,8 @@ namespace app\includes\controllers\admin\menu;
 
 class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuController
 {
+    public $model;
+    public $data;
     public function __construct()
     {
         parent::__construct();
@@ -31,5 +33,14 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     public function render()
     {
         // TODO: Implement render() method.
+        $action = isset($_GET['action']) ? $_GET['action'] : null ;
+        $pathView = "";
+        switch($action){
+            default:
+                $this->data = $this->model->get_data();
+                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPSearchForms.view.php";
+                break;
+        }
+        parent::loadView($pathView);
     }
 }
