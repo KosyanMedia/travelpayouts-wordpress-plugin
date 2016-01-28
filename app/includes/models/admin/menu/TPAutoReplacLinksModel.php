@@ -12,6 +12,11 @@ namespace app\includes\models\admin\menu;
 class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
 {
     public static $tableName = "tp_auto_replac_links";
+    public function __construct()
+    {
+        add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
+        add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
+    }
     public static function createTable()
     {
         // TODO: Implement createTable() method.
@@ -77,6 +82,17 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     public function deleteAll()
     {
         // TODO: Implement deleteAll() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        if(isset($_POST)) {
+            switch ($_POST['type']) {
+                case "arl_link":
+                    foreach ($_POST['id'] as $id) {
+                        $wpdb->query("DELETE FROM " .$tableName. " WHERE id = '" . (int)$id . "'");
+                    }
+                    break;
+            }
+        }
     }
 
     public function deleteId($id)

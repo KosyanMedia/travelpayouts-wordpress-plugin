@@ -22,9 +22,9 @@
                 <a href="admin.php?page=tp_control_substitution_links&action=import_links" class="TP-ImportLink">
                     <i></i><?php _e('Import links', TPOPlUGIN_TEXTDOMAIN) ?>
                 </a>
-                <a href="admin.php?page=tp_control_substitution_links&action=delete_checked"
+                <a href="#"
                    class="TP-deleteShortLincks deleteChecked"
-                   data-type="search_shortcodes">
+                   data-type="arl_link">
                     <i></i><?php _e('Remove', TPOPlUGIN_TEXTDOMAIN) ?>
                 </a>
             </div>
