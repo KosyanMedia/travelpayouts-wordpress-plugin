@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-28 10:57+0300\n"
+"POT-Creation-Date: 2016-01-28 17:00+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -304,8 +304,8 @@ msgctxt "add_menu_page page title"
 msgid "Settings"
 msgstr "Настройки"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:23
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:24
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:28
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:29
 msgctxt "add_menu_page page title"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
@@ -388,6 +388,7 @@ msgid "Insert widget"
 msgstr "Вставить виджет"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:43
 msgid "Link"
 msgstr "Ссылка"
 
@@ -822,6 +823,14 @@ msgstr "Творительный"
 msgid "Prepositional"
 msgstr "Предложный"
 
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:26
+msgid "Activate inactive links"
+msgstr "Активировать неактивные ссылки"
+
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:31
+msgid "Make all the referral links to sites Travelpayouts"
+msgstr "Сделать реферальными все ссылки на сайты Travelpayouts"
+
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:15
 msgid "Layout"
@@ -1104,6 +1113,7 @@ msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:55
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:30
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
@@ -1112,6 +1122,7 @@ msgid "Add Date"
 msgstr "Дата добавления"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:56
 msgid "Edit"
 msgstr "Редактировать "
 
@@ -1232,6 +1243,37 @@ msgstr ""
 #: app/includes/views/admin/menu/TPWidgets.view.php:100
 msgid "Save changes"
 msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
+msgid "Substitution links"
+msgstr "Подстановка ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:11
+msgid ""
+"Here you can put down automatically links for a given phrase in all posts"
+msgstr ""
+"Здесь вы можете автоматически проставить ссылки  по заданным фразам во всех "
+"постах"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
+msgid "List of links"
+msgstr "Список ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:22
+msgid "Add link"
+msgstr "Добавить ссылку"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
+msgid "Import links"
+msgstr "Импорт ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:42
+msgid "Anchor"
+msgstr "Анкор"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:74
+msgid "Affix links"
+msgstr "Проставить ссылки"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:28
 #: app/includes/views/admin/menu/TPStatisticView.php:191
@@ -1693,6 +1735,13 @@ msgstr "Отель"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:95
 msgid "Count"
 msgstr "Количество"
+
+#~ msgid ""
+#~ "Here you can add referral links that you want to substitute to the "
+#~ "specified anchor phrase"
+#~ msgstr ""
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
+#~ "заданные якорные фразы"
 
 #~ msgid "Widget of hotel selections"
 #~ msgstr "Виджет отельных подборок"

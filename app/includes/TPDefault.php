@@ -735,6 +735,10 @@ class TPDefault implements  \core\TPODefault{
             ),
             'admin_settings' => array(
             ),
+            'auto_repl_link' => array(
+                'active' => 1,
+                'all_link' => 1
+            )
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
         return $defaults;

@@ -12,10 +12,13 @@ namespace app\includes\controllers\admin\menu;
 class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuController
 {
     public $model;
+    public $modelOption;
     public $data;
     public function __construct()
     {
         parent::__construct();
+        $this->model = new \app\includes\models\admin\menu\TPAutoReplacLinksModel();
+        $this->modelOption = new \app\includes\models\admin\menu\TPAutoReplacLinksOptionModel();
 
     }
     public function action()
@@ -37,7 +40,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $pathView = "";
         switch($action){
             default:
-                //$this->data = $this->model->get_data();
+                $this->data = $this->model->get_data();
                 $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPAutoReplacLinks.view.php";
                 break;
         }

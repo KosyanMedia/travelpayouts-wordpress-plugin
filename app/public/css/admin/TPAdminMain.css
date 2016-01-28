@@ -607,6 +607,13 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(54% - 34px);
   float: left;
 }
+.TP-colFormCust{
+  width: calc(50% - 34px);
+  float: left;
+}
+.TP-colFormCust:last-of-type {
+  float: right;
+}
 .TP-colForm:last-of-type {
   float: right;
 }
@@ -1859,6 +1866,16 @@ thead tr td.active-w {
 .TP-lincksNavShort {
     margin-bottom: 10px;
 }
+.TP-lincksNavShortCust {
+  margin-bottom: 10px
+}
+.TP-lincksNavShortCust a{
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
 .TP-lincksNavShort a {
     display: block;
 }
@@ -1901,7 +1918,30 @@ thead tr td.active-w {
     background-position: center;
     float: left;
 }
-
+.TP-ImportLink {
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #DEDDDD;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #adacac;
+  line-height: 36px;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 15px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.TP-ImportLink:hover {
+  border-color: #acaaaa;
+  color: #acaaaa;
+}
 .TP-deleteShortLincks {
     height: 40px;
     background-color: #fff;
@@ -2568,4 +2608,11 @@ thead tr td.active-w {
 }
 .TPItemSubCompactButtons{
   margin-bottom: 50px;
+}
+
+.TP-colFormCust{
+  margin-top: 30px;
+}
+.TPAutoLink{
+  padding-bottom: 120px;
 }

@@ -20,10 +20,11 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
             $sql = "CREATE TABLE " . $tableName . "(
                               id int(11) NOT NULL AUTO_INCREMENT,
-                              url varchar(255) NOT NULL,
-                              anchor text NOT NULL,
-                              nofollow int(11) NOT NULL,
-                              replace int(11) NOT NULL,
+                              arl_url varchar(255) NOT NULL,
+                              arl_anchor text NOT NULL,
+                              arl_nofollow int(11) NOT NULL,
+                              arl_replace int(11) NOT NULL,
+                              date_add int(11) NOT NULL,
                               PRIMARY KEY (id)
                             ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -70,6 +71,11 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     public function get_data()
     {
         // TODO: Implement get_data() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
     }
     /**
      * @param $id
@@ -81,5 +87,15 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         $data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE id= ". $id, ARRAY_A);
         if(count($data) > 0) return $data;
         return false;
+    }
+    /**
+     * @return mixed
+     */
+    public function get_nextId(){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $next_id = $wpdb->get_var("SELECT MAX(id) FROM ".$tableName);
+        $next_id++;
+        return $next_id;
     }
 }
