@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-01-28 19:00+0300\n"
+"POT-Creation-Date: 2016-02-03 15:46+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -144,7 +144,7 @@ msgstr "Дешевые перелеты из города"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:220
+#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:221
 #: app/includes/models/admin/menu/TPFieldSettings.php:423
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
@@ -152,7 +152,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:219
+#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:220
 #: app/includes/models/admin/menu/TPFieldSettings.php:446
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
@@ -251,50 +251,54 @@ msgstr "Переменная $airline не задана или задана не
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
-#: app/includes/TPLoaderScripts.php:221
+#: app/includes/TPLoaderScripts.php:219
+msgid "Hotel Name"
+msgstr "Название отеля"
+
+#: app/includes/TPLoaderScripts.php:222
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:224
+#: app/includes/TPLoaderScripts.php:225
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:225
+#: app/includes/TPLoaderScripts.php:226
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:226
+#: app/includes/TPLoaderScripts.php:227
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:245 app/includes/TPLoaderScripts.php:246
-#: app/includes/TPLoaderScripts.php:250 app/includes/TPLoaderScripts.php:251
+#: app/includes/TPLoaderScripts.php:246 app/includes/TPLoaderScripts.php:247
+#: app/includes/TPLoaderScripts.php:251 app/includes/TPLoaderScripts.php:252
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:255
+#: app/includes/TPLoaderScripts.php:256
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:256
+#: app/includes/TPLoaderScripts.php:257
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:260
+#: app/includes/TPLoaderScripts.php:261
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:261
+#: app/includes/TPLoaderScripts.php:262
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:264
+#: app/includes/TPLoaderScripts.php:265
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:265
+#: app/includes/TPLoaderScripts.php:266
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -1087,14 +1091,16 @@ msgstr ""
 "записях"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:53
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:50
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:56
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:53
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:54
 msgid "save changes"
 msgstr "сохранить изменения"
 
@@ -1193,10 +1199,12 @@ msgstr "Все новости"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:8
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:8
 msgid ""
 "Here you can add referral links that you want to substitute to the specified "
 "anchor phrase"
@@ -1205,23 +1213,28 @@ msgstr ""
 "заданные якорные фразы"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:13
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:13
 msgid "Adding links"
 msgstr "Добавление ссылки"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:23
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:20
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:20
 msgid "Link "
 msgstr "Ссылка"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:31
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:28
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:28
 msgid "Anchor phrase"
 msgstr "Якорные фразы"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:45
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:42
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:42
 msgctxt "settings"
 msgid "Adding attribute nofollow"
 msgstr "Добавлять атрибут nofollow"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:48
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:45
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:45
 msgctxt "settings"
 msgid "Replace the existing links"
 msgstr "Заменять существующие ссылки"
@@ -2000,9 +2013,6 @@ msgstr "Количество"
 #~ msgstr "Виджет календаря"
 
 #~ msgid "Hotel buildings map"
-#~ msgstr "Отельная карта"
-
-#~ msgid "Hotels map"
 #~ msgstr "Отельная карта"
 
 #~ msgid "Count widgets"

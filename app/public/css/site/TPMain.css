@@ -379,8 +379,8 @@ span.ellipsis {
     margin-right: 15px;
     margin-bottom: 15px;
     float: left;
-    width: 30%;
-
+    width: 30.3333%;
+    min-width: 200px;
 }
 .TP-tdContent a {
     border: none !important;

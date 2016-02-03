@@ -824,6 +824,7 @@ jQuery(function($) {
                     }
                     break;
                 case '5':
+                    tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPHotelWidgetLabel);
                     doc.find('#tr_hotel_id_widget').show();
                     //doc.find('#tr_hotel_id_widget_size').show();
                     //doc.find('#hotel_size_widget_width').val($(this).data('widgets-size-width-5'));
@@ -841,6 +842,7 @@ jQuery(function($) {
                     }
                     break;
                 case '6':
+
                     doc.find('#tr_popular_routes_widget').show();
                     doc.find('.TPPopularRoutes').show();
                     if(doc.find('#popular_routes_widget_count').val() > 1){
