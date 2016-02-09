@@ -19,6 +19,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         parent::__construct();
         $this->model = new \app\includes\models\admin\menu\TPAutoReplacLinksModel();
         $this->modelOption = new \app\includes\models\admin\menu\TPAutoReplacLinksOptionModel();
+        add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
+        add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
 
     }
     public function action()
@@ -69,4 +71,30 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
         parent::loadView($pathView);
     }
+
+    /**
+     * @param $post_id
+     * @param $post
+     * @param $update
+     */
+    public function autoReplacLinksSavePost($post_id, $post, $update){
+        //error_log(print_r($post_id, true));
+        //error_log(print_r($post, true));
+        //error_log(print_r($update, true));
+    }
+
+    /**
+     * Очищенные данные поста.
+     * @param $data
+     * Оригинальные данные поста переданные в $_POST
+     * @param $postarr
+     *
+     * @return mixed
+     */
+    public function autoReplacLinksInsertPost($data, $postarr){
+        if ( $data['post_status'] == 'auto-draft' && $data['post_status'] == 'draft' ) return $data;
+        error_log(print_r($data, true));
+        return $data;
+    }
+
 }
