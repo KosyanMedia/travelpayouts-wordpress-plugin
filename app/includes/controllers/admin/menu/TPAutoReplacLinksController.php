@@ -74,6 +74,58 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         parent::loadView($pathView);
     }
 
+
+    /**
+     *
+     */
+    public function tp_add_custom_box(){
+        $screens = array( 'post', 'page' );
+        foreach ( $screens as $screen ){
+            add_meta_box(
+                'tp_sectionid',
+                _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
+                array( &$this, 'tp_add_custom_box_callback'),
+                $screen,
+                'side',
+                'high'
+            );
+        }
+
+    }
+
+    /**
+     * @param $post
+     */
+    public function tp_add_custom_box_callback($post){
+        //error_log(print_r($post, true));
+        if(empty(get_post_meta( $post->ID, 'tp_auto_replac_link', true ))) {
+            $tp_auto_replac_link = 0;
+        }else{
+            $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
+        }
+        // Используем nonce для верификации
+        wp_nonce_field( TPOPlUGIN_NAME, 'tp_auto_replac_link_noncename' );
+        ?>
+        <fieldset>
+            <legend class="screen-reader-text">
+                <?php echo _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </legend>
+            <input type="radio" name="tp_auto_replac_link"
+                   class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0"
+                    <?php checked( $tp_auto_replac_link, 0 ); ?> >
+            <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
+                <?php _e('Enable', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </label>
+            <br><input type="radio" name="tp_auto_replac_link"
+                       class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="1"
+                        <?php checked( $tp_auto_replac_link, 1 ); ?>>
+            <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
+                <?php _e('Disable', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </label>
+        </fieldset>
+        <?php
+    }
+
     /**
      * @param $post_id
      * @param $post
@@ -83,6 +135,20 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($post_id, true));
         //error_log(print_r($post, true));
         //error_log(print_r($update, true));
+        if ( ! isset( $_POST['tp_auto_replac_link_noncename'] ) )
+            return $post_id;
+        if ( ! wp_verify_nonce( $_POST['tp_auto_replac_link_noncename'], TPOPlUGIN_NAME ) )
+            return $post_id;
+        if ( $post->post_status == 'auto-draft' ||
+            $post->post_status == 'draft' ||
+            $post->post_status == 'trash' ){
+            return $post_id;
+        }
+        $tp_auto_replac_link = sanitize_text_field( $_POST['tp_auto_replac_link'] );
+        // Обновляем данные в базе данных.
+        update_post_meta( $post_id, 'tp_auto_replac_link', $tp_auto_replac_link );
+
+
     }
 
     /**
@@ -114,47 +180,12 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 'test'
             )
         );
-        error_log(print_r($data, true));
-        return $data;
-    }
-
-    /**
-     *
-     */
-    public function tp_add_custom_box(){
-        $screens = array( 'post', 'page' );
-        foreach ( $screens as $screen ){
-            add_meta_box(
-                'tp_sectionid',
-                _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
-                array( &$this, 'tp_add_custom_box_callback'),
-                $screen,
-                'side',
-                'high'
-            );
+        if($postarr['tp_auto_replac_link'] == 0){
+            error_log(1111111);
         }
-
-    }
-    public function tp_add_custom_box_callback(){
-        // Используем nonce для верификации
-        //wp_nonce_field( plugin_basename(__FILE__), 'myplugin_noncename' );
-        ?>
-        <fieldset>
-            <legend class="screen-reader-text">
-                <?php echo _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
-            </legend>
-            <input type="radio" name="tp_auto_replac_link"
-                   class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0" checked="checked">
-            <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
-                <?php _e('Enable', TPOPlUGIN_TEXTDOMAIN ); ?>
-            </label>
-            <br><input type="radio" name="tp_auto_replac_link"
-                       class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="1">
-            <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
-                <?php _e('Disable', TPOPlUGIN_TEXTDOMAIN ); ?>
-            </label>
-        </fieldset>
-        <?php
+        //error_log(print_r($data, true));
+        error_log(print_r($postarr['tp_auto_replac_link'], true));
+        return $data;
     }
 
 }
