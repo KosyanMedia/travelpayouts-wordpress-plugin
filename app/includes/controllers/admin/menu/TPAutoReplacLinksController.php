@@ -177,15 +177,50 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $dataAutoReplacLinks = array(
             'anchor' => array(
                 'test',
-                'test'
+                'test111'
             )
         );
-        if($postarr['tp_auto_replac_link'] == 0){
-            error_log(1111111);
+        if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
+            //error_log(print_r($data['post_content'], true));
+            $data['post_content'] = preg_replace(
+                '/[^<]test111[^<]/',//[^>][^<]
+                '<a href="">test111</a>',
+                $data['post_content']);
+            /*$data['post_content'] = preg_replace_callback(
+                '/[^>]test111[^<]/',
+                array( &$this, 'tp_preg_replace'),
+                $data['post_content']
+            );
+            /*if(strpos($title, 'origin') !== false){
+                $data['post_content'] = str_replace(
+                    'origin',
+                    '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' ,
+                    $title);
+            }*/
+            //$data['post_content'] = str_replace(' '.'test111', ' <a href="test111">test111</a> ', $data['post_content']);
+            /*$data['post_content'] = preg_replace(
+                '/^test111$/',
+                ' <a href="test111">test111</a>',
+                $data['post_content']);
+
+            error_log(print_r(preg_replace(
+                '/^test111$/',
+                ' <a href="test111">test111</a>',
+                $data['post_content']), true));*/
         }
         //error_log(print_r($data, true));
-        error_log(print_r($postarr['tp_auto_replac_link'], true));
+        //error_log(print_r($postarr['tp_auto_replac_link'], true));
         return $data;
+    }
+    public function tp_preg_replace($matches) {
+        /*error_log(print_r($matches, true));
+        foreach($matches as $key=>$match){
+            //$matches[$key] = $match.'11';
+            error_log(print_r($match, true));
+        }*/
+        //$matches[0] = 't22';
+        error_log(print_r($matches[0], true));
+        return $matches[0];
     }
 
 }
