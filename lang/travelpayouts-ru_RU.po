@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-02-03 15:46+0300\n"
+"POT-Creation-Date: 2016-02-10 15:29+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -308,11 +308,25 @@ msgctxt "add_menu_page page title"
 msgid "Settings"
 msgstr "Настройки"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:28
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:29
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:32
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:33
 msgctxt "add_menu_page page title"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:129
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:141
+msgctxt "meta_box_post"
+msgid "Substitution links"
+msgstr "Подстановка ссылок"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:146
+msgid "Enable"
+msgstr "Включить"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:151
+msgid "Disable"
+msgstr "Выключить"
 
 #: app/includes/controllers/admin/menu/TPStatisticController.php:21
 #: app/includes/controllers/admin/menu/TPStatisticController.php:22

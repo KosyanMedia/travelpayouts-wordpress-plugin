@@ -21,6 +21,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $this->modelOption = new \app\includes\models\admin\menu\TPAutoReplacLinksOptionModel();
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
+        add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
+        //$this->model->getDataAutoReplacLinks();
 
     }
     public function action()
@@ -90,11 +92,69 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $postarr
      *
      * @return mixed
+     * 'publish' - страница или запись опубликована.
+     * 'pending' - пост ожидает утверждения администратора.
+     * 'draft' - запись имеет статус черновика.
+     * 'auto-draft' - новый пост, без контента.
+     * 'future' - запись будет опубликована в будущем.
+     * 'private' - личное, запись не буде показана неавторизованным посетителям.
+     * 'inherit' - ревизия. См.get_children.
+     * 'trash' - пост находится в Корзине. Добавлено в WordPress версии 2.9.
+     *
      */
     public function autoReplacLinksInsertPost($data, $postarr){
-        if ( $data['post_status'] == 'auto-draft' && $data['post_status'] == 'draft' ) return $data;
+        if ( $data['post_status'] == 'auto-draft' ||
+            $data['post_status'] == 'draft' ||
+            $data['post_status'] == 'trash' ){
+            return $data;
+        }
+        $dataAutoReplacLinks = array(
+            'anchor' => array(
+                'test',
+                'test'
+            )
+        );
         error_log(print_r($data, true));
         return $data;
+    }
+
+    /**
+     *
+     */
+    public function tp_add_custom_box(){
+        $screens = array( 'post', 'page' );
+        foreach ( $screens as $screen ){
+            add_meta_box(
+                'tp_sectionid',
+                _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
+                array( &$this, 'tp_add_custom_box_callback'),
+                $screen,
+                'side',
+                'high'
+            );
+        }
+
+    }
+    public function tp_add_custom_box_callback(){
+        // Используем nonce для верификации
+        //wp_nonce_field( plugin_basename(__FILE__), 'myplugin_noncename' );
+        ?>
+        <fieldset>
+            <legend class="screen-reader-text">
+                <?php echo _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </legend>
+            <input type="radio" name="tp_auto_replac_link"
+                   class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0" checked="checked">
+            <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
+                <?php _e('Enable', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </label>
+            <br><input type="radio" name="tp_auto_replac_link"
+                       class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="1">
+            <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
+                <?php _e('Disable', TPOPlUGIN_TEXTDOMAIN ); ?>
+            </label>
+        </fieldset>
+        <?php
     }
 
 }

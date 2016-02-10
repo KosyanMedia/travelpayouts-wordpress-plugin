@@ -117,6 +117,20 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         if(count($data) > 0) return $data;
         return false;
     }
+
+    public function getDataAutoReplacLinks(){
+        $data = $this->get_data();
+        $dataResult = array();
+        //[arl_url] => https://www.travelpayouts.com/dashboard
+        //[arl_anchor] => Тест, Тест
+        foreach($data as $item){
+            $dataResult[$item['id']]['url'] = $item['arl_url'];
+            $dataResult[$item['id']]['anchor'] = explode(",", $item['arl_anchor']);
+
+        }
+        error_log(print_r($dataResult, true));
+
+    }
     /**
      * @param $id
      * @return bool
