@@ -174,6 +174,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             $data['post_status'] == 'trash' ){
             return $data;
         }
+        if(empty($data['post_content'])) return $data;
+        //error_log(print_r($data['post_content'], true));
         $dataAutoReplacLinks = array(
             'anchor' => array(
                 'test',
@@ -183,9 +185,10 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
             //error_log(print_r($data['post_content'], true));
             $data['post_content'] = preg_replace(
-                '/[^<]test111[^<]/',//[^>][^<]
+                '/test111/',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
                 '<a href="">test111</a>',
                 $data['post_content']);
+
             /*$data['post_content'] = preg_replace_callback(
                 '/[^>]test111[^<]/',
                 array( &$this, 'tp_preg_replace'),
