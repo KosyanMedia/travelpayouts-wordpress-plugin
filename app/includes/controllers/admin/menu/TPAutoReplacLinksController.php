@@ -183,6 +183,42 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             )
         );
         if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
+            $post_content = $data['post_content'];
+
+            // Заменяемый текст
+            $find = 'test111';
+            $replace = 'test11122';
+
+            // Сначала ищем теги <a>
+            $tags = array();
+            if (preg_match_all( // (?!.*?<\/[aA](\s*)? >.*?)
+                "/<[aA](?:\s[^>]*)?>.*?<\/[aA](?:\s*)?>/",
+                $post_content,$matches,PREG_OFFSET_CAPTURE//+PREG_SET_ORDER
+            ))
+            {
+                foreach($matches[0] as $tagA)
+                    $tags[] = array($tagA[1],$tagA[1]+strlen($tagA[0]));
+            }
+
+            if (preg_match_all("/$find/",
+                $post_content,$matches,PREG_OFFSET_CAPTURE//+PREG_SET_ORDER
+            ))
+            {
+                $len = strlen($find);
+                // переворачиваем массив для замены с конца, чтобы сдвиг не мешал
+                foreach(array_reverse($matches[0]) as $found) {
+                    $pos = $found[1];
+                    $inTag = false;
+                    foreach($tags as $tagPos)
+                        if ($tagPos[0]<$pos && $pos<$tagPos[1]) {
+                            $inTag = true;
+                            break;
+                        }
+                    if ( ! $inTag)
+                        $post_content = substr_replace($post_content, $replace, $pos, $len);
+                }
+            }
+            error_log($post_content);
             //$match = preg_match_all('/test111/',$data['post_content'], $search);
             /*$match = preg_replace(
                 '/test111/',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
@@ -190,8 +226,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $data['post_content'],
                 -1,
                 $count);*/
-            $data['post_content'] = preg_replace_callback(
-                '/(test111)[^<a.*?>(test111)<\/a>]/m',//^test111|test111|test111$
+            /*$data['post_content'] = preg_replace_callback(
+                '/(^test111$)[^<a.*?>(test111)<\/a>]/m',//|(\b)test111(\b)(test111)|^test111|test111|test111$
                 array( &$this, 'tp_preg_replace'),
                 $data['post_content'],
                 -1,
@@ -238,7 +274,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }*/
         //$matches[0] = 't22';
         error_log(print_r($matches, true));
-        return $matches[1].' 1 ';
+        return $matches[0];//.' 1 ';
     }
 
 }
