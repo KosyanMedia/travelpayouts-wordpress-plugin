@@ -183,10 +183,25 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             )
         );
         if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
-            //error_log(print_r($data['post_content'], true));
-            $data['post_content'] = preg_replace(
+            //$match = preg_match_all('/test111/',$data['post_content'], $search);
+            /*$match = preg_replace(
                 '/test111/',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
-                '<a href="">test111</a>',
+                '<a href="">test111</a> ',
+                $data['post_content'],
+                -1,
+                $count);*/
+            $data['post_content'] = preg_replace_callback(
+                '/(test111)[^<a.*?>(test111)<\/a>]/m',//^test111|test111|test111$
+                array( &$this, 'tp_preg_replace'),
+                $data['post_content'],
+                -1,
+                $count
+            );
+            //error_log(print_r($match, true));
+            error_log(print_r($count, true));
+            /*$data['post_content'] = preg_replace(
+                '|[^<a.*?>]test111[^<\/a>]|',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
+                '<a href="">test111</a> ',
                 $data['post_content']);
 
             /*$data['post_content'] = preg_replace_callback(
@@ -222,8 +237,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             error_log(print_r($match, true));
         }*/
         //$matches[0] = 't22';
-        error_log(print_r($matches[0], true));
-        return $matches[0];
+        error_log(print_r($matches, true));
+        return $matches[1].' 1 ';
     }
 
 }
