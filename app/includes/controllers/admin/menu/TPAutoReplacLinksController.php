@@ -22,7 +22,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
-        //$this->model->getDataAutoReplacLinks();
+
 
     }
     public function action()
@@ -98,11 +98,19 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      */
     public function tp_add_custom_box_callback($post){
         //error_log(print_r($post, true));
-        if(empty(get_post_meta( $post->ID, 'tp_auto_replac_link', true ))) {
-            $tp_auto_replac_link = 0;
+        $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+        $disabled = '';
+        if($dataAutoReplacLinks !== false){
+            if(empty(get_post_meta( $post->ID, 'tp_auto_replac_link', true ))) {
+                $tp_auto_replac_link = 0;
+            }else{
+                $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
+            }
         }else{
-            $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
+            $tp_auto_replac_link = 1;
+            $disabled = 'disabled="disabled"';
         }
+
         // Используем nonce для верификации
         wp_nonce_field( TPOPlUGIN_NAME, 'tp_auto_replac_link_noncename' );
         ?>
@@ -110,7 +118,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             <legend class="screen-reader-text">
                 <?php echo _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
             </legend>
-            <input type="radio" name="tp_auto_replac_link"
+            <input type="radio" name="tp_auto_replac_link" <?php echo $disabled; ?>
                    class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0"
                     <?php checked( $tp_auto_replac_link, 0 ); ?> >
             <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
@@ -175,106 +183,54 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             return $data;
         }
         if(empty($data['post_content'])) return $data;
-        //error_log(print_r($data['post_content'], true));
-        $dataAutoReplacLinks = array(
-            'anchor' => array(
-                'test',
-                'test111'
-            )
-        );
+
         if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
-            $post_content = $data['post_content'];
 
-            // Заменяемый текст
-            $find = 'test111';
-            $replace = 'test11122';
-
-            // Сначала ищем теги <a>
-            $tags = array();
-            if (preg_match_all( // (?!.*?<\/[aA](\s*)? >.*?)
-                "/<[aA](?:\s[^>]*)?>.*?<\/[aA](?:\s*)?>/",
-                $post_content,$matches,PREG_OFFSET_CAPTURE//+PREG_SET_ORDER
-            ))
-            {
-                foreach($matches[0] as $tagA)
-                    $tags[] = array($tagA[1],$tagA[1]+strlen($tagA[0]));
-            }
-
-            if (preg_match_all("/$find/",
-                $post_content,$matches,PREG_OFFSET_CAPTURE//+PREG_SET_ORDER
-            ))
-            {
-                $len = strlen($find);
-                // переворачиваем массив для замены с конца, чтобы сдвиг не мешал
-                foreach(array_reverse($matches[0]) as $found) {
-                    $pos = $found[1];
-                    $inTag = false;
-                    foreach($tags as $tagPos)
-                        if ($tagPos[0]<$pos && $pos<$tagPos[1]) {
-                            $inTag = true;
-                            break;
-                        }
-                    if ( ! $inTag)
-                        $post_content = substr_replace($post_content, $replace, $pos, $len);
+            $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+            foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
+                //error_log(print_r($dataAutoReplacLink['data'], true));
+                $defaults = array( 'url' => '', 'nofollow' => '', 'replace' => 0 );
+                extract( wp_parse_args( $dataAutoReplacLink['data'], $defaults ), EXTR_SKIP );
+                foreach($dataAutoReplacLink['anchor'] as $anchor){
+                    //error_log(preg_quote($anchor));
+                    $data['post_content'] = preg_replace_callback(
+                        '/('.preg_quote($anchor).'|<a .*?>'.preg_quote($anchor).'<\/a>)/m',
+                        function($matches) use ($anchor, $url, $nofollow, $replace){
+                            if(strpos($matches[1], '<a') === false){
+                                $matches[1] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                            } else{
+                                if($replace == 1){
+                                    $matches[1] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                                }
+                            }
+                            return $matches[1];
+                        },
+                        //array( &$this, 'tp_preg_replace'),
+                        $data['post_content'],
+                        -1,
+                        $count
+                    );
                 }
             }
-            error_log($post_content);
-            //$match = preg_match_all('/test111/',$data['post_content'], $search);
-            /*$match = preg_replace(
-                '/test111/',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
-                '<a href="">test111</a> ',
-                $data['post_content'],
-                -1,
-                $count);*/
-            /*$data['post_content'] = preg_replace_callback(
-                '/(^test111$)[^<a.*?>(test111)<\/a>]/m',//|(\b)test111(\b)(test111)|^test111|test111|test111$
-                array( &$this, 'tp_preg_replace'),
-                $data['post_content'],
-                -1,
-                $count
-            );
-            //error_log(print_r($match, true));
+
+
+
             error_log(print_r($count, true));
-            /*$data['post_content'] = preg_replace(
-                '|[^<a.*?>]test111[^<\/a>]|',//[^>][^<] [^\<a.*?\>]test111[^\<\/a\>]
-                '<a href="">test111</a> ',
-                $data['post_content']);
-
-            /*$data['post_content'] = preg_replace_callback(
-                '/[^>]test111[^<]/',
-                array( &$this, 'tp_preg_replace'),
-                $data['post_content']
-            );
-            /*if(strpos($title, 'origin') !== false){
-                $data['post_content'] = str_replace(
-                    'origin',
-                    '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' ,
-                    $title);
-            }*/
-            //$data['post_content'] = str_replace(' '.'test111', ' <a href="test111">test111</a> ', $data['post_content']);
-            /*$data['post_content'] = preg_replace(
-                '/^test111$/',
-                ' <a href="test111">test111</a>',
-                $data['post_content']);
-
-            error_log(print_r(preg_replace(
-                '/^test111$/',
-                ' <a href="test111">test111</a>',
-                $data['post_content']), true));*/
+            //error_log(print_r($post_content, true));
         }
         //error_log(print_r($data, true));
         //error_log(print_r($postarr['tp_auto_replac_link'], true));
         return $data;
     }
-    public function tp_preg_replace($matches) {
-        /*error_log(print_r($matches, true));
-        foreach($matches as $key=>$match){
-            //$matches[$key] = $match.'11';
-            error_log(print_r($match, true));
-        }*/
-        //$matches[0] = 't22';
+    /*public function tp_preg_replace($matches) {
+
         error_log(print_r($matches, true));
-        return $matches[0];//.' 1 ';
-    }
+        if(strpos($matches[1], '<a') === false){
+            $matches[1] .= ' 444';
+        } else{
+
+        }
+        return $matches[1];
+    }    */
 
 }

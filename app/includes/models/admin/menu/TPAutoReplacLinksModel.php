@@ -118,17 +118,21 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         return false;
     }
 
+    /**
+     * @return array|bool
+     */
     public function getDataAutoReplacLinks(){
         $data = $this->get_data();
+        if($data == false) return false;
         $dataResult = array();
-        //[arl_url] => https://www.travelpayouts.com/dashboard
-        //[arl_anchor] => Тест, Тест
         foreach($data as $item){
-            $dataResult[$item['id']]['url'] = $item['arl_url'];
+            $dataResult[$item['id']]['data']['url'] = $item['arl_url'];
+            $dataResult[$item['id']]['data']['nofollow'] = ($item['arl_nofollow'] == 1) ? 'rel="nofollow"' : '';
+            $dataResult[$item['id']]['data']['replace'] = $item['arl_replace'];
             $dataResult[$item['id']]['anchor'] = explode(",", $item['arl_anchor']);
 
         }
-        error_log(print_r($dataResult, true));
+        return $dataResult;
 
     }
     /**

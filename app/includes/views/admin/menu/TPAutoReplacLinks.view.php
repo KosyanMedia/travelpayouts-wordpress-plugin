@@ -68,7 +68,7 @@
             <div class="TP-colFormCust">
                 <div class="TP-FormItem">
                     <div class="ItemSub">
-                        <input type="submit" name="submit" id="TPBtnIsertLink" class="TPBtnIsertLink TP-ImportLink"
+                        <input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
                                value="<?php _e('Affix links', TPOPlUGIN_TEXTDOMAIN ); ?>">
                     </div>
                 </div>
