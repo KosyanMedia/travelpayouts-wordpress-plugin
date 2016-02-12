@@ -99,6 +99,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     public function tp_add_custom_box_callback($post){
         //error_log(print_r($post, true));
         $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+
         $disabled = '';
         if($dataAutoReplacLinks !== false){
             if(empty(get_post_meta( $post->ID, 'tp_auto_replac_link', true ))) {
@@ -189,21 +190,22 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
             foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
                 //error_log(print_r($dataAutoReplacLink['data'], true));
-                $defaults = array( 'url' => '', 'nofollow' => '', 'replace' => 0 );
-                extract( wp_parse_args( $dataAutoReplacLink['data'], $defaults ), EXTR_SKIP );
+                extract($dataAutoReplacLink['data']);
                 foreach($dataAutoReplacLink['anchor'] as $anchor){
-                    //error_log(preg_quote($anchor));
+                    //error_log(preg_quote($anchor).'  '.$url);
+                    //error_log(print_r($dataAutoReplacLink, true));
                     $data['post_content'] = preg_replace_callback(
-                        '/('.preg_quote($anchor).'|<a .*?>'.preg_quote($anchor).'<\/a>)/m',
+                        '/('.preg_quote($anchor).')|(\b)(<a .*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
                         function($matches) use ($anchor, $url, $nofollow, $replace){
-                            if(strpos($matches[1], '<a') === false){
-                                $matches[1] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                            //error_log(print_r($matches, true));
+                            if(strpos($matches[0], '<a') === false){
+                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
                             } else{
                                 if($replace == 1){
-                                    $matches[1] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
                                 }
                             }
-                            return $matches[1];
+                            return $matches[0];
                         },
                         //array( &$this, 'tp_preg_replace'),
                         $data['post_content'],
@@ -215,7 +217,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
 
 
-            error_log(print_r($count, true));
+            //error_log(print_r($count, true));
             //error_log(print_r($post_content, true));
         }
         //error_log(print_r($data, true));
