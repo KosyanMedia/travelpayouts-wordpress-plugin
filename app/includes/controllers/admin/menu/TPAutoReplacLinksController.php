@@ -102,10 +102,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
         $disabled = '';
         if($dataAutoReplacLinks !== false){
-            if(empty(get_post_meta( $post->ID, 'tp_auto_replac_link', true ))) {
+            $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
+            if(empty($tp_auto_replac_link)) {
                 $tp_auto_replac_link = 0;
-            }else{
-                $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
             }
         }else{
             $tp_auto_replac_link = 1;

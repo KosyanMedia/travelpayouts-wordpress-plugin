@@ -27,7 +27,7 @@
                         <span>
                             <?php _e('Anchor phrase', TPOPlUGIN_TEXTDOMAIN) ?>
                             <a href="#" class="tooltip-settings">
-                                <span><?php _e('', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                <span><?php _e('You may add several anchors, use comma as separator', TPOPlUGIN_TEXTDOMAIN); ?></span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                 <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
