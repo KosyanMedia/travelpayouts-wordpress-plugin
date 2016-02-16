@@ -6,6 +6,10 @@ jQuery(function($) {
     doc.ready(function(){
 
     });
+
+
+
+
     doc.find('#constructorShortcodesButton').click(function (e) {
         //console.log("constructorShortcodesButton");
 

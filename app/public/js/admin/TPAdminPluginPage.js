@@ -41,8 +41,64 @@ jQuery(function($){
 
     $.fn.dataTable.ext.errMode = 'throw';
     /** **/
+    doc.find('#TPBtnIsertLink').click(function (e) {
+        console.log(11);
+       /* doc.find("#TPProgressbar" )
+            .progressbar({
+            max: 100,
+            value: 37,
+        }); */
 
+
+        var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
+            resizable: false,
+            draggable: false,
+            maxHeight:100,
+            maxWidth: 1000,
+            minWidth: 700,
+            minHeight:40,
+            modal: true,
+            dialogClass:"TPProgressbarDialog",
+            open : function() {
+                //$(this).addClass(class_notice);
+                doc.find('.ui-widget-overlay').bind('click',function(){
+                   // dialogProgressbar.dialog('close');
+                })
+                var progressbar = $( "#TPProgressbar" ),
+                    progressLabel = $( ".TPProgressbar-label" );
+
+                progressbar.progressbar({
+                    value: false,
+                    change: function() {
+                        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                    },
+                    complete: function() {
+                        progressLabel.text(TPLebelProgressBar);
+                        dialogProgressbar.dialog('close');
+                    }
+                });
+
+                function progress() {
+                    var val = progressbar.progressbar( "value" ) || 0;
+
+                    progressbar.progressbar( "value", val + 2 );
+
+                    if ( val < 99 ) {
+                        setTimeout( progress, 80 );
+                    }
+                }
+
+                setTimeout( progress, 2000 );
+
+
+            },
+            close: function( event, ui ) {
+            }
+        });
+
+    });
     doc.ready(function(){
+
         selectLocalizationFields();
         buttonFontStyle('.BoldTracing');
         buttonFontStyle('.ItalicTracing');

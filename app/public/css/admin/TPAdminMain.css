@@ -2569,6 +2569,10 @@ thead tr td.active-w {
 .TPadminNoticeModal .ui-dialog-titlebar {
   display: none;
 }
+.TPProgressbarDialog .ui-dialog-titlebar {
+  display: none;
+}
+
 
 .TPnotice-dismiss{
   position: absolute;
@@ -2636,4 +2640,28 @@ thead tr td.active-w {
 }
 .TPAutoLink{
   padding-bottom: 120px;
+}
+
+.ui-progressbar {
+  position: relative;
+}
+.TPProgressbar-label {
+  position: absolute;
+  left: 5px;
+  display: inline-block;
+  text-align: center !important;
+  top: 4px;
+  color: #23282d; !important;
+  border: none;
+  font-weight: 200;
+  /*font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;*/
+}
+.ui-widget-header{
+  background: #69c7f4 !important;
+
+}
+.ui-widget-content {
+  border: 1px solid #e6ebed !important;
+  color: #ffffff !important;
 }

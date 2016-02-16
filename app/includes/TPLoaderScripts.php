@@ -37,10 +37,21 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(),
             TPOPlUGIN_VERSION
         );
+
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-jquery-ui',
+            TPOPlUGIN_URL.'app/public/css/lib/jquery-ui/jquery-ui.min.css',
+            array(),
+            TPOPlUGIN_VERSION
+        );
+
         wp_register_style(
             TPOPlUGIN_SLUG.'-TPAdminMain', //$handle
             TPOPlUGIN_URL.'app/public/css/admin/TPAdminMain.css', // $src
-            array(TPOPlUGIN_SLUG.'-bellows'), //$deps,
+            array(
+                TPOPlUGIN_SLUG.'-bellows',
+                TPOPlUGIN_SLUG.'-jquery-ui'
+            ), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
         /** End register styles */
@@ -116,7 +127,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 'jquery-ui-button','jquery-form', 'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-fileDownload', TPOPlUGIN_SLUG.'-jqColorPicker',
                 TPOPlUGIN_SLUG.'-excellentexport', TPOPlUGIN_SLUG.'-dataTables',
-                TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver'), //$deps
+                TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver',
+                'jquery-ui-progressbar'
+            ), //$deps
             TPOPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
@@ -215,7 +228,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
-                TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel;
+                TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar;
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -228,6 +241,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPHotelSelectWidgetCat1 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat1']; ?>';
             TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
+            TPLebelProgressBar = '<?php _e('Complete', TPOPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

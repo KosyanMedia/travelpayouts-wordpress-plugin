@@ -30,6 +30,7 @@
             </div>
             <a class="TP-AllLincksShort"></a>
         </div>
+
         <table class="TP-listShort" id="TP-listShortcode">
             <thead>
             <tr>
@@ -75,5 +76,12 @@
             </div>
         </form>
 
+    </div>
+</div>
+<div id="TPProgressbarDialog">
+    <div id="TPProgressbar">
+        <div class="TPProgressbar-label">
+            <?php _e('Placing links', TPOPlUGIN_TEXTDOMAIN ); ?>...
+        </div>
     </div>
 </div>
