@@ -241,7 +241,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPHotelSelectWidgetCat1 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat1']; ?>';
             TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
-            TPLebelProgressBar = '<?php _e('Complete', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPLebelProgressBar = '<?php _e('Complete!', TPOPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-02-16 15:04+0300\n"
+"POT-Creation-Date: 2016-02-16 15:35+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -274,8 +274,8 @@ msgid "City"
 msgstr "Город"
 
 #: app/includes/TPLoaderScripts.php:244
-msgid "Complete"
-msgstr "Завершено"
+msgid "Complete!"
+msgstr "Готово!"
 
 #: app/includes/TPLoaderScripts.php:260 app/includes/TPLoaderScripts.php:261
 #: app/includes/TPLoaderScripts.php:265 app/includes/TPLoaderScripts.php:266

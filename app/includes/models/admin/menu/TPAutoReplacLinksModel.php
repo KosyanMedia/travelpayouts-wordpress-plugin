@@ -16,6 +16,9 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
         add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
+
+        add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
+        add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
     }
     public static function createTable()
     {
@@ -92,6 +95,12 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
                     }
                     break;
             }
+        }
+    }
+
+    public function replaceAll(){
+        if(isset($_POST)) {
+            error_log(print_r($_POST, true));
         }
     }
 
