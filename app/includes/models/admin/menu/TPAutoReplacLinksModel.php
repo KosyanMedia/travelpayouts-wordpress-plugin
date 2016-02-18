@@ -153,7 +153,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
                     extract($dataAutoReplacLink['data']);
                     foreach($dataAutoReplacLink['anchor'] as $anchor){
                         //error_log(preg_quote($anchor).'  '.$url);
-                        //error_log(print_r($dataAutoReplacLink, true));
+                        //error_log(print_r($dataAutoReplacLink, true)); (\b) (\b)
                         $post->post_content = preg_replace_callback(
                             '/('.preg_quote($anchor).')|(\b)(<a .*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
                             function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){

@@ -739,6 +739,7 @@ class TPDefault implements  \core\TPODefault{
                 'active' => 1,
                 'all_link' => 1,
                 'limit' => 10,
+                'not_title' => 1,
             )
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );

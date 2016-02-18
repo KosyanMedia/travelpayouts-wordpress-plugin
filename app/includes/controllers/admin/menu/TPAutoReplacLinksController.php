@@ -194,11 +194,19 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 foreach($dataAutoReplacLink['anchor'] as $anchor){
                     //error_log(preg_quote($anchor).'  '.$url);
                     //error_log(print_r($dataAutoReplacLink, true));
+                    // (\b) (\b) Проверить
                     $data['post_content'] = preg_replace_callback(
-                        '/('.preg_quote($anchor).')|(\b)(<a .*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
+                        '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
                         function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                            //error_log(print_r($matches, true));
+                            error_log(print_r($matches, true));
                             if(strpos($matches[0], '<a') === false){
+
+                                /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                                    error_log(111);
+                                }else{
+                                    error_log(222);
+                                }*/
+
                                 $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                                               .' '.$event.'>'.$anchor.'</a>';
                             } else{
