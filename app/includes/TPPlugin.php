@@ -75,6 +75,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         //$settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
         //error_log(print_r($settings, true));
         //error_log(print_r(self::$options, true));
+        //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
         self::deleteCacheAll();
 
     }

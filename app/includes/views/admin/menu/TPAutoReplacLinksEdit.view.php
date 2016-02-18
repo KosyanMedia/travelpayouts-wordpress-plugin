@@ -36,15 +36,26 @@
                         </span>
                     <textarea name="arl_anchor" required><?php echo $this->data['arl_anchor'] ?></textarea>
                 </label>
-                <label>
+                <label class="TP-LabelEvent">
+                   <span>
+                        <?php _e('Events onclick', TPOPlUGIN_TEXTDOMAIN) ?>
+                   </span>
+                    <textarea  name="arl_event"><?php echo $this->data['arl_event'] ?></textarea>
+                </label>
+                <input type="hidden" name="link_id" value="<?php echo $this->data['id'] ?>">
+            </div>
+            <div  class="TP-LocalHead ">
+                <label class="TP-inputTextShortCustCheck">
                     <input id="chekarla1" type="checkbox" name="arl_nofollow"
                            value="1" hidden <?php checked( $this->data['arl_nofollow'], 1 ); ?>/>
                     <label for="chekarla1"><?php echo _x('Adding attribute nofollow', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla2" type="checkbox" name="arl_replace"
                            value="1" hidden <?php checked( $this->data['arl_replace'], 1 ); ?>/>
                     <label for="chekarla2"><?php echo _x('Replace the existing links', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <input id="chekarla3" type="checkbox" name="arl_target_blank"
+                           value="1" hidden <?php checked( $this->data['arl_target_blank'], 1 ); ?>/>
+                    <label for="chekarla3"><?php echo _x('Open in new window', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </label>
-                <input type="hidden" name="link_id" value="<?php echo $this->data['id'] ?>">
             </div>
             <div class="TP-navsUserShort">
                 <a href="admin.php?page=tp_control_substitution_links" class="TP-deleteShortLincks TP-deleteShortLincks--cust">

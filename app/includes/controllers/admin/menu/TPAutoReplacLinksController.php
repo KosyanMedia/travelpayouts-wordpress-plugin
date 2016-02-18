@@ -22,7 +22,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
-
+        add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
+        add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
 
     }
     public function action()
@@ -195,13 +196,15 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     //error_log(print_r($dataAutoReplacLink, true));
                     $data['post_content'] = preg_replace_callback(
                         '/('.preg_quote($anchor).')|(\b)(<a .*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
-                        function($matches) use ($anchor, $url, $nofollow, $replace){
+                        function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
                             //error_log(print_r($matches, true));
                             if(strpos($matches[0], '<a') === false){
-                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                              .' '.$event.'>'.$anchor.'</a>';
                             } else{
                                 if($replace == 1){
-                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks">'.$anchor.'</a>';
+                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                                  .' '.$event.'>'.$anchor.'</a>';
                                 }
                             }
                             return $matches[0];
@@ -233,5 +236,18 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
         return $matches[1];
     }    */
+
+
+    public function renderProgressbar(){
+        ?>
+        <div id="TPProgressbarDialog">
+            <div id="TPProgressbar">
+                <div class="TPProgressbar-label">
+                    <?php _e('Placing links', TPOPlUGIN_TEXTDOMAIN ); ?>...
+                </div>
+            </div>
+        </div>
+        <?php
+    }
 
 }

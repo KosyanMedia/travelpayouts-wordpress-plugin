@@ -78,10 +78,3 @@
 
     </div>
 </div>
-<div id="TPProgressbarDialog">
-    <div id="TPProgressbar">
-        <div class="TPProgressbar-label">
-            <?php _e('Placing links', TPOPlUGIN_TEXTDOMAIN ); ?>...
-        </div>
-    </div>
-</div>

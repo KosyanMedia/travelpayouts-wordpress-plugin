@@ -50,7 +50,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_URL.'app/public/css/admin/TPAdminMain.css', // $src
             array(
                 TPOPlUGIN_SLUG.'-bellows',
-                TPOPlUGIN_SLUG.'-jquery-ui'
+                //TPOPlUGIN_SLUG.'-jquery-ui'
             ), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
@@ -217,6 +217,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminPluginPage');
             wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminMain');
         }
+        if(strripos($hook, 'tp_control_substitution_links') !== false){
+            wp_enqueue_style(TPOPlUGIN_SLUG.'-jquery-ui');
+        }
+
     }
 
     public function headScriptAdmin()

@@ -60,8 +60,8 @@ jQuery(function($){
 
         }
         if(checkedId.length > 0) {
-            console.log(checkedId);
-            data = {id: checkedId}
+            console.log(checkedId.join());
+            data = {id: checkedId.join()}
             var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
                 resizable: false,
                 draggable: false,
@@ -71,6 +71,7 @@ jQuery(function($){
                 minHeight:40,
                 modal: true,
                 dialogClass:"TPProgressbarDialog",
+                autoOpen: true,
                 open : function() {
                     e.preventDefault();
 
@@ -80,7 +81,8 @@ jQuery(function($){
                         type: "POST", // Делаем POST запрос
                         data: data,
                         success: function (data) {
-                            //console.log(data.substring(0, data.length - 1));
+                            console.log(data.substring(0, data.length - 1));
+                            console.log('success');
                             //document.location.href = '';
                         }
                     });

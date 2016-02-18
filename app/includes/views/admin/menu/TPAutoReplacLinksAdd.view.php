@@ -36,13 +36,25 @@
                         </span>
                     <textarea name="arl_anchor" required></textarea>
                 </label>
-                <label>
+                <label class="TP-LabelEvent">
+                   <span>
+                        <?php _e('Events onclick', TPOPlUGIN_TEXTDOMAIN) ?>
+                   </span>
+                   <textarea  name="arl_event"></textarea>
+                </label>
+
+            </div>
+            <div  class="TP-LocalHead ">
+                <label class="TP-inputTextShortCustCheck">
                     <input id="chekarla1" type="checkbox" name="arl_nofollow"
                            value="1" hidden />
                     <label for="chekarla1"><?php echo _x('Adding attribute nofollow', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla2" type="checkbox" name="arl_replace"
                            value="1" hidden />
                     <label for="chekarla2"><?php echo _x('Replace the existing links', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <input id="chekarla3" type="checkbox" name="arl_target_blank"
+                           value="1" hidden />
+                    <label for="chekarla3"><?php echo _x('Open in new window', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </label>
             </div>
             <div class="TP-navsUserShort">
