@@ -2627,9 +2627,9 @@ thead tr td.active-w {
 .TPProgressbarDialog .ui-dialog-titlebar {
   display: none;
 }
-.TPProgressbarDialog .ui-widget-overlay {
+.ui-widget-overlay {
   position: fixed !important;
-  top: 0 !important;
+  top: 23px !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;

@@ -211,7 +211,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                         },
                         //array( &$this, 'tp_preg_replace'),
                         $data['post_content'],
-                        -1,
+                        -1,//Limit replace
                         $count
                     );
                 }
