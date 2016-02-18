@@ -16,7 +16,7 @@ class TPFieldAutoReplLink
     }
     public function TPFieldARL(){
         ?>
-        <div class="TP-colFormCust">
+        <div class="TP-colFormCust TP-colFormCustARL">
             <div class="TP-FormItem">
                 <div class="ItemSub">
                     <ul class="TP-listSet">
@@ -31,6 +31,19 @@ class TPFieldAutoReplLink
                             <label for="chekarl3"><?php _e('Make all the referral links to sites Travelpayouts', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
+                </div>
+                <div class="ItemSub">
+                    <span><?php _e('Limit replacements', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
+                        <label>
+                            <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"
+                                   value="<?php echo \app\includes\TPPlugin::$options['auto_repl_link']['limit']; ?>">
+                        </label>
+                        <div class="navSpinner">
+                            <a class="navDown" href="javascript:void(0);" data-spin="down" rollapp-href="javascript:void(0);"></a>
+                            <a class="navUp" href="javascript:void(0);" data-spin="up" rollapp-href="javascript:void(0);"></a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

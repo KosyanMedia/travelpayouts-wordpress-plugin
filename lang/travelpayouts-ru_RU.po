@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-02-18 13:16+0300\n"
+"POT-Creation-Date: 2016-02-18 16:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -144,7 +144,7 @@ msgstr "Дешевые перелеты из города"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:238
+#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:246
 #: app/includes/models/admin/menu/TPFieldSettings.php:423
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
@@ -152,7 +152,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:237
+#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:245
 #: app/includes/models/admin/menu/TPFieldSettings.php:446
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
@@ -251,58 +251,58 @@ msgstr "Переменная $airline не задана или задана не
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
-#: app/includes/TPLoaderScripts.php:236
+#: app/includes/TPLoaderScripts.php:244
 msgid "Hotel Name"
 msgstr "Название отеля"
 
-#: app/includes/TPLoaderScripts.php:239
+#: app/includes/TPLoaderScripts.php:247
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:242
+#: app/includes/TPLoaderScripts.php:250
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:243
+#: app/includes/TPLoaderScripts.php:251
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:244
+#: app/includes/TPLoaderScripts.php:252
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:248
+#: app/includes/TPLoaderScripts.php:256
 msgid "Complete!"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:264 app/includes/TPLoaderScripts.php:265
-#: app/includes/TPLoaderScripts.php:269 app/includes/TPLoaderScripts.php:270
+#: app/includes/TPLoaderScripts.php:272 app/includes/TPLoaderScripts.php:273
+#: app/includes/TPLoaderScripts.php:277 app/includes/TPLoaderScripts.php:278
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:274
+#: app/includes/TPLoaderScripts.php:282
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:275
+#: app/includes/TPLoaderScripts.php:283
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:279
+#: app/includes/TPLoaderScripts.php:287
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:280
+#: app/includes/TPLoaderScripts.php:288
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:283
+#: app/includes/TPLoaderScripts.php:291
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:284
+#: app/includes/TPLoaderScripts.php:292
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -414,7 +414,7 @@ msgid "Insert widget"
 msgstr "Вставить виджет"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:42
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:50
 msgid "Link"
 msgstr "Ссылка"
 
@@ -857,6 +857,10 @@ msgstr "Активировать неактивные ссылки"
 msgid "Make all the referral links to sites Travelpayouts"
 msgstr "Сделать реферальными все ссылки на сайты Travelpayouts"
 
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:36
+msgid "Limit replacements"
+msgstr "Количество замен "
+
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:15
 msgid "Layout"
@@ -1115,14 +1119,14 @@ msgstr ""
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:62
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:54
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:62
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:65
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:57
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:65
 msgid "save changes"
 msgstr "сохранить изменения"
 
@@ -1143,7 +1147,7 @@ msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:55
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:28
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:36
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
@@ -1152,7 +1156,7 @@ msgid "Add Date"
 msgstr "Дата добавления"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:55
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:63
 msgid "Edit"
 msgstr "Редактировать "
 
@@ -1255,23 +1259,24 @@ msgid "You may add several anchors, use comma as separator"
 msgstr "Вы можете добавить несколько якорных фраз, разделив их запятой\r"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:41
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:41
 msgid "Events onclick"
 msgstr "События onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:51
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:42
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
 msgctxt "settings"
 msgid "Adding attribute nofollow"
 msgstr "Добавлять атрибут nofollow"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:54
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:45
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:54
 msgctxt "settings"
 msgid "Replace the existing links"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:57
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:48
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:57
 msgctxt "settings"
 msgid "Open in new window"
 msgstr "Открывать в новом окне"
@@ -1346,15 +1351,16 @@ msgstr "Список ссылок"
 msgid "Add link"
 msgstr "Добавить ссылку"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:23
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:24
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:31
 msgid "Import links"
 msgstr "Импорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:41
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:49
 msgid "Anchor"
 msgstr "Анкор"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:73
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:81
 msgid "Affix links"
 msgstr "Проставить ссылки"
 

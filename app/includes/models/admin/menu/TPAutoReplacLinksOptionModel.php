@@ -32,6 +32,6 @@ class TPAutoReplacLinksOptionModel extends \app\includes\models\admin\TPOptionMo
     public function save_option($input)
     {
         parent::save_option($input);
-        error_log('test');
+        //error_log('test');
     }
 }
