@@ -19,9 +19,17 @@
                 <a href="admin.php?page=tp_control_substitution_links&action=add_link" class="TP-addShortLincks">
                     <i></i><?php _e('Add link', TPOPlUGIN_TEXTDOMAIN) ?>
                 </a>
-                <a href="admin.php?page=tp_control_substitution_links&action=import_links" class="TP-ImportLink">
+                <div class="input_button_style TP-ImportLink">
+                    <div class="input_font_style">
+                        <?php _e('Import links', TPOPlUGIN_TEXTDOMAIN) ?>
+                    </div>
+                    <input type="file" accept=".csv" name="select_file"
+                           id="importFileCSV" size="1" class="input_input_style"
+                           multiple="">
+                </div>
+                <!--<a href="admin.php?page=tp_control_substitution_links&action=import_links" class="TP-ImportLink">
                     <i></i><?php _e('Import links', TPOPlUGIN_TEXTDOMAIN) ?>
-                </a>
+                </a>-->
                 <a href="#"
                    class="TP-deleteShortLincks deleteChecked"
                    data-type="arl_link">

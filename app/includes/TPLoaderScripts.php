@@ -120,6 +120,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             true //$$in_footer
         );
         wp_register_script(
+            TPOPlUGIN_SLUG. '-jquery-csv', //$handle
+            TPOPlUGIN_URL.'app/public/js/lib/jquery.csv.min.js', //$src
+            array(), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+
+        wp_register_script(
             TPOPlUGIN_SLUG.'-TPAdminPluginPage', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminPluginPage.js', //$src
             array('jquery', 'wp-color-picker','jquery-ui-autocomplete',
@@ -128,7 +136,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_SLUG.'-fileDownload', TPOPlUGIN_SLUG.'-jqColorPicker',
                 TPOPlUGIN_SLUG.'-excellentexport', TPOPlUGIN_SLUG.'-dataTables',
                 TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver',
-                'jquery-ui-progressbar'
+                'jquery-ui-progressbar', TPOPlUGIN_SLUG. '-jquery-csv'
             ), //$deps
             TPOPlUGIN_VERSION, //$ver
             true //$$in_footer

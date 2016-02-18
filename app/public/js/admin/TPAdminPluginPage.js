@@ -40,6 +40,46 @@ jQuery(function($){
     };
 
     $.fn.dataTable.ext.errMode = 'throw';
+    /************************************************* ***/
+    /** **/
+    doc.find('#importFileCSV').change(function() {
+        var files = $(this)[0].files;
+        loadInViewCSV(files);
+    });
+    /** **/
+    function loadInViewCSV(files) {
+        dataArray = [];
+        var length = files.length;
+        if ( length==1 ){
+            $.each(files, function(index, file) {
+                // Создаем новый экземпляра FileReader
+                var fileReader = new FileReader();
+                fileReader.readAsText(file);
+                fileReader.onload = (function(file) {
+                    return function(e) {
+                        var result = $.csv.toArrays(this.result);
+                        //console.log(this.result);
+                        //console.log(result);
+                        $.ajax({
+                            url: ajaxurl+'?action=import_csv',
+                            type: "post", // Делаем POST запрос
+                            data: ({name : file.name, value : result}),
+                            success: function(data) {
+                                //console.log(data.substring(0, data.length - 1));
+                                document.location.href = "";
+                            }
+                        });
+                    };
+                })(files[index]);
+            });
+        } else
+            alert('Вы не можете загружать больше 1 файла!');
+        return false;
+    }
+
+
+
+
     /** **/
     doc.find('#TPBtnIsertLink').click(function (e) {
         console.log(11);

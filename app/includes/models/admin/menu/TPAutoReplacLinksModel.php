@@ -19,6 +19,9 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
 
         add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
         add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
+
+        add_action('wp_ajax_import_csv',      array( &$this, 'importCsv'));
+        add_action('wp_ajax_nopriv_import_csv',array( &$this, 'importCsv'));
     }
     public static function createTable()
     {
@@ -183,6 +186,31 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
             }
 
             wp_reset_postdata();
+
+        }
+    }
+
+
+    public function importCsv(){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        if(isset($_POST) && isset($_POST['value'])) {
+            //error_log(print_r($_POST, true));
+            //$csv = array_map('str_getcsv', $_POST['value']);
+            //error_log(print_r($csv, true));
+            foreach($_POST['value'] as $value){
+                $inputData = array(
+                    'arl_url' => (isset($value[0]))?$value[0]:'',
+                    'arl_anchor' => (isset($value[1]))?$value[1]:'',
+                    'arl_event' => (isset($value[2]))?$value[2]:'',
+                    'arl_nofollow' => (isset($value[3]))?$value[3]:0,
+                    'arl_replace' => (isset($value[4]))?$value[4]:0,
+                    'arl_target_blank' => (isset($value[5]))?$value[5]:0,
+                    'date_add' => time(),
+                );
+                $wpdb->insert($tableName, $inputData);
+            }
+
 
         }
     }
