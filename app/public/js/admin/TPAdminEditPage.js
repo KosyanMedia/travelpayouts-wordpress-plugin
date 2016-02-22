@@ -3,6 +3,18 @@ jQuery(function($) {
     doc = $(document);
     win = $(window);
 
+
+    doc.find('.TPAutoReplaceLinkPostBtn').click(function (e) {
+
+        doc.find('input[type=checkbox]').each(function(i, el){
+            console.log(i)
+            console.log(el)
+
+        });
+
+        console.log(11111111111);
+    });
+
     doc.find('.TPAutoReplaceLinkPostById').click(function (e) {
         var ID, data;
         ID = $(this).data('post_id');

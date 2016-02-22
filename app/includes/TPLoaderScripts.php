@@ -205,7 +205,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-TPAdminEditPage', //$handle
+            TPOPlUGIN_URL.'app/public/css/admin/TPAdminEditPage.css', // $src
+            array(
 
+            ), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
         switch($hook) {
             case "post.php":
             case "post-new.php":
@@ -220,8 +227,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
                 break;
             case "edit.php":
-                wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminNormalize');
-                wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
+                wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminEditPage');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminEditPage');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-jquery-ui');
                 break;

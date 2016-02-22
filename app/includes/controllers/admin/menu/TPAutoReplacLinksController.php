@@ -24,9 +24,13 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
         add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
-        //add_action( 'load-edit.php', array( &$this, 'renderButton' ) );
-        add_filter('post_row_actions', array( &$this, 'renderButton' ) ,10,2);
-        add_filter('page_row_actions', array( &$this, 'renderButton' ) ,10,2);
+
+
+        add_action( 'admin_footer-edit.php', array( &$this, 'renderButton' ) );
+        //add_filter('bulk_actions-edit-post', array( &$this, 'renderButton' ));
+
+        add_filter('post_row_actions', array( &$this, 'renderLinkPost' ) ,10,2);
+        add_filter('page_row_actions', array( &$this, 'renderLinkPost' ) ,10,2);
         add_action('wp_ajax_auto_replace_link_post_by_id',      array( &$this, 'TPAutoReplaceLinkPostById'));
         add_action('wp_ajax_nopriv_auto_replace_link_post_by_id',array( &$this, 'TPAutoReplaceLinkPostById'));
         add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
@@ -36,7 +40,34 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
     }
 
-    public function renderButton($actions,$tag){
+    /**
+     * @param $actions
+     */
+    public function renderButton(){
+        global $post_type;
+        if($post_type == 'post' || $post_type == 'page'){
+            ?>
+            <script type="text/javascript">
+                jQuery(document).ready(function() {
+                   // jQuery('<option>').val('full')
+                   //     .text('1').appendTo('select[name="action"]');
+                });
+                jQuery('<a href="#" class="button action TPAutoReplaceLinkPostBtn">'
+                    +'<?php _e('Substitution links', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
+                    .appendTo('.bulkactions');
+            </script>
+            <?php
+        }
+        //error_log(print_r($post_type, true));
+
+    }
+
+    /**
+     * @param $actions
+     * @param $tag
+     * @return mixed
+     */
+    public function renderLinkPost($actions,$tag){
         //error_log(print_r($actions, true));
         //error_log(print_r($tag, true));
         $actions['tp-auto-replace-link-action-class'] = '<a href="#" data-post_id="'.$tag->ID .'"
