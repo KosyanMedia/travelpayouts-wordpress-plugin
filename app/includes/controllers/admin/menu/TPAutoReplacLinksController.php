@@ -29,6 +29,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_filter('page_row_actions', array( &$this, 'renderButton' ) ,10,2);
         add_action('wp_ajax_auto_replace_link_post_by_id',      array( &$this, 'TPAutoReplaceLinkPostById'));
         add_action('wp_ajax_nopriv_auto_replace_link_post_by_id',array( &$this, 'TPAutoReplaceLinkPostById'));
+        add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
+        add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
+
         //page
 
     }
@@ -55,6 +58,48 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 'ID' => $post['ID'],
                 'post_content' => $post['post_content']
             ));
+
+        }
+    }
+
+    public function replaceAll(){
+        if(isset($_POST)) {
+
+            $dataAutoReplacLinks = $this->model->get_dataByArrayId($_POST['id']);
+            if($dataAutoReplacLinks == false) return false;
+
+            //error_log(print_r($this->get_dataByArrayId($_POST['id']), true));
+            $posts = get_posts( array(
+                'numberposts'     => -1, // тоже самое что posts_per_page
+                'offset'          => 0,
+                'category'        => '',
+                'orderby'         => 'post_date',
+                'order'           => 'DESC',
+                'include'         => '',
+                'exclude'         => '',
+                'meta_key'        => '',
+                'meta_value'      => '',
+                'post_type'       => 'any',
+                'post_mime_type'  => '', // image, video, video/mp4
+                'post_parent'     => '',
+                'post_status'     => 'publish'
+            ) );
+            foreach($posts as $post){ setup_postdata($post);
+                // формат вывода
+                //error_log(print_r($post->post_content, true));
+
+                $post->post_content = $this->postContentReplaceLink($dataAutoReplacLinks, $post->post_content );
+
+
+                //error_log($post->post_content );
+                wp_update_post(array(
+                    'ID' => $post->ID,
+                    'post_content' => $post->post_content
+                ));
+
+            }
+
+            wp_reset_postdata();
 
         }
     }

@@ -17,8 +17,8 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
         add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
 
-        add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
-        add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
+        //add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
+        //add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
 
         add_action('wp_ajax_import_csv',      array( &$this, 'importCsv'));
         add_action('wp_ajax_nopriv_import_csv',array( &$this, 'importCsv'));
@@ -121,74 +121,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         return false;
     }
 
-    public function replaceAll(){
-        if(isset($_POST)) {
 
-            $dataAutoReplacLinks = $this->get_dataByArrayId($_POST['id']);
-            if($dataAutoReplacLinks == false) return false;
-
-            //error_log(print_r($this->get_dataByArrayId($_POST['id']), true));
-            $posts = get_posts( array(
-                'numberposts'     => -1, // тоже самое что posts_per_page
-                'offset'          => 0,
-                'category'        => '',
-                'orderby'         => 'post_date',
-                'order'           => 'DESC',
-                'include'         => '',
-                'exclude'         => '',
-                'meta_key'        => '',
-                'meta_value'      => '',
-                'post_type'       => 'any',
-                'post_mime_type'  => '', // image, video, video/mp4
-                'post_parent'     => '',
-                'post_status'     => 'publish'
-            ) );
-            foreach($posts as $post){ setup_postdata($post);
-                // формат вывода
-                //error_log(print_r($post->post_content, true));
-
-
-                foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
-                    //error_log(print_r($dataAutoReplacLink['data'], true));
-                    extract($dataAutoReplacLink['data']);
-                    foreach($dataAutoReplacLink['anchor'] as $anchor){
-                        //error_log(preg_quote($anchor).'  '.$url);
-                        //error_log(print_r($dataAutoReplacLink, true)); (\b) (\b)
-                        $post->post_content = preg_replace_callback(
-                            '/('.preg_quote($anchor).')|(\b)(<a .*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
-                            function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                                //error_log(print_r($matches, true));
-                                if(strpos($matches[0], '<a') === false){
-                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                                  .' '.$event.'>'.$anchor.'</a>';
-                                } else{
-                                    if($replace == 1){
-                                        $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                                      .' '.$event.'>'.$anchor.'</a>';
-                                    }
-                                }
-                                return $matches[0];
-                            },
-                            //array( &$this, 'tp_preg_replace'),
-                            $post->post_content,
-                            -1,
-                            $count
-                        );
-                    }
-                }
-
-                //error_log($post->post_content );
-                wp_update_post(array(
-                    'ID' => $post->ID,
-                    'post_content' => $post->post_content
-                ));
-
-            }
-
-            wp_reset_postdata();
-
-        }
-    }
 
 
     public function importCsv(){
