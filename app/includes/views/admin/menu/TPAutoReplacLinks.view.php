@@ -73,15 +73,13 @@
         </table>
         <form action="options.php" class="formSettings TPFormNotReload" method="POST">
             <?php settings_fields('TPAutoReplLink'); ?>
-            <?php do_settings_fields('tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id'); ?>
-            <div class="TP-colFormCust">
-                <div class="TP-FormItem">
-                    <div class="ItemSub">
-                        <input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
-                               value="<?php _e('Affix links', TPOPlUGIN_TEXTDOMAIN ); ?>">
-                    </div>
-                </div>
+            <div class="TPmainContent TP-SettingContent">
+                 <?php do_settings_fields('tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id'); ?>
             </div>
+
+                <input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
+                       value="<?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?>">
+
         </form>
 
     </div>

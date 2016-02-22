@@ -198,7 +198,8 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
             //error_log(print_r($_POST, true));
             //$csv = array_map('str_getcsv', $_POST['value']);
             //error_log(print_r($csv, true));
-            foreach($_POST['value'] as $value){
+            foreach($_POST['value'] as $key=>$value){
+                if($key == 0) continue;
                 $inputData = array(
                     'arl_url' => (isset($value[0]))?$value[0]:'',
                     'arl_anchor' => (isset($value[1]))?$value[1]:'',

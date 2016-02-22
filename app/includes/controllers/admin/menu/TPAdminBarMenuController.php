@@ -17,6 +17,12 @@ class TPAdminBarMenuController extends \core\controllers\TPOAdminBarMenuControll
             "admin.php?page=".TPOPlUGIN_TEXTDOMAIN
         );
         $this->admin_bar_add_sub_menu(
+            __('Substitution links', TPOPlUGIN_TEXTDOMAIN )
+            .' (beta)',
+            'admin.php?page=tp_control_substitution_links',
+            'tp_admin_bar_menu',
+            TPOPlUGIN_TEXTDOMAIN.'_tp_control_substitution_links');
+        $this->admin_bar_add_sub_menu(
             __('Flight Tickets', TPOPlUGIN_TEXTDOMAIN ),
             'admin.php?page=tp_control_tickets',
             'tp_admin_bar_menu',

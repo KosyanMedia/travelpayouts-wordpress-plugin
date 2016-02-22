@@ -16,11 +16,10 @@
         <form method="post" action="admin.php?page=tp_control_substitution_links&action=update_link"
               name="linkAdd">
             <div class="TP-LocalHead TP-shortLocal">
-                <label>
+                <label id="TPArlUrl">
                     <span><?php _e('Link ', TPOPlUGIN_TEXTDOMAIN) ?></span>
                     <input type="text" name="arl_url" value="<?php echo $this->data['arl_url'] ?>" required/>
                 </label>
-                <label></label>
             </div>
             <div  class="TP-LocalHead ">
                 <label class="TP-inputTextShortCust">

@@ -81,14 +81,11 @@ jQuery(function($){
 
 
     /** **/
-    doc.find('#TPBtnIsertLink').click(function (e) {
-        console.log(11);
-       /* doc.find("#TPProgressbar" )
-            .progressbar({
-            max: 100,
-            value: 37,
-        }); */
 
+
+    /** **/
+    doc.find('#TPBtnIsertLink').click(function (e) {
+        //alert('Test');
         var checkedId = [];
         var checkBox = $('input.checkedId');
         var data,type;
@@ -100,66 +97,81 @@ jQuery(function($){
 
         }
         if(checkedId.length > 0) {
-            console.log(checkedId.join());
-            data = {id: checkedId.join()}
-            var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
-                resizable: false,
-                draggable: false,
-                maxHeight:100,
-                maxWidth: 1000,
-                minWidth: 700,
-                minHeight:40,
-                modal: true,
-                dialogClass:"TPProgressbarDialog",
-                autoOpen: true,
-                open : function() {
-                    e.preventDefault();
+            if (confirm(TPBtnIsertLinkDialogTxt)) {
+                // Save it!
+                console.log(11);
+                console.log(checkedId.join());
+                data = {id: checkedId.join()}
+                var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
+                    resizable: false,
+                    draggable: false,
+                    maxHeight:100,
+                    maxWidth: 1000,
+                    minWidth: 700,
+                    minHeight:40,
+                    modal: true,
+                    dialogClass:"TPProgressbarDialog",
+                    autoOpen: true,
+                    open : function() {
+                        e.preventDefault();
 
 
-                    $.ajax({
-                        url: ajaxurl + '?action=replace_all',
-                        type: "POST", // Делаем POST запрос
-                        data: data,
-                        success: function (data) {
-                            console.log(data.substring(0, data.length - 1));
-                            console.log('success');
-                            //document.location.href = '';
+                        $.ajax({
+                            url: ajaxurl + '?action=replace_all',
+                            type: "POST", // Делаем POST запрос
+                            data: data,
+                            success: function (data) {
+                                console.log(data.substring(0, data.length - 1));
+                                console.log('success');
+                                //document.location.href = '';
+                            }
+                        });
+
+                        var progressbar = $( "#TPProgressbar" ),
+                            progressLabel = $( ".TPProgressbar-label" );
+
+                        progressbar.progressbar({
+                            value: false,
+                            change: function() {
+                                progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                            },
+                            complete: function() {
+                                progressLabel.text(TPLebelProgressBar);
+                                dialogProgressbar.dialog('close');
+                            }
+                        });
+
+                        function progress() {
+                            var val = progressbar.progressbar( "value" ) || 0;
+
+                            progressbar.progressbar( "value", val + 2 );
+
+                            if ( val < 99 ) {
+                                setTimeout( progress, 80 );
+                            }
                         }
-                    });
 
-                    var progressbar = $( "#TPProgressbar" ),
-                        progressLabel = $( ".TPProgressbar-label" );
+                        setTimeout( progress, 2000 );
 
-                    progressbar.progressbar({
-                        value: false,
-                        change: function() {
-                            progressLabel.text( progressbar.progressbar( "value" ) + "%" );
-                        },
-                        complete: function() {
-                            progressLabel.text(TPLebelProgressBar);
-                            dialogProgressbar.dialog('close');
-                        }
-                    });
 
-                    function progress() {
-                        var val = progressbar.progressbar( "value" ) || 0;
 
-                        progressbar.progressbar( "value", val + 2 );
-
-                        if ( val < 99 ) {
-                            setTimeout( progress, 80 );
-                        }
+                    },
+                    close: function( event, ui ) {
                     }
+                });
+            }
 
-                    setTimeout( progress, 2000 );
-
-
-
-                },
-                close: function( event, ui ) {
-                }
-            });
         }
+
+
+
+       /* doc.find("#TPProgressbar" )
+            .progressbar({
+            max: 100,
+            value: 37,
+        }); */
+
+
 
 
     });

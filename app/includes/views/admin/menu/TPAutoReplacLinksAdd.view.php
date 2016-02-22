@@ -16,11 +16,10 @@
         <form method="post" action="admin.php?page=tp_control_substitution_links&action=save_link"
              name="linkAdd">
             <div class="TP-LocalHead TP-shortLocal">
-                <label>
+                <label  id="TPArlUrl">
                     <span><?php _e('Link ', TPOPlUGIN_TEXTDOMAIN) ?></span>
                     <input type="text" name="arl_url" required/>
                 </label>
-                <label></label>
             </div>
             <div  class="TP-LocalHead ">
                 <label class="TP-inputTextShortCust">
@@ -47,13 +46,13 @@
             <div  class="TP-LocalHead ">
                 <label class="TP-inputTextShortCustCheck">
                     <input id="chekarla1" type="checkbox" name="arl_nofollow"
-                           value="1" hidden />
+                           value="1" hidden checked="checked"/>
                     <label for="chekarla1"><?php echo _x('Adding attribute nofollow', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla2" type="checkbox" name="arl_replace"
                            value="1" hidden />
                     <label for="chekarla2"><?php echo _x('Replace the existing links', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla3" type="checkbox" name="arl_target_blank"
-                           value="1" hidden />
+                           value="1" hidden checked="checked"/>
                     <label for="chekarla3"><?php echo _x('Open in new window', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </label>
             </div>

@@ -2706,7 +2706,7 @@ thead tr td.active-w {
   margin-top: 30px;
 }
 .TPAutoLink{
-  padding-bottom: 240px;
+  /*padding-bottom: 240px;*/
 }
 
 .TPProgressbarDialog .ui-progressbar {
@@ -2735,4 +2735,8 @@ thead tr td.active-w {
 
 .TP-colFormCustARL{
   width: calc(52% - 34px) !important;
+}
+
+#TPArlUrl{
+  width: 100% !important;
 }

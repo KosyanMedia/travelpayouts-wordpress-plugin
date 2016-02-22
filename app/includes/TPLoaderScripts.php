@@ -197,6 +197,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         );
         wp_enqueue_style('wp-jquery-ui-dialog');
 
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-TPAdminEditPage', //$handle
+            TPOPlUGIN_URL.'app/public/js/admin/TPAdminEditPage.js', //$src
+            array('jquery', 'jquery-ui-core', 'jquery-ui-progressbar',
+                'jquery-ui-dialog'), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+
         switch($hook) {
             case "post.php":
             case "post-new.php":
@@ -210,7 +219,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertWidgets');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
                 break;
+            case "edit.php":
+                wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminNormalize');
+                wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
+                wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminEditPage');
+                wp_enqueue_style(TPOPlUGIN_SLUG.'-jquery-ui');
+                break;
         }
+
         if(strripos($hook, 'tpgenerator') !== false){
             //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
             wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
@@ -240,7 +256,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPTableEmpty, TPDestinationTitle, TPOriginTitle, TPLocationTitlt, TPTableEmptyReport,
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
-                TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar;
+                TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar,
+                TPBtnIsertLinkDialogTxt;
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -254,6 +271,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
             TPLebelProgressBar = '<?php _e('Complete!', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPBtnIsertLinkDialogTxt = '<?php _e('Actions can not cancel. Are you sure?', TPOPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

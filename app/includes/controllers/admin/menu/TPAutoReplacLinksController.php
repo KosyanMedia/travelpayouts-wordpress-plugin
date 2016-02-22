@@ -24,14 +24,83 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
         add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
+        //add_action( 'load-edit.php', array( &$this, 'renderButton' ) );
+        add_filter('post_row_actions', array( &$this, 'renderButton' ) ,10,2);
+        add_filter('page_row_actions', array( &$this, 'renderButton' ) ,10,2);
+        add_action('wp_ajax_auto_replace_link_post_by_id',      array( &$this, 'TPAutoReplaceLinkPostById'));
+        add_action('wp_ajax_nopriv_auto_replace_link_post_by_id',array( &$this, 'TPAutoReplaceLinkPostById'));
+        //page
 
     }
+
+    public function renderButton($actions,$tag){
+        //error_log(print_r($actions, true));
+        //error_log(print_r($tag, true));
+        $actions['tp-auto-replace-link-action-class'] = '<a href="#" data-post_id="'.$tag->ID .'"
+             class="TPAutoReplaceLinkPostById">'
+            . __('Substitution links', TPOPlUGIN_TEXTDOMAIN ).'</a>';
+        return $actions;
+    }
+
+    public function TPAutoReplaceLinkPostById(){
+        if(isset($_POST)) {
+            $post = get_post( $_POST['id'], ARRAY_A);
+
+            $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+            if($dataAutoReplacLinks == false) return false;
+            foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
+                //error_log(print_r($dataAutoReplacLink['data'], true));
+                extract($dataAutoReplacLink['data']);
+                foreach($dataAutoReplacLink['anchor'] as $anchor){
+                    //error_log(preg_quote($anchor).'  '.$url);
+                    //error_log(print_r($dataAutoReplacLink, true));
+                    // (\b) (\b) Проверить
+                    $post['post_content'] = preg_replace_callback(
+                        '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
+                        function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
+                            //error_log(print_r($matches, true));
+                            if(strpos($matches[0], '<a') === false){
+
+                                /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                                    error_log(111);
+                                }else{
+                                    error_log(222);
+                                }*/
+
+                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                    .' '.$event.'>'.$anchor.'</a>';
+                            } else{
+                                if($replace == 1){
+                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                        .' '.$event.'>'.$anchor.'</a>';
+                                }
+                            }
+                            return $matches[0];
+                        },
+                        //array( &$this, 'tp_preg_replace'),
+                        $post['post_content'],
+                        -1,//Limit replace
+                        $count
+                    );
+                }
+            }
+
+            wp_update_post(array(
+                'ID' => $post['ID'],
+                'post_content' => $post['post_content']
+            ));
+
+        }
+    }
+
     public function action()
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
-            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            .' (beta)',
+            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            .'<span class="update-plugins"><span class="plugin-count">beta</span></span>',
             'manage_options',
             'tp_control_substitution_links',
             array(&$this, 'render'));
@@ -198,7 +267,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     $data['post_content'] = preg_replace_callback(
                         '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
                         function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                            error_log(print_r($matches, true));
+                            //error_log(print_r($matches, true));
                             if(strpos($matches[0], '<a') === false){
 
                                 /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
