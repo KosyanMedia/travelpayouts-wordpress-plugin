@@ -48,42 +48,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
             if($dataAutoReplacLinks == false) return false;
-            foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
-                //error_log(print_r($dataAutoReplacLink['data'], true));
-                extract($dataAutoReplacLink['data']);
-                foreach($dataAutoReplacLink['anchor'] as $anchor){
-                    //error_log(preg_quote($anchor).'  '.$url);
-                    //error_log(print_r($dataAutoReplacLink, true));
-                    // (\b) (\b) Проверить
-                    $post['post_content'] = preg_replace_callback(
-                        '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
-                        function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                            //error_log(print_r($matches, true));
-                            if(strpos($matches[0], '<a') === false){
 
-                                /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
-                                    error_log(111);
-                                }else{
-                                    error_log(222);
-                                }*/
-
-                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                    .' '.$event.'>'.$anchor.'</a>';
-                            } else{
-                                if($replace == 1){
-                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                        .' '.$event.'>'.$anchor.'</a>';
-                                }
-                            }
-                            return $matches[0];
-                        },
-                        //array( &$this, 'tp_preg_replace'),
-                        $post['post_content'],
-                        -1,//Limit replace
-                        $count
-                    );
-                }
-            }
+            $post['post_content'] = $this->postContentReplaceLink($dataAutoReplacLinks, $post['post_content'] );
 
             wp_update_post(array(
                 'ID' => $post['ID'],
@@ -91,6 +57,51 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             ));
 
         }
+    }
+
+    /**
+     * @param $dataAutoReplacLinks
+     * @param $post_content
+     * @return mixed
+     */
+    public function postContentReplaceLink($dataAutoReplacLinks, $post_content){
+        foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
+            //error_log(print_r($dataAutoReplacLink['data'], true));
+            extract($dataAutoReplacLink['data']);
+            foreach($dataAutoReplacLink['anchor'] as $anchor){
+                //error_log(preg_quote($anchor).'  '.$url);
+                //error_log(print_r($dataAutoReplacLink, true));
+                // (\b) (\b) Проверить
+                $post_content = preg_replace_callback(
+                    '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
+                    function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
+                        //error_log(print_r($matches, true));
+                        if(strpos($matches[0], '<a') === false){
+
+                            /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                                error_log(111);
+                            }else{
+                                error_log(222);
+                            }*/
+
+                            $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                .' '.$event.'>'.$anchor.'</a>';
+                        } else{
+                            if($replace == 1){
+                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                                    .' '.$event.'>'.$anchor.'</a>';
+                            }
+                        }
+                        return $matches[0];
+                    },
+                    //array( &$this, 'tp_preg_replace'),
+                    $post_content,
+                    -1,//Limit replace
+                    $count
+                );
+            }
+        }
+        return $post_content;
     }
 
     public function action()
@@ -257,42 +268,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         if(isset($postarr['tp_auto_replac_link']) && $postarr['tp_auto_replac_link'] == 0){
 
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
-            foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
-                //error_log(print_r($dataAutoReplacLink['data'], true));
-                extract($dataAutoReplacLink['data']);
-                foreach($dataAutoReplacLink['anchor'] as $anchor){
-                    //error_log(preg_quote($anchor).'  '.$url);
-                    //error_log(print_r($dataAutoReplacLink, true));
-                    // (\b) (\b) Проверить
-                    $data['post_content'] = preg_replace_callback(
-                        '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
-                        function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                            //error_log(print_r($matches, true));
-                            if(strpos($matches[0], '<a') === false){
+            $data['post_content'] = $this->postContentReplaceLink($dataAutoReplacLinks, $data['post_content'] );
 
-                                /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
-                                    error_log(111);
-                                }else{
-                                    error_log(222);
-                                }*/
-
-                                $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                              .' '.$event.'>'.$anchor.'</a>';
-                            } else{
-                                if($replace == 1){
-                                    $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
-                                                  .' '.$event.'>'.$anchor.'</a>';
-                                }
-                            }
-                            return $matches[0];
-                        },
-                        //array( &$this, 'tp_preg_replace'),
-                        $data['post_content'],
-                        -1,//Limit replace
-                        $count
-                    );
-                }
-            }
 
 
 
