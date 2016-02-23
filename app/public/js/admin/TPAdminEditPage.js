@@ -5,14 +5,78 @@ jQuery(function($) {
 
 
     doc.find('.TPAutoReplaceLinkPostBtn').click(function (e) {
-
-        doc.find('input[type=checkbox]').each(function(i, el){
-            console.log(i)
-            console.log(el)
-
+        var checkedId = [];
+        var data;
+        doc.find('[id^=cb-select]:checked').each(function(i, el){
+            var post_id = parseInt($(el).val());
+            if(!isNaN(post_id)){
+                checkedId.push(post_id)
+            }
         });
+        if(checkedId.length > 0) {
+            data = {id: checkedId.join()}
+            console.log(data)
 
-        console.log(11111111111);
+            var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
+                resizable: false,
+                draggable: false,
+                maxHeight:100,
+                maxWidth: 1000,
+                minWidth: 700,
+                minHeight:40,
+                modal: true,
+                dialogClass:"TPProgressbarDialog",
+                autoOpen: true,
+                open : function() {
+                    e.preventDefault();
+
+
+                    $.ajax({
+                        url: ajaxurl + '?action=auto_replace_link_post_check_by_id',
+                        type: "POST", // Делаем POST запрос
+                        data: data,
+                        success: function (data) {
+                            console.log(data.substring(0, data.length - 1));
+                            console.log('success');
+                            //document.location.href = '';
+                        }
+                    });
+
+                    var progressbar = $( "#TPProgressbar" ),
+                        progressLabel = $( ".TPProgressbar-label" );
+
+                    progressbar.progressbar({
+                        value: false,
+                        change: function() {
+                            progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                        },
+                        complete: function() {
+                            progressLabel.text(TPLebelProgressBar);
+                            dialogProgressbar.dialog('close');
+                        }
+                    });
+
+                    function progress() {
+                        var val = progressbar.progressbar( "value" ) || 0;
+
+                        progressbar.progressbar( "value", val + 2 );
+
+                        if ( val < 99 ) {
+                            setTimeout( progress, 80 );
+                        }
+                    }
+
+                    setTimeout( progress, 2000 );
+
+
+
+                },
+                close: function( event, ui ) {
+                }
+            });
+
+        }
+
     });
 
     doc.find('.TPAutoReplaceLinkPostById').click(function (e) {
