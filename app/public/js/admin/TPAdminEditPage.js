@@ -15,7 +15,7 @@ jQuery(function($) {
         });
         if(checkedId.length > 0) {
             data = {id: checkedId.join()}
-            console.log(data)
+            //console.log(data)
 
             var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
                 resizable: false,

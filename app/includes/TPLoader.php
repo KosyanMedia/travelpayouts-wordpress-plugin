@@ -68,7 +68,7 @@ class TPLoader extends \core\TPOLoader{
         // TODO: Implement all() method.
 
         new \app\includes\TPLoaderScripts();
-        new controllers\admin\menu\TPAdminBarMenuController();
+        //new controllers\admin\menu\TPAdminBarMenuController();
 
 
     }
