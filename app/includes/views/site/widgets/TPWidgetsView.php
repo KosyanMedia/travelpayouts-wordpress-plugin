@@ -57,6 +57,10 @@ class TPWidgetsView {
             case 7:
                 $marker .= '_hotelsselections';
                 break;
+            case 8:
+                $marker .= '_specialoff';
+                break;
+
         }
 
 

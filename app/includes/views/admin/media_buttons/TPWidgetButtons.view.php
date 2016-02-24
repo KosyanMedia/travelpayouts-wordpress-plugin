@@ -36,7 +36,22 @@
                         <option value="5"><?php _e('Hotel Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="6"><?php _e('Popular Destinations Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="7"><?php _e('Hotels Selections Widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option value="8"><?php _e('Best deals widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
+            </tr>
+            <tr id="tr_filter_widget">
+                <td>
+                    <label>
+                        <input type="radio" name="filter" value="0"
+                            <?php checked(\app\includes\TPPlugin::$options['widgets']['8']['filter'], 0) ?>>
+                        <?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="1"
+                            <?php checked(\app\includes\TPPlugin::$options['widgets']['8']['filter'], 1) ?>>
+                        <?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </label>
+                </td>
             </tr>
             <tr id="tr_origin_widget">
                 <td>

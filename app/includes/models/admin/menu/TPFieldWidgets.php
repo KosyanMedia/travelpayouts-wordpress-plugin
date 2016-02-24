@@ -618,4 +618,75 @@ class TPFieldWidgets {
         </div>
         <?php
     }
+
+    public function TPFieldWidget_8(){
+        $widgets = 8;
+        ?>
+        <div class="TP-HeadTable ">
+            <label>
+                <span><?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][type]" class="TP-Zelect">
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'full'); ?>
+                        value="brickwork"><?php _e('Tile', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'compact'); ?>
+                        value="slider"><?php _e('Slider', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                </select>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <div class="TP-HeadTable ">
+            <label>
+                <span><?php //_e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <ul class="TP-listSet">
+                    <li>
+                        <input id="rchek18" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][filter]"
+                            <?php checked(\app\includes\TPPlugin::$options['widgets'][$widgets]['filter'], 0) ?> hidden value="0" />
+                        <label for="rchek18"><?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    </li>
+                    <li>
+                        <input id="rchek28" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][filter]"
+                            <?php checked(\app\includes\TPPlugin::$options['widgets'][$widgets]['filter'], 1) ?> hidden value="1" />
+                        <label for="rchek28"><?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    </li>
+                </ul>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <div class="TP-HeadTable ">
+            <label>
+                <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][limit]" class="TP-Zelect">
+                    <?php for($i = 1; $i < 11; $i++){ ?>
+                        <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['limit'], $i ); ?>
+                            value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+
+                </select>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <div class="TP-HeadTable  TPCheckBoxWidget">
+            <input id="chek88" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
+            <label for="chek88"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+
+        </div>
+        <div class="TP-ListSub ListSub--cust list--db">
+            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <div class="ItemSub  ItemSub-3">
+                <label>
+                    <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
+                           type="text"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
+                </label>
+            </div>
+        </div>
+        <?php
+    }
 }

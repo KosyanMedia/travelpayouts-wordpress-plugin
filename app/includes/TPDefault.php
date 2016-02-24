@@ -730,6 +730,14 @@ class TPDefault implements  \core\TPODefault{
                     'cat2' => 'distance',
                     'cat3' => 'tophotels'
 
+                ),
+                '8' => array(
+                    'width' => '800',
+                    'responsive' => 1,
+                    'type' => 'brickwork',
+                    'limit' => 9,
+                    'filter' => 0,
+
                 )
 
             ),

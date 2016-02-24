@@ -38,6 +38,10 @@ class TPWidgetsModel extends \app\includes\models\admin\TPOptionModel{
         add_settings_section( 'tp_settings_widget_7_id', '', '', 'tp_settings_widget_7' );
         add_settings_field('tp_widget_7_td', '', array(&$field ,'TPFieldWidget_7'),
             'tp_settings_widget_7', 'tp_settings_widget_7_id' );
+
+        add_settings_section( 'tp_settings_widget_8_id', '', '', 'tp_settings_widget_8' );
+        add_settings_field('tp_widget_8_td', '', array(&$field ,'TPFieldWidget_8'),
+            'tp_settings_widget_8', 'tp_settings_widget_8_id' );
     }
 
 }
