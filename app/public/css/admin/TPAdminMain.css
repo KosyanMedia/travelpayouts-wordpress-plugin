@@ -2023,6 +2023,9 @@ thead tr td.active-w {
 .TP-listShort tr td:last-of-type {
     border-right: 0;
     width: 75px;
+    max-width: 660px;
+    word-wrap: break-word;
+    padding: 0 15px;
 }
 .TP-listShort tr td label:before {
     margin-right: 0;
@@ -2740,3 +2743,19 @@ thead tr td.active-w {
 #TPArlUrl{
   width: 100% !important;
 }
+
+.TP-LocalHeadARL {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 20px;
+
+}
+.TP-LocalHeadARL label {
+  margin-bottom: 0;
+}
+#TP-listShortcode tbody tr td a  {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px !important;
+}
+

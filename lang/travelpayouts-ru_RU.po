@@ -1299,7 +1299,7 @@ msgstr "Вы можете добавить несколько якорных ф�
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:40
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:40
 msgid "Events onclick"
-msgstr "События onclick"
+msgstr "Событие onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:50
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:50

@@ -177,14 +177,65 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
     }
 
+
+    /**
+     * @param $count_anchor
+     * @return array|int
+     */
+    public function getReplaceLimits($count_anchor){
+        $limit = \app\includes\TPPlugin::$options['auto_repl_link']['limit'];
+        if($limit == 0) return -1;
+        if($count_anchor == 1) return (int) $limit;
+        return $this->getReplaceLimitRecursive($limit, $count_anchor);
+
+    }
+
+    /**
+     * @param $limit
+     * @param $count_anchor
+     * @param array $limit_array
+     * @return array
+     */
+    public function getReplaceLimitRecursive($limit, $count_anchor, $limit_array = array()){
+        if(count($limit_array) == 0) $limit_array = array_pad(array(),$count_anchor,0);
+        for($i = 0; $i < $count_anchor; $i++){
+            if($limit == 0) break;
+            $limit_array[$i] = $limit_array[$i]+1;
+            $limit--;
+        }
+        //error_log(print_r($limit_array, true));
+        //error_log($limit);
+        if($limit == 0) {
+            return $limit_array;
+        } else {
+            return $this->getReplaceLimitRecursive($limit, $count_anchor, $limit_array);
+        }
+    }
+
+    public function getReplaceLimit($limitReplace, $key){
+        switch(gettype($limitReplace)){
+            case "integer":
+                return $limitReplace;
+                break;
+            case "array":
+                return $limitReplace[$key];
+                break;
+        }
+    }
+
     /**
      * @param $dataAutoReplacLinks
      * @param $post_content
      * @return mixed
      */
     public function postContentReplaceLink($dataAutoReplacLinks, $post_content){
+
+        $limitReplace = $this->getReplaceLimits(count($dataAutoReplacLinks));
+        //error_log($this->getReplaceLimit($limitReplace, 0));
+        $key_limit = 0;
         foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
             //error_log(print_r($dataAutoReplacLink['data'], true));
+            //error_log($key_limit);
             extract($dataAutoReplacLink['data']);
             foreach($dataAutoReplacLink['anchor'] as $anchor){
                 //error_log(preg_quote($anchor).'  '.$url);
@@ -214,10 +265,11 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     },
                     //array( &$this, 'tp_preg_replace'),
                     $post_content,
-                    -1,//Limit replace
+                    $this->getReplaceLimit($limitReplace, $key_limit),//-1Limit replace
                     $count
                 );
             }
+            $key_limit++;
         }
         return $post_content;
     }
