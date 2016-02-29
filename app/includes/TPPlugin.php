@@ -7,6 +7,58 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         parent::__construct();
         new TPLoader();
         self::check_plugin_update();
+        $anchor = 'Lorem ipsum';
+        $url = 'http://kinogo.co/';
+        $nofollow = 0;
+        $replace = 0;
+        $target = '';
+        $event = '';
+        $str ='<h1><a href="">Lorem ipsum</a></h1> Lorem ipsum <h1>Lorem ipsum</h1>
+                <a href="">Lorem ipsum</a> Lorem ipsum <h2>Lorem ipsum</h2>
+                <a href="">Lorem ipsum</a> 223232';
+
+        $post_content = preg_replace_callback(
+            '/('.preg_quote($anchor).')|(<a(.*?)>'.preg_quote($anchor).'<\/a>)'
+            .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/h[1-6]>)/m',
+        //(<a(.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/a>)
+        //('.preg_quote($anchor).')|
+        //|<h[1-6].*>'.preg_quote($anchor).'<\/h[1-6]>
+            function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
+                error_log(print_r($matches, true));
+                if(strpos($matches[0], '<a') === false){
+                    //Если в тексте нет ссылки
+                    if(strpos($matches[0], '<h') === false){
+                        //Если в тексте нет заголовка
+                    }else{
+                        //Если в тексте есть заголовок
+                    }
+                    /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                        //Не вставлять ссылки во все заголовки
+                    }else{
+
+                    }*/
+                }else{
+                    //Если в тексте ссылки
+                    if($replace == 1){
+                        //Включен флаг замена если ссылка уже есть
+                        if(strpos($matches[0], '<h') === false){
+                            //Если в тексте нет заголовка
+                        }else{
+                            //Если в тексте есть заголовок
+                        }
+                    }
+                }
+
+                return $matches[0];
+            },
+            //array( &$this, 'tp_preg_replace'),
+            $str,
+            -1,//-1Limit replace
+            $count
+        );
+        error_log($count);
+        error_log(print_r($post_content, true));
+
     }
 
     static private function check_plugin_update() {

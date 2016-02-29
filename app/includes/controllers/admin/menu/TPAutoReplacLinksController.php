@@ -231,6 +231,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     public function postContentReplaceLink($dataAutoReplacLinks, $post_content){
 
         $limitReplace = $this->getReplaceLimits(count($dataAutoReplacLinks));
+        //error_log(print_r($limitReplace, true));
         //error_log($this->getReplaceLimit($limitReplace, 0));
         $key_limit = 0;
         foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
@@ -238,20 +239,15 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             //error_log($key_limit);
             extract($dataAutoReplacLink['data']);
             foreach($dataAutoReplacLink['anchor'] as $anchor){
-                //error_log(preg_quote($anchor).'  '.$url);
+                //error_log(preg_quote($anchor).' limit = '.$this->getReplaceLimit($limitReplace, $key_limit));
                 //error_log(print_r($dataAutoReplacLink, true));
                 // (\b) (\b) Проверить
                 $post_content = preg_replace_callback(
-                    '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)/m',
+                    '/('.preg_quote($anchor).')|(\b)(<a.*?>'.preg_quote($anchor).'<\/a>)(\b)|(\b)(<h[1-6].*?>'.preg_quote($anchor).'<\/h[1-6]>)(\b)/m',
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                        //error_log(print_r($matches, true));
-                        if(strpos($matches[0], '<a') === false){
+                        error_log(print_r($matches, true));
 
-                            /*if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
-                                error_log(111);
-                            }else{
-                                error_log(222);
-                            }*/
+                        if(strpos($matches[0], '<a') === false){
 
                             $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                                 .' '.$event.'>'.$anchor.'</a>';
