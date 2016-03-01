@@ -7,8 +7,18 @@ jQuery(function($) {
 
     });
 
+    /*doc.find('#publish').click(function(e) {
+        console.log(11111);
 
-
+        return false;
+    });*/
+    doc.find('#post').submit(function(){
+        console.log(11111);
+        console.log($(this).serialize());
+        //doc.find("input[name=active_connection]:checkbox")
+        //tp_auto_replac_link
+        return false;
+    });
 
     doc.find('#constructorShortcodesButton').click(function (e) {
         //console.log("constructorShortcodesButton");

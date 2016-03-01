@@ -186,7 +186,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
             $dataResult[$item['id']]['data']['nofollow'] = ($item['arl_nofollow'] == 1) ? 'rel="nofollow"' : '';
             $dataResult[$item['id']]['data']['target'] = ($item['arl_target_blank'] == 1) ? 'target="_blank"' : '';
             $dataResult[$item['id']]['data']['replace'] = $item['arl_replace'];
-            $dataResult[$item['id']]['anchor'] = explode(",", $item['arl_anchor']);
+            $dataResult[$item['id']]['anchor'] = explode(",", trim(str_replace(array("\r\n", "\r", "\n"), '', $item['arl_anchor']), ','));
             $dataResult[$item['id']]['data']['event'] = (!empty($item['arl_event']))  ? 'onclick="'.$item['arl_event'].'"' : '';
         }
         return $dataResult;

@@ -4,6 +4,7 @@ jQuery(function($) {
     win = $(window);
 
 
+
     doc.find('.TPAutoReplaceLinkPostBtn').click(function (e) {
         var checkedId = [];
         var data;

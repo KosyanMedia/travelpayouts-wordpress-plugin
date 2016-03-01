@@ -73,7 +73,7 @@
         </table>
         <form action="options.php" class="formSettings TPFormNotReload" method="POST">
             <?php settings_fields('TPAutoReplLink'); ?>
-            <div class="TPmainContent TP-SettingContent">
+            <div class="TPmainContent TP-SettingContent TPSettingsAutoReplacLink clearfix">
                  <?php do_settings_fields('tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id'); ?>
             </div>
 

@@ -2759,3 +2759,16 @@ thead tr td.active-w {
   font-size: 12px !important;
 }
 
+.TPSettingsAutoReplacLink {
+  padding: 0 16px;
+  text-align: left;
+}
+.TPSettingsAutoReplacLink .TP-colFormCust {
+  margin-top: 20px;
+}
+.TPSettingsAutoReplacLink .TP-colFormCust .ItemSub {
+  display: inline-block;
+}
+.TPFormNotReload {
+  text-align: center;
+}

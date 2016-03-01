@@ -17,9 +17,16 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     public function __construct()
     {
         parent::__construct();
+
+
         $this->model = new \app\includes\models\admin\menu\TPAutoReplacLinksModel();
         $this->modelOption = new \app\includes\models\admin\menu\TPAutoReplacLinksOptionModel();
+        //$dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+        //error_log(print_r($dataAutoReplacLinks, true));
+
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
+        //add_action( 'post_updated', array( &$this, 'autoReplacLinksUpdatedPost'), 10, 3 );
+
         add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
@@ -497,6 +504,26 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
     }
 
+    /**
+     * @param $post_ID
+     * @param $post_after
+     * @param $post_before
+     */
+    public function autoReplacLinksUpdatedPost($post_ID, $post_after, $post_before){
+        $tp_auto_replac_link = get_post_meta( $post_ID, 'tp_auto_replac_link', true );
+        if($tp_auto_replac_link == 0){
+            $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+            $post_after->post_content = $this->postContentReplaceLink($dataAutoReplacLinks,
+                $post_after->post_content);
+            wp_update_post(array(
+                'ID' => $post_ID,
+                'post_content' => $post_after->post_content
+            ));
+            error_log(222);
+        }
+
+
+    }
     /**
      * Очищенные данные поста.
      * @param $data
