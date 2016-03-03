@@ -27,7 +27,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         //add_action( 'post_updated', array( &$this, 'autoReplacLinksUpdatedPost'), 10, 3 );
 
-        add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
+        //add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
         add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
@@ -44,6 +44,11 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action('wp_ajax_nopriv_auto_replace_link_post_check_by_id',array( &$this, 'TPAutoReplaceLinkPostCheckById'));
         add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
         add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
+
+        add_action('wp_ajax_replace_insert_post',      array( &$this, 'replaceInsertPost'));
+        add_action('wp_ajax_nopriv_replace_insert_post',array( &$this, 'replaceInsertPost'));
+
+
 
         //page
 
@@ -141,7 +146,15 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
         }
     }
-
+    public function replaceInsertPost(){
+        if(isset($_POST) && isset($_POST['value'])) {
+            $content = $_POST['value'];
+            $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
+            $content = $this->postContentReplaceLink($dataAutoReplacLinks, $content );
+            //error_log($content);
+            echo $content;
+        }
+    }
     public function replaceAll(){
         if(isset($_POST)) {
 

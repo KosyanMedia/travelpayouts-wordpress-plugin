@@ -12,12 +12,91 @@ jQuery(function($) {
 
         return false;
     });*/
-    doc.find('#post').submit(function(){
-        console.log(11111);
-        console.log($(this).serialize());
-        //doc.find("input[name=active_connection]:checkbox")
-        //tp_auto_replac_link
-        return false;
+    doc.find('#post').submit(function(e){
+        var tp_auto_replac_link = parseInt($(this).find("input[name=tp_auto_replac_link]:checked").val());
+        var content = $(this).find("#content").val();
+        var form = $(this);
+        console.log(content)
+        console.log(tp_auto_replac_link)
+        if(tp_auto_replac_link == 0 && content != ""){
+            var dialogProgressbar = doc.find('#TPProgressbarDialog').dialog({
+                resizable: false,
+                draggable: false,
+                maxHeight:100,
+                maxWidth: 1000,
+                minWidth: 700,
+                minHeight:40,
+                modal: true,
+                dialogClass:"TPProgressbarDialog",
+                autoOpen: true,
+                open : function() {
+                    e.preventDefault();
+                    var progressbar = $( "#TPProgressbar" ),
+                        progressLabel = $( ".TPProgressbar-label" );
+
+                    progressbar.progressbar({
+                        value: false,
+                        change: function() {
+                            progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                        },
+                        complete: function() {
+                            progressLabel.text(TPLebelProgressBar);
+                            dialogProgressbar.dialog('close');
+                        }
+                    });
+
+                    function progress() {
+                        var val = progressbar.progressbar( "value" ) || 0;
+
+                        progressbar.progressbar( "value", val + 2 );
+
+                        if ( val < 99 ) {
+                            setTimeout( progress, 80 );
+                        }
+                    }
+
+                    setTimeout( progress, 2000 );
+                },
+                close: function( event, ui ) {
+                }
+            });
+            var dataInsertPostContent = {value: content}
+            //ajax newContent
+            $.ajax({
+                url: ajaxurl + '?action=replace_insert_post',
+                type: "POST", // Делаем POST запрос
+                data: dataInsertPostContent,
+                success: function (data) {
+                    var newContent = data.substring(0, data.length - 1)
+                    console.log(newContent);
+                    //Form ajaxSubmit
+                    form.ajaxSubmit({
+                        beforeSubmit: function(contentArray, $form, options){
+                            console.log("form beforeSubmit")
+                            var key;
+                            for(var i=0; i<contentArray.length; i++){
+                                if(contentArray[i].name == "content") {
+                                    key = i;
+                                    contentArray[i].value = newContent;
+                                }
+                            }
+                            console.log("contentArray["+key+"].value = "+contentArray[key].value);
+                        },
+                        success:function(data){
+                            console.log("ajaxSubmit success")
+                            document.location.href = '';
+                        }
+                    });
+
+                    //document.location.href = '';
+                }
+            });
+
+            return false;
+        }
+
+        return true;
+
     });
 
     doc.find('#constructorShortcodesButton').click(function (e) {
