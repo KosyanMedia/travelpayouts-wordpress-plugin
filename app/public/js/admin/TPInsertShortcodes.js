@@ -8,7 +8,7 @@ jQuery(function($) {
     });
 
     doc.find('#publish').click(function(e) {
-
+       // $("#post").data("valid", true);
         console.log("#publish click");
         var content, contentField, newContent, tp_auto_replac_link, dataInsertPostContent;
         tp_auto_replac_link = parseInt(doc.find("input[name=tp_auto_replac_link]:checked").val());
@@ -16,6 +16,13 @@ jQuery(function($) {
         content = contentField.val();
         console.log("tp_auto_replac_link = "+tp_auto_replac_link);
         console.log("#content = "+content);
+        //publish
+        console.log(doc.find("#original_post_status").val())
+        if( content != "")
+            doc.find("#original_post_status").val('publish');
+
+        console.log(doc.find("#original_post_status").val())
+
         if(tp_auto_replac_link == 0 && content != ""){
             //doc.find('#post').submit(function(e){return false});
             dataInsertPostContent = {value: content}
@@ -40,7 +47,7 @@ jQuery(function($) {
     });
     doc.find('#post').submit(function(e, parram){
         console.log("#post submit");
-
+        $(this).data("valid", true);
         if(parram == true){
             console.log("#post submit parram = true");
             return true;

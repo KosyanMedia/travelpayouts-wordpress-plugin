@@ -27,7 +27,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         //add_action( 'post_updated', array( &$this, 'autoReplacLinksUpdatedPost'), 10, 3 );
 
-        //add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
+        add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
         add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
@@ -499,6 +499,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      */
     public function autoReplacLinksSavePost($post_id, $post, $update){
         //error_log(print_r($post_id, true));
+        //error_log("autoReplacLinksSavePost");
         //error_log(print_r($post, true));
         //error_log(print_r($update, true));
         if ( ! isset( $_POST['tp_auto_replac_link_noncename'] ) )
@@ -532,7 +533,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 'ID' => $post_ID,
                 'post_content' => $post_after->post_content
             ));
-            error_log(222);
+            //error_log(222);
         }
 
 
@@ -555,7 +556,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      *
      */
     public function autoReplacLinksInsertPost($data, $postarr){
-        if ( $data['post_status'] == 'auto-draft' ||
+        /*if ( $data['post_status'] == 'auto-draft' ||
             $data['post_status'] == 'draft' ||
             $data['post_status'] == 'trash' ){
             return $data;
@@ -574,7 +575,11 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             //error_log(print_r($post_content, true));
         }
         //error_log(print_r($data, true));
-        //error_log(print_r($postarr['tp_auto_replac_link'], true));
+        //error_log(print_r($postarr['tp_auto_replac_link'], true));*/
+        if(!empty($data['post_content']) && !empty($data['post_title']))
+            $data['post_status'] = 'publish';
+        //error_log(print_r($data, true));
+        //error_log("_________________________________");
         return $data;
     }
     /*public function tp_preg_replace($matches) {
