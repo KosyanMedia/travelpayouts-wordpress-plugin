@@ -75,10 +75,16 @@
             <?php settings_fields('TPAutoReplLink'); ?>
             <div class="TPmainContent TP-SettingContent TPSettingsAutoReplacLink clearfix">
                  <?php do_settings_fields('tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id'); ?>
+                <div class="TP-navsPan">
+                <input type="submit" name="submit" class="TP-BtnTab"
+                       value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                </div>
             </div>
 
-                <input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
-                       value="<?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                <!--<input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
+                       value="<?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?>">-->
+            <a href="#" id="TPBtnIsertLink" class="TP-BtnTab">
+                <?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?></a>
 
         </form>
 

@@ -498,7 +498,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $update
      */
     public function autoReplacLinksSavePost($post_id, $post, $update){
-        //error_log(print_r($post_id, true));
+        error_log(print_r($post_id, true));
         //error_log("autoReplacLinksSavePost");
         //error_log(print_r($post, true));
         //error_log(print_r($update, true));
@@ -556,6 +556,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      *
      */
     public function autoReplacLinksInsertPost($data, $postarr){
+        //error_log($data['post_status']);
+        if ( $data['post_status'] == 'trash')
+            return $data;
         /*if ( $data['post_status'] == 'auto-draft' ||
             $data['post_status'] == 'draft' ||
             $data['post_status'] == 'trash' ){
