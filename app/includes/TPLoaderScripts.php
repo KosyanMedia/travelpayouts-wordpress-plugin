@@ -264,7 +264,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
                 TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar,
-                TPBtnIsertLinkDialogTxt;
+                TPBtnIsertLinkDialogTxt, TPAdminUrl;
+            TPAdminUrl = '<?php echo admin_url();?>';
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
