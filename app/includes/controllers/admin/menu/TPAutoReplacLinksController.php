@@ -259,6 +259,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             //error_log($key_limit);
             extract($dataAutoReplacLink['data']);
             foreach($dataAutoReplacLink['anchor'] as $anchor){
+                $anchor = trim($anchor);
                 //error_log(preg_quote($anchor).' limit = '.$this->getReplaceLimit($limitReplace, $key_limit));
                 //error_log(print_r($dataAutoReplacLink, true));
                 // (\b) (\b) Проверить
