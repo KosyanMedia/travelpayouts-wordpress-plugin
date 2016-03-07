@@ -48,6 +48,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action('wp_ajax_replace_insert_post',      array( &$this, 'replaceInsertPost'));
         add_action('wp_ajax_nopriv_replace_insert_post',array( &$this, 'replaceInsertPost'));
 
+        add_action('wp_ajax_tp_export_links',      array( &$this, 'tpExportLinks'));
+        add_action('wp_ajax_nopriv_tp_export_links',array( &$this, 'tpExportLinks'));
+
 
 
         //page
@@ -608,6 +611,21 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             </div>
         </div>
         <?php
+    }
+
+    public function tpExportLinks(){
+        $output = '';
+        $data = $this->model->get_data();
+        if($data != false){
+            $output = '"Ссылка","Якорные фразы","События onclick","Добавлять атрибут nofollow","Заменять существующие ссылки","Открывать в новом окне"';
+            foreach($data as $value){
+                $output .= PHP_EOL.'"'.$value['arl_url'].'","'.$value['arl_anchor'].'","'.$value['arl_event'].'"'
+                    .',"'.$value['arl_nofollow'].'","'.$value['arl_replace'].'","'.$value['arl_target_blank'].'"';
+            }
+        }
+
+
+        echo $output;
     }
 
 }

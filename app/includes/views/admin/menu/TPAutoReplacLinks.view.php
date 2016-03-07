@@ -27,9 +27,9 @@
                            id="importFileCSV" size="1" class="input_input_style"
                            multiple="">
                 </div>
-                <!--<a href="admin.php?page=tp_control_substitution_links&action=import_links" class="TP-ImportLink">
-                    <i></i><?php _e('Import links', TPOPlUGIN_TEXTDOMAIN) ?>
-                </a>-->
+                <a href="#" class="TPExportLink TPBtn">
+                    <i></i><?php _e('Export links', TPOPlUGIN_TEXTDOMAIN) ?>
+                </a>
                 <a href="#"
                    class="TP-deleteShortLincks deleteChecked"
                    data-type="arl_link">

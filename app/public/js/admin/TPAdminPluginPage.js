@@ -41,6 +41,22 @@ jQuery(function($){
 
     $.fn.dataTable.ext.errMode = 'throw';
     /************************************************* ***/
+    doc.find('.TPExportLink').click(function (e) {
+        console.log(11);
+        $.ajax({
+            url: ajaxurl + '?action=tp_export_links',
+            type: "POST", // Делаем POST запрос
+            success: function (data) {
+                var text = data.substring(0, data.length - 1);
+                var filename = TPFileNameCsvExport;
+                var export_settings = new Blob([text], {type: "text/csv;charset=utf-8"});
+                saveAs(export_settings, filename);
+               // console.log(text);
+               // console.log('success');
+                //document.location.href = '';
+            }
+        });
+    });
     /** **/
     doc.find('#importFileCSV').change(function() {
         var files = $(this)[0].files;

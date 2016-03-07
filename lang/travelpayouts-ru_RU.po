@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-07 14:18+0300\n"
+"POT-Creation-Date: 2016-03-07 15:27+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1530,9 +1530,12 @@ msgid "Add link"
 msgstr "Добавить ссылку"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:24
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:31
 msgid "Import links"
 msgstr "Импорт ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:31
+msgid "Export links"
+msgstr "Експорт ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:49
 msgid "Anchor"
@@ -1770,27 +1773,27 @@ msgstr "Бизнес"
 msgid "First"
 msgstr "Первый"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:388
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:390
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:389
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:391
 msgctxt "add_menu_page page title"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:444
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:477
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:445
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:478
 msgctxt "meta_box_post"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:483
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:484
 msgid "Enable"
 msgstr "Включена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:489
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:490
 msgid "Disable"
 msgstr "Выключена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:605
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:606
 msgid "Placing links"
 msgstr "Простановка ссылок"
 

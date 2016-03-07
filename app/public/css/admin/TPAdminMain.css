@@ -1957,6 +1957,32 @@ thead tr td.active-w {
   border-color: #acaaaa;
   color: #acaaaa;
 }
+
+.TPBtn {
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #DEDDDD;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #adacac;
+  line-height: 36px;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 15px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.TPBtn:hover {
+  border-color: #acaaaa;
+  color: #acaaaa;
+}
+
 .TP-deleteShortLincks {
     height: 40px;
     background-color: #fff;
@@ -2014,7 +2040,8 @@ thead tr td.active-w {
 .TP-listShort tr td {
     border-right: 1px solid #e6ebed;
     padding-left: 15px;
-    font-size: 12px;
+  padding-right: 15px;
+  font-size: 12px;
     font-weight: 300;
 }
 .TP-listShort tr td:nth-of-type(1) {
@@ -2765,10 +2792,32 @@ thead tr td.active-w {
 }
 .TPSettingsAutoReplacLink .TP-colFormCust {
   margin-top: 20px;
+  width: 100%;
 }
 .TPSettingsAutoReplacLink .TP-colFormCust .ItemSub {
   display: inline-block;
+  margin-bottom: 0;
+
 }
 .TPFormNotReload {
   text-align: center;
+}
+
+#TPBtnIsertLink {
+  color: white;
+  background: #de4915;
+}
+#TPBtnIsertLink:hover {
+  background-color: #ce4515;
+}
+
+.TPSettingsAutoReplacLink .TP-navsPan .TP-BtnTab {
+  margin-bottom: 20px;
+}
+.TPAutoLink #TP-listShortcode_paginate {
+  margin-top: 10px;
+  text-align: center;
+}
+.TPAutoLink #TP-listShortcode_paginate span {
+  display: inline-block;
 }
