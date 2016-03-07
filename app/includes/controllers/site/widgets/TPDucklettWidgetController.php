@@ -27,12 +27,15 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'type' => \app\includes\TPPlugin::$options['widgets'][$widgets]['type'],
             'filter' => \app\includes\TPPlugin::$options['widgets'][$widgets]['filter'],
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'currency' => $this->view->typeCurrency() ,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
         $output = '';
-        $output = '<script async src="//www.travelpayouts.com/ducklett/scripts.js?widget_type=brickwork&currency=rub&width=800&host=hydra.aviasales.ru&marker=17942.&limit=9" charset="UTF-8"></script>';
+        $output = '<script async src="//www.travelpayouts.com/ducklett/scripts.js?widget_type='.$type
+            .'&currency='.mb_strtolower($currency).'&width=800&host=hydra.aviasales.ru&marker=17942.&limit='.$limit.'" charset="UTF-8">
+        </script>';
         return $output;
     }
 }
