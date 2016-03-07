@@ -13,7 +13,18 @@ jQuery(function($) {
         var content, contentField, newContent, tp_auto_replac_link, dataInsertPostContent;
         tp_auto_replac_link = parseInt(doc.find("input[name=tp_auto_replac_link]:checked").val());
         contentField = doc.find("#content");
-        content = contentField.val();
+
+        if(typeof tinyMCE  != "undefined"){
+            if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                content = contentField.val();
+            } else if(tinyMCE && tinyMCE.activeEditor) {
+                console.log(  tinyMCE.activeEditor.getContent())
+                content = tinyMCE.activeEditor.getContent();
+            }
+        } else{
+            content = contentField.val();
+        }
+
         console.log("tp_auto_replac_link = "+tp_auto_replac_link);
         console.log("#content = "+content);
         //publish
@@ -31,9 +42,22 @@ jQuery(function($) {
                 type: "POST", // Делаем POST запрос
                 data: dataInsertPostContent,
                 success: function (data) {
-                    newContent = data.substring(0, data.length - 1)
+                     newContent = data.substring(0, data.length - 1);
                     console.log("newContent = "+newContent);
-                    contentField.val(newContent);
+                     if(typeof tinyMCE  != "undefined"){
+                         if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                             //if(QTags.insertContent(newContent) != true)
+                                 contentField.val(newContent);
+                         } else if(tinyMCE && tinyMCE.activeEditor) {
+                           //  console.log(tinyMCE.activeEditor.selection)
+                             tinyMCE.activeEditor.setContent(newContent);
+                         }
+                     } else{
+                         contentField.val(newContent);
+                     }
+
+
+
                     $('#post').trigger('submit', [ true ]);
                 }
             });
