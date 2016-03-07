@@ -463,10 +463,17 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
 
         $disabled = '';
+        //isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link'])
         if($dataAutoReplacLinks !== false){
             $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
             if(empty($tp_auto_replac_link)) {
-                $tp_auto_replac_link = 0;
+
+                if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link'])){
+                    $tp_auto_replac_link = 0;
+                } else{
+                    $tp_auto_replac_link = 1;
+                }
+
             }
         }else{
             $tp_auto_replac_link = 1;

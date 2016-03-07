@@ -2032,7 +2032,7 @@ thead tr td.active-w {
     border-width: 0 1px 0 1px;
     border-style: solid;
     border-color: #e6ebed;
-    width: 100%;
+    width: 100% !important;
 }
 .TP-listShort tr {
     height: 40px;

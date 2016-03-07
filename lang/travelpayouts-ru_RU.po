@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-07 15:27+0300\n"
+"POT-Creation-Date: 2016-03-07 16:30+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -62,58 +62,58 @@ msgstr "Откуда"
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:275
+#: app/includes/TPLoaderScripts.php:276
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:276
+#: app/includes/TPLoaderScripts.php:277
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:277
+#: app/includes/TPLoaderScripts.php:278
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:281
+#: app/includes/TPLoaderScripts.php:282
 msgid "Complete!"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:282
+#: app/includes/TPLoaderScripts.php:283
 msgid "Actions can not cancel. Are you sure?"
 msgstr "Действия нельзя отменить. Вы уверены?"
 
-#: app/includes/TPLoaderScripts.php:283
+#: app/includes/TPLoaderScripts.php:284
 msgid "Substitution links completed"
 msgstr "Подстановка ссылок завершена"
 
-#: app/includes/TPLoaderScripts.php:299 app/includes/TPLoaderScripts.php:300
-#: app/includes/TPLoaderScripts.php:304 app/includes/TPLoaderScripts.php:305
+#: app/includes/TPLoaderScripts.php:300 app/includes/TPLoaderScripts.php:301
+#: app/includes/TPLoaderScripts.php:305 app/includes/TPLoaderScripts.php:306
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:309
+#: app/includes/TPLoaderScripts.php:310
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:310
+#: app/includes/TPLoaderScripts.php:311
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:314
+#: app/includes/TPLoaderScripts.php:315
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:315
+#: app/includes/TPLoaderScripts.php:316
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:318
+#: app/includes/TPLoaderScripts.php:319
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:319
+#: app/includes/TPLoaderScripts.php:320
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -717,9 +717,13 @@ msgid "Do not add links to all titles"
 msgstr "Не вставлять ссылки во все заголовки"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:47
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:87
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:93
 msgid "Limit replacements"
 msgstr "Количество замен "
+
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:83
+msgid "Enable automatic replacement of the publication of the post"
+msgstr "Включить автоматическую замену при публикации поста"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:28
 msgid "Token"
@@ -1377,8 +1381,8 @@ msgstr "2. Внести настройки"
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:110
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:129
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:113
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:132
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:20
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
@@ -1773,27 +1777,27 @@ msgstr "Бизнес"
 msgid "First"
 msgstr "Первый"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:389
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:391
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:392
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:394
 msgctxt "add_menu_page page title"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:445
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:478
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:448
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:481
 msgctxt "meta_box_post"
 msgid "Substitution links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:484
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:487
 msgid "Enable"
 msgstr "Включена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:490
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
 msgid "Disable"
 msgstr "Выключена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:606
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:609
 msgid "Placing links"
 msgstr "Простановка ссылок"
 
