@@ -264,7 +264,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
                 TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar,
-                TPBtnIsertLinkDialogTxt, TPAdminUrl;
+                TPBtnIsertLinkDialogTxt, TPAdminUrl, TPInsertLinkNoticeTxt;
             TPAdminUrl = '<?php echo admin_url();?>';
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -280,6 +280,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
             TPLebelProgressBar = '<?php _e('Complete!', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPBtnIsertLinkDialogTxt = '<?php _e('Actions can not cancel. Are you sure?', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPInsertLinkNoticeTxt = '<?php _e('Substitution links completed', TPOPlUGIN_TEXTDOMAIN ); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>
