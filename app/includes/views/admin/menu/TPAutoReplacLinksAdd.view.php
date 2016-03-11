@@ -1,11 +1,11 @@
 <div class="TPWrapper TPWrapper-long">
 
     <p class="TPMainTitle  TPMainTitleSF">
-        <?php _e('Substitution links', TPOPlUGIN_TEXTDOMAIN); ?>
+        <?php _e('Auto-links', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _e('Here you can add referral links that you want to substitute to the specified anchor phrase', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _e('Here you can add referral links that you want to be defined to the specified anchor phrase.', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
@@ -48,13 +48,13 @@
                 <label class="TP-inputTextShortCustCheck">
                     <input id="chekarla1" type="checkbox" name="arl_nofollow"
                            value="1" hidden checked="checked"/>
-                    <label for="chekarla1"><?php echo _x('Adding attribute nofollow', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <label for="chekarla1"><?php echo _x('Add "nofollow" attribute', 'settingsARL', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla2" type="checkbox" name="arl_replace"
                            value="1" hidden />
-                    <label for="chekarla2"><?php echo _x('Replace the existing links', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <label for="chekarla2"><?php echo _x('Replace existing links', 'settingsARL', TPOPlUGIN_TEXTDOMAIN); ?></label>
                     <input id="chekarla3" type="checkbox" name="arl_target_blank"
                            value="1" hidden checked="checked"/>
-                    <label for="chekarla3"><?php echo _x('Open in new window', 'settings', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <label for="chekarla3"><?php echo _x('Open in a new tab', 'settingsARL', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 </label>
             </div>
             <div class="TP-navsUserShort">

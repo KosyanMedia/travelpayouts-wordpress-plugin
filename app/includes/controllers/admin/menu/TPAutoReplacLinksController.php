@@ -110,7 +110,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                    //     .text('1').appendTo('select[name="action"]');
                 });
                 jQuery('<a href="#" class="button action TPAutoReplaceLinkPostBtn">'
-                    +'<?php _e('Substitution links', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
+                    +'<?php _e('Auto-links', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
                     .appendTo('.bulkactions');
             </script>
             <?php
@@ -129,7 +129,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($tag, true));
         $actions['tp-auto-replace-link-action-class'] = '<a href="#" data-post_id="'.$tag->ID .'"
              class="TPAutoReplaceLinkPostById">'
-            . __('Substitution links', TPOPlUGIN_TEXTDOMAIN ).'</a>';
+            . __('Auto-links', TPOPlUGIN_TEXTDOMAIN ).'</a>';
         return $actions;
     }
 
@@ -394,9 +394,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            _x('Auto-links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
             .' (beta)',
-            _x('Substitution links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            _x('Auto-links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
             .'<span class="update-plugins"><span class="plugin-count">beta</span></span>',
             'manage_options',
             'tp_control_substitution_links',
@@ -450,7 +450,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         foreach ( $screens as $screen ){
             add_meta_box(
                 'tp_sectionid',
-                _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
+                _x('Auto-links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
                 array( &$this, 'tp_add_custom_box_callback'),
                 $screen,
                 'side',
@@ -490,7 +490,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         ?>
         <fieldset>
             <legend class="screen-reader-text">
-                <?php echo _x('Substitution links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php echo _x('Auto-links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
             </legend>
             <input type="radio" name="tp_auto_replac_link" <?php echo $disabled; ?>
                    class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0"

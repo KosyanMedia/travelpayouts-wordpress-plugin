@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-11 13:00+0300\n"
+"POT-Creation-Date: 2016-03-11 15:02+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -323,34 +323,33 @@ msgstr "Настройки"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:113
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:132
-#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:20
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
-msgid "Substitution links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:396
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:398
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:397
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:399
 msgctxt "add_menu_page page title"
-msgid "Substitution links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:452
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:492
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:453
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
 msgctxt "meta_box_post"
-msgid "Substitution links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:498
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:499
 msgid "Enable"
 msgstr "Включена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:504
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:505
 msgid "Disable"
 msgstr "Выключена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:620
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:621
 msgid "Placing links"
 msgstr "Простановка ссылок"
 
@@ -365,6 +364,10 @@ msgstr "Статистика"
 msgctxt "add_menu_page page title"
 msgid "Search Forms"
 msgstr "Поисковые формы"
+
+#: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:20
+msgid "Substitution links"
+msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:26
 msgid "Flight Tickets"
@@ -902,7 +905,6 @@ msgid "Make all the referral links to sites Travelpayouts"
 msgstr "Сделать реферальными все ссылки на сайты Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:36
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:78
 msgid "Do not add links to all titles"
 msgstr "Не вставлять ссылки во все заголовки"
 
@@ -910,12 +912,16 @@ msgstr "Не вставлять ссылки во все заголовки"
 msgid "Limit replacements"
 msgstr "Количество замен "
 
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:78
+msgid "Don't add links to all titles"
+msgstr "Не вставлять ссылки во все заголовки"
+
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:83
-msgid "Enable automatic replacement of the publication of the post"
-msgstr "Включить автоматическую замену при публикации поста"
+msgid "Enable auto-links for new posts"
+msgstr "Включить подстановку для новых постов\r"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:93
-msgid "Limit replacements anchor"
+msgid "Replacements limit anchor"
 msgstr "Количество замен анкора"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
@@ -1283,8 +1289,8 @@ msgstr "Все новости"
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:8
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:8
 msgid ""
-"Here you can add referral links that you want to substitute to the specified "
-"anchor phrase"
+"Here you can add referral links that you want to be defined to the specified "
+"anchor phrase."
 msgstr ""
 "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
 "заданные якорные фразы"
@@ -1316,21 +1322,21 @@ msgstr "Событие onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:51
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
-msgctxt "settings"
-msgid "Adding attribute nofollow"
-msgstr "Добавлять атрибут nofollow"
+msgctxt "settingsARL"
+msgid "Add \"nofollow\" attribute"
+msgstr "Добавлять атрибут nofollow "
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:54
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:54
-msgctxt "settings"
-msgid "Replace the existing links"
+msgctxt "settingsARL"
+msgid "Replace existing links"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:57
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:57
-msgctxt "settings"
-msgid "Open in new window"
-msgstr "Открывать в новом окне"
+msgctxt "settingsARL"
+msgid "Open in a new tab"
+msgstr "Открывать в новом окне "
 
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
@@ -1417,8 +1423,11 @@ msgid "Anchor"
 msgstr "Анкор"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:85
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:87
 msgid "Affix link for all existing posts"
+msgstr "Проставить ссылки по всех существующих постах"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:87
+msgid "Place auto-links in all existing posts"
 msgstr "Проставить ссылки по всех существующих постах"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:28
@@ -1886,6 +1895,26 @@ msgstr "Отель"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:110
 msgid "Count"
 msgstr "Количество"
+
+#, fuzzy
+#~ msgctxt "settingsARL"
+#~ msgid "Open in new window"
+#~ msgstr "Открывать в новом окне"
+
+#~ msgctxt "settings"
+#~ msgid "Adding attribute nofollow"
+#~ msgstr "Добавлять атрибут nofollow"
+
+#~ msgid "Enable automatic replacement of the publication of the post"
+#~ msgstr "Включить автоматическую замену при публикации поста"
+
+#~ msgctxt "add_menu_page page title"
+#~ msgid "Substitution links"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "meta_box_post"
+#~ msgid "Substitution links"
+#~ msgstr "Подстановка ссылок"
 
 #~ msgid "Affix links"
 #~ msgstr "Проставить ссылки"

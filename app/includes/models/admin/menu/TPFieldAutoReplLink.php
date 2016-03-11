@@ -75,12 +75,12 @@ class TPFieldAutoReplLink
                         <li>
                             <input id="chekarl4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][not_title]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
-                            <label for="chekarl4"><?php _e('Do not add links to all titles', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chekarl4"><?php _e('Don\'t add links to all titles', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chekarl5" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][tp_auto_replac_link]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link']), 1) ?> hidden />
-                            <label for="chekarl5"><?php _e('Enable automatic replacement of the publication of the post', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                            <label for="chekarl5"><?php _e('Enable auto-links for new posts', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
 
                     </ul>
@@ -90,7 +90,7 @@ class TPFieldAutoReplLink
         <div class="TP-colFormCust">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Limit replacements anchor', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _e('Replacements limit anchor', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
                         <label>
                             <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"

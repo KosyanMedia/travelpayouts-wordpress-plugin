@@ -1,6 +1,6 @@
 <div class="TPWrapper TPWrapper-long">
 
-    <p class="TPMainTitle TPMainTitleSF"><?php _e('Substitution links', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+    <p class="TPMainTitle TPMainTitleSF"><?php _e('Auto-links', TPOPlUGIN_TEXTDOMAIN); ?> </p>
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
@@ -84,7 +84,7 @@
                 <!--<input type="submit" name="submit" id="TPBtnIsertLink" class="TP-BtnTab"
                        value="<?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?>">-->
             <a href="#" id="TPBtnIsertLink" class="TP-BtnTab">
-                <?php _e('Affix link for all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                <?php _e('Place auto-links in all existing posts', TPOPlUGIN_TEXTDOMAIN ); ?></a>
 
         </form>
 
