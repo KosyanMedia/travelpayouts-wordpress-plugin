@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-11 15:02+0300\n"
+"POT-Creation-Date: 2016-03-11 15:26+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1397,9 +1397,10 @@ msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:7
 msgid ""
-"Here you can put down automatically links for a given phrase in all posts"
+"Here you can setup auto-links. Define anchor and your referral link for that "
+"anchor."
 msgstr ""
-"Здесь вы можете автоматически проставить ссылки  по заданным фразам во всех "
+"Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
 "постах"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:14
@@ -1895,6 +1896,12 @@ msgstr "Отель"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:110
 msgid "Count"
 msgstr "Количество"
+
+#~ msgid ""
+#~ "Here you can put down automatically links for a given phrase in all posts"
+#~ msgstr ""
+#~ "Здесь вы можете автоматически проставить ссылки  по заданным фразам во "
+#~ "всех постах"
 
 #, fuzzy
 #~ msgctxt "settingsARL"

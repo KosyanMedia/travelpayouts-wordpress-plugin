@@ -2043,6 +2043,9 @@ thead tr td.active-w {
   padding-right: 15px;
   font-size: 12px;
     font-weight: 300;
+  max-width: 244px;
+  word-wrap: break-word;
+
 }
 .TP-listShort tr td:nth-of-type(1) {
     width: 50px;
@@ -2789,6 +2792,10 @@ thead tr td.active-w {
 .TPSettingsAutoReplacLink {
   padding: 0 16px;
   text-align: left;
+  border-radius: 0 0 2px 2px;
+  box-shadow: none;
+
+
 }
 .TPSettingsAutoReplacLink .TP-colFormCust {
   margin-top: 20px;
@@ -2815,9 +2822,17 @@ thead tr td.active-w {
   margin-bottom: 20px;
 }
 .TPAutoLink #TP-listShortcode_paginate {
-  margin-top: 10px;
+  padding-top: 10px;
+  margin: 0;
+
   text-align: center;
+
 }
 .TPAutoLink #TP-listShortcode_paginate span {
   display: inline-block;
+}
+
+.TP-MainStyleTable label.TP-fontSizeInput .dropdown {
+  overflow-y: scroll;
+  max-height: 350px;
 }
