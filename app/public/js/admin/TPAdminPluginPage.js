@@ -107,10 +107,23 @@ jQuery(function($){
         var data,type;
         type = $(this).data('type');
         for (var i = 0; i < checkBox.length; i++) {
+
             if(checkBox[i].checked){
+                console.log("checked");
                 checkedId.push(parseInt(checkBox[i].name))
             }
 
+        }
+        //console.log(111);
+        if(checkedId.length == 0) {
+            for (var i = 0; i < checkBox.length; i++) {
+                checkedId.push(parseInt(checkBox[i].name));
+                /*if(checkBox[i].checked){
+
+                }*/
+                console.log("all");
+
+            }
         }
         if(checkedId.length > 0) {
             if (confirm(TPBtnIsertLinkDialogTxt)) {
