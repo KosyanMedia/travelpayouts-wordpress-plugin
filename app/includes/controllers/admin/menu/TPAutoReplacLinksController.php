@@ -205,11 +205,12 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $count_anchor
      * @return array|int
      */
-    public function getReplaceLimits($count_anchor){
+    public function getReplaceLimits(){//$count_anchor
         $limit = \app\includes\TPPlugin::$options['auto_repl_link']['limit'];
         if($limit == 0) return -1;
-        if($count_anchor == 1) return (int) $limit;
-        return $this->getReplaceLimitRecursive($limit, $count_anchor);
+        return (int) $limit;
+        //if($count_anchor == 1) return (int) $limit;
+        //return $this->getReplaceLimitRecursive($limit, $count_anchor);
 
     }
 
@@ -252,9 +253,10 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @return mixed
      */
     public function postContentReplaceLink($dataAutoReplacLinks, $post_content){
-
-        $limitReplace = $this->getReplaceLimits(count($dataAutoReplacLinks));
-        //error_log(print_r($limitReplace, true));
+        //$coutTpl = count($dataAutoReplacLinks);
+        $limitReplace = $this->getReplaceLimits();
+        error_log('$limitReplace = '.$limitReplace);
+        //error_log('$coutTpl = '.$coutTpl);
         //error_log($this->getReplaceLimit($limitReplace, 0));
         $key_limit = 0;
         foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
@@ -376,7 +378,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     },
                     //array( &$this, 'tp_preg_replace'),
                     $post_content,
-                    $this->getReplaceLimit($limitReplace, $key_limit),//-1Limit replace
+                    $limitReplace,//$this->getReplaceLimit($limitReplace, $key_limit),//-1Limit replace
                     $count
                 );
             }
@@ -384,6 +386,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
         return $post_content;
     }
+
+    
+
 
     public function action()
     {
