@@ -2836,3 +2836,10 @@ thead tr td.active-w {
   overflow-y: scroll;
   max-height: 350px;
 }
+.TP-SettingTitleDesc{
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1;
+  margin-top: -20px;
+}

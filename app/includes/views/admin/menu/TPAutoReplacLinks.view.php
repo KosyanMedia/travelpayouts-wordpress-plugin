@@ -6,6 +6,7 @@
         <p>
             <?php _e('Here you can setup auto-links. Define anchor and your referral link for that anchor.',
                 TPOPlUGIN_TEXTDOMAIN); ?>
+
         </p>
     </div>
 

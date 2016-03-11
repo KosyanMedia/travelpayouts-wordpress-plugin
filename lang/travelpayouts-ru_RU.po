@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-11 15:26+0300\n"
+"POT-Creation-Date: 2016-03-11 16:41+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -435,7 +435,7 @@ msgid "Insert widget"
 msgstr "Вставить виджет"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:50
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:51
 msgid "Link"
 msgstr "Ссылка"
 
@@ -912,17 +912,31 @@ msgstr "Не вставлять ссылки во все заголовки"
 msgid "Limit replacements"
 msgstr "Количество замен "
 
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:78
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
 msgid "Don't add links to all titles"
 msgstr "Не вставлять ссылки во все заголовки"
 
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:83
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:81
+msgid "No change in case anchor is inside &lt;h&gt; tags"
+msgstr "Если анкор встречается внутри  &lt;h&gt; -тегов — замены не будет"
+
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:94
 msgid "Enable auto-links for new posts"
 msgstr "Включить подстановку для новых постов\r"
 
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:93
-msgid "Replacements limit anchor"
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:96
+msgid ""
+"After you press \"Publish\" all you anchors will be auto-replaced by links"
+msgstr ""
+"После нажатия кнопки Опубликовать ко всем анкорам будут добавлены ссылки"
+
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:114
+msgid "Anchor replacements limit"
 msgstr "Количество замен анкора"
+
+#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:116
+msgid "The maximum number of anchor changes in one post"
+msgstr "Максимальное количество замен каждого анкора в одном посте"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:15
@@ -1180,16 +1194,16 @@ msgstr ""
 "записях"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:62
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:72
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:62
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:72
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:65
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:75
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:65
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:75
 msgid "save changes"
 msgstr "сохранить изменения"
 
@@ -1210,7 +1224,7 @@ msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:55
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:36
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:37
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
@@ -1219,7 +1233,7 @@ msgid "Add Date"
 msgstr "Дата добавления"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:63
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:64
 msgid "Edit"
 msgstr "Редактировать "
 
@@ -1326,14 +1340,23 @@ msgctxt "settingsARL"
 msgid "Add \"nofollow\" attribute"
 msgstr "Добавлять атрибут nofollow "
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:54
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:54
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
 msgctxt "settingsARL"
 msgid "Replace existing links"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:57
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:57
+msgid ""
+"In case you already have such active links — they'll be replaced to the new "
+"one"
+msgstr ""
+"Заменять существующие ссылки - Будет производится замена существующих ссылок "
+"с таким анкором"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:67
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:67
 msgctxt "settingsARL"
 msgid "Open in a new tab"
 msgstr "Открывать в новом окне "
@@ -1369,7 +1392,7 @@ msgstr ""
 "плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:92
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:80
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:81
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
@@ -1403,31 +1426,31 @@ msgstr ""
 "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
 "постах"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:14
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:15
 msgid "List of links"
 msgstr "Список ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:20
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:21
 msgid "Add link"
 msgstr "Добавить ссылку"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:24
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
 msgid "Import links"
 msgstr "Импорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:31
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:32
 msgid "Export links"
 msgstr "Експорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:49
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:50
 msgid "Anchor"
 msgstr "Анкор"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:85
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:86
 msgid "Affix link for all existing posts"
 msgstr "Проставить ссылки по всех существующих постах"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:87
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:88
 msgid "Place auto-links in all existing posts"
 msgstr "Проставить ссылки по всех существующих постах"
 
