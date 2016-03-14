@@ -928,7 +928,7 @@ msgstr "Включить подстановку для новых постов\r
 msgid ""
 "After you press \"Publish\" all you anchors will be auto-replaced by links"
 msgstr ""
-"После нажатия кнопки Опубликовать ко всем анкорам будут добавлены ссылки"
+"После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:114
 msgid "Anchor replacements limit"
