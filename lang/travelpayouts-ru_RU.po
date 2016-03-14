@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-14 12:18+0300\n"
+"POT-Creation-Date: 2016-03-14 13:11+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -329,27 +329,27 @@ msgstr "Настройки"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:397
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:399
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:477
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:479
 msgctxt "add_menu_page page title"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:453
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:533
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:573
 msgctxt "meta_box_post"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:499
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:579
 msgid "Enable"
 msgstr "Включена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:505
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:585
 msgid "Disable"
 msgstr "Выключена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:621
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:701
 msgid "Placing links"
 msgstr "Простановка ссылок"
 
@@ -1301,13 +1301,12 @@ msgid "All news"
 msgstr "Все новости"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:8
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:8
 msgid ""
 "Here you can add referral links that you want to be defined to the specified "
-"anchor phrase."
+"anchor phrase.  Anchors are case-sensitive."
 msgstr ""
 "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-"заданные якорные фразы"
+"заданные якорные фразы.  Анкор чувствителен к регистру символов."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:13
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:13
@@ -1834,6 +1833,14 @@ msgstr "1. Зарегистрироваться "
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:26
 msgid "2. Enter settings "
 msgstr "2. Внести настройки"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:8
+msgid ""
+"Here you can add referral links that you want to be defined to the specified "
+"anchor phrase. Anchors are case-sensitive."
+msgstr ""
+"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
+"заданные якорные фразы. Анкор чувствителен к регистру символов."
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
 msgid "Constructor search form"

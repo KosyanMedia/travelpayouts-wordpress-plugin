@@ -5,7 +5,7 @@
     </p>
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _e('Here you can add referral links that you want to be defined to the specified anchor phrase.', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _e('Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors are case-sensitive.', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
