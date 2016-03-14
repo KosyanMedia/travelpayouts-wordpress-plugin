@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-11 16:41+0300\n"
+"POT-Creation-Date: 2016-03-14 12:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1194,16 +1194,16 @@ msgstr ""
 "записях"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:72
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:80
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:72
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:80
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:75
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:83
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:75
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:83
 msgid "save changes"
 msgstr "сохранить изменения"
 
@@ -1334,20 +1334,29 @@ msgstr "Вы можете добавить несколько якорных ф�
 msgid "Events onclick"
 msgstr "Событие onclick"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:51
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:43
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:43
+msgid ""
+"You can add here custom events (e.g. Google Analytics events) that will be "
+"fired after the click on a link"
+msgstr ""
+"Можете добавить события Google Analytics или Yandex Metrika, которые будут "
+"вызываться при клике на ссылку"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:59
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:59
 msgctxt "settingsARL"
 msgid "Add \"nofollow\" attribute"
 msgstr "Добавлять атрибут nofollow "
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:63
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:63
 msgctxt "settingsARL"
 msgid "Replace existing links"
 msgstr "Заменять существующие ссылки"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:57
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:57
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:65
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:65
 msgid ""
 "In case you already have such active links — they'll be replaced to the new "
 "one"
@@ -1355,8 +1364,8 @@ msgstr ""
 "Заменять существующие ссылки - Будет производится замена существующих ссылок "
 "с таким анкором"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:67
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:67
+#: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:75
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:75
 msgctxt "settingsARL"
 msgid "Open in a new tab"
 msgstr "Открывать в новом окне "
