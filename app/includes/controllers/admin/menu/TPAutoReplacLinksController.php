@@ -272,10 +272,11 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     '/('.preg_quote($anchor).')|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/a>)'
                     .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/h[1-6]>)/m',
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                        //error_log(print_r($matches, true));
+                        error_log(print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
                             //Если в тексте нет ссылки
-                            if(strpos($matches[0], '<h') !== false){
+                            $matches[0] = $this->matchesReplace($matches[0], $anchor, $url, $nofollow, $target, $event);
+                            /*if(strpos($matches[0], '<h') !== false){
                                 //Если в тексте в заголовке
                                 if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
                                     //Не вставлять ссылки во все заголовки
@@ -289,14 +290,15 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                                 //Если в текст не в заголовке
                                 $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                                     .' '.$event.'>'.$matches[0].'</a>';
-                            }
+                            }*/
 
                         }else{
                             //Если в тексте ссылки
                             if($replace == 1){
+                                $matches[0] = $this->matchesReplace($matches[0], $anchor, $url, $nofollow, $target, $event);
                                 //Включен флаг замена если ссылка уже есть
                                 //error_log("Заменна ссылок replace == 1 ".print_r($matches, true));
-                                if(strpos($matches[0], '<h1') !== false){
+                                /*if(strpos($matches[0], '<h1') !== false){
                                     //Если в тексте нет заголовка
                                     if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
                                         //Не вставлять ссылки во все заголовки
@@ -360,7 +362,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                                     //Если в тексте нет заголовка
                                     $matches[0] = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                                         .' '.$event.'>'.$anchor.'</a>';
-                                }
+                                }*/
                             }
                         }
 
@@ -385,6 +387,84 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             $key_limit++;
         }
         return $post_content;
+    }
+
+    /**
+     * @param $matches
+     * @param $anchor
+     * @param $url
+     * @param $nofollow
+     * @param $target
+     * @param $event
+     * @return string
+     */
+    public function matchesReplace($matches, $anchor, $url, $nofollow, $target, $event){
+        if(strpos($matches, '<h1') !== false){
+            //Если в тексте нет заголовка
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                //Не вставлять ссылки во все заголовки
+                //error_log("Заменна ссылок replace == 1 h1");
+                $matches = '<h1>'.$anchor.'</h1>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h1><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h1>';
+            }
+        }elseif(strpos($matches, '<h2') !== false){
+            //Если в тексте в заголовке
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                //Не вставлять ссылки во все заголовки
+                $matches = '<h2>'.$anchor.'</h2>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h2><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h2>';
+            }
+        }elseif(strpos($matches, '<h3') !== false){
+            //Если в тексте в заголовке
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                //Не вставлять ссылки во все заголовки
+                $matches = '<h3>'.$anchor.'</h3>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h3><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h3>';
+            }
+        }elseif(strpos($matches, '<h4') !== false){
+            //Если в тексте в заголовке
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                $matches = '<h4>'.$anchor.'</h4>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h4><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h4>';
+            }
+        }elseif(strpos($matches, '<h5') !== false){
+            //Если в тексте в заголовке
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                //Не вставлять ссылки во все заголовки
+                $matches = '<h5>'.$anchor.'</h5>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h5><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h5>';
+            }
+        }elseif(strpos($matches, '<h6') !== false) {
+            if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
+                //Не вставлять ссылки во все заголовки
+                $matches = '<h6>'.$anchor.'</h6>';
+            }else{
+                // Вставлять ссылку в заголовки
+                $matches = '<h6><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                    .' '.$event.'>'.$anchor.'</a></h6>';
+            }
+        }else {
+            //Если в тексте нет заголовка
+            $matches = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
+                .' '.$event.'>'.$anchor.'</a>';
+        }
+
+        return $matches;
     }
 
     
