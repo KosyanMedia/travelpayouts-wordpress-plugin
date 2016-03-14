@@ -15,8 +15,12 @@
 #tr_destination_date_link, #tr_origin_date_hotel_link,
 #tr_destination_date_hotel_link, #tr_off_title,
 #tr_type_widget, #tr_limit_widget, #tr_cat_widget-1,
-#tr_cat_widget-2, #tr_cat_widget-3, #tr_zoom_widget, #tr_filter_widget{
+#tr_cat_widget-2, #tr_cat_widget-3, #tr_zoom_widget, #tr_filter_widget,
+#tr_type_widget_8, #tr_airline_widget_8, #tr_iata_widget_8, #tr_limit_widget_8{
     display: none;
+}
+#table_iata_widget_8, #table_airline_widget_8{
+    width: 100%;
 }
 .constructorShortcodesError{
     border: 1px solid #dd3d36 !important;

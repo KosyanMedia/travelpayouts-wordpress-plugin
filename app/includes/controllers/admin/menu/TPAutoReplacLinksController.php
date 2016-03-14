@@ -275,7 +275,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                     .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/h[1-6]>)|'
                     .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/m',
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                        error_log(print_r($matches, true));
+                        //error_log(print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
                             //Если в тексте нет ссылки
                             $matches[0] = $this->matchesReplace($matches[0], $anchor, $url, $nofollow, $target, $event);

@@ -782,6 +782,9 @@ jQuery(function($) {
                                         $(this));
                                 }
                                 break;
+                            case '8':
+                                console.log(88888888);
+                                break;
                         }
 
                     }
@@ -807,6 +810,7 @@ jQuery(function($) {
 
         //console.log(constructorWidgetModal.top);
         //console.log(constructorWidgetModal.left);
+        tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
 
@@ -1010,6 +1014,31 @@ jQuery(function($) {
                     //doc.find('#tr_cat_widget-3').show();
                     //tr_type_widget
 
+                    break;
+                case '8':
+                    doc.find('#tr_type_widget_8').show();
+                    doc.find('#tr_filter_widget').show();
+                    doc.find('#tr_limit_widget_8').show();
+                    switch ( doc.find("input[name=filter]:checked").val()){
+                        case '0':
+                            doc.find("#tr_airline_widget_8").show();
+                            break;
+                        case '1':
+                            doc.find("#tr_iata_widget_8").show();
+                            break;
+                    }
+                    doc.find("input[name=filter]:radio").change(function () {
+                        doc.find("#tr_airline_widget_8").hide();
+                        doc.find("#tr_iata_widget_8").hide();
+                        switch ($(this).val()){
+                            case '0':
+                                doc.find("#tr_airline_widget_8").show();
+                                break;
+                            case '1':
+                                doc.find("#tr_iata_widget_8").show();
+                                break;
+                        }
+                    });
                     break;
             }
         });
@@ -1412,6 +1441,9 @@ jQuery(function($) {
         doc.find('#tr_cat_widget-2').hide();
         doc.find('#tr_cat_widget-3').hide();
         doc.find('#tr_zoom_widget').hide();
+        doc.find('#tr_filter_widget').hide();
+        doc.find('#tr_type_widget_8').hide();
+        doc.find('#tr_limit_widget_8').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }

@@ -39,6 +39,17 @@
                         <option value="8"><?php _e('Best deals widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
             </tr>
+            <tr id="tr_type_widget_8">
+                <td>
+                    <span><?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <select name="type_widget_8" id="type_widget_8">
+                        <option <?php selected( \app\includes\TPPlugin::$options["widgets"]['8']['type'], 'full'); ?>
+                            value="brickwork"><?php _e('Tile', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        <option <?php selected( \app\includes\TPPlugin::$options["widgets"]['8']['type'], 'compact'); ?>
+                            value="slider"><?php _e('Slider', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                    </select>
+                </td>
+            </tr>
             <tr id="tr_filter_widget">
                 <td>
                     <label>
@@ -46,11 +57,57 @@
                             <?php checked(\app\includes\TPPlugin::$options['widgets']['8']['filter'], 0) ?>>
                         <?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?>
                     </label>
+                    <br/>
                     <label>
                         <input type="radio" name="filter" value="1"
                             <?php checked(\app\includes\TPPlugin::$options['widgets']['8']['filter'], 1) ?>>
                         <?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?>
                     </label>
+                </td>
+            </tr>
+            <tr id="tr_airline_widget_8">
+                <td>
+                    <table id="table_airline_widget_8">
+                        <tr id="tr_table_airline_widget_8">
+                            <td>
+                                <input type="text" name="airline_widget_8" id="airline_widget_8" value=""
+                                       class="constructorAirlineShortcodesAutocomplete regular-text code"
+                                       placeholder="<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr id="tr_iata_widget_8">
+                <td>
+                    <table  id="table_iata_widget_8">
+                        <tr>
+                            <td>
+                                <input type="text" name="origin_8" id="origin_widget_8" value=""
+                                       class="constructorCityShortcodesAutocomplete regular-text code"
+                                       placeholder="<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="destination_8" id="destination_widget_8" value=""
+                                       class="constructorCityShortcodesAutocomplete regular-text code"
+                                       placeholder="<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr id="tr_limit_widget_8">
+                <td>
+                    <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <select name="limit_widget_8" id="limit_widget_8">
+                        <?php for($i = 1; $i < 11; $i++){ ?>
+                            <option <?php selected( \app\includes\TPPlugin::$options["widgets"]['8']['limit'], $i ); ?>
+                                value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                        <?php } ?>
+
+                    </select>
                 </td>
             </tr>
             <tr id="tr_origin_widget">
