@@ -268,9 +268,12 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 //error_log(preg_quote($anchor).' limit = '.$this->getReplaceLimit($limitReplace, $key_limit));
                 //error_log(print_r($dataAutoReplacLink, true));
                 // (\b) (\b) Проверить
+                //(.*?)(.*?)
+                //(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/h[1-6]>)
                 $post_content = preg_replace_callback(
-                    '/('.preg_quote($anchor).')|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/a>)'
-                    .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.*?)<\/h[1-6]>)/m',
+                    '/('.preg_quote($anchor).')$|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a>)'
+                    .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/h[1-6]>)|'
+                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/m',
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
                         error_log(print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
@@ -677,6 +680,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($postarr['tp_auto_replac_link'], true));*/
         if(!empty($data['post_content']) && !empty($data['post_title']))
             $data['post_status'] = 'publish';
+        $data['post_content'] = wp_unslash($data['post_content']);
         //error_log(print_r($data, true));
         //error_log("_________________________________");
         return $data;
