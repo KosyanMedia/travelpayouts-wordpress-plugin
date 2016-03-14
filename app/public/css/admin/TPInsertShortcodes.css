@@ -1,3 +1,63 @@
+.airline_widget_8{
+    width: 270px;
+}
+.TPBtnDelete{
+    height: 40px;
+    background-color: #e10000;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 15px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.TPBtnDelete:hover {
+    background: #f20000;
+    color: #FFFFFF;
+}
+
+.TPBtnAdd {
+    height: 40px;
+    background-color: #69c7f4;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 15px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.TPBtnAdd:hover {
+    background: #00abfd;
+    color: #FFFFFF;
+}
+.TPBtnAdd i {
+    background: url("../../images/plus.png") no-repeat;
+    display: block;
+    height: 100%;
+    width: 22px;
+    margin-right: 10px;
+    background-position: center;
+    float: left;
+}
+
 #select_shortcodes, #select_widgets, #select_search_form,#constructorLinkModalSelect{
     width: 350px;
 }
@@ -362,3 +422,5 @@
     width: 100% !important;
 }
 .ui-progressbar{height:2em;text-align:left;overflow:hidden}.ui-progressbar .ui-progressbar-value{margin:-1px;height:100%}.ui-progressbar .ui-progressbar-overlay{background:url(../lib/jquery-ui/images/animated-overlay.gif);height:100%;filter:alpha(opacity=25);opacity:.25}.ui-progressbar-indeterminate .ui-progressbar-value{background-image:none}.ui-resizable{position:relative}
+
+

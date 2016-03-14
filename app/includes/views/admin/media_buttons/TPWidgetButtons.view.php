@@ -69,13 +69,21 @@
                 <td>
                     <table id="table_airline_widget_8">
                         <tr id="tr_table_airline_widget_8">
-                            <td>
+                            <td style="width: 70%">
                                 <input type="text" name="airline_widget_8" id="airline_widget_8" value=""
-                                       class="constructorAirlineShortcodesAutocomplete regular-text code"
+                                       class="constructorAirlineShortcodesAutocomplete airline_widget_8"
                                        placeholder="<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>">
+                                <a href="#" class="TPBtnDelete">
+                                    <i></i>
+                                    <?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>
+                                </a>
                             </td>
                         </tr>
                     </table>
+                    <a href="#" class="TPBtnAdd">
+                        <i></i>
+                        <?php _e('Add', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
                 </td>
             </tr>
             <tr id="tr_iata_widget_8">
