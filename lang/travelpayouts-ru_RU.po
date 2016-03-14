@@ -1360,9 +1360,7 @@ msgstr "Заменять существующие ссылки"
 msgid ""
 "In case you already have such active links — they'll be replaced to the new "
 "one"
-msgstr ""
-"Заменять существующие ссылки - Будет производится замена существующих ссылок "
-"с таким анкором"
+msgstr "Будет производится замена существующих ссылок с таким анкором"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:75
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:75
