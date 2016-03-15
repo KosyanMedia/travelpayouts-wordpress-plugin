@@ -2859,3 +2859,7 @@ thead tr td.active-w {
   text-decoration: none;
   color: #fff;
 }
+
+.TP-ImportLink .input_font_style{
+  text-transform: uppercase;
+}
