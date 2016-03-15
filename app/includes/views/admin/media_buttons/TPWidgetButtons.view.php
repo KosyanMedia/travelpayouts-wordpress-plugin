@@ -24,6 +24,8 @@
                             data-widgets-responsive-7 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['7']['responsive']))? 1 : 0;?>"
                             data-widgets-limit-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['limit'] ?>"
                             data-widgets-type-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['type'] ?>"
+                            data-widgets-size-width-8 = "<?php echo \app\includes\TPPlugin::$options['widgets']['8']['width'] ?>"
+                            data-widgets-responsive-8 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['8']['responsive']))? 1 : 0;?>"
 
                     >
                         <option selected="selected" value="0"><?php _e('Select widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
@@ -68,17 +70,21 @@
             <tr id="tr_airline_widget_8">
                 <td>
                     <table id="table_airline_widget_8">
-                        <tr id="tr_table_airline_widget_8">
-                            <td style="width: 70%">
-                                <input type="text" name="airline_widget_8" id="airline_widget_8" value=""
-                                       class="constructorAirlineShortcodesAutocomplete airline_widget_8"
-                                       placeholder="<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>">
-                                <a href="#" class="TPBtnDelete">
-                                    <i></i>
-                                    <?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>
-                                </a>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr class="tr_table_airline_widget_8">
+                                <td style="width: 70%">
+                                    <input type="text" name="airline_widget_118" id="airline_widget_8" value=""
+                                           class="constructorAirlineShortcodesAutocomplete airline_widget_8"
+                                           placeholder="<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>">
+                                    <!--<a href="#" class="TPBtnDelete">
+                                        <i></i>
+                                        <?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    </a>-->
+                                </td>
+                            </tr>
+
+                        </tbody>
+
                     </table>
                     <a href="#" class="TPBtnAdd">
                         <i></i>

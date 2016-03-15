@@ -27,10 +27,15 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'type' => \app\includes\TPPlugin::$options['widgets'][$widgets]['type'],
             'filter' => \app\includes\TPPlugin::$options['widgets'][$widgets]['filter'],
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'origin' => false,
+            'destination' => false,
+            'airline' => false,
             'currency' => $this->view->typeCurrency() ,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-
+        //&origin_iatas=MOW
+        //&destination_iatas=LED
+        //airline_iatas=SU%2CXM
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
         $output = '';
         $output = '<script async src="//www.travelpayouts.com/ducklett/scripts.js?widget_type='.$type

@@ -783,7 +783,50 @@ jQuery(function($) {
                                 }
                                 break;
                             case '8':
-                                console.log(88888888);
+                                var limit_8, type_8, filter_8, width_8, origin_8, destination_8, airline_8,
+                                    airlines, parrams;
+                                if(doc.find('#responsive_widget').is(":checked")){
+                                    responsive = "responsive=true";
+                                }else{
+                                    responsive = "width="+doc.find('#responsive_width').val();
+                                }
+                                parrams = '';
+                                parrams += responsive + ' ';
+                                limit_8  = doc.find('#limit_widget_8').val();
+                                parrams += 'limit='+limit_8+' ';
+                                type_8  = doc.find('#type_widget_8').val();
+                                parrams += 'type='+type_8+' ';
+                                filter_8  = doc.find("input[name=filter]:checked").val();
+                                parrams += 'filter='+filter_8+' ';
+                                origin_8  = doc.find('#origin_widget_8').val();
+                                origin_8 = origin_8.substring(origin_8.indexOf('[')+1,origin_8.indexOf(']'));
+                                if(origin_8 != "")
+                                    parrams += 'origin='+origin_8+' ';
+                                destination_8  = doc.find('#destination_widget_8').val();
+                                destination_8 = destination_8.substring(destination_8.indexOf('[')+1,destination_8.indexOf(']'));
+                                if(destination_8 != "")
+                                    parrams += 'destination='+destination_8+' ';
+                                airlines = '';
+                                if(filter_8 == '0'){
+                                    doc.find('.airline_widget_8').each(function( index ) {
+                                        var airline = $(this).val();
+                                        airline = airline.substring(airline.indexOf('[')+1,airline.indexOf(']'));
+                                        if(airline != '')
+                                            airlines += airline+','
+
+                                    });
+                                }
+                                airline_8 = '';
+                                if (airlines != ''){
+                                    airline_8 = 'airline="'+airlines+'"';
+                                }
+                                parrams += airline_8;
+
+
+                                //console.log(parrams);
+
+                                setShortcodes("[tp_ducklett_widget "+parrams+"]",
+                                $(this));
                                 break;
                         }
 
@@ -1019,6 +1062,20 @@ jQuery(function($) {
                     doc.find('#tr_type_widget_8').show();
                     doc.find('#tr_filter_widget').show();
                     doc.find('#tr_limit_widget_8').show();
+
+                    doc.find('#tr_responsive_widget').show();
+                    doc.find('#responsive_width').val($(this).data('widgets-size-width-8'));
+                    switch ($(this).data('widgets-responsive-8')){
+                        case 0:
+                            doc.find('#responsive_widget').attr('checked', false);
+                            doc.find('#responsive_width_label').show();
+                            break;
+                        case 1:
+                            doc.find('#responsive_widget').attr('checked', true);
+                            doc.find('#responsive_width_label').hide();
+                            break;
+                    }
+
                     switch ( doc.find("input[name=filter]:checked").val()){
                         case '0':
                             doc.find("#tr_airline_widget_8").show();
@@ -1039,6 +1096,26 @@ jQuery(function($) {
                                 break;
                         }
                     });
+                    doc.find('.TPBtnAdd').click(function (e) {
+                        //doc.find('.tr_table_airline_widget_8').clone().appendTo('#table_airline_widget_8 tbody');
+                        doc.find('#table_airline_widget_8 tbody')
+                            .append('<tr class="tr_table_airline_widget_8">' +
+                                '<td><input type="text" name="airline_widget_8" ' +
+                                'value="" class="constructorAirlineShortcodesAutocomplete airline_widget_8" ' +
+                                'placeholder="'+LabelAirlineWidget_8+'">' +
+                                ' <a href="#" class="TPBtnDelete"><i></i>' +
+                                LabelDeleteWidget_8+'</a>'+
+                                '</td></tr>');
+
+                        tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete",
+                            "#constructorWidgetModal");
+                        doc.find('.TPBtnDelete').click(function (e) {
+                            $(this).parent('td').parent('tr').remove();
+                        });
+
+                    });
+
+
                     break;
             }
         });
@@ -1444,6 +1521,12 @@ jQuery(function($) {
         doc.find('#tr_filter_widget').hide();
         doc.find('#tr_type_widget_8').hide();
         doc.find('#tr_limit_widget_8').hide();
+        doc.find('#tr_airline_widget_8').hide();
+        doc.find('#tr_iata_widget_8').hide();
+
+        doc.find('#origin_widget_8').val();
+        doc.find('#destination_widget_8').val();
+        doc.find('.airline_widget_8').val();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }
