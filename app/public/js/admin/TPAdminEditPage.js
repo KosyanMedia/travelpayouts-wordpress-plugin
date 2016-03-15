@@ -6,6 +6,7 @@ jQuery(function($) {
 
 
     doc.find('.TPAutoReplaceLinkPostBtn').click(function (e) {
+        console.log("TPAutoReplaceLinkPostBtn");
         var checkedId = [];
         var data;
         doc.find('[id^=cb-select]:checked').each(function(i, el){
@@ -14,6 +15,7 @@ jQuery(function($) {
                 checkedId.push(post_id)
             }
         });
+        console.log(checkedId);
         if(checkedId.length > 0) {
             data = {id: checkedId.join()}
             $.ajax({
