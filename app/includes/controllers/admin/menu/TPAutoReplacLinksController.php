@@ -135,7 +135,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
     public function TPAutoReplaceLinkPostById(){
         if(isset($_POST)) {
-            error_log(print_r($_POST, true));
+            //error_log(print_r($_POST, true));
             $post = get_post( $_POST['id'], ARRAY_A);
 
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
@@ -144,7 +144,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             //error_log(print_r($dataAutoReplacLinks, true));
             $post['post_content'] = $this->postContentReplaceLink($dataAutoReplacLinks, $post['post_content'] );
 
-            error_log(print_r($post['post_content'], true));
+           // error_log(print_r($post['post_content'], true));
             wp_update_post(array(
                 'ID' => $post['ID'],
                 'post_content' => $post['post_content']
@@ -258,8 +258,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     public function postContentReplaceLink($dataAutoReplacLinks, $post_content){
         //$coutTpl = count($dataAutoReplacLinks);
         $limitReplace = $this->getReplaceLimits();
-        error_log('$limitReplace = '.$limitReplace);
-        error_log('$post_content = '.$post_content);
+        //error_log('$limitReplace = '.$limitReplace);
+        //error_log('$post_content = '.$post_content);
         //error_log($this->getReplaceLimit($limitReplace, 0));
         $key_limit = 0;
         foreach($dataAutoReplacLinks as $key=>$dataAutoReplacLink){
@@ -268,7 +268,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             extract($dataAutoReplacLink['data']);
             foreach($dataAutoReplacLink['anchor'] as $anchor){
                 $anchor = trim($anchor);
-                error_log(preg_quote($anchor));
+                //error_log(preg_quote($anchor));
                 //error_log(print_r($dataAutoReplacLink, true));
                 // (\b) (\b) Проверить
                 //(.*?)(.*?)
@@ -276,9 +276,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $post_content = preg_replace_callback(
                     '/\b('.preg_quote($anchor).')\b|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a>)'
                     .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/h[1-6]>)|'
-                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/m',
+                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/um',//m
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
-                        //error_log(print_r($matches, true));
+                        //error_log('matches = '.print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
                             //Если в тексте нет ссылки
                             $matches[0] = $this->matchesReplace($matches[0], $anchor, $url, $nofollow, $target, $event);
