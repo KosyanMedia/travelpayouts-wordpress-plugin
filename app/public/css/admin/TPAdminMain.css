@@ -2863,3 +2863,6 @@ thead tr td.active-w {
 .TP-ImportLink .input_font_style{
   text-transform: uppercase;
 }
+.TPARLHelp{
+  margin-left: 5px;
+}

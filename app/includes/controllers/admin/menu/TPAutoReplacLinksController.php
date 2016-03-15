@@ -569,7 +569,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             $tp_auto_replac_link = 2;
             $disabled = 'disabled="disabled"';
         }
-        error_log("tp_auto_replac_link = ".$tp_auto_replac_link);
+        //error_log("tp_auto_replac_link = ".$tp_auto_replac_link);
         // Используем nonce для верификации
         wp_nonce_field( TPOPlUGIN_NAME, 'tp_auto_replac_link_noncename' );
         ?>

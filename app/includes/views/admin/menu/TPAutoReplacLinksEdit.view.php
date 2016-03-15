@@ -25,7 +25,7 @@
                 <label class="TP-inputTextShortCust">
                         <span>
                             <?php _e('Anchor phrase', TPOPlUGIN_TEXTDOMAIN) ?>
-                            <a href="#" class="tooltip-settings">
+                            <a href="#" class="tooltip-settings TPARLHelp">
                                 <span><?php _e('You may add several anchors, use comma as separator', TPOPlUGIN_TEXTDOMAIN); ?></span>
                                 <div class="svg-img-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -39,7 +39,7 @@
                 <label class="TP-LabelEvent">
                    <span>
                         <?php _e('Events onclick', TPOPlUGIN_TEXTDOMAIN) ?>
-                       <a href="#" class="tooltip-settings">
+                       <a href="#" class="tooltip-settings TPARLHelp">
                            <span><?php _e('You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a link', TPOPlUGIN_TEXTDOMAIN); ?></span>
                            <div class="svg-img-3">
                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -61,7 +61,7 @@
                            value="1" hidden <?php checked( $this->data['arl_replace'], 1 ); ?>/>
                     <label for="chekarla2">
                         <?php echo _x('Replace existing links', 'settingsARL', TPOPlUGIN_TEXTDOMAIN); ?>
-                        <a href="#" class="tooltip-settings">
+                        <a href="#" class="tooltip-settings TPARLHelp">
                             <span><?php _e('In case you already have such active links — they\'ll be replaced to the new one', TPOPlUGIN_TEXTDOMAIN); ?></span>
                             <div class="svg-img-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
