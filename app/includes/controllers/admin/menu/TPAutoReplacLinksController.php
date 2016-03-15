@@ -547,27 +547,29 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $post
      */
     public function tp_add_custom_box_callback($post){
-        //error_log(print_r($post, true));
         $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
-
         $disabled = '';
         //isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link'])
         if($dataAutoReplacLinks !== false){
-            $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
-            if(empty($tp_auto_replac_link)) {
-
+            if(get_post_meta( $post->ID, 'tp_auto_replac_link', true )){
+                //error_log("get_post_meta");
+                $tp_auto_replac_link = get_post_meta( $post->ID, 'tp_auto_replac_link', true );
+            }else{
+                //error_log("option");
                 if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link'])){
-                    $tp_auto_replac_link = 0;
-                } else{
                     $tp_auto_replac_link = 1;
+                } else{
+                    $tp_auto_replac_link = 2;
                 }
-
             }
+
+            //error_log($tp_auto_replac_link);
+
         }else{
-            $tp_auto_replac_link = 1;
+            $tp_auto_replac_link = 2;
             $disabled = 'disabled="disabled"';
         }
-
+        error_log("tp_auto_replac_link = ".$tp_auto_replac_link);
         // Используем nonce для верификации
         wp_nonce_field( TPOPlUGIN_NAME, 'tp_auto_replac_link_noncename' );
         ?>
@@ -576,14 +578,14 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 <?php echo _x('Auto-links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
             </legend>
             <input type="radio" name="tp_auto_replac_link" <?php echo $disabled; ?>
-                   class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="0"
-                    <?php checked( $tp_auto_replac_link, 0 ); ?> >
+                   class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="1"
+                    <?php checked( $tp_auto_replac_link, 1 ); ?> >
             <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
                 <?php _e('Enable', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
             <br><input type="radio" name="tp_auto_replac_link"
-                       class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="1"
-                        <?php checked( $tp_auto_replac_link, 1 ); ?>>
+                       class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="2"
+                        <?php checked( $tp_auto_replac_link, 2 ); ?>>
             <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
                 <?php _e('Disable', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
@@ -597,9 +599,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $update
      */
     public function autoReplacLinksSavePost($post_id, $post, $update){
-        error_log(print_r($post_id, true));
+        //error_log(print_r($post_id, true));
         //error_log("autoReplacLinksSavePost");
-        //error_log(print_r($post, true));
+        //error_log(print_r($_POST, true));
         //error_log(print_r($update, true));
         if ( ! isset( $_POST['tp_auto_replac_link_noncename'] ) )
             return $post_id;
@@ -612,6 +614,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
         $tp_auto_replac_link = sanitize_text_field( $_POST['tp_auto_replac_link'] );
         // Обновляем данные в базе данных.
+        //error_log(print_r($tp_auto_replac_link, true));
         update_post_meta( $post_id, 'tp_auto_replac_link', $tp_auto_replac_link );
 
 

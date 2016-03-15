@@ -34,7 +34,7 @@ jQuery(function($) {
 
         console.log(doc.find("#original_post_status").val())
 
-        if(tp_auto_replac_link == 0 && content != ""){
+        if(tp_auto_replac_link == 1 && content != ""){
             //doc.find('#post').submit(function(e){return false});
             dataInsertPostContent = {value: content}
             $.ajax({
