@@ -159,7 +159,15 @@ class TPWidgetsView {
                 break;
             case 8:
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = 'hydra.aviasales.ru';
+                    switch (\app\includes\TPPlugin::$options['local']['localization']){
+                        case 1:
+                            $white_label = 'hydra.aviasales.ru';
+                            break;
+                        case 2:
+                            $white_label = 'www.jetradar.com%2Fsearches%2Fnew';
+                            break;
+                    }
+                    //$white_label = 'hydra.aviasales.ru';
                 }
                 break;
         }
