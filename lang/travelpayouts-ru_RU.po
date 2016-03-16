@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-16 15:48+0300\n"
+"POT-Creation-Date: 2016-03-16 16:32+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -283,8 +283,12 @@ msgid "Complete!"
 msgstr "Готово!"
 
 #: app/includes/TPLoaderScripts.php:283
-msgid "Actions can not cancel. Are you sure?"
-msgstr "Действия нельзя отменить. Вы уверены?"
+msgid ""
+"You can't undo this action. Be sure to have a backup of your database. Are "
+"you sure you want to continue?"
+msgstr ""
+"Действие невозможно отменить. Обязательно сделайте backup вашей базы. "
+"Продолжить?"
 
 #: app/includes/TPLoaderScripts.php:284
 msgid "Substitution links completed"
@@ -1191,17 +1195,18 @@ msgid "Default City of Arrival"
 msgstr "Город прилета по-умолчанию"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:57
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
 msgid "Default City/Hotel"
 msgstr "Город/Отель по умолчанию"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:61
 #: app/includes/views/admin/menu/TPSearchForms.view.php:73
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:64
 msgid "Shortcode"
 msgstr "Шорткод"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:66
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:70
 msgid ""
 "Shortcode will be automatically generated after you press the Save Changes "
 "button. It can also be placed into your posts right away"
@@ -1211,14 +1216,14 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:80
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:80
 msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:75
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:83
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:79
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:83
 msgid "save changes"
 msgstr "сохранить изменения"
@@ -1953,6 +1958,9 @@ msgstr "Отель"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:181
 msgid "Count"
 msgstr "Количество"
+
+#~ msgid "Actions can not cancel. Are you sure?"
+#~ msgstr "Действия нельзя отменить. Вы уверены?"
 
 #~ msgid ""
 #~ "Here you can put down automatically links for a given phrase in all posts"
