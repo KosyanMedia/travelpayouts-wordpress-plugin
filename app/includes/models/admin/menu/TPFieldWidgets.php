@@ -660,7 +660,7 @@ class TPFieldWidgets {
             <label>
                 <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][limit]" class="TP-Zelect">
-                    <?php for($i = 1; $i < 11; $i++){ ?>
+                    <?php for($i = 1; $i < 22; $i++){ ?>
                         <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['limit'], $i ); ?>
                             value="<?php echo $i; ?>"><?php echo $i; ?></option>
                     <?php } ?>

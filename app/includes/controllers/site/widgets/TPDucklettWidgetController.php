@@ -33,51 +33,40 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'currency' => $this->view->typeCurrency() ,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        //&origin_iatas=MOW
-        //&destination_iatas=LED
-        //airline_iatas=SU%2CXM
-        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
+        $url_params = '';
+        $url_params .= '&limit='.$limit;
+        switch($filter){
+            case 0:
+                if(isset($airline) && !empty($airline)){
+                    //$url_params .= '&airline_iatas='.$airline;
+                    $airlines = explode(',', $airline);
+                    $air = '';
+                    foreach($airlines as $value){
+                        $air .= $value.'%2C';
+                    }
+                    $air = substr($air, 0, -6);
+                    //error_log($air);
+                    $url_params .= '&airline_iatas='.$air;
+                }
+
+                break;
+            case 1:
+                if(isset($origin) && !empty($origin))
+                    $url_params .= '&origin_iatas='.$origin;
+                if(isset($destination) && !empty($destination))
+                    $url_params .= '&destination_iatas='.$destination;
+                break;
+        }
+        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px";
+        $url_params .= $width;
+        //error_log($url_params);
+        //error_log($this->view->getMarker($widgets));
+        //error_log($this->view->getWhiteLabel($widgets));
         $output = '';
         $output = '<script async src="//www.travelpayouts.com/ducklett/scripts.js?widget_type='.$type
-            .'&currency='.mb_strtolower($currency).'&width=800&host=hydra.aviasales.ru&marker=17942.&limit='.$limit.'" charset="UTF-8">
+            .'&currency='.mb_strtolower($currency).'&host='.$this->view->getWhiteLabel($widgets).'&marker='
+            .$this->view->getMarker($widgets).'.'.$url_params.'" charset="UTF-8">
         </script>';
         return $output;
     }
 }
-/*
- *  $widgets = 3;
-        $origin_i = '';
-        $destination_i = '';
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
-            $origin_i = $origin_iata[1];
-        }
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
-            $destination_i = $destination_iata[1];
-        }
-        $defaults = array(
-            'origin' => $origin_i,
-            'destination' => $destination_i,
-            'direct' => 'false',
-            'one_way' => 'false',
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
-        );
-        extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
-        $period_day_to = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
-        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
-
-        $output = '';
-        $output = '
-            <div class="TPWidget TPCalendarWidget">
-            <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets)
-            .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
-            .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
-            .'&only_direct='.$direct.'&locale='.$this->view->locale
-            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
-            .'&range='.$period_day_from.'%2C'.$period_day_to.'"
-            async></script></div>';
-        //error_log($output);
-        return $output;
- */

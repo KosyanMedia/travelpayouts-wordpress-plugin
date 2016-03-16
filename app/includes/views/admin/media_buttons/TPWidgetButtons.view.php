@@ -116,7 +116,7 @@
                 <td>
                     <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <select name="limit_widget_8" id="limit_widget_8">
-                        <?php for($i = 1; $i < 11; $i++){ ?>
+                        <?php for($i = 1; $i < 22; $i++){ ?>
                             <option <?php selected( \app\includes\TPPlugin::$options["widgets"]['8']['limit'], $i ); ?>
                                 value="<?php echo $i; ?>"><?php echo $i; ?></option>
                         <?php } ?>

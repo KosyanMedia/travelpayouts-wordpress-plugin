@@ -157,6 +157,11 @@ class TPWidgetsView {
                     $white_label = 'search.hotellook.com';
                 }
                 break;
+            case 8:
+                if( ! $white_label || empty( $white_label ) ){
+                    $white_label = 'hydra.aviasales.ru';
+                }
+                break;
         }
         return $white_label;
 
