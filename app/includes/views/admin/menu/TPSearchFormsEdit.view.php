@@ -56,7 +56,11 @@
                     <input type="text" name="search_shortcode_to" class="searchShortcodeAutocomplete"
                            value="<?php echo $this->data['to_city'] ?>"/>
                 </label>
-
+                <label>
+                    <span><?php _e('Default City/Hotel', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <input type="text" name="search_shortcode_hotel_city" class="searchHotelCityShortcodeAutocomplete TPHotelCityAutocomplete"
+                           value="<?php echo $this->data['hotel_city'] ?>"/>/>
+                </label>
                 <p class="TP-ViewShortCode"><?php _e('Shortcode', TPOPlUGIN_TEXTDOMAIN) ?>:
                     <span>[tp_search_shortcodes id=<?php echo $this->data['id'] ?>]</span>
                 </p>

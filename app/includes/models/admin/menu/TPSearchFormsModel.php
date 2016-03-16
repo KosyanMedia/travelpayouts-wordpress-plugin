@@ -49,7 +49,8 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'type_shortcode' => $_POST["search_shortcode_type"],
             'code_form' => $code_form,
             'from_city' => $_POST["search_shortcode_from"],
-            'to_city' => $_POST["search_shortcode_to"]
+            'to_city' => $_POST["search_shortcode_to"],
+            'hotel_city' => $_POST["search_shortcode_hotel_city"]
         );
         $wpdb->insert($tableName, $inputData);
     }
@@ -90,7 +91,8 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'type_shortcode' => $_POST["search_shortcode_type"],
             'code_form' => $code_form,
             'from_city' => $_POST["search_shortcode_from"],
-            'to_city' => $_POST["search_shortcode_to"]
+            'to_city' => $_POST["search_shortcode_to"],
+            'hotel_city' => $_POST["search_shortcode_hotel_city"]
         );
         $wpdb->update($tableName, $inputData ,array('id' => $_POST['search_shortcodes_id']));
     }
@@ -165,6 +167,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                               code_form text NOT NULL,
                               from_city varchar(255) NOT NULL,
                               to_city varchar(255) NOT NULL,
+                              hotel_city varchar(255) NOT NULL,
                               PRIMARY KEY (id)
                             ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');

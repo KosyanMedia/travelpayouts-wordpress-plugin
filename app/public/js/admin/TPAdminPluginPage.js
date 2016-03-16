@@ -4,6 +4,8 @@ jQuery(function($){
     win = $(window);
     tpCityAutocomplete = new TPCityAutocomplete();
     tpCityAutocomplete.TPCityAutocompleteInit('.searchShortcodeAutocomplete');
+    tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityShortcodeAutocomplete');
+
     $.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");

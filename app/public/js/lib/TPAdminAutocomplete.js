@@ -240,6 +240,35 @@ function TPCityAutocomplete(){
                                         }
                                     })
                                 )
+                            } else if($(selector).hasClass('TPHotelCityAutocomplete')){
+                                var records =[];
+
+                                $.map(data.cities, function(city, key_city){
+                                    var record = new Object();
+                                    record.label = city.fullname+" ["+city.hotelsCount+" "+TPLabelAutocomplete+"]";
+                                    record.val = '{'+city.city+', '+city.country+', '+city.hotelsCount+', '
+                                        +city.id+', city, '+city.country+'}';
+                                    records.push(record);
+
+                                })
+
+                                $.map(data.hotels, function(hotel, key_hotel){
+                                    var record = new Object();
+                                    record.label = hotel.hotelFullName;
+                                    record.val =  '{'+hotel.name+', '+hotel.locationFullName+', '
+                                        +hotel.id+', hotel, '+hotel.country+'}';
+                                    records.push(record);
+
+                                })
+                                response(
+                                    $.map(records, function(item, key){
+                                        return {
+                                            label: item.label,
+                                            value: item.label+item.val,
+                                            val: item.val
+                                        }
+                                    })
+                                )
                             } else if($(selector).hasClass('TPAutocompleteID')){
                                 response(
                                     $.map(data.cities, function(item){
