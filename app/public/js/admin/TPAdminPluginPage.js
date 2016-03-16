@@ -269,6 +269,7 @@ jQuery(function($){
         TPSettingsSave('#TPWidgetConfig');
         TPStatsSave(TPStatsTableSort());
         TPShortcodeTableSort();
+        TPAnchorTableSort();
     });
     $(".btnColor").click(function(){
         $(this).prev('.color').trigger('click');
@@ -730,6 +731,39 @@ jQuery(function($){
                     "sSearch": "Filter Data"
                 },
                 "sEmptyTable": TPTableEmptySearchShortcode
+            }
+        });
+        //console.log( dataTable.rowCount())
+        return dataTable;
+    }
+    function TPAnchorTableSort(){
+        var dataTable;
+        dataTable = doc.find('#TPAnchorTable').dataTable( {
+            ordering: true,
+            "order": [[ 1, "asc" ]],
+            paging: (10 < $('tr', $('#TPAnchorTable').find('tbody')).length),
+            iDisplayLength : 10,
+            "bLengthChange": false,
+            searching: true,
+            bFilter: false,
+            bInfo: false,
+            columnDefs: [
+                {
+                    targets: 1,
+                    className: 'active-w'
+                },
+                { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
+                { "aTargets" : ["tp-notsort-column"] ,  "orderable": false }
+            ],
+            "oLanguage":{
+                "oPaginate": {
+                    "sNext": null,
+                    "sLast": null,
+                    "sFirst": null,
+                    "sPrevious": null,
+                    "sSearch": "Filter Data"
+                },
+                "sEmptyTable": TPTableEmptyAnchors
             }
         });
         //console.log( dataTable.rowCount())

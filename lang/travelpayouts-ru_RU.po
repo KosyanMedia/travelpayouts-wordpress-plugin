@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-16 16:32+0300\n"
+"POT-Creation-Date: 2016-03-16 16:40+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -144,7 +144,7 @@ msgstr "Дешевые перелеты из города"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:271
+#: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:272
 #: app/includes/models/admin/menu/TPFieldSettings.php:423
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
@@ -153,7 +153,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:270
+#: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:271
 #: app/includes/models/admin/menu/TPFieldSettings.php:446
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
@@ -163,7 +163,7 @@ msgstr "Откуда"
 msgid "Destination"
 msgstr "Куда"
 
-#: app/includes/TPPluginWidget.php:258 app/includes/TPLoaderScripts.php:285
+#: app/includes/TPPluginWidget.php:258 app/includes/TPLoaderScripts.php:286
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:99
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:78
 msgid "Airline"
@@ -256,33 +256,33 @@ msgstr "Переменная $airline не задана или задана не
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
-#: app/includes/TPLoaderScripts.php:269
+#: app/includes/TPLoaderScripts.php:270
 msgid "Hotel Name"
 msgstr "Название отеля"
 
-#: app/includes/TPLoaderScripts.php:272
+#: app/includes/TPLoaderScripts.php:273
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:276
+#: app/includes/TPLoaderScripts.php:277
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:277
+#: app/includes/TPLoaderScripts.php:278
 msgid "hotels"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:278
+#: app/includes/TPLoaderScripts.php:279
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
 msgid "City"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:282
+#: app/includes/TPLoaderScripts.php:283
 msgid "Complete!"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:283
+#: app/includes/TPLoaderScripts.php:284
 msgid ""
 "You can't undo this action. Be sure to have a backup of your database. Are "
 "you sure you want to continue?"
@@ -290,41 +290,45 @@ msgstr ""
 "Действие невозможно отменить. Обязательно сделайте backup вашей базы. "
 "Продолжить?"
 
-#: app/includes/TPLoaderScripts.php:284
+#: app/includes/TPLoaderScripts.php:285
 msgid "Substitution links completed"
 msgstr "Подстановка ссылок завершена"
 
-#: app/includes/TPLoaderScripts.php:286
+#: app/includes/TPLoaderScripts.php:287
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:81
 msgid "Delete"
 msgstr "Удалить"
 
-#: app/includes/TPLoaderScripts.php:302 app/includes/TPLoaderScripts.php:303
-#: app/includes/TPLoaderScripts.php:307 app/includes/TPLoaderScripts.php:308
+#: app/includes/TPLoaderScripts.php:303 app/includes/TPLoaderScripts.php:304
+#: app/includes/TPLoaderScripts.php:308 app/includes/TPLoaderScripts.php:309
 msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:312
+#: app/includes/TPLoaderScripts.php:313
 msgid "No data"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:313
+#: app/includes/TPLoaderScripts.php:314
 msgid "There are no payments yet"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:317
+#: app/includes/TPLoaderScripts.php:318
 msgid "No search form."
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:318
+#: app/includes/TPLoaderScripts.php:319
+msgid "No anchors."
+msgstr "Нет анкоров"
+
+#: app/includes/TPLoaderScripts.php:320
 msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:321
+#: app/includes/TPLoaderScripts.php:323
 msgid "Create"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:322
+#: app/includes/TPLoaderScripts.php:324
 msgid "Cancel"
 msgstr "Отмена"
 

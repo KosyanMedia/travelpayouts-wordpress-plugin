@@ -264,7 +264,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPTableEmptyBalance, TPTableEmptySearchShortcode, TPFileNameExport, TPPluginName,
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
                 TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar,
-                TPBtnIsertLinkDialogTxt, TPAdminUrl, TPInsertLinkNoticeTxt, TPFileNameCsvExport, LabelAirlineWidget_8, LabelDeleteWidget_8;
+                TPBtnIsertLinkDialogTxt, TPAdminUrl, TPInsertLinkNoticeTxt, TPFileNameCsvExport, LabelAirlineWidget_8,
+                LabelDeleteWidget_8, TPTableEmptyAnchors;
             TPAdminUrl = '<?php echo admin_url();?>';
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -315,6 +316,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             TPTableEmptySearchShortcode = '<?php _e('No search form.', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptyAnchors = '<?php _e('No anchors.', TPOPlUGIN_TEXTDOMAIN); ?>';
             TPStatsTotalTrText = '<?php _e('Grand total this month', TPOPlUGIN_TEXTDOMAIN); ?>';
             wpLocale = '<?php echo get_locale(); ?>';
             ajaxurl = '<?php echo TPOPlUGIN_AJAX_URL; ?>';

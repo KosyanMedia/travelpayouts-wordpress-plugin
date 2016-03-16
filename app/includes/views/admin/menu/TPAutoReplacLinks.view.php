@@ -40,7 +40,7 @@
             <a class="TP-AllLincksShort"></a>
         </div>
 
-        <table class="TP-listShort TPTableAutoReplaceLink" id="TP-listShortcode">
+        <table class="TP-listShort TPTableAutoReplaceLink" id="TPAnchorTable">
             <thead>
             <tr>
                 <td class="tp-notsort-column">
