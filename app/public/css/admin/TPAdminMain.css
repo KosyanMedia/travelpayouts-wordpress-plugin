@@ -2844,7 +2844,7 @@ thead tr td.active-w {
   margin-top: -20px;
 }
 
-.TPExportLink {
+/*.TPExportLink {
   text-decoration: none;
   border: none;
   width: 160px;
@@ -2858,11 +2858,14 @@ thead tr td.active-w {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
-}
+}*/
 
 .TP-ImportLink .input_font_style{
   text-transform: uppercase;
+  font-weight: 300;
+
+  font-size: 14px;
 }
 .TPARLHelp{
-  margin-left: 5px;
+  margin: 5px;
 }
