@@ -158,6 +158,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
             $content = $this->postContentReplaceLink($dataAutoReplacLinks, $content );
             //error_log($content);
+            //print_r($content);
             echo $content;
         }
     }
@@ -470,7 +471,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 .' '.$event.'>'.$anchor.'</a>';
         }
 
-        return $matches;
+        //return  wp_unslash($matches);
+        return  stripslashes($matches);
     }
 
     
@@ -686,7 +688,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($postarr['tp_auto_replac_link'], true));*/
         if(!empty($data['post_content']) && !empty($data['post_title']))
             $data['post_status'] = 'publish';
-        $data['post_content'] = wp_unslash($data['post_content']);
+        //$data['post_content'] = $data['post_content']);
         //error_log(print_r($data, true));
         //error_log("_________________________________");
         return $data;

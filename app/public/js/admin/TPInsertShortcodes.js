@@ -42,8 +42,9 @@ jQuery(function($) {
                 type: "POST", // Делаем POST запрос
                 data: dataInsertPostContent,
                 success: function (data) {
-                     newContent = data.substring(0, data.length - 1);
+                     newContent = stripslashes(data.substring(0, data.length - 1));
                     console.log("newContent = "+newContent);
+
                      if(typeof tinyMCE  != "undefined"){
                          if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
                              //if(QTags.insertContent(newContent) != true)
@@ -58,7 +59,7 @@ jQuery(function($) {
 
 
 
-                    $('#post').trigger('submit', [ true ]);
+                   $('#post').trigger('submit', [ true ]);
                 }
             });
             //doc.find('#post').submit();
@@ -69,6 +70,37 @@ jQuery(function($) {
 
 
     });
+    function stripslashes(str) {
+        //       discuss at: http://phpjs.org/functions/stripslashes/
+        //      original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+        //      improved by: Ates Goral (http://magnetiq.com)
+        //      improved by: marrtins
+        //      improved by: rezna
+        //         fixed by: Mick@el
+        //      bugfixed by: Onno Marsman
+        //      bugfixed by: Brett Zamir (http://brett-zamir.me)
+        //         input by: Rick Waldron
+        //         input by: Brant Messenger (http://www.brantmessenger.com/)
+        // reimplemented by: Brett Zamir (http://brett-zamir.me)
+        //        example 1: stripslashes('Kevin\'s code');
+        //        returns 1: "Kevin's code"
+        //        example 2: stripslashes('Kevin\\\'s code');
+        //        returns 2: "Kevin\'s code"
+
+        return (str + '')
+            .replace(/\\(.?)/g, function(s, n1) {
+                switch (n1) {
+                    case '\\':
+                        return '\\';
+                    case '0':
+                        return '\u0000';
+                    case '':
+                        return '';
+                    default:
+                        return n1;
+                }
+            });
+    }
     doc.find('#post').submit(function(e, parram){
         console.log("#post submit");
         $(this).data("valid", true);
@@ -1179,6 +1211,7 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorSearchFormModal");
+        tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityShortcodeAutocomplete' , "#constructorSearchFormModal");
         if (doc.find('#select_search_form').length > 0) {
             doc.find('#tr_origin_search_form').show();
             doc.find('#tr_destination_search_form').show();
