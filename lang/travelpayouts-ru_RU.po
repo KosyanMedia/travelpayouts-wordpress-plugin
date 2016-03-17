@@ -1483,7 +1483,7 @@ msgstr "Проставить ссылки по всех существующих
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:88
 msgid "Place auto-links in all existing posts"
-msgstr "Проставить ссылки по всех существующих постах"
+msgstr "Проставить ссылки во всех существующих постах"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:28
 #: app/includes/views/admin/menu/TPStatisticView.php:191
