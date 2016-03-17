@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-16 16:40+0300\n"
+"POT-Creation-Date: 2016-03-17 16:19+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -291,7 +291,7 @@ msgstr ""
 "Продолжить?"
 
 #: app/includes/TPLoaderScripts.php:285
-msgid "Substitution links completed"
+msgid "Auto-links are applied"
 msgstr "Подстановка ссылок завершена"
 
 #: app/includes/TPLoaderScripts.php:287
@@ -346,27 +346,27 @@ msgstr "Настройки"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:483
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:485
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:487
 msgctxt "add_menu_page page title"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:539
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:581
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:541
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:583
 msgctxt "meta_box_post"
 msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:587
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:589
 msgid "Enable"
 msgstr "Включена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:593
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:595
 msgid "Disable"
 msgstr "Выключена"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:711
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:713
 msgid "Placing links"
 msgstr "Простановка ссылок"
 
@@ -1200,6 +1200,7 @@ msgstr "Город прилета по-умолчанию"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:57
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:50
 msgid "Default City/Hotel"
 msgstr "Город/Отель по умолчанию"
 
@@ -1879,11 +1880,11 @@ msgstr "Нет настроенных Поисковых форм. "
 msgid "Go to setting."
 msgstr "Перейти к настройке."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:36
 msgid "City of departure default"
 msgstr "Город вылета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:40
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:43
 msgid "City Arrival default"
 msgstr "Город прилета по-умолчанию"
 
@@ -1962,6 +1963,9 @@ msgstr "Отель"
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:181
 msgid "Count"
 msgstr "Количество"
+
+#~ msgid "Substitution links completed"
+#~ msgstr "Подстановка ссылок завершена"
 
 #~ msgid "Actions can not cancel. Are you sure?"
 #~ msgstr "Действия нельзя отменить. Вы уверены?"
