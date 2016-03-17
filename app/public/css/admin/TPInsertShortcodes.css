@@ -77,7 +77,8 @@
 #tr_destination_date_hotel_link, #tr_off_title,
 #tr_type_widget, #tr_limit_widget, #tr_cat_widget-1,
 #tr_cat_widget-2, #tr_cat_widget-3, #tr_zoom_widget, #tr_filter_widget,
-#tr_type_widget_8, #tr_airline_widget_8, #tr_iata_widget_8, #tr_limit_widget_8{
+#tr_type_widget_8, #tr_airline_widget_8, #tr_iata_widget_8, #tr_limit_widget_8
+#tr_type_search_form, #tr_search_shortcode_hotel_city{
     display: none;
 }
 #table_iata_widget_8, #table_airline_widget_8{

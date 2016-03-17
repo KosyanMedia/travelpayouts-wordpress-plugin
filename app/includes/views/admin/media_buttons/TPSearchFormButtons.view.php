@@ -26,8 +26,20 @@
                 } ?>
             </td>
         </tr>
-        <tr>
-            <td></td>
+        <tr  id="tr_type_search_form">
+            <td id="td_type_search_form">
+                <select name="type_search_form" id="type_search_form">
+                    <option value="avia" selected="selected">
+                        <?php echo _x('Flights','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                    </option>
+                    <option value="hotel">
+                        <?php echo _x('Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                    </option>
+                    <option value="avia_hotel">
+                        <?php echo _x('Flights + Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                    </option>
+                </select>
+            </td>
         </tr>
         <tr id="tr_origin_search_form">
             <td>
