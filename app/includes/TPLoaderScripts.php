@@ -281,7 +281,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
             TPLebelProgressBar = '<?php _e('Complete!', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPBtnIsertLinkDialogTxt = '<?php _e('You can\'t undo this action. Be sure to have a backup of your database. Are you sure you want to continue?', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPBtnIsertLinkDialogTxt = "<?php _e('You can\'t undo this action. Be sure to have a backup of your database. Are you sure you want to continue?', TPOPlUGIN_TEXTDOMAIN ); ?>";
             TPInsertLinkNoticeTxt = '<?php _e('Substitution links completed', TPOPlUGIN_TEXTDOMAIN ); ?>';
             LabelAirlineWidget_8 = '<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>';
             LabelDeleteWidget_8 = '<?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>';
