@@ -7,7 +7,7 @@
                         <select name="select_search_form" id="select_search_form">
                             <?php foreach($this->data as $key => $record): ?>
                                 <option value="<?php echo $record['id'];?>"
-                                    <?php echo selected($key, 0); ?>>
+                                    <?php echo selected($key, 0); ?> data-type_form="<?php echo $record['type_form'];?>">
                                     <?php echo $record['title'];?></option>
                             <?php endforeach; ?>
                         </select>
@@ -15,7 +15,7 @@
                         <label>
                         <?php foreach($this->data as $key => $record): ?>
                             <?php echo $record['title'];  ?>
-                            <input type="hidden" name="select_search_form"
+                            <input type="hidden" name="select_search_form"  data-type_form="<?php echo $record['type_form'];?>"
                                    id="select_search_form" value="<?php echo $record['id'];?>">
                         <?php endforeach; ?>
                         </label>
@@ -26,7 +26,7 @@
                 } ?>
             </td>
         </tr>
-        <tr  id="tr_type_search_form">
+        <!--<tr  id="tr_type_search_form">
             <td id="td_type_search_form">
                 <select name="type_search_form" id="type_search_form">
                     <option value="avia" selected="selected">
@@ -40,7 +40,7 @@
                     </option>
                 </select>
             </td>
-        </tr>
+        </tr>-->
         <tr id="tr_origin_search_form">
             <td>
                 <input type="text" name="origin_search_form" id="origin_search_form" value=""

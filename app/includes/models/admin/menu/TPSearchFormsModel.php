@@ -20,7 +20,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
      */
     public function getTypeForm($form){
         $type = "";
-        preg_match('/"form_type":"(.*?)"/', $form,  $matches);
+        preg_match('/"form_type":\s*"(.*?)"/', $form,  $matches);
         if(isset($matches[1]) && !empty($matches[1]))
             return $matches[1];
         return $type;
@@ -70,22 +70,22 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                         case 'hotel':
                             error_log('hotel11111111');
                             $hotel_city_text = '"hotel": {
-                                            "name": "' . $params[0] . '"
-                                            "location": "' . $params[1] . ', ' . $params[2] . '"
-                                            "hotels_count": ""
-                                            "search_id": "' . $params[3] . '"
-                                            "search_type": "' . $params[4] . '"
+                                            "name": "' . $params[0] . '",
+                                            "location": "' . $params[1] . ', ' . $params[2] . '",
+                                            "hotels_count": "",
+                                            "search_id": "' . $params[3] . '",
+                                            "search_type": "' . $params[4] . '",
                                             "country_name": "' . $params[5] . '"
                                         }';
                             break;
                         case 'city':
                             error_log('city11111111');
                             $hotel_city_text = '"hotel": {
-                                            "name": "' . $params[0] . '"
-                                            "location": "' . $params[1] . '"
-                                            "hotels_count": "' . $params[2] . '"
-                                            "search_id": "' . $params[3] . '"
-                                            "search_type": "' . $params[4] . '"
+                                            "name": "' . $params[0] . '",
+                                            "location": "' . $params[1] . '",
+                                            "hotels_count": "' . $params[2] . '",
+                                            "search_id": "' . $params[3] . '",
+                                            "search_type": "' . $params[4] . '",
                                             "country_name": "' . $params[5] . '"
                                         }';
                             break;
@@ -146,6 +146,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         $tableName = $wpdb->prefix .self::$tableName;
         $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
         $type_form = $this->getTypeForm($code_form);
+        error_log('$type_form = '.$type_form);
         $code_form = $this->replaceDefault($type_form, $code_form, $_POST["search_shortcode_from"],
             $_POST["search_shortcode_to"], $_POST["search_shortcode_hotel_city"]);
         $inputData = array(
@@ -168,6 +169,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         $tableName = $wpdb->prefix .self::$tableName;
         $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
         $type_form = $this->getTypeForm($code_form);
+        error_log('$type_form = '.$type_form);
         $code_form = $this->replaceDefault($type_form, $code_form, $_POST["search_shortcode_from"],
             $_POST["search_shortcode_to"], $_POST["search_shortcode_hotel_city"]);
         $inputData = array(

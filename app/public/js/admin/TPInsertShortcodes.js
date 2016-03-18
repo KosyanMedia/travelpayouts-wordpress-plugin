@@ -1179,7 +1179,9 @@ jQuery(function($) {
                     click: function() {
                         var origin, destination, select, type, hotel_city;
                         select = doc.find('#select_search_form').val();
+                        console.log(select);
                         if(!isNaN(select)){
+                            console.log(select);
                             origin = doc.find('#origin_search_form').val();
                             //origin = origin.replace('[', '{');
                             //origin = origin.replace(']', '}');
@@ -1190,7 +1192,12 @@ jQuery(function($) {
                             hotel_city = doc.find('#search_shortcode_hotel_city').val();
                             hotel_city = hotel_city.substring(hotel_city.indexOf('{')+1,hotel_city.indexOf('}'));
                             destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
-                            type = doc.find('#type_search_form').val();
+                            //type = doc.find('#select_search_form').find(':selected').data('type_form');
+                            if(doc.find('#select_search_form').is("input")){
+                                type = doc.find('#select_search_form').data('type_form');
+                            }else {
+                                type = doc.find('#select_search_form').find(':selected').data('type_form');
+                            }
                             switch (type){
                                 case "avia":
                                     setShortcodes("[tp_search_shortcodes id="+select
@@ -1230,11 +1237,21 @@ jQuery(function($) {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityShortcodeAutocomplete' , "#constructorSearchFormModal");
+
         if (doc.find('#select_search_form').length > 0) {
+            //select = doc.find('#select_search_form').val();
             //doc.find('#tr_origin_search_form').show();
             //doc.find('#tr_destination_search_form').show();
-            doc.find('#tr_type_search_form').show();
-            switch (doc.find('#type_search_form').val()){
+            var  selectSearchForm;
+            if(doc.find('#select_search_form').is("input")){
+                selectSearchForm = doc.find('#select_search_form').data('type_form');
+            }else {
+                selectSearchForm = doc.find('#select_search_form').find(':selected').data('type_form');
+            }
+
+            console.log(selectSearchForm)
+            //doc.find('#tr_type_search_form').show();
+            switch (selectSearchForm){
                 case "avia":
                     doc.find('#tr_origin_search_form').show();
                     doc.find('#tr_destination_search_form').show();
@@ -1249,7 +1266,7 @@ jQuery(function($) {
                     break;
             }
         }
-        doc.find('#td_type_search_form').on('change', '#type_search_form', function(e) {
+        /*doc.find('#td_type_search_form').on('change', '#type_search_form', function(e) {
             e.preventDefault();
             doc.find('#tr_origin_search_form').hide();
             doc.find('#tr_destination_search_form').hide();
@@ -1268,10 +1285,24 @@ jQuery(function($) {
                     doc.find('#tr_search_shortcode_hotel_city').show();
                     break;
             }
-        });
+        });*/
         doc.find('#td_select_search_form').on('change', '#select_search_form', function(e) {
             e.preventDefault();
             doc.find('#select_search_form').removeClass('constructorShortcodesError');
+            switch ($(this).find(':selected').data('type_form')){
+                case "avia":
+                    doc.find('#tr_origin_search_form').show();
+                    doc.find('#tr_destination_search_form').show();
+                    break;
+                case "hotel":
+                    doc.find('#tr_search_shortcode_hotel_city').show();
+                    break;
+                case "avia_hotel":
+                    doc.find('#tr_origin_search_form').show();
+                    doc.find('#tr_destination_search_form').show();
+                    doc.find('#tr_search_shortcode_hotel_city').show();
+                    break;
+            }
             //doc.find('#tr_origin_search_form').hide();
             //doc.find('#tr_destination_search_form').hide();
             /*if(!isNaN($(this).val())){

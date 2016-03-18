@@ -56,6 +56,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                 $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
                 break;
         }
+        error_log($code_form);
         return $this->render($code_form);
 
 
@@ -122,22 +123,22 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                         case 'hotel':
                             error_log('hotel11111111');
                             $hotel_city_text = '"hotel": {
-                                            "name": "'.$params[0].'"
-                                            "location": "'.$params[1].', '.$params[2].'"
-                                            "hotels_count": ""
-                                            "search_id": "'.$params[3].'"
-                                            "search_type": "'.$params[4].'"
+                                            "name": "'.$params[0].'",
+                                            "location": "'.$params[1].', '.$params[2].'",
+                                            "hotels_count": "",
+                                            "search_id": "'.$params[3].'",
+                                            "search_type": "'.$params[4].'",
                                             "country_name": "'.$params[5].'"
                                         }';
                             break;
                         case 'city':
                             error_log('city11111111');
                             $hotel_city_text = '"hotel": {
-                                            "name": "'.$params[0].'"
-                                            "location": "'.$params[1].'"
-                                            "hotels_count": "'.$params[2].'"
-                                            "search_id": "'.$params[3].'"
-                                            "search_type": "'.$params[4].'"
+                                            "name": "'.$params[0].'",
+                                            "location": "'.$params[1].'",
+                                            "hotels_count": "'.$params[2].'",
+                                            "search_id": "'.$params[3].'",
+                                            "search_type": "'.$params[4].'",
                                             "country_name": "'.$params[5].'"
                                         }';
                             break;
