@@ -13,36 +13,141 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
         add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
     }
+
+    /**
+     * @param $form
+     * @return string
+     */
+    public function getTypeForm($form){
+        $type = "";
+        preg_match('/"form_type":"(.*?)"/', $form,  $matches);
+        if(isset($matches[1]) && !empty($matches[1]))
+            return $matches[1];
+        return $type;
+    }
+
+    /**
+     * @param $type
+     * @param $form
+     * @param $origin_iata
+     * @param $destination_iata
+     * @param $hotel_city
+     * @return mixed
+     */
+    public function replaceDefault($type, $form, $origin_iata, $destination_iata, $hotel_city){
+        switch ($type){
+            case "avia":
+                $form = $this->replaceOrigin($origin_iata, $form);
+                $form = $this->replaceDestination($destination_iata, $form);
+                break;
+            case "hotel":
+                $form = $this->replaceHotelCity($hotel_city, $form);
+                break;
+            case "avia_hotel":
+                $form = $this->replaceOrigin($origin_iata, $form);
+                $form = $this->replaceDestination($destination_iata, $form);
+                $form = $this->replaceHotelCity($hotel_city, $form);
+                break;
+        }
+        return $form;
+
+    }
+
+    /**
+     * @param $hotel_city
+     * @param $form
+     * @return mixed
+     */
+    public function replaceHotelCity($hotel_city, $form){
+        if (!empty($hotel_city)) {
+            preg_match('/\{(.+)\}/',  $hotel_city, $hotel_iata);
+            if(!empty($hotel_iata[1])){
+                $params = explode(', ',  $hotel_iata[1]);
+                if(count($params) == 6) {
+                    error_log($params[4]);
+                    $hotel_city_text = "";
+                    switch ($params[4]) {
+                        case 'hotel':
+                            error_log('hotel11111111');
+                            $hotel_city_text = '"hotel": {
+                                            "name": "' . $params[0] . '"
+                                            "location": "' . $params[1] . ', ' . $params[2] . '"
+                                            "hotels_count": ""
+                                            "search_id": "' . $params[3] . '"
+                                            "search_type": "' . $params[4] . '"
+                                            "country_name": "' . $params[5] . '"
+                                        }';
+                            break;
+                        case 'city':
+                            error_log('city11111111');
+                            $hotel_city_text = '"hotel": {
+                                            "name": "' . $params[0] . '"
+                                            "location": "' . $params[1] . '"
+                                            "hotels_count": "' . $params[2] . '"
+                                            "search_id": "' . $params[3] . '"
+                                            "search_type": "' . $params[4] . '"
+                                            "country_name": "' . $params[5] . '"
+                                        }';
+                            break;
+                    }
+                    error_log('$hotel_city_text = ' . $hotel_city_text);
+                    $form = preg_replace('/"hotel": \{.*?\}/s', $hotel_city_text, $form);
+                }
+            }
+        }
+        return $form;
+    }
+    /**
+     * @param $destination_iata
+     * @param $form
+     * @return mixed
+     */
+    public function replaceDestination($destination_iata, $form){
+        if(!empty( $destination_iata)){
+            preg_match('/\[(.+)\]/',  $destination_iata, $to_iata);
+            if(!empty($to_iata[1])){
+                $to_city = explode(',',  $destination_iata);
+                $destination = '"destination": {
+                                            "name": "'.$to_city[0].'",
+                                            "iata": "'.$to_iata[1].'"
+                                        }';
+                $form = preg_replace('/"destination": \{.*?\}/s', $destination, $form);
+            }
+
+        }
+        return $form;
+    }
+
+    /**
+     * @param $origin_iata
+     * @param $form
+     * @return mixed
+     */
+    public function replaceOrigin($origin_iata, $form){
+        if(!empty($origin_iata)){
+            preg_match('/\[(.+)\]/', $origin_iata, $from_iata);
+            if(!empty($from_iata[1])){
+                $from_city = explode(',', $origin_iata);
+                $origin = '"origin": {
+                                            "name": "'.$from_city[0].'",
+                                            "iata": "'.$from_iata[1].'"
+                                        }';
+                $form = preg_replace('/"origin": \{.*?\}/s', $origin, $form);
+            }
+
+        }
+        return $form;
+    }
+
     public function insert($data)
     {
         // TODO: Implement insert() method.
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
-        if(!empty($_POST["search_shortcode_from"])){
-            preg_match('/\[(.+)\]/', $_POST["search_shortcode_from"], $from_iata);
-            if(!empty($from_iata[1])){
-                $from_city = explode(',', $_POST["search_shortcode_from"]);
-                $origin = '"origin": {
-                                            "name": "'.$from_city[0].'",
-                                            "iata": "'.$from_iata[1].'"
-                                        }';
-                $code_form = preg_replace('/"origin": \{.*?\}/s', $origin, $code_form);
-            }
-
-        }
-        if(!empty( $_POST["search_shortcode_to"])){
-            preg_match('/\[(.+)\]/',  $_POST["search_shortcode_to"], $to_iata);
-            if(!empty($to_iata[1])){
-                $to_city = explode(',',  $_POST["search_shortcode_to"]);
-                $destination = '"destination": {
-                                            "name": "'.$to_city[0].'",
-                                            "iata": "'.$to_iata[1].'"
-                                        }';
-                $code_form = preg_replace('/"destination": \{.*?\}/s', $destination, $code_form);
-            }
-
-        }
+        $type_form = $this->getTypeForm($code_form);
+        $code_form = $this->replaceDefault($type_form, $code_form, $_POST["search_shortcode_from"],
+            $_POST["search_shortcode_to"], $_POST["search_shortcode_hotel_city"]);
         $inputData = array(
             'title' => $_POST["search_shortcode_title"],
             'date_add' => time(),
@@ -50,7 +155,8 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'code_form' => $code_form,
             'from_city' => $_POST["search_shortcode_from"],
             'to_city' => $_POST["search_shortcode_to"],
-            'hotel_city' => $_POST["search_shortcode_hotel_city"]
+            'hotel_city' => $_POST["search_shortcode_hotel_city"],
+            'type_form' => $type_form,
         );
         $wpdb->insert($tableName, $inputData);
     }
@@ -61,30 +167,9 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
-        if(!empty($_POST["search_shortcode_from"])){
-            preg_match('/\[(.+)\]/', $_POST["search_shortcode_from"], $from_iata);
-            if(!empty($from_iata[1])){
-                $from_city = explode(',', $_POST["search_shortcode_from"]);
-                $origin = '"origin": {
-                                            "name": "'.$from_city[0].'",
-                                            "iata": "'.$from_iata[1].'"
-                                        }';
-                $code_form = preg_replace('/"origin": \{.*?\}/s', $origin, $code_form);
-            }
-
-        }
-        if(!empty( $_POST["search_shortcode_to"])){
-            preg_match('/\[(.+)\]/',  $_POST["search_shortcode_to"], $to_iata);
-            if(!empty($to_iata[1])){
-                $to_city = explode(',',  $_POST["search_shortcode_to"]);
-                $destination = '"destination": {
-                                            "name": "'.$to_city[0].'",
-                                            "iata": "'.$to_iata[1].'"
-                                        }';
-                $code_form = preg_replace('/"destination": \{.*?\}/s', $destination, $code_form);
-            }
-
-        }
+        $type_form = $this->getTypeForm($code_form);
+        $code_form = $this->replaceDefault($type_form, $code_form, $_POST["search_shortcode_from"],
+            $_POST["search_shortcode_to"], $_POST["search_shortcode_hotel_city"]);
         $inputData = array(
             'title' => $_POST["search_shortcode_title"],
             'date_add' => time(),
@@ -92,7 +177,8 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'code_form' => $code_form,
             'from_city' => $_POST["search_shortcode_from"],
             'to_city' => $_POST["search_shortcode_to"],
-            'hotel_city' => $_POST["search_shortcode_hotel_city"]
+            'hotel_city' => $_POST["search_shortcode_hotel_city"],
+            'type_form' => $type_form,
         );
         $wpdb->update($tableName, $inputData ,array('id' => $_POST['search_shortcodes_id']));
     }
@@ -168,6 +254,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                               from_city varchar(255) NOT NULL,
                               to_city varchar(255) NOT NULL,
                               hotel_city varchar(255) NOT NULL,
+                              type_form varchar(255) NOT NULL,
                               PRIMARY KEY (id)
                             ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');

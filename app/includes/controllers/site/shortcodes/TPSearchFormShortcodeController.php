@@ -32,44 +32,31 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         if($id == false) return;
         $data = $this->model->get_dataId($id);
         $code_form = wp_unslash($data["code_form"]);
-        /*if(!empty($origin)){
-            $origin_text = '"origin": {
-                                            "iata": "'.$origin.'"
-                                        }';
-            $code_form = preg_replace('/"origin": \{.*?\}/s', $origin_text, $code_form);
-        }
-        if(!empty($destination)){
-            $destination_text = '"destination": {
-                                            "iata": "'.$destination.'"
-                                        }';
-            $code_form = preg_replace('/"destination": \{.*?\}/s', $destination_text, $code_form);
-        }
-        return $this->render($code_form);*/
-        if(!empty($origin)){
+        error_log($id);
+        error_log($type);
+        error_log($origin);
+        error_log($destination);
+        error_log($hotel_city);
 
-        }
         switch ($type){
             case "avia":
-                error_log($id);
-                error_log($type);
-                error_log($origin);
-                error_log($destination);
+                $code_form = $this->replaceOrigin($origin, $code_form, false);
+                $code_form = $this->replaceDestination($destination, $code_form, false);
+                $code_form = $this->replaceHotelCity($hotel_city, $code_form, true);
 
                 break;
             case "hotel":
-                error_log($id);
-                error_log($type);
-                error_log($hotel_city);
+                $code_form = $this->replaceOrigin($origin, $code_form, true);
+                $code_form = $this->replaceDestination($destination, $code_form, true);
+                $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
                 break;
             case "avia_hotel":
-                error_log($id);
-                error_log($type);
-                error_log($hotel_city);
-                error_log($origin);
-                error_log($destination);
+                $code_form = $this->replaceOrigin($origin, $code_form, false);
+                $code_form = $this->replaceDestination($destination, $code_form, false);
+                $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
                 break;
         }
-        error_log("**********************");
+        return $this->render($code_form);
 
 
     }
@@ -81,13 +68,16 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
      * @return mixed
      */
     public function replaceOrigin($origin, $form, $delete = false){
-        if(!empty($origin)){
-            $origin_text = '"origin": {
+        if($delete == false){
+            if(!empty($origin)){
+                $origin_text = '"origin": {
                                             "iata": "'.$origin.'"
                                         }';
-            //$code_form = preg_replace('/"origin": \{.*?\}/s', $origin_text, $code_form);
+                $form = preg_replace('/"origin": \{.*?\}/s', $origin_text, $form);
+            }
+        } else{
+            $form = preg_replace('/"origin": \{.*?\}/s', '', $form);
         }
-        error_log($origin_text);
         return $form;
     }
 
@@ -98,13 +88,17 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
      * @return mixed
      */
     public function replaceDestination($destination, $form, $delete = false){
-        if(!empty($destination)){
-            $destination_text = '"destination": {
-                                            "iata": "'.$destination.'"
-                                        }';
-            //$code_form = preg_replace('/"destination": \{.*?\}/s', $destination_text, $code_form);
+        if($delete == false) {
+            if (!empty($destination)) {
+                $destination_text = '"destination": {
+                                                "iata": "' . $destination . '"
+                                            }';
+                $form = preg_replace('/"destination": \{.*?\}/s', $destination_text, $form);
+            }
+        }else{
+            $form = preg_replace('/"destination": \{.*?\}/s', '', $form);
         }
-        error_log($destination_text);
+
         return $form;
     }
 
@@ -115,13 +109,49 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
      * @return mixed
      */
     public function replaceHotelCity($hotel_city, $form, $delete = false){
-        if(!empty($hotel_city)){
-            $hotel_city_text = '"destination": {
-                                            "iata": "'.$hotel_city.'"
+
+        if($delete == false){
+            if(!empty($hotel_city)){
+                $params = explode(", ", $hotel_city);
+
+                if(count($params) == 6){
+                    //error_log(print_r($params, true));
+                    error_log($params[4]);
+                    $hotel_city_text = "";
+                    switch($params[4]){
+                        case 'hotel':
+                            error_log('hotel11111111');
+                            $hotel_city_text = '"hotel": {
+                                            "name": "'.$params[0].'"
+                                            "location": "'.$params[1].', '.$params[2].'"
+                                            "hotels_count": ""
+                                            "search_id": "'.$params[3].'"
+                                            "search_type": "'.$params[4].'"
+                                            "country_name": "'.$params[5].'"
                                         }';
-            //$code_form = preg_replace('/"destination": \{.*?\}/s', $destination_text, $code_form);
+                            break;
+                        case 'city':
+                            error_log('city11111111');
+                            $hotel_city_text = '"hotel": {
+                                            "name": "'.$params[0].'"
+                                            "location": "'.$params[1].'"
+                                            "hotels_count": "'.$params[2].'"
+                                            "search_id": "'.$params[3].'"
+                                            "search_type": "'.$params[4].'"
+                                            "country_name": "'.$params[5].'"
+                                        }';
+                            break;
+                    }
+                    error_log('$hotel_city_text = '.$hotel_city_text);
+                    $form = preg_replace('/"hotel": \{.*?\}/s', $hotel_city_text, $form);
+                }
+
+            }
+        }else{
+            $form = preg_replace('/"hotel": \{.*?\}/s', '', $form);
         }
-        error_log($hotel_city_text);
+
+
         return $form;
     }
 
