@@ -746,7 +746,7 @@ class TPDefault implements  \core\TPODefault{
             'auto_repl_link' => array(
                 'active' => 1,
                 'all_link' => 1,
-                'limit' => 5,
+                'limit' => 2,
                 'not_title' => 1,
             )
         );

@@ -63,7 +63,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
 
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
             if($dataAutoReplacLinks == false) return false;
-
+            //error_log("TPAutoReplaceLinkPostCheckById = ".$_POST['id']);
             $posts = get_posts( array(
                 'numberposts'     => -1, // тоже самое что posts_per_page
                 'offset'          => 0,
@@ -77,10 +77,12 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 'post_type'       => 'any',
                 'post_mime_type'  => '', // image, video, video/mp4
                 'post_parent'     => '',
-                'post_status'     => 'publish'
+                'post_status'     => 'any'
             ) );
+            //error_log("TPAutoReplaceLinkPostCheckById = post ".print_r($posts, true));
             foreach($posts as $post){ setup_postdata($post);
                 // формат вывода
+                error_log("TPAutoReplaceLinkPostCheckById = post ".$post->post_content);
                 $post->post_content =
                     $this->postContentReplaceLink($dataAutoReplacLinks, $post->post_content );
 
