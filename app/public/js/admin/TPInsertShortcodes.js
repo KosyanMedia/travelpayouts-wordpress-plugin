@@ -1481,6 +1481,7 @@ jQuery(function($) {
         doc.find('#tr_zoom_widget').hide();
         doc.find('#tr_filter_widget').hide();
         doc.find('#tr_type_widget_8').hide();
+
         doc.find('#tr_limit_widget_8').hide();
         doc.find('#tr_airline_widget_8').hide();
         doc.find('#tr_iata_widget_8').hide();
