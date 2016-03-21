@@ -27,7 +27,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_action( 'save_post', array( &$this, 'autoReplacLinksSavePost'), 10, 3 );
         //add_action( 'post_updated', array( &$this, 'autoReplacLinksUpdatedPost'), 10, 3 );
 
-        add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
+        //add_filter( 'wp_insert_post_data', array( &$this, 'autoReplacLinksInsertPost'), 10, 2 );
         add_action('add_meta_boxes', array( &$this, 'tp_add_custom_box'));
         add_action( 'wp_footer',    array( &$this, 'renderProgressbar' ) );
         add_action( 'admin_footer', array( &$this, 'renderProgressbar' ) );
@@ -153,6 +153,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         }
     }
     public function replaceInsertPost(){
+
         if(isset($_POST) && isset($_POST['value'])) {
             $content = $_POST['value'];
             $dataAutoReplacLinks = $this->model->getDataAutoReplacLinks();
@@ -604,7 +605,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $update
      */
     public function autoReplacLinksSavePost($post_id, $post, $update){
-        //error_log(print_r($post_id, true));
+        error_log('autoReplacLinksSavePost $post->post_status = '.$post->post_status);
         //error_log("autoReplacLinksSavePost");
         //error_log(print_r($_POST, true));
         //error_log(print_r($update, true));
@@ -612,11 +613,11 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             return $post_id;
         if ( ! wp_verify_nonce( $_POST['tp_auto_replac_link_noncename'], TPOPlUGIN_NAME ) )
             return $post_id;
-        if ( $post->post_status == 'auto-draft' ||
+        /*if ( $post->post_status == 'auto-draft' ||
             $post->post_status == 'draft' ||
             $post->post_status == 'trash' ){
             return $post_id;
-        }
+        }*/
         $tp_auto_replac_link = sanitize_text_field( $_POST['tp_auto_replac_link'] );
         // Обновляем данные в базе данных.
         //error_log(print_r($tp_auto_replac_link, true));

@@ -214,6 +214,36 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             ), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-TPPostAddNew', //$handle
+            TPOPlUGIN_URL.'app/public/js/admin/post/TPPostAddNew.js', //$src
+            array(), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-TPPostUpdate', //$handle
+            TPOPlUGIN_URL.'app/public/js/admin/post/TPPostUpdate.js', //$src
+            array(), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-TPPost', //$handle
+            TPOPlUGIN_URL.'app/public/js/admin/post/TPPost.js', //$src
+            array('jquery', 'jquery-ui-core','jquery-form'), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+        switch($hook) {
+            case "post.php":
+                wp_enqueue_script(TPOPlUGIN_SLUG.'-TPPostUpdate');
+                break;
+            case "post-new.php":
+                wp_enqueue_script(TPOPlUGIN_SLUG.'-TPPostAddNew');
+                break;
+        }
+
         switch($hook) {
             case "post.php":
             case "post-new.php":
@@ -222,6 +252,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 //wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
                 wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertShortcodes');
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertShortcodes');
+                wp_enqueue_script(TPOPlUGIN_SLUG.'-TPPost');
                 break;
             case "widgets.php":
                 wp_enqueue_script(TPOPlUGIN_SLUG.'-InsertWidgets');

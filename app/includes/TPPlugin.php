@@ -78,6 +78,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         //error_log(print_r($settings, true));
         //error_log(print_r(self::$options, true));
         //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
+        //models\admin\menu\TPSearchFormsModel::deleteTable();
         self::deleteCacheAll();
 
     }
