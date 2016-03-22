@@ -75,9 +75,10 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                                             "iata": "'.$origin.'"
                                         }';
                 $form = preg_replace('/"origin": \{.*?\}/s', $origin_text, $form);
+                $form = preg_replace('/"origin": \".*?\"/s', $origin_text, $form);
             }
         } else{
-            $form = preg_replace('/"origin": \{.*?\}/s', '', $form);
+            $form = preg_replace('/"origin": \{.*?\}/s', '"origin": ""', $form);
         }
         return $form;
     }
@@ -95,9 +96,10 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                                                 "iata": "' . $destination . '"
                                             }';
                 $form = preg_replace('/"destination": \{.*?\}/s', $destination_text, $form);
+                $form = preg_replace('/"destination": \".*?\"/s', $destination_text, $form);
             }
         }else{
-            $form = preg_replace('/"destination": \{.*?\}/s', '', $form);
+            $form = preg_replace('/"destination": \{.*?\}/s', '"destination": ""', $form);
         }
 
         return $form;
@@ -145,11 +147,12 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                     }
                     error_log('$hotel_city_text = '.$hotel_city_text);
                     $form = preg_replace('/"hotel": \{.*?\}/s', $hotel_city_text, $form);
+                    $form = preg_replace('/"hotel": \".*?\"/s', $hotel_city_text, $form);
                 }
 
             }
         }else{
-            $form = preg_replace('/"hotel": \{.*?\}/s', '', $form);
+            $form = preg_replace('/"hotel": \{.*?\}/s', '"hotel": ""', $form);
         }
 
 

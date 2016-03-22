@@ -72,6 +72,7 @@ function TPCityAutocomplete(){
                 }).autocomplete({
                     source: function(request, response){
                         console.log(request.term)
+                        console.log(tpLocale)
                         switch (tpLocale){
                             case 'ru':
                                 $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
@@ -194,7 +195,8 @@ function TPCityAutocomplete(){
                 }).autocomplete({
                     source: function(request, response){
                         //console.log(request.term, AppendTo);
-                        $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                        console.log(tpLocale);
+                        $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&lang=" + tpLocale, function(data) {
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                 var locations=[];
                                 /*$.map(data, function(items, keys){

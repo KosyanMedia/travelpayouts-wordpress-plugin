@@ -92,6 +92,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                     }
                     error_log('$hotel_city_text = ' . $hotel_city_text);
                     $form = preg_replace('/"hotel": \{.*?\}/s', $hotel_city_text, $form);
+                    $form = preg_replace('/"hotel": \".*?\"/s', $hotel_city_text, $form);
                 }
             }
         }
@@ -112,6 +113,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                                             "iata": "'.$to_iata[1].'"
                                         }';
                 $form = preg_replace('/"destination": \{.*?\}/s', $destination, $form);
+                $form = preg_replace('/"destination": \".*?\"/s', $destination, $form);
             }
 
         }
@@ -133,6 +135,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                                             "iata": "'.$from_iata[1].'"
                                         }';
                 $form = preg_replace('/"origin": \{.*?\}/s', $origin, $form);
+                $form = preg_replace('/"origin": \".*?\"/s', $origin, $form);
             }
 
         }
