@@ -95,6 +95,15 @@
                     <?php
                     break;
                 case "en_US":
+                    ?>
+
+                    <h2 class="TP-titleNews"><?php _e('Travelpayouts News', TPOPlUGIN_TEXTDOMAIN ); ?></h2>
+                    <a class="TP-allNewsLinck" href="http://blog.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=ru" target="_blank">
+                        <?php _e('All news', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    </a>
+                    <?php $this->view->tpGetNewsEn(); ?>
+
+                    <?php
                     break;
                 default:
                     break;

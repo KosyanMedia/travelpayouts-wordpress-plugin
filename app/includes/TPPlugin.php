@@ -7,9 +7,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         parent::__construct();
         new TPLoader();
         self::check_plugin_update();
-
-
     }
+
 
     static private function check_plugin_update() {
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {

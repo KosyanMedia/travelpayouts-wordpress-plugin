@@ -111,6 +111,29 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
         $output .= '</ul>';
         echo $output;
     }
+    public function tpGetNewsEn(){
+        $output = '';
+        $output .= '<ul class="TP-ListNewsMin">';
+        if(!empty($this->model->rssEn["data"]["item"])) {
+            foreach ($this->model->rssEn["data"]["item"] as $tpNews) {
+                $output .= '<li>
+                    <div class="TP-NewsDate">
+                        <p>' . date('d.m', strtotime($tpNews["pubDate"])) . '</p>
+                        <span>' . date('Y', strtotime($tpNews["pubDate"])) . '</span>
+                    </div>
+                    <div class="TP-NewsContentMin">
+                        ' . $this->tpDashboardNewsLink($tpNews["title"], $tpNews["link"]) . '
+                        <p>
+
+                        </p>
+                    </div>
+                </li>';
+            }
+        }
+        //strip_tags($tpNews["description"]);
+        $output .= '</ul>';
+        echo $output;
+    }
     /**
      * @param string $title
      * @param string $link

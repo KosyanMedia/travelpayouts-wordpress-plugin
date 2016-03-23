@@ -10,6 +10,7 @@ class TPDashboardModel {
     public $balance;
     public $detailed_sales;
     public $rss;
+    public $rssEn;
     public function __construct(){
         add_action( 'admin_init', array( &$this, 'setData' ) );
     }
@@ -21,6 +22,7 @@ class TPDashboardModel {
         $this->balance = $this->tpGetBalance();
         $this->detailed_sales = $this->tpGetDetailedSales();
         $this->rss = $this->tpGetXmlRss();
+        $this->rssEn = $this->tpGetXmlRssEN();
     }
 
     /**
@@ -82,6 +84,29 @@ class TPDashboardModel {
         }
         //error_log(print_r($TPRss,true));
         return $TPRss;
+    }
+    /**
+     * @return array
+     */
+    public function tpGetXmlRssEN(){
+        $cacheKey = TPOPlUGIN_NAME."_TPRssNewEN";
+        $TPRssEn = array();
+        if ( false === ( $TPRssEn = get_transient($cacheKey) ) ) {
+            error_log('tpGetXmlRssEN');
+            try {
+                $sxml = @simplexml_load_file("http://feeds.feedburner.com/TravelpayoutsBlog", 'SimpleXMLElement', LIBXML_NOCDATA);
+                if ($sxml !== false) {
+                    $TPRssEn['data'] =
+                        \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
+                    set_transient($cacheKey, $TPRssEn, HOUR_IN_SECONDS * 12);
+                }
+            }   catch (Exception $e) {
+
+            }
+
+        }
+        error_log('tpGetXmlRssEN = '.print_r($TPRssEn,true));
+        return $TPRssEn;
     }
 
 }
