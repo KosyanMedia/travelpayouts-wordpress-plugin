@@ -15,7 +15,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'], 'one_way' => false,
             'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'], 'trip_class' => 0, 'title' => ''
         , 'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] , 'paginate' => true
-        , 'off_title' => ''
+        , 'off_title' => '', 'subid' => ''
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'currency' => $this->typeCurrency(),
@@ -61,6 +61,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
                 break;
         }
         return array('rows' => $rows_sort,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
-        , 'paginate' => $paginate, 'one_way' => $one_way, 'off_title' => $off_title);
+        , 'paginate' => $paginate, 'one_way' => $one_way,
+            'off_title' => $off_title, 'subid' => $subid);
     }
 }

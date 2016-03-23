@@ -16,7 +16,9 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
             'limit' => \app\includes\TPPlugin::$options['shortcodes']['10']['limit'],
             'title' => '',
             'paginate' => true,
-            'off_title' => '');
+            'off_title' => '',
+            'subid' => ''
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array( 'airline' => $airline,
             'limit' => $limit );
@@ -38,6 +40,6 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
             $return = $this->iataAutocomplete($return, 10);
         }
         return array('rows' => $return, 'type' => 10, 'airline' => $this->iataAutocomplete($airline, 0 , 'airline'),
-            'title' => $title, 'paginate' => $paginate, 'off_title' => $off_title);
+            'title' => $title, 'paginate' => $paginate, 'off_title' => $off_title, 'subid' => $subid);
     }
 }

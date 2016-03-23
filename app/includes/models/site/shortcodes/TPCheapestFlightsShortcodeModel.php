@@ -15,7 +15,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
     {
         // TODO: Implement get_data() method.
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '', 'paginate' => true, 'off_title' => '' );
+            'currency' => 'RUB', 'title' => '', 'paginate' => true, 'off_title' => '', 'subid' => '' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => $departure_at, 'return_at' => $return_at,
@@ -37,7 +37,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
         return array('rows' => $rows, 'type' => 4, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination  , 'paginate' => $paginate,
-            'off_title' => $off_title
+            'off_title' => $off_title, 'subid' => $subid
         );
     }
 }

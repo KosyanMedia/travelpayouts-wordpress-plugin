@@ -42,7 +42,8 @@ class TPShortcodeView {
             'destination_iata' => '',
             'paginate' => 'false',
             'one_way' => 'false',
-            'off_title' => '');
+            'off_title' => '',
+            'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $html = '';
         if(count($rows) < 1) return false;
@@ -63,7 +64,7 @@ class TPShortcodeView {
                         data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
                         data-sort_column="'.$sort_column.'">
                         '.$this->renderHeadTable($type, $one_way).'
-                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit).'
+                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid).'
                     </table>
                 </div>';
         return $html;
@@ -194,7 +195,13 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit){
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid){
+        error_log("renderBodyTable subid = ".$subid);
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            //error_log($subid);
+        }
         $delimiter = '';
         if($one_way === 'false'){
             $delimiter = ' &#8596 ';
@@ -219,7 +226,8 @@ class TPShortcodeView {
                             'departure_at' => $row['depart_date'],
                             //'return_at' => $row['return_date'],
                             'price' => number_format($row["value"], 0, '.', ' '),
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ) );
                         break;
                     case 2:
@@ -229,7 +237,8 @@ class TPShortcodeView {
                             'departure_at' => $row['depart_date'],
                             'return_at' => $row['return_date'],
                             'price' => number_format($row["value"], 0, '.', ' '),
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ));
                         break;
                     case 8:
@@ -240,7 +249,8 @@ class TPShortcodeView {
                             'departure_at' => $row['departure_at'],
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ) );
                         break;
                     case 9:
@@ -250,7 +260,8 @@ class TPShortcodeView {
                             'departure_at' => $row['departure_at'],
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ));
                         break;
                     case 10:
@@ -260,7 +271,8 @@ class TPShortcodeView {
                             'destination' => $citys[1],
                             'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
                             'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ));
                         break;
                     case 12:
@@ -273,7 +285,8 @@ class TPShortcodeView {
                             'return_at' => $row['return_date'],
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
-                            'one_way' =>  '&one_way='.$one_way
+                            'one_way' =>  '&one_way='.$one_way,
+                            'subid' => $subid
                         ));
                         break;
                     default:
@@ -283,7 +296,8 @@ class TPShortcodeView {
                             'departure_at' => $row['departure_at'],
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
-                            'type' => $type
+                            'type' => $type,
+                            'subid' => $subid
                         ));
                 }
                 // get Price
@@ -651,8 +665,10 @@ class TPShortcodeView {
             'return_at' => false,
             'link_text' => '',
             'price' => '',
-            'one_way' => '');
+            'one_way' => '',
+            'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        //error_log("getUrlTable subid = ".$subid);
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
             if(strpos($white_label, 'http') === false){
@@ -675,6 +691,8 @@ class TPShortcodeView {
             $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
         if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
             $marker = $marker.'_'.\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
+        if(!empty($subid))
+            $marker = $marker.'_'.$subid;
         $marker = $marker.'.$69';
         if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
             $marker = $marker . '&with_request=true';

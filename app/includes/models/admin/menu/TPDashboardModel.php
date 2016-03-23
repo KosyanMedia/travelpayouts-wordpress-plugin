@@ -92,7 +92,7 @@ class TPDashboardModel {
         $cacheKey = TPOPlUGIN_NAME."_TPRssNewEN";
         $TPRssEn = array();
         if ( false === ( $TPRssEn = get_transient($cacheKey) ) ) {
-            error_log('tpGetXmlRssEN');
+            //error_log('tpGetXmlRssEN');
             try {
                 $sxml = @simplexml_load_file("http://feeds.feedburner.com/TravelpayoutsBlog", 'SimpleXMLElement', LIBXML_NOCDATA);
                 if ($sxml !== false) {
@@ -105,7 +105,7 @@ class TPDashboardModel {
             }
 
         }
-        error_log('tpGetXmlRssEN = '.print_r($TPRssEn,true));
+        //error_log('tpGetXmlRssEN = '.print_r($TPRssEn,true));
         return $TPRssEn;
     }
 

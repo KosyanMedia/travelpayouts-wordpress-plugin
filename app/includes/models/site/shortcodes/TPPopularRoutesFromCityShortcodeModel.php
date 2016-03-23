@@ -13,7 +13,8 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         // TODO: Implement get_data() method.
         if(\app\includes\TPPlugin::$options['local']['currency'] != 1) return false;
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'limit' => false, 'title' => '', 'paginate' => true, 'off_title' => '');
+            'currency' => 'RUB', 'limit' => false, 'title' => '', 'paginate' => true,
+            'off_title' => '', 'subid' => '');
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array('origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
@@ -35,7 +36,8 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         }
 
         return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
-                'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate, 'off_title' => $off_title);
+                'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate,
+            'off_title' => $off_title, 'subid' => $subid);
 
     }
 }
