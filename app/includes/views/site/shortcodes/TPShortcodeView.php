@@ -59,7 +59,7 @@ class TPShortcodeView {
 
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix">
                     '.$this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline).'
-                    <table class="TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
+                    <table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"
                         data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
                         data-sort_column="'.$sort_column.'">

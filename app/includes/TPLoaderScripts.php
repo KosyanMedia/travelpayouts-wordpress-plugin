@@ -690,6 +690,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                             });
                         });
             <?php }?>
+            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_table_ga_ym'])){?>
+                jQuery(function($) {
+                    var doc, win;
+                    doc = $(document);
+                    doc.find('.TPTableShortcode').each(function( index ) {
+                        <?php echo \app\includes\TPPlugin::$options['config']['code_table_ga_ym']; ?>
+                    });
+                });
+            <?php }?>
         </script>
         <style type="text/css">
             <?php
