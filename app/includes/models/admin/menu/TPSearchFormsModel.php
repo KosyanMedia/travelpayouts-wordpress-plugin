@@ -241,29 +241,58 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         if(count($data) > 0) return $data;
         return false;
     }
+    public static function getData()
+    {
+        // TODO: Implement get_data() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
     /**
      *
      */
     public static function createTable()
     {
         // TODO: Implement createTable() method.
+        $version = get_option(TPOPlUGIN_TABLE_SF_VERSION);
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
-        if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
-            $sql = "CREATE TABLE " . $tableName . "(
-                              id int(11) NOT NULL AUTO_INCREMENT,
-                              title varchar(255) NOT NULL,
-                              date_add int(11) NOT NULL,
-                              type_shortcode varchar(255) NOT NULL,
-                              code_form text NOT NULL,
-                              from_city varchar(255) NOT NULL,
-                              to_city varchar(255) NOT NULL,
-                              hotel_city varchar(255) NOT NULL,
-                              type_form varchar(255) NOT NULL,
-                              PRIMARY KEY (id)
-                            ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+        $sql = "CREATE TABLE " . $tableName . "(
+                  id int(11) NOT NULL AUTO_INCREMENT,
+                  title varchar(255) NOT NULL,
+                  date_add int(11) NOT NULL,
+                  type_shortcode varchar(255) NOT NULL,
+                  code_form text NOT NULL,
+                  from_city varchar(255) NOT NULL,
+                  to_city varchar(255) NOT NULL,
+                  hotel_city varchar(255) NOT NULL,
+                  type_form varchar(255) NOT NULL,
+                  PRIMARY KEY (id)
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+        if($version != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-            dbDelta($sql);
+            if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
+                dbDelta($sql);
+            }else{
+                $data = self::getData();
+                self::deleteTable();
+                dbDelta($sql);
+                if($data != false) {
+                    $rows = array();
+                    foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
+                        foreach($data as $key=>$values) {
+                            $rows[$key][$column_name] =  $values[$column_name] ;
+                        }
+
+                    }
+                    foreach($rows as $row) {
+                        $wpdb->insert($tableName, $row);
+                    }
+                }
+            }
+            update_option(TPOPlUGIN_TABLE_SF_VERSION, TPOPlUGIN_DATABASE);
         }
 
     }

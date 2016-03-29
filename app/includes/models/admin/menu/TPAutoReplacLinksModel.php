@@ -26,22 +26,43 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     public static function createTable()
     {
         // TODO: Implement createTable() method.
+        $version = get_option(TPOPlUGIN_TABLE_ARL_VERSION);
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
-        if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
-            $sql = "CREATE TABLE " . $tableName . "(
-                              id int(11) NOT NULL AUTO_INCREMENT,
-                              arl_url varchar(255) NOT NULL,
-                              arl_anchor text NOT NULL,
-                              arl_event text NOT NULL,
-                              arl_nofollow int(11) NOT NULL,
-                              arl_replace int(11) NOT NULL,
-                              arl_target_blank int(11) NOT NULL,
-                              date_add int(11) NOT NULL,
-                              PRIMARY KEY (id)
-                            ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+        $sql = "CREATE TABLE " . $tableName . "(
+                  id int(11) NOT NULL AUTO_INCREMENT,
+                  arl_url varchar(255) NOT NULL,
+                  arl_anchor text NOT NULL,
+                  arl_event text NOT NULL,
+                  arl_nofollow int(11) NOT NULL,
+                  arl_replace int(11) NOT NULL,
+                  arl_target_blank int(11) NOT NULL,
+                  date_add int(11) NOT NULL,
+                  PRIMARY KEY (id)
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+        //
+        if($version != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-            dbDelta($sql);
+            if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
+                dbDelta($sql);
+            }else{
+                $data = self::getData();
+                self::deleteTable();
+                dbDelta($sql);
+                if($data != false) {
+                    $rows = array();
+                    foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
+                        foreach($data as $key=>$values) {
+                            $rows[$key][$column_name] =  $values[$column_name] ;
+                        }
+
+                    }
+                    foreach($rows as $row) {
+                        $wpdb->insert($tableName, $row);
+                    }
+                }
+            }
+            update_option(TPOPlUGIN_TABLE_ARL_VERSION, TPOPlUGIN_DATABASE);
         }
     }
 
@@ -163,7 +184,15 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         // TODO: Implement query() method.
     }
-
+    public static function getData()
+    {
+        // TODO: Implement get_data() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
     public function get_data()
     {
         // TODO: Implement get_data() method.
@@ -214,3 +243,12 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         return $next_id;
     }
 }
+/*if($data != false){
+                    foreach($data as $values){
+                        /*$sql_insert = "INSERT IGNORE INTO ".$tableName
+                                      ." (".implode(", ", array_keys($values)).")"
+                                      ." VALUES ('".implode("', '", array_values($values))."')";
+                        error_log($sql_insert);*
+                        //$wpdb->query($sql_insert);
+                    }
+                }*/

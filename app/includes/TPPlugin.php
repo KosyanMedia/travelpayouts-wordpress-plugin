@@ -7,10 +7,12 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         parent::__construct();
         new TPLoader();
         self::check_plugin_update();
+
     }
 
 
     static private function check_plugin_update() {
+        error_log("check_plugin_update");
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
@@ -32,6 +34,9 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
 
             update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
         }
+        models\admin\menu\TPSearchFormsModel::createTable();
+        models\admin\menu\TPAutoReplacLinksModel::createTable();
+
     }
     static public function activation()
     {
