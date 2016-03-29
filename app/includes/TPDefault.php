@@ -82,7 +82,8 @@ class TPDefault implements  \core\TPODefault{
                 'distance' => 1,
                 'format_date' => 'd.m.Y',
                 'code_ga_ym' => '',
-                'code_table_ga_ym' => ''
+                'code_table_ga_ym' => '',
+                'compact_button' => 1
             ),
             'local' => array(
                 'localization' => $localization,
