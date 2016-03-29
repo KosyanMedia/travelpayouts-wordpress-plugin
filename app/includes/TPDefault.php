@@ -27,9 +27,9 @@ class TPDefault implements  \core\TPODefault{
             'head_text_color' => '#ffffff',
         ),
         'button' => array(
-            'background' => '#fd8a27',
+            'background' => '#FEB20E',
             //'color' => '#571601',
-            'color' => '#ffffff',
+            'color' => ' #FFFFFF',
             'border' => '#ce6408'
 
         )
@@ -669,9 +669,9 @@ class TPDefault implements  \core\TPODefault{
                     'head_text_color' => '#ffffff',
                 ),
                 'button' => array(
-                    'background' => '#fd8a27',
+                    'background' => '#FEB20E',
                     //'color' => '#571601',
-                    'color' => '#ffffff',
+                    'color' => '#FFFFFF',
                     'border' => '#ce6408'
 
                 )
