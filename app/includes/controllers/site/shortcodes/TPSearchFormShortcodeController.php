@@ -31,12 +31,13 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if($id == false) return;
         $data = $this->model->get_dataId($id);
+        //var_dump($data);
         $code_form = wp_unslash($data["code_form"]);
-        error_log($id);
+        /*error_log($id);
         error_log($type);
         error_log($origin);
         error_log($destination);
-        error_log($hotel_city);
+        error_log($hotel_city);*/
 
         switch ($type){
             case "avia":
@@ -56,7 +57,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                 $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
                 break;
         }
-        error_log($code_form);
+        //error_log($code_form);
         return $this->render($code_form);
 
 

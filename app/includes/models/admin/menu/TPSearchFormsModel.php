@@ -277,16 +277,18 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                 dbDelta($sql);
             }else{
                 $data = self::getData();
+                //error_log(print_r($data, true));
                 self::deleteTable();
                 dbDelta($sql);
                 if($data != false) {
                     $rows = array();
                     foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
                         foreach($data as $key=>$values) {
-                            $rows[$key][$column_name] =  $values[$column_name] ;
+                            $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
                         }
 
                     }
+                    //error_log('$rows = '.print_r($rows, true));
                     foreach($rows as $row) {
                         $wpdb->insert($tableName, $row);
                     }

@@ -14,6 +14,6 @@ $TPOPlUGINs = get_plugin_data(TPOPlUGIN_DIR.'/'.basename(TPOPlUGIN_DIR).'.php', 
 //error_log(print_r($TPOPlUGINs, true));
 define("TPOPlUGIN_VERSION", $TPOPlUGINs['Version']);
 define("TPOPlUGIN_NAME", $TPOPlUGINs['Name']);
-define("TPOPlUGIN_DATABASE", 1);
+define("TPOPlUGIN_DATABASE", 5);
 define("TPOPlUGIN_TABLE_SF_VERSION", TPOPlUGIN_SLUG.'_table_sf_version');
 define("TPOPlUGIN_TABLE_ARL_VERSION", TPOPlUGIN_SLUG.'_table_arl_version');

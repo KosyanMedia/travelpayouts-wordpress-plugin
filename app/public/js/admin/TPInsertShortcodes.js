@@ -1147,7 +1147,7 @@ jQuery(function($) {
             }else {
                 selectSearchForm = doc.find('#select_search_form').find(':selected').data('type_form');
             }
-
+            if(selectSearchForm == "") selectSearchForm = "avia";
             console.log(selectSearchForm)
             //doc.find('#tr_type_search_form').show();
             switch (selectSearchForm){
@@ -1191,7 +1191,9 @@ jQuery(function($) {
             doc.find('#tr_destination_search_form').hide();
             doc.find('#tr_search_shortcode_hotel_city').hide();
             doc.find('#select_search_form').removeClass('constructorShortcodesError');
-            switch ($(this).find(':selected').data('type_form')){
+            var selectChSearchForm = $(this).find(':selected').data('type_form');
+            if(selectChSearchForm == "") selectChSearchForm = "avia";
+            switch (selectChSearchForm){
                 case "avia":
                     doc.find('#tr_origin_search_form').show();
                     doc.find('#tr_destination_search_form').show();

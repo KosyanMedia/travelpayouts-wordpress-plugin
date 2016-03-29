@@ -6,6 +6,7 @@
                     <?php if(count($this->data)>1){ ?>
                         <select name="select_search_form" id="select_search_form">
                             <?php foreach($this->data as $key => $record): ?>
+
                                 <option value="<?php echo $record['id'];?>"
                                     <?php echo selected($key, 0); ?> data-type_form="<?php echo $record['type_form'];?>">
                                     <?php echo $record['title'];?></option>

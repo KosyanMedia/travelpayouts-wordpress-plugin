@@ -53,7 +53,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
                     $rows = array();
                     foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
                         foreach($data as $key=>$values) {
-                            $rows[$key][$column_name] =  $values[$column_name] ;
+                            $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
                         }
 
                     }
