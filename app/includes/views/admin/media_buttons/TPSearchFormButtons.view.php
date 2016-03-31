@@ -63,5 +63,11 @@
                        placeholder="<?php _e('Default City/Hotel', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
+        <tr id="tr_subid_sf">
+            <td>
+                <input type="text" name="tp_subid" id="tp_subid_sf" value=""
+                       class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
     </table>
 </div>

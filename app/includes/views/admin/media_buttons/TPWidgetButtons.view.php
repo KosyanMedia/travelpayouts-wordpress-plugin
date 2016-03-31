@@ -41,6 +41,12 @@
                         <option value="8"><?php _e('Best deals widget', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
             </tr>
+            <tr id="tr_subid_widget">
+                <td>
+                    <input type="text" name="tp_subid" id="tp_subid_widget" value=""
+                           class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
+                </td>
+            </tr>
             <tr id="tr_type_widget_8">
                 <td>
                     <span><?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN ); ?></span>

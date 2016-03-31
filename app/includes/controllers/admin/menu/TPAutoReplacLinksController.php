@@ -82,7 +82,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             //error_log("TPAutoReplaceLinkPostCheckById = post ".print_r($posts, true));
             foreach($posts as $post){ setup_postdata($post);
                 // формат вывода
-                error_log("TPAutoReplaceLinkPostCheckById = post ".$post->post_content);
+                //error_log("TPAutoReplaceLinkPostCheckById = post ".$post->post_content);
                 $post->post_content =
                     $this->postContentReplaceLink($dataAutoReplacLinks, $post->post_content );
 
@@ -607,7 +607,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @param $update
      */
     public function autoReplacLinksSavePost($post_id, $post, $update){
-        error_log('autoReplacLinksSavePost $post->post_status = '.$post->post_status);
+        //error_log('autoReplacLinksSavePost $post->post_status = '.$post->post_status);
         //error_log("autoReplacLinksSavePost");
         //error_log(print_r($_POST, true));
         //error_log(print_r($update, true));

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-03-24 12:27+0300\n"
+"POT-Creation-Date: 2016-03-31 13:08+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -147,7 +147,7 @@ msgstr "Дешевые перелеты в город"
 #: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:303
 #: app/includes/models/admin/menu/TPFieldSettings.php:442
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:81
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:76
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:102
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:130
 msgid "Origin"
@@ -156,7 +156,7 @@ msgstr "Откуда"
 #: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:302
 #: app/includes/models/admin/menu/TPFieldSettings.php:465
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:87
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:82
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:109
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:136
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:191
@@ -164,7 +164,7 @@ msgid "Destination"
 msgstr "Куда"
 
 #: app/includes/TPPluginWidget.php:258 app/includes/TPLoaderScripts.php:317
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:105
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:100
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:78
 msgid "Airline"
 msgstr "Авиакомпания"
@@ -173,8 +173,8 @@ msgstr "Авиакомпания"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldWidgets.php:661
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:497
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:110
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:112
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:111
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:113
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:117
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:226
 msgid "Limit"
@@ -183,23 +183,23 @@ msgstr "Лимит"
 #: app/includes/TPPluginWidget.php:279
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:483
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:675
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:127
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:128
 msgid "Paginate"
 msgstr "Пейджинация"
 
 #: app/includes/TPPluginWidget.php:287
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:133
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
 msgid "One Way"
 msgstr "В одну сторону "
 
 #: app/includes/TPPluginWidget.php:295
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:139
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:140
 msgid "No title"
 msgstr "Убрать заголовок\r"
 
 #: app/includes/TPPluginWidget.php:301
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:557
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:144
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:145
 msgid "Number of stops"
 msgstr "Пересадки"
 
@@ -208,19 +208,19 @@ msgstr "Пересадки"
 #: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
 #: app/includes/views/admin/menu/TPStatisticView.php:161
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:146
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:147
 msgid "All"
 msgstr "Все"
 
 #: app/includes/TPPluginWidget.php:307
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:562
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:147
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:148
 msgid "No more than one stop"
 msgstr "Не более 1 пересадки"
 
 #: app/includes/TPPluginWidget.php:309
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:564
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:148
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:149
 msgid "Direct"
 msgstr "без пересадок"
 
@@ -1204,7 +1204,7 @@ msgstr "Город прилета по-умолчанию"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:57
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:62
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:63
 msgid "Default City/Hotel"
 msgstr "Город/Отель по умолчанию"
 
@@ -1878,34 +1878,34 @@ msgstr ""
 msgid "Constructor search form"
 msgstr "Конструктор поисковых форм"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:24
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:25
 msgid "No customized search form. "
 msgstr "Нет настроенных Поисковых форм. "
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:25
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
 msgid "Go to setting."
 msgstr "Перейти к настройке."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:34
 msgctxt "search_form_modal"
 msgid "Flights"
 msgstr "Авиа"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:36
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:37
 msgctxt "search_form_modal"
 msgid "Hotels"
 msgstr "Отельная"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:39
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:40
 msgctxt "search_form_modal"
 msgid "Flights + Hotels"
 msgstr "Авиа + Отельная"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:48
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:49
 msgid "City of departure default"
 msgstr "Город вылета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:55
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:56
 msgid "City Arrival default"
 msgstr "Город прилета по-умолчанию"
 
@@ -1953,19 +1953,19 @@ msgstr "Конструктор таблиц"
 msgid "Alternate title"
 msgstr "Альтернативный заголовок"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:75
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:106
 msgid "Subid"
-msgstr ""
+msgstr "Дополнительный маркер"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:118
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:119
 msgid "Economy"
 msgstr "Эконом"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:119
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
 msgid "Business"
 msgstr "Бизнес"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:121
 msgid "First"
 msgstr "Первый"
 

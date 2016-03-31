@@ -276,7 +276,6 @@ jQuery(function($) {
                 doc.find('#tr_transplant').hide();
                 doc.find('#tr_one_way').hide();
                 doc.find('#tr_off_title').hide();
-
                 doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid').removeClass('constructorShortcodesError');
             }
         });
@@ -522,9 +521,6 @@ jQuery(function($) {
                 //win.scrollTop(500);
                 //console.log($('#selector').dialog('option', 'position')[0]);
                // console.log($(this).parent());
-
-
-
                 //window.scrollTo($('#selector').dialog('option', 'position')[0],$('#selector').dialog('option', 'position')[1]);
             },
             buttons: [
@@ -533,10 +529,10 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit;
+                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid;
                         selected = doc.find('#select_widgets').val();
 
-                        doc.find('#select_widgets option[value=0]').attr('selected','selected')
+                        //doc.find('#select_widgets option[value=0]').attr('selected','selected')
                         origin = doc.find('#origin_widget').val();
                         doc.find('#origin_widget').val("");
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
@@ -564,191 +560,206 @@ jQuery(function($) {
 
                         typeHotelSelectView = doc.find('#type_widget').val();
                         limit =  doc.find('#limit_widget').val();
-                        switch (selected) {
-                            case '0':
-                                doc.find('#select_widgets').addClass('constructorShortcodesError');
-                                break;
-                            case '1':
-                                if (origin == "") {
-                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
-                                }else {
-                                    if(doc.find('#direct_widget').is(":checked")){
-                                        direct = "direct=true";
-                                    }else{
-                                        direct = "";
-                                    }
+                        tp_subid = doc.find('#tp_subid_widget').val();
+                        if(!validSubid(tp_subid)){
+                            doc.find('#tp_subid_widget').addClass('constructorShortcodesError');
+                        }else {
+                            switch (selected) {
+                                case '0':
+                                    doc.find('#select_widgets').addClass('constructorShortcodesError');
+                                    break;
+                                case '1':
+                                    if (origin == "") {
+                                        doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                    }else {
+                                        if(doc.find('#direct_widget').is(":checked")){
+                                            direct = "direct=true";
+                                        }else{
+                                            direct = "";
+                                        }
 
-                                    setShortcodes("[tp_map_widget origin=" + origin + " width="+width+" height="+height+" "+direct+"]",
-                                        $(this));
-                                }
-                                break
-                            case '2':
+                                        setShortcodes("[tp_map_widget origin=" + origin + " width="+width
+                                            +" height="+height+" "+direct+" subid=\""+tp_subid+"\"]",
+                                            $(this));
+                                    }
+                                    break
+                                case '2':
 
 
-                                if(location == ""){
-                                    doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
-                                }else {
-                                    setShortcodes("[tp_hotelmap_widget coordinates=\"" + location + "\" width="+width+" height="+height+" zoom="+zoom+"]",
-                                        $(this));
-                                }
-                                break;
-                            case '3':
-                                if (origin == "") {
-                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
-                                }
-                                if (destination == "") {
-                                    doc.find('#destination_widget').addClass('constructorShortcodesError');
-                                }
-                                if (origin != "" && destination != ""){
-                                    if(doc.find('#direct_widget').is(":checked")){
-                                        direct = "direct=true";
-                                    }else{
-                                        direct = "";
+                                    if(location == ""){
+                                        doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
+                                    }else {
+                                        setShortcodes("[tp_hotelmap_widget coordinates=\"" + location
+                                            + "\" width="+width+" height="+height+" zoom="+zoom
+                                            +" subid=\""+tp_subid+"\"]",
+                                            $(this));
                                     }
-                                    if(doc.find('#one_way_widget').is(":checked")){
-                                        one_way = "one_way=true";
-                                    }else{
-                                        one_way = "";
+                                    break;
+                                case '3':
+                                    if (origin == "") {
+                                        doc.find('#origin_widget').addClass('constructorShortcodesError');
                                     }
-                                    if(doc.find('#responsive_widget').is(":checked")){
-                                        responsive = "responsive=true";
-                                    }else{
-                                        responsive = "width="+doc.find('#responsive_width').val();
+                                    if (destination == "") {
+                                        doc.find('#destination_widget').addClass('constructorShortcodesError');
                                     }
-                                    setShortcodes("[tp_calendar_widget origin="+origin+" destination="+destination+" "+direct+" "+one_way+" "+responsive+"]",
-                                        $(this));
-                                }
-                                break;
-                            case '4':
-                                if (origin == "") {
-                                    doc.find('#origin_widget').addClass('constructorShortcodesError');
-                                }
-                                if (destination == "") {
-                                    doc.find('#destination_widget').addClass('constructorShortcodesError');
-                                }
-                                if (origin != "" && destination != ""){
-                                    if(doc.find('#responsive_widget').is(":checked")){
-                                        responsive = "responsive=true";
-                                    }else{
-                                        responsive = "width="+doc.find('#responsive_width').val();
-                                    }
-                                    setShortcodes("[tp_subscriptions_widget origin="+origin+" destination="+destination+" "+responsive+"]",
-                                        $(this));
-                                }
-                                break;
-                            case '5':
-                                if (hotel_id == "") {
-                                    doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
-                                }
-
-                                if (hotel_id != ""){
-                                    if(doc.find('#responsive_widget').is(":checked")){
-                                        responsive = "responsive=true";
-                                    }else{
-                                        responsive = "width="+doc.find('#responsive_width').val();
-                                    }
-                                    //width = doc.find('#hotel_size_widget_width').val();
-                                    setShortcodes("[tp_hotel_widget hotel_id="+hotel_id+" "+responsive+"]",
-                                        $(this));
-                                }
-                                break;
-                            case '6':
-                                count = parseInt(doc.find('#popular_routes_widget_count').val());
-                                if(count == 1){
-                                    //tr_popular_routes_destination-0
-                                    var destination_r = doc.find('#popular_routes_destination-0').val();
-                                    destination_r = destination_r.substring(destination_r.indexOf('[')+1,destination_r.indexOf(']'));
-                                    if(destination_r == ""){
-                                        doc.find('#popular_routes_destination-0').addClass('constructorShortcodesError');
-                                    }else{
+                                    if (origin != "" && destination != ""){
+                                        if(doc.find('#direct_widget').is(":checked")){
+                                            direct = "direct=true";
+                                        }else{
+                                            direct = "";
+                                        }
+                                        if(doc.find('#one_way_widget').is(":checked")){
+                                            one_way = "one_way=true";
+                                        }else{
+                                            one_way = "";
+                                        }
                                         if(doc.find('#responsive_widget').is(":checked")){
                                             responsive = "responsive=true";
                                         }else{
                                             responsive = "width="+doc.find('#responsive_width').val();
                                         }
-                                        setShortcodes("[tp_popular_routes_widget destination="+destination_r+"  "+responsive+"]",
+                                        setShortcodes("[tp_calendar_widget origin="+origin+" destination="+destination+" "
+                                            +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"]",
                                             $(this));
                                     }
-                                }else{
-                                    var shortcode, count_s;
-                                    shortcode = '';
-                                    count_s = 0;
-                                    responsive = "responsive=true";
-                                    for(var i = 0; i < count; i++){
-                                        var destination_r = doc.find('#popular_routes_destination-'+i).val();
+                                    break;
+                                case '4':
+                                    if (origin == "") {
+                                        doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                    }
+                                    if (destination == "") {
+                                        doc.find('#destination_widget').addClass('constructorShortcodesError');
+                                    }
+                                    if (origin != "" && destination != ""){
+                                        if(doc.find('#responsive_widget').is(":checked")){
+                                            responsive = "responsive=true";
+                                        }else{
+                                            responsive = "width="+doc.find('#responsive_width').val();
+                                        }
+                                        setShortcodes("[tp_subscriptions_widget origin="+origin+" destination="
+                                            +destination+" "+responsive+" subid=\""+tp_subid+"\"]",
+                                            $(this));
+                                    }
+                                    break;
+                                case '5':
+                                    if (hotel_id == "") {
+                                        doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
+                                    }
+
+                                    if (hotel_id != ""){
+                                        if(doc.find('#responsive_widget').is(":checked")){
+                                            responsive = "responsive=true";
+                                        }else{
+                                            responsive = "width="+doc.find('#responsive_width').val();
+                                        }
+                                        //width = doc.find('#hotel_size_widget_width').val();
+                                        setShortcodes("[tp_hotel_widget hotel_id="+hotel_id+" "+responsive
+                                            +" subid=\""+tp_subid+"\"]",
+                                            $(this));
+                                    }
+                                    break;
+                                case '6':
+                                    count = parseInt(doc.find('#popular_routes_widget_count').val());
+                                    if(count == 1){
+                                        //tr_popular_routes_destination-0
+                                        var destination_r = doc.find('#popular_routes_destination-0').val();
                                         destination_r = destination_r.substring(destination_r.indexOf('[')+1,destination_r.indexOf(']'));
                                         if(destination_r == ""){
-                                            doc.find('#popular_routes_destination-'+i).addClass('constructorShortcodesError');
+                                            doc.find('#popular_routes_destination-0').addClass('constructorShortcodesError');
                                         }else{
-                                            count_s++;
-                                            shortcode += "<div class='TP-PopularRoutesWidget'>[tp_popular_routes_widget destination="+destination_r+" "+responsive+"]</div>";
+                                            if(doc.find('#responsive_widget').is(":checked")){
+                                                responsive = "responsive=true";
+                                            }else{
+                                                responsive = "width="+doc.find('#responsive_width').val();
+                                            }
+                                            setShortcodes("[tp_popular_routes_widget destination="+destination_r+"  "
+                                                +responsive+" subid=\""+tp_subid+"\"]",
+                                                $(this));
+                                        }
+                                    }else{
+                                        var shortcode, count_s;
+                                        shortcode = '';
+                                        count_s = 0;
+                                        responsive = "responsive=true";
+                                        for(var i = 0; i < count; i++){
+                                            var destination_r = doc.find('#popular_routes_destination-'+i).val();
+                                            destination_r = destination_r.substring(destination_r.indexOf('[')+1,destination_r.indexOf(']'));
+                                            if(destination_r == ""){
+                                                doc.find('#popular_routes_destination-'+i).addClass('constructorShortcodesError');
+                                            }else{
+                                                count_s++;
+                                                shortcode += "<div class='TP-PopularRoutesWidget'>[tp_popular_routes_widget destination="+destination_r+" "+responsive+" subid=\""+tp_subid+"\"]</div>";
+                                            }
+                                        }
+                                        if(count == count_s){
+                                            shortcode = '<div class="TP-PopularRoutesWidgets">'+shortcode+'</div>'
+                                            //console.log(shortcode);
+                                            setShortcodes(shortcode, $(this));
                                         }
                                     }
-                                    if(count == count_s){
-                                        shortcode = '<div class="TP-PopularRoutesWidgets">'+shortcode+'</div>'
-                                        //console.log(shortcode);
-                                        setShortcodes(shortcode, $(this));
+
+
+                                    break;
+                                case '7':
+                                    if (hotel_id == "") {
+                                        doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
+                                    }else{
+
+                                        setShortcodes("[tp_hotel_selections_widget id="+hotel_id+" "
+                                            +cat+" type="+typeHotelSelectView+" limit="+limit
+                                            +" subid=\""+tp_subid+"\"]",
+                                            $(this));
                                     }
-                                }
+                                    break;
+                                case '8':
+                                    var limit_8, type_8, filter_8, width_8, origin_8, destination_8, airline_8,
+                                        airlines, parrams;
+                                    if(doc.find('#responsive_widget').is(":checked")){
+                                        responsive = "responsive=true";
+                                    }else{
+                                        responsive = "width="+doc.find('#responsive_width').val();
+                                    }
+                                    parrams = '';
+                                    parrams += responsive + ' ';
+                                    limit_8  = doc.find('#limit_widget_8').val();
+                                    parrams += 'limit='+limit_8+' ';
+                                    type_8  = doc.find('#type_widget_8').val();
+                                    parrams += 'type='+type_8+' ';
+                                    filter_8  = doc.find("input[name=filter]:checked").val();
+                                    parrams += 'filter='+filter_8+' ';
+                                    origin_8  = doc.find('#origin_widget_8').val();
+                                    origin_8 = origin_8.substring(origin_8.indexOf('[')+1,origin_8.indexOf(']'));
+                                    if(origin_8 != "")
+                                        parrams += 'origin='+origin_8+' ';
+                                    destination_8  = doc.find('#destination_widget_8').val();
+                                    destination_8 = destination_8.substring(destination_8.indexOf('[')+1,destination_8.indexOf(']'));
+                                    if(destination_8 != "")
+                                        parrams += 'destination='+destination_8+' ';
+                                    airlines = '';
+                                    if(filter_8 == '0'){
+                                        doc.find('.airline_widget_8').each(function( index ) {
+                                            var airline = $(this).val();
+                                            airline = airline.substring(airline.indexOf('[')+1,airline.indexOf(']'));
+                                            if(airline != '')
+                                                airlines += airline+','
+
+                                        });
+                                    }
+                                    airline_8 = '';
+                                    if (airlines != ''){
+                                        airline_8 = 'airline="'+airlines+'"';
+                                    }
+                                    parrams += airline_8;
 
 
-                                break;
-                            case '7':
-                                if (hotel_id == "") {
-                                    doc.find('#hotel_id_widget').addClass('constructorShortcodesError');
-                                }else{
+                                    //console.log(parrams);
 
-                                    setShortcodes("[tp_hotel_selections_widget id="+hotel_id+" "+cat+" type="+typeHotelSelectView+" limit="+limit+"]",
+                                    setShortcodes("[tp_ducklett_widget "+parrams+" subid=\""+tp_subid+"\"]",
                                         $(this));
-                                }
-                                break;
-                            case '8':
-                                var limit_8, type_8, filter_8, width_8, origin_8, destination_8, airline_8,
-                                    airlines, parrams;
-                                if(doc.find('#responsive_widget').is(":checked")){
-                                    responsive = "responsive=true";
-                                }else{
-                                    responsive = "width="+doc.find('#responsive_width').val();
-                                }
-                                parrams = '';
-                                parrams += responsive + ' ';
-                                limit_8  = doc.find('#limit_widget_8').val();
-                                parrams += 'limit='+limit_8+' ';
-                                type_8  = doc.find('#type_widget_8').val();
-                                parrams += 'type='+type_8+' ';
-                                filter_8  = doc.find("input[name=filter]:checked").val();
-                                parrams += 'filter='+filter_8+' ';
-                                origin_8  = doc.find('#origin_widget_8').val();
-                                origin_8 = origin_8.substring(origin_8.indexOf('[')+1,origin_8.indexOf(']'));
-                                if(origin_8 != "")
-                                    parrams += 'origin='+origin_8+' ';
-                                destination_8  = doc.find('#destination_widget_8').val();
-                                destination_8 = destination_8.substring(destination_8.indexOf('[')+1,destination_8.indexOf(']'));
-                                if(destination_8 != "")
-                                    parrams += 'destination='+destination_8+' ';
-                                airlines = '';
-                                if(filter_8 == '0'){
-                                    doc.find('.airline_widget_8').each(function( index ) {
-                                        var airline = $(this).val();
-                                        airline = airline.substring(airline.indexOf('[')+1,airline.indexOf(']'));
-                                        if(airline != '')
-                                            airlines += airline+','
-
-                                    });
-                                }
-                                airline_8 = '';
-                                if (airlines != ''){
-                                    airline_8 = 'airline="'+airlines+'"';
-                                }
-                                parrams += airline_8;
-
-
-                                //console.log(parrams);
-
-                                setShortcodes("[tp_ducklett_widget "+parrams+"]",
-                                $(this));
-                                break;
+                                    break;
+                            }
                         }
+
 
                     }
                 },
@@ -757,6 +768,7 @@ jQuery(function($) {
                     text: button_cancel,
                     click: function() {
                         $( this ).dialog( "close" );
+
 
                     }
                 },
@@ -768,13 +780,14 @@ jQuery(function($) {
                 //win.scrollTop(p.top);
                 resetConstructorWidgetModal();
                 $("#select_widgets :first").attr("selected", "selected");
+                doc.find('#origin_widget, #hotel_id_widget, #destination_widget, #tp_subid_widget').removeClass('constructorShortcodesError');
+
             }
         });
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
-
-        doc.find('#origin_widget, #hotel_id_widget, #destination_widget').focus(function() {
+        doc.find('#origin_widget, #hotel_id_widget, #destination_widget, #tp_subid_widget').focus(function() {
             $(this).removeClass('constructorShortcodesError');
 
         });
@@ -820,23 +833,20 @@ jQuery(function($) {
             doc.find('.TPPopularRoutes').show();
             tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
         });
-
         doc.find('#td_select_widgets').on('change', '#select_widgets', function(e) {
+            //e.preventDefault();
             doc.find('#responsive_label').on('change', '#responsive_widget', function(e) {
                 if($(this).is(":checked")) {
                     doc.find('#responsive_width_label').hide();
                 }else{
                     doc.find('#responsive_width_label').show();
-
                 }
-
             });
-                e.preventDefault();
             var tbody;
             tbody = $(this).parent('#td_select_widgets').parent('#tr_select_widgets').parent('tbody');
             $(this).removeClass('constructorShortcodesError');
+            $("tp_subid_widget").removeClass('constructorShortcodesError');
             resetConstructorWidgetModal();
-
             tbody.children('#tr_hotel_id_widget').children('td').children('input').removeClass('TPCoordinatesAutocomplete');
             tbody.children('#tr_hotel_id_widget').children('td').children('input').removeClass('TPAutocompleteID');
             tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPOriginTitle);
@@ -844,6 +854,7 @@ jQuery(function($) {
                 case '0':
                     break;
                 case '1':
+                    doc.find('#tr_subid_widget').show();
                     doc.find('#tr_origin_widget').show();
                     doc.find('#tr_size_widget').show();
                     doc.find('#tr_direct_widget').show();
@@ -859,6 +870,7 @@ jQuery(function($) {
                     }
                     break;
                 case '2':
+                    doc.find('#tr_subid_widget').show();
                     tbody.children('#tr_hotel_id_widget').children('td').children('input').addClass('TPCoordinatesAutocomplete');
                     tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPLocationTitlt);
                     doc.find('#tr_hotel_id_widget').show();
@@ -869,6 +881,7 @@ jQuery(function($) {
 
                     break;
                 case '3':
+                    doc.find('#tr_subid_widget').show();
                     doc.find('#tr_origin_widget').show();
                     doc.find('#tr_destination_widget').show();
                     doc.find('#tr_direct_widget').show();
@@ -904,6 +917,7 @@ jQuery(function($) {
                     }
                     break;
                 case '4':
+                    doc.find('#tr_subid_widget').show();
                     doc.find('#tr_origin_widget').show();
                     doc.find('#tr_destination_widget').show();
                     doc.find('#tr_responsive_widget').show();
@@ -920,6 +934,7 @@ jQuery(function($) {
                     }
                     break;
                 case '5':
+                    doc.find('#tr_subid_widget').show();
                     tbody.children('#tr_hotel_id_widget').children('td').children('input').attr("placeholder", TPHotelWidgetLabel);
                     doc.find('#tr_hotel_id_widget').show();
                     //doc.find('#tr_hotel_id_widget_size').show();
@@ -938,7 +953,7 @@ jQuery(function($) {
                     }
                     break;
                 case '6':
-
+                    doc.find('#tr_subid_widget').show();
                     doc.find('#tr_popular_routes_widget').show();
                     doc.find('.TPPopularRoutes').show();
                     if(doc.find('#popular_routes_widget_count').val() > 1){
@@ -962,6 +977,7 @@ jQuery(function($) {
                     //doc.find('#hotel_size_widget_width').val($(this).data('widgets-size-width-5'));
                     break;
                 case '7':
+                    doc.find('#tr_subid_widget').show();
                     //doc.find('#tr_origin_widget').show();
                     //tbody.children('#tr_origin_widget').children('td').children('input').addClass('TPAutocompleteID');
                     tbody.children('#tr_hotel_id_widget').children('td').children('input').addClass('TPAutocompleteID');
@@ -977,6 +993,7 @@ jQuery(function($) {
 
                     break;
                 case '8':
+                    doc.find('#tr_subid_widget').show();
                     doc.find('#tr_type_widget_8').show();
                     doc.find('#tr_filter_widget').show();
                     doc.find('#tr_limit_widget_8').show();
@@ -1028,6 +1045,8 @@ jQuery(function($) {
             }
         });
     });
+
+
     function addFieldAirline(){
         //doc.find('.tr_table_airline_widget_8').clone().appendTo('#table_airline_widget_8 tbody');
         console.log("TPBtnAdd");
@@ -1076,7 +1095,7 @@ jQuery(function($) {
                     id: "constructorSearchFormButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, select, type, hotel_city;
+                        var origin, destination, select, type, hotel_city, tp_subid;
                         select = doc.find('#select_search_form').val();
                         console.log(select);
                         if(!isNaN(select)){
@@ -1097,22 +1116,30 @@ jQuery(function($) {
                             }else {
                                 type = doc.find('#select_search_form').find(':selected').data('type_form');
                             }
-                            switch (type){
-                                case "avia":
-                                    setShortcodes("[tp_search_shortcodes id="+select
-                                        +" origin=\""+origin+"\" "+"destination=\""+destination
-                                        +"\" type=\""+type+"\"]", $(this));
-                                    break;
-                                case "hotel":
-                                    setShortcodes("[tp_search_shortcodes id="+select
-                                        +" hotel_city=\""+hotel_city+"\" type=\""+type+"\"]", $(this));
-                                    break;
-                                case "avia_hotel":
-                                    setShortcodes("[tp_search_shortcodes id="+select
-                                        +" origin=\""+origin+"\" "+"destination=\""+destination
-                                        +"\" hotel_city=\""+hotel_city+"\" type=\""+type+"\"]", $(this));
-                                    break;
+                            tp_subid = doc.find('#tp_subid_sf').val();
+                            if(!validSubid(tp_subid)){
+                                doc.find('#tp_subid_sf').addClass('constructorShortcodesError');
+                            }else {
+                                switch (type){
+                                    case "avia":
+                                        setShortcodes("[tp_search_shortcodes id="+select
+                                            +" origin=\""+origin+"\" "+"destination=\""+destination
+                                            +"\" type=\""+type+"\" subid=\""+tp_subid+"\"]", $(this));
+                                        break;
+                                    case "hotel":
+                                        setShortcodes("[tp_search_shortcodes id="+select
+                                            +" hotel_city=\""+hotel_city+"\" type=\""
+                                            +type+"\" subid=\""+tp_subid+"\"]", $(this));
+                                        break;
+                                    case "avia_hotel":
+                                        setShortcodes("[tp_search_shortcodes id="+select
+                                            +" origin=\""+origin+"\" "+"destination=\""+destination
+                                            +"\" hotel_city=\""+hotel_city+"\" type=\""+type
+                                            +"\" subid=\""+tp_subid+"\"]", $(this));
+                                        break;
+                                }
                             }
+
 
                         }else{
                             doc.find('#select_search_form').addClass('constructorShortcodesError');
@@ -1130,13 +1157,15 @@ jQuery(function($) {
 
             ],
             close: function( event, ui ) {
-
+                doc.find('#tr_subid_sf').hide();
+                doc.find('#tr_origin_search_form').hide();
+                doc.find('#tr_destination_search_form').hide();
+                doc.find('#tr_search_shortcode_hotel_city').hide();
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorSearchFormModal");
         tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityShortcodeAutocomplete' , "#constructorSearchFormModal");
-
         if (doc.find('#select_search_form').length > 0) {
             //select = doc.find('#select_search_form').val();
             //doc.find('#tr_origin_search_form').show();
@@ -1150,6 +1179,8 @@ jQuery(function($) {
             if(selectSearchForm == "") selectSearchForm = "avia";
             console.log(selectSearchForm)
             //doc.find('#tr_type_search_form').show();
+            doc.find("#tp_subid_sf").removeClass('constructorShortcodesError');
+            doc.find('#tr_subid_sf').show();
             switch (selectSearchForm){
                 case "avia":
                     doc.find('#tr_origin_search_form').show();
@@ -1165,6 +1196,10 @@ jQuery(function($) {
                     break;
             }
         }
+        doc.find('#tp_subid_sf').focus(function() {
+            $(this).removeClass('constructorShortcodesError');
+
+        });
         /*doc.find('#td_type_search_form').on('change', '#type_search_form', function(e) {
             e.preventDefault();
             doc.find('#tr_origin_search_form').hide();
@@ -1190,21 +1225,26 @@ jQuery(function($) {
             doc.find('#tr_origin_search_form').hide();
             doc.find('#tr_destination_search_form').hide();
             doc.find('#tr_search_shortcode_hotel_city').hide();
+            doc.find('#tr_subid_sf').hide();
             doc.find('#select_search_form').removeClass('constructorShortcodesError');
+            doc.find('#tr_subid_sf').removeClass('constructorShortcodesError');
             var selectChSearchForm = $(this).find(':selected').data('type_form');
             if(selectChSearchForm == "") selectChSearchForm = "avia";
             switch (selectChSearchForm){
                 case "avia":
                     doc.find('#tr_origin_search_form').show();
                     doc.find('#tr_destination_search_form').show();
+                    doc.find('#tr_subid_sf').show();
                     break;
                 case "hotel":
                     doc.find('#tr_search_shortcode_hotel_city').show();
+                    doc.find('#tr_subid_sf').show();
                     break;
                 case "avia_hotel":
                     doc.find('#tr_origin_search_form').show();
                     doc.find('#tr_destination_search_form').show();
                     doc.find('#tr_search_shortcode_hotel_city').show();
+                    doc.find('#tr_subid_sf').show();
                     break;
             }
             //doc.find('#tr_origin_search_form').hide();
@@ -1394,7 +1434,7 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, one_way, hotel_id, text_link, check_out, check_in, origin_date,
-                            destination_date, type;
+                            destination_date, type, tp_subid;
                         origin = doc.find('#origin_link').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_link').val();
@@ -1403,52 +1443,58 @@ jQuery(function($) {
                         hotel_id = hotel_id.substring(hotel_id.indexOf('{')+1,hotel_id.indexOf('}'));
                         text_link =  doc.find('#text_link').val();
                         type = doc.find('#constructorLinkModalSelect').val();
-                        switch (type) {
-                            case '0':
-                                doc.find('#constructorLinkModalSelect').addClass('constructorShortcodesError');
-                                break;
-                            case '1':
-                                if(doc.find('#one_way_link').is(":checked")){
-                                    one_way = "one_way=true";
-                                    destination_date =  "";
-                                }else{
-                                    one_way = "one_way=false";
-                                    destination_date =  "destination_date="+doc.find('#destination_date_link').val().replace(/\D/g, '');
-                                }
-                                if (origin == "") {
-                                    doc.find('#origin_link').addClass('constructorShortcodesError');
-                                }
-                                if (destination == "") {
-                                    doc.find('#destination_link').addClass('constructorShortcodesError');
-                                }
-                                if (origin != "" && destination != ""){
-                                    origin_date =  doc.find('#origin_date_link').val().replace(/\D/g, '');
+                        tp_subid = doc.find('#tp_subid_link').val();
+                        if(!validSubid(tp_subid)){
+                            doc.find('#tp_subid_link').addClass('constructorShortcodesError');
+                        }else {
+                            switch (type) {
+                                case '0':
+                                    doc.find('#constructorLinkModalSelect').addClass('constructorShortcodesError');
+                                    break;
+                                case '1':
+                                    if(doc.find('#one_way_link').is(":checked")){
+                                        one_way = "one_way=true";
+                                        destination_date =  "";
+                                    }else{
+                                        one_way = "one_way=false";
+                                        destination_date =  "destination_date="+doc.find('#destination_date_link').val().replace(/\D/g, '');
+                                    }
+                                    if (origin == "") {
+                                        doc.find('#origin_link').addClass('constructorShortcodesError');
+                                    }
+                                    if (destination == "") {
+                                        doc.find('#destination_link').addClass('constructorShortcodesError');
+                                    }
+                                    if (origin != "" && destination != ""){
+                                        origin_date =  doc.find('#origin_date_link').val().replace(/\D/g, '');
 
-                                    setShortcodesReplace("[tp_link origin="+origin+" destination="+destination+" " +
-                                        "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
-                                        " "+destination_date+" "+one_way+" " +
-                                        "type="+type+"]", $(this));
-                                    /*setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
-                                        "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
-                                        " "+destination_date+" "+one_way+" " +
-                                        "type="+type+"]",
-                                        $(this));*/
-                                }
-                                break
-                            case '2':
-                                if (hotel_id == "") {
-                                    doc.find('#city_link').addClass('constructorShortcodesError');
-                                }else{
-                                    check_in =  doc.find('#check_in_link').val().replace(/\D/g, '');
-                                    check_out =  doc.find('#check_out_link').val().replace(/\D/g, '');
+                                        setShortcodesReplace("[tp_link origin="+origin+" destination="+destination+" " +
+                                            "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
+                                            " "+destination_date+" "+one_way+" " +
+                                            "type="+type+"  subid=\"" + tp_subid + "\"]", $(this));
+                                        /*setShortcodes("[tp_link origin="+origin+" destination="+destination+" " +
+                                         "text_link=\""+text_link+"\" origin_date="+origin_date+" " +
+                                         " "+destination_date+" "+one_way+" " +
+                                         "type="+type+"]",
+                                         $(this));*/
+                                    }
+                                    break
+                                case '2':
+                                    if (hotel_id == "") {
+                                        doc.find('#city_link').addClass('constructorShortcodesError');
+                                    }else{
+                                        check_in =  doc.find('#check_in_link').val().replace(/\D/g, '');
+                                        check_out =  doc.find('#check_out_link').val().replace(/\D/g, '');
 
-                                    setShortcodes("[tp_link hotel_id=\""+hotel_id+"\" text_link=\""+text_link+"\" " +
-                                        " check_in="+check_in+" check_out="+check_out+" " +
-                                        "type="+type+"]",
-                                        $(this));
-                                }
-                                break
+                                        setShortcodes("[tp_link hotel_id=\""+hotel_id+"\" text_link=\""+text_link+"\" " +
+                                            " check_in="+check_in+" check_out="+check_out+" " +
+                                            "type="+type+"  subid=\"" + tp_subid + "\"]",
+                                            $(this));
+                                    }
+                                    break
+                            }
                         }
+
 
                     }
                 },
@@ -1457,19 +1503,28 @@ jQuery(function($) {
                     text: button_cancel,
                     click: function() {
                         $( this ).dialog( "close" );
+
                     }
                 },
 
             ],
             close: function( event, ui ) {
-
+                doc.find('#tr_subid_link').hide();
+                doc.find('#tr_origin_link').hide();
+                doc.find('#tr_destination_link').hide();
+                doc.find('#tr_origin_date_link').hide();
+                doc.find('#tr_destination_date_link').hide();
+                doc.find('#tr_one_way_link').hide();
+                doc.find('#tr_city_link').hide();
+                doc.find('#tr_origin_date_hotel_link').hide();
+                doc.find('#tr_destination_date_hotel_link').hide();
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
         tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
         //doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         //doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
-        doc.find('#origin_link, #destination_link, #city_link').focus(function() {
+        doc.find('#origin_link, #destination_link, #city_link, #tp_subid_link').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
         doc.find('#label_one_way_link').on('change', '#one_way_link', function(e) {
@@ -1486,6 +1541,7 @@ jQuery(function($) {
             doc.find('#origin_link').removeClass('constructorShortcodesError');
             doc.find('#destination_link').removeClass('constructorShortcodesError');
             doc.find('#city_link').removeClass('constructorShortcodesError');
+            doc.find('#tp_subid_link').removeClass('constructorShortcodesError');
             doc.find('#tr_origin_link').hide();
             doc.find('#tr_destination_link').hide();
             doc.find('#tr_origin_date_link').hide();
@@ -1494,10 +1550,12 @@ jQuery(function($) {
             doc.find('#tr_city_link').hide();
             doc.find('#tr_origin_date_hotel_link').hide();
             doc.find('#tr_destination_date_hotel_link').hide();
+            doc.find('#tr_subid_link').hide();
             switch($(this).val()) {
                 case '0':
                     break;
                 case '1':
+                    doc.find('#tr_subid_link').show();
                     doc.find('#tr_origin_link').show();
                     doc.find('#tr_destination_link').show();
                     doc.find('#tr_origin_date_link').show();
@@ -1505,6 +1563,7 @@ jQuery(function($) {
                     doc.find('#tr_one_way_link').show();
                     break;
                 case '2':
+                    doc.find('#tr_subid_link').show();
                     doc.find('#tr_city_link').show();
                     doc.find('#tr_origin_date_hotel_link').show();
                     doc.find('#tr_destination_date_hotel_link').show();
@@ -1550,6 +1609,7 @@ jQuery(function($) {
         doc.find('#destination_widget_8').val();
         doc.find('.airline_widget_8').val();
         doc.find('#constructorWidgetModalTable').off( 'click', '.TPBtnAdd');
+        doc.find('#tr_subid_widget').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }

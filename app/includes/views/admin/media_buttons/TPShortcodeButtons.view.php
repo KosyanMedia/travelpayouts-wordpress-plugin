@@ -69,12 +69,7 @@
                        class="regular-text code" placeholder="<?php _e('Alternate title', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
-        <tr id="tr_subid">
-            <td>
-                <input type="text" name="tp_subid" id="tp_subid" value=""
-                       class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
-            </td>
-        </tr>
+
         <tr id="tr_origin">
             <td>
                 <input type="text" name="origin" id="origin" value=""
@@ -103,6 +98,12 @@
             <td>
                 <input type="text" name="airline" id="airline" value=""
                        class="constructorAirlineShortcodesAutocomplete regular-text code" placeholder="<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
+        <tr id="tr_subid">
+            <td>
+                <input type="text" name="tp_subid" id="tp_subid" value=""
+                       class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
         <tr id="tr_limit">

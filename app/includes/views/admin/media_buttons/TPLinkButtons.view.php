@@ -31,6 +31,19 @@
                            placeholder="<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </td>
             </tr>
+            <tr id="tr_city_link">
+                <td>
+                    <input type="text" name="city" id="city_link" value=""
+                           class="constructorHotelShortcodesAutocomplete regular-text code"
+                           placeholder="<?php _e('City', TPOPlUGIN_TEXTDOMAIN); ?>">
+                </td>
+            </tr>
+            <tr id="tr_subid_link">
+                <td>
+                    <input type="text" name="tp_subid" id="tp_subid_link" value=""
+                           class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
+                </td>
+            </tr>
             <tr id="tr_origin_date_link">
                 <td>
                     <label>
@@ -59,13 +72,7 @@
                     </label>
                 </td>
             </tr>
-            <tr id="tr_city_link">
-                <td>
-                    <input type="text" name="city" id="city_link" value=""
-                           class="constructorHotelShortcodesAutocomplete regular-text code"
-                           placeholder="<?php _e('City', TPOPlUGIN_TEXTDOMAIN); ?>">
-                </td>
-            </tr>
+
             <tr id="tr_origin_date_hotel_link">
                 <td>
                     <label>
