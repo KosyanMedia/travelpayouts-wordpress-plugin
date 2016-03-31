@@ -24,7 +24,8 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'hotel_id' => false,
             'check_in' => 1,
             'check_out' => 12,
-            'type' => 0
+            'type' => 0,
+            'subid' => ''
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -38,7 +39,8 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'hotel_id' => $hotel_id,
             'check_in' => $check_in,
             'check_out' => $check_out,
-            'type' => $type
+            'type' => $type,
+            'subid' => $subid
         );
     }
 }

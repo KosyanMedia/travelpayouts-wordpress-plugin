@@ -1193,8 +1193,10 @@ class TPShortcodesView {
             'hotel_id' => false,
             'check_in' => 1,
             'check_out' => 12,
-            'type' => 0
+            'type' => 0,
+            'subid' => ''
         );
+
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
@@ -1203,12 +1205,18 @@ class TPShortcodesView {
                 $white_label = 'http://'.$white_label;
             }
         }
-
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            //error_log($subid);
+        }
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
         if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
             $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
         $marker = $marker.'_link';
+        if(!empty($subid))
+            $marker = $marker.'_'.$subid;
         $marker = $marker.'.$69';
         if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
             $marker = $marker . '&with_request=true';
