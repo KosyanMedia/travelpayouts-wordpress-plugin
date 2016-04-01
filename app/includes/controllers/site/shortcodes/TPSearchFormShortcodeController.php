@@ -72,7 +72,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
             $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
             $marker = \app\includes\TPPlugin::$options['account']['marker'];
             $marker_txt = '';
-            $marker_txt = '"marker": "'.$marker.'_'.$subid.'"';
+            $marker_txt = '"marker": "'.$marker.'.'.$subid.'",';
             $form = preg_replace('/"marker":.*?,/s', $marker_txt, $form);
             //error_log("getSubid ".$form);
         }

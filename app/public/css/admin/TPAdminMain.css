@@ -308,8 +308,9 @@ h1, h2, h3, h4, h5, h6 {
 .ItemSub label textarea {
 
   color: #929a9f;
-  font-size: 11px;
+  font-size: 13px;
   width: 98%;
+  line-height: 1.2;
 
 }
 .ItemSub label textarea:hover {

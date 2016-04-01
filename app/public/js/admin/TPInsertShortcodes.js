@@ -1099,7 +1099,7 @@ jQuery(function($) {
                         select = doc.find('#select_search_form').val();
                         console.log(select);
                         if(!isNaN(select)){
-                            console.log(select);
+
                             origin = doc.find('#origin_search_form').val();
                             //origin = origin.replace('[', '{');
                             //origin = origin.replace(']', '}');
@@ -1120,6 +1120,8 @@ jQuery(function($) {
                             if(!validSubid(tp_subid)){
                                 doc.find('#tp_subid_sf').addClass('constructorShortcodesError');
                             }else {
+                                console.log(select+'TEST');
+                                console.log(type+'type');
                                 switch (type){
                                     case "avia":
                                         setShortcodes("[tp_search_shortcodes id="+select
@@ -1137,6 +1139,10 @@ jQuery(function($) {
                                             +"\" hotel_city=\""+hotel_city+"\" type=\""+type
                                             +"\" subid=\""+tp_subid+"\"]", $(this));
                                         break;
+                                    default:
+                                        setShortcodes("[tp_search_shortcodes id="+select
+                                            +" origin=\""+origin+"\" "+"destination=\""+destination
+                                            +"\" type=\""+type+"\" subid=\""+tp_subid+"\"]", $(this));
                                 }
                             }
 
