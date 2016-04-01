@@ -1252,6 +1252,11 @@ jQuery(function($) {
                     doc.find('#tr_search_shortcode_hotel_city').show();
                     doc.find('#tr_subid_sf').show();
                     break;
+                default:
+                    doc.find('#tr_origin_search_form').show();
+                    doc.find('#tr_destination_search_form').show();
+                    doc.find('#tr_subid_sf').show();
+                    break;
             }
             //doc.find('#tr_origin_search_form').hide();
             //doc.find('#tr_destination_search_form').hide();
