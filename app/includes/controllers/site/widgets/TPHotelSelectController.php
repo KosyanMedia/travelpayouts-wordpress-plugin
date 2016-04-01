@@ -30,7 +30,8 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
             'type' => \app\includes\TPPlugin::$options["widgets"][$widgets]['type'],
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'responsive' => \app\includes\TPPlugin::$options['widgets'][$widgets]['responsive'],
-            'limit' => \app\includes\TPPlugin::$options['widgets'][$widgets]['limit']
+            'limit' => \app\includes\TPPlugin::$options['widgets'][$widgets]['limit'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
@@ -59,7 +60,7 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         .'&type='.$type
         .'&currency='.mb_strtolower($this->view->typeCurrency())
         .$width.'&host='.$this->view->getWhiteLabel($widgets)
-        .'&marker='.$this->view->getMarker($widgets).'.&limit='
+        .'&marker='.$this->view->getMarker($widgets, $subid).'.&limit='
         .$limit
         .'" charset="UTF-8"></script></div>';
         return $output;

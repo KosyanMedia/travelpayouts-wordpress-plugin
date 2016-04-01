@@ -31,6 +31,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'destination' => false,
             'airline' => false,
             'currency' => $this->view->typeCurrency() ,
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $url_params = '';
@@ -77,7 +78,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
         $output = '';
         $output = '<script async src="'.$url.'?widget_type='.$type
             .'&currency='.mb_strtolower($currency).'&host='.$this->view->getWhiteLabel($widgets).'&marker='
-            .$this->view->getMarker($widgets).'.'.$url_params.'" charset="UTF-8">
+            .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8">
         </script>';
         return $output;
     }

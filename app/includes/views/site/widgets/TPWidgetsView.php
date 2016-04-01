@@ -22,49 +22,71 @@ class TPWidgetsView {
      * @param bool $widgetType
      * @return string
      */
-    public function getMarker($widgetType = false){
+    public function getMarker($widgetType = false, $subid = ''){
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
             $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
         if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
             $marker = $marker.'_'.\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
         }
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            //error_log($subid);
+        }
         switch($widgetType){
             case 1:
                 //map
-                $marker .= '_map.$69';
+                $marker .= '_map';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
+                $marker .= '.$69';
                 break;
             case 2:
                 //hotelsmap
-                $marker .= '_hotelsmap.$69';
+                $marker .= '_hotelsmap';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
+                $marker .= '.$69';
                 break;
             case 3:
                 //calendar
                 $marker .= '_calendar';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
                 break;
             case 4:
                 //subscriptions
-                $marker .= '_subscr.$69';
+                $marker .= '_subscr';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
+                $marker .= '.$69';
                 break;
             case 5:
                 //chansey
                 $marker .= '_hotel';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
                 break;
             case 6:
                 //weedle
                 $marker .= '_populardest';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
                 break;
             case 7:
                 $marker .= '_hotelsselections';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
                 break;
             case 8:
                 $marker .= '_specialoff';
+                if(!empty($subid))
+                    $marker = $marker.'_'.$subid;
                 break;
 
         }
 
-
-        //$marker = $marker.'.$69';
         return rawurlencode($marker);
     }
 

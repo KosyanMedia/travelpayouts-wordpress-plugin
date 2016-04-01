@@ -33,7 +33,8 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'destination' => $destination_i,
             'direct' => 'false',
             'one_way' => 'false',
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
@@ -43,7 +44,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
         $output = '';
         $output = '
             <div class="TPWidget TPCalendarWidget">
-            <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets)
+            <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
             .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.$this->view->locale

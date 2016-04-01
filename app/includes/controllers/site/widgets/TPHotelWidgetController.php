@@ -19,7 +19,8 @@ class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsSho
         $widgets = 5;
         $defaults = array(
             'hotel_id' => false,
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
@@ -27,7 +28,7 @@ class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsSho
         $output = '
             <div class="TPWidget TPHotelWidget">
             <script async src="//www.travelpayouts.com/chansey/iframe.js'.$width.'&hotel_id='.$hotel_id
-            .'&locale='.$this->view->locale.'&host='.$this->view->getWhiteLabel($widgets).'%2Fsearch&marker='.$this->view->getMarker($widgets)
+            .'&locale='.$this->view->locale.'&host='.$this->view->getWhiteLabel($widgets).'%2Fsearch&marker='.$this->view->getMarker($widgets, $subid)
             .'&currency='.mb_strtolower($this->view->typeCurrency()).'">
                    </script></div>';
 

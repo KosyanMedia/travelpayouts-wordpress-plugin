@@ -21,7 +21,8 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         $widgets = 6;
         $defaults = array(
             'destination' => false,
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
@@ -29,7 +30,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         $output = '
             <div class="TPWidget TPPopularRoutesWidget">
             <script async src="//www.travelpayouts.com/weedle/widget.js'.$width
-            .'&marker='.$this->view->getMarker($widgets).'&host='.$this->view->getWhiteLabel($widgets)
+            .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$this->view->getWhiteLabel($widgets)
             .'&locale='.$this->view->locale.'&currency='.mb_strtolower($this->view->typeCurrency())
             .'&destination='.$destination.'" charset="UTF-8">
                    </script></div>';

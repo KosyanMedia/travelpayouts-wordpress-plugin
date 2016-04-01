@@ -25,6 +25,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
             'lon' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $coordinates = explode(',', $coordinates);
@@ -50,7 +51,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
 
         $output = '
         <div class="TPWidget TPHotelMapWidget">
-        <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.$this->view->locale.'&marker='.$this->view->getMarker($widgets)
+        <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.$this->view->locale.'&marker='.$this->view->getMarker($widgets, $subid)
             .'&changeflag=0&draggable='.$draggable.'&map_styled='.$map_styled.'&map_color='.$map_color.'
                     &contrast_color='.$contrast_color.'&disable_zoom='.$disable_zoom.'
                     &base_diameter='.\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter'].'

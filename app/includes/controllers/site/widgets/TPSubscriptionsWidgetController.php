@@ -31,7 +31,8 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         $defaults = array(
             'origin' => $origin_i,
             'destination' => $destination_i,
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width']
+            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['color']);
@@ -41,7 +42,7 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         $output = '
         <div class="TPWidget TPSubscriptionsWidget">
             <script async src="//www.travelpayouts.com/subscription_widget/widget.js'.$width.'backgroundColor='.$color
-            .'&marker='.$this->view->getMarker($widgets).'&host='.$this->view->getWhiteLabel($widgets).'
+            .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$this->view->getWhiteLabel($widgets).'
             &originIata='.$origin.'&destinationIata='.$destination.'"></script></div>';
         return $output;
     }
