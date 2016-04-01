@@ -27,6 +27,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
             'origin' => false,
             'destination' => false,
             'hotel_city' => false,
+            'subid' => ''
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if($id == false) return;
@@ -58,11 +59,25 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                 break;
         }
         //error_log($code_form);
+        $code_form = $this->getSubid($code_form, $subid);
+        //error_log($code_form);
         return $this->render($code_form);
 
 
     }
 
+    public function getSubid($form, $subid = ""){
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            $marker = \app\includes\TPPlugin::$options['account']['marker'];
+            $marker_txt = '';
+            $marker_txt = '"marker": "'.$marker.'_'.$subid.'"';
+            $form = preg_replace('/"marker":.*?,/s', $marker_txt, $form);
+            //error_log("getSubid ".$form);
+        }
+        return $form;
+    }
     /**
      * @param $origin
      * @param $form
