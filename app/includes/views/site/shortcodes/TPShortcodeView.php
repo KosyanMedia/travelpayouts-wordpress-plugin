@@ -911,7 +911,8 @@ class TPShortcodeView {
             case 0:
                 switch(\app\includes\TPPlugin::$options['local']['localization']){
                     case 1:
-                        $numberChanges = "Без пересадок";
+                        //$numberChanges = "Без пересадок";
+                        $numberChanges = "Прямой";
                         break;
                     case 2:
                         $numberChanges = "Direct";
