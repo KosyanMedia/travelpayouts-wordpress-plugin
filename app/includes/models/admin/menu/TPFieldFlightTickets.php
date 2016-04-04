@@ -240,6 +240,29 @@ class TPFieldFlightTickets {
 
                     </label>
                 </div>
+                <div class="TP-tracingFont TP-tracingFontBtn">
+                    <a class="BoldTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
+                        <input type="checkbox" id="btn-font-style-radio1"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][font_style][bold]"
+                               value="1"
+                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold']), 1) ?>>
+                        B
+                    </a>
+                    <a class="ItalicTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
+                        <input type="checkbox" id="btn-font-style-radio2"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][font_style][italic]"
+                               value="1"
+                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic']), 1) ?>>
+                        B
+                    </a>
+                    <a class="UnderlineTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
+                        <input type="checkbox" id="btn-font-style-radio3"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][button][underline]"
+                               value="1"
+                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline']), 1) ?>>
+                        B
+                    </a>
+                </div>
 
             </div>
             <div class="TP-StyleItem">

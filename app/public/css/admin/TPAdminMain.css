@@ -1575,7 +1575,10 @@ input[type="checkbox"]:checked + label::before {
     width: 75px;
     margin-right: 15px;
 }
-
+.TP-tracingFontBtn{
+  margin-left: 10px;
+  margin-top: 25px;
+}
 .TP-tracingFont {
     float: left;
     height: 40px;

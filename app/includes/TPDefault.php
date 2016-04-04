@@ -30,7 +30,10 @@ class TPDefault implements  \core\TPODefault{
             'background' => '#FEB20E',
             //'color' => '#571601',
             'color' => ' #FFFFFF',
-            'border' => '#ce6408'
+            'border' => '#ce6408',
+            'font_style' => array(
+                'bold' => 1
+            )
 
         )
     );
@@ -195,8 +198,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'OW from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'OW tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -226,8 +229,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -283,8 +286,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -317,8 +320,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -351,8 +354,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 12,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -385,8 +388,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -418,8 +421,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -453,8 +456,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -509,7 +512,7 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => 'Find tickets on price',
-                        'ru' => 'Найти от price'
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -544,8 +547,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -583,8 +586,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 3,
                     'selected' => array(
@@ -623,8 +626,8 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'RT from price',
-                        'ru' => 'Найти от price'
+                        'en' => 'Tickets from price',
+                        'ru' => 'Билеты от price'
                     ),
                     'sort_column' => 3,
                     'selected' => array(
@@ -673,7 +676,10 @@ class TPDefault implements  \core\TPODefault{
                     'background' => '#FEB20E',
                     //'color' => '#571601',
                     'color' => '#FFFFFF',
-                    'border' => '#ce6408'
+                    'border' => '#ce6408',
+                    'font_style' => array(
+                        'bold' => 1
+                    )
 
                 )
             ),

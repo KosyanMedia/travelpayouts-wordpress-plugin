@@ -828,6 +828,23 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 border-bottom: 1px solid <?php echo \app\includes\TPPlugin::$options['style_table']['button']['border']; ?> !important;
                 background: <?php echo \app\includes\TPPlugin::$options['style_table']['button']['background']; ?> !important;
                 color:  <?php echo \app\includes\TPPlugin::$options['style_table']['button']['color']; ?> !important;
+                <?php
+                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold'])){
+                       echo 'font-weight: bold !important;';
+                   }else{
+                       echo 'font-weight: normal !important;';
+                   }
+                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic'])){
+                       echo 'font-style: italic !important;';
+                   }else{
+                       echo 'font-style: normal !important;';
+                   }
+                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline'])){
+                       echo 'text-decoration: underline !important;';
+                   }else{
+                       echo 'text-decoration: none !important;';
+                   }
+               ?>
             }
             .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
                 background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['button']['background'], 0.7); ?> !important;
