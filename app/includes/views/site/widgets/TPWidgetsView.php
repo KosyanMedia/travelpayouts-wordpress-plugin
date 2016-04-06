@@ -98,6 +98,7 @@ class TPWidgetsView {
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
             $white_label = preg_replace("(^https?://)", "", $white_label );
+            $white_label = preg_replace("#/$#", "", $white_label);
         }
         switch($widgetType){
             case 1:
@@ -190,9 +191,12 @@ class TPWidgetsView {
                             break;
                     }
                     //$white_label = 'hydra.aviasales.ru';
+                }else{
+                    $white_label .= '/flights';
                 }
                 break;
         }
+        //error_log($white_label);
         return $white_label;
 
     }

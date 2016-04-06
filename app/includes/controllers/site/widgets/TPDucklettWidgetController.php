@@ -74,7 +74,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             default:
                 $url = '//www.travelpayouts.com/ducklett/scripts.js';
         }
-        error_log($url);
+       // error_log($url);
         $output = '';
         $output = '<script async src="'.$url.'?widget_type='.$type
             .'&currency='.mb_strtolower($currency).'&host='.$this->view->getWhiteLabel($widgets).'&marker='
