@@ -14,10 +14,12 @@ abstract class TPOLoaderScripts{
         else:
             add_action( 'wp_enqueue_scripts', array(&$this, 'loadScriptSite' ) );
             add_action('wp_head', array(&$this, 'headScriptSite'));
+            add_action( 'wp_footer', array(&$this, 'footerScriptSite'));
         endif;
     }
     abstract public function loadScriptAdmin($hook);
     abstract public function headScriptAdmin();
     abstract public function loadScriptSite($hook);
     abstract public function headScriptSite();
+    abstract public function footerScriptSite();
 }

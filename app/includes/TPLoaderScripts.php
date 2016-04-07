@@ -681,24 +681,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     tpLocale = 'en';
                     break;
             }
-            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga_ym'])){?>
-                        jQuery(function($) {
-                            var doc, win;
-                            doc = $(document);
-                            doc.find('.TPButtonTable').click(function () {
-                                <?php echo \app\includes\TPPlugin::$options['config']['code_ga_ym']; ?>
-                            });
-                        });
-            <?php }?>
-            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_table_ga_ym'])){?>
-                jQuery(function($) {
-                    var doc, win;
-                    doc = $(document);
-                    doc.find('.TPTableShortcode').each(function( index ) {
-                        <?php echo \app\includes\TPPlugin::$options['config']['code_table_ga_ym']; ?>
-                    });
-                });
-            <?php }?>
+
         </script>
         <style type="text/css">
             <?php
@@ -852,5 +835,41 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
         </style>
     <?php
+    }
+
+    public function footerScriptSite()
+    {
+        // TODO: Implement footerScriptSite() method.
+        global $post;
+        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
+        ?>
+        <script type="text/javascript">
+            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga_ym'])){?>
+            jQuery(function($) {
+                var doc, win;
+                doc = $(document);
+                doc.find('.TPButtonTable').click(function () {
+                    <?php echo \app\includes\TPPlugin::$options['config']['code_ga_ym']; ?>
+                });
+            });
+            <?php }?>
+            <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_table_ga_ym'])){?>
+            jQuery(function($) {
+                var doc, win;
+                doc = $(document);
+                doc.ready(function () {
+                    $(window).load(function() {
+                        doc.find('.TPTableShortcode').each(function( index ) {
+                            <?php echo \app\includes\TPPlugin::$options['config']['code_table_ga_ym']; ?>
+                        });
+                        //insert all your ajax callback code here.
+                        //Which will run only after page is fully loaded in background.
+                    });
+                });
+            });
+            <?php }?>
+        </script>
+        <?php
     }
 }
