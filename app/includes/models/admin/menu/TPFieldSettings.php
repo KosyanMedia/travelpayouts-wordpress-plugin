@@ -140,9 +140,26 @@ class TPFieldSettings {
 
                 </div>
                 <div class="ItemSub TPItemSubCompactButtons">
-                    <input id="chek10" class="TPChekCompactButtons" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][compact_button]"
-                           value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['compact_button']), 1) ?> hidden />
-                    <label for="chek10"><?php _e('Compact buttons in the editor', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                    <span><?php _e('Buttons in the editor', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][media_button][view]"
+                            class="TP-Zelect">
+                        <option
+                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 0 ); ?> value="0">
+                            <?php echo _x('Default', 'config_media_btn_option', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </option>
+                        <option
+                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 1 ); ?> value="1">
+                            <?php echo _x('Compact', 'config_media_btn_option', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </option>
+                        <option
+                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 2 ); ?> value="2">
+                            <?php echo _x('Hide', 'config_media_btn_option', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </option>
+
+                    </select>
+                    <!--<input id="chek10" class="TPChekCompactButtons" type="checkbox" name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[config][compact_button]"
+                           value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['config']['compact_button']), 1) ?> hidden />
+                    <label for="chek10"><?php //_e('Compact buttons in the editor', TPOPlUGIN_TEXTDOMAIN); ?></label>-->
                 </div>
             </div>
 

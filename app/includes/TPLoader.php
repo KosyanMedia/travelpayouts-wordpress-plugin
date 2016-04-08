@@ -23,12 +23,16 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\menu\TPSettingsController();
         new controllers\admin\menu\TPWizardController();
         // Media buttons
-        new controllers\admin\media_buttons\TPShortcodeButtonsController();
-        new controllers\admin\media_buttons\TPWidgetButtonsController();
-        new controllers\admin\media_buttons\TPSearchFormButtonsController();
         new models\admin\TPPostsModel();
-        new controllers\admin\media_buttons\TPLinkButtonsController();
         new controllers\admin\TPModalAdminNoticeController();
+        if( \app\includes\TPPlugin::$options['config']['media_button']['view'] != 2){
+            new controllers\admin\media_buttons\TPShortcodeButtonsController();
+            new controllers\admin\media_buttons\TPWidgetButtonsController();
+            new controllers\admin\media_buttons\TPSearchFormButtonsController();
+            new controllers\admin\media_buttons\TPLinkButtonsController();
+        }
+
+
 
     }
 

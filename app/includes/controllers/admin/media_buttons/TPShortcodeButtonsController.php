@@ -11,7 +11,8 @@ class TPShortcodeButtonsController extends \core\controllers\TPOAdminMediaButton
     public function action($args = array())
     {
         // TODO: Implement action() method.
-        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Table', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert table', TPOPlUGIN_TEXTDOMAIN  );
+        $text = $this->getTextBtn(__( 'Insert table', TPOPlUGIN_TEXTDOMAIN  ), __( 'Table', TPOPlUGIN_TEXTDOMAIN  ));
+
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
             'text'      => $text,

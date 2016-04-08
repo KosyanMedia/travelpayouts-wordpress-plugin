@@ -11,7 +11,9 @@ class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsCo
     public function action($args = array())
     {
         // TODO: Implement action() method.
-        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Widget', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert widget', TPOPlUGIN_TEXTDOMAIN  );
+        $text = $this->getTextBtn(__( 'Insert widget', TPOPlUGIN_TEXTDOMAIN  ),
+            __( 'Widget', TPOPlUGIN_TEXTDOMAIN  ));
+
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
             'text'      => $text,

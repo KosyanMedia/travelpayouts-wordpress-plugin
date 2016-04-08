@@ -17,7 +17,9 @@ class TPSearchFormButtonsController extends \core\controllers\TPOAdminMediaButto
     public function action($args = array())
     {
         // TODO: Implement action() method.
-        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Form', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert search form', TPOPlUGIN_TEXTDOMAIN  );
+
+        $text = $this->getTextBtn(__( 'Insert search form', TPOPlUGIN_TEXTDOMAIN  ),
+            __( 'Form', TPOPlUGIN_TEXTDOMAIN  ));
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
             'text'      => $text,
