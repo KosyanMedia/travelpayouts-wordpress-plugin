@@ -178,6 +178,8 @@ class TPWidgetsView {
             case 7:
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = 'search.hotellook.com';
+                }else{
+                    $white_label .= '/hotels';
                 }
                 break;
             case 8:
