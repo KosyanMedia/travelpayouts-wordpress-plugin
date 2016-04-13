@@ -2878,3 +2878,28 @@ thead tr td.active-w {
 .TP-FormItem .ItemSub-Table-YM-GA {
   margin-bottom: 27px;
 }
+
+#tabs-config .box-span{
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 300;
+}
+
+#tabs-config .ItemSub span {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 300;
+}
+#tabs-config .ItemSub {
+  margin-bottom: 29px;
+}
+#tabs-config .TP-FormItem > .TPItemSubCompactButtons {
+  margin-bottom: 60px;
+}
+#tabs-config .TP-FormItem > .TP-ListSub {
+  margin-bottom: 58px;
+}
+#tabs-config .ItemSub label textarea {
+  height: 50px;
+}
+
