@@ -546,13 +546,17 @@ jQuery(function($){
                     doc.find('.TPFields_ru').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("RU");
                     doc.find('.TPFieldTitleCaseDiv').show();
+                    TPFieldHostSelect("1");
                     break;
                 case "2":
                     //en
                     doc.find('.TPFields_en').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("EN");
                     doc.find('.TPFieldTitleCaseDiv').hide();
+                    TPFieldHostSelect("2");
+
                     break;
+
                 /*case "3":
                     //en
                     doc.find('.TPFields_de').removeClass('TP-ListRowColumNot');
@@ -561,6 +565,32 @@ jQuery(function($){
         });
 
     }
+
+    /**
+     *
+     * @param local
+     * @constructor
+     */
+    function TPFieldHostSelect(local){
+        var host, default_host;
+        host = doc.find('.TPFieldHost').data('host');
+        if(host == '') {
+            switch (local){
+                case "1":
+                    default_host = doc.find('.TPFieldHost').data('default_host_ru');
+                    break;
+                case "2":
+                    default_host = doc.find('.TPFieldHost').data('default_host_en');
+                    break;
+            }
+            doc.find('.TPFieldHost').find('option:selected').removeAttr("selected");
+            doc.find('.TPFieldHost option[value="' + default_host + '"]')
+                .attr('selected', 'selected');
+            doc.find('.TPFieldHostLabel').children('.zelect').remove();
+            doc.find('.TPFieldHost').zelect({});
+        }
+    }
+
     switch ($('select.TPFieldLocalization').val()){
         case "1":
             doc.find('.TPFieldTitleCaseDiv').show();

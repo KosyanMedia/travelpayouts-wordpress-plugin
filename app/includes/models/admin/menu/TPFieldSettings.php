@@ -399,6 +399,11 @@ class TPFieldSettings {
             </label>
 
         </div>
+         <div class="TP-LocalHead">
+             <?php $this->TPFieldHost(); ?>
+            <label>
+            </label>
+         </div>
         <div class="TP-LocalHead TPFieldTitleCaseDiv">
             <?php $this->TPFieldTitleCase(); ?>
         </div>
@@ -449,7 +454,65 @@ class TPFieldSettings {
         </div>
     <?php
     }
-
+    public function TPFieldHost(){
+        $hosts = array(
+            'aviasales.ru',
+            'jetradar.com',
+            'jetradar.com.br',
+            'ca.jetradar.com',
+            'jetradar.ch',
+            'jetradar.at',
+            'jetradar.be',
+            'jetradar.co.nl',
+            'jetradar.gr',
+            'jetradar.com.au',
+            'jetradar.de',
+            'jetradar.es',
+            'jetradar.fr',
+            'jetradar.it',
+            'jetradar.pt',
+            'ie.jetradar.com',
+            'jetradar.co.uk',
+            'jetradar.hk',
+            'jetradar.in',
+            'jetradar.co.nz',
+            'jetradar.ph',
+            'jetradar.pl',
+            'jetradar.sg',
+            'jetradar.co.th',
+        );
+        $host_option = \app\includes\TPPlugin::$options['local']['host'];
+        $default_host_option = \app\includes\TPPlugin::$options['local']['host'];
+        $default_host_ru = 'aviasales.ru';
+        $default_host_en = 'jetradar.com';
+        switch(\app\includes\TPPlugin::$options['local']['localization']){
+            case 1:
+                if(empty($host_option)) $host_option = $default_host_ru;
+                break;
+            case 2:
+                if(empty($host_option)) $host_option = $default_host_en;
+                break;
+        }
+        ?>
+        <label class="TPFieldHostLabel">
+            <span>
+                <?php echo _x('Host', 'page_settings tab local', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
+            <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host]"
+                    class="TP-Zelect TPFieldHost"
+                    data-host="<?php echo $default_host_option; ?>"
+                    data-default_host_ru="<?php echo $default_host_ru; ?>"
+                    data-default_host_en="<?php echo $default_host_en; ?>">
+                <?php foreach($hosts as $host){ ?>
+                <option <?php selected($host_option, $host ); ?>
+                    value="<?php echo $host; ?>">
+                    <?php echo $host; ?>
+                </option>
+                <?php } ?>
+            </select>
+        </label>
+        <?php
+    }
     /**
      *
      */

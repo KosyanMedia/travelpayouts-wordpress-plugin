@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-04-08 13:14+0300\n"
+"POT-Creation-Date: 2016-04-14 12:47+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -37,15 +37,15 @@ msgstr "Проблема с плагином? Есть пожелания или
 msgid "View "
 msgstr ""
 
-#: app/includes/TPLoader.php:92
+#: app/includes/TPLoader.php:96
 msgid "Set details and enable plugin features"
 msgstr "Настроить плагин для начала работы"
 
-#: app/includes/TPLoader.php:97
+#: app/includes/TPLoader.php:101
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
-#: app/includes/TPLoader.php:98
+#: app/includes/TPLoader.php:102
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "
@@ -145,7 +145,7 @@ msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
 #: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:303
-#: app/includes/models/admin/menu/TPFieldSettings.php:459
+#: app/includes/models/admin/menu/TPFieldSettings.php:474
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:76
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:108
@@ -154,7 +154,7 @@ msgid "Origin"
 msgstr "Откуда"
 
 #: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:302
-#: app/includes/models/admin/menu/TPFieldSettings.php:482
+#: app/includes/models/admin/menu/TPFieldSettings.php:497
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:82
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:115
@@ -435,38 +435,38 @@ msgctxt "add_menu_page page title"
 msgid "Flight Tickets"
 msgstr "Авиабилеты"
 
-#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:20
-msgid "Form"
-msgstr "Форма"
-
-#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:20
+#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:21
 msgid "Insert search form"
 msgstr "Вставить поисковую форму"
 
-#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:14
-msgid "Widget"
-msgstr "Виджет"
+#: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
+msgid "Form"
+msgstr "Форма"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:14
 msgid "Insert widget"
 msgstr "Вставить виджет"
 
-#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
+#: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
+msgid "Widget"
+msgstr "Виджет"
+
+#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:18
+msgid "Insert link"
+msgstr "Вставить ссылку"
+
+#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:51
 msgid "Link"
 msgstr "Ссылка"
 
-#: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:17
-msgid "Insert link"
-msgstr "Вставить ссылку"
+#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:14
+msgid "Insert table"
+msgstr "Вставить таблицу"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:14
 msgid "Table"
 msgstr "Таблица"
-
-#: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:14
-msgid "Insert table"
-msgstr "Вставить таблицу"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
 #: app/includes/models/admin/menu/TPFieldWidgets.php:85
@@ -881,11 +881,13 @@ msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:379
+#: app/includes/models/admin/menu/TPFieldSettings.php:407
 #: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:382
+#: app/includes/models/admin/menu/TPFieldSettings.php:410
 #: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
@@ -910,32 +912,37 @@ msgstr "доллар США"
 msgid "Euro"
 msgstr "Евро"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:406
+#: app/includes/models/admin/menu/TPFieldSettings.php:404
+msgctxt "page_settings tab local"
+msgid "Host"
+msgstr "Хост"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:421
 msgid "Fields"
 msgstr "Названия ячеек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:465
-#: app/includes/models/admin/menu/TPFieldSettings.php:488
+#: app/includes/models/admin/menu/TPFieldSettings.php:480
+#: app/includes/models/admin/menu/TPFieldSettings.php:503
 msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:468
-#: app/includes/models/admin/menu/TPFieldSettings.php:491
+#: app/includes/models/admin/menu/TPFieldSettings.php:483
+#: app/includes/models/admin/menu/TPFieldSettings.php:506
 msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:471
-#: app/includes/models/admin/menu/TPFieldSettings.php:494
+#: app/includes/models/admin/menu/TPFieldSettings.php:486
+#: app/includes/models/admin/menu/TPFieldSettings.php:509
 msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:474
-#: app/includes/models/admin/menu/TPFieldSettings.php:497
+#: app/includes/models/admin/menu/TPFieldSettings.php:489
+#: app/includes/models/admin/menu/TPFieldSettings.php:512
 msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:477
-#: app/includes/models/admin/menu/TPFieldSettings.php:500
+#: app/includes/models/admin/menu/TPFieldSettings.php:492
+#: app/includes/models/admin/menu/TPFieldSettings.php:515
 msgid "Prepositional"
 msgstr "Предложный"
 

@@ -851,7 +851,6 @@ class TPShortcodeView {
         switch(\app\includes\TPPlugin::$options['local']['currency']){
             case "1":
                 $currency = '<i class="TPCurrencyIco" >i</i>';
-
                 break;
             case "2":
                 $currency = '<i class="TPCurrencyIco">$</i>';//&#8364;
