@@ -47,15 +47,15 @@ class TPDefault implements  \core\TPODefault{
         switch($locale) {
             case "ru_RU":
                 $localization = 1;
-                $currency = 1;
+                $currency = 'RUB';
                 break;
             case "en_US":
                 $localization = 2;
-                $currency = 2;
+                $currency = 'USD';
                 break;
             default:
                 $localization = 1;
-                $currency = 1;
+                $currency = 'RUB';
                 break;
         }
         // TODO: Implement defaultOptions() method.

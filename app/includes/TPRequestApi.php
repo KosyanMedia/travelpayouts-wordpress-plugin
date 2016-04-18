@@ -13,7 +13,7 @@ class TPRequestApi {
     protected $api_url;
     protected $api_url_2;
     protected $error_json;
-    public $currencys = array('RUB', 'USD', 'EUR');
+    public $currencys;
     public $calendar_types = array( 'departure_date', 'return_date' );
     private static $instance = null;
     private function __construct() {
@@ -51,6 +51,7 @@ class TPRequestApi {
             //new TPAdminNotice("error", "Токен не указан или указан не верно.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "token");
         }else{
+            $this->currencys = \app\includes\common\TPCurrencyUtils::getCurrencyAll();
             $this->status = true;
             $this->marker = TPPlugin::$options['account']['marker'];
             $this->token = TPPlugin::$options['account']['token'];

@@ -388,15 +388,14 @@ class TPFieldSettings {
             <label>
                 <span><?php _e('Currency', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 1 ); ?> value="1">
-                        <?php _e('Ruble', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 2 ); ?>  value="2">
-                        <?php _e('US dollar', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['currency'], 3 ); ?>  value="3">
-                        <?php _e('Euro', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </option>
+                    <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
+                        <option
+                            <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
+                            value="<?php echo $currency ?>">
+                            <?php echo $currency; ?>
+                        </option>
+                    <?php } ?>
+
                 </select>
             </label>
 

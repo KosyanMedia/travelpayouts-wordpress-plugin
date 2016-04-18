@@ -100,6 +100,7 @@ class TPWidgetsView {
             $white_label = preg_replace("(^https?://)", "", $white_label );
             $white_label = preg_replace("#/$#", "", $white_label);
         }
+
         switch($widgetType){
             case 1:
                 if( ! $white_label || empty( $white_label ) ){

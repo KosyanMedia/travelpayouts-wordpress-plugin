@@ -842,7 +842,7 @@ class TPShortcodeView {
      * @return string
      */
     public function currencyView(){
-        switch(\app\includes\TPPlugin::$options['local']['currency']){
+       /* switch(\app\includes\TPPlugin::$options['local']['currency']){
             case "1":
                 $currency = '<i class="TPCurrencyIco" >i</i>';
                 break;
@@ -853,8 +853,8 @@ class TPShortcodeView {
                 $currency = '<i class="TPCurrencyIco">€</i>';//&#8364;
                 break;
 
-        }
-        return $currency;
+        }*/
+        return \app\includes\TPPlugin::$options['local']['currency'];
     }
 
     /**

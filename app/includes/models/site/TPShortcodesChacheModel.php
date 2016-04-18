@@ -47,7 +47,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
      * @return string
      */
     public function typeCurrency(){
-        switch((int) \app\includes\TPPlugin::$options['local']['currency']){
+        /*switch((int) \app\includes\TPPlugin::$options['local']['currency']){
             case 1:
                 $currency = 'RUB';
                 break;
@@ -57,8 +57,8 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
             case 3:
                 $currency = 'EUR';
                 break;
-        }
-        return $currency;
+        }*/
+        return \app\includes\TPPlugin::$options['local']['currency'];
     }
 
     /**
