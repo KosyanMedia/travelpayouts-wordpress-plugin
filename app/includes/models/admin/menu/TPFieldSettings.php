@@ -6,6 +6,8 @@
  * Time: 11:04
  */
 namespace app\includes\models\admin\menu;
+use app\includes\common\TPHostURL;
+
 class TPFieldSettings {
     public $local = array(
         1 => 'ru',
@@ -455,32 +457,7 @@ class TPFieldSettings {
     <?php
     }
     public function TPFieldHost(){
-        $hosts = array(
-            'aviasales.ru',
-            'jetradar.com',
-            'jetradar.com.br',
-            'ca.jetradar.com',
-            'jetradar.ch',
-            'jetradar.at',
-            'jetradar.be',
-            'jetradar.co.nl',
-            'jetradar.gr',
-            'jetradar.com.au',
-            'jetradar.de',
-            'jetradar.es',
-            'jetradar.fr',
-            'jetradar.it',
-            'jetradar.pt',
-            'ie.jetradar.com',
-            'jetradar.co.uk',
-            'jetradar.hk',
-            'jetradar.in',
-            'jetradar.co.nz',
-            'jetradar.ph',
-            'jetradar.pl',
-            'jetradar.sg',
-            'jetradar.co.th',
-        );
+        $hosts = \app\includes\common\TPHostURL::getHost();
         $host_option = \app\includes\TPPlugin::$options['local']['host'];
         $default_host_option = \app\includes\TPPlugin::$options['local']['host'];
         $default_host_ru = 'aviasales.ru';

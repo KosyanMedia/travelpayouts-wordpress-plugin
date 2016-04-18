@@ -676,14 +676,7 @@ class TPShortcodeView {
             }
         }
         if( ! $white_label || empty( $white_label ) ){
-            switch (\app\includes\TPPlugin::$options['local']['localization']){
-                case 1:
-                    $white_label = 'http://engine.aviasales.ru';
-                    break;
-                case 2:
-                    $white_label = 'http://jetradar.com';
-                    break;
-            }
+            $white_label = \app\includes\common\TPHostURL::getHostTable();
         }
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
@@ -716,6 +709,7 @@ class TPShortcodeView {
                 $url .= $one_way;
                 break;
         }
+
         if($redirect){
             $home = '';
             $home = get_option('home');
