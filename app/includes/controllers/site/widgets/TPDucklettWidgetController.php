@@ -30,7 +30,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'origin' => false,
             'destination' => false,
             'airline' => false,
-            'currency' => $this->view->typeCurrency() ,
+            'currency' => 'USD' ,
             'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
@@ -75,9 +75,13 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
                 $url = '//www.travelpayouts.com/ducklett/scripts.js';
         }
        // error_log($url);
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '<script async src="'.$url.'?widget_type='.$type
-            .'&currency='.mb_strtolower($currency).'&host='.$this->view->getWhiteLabel($widgets).'&marker='
+            .'&currency='.mb_strtolower($currency).'&host='.$white_label.'&marker='
             .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8">
         </script>';
         return $output;

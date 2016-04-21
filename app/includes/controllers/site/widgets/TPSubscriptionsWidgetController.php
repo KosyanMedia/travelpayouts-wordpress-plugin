@@ -38,11 +38,15 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         $color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['color']);
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         //error_log($width);
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
         <div class="TPWidget TPSubscriptionsWidget">
             <script async src="//www.travelpayouts.com/subscription_widget/widget.js'.$width.'backgroundColor='.$color
-            .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$this->view->getWhiteLabel($widgets).'
+            .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$white_label.'
             &originIata='.$origin.'&destinationIata='.$destination.'"></script></div>';
         return $output;
     }

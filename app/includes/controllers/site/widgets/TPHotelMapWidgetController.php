@@ -48,14 +48,17 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
         $map_color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['map_color']);
         $contrast_color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['contrast_color']);
         $output = '';
-
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '
         <div class="TPWidget TPHotelMapWidget">
         <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.$this->view->locale.'&marker='.$this->view->getMarker($widgets, $subid)
             .'&changeflag=0&draggable='.$draggable.'&map_styled='.$map_styled.'&map_color='.$map_color.'
                     &contrast_color='.$contrast_color.'&disable_zoom='.$disable_zoom.'
                     &base_diameter='.\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter'].'
-                    &scrollwheel='.$scrollwheel.'&host='.$this->view->getWhiteLabel($widgets).'&lat='.$lat.'&lng='.$lon.'&zoom='.$zoom.'"
+                    &scrollwheel='.$scrollwheel.'&host='.$white_label.'&lat='.$lat.'&lng='.$lon.'&zoom='.$zoom.'"
                     height="'.$height.'px" width="'.$width.'px"  scrolling="no" frameborder="0"></iframe></div>';
         return $output;
     }

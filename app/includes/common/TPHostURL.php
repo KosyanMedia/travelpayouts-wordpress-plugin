@@ -28,12 +28,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.com/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.com/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.com/new_searches/'
             )
         ),
         'jetradar.com.br' => array(
@@ -41,12 +41,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.com.br/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.com.br/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.com.br/new_searches/'
             )
         ),
         'ca.jetradar.com' => array(
@@ -54,12 +54,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'ca.jetradar.com/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'ca.jetradar.com/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'ca.jetradar.com/new_searches/'
             )
         ),
         'jetradar.ch' => array(
@@ -67,12 +67,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.ch/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.ch/new_searches/',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.ch/new_searches/'
             )
         ),
         'jetradar.at' => array(
@@ -351,6 +351,7 @@ class TPHostURL
      */
     public static function getHostWidget($widget){
         $host = \app\includes\TPPlugin::$options['local']['host'];
+        //3,6,8
         $host = self::$hosts[$host]['widget'][$widget];
         return $host;
     }

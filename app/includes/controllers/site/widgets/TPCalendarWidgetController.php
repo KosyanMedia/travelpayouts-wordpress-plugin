@@ -40,13 +40,17 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
         $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
         $period_day_to = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
-
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
+        error_log($currency);
         $output = '';
         $output = '
             <div class="TPWidget TPCalendarWidget">
             <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
-            .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
-            .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
+            .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
+            .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.$this->view->locale
             .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"

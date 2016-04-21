@@ -52,14 +52,17 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         }
         $cat = $cat1.'%2C'.$cat2.'%2C'.$cat3;
         error_log($cat);
-
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '
         <div class="TPWidget TPHotelSelectWidget">
         <script async src="'.$url.'?categories='.$cat.'&id='
         .$id
         .'&type='.$type
-        .'&currency='.mb_strtolower($this->view->typeCurrency())
-        .$width.'&host='.$this->view->getWhiteLabel($widgets)
+        .'&currency='.mb_strtolower($currency)
+        .$width.'&host='.$white_label
         .'&marker='.$this->view->getMarker($widgets, $subid).'.&limit='
         .$limit
         .'" charset="UTF-8"></script></div>';

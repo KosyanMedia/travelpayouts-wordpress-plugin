@@ -100,7 +100,7 @@ class TPWidgetsView {
             $white_label = preg_replace("(^https?://)", "", $white_label );
             $white_label = preg_replace("#/$#", "", $white_label);
         }
-
+        //3,6,8
         switch($widgetType){
             case 1:
                 if( ! $white_label || empty( $white_label ) ){
@@ -132,13 +132,17 @@ class TPWidgetsView {
                 break;
             case 3:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'hydra.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'hydra.jetradar.com';
-                            break;
+                    $white_label = \app\includes\common\TPHostURL::getHostWidget(3);
+                    //error_log($white_label);
+                    if( ! $white_label || empty( $white_label ) ){
+                        switch (\app\includes\TPPlugin::$options['local']['localization']){
+                            case 1:
+                                $white_label = 'hydra.aviasales.ru';
+                                break;
+                            case 2:
+                                $white_label = 'hydra.jetradar.com';
+                                break;
+                        }
                     }
                 }else{
                     $white_label .= '/flights';
@@ -173,7 +177,11 @@ class TPWidgetsView {
                             $white_label = 'hydra.jetradar.com';
                             break;
                     }    */
-                    $white_label = 'hydra.aviasales.ru';
+                    $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
+                    error_log($white_label);
+                    if( ! $white_label || empty( $white_label ) ) {
+                        $white_label = 'hydra.aviasales.ru';
+                    }
                 }
                 break;
             case 7:
@@ -185,13 +193,17 @@ class TPWidgetsView {
                 break;
             case 8:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'hydra.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'www.jetradar.com%2Fsearches%2Fnew';
-                            break;
+                    $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
+                    error_log($white_label);
+                    if( ! $white_label || empty( $white_label ) ) {
+                        switch (\app\includes\TPPlugin::$options['local']['localization']) {
+                            case 1:
+                                $white_label = 'hydra.aviasales.ru';
+                                break;
+                            case 2:
+                                $white_label = 'www.jetradar.com%2Fsearches%2Fnew';
+                                break;
+                        }
                     }
                     //$white_label = 'hydra.aviasales.ru';
                 }else{
@@ -216,6 +228,87 @@ class TPWidgetsView {
                 break;
             case 3:
                 $currency = 'EUR';
+                break;
+        }
+        return $currency;
+    }
+
+    public function getCurrency($widgetType = false, $white_label = ''){
+        $currency = '';
+        $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
+        $currency_default = array('USD', 'RUB');
+        error_log($white_label);
+        error_log($currency_option);
+
+        switch($widgetType){
+            case 1:
+                if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }
+                break;
+            case 2:
+                if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }
+                break;
+            case 3:
+                if(strpos($white_label, 'jetradar') !== false){
+                    if($currency_option == $currency_default[1]){
+                        $currency = $currency_default[0];
+                    }else{
+                        $currency = $currency_option;
+                    }
+                }else{
+                    $currency = $currency_option;
+                }
+
+                break;
+            case 4:
+                if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }
+                break;
+            case 5:
+                if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }
+                break;
+            case 6:
+                if(strpos($white_label, 'jetradar') !== false){
+                    if($currency_option == $currency_default[1]){
+                        $currency = $currency_default[0];
+                    }else{
+                        $currency = $currency_option;
+                    }
+                }else{
+                    $currency = $currency_option;
+                }
+                break;
+            case 7:
+                if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }
+                break;
+            case 8:
+                if(strpos($white_label, 'jetradar') !== false){
+                    if($currency_option == $currency_default[1]){
+                        $currency = $currency_default[0];
+                    }else{
+                        $currency = $currency_option;
+                    }
+                }else{
+                    $currency = $currency_option;
+                }
                 break;
         }
         return $currency;

@@ -24,12 +24,16 @@ class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsSho
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
             <div class="TPWidget TPHotelWidget">
             <script async src="//www.travelpayouts.com/chansey/iframe.js'.$width.'&hotel_id='.$hotel_id
-            .'&locale='.$this->view->locale.'&host='.$this->view->getWhiteLabel($widgets).'%2Fsearch&marker='.$this->view->getMarker($widgets, $subid)
-            .'&currency='.mb_strtolower($this->view->typeCurrency()).'">
+            .'&locale='.$this->view->locale.'&host='.$white_label.'%2Fsearch&marker='.$this->view->getMarker($widgets, $subid)
+            .'&currency='.mb_strtolower($currency).'">
                    </script></div>';
 
         return $output;
