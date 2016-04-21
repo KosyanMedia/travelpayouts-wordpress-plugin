@@ -409,7 +409,7 @@ class TPFieldSettings {
             <?php $this->TPFieldTitleCase(); ?>
         </div>
         <div class="TP-listColum">
-            <span><?php _e('Fields', TPOPlUGIN_TEXTDOMAIN); ?></span>
+            <span><?php _e('Fields (you can edit values on your own, e.g. for your own language)', TPOPlUGIN_TEXTDOMAIN); ?></span>
             <?php
             $local_table_fields = '<ul class="titleHeadTable">
                            <li class="TPLangFieldsLi">'.$this->local[\app\includes\TPPlugin::$options['local']['localization']].'</li>
