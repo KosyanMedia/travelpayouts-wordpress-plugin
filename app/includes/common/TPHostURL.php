@@ -70,7 +70,7 @@ class TPHostURL
                 3 => 'jetradar.ch/new_searches/',
                 4 => '',
                 5 => '',
-                6 => 'jetradar.ch/new_searches/',
+                6 => 'jetradar.ch/new_searches',
                 7 => '',
                 8 => 'jetradar.ch/new_searches/'
             )
@@ -80,12 +80,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.at/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.at/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.at/new_searches/'
             )
         ),
         'jetradar.be' => array(
@@ -93,12 +93,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.be/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.be/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.be/new_searches/'
             )
         ),
         'jetradar.co.nl' => array(
@@ -106,12 +106,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.co.nl/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.co.nl/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.co.nl/new_searches/'
             )
         ),
         'jetradar.gr' => array(
@@ -119,12 +119,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.gr/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.gr/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.gr/new_searches/'
             )
         ),
         'jetradar.com.au' => array(
@@ -132,12 +132,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.com.au/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.com.au/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.com.au/new_searches/'
             )
         ),
         'jetradar.de' => array(
@@ -145,12 +145,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.de/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.de/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.de/new_searches/'
             )
         ),
         'jetradar.es' => array(
@@ -158,12 +158,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.es/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.es/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.es/new_searches/'
             )
         ),
         'jetradar.fr' => array(
@@ -171,12 +171,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.fr/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.fr/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.fr/new_searches/'
             )
         ),
         'jetradar.it' => array(
@@ -184,12 +184,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.it/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.it/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.it/new_searches/'
             )
         ),
         'jetradar.pt' => array(
@@ -197,12 +197,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.pt/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.pt/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.pt/new_searches/'
             )
         ),
         'ie.jetradar.com' => array(
@@ -210,12 +210,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'ie.jetradar.com/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'ie.jetradar.com/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'ie.jetradar.com/new_searches/'
             )
         ),
         'jetradar.co.uk' => array(
@@ -223,12 +223,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.co.uk/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.co.uk/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.co.uk/new_searches/'
             )
         ),
         'jetradar.hk' => array(
@@ -236,12 +236,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.hk/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.hk/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.hk/new_searches/'
             )
         ),
         'jetradar.in' => array(
@@ -249,12 +249,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.in/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.in/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.in/new_searches/'
             )
         ),
         'jetradar.co.nz' => array(
@@ -262,12 +262,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.co.nz/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.co.nz/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.co.nz/new_searches/'
             )
         ),
         'jetradar.ph' => array(
@@ -275,12 +275,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.ph/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.ph/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.ph/new_searches/'
             )
         ),
         'jetradar.pl' => array(
@@ -288,12 +288,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.pl/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.pl/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.pl/new_searches/'
             )
         ),
         'jetradar.sg' => array(
@@ -301,12 +301,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.sg/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.sg/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.sg/new_searches/'
             )
         ),
         'jetradar.co.th' => array(
@@ -314,12 +314,12 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => '',
+                3 => 'jetradar.co.th/new_searches/',
                 4 => '',
                 5 => '',
-                6 => '',
+                6 => 'jetradar.co.th/new_searches',
                 7 => '',
-                8 => ''
+                8 => 'jetradar.co.th/new_searches/'
             )
         ),
     );
