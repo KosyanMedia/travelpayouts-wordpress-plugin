@@ -65,6 +65,9 @@ class TPLoader extends \core\TPOLoader{
         new \app\includes\controllers\site\widgets\TPHotelSelectController();
         new \app\includes\controllers\site\widgets\TPDucklettWidgetController();
 
+        //Tabs
+        new \app\includes\controllers\site\TPTabsShortcodeController();
+
 
     }
 

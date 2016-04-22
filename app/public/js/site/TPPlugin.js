@@ -1,5 +1,6 @@
 jQuery(function($) {
     $(document).ready(function () {
+        $( ".TPTabs" ).tabs();
         var conteiner = '.TP-Plugin-Tables_wrapper';
         var table = conteiner + ' .TP-Plugin-Tables_box';
 

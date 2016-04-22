@@ -563,7 +563,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_VERSION // $ver
             );
         }
-
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-jquery-ui',
+            TPOPlUGIN_URL.'app/public/css/lib/jquery-ui/jquery-ui.min.css',
+            array(),
+            TPOPlUGIN_VERSION
+        );
         /** End register styles */
 
         /** Register scripts */
@@ -612,6 +617,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_URL.'app/public/js/site/TPPlugin.js', //$src
             array(
                 'jquery',
+                'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-dataTables',
                 ), //$deps
             TPOPlUGIN_VERSION, //$ver
@@ -622,6 +628,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         /** Call scripts and style **/
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPNormalize');
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
+        wp_enqueue_style(TPOPlUGIN_SLUG. '-jquery-ui');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
     }
 

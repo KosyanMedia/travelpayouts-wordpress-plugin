@@ -12,6 +12,7 @@ abstract class TPWigetsShortcodesController extends \core\controllers\TPOShortco
         parent::__construct();
         $this->view = new \app\includes\views\site\widgets\TPWidgetsView();
     }
+
     public function action($args = array())
     {
         // TODO: Implement action() method.
