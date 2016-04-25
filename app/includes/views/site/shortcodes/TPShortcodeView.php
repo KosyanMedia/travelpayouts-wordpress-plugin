@@ -669,14 +669,17 @@ class TPShortcodeView {
             'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //error_log("getUrlTable subid = ".$subid);
+        $isWhiteLabel = false;
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
             if(strpos($white_label, 'http') === false){
                 $white_label = 'http://'.$white_label;
             }
+            $isWhiteLabel = true;
         }
         if( ! $white_label || empty( $white_label ) ){
             $white_label = \app\includes\common\TPHostURL::getHostTable();
+            $isWhiteLabel = false;
         }
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
@@ -698,6 +701,12 @@ class TPShortcodeView {
         $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : "";
         $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
+        if ($isWhiteLabel == true){
+            if (\app\includes\TPPlugin::$options['local']['localization'] == 2){
+                $url .= '&locale=en';
+                $url .= '&currency='.\app\includes\TPPlugin::$options['local']['currency'];
+            }
+        }
         switch($type){
             case 1:
             case 10:
@@ -854,7 +863,7 @@ class TPShortcodeView {
                 break;
 
         }*/
-        return \app\includes\TPPlugin::$options['local']['currency'];
+        return ' '.\app\includes\TPPlugin::$options['local']['currency'];
     }
 
     /**
