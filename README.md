@@ -2,7 +2,7 @@
 
 ## About plugin
 
-Install our wordpress travel plugin to your website and help your visitors to find the cheapest flights and hotels. Widgets, tables, forms — all of these can be installed in just a few clicks, making your users happy and bringing you steady income. Note: It has nothing to do with advertising. We offer in-demand and useful services! This wordpress travel plugin is a very good solution for travel bloggers, travel agencies and travel-related websites.
+Install our [wordpress travel plugin](https://wordpress.org/plugins/travelpayouts/) to your website and help your visitors to find the cheapest flights and hotels. Widgets, tables, forms — all of these can be installed in just a few clicks, making your users happy and bringing you steady income. Note: It has nothing to do with advertising. We offer in-demand and useful services! This wordpress travel plugin is a very good solution for travel bloggers, travel agencies and travel-related websites.
 
 ## What the "Travelpayouts" plugin can offer:
 
