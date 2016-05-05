@@ -6,7 +6,7 @@
  * Time: 15:43
  */
 namespace app\includes\controllers\admin\media_buttons;
-class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
+class TPWidgetButtonsController extends TPAdminMediaButtonsController{
 
     public function action($args = array())
     {

@@ -517,6 +517,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
 
         global $widgets;
+        global $wp_styles;
 
 
         global $post;
@@ -537,6 +538,32 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-TPNormilize', //$handle
             TPOPlUGIN_URL.'app/public/css/site/TPNormalize.css', // $src
             array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-fontello', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/fontello.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-animation', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/animation.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        wp_enqueue_style(
+            TPOPlUGIN_SLUG.'-fontello-ie7', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/fontello-ie7.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        $wp_styles->add_data(  TPOPlUGIN_SLUG.'-fontello-ie7', 'conditional', 'IE 7' );
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-TPCurrencyMain', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/TPCurrencyMain.css', // $src
+            array(TPOPlUGIN_SLUG.'-fontello', TPOPlUGIN_SLUG.'-animation'), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
 
@@ -569,6 +596,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(),
             TPOPlUGIN_VERSION
         );
+
         /** End register styles */
 
         /** Register scripts */
@@ -629,6 +657,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPNormalize');
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
         wp_enqueue_style(TPOPlUGIN_SLUG. '-jquery-ui');
+        wp_enqueue_style(TPOPlUGIN_SLUG.'-TPCurrencyMain');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
     }
 

@@ -9,7 +9,7 @@
 namespace app\includes\controllers\admin\media_buttons;
 
 
-class TPLinkButtonsController extends \core\controllers\TPOAdminMediaButtonsController
+class TPLinkButtonsController extends TPAdminMediaButtonsController
 {
 
     public function action($args = array())

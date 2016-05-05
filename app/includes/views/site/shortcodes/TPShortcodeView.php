@@ -851,19 +851,8 @@ class TPShortcodeView {
      * @return string
      */
     public function currencyView(){
-       /* switch(\app\includes\TPPlugin::$options['local']['currency']){
-            case "1":
-                $currency = '<i class="TPCurrencyIco" >i</i>';
-                break;
-            case "2":
-                $currency = '<i class="TPCurrencyIco">$</i>';//&#8364;
-                break;
-            case "3":
-                $currency = '<i class="TPCurrencyIco">€</i>';//&#8364;
-                break;
-
-        }*/
-        return ' '.\app\includes\TPPlugin::$options['local']['currency'];
+        $currency = mb_strtolower(\app\includes\TPPlugin::$options['local']['currency']);
+        return '<i class="TP-currency-icons"><i class="demo-icon icon-'.$currency.'"></i></i>';
     }
 
     /**
@@ -1142,28 +1131,38 @@ class TPShortcodeView {
 
     /** **/
     public function redirect_plugins(){
+
         $redirect = false;
         if(isset(\app\includes\TPPlugin::$options['config']['redirect']))
             $redirect = true;
         if($redirect){
+
             if(isset($_GET['searches'])){
+                //error_log('redirect_plugins');
+                //error_log(print_r($_GET['searches'], true));
                 $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
                 if(!empty($white_label)){
                     if(strpos($white_label, 'http') === false){
                         $white_label = 'http://'.$white_label;
                     }
                 }else{
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
+                    /*switch (\app\includes\TPPlugin::$options['local']['localization']){
                         case 1:
                             $white_label = 'http://engine.aviasales.ru';
                             break;
                         case 2:
                             $white_label = 'http://jetradar.com';
                             break;
-                    }
+                    }*/
+                    $white_label = \app\includes\common\TPHostURL::getHostTable();
+                    //error_log('0 = '.$white_label);
+
                 }
+                //error_log('1 = '.$white_label);
                 $white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
+                //error_log('2 = '.$white_label);
                 header("Location: {$white_label}", true, 302);
+                die;
                 /*
                  * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
                  * problem
@@ -1189,6 +1188,7 @@ class TPShortcodeView {
                 }
                 $white_label = "{$white_label}/searches/".urldecode($_GET['searches_ticket']);
                 header("Location: {$white_label}", true, 302);
+                die;
                 /*
                  * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
                  * problem
@@ -1207,6 +1207,7 @@ class TPShortcodeView {
                 }
                 $white_label = "{$white_label}".urldecode($_GET['searches_hotel']);
                 header("Location: {$white_label}", true, 302);
+                die;
                 /*
                  * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
                  * problem

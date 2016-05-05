@@ -6,7 +6,7 @@
  * Time: 17:18
  */
 namespace app\includes\controllers\admin\media_buttons;
-class TPSearchFormButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
+class TPSearchFormButtonsController extends TPAdminMediaButtonsController{
     public $model;
     public $data;
     public function __construct()

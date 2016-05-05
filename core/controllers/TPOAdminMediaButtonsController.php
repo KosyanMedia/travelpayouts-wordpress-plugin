@@ -32,24 +32,4 @@ abstract class TPOAdminMediaButtonsController extends TPOBaseController{
     }
     abstract public function action($args = array());
     abstract public function render();
-
-    /**
-     * @param string $txtDefault
-     * @param string $txtCompact
-     * @return string
-     */
-    public function getTextBtn($txtDefault = '', $txtCompact = ''){
-        $txt = '';
-        switch( \app\includes\TPPlugin::$options['config']['media_button']['view'] ){
-            case 0:
-                $txt = $txtDefault;
-                break;
-            case 1:
-                $txt = $txtCompact;
-                break;
-            default:
-                $txt = $txtDefault;
-        }
-        return $txt;
-    }
 }

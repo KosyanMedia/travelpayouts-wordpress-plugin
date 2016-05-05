@@ -142,10 +142,10 @@
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link i {
     font-size: 14px;
     font-weight: normal;
-    font-family: ALSRubl, sans-serif;
+    /*font-family: ALSRubl, sans-serif;*/
     font-style: normal;
     line-height: 26px;
-    margin-left: 5px; }
+    margin-left: 2px; }
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
     background: #ce6408;
     text-decoration: none;
@@ -300,7 +300,7 @@
 .TP-Plugin-Tables_box tbody tr:hover .TPPopUpButtonTable{
     display: block;
 }
-@font-face {
+/*@font-face {
     font-family: 'ALSRubl';
     src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
     font-weight: normal;
@@ -313,6 +313,17 @@
     font-style: normal;
     line-height: 26px;
     margin-left: 5px;
+}*/
+@font-face {
+    font-family: 'Currency Font';
+    src: url("../lib/currency_fonts/currency-regular-webfont.eot");
+    src: url("../lib/currency_fonts/currency-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../lib/currency_fonts/currency-regular-webfont.woff") format("woff"), url("../lib/currency_fonts/currency-regular-webfont.ttf") format("truetype"), url("../lib/currency_fonts/currency-regular-webfont.svg#untitledregular") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+.currency-font {
+    font-family: 'Currency Font', Helvetica, sans;
+    font-weight: normal;
+    margin-left: 0.3ex;
 }
 
 .TP-Plugin-Tables_box tbody tr td p {
