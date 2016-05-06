@@ -34,8 +34,12 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         $data = $this->model->get_dataId($id);
         //var_dump($data);
         $code_form = wp_unslash($data["code_form"]);
+        $typeForm = $this->model->getTypeForm($code_form);
+        if (!empty($typeForm)) $type = $typeForm;
+        //error_log($type);
+        //error_log($typeForm);
         /*error_log($id);
-        error_log($type);
+
         error_log($origin);
         error_log($destination);
         error_log($hotel_city);*/
