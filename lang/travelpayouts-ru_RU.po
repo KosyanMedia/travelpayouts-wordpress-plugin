@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-04-21 17:50+0300\n"
+"POT-Creation-Date: 2016-05-18 18:42+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -37,15 +37,15 @@ msgstr "Проблема с плагином? Есть пожелания или
 msgid "View "
 msgstr ""
 
-#: app/includes/TPLoader.php:96
+#: app/includes/TPLoader.php:99
 msgid "Set details and enable plugin features"
 msgstr "Настроить плагин для начала работы"
 
-#: app/includes/TPLoader.php:101
+#: app/includes/TPLoader.php:104
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
-#: app/includes/TPLoader.php:102
+#: app/includes/TPLoader.php:105
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "

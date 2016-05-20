@@ -14,7 +14,7 @@ class TPCurrencyUtils
     private static $currency = array(
         'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
         'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
-        'SGD', 'THB', 'GBP', 'GBP'
+        'SGD', 'THB', 'GBP'
     );
 
     /**
