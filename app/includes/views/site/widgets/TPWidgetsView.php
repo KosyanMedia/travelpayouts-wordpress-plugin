@@ -232,73 +232,45 @@ class TPWidgetsView {
         }
         return $currency;
     }
+    public function getCurrencyValid($currency_option){
+        $currency_default = array('USD', 'RUB', 'EUR');
+        $currency = '';
+        if (in_array($currency_option, $currency_default)) {
+            //error_log("true");
+            $currency = $currency_option;
+        } else {
+            //error_log("USD");
+            $currency = $currency_default[0];
+        }
+        return $currency;
+    }
 
     public function getCurrency($widgetType = false, $white_label = ''){
         $currency = '';
         $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
-        $currency_default = array('USD', 'RUB');
+        $currency_default = array('USD', 'RUB', 'EUR');
         error_log($white_label);
         error_log($currency_option);
 
         switch($widgetType){
             case 1:
-                if(strpos($white_label, 'jetradar') !== false){
-                    $currency = $currency_default[0];
-                }else{
-                    $currency = $currency_default[1];
-                }
-                break;
-            case 2:
-                if(strpos($white_label, 'jetradar') !== false){
-                    $currency = $currency_default[0];
-                }else{
-                    $currency = $currency_default[1];
-                }
-                break;
-            case 3:
-                if(strpos($white_label, 'jetradar') !== false){
-                    if($currency_option == $currency_default[1]){
-                        $currency = $currency_default[0];
-                    }else{
-                        $currency = $currency_option;
-                    }
-                }else{
-                    $currency = $currency_option;
-                }
-
-                break;
-            case 4:
-                if(strpos($white_label, 'jetradar') !== false){
-                    $currency = $currency_default[0];
-                }else{
-                    $currency = $currency_default[1];
-                }
-                break;
-            case 5:
-                if(strpos($white_label, 'jetradar') !== false){
-                    $currency = $currency_default[0];
-                }else{
-                    $currency = $currency_default[1];
-                }
-                break;
-            case 6:
-                if(strpos($white_label, 'jetradar') !== false){
-                    if($currency_option == $currency_default[1]){
-                        $currency = $currency_default[0];
-                    }else{
-                        $currency = $currency_option;
-                    }
-                }else{
-                    $currency = $currency_option;
-                }
-                break;
-            case 7:
+                $currency = $this->getCurrencyValid($currency_option);
                 /*if(strpos($white_label, 'jetradar') !== false){
                     $currency = $currency_default[0];
                 }else{
                     $currency = $currency_default[1];
                 }*/
-                if(strpos($white_label, 'jetradar') !== false){
+                break;
+            case 2:
+                /*if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }*/
+                $currency = $this->getCurrencyValid($currency_option);
+                break;
+            case 3:
+                /*if(strpos($white_label, 'jetradar') !== false){
                     if($currency_option == $currency_default[1]){
                         $currency = $currency_default[0];
                     }else{
@@ -306,10 +278,43 @@ class TPWidgetsView {
                     }
                 }else{
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $currency_option;
+
+                break;
+            case 4:
+                /*if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }*/
+                $currency = $this->getCurrencyValid($currency_option);
+                break;
+            case 5:
+                /*if(strpos($white_label, 'jetradar') !== false){
+                    $currency = $currency_default[0];
+                }else{
+                    $currency = $currency_default[1];
+                }*/
+                $currency = $this->getCurrencyValid($currency_option);
+                break;
+            case 6:
+                /*if(strpos($white_label, 'jetradar') !== false){
+                    if($currency_option == $currency_default[1]){
+                        $currency = $currency_default[0];
+                    }else{
+                        $currency = $currency_option;
+                    }
+                }else{
+                    $currency = $currency_option;
+                }*/
+                $currency = $currency_option;
+                break;
+            case 7:
+                $currency = $currency_option;
                 break;
             case 8:
-                if(strpos($white_label, 'jetradar') !== false){
+                /*if(strpos($white_label, 'jetradar') !== false){
                     if($currency_option == $currency_default[1]){
                         $currency = $currency_default[0];
                     }else{
@@ -317,7 +322,8 @@ class TPWidgetsView {
                     }
                 }else{
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $currency_option;
                 break;
         }
         return $currency;
