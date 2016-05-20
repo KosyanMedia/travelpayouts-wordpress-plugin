@@ -293,10 +293,19 @@ class TPWidgetsView {
                 }
                 break;
             case 7:
-                if(strpos($white_label, 'jetradar') !== false){
+                /*if(strpos($white_label, 'jetradar') !== false){
                     $currency = $currency_default[0];
                 }else{
                     $currency = $currency_default[1];
+                }*/
+                if(strpos($white_label, 'jetradar') !== false){
+                    if($currency_option == $currency_default[1]){
+                        $currency = $currency_default[0];
+                    }else{
+                        $currency = $currency_option;
+                    }
+                }else{
+                    $currency = $currency_option;
                 }
                 break;
             case 8:

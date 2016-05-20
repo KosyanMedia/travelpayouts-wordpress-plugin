@@ -56,6 +56,8 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
+        error_log("currency = ".$currency);
+        error_log("currency = ".mb_strtolower($currency));
         $output = '
         <div class="TPWidget TPHotelSelectWidget">
         <script async src="'.$url.'?categories='.$cat.'&id='
