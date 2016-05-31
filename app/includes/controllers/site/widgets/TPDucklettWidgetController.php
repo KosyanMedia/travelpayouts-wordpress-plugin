@@ -79,6 +79,8 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
+        error_log($currency);
+        error_log($white_label);
         $output = '';
         $output = '<script async src="'.$url.'?widget_type='.$type
             .'&currency='.mb_strtolower($currency).'&host='.$white_label.'&marker='

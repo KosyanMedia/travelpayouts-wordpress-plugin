@@ -51,13 +51,13 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
                 $url = '//www.travelpayouts.com/blissey/scripts.js';
         }
         $cat = $cat1.'%2C'.$cat2.'%2C'.$cat3;
-        error_log($cat);
+        //error_log($cat);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
-        error_log("currency = ".$currency);
-        error_log("currency = ".mb_strtolower($currency));
+        //error_log("currency = ".$currency);
+        //error_log("currency = ".mb_strtolower($currency));
         $output = '
         <div class="TPWidget TPHotelSelectWidget">
         <script async src="'.$url.'?categories='.$cat.'&id='
