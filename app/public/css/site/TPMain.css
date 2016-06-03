@@ -397,3 +397,73 @@ span.ellipsis {
 .TP-tdContent a {
     border: none !important;
 }
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a{
+    background-color: #69c7f4;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a{
+    display: block;
+    outline: none;
+    padding: 0 30px;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    color: #929a9f;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    line-height: 60px;
+    background: #fff;
+    -moz-box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+.TPTabs.ui-tabs .ui-tabs-nav li a br {
+    display: none;
+}
+.TPTabs.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.TPTabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li{
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+}
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover a{
+    background-color: #69c7f4;
+    color: #fff;
+    border: none;
+}
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover{
+    border: 1px solid transparent;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li{
+    margin: 0!important;
+    border: 0!important;
+}
