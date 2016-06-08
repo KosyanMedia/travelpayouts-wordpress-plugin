@@ -239,7 +239,7 @@ class TPWidgetsView {
             //error_log("true");
             $currency = $currency_option;
         } else {
-            //error_log("USD");
+            error_log("USD");
             $currency = $currency_default[0];
         }
         return $currency;
@@ -254,7 +254,7 @@ class TPWidgetsView {
             7 => array('PLN'),
             8 => array('CAD', 'CHF', 'GBP', 'HKD', 'IDR', 'INR', 'NZD', 'PHP','PLN', 'SGD', )
         );
-
+        error_log($currency_option);
         switch($widgetType){
             case 1:
                 $currency = $this->getCurrencyValid($currency_option);
