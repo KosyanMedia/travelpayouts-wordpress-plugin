@@ -3,10 +3,7 @@
     font-size: 15px;
     font-weight: 600;
     font-style: normal;
-    display: inline-block;
-    margin-left: 5px;
-
-    /*color: #999;*/
+    color: #999;
 }
 .TP-currency-icons i {
     font-style: normal;

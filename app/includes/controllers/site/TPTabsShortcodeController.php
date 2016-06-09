@@ -41,7 +41,7 @@ class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigets
         if(count($tabs) > 0) {
             $output .= '<div class="TPTabs">';
             foreach($tabs as $key=>$tab){
-                error_log($tab);
+               // error_log($tab);
                 $do_shortcode = do_shortcode($tab);
                 //error_log($do_shortcode);
                 //preg_match($pattern, $do_shortcode, $matches);
@@ -52,8 +52,7 @@ class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigets
                 //error_log($tab_out['title']);
                 $tab_menu_out .= '<li><a href="#TPTabs-'.$key.'">'
                     .$tab_out[0].'</a></li>';
-                $tab_content_out .= '<div class="TPTabContent" id="TPTabs-'.$key.'">'
-                    .$tab_out[1].'</div>';
+                $tab_content_out .= '<div class="TPTabContent" id="TPTabs-'.$key.'">'.$tab_out[1].'</div>';
             }
             $output .= '<ul class="TPTabsMenu">'.$tab_menu_out.'</ul>';
             $output .= $tab_content_out;
