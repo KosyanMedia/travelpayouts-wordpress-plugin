@@ -397,6 +397,12 @@ span.ellipsis {
 .TP-tdContent a {
     border: none !important;
 }
+
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+    border: none;
+}
+
+
 .TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a{
     background-color: #69c7f4;
     color: #fff;
@@ -432,9 +438,10 @@ span.ellipsis {
     padding: 0;
     background: none;
     border: none;
-    width: 100%;
-    height: 60px;
-    margin-bottom: 30px;
+    height: auto;
+    display: inline-block;
+    width: auto;
+    /*margin-bottom: 30px;*/
     overflow: hidden;
     background-color: #fff;
     -moz-border-radius: 5px;
