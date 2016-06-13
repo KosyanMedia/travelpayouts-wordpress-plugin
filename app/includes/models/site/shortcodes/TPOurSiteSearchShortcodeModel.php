@@ -18,9 +18,23 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr =  array('currency' => $this->typeCurrency(),
             'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit, 'one_way' => $one_way);
+        //9. На нашем сайте искали
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 9. На нашем сайте искали ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()){
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if ( false === ($rows = get_transient($this->cacheKey('12')))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 $rows = array();
@@ -57,6 +71,10 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
                 }
                 break;
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($rows_sort, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $rows_sort, 'type' => 12, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way
         , 'off_title' => $off_title, 'subid' => $subid);
 

@@ -27,7 +27,7 @@
                         data-paginate-13="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['13']['paginate_switch']))? 1 : 0;?>"
                         data-paginate-14="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['14']['paginate_switch']))? 1 : 0;?>"
                     >
-                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 1){ ?>
+                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 'RUB'){ ?>
                         <option selected="selected" value="0"> <?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="2">2. <?php _e('Flights from Origin to Destination (next few days)', TPOPlUGIN_TEXTDOMAIN); ?></option>

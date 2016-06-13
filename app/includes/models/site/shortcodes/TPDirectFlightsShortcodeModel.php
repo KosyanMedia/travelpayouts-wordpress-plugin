@@ -22,9 +22,22 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
         $attr = array( 'origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency() );
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 7. Билеты без пересадок ИЗ ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()) {
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if ( false === ($rows = get_transient($this->cacheKey('8', $origin)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 $rows = array();
@@ -47,7 +60,10 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             $rows = $this->iataAutocomplete($rows, 8);
 
         }
-
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($rows, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
             'limit' => $limit, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate
         , 'off_title' => $off_title, 'subid' => $subid);

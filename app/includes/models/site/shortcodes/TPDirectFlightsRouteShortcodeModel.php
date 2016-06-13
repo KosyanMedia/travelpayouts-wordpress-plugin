@@ -11,6 +11,11 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 6. Билеты без пересадок по направлению ";
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB', 'title' => '' , 'paginate' => true,
             'off_title' => '', 'subid' => '');
@@ -35,10 +40,17 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'currency' => $this->typeCurrency() );
-
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()) {
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('7',
                     $origin.$destination)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false {$current_day}");
                 $return = array();
                 if($current_day < 20){
                     $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
@@ -64,6 +76,8 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                     if($return_three)
                         array_push($return, $return_three[$destination][0]);
                 }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 $return = $this->iataAutocomplete($return, 7);
@@ -101,6 +115,10 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 return false;
             $return = $this->iataAutocomplete($return, 7);
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($return, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $return, 'type' => 7, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,

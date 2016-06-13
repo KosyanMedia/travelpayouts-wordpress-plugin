@@ -19,5 +19,9 @@ class TPPopularRoutesFromCityShortcodeController extends \app\includes\controlle
     {
         // TODO: Implement initShortcode() method.
         add_shortcode( 'tp_popular_routes_from_city_shortcodes', array(&$this, 'action'));
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 8. Популярные направления из города ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
     }
 }

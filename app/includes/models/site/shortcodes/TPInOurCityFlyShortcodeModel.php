@@ -20,9 +20,22 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
         $attr = array( 'currency' => $this->typeCurrency(),
             'destination' => $destination, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
             'one_way' => $one_way);
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 11. Дешевые перелеты в город ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()){
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if ( false === ($rows = get_transient($this->cacheKey('14', $destination)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 $rows = array();
@@ -58,6 +71,10 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
                 }
                 break;
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($rows_sort, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $rows_sort,'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
             'type' => 14, 'title' => $title, 'paginate' => $paginate, 'one_way' => $one_way,
             'off_title' => $off_title, 'subid' => $subid

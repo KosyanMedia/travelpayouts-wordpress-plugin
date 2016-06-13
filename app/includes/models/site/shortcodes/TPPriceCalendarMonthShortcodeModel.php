@@ -18,10 +18,23 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
         //$month
         $attr =  array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 1. Цены на месяц по направлению, в одну сторону  ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()) {
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('1',
                     $origin.$destination)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 $return = $this->iataAutocomplete($return, 1);
@@ -54,6 +67,10 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                 }
                 break;
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($rows, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $rows, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate

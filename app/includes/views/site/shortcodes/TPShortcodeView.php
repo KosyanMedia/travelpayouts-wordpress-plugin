@@ -196,7 +196,7 @@ class TPShortcodeView {
      * @return string
      */
     public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid){
-        error_log("renderBodyTable subid = ".$subid);
+        //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);
             $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);

@@ -28,7 +28,15 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'subid' => ''
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." Link ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return  array(
             'origin' => $origin,
             'destination' => $destination,

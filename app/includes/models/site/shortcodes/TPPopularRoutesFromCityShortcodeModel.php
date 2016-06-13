@@ -11,7 +11,7 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        if(\app\includes\TPPlugin::$options['local']['currency'] != 1) return false;
+        if(\app\includes\TPPlugin::$options['local']['currency'] != 'RUB') return false;
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB', 'limit' => false, 'title' => '', 'paginate' => true,
             'off_title' => '', 'subid' => '');
@@ -19,11 +19,23 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         $attr = array('origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
             'currency' => $this->typeCurrency());
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 8. Популярные направления из города ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if ($this->cacheSecund()) {
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('9',
-                    $origin)))
-            ) {
+                    $origin)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if (!$return)
                     return false;
                 set_transient($this->cacheKey('9',
@@ -34,7 +46,10 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
             if (!$return)
                 return false;
         }
-
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($return, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
                 'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate,
             'off_title' => $off_title, 'subid' => $subid);

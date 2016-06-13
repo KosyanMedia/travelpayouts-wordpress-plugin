@@ -16,10 +16,23 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'currency' => $this->typeCurrency());
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
+            ." 5. Цены на билеты по месяцам ";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         if($this->cacheSecund()) {
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('6',
                     $origin.$destination)))) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache -> false");
                 $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
                 set_transient( $this->cacheKey('6',
@@ -30,6 +43,10 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
             if( ! $return )
                 return false;
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("{$method} rows = ".print_r($return, true));
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         //return var_dump("<pre>", $return, "</pre>");
         return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 6, 'title' => $title,
