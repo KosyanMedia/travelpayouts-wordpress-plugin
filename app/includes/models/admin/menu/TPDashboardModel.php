@@ -29,17 +29,25 @@ class TPDashboardModel {
      * @return array|bool
      */
     public function tpGetBalance(){
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         $cacheKey = TPOPlUGIN_NAME."_TPBalance";
         $TPBalance = array();
         if ( false === ( $TPBalance = get_transient($cacheKey) ) ) {
           //  error_log('tpGetBalance');
             //$TPBalance['time'] = current_time('timestamp',1);
             $return = \app\includes\TPPlugin::$TPRequestApi->get_balance();
+            //if( ! $return )
+            //    return false;
             if( ! $return )
-                return false;
+                $return = array();
             $TPBalance['data'] = $return;
             set_transient( $cacheKey, $TPBalance, MINUTE_IN_SECONDS * 10);
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return $TPBalance;
     }
 
@@ -47,6 +55,10 @@ class TPDashboardModel {
      * @return array
      */
     public function tpGetDetailedSales(){
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         $cacheKey = TPOPlUGIN_NAME."_TPDetailedSales";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
@@ -55,11 +67,15 @@ class TPDashboardModel {
             if( !$TPDetailedSales['current_month'])
                 return false;
             $TPDetailedSales['last_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales(array('date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y")))));
-            if( !$TPDetailedSales['last_month'])
-                return false;
+           // if( !$TPDetailedSales['last_month'])
+            //    return false;
+            if( ! $TPDetailedSales['last_month'] )
+                $TPDetailedSales['last_month'] = array();
             $TPDetailedSales['time'] = current_time('timestamp',0);
             set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 10);
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return $TPDetailedSales;
     }
 
@@ -67,6 +83,10 @@ class TPDashboardModel {
      * @return array
      */
     public function tpGetXmlRss(){
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         $cacheKey = TPOPlUGIN_NAME."_TPRssNew";
         $TPRss = array();
         if ( false === ( $TPRss = get_transient($cacheKey) ) ) {
@@ -76,12 +96,17 @@ class TPDashboardModel {
                 if ($sxml !== false) {
                     $TPRss['data'] = \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
                     set_transient($cacheKey, $TPRss, HOUR_IN_SECONDS * 12);
+                } else {
+                    $TPRss['data'] = array();
+                    set_transient($cacheKey, $TPRss, MINUTE_IN_SECONDS * 10);
                 }
             }   catch (Exception $e) {
 
             }
 
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         //error_log(print_r($TPRss,true));
         return $TPRss;
     }
@@ -89,6 +114,10 @@ class TPDashboardModel {
      * @return array
      */
     public function tpGetXmlRssEN(){
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         $cacheKey = TPOPlUGIN_NAME."_TPRssNewEN";
         $TPRssEn = array();
         if ( false === ( $TPRssEn = get_transient($cacheKey) ) ) {
@@ -99,12 +128,17 @@ class TPDashboardModel {
                     $TPRssEn['data'] =
                         \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
                     set_transient($cacheKey, $TPRssEn, HOUR_IN_SECONDS * 12);
+                } else {
+                    $TPRssEn['data'] = array();
+                    set_transient($cacheKey, $TPRssEn, MINUTE_IN_SECONDS * 10);
                 }
             }   catch (Exception $e) {
 
             }
 
         }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         //error_log('tpGetXmlRssEN = '.print_r($TPRssEn,true));
         return $TPRssEn;
     }
