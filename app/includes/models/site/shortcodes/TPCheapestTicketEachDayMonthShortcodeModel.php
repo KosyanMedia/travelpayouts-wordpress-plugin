@@ -36,9 +36,19 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
                 if( ! $return )
                     return false;
                 $rows = array();
-                $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
                 set_transient( $this->cacheKey('5',
-                    $origin.$destination) , $rows, $this->cacheSecund());
+                    $origin.$destination) , $rows, $cacheSecund);
             }
         }else{
             $return = (array) \app\includes\TPPlugin::$TPRequestApi->get_calendar($attr);
@@ -48,25 +58,29 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
         }
         $rows_sort = array();
-        switch($stops){
-            case 0:
-                $rows_sort = $rows;
-                break;
-            case 1:
-                foreach($rows as $value){
-                    if($value['transfers'] <= 1){
-                        $rows_sort[] = $value;
+        if($rows){
+            switch($stops){
+                case 0:
+                    $rows_sort = $rows;
+                    break;
+                case 1:
+                    foreach($rows as $value){
+                        if($value['transfers'] <= 1){
+                            $rows_sort[] = $value;
+                        }
                     }
-                }
-                break;
-            case 2:
-                foreach($rows as $value){
-                    if($value['transfers'] == 0){
-                        $rows_sort[] = $value;
+                    break;
+                case 2:
+                    foreach($rows as $value){
+                        if($value['transfers'] == 0){
+                            $rows_sort[] = $value;
+                        }
                     }
-                }
-                break;
+                    break;
+            }
         }
+
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($rows_sort, true));
         if(TPOPlUGIN_ERROR_LOG)

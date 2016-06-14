@@ -35,11 +35,21 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $return = $this->iataAutocomplete($return, 1);
+                //if( ! $return )
+                //    return false;
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $return = $this->iataAutocomplete($return, 1);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
                 set_transient( $this->cacheKey('1',
-                    $origin.$destination) , $return, $this->cacheSecund());
+                    $origin.$destination) , $return, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
@@ -48,25 +58,28 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             $return = $this->iataAutocomplete($return, 1);
         }
         $rows = array();
-        switch($stops){
-            case 0:
-                $rows = $return;
-                break;
-            case 1:
-                foreach($return as $value){
-                    if($value['number_of_changes'] <= 1){
-                        $rows[] = $value;
+        if($return){
+            switch($stops){
+                case 0:
+                    $rows = $return;
+                    break;
+                case 1:
+                    foreach($return as $value){
+                        if($value['number_of_changes'] <= 1){
+                            $rows[] = $value;
+                        }
                     }
-                }
-                break;
-            case 2:
-                foreach($return as $value){
-                    if($value['number_of_changes'] == 0){
-                        $rows[] = $value;
+                    break;
+                case 2:
+                    foreach($return as $value){
+                        if($value['number_of_changes'] == 0){
+                            $rows[] = $value;
+                        }
                     }
-                }
-                break;
+                    break;
+            }
         }
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($rows, true));
         if(TPOPlUGIN_ERROR_LOG)

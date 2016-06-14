@@ -33,11 +33,21 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
                 $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $return = $this->iataAutocomplete($return, 2);
+                //if( ! $return )
+                //    return false;
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $return = $this->iataAutocomplete($return, 2);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
                 set_transient( $this->cacheKey('2',
-                    $origin.$destination) , $return, $this->cacheSecund());
+                    $origin.$destination) , $return, $cacheSecund);
             }
         }else{
             $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));

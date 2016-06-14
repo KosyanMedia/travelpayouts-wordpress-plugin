@@ -13,6 +13,10 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         add_filter( 'term_description',  'do_shortcode' );
         add_filter( 'widget_text', 'do_shortcode');
     }
+    public function cacheEmptySecund(){
+        //10 minut
+        return 60 * 10;
+    }
     /**
      * @return bool|int
      */

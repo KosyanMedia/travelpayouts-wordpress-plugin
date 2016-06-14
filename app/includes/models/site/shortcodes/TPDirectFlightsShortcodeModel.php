@@ -38,15 +38,25 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $rows = array();
-                foreach($return as $city => $flights){
-                    $rows[$city] = $this->single_flight( $flights );
+                //if( ! $return )
+                //    return false;
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $rows = array();
+                    foreach($return as $city => $flights){
+                        $rows[$city] = $this->single_flight( $flights );
+                    }
+                    array_multisort($rows, SORT_ASC, $rows);
+                    $rows = $this->iataAutocomplete($rows, 8);
+                    $cacheSecund = $this->cacheSecund();
                 }
-                array_multisort($rows, SORT_ASC, $rows);
-                $rows = $this->iataAutocomplete($rows, 8);
-                set_transient( $this->cacheKey('8', $origin) , $rows, $this->cacheSecund());
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
+                set_transient( $this->cacheKey('8', $origin) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);

@@ -40,11 +40,22 @@ class TPPopularDestinationsAirlinesShortcodeModel extends \app\includes\models\s
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_popular($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $return = $this->iataAutocomplete($return, 10);
+                //if( ! $return )
+                //    return false;
+                //$rows = array();
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $return = $this->iataAutocomplete($return, 10);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
                 set_transient( $this->cacheKey('10',
-                    $airline) , $return, $this->cacheSecund());
+                    $airline) , $return, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_popular($attr);

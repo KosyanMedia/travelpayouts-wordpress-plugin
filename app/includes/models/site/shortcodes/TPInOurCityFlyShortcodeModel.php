@@ -36,12 +36,23 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
+                //if( ! $return )
+                //    return false;
+
                 $rows = array();
-                $rows = $return;
-                $rows = $this->iataAutocomplete($rows, 13);
-                set_transient( $this->cacheKey('14', $destination) , $rows, $this->cacheSecund());
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $rows = $return;
+                    $rows = $this->iataAutocomplete($rows, 13);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
+                set_transient( $this->cacheKey('14', $destination) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -52,25 +63,28 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
             $rows = $this->iataAutocomplete($rows, 13);
         }
         $rows_sort = array();
-        switch($stops){
-            case 0:
-                $rows_sort = $rows;
-                break;
-            case 1:
-                foreach($rows as $value){
-                    if($value['number_of_changes'] <= 1){
-                        $rows_sort[] = $value;
+        if($rows){
+            switch($stops){
+                case 0:
+                    $rows_sort = $rows;
+                    break;
+                case 1:
+                    foreach($rows as $value){
+                        if($value['number_of_changes'] <= 1){
+                            $rows_sort[] = $value;
+                        }
                     }
-                }
-                break;
-            case 2:
-                foreach($rows as $value){
-                    if($value['number_of_changes'] == 0){
-                        $rows_sort[] = $value;
+                    break;
+                case 2:
+                    foreach($rows as $value){
+                        if($value['number_of_changes'] == 0){
+                            $rows_sort[] = $value;
+                        }
                     }
-                }
-                break;
+                    break;
+            }
         }
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($rows_sort, true));
         if(TPOPlUGIN_ERROR_LOG)

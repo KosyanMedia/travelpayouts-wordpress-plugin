@@ -78,11 +78,19 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 }
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $return = $this->iataAutocomplete($return, 7);
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $return = $this->iataAutocomplete($return, 7);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
                 set_transient( $this->cacheKey('7',
-                    $origin.$destination) , $return, $this->cacheSecund());
+                    $origin.$destination) , $return, $cacheSecund);
             }
         }else{
             $return = array();

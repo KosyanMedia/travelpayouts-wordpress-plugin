@@ -37,10 +37,19 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
-                $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
-                set_transient( $this->cacheKey('4', $origin.$destination) , $rows, $this->cacheSecund());
+
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
+
+                set_transient( $this->cacheKey('4', $origin.$destination) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);

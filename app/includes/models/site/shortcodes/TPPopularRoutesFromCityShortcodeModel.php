@@ -36,10 +36,19 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if (!$return)
-                    return false;
+                //if (!$return)
+                //    return false;
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
                 set_transient($this->cacheKey('9',
-                    $origin), $return, $this->cacheSecund());
+                    $origin), $return, $cacheSecund);
             }
         } else {
             $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);

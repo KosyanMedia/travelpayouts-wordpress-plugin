@@ -33,8 +33,15 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
                 $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
-                if( ! $return )
-                    return false;
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $return = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $cacheSecund = $this->cacheSecund();
+                }
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("{$method} cache secund = ".$cacheSecund);
                 set_transient( $this->cacheKey('6',
                     $origin.$destination) , $return, $this->cacheSecund());
             }
