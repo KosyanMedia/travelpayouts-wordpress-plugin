@@ -14,6 +14,9 @@
     margin: 0 !important;
     width: auto;
 }
+.TPpriceTd .TP-currency-icons i:before {
+    margin: 5px !important;
+}
 
 
 @font-face {
