@@ -106,7 +106,7 @@
     white-space: nowrap;
 }
 .TP-Plugin-Tables_box tbody tr .TPflight_numberTd p{
-    display: block;
+    display: inline;
     white-space: nowrap;
 }
 

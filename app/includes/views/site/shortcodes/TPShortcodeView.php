@@ -338,12 +338,19 @@ class TPShortcodeView {
                             <p class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
-                                '<p  data-airline-iata="'.$row['airline'].'">' .
-                                $row['airline'].'</p><span>('. $row['airline_iata'].' '.
-                                $row['flight_number'].')</span>',
+                                $row['airline']
+                                .'('. $row['airline_iata'].' '.$row['flight_number'].')',
                                 $type, $count, $price).'
                             </p>
                             </td>';
+                        /*
+                         * $this->getTextTdTable(
+                                $urlLink,
+                                '<p  data-airline-iata="'.$row['airline'].'">' .
+                                $row['airline'].'</p><span>('. $row['airline_iata'].' '.
+                                $row['flight_number'].')</span>',
+                                $type, $count, $price)
+                         */
                         break;
                     //Дата вылета
                     case "departure_at":
