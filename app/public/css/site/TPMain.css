@@ -474,3 +474,7 @@ span.ellipsis {
     margin: 0!important;
     border: 0!important;
 }
+
+.TPflight_numberTd .TP-tdContent{
+    margin: 0 !important;
+}
