@@ -511,6 +511,12 @@ class TPRequestApi {
      * Функция которой передаётся url и которая возвращает body ответа
      **/
     public function request( $string ){
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
         $string = htmlspecialchars($string);
         //error_log($string);
         $response = wp_remote_get( $string, array('headers' => array(
@@ -525,8 +531,11 @@ class TPRequestApi {
         return $json;*/
         if( ! is_wp_error( $json ) && $json->success == true )
             return $json->data;
-        if( is_wp_error( $json ) )
-            echo "<p>".$this->error_json."</p>";
+        if( is_wp_error( $json ) ){
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log($method." JSON ERROR = ".print_r($this->error_json, true));
+        }
+
         return false;
     }
     /**
