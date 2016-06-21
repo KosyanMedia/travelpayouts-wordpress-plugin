@@ -339,7 +339,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $row['airline']
-                                .'('. $row['airline_iata'].' '.$row['flight_number'].')',
+                                .' ('. $row['airline_iata'].' '.$row['flight_number'].')',
                                 $type, $count, $price).'
                             </p>
                             </td>';
