@@ -3,10 +3,29 @@
 namespace app\includes;
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public static $TPRequestApi;
-    public function __construct() {
+    private static $instance = null;
+
+    /**
+     * @return TPPlugin|null
+     */
+    public static function getInstance()
+    {
+        if (null === self::$instance)
+        {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    protected function __construct() {
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." -> Start");
         parent::__construct();
         new TPLoader();
         self::check_plugin_update();
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." -> End");
     }
 
     static private function check_plugin_update() {
@@ -96,4 +115,4 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     }
 
 }
-$TPPlugin = new TPPlugin();
+$TPPlugin = TPPlugin::getInstance();//new TPPlugin();

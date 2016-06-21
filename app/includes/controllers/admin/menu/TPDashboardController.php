@@ -8,8 +8,11 @@ class TPDashboardController extends \core\controllers\TPOAdminMenuController{
     public $view;
     public function __construct(){
         parent::__construct();
+
         $this->model = new \app\includes\models\admin\menu\TPDashboardModel();
         $this->view = new \app\includes\views\admin\menu\TPDashboardView($this->model);
+
+
     }
     public function action()
     {

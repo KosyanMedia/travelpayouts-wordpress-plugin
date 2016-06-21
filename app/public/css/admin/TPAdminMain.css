@@ -2273,7 +2273,8 @@ thead tr td.active-w {
   margin-bottom: 30px;
 }
 .TPDefaultSettingsItem{
-  margin-top: -30px;
+  /* -30 */
+  margin-top: 0px;
 }
 .TP-BackgroundTables a{
     margin-right: 15px;

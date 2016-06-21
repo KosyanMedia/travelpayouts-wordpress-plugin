@@ -201,6 +201,9 @@ class TPFieldSettings {
                                 </a></div>
                         </li>
                         <li>
+                            <input id="chek34" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][statistics]"
+                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['statistics']), 1) ?> hidden />
+                            <label for="chek34"><?php _e(' Turn off statistics and blog updates', TPOPlUGIN_TEXTDOMAIN); ?></label>
 
                         </li>
                     </ul>

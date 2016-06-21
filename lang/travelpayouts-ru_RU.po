@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-05-18 18:42+0300\n"
+"POT-Creation-Date: 2016-06-21 17:31+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -145,7 +145,7 @@ msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
 #: app/includes/TPPluginWidget.php:240 app/includes/TPLoaderScripts.php:303
-#: app/includes/models/admin/menu/TPFieldSettings.php:498
+#: app/includes/models/admin/menu/TPFieldSettings.php:501
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:76
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:108
@@ -154,7 +154,7 @@ msgid "Origin"
 msgstr "Откуда"
 
 #: app/includes/TPPluginWidget.php:249 app/includes/TPLoaderScripts.php:302
-#: app/includes/models/admin/menu/TPFieldSettings.php:521
+#: app/includes/models/admin/menu/TPFieldSettings.php:524
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:82
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:115
@@ -224,35 +224,35 @@ msgstr "Не более 1 пересадки"
 msgid "Direct"
 msgstr "без пересадок"
 
-#: app/includes/TPRequestApi.php:469
+#: app/includes/TPRequestApi.php:568
 msgid "The variable $origin parameters not set or incorrectly."
 msgstr "Переменная $origin не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:470
+#: app/includes/TPRequestApi.php:569
 msgid "The variable $destination parameters not set or incorrectly."
 msgstr "Переменная $destination не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:471
+#: app/includes/TPRequestApi.php:570
 msgid "The variable $currency parameters not set or incorrectly."
 msgstr "Переменная $currency не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:472
+#: app/includes/TPRequestApi.php:571
 msgid "The variable $departure_at parameters not set or incorrectly."
 msgstr "Переменная $departure_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:473
+#: app/includes/TPRequestApi.php:572
 msgid "The variable $calendar_type parameters not set or incorrectly."
 msgstr "Переменная $calendar_type не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:474
+#: app/includes/TPRequestApi.php:573
 msgid "The variable $return_at parameters not set or incorrectly."
 msgstr "Переменная $return_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:475
+#: app/includes/TPRequestApi.php:574
 msgid "The variable $airline parameters not set or incorrectly."
 msgstr "Переменная $airline не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:479
+#: app/includes/TPRequestApi.php:578
 msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
@@ -419,12 +419,12 @@ msgctxt "add_menu_page page title"
 msgid "Wizard"
 msgstr "Визард"
 
-#: app/includes/controllers/admin/menu/TPDashboardController.php:18
+#: app/includes/controllers/admin/menu/TPDashboardController.php:21
 msgctxt "add_menu_page page title"
 msgid "Travelpayouts"
 msgstr "Travelpayouts"
 
-#: app/includes/controllers/admin/menu/TPDashboardController.php:19
+#: app/includes/controllers/admin/menu/TPDashboardController.php:22
 msgctxt "add_menu_page menu title"
 msgid "Travelpayouts"
 msgstr "Travelpayouts"
@@ -749,27 +749,31 @@ msgstr ""
 "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. "
 "Рекомендуем не менять этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:210
+#: app/includes/models/admin/menu/TPFieldSettings.php:206
+msgid " Turn off statistics and blog updates"
+msgstr "Отключить обновление статистики и новостей"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:213
 msgid "Default settings"
 msgstr "Настройки по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:218
+#: app/includes/models/admin/menu/TPFieldSettings.php:221
 msgid "Cache Timeout"
 msgstr "Частота обновления данных для таблиц"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:235
+#: app/includes/models/admin/menu/TPFieldSettings.php:238
 msgid "Day"
 msgstr "День"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:240
+#: app/includes/models/admin/menu/TPFieldSettings.php:243
 msgid "Hour"
 msgstr "Час"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:248
+#: app/includes/models/admin/menu/TPFieldSettings.php:251
 msgid "Script Include"
 msgstr "Размещать скрипты плагина"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:252
+#: app/includes/models/admin/menu/TPFieldSettings.php:255
 msgid ""
 "Select &lt;head&gt; option to speed up the page loading. In case it still "
 "goes slow, try switching to &lt;footer&gt;"
@@ -778,63 +782,63 @@ msgstr ""
 "загружаются медленно, попробуйте переставить в &lt;"
 "footer&gt;                                "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:260
+#: app/includes/models/admin/menu/TPFieldSettings.php:263
 msgid "Inside &lt;head&gt; tag "
 msgstr "Внутри тега &lt;head&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:265
+#: app/includes/models/admin/menu/TPFieldSettings.php:268
 msgid "Inside &lt;footer&gt; tag "
 msgstr "Внутри тега &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:273
+#: app/includes/models/admin/menu/TPFieldSettings.php:276
 msgid "Date Format"
 msgstr "Формат даты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:278
+#: app/includes/models/admin/menu/TPFieldSettings.php:281
 msgid "Use variables to set the date:"
 msgstr "Используйте переменные для настройки даты:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:279
+#: app/includes/models/admin/menu/TPFieldSettings.php:282
 msgid "day"
 msgstr "день месяца"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:280
+#: app/includes/models/admin/menu/TPFieldSettings.php:283
 msgid "month name (small letters)"
 msgstr "название месяца с маленькой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:281
+#: app/includes/models/admin/menu/TPFieldSettings.php:284
 msgid "month name (capital letters)"
 msgstr "название месяца с большой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:282
+#: app/includes/models/admin/menu/TPFieldSettings.php:285
 msgid "month number"
 msgstr "месяц цифрой"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:283
+#: app/includes/models/admin/menu/TPFieldSettings.php:286
 msgid "month (3 letters)"
 msgstr "месяц 3 буквами"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:284
+#: app/includes/models/admin/menu/TPFieldSettings.php:287
 msgid "month (3 small letters)"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:285
+#: app/includes/models/admin/menu/TPFieldSettings.php:288
 msgid "last 2 digits of the year"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:286
+#: app/includes/models/admin/menu/TPFieldSettings.php:289
 msgid "year"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:299
+#: app/includes/models/admin/menu/TPFieldSettings.php:302
 msgid "Current format"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:305
+#: app/includes/models/admin/menu/TPFieldSettings.php:308
 msgid "Event tracking. \"Find\" button"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:308
+#: app/includes/models/admin/menu/TPFieldSettings.php:311
 msgid ""
 "Set a goal in Yandex Metrica or Google Analytics and paste in this field the "
 "code you need to track the event (reaching the goal). In example, "
@@ -846,86 +850,86 @@ msgstr ""
 "\"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или \"ga('send', 'event', "
 "'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:325
+#: app/includes/models/admin/menu/TPFieldSettings.php:328
 msgid "Event tracking. Table is loaded"
 msgstr "Отслеживание события. Загрузка таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:328
+#: app/includes/models/admin/menu/TPFieldSettings.php:331
 msgid "Google Analytics event that will be fired every time a table loads."
 msgstr ""
 "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой "
 "загрузке таблицы."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:347
+#: app/includes/models/admin/menu/TPFieldSettings.php:350
 msgid "Import settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:351
+#: app/includes/models/admin/menu/TPFieldSettings.php:354
 msgid "Browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:354
+#: app/includes/models/admin/menu/TPFieldSettings.php:357
 msgid "Import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:355
+#: app/includes/models/admin/menu/TPFieldSettings.php:358
 msgid "The file is not selected"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:359
+#: app/includes/models/admin/menu/TPFieldSettings.php:362
 msgid "Export"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:378
+#: app/includes/models/admin/menu/TPFieldSettings.php:381
 msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:381
+#: app/includes/models/admin/menu/TPFieldSettings.php:384
 #: app/includes/models/admin/menu/TPFieldWizard.php:50
 msgid "Russian"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:384
+#: app/includes/models/admin/menu/TPFieldSettings.php:387
 #: app/includes/models/admin/menu/TPFieldWizard.php:53
 msgid "English"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:389
+#: app/includes/models/admin/menu/TPFieldSettings.php:392
 #: app/includes/models/admin/menu/TPFieldWizard.php:63
 msgid "Currency"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:412
+#: app/includes/models/admin/menu/TPFieldSettings.php:415
 msgid "Fields (you can edit values on your own, e.g. for your own language)"
 msgstr "Названия ячеек (можете менять название по своему усмотрению)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:475
+#: app/includes/models/admin/menu/TPFieldSettings.php:478
 msgctxt "page_settings tab local"
 msgid "Host"
 msgstr "Хост"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:504
-#: app/includes/models/admin/menu/TPFieldSettings.php:527
+#: app/includes/models/admin/menu/TPFieldSettings.php:507
+#: app/includes/models/admin/menu/TPFieldSettings.php:530
 msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:507
-#: app/includes/models/admin/menu/TPFieldSettings.php:530
+#: app/includes/models/admin/menu/TPFieldSettings.php:510
+#: app/includes/models/admin/menu/TPFieldSettings.php:533
 msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:510
-#: app/includes/models/admin/menu/TPFieldSettings.php:533
+#: app/includes/models/admin/menu/TPFieldSettings.php:513
+#: app/includes/models/admin/menu/TPFieldSettings.php:536
 msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:513
-#: app/includes/models/admin/menu/TPFieldSettings.php:536
+#: app/includes/models/admin/menu/TPFieldSettings.php:516
+#: app/includes/models/admin/menu/TPFieldSettings.php:539
 msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:516
-#: app/includes/models/admin/menu/TPFieldSettings.php:539
+#: app/includes/models/admin/menu/TPFieldSettings.php:519
+#: app/includes/models/admin/menu/TPFieldSettings.php:542
 msgid "Prepositional"
 msgstr "Предложный"
 

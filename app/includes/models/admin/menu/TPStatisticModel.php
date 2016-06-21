@@ -11,7 +11,8 @@ class TPStatisticModel extends TPDashboardModel{
     public $detailed_sales;
     public $payments;
     public function __construct(){
-        add_action( 'admin_init', array( &$this, 'setData' ) );
+        if (!\app\includes\TPPlugin::$options['config']['statistics'])
+            add_action( 'admin_init', array( &$this, 'setData' ) );
         add_action('wp_ajax_tp_get_detailed_sales',      array( &$this, 'tpGetDetailedSalesAjax'));
         add_action('wp_ajax_nopriv_tp_get_detailed_sales', array( &$this, 'tpGetDetailedSalesAjax'));
         add_action('wp_ajax_tp_save_stats_total',      array( &$this, 'tpSaveStatsTotal'));
