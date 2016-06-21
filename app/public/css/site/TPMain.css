@@ -252,7 +252,9 @@
     .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
         display: inline-block;
         overflow: inherit;
-        min-width: 100px; }
+        min-width: 100px;
+        width: 100%;
+    }
 
     .TP-rwd-table-avio tbody tr td:before {
         background: #1db1db; }
