@@ -238,7 +238,7 @@ jQuery(function($) {
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){
         var $items = $(this).find('.TP-PopularRoutesWidget');
-        var width = 100/$items.length - 3;
+        var width = Math.round(100/$items.length - 3);
         console.log($items.length)
         var count = $items.length - 1;
         $items.each(function(i,e){
