@@ -239,8 +239,13 @@ jQuery(function($) {
     PopularRoutesWidgets.each(function(){
         var $items = $(this).find('.TP-PopularRoutesWidget');
         var width = 100/$items.length - 3;
+        console.log($items.length)
+        var count = $items.length - 1;
         $items.each(function(i,e){
+            console.log(i)
             $(e).css('width', width+"%");
+            if (i != count)
+                $(e).css('margin-right', "1%");
         });
     });
 
