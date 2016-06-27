@@ -30,7 +30,7 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
         if($this->cacheSecund()){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('14', $destination)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('14'.$one_way, $destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -52,7 +52,7 @@ class TPInOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcode
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('14', $destination) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('14'.$one_way, $destination) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);

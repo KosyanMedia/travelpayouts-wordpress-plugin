@@ -17,6 +17,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         //10 minut
         return 60 * 10;
     }
+
     /**
      * @return bool|int
      */

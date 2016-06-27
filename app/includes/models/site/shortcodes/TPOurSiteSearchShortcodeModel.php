@@ -29,7 +29,7 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
         if($this->cacheSecund()){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('12')))) {
+            if ( false === ($rows = get_transient($this->cacheKey('12'.$one_way)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -50,7 +50,7 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('12') , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('12'.$one_way) , $rows, $this->cacheSecund());
 
                 //$this->cacheSecund()
             }

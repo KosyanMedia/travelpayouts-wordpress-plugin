@@ -28,10 +28,13 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             ." 10. Дешевые перелеты из города ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." cacheKey = ".$one_way);
+
         if($this->cacheSecund()){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('13', $origin)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('13'.$one_way, $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -52,7 +55,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('13', $origin) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('13'.$one_way, $origin) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);

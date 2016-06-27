@@ -1,6 +1,10 @@
 jQuery(function($) {
     $(document).ready(function () {
-        $( ".TPTabs" ).tabs();
+        $( ".TPTabs" ).tabs();/*.tabs({
+            beforeActivate: function( event, ui ) {
+                checkSize();
+            }
+        });*/
         var conteiner = '.TP-Plugin-Tables_wrapper';
         var table = conteiner + ' .TP-Plugin-Tables_box';
 
