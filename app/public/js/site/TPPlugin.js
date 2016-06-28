@@ -1,25 +1,30 @@
 jQuery(function($) {
     $(document).ready(function () {
-        $( ".TPTabs" ).tabs();/*.tabs({
+        $( ".TPTabs" ).tabs({
             beforeActivate: function( event, ui ) {
-                checkSize();
+                console.log('beforeActivate');
+                setTimeout(function() {
+                    checkSize();
+                }, 2000)
+
             }
-        });*/
+        });
         var conteiner = '.TP-Plugin-Tables_wrapper';
-        var table = conteiner + ' .TP-Plugin-Tables_box';
+        var table = ' .TP-Plugin-Tables_box';
 
         function checkSize() {
+            console.log('checkSize');
             var widthWrapper, widthBox, hidden, small;
             $(table).each(function () {
                 $(this).removeClass('TP-autoWidth-plugin');
-                widthWrapper = $(conteiner).width();
+                widthWrapper = $(this).parents(conteiner).width();
                 widthBox = $(this).width();
                 if (widthBox > widthWrapper) {
                     while (widthBox > widthWrapper) {
                         if (!$(this).find('tr td.TP-unessential:not(.TP-hidden)').length)
                             return false;
                         $('td.TP-unessential:not(.TP-hidden):last', $(this).find('tr')).addClass('TP-hidden');
-                        widthWrapper = $(conteiner).width();
+                        widthWrapper = $(this).parents(conteiner).width();
                         widthBox = $(this).width();
                     }
                     $(this).addClass('TP-autoWidth-plugin');
@@ -30,7 +35,7 @@ jQuery(function($) {
                         if ($(this).find('tr td.TP-unessential.TP-hidden').length) {
                             hidden = $('td.TP-unessential.TP-hidden:first', $(this).find('tr'));
                             hidden.removeClass('TP-hidden');
-                            widthWrapper = $(conteiner).width();
+                            widthWrapper = $(this).parents(conteiner).width();
                             widthBox = $(this).width();
                             if (widthBox > widthWrapper) {
                                 hidden.addClass('TP-hidden');
@@ -43,9 +48,9 @@ jQuery(function($) {
                 }
             });
         }
-
         checkSize();
         $(window).resize(checkSize);
+
         /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
             if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
                 $(this).children("td:last").hasClass('TP-hidden')){

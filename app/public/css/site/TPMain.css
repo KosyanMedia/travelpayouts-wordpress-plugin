@@ -316,7 +316,7 @@
     line-height: 26px;
     margin-left: 5px;
 }*/
-@font-face {
+/*@font-face {
     font-family: 'Currency Font';
     src: url("../lib/currency_fonts/currency-regular-webfont.eot");
     src: url("../lib/currency_fonts/currency-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../lib/currency_fonts/currency-regular-webfont.woff") format("woff"), url("../lib/currency_fonts/currency-regular-webfont.ttf") format("truetype"), url("../lib/currency_fonts/currency-regular-webfont.svg#untitledregular") format("svg");
@@ -326,7 +326,7 @@
     font-family: 'Currency Font', Helvetica, sans;
     font-weight: normal;
     margin-left: 0.3ex;
-}
+}*/
 
 .TP-Plugin-Tables_box tbody tr td p {
     display: inline;
