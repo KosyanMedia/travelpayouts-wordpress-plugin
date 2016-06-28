@@ -23,7 +23,7 @@ class TPAutocomplete {
         return self::$instance;
     }
     private function getIataAutocomplete(){
-        $cities = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/cities.json');
+        $cities = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/airports.json');//cities
         $cities = json_decode($cities, true);
         foreach($cities as $value){
             $rows[$value['code']] = $value;
