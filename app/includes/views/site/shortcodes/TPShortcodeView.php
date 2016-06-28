@@ -745,7 +745,9 @@ class TPShortcodeView {
         $button_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][$this->local]."</span>";
         if(!empty($button_text)){
             if(strpos($button_text, 'price') !== false){
-                $price = number_format($price, 0, '.', ' ');
+                if (!is_string($price)) {
+                    $price = number_format($price, 0, '.', ' ');
+                }
                 $button_text = str_replace('price', $price, $button_text);
                 $button_text .= $this->currencyView();
             }

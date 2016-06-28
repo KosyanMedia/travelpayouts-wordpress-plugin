@@ -12,7 +12,7 @@ class TPDashboardModel {
     public $rss;
     public $rssEn;
     public function __construct(){
-        if (!\app\includes\TPPlugin::$options['config']['statistics'])
+        if (!isset(\app\includes\TPPlugin::$options['config']['statistics']))
             add_action( 'admin_init', array( &$this, 'setData' ) );
 
 
