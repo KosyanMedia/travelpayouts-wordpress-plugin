@@ -52,6 +52,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
+            error_log($_POST['value']);
             $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $_POST['value']);
             update_option( TPOPlUGIN_OPTION_NAME, $settings);
 

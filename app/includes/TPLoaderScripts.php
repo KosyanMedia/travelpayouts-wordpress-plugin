@@ -296,7 +296,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPMesgUpdateSettings, TPLabelAutocomplete, TPdatepickerPlus,TPMesgUpdate, TPPHCity, TPHotelSelectWidgetCat1,
                 TPHotelSelectWidgetCat2, TPHotelSelectWidgetCat3, TPHotelWidgetLabel, TPLebelProgressBar,
                 TPBtnIsertLinkDialogTxt, TPAdminUrl, TPInsertLinkNoticeTxt, TPFileNameCsvExport, LabelAirlineWidget_8,
-                LabelDeleteWidget_8, TPTableEmptyAnchors;
+                LabelDeleteWidget_8, TPTableEmptyAnchors, TPImportSettingsErrorNoticeTxt;
             TPAdminUrl = '<?php echo admin_url();?>';
             TPHotelWidgetLabel = '<?php _e('Hotel Name', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
@@ -317,6 +317,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPInsertLinkNoticeTxt = '<?php _e('Auto-links are applied', TPOPlUGIN_TEXTDOMAIN ); ?>';
             LabelAirlineWidget_8 = '<?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>';
             LabelDeleteWidget_8 = '<?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPImportSettingsErrorNoticeTxt = '<?php _e('Error invalid file', TPOPlUGIN_TEXTDOMAIN); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>

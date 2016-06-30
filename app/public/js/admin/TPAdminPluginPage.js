@@ -424,15 +424,30 @@ jQuery(function($){
                 fileReader.readAsText(file);
                 fileReader.onload = (function(file) {
                     return function(e) {
-                        $.ajax({
-                            url: ajaxurl+'?action=import_settings',
-                            type: "post", // Делаем POST запрос
-                            data: ({name : file.name, value : JSON.parse(this.result)}),
-                            success: function(data) {
-                                //console.log(data.substring(0, data.length - 1));
-                                document.location.href = "";
+                        //.match( /\{(.+?)\}/ig)
+                        var re = /\{.*\}|\[.*\]/g;
+                        var jsonSettings = this.result.match(re);
+
+                        //console.log(JSON.stringify(this.result).match(re));
+                        if (jsonSettings != null){
+                            //console.log(JSON.parse(jsonSettings[0]));
+                            $.ajax({
+                                url: ajaxurl+'?action=import_settings',
+                                type: "post", // Делаем POST запрос
+                                data: ({name:file.name, value:JSON.parse(jsonSettings[0])}),
+                                success: function(data) {
+                                    //console.log(data.substring(0, data.length - 1));
+                                    document.location.href = "";
+                                }
+                            });
+                        } else {
+                            if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+                                doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('error', 'test' , ''));
+                            }else{
+                                $('#wpbody-content').before(adminNotice('error', 'test' , ''));
                             }
-                        });
+                        }
+
                     };
                 })(files[index]);
                 // Инициируем функцию FileReader
