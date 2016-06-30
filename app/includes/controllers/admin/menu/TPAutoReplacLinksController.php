@@ -280,7 +280,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $post_content = preg_replace_callback(
                     '/\b('.preg_quote($anchor).')\b|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a>)'
                     .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/h[1-6]>)|'
-                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/um',//m
+                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)|(<img(.*?)>)/um',//m
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
                         //error_log('matches = '.print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
@@ -409,6 +409,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @return string
      */
     public function matchesReplace($matches, $anchor, $url, $nofollow, $target, $event){
+        //error_log($matches);
+        if(strpos($matches, '<img') !== false)  return  stripslashes($matches);
         if(strpos($matches, '<h1') !== false){
             //Если в тексте нет заголовка
             if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
@@ -468,7 +470,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $matches = '<h6><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                     .' '.$event.'>'.$anchor.'</a></h6>';
             }
-        }else {
+        }
+        else {
             //Если в тексте нет заголовка
             $matches = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                 .' '.$event.'>'.$anchor.'</a>';
