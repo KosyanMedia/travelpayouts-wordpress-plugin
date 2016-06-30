@@ -442,9 +442,9 @@ jQuery(function($){
                             });
                         } else {
                             if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
-                                doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('error', 'test' , ''));
+                                doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('error', TPImportSettingsErrorNoticeTxt , ''));
                             }else{
-                                $('#wpbody-content').before(adminNotice('error', 'test' , ''));
+                                $('#wpbody-content').before(adminNotice('error', TPImportSettingsErrorNoticeTxt , ''));
                             }
                         }
 
