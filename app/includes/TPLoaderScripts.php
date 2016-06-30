@@ -302,7 +302,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPDestinationTitle = '<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPOriginTitle = '<?php _e('Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _e('Location', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPFileNameExport = '<?php echo TPOPlUGIN_NAME."Settings.txt"; ?>';
+            TPFileNameExport = '<?php echo TPOPlUGIN_NAME."Settings_v"
+            .TPOPlUGIN_VERSION."_".get_bloginfo('name')."_".date('Ymd').".txt"; ?>';
             TPFileNameCsvExport = '<?php echo TPOPlUGIN_NAME."Links.csv"; ?>';
             TPPluginName = '<?php echo TPOPlUGIN_NAME; ?>';
             TPMesgUpdateSettings = '<?php _e('Settings saved.', TPOPlUGIN_TEXTDOMAIN ); ?>';
