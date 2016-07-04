@@ -1,5 +1,23 @@
 jQuery(function($) {
     $(document).ready(function () {
+        var size_list = $(".TPReadMoreList  > div").size();
+        var x=1;
+        console.log(size_list)
+        /*$('.TPReadMoreList div:lt('+x+')').show();
+        $('.TPReadMoreButton').click(function () {
+            x= (x+5 <= size_li) ? x+5 : size_li;
+            $('.TPReadMoreList div:lt('+x+')').show();
+        });*/
+
+        $('.TPReadMoreList > div:lt('+x+')').show();
+        $('.TPReadMoreButton').click(function () {
+            console.log("click");
+            x= (x+1 <= size_list) ? x+1 : size_list;
+            console.log(x)
+            $('.TPReadMoreList > div:lt('+x+')').show();
+        });
+        if ( x == size_list)  $('.TPReadMoreButton').hide()
+
         $( ".TPTabs" ).tabs({
             beforeActivate: function( event, ui ) {
                 console.log('beforeActivate');

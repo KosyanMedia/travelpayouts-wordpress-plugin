@@ -1,3 +1,9 @@
+.TPReadMoreList > div{ display:none;  }
+.TPReadMoreButton{
+    display: block;
+    cursor: pointer;
+}
+
 .TP-Plugin-Tables_wrapper {
     border: 0;
     width: 100%;
