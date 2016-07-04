@@ -543,13 +543,16 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_VERSION // $ver
         );
 
-        wp_register_style(
+
+        /*
+         *
+         wp_register_style(
             TPOPlUGIN_SLUG.'-fontello', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/fontello.css', // $src
             array(), //$deps,
             TPOPlUGIN_VERSION // $ver
         );
-        wp_register_style(
+         wp_register_style(
             TPOPlUGIN_SLUG.'-animation', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/animation.css', // $src
             array(), //$deps,
@@ -565,6 +568,31 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_style(
             TPOPlUGIN_SLUG.'-TPCurrencyMain', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/TPCurrencyMain.css', // $src
+            array(TPOPlUGIN_SLUG.'-fontello', TPOPlUGIN_SLUG.'-animation'), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );*/
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-fontello', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/fontello.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-animation', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/animation.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        wp_enqueue_style(
+            TPOPlUGIN_SLUG.'-fontello-ie7', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/fontello-ie7.css', // $src
+            array(), //$deps,
+            TPOPlUGIN_VERSION // $ver
+        );
+        $wp_styles->add_data(  TPOPlUGIN_SLUG.'-fontello-ie7', 'conditional', 'IE 7' );
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-TPCurrencyMain', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/TPCurrencyMainNew.css', // $src
             array(TPOPlUGIN_SLUG.'-fontello', TPOPlUGIN_SLUG.'-animation'), //$deps,
             TPOPlUGIN_VERSION // $ver
         );

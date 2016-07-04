@@ -861,7 +861,8 @@ class TPShortcodeView {
      */
     public function currencyView(){
         $currency = mb_strtolower(\app\includes\TPPlugin::$options['local']['currency']);
-        return '<i class="TP-currency-icons"><i class="demo-icon icon-'.$currency.'"></i></i>';
+        //return '<i class="TP-currency-icons"><i class="demo-icon icon-'.$currency.'"></i></i>';
+        return '<i class="TP-currency-icons"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
     }
 
     /**
