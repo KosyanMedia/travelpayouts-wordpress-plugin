@@ -38,27 +38,48 @@ class TPDefault implements  \core\TPODefault{
         )
     );
 
+    public static function getDefaultCurrency(){
+        $currency = 'USD';
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $currency = 'RUB';
+                break;
+            case "en_US":
+                $currency = 'USD';
+                break;
+            default:
+                $currency = 'RUB';
+                break;
+        }
+        return $currency;
+    }
+
+    public static function getDefaultLocal(){
+        $localization = 2;
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $localization = 1;
+                break;
+            case "en_US":
+                $localization = 2;
+                break;
+            default:
+                $localization = 1;
+                break;
+        }
+        return $localization;
+    }
+
     /**
      * @return array
      */
     public static function defaultOptions()
     {
-        global $locale;
-        switch($locale) {
-            case "ru_RU":
-                $localization = 1;
-                $currency = 'RUB';
-                break;
-            case "en_US":
-                $localization = 2;
-                $currency = 'USD';
-                break;
-            default:
-                $localization = 1;
-                $currency = 'RUB';
-                break;
-        }
         // TODO: Implement defaultOptions() method.
+        $localization = self::getDefaultLocal();
+        $currency = self::getDefaultCurrency();
         $defaults = array(
             'account' => array(
                 'marker' => '',

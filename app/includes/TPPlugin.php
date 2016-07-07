@@ -37,7 +37,12 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
                 $settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
                 update_option( TPOPlUGIN_OPTION_NAME, $settings);
             }
-
+            if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.5.2', '<')) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("currency default version = ".get_option(TPOPlUGIN_OPTION_VERSION) );
+                self::$options['local']['currency'] = TPDefault::getDefaultCurrency();
+                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
+            }
             if(!empty(self::$options['account']['marker'])){
                 $request = 'http://metrics.aviasales.ru/?goal=tp_wp_plugin_activation&data={"merker":'
                     .self::$options['account']['marker'].',"domain":"'.preg_replace("(^https?://)", "", get_option('home')).'"}';
