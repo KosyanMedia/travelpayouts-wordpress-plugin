@@ -11,14 +11,14 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'currency' => 'RUB', 'destination' => false,
+        $defaults = array( 'currency' => $this->typeCurrency(), 'destination' => false,
             'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'], 'one_way' => false,
             'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'], 'trip_class' => 0, 'title' => ''
         , 'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] , 'paginate' => true
         , 'off_title' => '', 'subid' => ''
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array( 'currency' => $this->typeCurrency(),
+        $attr = array( 'currency' => $currency,
             'origin' => $origin, 'period_type' => $period_type, 'trip_class' => $trip_class, 'limit' => $limit,
             'one_way' => $one_way);
         $name_method = "***************".__METHOD__."***************";
@@ -34,7 +34,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
         if($this->cacheSecund()){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('13'.$one_way, $origin)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('13'.$one_way.$currency, $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -55,7 +55,7 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('13'.$one_way, $origin) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('13'.$one_way.$currency, $origin) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
@@ -94,6 +94,6 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             error_log($name_method);
         return array('rows' => $rows_sort,'origin' => $this->iataAutocomplete($origin, 0), 'type' => 13, 'title' => $title
         , 'paginate' => $paginate, 'one_way' => $one_way,
-            'off_title' => $off_title, 'subid' => $subid);
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
     }
 }

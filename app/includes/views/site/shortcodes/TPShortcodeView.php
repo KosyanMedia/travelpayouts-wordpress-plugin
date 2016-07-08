@@ -43,8 +43,11 @@ class TPShortcodeView {
             'paginate' => 'false',
             'one_way' => 'false',
             'off_title' => '',
-            'subid' => '');
+            'subid' => '',
+            'currency' => \app\includes\TPPlugin::$options['local']['currency']
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        //error_log('currency = '.$currency);
         $html = '';
         if(count($rows) < 1) return false;
 
@@ -64,7 +67,7 @@ class TPShortcodeView {
                         data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
                         data-sort_column="'.$sort_column.'">
                         '.$this->renderHeadTable($type, $one_way).'
-                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid).'
+                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency).'
                     </table>
                 </div>';
         return $html;
@@ -195,7 +198,7 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid){
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency){
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);
@@ -328,7 +331,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $row['airline_iata'].' '. $row[$selected_field],
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                             </p></td>';
                         break;
                     //Рейс
@@ -340,7 +343,7 @@ class TPShortcodeView {
                                 $urlLink,
                                 $row['airline']
                                 .' ('. $row['airline_iata'].' '.$row['flight_number'].')',
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                             </p>
                             </td>';
                         /*
@@ -366,7 +369,7 @@ class TPShortcodeView {
                                 $bodyTable .= $this->getTextTdTable(
                                     $urlLink,
                                     $this->tpDate(strtotime(  $row['depart_date'] )),
-                                    $type, $count, $price);
+                                    $type, $count, $price, 0, $currency);
                                 $bodyTable .= '</p>';
                                 break;
                             default:
@@ -375,7 +378,7 @@ class TPShortcodeView {
                                 $bodyTable .= $this->getTextTdTable(
                                     $urlLink,
                                     $this->tpDate(strtotime(  $row[$selected_field] )),
-                                    $type, $count, $price);
+                                    $type, $count, $price, 0, $currency);
                                 $bodyTable .= '</p>';
 
                                 break;
@@ -398,7 +401,7 @@ class TPShortcodeView {
                                             '.$this->getTextTdTable(
                                             $urlLink,
                                             $this->tpDate(strtotime($row['return_date'])),
-                                            $type, $count, $price).'
+                                            $type, $count, $price, 0, $currency).'
                                         </p>
                                         </td>';
                                 }
@@ -410,7 +413,7 @@ class TPShortcodeView {
                                         '.$this->getTextTdTable(
                                         $urlLink,
                                         $this->tpDate(strtotime($row[$selected_field])),
-                                        $type, $count, $price).'
+                                        $type, $count, $price, 0, $currency).'
                                     </p>
                                     </td>';
                                 break;
@@ -438,7 +441,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $number_of_changes,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                             </p>
                             </td>';
                         break;
@@ -450,7 +453,7 @@ class TPShortcodeView {
                                 '.$this->getTextTdTable(
                                 $urlLink,
                                 number_format($price, 0, '.', ' '),
-                                $type, $count, $price).$this->currencyView().'
+                                $type, $count, $price, 0, $currency).$this->currencyView($currency).'
                                 </p>
                             </td>';
                         break;
@@ -463,7 +466,7 @@ class TPShortcodeView {
                                 $urlLink,
                                 '<p data-airline-iata="'.$row[$selected_field].'">' .
                                 $row[$selected_field].'</p>',
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -477,7 +480,7 @@ class TPShortcodeView {
                                 '<img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
                                 .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">'
                                 ,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -490,7 +493,7 @@ class TPShortcodeView {
                                 $urlLink,
                                 '<span data-city-iata="'.$row[$selected_field].'">'.
                                 $row[$selected_field].'</span>',
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -518,7 +521,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $destination_txt,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -558,7 +561,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $origin_destination,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -570,7 +573,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $count_row,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -582,7 +585,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $row,
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -594,7 +597,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $this->getTripClass($row[$selected_field]),
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -606,7 +609,7 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $this->tpDistanceView($row[$selected_field]),
-                                $type, $count, $price).'
+                                $type, $count, $price, 0, $currency).'
                                 </p>
                             </td>';
                         break;
@@ -620,7 +623,7 @@ class TPShortcodeView {
                                 number_format($row["value"]/$row['distance'], 0, '.', ' ').$this->currencyView(),
                                 $type,
                                 $count,
-                                $price).'
+                                $price, 0, $currency).'
                             </p>
                             </td>';
                         break;
@@ -635,7 +638,7 @@ class TPShortcodeView {
                                 human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp')),
                                 $type,
                                 $count,
-                                $price).'
+                                $price, 0, $currency).'
                             </p>
                             </td>';
                         break;
@@ -643,7 +646,7 @@ class TPShortcodeView {
                         $bodyTable .= '<td data-th="'.\app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field].'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
                             <p data-price="'.$price.'">
-                            '.$this->getTextTdTable($urlLink, "", $type, $count, $price, 1).'
+                            '.$this->getTextTdTable($urlLink, "", $type, $count, $price, 1, $currency).'
                             </p>
                             </td>';
                         break;
@@ -741,7 +744,7 @@ class TPShortcodeView {
      * @param $price
      * @return mixed|string
      */
-    public function getButtonText($typeShortcode, $price){
+    public function getButtonText($typeShortcode, $price, $currency){
         $button_text = "<span>".\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][$this->local]."</span>";
         if(!empty($button_text)){
             if(strpos($button_text, 'price') !== false){
@@ -749,7 +752,7 @@ class TPShortcodeView {
                     $price = number_format($price, 0, '.', ' ');
                 }
                 $button_text = str_replace('price', $price, $button_text);
-                $button_text .= $this->currencyView();
+                $button_text .= $this->currencyView($currency);
             }
         }
         return $button_text;
@@ -763,7 +766,7 @@ class TPShortcodeView {
      * @param int $type
      * @return string
      */
-    public function getTextTdTable($url, $text, $typeShortcode, $count, $price, $type = 0){
+    public function getTextTdTable($url, $text, $typeShortcode, $count, $price, $type = 0, $currency){
 
         $textTd = '';
         $rel = '';
@@ -788,7 +791,7 @@ class TPShortcodeView {
                 //button
                 case 1:
                     $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable" '.$target_url.' '.$rel.'>'
-                        .$this->getButtonText($typeShortcode, $price).'</a>';
+                        .$this->getButtonText($typeShortcode, $price, $currency).'</a>';
                     break;
             }
         }else{
@@ -816,7 +819,7 @@ class TPShortcodeView {
                     //error_log($this->getButtonText($typeShortcode, $price));
                     //error_log($price);
                     $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable " '.$target_url.' '.$rel.'>'
-                        .$this->getButtonText($typeShortcode, $price).'</a>';
+                        .$this->getButtonText($typeShortcode, $price, $currency).'</a>';
                     break;
             }
             // }
@@ -859,9 +862,10 @@ class TPShortcodeView {
     /**
      * @return string
      */
-    public function currencyView(){
-        $currency = mb_strtolower(\app\includes\TPPlugin::$options['local']['currency']);
+    public function currencyView($currency){
+        //$currency = mb_strtolower(\app\includes\TPPlugin::$options['local']['currency']);
         //return '<i class="TP-currency-icons"><i class="demo-icon icon-'.$currency.'"></i></i>';
+        $currency = mb_strtolower($currency);
         return '<i class="TP-currency-icons"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
     }
 

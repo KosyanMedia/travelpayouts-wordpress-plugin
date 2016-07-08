@@ -11,11 +11,11 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' ,
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => $this->typeCurrency(), 'title' => '' ,
             'paginate' => true, 'off_title' => '', 'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
-            'currency' => $this->typeCurrency());
+            'currency' => $currency);
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -26,7 +26,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         if($this->cacheSecund()) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if (false === ($return = get_transient($this->cacheKey('6',
+            if (false === ($return = get_transient($this->cacheKey('6'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
@@ -42,7 +42,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
                 }
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
-                set_transient( $this->cacheKey('6',
+                set_transient( $this->cacheKey('6'.$currency,
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
@@ -58,6 +58,6 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 6, 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid);
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
     }
 }

@@ -16,12 +16,12 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
     {
         // TODO: Implement get_data() method.
         $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB','title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']
+            'currency' => $this->typeCurrency(),'title' => '', 'limit' => \app\includes\TPPlugin::$options['shortcodes']['8']['limit']
             , 'paginate' => true, 'off_title' => '', 'subid' => '');
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array( 'origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
-            'currency' => $this->typeCurrency() );
+            'currency' => $currency );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -32,7 +32,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
         if($this->cacheSecund()) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('8', $origin)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('8'.$currency, $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
@@ -56,7 +56,7 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('8', $origin) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('8'.$currency, $origin) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
@@ -76,6 +76,6 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             error_log($name_method);
         return array('rows' => $rows, 'type' => 8, 'origin' =>  $this->iataAutocomplete($origin, 0),
             'limit' => $limit, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate
-        , 'off_title' => $off_title, 'subid' => $subid);
+        , 'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
     }
 }

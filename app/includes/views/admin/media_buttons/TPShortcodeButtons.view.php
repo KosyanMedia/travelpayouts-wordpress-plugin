@@ -82,6 +82,7 @@
                        class="constructorCityShortcodesAutocomplete regular-text code" placeholder="<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+
         <tr id="tr_depart_date">
             <td>
                 <input type="text" name="depart_date" class="constructorDateShortcodes regular-text code"
@@ -104,6 +105,20 @@
             <td>
                 <input type="text" name="tp_subid" id="tp_subid" value=""
                        class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
+        <tr id="tr_currency">
+            <td>
+                <select name="currency" id="currency" class="TP-Zelect">
+                    <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
+                        <option
+                            <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
+                            value="<?php echo $currency ?>">
+                            <?php echo $currency; ?>
+                        </option>
+                    <?php } ?>
+
+                </select>
             </td>
         </tr>
         <tr id="tr_limit">

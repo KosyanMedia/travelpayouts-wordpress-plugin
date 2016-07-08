@@ -17,7 +17,7 @@ jQuery(function($) {
             autoOpen: true,
             resizable: false,
             draggable: false,
-            maxHeight:400,
+            maxHeight:450,
             maxWidth: 450,
             minWidth: 406,
             minHeight:200,
@@ -53,8 +53,9 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, airline, shortcodes, title,
-                            off_title, limit, trip_class,paginate, one_way, tp_subid;
+                            off_title, limit, trip_class,paginate, one_way, tp_subid, currency;
                         shortcodes = "";
+                        currency = doc.find('#currency').val();
                         origin = doc.find('#origin').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination').val();
@@ -98,7 +99,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" " +
                                             "stops="+doc.find('#transplant').val()+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\" currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -112,7 +113,7 @@ jQuery(function($) {
                                     if(origin != "" && destination != ""){
                                         setShortcodes("[tp_price_calendar_week_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -130,7 +131,7 @@ jQuery(function($) {
                                     if(origin != "" && destination != ""){
                                         setShortcodes("[tp_cheapest_flights_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -145,7 +146,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -159,7 +160,7 @@ jQuery(function($) {
                                     if(origin != "" && destination != ""){
                                         setShortcodes("[tp_cheapest_tickets_each_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -173,7 +174,7 @@ jQuery(function($) {
                                     if(origin != "" && destination != ""){
                                         setShortcodes("[tp_direct_flights_route_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -183,7 +184,7 @@ jQuery(function($) {
                                     }else{
                                         setShortcodes("[tp_direct_flights_shortcodes origin="+origin+" " +
                                             " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -214,7 +215,7 @@ jQuery(function($) {
                                     setShortcodes("[tp_our_site_search_shortcodes " +
                                         " title=\""+title+"\" limit="+limit+" "+paginate
                                         +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                        +" subid=\""+tp_subid+"\"]",
+                                        +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                         $(this));
                                     break;
                                 case '12':
@@ -224,7 +225,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
                                             " title=\""+title+"\" limit="+limit+" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -235,7 +236,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
                                             " title=\""+title+"\" limit="+limit+" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -276,6 +277,7 @@ jQuery(function($) {
                 doc.find('#tr_transplant').hide();
                 doc.find('#tr_one_way').hide();
                 doc.find('#tr_off_title').hide();
+                doc.find('#tr_currency').hide();
                 doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid').removeClass('constructorShortcodesError');
             }
         });
@@ -362,7 +364,7 @@ jQuery(function($) {
             doc.find('#tr_transplant').hide();
             doc.find('#tr_one_way').hide();
             doc.find('#tr_off_title').hide();
-
+            doc.find('#tr_currency').hide();
 
             doc.find("#limit").val("");
             switch($(this).val()) {
@@ -376,6 +378,7 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '2':
                     doc.find('#tr_paginate').show();
@@ -384,6 +387,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 /*case '3':
                     doc.find('#tr_title').show();
@@ -395,6 +399,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '4':
                     doc.find('#tr_paginate').show();
@@ -404,6 +409,7 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '5':
                     doc.find('#tr_paginate').show();
@@ -412,6 +418,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
 
                     break;
                 case '6':
@@ -421,6 +428,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '7':
                     doc.find('#tr_paginate').show();
@@ -430,6 +438,7 @@ jQuery(function($) {
                     doc.find('#tr_limit').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '8':
                     doc.find('#tr_paginate').show();
@@ -446,12 +455,14 @@ jQuery(function($) {
                     doc.find('#tr_limit').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    //doc.find('#tr_currency').show();
                     break;
                 case '10':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_subid').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '11':
                     doc.find('#tr_paginate').show();
@@ -463,6 +474,7 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '12':
                     doc.find('#tr_paginate').show();
@@ -475,6 +487,7 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '13':
                     doc.find('#tr_paginate').show();
@@ -487,6 +500,7 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
             }
             if(doc.find('#off_title').is(":checked")) {

@@ -57,11 +57,12 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         }
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($return, true));
+        //error_log("{$method} rows = ".print_r($return, true));
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
         return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
                 'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid);
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $this->typeCurrency());
 
     }
 }

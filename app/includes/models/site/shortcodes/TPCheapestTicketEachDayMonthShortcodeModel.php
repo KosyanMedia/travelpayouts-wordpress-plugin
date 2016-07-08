@@ -11,11 +11,11 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB', 'title' => '' , 'paginate' => true
+        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => $this->typeCurrency(), 'title' => '' , 'paginate' => true
         , 'stops' => \app\includes\TPPlugin::$options['shortcodes']['5']['transplant'], 'off_title' => '', 'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
-            'currency' => $this->typeCurrency());
+            'currency' => $currency);
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -26,7 +26,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
         if($this->cacheSecund()) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if (false === ($rows = get_transient($this->cacheKey('5',
+            if (false === ($rows = get_transient($this->cacheKey('5'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
@@ -47,7 +47,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('5',
+                set_transient( $this->cacheKey('5'.$currency,
                     $origin.$destination) , $rows, $cacheSecund);
             }
         }else{
@@ -89,6 +89,6 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
         return array('rows' => $rows_sort, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 5, 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid);
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
     }
 }

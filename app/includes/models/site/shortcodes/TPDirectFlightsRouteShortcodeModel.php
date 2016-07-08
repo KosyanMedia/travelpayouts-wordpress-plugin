@@ -17,7 +17,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
         $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
             ." 6. Билеты без пересадок по направлению ";
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '' , 'paginate' => true,
+            'currency' => $this->typeCurrency(), 'title' => '' , 'paginate' => true,
             'off_title' => '', 'subid' => '');
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $current_day = date("d",time());
@@ -25,27 +25,27 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
 
         $attr =  array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m'), 'return_at' => date('Y-m'),
-            'currency' => $this->typeCurrency() );
+            'currency' => $currency );
 
         $attr_one =  array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
-            'currency' => $this->typeCurrency()  );
+            'currency' => $currency  );
 
         $attr_two =  array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
-            'currency' => $this->typeCurrency()  );
+            'currency' => $currency  );
         $attr_three =  array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
-            'currency' => $this->typeCurrency() );
+            'currency' => $currency);
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if($this->cacheSecund()) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if (false === ($return = get_transient($this->cacheKey('7',
+            if (false === ($return = get_transient($this->cacheKey('7'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
@@ -89,7 +89,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('7',
+                set_transient( $this->cacheKey('7'.$currency,
                     $origin.$destination) , $return, $cacheSecund);
             }
         }else{
@@ -130,6 +130,6 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
         return array('rows' => $return, 'type' => 7, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid);
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
     }
 }

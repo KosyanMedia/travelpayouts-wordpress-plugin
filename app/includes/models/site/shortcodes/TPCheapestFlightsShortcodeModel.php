@@ -16,11 +16,11 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
         // TODO: Implement get_data() method.
 
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'title' => '', 'paginate' => true, 'off_title' => '', 'subid' => '' );
+            'currency' => $this->typeCurrency(), 'title' => '', 'paginate' => true, 'off_title' => '', 'subid' => '' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $attr = array( 'origin' => $origin, 'destination' => $destination,
             'departure_at' => $departure_at, 'return_at' => $return_at,
-            'currency' => $this->typeCurrency() );
+            'currency' => $currency );
         $name_method = "***************".__METHOD__."***************";
         $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
             ." 3. Самые дешевые билеты по направлению ";
@@ -31,7 +31,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
         if($this->cacheSecund()) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} -> cache");
-            if (false === ($rows = get_transient($this->cacheKey('4', $origin . $destination)))) {
+            if (false === ($rows = get_transient($this->cacheKey('4'.$currency, $origin . $destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} -> cache false");
                 $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
@@ -49,7 +49,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('4', $origin.$destination) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('4'.$currency, $origin.$destination) , $rows, $cacheSecund);
             }
         }else{
             $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
@@ -64,7 +64,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
         return array('rows' => $rows, 'type' => 4, 'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
             'origin_iata' => $origin, 'destination_iata' => $destination  , 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid
+            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency
         );
     }
 }
