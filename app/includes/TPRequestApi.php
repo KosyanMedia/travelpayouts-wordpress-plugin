@@ -52,6 +52,7 @@ class TPRequestApi {
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "token");
         }else{
             $this->currencys = \app\includes\common\TPCurrencyUtils::getCurrencyAll();
+            $this->currencyValid();
             $this->status = true;
             $this->marker = TPPlugin::$options['account']['marker'];
             $this->token = TPPlugin::$options['account']['token'];
@@ -61,6 +62,15 @@ class TPRequestApi {
         }
 
     }
+
+    public function currencyValid(){
+        if ( ! \app\includes\TPPlugin::$options['local']['currency'] ||
+            ! in_array( \app\includes\TPPlugin::$options['local']['currency'], $this->currencys ) ) {
+            \app\includes\TPPlugin::$options['local']['currency'] = \app\includes\TPDefault::getDefaultCurrency();
+            update_option( TPOPlUGIN_OPTION_NAME,  \app\includes\TPPlugin::$options);
+        }
+    }
+
     public function get_status(){
         return $this->status;
     }
