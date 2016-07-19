@@ -24,6 +24,7 @@ class TPCheapestFlightsShortcodeController extends \app\includes\controllers\sit
     public function actionTable($args = array())
     {
         $data = $this->model->getDataTable($args);
+        error_log(print_r($data, true));
         if(!$data) return false;
         return $this->view->renderTable($data);
     }
