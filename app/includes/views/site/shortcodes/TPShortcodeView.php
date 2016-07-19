@@ -25,6 +25,9 @@ class TPShortcodeView {
         \app\includes\models\site\TPAutocomplete::getInstance();
     }
 
+    public function renderPrice($price, $currency){
+        return '<span class="TPPriceSpan">'.number_format($price, 0, '.', ' ').$this->currencyView($currency).'</span>';
+    }
     /**
      * @param array $args
      * @return bool|string

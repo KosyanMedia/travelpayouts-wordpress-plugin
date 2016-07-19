@@ -138,8 +138,24 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
         if( ! $return )
             return false;
         $rows = array_column($return, 'value');
-        error_log($currency);
-        error_log(max($rows));
-        error_log(print_r($rows, true));
+        return array('price' => max($rows), 'currency' => $currency);
+    }
+    public function getMinPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency()
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'value');
+        return array('price' => min($rows), 'currency' => $currency);
     }
 }
