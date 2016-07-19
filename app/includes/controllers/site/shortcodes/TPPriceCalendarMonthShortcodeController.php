@@ -25,10 +25,6 @@ class TPPriceCalendarMonthShortcodeController extends \app\includes\controllers\
     public function actionTable($args = array())
     {
         $data = $this->model->getDataTable($args);
-        return $this->renderTable($data);
-    }
-    public function renderTable($data)
-    {
         if(!$data) return false;
         return $this->view->renderTable($data);
     }
@@ -40,6 +36,7 @@ class TPPriceCalendarMonthShortcodeController extends \app\includes\controllers\
         extract($data, EXTR_SKIP);
         return $this->view->renderPrice($price, $currency);
     }
+
     public function actionMinPrice($args = array())
     {
         $data = $this->model->getMinPrice($args);

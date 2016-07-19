@@ -18,6 +18,29 @@ class TPPriceCalendarWeekShortcodeController extends \app\includes\controllers\s
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_price_calendar_week_shortcodes', array(&$this, 'action'));
+        add_shortcode( 'tp_price_calendar_week_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_price_calendar_week_shortcodes_max_price', array(&$this, 'actionMaxPrice'));
+        add_shortcode( 'tp_price_calendar_week_shortcodes_min_price', array(&$this, 'actionMinPrice'));
+    }
+    public function actionTable($args = array())
+    {
+        $data = $this->model->getDataTable($args);
+        if(!$data) return false;
+        return $this->view->renderTable($data);
+    }
+
+    public function actionMaxPrice($args = array())
+    {
+        $data = $this->model->getMaxPrice($args);
+        if(!$data) return false;
+        extract($data, EXTR_SKIP);
+        return $this->view->renderPrice($price, $currency);
+    }
+    public function actionMinPrice($args = array())
+    {
+        $data = $this->model->getMinPrice($args);
+        if(!$data) return false;
+        extract($data, EXTR_SKIP);
+        return $this->view->renderPrice($price, $currency);
     }
 }
