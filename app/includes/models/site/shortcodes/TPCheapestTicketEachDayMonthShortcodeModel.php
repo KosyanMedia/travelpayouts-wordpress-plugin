@@ -11,11 +11,12 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => $this->typeCurrency(), 'title' => '' , 'paginate' => true
-        , 'stops' => \app\includes\TPPlugin::$options['shortcodes']['5']['transplant'], 'off_title' => '', 'subid' => '');
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array( 'origin' => $origin, 'destination' => $destination,
-            'currency' => $currency);
+        extract($args, EXTR_SKIP );
+        $attr = array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -57,6 +58,32 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             $rows = array();
             $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
         }
+        return $rows;
+
+    }
+    /**
+     * @param array $args
+     * @return array|bool
+     */
+    public function getDataTable($args = array()){
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+            'title' =>'' ,
+            'paginate' => true,
+            'stops' => \app\includes\TPPlugin::$options['shortcodes']['5']['transplant'],
+            'off_title' => '',
+            'subid' => '');
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $rows = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency,
+        ));
+        if( ! $rows )
+            return false;
+
         $rows_sort = array();
         if($rows){
             switch($stops){
@@ -79,16 +106,55 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
                     break;
             }
         }
+        return array(
+            'rows' => $rows_sort,
+            'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
+            'type' => 5,
+            'title' => $title,
+            'origin_iata' => $origin,
+            'destination_iata' => $destination,
+            'paginate' => $paginate,
+            'off_title' => $off_title,
+            'subid' => $subid,
+            'currency' => $currency);
 
 
-        if(TPOPlUGIN_ERROR_LOG)
-            error_log("{$method} rows = ".print_r($rows_sort, true));
-        if(TPOPlUGIN_ERROR_LOG)
-            error_log($name_method);
-        //return var_dump("<pre>", $rows, "</pre>");
-        return array('rows' => $rows_sort, 'origin' => $this->iataAutocomplete($origin, 0),
-            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 5, 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
+    }
+    public function getMaxPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency,
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'price');
+        return array('price' => max($rows), 'currency' => $currency);
+    }
+    public function getMinPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'price');
+        return array('price' => min($rows), 'currency' => $currency);
     }
 }
