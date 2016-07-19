@@ -7,17 +7,19 @@
  */
 namespace app\includes\models\site\shortcodes;
 class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
-
+    /**
+     * @param array $args
+     * @return array|bool
+     */
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => $this->typeCurrency(), 'title' => '',
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant'], 'paginate' => true
-        , 'off_title' => '', 'subid' => '');
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        //$month
-        $attr =  array( 'origin' => $origin, 'destination' => $destination,
-            'currency' => $currency);
+        extract($args, EXTR_SKIP);
+        $attr =  array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -57,6 +59,32 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                 return false;
             $return = $this->iataAutocomplete($return, 1);
         }
+        return $return;
+    }
+
+    /**
+     * @param array $args
+     * @return array|bool
+     */
+    public function getDataTable($args = array()){
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+            'title' => '',
+            'stops' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant'],
+            'paginate' => true,
+            'off_title' => '',
+            'subid' => ''
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        ));
+        if( ! $return )
+            return false;
         $rows = array();
         if($return){
             switch($stops){
@@ -79,14 +107,39 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                     break;
             }
         }
+        return array(
+            'rows' => $rows,
+            'type' => 1,
+            'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
+            'title' => $title,
+            'origin_iata' => $origin,
+            'destination_iata' => $destination,
+            'paginate' => $paginate,
+            'off_title' => $off_title,
+            'subid' => $subid,
+            'currency' => $currency);
 
-        if(TPOPlUGIN_ERROR_LOG)
-            error_log("{$method} rows = ".print_r($rows, true));
-        if(TPOPlUGIN_ERROR_LOG)
-            error_log($name_method);
-        return array('rows' => $rows, 'type' => 1, 'origin' => $this->iataAutocomplete($origin, 0),
-            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate
-        , 'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
+
+    }
+    public function getMaxPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency()
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'value');
+        error_log($currency);
+        error_log(max($rows));
+        error_log(print_r($rows, true));
     }
 }

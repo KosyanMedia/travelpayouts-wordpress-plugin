@@ -17,6 +17,24 @@ class TPPriceCalendarMonthShortcodeController extends \app\includes\controllers\
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_price_calendar_month_shortcodes', array(&$this, 'action'));
+        add_shortcode( 'tp_price_calendar_month_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_price_calendar_month_shortcodes_max_price', array(&$this, 'actionMaxPrice'));
     }
+
+    public function actionTable($args = array())
+    {
+        $data = $this->model->getDataTable($args);
+        return $this->renderTable($data);
+    }
+    public function renderTable($data)
+    {
+        if(!$data) return false;
+        return $this->view->renderTable($data);
+    }
+
+    public function actionMaxPrice($args = array())
+    {
+        return $this->model->getMaxPrice($args);
+    }
+
 }
