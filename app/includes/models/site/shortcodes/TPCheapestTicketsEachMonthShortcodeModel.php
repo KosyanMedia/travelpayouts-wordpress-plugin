@@ -11,10 +11,10 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => $this->typeCurrency(), 'title' => '' ,
-            'paginate' => true, 'off_title' => '', 'subid' => '');
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array( 'origin' => $origin, 'destination' => $destination,
+        extract($args, EXTR_SKIP );
+        $attr = array(
+            'origin' => $origin,
+            'destination' => $destination,
             'currency' => $currency);
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
@@ -55,9 +55,79 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
         //return var_dump("<pre>", $return, "</pre>");
-        return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
-            'destination' => $this->iataAutocomplete($destination, 0, 'destination'), 'type' => 6, 'title' => $title,
-            'origin_iata' => $origin, 'destination_iata' => $destination, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid, 'currency' => $currency);
+        return $return;
+    }
+
+    /**
+     * @param array $args
+     * @return array|bool
+     */
+    public function getDataTable($args = array()){
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+            'title' => '' ,
+            'paginate' => true,
+            'off_title' => '',
+            'subid' => '');
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency,
+        ));
+        if( ! $return )
+            return false;
+        return array(
+            'rows' => $return,
+            'origin' => $this->iataAutocomplete($origin, 0),
+            'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
+            'type' => 6,
+            'title' => $title,
+            'origin_iata' => $origin,
+            'destination_iata' => $destination,
+            'paginate' => $paginate,
+            'off_title' => $off_title,
+            'subid' => $subid,
+            'currency' => $currency);
+
+
+    }
+    public function getMaxPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency,
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'price');
+        return array('price' => max($rows), 'currency' => $currency);
+    }
+    public function getMinPrice($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => $this->typeCurrency(),
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $return = $this->get_data(array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'currency' => $currency
+        ));
+        if( ! $return )
+            return false;
+        $rows = array_column($return, 'price');
+        return array('price' => min($rows), 'currency' => $currency);
     }
 }

@@ -133,14 +133,16 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
-            'departure_at' => $departure_at,
-            'return_at' => $return_at,
+            'departure_at' => false,
+            'return_at' => false,
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency
+            'currency' => $currency,
+            'departure_at' => $departure_at,
+            'return_at' => $return_at,
         ));
         if( ! $return )
             return false;
