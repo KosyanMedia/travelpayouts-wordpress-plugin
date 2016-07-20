@@ -66,7 +66,7 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
         }
 
         if(TPOPlUGIN_ERROR_LOG)
-            error_log("{$method} rows = ".print_r($rows_sort, true));
+            error_log("{$method} rows = ".print_r($rows, true));
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
         return $rows;
