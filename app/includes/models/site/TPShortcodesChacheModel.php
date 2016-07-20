@@ -207,7 +207,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
 
                     switch(\app\includes\TPPlugin::$options['local']['localization']) {
                         case "1":
-                            $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
+                            $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$data]['names']['en'];
                             break;
                         case "2":
                             $data = TPAutocomplete::$data_airline[$data]['names']['en'];
