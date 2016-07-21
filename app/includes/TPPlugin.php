@@ -26,9 +26,13 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         self::check_plugin_update();
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." -> End");
+
     }
 
     static private function check_plugin_update() {
+        //error_log("check_plugin_update");
+        //error_log(is_plugin_active('travelpayouts/travelpayouts.php'));
+        if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
@@ -97,15 +101,14 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     static public function deactivation()
     {
         // TODO: Implement deactivation() method.
-        //delete_option( TPOPlUGIN_OPTION_NAME);
-        //delete_option( TPOPlUGIN_OPTION_VERSION);
-        //$settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
-        //error_log(print_r($settings, true));
-        //error_log(print_r(self::$options, true));
+
         //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
         //models\admin\menu\TPSearchFormsModel::deleteTable();
         self::deleteCacheAll();
-
+        //delete_option( TPOPlUGIN_OPTION_NAME);
+        //delete_option( TPOPlUGIN_OPTION_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
     }
 
     static public function uninstall()
