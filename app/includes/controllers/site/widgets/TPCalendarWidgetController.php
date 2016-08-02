@@ -34,11 +34,13 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'direct' => 'false',
             'one_way' => 'false',
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'subid' => ''
+            'subid' => '',
+            'period_day_from' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
+            'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
+            'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period']
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
-        $period_day_to = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
+
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
@@ -52,7 +54,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
             .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.$this->view->locale
-            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
+            .'&period='.$period
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script></div>';
         //error_log($output);

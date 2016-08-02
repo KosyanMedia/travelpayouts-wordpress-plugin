@@ -543,11 +543,16 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid;
+                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid,
+                            calendar_period, calendar_period_from, calendar_period_to;
                         selected = doc.find('#select_widgets').val();
 
                         //doc.find('#select_widgets option[value=0]').attr('selected','selected')
                         origin = doc.find('#origin_widget').val();
+
+                        calendar_period = doc.find('#calendar_period').val();
+                        calendar_period_from = doc.find('#calendar_period_from').val();
+                        calendar_period_to = doc.find('#calendar_period_to').val();
                         doc.find('#origin_widget').val("");
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_widget').val();
@@ -632,8 +637,12 @@ jQuery(function($) {
                                         }else{
                                             responsive = "width="+doc.find('#responsive_width').val();
                                         }
+
                                         setShortcodes("[tp_calendar_widget origin="+origin+" destination="+destination+" "
-                                            +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"]",
+                                            +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"" +
+                                            " period_day_from=\""+calendar_period_from+"\" " +
+                                            " period_day_to=\""+calendar_period_to+"\"" +
+                                            " period=\""+calendar_period+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -898,6 +907,8 @@ jQuery(function($) {
                     doc.find('#tr_subid_widget').show();
                     doc.find('#tr_origin_widget').show();
                     doc.find('#tr_destination_widget').show();
+                    doc.find('#tr_calendar_period_widget').show();
+                    doc.find('#tr_calendar_period_size_widget').show();
                     doc.find('#tr_direct_widget').show();
                     doc.find('#tr_one_way_widget').show();
 
@@ -1635,6 +1646,8 @@ jQuery(function($) {
         doc.find('.airline_widget_8').val();
         doc.find('#constructorWidgetModalTable').off( 'click', '.TPBtnAdd');
         doc.find('#tr_subid_widget').hide();
+        doc.find('#tr_calendar_period_widget').hide();
+        doc.find('#tr_calendar_period_size_widget').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }

@@ -1,3 +1,4 @@
+
 <div id="constructorWidgetModal" title="<?php _e('Constructor widgets', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
     <form id="constructorWidgetModalForm">
         <table id="constructorWidgetModalTable">
@@ -140,6 +141,54 @@
                 <td>
                     <input type="text" name="destination" id="destination_widget" value=""
                            class="constructorCityShortcodesAutocomplete regular-text code" placeholder="<?php _e('Destination', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                </td>
+            </tr>
+            <tr id="tr_calendar_period_widget">
+                <td>
+                    <?php
+
+                        global $wp_locale;
+                        $output_month = '';
+                        $monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
+                        $output_month .= '<option value="year"
+                        '.selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], 'year' , false).'>
+                        '.__('Year', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+                        $output_month .= '<option value="current_month"
+                    '.selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], 'current_month' , false).'>
+                    '.__('Current month', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+                        $current_date = getdate();
+                        $m = false;
+                        $out_c = '';
+                        $out_n = '';
+                        foreach ($monthNames as $key=>$month) {
+                            if(($key+1) == $current_date['mon']){
+                                $m = true;
+                            }
+                            if($m){
+                                $out_c .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"'
+                                    .selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], date('Y').'-'.($key+1).'-01', false).'>'
+                                    .$month.'</option>';
+                            }else{
+                                $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.($key+1).'-01'.'"'
+                                    .selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], date('Y', strtotime('+1 year')).'-'.($key+1).'-01', false).'>'
+                                    .$month.'</option>';
+                            }
+                        }
+                        $output_month .= $out_c.$out_n;
+                    ?>
+                    <select name="calendar_period" id="calendar_period">
+                        <?php echo $output_month; ?>
+                    </select>
+                </td>
+            </tr>
+            <tr id="tr_calendar_period_size_widget">
+                <td>
+                    <?php _e('Range, days', TPOPlUGIN_TEXTDOMAIN ); ?>:
+                    <input type="number" class="small-text" id="calendar_period_from" min="1"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets']['3']['period_day']['from']) ?>">
+                    X
+                    <input type="number" class="small-text" id="calendar_period_to" min="1"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets']['3']['period_day']['to']) ?>">
                 </td>
             </tr>
             <tr id="tr_hotel_id_widget">
