@@ -323,6 +323,7 @@ class TPRequestApi {
         /*if(array_key_exists(0, (array)$return)){
             return array(2);
         }*/
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)

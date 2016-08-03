@@ -22,6 +22,7 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\menu\TPStatisticController();
         new controllers\admin\menu\TPSettingsController();
         new controllers\admin\menu\TPWizardController();
+        new controllers\admin\menu\TPWhatNewsController();
         // Media buttons
         new models\admin\TPPostsModel();
         new controllers\admin\TPModalAdminNoticeController();
