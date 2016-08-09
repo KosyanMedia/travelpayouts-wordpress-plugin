@@ -61,6 +61,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         }
         models\admin\menu\TPSearchFormsModel::createTable();
         models\admin\menu\TPAutoReplacLinksModel::createTable();
+        models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
 
     }
     static public function activation()
@@ -95,6 +96,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
                 update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
             models\admin\menu\TPSearchFormsModel::createTable();
             models\admin\menu\TPAutoReplacLinksModel::createTable();
+            models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
         }
     }
 
@@ -104,11 +106,14 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
 
         //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
         //models\admin\menu\TPSearchFormsModel::deleteTable();
+        models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         self::deleteCacheAll();
         //delete_option( TPOPlUGIN_OPTION_NAME);
         //delete_option( TPOPlUGIN_OPTION_VERSION);
         //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
         //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
     }
 
     static public function uninstall()
@@ -116,10 +121,13 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();
         models\admin\menu\TPAutoReplacLinksModel::deleteTable();
+        models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         delete_option( TPOPlUGIN_OPTION_NAME);
         delete_option( TPOPlUGIN_OPTION_VERSION);
         delete_option( TPOPlUGIN_TABLE_SF_VERSION);
         delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
     }
 
 }
