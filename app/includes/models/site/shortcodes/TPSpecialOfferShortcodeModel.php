@@ -156,12 +156,47 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         self::deleteTableSpecialRoute();
     }
 
-    public static function insertSpecialOffer(){
-
+    public static function insertSpecialOffer($cat_id, $airline, $airline_code, $title, $conditions, $href,
+                                              $sale_date_begin, $sale_date_end, $flight_date_begin, $flight_date_end, $link){
+        $data =  array(
+            'cat_id' => $cat_id,
+            'airline' =>  $airline,
+            'airline_code' => $airline_code,
+            'title' => $title,
+            'conditions' => $conditions,
+            'href' => $href,
+            'sale_date_begin' => $sale_date_begin,
+            'sale_date_end' => $sale_date_end,
+            'flight_date_begin' => $flight_date_begin,
+            'flight_date_end' => $flight_date_end,
+            'link' => $link
+        );
+        global $wpdb;
+        $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
+        $wpdb->insert($tableNameOffer, $data);
     }
 
-    public static function insertSpecialRoute(){
-
+    public static function insertSpecialRoute($airline_code, $cat_id, $countries, $from_iata, $to_iata, $from_name,
+                                              $to_name, $class, $oneway_price, $roundtrip_price, $flight_date_begin,
+                                              $flight_date_end, $sale_date_begin){
+        $data = array(
+            'airline_code' => $airline_code,
+            'cat_id' => $cat_id,
+            'countries'=> $countries,
+            'from_iata' => $from_iata,
+            'to_iata' => $to_iata,
+            'from_name' => $from_name,
+            'to_name' => $to_name,
+            'class' => $class,
+            'oneway_price' => $oneway_price,
+            'roundtrip_price' => $roundtrip_price,
+            'departure_at' => $flight_date_begin,
+            'return_at' => $flight_date_end,
+            'sale_date_begin' => $sale_date_begin
+        );
+        global $wpdb;
+        $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
+        $wpdb->insert($tableNameRoute, $data);
     }
 
     public function insert($data)
@@ -201,65 +236,33 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
 
     public static function getSpecialOfferApiUpdateDB(){
         //error_log("getSpecialOfferApiUpdateDB");
-        self::getSpecialOfferApi();
+
         $cache_key = 'TP_Special_Offer_Api_Update_DB';
         if ( false === ( $specialOfferApiUpdateDB = get_transient( $cache_key ) ) ) {
             //self::$KPDTourismusShortcodeSettings->get_xmlparse_db();
             error_log("getSpecialOfferApiUpdateDB Cache");
+            self::getSpecialOfferApi();
             set_transient( $cache_key, $specialOfferApiUpdateDB, 60*60*12);
         }
 
     }
+    public static function truncateTable(){
+        global $wpdb;
+        $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
+        $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
+        $wpdb->query("TRUNCATE TABLE `".$tableNameOffer."`");
+        $wpdb->query("TRUNCATE TABLE `".$tableNameRoute."`");
+    }
     public static function getSpecialOfferApi(){
         $data = \app\includes\TPPlugin::$TPRequestApi->getSpecialOffer();
         if(count($data) > 0) {
-            $time = time();
-            foreach($data['offer'] as $offer){
-                error_log(print_r($offer, true));
-                if($offer['@attributes']['flight_date_end'] > $time) {
-                    $cat_id = $offer['@attributes']['id'];
-                    $airline = $offer['@attributes']['airline'];
-                    $airline_code = $offer['@attributes']['airline_code'];
-                    $title = $offer['@attributes']['title'];
-                    $conditions = $offer['conditions'];
-                    $href = $offer['@attributes']['href'];
-                    $sale_date_begin = $offer['@attributes']['sale_date_begin'];
-                    $sale_date_end = $offer['@attributes']['sale_date_end'];
-                    $flight_date_begin = $offer['@attributes']['flight_date_begin'];
-                    $flight_date_end = $offer['@attributes']['flight_date_end'];
-                    $link = $offer['@attributes']['link'];
-                    error_log($title);
-                    foreach($offer['route'] as $route){
-                        $from_iata = $route['@attributes']['from_iata'];
-                        $to_iata = $route['@attributes']['to_iata'];
-                        $countries = '';
-
-                        $from_name = $route['@attributes']['from_name'];
-                        $to_name = $route['@attributes']['to_name'];
-                        $class = $route['@attributes']['class'];
-                        $oneway_price = $route['@attributes']['oneway_price'];
-                        $roundtrip_price = $route['@attributes']['roundtrip_price'];
-
-                        $rows_routes = $wpdb->insert( $wpdb->prefix."os_av_special_route", array('airline_code' => $airline_code, 'cat_id' => $cat_id, 'countries'=> $countries,
-                            'from_iata' => $from_iata, 'to_iata' => $to_iata, 'from_name' => $from_name, 'to_name' => $to_name,
-                            'class' => $class, 'oneway_price' => $oneway_price, 'roundtrip_price' => $roundtrip_price,
-                            'departure_at' => $flight_date_begin, 'return_at' => $flight_date_end, 'sale_date_begin' => $sale_date_begin));
-                    }
-                }
-            }
-        }
-
-
-       /*
-        if($sxml){
-            if($sxml->offer){
+            if($data->offer) {
+                self::truncateTable();
                 $time = time();
-                $wpdb->query("TRUNCATE TABLE `".$wpdb->prefix."os_av_special_offer`");
-                $wpdb->query("TRUNCATE TABLE `".$wpdb->prefix."os_av_special_route`");
-                foreach ($sxml->offer as $offer){
-                    if($offer['flight_date_end'] > $time){
+                foreach ($data->offer as $offer) {
+                    if ($offer['flight_date_end'] > $time) {
                         $cat_id = $offer['id'];
-                        $airline =  $offer['airline'];
+                        $airline = $offer['airline'];
                         $airline_code = $offer['airline_code'];
                         $title = $offer['title'];
                         $conditions = $offer->conditions;
@@ -269,42 +272,25 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                         $flight_date_begin = $offer['flight_date_begin'];
                         $flight_date_end = $offer['flight_date_end'];
                         $link = $offer['link'];
-                        $rows_offers = $wpdb->insert( $wpdb->prefix."os_av_special_offer", array( 'cat_id' => $cat_id, 'airline' =>  $airline,
-                            'airline_code' => $airline_code, 'title' => $title, 'conditions' => $conditions,
-                            'href' => $href, 'sale_date_begin' => $sale_date_begin, 'sale_date_end' => $sale_date_end,
-                            'flight_date_begin' => $flight_date_begin, 'flight_date_end' => $flight_date_end, 'link' => $link));//, 'name' => $name,
-                        // 'price' => $price,'picture'=>$picture,'description'=>$description,) );
-                        $to_coun='';
-                        $countries='';
-                        foreach($offer->route as $route){
+                        self::insertSpecialOffer($cat_id, $airline, $airline_code, $title, $conditions, $href,
+                            $sale_date_begin, $sale_date_end, $flight_date_begin, $flight_date_end, $link);
+                        foreach ($offer->route as $route) {
                             $from_iata = $route['from_iata'];
                             $to_iata = $route['to_iata'];
-
-                            foreach($name_iata as $name){
-                                if($to_iata == $name->iata){
-                                    preg_match('/, ([^a-zA-Z][$а-яА-я].+)/', $name->name, $to_coun);
-                                    $countries = $to_coun[1];
-                                }
-                            }
+                            $countries = '';
                             $from_name = $route['from_name'];
                             $to_name = $route['to_name'];
                             $class = $route['class'];
                             $oneway_price = $route['oneway_price'];
                             $roundtrip_price = $route['roundtrip_price'];
-                            $rows_routes = $wpdb->insert( $wpdb->prefix."os_av_special_route", array('airline_code' => $airline_code, 'cat_id' => $cat_id, 'countries'=> $countries,
-                                'from_iata' => $from_iata, 'to_iata' => $to_iata, 'from_name' => $from_name, 'to_name' => $to_name,
-                                'class' => $class, 'oneway_price' => $oneway_price, 'roundtrip_price' => $roundtrip_price,
-                                'departure_at' => $flight_date_begin, 'return_at' => $flight_date_end, 'sale_date_begin' => $sale_date_begin));
+                            self::insertSpecialRoute($airline_code, $cat_id, $countries, $from_iata, $to_iata, $from_name,
+                                $to_name, $class, $oneway_price, $roundtrip_price, $flight_date_begin,
+                                $flight_date_end, $sale_date_begin);
                         }
                     }
                 }
-                if($rows_offers > 0){
-                    return;
-                }
-                if($rows_routes > 0){
-                    return;
-                }
             }
-        }*/
+        }
+
     }
 }

@@ -499,8 +499,10 @@ class TPRequestApi {
         try {
             $sxml = @simplexml_load_file("http://www.aviasales.ru/latest-offers.xml",
                 'SimpleXMLElement', LIBXML_NOCDATA);
+            $sxml = simplexml_load_file("http://www.aviasales.ru/latest-offers.xml");
+
             if ($sxml !== false) {
-                $data = $this->objectToArray($sxml);
+                $data = $sxml;
             } else {
                 $data = array();
             }
