@@ -493,6 +493,23 @@ class TPRequestApi {
         $request_string = "$this->api_url_2/statistics/payments";
         return $this->objectToArray($this->request_two($request_string));
     }
+
+    public function getSpecialOffer(){
+        $data = array();
+        try {
+            $sxml = @simplexml_load_file("http://www.aviasales.ru/latest-offers.xml",
+                'SimpleXMLElement', LIBXML_NOCDATA);
+            if ($sxml !== false) {
+                $data = $this->objectToArray($sxml);
+            } else {
+                $data = array();
+            }
+        }   catch (Exception $e) {
+
+        }
+        return $data;
+    }
+
     /**
      * object to array
      * @param $d

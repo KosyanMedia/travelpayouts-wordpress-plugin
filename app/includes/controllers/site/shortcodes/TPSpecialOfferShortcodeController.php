@@ -17,6 +17,7 @@ class TPSpecialOfferShortcodeController extends \app\includes\controllers\site\T
         parent::__construct();
         $this->model = new \app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel();
         $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+
     }
     public function initShortcode()
     {
