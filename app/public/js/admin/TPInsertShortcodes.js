@@ -280,11 +280,13 @@ jQuery(function($) {
                 doc.find('#tr_one_way').hide();
                 doc.find('#tr_off_title').hide();
                 doc.find('#tr_currency').hide();
-                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid').removeClass('constructorShortcodesError');
+                doc.find('#tr_country').hide();
+                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #tr_country').removeClass('constructorShortcodesError');
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
+        tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
 
         doc.find('#origin, #destination, #airline, #tp_subid').focus(function() {
             $(this).removeClass('constructorShortcodesError');
@@ -354,6 +356,7 @@ jQuery(function($) {
 
             doc.find('#select_shortcodes').removeClass('constructorShortcodesError');
             doc.find('#tp_subid').removeClass('constructorShortcodesError');
+            doc.find('#tr_country').removeClass('constructorShortcodesError');
 
             doc.find('#tr_title').hide();
             doc.find('#tr_subid').hide();

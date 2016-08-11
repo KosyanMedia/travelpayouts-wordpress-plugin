@@ -64,6 +64,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             true //$$in_footer
         );
         wp_register_script(
+            TPOPlUGIN_SLUG.'-AutocompleteCountries', //$handle
+            TPOPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_countries.js', //$src
+            array(), //$deps
+            TPOPlUGIN_VERSION, //$ver
+            true //$$in_footer
+        );
+        wp_register_script(
             TPOPlUGIN_SLUG.'-AutocompleteScript', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/TPAdminAutocomplete.js', //$src
             array('jquery', 'jquery-ui-autocomplete'), //$deps
@@ -187,6 +194,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         /** End register scripts */
         /** Call scripts and style **/
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteAirlines');
+        wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteCountries');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-AutocompleteScript');
 
         wp_register_script(

@@ -520,6 +520,73 @@ function TPCityAutocomplete(){
     /**
      *
      * @param selector
+     * @param AppendTo
+     * @constructor
+     */
+    this.TPCountryAutocompleteInit = function(selector, AppendTo){
+        if (typeof(AppendTo)==='undefined') AppendTo = null;
+        jQuery(function($) {
+            var doc, win;
+            doc = $(document);
+            win = $(window);
+            doc.find(selector).each(function () {
+                var input = $(this);
+                $(this).val(function (index, value) {
+                    return value;
+                }).autocomplete({
+                    source: function(request, response){
+                        response(
+                            $.map(AutocompleteCountry, function(item){
+                                if(tpLocale == "ru"){
+                                    if( matchInArray( request.term, item.name_translations["ru"]) ||
+                                        matchInArray( request.term, item.name_translations["en"]) ||
+                                        matchInArray( request.term, item.code)){
+                                        if(item.code != null) {
+                                            var name = (typeof(item.name_translations["ru"]) === 'undefined') ? item.name_translations["en"] : item.name_translations["ru"];
+                                            return {
+                                                label: name+" ["+item.code+"]",
+                                                value: name+" ["+item.code+"]",
+                                                val:  name+" ["+item.code+"]"
+                                            }
+                                        }
+                                    }
+                                }else{
+                                    if( matchInArray( request.term, item.name_translations["en"]) ||
+                                        matchInArray( request.term, item.code)){
+                                        if(item.iata != null) {
+                                            var name = item.name_translations["en"];
+                                            return {
+                                                label: name+" ["+item.code+"]",
+                                                value: name+" ["+item.code+"]",
+                                                val:  name+" ["+item.code+"]"
+                                            }
+                                        }
+                                    }
+                                }
+
+                            })
+                        )
+
+                    },
+                    select: function( event, ui ) {
+                        input.attr('value',ui.item.val).val(ui.item.val);
+                    },
+                    change: function( event, ui ) {
+                        if( ! ui.item )
+                            input.attr('value','').val('');
+                    },
+                    minLength: 2,
+                    delay: 500,
+                    autoFocus: true,
+                    appendTo: AppendTo
+                });
+            });
+        });
+    }
+
+    /**
+     *
+     * @param selector
      * @param key_data
      * @constructor
      */
