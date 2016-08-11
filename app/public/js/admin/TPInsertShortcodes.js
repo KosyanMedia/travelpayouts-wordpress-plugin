@@ -240,6 +240,8 @@ jQuery(function($) {
                                             $(this));
                                     }
                                     break;
+                                case '14':
+                                    break;
                                 default :
                                     if(origin == ""){
                                         doc.find('#origin').addClass('constructorShortcodesError');
@@ -365,6 +367,7 @@ jQuery(function($) {
             doc.find('#tr_one_way').hide();
             doc.find('#tr_off_title').hide();
             doc.find('#tr_currency').hide();
+            doc.find('#tr_country').hide();
 
             doc.find("#limit").val("");
             switch($(this).val()) {
@@ -501,6 +504,12 @@ jQuery(function($) {
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    break;
+                case '14':
+                    doc.find('#tr_title').show();
+                    doc.find('#tr_country').show();
+                    doc.find('#tr_airline').show();
+                    doc.find('#tr_limit').show();
                     break;
             }
             if(doc.find('#off_title').is(":checked")) {

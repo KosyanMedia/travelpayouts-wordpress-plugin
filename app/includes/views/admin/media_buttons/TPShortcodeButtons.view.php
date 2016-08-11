@@ -39,10 +39,10 @@
                         <option value="7">7. <?php _e('Direct Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="8">8. <?php _e('Popular Destinations from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="9">9. <?php _e('Most popular flights within this Airlines', TPOPlUGIN_TEXTDOMAIN); ?></option>
-                        <!--<option value="10">10. <?php// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>-->
                         <option value="11">10. <?php _e('Searched on our website', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="12" >11. <?php _e('Cheap Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="13">12. <?php _e('Cheap Flights to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="14">13. <?php _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>
                     <?php } else { ?>
                         <option selected="selected" value="0"> <?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="1">1. <?php _e('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN); ?></option>
@@ -58,6 +58,7 @@
                         <option value="11">9. <?php _e('Searched on our website', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="12" >10. <?php _e('Cheap Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
                         <option value="13">11. <?php _e('Cheap Flights to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                        <option value="14">12. <?php _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>
                     <?php }?>
 
                 </select>
@@ -93,6 +94,13 @@
             <td>
                 <input type="text" name="return_date" class="constructorDateShortcodes regular-text code"
                        placeholder="Обратно">
+            </td>
+        </tr>
+        <tr id="tr_country">
+            <td>
+                <input type="text" name="country" id="country" value=""
+                       class="constructorCountryShortcodesAutocomplete regular-text code"
+                       placeholder="<?php _e('Country', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
         <tr id="tr_airline">
