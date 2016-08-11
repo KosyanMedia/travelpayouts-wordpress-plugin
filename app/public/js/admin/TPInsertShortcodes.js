@@ -53,13 +53,16 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, airline, shortcodes, title,
-                            off_title, limit, trip_class,paginate, one_way, tp_subid, currency;
+                            off_title, limit, trip_class,paginate, one_way, tp_subid, currency,
+                            country;
                         shortcodes = "";
                         currency = doc.find('#currency').val();
                         origin = doc.find('#origin').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination').val();
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
+                        country = doc.find('#country').val();
+                        country = country.substring(country.indexOf('[')+1,country.indexOf(']'));
                         airline = doc.find('#airline').val();
                         airline = airline.substring(airline.indexOf('[')+1,airline.indexOf(']'));
                         title = doc.find('#tp_title').val();
@@ -241,6 +244,17 @@ jQuery(function($) {
                                     }
                                     break;
                                 case '14':
+                                    /*if(country == ""){
+                                        doc.find('#country').addClass('constructorShortcodesError');
+                                    }
+                                    if(airline == ""){
+                                        doc.find('#airline').addClass('constructorShortcodesError');
+                                    }*/
+                                    //if(country != "" || airline != ""){
+                                        setShortcodes("[tp_special_offer_shortcodes country=\""+country+"\" " +
+                                            "airline=\""+airline+"\" title=\""+title+"\" limit=\""+limit+"\"]",
+                                            $(this));
+                                    //}
                                     break;
                                 default :
                                     if(origin == ""){
@@ -281,14 +295,14 @@ jQuery(function($) {
                 doc.find('#tr_off_title').hide();
                 doc.find('#tr_currency').hide();
                 doc.find('#tr_country').hide();
-                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #tr_country').removeClass('constructorShortcodesError');
+                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #country').removeClass('constructorShortcodesError');
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
 
-        doc.find('#origin, #destination, #airline, #tp_subid').focus(function() {
+        doc.find('#origin, #destination, #airline, #tp_subid, #country').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
         /*doc.find('#constructorShortcodesButtonOk').click(function (e) {
@@ -356,7 +370,7 @@ jQuery(function($) {
 
             doc.find('#select_shortcodes').removeClass('constructorShortcodesError');
             doc.find('#tp_subid').removeClass('constructorShortcodesError');
-            doc.find('#tr_country').removeClass('constructorShortcodesError');
+            doc.find('#country').removeClass('constructorShortcodesError');
 
             doc.find('#tr_title').hide();
             doc.find('#tr_subid').hide();
