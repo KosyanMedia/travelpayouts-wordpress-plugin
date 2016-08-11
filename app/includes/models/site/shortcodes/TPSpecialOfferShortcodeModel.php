@@ -235,12 +235,12 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
     }
 
     public static function getSpecialOfferApiUpdateDB(){
-        //error_log("getSpecialOfferApiUpdateDB");
 
+        //self::getSpecialOfferApi();
+        //self::getCountryCodeFromCityIata("MOW");
         $cache_key = 'TP_Special_Offer_Api_Update_DB';
         if ( false === ( $specialOfferApiUpdateDB = get_transient( $cache_key ) ) ) {
             //self::$KPDTourismusShortcodeSettings->get_xmlparse_db();
-            error_log("getSpecialOfferApiUpdateDB Cache");
             self::getSpecialOfferApi();
             set_transient( $cache_key, $specialOfferApiUpdateDB, 60*60*12);
         }
@@ -277,7 +277,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                         foreach ($offer->route as $route) {
                             $from_iata = $route['from_iata'];
                             $to_iata = $route['to_iata'];
-                            $countries = '';
+                            $countries = self::getCountryCodeFromCityIata($route['to_iata']);
                             $from_name = $route['from_name'];
                             $to_name = $route['to_name'];
                             $class = $route['class'];
@@ -292,5 +292,16 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
             }
         }
 
+    }
+    public static function getCountryCodeFromCityIata($iata){
+        \app\includes\models\site\TPAutocomplete::getInstance();
+        $iata = trim((string)$iata);
+        //error_log(print_r(\app\includes\models\site\TPAutocomplete::$data[$iata], true));
+        $countryCode = '';
+        if(isset( \app\includes\models\site\TPAutocomplete::$data[$iata])){
+           $countryCode = \app\includes\models\site\TPAutocomplete::$data[$iata]['country_code'];
+        }
+        //error_log($countryCode);
+        return $countryCode;
     }
 }
