@@ -27,10 +27,11 @@ class TPSpecialOfferShortcodeController extends \app\includes\controllers\site\T
 
     public function actionTable($args = array())
     {
-        /*$data = $this->model->getDataTable($args);
-        if(!$data) return false;
+        /*
         return $this->view->renderTable($data);*/
-        var_dump("tp_special_offer_shortcodes");
+        $data = $this->model->getDataTable($args);
+        if(!$data) return false;
+        var_dump($data);
     }
 
 }

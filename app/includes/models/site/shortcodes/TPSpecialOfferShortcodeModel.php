@@ -304,4 +304,46 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         //error_log($countryCode);
         return $countryCode;
     }
+    public function getDataTable($args = array())
+    {
+
+        $defaults = array(
+            'country' => false,
+            'airline' => false,
+            'limit' => false,
+            'title' => '',
+            'sort' => 0
+            );
+        extract(wp_parse_args($args, $defaults), EXTR_SKIP);
+        global $wpdb;
+        $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
+        $where = '';
+        $s = '';
+        if($sort == 0)
+            $s = 'ORDER BY `sale_date_begin` DESC';
+        else
+            $s = 'ORDER BY RAND()';
+        if(!empty($country) || !empty($airline)){
+            if(!empty($country) AND $country){
+                $where = "countries = '{$country}'";
+            }
+            if(!empty($airline) AND $airline){
+                $where = "airline_code = '{$airline}'";
+            }
+            if(!empty($country) AND $country AND !empty($airline) AND $airline){
+                $where = "countries = '{$country}' AND airline_code = '{$airline}'" ;
+            }
+            $resultRoute = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}",NULL),ARRAY_A);
+            $a_id = array();
+            foreach($resultRoute as $key=>$route){
+                $a_id[$key] = $route["cat_id"];
+            }
+            $cat_id = array_unique($a_id);
+
+        } else {
+
+            return "empty";
+        }
+        return $cat_id;
+    }
 }

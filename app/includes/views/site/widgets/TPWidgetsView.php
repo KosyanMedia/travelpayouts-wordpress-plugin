@@ -239,7 +239,7 @@ class TPWidgetsView {
             //error_log("true");
             $currency = $currency_option;
         } else {
-            error_log("USD");
+            //error_log("USD");
             $currency = $currency_default[0];
         }
         return $currency;
@@ -250,9 +250,10 @@ class TPWidgetsView {
         $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
         $currency_default = array('USD', 'RUB', 'EUR');
         $currencyNotMaintained = array(
-            6 => array('PLN'),
-            7 => array('PLN'),
-            8 => array('CAD', 'CHF', 'GBP', 'HKD', 'IDR', 'INR', 'NZD', 'PHP','PLN', 'SGD', )
+            3 => array('TRY', 'ILS'),
+            6 => array('PLN', 'TRY', 'ILS'),
+            7 => array('PLN', 'TRY', 'ILS'),
+            8 => array('CAD', 'CHF', 'GBP', 'HKD', 'IDR', 'INR', 'NZD', 'PHP','PLN', 'SGD', 'TRY', 'ILS' )
         );
         error_log($currency_option);
         switch($widgetType){
@@ -282,8 +283,12 @@ class TPWidgetsView {
                 }else{
                     $currency = $currency_option;
                 }*/
-                $currency = $currency_option;
-
+                //$currency = $currency_option;
+                if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
+                    $currency = $currency_default[0];
+                } else {
+                    $currency = $currency_option;
+                }
                 break;
             case 4:
                 /*if(strpos($white_label, 'jetradar') !== false){

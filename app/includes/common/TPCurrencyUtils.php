@@ -15,7 +15,7 @@ class TPCurrencyUtils
         'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
         'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
         'SGD', 'THB', 'GBP', 'ZAR', 'UAH', 'KZT',
-        'AUD'
+        'AUD', 'TRY', 'ILS'
     );
 
     /**
