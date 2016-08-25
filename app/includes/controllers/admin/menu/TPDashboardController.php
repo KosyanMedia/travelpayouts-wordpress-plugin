@@ -18,8 +18,8 @@ class TPDashboardController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         $plugin_page = add_menu_page(
-            _x('Travelpayouts',  'add_menu_page page title' , TPOPlUGIN_TEXTDOMAIN ),
-            _x('Travelpayouts',     'add_menu_page menu title' , TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_dashboard_title',  'admin menu page title dashboard' , TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_dashboard_title',  'admin menu page title dashboard' , TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             TPOPlUGIN_TEXTDOMAIN,
             array(&$this,'render'),

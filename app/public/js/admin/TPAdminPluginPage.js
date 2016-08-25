@@ -587,8 +587,10 @@ jQuery(function($){
      * @constructor
      */
     function TPFieldHostSelect(local){
+        console.log('local = '+local);
         var host, default_host;
         host = doc.find('.TPFieldHost').data('host');
+        console.log('host = '+host);
         if(host == '') {
             switch (local){
                 case "1":
@@ -598,6 +600,7 @@ jQuery(function($){
                     default_host = doc.find('.TPFieldHost').data('default_host_en');
                     break;
             }
+            console.log('default_host = '+default_host);
             doc.find('.TPFieldHost').find('option:selected').removeAttr("selected");
             doc.find('.TPFieldHost option[value="' + default_host + '"]')
                 .attr('selected', 'selected');

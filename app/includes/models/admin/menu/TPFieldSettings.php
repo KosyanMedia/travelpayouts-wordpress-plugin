@@ -386,6 +386,9 @@ class TPFieldSettings {
                     <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
                         <?php _e('English', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
+                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
+                        <?php _e('Thai', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                 </select>
             </label>
             <label>

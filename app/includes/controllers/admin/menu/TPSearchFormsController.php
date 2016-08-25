@@ -18,8 +18,8 @@ class TPSearchFormsController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Search Forms',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
-            _x('Search Forms',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_search_forms_title',  'admin menu page title search forms', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_search_forms_title',  'admin menu page title search forms', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_search_shortcodes',
             array(&$this, 'render'));

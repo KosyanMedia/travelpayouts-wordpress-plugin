@@ -15,9 +15,10 @@ class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController
     public function action()
     {
         // TODO: Implement action() method.
+        //
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Flight Tickets',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
-            _x('Flight Tickets',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_flight_tickets_title',  'admin menu page title flight tickets', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_flight_tickets_title',  'admin menu page title flight tickets', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_tickets',
             array(&$this, 'render'));

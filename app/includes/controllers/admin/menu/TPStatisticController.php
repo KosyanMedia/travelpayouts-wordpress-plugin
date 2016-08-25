@@ -18,8 +18,10 @@ class TPStatisticController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Statistics',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
-            _x('Statistics',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_statistics_title',  'admin menu page title statistics',
+                TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_statistics_title',  'admin menu page title statistics',
+                TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_stats',
             array(&$this, 'render'));
