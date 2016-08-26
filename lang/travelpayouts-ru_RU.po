@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-26 11:05+0300\n"
+"POT-Creation-Date: 2016-08-26 12:35+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1404,7 +1404,6 @@ msgstr "Редактировать "
 #: app/includes/views/admin/menu/TPWidgets.view.php:86
 #: app/includes/views/admin/menu/TPWidgets.view.php:100
 #: app/includes/views/admin/menu/TPWidgets.view.php:114
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:18
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
@@ -1778,7 +1777,6 @@ msgid "Localization"
 msgstr "Локализация"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:88
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:14
 msgid ""
 "By pressing the button \"Save\" you agree to send the plugin's activation "
 "data to Travelpayouts."
@@ -1891,14 +1889,28 @@ msgid "tp_admin_page_wizard_tab_menu_registration"
 msgstr "У меня нет аккаунта Тravelpayouts"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
-msgid "Get your API Token and Partner Marker by following "
+msgctxt "admin page wizard tab menu account paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
 msgstr ""
 "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после "
-"регистрации"
+"регистрации "
 
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:7
-msgid "this link."
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:8
+msgctxt "admin page wizard tab menu account paragraph_1 link tp"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
 msgstr "на этой странице."
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
+msgctxt "admin page wizard tab menu account paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgstr ""
+"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации "
+"плагина в Travelpayouts"
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
+msgctxt "admin page wizard tab menu account btn_save"
+msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
 #, php-format
@@ -2048,11 +2060,6 @@ msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
 msgstr "1. Зарегистрироваться "
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
-#, fuzzy
-msgid "2. Enter settings "
-msgstr "2. Внести настройки"
-
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:32
 msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Внести настройки"
@@ -2068,6 +2075,18 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "this link."
+#~ msgstr "на этой странице."
+
+#~ msgid "Get your API Token and Partner Marker by following "
+#~ msgstr ""
+#~ "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после "
+#~ "регистрации"
+
+#, fuzzy
+#~ msgid "2. Enter settings "
+#~ msgstr "2. Внести настройки"
 
 #~ msgid "1. Sign up "
 #~ msgstr "1. Зарегистрироваться "

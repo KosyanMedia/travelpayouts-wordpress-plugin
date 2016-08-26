@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-26 11:06+0300\n"
+"POT-Creation-Date: 2016-08-26 12:36+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1379,7 +1379,6 @@ msgstr ""
 #: app/includes/views/admin/menu/TPWidgets.view.php:86
 #: app/includes/views/admin/menu/TPWidgets.view.php:100
 #: app/includes/views/admin/menu/TPWidgets.view.php:114
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:18
 msgid "Save changes"
 msgstr ""
 
@@ -1727,13 +1726,15 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:41
 #: app/includes/views/admin/menu/TPSettings.view.php:62
+#, fuzzy
 msgid "Account"
-msgstr ""
+msgstr "Get your API Token and Partner Marker by following "
 
 #: app/includes/views/admin/menu/TPSettings.view.php:46
 #: app/includes/views/admin/menu/TPSettings.view.php:70
+#, fuzzy
 msgid "Settings"
-msgstr ""
+msgstr "2. Enter settings "
 
 #: app/includes/views/admin/menu/TPSettings.view.php:51
 #: app/includes/views/admin/menu/TPSettings.view.php:78
@@ -1741,7 +1742,6 @@ msgid "Localization"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:88
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:14
 msgid ""
 "By pressing the button \"Save\" you agree to send the plugin's activation "
 "data to Travelpayouts."
@@ -1852,13 +1852,26 @@ msgid "tp_admin_page_wizard_tab_menu_registration"
 msgstr "New to Travelpayouts?"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
-msgid "Get your API Token and Partner Marker by following "
-msgstr ""
+msgctxt "admin page wizard tab menu account paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
+msgstr "Get your API Token and Partner Marker by following "
 
-#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:7
-#, fuzzy
-msgid "this link."
-msgstr "1. Sign up"
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:8
+msgctxt "admin page wizard tab menu account paragraph_1 link tp"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+msgstr "this link."
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
+msgctxt "admin page wizard tab menu account paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgstr ""
+"By pressing the button \"Save\" you agree to send the plugin's activation "
+"data to Travelpayouts."
+
+#: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
+msgctxt "admin page wizard tab menu account btn_save"
+msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
 #, php-format
@@ -1989,10 +2002,6 @@ msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
 msgstr "1. Sign up"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
-msgid "2. Enter settings "
-msgstr ""
-
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:32
 msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Enter settings "
@@ -2008,3 +2017,7 @@ msgstr ""
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgid "this link."
+#~ msgstr "2. Enter settings "
