@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-25 21:26+0300\n"
+"POT-Creation-Date: 2016-08-26 11:06+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;"
+"_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -1347,8 +1347,9 @@ msgid "Anchor"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:51
+#, fuzzy
 msgid "Link"
-msgstr ""
+msgstr "1. Sign up"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:64
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
@@ -1403,8 +1404,9 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:20
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:20
+#, fuzzy
 msgid "Link "
-msgstr ""
+msgstr "1. Sign up"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:27
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:27
@@ -1720,8 +1722,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Please, enter your %s account data below. Please, register if you don’t have "
-"a Travelpayouts account. Check your Marker and Token at - %s  White Label - "
-"%s"
+"a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:41
@@ -1837,8 +1838,8 @@ msgctxt "admin page wizard title description"
 msgid "tp_admin_page_wizard_title_description"
 msgstr ""
 "Install our convenient and useful tools to your website and help your "
-"visitors to find the cheapest flights and hotels. Earn on commission for "
-"each booking."
+"visitors to find the cheapest flights and hotels. Earn on commission for each "
+"booking."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
 msgctxt "admin page wizard tab menu account"
@@ -1855,8 +1856,9 @@ msgid "Get your API Token and Partner Marker by following "
 msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:7
+#, fuzzy
 msgid "this link."
-msgstr ""
+msgstr "1. Sign up"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
 #, php-format
@@ -1886,8 +1888,8 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:20
 msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab "
-"a great deal and gets to have an unforgettable journey, while we pay you a "
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a "
+"great deal and gets to have an unforgettable journey, while we pay you a "
 "reward."
 msgstr ""
 
@@ -1948,8 +1950,7 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:49
 msgid ""
-"Dozens of useful articles in Travelpayouts Knowledge Base, always available "
-"at"
+"Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
@@ -1963,36 +1964,45 @@ msgid ""
 msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
-msgid "New to Travelpayouts? Please, "
-msgstr ""
+msgctxt "admin page wizard tab menu registration paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+msgstr "New to Travelpayouts? Please,"
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:4
-msgid "Register"
-msgstr ""
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:5
+msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+msgstr "Register"
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:8
-msgid "Registration is totally free and takes less than a minute."
-msgstr ""
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:10
+msgctxt "admin page wizard tab menu registration paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+msgstr "Registration is totally free and takes less than a minute."
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:11
-msgid "Return to plugin settings to fill out your Profile."
-msgstr ""
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:14
+msgctxt "admin page wizard tab menu registration paragraph_3"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+msgstr "Return to plugin settings to fill out your Profile."
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:18
-msgid "1. Sign up "
-msgstr ""
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:22
+msgctxt "admin page wizard tab menu registration link sing up"
+msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+msgstr "1. Sign up"
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:26
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
 msgid "2. Enter settings "
 msgstr ""
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:32
+msgctxt "admin page wizard tab menu registration link enter settings"
+msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+msgstr "2. Enter settings "
 
 #: core/controllers/TPOAdminMenuController.php:24
 msgid "Please, don't delete the information below. It makes helping you easier"
 msgstr ""
 
 #: core/controllers/TPOAdminMenuController.php:39
-msgid ""
-"A problem with the plugin? Have some suggestions or ideas? Contact us at"
+msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 msgstr ""
 
 #: core/controllers/TPOBaseController.php:24

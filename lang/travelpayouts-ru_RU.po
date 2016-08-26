@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-25 21:26+0300\n"
+"POT-Creation-Date: 2016-08-26 11:05+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;"
+"_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -1660,8 +1660,8 @@ msgid ""
 "Here you can add shortcodes for each search form added to your Travelpayouts "
 "account"
 msgstr ""
-"В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных "
-"в админке аккаунта Travelpayouts"
+"В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в "
+"админке аккаунта Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:40
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:20
@@ -1730,8 +1730,8 @@ msgstr "Код формы TravelPayouts"
 msgid ""
 "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
 msgstr ""
-"Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe "
-"код для вставки\""
+"Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код "
+"для вставки\""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:49
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:50
@@ -1756,8 +1756,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Please, enter your %s account data below. Please, register if you don’t have "
-"a Travelpayouts account. Check your Marker and Token at - %s  White Label - "
-"%s"
+"a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта "
 "в Travelpayouts - вам сперва необходимо зарегистрироваться. Маркер и токен "
@@ -1878,8 +1877,8 @@ msgctxt "admin page wizard title description"
 msgid "tp_admin_page_wizard_title_description"
 msgstr ""
 "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, "
-"которые помогут вашим посетителям найти самые дешевые билеты и отели, а вам "
-"– заработать на этом."
+"которые помогут вашим посетителям найти самые дешевые билеты и отели, а вам – "
+"заработать на этом."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
 msgctxt "admin page wizard tab menu account"
@@ -1909,8 +1908,8 @@ msgid ""
 "Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
 "booking (with booking amount that equals to approx. 400$)."
 msgstr ""
-"- партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
-"до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
+"- партнерская сеть для заработка на туристическом трафике.  Вы заработаете до "
+"70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
 "составляет 7$ с купленного авиабилета и 20$ с брони гостиницы (при сумме "
 "брони около $400)."
 
@@ -1938,8 +1937,8 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:20
 msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab "
-"a great deal and gets to have an unforgettable journey, while we pay you a "
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a "
+"great deal and gets to have an unforgettable journey, while we pay you a "
 "reward."
 msgstr ""
 "<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с "
@@ -2007,8 +2006,7 @@ msgstr " о настройке и возможностях WP плагина Tra
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:49
 msgid ""
-"Dozens of useful articles in Travelpayouts Knowledge Base, always available "
-"at"
+"Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
@@ -2020,47 +2018,73 @@ msgid ""
 "We wish success to all your endeavors! Do the things you love and we will "
 "take care of the rest!"
 msgstr ""
-"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а "
-"мы поможем вам с остальным!"
+"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы "
+"поможем вам с остальным!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
-msgid "New to Travelpayouts? Please, "
+msgctxt "admin page wizard tab menu registration paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
 msgstr ""
 "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:4
-msgid "Register"
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:5
+msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
 msgstr "регистрацию."
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:8
-msgid "Registration is totally free and takes less than a minute."
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:10
+msgctxt "admin page wizard tab menu registration paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
 msgstr "Пройдите быструю и бесплатную регистрацию."
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:11
-msgid "Return to plugin settings to fill out your Profile."
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:14
+msgctxt "admin page wizard tab menu registration paragraph_3"
+msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
 msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:18
-msgid "1. Sign up "
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:22
+msgctxt "admin page wizard tab menu registration link sing up"
+msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
 msgstr "1. Зарегистрироваться "
 
-#: app/includes/views/admin/menu/TPWizardTabReg.view.php:26
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
+#, fuzzy
 msgid "2. Enter settings "
+msgstr "2. Внести настройки"
+
+#: app/includes/views/admin/menu/TPWizardTabReg.view.php:32
+msgctxt "admin page wizard tab menu registration link enter settings"
+msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Внести настройки"
 
 #: core/controllers/TPOAdminMenuController.php:24
 msgid "Please, don't delete the information below. It makes helping you easier"
-msgstr ""
-"Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
+msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
 
 #: core/controllers/TPOAdminMenuController.php:39
-msgid ""
-"A problem with the plugin? Have some suggestions or ideas? Contact us at"
+msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "1. Sign up "
+#~ msgstr "1. Зарегистрироваться "
+
+#~ msgid "Return to plugin settings to fill out your Profile."
+#~ msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
+
+#~ msgid "Registration is totally free and takes less than a minute."
+#~ msgstr "Пройдите быструю и бесплатную регистрацию."
+
+#~ msgid "Register"
+#~ msgstr "регистрацию."
+
+#~ msgid "New to Travelpayouts? Please, "
+#~ msgstr ""
+#~ "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и "
+#~ "бесплатную"
 
 #~ msgid "New to Travelpayouts?"
 #~ msgstr "У меня нет аккаунта Тravelpayouts"
@@ -2224,8 +2248,8 @@ msgstr ""
 #~ "Shortcode generated automatically when you save and available for "
 #~ "insertion into the posts"
 #~ msgstr ""
-#~ "Шорткод генерируется автоматически при сохранении и доступен для вставки "
-#~ "в записях"
+#~ "Шорткод генерируется автоматически при сохранении и доступен для вставки в "
+#~ "записях"
 
 #~ msgid "Code form TravelPayouts"
 #~ msgstr "Код формы TravelPayouts"
@@ -2354,8 +2378,8 @@ msgstr ""
 #~ "For faster injection test page, select &lt;head&gt;. If pages are loading "
 #~ "slowly, try to rearrange the &lt;footer&gt;"
 #~ msgstr ""
-#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если "
-#~ "страницы загружаются медленно, попробуйте переставить в &lt;footer&gt;"
+#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы "
+#~ "загружаются медленно, попробуйте переставить в &lt;footer&gt;"
 
 #~ msgid "Format date"
 #~ msgstr "Формат даты"
@@ -2374,8 +2398,7 @@ msgstr ""
 #~ "Используйте переменные airline для автоматической подстановки авиакомпании"
 
 #~ msgid ""
-#~ "Use variables of origin, destination for automatic substitution of the "
-#~ "city"
+#~ "Use variables of origin, destination for automatic substitution of the city"
 #~ msgstr ""
 #~ "Используйте переменные origin, destination для автоматической подстановки "
 #~ "города"
