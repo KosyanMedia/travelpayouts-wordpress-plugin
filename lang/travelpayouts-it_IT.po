@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-26 12:36+0300\n"
+"POT-Creation-Date: 2016-08-30 22:09+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -1913,12 +1913,8 @@ msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
 msgstr "Salva modifiche"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
-#, php-format
-msgid ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to "
-"70% from the commission advertiser gets for each sale. On average, our "
-"Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
-"booking (with booking amount that equals to approx. 400$)."
+msgctxt "admin page wizard tab menu content paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgstr ""
 " – Network di affiliazione che monetizza il tuo Traffico di viaggio . Si può "
 "guadagnare fino al 70 % dalla Commissione che l'inserzionista riceve da ogni "
@@ -1926,112 +1922,126 @@ msgstr ""
 "venduto e 20 $ da ciascun hotel venduto a prenotazione ( con una quantità di "
 "prenotazione che equivale a circa 400 $ )."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:10
-msgid ""
-"All user purchases made within 30 days after following links in tables or "
-"using placed widgets will be credited to your account."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
+msgctxt "admin page wizard tab menu content paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
 msgstr ""
 "Tutti gli acquisti degli utenti effettuati entro 30 giorni dopo aver seguito "
 "i link in tabelle o utilizzando i widget saranno accreditati sul tuo conto "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:13
-msgid "How it works?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:16
+msgctxt "admin page wizard tab menu content paragraph_3"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3"
 msgstr "Come funziona?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:17
-msgid ""
-"<strong>Install our Affiliate tools.</strong>  You place our widgets and "
-"tables right in your posts and help visitors to book favorable flights, "
-"hotels and other services."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:22
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
 msgstr ""
-"<Strong > Installa i nostri strumenti di affiliazione . < / Strong>Posiziona "
-"i nostri widget e le tabelle direttamente nei messaggi per aiutare i "
-"visitatori a prenotare i voli  migliori , alberghi e altri servizi ."
+"<strong> Installa i nostri strumenti di affiliazione . </strong>Posiziona i "
+"nostri widget e le tabelle direttamente nei messaggi per aiutare i visitatori "
+"a prenotare i voli  migliori , alberghi e altri servizi ."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:20
-msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a "
-"great deal and gets to have an unforgettable journey, while we pay you a "
-"reward."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgstr ""
-"< Strong> Visitatore paga per il servizio . < / Strong> Il cliente è felice "
-"di avere un viaggio indimenticabile , mentre noi vi paghiamo un premio per la "
+"<strong> Visitatore paga per il servizio . </strong> Il cliente è felice di "
+"avere un viaggio indimenticabile , mentre noi vi paghiamo un premio per la "
 "prenotazione ."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:23
-msgid ""
-"<strong>You get profits.</strong>  Your earnings will be displayed in your "
-"Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
-"monthly payouts. "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 msgstr ""
-"< Strong> I tuoi profitti . < / Strong> I tuoi guadagni saranno visualizzati "
+"<strong> I tuoi profitti . </strong> I tuoi guadagni saranno visualizzati "
 "nella tua Dashboard diTravelpayouts  e nel tuo plugin. Abbiamo un programma , "
 "automatizzato , con pagamenti mensili."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
-msgid "What features does a plugin have?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
+msgctxt "admin page wizard tab menu content paragraph_4"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
 msgstr "Quali caratteristiche ha il plugin?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:28
-msgid "Plugin allows to get the following tools added to your Wordpress posts:"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
+msgctxt "admin page wizard tab menu content paragraph_5"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5"
 msgstr ""
-"Plugin permette di ottenere i seguenti strumenti aggiunti ai tuoi post "
-"Wordpress :"
+"Il plugin permette di inserire i record (tramite Wordpress interfaccia di "
+"editing) i seguenti strumenti:"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:32
-msgid "12 customizable tables with flight information;"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:47
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable "
+"tables with flight information;)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
 msgstr "12 tabelle modificabili con le informazioni sui voli;"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:33
-msgid "Search Forms;"
-msgstr "Поисковые формы;"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
+msgstr ""
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:34
-msgid "Low cost flights and hotels Map"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights "
+"and hotels Map)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 msgstr "Voli lowcost e Mappa hotel"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:35
-msgid "Low prices Calendar"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:59
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
 msgstr "Calendario dei prezzi più bassi"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
-msgid "Hotel Widget "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:63
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
 msgstr "Hotel Widget "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:37
-msgid "Popular flight destinations Widget"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:67
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight "
+"destinations Widget)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
 msgstr "Widget Destinazioni Voli Popolari"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
-msgid "How can I earn more?"
-msgstr "Come posso guadagnare di più?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:74
+msgctxt "(How can I earn more?)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_6"
+msgstr "Come posso guadagnare di più? "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:44
-msgid "We recommend that you get acquainted to the "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:79
+msgctxt "(We recommend that you get acquainted to the )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7"
 msgstr "Si consiglia di acquisire familiarità con lo "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:46
-msgid "detailed information"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:82
+msgctxt "(detailed information)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_link"
 msgstr "informazioni dettagliate"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:48
-msgid "on Travelpayouts WP plugin features."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:85
+msgctxt "(on Travelpayouts WP plugin features. )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
 msgstr "sulle caratteristiche del plugin WP Travelpayouts ."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:49
-msgid ""
-"Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:87
+msgctxt ""
+"(Dozens of useful articles in Travelpayouts Knowledge Base, always available "
+"at )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
 msgstr ""
 "Dozzine di articoli su come iniziare su Travelpayouts, sempre disponibili su"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
-msgid "https://support.travelpayouts.com"
-msgstr "https://support.travelpayouts.com/hc/ru"
-
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
-msgid ""
-"We wish success to all your endeavors! Do the things you love and we will "
-"take care of the rest!"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
+msgctxt ""
+"(We wish success to all your endeavors! Do the things you love and we will "
+"take care of the rest!)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 msgstr ""
 "Ti auguriamo il successo a tutti i tuoi sforzi ! Fai le cose che ami e noi ci "
 "occuperemo del resto!"
@@ -2080,6 +2090,113 @@ msgstr ""
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid ""
+#~ "We wish success to all your endeavors! Do the things you love and we will "
+#~ "take care of the rest!"
+#~ msgstr ""
+#~ "Ti auguriamo il successo a tutti i tuoi sforzi ! Fai le cose che ami e noi "
+#~ "ci occuperemo del resto!"
+
+#~ msgid "on Travelpayouts WP plugin features."
+#~ msgstr "sulle caratteristiche del plugin WP Travelpayouts ."
+
+#~ msgid ""
+#~ "Dozens of useful articles in Travelpayouts Knowledge Base, always "
+#~ "available at"
+#~ msgstr ""
+#~ "Dozzine di articoli su come iniziare su Travelpayouts, sempre disponibili "
+#~ "su"
+
+#~ msgid "https://support.travelpayouts.com"
+#~ msgstr "https://support.travelpayouts.com/hc/ru"
+
+#~ msgid "We recommend that you get acquainted to the "
+#~ msgstr "Si consiglia di acquisire familiarità con lo "
+
+#~ msgid "detailed information"
+#~ msgstr "informazioni dettagliate"
+
+#~ msgid "How can I earn more?"
+#~ msgstr "Come posso guadagnare di più?"
+
+#~ msgid "Popular flight destinations Widget"
+#~ msgstr "Widget Destinazioni Voli Popolari"
+
+#~ msgid "Hotel Widget "
+#~ msgstr "Hotel Widget "
+
+#~ msgid "Low prices Calendar"
+#~ msgstr "Calendario dei prezzi più bassi"
+
+#~ msgid "Low cost flights and hotels Map"
+#~ msgstr "Voli lowcost e Mappa hotel"
+
+#~ msgid "Search Forms;"
+#~ msgstr "Поисковые формы;"
+
+#~ msgid "12 customizable tables with flight information;"
+#~ msgstr "12 tabelle modificabili con le informazioni sui voli;"
+
+#~ msgid ""
+#~ "Plugin allows to get the following tools added to your Wordpress posts:"
+#~ msgstr ""
+#~ "Plugin permette di ottenere i seguenti strumenti aggiunti ai tuoi post "
+#~ "Wordpress :"
+
+#~ msgid "What features does a plugin have?"
+#~ msgstr "Quali caratteristiche ha il plugin?"
+
+#~ msgid ""
+#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your "
+#~ "Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
+#~ "monthly payouts. "
+#~ msgstr ""
+#~ "< Strong> I tuoi profitti . < / Strong> I tuoi guadagni saranno "
+#~ "visualizzati nella tua Dashboard diTravelpayouts  e nel tuo plugin. "
+#~ "Abbiamo un programma , automatizzato , con pagamenti mensili."
+
+#~ msgid ""
+#~ "<strong>Visitor pays for the service.</strong>  The client is happy to "
+#~ "grab a great deal and gets to have an unforgettable journey, while we pay "
+#~ "you a reward."
+#~ msgstr ""
+#~ "< Strong> Visitatore paga per il servizio . < / Strong> Il cliente è "
+#~ "felice di avere un viaggio indimenticabile , mentre noi vi paghiamo un "
+#~ "premio per la prenotazione ."
+
+#~ msgid ""
+#~ "<strong>Install our Affiliate tools.</strong>  You place our widgets and "
+#~ "tables right in your posts and help visitors to book favorable flights, "
+#~ "hotels and other services."
+#~ msgstr ""
+#~ "<Strong > Installa i nostri strumenti di affiliazione . < / "
+#~ "Strong>Posiziona i nostri widget e le tabelle direttamente nei messaggi "
+#~ "per aiutare i visitatori a prenotare i voli  migliori , alberghi e altri "
+#~ "servizi ."
+
+#~ msgid "How it works?"
+#~ msgstr "Come funziona?"
+
+#~ msgid ""
+#~ "All user purchases made within 30 days after following links in tables or "
+#~ "using placed widgets will be credited to your account."
+#~ msgstr ""
+#~ "Tutti gli acquisti degli utenti effettuati entro 30 giorni dopo aver "
+#~ "seguito i link in tabelle o utilizzando i widget saranno accreditati sul "
+#~ "tuo conto "
+
+#~ msgid ""
+#~ " – Affiliate Network that monetizes your Travel Traffic. You will earn up "
+#~ "to 70% from the commission advertiser gets for each sale. On average, our "
+#~ "Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
+#~ "booking (with booking amount that equals to approx. 400$)."
+#~ msgstr ""
+#~ " – Network di affiliazione che monetizza il tuo Traffico di viaggio . Si "
+#~ "può guadagnare fino al 70 % dalla Commissione che l'inserzionista riceve "
+#~ "da ogni vendita. In media , il nostro affiliato guadagna 7 $ da ogni "
+#~ "biglietto aereo venduto e 20 $ da ciascun hotel venduto a prenotazione "
+#~ "( con una quantità di prenotazione che equivale a circa 400 $ )."
 
 #~ msgid "this link."
 #~ msgstr "questo link."

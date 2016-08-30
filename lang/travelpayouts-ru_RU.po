@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-26 12:35+0300\n"
+"POT-Creation-Date: 2016-08-30 22:10+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1913,122 +1913,132 @@ msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
-#, php-format
-msgid ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to "
-"70% from the commission advertiser gets for each sale. On average, our "
-"Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
-"booking (with booking amount that equals to approx. 400$)."
+msgctxt "admin page wizard tab menu content paragraph_1"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgstr ""
-"- партнерская сеть для заработка на туристическом трафике.  Вы заработаете до "
-"70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
+" - партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
+"до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
 "составляет 7$ с купленного авиабилета и 20$ с брони гостиницы (при сумме "
 "брони около $400)."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:10
-msgid ""
-"All user purchases made within 30 days after following links in tables or "
-"using placed widgets will be credited to your account."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
+msgctxt "admin page wizard tab menu content paragraph_2"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
 msgstr ""
 "Пользователь, перешедший по вашей партнерской ссылке на сайт рекламодателя, "
 "закрепляется за вами на 30 дней (cookie lifetime). Все его покупки в этот "
 "период зачисляются на ваш счет. "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:13
-msgid "How it works?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:16
+msgctxt "admin page wizard tab menu content paragraph_3"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3"
 msgstr "Как это работает?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:17
-msgid ""
-"<strong>Install our Affiliate tools.</strong>  You place our widgets and "
-"tables right in your posts and help visitors to book favorable flights, "
-"hotels and other services."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:22
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
 msgstr ""
 "<strong>Установите наши инструменты..</strong>Вы размещаете в ваших записях "
 "таблицы и виджеты с информацией о выгодных авиабилетах, отелях и т.д. "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:20
-msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a "
-"great deal and gets to have an unforgettable journey, while we pay you a "
-"reward."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgstr ""
-"<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с "
-"вашего ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
+"<strong>Посетитель оплачивает услугу.</strong> Посетители переходят с вашего "
+"ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:23
-msgid ""
-"<strong>You get profits.</strong>  Your earnings will be displayed in your "
-"Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
-"monthly payouts. "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
+msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 msgstr ""
 "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в "
 "вашем личном кабинете Travelpayouts и в плагине. Выплата прибыли происходит "
 "автоматически раз в месяц, строго по расписанию."
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
-msgid "What features does a plugin have?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
+msgctxt "admin page wizard tab menu content paragraph_4"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
 msgstr "Что умеет этот плагин?"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:28
-msgid "Plugin allows to get the following tools added to your Wordpress posts:"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
+msgctxt "admin page wizard tab menu content paragraph_5"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5"
 msgstr ""
 "Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
 "Wordpress) следующие инструменты:"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:32
-msgid "12 customizable tables with flight information;"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:47
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable "
+"tables with flight information;)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
 msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:33
-msgid "Search Forms;"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
 msgstr "Поисковые формы;"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:34
-msgid "Low cost flights and hotels Map"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights "
+"and hotels Map)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 msgstr "Карту дешевых авиаперелетов, отельную карту"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:35
-msgid "Low prices Calendar"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:59
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
 msgstr "Календарь низких цен"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
-msgid "Hotel Widget "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:63
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
 msgstr "Виджет отеля"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:37
-msgid "Popular flight destinations Widget"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:67
+msgctxt ""
+"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight "
+"destinations Widget)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
 msgstr "Виджет популярных направлений перелета"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
-msgid "How can I earn more?"
-msgstr "Как заработать еще больше?"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:74
+msgctxt "(How can I earn more?)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_6"
+msgstr "Как заработать еще больше? "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:44
-msgid "We recommend that you get acquainted to the "
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:79
+msgctxt "(We recommend that you get acquainted to the )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7"
 msgstr "Рекомендуем ознакомиться с "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:46
-msgid "detailed information"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:82
+msgctxt "(detailed information)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_link"
 msgstr "подробной информацией"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:48
-msgid "on Travelpayouts WP plugin features."
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:85
+msgctxt "(on Travelpayouts WP plugin features. )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
 msgstr " о настройке и возможностях WP плагина Travelpayouts. "
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:49
-msgid ""
-"Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:87
+msgctxt ""
+"(Dozens of useful articles in Travelpayouts Knowledge Base, always available "
+"at )"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
 msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
-msgid "https://support.travelpayouts.com"
-msgstr "https://support.travelpayouts.com/hc/ru"
-
-#: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
-msgid ""
-"We wish success to all your endeavors! Do the things you love and we will "
-"take care of the rest!"
+#: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
+msgctxt ""
+"(We wish success to all your endeavors! Do the things you love and we will "
+"take care of the rest!)"
+msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 msgstr ""
 "Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы "
 "поможем вам с остальным!"
@@ -2075,6 +2085,108 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid ""
+#~ "We wish success to all your endeavors! Do the things you love and we will "
+#~ "take care of the rest!"
+#~ msgstr ""
+#~ "Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а "
+#~ "мы поможем вам с остальным!"
+
+#~ msgid "on Travelpayouts WP plugin features."
+#~ msgstr " о настройке и возможностях WP плагина Travelpayouts. "
+
+#~ msgid ""
+#~ "Dozens of useful articles in Travelpayouts Knowledge Base, always "
+#~ "available at"
+#~ msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
+
+#~ msgid "https://support.travelpayouts.com"
+#~ msgstr "https://support.travelpayouts.com/hc/ru"
+
+#~ msgid "We recommend that you get acquainted to the "
+#~ msgstr "Рекомендуем ознакомиться с "
+
+#~ msgid "detailed information"
+#~ msgstr "подробной информацией"
+
+#~ msgid "How can I earn more?"
+#~ msgstr "Как заработать еще больше?"
+
+#~ msgid "Popular flight destinations Widget"
+#~ msgstr "Виджет популярных направлений перелета"
+
+#~ msgid "Hotel Widget "
+#~ msgstr "Виджет отеля"
+
+#~ msgid "Low prices Calendar"
+#~ msgstr "Календарь низких цен"
+
+#~ msgid "Low cost flights and hotels Map"
+#~ msgstr "Карту дешевых авиаперелетов, отельную карту"
+
+#~ msgid "Search Forms;"
+#~ msgstr "Поисковые формы;"
+
+#~ msgid "12 customizable tables with flight information;"
+#~ msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
+
+#~ msgid ""
+#~ "Plugin allows to get the following tools added to your Wordpress posts:"
+#~ msgstr ""
+#~ "Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
+#~ "Wordpress) следующие инструменты:"
+
+#~ msgid "What features does a plugin have?"
+#~ msgstr "Что умеет этот плагин?"
+
+#~ msgid ""
+#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your "
+#~ "Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
+#~ "monthly payouts. "
+#~ msgstr ""
+#~ "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается "
+#~ "в вашем личном кабинете Travelpayouts и в плагине. Выплата прибыли "
+#~ "происходит автоматически раз в месяц, строго по расписанию."
+
+#~ msgid ""
+#~ "<strong>Visitor pays for the service.</strong>  The client is happy to "
+#~ "grab a great deal and gets to have an unforgettable journey, while we pay "
+#~ "you a reward."
+#~ msgstr ""
+#~ "<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с "
+#~ "вашего ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
+
+#~ msgid ""
+#~ "<strong>Install our Affiliate tools.</strong>  You place our widgets and "
+#~ "tables right in your posts and help visitors to book favorable flights, "
+#~ "hotels and other services."
+#~ msgstr ""
+#~ "<strong>Установите наши инструменты..</strong>Вы размещаете в ваших "
+#~ "записях таблицы и виджеты с информацией о выгодных авиабилетах, отелях и т."
+#~ "д. "
+
+#~ msgid "How it works?"
+#~ msgstr "Как это работает?"
+
+#~ msgid ""
+#~ "All user purchases made within 30 days after following links in tables or "
+#~ "using placed widgets will be credited to your account."
+#~ msgstr ""
+#~ "Пользователь, перешедший по вашей партнерской ссылке на сайт "
+#~ "рекламодателя, закрепляется за вами на 30 дней (cookie lifetime). Все его "
+#~ "покупки в этот период зачисляются на ваш счет. "
+
+#~ msgid ""
+#~ " – Affiliate Network that monetizes your Travel Traffic. You will earn up "
+#~ "to 70% from the commission advertiser gets for each sale. On average, our "
+#~ "Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
+#~ "booking (with booking amount that equals to approx. 400$)."
+#~ msgstr ""
+#~ "- партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
+#~ "до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход "
+#~ "партнера составляет 7$ с купленного авиабилета и 20$ с брони гостиницы "
+#~ "(при сумме брони около $400)."
 
 #~ msgid "this link."
 #~ msgstr "на этой странице."
