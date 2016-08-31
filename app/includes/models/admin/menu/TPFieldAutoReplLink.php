@@ -22,18 +22,18 @@ class TPFieldAutoReplLink
                     <ul class="TP-listSet">
                         <li>
                             <input id="chekarl2" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][active]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['active']), 1) ?> hidden />
-                            <label for="chekarl2"><?php _e('Activate inactive links', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                   value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['active']), 1) ?> hidden />
+                            <label for="chekarl2"><?php //_e('Activate inactive links', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chekarl3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][all_link]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['all_link']), 1) ?> hidden />
-                            <label for="chekarl3"><?php _e('Make all the referral links to sites Travelpayouts', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                   value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['all_link']), 1) ?> hidden />
+                            <label for="chekarl3"><?php //_e('Make all the referral links to sites Travelpayouts', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chekarl4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][not_title]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
-                            <label for="chekarl4"><?php _e('Do not add links to all titles', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                   value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
+                            <label for="chekarl4"><?php //_e('Do not add links to all titles', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -47,8 +47,8 @@ class TPFieldAutoReplLink
                     <span><?php _e('Limit replacements', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
                         <label>
-                            <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"
-                                   value="<?php echo \app\includes\TPPlugin::$options['auto_repl_link']['limit']; ?>">
+                            <input name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"
+                                   value="<?php //echo \app\includes\TPPlugin::$options['auto_repl_link']['limit']; ?>">
                         </label>
                         <div class="navSpinner">
                             <a class="navDown" href="javascript:void(0);" data-spin="down" rollapp-href="javascript:void(0);"></a>
@@ -63,22 +63,26 @@ class TPFieldAutoReplLink
                 <div class="ItemSub">
                     <ul class="TP-listSet">
                        <!-- <li>
-                            <input id="chekarl2" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][active]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['active']), 1) ?> hidden />
-                            <label for="chekarl2"><?php _e('Activate inactive links', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                            <input id="chekarl2" type="checkbox" name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][active]"
+                                   value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['active']), 1) ?> hidden />
+                            <label for="chekarl2"><?php //_e('Activate inactive links', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chekarl3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][all_link]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['all_link']), 1) ?> hidden />
-                            <label for="chekarl3"><?php _e('Make all the referral links to sites Travelpayouts', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                   value="1" <?php //checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['all_link']), 1) ?> hidden />
+                            <label for="chekarl3"><?php //_e('Make all the referral links to sites Travelpayouts', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>-->
                         <li>
                             <input id="chekarl4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][not_title]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
                             <label for="chekarl4">
-                                <?php _e('Don\'t add links to all titles', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('tp_admin_page_auto_links_input_not_title_label',
+                                    '(Don\'t add links to all titles)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 <a href="#" class="tooltip-settings TPARLHelp">
-                                    <span><?php _e('No change in case anchor is inside &lt;h&gt; tags', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                    <span>
+                                        <?php _ex('tp_admin_page_auto_links_input_not_title_label_help',
+                                            '(No change in case anchor is inside &lt;h&gt; tags)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    </span>
                                     <div class="svg-img-3 ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                 <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -91,9 +95,13 @@ class TPFieldAutoReplLink
                             <input id="chekarl5" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][tp_auto_replac_link]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link']), 1) ?> hidden />
                             <label for="chekarl5">
-                                <?php _e('Enable auto-links for new posts', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('tp_admin_page_auto_links_input_tp_auto_replac_link_label',
+                                    '(Enable auto-links for new posts)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 <a href="#" class="tooltip-settings TPARLHelp">
-                                    <span><?php _e('After you press "Publish" all you anchors will be auto-replaced by links', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                    <span>
+                                        <?php _ex('tp_admin_page_auto_links_input_tp_auto_replac_link_label_help',
+                                            '(After you press "Publish" all you anchors will be auto-replaced by links)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    </span>
                                     <div class="svg-img-3 ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                 <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -111,9 +119,12 @@ class TPFieldAutoReplLink
             <div class="TP-FormItem">
                 <div class="ItemSub">
                     <span>
-                        <?php _e('Anchor replacements limit', TPOPlUGIN_TEXTDOMAIN ); ?>
+                        <?php _ex('tp_admin_page_auto_links_input_limit_label',
+                            '(Anchor replacements limit)', TPOPlUGIN_TEXTDOMAIN); ?>
                         <a href="#" class="tooltip-settings TPARLHelp">
-                            <span><?php _e('The maximum number of anchor changes in one post', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                            <span>
+                                <?php _ex('tp_admin_page_auto_links_input_limit_label_help',
+                                    '(The maximum number of anchor changes in one post)', TPOPlUGIN_TEXTDOMAIN); ?>
                             <div class="svg-img-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
