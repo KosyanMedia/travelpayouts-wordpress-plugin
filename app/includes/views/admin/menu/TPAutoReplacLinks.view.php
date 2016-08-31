@@ -1,12 +1,14 @@
 <div class="TPWrapper TPWrapper-long">
 
-    <p class="TPMainTitle TPMainTitleSF"><?php _e('Auto-links', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+    <p class="TPMainTitle TPMainTitleSF">
+        <?php _ex('tp_admin_page_auto_links_paragraph_1',
+            '(Auto-links )', TPOPlUGIN_TEXTDOMAIN); ?>
+    </p>
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _e('Here you can setup auto-links. Define anchor and your referral link for that anchor.',
-                TPOPlUGIN_TEXTDOMAIN); ?>
-
+            <?php _ex('tp_admin_page_auto_links_paragraph_2',
+                '(Here you can setup auto-links. Define anchor and your referral link for that anchor.)', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
 

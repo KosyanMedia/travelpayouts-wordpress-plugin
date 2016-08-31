@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-31 13:30+0300\n"
+"POT-Creation-Date: 2016-08-31 15:01+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -399,7 +399,6 @@ msgstr "Настройки"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:134
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:3
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
 msgid "Auto-links"
@@ -1339,49 +1338,55 @@ msgstr "Отель"
 msgid "Count"
 msgstr "Количество"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:7
-msgid ""
-"Here you can setup auto-links. Define anchor and your referral link for that "
-"anchor."
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
+msgctxt "(Auto-links )"
+msgid "tp_admin_page_auto_links_paragraph_1"
+msgstr "Подстановка ссылок"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:10
+msgctxt ""
+"(Here you can setup auto-links. Define anchor and your referral link for that "
+"anchor.)"
+msgid "tp_admin_page_auto_links_paragraph_2"
 msgstr ""
 "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
 "постах"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:15
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
 msgid "List of links"
 msgstr "Список ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:21
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:23
 msgid "Add link"
 msgstr "Добавить ссылку"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:27
 msgid "Import links"
 msgstr "Импорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:32
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:34
 msgid "Export links"
 msgstr "Експорт ссылок"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:37
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:39
 #: app/includes/views/admin/menu/TPSearchForms.view.php:55
 msgid "Remove"
 msgstr "Удалить отмеченные"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:50
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:52
 msgid "Anchor"
 msgstr "Анкор"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:51
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:53
 msgid "Link"
 msgstr "Ссылка"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:64
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:66
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
 msgid "Edit"
 msgstr "Редактировать "
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:81
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:83
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:36
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
@@ -1407,11 +1412,11 @@ msgstr "Редактировать "
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:86
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:88
 msgid "Affix link for all existing posts"
 msgstr "Проставить ссылки по всех существующих постах"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:88
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:90
 msgid "Place auto-links in all existing posts"
 msgstr "Проставить ссылки во всех существующих постах"
 
@@ -2124,6 +2129,13 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid ""
+#~ "Here you can setup auto-links. Define anchor and your referral link for "
+#~ "that anchor."
+#~ msgstr ""
+#~ "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
+#~ "постах"
 
 #~ msgid "Last updated at "
 #~ msgstr "Данные обновлены в "
