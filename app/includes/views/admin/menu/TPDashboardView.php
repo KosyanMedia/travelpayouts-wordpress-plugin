@@ -18,32 +18,34 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
         if($this->model->detailed_sales["current_month"]["sales"] != false) {
             $output = '<div class="TP-incomeSection">
                 <div class="TP-ourIncome">
-                    <p class="TP-titleIncome">' . __('Your income', TPOPlUGIN_TEXTDOMAIN) . ':</p>
+                    <p class="TP-titleIncome">'
+                . _x('tp_admin_page_dashboard_paragraph_2', '(Your income)', TPOPlUGIN_TEXTDOMAIN)
+                . ':</p>
                     <div class="listIncome">
                         <div class="itemIncome">
                             <p>' . $this->tpGetDay($this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('today', TPOPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . _x('tp_admin_page_dashboard_paragraph_2_today', '(today)', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetDay($this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('yesterday', TPOPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . _x('tp_admin_page_dashboard_paragraph_2_yesterday', '(yesterday)', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetMonth($this->model->detailed_sales["current_month"]["sales"])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('this month', TPOPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . _x('tp_admin_page_dashboard_paragraph_2_this_month', '(this month)', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->tpGetMonth($this->model->detailed_sales["last_month"]["sales"])
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('last month', TPOPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' .  _x('tp_admin_page_dashboard_paragraph_2_last_month', '(last month)', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                         <div class="itemIncome">
                             <p>' . $this->model->balance["data"]["balance"]
                 . $this->getCurrencyView($this->model->balance["data"]["currency"]) . '</p>
-                            <span>' . __('unpaid earnings', TPOPlUGIN_TEXTDOMAIN) . '</span>
+                            <span>' . _x('tp_admin_page_dashboard_paragraph_2_unpaid_earnings', '(unpaid earnings)', TPOPlUGIN_TEXTDOMAIN) . '</span>
                         </div>
                     </div>
                 </div>
@@ -175,15 +177,15 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 <thead>
                 <tr>
                     <td></td>
-                    <td><?php _e('Visit.', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Search', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php  _ex('tp_admin_page_dashboard_table_td_1_label', '(Visit.)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_2_label', '(Search)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_3_label', '(Clicks)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <!--<td><?php //_e('Paid clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Clicks income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Bookings', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Paid booking', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Booking income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Possible. income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_4_label', '(Clicks income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_5_label', '(Bookings)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_6_label', '(Paid booking)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_7_label', '(Booking income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_8_label', '(Possible. income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>
                     <td>STR</td>
@@ -279,15 +281,15 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 <thead>
                 <tr>
                     <td></td>
-                    <td><?php _e('Visit.', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Search', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php  _ex('tp_admin_page_dashboard_table_td_1_label', '(Visit.)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_2_label', '(Search)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_3_label', '(Clicks)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <!--<td><?php //_e('Paid clicks', TPOPlUGIN_TEXTDOMAIN ); ?></td>-->
-                    <td><?php _e('Clicks income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Bookings', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Paid booking', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Booking income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
-                    <td><?php _e('Possible. income', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_4_label', '(Clicks income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_5_label', '(Bookings)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_6_label', '(Paid booking)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_7_label', '(Booking income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _ex('tp_admin_page_dashboard_table_td_8_label', '(Possible. income)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td>CTR</td>
                     <td>CPC</td>
                     <td>STR</td>

@@ -276,7 +276,8 @@ class TPFieldFlightTickets {
                 <label for="chek66"><?php _e('Enable Horizontal Scroll', TPOPlUGIN_TEXTDOMAIN ); ?></label>
                 <div class="svg-img-1 svg-img-style-table">
                     <a href="#" class="tooltip-settings">
-                        <span><?php _e("The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.", TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <span>
+                            <?php _e("The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.", TPOPlUGIN_TEXTDOMAIN); ?></span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#00B0DD">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-08-30 22:08+0300\n"
+"POT-Creation-Date: 2016-08-31 13:34+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -233,7 +233,7 @@ msgid "Cheap Flights to destination"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:267
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:520
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:521
 #: app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldWidgets.php:661
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
@@ -244,8 +244,8 @@ msgid "Limit"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:279
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:506
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:698
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:507
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:699
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr ""
@@ -262,13 +262,13 @@ msgid "No title"
 msgstr "Insert link"
 
 #: app/includes/TPPluginWidget.php:301
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:580
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:581
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:168
 msgid "Number of stops"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:305
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:583
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:584
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
 #: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
@@ -277,13 +277,13 @@ msgid "All"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:307
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:585
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:586
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:171
 msgid "No more than one stop"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:309
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:587
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:588
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:172
 msgid "Direct"
 msgstr ""
@@ -582,7 +582,7 @@ msgstr ""
 msgid "Enable Horizontal Scroll"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:279
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:280
 #, php-format
 msgid ""
 "The tables' width won't be 100% of your content zone. When you resize your "
@@ -590,95 +590,95 @@ msgid ""
 "your design, but will have a horizontal scroll."
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:289
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:290
 msgid "Reset to Default styles"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:304
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:305
 #, fuzzy
 msgid "Title"
 msgstr "Insert link"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:315
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:316
 msgid "Use \"airline\" variable to add the Airlines automatically"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:318
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:319
 msgid ""
 "Use \"origin\" and \"destination\" variables to add the city automatically"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:332
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:333
 msgid "Title tag"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:356
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:357
 msgid "Button Title"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:366
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:367
 msgid "\"price\" variable can be used"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:394
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:395
 msgid "Order by price"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:401
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:402
 msgid "Ascending"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:406
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:407
 msgid "Descending"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:411
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:412
 msgid "Do not sort"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:460
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:461
 msgid "Table Columns"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:463
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:464
 msgid "Not selected"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:470
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:471
 msgid "Selected"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:487
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:677
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:488
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:678
 msgid "Rows per page"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:543
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:544
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
 msgid "Departure date"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:559
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:560
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
 msgid "Return date"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:601
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:602
 msgid "Sort by column"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:635
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:664
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:720
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:748
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:777
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:805
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:833
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:862
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:890
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:947
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:996
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1044
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:636
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:665
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:721
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:749
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:778
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:806
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:834
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:863
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:891
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:948
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:997
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1045
 #: app/includes/models/admin/menu/TPFieldSettings.php:37
 msgid "Extra marker"
 msgstr ""
@@ -1474,138 +1474,156 @@ msgid ""
 "anchor phrase. Anchors are case-sensitive."
 msgstr ""
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:34
-msgid "Go to "
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:35
+msgctxt "(Go to )"
+msgid "tp_admin_page_dashboard_paragraph_1"
+msgstr "Go to "
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:58
-msgid "Today"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:62
+msgctxt "(Today)"
+msgid "tp_admin_page_dashboard_paragraph_3_list_li_1"
+msgstr "Today"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:59
-msgid "Yesterday"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:67
+msgctxt "(Yesterday)"
+msgid "tp_admin_page_dashboard_paragraph_3_list_li_2"
+msgstr "Yesterday"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:60
-msgid "This month"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:72
+msgctxt "(This month)"
+msgid "tp_admin_page_dashboard_paragraph_3_list_li_3"
+msgstr "This month"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:61
-msgid "Last month"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:77
+msgctxt "(Last month)"
+msgid "tp_admin_page_dashboard_paragraph_3_list_li_4"
+msgstr "Last month"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:76
-msgid "Last updated at "
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:94
+msgctxt "(Last updated at )"
+msgid "tp_admin_page_dashboard_paragraph_4_1"
+msgstr "Last updated at "
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:78
-msgid " (Local time)"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:99
+msgctxt "( (Local time) )"
+msgid "tp_admin_page_dashboard_paragraph_4_2"
+msgstr "(Local time)"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:80
-#, php-format
-msgid "Go to %s section to get a detailed report"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPDashboard.view.php:80
-#: app/includes/views/admin/menu/TPStatistic.view.php:3
-msgid "Statistics"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPDashboard.view.php:89
-#: app/includes/views/admin/menu/TPDashboard.view.php:100
-msgid "Travelpayouts News"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPDashboard.view.php:91
 #: app/includes/views/admin/menu/TPDashboard.view.php:102
-msgid "All news"
-msgstr ""
+msgctxt "(Go to %s section to get a detailed report)"
+msgid "tp_admin_page_dashboard_paragraph_4_3"
+msgstr "Go to %s section to get a detailed report"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:21
-msgid "Your income"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:104
+msgctxt "Statistics"
+msgid "tp_admin_page_dashboard_paragraph_4_4"
+msgstr "Statistics"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:26
-msgid "today"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:113
+#: app/includes/views/admin/menu/TPDashboard.view.php:124
+msgctxt "(Travelpayouts News)"
+msgid "tp_admin_page_dashboard_paragraph_5_1"
+msgstr "Travelpayouts News"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:31
-msgid "yesterday"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboard.view.php:115
+#: app/includes/views/admin/menu/TPDashboard.view.php:126
+msgctxt "(All news)"
+msgid "tp_admin_page_dashboard_paragraph_5_2"
+msgstr "All news"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:36
-msgid "this month"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:22
+msgctxt "(Your income)"
+msgid "tp_admin_page_dashboard_paragraph_2"
+msgstr "Your income"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:41
-msgid "last month"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:28
+msgctxt "(today)"
+msgid "tp_admin_page_dashboard_paragraph_2_today"
+msgstr "today"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:46
-msgid "unpaid earnings"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:33
+msgctxt "(yesterday)"
+msgid "tp_admin_page_dashboard_paragraph_2_yesterday"
+msgstr "yesterday"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:178
-#: app/includes/views/admin/menu/TPDashboardView.php:282
-msgid "Visit."
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:38
+msgctxt "(this month)"
+msgid "tp_admin_page_dashboard_paragraph_2_this_month"
+msgstr "this month"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:179
-#: app/includes/views/admin/menu/TPDashboardView.php:283
-#: app/includes/views/admin/menu/TPStatisticView.php:32
-#, fuzzy
-msgid "Search"
-msgstr "Insert search form"
+#: app/includes/views/admin/menu/TPDashboardView.php:43
+msgctxt "(last month)"
+msgid "tp_admin_page_dashboard_paragraph_2_last_month"
+msgstr "last month"
+
+#: app/includes/views/admin/menu/TPDashboardView.php:48
+msgctxt "(unpaid earnings)"
+msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+msgstr "unpaid earnings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:180
 #: app/includes/views/admin/menu/TPDashboardView.php:284
-#: app/includes/views/admin/menu/TPStatisticView.php:33
-msgid "Clicks"
-msgstr ""
+msgctxt "(Visit.)"
+msgid "tp_admin_page_dashboard_table_td_1_label"
+msgstr "Visit."
+
+#: app/includes/views/admin/menu/TPDashboardView.php:181
+#: app/includes/views/admin/menu/TPDashboardView.php:285
+msgctxt "(Search)"
+msgid "tp_admin_page_dashboard_table_td_2_label"
+msgstr "Search"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:182
 #: app/includes/views/admin/menu/TPDashboardView.php:286
-msgid "Clicks income"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPDashboardView.php:183
-#: app/includes/views/admin/menu/TPDashboardView.php:287
-msgid "Bookings"
-msgstr ""
+msgctxt "(Clicks)"
+msgid "tp_admin_page_dashboard_table_td_3_label"
+msgstr "Clicks"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:184
 #: app/includes/views/admin/menu/TPDashboardView.php:288
-#: app/includes/views/admin/menu/TPStatisticView.php:36
-msgid "Paid booking"
-msgstr ""
+msgctxt "(Clicks income)"
+msgid "tp_admin_page_dashboard_table_td_4_label"
+msgstr "Clicks income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:185
 #: app/includes/views/admin/menu/TPDashboardView.php:289
-msgid "Booking income"
-msgstr ""
+msgctxt "(Bookings)"
+msgid "tp_admin_page_dashboard_table_td_5_label"
+msgstr "Bookings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:186
 #: app/includes/views/admin/menu/TPDashboardView.php:290
-#: app/includes/views/admin/menu/TPStatisticView.php:38
-msgid "Possible. income"
-msgstr ""
+msgctxt "(Paid booking)"
+msgid "tp_admin_page_dashboard_table_td_6_label"
+msgstr "Paid booking"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:201
-#: app/includes/views/admin/menu/TPDashboardView.php:305
+#: app/includes/views/admin/menu/TPDashboardView.php:187
+#: app/includes/views/admin/menu/TPDashboardView.php:291
+msgctxt "(Booking income)"
+msgid "tp_admin_page_dashboard_table_td_7_label"
+msgstr "Booking income"
+
+#: app/includes/views/admin/menu/TPDashboardView.php:188
+#: app/includes/views/admin/menu/TPDashboardView.php:292
+msgctxt "(Possible. income)"
+msgid "tp_admin_page_dashboard_table_td_8_label"
+msgstr "Possible. income"
+
+#: app/includes/views/admin/menu/TPDashboardView.php:203
+#: app/includes/views/admin/menu/TPDashboardView.php:307
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:2
 #: app/includes/views/admin/menu/TPStatisticView.php:154
 msgid "Flights"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPDashboardView.php:204
-#: app/includes/views/admin/menu/TPDashboardView.php:308
+#: app/includes/views/admin/menu/TPDashboardView.php:206
+#: app/includes/views/admin/menu/TPDashboardView.php:310
 #: app/includes/views/admin/menu/TPStatisticView.php:155
 msgid "Hotels"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPDashboardView.php:227
-#: app/includes/views/admin/menu/TPDashboardView.php:331
+#: app/includes/views/admin/menu/TPDashboardView.php:229
+#: app/includes/views/admin/menu/TPDashboardView.php:333
 #: app/includes/views/admin/menu/TPStatisticView.php:108
 #: app/includes/views/admin/menu/TPStatisticView.php:148
 msgid "Total"
@@ -1747,6 +1765,10 @@ msgid ""
 "data to Travelpayouts."
 msgstr ""
 
+#: app/includes/views/admin/menu/TPStatistic.view.php:3
+msgid "Statistics"
+msgstr ""
+
 #: app/includes/views/admin/menu/TPStatistic.view.php:9
 #: app/includes/views/admin/menu/TPStatistic.view.php:22
 msgid "Earnings Report"
@@ -1800,6 +1822,15 @@ msgstr ""
 msgid "Visitors"
 msgstr ""
 
+#: app/includes/views/admin/menu/TPStatisticView.php:32
+#, fuzzy
+msgid "Search"
+msgstr "Insert search form"
+
+#: app/includes/views/admin/menu/TPStatisticView.php:33
+msgid "Clicks"
+msgstr ""
+
 #: app/includes/views/admin/menu/TPStatisticView.php:34
 msgid "Income clicks"
 msgstr ""
@@ -1808,8 +1839,16 @@ msgstr ""
 msgid "Booking"
 msgstr ""
 
+#: app/includes/views/admin/menu/TPStatisticView.php:36
+msgid "Paid booking"
+msgstr ""
+
 #: app/includes/views/admin/menu/TPStatisticView.php:37
 msgid "Income booking"
+msgstr ""
+
+#: app/includes/views/admin/menu/TPStatisticView.php:38
+msgid "Possible. income"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPStatisticView.php:192
