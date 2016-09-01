@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-01 18:41+0300\n"
+"POT-Creation-Date: 2016-09-01 22:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -397,7 +397,6 @@ msgstr "Impostazioni"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:134
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
 msgid "Auto-links"
 msgstr "Auto-links"
 
@@ -1475,76 +1474,87 @@ msgctxt "(save changes)"
 msgid "tp_admin_page_auto_links_add_btn_save changes_label"
 msgstr "salva modifiche"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:8
-msgid ""
-"Here you can add referral links that you want to be defined to the specified "
-"anchor phrase. Anchors are case-sensitive."
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
+msgctxt "(Auto-links )"
+msgid "tp_admin_page_auto_links_edit_paragraph_1"
+msgstr "Auto-links"
+
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
+msgctxt ""
+"(Here you can add referral links that you want to be defined to the specified "
+"anchor phrase.  Anchors are case-sensitive.)"
+msgid "tp_admin_page_auto_links_edit_paragraph_2"
 msgstr ""
 "Qui è possibile aggiungere link di riferimento che si desidera definire la "
-"frase ancora specificata . Ancore sono case-sensitive ."
+"frase specificata . Ancore sono case-sensitive ."
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:13
-msgid "Adding links"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:15
+msgctxt "(Adding links)"
+msgid "tp_admin_page_auto_links_edit_paragraph_3"
 msgstr "Aggiunta di collegamenti"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:20
-msgid "Link "
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:24
+msgctxt "(Link)"
+msgid "tp_admin_page_auto_links_edit_input_arl_url_label"
 msgstr "Link"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:27
-msgid "Anchor phrase"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:33
+msgctxt "(Anchor phrase)"
+msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label"
 msgstr "Ancora frase"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:29
-msgid "You may add several anchors, use comma as separator"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:37
+msgctxt "(You may add several anchors, use comma as separator)"
+msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label_help"
 msgstr ""
 "È possibile aggiungere diverse ancore, utilizzare la virgola come separatore"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:41
-msgid "Events onclick"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
+msgctxt "(Events onclick)"
+msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label"
 msgstr "Eventi onclick"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:43
-msgid ""
-"You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
+msgctxt ""
+"(You can add here custom events (e.g. Google Analytics events) that will be "
+"fired after the click on a link)"
+msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
 msgstr ""
 "È possibile aggiungere qui eventi personalizzati (ad esempio eventi di Google "
 "Analytics ) che verranno messi dopo il clic su un link"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:59
-msgctxt "settingsARL"
-msgid "Add \"nofollow\" attribute"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:74
+msgctxt "(Add \"nofollow\" attribute)"
+msgid "tp_admin_page_auto_links_edit_input_arl_nofollow_label"
 msgstr "Aggiungi attributo \"nofollow\""
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:63
-msgctxt "settingsARL"
-msgid "Replace existing links"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:80
+msgctxt "(Replace existing links)"
+msgid "tp_admin_page_auto_links_edit_input_arl_replace_label"
 msgstr "Sostituire collegamenti esistenti"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:65
-msgid ""
-"In case you already have such active links — they'll be replaced to the new "
-"one"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:84
+msgctxt ""
+"(In case you already have such active links — they'll be replaced to the new "
+"one)"
+msgid "tp_admin_page_auto_links_edit_input_arl_replace_label_help"
 msgstr ""
 "Nel caso in cui si dispone già di tali collegamenti attivi - essi saranno "
 "sostituiti a quello nuovo"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:75
-msgctxt "settingsARL"
-msgid "Open in a new tab"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:97
+msgctxt "(Open in a new tab)"
+msgid "tp_admin_page_auto_links_edit_input_arl_target_blank_label"
 msgstr "Apri in una nuova scheda"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:80
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
-msgid "cancel"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:105
+msgctxt "(cancel)"
+msgid "tp_admin_page_auto_links_edit_btn_cancel_label"
 msgstr "cancella"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:83
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:75
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:79
-msgid "save changes"
+#: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:109
+msgctxt "(save changes)"
+msgid "tp_admin_page_auto_links_edit_btn_save_changes_label"
 msgstr "salva modifiche"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:35
@@ -1845,6 +1855,16 @@ msgid ""
 msgstr ""
 "Shortcode verrà generato automaticamente dopo aver premuto il pulsante Salva "
 "modifiche . Può anche essere collocato nei tuoi articoli subito"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
+msgid "cancel"
+msgstr "cancella"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:75
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:79
+msgid "save changes"
+msgstr "salva modifiche"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
@@ -2203,6 +2223,56 @@ msgstr ""
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid ""
+#~ "Here you can add referral links that you want to be defined to the "
+#~ "specified anchor phrase. Anchors are case-sensitive."
+#~ msgstr ""
+#~ "Qui è possibile aggiungere link di riferimento che si desidera definire la "
+#~ "frase ancora specificata . Ancore sono case-sensitive ."
+
+#~ msgid "Adding links"
+#~ msgstr "Aggiunta di collegamenti"
+
+#~ msgid "Link "
+#~ msgstr "Link"
+
+#~ msgid "Anchor phrase"
+#~ msgstr "Ancora frase"
+
+#~ msgid "You may add several anchors, use comma as separator"
+#~ msgstr ""
+#~ "È possibile aggiungere diverse ancore, utilizzare la virgola come "
+#~ "separatore"
+
+#~ msgid "Events onclick"
+#~ msgstr "Eventi onclick"
+
+#~ msgid ""
+#~ "You can add here custom events (e.g. Google Analytics events) that will be "
+#~ "fired after the click on a link"
+#~ msgstr ""
+#~ "È possibile aggiungere qui eventi personalizzati (ad esempio eventi di "
+#~ "Google Analytics ) che verranno messi dopo il clic su un link"
+
+#~ msgctxt "settingsARL"
+#~ msgid "Add \"nofollow\" attribute"
+#~ msgstr "Aggiungi attributo \"nofollow\""
+
+#~ msgctxt "settingsARL"
+#~ msgid "Replace existing links"
+#~ msgstr "Sostituire collegamenti esistenti"
+
+#~ msgid ""
+#~ "In case you already have such active links — they'll be replaced to the "
+#~ "new one"
+#~ msgstr ""
+#~ "Nel caso in cui si dispone già di tali collegamenti attivi - essi saranno "
+#~ "sostituiti a quello nuovo"
+
+#~ msgctxt "settingsARL"
+#~ msgid "Open in a new tab"
+#~ msgstr "Apri in una nuova scheda"
 
 #~ msgid ""
 #~ "Here you can add referral links that you want to be defined to the "
