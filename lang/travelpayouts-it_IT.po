@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-01 22:18+0300\n"
+"POT-Creation-Date: 2016-09-02 13:44+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -510,7 +510,6 @@ msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "Numero massimo di ancore da cambiare in un articolo"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:15
 msgid "Layout"
 msgstr "Grafica"
 
@@ -1694,7 +1693,6 @@ msgstr "Possibile. reddito"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:307
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:2
 #: app/includes/views/admin/menu/TPStatisticView.php:154
 msgid "Flights"
 msgstr "Voli"
@@ -1712,11 +1710,26 @@ msgstr "Hotel"
 msgid "Total"
 msgstr "Totale"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:9
-msgid "Tables Content"
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:3
+msgctxt "(Flights)"
+msgid "tp_admin_page_flights_paragraph_1"
+msgstr "Voli"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:13
+msgctxt "(Tables Content)"
+msgid "tp_admin_page_flights_tab_menu_tickets_config"
 msgstr "Tabella Contenuti"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:36
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:22
+msgctxt "(Layout)"
+msgid "tp_admin_page_flights_tab_menu_tickets_style"
+msgstr "Grafica"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:45
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tickets_config_btn_save_changes"
+msgstr "Salva modifiche"
+
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
@@ -2223,6 +2236,9 @@ msgstr ""
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Tables Content"
+#~ msgstr "Tabella Contenuti"
 
 #~ msgid ""
 #~ "Here you can add referral links that you want to be defined to the "

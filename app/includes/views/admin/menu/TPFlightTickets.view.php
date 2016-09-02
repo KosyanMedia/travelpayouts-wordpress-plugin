@@ -1,18 +1,27 @@
 <div class="TPWrapper">
-    <p class="TPMainTitle"><?php _e('Flights', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+    <p class="TPMainTitle">
+        <?php _ex('tp_admin_page_flights_paragraph_1',
+            '(Flights)', TPOPlUGIN_TEXTDOMAIN); ?>
+    </p>
     <div id="tabs-flights">
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-tickets_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
-                        <span><?php _e('Tables Content', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <span>
+                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_config',
+                                '(Tables Content)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="#tabs-tickets_style" class="TPMainMenuA">
                         <i class="icoItemNav ico-glass"></i>
-                        <span><?php _e('Layout', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <span>
+                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_style',
+                                '(Layout)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                     </a>
                 </li>
             </ul>
@@ -33,7 +42,8 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <input type="submit" name="submit" id="TPSaveSettingsStyle" class="TP-BtnTab"
-                           value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                           value="<?php _ex('tp_admin_page_flights_tab_tickets_config_btn_save_changes',
+                               '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </form>
         </div>

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-01 22:10+0300\n"
+"POT-Creation-Date: 2016-09-02 13:45+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -511,7 +511,6 @@ msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "The maximum number of anchor changes in one post"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:15
 msgid "Layout"
 msgstr ""
 
@@ -1673,7 +1672,6 @@ msgstr "Possible. income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:307
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:2
 #: app/includes/views/admin/menu/TPStatisticView.php:154
 msgid "Flights"
 msgstr ""
@@ -1691,11 +1689,26 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:9
-msgid "Tables Content"
-msgstr ""
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:3
+msgctxt "(Flights)"
+msgid "tp_admin_page_flights_paragraph_1"
+msgstr "Flights"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:36
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:13
+msgctxt "(Tables Content)"
+msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgstr "Tables Content"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:22
+msgctxt "(Layout)"
+msgid "tp_admin_page_flights_tab_menu_tickets_style"
+msgstr "Layout"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:45
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tickets_config_btn_save_changes"
+msgstr "Save changes"
+
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
@@ -1778,8 +1791,9 @@ msgid "Shortcode"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:88
+#, fuzzy
 msgid "Edit"
-msgstr ""
+msgstr "Link"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:25
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26

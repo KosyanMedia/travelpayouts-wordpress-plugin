@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-01 22:12+0300\n"
+"POT-Creation-Date: 2016-09-02 13:43+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -511,7 +511,6 @@ msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "Максимальное количество замен каждого анкора в одном посте"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:15
 msgid "Layout"
 msgstr "Внешний вид таблиц"
 
@@ -1689,10 +1688,9 @@ msgstr "Возмож. доход"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:307
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:2
 #: app/includes/views/admin/menu/TPStatisticView.php:154
 msgid "Flights"
-msgstr "Авиабилеты"
+msgstr "Поиск авиабилетов"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:206
 #: app/includes/views/admin/menu/TPDashboardView.php:310
@@ -1707,11 +1705,27 @@ msgstr "Отели"
 msgid "Total"
 msgstr "Итого"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:9
-msgid "Tables Content"
-msgstr "Содержание таблиц "
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:3
+msgctxt "(Flights)"
+msgid "tp_admin_page_flights_paragraph_1"
+msgstr "Авиабилеты"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:36
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:13
+msgctxt "(Tables Content)"
+msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgstr "Содержание таблиц"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:22
+msgctxt "(Layout)"
+msgid "tp_admin_page_flights_tab_menu_tickets_style"
+msgstr "Внешний вид таблиц"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:45
+#, fuzzy
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tickets_config_btn_save_changes"
+msgstr "Сохранить изменения"
+
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
@@ -2215,6 +2229,9 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "Tables Content"
+#~ msgstr "Содержание таблиц "
 
 #~ msgid ""
 #~ "Here you can add referral links that you want to be defined to the "
