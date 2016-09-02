@@ -42,7 +42,7 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <input type="submit" name="submit" id="TPSaveSettingsStyle" class="TP-BtnTab"
-                           value="<?php _ex('tp_admin_page_flights_tab_tickets_config_btn_save_changes',
+                           value="<?php _ex('tp_admin_page_flights_tab_tickets_style_btn_save_changes',
                                '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </form>

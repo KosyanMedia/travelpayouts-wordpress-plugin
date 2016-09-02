@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-02 13:45+0300\n"
+"POT-Creation-Date: 2016-09-02 15:36+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -233,7 +233,7 @@ msgid "Cheap Flights to destination"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:267
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:521
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:564
 #: app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldWidgets.php:661
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
@@ -244,8 +244,8 @@ msgid "Limit"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:279
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:507
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:699
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:550
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:742
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr ""
@@ -262,13 +262,13 @@ msgid "No title"
 msgstr "Insert link"
 
 #: app/includes/TPPluginWidget.php:301
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:581
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:624
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:168
 msgid "Number of stops"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:305
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:584
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:627
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
 #: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
@@ -277,13 +277,13 @@ msgid "All"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:307
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:586
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:629
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:171
 msgid "No more than one stop"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:309
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:588
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:631
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:172
 msgid "Direct"
 msgstr ""
@@ -510,166 +510,182 @@ msgctxt "(The maximum number of anchor changes in one post)"
 msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "The maximum number of anchor changes in one post"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
-msgid "Layout"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:27
+msgctxt "(Layout)"
+msgid "tp_admin_page_flights_tab_tickets_style_paragraph_1"
+msgstr "Layout"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:32
-msgid "Header style"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:36
+msgctxt "(Header style)"
+msgid "tp_admin_page_flights_tab_tickets_style_title_style_label"
+msgstr "Header style"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:89
-msgid "Content"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:146
-msgid "Borders"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:150
-msgctxt "select_type_table"
-msgid "solid"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:153
-msgctxt "select_type_table"
-msgid "dotted"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:96
+msgctxt "(Content)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_style_label"
+msgstr "Content"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:156
-msgctxt "select_type_table"
-msgid "dashed"
-msgstr ""
+msgctxt "(Borders)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label"
+msgstr "Borders"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:184
-msgid "Background"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:162
+msgctxt "(solid)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid"
+msgstr "solid"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:194
-msgid "Table header background"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:166
+msgctxt "(dotted)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted"
+msgstr "dotted"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:203
-msgid "Table header font"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:170
+msgctxt "(dashed)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed"
+msgstr "dashed"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:216
-msgid "Button background"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:200
+msgctxt "(Background)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_background_color_label"
+msgstr "Background"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:226
-msgid "Button border"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:213
+msgctxt "(Table header background)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_head_color_label"
+msgstr "Table header background"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:235
-msgid "Button font"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:225
+msgctxt "(Table header font)"
+msgid "tp_admin_page_flights_tab_tickets_style_table_head_text_color_label"
+msgstr "Table header font"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:271
-msgid "Show data as hyperlinks"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:241
+msgctxt "(Button background)"
+msgid "tp_admin_page_flights_tab_tickets_style_button_background_label"
+msgstr "Button background"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:276
-msgid "Enable Horizontal Scroll"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:254
+msgctxt "(Button border)"
+msgid "tp_admin_page_flights_tab_tickets_style_button_border_label"
+msgstr "Button border"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:280
-#, php-format
-msgid ""
-"The tables' width won't be 100% of your content zone. When you resize your "
-"content zone (e.g. you have a responsible WP theme) - tables won't affect "
-"your design, but will have a horizontal scroll."
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:290
-msgid "Reset to Default styles"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:266
+msgctxt "(Button font)"
+msgid "tp_admin_page_flights_tab_tickets_style_button_font_label"
+msgstr "Button font"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:305
+msgctxt "(Show data as hyperlinks)"
+msgid "tp_admin_page_flights_tab_tickets_style_input_hyperlink_label"
+msgstr "Show data as hyperlinks"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:313
+msgctxt "(Enable Horizontal Scroll)"
+msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label"
+msgstr "Enable Horizontal Scroll"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:319
+msgctxt ""
+"(The tables' width won't be 100% of your content zone. When you resize your "
+"content zone (e.g. you have a responsible WP theme) - tables won't affect "
+"your design, but will have a horizontal scroll.)"
+msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label_help"
+msgstr ""
+"The tables\\' width won\\'t be 100% of your content zone. When you resize "
+"your content zone (e.g. you have a responsible WP theme) - tables won\\'t "
+"affect your design, but will have a horizontal scroll."
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:332
+msgctxt "(Reset to Default styles)"
+msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
+msgstr "Reset to Default styles"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:348
 #, fuzzy
 msgid "Title"
 msgstr "Insert link"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:316
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:359
 msgid "Use \"airline\" variable to add the Airlines automatically"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:319
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:362
 msgid ""
 "Use \"origin\" and \"destination\" variables to add the city automatically"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:333
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:376
 msgid "Title tag"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:357
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:400
 msgid "Button Title"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:367
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:410
 msgid "\"price\" variable can be used"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:395
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:438
 msgid "Order by price"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:402
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:445
 msgid "Ascending"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:407
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:450
 msgid "Descending"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:412
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:455
 msgid "Do not sort"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:461
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:504
 msgid "Table Columns"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:464
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:507
 msgid "Not selected"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:471
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:514
 msgid "Selected"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:488
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:678
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:531
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:721
 msgid "Rows per page"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:544
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:587
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
 msgid "Departure date"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:560
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:603
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
 msgid "Return date"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:602
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:645
 msgid "Sort by column"
 msgstr ""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:636
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:665
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:721
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:749
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:778
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:806
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:834
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:863
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:891
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:948
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:997
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1045
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:679
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:708
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:764
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:792
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:821
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:849
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:877
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:906
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:934
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:991
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1040
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1088
 #: app/includes/models/admin/menu/TPFieldSettings.php:37
 msgid "Extra marker"
 msgstr ""
@@ -1189,9 +1205,10 @@ msgid "Go to setting."
 msgstr ""
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:34
+#, fuzzy
 msgctxt "search_form_modal"
 msgid "Flights"
-msgstr ""
+msgstr "Tables Content"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:37
 msgctxt "search_form_modal"
@@ -1673,8 +1690,9 @@ msgstr "Possible. income"
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:307
 #: app/includes/views/admin/menu/TPStatisticView.php:154
+#, fuzzy
 msgid "Flights"
-msgstr ""
+msgstr "Tables Content"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:206
 #: app/includes/views/admin/menu/TPDashboardView.php:310
@@ -1706,7 +1724,7 @@ msgstr "Layout"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:45
 msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tickets_config_btn_save_changes"
+msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14

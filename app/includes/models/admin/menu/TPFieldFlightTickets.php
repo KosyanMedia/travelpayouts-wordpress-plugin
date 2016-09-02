@@ -23,13 +23,19 @@ class TPFieldFlightTickets {
             'Roboto'
         );
         ?>
-        <p class="TP-SettingTitle"><?php _e('Layout', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+        <p class="TP-SettingTitle">
+            <?php _ex('tp_admin_page_flights_tab_tickets_style_paragraph_1',
+                '(Layout)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </p>
 
         <div class="TP-StyleTable">
 
             <div class="TP-StyleItem">
                 <div class="TP-MainStyleTable">
-                    <span><?php _e('Header style', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_title_style_label',
+                            '(Header style)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-fontInput">
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_family]">
                             <?php
@@ -86,7 +92,10 @@ class TPFieldFlightTickets {
 
             <div class="TP-StyleItem">
                 <div class="TP-MainStyleTable">
-                    <span><?php _e('Content', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_style_label',
+                            '(Content)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-fontInput">
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_family]">
                             <?php
@@ -143,17 +152,23 @@ class TPFieldFlightTickets {
 
             <div class="TP-StyleItem">
                 <div class="TP-MainStyleTable">
-                    <span><?php _e('Borders', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label',
+                            '(Borders)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-lb-1" id="TPLineType" >
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_type]">
                             <option value="solid" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "solid" ) ?>>
-                                <?php echo _x('solid', 'select_type_table', TPOPlUGIN_TEXTDOMAIN) ?>
+                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid',
+                                    '(solid)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="dotted" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dotted" ) ?>>
-                                <?php echo _x('dotted', 'select_type_table', TPOPlUGIN_TEXTDOMAIN) ?>
+                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted',
+                                    '(dotted)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="dashed" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dashed" ) ?>>
-                                <?php echo _x('dashed', 'select_type_table', TPOPlUGIN_TEXTDOMAIN) ?>
+                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed',
+                                    '(dashed)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                         </select>
                     </label>
@@ -181,7 +196,10 @@ class TPFieldFlightTickets {
 
             <div class="TP-StyleItem">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
-                    <span><?php _e('Background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_background_color_label',
+                            '(Background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][background_color]"
@@ -191,7 +209,10 @@ class TPFieldFlightTickets {
                     </label>
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
-                    <span><?php _e('Table header background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_head_color_label',
+                            '(Table header background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_color]"
@@ -200,7 +221,10 @@ class TPFieldFlightTickets {
                     </label>
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
-                    <span><?php _e('Table header font', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_head_text_color_label',
+                            '(Table header font)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_text_color]"
@@ -213,7 +237,10 @@ class TPFieldFlightTickets {
 
             <div class="TP-StyleItem">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
-                    <span><?php _e('Button background', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_background_label',
+                            '(Button background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][background]"
@@ -223,7 +250,10 @@ class TPFieldFlightTickets {
                     </label>
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
-                    <span><?php _e('Button border', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_border_label',
+                            '(Button border)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][border]"
@@ -232,7 +262,10 @@ class TPFieldFlightTickets {
                     </label>
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
-                    <span><?php _e('Button font', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_font_label',
+                            '(Button font)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][color]"
@@ -268,16 +301,24 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem">
                 <input id="chek677" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][hyperlink]"
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />
-                <label for="chek677"><?php _e('Show data as hyperlinks', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                <label for="chek677">
+                    <?php _ex('tp_admin_page_flights_tab_tickets_style_input_hyperlink_label',
+                        '(Show data as hyperlinks)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </label>
             </div>
             <div class="TP-StyleItem">
                 <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
-                <label for="chek66"><?php _e('Enable Horizontal Scroll', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                <label for="chek66">
+                    <?php _ex('tp_admin_page_flights_tab_tickets_style_input_responsive_label',
+                        '(Enable Horizontal Scroll)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </label>
                 <div class="svg-img-1 svg-img-style-table">
                     <a href="#" class="tooltip-settings">
                         <span>
-                            <?php _e("The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.", TPOPlUGIN_TEXTDOMAIN); ?></span>
+                             <?php _ex('tp_admin_page_flights_tab_tickets_style_input_responsive_label_help',
+                                 '(The tables\' width won\'t be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won\'t affect your design, but will have a horizontal scroll.)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#00B0DD">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -287,7 +328,9 @@ class TPFieldFlightTickets {
             </div>
             <div class="TP-StyleItem">
                 <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust TP-BtnDefaultStyle">
-                    <i></i><?php _e('Reset to Default styles', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <i></i>
+                    <?php _ex('tp_admin_page_flights_tab_tickets_style_btn_default_style',
+                        '(Reset to Default styles)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
             </div>
 
