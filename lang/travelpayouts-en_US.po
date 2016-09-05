@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-05 12:18+0300\n"
+"POT-Creation-Date: 2016-09-05 13:50+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -153,55 +153,47 @@ msgstr ""
 #: app/includes/TPPluginWidget.php:181 app/includes/TPPluginWidget.php:210
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:32
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:48
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:7
 msgid "Flights from origin to destination, One Way (next month)"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:212
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:33
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:49
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:20
 msgid "Flights from Origin to Destination (next few days)"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:187 app/includes/TPPluginWidget.php:215
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:35
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:51
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:33
 msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:189 app/includes/TPPluginWidget.php:217
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:36
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:52
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:46
 msgid "Cheapest Flights from origin to destination (next month)"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:191 app/includes/TPPluginWidget.php:219
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:37
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:53
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:59
 msgid "Cheapest Flights from origin to destination (next year)"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:221
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:38
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:54
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:72
 msgid "Direct Flights from origin to destination"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:195 app/includes/TPPluginWidget.php:223
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:39
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:55
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:85
 msgid "Direct Flights from origin"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:197
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:40
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:99
 msgid "Popular Destinations from origin"
 msgstr ""
 
@@ -214,21 +206,18 @@ msgstr ""
 #: app/includes/TPPluginWidget.php:202 app/includes/TPPluginWidget.php:228
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:42
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:58
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:126
 msgid "Searched on our website"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:204 app/includes/TPPluginWidget.php:230
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:43
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:59
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:139
 msgid "Cheap Flights from origin"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:206 app/includes/TPPluginWidget.php:232
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:60
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:152
 msgid "Cheap Flights to destination"
 msgstr ""
 
@@ -1262,7 +1251,7 @@ msgstr ""
 #, fuzzy
 msgctxt "search_form_modal"
 msgid "Flights"
-msgstr "Layout"
+msgstr "Arial"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:37
 msgctxt "search_form_modal"
@@ -1746,7 +1735,7 @@ msgstr "Possible. income"
 #: app/includes/views/admin/menu/TPStatisticView.php:154
 #, fuzzy
 msgid "Flights"
-msgstr "Layout"
+msgstr "Arial"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:206
 #: app/includes/views/admin/menu/TPDashboardView.php:310
@@ -1781,33 +1770,125 @@ msgctxt "(Save changes)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
 msgstr "Save changes"
 
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:14
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:27
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:40
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:53
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:66
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:79
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:92
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:106
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:120
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:133
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:146
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:159
-#: app/includes/views/admin/menu/TPSettings.view.php:92
-#: app/includes/views/admin/menu/TPWidgets.view.php:17
-#: app/includes/views/admin/menu/TPWidgets.view.php:31
-#: app/includes/views/admin/menu/TPWidgets.view.php:45
-#: app/includes/views/admin/menu/TPWidgets.view.php:59
-#: app/includes/views/admin/menu/TPWidgets.view.php:73
-#: app/includes/views/admin/menu/TPWidgets.view.php:86
-#: app/includes/views/admin/menu/TPWidgets.view.php:100
-#: app/includes/views/admin/menu/TPWidgets.view.php:114
-msgid "Save changes"
-msgstr ""
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:8
+msgctxt "(Flights from origin to destination, One Way (next month))"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
+msgstr "Flights from origin to destination, One Way (next month)"
 
-#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:113
-msgid "Most popular flights within this Airline"
-msgstr ""
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:17
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:25
+msgctxt "(Flights from Origin to Destination (next few days))"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_label"
+msgstr "Flights from Origin to Destination (next few days)"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:34
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:42
+msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_label"
+msgstr "Cheapest Flights from origin to destination, Round-trip"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:51
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:59
+msgctxt "(Cheapest Flights from origin to destination (next month))"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_label"
+msgstr "Cheapest Flights from origin to destination (next month)"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:68
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:76
+msgctxt "(Cheapest Flights from origin to destination (next year))"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_label"
+msgstr "Cheapest Flights from origin to destination (next year)"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:85
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:93
+msgctxt "(Direct Flights from origin to destination)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_label"
+msgstr "Direct Flights from origin to destination"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:102
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:110
+msgctxt "(Direct Flights from origin)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_label"
+msgstr "Direct Flights from origin"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:119
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_btn_save_label"
+msgstr "Save change"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:128
+msgctxt "(Popular Destinations from origin)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_label"
+msgstr "Popular Destinations from origin"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:137
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:146
+msgctxt "(Most popular flights within this Airline)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_label"
+msgstr "Most popular flights within this Airline"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:155
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:163
+msgctxt "(Searched on our website)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_label"
+msgstr "Searched on our website"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:172
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_btn_save_label"
+msgstr "Save changes "
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:180
+msgctxt "(Cheap Flights from origin)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_label"
+msgstr "Cheap Flights from origin"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:189
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_btn_save_label"
+msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:197
+msgctxt "(Cheap Flights to destination)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_label"
+msgstr "Cheap Flights to destination"
+
+#: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:206
+msgctxt "(Save changes)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
+msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:3
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:3
@@ -1954,6 +2035,18 @@ msgstr ""
 msgid ""
 "By pressing the button \"Save\" you agree to send the plugin's activation "
 "data to Travelpayouts."
+msgstr ""
+
+#: app/includes/views/admin/menu/TPSettings.view.php:92
+#: app/includes/views/admin/menu/TPWidgets.view.php:17
+#: app/includes/views/admin/menu/TPWidgets.view.php:31
+#: app/includes/views/admin/menu/TPWidgets.view.php:45
+#: app/includes/views/admin/menu/TPWidgets.view.php:59
+#: app/includes/views/admin/menu/TPWidgets.view.php:73
+#: app/includes/views/admin/menu/TPWidgets.view.php:86
+#: app/includes/views/admin/menu/TPWidgets.view.php:100
+#: app/includes/views/admin/menu/TPWidgets.view.php:114
+msgid "Save changes"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:3
