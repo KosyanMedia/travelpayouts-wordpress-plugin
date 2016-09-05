@@ -11,16 +11,26 @@ class TPFieldFlightTickets {
     }
     public function TPFieldStyleTable(){
         $font_family_attr = array(
-            'Arial',
-            'Arial Black',
-            'Comic Sans MS',
-            'Courier New',
-            'Georgia',
-            'Impact',
-            'Times New Roman',
-            'Trebuchet MS',
-            'Verdana',
-            'Roboto'
+            _x('tp_admin_page_flights_tab_tickets_style_font_arial',
+                'Arial', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_font_arial_black',
+                'Arial Black', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_font_comic_sans_MS',
+                'Comic Sans MS', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_font_courier_new',
+                'Courier New', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_font_georgia',
+                'Georgia', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_font_impact',
+                'Impact', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_times_new_roman',
+                'Times New Roman', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_trebuchet_MS',
+                'Trebuchet MS', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_verdana',
+                'Verdana', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_roboto',
+                'Roboto', TPOPlUGIN_TEXTDOMAIN),
         );
         ?>
         <p class="TP-SettingTitle">
