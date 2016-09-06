@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-05 13:50+0300\n"
+"POT-Creation-Date: 2016-09-06 18:35+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;"
-"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;"
-"_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPLoader.php:101
@@ -62,8 +62,7 @@ msgstr ""
 msgid "Location"
 msgstr ""
 
-#: app/includes/TPLoaderScripts.php:317
-#: app/includes/views/admin/TPModalAdminNotice.view.php:4
+#: app/includes/TPLoaderScripts.php:317 app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr ""
 
@@ -82,8 +81,8 @@ msgstr ""
 
 #: app/includes/TPLoaderScripts.php:324
 msgid ""
-"You can't undo this action. Be sure to have a backup of your database. Are "
-"you sure you want to continue?"
+"You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
+"continue?"
 msgstr ""
 
 #: app/includes/TPLoaderScripts.php:325
@@ -221,9 +220,7 @@ msgstr ""
 msgid "Cheap Flights to destination"
 msgstr ""
 
-#: app/includes/TPPluginWidget.php:267
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:574
-#: app/includes/models/admin/menu/TPFieldWidgets.php:576
+#: app/includes/TPPluginWidget.php:267 app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldWidgets.php:661
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:136
@@ -232,9 +229,7 @@ msgstr ""
 msgid "Limit"
 msgstr ""
 
-#: app/includes/TPPluginWidget.php:279
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:560
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:752
+#: app/includes/TPPluginWidget.php:279 app/includes/models/admin/menu/TPFieldFlightTickets.php:837
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr ""
@@ -251,13 +246,11 @@ msgid "No title"
 msgstr "Insert link"
 
 #: app/includes/TPPluginWidget.php:301
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:634
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:168
 msgid "Number of stops"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:305
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
 #: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
@@ -266,13 +259,11 @@ msgid "All"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:307
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:639
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:171
 msgid "No more than one stop"
 msgstr ""
 
 #: app/includes/TPPluginWidget.php:309
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:641
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:172
 msgid "Direct"
 msgstr ""
@@ -483,11 +474,9 @@ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
 msgstr "Enable auto-links for new posts"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:102
-msgctxt ""
-"(After you press \"Publish\" all you anchors will be auto-replaced by links)"
+msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
 msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
-msgstr ""
-"After you press \"Publish\" all you anchors will be auto-replaced by links"
+msgstr "After you press \"Publish\" all you anchors will be auto-replaced by links"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:122
 msgctxt "(Anchor replacements limit)"
@@ -626,111 +615,175 @@ msgstr "Enable Horizontal Scroll"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:329
 msgctxt ""
-"(The tables' width won't be 100% of your content zone. When you resize your "
-"content zone (e.g. you have a responsible WP theme) - tables won't affect "
-"your design, but will have a horizontal scroll.)"
+"(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
+"you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
+"scroll.)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label_help"
 msgstr ""
-"The tables\\' width won\\'t be 100% of your content zone. When you resize "
-"your content zone (e.g. you have a responsible WP theme) - tables won\\'t "
-"affect your design, but will have a horizontal scroll."
+"The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e."
+"g. you have a responsible WP theme) - tables won\\'t affect your design, but will have a "
+"horizontal scroll."
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:342
 msgctxt "(Reset to Default styles)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Reset to Default styles"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:358
-#, fuzzy
-msgid "Title"
-msgstr "Insert link"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:359
+msgctxt "(Title)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
+msgstr "Title"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:369
-msgid "Use \"airline\" variable to add the Airlines automatically"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:373
+msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
+msgstr "Use \"airline\" variable to add the Airlines automatically"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:372
-msgid ""
-"Use \"origin\" and \"destination\" variables to add the city automatically"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:380
+msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
+msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:386
-msgid "Title tag"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
+msgctxt "(Title tag)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
+msgstr "Title tag"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
+msgctxt "(DIV)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
+msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:410
-msgid "Button Title"
-msgstr ""
+msgctxt "(H1)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
+msgstr "H1"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:415
+msgctxt "(H2)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
+msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:420
-msgid "\"price\" variable can be used"
-msgstr ""
+msgctxt "(H3)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
+msgstr "H3"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:448
-msgid "Order by price"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:425
+msgctxt "(H4)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
+msgstr "H4"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:455
-msgid "Ascending"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
+msgctxt "(Button Title)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label"
+msgstr "Button Title"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:460
-msgid "Descending"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:453
+msgctxt "(\"price\" variable can be used)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help"
+msgstr "\"price\" variable can be used"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:465
-msgid "Do not sort"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:484
+msgctxt "(Order by price)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label"
+msgstr "Order by price"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:514
-msgid "Table Columns"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:494
+msgctxt "(Ascending)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending"
+msgstr "Ascending"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:517
-msgid "Not selected"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:502
+msgctxt "(Descending)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending"
+msgstr "Descending"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:524
-msgid "Selected"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:510
+msgctxt "(Do not sort)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort"
+msgstr "Do not sort"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:541
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:731
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:562
+msgctxt "(Table Columns)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label"
+msgstr "Table Columns"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:568
+msgctxt "(Not selected)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
+msgstr "Not selected"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:578
+msgctxt "(Selected)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select"
+msgstr "Selected"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:598
+msgctxt "(Rows per page)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
+msgstr "Rows per page"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:620
+msgctxt "(Paginate)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
+msgstr "Paginate"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
+msgctxt "(Limit)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label"
+msgstr "Limit"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:663
+msgctxt "(Departure date)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label"
+msgstr "Departure date"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:682
+msgctxt "(Return date)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label"
+msgstr "Return date"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:706
+msgctxt "(Number of stops)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label"
+msgstr "Number of stops"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:712
+msgctxt "(All)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1"
+msgstr "All"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:717
+msgctxt "(No more than one stop)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2"
+msgstr "No more than one stop"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:722
+msgctxt "(Direct)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3"
+msgstr "Direct"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:739
+msgctxt "(Sort by column)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
+msgstr "Sort by column"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:770
+msgctxt "(Extra marker)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
+msgstr "Extra marker"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:816
 msgid "Rows per page"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:597
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
-msgid "Departure date"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:613
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
-msgid "Return date"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:655
-msgid "Sort by column"
-msgstr ""
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:689
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:718
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:774
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:802
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:831
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:859
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:887
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:916
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:944
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1001
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1050
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1098
-#: app/includes/models/admin/menu/TPFieldSettings.php:37
-msgid "Extra marker"
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:30
 msgid "Token"
+msgstr ""
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:37
+msgid "Extra marker"
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:48
@@ -801,8 +854,8 @@ msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:178
 msgid ""
-"In this case the 301 Redirect, which is more preferable for search engines, "
-"will be activated. We recommend that you don’t change this option."
+"In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+"We recommend that you don’t change this option."
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:188
@@ -815,8 +868,8 @@ msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:196
 msgid ""
-"This attribute avoids getting undesirable search results into the search "
-"engines index. We recommend that you don’t change this option."
+"This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option."
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:206
@@ -845,8 +898,8 @@ msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:255
 msgid ""
-"Select &lt;head&gt; option to speed up the page loading. In case it still "
-"goes slow, try switching to &lt;footer&gt;"
+"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+"switching to &lt;footer&gt;"
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:263
@@ -907,10 +960,9 @@ msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:311
 msgid ""
-"Set a goal in Yandex Metrica or Google Analytics and paste in this field the "
-"code you need to track the event (reaching the goal). In example, "
-"\"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or \"ga('send', 'event', "
-"'category', 'action');\""
+"Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+"track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
+"or \"ga('send', 'event', 'category', 'action');\""
 msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:328
@@ -1091,9 +1143,9 @@ msgstr ""
 #, fuzzy
 msgid "Responsive"
 msgstr ""
-"The tables\\' width won\\'t be 100% of your content zone. When you resize "
-"your content zone (e.g. you have a responsible WP theme) - tables won\\'t "
-"affect your design, but will have a horizontal scroll."
+"The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e."
+"g. you have a responsible WP theme) - tables won\\'t affect your design, but will have a "
+"horizontal scroll."
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:248
 #: app/includes/models/admin/menu/TPFieldWidgets.php:378
@@ -1219,12 +1271,20 @@ msgstr ""
 msgid "Subid"
 msgstr ""
 
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
+msgid "Departure date"
+msgstr ""
+
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:52
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:62
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:81
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:91
 msgctxt "insert link date"
 msgid "today"
+msgstr ""
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
+msgid "Return date"
 msgstr ""
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:79
@@ -1373,13 +1433,9 @@ msgid "tp_admin_page_auto_links_paragraph_1"
 msgstr "Auto-links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:10
-msgctxt ""
-"(Here you can setup auto-links. Define anchor and your referral link for that "
-"anchor.)"
+msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
 msgid "tp_admin_page_auto_links_paragraph_2"
-msgstr ""
-"Here you can setup auto-links. Define anchor and your referral link for that "
-"anchor."
+msgstr "Here you can setup auto-links. Define anchor and your referral link for that anchor."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
 msgctxt "(List of links)"
@@ -1438,12 +1494,12 @@ msgstr "Auto-links "
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:9
 msgctxt ""
-"(Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive.)"
+"(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive.)"
 msgid "tp_admin_page_auto_links_add_paragraph_2"
 msgstr ""
-"Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:15
 msgctxt "(Adding links)"
@@ -1472,12 +1528,12 @@ msgstr "Events onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
 msgctxt ""
-"(You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link)"
+"(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+"click on a link)"
 msgid "tp_admin_page_auto_links_add_textarea_arl_event_label_help"
 msgstr ""
-"You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
+"on a link"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:74
 msgctxt "(Add \"nofollow\" attribute)"
@@ -1490,13 +1546,9 @@ msgid "tp_admin_page_auto_links_add_input_arl_replace_label"
 msgstr "Replace existing links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:84
-msgctxt ""
-"(In case you already have such active links — they'll be replaced to the new "
-"one)"
+msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
 msgid "tp_admin_page_auto_links_add_input_arl_replace_label_help"
-msgstr ""
-"In case you already have such active links — they'll be replaced to the new "
-"one"
+msgstr "In case you already have such active links — they'll be replaced to the new one"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:97
 msgctxt "(Open in a new tab)"
@@ -1520,12 +1572,12 @@ msgstr "Auto-links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
 msgctxt ""
-"(Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive.)"
+"(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive.)"
 msgid "tp_admin_page_auto_links_edit_paragraph_2"
 msgstr ""
-"Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:15
 msgctxt "(Adding links)"
@@ -1554,12 +1606,12 @@ msgstr "Events onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
 msgctxt ""
-"(You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link)"
+"(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+"click on a link)"
 msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
 msgstr ""
-"You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
+"on a link"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:74
 msgctxt "(Add \"nofollow\" attribute)"
@@ -1572,13 +1624,9 @@ msgid "tp_admin_page_auto_links_edit_input_arl_replace_label"
 msgstr "Replace existing links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:84
-msgctxt ""
-"(In case you already have such active links — they'll be replaced to the new "
-"one)"
+msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
 msgid "tp_admin_page_auto_links_edit_input_arl_replace_label_help"
-msgstr ""
-"In case you already have such active links — they'll be replaced to the new "
-"one"
+msgstr "In case you already have such active links — they'll be replaced to the new one"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:97
 msgctxt "(Open in a new tab)"
@@ -1897,9 +1945,7 @@ msgid "Search forms"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:7
-msgid ""
-"Here you can add shortcodes for each search form added to your Travelpayouts "
-"account"
+msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:40
@@ -1976,8 +2022,7 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:44
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:45
-msgid ""
-"Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
+msgid "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:49
@@ -1993,8 +2038,8 @@ msgstr ""
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:70
 msgid ""
-"Shortcode will be automatically generated after you press the Save Changes "
-"button. It can also be placed into your posts right away"
+"Shortcode will be automatically generated after you press the Save Changes button. It can also "
+"be placed into your posts right away"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
@@ -2010,8 +2055,8 @@ msgstr ""
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
 msgid ""
-"Please, enter your %s account data below. Please, register if you don’t have "
-"a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s"
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:41
@@ -2033,8 +2078,7 @@ msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:88
 msgid ""
-"By pressing the button \"Save\" you agree to send the plugin's activation "
-"data to Travelpayouts."
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSettings.view.php:92
@@ -2160,9 +2204,8 @@ msgstr "Earn by selling tourist services"
 msgctxt "admin page wizard title description"
 msgid "tp_admin_page_wizard_title_description"
 msgstr ""
-"Install our convenient and useful tools to your website and help your "
-"visitors to find the cheapest flights and hotels. Earn on commission for each "
-"booking."
+"Install our convenient and useful tools to your website and help your visitors to find the "
+"cheapest flights and hotels. Earn on commission for each booking."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
 msgctxt "admin page wizard tab menu account"
@@ -2188,8 +2231,7 @@ msgstr "this link."
 msgctxt "admin page wizard tab menu account paragraph_2"
 msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
 msgstr ""
-"By pressing the button \"Save\" you agree to send the plugin's activation "
-"data to Travelpayouts."
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
 msgctxt "admin page wizard tab menu account btn_save"
@@ -2200,17 +2242,16 @@ msgstr "Save changes"
 msgctxt "admin page wizard tab menu content paragraph_1"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgstr ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to "
-"70% from the commission advertiser gets for each sale. On average, our "
-"Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
-"booking (with booking amount that equals to approx. 400$)."
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+"commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
+"ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
 msgctxt "admin page wizard tab menu content paragraph_2"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
 msgstr ""
-"All user purchases made within 30 days after following links in tables or "
-"using placed widgets will be credited to your account."
+"All user purchases made within 30 days after following links in tables or using placed widgets "
+"will be credited to your account."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:16
 msgctxt "admin page wizard tab menu content paragraph_3"
@@ -2221,25 +2262,22 @@ msgstr "How it works?"
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
 msgstr ""
-"<strong>Install our Affiliate tools.</strong>  You place our widgets and "
-"tables right in your posts and help visitors to book favorable flights, "
-"hotels and other services."
+"<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your "
+"posts and help visitors to book favorable flights, hotels and other services."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgstr ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a "
-"great deal and gets to have an unforgettable journey, while we pay you a "
-"reward."
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
+"gets to have an unforgettable journey, while we pay you a reward."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 msgstr ""
-"<strong>You get profits.</strong>  Your earnings will be displayed in your "
-"Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
-"monthly payouts. "
+"<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
+"Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
 msgctxt "admin page wizard tab menu content paragraph_4"
@@ -2253,40 +2291,35 @@ msgstr "Plugin allows to get the following tools added to your Wordpress posts:"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:47
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable "
-"tables with flight information;)"
+"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable tables with flight "
+"information;)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
 msgstr "12 customizable tables with flight information; "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
 msgstr "Search Forms;"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights "
-"and hotels Map)"
+"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 msgstr "Low cost flights and hotels Map"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:59
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
 msgstr "Low prices Calendar"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:63
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
 msgstr "Hotel Widget "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:67
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight "
-"destinations Widget)"
+"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight destinations Widget)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
 msgstr "Popular flight destinations Widget"
 
@@ -2311,21 +2344,17 @@ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
 msgstr "on Travelpayouts WP plugin features."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:87
-msgctxt ""
-"(Dozens of useful articles in Travelpayouts Knowledge Base, always available "
-"at )"
+msgctxt "(Dozens of useful articles in Travelpayouts Knowledge Base, always available at )"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
-msgstr ""
-"Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
+msgstr "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
 msgctxt ""
-"(We wish success to all your endeavors! Do the things you love and we will "
-"take care of the rest!)"
+"(We wish success to all your endeavors! Do the things you love and we will take care of the "
+"rest!)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 msgstr ""
-"We wish success to all your endeavors! Do the things you love and we will "
-"take care of the rest!"
+"We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
 msgctxt "admin page wizard tab menu registration paragraph_1"
@@ -2368,6 +2397,10 @@ msgstr ""
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgid "Title"
+#~ msgstr "Insert link"
 
 #, fuzzy
 #~ msgid "Link "

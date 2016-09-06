@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-05 13:21+0300\n"
+"POT-Creation-Date: 2016-09-06 18:34+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;"
-"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;"
-"_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPLoader.php:101
@@ -34,8 +34,8 @@ msgstr "Привет! Плагин Travelpayouts почти готов к раб
 #: app/includes/TPLoader.php:107
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
-"Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на "
-"продаже туристических услуг. "
+"Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
+"услуг. "
 
 #: app/includes/TPLoaderScripts.php:309
 msgid "Hotel Name"
@@ -64,8 +64,7 @@ msgstr "Откуда"
 msgid "Location"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:317
-#: app/includes/views/admin/TPModalAdminNotice.view.php:4
+#: app/includes/TPLoaderScripts.php:317 app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
@@ -84,11 +83,9 @@ msgstr "Готово!"
 
 #: app/includes/TPLoaderScripts.php:324
 msgid ""
-"You can't undo this action. Be sure to have a backup of your database. Are "
-"you sure you want to continue?"
-msgstr ""
-"Действие невозможно отменить. Обязательно сделайте backup вашей базы. "
-"Продолжить?"
+"You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
+"continue?"
+msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
 
 #: app/includes/TPLoaderScripts.php:325
 msgid "Auto-links are applied"
@@ -224,9 +221,7 @@ msgstr "Дешевые перелеты из города"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:267
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:574
-#: app/includes/models/admin/menu/TPFieldWidgets.php:576
+#: app/includes/TPPluginWidget.php:267 app/includes/models/admin/menu/TPFieldWidgets.php:576
 #: app/includes/models/admin/menu/TPFieldWidgets.php:661
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:136
@@ -235,9 +230,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Limit"
 msgstr "Лимит"
 
-#: app/includes/TPPluginWidget.php:279
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:560
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:752
+#: app/includes/TPPluginWidget.php:279 app/includes/models/admin/menu/TPFieldFlightTickets.php:837
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr "Пейджинация"
@@ -253,13 +246,11 @@ msgid "No title"
 msgstr "Убрать заголовок\r"
 
 #: app/includes/TPPluginWidget.php:301
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:634
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:168
 msgid "Number of stops"
 msgstr "Пересадки"
 
 #: app/includes/TPPluginWidget.php:305
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
 #: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
@@ -268,13 +259,11 @@ msgid "All"
 msgstr "Все"
 
 #: app/includes/TPPluginWidget.php:307
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:639
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:171
 msgid "No more than one stop"
 msgstr "Не более 1 пересадки"
 
 #: app/includes/TPPluginWidget.php:309
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:641
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:172
 msgid "Direct"
 msgstr "без пересадок"
@@ -483,11 +472,9 @@ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
 msgstr "Включить подстановку для новых постов"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:102
-msgctxt ""
-"(After you press \"Publish\" all you anchors will be auto-replaced by links)"
+msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
 msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
-msgstr ""
-"После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
+msgstr "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:122
 msgctxt "(Anchor replacements limit)"
@@ -626,116 +613,176 @@ msgstr "Разрешить горизонтальный скролл"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:329
 msgctxt ""
-"(The tables' width won't be 100% of your content zone. When you resize your "
-"content zone (e.g. you have a responsible WP theme) - tables won't affect "
-"your design, but will have a horizontal scroll.)"
+"(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
+"you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
+"scroll.)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label_help"
 msgstr ""
-"Таблицы не растягиваются на всю ширину контент зоны (max-width не равно "
-"100%). При уменьшении ширины контент зоны (например, на мобильных "
-"устройствах, если ваша WP тема адаптивна), - таблица \"впишется\" в новый "
-"размер, но с появлением горизонтального скролла."
+"Таблицы не растягиваются на всю ширину контент зоны (max-width не равно 100%). При уменьшении "
+"ширины контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - таблица "
+"\"впишется\" в новый размер, но с появлением горизонтального скролла."
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:342
 msgctxt "(Reset to Default styles)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Стили по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:358
-msgid "Title"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:359
+msgctxt "(Title)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
 msgstr "Заголовок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:369
-msgid "Use \"airline\" variable to add the Airlines automatically"
-msgstr ""
-"Используйте переменные \"airline\"  для автоматической подстановки "
-"авиакомпании"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:373
+msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
+msgstr "Используйте переменные \"airline\"  для автоматической подстановки авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:372
-msgid ""
-"Use \"origin\" and \"destination\" variables to add the city automatically"
-msgstr ""
-"Используйте переменные \"origin\",  \"destination\"  для автоматической "
-"подстановки города"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:380
+msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
+msgstr "Используйте переменные \"origin\", \"destination\" для автоматической подстановки города"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:386
-msgid "Title tag"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
+msgctxt "(Title tag)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Тег заголовка"
 
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
+msgctxt "(DIV)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
+msgstr "DIV"
+
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:410
-msgid "Button Title"
-msgstr "Текст кнопки"
+msgctxt "(H1)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
+msgstr "H1"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:415
+msgctxt "(H2)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
+msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:420
-msgid "\"price\" variable can be used"
+msgctxt "(H3)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
+msgstr "H3"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:425
+msgctxt "(H4)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
+msgstr "H4"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
+msgctxt "(Button Title)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label"
+msgstr "Текст кнопки"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:453
+msgctxt "(\"price\" variable can be used)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:448
-msgid "Order by price"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:484
+msgctxt "(Order by price)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label"
 msgstr "Сортировка по цене"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:455
-msgid "Ascending"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:494
+msgctxt "(Ascending)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending"
 msgstr "по возрастанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:460
-msgid "Descending"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:502
+msgctxt "(Descending)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending"
 msgstr "по убыванию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:465
-msgid "Do not sort"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:510
+msgctxt "(Do not sort)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort"
 msgstr "не сортировать"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:514
-msgid "Table Columns"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:562
+msgctxt "(Table Columns)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Колонки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:517
-msgid "Not selected"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:568
+msgctxt "(Not selected)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Не выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:524
-msgid "Selected"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:578
+msgctxt "(Selected)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:541
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:731
-msgid "Rows per page"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:598
+msgctxt "(Rows per page)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:597
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
-msgid "Departure date"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:620
+msgctxt "(Paginate)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
+msgstr "Пейджинация"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
+msgctxt "(Limit)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label"
+msgstr "Лимит"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:663
+msgctxt "(Departure date)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label"
 msgstr "Дата отправления"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:613
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
-msgid "Return date"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:682
+msgctxt "(Return date)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label"
 msgstr "Дата возвращения"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:655
-msgid "Sort by column"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:706
+msgctxt "(Number of stops)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label"
+msgstr "Пересадки"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:712
+msgctxt "(All)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1"
+msgstr "Все"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:717
+msgctxt "(No more than one stop)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2"
+msgstr "Не более 1 пересадки"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:722
+msgctxt "(Direct)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3"
+msgstr "без пересадок"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:739
+msgctxt "(Sort by column)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:689
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:718
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:774
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:802
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:831
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:859
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:887
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:916
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:944
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1001
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1050
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1098
-#: app/includes/models/admin/menu/TPFieldSettings.php:37
-msgid "Extra marker"
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:770
+msgctxt "(Extra marker)"
+msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:816
+msgid "Rows per page"
+msgstr "Количество строк на странице"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:30
 msgid "Token"
 msgstr "Токен"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:37
+msgid "Extra marker"
+msgstr "Дополнительный маркер"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:48
 #: app/includes/views/admin/menu/TPStatisticView.php:30
@@ -805,11 +852,11 @@ msgstr "Переходить на результаты через редирек
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:178
 msgid ""
-"In this case the 301 Redirect, which is more preferable for search engines, "
-"will be activated. We recommend that you don’t change this option."
+"In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+"We recommend that you don’t change this option."
 msgstr ""
-"При переходе отдается код 301, что хорошо воспринимается поисковиками. "
-"Рекомендуем не менять этот параметр."
+"При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять "
+"этот параметр."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:188
 msgid "Open in a New Window"
@@ -821,11 +868,11 @@ msgstr "Добавлять для ссылок атрибут nofollow"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:196
 msgid ""
-"This attribute avoids getting undesirable search results into the search "
-"engines index. We recommend that you don’t change this option."
+"This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option."
 msgstr ""
-"Атрибут помогает избежать нежелательных результатов в индексе поисковиков. "
-"Рекомендуем не менять этот параметр."
+"Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
+"этот параметр."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:206
 msgid " Turn off statistics and blog updates"
@@ -853,12 +900,11 @@ msgstr "Размещать скрипты плагина"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:255
 msgid ""
-"Select &lt;head&gt; option to speed up the page loading. In case it still "
-"goes slow, try switching to &lt;footer&gt;"
+"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+"switching to &lt;footer&gt;"
 msgstr ""
-"Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы "
-"загружаются медленно, попробуйте переставить в &lt;"
-"footer&gt;                                "
+"Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
+"попробуйте переставить в &lt;footer&gt;                                "
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:263
 msgid "Inside &lt;head&gt; tag "
@@ -918,15 +964,13 @@ msgstr "Отслеживание события. Нажатия кнопки \"�
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:311
 msgid ""
-"Set a goal in Yandex Metrica or Google Analytics and paste in this field the "
-"code you need to track the event (reaching the goal). In example, "
-"\"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or \"ga('send', 'event', "
-"'category', 'action');\""
+"Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+"track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
+"or \"ga('send', 'event', 'category', 'action');\""
 msgstr ""
-"Определите цель в Яндекс Метрике или Google Analytics, вставте в данное поле "
-"необходимый метод для отслеживания достижения цели. Например, "
-"\"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или \"ga('send', 'event', "
-"'category', 'action');\""
+"Определите цель в Яндекс Метрике или Google Analytics, вставте в данное поле необходимый метод "
+"для отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
+"\"ga('send', 'event', 'category', 'action');\""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:328
 msgid "Event tracking. Table is loaded"
@@ -934,9 +978,7 @@ msgstr "Отслеживание события. Загрузка таблицы
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:331
 msgid "Google Analytics event that will be fired every time a table loads."
-msgstr ""
-"Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой "
-"загрузке таблицы."
+msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:350
 msgid "Import settings"
@@ -1233,6 +1275,10 @@ msgstr "Поиск отелей"
 msgid "Subid"
 msgstr "Дополнительный маркер"
 
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
+msgid "Departure date"
+msgstr "Дата отправления"
+
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:52
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:62
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:81
@@ -1240,6 +1286,10 @@ msgstr "Дополнительный маркер"
 msgctxt "insert link date"
 msgid "today"
 msgstr "сегодня"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
+msgid "Return date"
+msgstr "Дата возвращения"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:79
 msgid "Check in"
@@ -1385,13 +1435,9 @@ msgid "tp_admin_page_auto_links_paragraph_1"
 msgstr "Подстановка ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:10
-msgctxt ""
-"(Here you can setup auto-links. Define anchor and your referral link for that "
-"anchor.)"
+msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
 msgid "tp_admin_page_auto_links_paragraph_2"
-msgstr ""
-"Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
-"постах"
+msgstr "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех постах"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
 msgctxt "(List of links)"
@@ -1450,12 +1496,12 @@ msgstr "Подстановка ссылок "
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:9
 msgctxt ""
-"(Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive.)"
+"(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive.)"
 msgid "tp_admin_page_auto_links_add_paragraph_2"
 msgstr ""
-"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-"заданные якорные фразы.  Анкор чувствителен к регистру символов."
+"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+"фразы.  Анкор чувствителен к регистру символов."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:15
 msgctxt "(Adding links)"
@@ -1484,12 +1530,12 @@ msgstr "Событие onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
 msgctxt ""
-"(You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link)"
+"(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+"click on a link)"
 msgid "tp_admin_page_auto_links_add_textarea_arl_event_label_help"
 msgstr ""
-"Можете добавить события Google Analytics или Yandex Metrika, которые будут "
-"вызываться при клике на ссылку"
+"Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике "
+"на ссылку"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:74
 msgctxt "(Add \"nofollow\" attribute)"
@@ -1502,9 +1548,7 @@ msgid "tp_admin_page_auto_links_add_input_arl_replace_label"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:84
-msgctxt ""
-"(In case you already have such active links — they'll be replaced to the new "
-"one)"
+msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
 msgid "tp_admin_page_auto_links_add_input_arl_replace_label_help"
 msgstr "Будет производится замена существующих ссылок с таким анкором"
 
@@ -1530,12 +1574,12 @@ msgstr "Подстановка ссылок "
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
 msgctxt ""
-"(Here you can add referral links that you want to be defined to the specified "
-"anchor phrase.  Anchors are case-sensitive.)"
+"(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive.)"
 msgid "tp_admin_page_auto_links_edit_paragraph_2"
 msgstr ""
-"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-"заданные якорные фразы.  Анкор чувствителен к регистру символов."
+"Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+"фразы.  Анкор чувствителен к регистру символов."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:15
 msgctxt "(Adding links)"
@@ -1564,12 +1608,12 @@ msgstr "Событие onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
 msgctxt ""
-"(You can add here custom events (e.g. Google Analytics events) that will be "
-"fired after the click on a link)"
+"(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+"click on a link)"
 msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
 msgstr ""
-"Можете добавить события Google Analytics или Yandex Metrika, которые будут "
-"вызываться при клике на ссылку"
+"Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике "
+"на ссылку"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:74
 msgctxt "(Add \"nofollow\" attribute)"
@@ -1582,9 +1626,7 @@ msgid "tp_admin_page_auto_links_edit_input_arl_replace_label"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:84
-msgctxt ""
-"(In case you already have such active links — they'll be replaced to the new "
-"one)"
+msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
 msgid "tp_admin_page_auto_links_edit_input_arl_replace_label_help"
 msgstr "Будет производится замена существующих ссылок с таким анкором"
 
@@ -1904,12 +1946,10 @@ msgid "Search forms"
 msgstr "Поисковые формы"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:7
-msgid ""
-"Here you can add shortcodes for each search form added to your Travelpayouts "
-"account"
+msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
 msgstr ""
-"В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в "
-"админке аккаунта Travelpayouts"
+"В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в админке аккаунта "
+"Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:40
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:20
@@ -1983,11 +2023,9 @@ msgstr "Код формы TravelPayouts"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:44
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:45
-msgid ""
-"Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
+msgid "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
 msgstr ""
-"Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код "
-"для вставки\""
+"Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код для вставки\""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:49
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:50
@@ -2002,11 +2040,9 @@ msgstr "Город прилета по-умолчанию"
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:70
 msgid ""
-"Shortcode will be automatically generated after you press the Save Changes "
-"button. It can also be placed into your posts right away"
-msgstr ""
-"Шорткод генерируется автоматически при сохранении и доступен для вставки в "
-"записях"
+"Shortcode will be automatically generated after you press the Save Changes button. It can also "
+"be placed into your posts right away"
+msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
@@ -2021,12 +2057,12 @@ msgstr "сохранить изменения"
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
 msgid ""
-"Please, enter your %s account data below. Please, register if you don’t have "
-"a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s"
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
-"Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта "
-"в Travelpayouts - вам сперва необходимо зарегистрироваться. Маркер и токен "
-"можно посмотреть здесь  - %s  White Label - тут %s"
+"Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts - "
+"вам сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White "
+"Label - тут %s"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:41
 #: app/includes/views/admin/menu/TPSettings.view.php:62
@@ -2045,11 +2081,9 @@ msgstr "Локализация"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:88
 msgid ""
-"By pressing the button \"Save\" you agree to send the plugin's activation "
-"data to Travelpayouts."
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
-"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации "
-"плагина в Travelpayouts"
+"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:92
 #: app/includes/views/admin/menu/TPWidgets.view.php:17
@@ -2173,9 +2207,8 @@ msgstr "Зарабатывайте на продаже туристически�
 msgctxt "admin page wizard title description"
 msgid "tp_admin_page_wizard_title_description"
 msgstr ""
-"Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, "
-"которые помогут вашим посетителям найти самые дешевые билеты и отели, а вам – "
-"заработать на этом."
+"Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
+"вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
 msgctxt "admin page wizard tab menu account"
@@ -2190,9 +2223,7 @@ msgstr "У меня нет аккаунта Тravelpayouts"
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
 msgctxt "admin page wizard tab menu account paragraph_1"
 msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
-msgstr ""
-"Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после "
-"регистрации "
+msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации "
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:8
 msgctxt "admin page wizard tab menu account paragraph_1 link tp"
@@ -2203,8 +2234,7 @@ msgstr "на этой странице."
 msgctxt "admin page wizard tab menu account paragraph_2"
 msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
 msgstr ""
-"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации "
-"плагина в Travelpayouts"
+"Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
 msgctxt "admin page wizard tab menu account btn_save"
@@ -2215,18 +2245,16 @@ msgstr "Сохранить изменения"
 msgctxt "admin page wizard tab menu content paragraph_1"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgstr ""
-" - партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
-"до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход партнера "
-"составляет 7$ с купленного авиабилета и 20$ с брони гостиницы (при сумме "
-"брони около $400)."
+" - партнерская сеть для заработка на туристическом трафике.  Вы заработаете до 70% с комиссии "
+"рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного авиабилета "
+"и 20$ с брони гостиницы (при сумме брони около $400)."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
 msgctxt "admin page wizard tab menu content paragraph_2"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
 msgstr ""
-"Пользователь, перешедший по вашей партнерской ссылке на сайт рекламодателя, "
-"закрепляется за вами на 30 дней (cookie lifetime). Все его покупки в этот "
-"период зачисляются на ваш счет. "
+"Пользователь, перешедший по вашей партнерской ссылке на сайт рекламодателя, закрепляется за вами "
+"на 30 дней (cookie lifetime). Все его покупки в этот период зачисляются на ваш счет. "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:16
 msgctxt "admin page wizard tab menu content paragraph_3"
@@ -2237,23 +2265,23 @@ msgstr "Как это работает?"
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
 msgstr ""
-"<strong>Установите наши инструменты..</strong>Вы размещаете в ваших записях "
-"таблицы и виджеты с информацией о выгодных авиабилетах, отелях и т.д. "
+"<strong>Установите наши инструменты..</strong>Вы размещаете в ваших записях таблицы и виджеты с "
+"информацией о выгодных авиабилетах, отелях и т.д. "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgstr ""
-"<strong>Посетитель оплачивает услугу.</strong> Посетители переходят с вашего "
-"ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
+"<strong>Посетитель оплачивает услугу.</strong> Посетители переходят с вашего ресурса и "
+"оплачивают услугу. Мы выплачиваем вам комиссию."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
 msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 msgstr ""
-"<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в "
-"вашем личном кабинете Travelpayouts и в плагине. Выплата прибыли происходит "
-"автоматически раз в месяц, строго по расписанию."
+"<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в вашем личном "
+"кабинете Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, строго "
+"по расписанию."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
 msgctxt "admin page wizard tab menu content paragraph_4"
@@ -2264,45 +2292,40 @@ msgstr "Что умеет этот плагин?"
 msgctxt "admin page wizard tab menu content paragraph_5"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5"
 msgstr ""
-"Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
-"Wordpress) следующие инструменты:"
+"Плагин позволяет вставлять в ваши записи (через интерфейс редактирования Wordpress) следующие "
+"инструменты:"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:47
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable "
-"tables with flight information;)"
+"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable tables with flight "
+"information;)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
 msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
 msgstr "Поисковые формы;"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights "
-"and hotels Map)"
+"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 msgstr "Карту дешевых авиаперелетов, отельную карту"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:59
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
 msgstr "Календарь низких цен"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:63
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
+msgctxt "admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
 msgstr "Виджет отеля"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:67
 msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight "
-"destinations Widget)"
+"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight destinations Widget)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
 msgstr "Виджет популярных направлений перелета"
 
@@ -2327,26 +2350,23 @@ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
 msgstr " о настройке и возможностях WP плагина Travelpayouts. "
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:87
-msgctxt ""
-"(Dozens of useful articles in Travelpayouts Knowledge Base, always available "
-"at )"
+msgctxt "(Dozens of useful articles in Travelpayouts Knowledge Base, always available at )"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
 msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
 msgctxt ""
-"(We wish success to all your endeavors! Do the things you love and we will "
-"take care of the rest!)"
+"(We wish success to all your endeavors! Do the things you love and we will take care of the "
+"rest!)"
 msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 msgstr ""
-"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы "
-"поможем вам с остальным!"
+"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с "
+"остальным!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
 msgctxt "admin page wizard tab menu registration paragraph_1"
 msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
-msgstr ""
-"Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
+msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:5
 msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
@@ -2384,6 +2404,49 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "Sort by column"
+#~ msgstr "Сортировка по столбцу"
+
+#~ msgid "Table Columns"
+#~ msgstr "Колонки таблицы"
+
+#~ msgid "Not selected"
+#~ msgstr "Не выбранные"
+
+#~ msgid "Selected"
+#~ msgstr "Выбранные"
+
+#~ msgid "Order by price"
+#~ msgstr "Сортировка по цене"
+
+#~ msgid "Ascending"
+#~ msgstr "по возрастанию"
+
+#~ msgid "Descending"
+#~ msgstr "по убыванию"
+
+#~ msgid "Do not sort"
+#~ msgstr "не сортировать"
+
+#~ msgid "Button Title"
+#~ msgstr "Текст кнопки"
+
+#~ msgid "\"price\" variable can be used"
+#~ msgstr "Можно использовать переменную \"price\""
+
+#~ msgid "Title tag"
+#~ msgstr "Тег заголовка"
+
+#~ msgid "Title"
+#~ msgstr "Заголовок"
+
+#~ msgid "Use \"airline\" variable to add the Airlines automatically"
+#~ msgstr "Используйте переменные \"airline\"  для автоматической подстановки авиакомпании"
+
+#~ msgid "Use \"origin\" and \"destination\" variables to add the city automatically"
+#~ msgstr ""
+#~ "Используйте переменные \"origin\",  \"destination\"  для автоматической подстановки города"
 
 #, fuzzy
 #~ msgctxt "(Cheap Flights to destination)"
@@ -2442,14 +2505,13 @@ msgstr ""
 #~ msgstr "Разрешить горизонтальный скролл"
 
 #~ msgid ""
-#~ "The tables' width won't be 100% of your content zone. When you resize your "
-#~ "content zone (e.g. you have a responsible WP theme) - tables won't affect "
-#~ "your design, but will have a horizontal scroll."
+#~ "The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
+#~ "you have a responsible WP theme) - tables won't affect your design, but will have a "
+#~ "horizontal scroll."
 #~ msgstr ""
-#~ "Таблицы не растягиваются на всю ширину контент зоны (max-width не равно "
-#~ "100%). При уменьшении ширины контент зоны (например, на мобильных "
-#~ "устройствах, если ваша WP тема адаптивна), - таблица \"впишется\" в новый "
-#~ "размер, но с появлением горизонтального скролла."
+#~ "Таблицы не растягиваются на всю ширину контент зоны (max-width не равно 100%). При уменьшении "
+#~ "ширины контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - "
+#~ "таблица \"впишется\" в новый размер, но с появлением горизонтального скролла."
 
 #~ msgid "Reset to Default styles"
 #~ msgstr "Стили по умолчанию"
@@ -2458,11 +2520,11 @@ msgstr ""
 #~ msgstr "Содержание таблиц "
 
 #~ msgid ""
-#~ "Here you can add referral links that you want to be defined to the "
-#~ "specified anchor phrase. Anchors are case-sensitive."
+#~ "Here you can add referral links that you want to be defined to the specified anchor phrase. "
+#~ "Anchors are case-sensitive."
 #~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-#~ "заданные якорные фразы. Анкор чувствителен к регистру символов."
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы. Анкор чувствителен к регистру символов."
 
 #~ msgid "Adding links"
 #~ msgstr "Добавление ссылки"
@@ -2480,11 +2542,11 @@ msgstr ""
 #~ msgstr "Событие onclick"
 
 #~ msgid ""
-#~ "You can add here custom events (e.g. Google Analytics events) that will be "
-#~ "fired after the click on a link"
+#~ "You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link"
 #~ msgstr ""
-#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут "
-#~ "вызываться при клике на ссылку"
+#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при "
+#~ "клике на ссылку"
 
 #~ msgctxt "settingsARL"
 #~ msgid "Add \"nofollow\" attribute"
@@ -2494,9 +2556,7 @@ msgstr ""
 #~ msgid "Replace existing links"
 #~ msgstr "Заменять существующие ссылки"
 
-#~ msgid ""
-#~ "In case you already have such active links — they'll be replaced to the "
-#~ "new one"
+#~ msgid "In case you already have such active links — they'll be replaced to the new one"
 #~ msgstr "Будет производится замена существующих ссылок с таким анкором"
 
 #~ msgctxt "settingsARL"
@@ -2504,11 +2564,11 @@ msgstr ""
 #~ msgstr "Открывать в новом окне "
 
 #~ msgid ""
-#~ "Here you can add referral links that you want to be defined to the "
-#~ "specified anchor phrase.  Anchors are case-sensitive."
+#~ "Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+#~ "Anchors are case-sensitive."
 #~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на "
-#~ "заданные якорные фразы.  Анкор чувствителен к регистру символов."
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы.  Анкор чувствителен к регистру символов."
 
 #~ msgid "Don't add links to all titles"
 #~ msgstr "Не вставлять ссылки во все заголовки"
@@ -2519,11 +2579,8 @@ msgstr ""
 #~ msgid "Enable auto-links for new posts"
 #~ msgstr "Включить подстановку для новых постов"
 
-#~ msgid ""
-#~ "After you press \"Publish\" all you anchors will be auto-replaced by links"
-#~ msgstr ""
-#~ "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены "
-#~ "ссылки"
+#~ msgid "After you press \"Publish\" all you anchors will be auto-replaced by links"
+#~ msgstr "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
 
 #~ msgid "Anchor replacements limit"
 #~ msgstr "Количество замен анкора"
@@ -2564,12 +2621,8 @@ msgstr ""
 #~ msgid "Place auto-links in all existing posts"
 #~ msgstr "Проставить ссылки во всех существующих постах"
 
-#~ msgid ""
-#~ "Here you can setup auto-links. Define anchor and your referral link for "
-#~ "that anchor."
-#~ msgstr ""
-#~ "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех "
-#~ "постах"
+#~ msgid "Here you can setup auto-links. Define anchor and your referral link for that anchor."
+#~ msgstr "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех постах"
 
 #~ msgid "Last updated at "
 #~ msgstr "Данные обновлены в "
@@ -2632,18 +2685,16 @@ msgstr ""
 #~ msgstr "Перейти на"
 
 #~ msgid ""
-#~ "We wish success to all your endeavors! Do the things you love and we will "
-#~ "take care of the rest!"
+#~ "We wish success to all your endeavors! Do the things you love and we will take care of the "
+#~ "rest!"
 #~ msgstr ""
-#~ "Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а "
-#~ "мы поможем вам с остальным!"
+#~ "Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с "
+#~ "остальным!"
 
 #~ msgid "on Travelpayouts WP plugin features."
 #~ msgstr " о настройке и возможностях WP плагина Travelpayouts. "
 
-#~ msgid ""
-#~ "Dozens of useful articles in Travelpayouts Knowledge Base, always "
-#~ "available at"
+#~ msgid "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 #~ msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
 #~ msgid "https://support.travelpayouts.com"
@@ -2676,70 +2727,61 @@ msgstr ""
 #~ msgid "12 customizable tables with flight information;"
 #~ msgstr "12 настраиваемых таблиц с информацией про авиаперелеты;"
 
-#~ msgid ""
-#~ "Plugin allows to get the following tools added to your Wordpress posts:"
+#~ msgid "Plugin allows to get the following tools added to your Wordpress posts:"
 #~ msgstr ""
-#~ "Плагин позволяет вставлять в ваши записи (через интерфейс редактирования "
-#~ "Wordpress) следующие инструменты:"
+#~ "Плагин позволяет вставлять в ваши записи (через интерфейс редактирования Wordpress) следующие "
+#~ "инструменты:"
 
 #~ msgid "What features does a plugin have?"
 #~ msgstr "Что умеет этот плагин?"
 
 #~ msgid ""
-#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your "
-#~ "Travelpayouts Dashboard and in your plugin. We make scheduled, automated, "
-#~ "monthly payouts. "
+#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
+#~ "Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
 #~ msgstr ""
-#~ "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается "
-#~ "в вашем личном кабинете Travelpayouts и в плагине. Выплата прибыли "
-#~ "происходит автоматически раз в месяц, строго по расписанию."
+#~ "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в вашем личном "
+#~ "кабинете Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, "
+#~ "строго по расписанию."
 
 #~ msgid ""
-#~ "<strong>Visitor pays for the service.</strong>  The client is happy to "
-#~ "grab a great deal and gets to have an unforgettable journey, while we pay "
-#~ "you a reward."
+#~ "<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
+#~ "gets to have an unforgettable journey, while we pay you a reward."
 #~ msgstr ""
-#~ "<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с "
-#~ "вашего ресурса и оплачивают услугу. Мы выплачиваем вам комиссию."
+#~ "<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с вашего ресурса и "
+#~ "оплачивают услугу. Мы выплачиваем вам комиссию."
 
 #~ msgid ""
-#~ "<strong>Install our Affiliate tools.</strong>  You place our widgets and "
-#~ "tables right in your posts and help visitors to book favorable flights, "
-#~ "hotels and other services."
+#~ "<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your "
+#~ "posts and help visitors to book favorable flights, hotels and other services."
 #~ msgstr ""
-#~ "<strong>Установите наши инструменты..</strong>Вы размещаете в ваших "
-#~ "записях таблицы и виджеты с информацией о выгодных авиабилетах, отелях и т."
-#~ "д. "
+#~ "<strong>Установите наши инструменты..</strong>Вы размещаете в ваших записях таблицы и виджеты "
+#~ "с информацией о выгодных авиабилетах, отелях и т.д. "
 
 #~ msgid "How it works?"
 #~ msgstr "Как это работает?"
 
 #~ msgid ""
-#~ "All user purchases made within 30 days after following links in tables or "
-#~ "using placed widgets will be credited to your account."
+#~ "All user purchases made within 30 days after following links in tables or using placed "
+#~ "widgets will be credited to your account."
 #~ msgstr ""
-#~ "Пользователь, перешедший по вашей партнерской ссылке на сайт "
-#~ "рекламодателя, закрепляется за вами на 30 дней (cookie lifetime). Все его "
-#~ "покупки в этот период зачисляются на ваш счет. "
+#~ "Пользователь, перешедший по вашей партнерской ссылке на сайт рекламодателя, закрепляется за "
+#~ "вами на 30 дней (cookie lifetime). Все его покупки в этот период зачисляются на ваш счет. "
 
 #~ msgid ""
-#~ " – Affiliate Network that monetizes your Travel Traffic. You will earn up "
-#~ "to 70% from the commission advertiser gets for each sale. On average, our "
-#~ "Affiliate earns 7$ from each sold air ticket and 20$ from each sold hotel "
-#~ "booking (with booking amount that equals to approx. 400$)."
+#~ " – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+#~ "commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold "
+#~ "air ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. "
+#~ "400$)."
 #~ msgstr ""
-#~ "- партнерская сеть для заработка на туристическом трафике.  Вы заработаете "
-#~ "до 70% с комиссии рекламодателя за каждую продажу.  В среднем доход "
-#~ "партнера составляет 7$ с купленного авиабилета и 20$ с брони гостиницы "
-#~ "(при сумме брони около $400)."
+#~ "- партнерская сеть для заработка на туристическом трафике.  Вы заработаете до 70% с комиссии "
+#~ "рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного "
+#~ "авиабилета и 20$ с брони гостиницы (при сумме брони около $400)."
 
 #~ msgid "this link."
 #~ msgstr "на этой странице."
 
 #~ msgid "Get your API Token and Partner Marker by following "
-#~ msgstr ""
-#~ "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после "
-#~ "регистрации"
+#~ msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации"
 
 #, fuzzy
 #~ msgid "2. Enter settings "
@@ -2758,9 +2800,7 @@ msgstr ""
 #~ msgstr "регистрацию."
 
 #~ msgid "New to Travelpayouts? Please, "
-#~ msgstr ""
-#~ "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и "
-#~ "бесплатную"
+#~ msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
 
 #~ msgid "New to Travelpayouts?"
 #~ msgstr "У меня нет аккаунта Тravelpayouts"
@@ -2769,13 +2809,11 @@ msgstr ""
 #~ msgstr "Я зарегистрирован в Travelpayouts"
 
 #~ msgid ""
-#~ "Install our convenient and useful tools to your website and help your "
-#~ "visitors to find the cheapest flights and hotels. Earn on commission for "
-#~ "each booking."
+#~ "Install our convenient and useful tools to your website and help your visitors to find the "
+#~ "cheapest flights and hotels. Earn on commission for each booking."
 #~ msgstr ""
-#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные "
-#~ "инструменты, которые помогут вашим посетителям найти самые дешевые билеты "
-#~ "и отели, а вам – заработать на этом."
+#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
+#~ "вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
 
 #~ msgid "Earn by selling tourist services"
 #~ msgstr "Зарабатывайте на продаже туристических услуг"
@@ -2864,11 +2902,8 @@ msgstr ""
 #~ msgid "Actions can not cancel. Are you sure?"
 #~ msgstr "Действия нельзя отменить. Вы уверены?"
 
-#~ msgid ""
-#~ "Here you can put down automatically links for a given phrase in all posts"
-#~ msgstr ""
-#~ "Здесь вы можете автоматически проставить ссылки  по заданным фразам во "
-#~ "всех постах"
+#~ msgid "Here you can put down automatically links for a given phrase in all posts"
+#~ msgstr "Здесь вы можете автоматически проставить ссылки  по заданным фразам во всех постах"
 
 #, fuzzy
 #~ msgctxt "settingsARL"
@@ -2921,11 +2956,8 @@ msgstr ""
 #~ msgstr "м"
 
 #~ msgid ""
-#~ "Shortcode generated automatically when you save and available for "
-#~ "insertion into the posts"
-#~ msgstr ""
-#~ "Шорткод генерируется автоматически при сохранении и доступен для вставки в "
-#~ "записях"
+#~ "Shortcode generated automatically when you save and available for insertion into the posts"
+#~ msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
 
 #~ msgid "Code form TravelPayouts"
 #~ msgstr "Код формы TravelPayouts"
@@ -2973,11 +3005,9 @@ msgstr ""
 #~ msgstr "Настроить плагин для начала работы"
 
 #~ msgid ""
-#~ "Enter your account details in the %s and start earning money by selling "
-#~ "tourism services."
+#~ "Enter your account details in the %s and start earning money by selling tourism services."
 #~ msgstr ""
-#~ "Введите данные вашего аккаунта в  %s  и начните зарабатывать на продаже "
-#~ "туристических услуг."
+#~ "Введите данные вашего аккаунта в  %s  и начните зарабатывать на продаже туристических услуг."
 
 #, fuzzy
 #~ msgid " White Label - "
@@ -3017,11 +3047,11 @@ msgstr ""
 #~ msgstr "Введите ниже данные из вашего кабинета на сайте"
 
 #~ msgid ""
-#~ "If you do not have an account in Travelpayouts - you first need to "
-#~ "register. Marker and the token can be seen here - "
+#~ "If you do not have an account in Travelpayouts - you first need to register. Marker and the "
+#~ "token can be seen here - "
 #~ msgstr ""
-#~ " Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо "
-#~ "зарегистрироваться.  Маркер и токен можно посмотреть здесь -"
+#~ " Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо зарегистрироваться.  Маркер "
+#~ "и токен можно посмотреть здесь -"
 
 #~ msgid "Statistic"
 #~ msgstr "Статистика"
@@ -3051,11 +3081,11 @@ msgstr ""
 #~ msgstr "Частота обновления данных для таблиц"
 
 #~ msgid ""
-#~ "For faster injection test page, select &lt;head&gt;. If pages are loading "
-#~ "slowly, try to rearrange the &lt;footer&gt;"
+#~ "For faster injection test page, select &lt;head&gt;. If pages are loading slowly, try to "
+#~ "rearrange the &lt;footer&gt;"
 #~ msgstr ""
-#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы "
-#~ "загружаются медленно, попробуйте переставить в &lt;footer&gt;"
+#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются "
+#~ "медленно, попробуйте переставить в &lt;footer&gt;"
 
 #~ msgid "Format date"
 #~ msgstr "Формат даты"
@@ -3070,14 +3100,10 @@ msgstr ""
 #~ msgstr "Названия ячеек"
 
 #~ msgid "Use variables of airline  for automatic substitution Airlines"
-#~ msgstr ""
-#~ "Используйте переменные airline для автоматической подстановки авиакомпании"
+#~ msgstr "Используйте переменные airline для автоматической подстановки авиакомпании"
 
-#~ msgid ""
-#~ "Use variables of origin, destination for automatic substitution of the city"
-#~ msgstr ""
-#~ "Используйте переменные origin, destination для автоматической подстановки "
-#~ "города"
+#~ msgid "Use variables of origin, destination for automatic substitution of the city"
+#~ msgstr "Используйте переменные origin, destination для автоматической подстановки города"
 
 #~ msgid "Title button"
 #~ msgstr "Текст кнопки"
@@ -3218,12 +3244,11 @@ msgstr ""
 #~ msgstr "Карта \"В наш город летят\""
 
 #~ msgid ""
-#~ "If you do not have an account in Travelpayouts - you first need to "
-#~ "register.\n"
+#~ "If you do not have an account in Travelpayouts - you first need to register.\n"
 #~ "                            Marker and the token can be seen here - "
 #~ msgstr ""
-#~ " Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо "
-#~ "зарегистрироваться. Маркер и токен можно посмотреть здесь -"
+#~ " Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо зарегистрироваться. Маркер и "
+#~ "токен можно посмотреть здесь -"
 
 #~ msgid "TravelPayouts - Flights"
 #~ msgstr "TravelPayouts - Авиабилеты"

@@ -355,7 +355,10 @@ class TPFieldFlightTickets {
     public function TPFieldTitle($shortcode, $type = 'shortcodes'){
         ?>
         <label>
-            <span><?php _e('Title', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label',
+                    '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <?php
             foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
                 $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
@@ -366,10 +369,18 @@ class TPFieldFlightTickets {
             }
             switch($shortcode){
                 case 10:
-                    ?><p><?php _e('Use "airline" variable to add the Airlines automatically', TPOPlUGIN_TEXTDOMAIN ); ?></p><?php
+                    ?><p>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1',
+                    '(Use "airline" variable to add the Airlines automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
+
+                    </p><?php
                     break;
                 default:
-                    ?><p><?php _e('Use "origin" and "destination" variables to add the city automatically', TPOPlUGIN_TEXTDOMAIN ); ?></p><?php
+                    ?><p>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2',
+                    '(Use "origin" and "destination" variables to add the city automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <?php
                     break;
             }
             ?>
@@ -383,19 +394,37 @@ class TPFieldFlightTickets {
     public function TPFieldTitleTag($shortcode, $type = 'shortcodes'){
         ?>
         <label>
-            <span><?php _e('Title tag', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label',
+                    '(Title tag)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
-                    value="div">DIV</option>
+                    value="div">
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1',
+                        '(DIV)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
-                    value="h1">H1</option>
+                    value="h1">
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2',
+                        '(H1)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
-                    value="h2">H2</option>
+                    value="h2">
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3',
+                        '(H2)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
-                    value="h3">H3</option>
+                    value="h3">
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4',
+                        '(H3)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
-                    value="h4">H4</option>
+                    value="h4">
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5',
+                        '(H4)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </option>
             </select>
 
         </label>
@@ -407,7 +436,10 @@ class TPFieldFlightTickets {
     public function TPFieldTitleButton($shortcode){
         ?>
         <label>
-            <span><?php _e('Button Title', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label',
+                    '(Button Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <?php
             foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
                 $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
@@ -417,7 +449,10 @@ class TPFieldFlightTickets {
             <?php
             }
             ?>
-            <p><?php _e('"price" variable can be used', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+            <p>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help',
+                    '("price" variable can be used)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </p>
         </label>
     <?php
     }
@@ -445,24 +480,36 @@ class TPFieldFlightTickets {
      */
     public function TPFieldSortPrice($shortcode){
         ?>
-        <span><?php _e('Order by price', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+        <span>
+            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label',
+                '(Order by price)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </span>
         <div class="TP-FormItem">
             <div class="ItemSub">
                 <ul class="TP-listSet TP-listSet--cust">
                     <li>
                         <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 2) ?> hidden value="2" />
-                        <label for="rchek2"><?php _e('Ascending', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                        <label for="rchek2">
+                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending',
+                                '(Ascending)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
                     </li>
                     <li>
                         <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 1) ?> hidden value="1" />
-                        <label for="rchek1"><?php _e('Descending', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                        <label for="rchek1">
+                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending',
+                                '(Descending)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
                     </li>
                     <li>
                         <input id="rchek0" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 0) ?> hidden value="1" />
-                        <label for="rchek0"><?php _e('Do not sort', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+                        <label for="rchek0">
+                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort',
+                                '(Do not sort)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
                     </li>
                 </ul>
             </div>
@@ -511,17 +558,26 @@ class TPFieldFlightTickets {
         ?>
 
         <div class="TP-SortableSection">
-            <p class="titleSortable"><?php _e('Table Columns', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+            <p class="titleSortable">
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label',
+                    '(Table Columns)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </p>
             <div class="TP-ContainerSorTable">
                 <div data-force="30" class="layer TP-blockSortable" >
-                    <p class="TP-titleBlockSortable"><?php _e('Not selected', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+                    <p class="TP-titleBlockSortable">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
+                            '(Not selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
                     <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
                         <?php echo $settingsShortcodeSortable; ?>
                     </ul>
                 </div>
 
                 <div data-force="18" class="layer TP-blockSortable">
-                    <p class="TP-titleBlockSortable"><?php _e('Selected', TPOPlUGIN_TEXTDOMAIN ); ?></p>
+                    <p class="TP-titleBlockSortable">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select',
+                            '(Selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
                     <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
                         <?php echo $settingsShortcodeSortableSelected; ?>
                     </ul>
@@ -538,7 +594,10 @@ class TPFieldFlightTickets {
     public function TPFieldPaginate($shortcode){
         ?>
         <div class="ItemSub">
-            <span><?php _e('Rows per page', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label',
+                    '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
                     <label>
@@ -557,7 +616,10 @@ class TPFieldFlightTickets {
         <div class="TP-HeadTable">
             <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1"><?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek-p1">
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label',
+                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
             <label></label>
 
         </div>
@@ -571,7 +633,10 @@ class TPFieldFlightTickets {
     public function TPFieldLimit($shortcode){
         ?>
         <div class="ItemSub">
-            <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label',
+                    '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
                     <label>
@@ -594,7 +659,10 @@ class TPFieldFlightTickets {
     public function TPFieldPlusDate($shortcode){
         ?>
         <div class="ItemSub">
-            <span><?php _e('Departure date', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label',
+                    '(Departure date)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
                     <label>
@@ -610,7 +678,10 @@ class TPFieldFlightTickets {
             </div>
         </div>
         <div class="ItemSub">
-            <span><?php _e('Return date', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label',
+                    '(Return date)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
                     <label>
@@ -631,14 +702,26 @@ class TPFieldFlightTickets {
         ?>
         <div class="TP-HeadTable">
             <label>
-                <span><?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label',
+                        '(Number of stops)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][transplant]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
-                        value="0"><?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="0">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1',
+                            '(All)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
-                        value="1"><?php _e('No more than one stop', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="1">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2',
+                            '(No more than one stop)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
-                        value="2"><?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="2">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3',
+                            '(Direct)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                 </select>
             </label>
             <label>
@@ -652,7 +735,10 @@ class TPFieldFlightTickets {
         ?>
         <div class="TP-HeadTable TPSortFieldSelect">
             <label class="TPSortFieldLabel">
-                <span><?php _e('Sort by column', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label',
+                        '(Sort by column)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
                      <?php
                          if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])) {
@@ -676,17 +762,14 @@ class TPFieldFlightTickets {
         </div>
         <?php
     }
-    //Shortcode 1
-    public function TPFieldShortcode_1(){
-        $shortcode = 1;
+    public function TPFieldExtraMarker($shortcode){
         ?>
         <div class="TP-HeadTable">
-            <?php $this->TPFieldTitle($shortcode); ?>
-            <?php $this->TPFieldTitleTag($shortcode); ?>
-        </div>
-        <div class="TP-HeadTable">
             <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label',
+                        '(Extra marker)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
                        value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
                        class="TPFieldInputText"/>
@@ -695,6 +778,18 @@ class TPFieldFlightTickets {
 
             </label>
         </div>
+        <?php
+    }
+
+    //Shortcode 1
+    public function TPFieldShortcode_1(){
+        $shortcode = 1;
+        ?>
+        <div class="TP-HeadTable">
+            <?php $this->TPFieldTitle($shortcode); ?>
+            <?php $this->TPFieldTitleTag($shortcode); ?>
+        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
@@ -713,22 +808,15 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <div class="TP-ListSub TP-ListSubS-2">
             <?php $this->TPFieldPlusDate($shortcode); ?>
             <?php //$this->TPFieldPaginate($shortcode); ?>
             <div class="ItemSub">
-                <span><?php _e('Rows per page', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label',
+                        '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <div class="TP-childF">
                     <div class="spinnerW clearfix" data-trigger="spinner">
                         <label>
@@ -749,7 +837,10 @@ class TPFieldFlightTickets {
         <div class="TP-HeadTable">
             <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1"><?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek-p1">
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label',
+                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
             <label></label>
 
         </div>
@@ -769,17 +860,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -797,17 +878,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldTransplant($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
@@ -826,17 +897,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -854,17 +915,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -882,17 +933,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldLimit($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
@@ -911,17 +952,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
             <?php $this->TPFieldTitleButton($shortcode); ?>
@@ -939,17 +970,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldLimit($shortcode); ?>
         <?php $this->TPFieldPaginate($shortcode); ?>
         <div class="TP-HeadTable">
@@ -996,17 +1017,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldLimit($shortcode); ?>
 
         <?php $this->TPFieldPeriodType($shortcode); ?>
@@ -1045,17 +1056,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldLimit($shortcode); ?>
         <?php $this->TPFieldPeriodType($shortcode); ?>
         <!--<div class="TP-HeadTable">
@@ -1093,17 +1094,7 @@ class TPFieldFlightTickets {
             <?php $this->TPFieldTitle($shortcode); ?>
             <?php $this->TPFieldTitleTag($shortcode); ?>
         </div>
-        <div class="TP-HeadTable">
-            <label>
-                <span><?php _e('Extra marker', TPOPlUGIN_TEXTDOMAIN ); ?></span>
-                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
-                       class="TPFieldInputText"/>
-            </label>
-            <label>
-
-            </label>
-        </div>
+        <?php $this->TPFieldExtraMarker($shortcode); ?>
         <?php $this->TPFieldLimit($shortcode); ?>
         <?php $this->TPFieldPeriodType($shortcode); ?>
         <!--<div class="TP-HeadTable">
