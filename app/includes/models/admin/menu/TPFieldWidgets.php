@@ -36,7 +36,8 @@ class TPFieldWidgets {
 
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/map-wiget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_1_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -44,20 +45,31 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/203638518-Map-widget?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=map" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_1_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
 
         <div class="TP-HeadTable TP-HeadTableCheckbox">
             <input id="chek1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][direct]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['direct']), 1) ?> hidden />
-            <label for="chek1"><?php _e('Direct Flights Only', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek1">
+                <?php _ex('tp_admin_page_widgets_shortcode_1_field_direct_label',
+                    '(Direct Flights Only)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
             <input id="chek2" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][hide_logo]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']), 1) ?> hidden />
-            <label for="chek2"><?php _e('Hide Logo', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek2">
+                <?php _ex('tp_admin_page_widgets_shortcode_1_field_hide_logo_label',
+                    '(Hide Logo)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
 
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Size', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_1_field_size_label',
+                    '(Size)', TPOPlUGIN_TEXTDOMAIN); ?>
+                (px)</span>
             <div class="ItemSub">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -82,7 +94,8 @@ class TPFieldWidgets {
 
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/hotel-widget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_2_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -90,25 +103,39 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/204395407-Hotels-map?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=hotels_map" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_2_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
 
         <div class="TP-HeadTable TPCheckBoxWidget">
             <input id="chek3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][draggable]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['draggable']), 1) ?> hidden />
-            <label for="chek3"><?php _e('Draggable', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek3">
+                <?php _ex('tp_admin_page_widgets_shortcode_2_field_draggable_label',
+                    '(Draggable)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
             <input id="chek4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][disable_zoom]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['disable_zoom']), 1) ?> hidden />
-            <label for="chek4"><?php _e('Disable zoom', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek4">
+                <?php _ex('tp_admin_page_widgets_shortcode_2_field_disable_zoom_label',
+                    '(Disable zoom)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
             <input id="chek5" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][scrollwheel]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['scrollwheel']), 1) ?> hidden />
-            <label for="chek5"><?php _e('Scroll Wheel Zoom', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek5">
+                <?php _ex('tp_admin_page_widgets_shortcode_2_field_scrollwheel_label',
+                    '(Scroll Wheel Zoom)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
 
         </div>
         <div class="TP-HeadTable">
             <label class="TPMarkerSize">
-                <span><?php _e('Pin Size', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_2_field_base_diameter_label',
+                        '(Pin Size)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <div class="width-80">
                     <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][base_diameter]"
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter']) ?>"
@@ -116,7 +143,10 @@ class TPFieldWidgets {
                 </div>
             </label>
             <label class="TPMapZoom">
-                <span><?php _e('Zoom', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_2_field_zoom_label',
+                        '(Zoom)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][zoom]" class="TP-Zelect">
                     <?php for($z = 0; $z < 20; $z++) {?>
                         <option value="<?php echo $z;?>" <?php selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['zoom'], $z)?>>
@@ -133,14 +163,20 @@ class TPFieldWidgets {
 
             <input id="chek6" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][map_styled]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['map_styled']), 1) ?> hidden />
-            <label for="chek6" class="TPLabelMapStyled"><?php _e('Map Style', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek6" class="TPLabelMapStyled">
+                <?php _ex('tp_admin_page_widgets_shortcode_2_field_map_style_label',
+                    '(Map Style)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
             <div class="TP-ColorStyle TP-ColorStyleWidget">
                 <label>
                     <input class="TP-inColot color" type="text"
                            name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][color]"
                            value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
-                    <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                    <a class="btnColor">
+                        <?php _ex('tp_admin_page_widgets_shortcode_2_field_color_label',
+                            '(select color)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
                 </label>
             </div>
             <div class="TP-ColorStyle TP-ColorStyleWidget">
@@ -148,7 +184,10 @@ class TPFieldWidgets {
                     <input class="TP-inColot color" type="text"
                            name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][map_color]"
                            value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['map_color'] ?>"/>
-                    <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                    <a class="btnColor">
+                        <?php _ex('tp_admin_page_widgets_shortcode_2_field_map_color_label',
+                            '(select color)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
                 </label>
             </div>
 
@@ -157,14 +196,20 @@ class TPFieldWidgets {
                     <input class="TP-inColot color" type="text"
                            name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][contrast_color]"
                            value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['contrast_color'] ?>"/>
-                    <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                    <a class="btnColor">
+                        <?php _ex('tp_admin_page_widgets_shortcode_2_field_contrast_color_label',
+                            '(select color)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
                 </label>
             </div>
 
         </div>
 
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Size', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_2_field_size_label',
+                    '(Size)', TPOPlUGIN_TEXTDOMAIN); ?>
+                (px)</span>
             <div class="ItemSub">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -189,7 +234,8 @@ class TPFieldWidgets {
 
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/calendar-wiget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_3_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -197,12 +243,17 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/203912008-Calendar-widget?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=calendar" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_3_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
 
         <div class="TP-ListSub ListSub--cust list--db">
 
             <div class="ItemSub ItemSub-1">
-                <span class="TP-titleSub--custom"><?php _e('City of Departure', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span class="TP-titleSub--custom">
+                    <?php _ex('tp_admin_page_widgets_shortcode_3_field_origin_label',
+                        '(City of Departure)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <label>
                     <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][origin]"
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
@@ -212,7 +263,10 @@ class TPFieldWidgets {
 
 
             <div class="ItemSub">
-                <span class="TP-titleSub--custom"><?php _e('City of Arrival', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span class="TP-titleSub--custom">
+                    <?php _ex('tp_admin_page_widgets_shortcode_3_field_destination_label',
+                        '(City of Arrival)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <label>
                     <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][destination]"
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
@@ -221,7 +275,10 @@ class TPFieldWidgets {
             </div>
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Range, days', TPOPlUGIN_TEXTDOMAIN ); ?> </span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_3_field_period_day_label',
+                    '(Range, days)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
             <div class="ItemSub ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][period_day][from]"
@@ -241,11 +298,17 @@ class TPFieldWidgets {
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek73" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek73"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek73">
+                <?php _ex('tp_admin_page_widgets_shortcode_3_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_3_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?>(px)
+            </span>
             <div class="ItemSub">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -261,10 +324,11 @@ class TPFieldWidgets {
         $monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
         $output_month .= '<option value="year"
                     '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], 'year' , false).'>
-                    '.__('Year', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+                    '._x('tp_admin_page_widgets_shortcode_3_field_period_value_year',
+                '(Year)', TPOPlUGIN_TEXTDOMAIN ).'</option>';
         $output_month .= '<option value="current_month"
                 '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], 'current_month' , false).'>
-                '.__('Current month', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+                '._x('tp_admin_page_widgets_shortcode_3_field_period_value_current_month', '(Current month)', TPOPlUGIN_TEXTDOMAIN ).'</option>';
         /*foreach($monthNames as $key=>$month){
             $output_month .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"
                                 '.selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>
@@ -302,7 +366,10 @@ class TPFieldWidgets {
         ?>
         <div class="TP-HeadTable">
             <label>
-                <span><?php _e('Period', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_3_field_period_label',
+                        '(Period)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][period]" class="TP-Zelect">
                     <?php echo $output_month; ?>
                 </select>
@@ -312,10 +379,16 @@ class TPFieldWidgets {
         <div class="TP-HeadTable TPCheckBoxWidget">
             <input id="chek63" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][only_direct]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['only_direct']), 1) ?> hidden />
-            <label for="chek63"><?php _e('Direct Flights Only', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek63">
+                <?php _ex('tp_admin_page_widgets_shortcode_3_field_only_direct_label',
+                    '(Direct Flights Only)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
             <input id="chek73" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][one_way]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['one_way']), 1) ?> hidden />
-            <label for="chek73"><?php _e('One way', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek73">
+                <?php _ex('tp_admin_page_widgets_shortcode_3_field_one_way_label',
+                    '(One way)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
 
@@ -328,19 +401,26 @@ class TPFieldWidgets {
         <a href="#" class="tooltip-img">
             <span class="TP-WidgetHelpImgSubsc">
                 <img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/subscribe-wiget.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_4_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
                         <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
             </div>
         </a>
-        <a href="https://support.travelpayouts.com/hc/ru/articles/204596297?utm_source=wpplugin&utm_medium=widgets&utm_campaign=ru&utm_content=subscriptions" target="_blank" class="tooltip-img-2"><?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+        <a href="https://support.travelpayouts.com/hc/ru/articles/204596297?utm_source=wpplugin&utm_medium=widgets&utm_campaign=ru&utm_content=subscriptions" target="_blank" class="tooltip-img-2">
+            <?php _ex('tp_admin_page_widgets_shortcode_4_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
 
         <div class="TP-ListSub ListSub--cust list--db">
 
             <div class="ItemSub ItemSub-1">
-                <span class="TP-titleSub--custom"><?php _e('City of Departure', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span class="TP-titleSub--custom">
+                     <?php _ex('tp_admin_page_widgets_shortcode_4_field_origin_label',
+                         '(City of Departure)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <label>
                     <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][origin]"
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin']) ?>"
@@ -350,7 +430,10 @@ class TPFieldWidgets {
 
 
             <div class="ItemSub">
-                <span class="TP-titleSub--custom"><?php _e('City of Arrival', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span class="TP-titleSub--custom">
+                    <?php _ex('tp_admin_page_widgets_shortcode_4_field_destination_label',
+                        '(City of Arrival)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <label>
                     <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][destination]"
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination']) ?>"
@@ -364,18 +447,26 @@ class TPFieldWidgets {
                     <input class="TP-inColot color" type="text"
                            name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][color]"
                            value="<?php echo \app\includes\TPPlugin::$options['widgets'][$widgets]['color'] ?>"/>
-                    <a class="btnColor"><?php _e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+                    <a class="btnColor">
+                        <?php _ex('tp_admin_page_widgets_shortcode_4_field_color_label',
+                            '(select color)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
                 </label>
             </div>
         </div>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek74" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek74"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek74">
+                <?php _ex('tp_admin_page_widgets_shortcode_4_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_4_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?> (px)</span>
             <div class="ItemSub ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -392,7 +483,8 @@ class TPFieldWidgets {
 
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/one-hotel-wiget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_5_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -400,15 +492,22 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/205451067-Hotel-widget?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=chansey" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_5_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek75" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek75"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek75">
+                <?php _ex('tp_admin_page_widgets_shortcode_5_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_5_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?> (px)</span>
             <div class="ItemSub ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -426,7 +525,8 @@ class TPFieldWidgets {
 
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/popular-destination-wiget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_6_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -434,15 +534,22 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/205670418?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=weedle" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_6_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek76" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek76"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek76">
+                <?php _ex('tp_admin_page_widgets_shortcode_6_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_6_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?> (px)</span>
             <div class="ItemSub  ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -453,7 +560,10 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('Number of Widgets', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_6_field_count_label',
+                        '(Number of Widgets)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][count]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['count'], 1 ); ?>
                         value="1">1</option>
@@ -474,31 +584,57 @@ class TPFieldWidgets {
         $cat = array(
             'ru' => array(
                 "0" => "-----",
-                "1stars" => "1 звезда",
-                "2stars" => "2 звезды",
-                "3stars" => "3 звезды",
-                "4stars" => "4 звезды",
-                "5stars" => "5 звёзд",
-                "price" => "Дешёвые",
-                "distance" => "Близко к центру",
-                "center" => "Отели в центре",
-                "rating" => "Рейтинг",
-                "tophotels" => "Популярные",
-                "highprice" => "Дорогие",
+                "1stars" =>
+                    _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+                        , "1 звезда", TPOPlUGIN_TEXTDOMAIN),
+                "2stars" =>
+                    _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+                        , "2 звезды", TPOPlUGIN_TEXTDOMAIN),
+                "3stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+                    , "3 звезды", TPOPlUGIN_TEXTDOMAIN),
+                "4stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+                    , "4 звезды", TPOPlUGIN_TEXTDOMAIN),
+                "5stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+                    , "5 звёзд", TPOPlUGIN_TEXTDOMAIN),
+                "price" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+                    , "Дешёвые", TPOPlUGIN_TEXTDOMAIN),
+                "distance" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+                    , "Близко к центру", TPOPlUGIN_TEXTDOMAIN),
+                "center" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+                    , "Отели в центре", TPOPlUGIN_TEXTDOMAIN),
+                "rating" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+                    , "Рейтинг", TPOPlUGIN_TEXTDOMAIN),
+                "tophotels" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+                    , "Популярные", TPOPlUGIN_TEXTDOMAIN),
+                "highprice" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+                    , "Дорогие", TPOPlUGIN_TEXTDOMAIN),
             ),
             'en' => array(
                 "0" => "-----",
-                "1stars" => "1 star",
-                "2stars" => "2 stars",
-                "3stars" => "3 stars",
-                "4stars" => "4 stars",
-                "5stars" => "5 stars",
-                "distance" => "Close to city center",
-                "price" => "Cheap",
-                "rating" => "Rating",
-                "center" => "Hotels in the center",
-                "highprice" => "Expensive",
-                "tophotels" => "Popular",
+                "1stars" =>
+                    _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+                        , "1 star", TPOPlUGIN_TEXTDOMAIN),
+                "2stars" =>
+                    _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+                        , "2 stars", TPOPlUGIN_TEXTDOMAIN),
+                "3stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+                    , "3 stars", TPOPlUGIN_TEXTDOMAIN),
+                "4stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+                    , "4 stars", TPOPlUGIN_TEXTDOMAIN),
+                "5stars" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+                    , "5 stars", TPOPlUGIN_TEXTDOMAIN),
+                "price" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+                    , "Cheap", TPOPlUGIN_TEXTDOMAIN),
+                "distance" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+                    , "Close to city center", TPOPlUGIN_TEXTDOMAIN),
+                "center" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+                    , "Hotels in the center", TPOPlUGIN_TEXTDOMAIN),
+                "rating" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+                    , "Rating", TPOPlUGIN_TEXTDOMAIN),
+                "tophotels" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+                    , "Popular", TPOPlUGIN_TEXTDOMAIN),
+                "highprice" => _x("tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+                    , "Expensive", TPOPlUGIN_TEXTDOMAIN),
             ),
         );
         $loc = '';
@@ -517,7 +653,8 @@ class TPFieldWidgets {
         ?>
         <a href="#" class="tooltip-img">
             <span><img src="<?php echo TPOPlUGIN_URL; ?>app/public/images/hotel_list_widget<?php echo $this->local_img; ?>.png" alt="" height="300px"/></span>
-            <?php _e('Widget Example', TPOPlUGIN_TEXTDOMAIN ); ?>
+            <?php _ex('tp_admin_page_widgets_shortcode_7_link_example',
+                '(Widget Example)', TPOPlUGIN_TEXTDOMAIN); ?>
             <div class="svg-img-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -525,12 +662,15 @@ class TPFieldWidgets {
             </div>
         </a>
         <a href="https://support.travelpayouts.com/hc/<?php echo $this->local_url;?>/articles/215942897?utm_source=wpplugin&utm_medium=widgets&utm_campaign=<?php echo $this->local; ?>&utm_content=blissey" target="_blank" class="tooltip-img-2">
-            <?php _e('Travepayouts Help', TPOPlUGIN_TEXTDOMAIN ); ?></a>
+            <?php _ex('tp_admin_page_widgets_shortcode_7_link_help',
+                '(Travepayouts Help)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </a>
         <div class="TP-ListSub ListSub--cust list--db">
 
             <div class="TP-ColorStyle TP-HotelSelectWidget">
                 <label>
-                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_admin_page_widgets_shortcode_7_field_cat1_label',
+                        '(Select selection)', TPOPlUGIN_TEXTDOMAIN); ?>
 
                 </label>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat1]" class="TP-Zelect TP-ZelectCat">
@@ -544,7 +684,8 @@ class TPFieldWidgets {
             </div>
             <div class="TP-ColorStyle TP-HotelSelectWidget">
                 <label>
-                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_admin_page_widgets_shortcode_7_field_cat2_label',
+                        '(Select selection)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat2]" class="TP-Zelect TP-ZelectCat">
                     <?php foreach($cat[$loc] as $key=>$cat_val){ ?>
@@ -558,7 +699,8 @@ class TPFieldWidgets {
 
             <div class="TP-ColorStyle TP-HotelSelectWidget">
                 <label>
-                    <?php _e('Select selection', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_admin_page_widgets_shortcode_7_field_cat3_label',
+                        '(Select selection)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][cat3]" class="TP-Zelect TP-ZelectCat">
                     <?php foreach($cat[$loc] as $key=>$cat_val){ ?>
@@ -573,7 +715,10 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_7_field_limit_label',
+                        '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][limit]" class="TP-Zelect">
                     <?php for($i = 1; $i < 11; $i++){ ?>
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['limit'], $i ); ?>
@@ -588,12 +733,21 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('View widget', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_7_field_type_label',
+                        '(View widget)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][type]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'full'); ?>
-                        value="full"><?php _e('Full', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="full">
+                        <?php _ex('tp_admin_page_widgets_shortcode_7_field_type_value_full',
+                            '(Full)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'compact'); ?>
-                        value="compact"><?php _e('Compact', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="compact">
+                        <?php _ex('tp_admin_page_widgets_shortcode_7_field_type_value_compact',
+                            '(Compact)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                 </select>
             </label>
             <label>
@@ -603,11 +757,16 @@ class TPFieldWidgets {
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek77" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek77"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek77">
+                <?php _ex('tp_admin_page_widgets_shortcode_7_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_7_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?>(px)</span>
             <div class="ItemSub  ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"
@@ -624,12 +783,21 @@ class TPFieldWidgets {
         ?>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_8_field_type_label',
+                        '(Widget type)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][type]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'full'); ?>
-                        value="brickwork"><?php _e('Tile', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="brickwork">
+                        <?php _ex('tp_admin_page_widgets_shortcode_8_field_type_value_tile',
+                            '(Tile)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                     <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['type'], 'compact'); ?>
-                        value="slider"><?php _e('Slider', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                        value="slider">
+                        <?php _ex('tp_admin_page_widgets_shortcode_8_field_type_value_slider',
+                            '(Slider)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                 </select>
             </label>
             <label>
@@ -643,12 +811,18 @@ class TPFieldWidgets {
                     <li>
                         <input id="rchek18" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][filter]"
                             <?php checked(\app\includes\TPPlugin::$options['widgets'][$widgets]['filter'], 0) ?> hidden value="0" />
-                        <label for="rchek18"><?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                        <label for="rchek18">
+                            <?php _ex('tp_admin_page_widgets_shortcode_8_field_filter_airlines_label',
+                                '(Filter by airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
                     </li>
                     <li>
                         <input id="rchek28" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][filter]"
                             <?php checked(\app\includes\TPPlugin::$options['widgets'][$widgets]['filter'], 1) ?> hidden value="1" />
-                        <label for="rchek28"><?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                        <label for="rchek28">
+                            <?php _ex('tp_admin_page_widgets_shortcode_8_field_filter_routes_label',
+                                '(Filter by routes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
                     </li>
                 </ul>
             </label>
@@ -658,7 +832,10 @@ class TPFieldWidgets {
         </div>
         <div class="TP-HeadTable ">
             <label>
-                <span><?php _e('Limit', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <span>
+                    <?php _ex('tp_admin_page_widgets_shortcode_8_field_limit_label',
+                        '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets; ?>][limit]" class="TP-Zelect">
                     <?php for($i = 1; $i < 22; $i++){ ?>
                         <option <?php selected( \app\includes\TPPlugin::$options["widgets"][$widgets]['limit'], $i ); ?>
@@ -674,11 +851,16 @@ class TPFieldWidgets {
         <div class="TP-HeadTable  TPCheckBoxWidget">
             <input id="chek88" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek88"><?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN ); ?></label>
+            <label for="chek88">
+                <?php _ex('tp_admin_page_widgets_shortcode_8_field_responsive_label',
+                    '(Responsive)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
 
         </div>
         <div class="TP-ListSub ListSub--cust list--db">
-            <span class="TP-titleSub--custom"><?php _e('Width', TPOPlUGIN_TEXTDOMAIN ); ?> (px)</span>
+            <span class="TP-titleSub--custom">
+                <?php _ex('tp_admin_page_widgets_shortcode_8_field_width_label',
+                    '(Width)', TPOPlUGIN_TEXTDOMAIN); ?>(px)</span>
             <div class="ItemSub  ItemSub-3">
                 <label>
                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][width]"

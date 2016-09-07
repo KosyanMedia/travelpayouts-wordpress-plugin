@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-07 09:56+0300\n"
+"POT-Creation-Date: 2016-09-07 18:20+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -221,8 +221,7 @@ msgstr "Voli Economici dalla città di partenza"
 msgid "Cheap Flights to destination"
 msgstr "Voli Economici per destinazione"
 
-#: app/includes/TPPluginWidget.php:267 app/includes/models/admin/menu/TPFieldWidgets.php:576
-#: app/includes/models/admin/menu/TPFieldWidgets.php:661
+#: app/includes/TPPluginWidget.php:267
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:136
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:124
@@ -1060,178 +1059,434 @@ msgid "Prepositional"
 msgstr "Preposizionale"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
-#: app/includes/models/admin/menu/TPFieldWidgets.php:85
-#: app/includes/models/admin/menu/TPFieldWidgets.php:192
-#: app/includes/models/admin/menu/TPFieldWidgets.php:331
-#: app/includes/models/admin/menu/TPFieldWidgets.php:395
-#: app/includes/models/admin/menu/TPFieldWidgets.php:429
-#: app/includes/models/admin/menu/TPFieldWidgets.php:520
-msgid "Widget Example"
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_1_link_example"
 msgstr "Esempio Widget"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:47
-#: app/includes/models/admin/menu/TPFieldWidgets.php:93
-#: app/includes/models/admin/menu/TPFieldWidgets.php:200
-#: app/includes/models/admin/menu/TPFieldWidgets.php:338
-#: app/includes/models/admin/menu/TPFieldWidgets.php:403
-#: app/includes/models/admin/menu/TPFieldWidgets.php:437
-#: app/includes/models/admin/menu/TPFieldWidgets.php:528
-msgid "Travepayouts Help"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:48
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_1_link_help"
 msgstr "Aiuto Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:52
-#: app/includes/models/admin/menu/TPFieldWidgets.php:315
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:212
-msgid "Direct Flights Only"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:56
+msgctxt "(Direct Flights Only)"
+msgid "tp_admin_page_widgets_shortcode_1_field_direct_label"
 msgstr "Solo Voli Diretti"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:55
-msgid "Hide Logo"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:62
+msgctxt "(Hide Logo)"
+msgid "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
 msgstr "Nascondi logo"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:60
-#: app/includes/models/admin/menu/TPFieldWidgets.php:167
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:202
-msgid "Size"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:70
+msgctxt "(Size)"
+msgid "tp_admin_page_widgets_shortcode_1_field_size_label"
 msgstr "Misura"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:98
-msgid "Draggable"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:97
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_2_link_example"
+msgstr "Esempio Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:106
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_2_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:114
+msgctxt "(Draggable)"
+msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
 msgstr "Trascinabile"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:102
-msgid "Disable zoom"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:121
+msgctxt "(Disable zoom)"
+msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
 msgstr "Disabilita zoom"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:105
-msgid "Scroll Wheel Zoom"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:127
+msgctxt "(Scroll Wheel Zoom)"
+msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
 msgstr "Scroll Wheel Zoom"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:111
-msgid "Pin Size"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:136
+msgctxt "(Pin Size)"
+msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
 msgstr "Misura Pin"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:119
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:310
-msgid "Zoom"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:147
+msgctxt "(Zoom)"
+msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
 msgstr "Zoom"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:136
-msgid "Map Style"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:167
+msgctxt "(Map Style)"
+msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
 msgstr "Stile Mappa"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:143
-#: app/includes/models/admin/menu/TPFieldWidgets.php:151
-#: app/includes/models/admin/menu/TPFieldWidgets.php:160
-#: app/includes/models/admin/menu/TPFieldWidgets.php:367
-msgid "select color"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:177
+msgctxt "(select color)"
+msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
 msgstr "seleziona colore"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:205
-#: app/includes/models/admin/menu/TPFieldWidgets.php:343
-msgid "City of Departure"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:188
+msgctxt "(select color)"
+msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+msgstr "seleziona colore"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:200
+msgctxt "(select color)"
+msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+msgstr "seleziona colore"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:210
+msgctxt "(Size)"
+msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
+msgstr "Misura"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:237
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_3_link_example"
+msgstr "Esempio Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:246
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_3_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:254
+msgctxt "(City of Departure)"
+msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
 msgstr "Città di Partenza"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:215
-#: app/includes/models/admin/menu/TPFieldWidgets.php:353
-msgid "City of Arrival"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:267
+msgctxt "(City of Arrival)"
+msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
 msgstr "Città di Arrivo"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:224
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:186
-msgid "Range, days"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:279
+msgctxt "(Range, days)"
+msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
 msgstr "Raggio, giorni"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:244
-#: app/includes/models/admin/menu/TPFieldWidgets.php:374
-#: app/includes/models/admin/menu/TPFieldWidgets.php:407
-#: app/includes/models/admin/menu/TPFieldWidgets.php:441
-#: app/includes/models/admin/menu/TPFieldWidgets.php:606
-#: app/includes/models/admin/menu/TPFieldWidgets.php:677
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
-msgid "Responsive"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:302
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:248
-#: app/includes/models/admin/menu/TPFieldWidgets.php:378
-#: app/includes/models/admin/menu/TPFieldWidgets.php:411
-#: app/includes/models/admin/menu/TPFieldWidgets.php:445
-#: app/includes/models/admin/menu/TPFieldWidgets.php:610
-#: app/includes/models/admin/menu/TPFieldWidgets.php:681
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:228
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:259
-msgid "Width"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:309
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
 msgstr "Larghezza"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:264
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:155
-msgid "Year"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:327
+msgctxt "(Year)"
+msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
 msgstr "Anno"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:267
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:158
-msgid "Current month"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:331
+msgctxt "(Current month)"
+msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
 msgstr "Mese corrente"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:305
-msgid "Period"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:370
+msgctxt "(Period)"
+msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
 msgstr "Period"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:318
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:71
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:220
-msgid "One way"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:383
+msgctxt "(Direct Flights Only)"
+msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+msgstr "Solo Voli Diretti"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:389
+msgctxt "(One way)"
+msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
 msgstr "Solo andata"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:456
-msgid "Number of Widgets"
-msgstr "Numero di Widget"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:404
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_4_link_example"
+msgstr "Esempio Widget"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:533
-#: app/includes/models/admin/menu/TPFieldWidgets.php:547
-#: app/includes/models/admin/menu/TPFieldWidgets.php:561
-msgid "Select selection"
-msgstr "Selezionare selezione"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:413
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_4_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:421
+msgctxt "(City of Departure)"
+msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
+msgstr "Città di Partenza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:434
+msgctxt "(City of Arrival)"
+msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
+msgstr "Città di Arrivo"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:451
+msgctxt "(select color)"
+msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
+msgstr "seleziona colore"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:461
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+msgstr "Responsive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:468
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
+msgstr "Larghezza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:486
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_5_link_example"
+msgstr "Esempio Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:495
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_5_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:502
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+msgstr "Responsive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:509
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
+msgstr "Larghezza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:528
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_6_link_example"
+msgstr "Esempio Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:537
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_6_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:544
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+msgstr "Responsive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:551
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
+msgstr "Larghezza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:564
+msgctxt "(Number of Widgets)"
+msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
+msgstr "Larghezza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:588
+msgctxt "1 звезда"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+msgstr "1 звезда"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:591
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:268
-msgid "View widget"
-msgstr "Vedi Widget"
+msgctxt "2 звезды"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+msgstr "2 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:594
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:271
-msgid "Full"
-msgstr "Pieno"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:593
+msgctxt "3 звезды"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+msgstr "3 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:596
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:273
-msgid "Compact"
-msgstr "Compatto"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:595
+msgctxt "4 звезды"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+msgstr "4 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:627
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:53
-msgid "Widget type"
-msgstr "Tipo Widget"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:597
+msgctxt "5 звёзд"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+msgstr "5 звёзд"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:599
+msgctxt "Дешёвые"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+msgstr "Дешёвые"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:601
+msgctxt "Близко к центру"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+msgstr "Близко к центру"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:603
+msgctxt "Отели в центре"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+msgstr "Отели в центре"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:605
+msgctxt "Рейтинг"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+msgstr "Рейтинг"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:607
+msgctxt "Популярные"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+msgstr "Популярные"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:609
+msgctxt "Дорогие"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+msgstr "Дорогие"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:615
+msgctxt "1 star"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+msgstr "1 star"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:618
+msgctxt "2 stars"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+msgstr "2 stars"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:620
+msgctxt "3 stars"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+msgstr "3 stars"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:622
+msgctxt "4 stars"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+msgstr "4 stars"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:624
+msgctxt "5 stars"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+msgstr "5 stars"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:626
+msgctxt "Cheap"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+msgstr "Cheap"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:628
+msgctxt "Close to city center"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+msgstr "Close to city center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:630
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:56
-msgid "Tile"
-msgstr "Tile"
+msgctxt "Hotels in the center"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+msgstr "Hotels in the center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:632
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:58
-msgid "Slider"
+msgctxt "Rating"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+msgstr "Rating"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:634
+msgctxt "Popular"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+msgstr "Popular"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:636
+msgctxt "Expensive"
+msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+msgstr "Expensive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:656
+msgctxt "(Widget Example)"
+msgid "tp_admin_page_widgets_shortcode_7_link_example"
+msgstr "Esempio Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:665
+msgctxt "(Travepayouts Help)"
+msgid "tp_admin_page_widgets_shortcode_7_link_help"
+msgstr "Aiuto Travelpayouts"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:672
+msgctxt "(Select selection)"
+msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+msgstr "Selezionare selezione"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:687
+msgctxt "(Select selection)"
+msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+msgstr "Selezionare selezione"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:702
+msgctxt "(Select selection)"
+msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+msgstr "Selezionare selezione"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:719
+msgctxt "(Limit)"
+msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
+msgstr "Limite"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:737
+msgctxt "(View widget)"
+msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
+msgstr "Vedi Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:743
+msgctxt "(Full)"
+msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+msgstr "Pieno"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:748
+msgctxt "(Compact)"
+msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+msgstr "Compatto"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:761
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+msgstr "Responsive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:768
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
+msgstr "Larghezza"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:787
+msgctxt "(Widget type)"
+msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
+msgstr "Tipo Widget"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:793
+msgctxt "(Tile)"
+msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+msgstr "Tile"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:798
+msgctxt "(Slider)"
+msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
 msgstr "Slider"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:646
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
-msgid "Filter by airlines"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:815
+msgctxt "(Filter by airlines)"
+msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
 msgstr "Filtra per compagnia"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:651
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
-msgid "Filter by routes"
+#: app/includes/models/admin/menu/TPFieldWidgets.php:823
+msgctxt "(Filter by routes)"
+msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
 msgstr "Filtra per rotta"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:836
+msgctxt "(Limit)"
+msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
+msgstr "Limite"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:855
+msgctxt "(Responsive)"
+msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+msgstr "Responsive"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:862
+msgctxt "(Width)"
+msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
+msgstr "Larghezza"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
 msgid "Your API token"
@@ -1291,6 +1546,11 @@ msgstr "oggi"
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
 msgid "Return date"
 msgstr "Data Ritorno"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:71
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:220
+msgid "One way"
+msgstr "Solo andata"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:79
 msgid "Check in"
@@ -1411,17 +1671,82 @@ msgstr "Widget Selezione Hotel"
 msgid "Best deals widget"
 msgstr "Widget Migliori Offerte"
 
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:53
+msgid "Widget type"
+msgstr "Tipo Widget"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:56
+msgid "Tile"
+msgstr "Tile"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:58
+msgid "Slider"
+msgstr "Slider"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
+msgid "Filter by airlines"
+msgstr "Filtra per compagnia"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
+msgid "Filter by routes"
+msgstr "Filtra per rotta"
+
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:98
 msgid "Add"
 msgstr "Aggiungi"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:155
+msgid "Year"
+msgstr "Anno"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:158
+msgid "Current month"
+msgstr "Mese corrente"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:186
+msgid "Range, days"
+msgstr "Raggio, giorni"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:197
 msgid "Hotel"
 msgstr "Hotel"
 
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:202
+msgid "Size"
+msgstr "Misura"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:212
+msgid "Direct Flights Only"
+msgstr "Solo Voli Diretti"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:228
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:259
+msgid "Width"
+msgstr "Larghezza"
+
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:236
 msgid "Count"
 msgstr "Conto"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
+msgid "Responsive"
+msgstr "Responsive"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:268
+msgid "View widget"
+msgstr "Vedi Widget"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:271
+msgid "Full"
+msgstr "Pieno"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:273
+msgid "Compact"
+msgstr "Compatto"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:310
+msgid "Zoom"
+msgstr "Zoom"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
 msgctxt "(Auto-links )"
@@ -2477,6 +2802,48 @@ msgstr "Un problema con il plugin ? Hai suggerimenti o idee ? Contattaci all'ind
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "City of Departure"
+#~ msgstr "Città di Partenza"
+
+#~ msgid "City of Arrival"
+#~ msgstr "Città di Arrivo"
+
+#~ msgid "select color"
+#~ msgstr "seleziona colore"
+
+#~ msgid "Number of Widgets"
+#~ msgstr "Numero di Widget"
+
+#~ msgid "Select selection"
+#~ msgstr "Selezionare selezione"
+
+#~ msgid "Period"
+#~ msgstr "Period"
+
+#~ msgid "Draggable"
+#~ msgstr "Trascinabile"
+
+#~ msgid "Disable zoom"
+#~ msgstr "Disabilita zoom"
+
+#~ msgid "Scroll Wheel Zoom"
+#~ msgstr "Scroll Wheel Zoom"
+
+#~ msgid "Pin Size"
+#~ msgstr "Misura Pin"
+
+#~ msgid "Map Style"
+#~ msgstr "Stile Mappa"
+
+#~ msgid "Hide Logo"
+#~ msgstr "Nascondi logo"
+
+#~ msgid "Widget Example"
+#~ msgstr "Esempio Widget"
+
+#~ msgid "Travepayouts Help"
+#~ msgstr "Aiuto Travelpayouts"
 
 #~ msgid "Rows per page"
 #~ msgstr "Righe per pagina"
