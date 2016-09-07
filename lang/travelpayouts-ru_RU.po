@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-06 18:34+0300\n"
+"POT-Creation-Date: 2016-09-07 09:53+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -230,7 +230,7 @@ msgstr "Дешевые перелеты в город"
 msgid "Limit"
 msgstr "Лимит"
 
-#: app/includes/TPPluginWidget.php:279 app/includes/models/admin/menu/TPFieldFlightTickets.php:837
+#: app/includes/TPPluginWidget.php:279
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr "Пейджинация"
@@ -718,11 +718,13 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_tabl
 msgstr "Выбранные"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:598
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:817
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:620
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:841
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Пейджинация"
@@ -771,10 +773,6 @@ msgstr "Сортировка по столбцу"
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
-
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:816
-msgid "Rows per page"
-msgstr "Количество строк на странице"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:30
 msgid "Token"
@@ -1378,42 +1376,34 @@ msgid "Select widget"
 msgstr "Выберите виджет"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
-#: app/includes/views/admin/menu/TPWidgets.view.php:10
 msgid "Map Widget"
 msgstr "Виджет карты"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:34
-#: app/includes/views/admin/menu/TPWidgets.view.php:24
 msgid "Hotels Map Widget"
 msgstr "Отельная карта"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:35
-#: app/includes/views/admin/menu/TPWidgets.view.php:38
 msgid "Calendar Widget"
 msgstr "Виджет календаря"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
-#: app/includes/views/admin/menu/TPWidgets.view.php:52
 msgid "Subscription Widget"
 msgstr "Виджет подписок"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:39
-#: app/includes/views/admin/menu/TPWidgets.view.php:66
 msgid "Hotel Widget"
 msgstr "Виджет отеля"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:40
-#: app/includes/views/admin/menu/TPWidgets.view.php:79
 msgid "Popular Destinations Widget"
 msgstr "Виджет популярных направлений"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:41
-#: app/includes/views/admin/menu/TPWidgets.view.php:93
 msgid "Hotels Selections Widget"
 msgstr "Виджет отельных подборок"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:42
-#: app/includes/views/admin/menu/TPWidgets.view.php:107
 msgid "Best deals widget"
 msgstr "Виджет спецпредложений"
 
@@ -2086,14 +2076,6 @@ msgstr ""
 "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:92
-#: app/includes/views/admin/menu/TPWidgets.view.php:17
-#: app/includes/views/admin/menu/TPWidgets.view.php:31
-#: app/includes/views/admin/menu/TPWidgets.view.php:45
-#: app/includes/views/admin/menu/TPWidgets.view.php:59
-#: app/includes/views/admin/menu/TPWidgets.view.php:73
-#: app/includes/views/admin/menu/TPWidgets.view.php:86
-#: app/includes/views/admin/menu/TPWidgets.view.php:100
-#: app/includes/views/admin/menu/TPWidgets.view.php:114
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
@@ -2194,9 +2176,90 @@ msgstr "Статус"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: app/includes/views/admin/menu/TPWidgets.view.php:2
-msgid "Widgets"
+#: app/includes/views/admin/menu/TPWidgets.view.php:3
+msgctxt "(Widgets)"
+msgid "tp_admin_page_widgets_paragraph_1"
 msgstr "Виджеты"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:14
+msgctxt "(Map Widget)"
+msgid "tp_admin_page_widgets_shortcode_1_label"
+msgstr "Виджет карты"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:23
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_1_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:32
+msgctxt "(Hotels Map Widget)"
+msgid "tp_admin_page_widgets_shortcode_2_label"
+msgstr "Отельная карта"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:41
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_2_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:50
+msgctxt "(Calendar Widget)"
+msgid "tp_admin_page_widgets_shortcode_3_label"
+msgstr "Виджет календаря"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:59
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_3_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:68
+msgctxt "(Subscription Widget)"
+msgid "tp_admin_page_widgets_shortcode_4_label"
+msgstr "Виджет подписок"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:77
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_4_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:86
+msgctxt "(Hotel Widget)"
+msgid "tp_admin_page_widgets_shortcode_5_label"
+msgstr "Виджет отеля"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:95
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_5_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:103
+msgctxt "(Popular Destinations Widget)"
+msgid "tp_admin_page_widgets_shortcode_6_label"
+msgstr "Виджет популярных направлений"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:112
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_6_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:121
+msgctxt "(Hotels Selections Widget)"
+msgid "tp_admin_page_widgets_shortcode_7_label"
+msgstr "Виджет отельных подборок"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:130
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_7_btn_save_label"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:139
+msgctxt "(Best deals widget)"
+msgid "tp_admin_page_widgets_shortcode_8_label"
+msgstr "Виджет спецпредложений"
+
+#: app/includes/views/admin/menu/TPWidgets.view.php:148
+msgctxt "(Save changes)"
+msgid "tp_admin_page_widgets_shortcode_8_btn_save_label"
+msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:4
 msgctxt "admin page wizard title"
@@ -2404,6 +2467,12 @@ msgstr "Проблема с плагином? Есть пожелания или
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "Rows per page"
+#~ msgstr "Количество строк на странице"
+
+#~ msgid "Widgets"
+#~ msgstr "Виджеты"
 
 #~ msgid "Sort by column"
 #~ msgstr "Сортировка по столбцу"
