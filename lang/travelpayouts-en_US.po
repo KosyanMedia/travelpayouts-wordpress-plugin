@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-08 13:30+0300\n"
+"POT-Creation-Date: 2016-09-08 16:29+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1585,8 +1585,6 @@ msgid "City Arrival default"
 msgstr ""
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:63
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:57
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
 msgid "Default City/Hotel"
 msgstr ""
 
@@ -2319,89 +2317,183 @@ msgctxt "(Edit)"
 msgid "tp_admin_page_search_forms_table_edit_link"
 msgstr "Edit"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:3
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:3
-msgid "Search forms"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:4
+msgctxt "(Search forms)"
+msgid "tp_admin_page_add_search_forms_paragraph_1"
+msgstr "Search forms"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:20
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:20
-msgid "Check our step-by-step manual "
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:23
+msgctxt "(Check our step-by-step manual )"
+msgid "tp_admin_page_add_search_forms_paragraph_2"
+msgstr "Check our step-by-step manual "
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:21
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:21
-msgid "here"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:26
+msgctxt "(here)"
+msgid "tp_admin_page_add_search_forms_paragraph_2_link"
+msgstr "here"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:25
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26
-msgid "Adding shortcode"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:31
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:32
-#, fuzzy
-msgid "Title "
-msgstr "Insert link"
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:35
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:36
-msgid "Type shortcode"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:37
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:38
-msgctxt "select_search_form"
-msgid "Search Form"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:38
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:39
-msgid "Other"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:34
+msgctxt "(Adding shortcode)"
+msgid "tp_admin_page_add_search_forms_paragraph_3"
+msgstr "Adding shortcode"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:43
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:44
-msgid "TravelPayouts Form Code"
-msgstr ""
+msgctxt "(Title)"
+msgid "tp_admin_page_add_search_forms_field_title_label"
+msgstr "Title"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:44
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:45
-msgid "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:50
+msgctxt "(Type shortcode)"
+msgid "tp_admin_page_add_search_forms_field_type_label"
+msgstr "Type shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:49
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:50
-msgid "Default City of Departure"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:55
+msgctxt "(Search Form)"
+msgid "tp_admin_page_add_search_forms_field_type_value_1"
+msgstr "Search Form"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:53
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:55
-msgid "Default City of Arrival"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:61
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:64
-msgid "Shortcode"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:59
+msgctxt "(Other)"
+msgid "tp_admin_page_add_search_forms_field_type_value_2"
+msgstr "Other"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:70
-msgid ""
+msgctxt "(TravelPayouts Form Code)"
+msgid "tp_admin_page_add_search_forms_field_code_form_label"
+msgstr "TravelPayouts Form Code"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
+msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
+msgid "tp_admin_page_add_search_forms_field_code_form_help"
+msgstr "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:79
+msgctxt "(Default City of Departure)"
+msgid "tp_admin_page_add_search_forms_field_from_label"
+msgstr "Default City of Departure"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:86
+msgctxt "(Default City of Arrival)"
+msgid "tp_admin_page_add_search_forms_field_to_label"
+msgstr "Default City of Arrival"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:93
+msgctxt "(Default City/Hotel)"
+msgid "tp_admin_page_add_search_forms_field_city_label"
+msgstr "Default City/Hotel"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:100
+msgctxt "(Shortcode)"
+msgid "tp_admin_page_add_search_forms_field_search_shortcodes_label"
+msgstr "Shortcode"
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:107
+msgctxt ""
+"(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+"be placed into your posts right away )"
+msgid "tp_admin_page_add_search_forms_paragraph_4"
+msgstr ""
 "Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away"
-msgstr ""
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:75
-msgid "cancel"
-msgstr ""
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:113
+msgctxt "(cancel)"
+msgid "tp_admin_page_add_search_forms_btn_cancel"
+msgstr "cancel"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:75
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:117
+msgctxt "(save changes)"
+msgid "tp_admin_page_add_search_forms_btn_save"
+msgstr "save changes"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:4
+msgctxt "(Search forms)"
+msgid "tp_admin_page_edit_search_forms_paragraph_1"
+msgstr "Search forms"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:23
+msgctxt "(Check our step-by-step manual )"
+msgid "tp_admin_page_edit_search_forms_paragraph_2"
+msgstr "Check our step-by-step manual "
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26
+msgctxt "(here)"
+msgid "tp_admin_page_edit_search_forms_paragraph_2_link"
+msgstr "here"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:34
+msgctxt "(Adding shortcode)"
+msgid "tp_admin_page_edit_search_forms_paragraph_3"
+msgstr "Adding shortcode"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:43
+msgctxt "(Title)"
+msgid "tp_admin_page_edit_search_forms_field_title_label"
+msgstr "Title"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:50
+msgctxt "(Type shortcode)"
+msgid "tp_admin_page_edit_search_forms_field_type_label"
+msgstr "Type shortcode"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:55
+msgctxt "(Search Form)"
+msgid "tp_admin_page_edit_search_forms_field_type_value_1"
+msgstr "Search Form"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:59
+msgctxt "(Other)"
+msgid "tp_admin_page_edit_search_forms_field_type_value_2"
+msgstr "Other"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:67
+msgctxt "(TravelPayouts Form Code)"
+msgid "tp_admin_page_edit_search_forms_field_code_form_label"
+msgstr "TravelPayouts Form Code"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
+msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
+msgid "tp_admin_page_edit_search_forms_field_code_form_help"
+msgstr "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
+
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:79
-msgid "save changes"
+msgctxt "(Default City of Departure)"
+msgid "tp_admin_page_edit_search_forms_field_from_label"
+msgstr "Default City of Departure"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:87
+msgctxt "(Default City of Arrival)"
+msgid "tp_admin_page_edit_search_forms_field_to_label"
+msgstr "Default City of Arrival"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:95
+msgctxt "(Default City/Hotel)"
+msgid "tp_admin_page_edit_search_forms_field_city_label"
+msgstr "Default City/Hotel"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:102
+msgctxt "(Shortcode)"
+msgid "tp_admin_page_edit_search_forms_field_search_shortcodes_label"
+msgstr "Shortcode"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:109
+msgctxt ""
+"(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+"be placed into your posts right away )"
+msgid "tp_admin_page_edit_search_forms_paragraph_4"
 msgstr ""
+"Shortcode will be automatically generated after you press the Save Changes button. It can also "
+"be placed into your posts right away"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:115
+msgctxt "(cancel)"
+msgid "tp_admin_page_edit_search_forms_btn_cancel"
+msgstr "cancel"
+
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:120
+msgctxt "(save changes)"
+msgid "tp_admin_page_edit_search_forms_btn_save"
+msgstr "save changes"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:25
 #, php-format
@@ -2878,6 +2970,10 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgid "Title "
+#~ msgstr "Insert link"
 
 #, fuzzy
 #~ msgid "Edit"

@@ -1,6 +1,9 @@
 <div class="TPWrapper TPWrapper-long">
 
-    <p class="TPMainTitle  TPMainTitleSF"><?php _e('Search forms', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+    <p class="TPMainTitle  TPMainTitleSF">
+        <?php _ex('tp_admin_page_add_search_forms_paragraph_1',
+            '(Search forms)', TPOPlUGIN_TEXTDOMAIN); ?>
+    </p>
     <div class="TP-TopImportantInfo TP-shortDescription">
         <?php
         global $locale;
@@ -17,62 +20,102 @@
                 break;
         } ?>
         <p>
-            <?php _e('Check our step-by-step manual ', TPOPlUGIN_TEXTDOMAIN); ?>
-            <a href="<?php echo $link_help; ?>" target="_blank"><?php _e('here', TPOPlUGIN_TEXTDOMAIN); ?></a>
+            <?php _ex('tp_admin_page_add_search_forms_paragraph_2',
+                '(Check our step-by-step manual )', TPOPlUGIN_TEXTDOMAIN); ?>
+            <a href="<?php echo $link_help; ?>" target="_blank">
+                <?php _ex('tp_admin_page_add_search_forms_paragraph_2_link',
+                    '(here)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </a>
         </p>
     </div>
+
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
-        <p class="TP-SettingTitle"><?php _e('Adding shortcode', TPOPlUGIN_TEXTDOMAIN); ?> </p>
+        <p class="TP-SettingTitle">
+            <?php _ex('tp_admin_page_add_search_forms_paragraph_3',
+                '(Adding shortcode)', TPOPlUGIN_TEXTDOMAIN); ?>
+        </p>
 
         <form method="post" action="admin.php?page=tp_control_search_shortcodes&action=save_search_shortcode"
               method="post" name="searchShortcodeAdd">
             <div class="TP-LocalHead TP-shortLocal">
                 <label>
-                    <span><?php _e('Title ', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_add_search_forms_field_title_label',
+                            '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <input type="text" name="search_shortcode_title" required/>
                 </label>
                 <label>
-                    <span><?php _e('Type shortcode', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_add_search_forms_field_type_label',
+                            '(Type shortcode)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <select class="TP-Zelect TPSelectSearchShortcodeType" name="search_shortcode_type" required="required">
-                        <option value="0"><?php echo _x('Search Form', 'select_search_form', TPOPlUGIN_TEXTDOMAIN) ?></option>
-                        <option value="1"><?php _e('Other', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                        <option value="0">
+                            <?php _ex('tp_admin_page_add_search_forms_field_type_value_1',
+                                '(Search Form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </option>
+                        <option value="1">
+                            <?php _ex('tp_admin_page_add_search_forms_field_type_value_2',
+                                '(Other)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </option>
                     </select>
                 </label>
                 <div>
                     <label class="TP-inputTextShort">
-                        <span><?php _e('TravelPayouts Form Code', TPOPlUGIN_TEXTDOMAIN) ?></span>
-                        <span><?php _e('Make sure you have unchecked the "Short Code" and "Iframe Code" boxes', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                        <span>
+                            <?php _ex('tp_admin_page_add_search_forms_field_code_form_label',
+                                '(TravelPayouts Form Code)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
+                        <span>
+                            <?php _ex('tp_admin_page_add_search_forms_field_code_form_help',
+                                '(Make sure you have unchecked the "Short Code" and "Iframe Code" boxes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                         <textarea name="search_shortcode_code_form" class="TPSearchShortcodeCodeForm"></textarea>
                     </label>
                 </div>
                 <label>
-                    <span><?php _e('Default City of Departure', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_add_search_forms_field_from_label',
+                            '(Default City of Departure)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <input type="text" name="search_shortcode_from" class="searchShortcodeAutocomplete"/>
                 </label>
                 <label>
-                    <span><?php _e('Default City of Arrival', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_add_search_forms_field_to_label',
+                            '(Default City of Arrival)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <input type="text" name="search_shortcode_to" class="searchShortcodeAutocomplete"/>
                 </label>
                 <label>
-                    <span><?php _e('Default City/Hotel', TPOPlUGIN_TEXTDOMAIN) ?></span>
+                    <span>
+                        <?php _ex('tp_admin_page_add_search_forms_field_city_label',
+                            '(Default City/Hotel)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </span>
                     <input type="text" name="search_shortcode_hotel_city" class="searchHotelCityShortcodeAutocomplete TPHotelCityAutocomplete"/>
                 </label>
 
-                <p class="TP-ViewShortCode"><?php _e('Shortcode', TPOPlUGIN_TEXTDOMAIN) ?>:
+                <p class="TP-ViewShortCode">
+                    <?php _ex('tp_admin_page_add_search_forms_field_search_shortcodes_label',
+                        '(Shortcode)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <span>[tp_search_shortcodes id=<?php echo '"'.$this->model->get_nextId().'"'; ?>]</span>
                 </p>
             </div>
 
             <p class="TP-sescriptionShort">
-                <?php _e('Shortcode will be automatically generated after you press the Save Changes button. It can also be placed into your posts right away', TPOPlUGIN_TEXTDOMAIN) ?>
+                <?php _ex('tp_admin_page_add_search_forms_paragraph_4',
+                    '(Shortcode will be automatically generated after you press the Save Changes button. It can also be placed into your posts right away )', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
 
             <div class="TP-navsUserShort">
                 <a href="admin.php?page=tp_control_search_shortcodes" class="TP-deleteShortLincks TP-deleteShortLincks--cust">
-                    <i></i><?php _e('cancel', TPOPlUGIN_TEXTDOMAIN) ?>
+                    <i></i> <?php _ex('tp_admin_page_add_search_forms_btn_cancel',
+                        '(cancel)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
                 <button class="TP-BtnTab">
-                    <?php _e('save changes', TPOPlUGIN_TEXTDOMAIN) ?>
+                    <?php _ex('tp_admin_page_add_search_forms_btn_save',
+                        '(save changes)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </button>
             </div>
 
