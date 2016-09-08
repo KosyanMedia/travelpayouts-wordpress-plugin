@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-08 12:57+0300\n"
+"POT-Creation-Date: 2016-09-08 13:30+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -251,7 +251,6 @@ msgstr ""
 
 #: app/includes/TPPluginWidget.php:305
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
-#: app/includes/views/admin/menu/TPSearchForms.view.php:59
 #: app/includes/views/admin/menu/TPStatisticView.php:153
 #: app/includes/views/admin/menu/TPStatisticView.php:161
 msgid "All"
@@ -2253,66 +2252,98 @@ msgctxt "(Save changes)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
 msgstr "Save changes"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:3
+#: app/includes/views/admin/menu/TPSearchForms.view.php:4
+msgctxt "(Search forms)"
+msgid "tp_admin_page_search_forms_paragraph_1"
+msgstr "Search forms"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:10
+msgctxt "(Here you can add shortcodes for each search form added to your Travelpayouts account)"
+msgid "tp_admin_page_search_forms_paragraph_2"
+msgstr "Here you can add shortcodes for each search form added to your Travelpayouts account"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:20
+#: app/includes/views/admin/menu/TPSearchForms.view.php:29
+#: app/includes/views/admin/menu/TPSearchForms.view.php:38
+msgctxt "(https://www.travelpayouts.com/tools/forms)"
+msgid "tp_admin_page_search_forms_paragraph_2_link"
+msgstr "https://www.travelpayouts.com/tools/forms"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:46
+msgctxt "(Check our step-by-step manual )"
+msgid "tp_admin_page_search_forms_paragraph_3"
+msgstr "Check our step-by-step manual "
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:49
+msgctxt "(here )"
+msgid "tp_admin_page_search_forms_paragraph_3_link"
+msgstr "here"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:57
+msgctxt "(Search Form Shortcodes)"
+msgid "tp_admin_page_search_forms_paragraph_4"
+msgstr "Search Form Shortcodes"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:65
+msgctxt "(Add a shortcode)"
+msgid "tp_admin_page_search_forms_btn_add_shortcode"
+msgstr "Add a shortcode"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:71
+msgctxt "(Remove)"
+msgid "tp_admin_page_search_forms_btn_remove"
+msgstr "Remove"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:76
+msgctxt "(All)"
+msgid "tp_admin_page_search_forms_btn_all"
+msgstr "All"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:90
+msgctxt "(Title )"
+msgid "tp_admin_page_search_forms_table_td_1"
+msgstr "Title"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:94
+msgctxt "(Add Date )"
+msgid "tp_admin_page_search_forms_table_td_2"
+msgstr "Add Date"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:98
+msgctxt "(Shortcode )"
+msgid "tp_admin_page_search_forms_table_td_3"
+msgstr "Shortcode"
+
+#: app/includes/views/admin/menu/TPSearchForms.view.php:115
+msgctxt "(Edit)"
+msgid "tp_admin_page_search_forms_table_edit_link"
+msgstr "Edit"
+
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:3
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:3
 msgid "Search forms"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:7
-msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:40
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:20
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:20
 msgid "Check our step-by-step manual "
 msgstr ""
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:41
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:21
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:21
 msgid "here"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:46
-msgid "Search Form Shortcodes"
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:25
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26
+msgid "Adding shortcode"
 msgstr ""
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:51
-msgid "Add a shortcode"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:55
-msgid "Remove"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:71
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:31
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:32
 #, fuzzy
 msgid "Title "
 msgstr "Insert link"
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:72
-msgid "Add Date"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:73
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:61
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:64
-msgid "Shortcode"
-msgstr ""
-
-#: app/includes/views/admin/menu/TPSearchForms.view.php:88
-#, fuzzy
-msgid "Edit"
-msgstr "Link"
-
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:25
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26
-msgid "Adding shortcode"
-msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:35
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:36
@@ -2348,6 +2379,11 @@ msgstr ""
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:53
 #: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:55
 msgid "Default City of Arrival"
+msgstr ""
+
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:61
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:64
+msgid "Shortcode"
 msgstr ""
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
@@ -2842,6 +2878,10 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgid "Edit"
+#~ msgstr "Link"
 
 #, fuzzy
 #~ msgid "Title"
