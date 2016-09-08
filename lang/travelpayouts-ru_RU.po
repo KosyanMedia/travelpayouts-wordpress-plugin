@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-07 18:13+0300\n"
+"POT-Creation-Date: 2016-09-08 12:49+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2782,16 +2782,79 @@ msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Внести настройки"
 
 #: core/controllers/TPOAdminMenuController.php:24
-msgid "Please, don't delete the information below. It makes helping you easier"
+msgctxt "(Please, don't delete the information below. It makes helping you easier)"
+msgid "tp_admin_page_link_help_msg_text_1"
 msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
 
+#: core/controllers/TPOAdminMenuController.php:27
+msgctxt "(domain: )"
+msgid "tp_admin_page_link_help__msg_text_2"
+msgstr "domain: "
+
+#: core/controllers/TPOAdminMenuController.php:29
+msgctxt "(marker: )"
+msgid "tp_admin_page_link_help__msg_text_3"
+msgstr "marker: "
+
+#: core/controllers/TPOAdminMenuController.php:31
+msgctxt "(whitelabel: )"
+msgid "tp_admin_page_link_help__msg_text_4"
+msgstr "whitelabel: "
+
+#: core/controllers/TPOAdminMenuController.php:33
+msgctxt "(WP theme: )"
+msgid "tp_admin_page_link_help__msg_text_5"
+msgstr "WP theme: "
+
+#: core/controllers/TPOAdminMenuController.php:35
+msgctxt "(WP theme URI: )"
+msgid "tp_admin_page_link_help__msg_text_6"
+msgstr "WP theme URI: "
+
+#: core/controllers/TPOAdminMenuController.php:37
+msgctxt "(WP theme version: )"
+msgid "tp_admin_page_link_help__msg_text_7"
+msgstr "WP theme version: "
+
 #: core/controllers/TPOAdminMenuController.php:39
-msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
+msgctxt "(WP version: )"
+msgid "tp_admin_page_link_help__msg_text_8"
+msgstr "WP version: "
+
+#: core/controllers/TPOAdminMenuController.php:41
+msgctxt "(PHP version:  )"
+msgid "tp_admin_page_link_help__msg_text_9"
+msgstr "PHP version: "
+
+#: core/controllers/TPOAdminMenuController.php:43
+msgctxt "(Plugin version: )"
+msgid "tp_admin_page_link_help__msg_text_10"
+msgstr "Plugin version: "
+
+#: core/controllers/TPOAdminMenuController.php:45
+msgctxt "( - Travelpayouts WP Plugin Support Request - )"
+msgid "tp_admin_page_link_help__msg_text_11"
+msgstr "- Travelpayouts WP Plugin Support Request -  "
+
+#: core/controllers/TPOAdminMenuController.php:50
+msgctxt "(A problem with the plugin? Have some suggestions or ideas? Contact us at)"
+msgid "tp_admin_page_link_help_link_text"
 msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
+
+#: core/controllers/TPOAdminMenuController.php:53
+msgctxt "(wpplugin@travelpayouts.com)"
+msgid "tp_admin_page_link_help_link_label"
+msgstr "wpplugin@travelpayouts.com"
 
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "Please, don't delete the information below. It makes helping you easier"
+#~ msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
+
+#~ msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
+#~ msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #~ msgid "City of Departure"
 #~ msgstr "Город вылета"
