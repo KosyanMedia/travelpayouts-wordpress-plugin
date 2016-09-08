@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-08 16:25+0300\n"
+"POT-Creation-Date: 2016-09-08 17:56+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -2541,48 +2541,70 @@ msgstr "Cliccando il tasto \"salva\" accetti l'attivazione dei dati del plugin d
 msgid "Save changes"
 msgstr "Salva modifiche"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:3
-msgid "Statistics"
+#: app/includes/views/admin/menu/TPStatistic.view.php:4
+msgctxt "(Statistics)"
+msgid "tp_admin_page_statistics_paragraph_1"
 msgstr "Statistiche"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:9
-#: app/includes/views/admin/menu/TPStatistic.view.php:22
-msgid "Earnings Report"
+#: app/includes/views/admin/menu/TPStatistic.view.php:13
+msgctxt "(Earnings Report)"
+msgid "tp_admin_page_statistics_tab_menu_report"
 msgstr "Report Guadagni"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:15
-#: app/includes/views/admin/menu/TPStatistic.view.php:61
-msgid "Balance and Payouts"
+#: app/includes/views/admin/menu/TPStatistic.view.php:22
+msgctxt "(Balance and Payouts)"
+msgid "tp_admin_page_statistics_tab_menu_balance"
 msgstr "Bilancio e Pagamenti"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:24
-msgid "Your Earnings Report for "
-msgstr "Il tuo rapporto di guadagni per             "
+#: app/includes/views/admin/menu/TPStatistic.view.php:32
+msgctxt "(Earnings Report)"
+msgid "tp_admin_page_statistics_tab_report_paragraph_1"
+msgstr "Report Guadagni"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:30
-msgid "Select month"
+#: app/includes/views/admin/menu/TPStatistic.view.php:36
+msgctxt "(Your Earnings Report for )"
+msgid "tp_admin_page_statistics_tab_report_paragraph_2"
+msgstr "Il tuo rapporto di guadagni per"
+
+#: app/includes/views/admin/menu/TPStatistic.view.php:44
+msgctxt "(Select month )"
+msgid "tp_admin_page_statistics_tab_report_select_month"
 msgstr "Seleziona Mese"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:49
-msgid "show"
+#: app/includes/views/admin/menu/TPStatistic.view.php:65
+msgctxt "(show)"
+msgid "tp_admin_page_statistics_tab_report_btn_show"
 msgstr "mostra"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:54
-msgid "Report on income"
+#: app/includes/views/admin/menu/TPStatistic.view.php:71
+msgctxt "(Report on income)"
+msgid "tp_admin_page_statistics_tab_report_title_xls"
 msgstr "Relazione sul reddito"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:55
-#: app/includes/views/admin/menu/TPStatistic.view.php:68
-msgid "DOWNLOAD REPORT (XLS)"
-msgstr "SCARICA RAPPORTO (XLS)           "
+#: app/includes/views/admin/menu/TPStatistic.view.php:73
+msgctxt "(DOWNLOAD REPORT (XLS))"
+msgid "tp_admin_page_statistics_tab_report_btn_download_xls"
+msgstr "SCARICA RAPPORTO (XLS)"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:62
-msgid "Balance"
+#: app/includes/views/admin/menu/TPStatistic.view.php:81
+msgctxt "(Balance and Payouts)"
+msgid "tp_admin_page_statistics_tab_balance_paragraph_1"
+msgstr "Bilancio e pagamenti"
+
+#: app/includes/views/admin/menu/TPStatistic.view.php:85
+msgctxt "(Balance)"
+msgid "tp_admin_page_statistics_tab_balance_paragraph_2"
 msgstr "Bilancio"
 
-#: app/includes/views/admin/menu/TPStatistic.view.php:67
-msgid "Balance and payments"
+#: app/includes/views/admin/menu/TPStatistic.view.php:91
+msgctxt "(Balance and payments)"
+msgid "tp_admin_page_statistics_tab_balance_title_xls"
 msgstr "Bilancio e pagamenti"
+
+#: app/includes/views/admin/menu/TPStatistic.view.php:93
+msgctxt "(DOWNLOAD REPORT (XLS))"
+msgid "tp_admin_page_statistics_tab_balance_btn_download_xls"
+msgstr "SCARICA RAPPORTO (XLS)"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:28
 #: app/includes/views/admin/menu/TPStatisticView.php:191
@@ -2987,6 +3009,36 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistiche"
+
+#~ msgid "Earnings Report"
+#~ msgstr "Report Guadagni"
+
+#~ msgid "Balance and Payouts"
+#~ msgstr "Bilancio e Pagamenti"
+
+#~ msgid "Your Earnings Report for "
+#~ msgstr "Il tuo rapporto di guadagni per             "
+
+#~ msgid "Select month"
+#~ msgstr "Seleziona Mese"
+
+#~ msgid "show"
+#~ msgstr "mostra"
+
+#~ msgid "Report on income"
+#~ msgstr "Relazione sul reddito"
+
+#~ msgid "DOWNLOAD REPORT (XLS)"
+#~ msgstr "SCARICA RAPPORTO (XLS)           "
+
+#~ msgid "Balance"
+#~ msgstr "Bilancio"
+
+#~ msgid "Balance and payments"
+#~ msgstr "Bilancio e pagamenti"
 
 #~ msgid "Search forms"
 #~ msgstr "Search forms"
