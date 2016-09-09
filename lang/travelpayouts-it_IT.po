@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-08 18:56+0300\n"
+"POT-Creation-Date: 2016-09-09 17:35+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -40,7 +40,6 @@ msgid "Hotel Name"
 msgstr "Nome Hotel"
 
 #: app/includes/TPLoaderScripts.php:310 app/includes/TPPluginWidget.php:249
-#: app/includes/models/admin/menu/TPFieldSettings.php:527
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:83
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:116
@@ -50,7 +49,6 @@ msgid "Destination"
 msgstr "Destinazione"
 
 #: app/includes/TPLoaderScripts.php:311 app/includes/TPPluginWidget.php:240
-#: app/includes/models/admin/menu/TPFieldSettings.php:504
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:77
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:109
@@ -774,283 +772,366 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_mark
 msgstr "Codice partner Extra"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:30
-msgid "Token"
+msgctxt "(Token)"
+msgid "tp_admin_page_settings_tab_account_field_token_label"
 msgstr "Chiave"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:37
-msgid "Extra marker"
-msgstr " Codice partner Extra"
+#: app/includes/models/admin/menu/TPFieldSettings.php:38
+msgctxt "(Extra marker)"
+msgid "tp_admin_page_settings_tab_account_field_extra_marker_label"
+msgstr "Codice partner Extra"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:48
-msgid "Marker"
+#: app/includes/models/admin/menu/TPFieldSettings.php:50
+msgctxt "(Marker)"
+msgid "tp_admin_page_settings_tab_account_field_marker_label"
 msgstr "Codice affiliato"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:55
-msgid "White Label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:58
+msgctxt "White Label"
+msgid "tp_admin_page_settings_tab_account_field_white_label_label"
 msgstr "White Label"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:74
-msgid "Error Message"
+#: app/includes/models/admin/menu/TPFieldSettings.php:78
+msgctxt "(Error Message)"
+msgid "tp_admin_page_settings_tab_config_field_message_error_label"
 msgstr "Messaggio di Errore"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:88
-msgid "Action after click"
+#: app/includes/models/admin/menu/TPFieldSettings.php:93
+msgctxt "Action after click"
+msgid "tp_admin_page_settings_tab_config_field_after_url_label"
 msgstr "Azione dopo il click"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:93
-msgid "Show Search Form"
+#: app/includes/models/admin/menu/TPFieldSettings.php:100
+msgctxt "(Show Search Form)"
+msgid "tp_admin_page_settings_tab_config_field_after_url_value_0_label"
 msgstr "Mostra Campo Ricerca"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:98
-msgid "Show Search Results"
+#: app/includes/models/admin/menu/TPFieldSettings.php:108
+msgctxt "(Show Search Results)"
+msgid "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
 msgstr "Mostra Risultati della Ricerca"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:103
-msgid "Distance Units"
+#: app/includes/models/admin/menu/TPFieldSettings.php:115
+msgctxt "(Distance Units)"
+msgid "tp_admin_page_settings_tab_config_field_distance_label"
 msgstr "Unità di Distanza"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:106
-msgid "km"
+#: app/includes/models/admin/menu/TPFieldSettings.php:119
+msgctxt "(km)"
+msgid "tp_admin_page_settings_tab_config_field_distance_value_1_label"
 msgstr "km"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:109
-msgid "miles"
+#: app/includes/models/admin/menu/TPFieldSettings.php:123
+msgctxt "miles"
+msgid "tp_admin_page_settings_tab_config_field_distance_value_2_label"
 msgstr "miglia"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:114
-msgid "Airlines logo size"
+#: app/includes/models/admin/menu/TPFieldSettings.php:130
+msgctxt "(Airlines logo size)"
+msgid "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
 msgstr "Misura Logo compagnia"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:145
-msgid "Buttons in the editor"
+#: app/includes/models/admin/menu/TPFieldSettings.php:162
+msgctxt "(Buttons in the editor)"
+msgid "tp_admin_page_settings_tab_config_field_media_button_label"
 msgstr "Bottone nell'editor"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:150
-msgctxt "config_media_btn_option"
-msgid "Default"
+#: app/includes/models/admin/menu/TPFieldSettings.php:168
+msgctxt "Default"
+msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "Default"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:154
-msgctxt "config_media_btn_option"
-msgid "Compact"
+#: app/includes/models/admin/menu/TPFieldSettings.php:173
+msgctxt "Compact"
+msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "Compatto"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:158
-msgctxt "config_media_btn_option"
-msgid "Hide"
+#: app/includes/models/admin/menu/TPFieldSettings.php:178
+msgctxt "Hide"
+msgid "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
 msgstr "Nascondi"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:175
-msgctxt "settings"
-msgid "Redirect"
+#: app/includes/models/admin/menu/TPFieldSettings.php:197
+msgctxt "Redirect"
+msgid "tp_admin_page_settings_tab_config_field_redirect_label"
 msgstr "Rediretto"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:178
-msgid ""
-"In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
-"We recommend that you don’t change this option."
+#: app/includes/models/admin/menu/TPFieldSettings.php:202
+msgctxt ""
+"(In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+"We recommend that you don’t change this option.)"
+msgid "tp_admin_page_settings_tab_config_field_redirect_help"
 msgstr ""
 "In questo caso il 301 reindirizzamento , che è più preferibile per i motori di ricerca , sarà "
 "attivato . Si consiglia di non modificare questa opzione."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:188
-msgid "Open in a New Window"
+#: app/includes/models/admin/menu/TPFieldSettings.php:214
+msgctxt "(Open in a New Window)"
+msgid "tp_admin_page_settings_tab_config_field_target_url_label"
 msgstr "Apri in una Nuova Finestra"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:193
-msgid " Add Nofollow Attribute"
-msgstr " Aggiungi attributo \"nofollow\""
+#: app/includes/models/admin/menu/TPFieldSettings.php:221
+msgctxt "(Add Nofollow Attribute)"
+msgid "tp_admin_page_settings_tab_config_field_nofollow_label"
+msgstr "Aggiungi attributo \"nofollow\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:196
-msgid ""
-"This attribute avoids getting undesirable search results into the search engines index. We "
-"recommend that you don’t change this option."
+#: app/includes/models/admin/menu/TPFieldSettings.php:226
+msgctxt ""
+"(This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option.)"
+msgid "tp_admin_page_settings_tab_config_field_nofollow_help"
 msgstr ""
 "Questo attributo consente di evitare di ottenere risultati di ricerca indesiderate nell'indice "
 "dei motori di ricerca . Si consiglia di non modificare questa opzione."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:206
-msgid " Turn off statistics and blog updates"
+#: app/includes/models/admin/menu/TPFieldSettings.php:238
+msgctxt "(Turn off statistics and blog updates)"
+msgid "tp_admin_page_settings_tab_config_field_statistics_label"
 msgstr "Spegni aggiornamenti e statistiche dal blog"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:213
-msgid "Default settings"
+#: app/includes/models/admin/menu/TPFieldSettings.php:246
+msgctxt "(Default settings)"
+msgid "tp_admin_page_settings_tab_config_btn_default"
 msgstr "Impostazioni di base"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:221
-msgid "Cache Timeout"
+#: app/includes/models/admin/menu/TPFieldSettings.php:256
+msgctxt "(Cache Timeout)"
+msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
 msgstr "Tempo Cache"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:238
-msgid "Day"
+#: app/includes/models/admin/menu/TPFieldSettings.php:276
+msgctxt "(Day)"
+msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 msgstr "Giorno"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:243
-msgid "Hour"
+#: app/includes/models/admin/menu/TPFieldSettings.php:284
+msgctxt "(Hour)"
+msgid "tp_admin_page_settings_tab_config_field_cache_value_1_label"
 msgstr "Ora"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:251
-msgid "Script Include"
+#: app/includes/models/admin/menu/TPFieldSettings.php:294
+msgctxt "(Script Include)"
+msgid "tp_admin_page_settings_tab_config_field_script_label"
 msgstr "Includi script"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:255
-msgid ""
-"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
-"switching to &lt;footer&gt;"
+#: app/includes/models/admin/menu/TPFieldSettings.php:299
+msgctxt ""
+"(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+"switching to &lt;footer&gt;)"
+msgid "tp_admin_page_settings_tab_config_field_script_help"
 msgstr ""
 "Selezionare &lt ; testata&gt ; possibilità di accelerare il caricamento della pagina . Nel caso "
-"in cui si va ancora lento , prova a passare a &lt; piè di pagina "
-"&lt ;                                "
+"in cui si va ancora lento , prova a passare a &lt; piè di pagina &lt ;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:263
-msgid "Inside &lt;head&gt; tag "
+#: app/includes/models/admin/menu/TPFieldSettings.php:309
+msgctxt "(Inside &lt;head&gt; tag )"
+msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
 msgstr "All'interno &lt;testata&gt ; tag "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:268
-msgid "Inside &lt;footer&gt; tag "
+#: app/includes/models/admin/menu/TPFieldSettings.php:316
+msgctxt "(Inside &lt;footer&gt; tag )"
+msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
 msgstr "All'interno &lt;piè di pagina&gt ; tag "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:276
-msgid "Date Format"
+#: app/includes/models/admin/menu/TPFieldSettings.php:325
+msgctxt "(Date Format)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_label"
 msgstr "Formato Data"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:281
-msgid "Use variables to set the date:"
+#: app/includes/models/admin/menu/TPFieldSettings.php:332
+msgctxt "(Use variables to set the date:)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
 msgstr "Usa le variabili per impostare le date:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:282
-msgid "day"
+#: app/includes/models/admin/menu/TPFieldSettings.php:334
+msgctxt "(day)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
 msgstr "giorno"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:283
-msgid "month name (small letters)"
+#: app/includes/models/admin/menu/TPFieldSettings.php:336
+msgctxt "(month name (small letters))"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
 msgstr "nome mese ( in lettere)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:284
-msgid "month name (capital letters)"
+#: app/includes/models/admin/menu/TPFieldSettings.php:338
+msgctxt "(month name (capital letters))"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
 msgstr "nome mese ( in lettere)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:285
-msgid "month number"
+#: app/includes/models/admin/menu/TPFieldSettings.php:340
+msgctxt "(month number)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
 msgstr "numero mese"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:286
-msgid "month (3 letters)"
+#: app/includes/models/admin/menu/TPFieldSettings.php:342
+msgctxt "(month (3 letters))"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
 msgstr "mese (3 lettere)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:287
-msgid "month (3 small letters)"
+#: app/includes/models/admin/menu/TPFieldSettings.php:344
+msgctxt "(month (3 small letters))"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
 msgstr "mese ( 3 piccole lettere)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:288
-msgid "last 2 digits of the year"
+#: app/includes/models/admin/menu/TPFieldSettings.php:346
+msgctxt "(last 2 digits of the year)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
 msgstr "ultime 2 cifre dell'anno"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:289
-msgid "year"
+#: app/includes/models/admin/menu/TPFieldSettings.php:348
+msgctxt "(year)"
+msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
 msgstr "anno"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:302
-msgid "Current format"
+#: app/includes/models/admin/menu/TPFieldSettings.php:362
+msgctxt "(Current format)"
+msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
 msgstr "Formato corrente"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:308
-msgid "Event tracking. \"Find\" button"
+#: app/includes/models/admin/menu/TPFieldSettings.php:370
+msgctxt "(Event tracking. \"Find\" button)"
+msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
 msgstr "Monitoraggio eventi. Tasto \"Cerca\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:311
-msgid ""
-"Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+#: app/includes/models/admin/menu/TPFieldSettings.php:375
+msgctxt ""
+"(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
-"or \"ga('send', 'event', 'category', 'action');\""
+"or \"ga('send', 'event', 'category', 'action');\")"
+msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
 msgstr ""
 "Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
-"or \"ga('send', 'event', 'category', 'action');\""
+"or \"ga('send', 'event', 'category', 'action');\"                                    "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:328
-msgid "Event tracking. Table is loaded"
+#: app/includes/models/admin/menu/TPFieldSettings.php:394
+msgctxt "(Event tracking. Table is loaded)"
+msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
 msgstr "Monitoraggio eventi . Tabellacaricata"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:331
-msgid "Google Analytics event that will be fired every time a table loads."
+#: app/includes/models/admin/menu/TPFieldSettings.php:399
+msgctxt "(Google Analytics event that will be fired every time a table loads.)"
+msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
 msgstr "Google Analytics event that will be fired every time a table loads."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:350
-msgid "Import settings"
+#: app/includes/models/admin/menu/TPFieldSettings.php:419
+msgctxt "(Import settings)"
+msgid "tp_admin_page_settings_tab_config_btn_import_settings"
 msgstr "Importa impostazioni"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:354
-msgid "Browse"
+#: app/includes/models/admin/menu/TPFieldSettings.php:424
+msgctxt "(Browse)"
+msgid "tp_admin_page_settings_tab_config_btn_browse"
 msgstr "Motore di ricerca"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:357
-msgid "Import"
+#: app/includes/models/admin/menu/TPFieldSettings.php:429
+msgctxt "(Import)"
+msgid "tp_admin_page_settings_tab_config_btn_import"
 msgstr "Importa"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:358
-msgid "The file is not selected"
+#: app/includes/models/admin/menu/TPFieldSettings.php:431
+msgctxt "(The file is not selected)"
+msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
 msgstr "Il file non è selezionato"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:362
-msgid "Export"
+#: app/includes/models/admin/menu/TPFieldSettings.php:436
+msgctxt "(Export)"
+msgid "tp_admin_page_settings_tab_config_btn_export_settings"
 msgstr "Esporta"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:381
-msgid "Tables and Widgets Language"
+#: app/includes/models/admin/menu/TPFieldSettings.php:456
+msgctxt "(Tables and Widgets Language)"
+msgid "tp_admin_page_settings_tab_localization_field_localization_label"
 msgstr "Lingua Tabelle e Widget"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:384
-#: app/includes/models/admin/menu/TPFieldWizard.php:50
-msgid "Russian"
+#: app/includes/models/admin/menu/TPFieldSettings.php:460
+msgctxt "(Russian)"
+msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
 msgstr "Russo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:387
-#: app/includes/models/admin/menu/TPFieldWizard.php:53
-msgid "English"
+#: app/includes/models/admin/menu/TPFieldSettings.php:464
+msgctxt "(English)"
+msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
 msgstr "Inglese"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:390
-msgid "Thai"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldSettings.php:468
+msgctxt "(Thai)"
+msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
+msgstr "Thai"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:395
-#: app/includes/models/admin/menu/TPFieldWizard.php:63
-msgid "Currency"
+#: app/includes/models/admin/menu/TPFieldSettings.php:474
+msgctxt "(Currency)"
+msgid "tp_admin_page_settings_tab_localization_field_currency_label"
 msgstr "Moneta"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:418
-msgid "Fields (you can edit values on your own, e.g. for your own language)"
+#: app/includes/models/admin/menu/TPFieldSettings.php:498
+msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
+msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Campi ( è possibile modificare i valori da soli , ad esempio per la propria lingua)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:481
-msgctxt "page_settings tab local"
-msgid "Host"
+#: app/includes/models/admin/menu/TPFieldSettings.php:562
+msgctxt "(Host)"
+msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Host"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:510
-#: app/includes/models/admin/menu/TPFieldSettings.php:533
-msgid "Genitive"
+#: app/includes/models/admin/menu/TPFieldSettings.php:587
+msgctxt "(Origin)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
+msgstr "Luogo di partenza"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:595
+msgctxt "(Genitive)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Genitivo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:513
-#: app/includes/models/admin/menu/TPFieldSettings.php:536
-msgid "Dative"
+#: app/includes/models/admin/menu/TPFieldSettings.php:599
+msgctxt "(Dative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Dativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:516
-#: app/includes/models/admin/menu/TPFieldSettings.php:539
-msgid "Accusative"
+#: app/includes/models/admin/menu/TPFieldSettings.php:603
+msgctxt "(Accusative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Accusativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:519
-#: app/includes/models/admin/menu/TPFieldSettings.php:542
-msgid "Ablative"
+#: app/includes/models/admin/menu/TPFieldSettings.php:607
+msgctxt "(Ablative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Ablativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:522
-#: app/includes/models/admin/menu/TPFieldSettings.php:545
-msgid "Prepositional"
+#: app/includes/models/admin/menu/TPFieldSettings.php:611
+msgctxt "(Prepositional)"
+msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
+msgstr "Preposizionale"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:617
+msgctxt "Destination"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
+msgstr "Destinazione"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:624
+msgctxt "(Genitive)"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
+msgstr "Genitivo"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:628
+msgctxt "(Dative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
+msgstr "Dativo"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:632
+msgctxt "(Accusative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
+msgstr "Accusativo"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:636
+msgctxt "(Ablative)"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
+msgstr "Ablativo"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:640
+msgctxt "(Prepositional)"
+msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Preposizionale"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
@@ -1498,6 +1579,18 @@ msgstr "Seleziona Attrezzi Lingua e Moneta"
 #: app/includes/models/admin/menu/TPFieldWizard.php:46
 msgid "Widget and Tables Language"
 msgstr "Lingua Tabelle e Widget"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:50
+msgid "Russian"
+msgstr "Russo"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:53
+msgid "English"
+msgstr "Inglese"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:63
+msgid "Currency"
+msgstr "Moneta"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgid "Constructor link"
@@ -2499,38 +2592,55 @@ msgctxt "(save changes)"
 msgid "tp_admin_page_edit_search_forms_btn_save"
 msgstr "salva modifiche"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:25
-#, php-format
-msgid ""
-"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
-"account. Check your Marker and Token at - %s  White Label - %s"
+#: app/includes/views/admin/menu/TPSettings.view.php:26
+msgctxt ""
+"(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s)"
+msgid "tp_admin_page_settings_paragraph_1"
 msgstr ""
 "Si prega di inserire il tuo % s dati dell'account qui di seguito . Si prega di registrarsi se "
 "non si dispone di un account Travelpayouts . Controlla il tuo Codice e Chiave a - % s White "
 "Label - % s"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:41
-#: app/includes/views/admin/menu/TPSettings.view.php:62
-msgid "Account"
+#: app/includes/views/admin/menu/TPSettings.view.php:43
+msgctxt "(Account)"
+msgid "tp_admin_page_settings_tab_menu_account"
 msgstr "Conto"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:46
-#: app/includes/views/admin/menu/TPSettings.view.php:70
-msgid "Settings"
+#: app/includes/views/admin/menu/TPSettings.view.php:49
+msgctxt "(Settings)"
+msgid "tp_admin_page_settings_tab_menu_config"
 msgstr "Impostazioni"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:51
-#: app/includes/views/admin/menu/TPSettings.view.php:78
-msgid "Localization"
+#: app/includes/views/admin/menu/TPSettings.view.php:55
+msgctxt "(Localization)"
+msgid "tp_admin_page_settings_tab_menu_localization"
 msgstr "Localizzazione"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:88
-msgid ""
+#: app/includes/views/admin/menu/TPSettings.view.php:67
+msgctxt "(Account)"
+msgid "tp_admin_page_settings_tab_account"
+msgstr "Conto"
+
+#: app/includes/views/admin/menu/TPSettings.view.php:76
+msgctxt "(Settings)"
+msgid "tp_admin_page_settings_tab_config"
+msgstr "Impostazioni"
+
+#: app/includes/views/admin/menu/TPSettings.view.php:85
+msgctxt "(Localization)"
+msgid "tp_admin_page_settings_tab_localization"
+msgstr "Localizzazione"
+
+#: app/includes/views/admin/menu/TPSettings.view.php:96
+msgctxt ""
 "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+msgid "tp_admin_page_settings_paragraph_2"
 msgstr "Cliccando il tasto \"salva\" accetti l'attivazione dei dati del plugin di TravelPayouts"
 
-#: app/includes/views/admin/menu/TPSettings.view.php:92
-msgid "Save changes"
+#: app/includes/views/admin/menu/TPSettings.view.php:101
+msgctxt "Save changes"
+msgid "tp_admin_page_settings_btn_save"
 msgstr "Salva modifiche"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:4
@@ -3062,6 +3172,229 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Tables and Widgets Language"
+#~ msgstr "Lingua Tabelle e Widget"
+
+#~ msgid "Fields (you can edit values on your own, e.g. for your own language)"
+#~ msgstr "Campi ( è possibile modificare i valori da soli , ad esempio per la propria lingua)"
+
+#~ msgctxt "page_settings tab local"
+#~ msgid "Host"
+#~ msgstr "Host"
+
+#~ msgid "Genitive"
+#~ msgstr "Genitivo"
+
+#~ msgid "Dative"
+#~ msgstr "Dativo"
+
+#~ msgid "Accusative"
+#~ msgstr "Accusativo"
+
+#~ msgid "Ablative"
+#~ msgstr "Ablativo"
+
+#~ msgid "Prepositional"
+#~ msgstr "Preposizionale"
+
+#~ msgid "Error Message"
+#~ msgstr "Messaggio di Errore"
+
+#~ msgid "Action after click"
+#~ msgstr "Azione dopo il click"
+
+#~ msgid "Show Search Form"
+#~ msgstr "Mostra Campo Ricerca"
+
+#~ msgid "Show Search Results"
+#~ msgstr "Mostra Risultati della Ricerca"
+
+#~ msgid "Distance Units"
+#~ msgstr "Unità di Distanza"
+
+#~ msgid "km"
+#~ msgstr "km"
+
+#~ msgid "miles"
+#~ msgstr "miglia"
+
+#~ msgid "Airlines logo size"
+#~ msgstr "Misura Logo compagnia"
+
+#~ msgid "Buttons in the editor"
+#~ msgstr "Bottone nell'editor"
+
+#~ msgctxt "config_media_btn_option"
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgctxt "config_media_btn_option"
+#~ msgid "Compact"
+#~ msgstr "Compatto"
+
+#~ msgctxt "config_media_btn_option"
+#~ msgid "Hide"
+#~ msgstr "Nascondi"
+
+#~ msgctxt "settings"
+#~ msgid "Redirect"
+#~ msgstr "Rediretto"
+
+#~ msgid ""
+#~ "In this case the 301 Redirect, which is more preferable for search engines, will be "
+#~ "activated. We recommend that you don’t change this option."
+#~ msgstr ""
+#~ "In questo caso il 301 reindirizzamento , che è più preferibile per i motori di ricerca , sarà "
+#~ "attivato . Si consiglia di non modificare questa opzione."
+
+#~ msgid "Open in a New Window"
+#~ msgstr "Apri in una Nuova Finestra"
+
+#~ msgid " Add Nofollow Attribute"
+#~ msgstr " Aggiungi attributo \"nofollow\""
+
+#~ msgid ""
+#~ "This attribute avoids getting undesirable search results into the search engines index. We "
+#~ "recommend that you don’t change this option."
+#~ msgstr ""
+#~ "Questo attributo consente di evitare di ottenere risultati di ricerca indesiderate "
+#~ "nell'indice dei motori di ricerca . Si consiglia di non modificare questa opzione."
+
+#~ msgid " Turn off statistics and blog updates"
+#~ msgstr "Spegni aggiornamenti e statistiche dal blog"
+
+#~ msgid "Default settings"
+#~ msgstr "Impostazioni di base"
+
+#~ msgid "Cache Timeout"
+#~ msgstr "Tempo Cache"
+
+#~ msgid "Day"
+#~ msgstr "Giorno"
+
+#~ msgid "Hour"
+#~ msgstr "Ora"
+
+#~ msgid "Script Include"
+#~ msgstr "Includi script"
+
+#~ msgid ""
+#~ "Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+#~ "switching to &lt;footer&gt;"
+#~ msgstr ""
+#~ "Selezionare &lt ; testata&gt ; possibilità di accelerare il caricamento della pagina . Nel "
+#~ "caso in cui si va ancora lento , prova a passare a &lt; piè di pagina "
+#~ "&lt ;                                "
+
+#~ msgid "Inside &lt;head&gt; tag "
+#~ msgstr "All'interno &lt;testata&gt ; tag "
+
+#~ msgid "Inside &lt;footer&gt; tag "
+#~ msgstr "All'interno &lt;piè di pagina&gt ; tag "
+
+#~ msgid "Date Format"
+#~ msgstr "Formato Data"
+
+#~ msgid "Use variables to set the date:"
+#~ msgstr "Usa le variabili per impostare le date:"
+
+#~ msgid "day"
+#~ msgstr "giorno"
+
+#~ msgid "month name (small letters)"
+#~ msgstr "nome mese ( in lettere)"
+
+#~ msgid "month name (capital letters)"
+#~ msgstr "nome mese ( in lettere)"
+
+#~ msgid "month number"
+#~ msgstr "numero mese"
+
+#~ msgid "month (3 letters)"
+#~ msgstr "mese (3 lettere)"
+
+#~ msgid "month (3 small letters)"
+#~ msgstr "mese ( 3 piccole lettere)"
+
+#~ msgid "last 2 digits of the year"
+#~ msgstr "ultime 2 cifre dell'anno"
+
+#~ msgid "year"
+#~ msgstr "anno"
+
+#~ msgid "Current format"
+#~ msgstr "Formato corrente"
+
+#~ msgid "Event tracking. \"Find\" button"
+#~ msgstr "Monitoraggio eventi. Tasto \"Cerca\""
+
+#~ msgid ""
+#~ "Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');"
+#~ "\" or \"ga('send', 'event', 'category', 'action');\""
+#~ msgstr ""
+#~ "Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');"
+#~ "\" or \"ga('send', 'event', 'category', 'action');\""
+
+#~ msgid "Event tracking. Table is loaded"
+#~ msgstr "Monitoraggio eventi . Tabellacaricata"
+
+#~ msgid "Google Analytics event that will be fired every time a table loads."
+#~ msgstr "Google Analytics event that will be fired every time a table loads."
+
+#~ msgid "Import settings"
+#~ msgstr "Importa impostazioni"
+
+#~ msgid "Browse"
+#~ msgstr "Motore di ricerca"
+
+#~ msgid "Import"
+#~ msgstr "Importa"
+
+#~ msgid "The file is not selected"
+#~ msgstr "Il file non è selezionato"
+
+#~ msgid "Export"
+#~ msgstr "Esporta"
+
+#~ msgid "Token"
+#~ msgstr "Chiave"
+
+#~ msgid "Extra marker"
+#~ msgstr " Codice partner Extra"
+
+#~ msgid "Marker"
+#~ msgstr "Codice affiliato"
+
+#~ msgid "White Label"
+#~ msgstr "White Label"
+
+#~ msgid ""
+#~ "Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+#~ "account. Check your Marker and Token at - %s  White Label - %s"
+#~ msgstr ""
+#~ "Si prega di inserire il tuo % s dati dell'account qui di seguito . Si prega di registrarsi se "
+#~ "non si dispone di un account Travelpayouts . Controlla il tuo Codice e Chiave a - % s White "
+#~ "Label - % s"
+
+#~ msgid "Account"
+#~ msgstr "Conto"
+
+#~ msgid "Settings"
+#~ msgstr "Impostazioni"
+
+#~ msgid "Localization"
+#~ msgstr "Localizzazione"
+
+#~ msgid ""
+#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
+#~ "Travelpayouts."
+#~ msgstr "Cliccando il tasto \"salva\" accetti l'attivazione dei dati del plugin di TravelPayouts"
+
+#~ msgid "Save changes"
+#~ msgstr "Salva modifiche"
 
 #~ msgid "Date"
 #~ msgstr "Data"

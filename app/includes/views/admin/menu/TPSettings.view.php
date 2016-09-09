@@ -22,7 +22,9 @@
                     break;
             } ?>
             <p>
-                <?php printf(__('Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s' , TPOPlUGIN_TEXTDOMAIN),
+                <?php printf(
+                    _x('tp_admin_page_settings_paragraph_1',
+                        '(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. Check your Marker and Token at - %s  White Label - %s)' , TPOPlUGIN_TEXTDOMAIN),
                     '<a href="'.$tp_url.'" target="_blank">
                         travelpayouts.com
                     </a>',
@@ -38,17 +40,20 @@
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-account" class="TPMainMenuA">
-                        <span><?php _e('Account', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <span><?php _ex('tp_admin_page_settings_tab_menu_account',
+                                '(Account)', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
                 <li>
                     <a href="#tabs-config" class="TPMainMenuA">
-                        <span><?php _e('Settings', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <span><?php _ex('tp_admin_page_settings_tab_menu_config',
+                                '(Settings)', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     </a>
                 </li>
                 <li>
                     <a href="#tabs-localization" class="TPMainMenuA">
-                        <span><?php _e('Localization', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                        <span><?php _ex('tp_admin_page_settings_tab_menu_localization',
+                                '(Localization)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     </a>
                 </li>
             </ul>
@@ -59,7 +64,8 @@
                 <div class="TPmainContent TP-SettingContent">
                     <div id="tabs-account">
                         <p class="TP-SettingTitle">
-                            <?php _e('Account', TPOPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _ex('tp_admin_page_settings_tab_account',
+                                '(Account)', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <div class="TP-RowForm">
                             <?php do_settings_fields('tp_settings_account', 'tp_settings_account_id'); ?>
@@ -67,7 +73,8 @@
                     </div>
                     <div id="tabs-config">
                         <p class="TP-SettingTitle">
-                            <?php _e('Settings', TPOPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _ex('tp_admin_page_settings_tab_config',
+                                '(Settings)', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <div class="TP-RowForm">
                             <?php do_settings_fields('tp_settings_plugin_config', 'tp_settings_plugin_config_id'); ?>
@@ -75,7 +82,8 @@
                     </div>
                     <div id="tabs-localization">
                         <p class="TP-SettingTitle">
-                            <?php _e('Localization', TPOPlUGIN_TEXTDOMAIN ); ?>
+                            <?php _ex('tp_admin_page_settings_tab_localization',
+                                '(Localization)', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </p>
                         <?php do_settings_fields('tp_settings_local', 'tp_settings_local_id'); ?>
                     </div>
@@ -85,11 +93,13 @@
                     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
                     <?php if(empty(\app\includes\TPPlugin::$options['account']['marker'])){ ?>
                     <span class="TP-msgSend">
-                        <?php _e("By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts.", TPOPlUGIN_TEXTDOMAIN)?>
+                        <?php _ex('tp_admin_page_settings_paragraph_2',
+                            "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts.", TPOPlUGIN_TEXTDOMAIN)?>
                     </span>
                     <?php } ?>
                     <input type="submit" name="submit" id="TPSaveSettings" class="TP-BtnTab"
-                           value="<?php _e('Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
+                           value="<?php _ex('tp_admin_page_settings_btn_save',
+                               'Save changes', TPOPlUGIN_TEXTDOMAIN ); ?>">
                 </div>
             </form>
         </div>
