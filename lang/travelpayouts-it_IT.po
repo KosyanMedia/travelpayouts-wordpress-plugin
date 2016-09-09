@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-09 17:35+0300\n"
+"POT-Creation-Date: 2016-09-09 19:25+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -41,7 +41,6 @@ msgstr "Nome Hotel"
 
 #: app/includes/TPLoaderScripts.php:310 app/includes/TPPluginWidget.php:249
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:83
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:116
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:143
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:246
@@ -50,7 +49,6 @@ msgstr "Destinazione"
 
 #: app/includes/TPLoaderScripts.php:311 app/includes/TPPluginWidget.php:240
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:77
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:109
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:137
 msgid "Origin"
@@ -90,7 +88,6 @@ msgid "Auto-links are applied"
 msgstr "Auto-links è applicato"
 
 #: app/includes/TPLoaderScripts.php:326 app/includes/TPPluginWidget.php:258
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:109
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:85
 msgid "Airline"
 msgstr "Compagnia Aerea"
@@ -143,122 +140,88 @@ msgstr "Titolo:"
 
 #: app/includes/TPPluginWidget.php:171 app/includes/TPPluginWidget.php:178
 #: app/includes/TPPluginWidget.php:208
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:31
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:47
 msgid "Select the table"
 msgstr "Seleziona la tabella"
 
 #: app/includes/TPPluginWidget.php:181 app/includes/TPPluginWidget.php:210
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:32
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:48
 msgid "Flights from origin to destination, One Way (next month)"
 msgstr "Voli da luogo di partenza a destinazione, Solo Andata (mese prossimo)"
 
 #: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:212
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:33
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:49
 msgid "Flights from Origin to Destination (next few days)"
 msgstr "Voli da Origine a Destinazione (prossimi giorni)"
 
 #: app/includes/TPPluginWidget.php:187 app/includes/TPPluginWidget.php:215
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:35
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:51
 msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr "Voli economici da luogo partenza a destinazione, andata e ritorno"
 
 #: app/includes/TPPluginWidget.php:189 app/includes/TPPluginWidget.php:217
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:36
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:52
 msgid "Cheapest Flights from origin to destination (next month)"
 msgstr "Voli economici da luogo partenza a destinazione (mese prossimo)"
 
 #: app/includes/TPPluginWidget.php:191 app/includes/TPPluginWidget.php:219
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:37
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:53
 msgid "Cheapest Flights from origin to destination (next year)"
 msgstr "Voli Economici da luogo di partenza a destinazione (anno prossimo)"
 
 #: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:221
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:38
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:54
 msgid "Direct Flights from origin to destination"
 msgstr "Voli diretti da origine a destinazione"
 
 #: app/includes/TPPluginWidget.php:195 app/includes/TPPluginWidget.php:223
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:39
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:55
 msgid "Direct Flights from origin"
 msgstr "Voli diretti da origine"
 
 #: app/includes/TPPluginWidget.php:197
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:40
 msgid "Popular Destinations from origin"
 msgstr "Destinazioni Popolari dal luogo di partenza"
 
 #: app/includes/TPPluginWidget.php:199 app/includes/TPPluginWidget.php:225
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:41
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:56
 msgid "Most popular flights within this Airlines"
 msgstr "Viaggi più popolari con questa Compagnia"
 
 #: app/includes/TPPluginWidget.php:202 app/includes/TPPluginWidget.php:228
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:42
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:58
 msgid "Searched on our website"
 msgstr "Cerca sul nostro sito"
 
 #: app/includes/TPPluginWidget.php:204 app/includes/TPPluginWidget.php:230
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:43
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:59
 msgid "Cheap Flights from origin"
 msgstr "Voli Economici dalla città di partenza"
 
 #: app/includes/TPPluginWidget.php:206 app/includes/TPPluginWidget.php:232
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:44
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:60
 msgid "Cheap Flights to destination"
 msgstr "Voli Economici per destinazione"
 
 #: app/includes/TPPluginWidget.php:267
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:134
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:136
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:124
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:281
 msgid "Limit"
 msgstr "Limite"
 
 #: app/includes/TPPluginWidget.php:279
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:151
 msgid "Paginate"
 msgstr "Impaginato"
 
 #: app/includes/TPPluginWidget.php:287
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:157
 msgid "One Way"
 msgstr "Solo Andata "
 
 #: app/includes/TPPluginWidget.php:295
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:163
 msgid "No title"
 msgstr "Nessun titolo"
 
 #: app/includes/TPPluginWidget.php:301
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:168
 msgid "Number of stops"
 msgstr "Numero di scali"
 
 #: app/includes/TPPluginWidget.php:305
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
 msgid "All"
 msgstr "Tutto"
 
 #: app/includes/TPPluginWidget.php:307
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:171
 msgid "No more than one stop"
 msgstr "Non più di uno scalo"
 
 #: app/includes/TPPluginWidget.php:309
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:172
 msgid "Direct"
 msgstr "Diretto"
 
@@ -1614,7 +1577,6 @@ msgstr "Cerca per hotel"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:69
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:115
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:48
 msgid "Subid"
 msgstr "Subid"
@@ -1687,35 +1649,179 @@ msgstr "Città di Arrivo default"
 msgid "Default City/Hotel"
 msgstr "Default Città/Hotel"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:1
-msgid "Constructor tables"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:2
+msgctxt "(Constructor tables)"
+msgid "tp_admin_page_settings_сonstructor_tables_title"
 msgstr "Costruisci tabelle"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:45
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:61
-msgid "Special offers airline"
-msgstr "Спецпредложения авиакомпаний"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:91
+msgctxt "(Select the table)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_0"
+msgstr "Seleziona la tabella"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:37
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:95
+msgctxt "(Flights from origin to destination, One Way (next month))"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_1"
+msgstr "Voli da luogo di partenza a destinazione, Solo Andata (mese prossimo)"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:41
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:99
+msgctxt "(Flights from Origin to Destination (next few days))"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_2"
+msgstr "Voli da Origine a Destinazione (prossimi giorni)"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:46
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:104
+msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_3"
+msgstr "Voli economici da luogo partenza a destinazione, andata e ritorno"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:50
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:108
+msgctxt "(Cheapest Flights from origin to destination (next month))"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_4"
+msgstr "Voli economici da luogo partenza a destinazione (mese prossimo)"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:54
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:112
+msgctxt "(Cheapest Flights from origin to destination (next year))"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_5"
+msgstr "Voli Economici da luogo di partenza a destinazione (anno prossimo)"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:58
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:116
+msgctxt "(Direct Flights from origin to destination)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_6"
+msgstr "Voli diretti da origine a destinazione"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:62
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
+msgctxt "(Direct Flights from origin)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_7"
+msgstr "Voli diretti da origine"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:66
+msgctxt "(Popular Destinations from origin)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_8"
+msgstr "Destinazioni Popolari dal luogo di partenza"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:70
-msgid "Alternate title"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:124
+msgctxt "(Most popular flights within this Airlines)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_9"
+msgstr "Viaggi più popolari con questa Compagnia"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:74
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:129
+msgctxt "(Searched on our website)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_11"
+msgstr "Cerca sul nostro sito"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:78
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:133
+msgctxt "(Cheap Flights from origin)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_12"
+msgstr "Voli Economici dalla città di partenza"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:82
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:137
+msgctxt "(Cheap Flights to destination)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_13"
+msgstr "Voli Economici per destinazione"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:86
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:141
+msgctxt "(Special offers airline)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_14"
+msgstr "Special offers airline"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:153
+msgctxt "(Alternate title)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_title_label"
 msgstr "Titolo alternativo"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:103
-#, fuzzy
-msgid "Country"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:162
+msgctxt "(Origin)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_origin_label"
+msgstr "Luogo di partenza"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
+msgctxt "(Destination)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_destination_label"
+msgstr "Destinazione"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:189
+msgctxt "(Country)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_country_label"
 msgstr "Conto"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:142
-msgid "Economy"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:197
+msgctxt "(Airline)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_airline_label"
+msgstr "Compagnia Aerea"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:205
+msgctxt "(Subid)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_subid_label"
+msgstr "Subid"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:225
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:229
+msgctxt "(Limit)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_limit_label"
+msgstr "Limite"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:237
+msgctxt "(Economy)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_0"
 msgstr "Economica"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:143
-msgid "Business"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:241
+msgctxt "(Business)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_1"
 msgstr "Business"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:144
-msgid "First"
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:245
+msgctxt "(First)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_2"
 msgstr "Primo"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:254
+msgctxt "(Paginate)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
+msgstr "Impaginato"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:261
+msgctxt "(One Way)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_one_way_label"
+msgstr "Solo Andata"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:268
+msgctxt "(No title)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_off_title_label"
+msgstr "Nessun titolo"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:275
+msgctxt "(Number of stops)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_label"
+msgstr "Numero di scali"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:279
+msgctxt "(All)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_0"
+msgstr "Tutto"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:282
+msgctxt "(No more than one stop)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_1"
+msgstr "Non più di uno scalo"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:285
+msgctxt "Direct"
+msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
+msgstr "Diretto"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:2
 msgid "Constructor widgets"
@@ -3172,6 +3278,28 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Constructor tables"
+#~ msgstr "Costruisci tabelle"
+
+#~ msgid "Special offers airline"
+#~ msgstr "Спецпредложения авиакомпаний"
+
+#~ msgid "Alternate title"
+#~ msgstr "Titolo alternativo"
+
+#, fuzzy
+#~ msgid "Country"
+#~ msgstr "Conto"
+
+#~ msgid "Economy"
+#~ msgstr "Economica"
+
+#~ msgid "Business"
+#~ msgstr "Business"
+
+#~ msgid "First"
+#~ msgstr "Primo"
 
 #~ msgid "Tables and Widgets Language"
 #~ msgstr "Lingua Tabelle e Widget"
