@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 13:59+0300\n"
+"POT-Creation-Date: 2016-09-12 14:25+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -1567,7 +1567,6 @@ msgid "Search for hotels"
 msgstr "Cerca per hotel"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:44
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:69
 msgid "Subid"
 msgstr "Subid"
 
@@ -1600,43 +1599,39 @@ msgid "Check out"
 msgstr "Check out"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
-msgid "Constructor search form"
+msgctxt "(Constructor search form)"
+msgid "tp_admin_page_settings_сonstructor_search_form_title"
 msgstr "Costruisci modulo ricerca"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:25
-msgid "No customized search form. "
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
+msgctxt "(No customized search form. )"
+msgid "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
 msgstr "Nessuna campo di ricerca personalizzato."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
-msgid "Go to setting."
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:29
+msgctxt "(Go to setting.)"
+msgid "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
 msgstr "Vai alle impostazioni."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:34
-msgctxt "search_form_modal"
-msgid "Flights"
-msgstr "Volii"
-
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:37
-msgctxt "search_form_modal"
-msgid "Hotels"
-msgstr "Hotel"
-
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:40
-msgctxt "search_form_modal"
-msgid "Flights + Hotels"
-msgstr "Voli + Hotel"
-
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:49
-msgid "City of departure default"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:54
+msgctxt "(City of departure default)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
 msgstr "Citta di partenza default"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:56
-msgid "City Arrival default"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:62
+msgctxt "(City Arrival default)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
 msgstr "Città di Arrivo default"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:63
-msgid "Default City/Hotel"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:70
+msgctxt "(Default City/Hotel)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
 msgstr "Default Città/Hotel"
+
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:78
+msgctxt "(Subid)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
+msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:2
 msgctxt "(Constructor tables)"
@@ -3355,6 +3350,36 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Constructor search form"
+#~ msgstr "Costruisci modulo ricerca"
+
+#~ msgid "No customized search form. "
+#~ msgstr "Nessuna campo di ricerca personalizzato."
+
+#~ msgid "Go to setting."
+#~ msgstr "Vai alle impostazioni."
+
+#~ msgctxt "search_form_modal"
+#~ msgid "Flights"
+#~ msgstr "Volii"
+
+#~ msgctxt "search_form_modal"
+#~ msgid "Hotels"
+#~ msgstr "Hotel"
+
+#~ msgctxt "search_form_modal"
+#~ msgid "Flights + Hotels"
+#~ msgstr "Voli + Hotel"
+
+#~ msgid "City of departure default"
+#~ msgstr "Citta di partenza default"
+
+#~ msgid "City Arrival default"
+#~ msgstr "Città di Arrivo default"
+
+#~ msgid "Default City/Hotel"
+#~ msgstr "Default Città/Hotel"
 
 #~ msgid "Constructor widgets"
 #~ msgstr "Costruisci widget"

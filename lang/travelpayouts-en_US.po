@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 14:05+0300\n"
+"POT-Creation-Date: 2016-09-12 14:27+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1566,7 +1566,6 @@ msgid "Search for hotels"
 msgstr ""
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:44
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:69
 msgid "Subid"
 msgstr ""
 
@@ -1599,44 +1598,39 @@ msgid "Check out"
 msgstr ""
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
-msgid "Constructor search form"
-msgstr ""
-
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:25
-msgid "No customized search form. "
-msgstr ""
+msgctxt "(Constructor search form)"
+msgid "tp_admin_page_settings_сonstructor_search_form_title"
+msgstr "Constructor search form"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
-msgid "Go to setting."
-msgstr ""
+msgctxt "(No customized search form. )"
+msgid "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
+msgstr "No customized search form."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:34
-#, fuzzy
-msgctxt "search_form_modal"
-msgid "Flights"
-msgstr "Arial"
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:29
+msgctxt "(Go to setting.)"
+msgid "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
+msgstr "Go to setting."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:37
-msgctxt "search_form_modal"
-msgid "Hotels"
-msgstr ""
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:54
+msgctxt "(City of departure default)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
+msgstr "City of departure default"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:40
-msgctxt "search_form_modal"
-msgid "Flights + Hotels"
-msgstr ""
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:62
+msgctxt "(City Arrival default)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
+msgstr "City Arrival default"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:49
-msgid "City of departure default"
-msgstr ""
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:70
+msgctxt "(Default City/Hotel)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
+msgstr "Default City/Hotel"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:56
-msgid "City Arrival default"
-msgstr ""
-
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:63
-msgid "Default City/Hotel"
-msgstr ""
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:78
+msgctxt "(Subid)"
+msgid "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
+msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:2
 msgctxt "(Constructor tables)"
@@ -3344,6 +3338,11 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "search_form_modal"
+#~ msgid "Flights"
+#~ msgstr "Arial"
 
 #, fuzzy
 #~ msgid "Add"

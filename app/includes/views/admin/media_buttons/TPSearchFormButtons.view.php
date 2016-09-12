@@ -1,4 +1,5 @@
-<div id="constructorSearchFormModal" title="<?php _e('Constructor search form', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
+<div id="constructorSearchFormModal" title="<?php _ex('tp_admin_page_settings_сonstructor_search_form_title',
+    '(Constructor search form)', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_search_form">
@@ -22,8 +23,12 @@
                         </label>
                     <?php } ?>
                 <?php } else{
-                    _e("No customized search form. ", TPOPlUGIN_TEXTDOMAIN);
-                    ?><a href="admin.php?page=tp_control_search_shortcodes"><?php _e("Go to setting.", TPOPlUGIN_TEXTDOMAIN); ?></a><?php
+                    _ex('tp_admin_page_settings_сonstructor_search_form_no_search_form_label',
+                        "(No customized search form. )", TPOPlUGIN_TEXTDOMAIN);
+                    ?><a href="admin.php?page=tp_control_search_shortcodes">
+                    <?php _ex('tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title',
+                        "(Go to setting.)", TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a><?php
                 } ?>
             </td>
         </tr>
@@ -31,13 +36,13 @@
             <td id="td_type_search_form">
                 <select name="type_search_form" id="type_search_form">
                     <option value="avia" selected="selected">
-                        <?php echo _x('Flights','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                        <?php //echo _x('Flights','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
                     </option>
                     <option value="hotel">
-                        <?php echo _x('Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                        <?php //echo _x('Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
                     </option>
                     <option value="avia_hotel">
-                        <?php echo _x('Flights + Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
+                        <?php //echo _x('Flights + Hotels','search_form_modal', TPOPlUGIN_TEXTDOMAIN) ?>
                     </option>
                 </select>
             </td>
@@ -46,27 +51,32 @@
             <td>
                 <input type="text" name="origin_search_form" id="origin_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _e('City of departure default', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_origin_label',
+                           '(City of departure default)', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_destination_search_form">
             <td>
                 <input type="text" name="destination_search_form" id="destination_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _e('City Arrival default', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php  _ex('tp_admin_page_settings_сonstructor_search_form_field_destination_label',
+                           '(City Arrival default)', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_search_shortcode_hotel_city">
             <td>
                 <input type="text" name="search_shortcode_hotel_city" id="search_shortcode_hotel_city" value=""
                        class="searchHotelCityShortcodeAutocomplete TPHotelCityAutocomplete regular-text code"
-                       placeholder="<?php _e('Default City/Hotel', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label',
+                           '(Default City/Hotel)', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_subid_sf">
             <td>
                 <input type="text" name="tp_subid" id="tp_subid_sf" value=""
-                       class="regular-text code" placeholder="<?php _e('Subid', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       class="regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_subid_label',
+                           '(Subid)', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
     </table>
