@@ -200,10 +200,12 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                         $output .= '<tr>';
                         switch ($key_row) {
                             case "flights":
-                                $output .= '<td>' . __('Flights', TPOPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . _x('tp_admin_page_dashboard_table_td_flights',
+                                        '(Flights)', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                             case "hotels":
-                                $output .= '<td>' . __('Hotels', TPOPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . _x('tp_admin_page_dashboard_table_td_hotels',
+                                        '(Hotels)', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                         }
                         $output .= '<td>' . round($row["visitors"],2) . '</td>';
@@ -226,7 +228,8 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 ?>
 
                 <tr class="TP-rowAllCountMonth">
-                    <td><?php _e('Total', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _x('tp_admin_page_dashboard_table_td_total',
+                            '(Total)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>
@@ -304,10 +307,12 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                         $output .= '<tr>';
                         switch ($key_row) {
                             case "flights":
-                                $output .= '<td>' . __('Flights', TPOPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . _x('tp_admin_page_dashboard_table_td_flights',
+                                        '(Flights)', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                             case "hotels":
-                                $output .= '<td>' . __('Hotels', TPOPlUGIN_TEXTDOMAIN) . '</td>';
+                                $output .= '<td>' . _x('tp_admin_page_dashboard_table_td_hotels',
+                                        '(Hotels)', TPOPlUGIN_TEXTDOMAIN) . '</td>';
                                 break;
                         }
                         $output .= '<td>' . @round($row["visitors"],2) . '</td>';
@@ -330,7 +335,8 @@ class TPDashboardView extends \app\includes\views\admin\TPView{
                 ?>
 
                 <tr class="TP-rowAllCountMonth">
-                    <td><?php _e('Total', TPOPlUGIN_TEXTDOMAIN ); ?></td>
+                    <td><?php _x('tp_admin_page_dashboard_table_td_total',
+                            '(Total)', TPOPlUGIN_TEXTDOMAIN ); ?></td>
                     <td><?php echo @round($rows["flights"]["visitors"] + $rows["hotels"]["visitors"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["searches"] + $rows["hotels"]["searches"],2); ?></td>
                     <td><?php echo @round($rows["flights"]["clicks"] + $rows["hotels"]["clicks"],2); ?></td>

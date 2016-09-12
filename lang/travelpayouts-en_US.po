@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 18:09+0300\n"
+"POT-Creation-Date: 2016-09-12 18:56+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -373,9 +373,13 @@ msgid "tp_admin_bar_menu_settings_title"
 msgstr "Settings"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
+msgctxt "(Auto-links)"
+msgid "tp_admin_page_edit_post_btn_auto_links"
+msgstr "Auto-links"
+
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:134
-#, fuzzy
-msgid "Auto-links"
+msgctxt "(Auto-links)"
+msgid "tp_admin_page_edit_post_table_post_link_auto_links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:491
@@ -385,23 +389,29 @@ msgid "tp_admin_menu_page_auto_links_title"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:547
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:589
-#, fuzzy
-msgctxt "meta_box_post"
-msgid "Auto-links"
+msgctxt "(Auto-links)"
+msgid "tp_admin_page_edit_post_meta_box_auto_links"
 msgstr "Auto-links"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:595
-msgid "Enable"
-msgstr ""
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:590
+msgctxt "(Auto-links)"
+msgid "tp_admin_page_edit_post_meta_box_field_auto_links"
+msgstr "Auto-links"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:601
-msgid "Disable"
-msgstr ""
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:597
+msgctxt "(Enable)"
+msgid "tp_admin_page_edit_post_meta_box_field_auto_links_enable"
+msgstr "Enable"
 
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:719
-msgid "Placing links"
-msgstr ""
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:604
+msgctxt "(Disable)"
+msgid "tp_admin_page_edit_post_meta_box_field_auto_links_disable"
+msgstr "Disable"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:723
+msgctxt "(Placing links)"
+msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
+msgstr "Placing links"
 
 #: app/includes/controllers/admin/menu/TPDashboardController.php:21
 #: app/includes/controllers/admin/menu/TPDashboardController.php:22
@@ -450,10 +460,6 @@ msgstr "Widgets"
 msgctxt "admin menu page title wizard"
 msgid "tp_admin_menu_page_wizard_title"
 msgstr "Wizard"
-
-#: app/includes/models/admin/menu/TPFieldAutoReplLink.php:47
-msgid "Limit replacements"
-msgstr ""
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
 msgctxt "(Don't add links to all titles)"
@@ -1567,36 +1573,44 @@ msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
-msgid "Your API token"
-msgstr ""
+msgctxt "(Your API token)"
+msgid "tp_admin_page_wizard_field_token_label"
+msgstr "Your API token"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:30
-msgid "Your partner marker"
-msgstr ""
+msgctxt "(Your partner marker)"
+msgid "tp_admin_page_wizard_field_marker_label"
+msgstr "Your partner marker"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:40
-msgid "Select Tools Language and Currency"
-msgstr ""
+msgctxt "(Select Tools Language and Currency)"
+msgid "tp_admin_page_wizard_field_localization_currency_label"
+msgstr "Select Tools Language and Currency"
 
-#: app/includes/models/admin/menu/TPFieldWizard.php:46
-msgid "Widget and Tables Language"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldWizard.php:48
+msgctxt "(Widget and Tables Language)"
+msgid "tp_admin_page_wizard_field_localization_label"
+msgstr "Widget and Tables Language"
 
-#: app/includes/models/admin/menu/TPFieldWizard.php:50
-msgid "Russian"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldWizard.php:54
+msgctxt "(Russian)"
+msgid "tp_admin_page_wizard_field_localization_value_1_label"
+msgstr "Russian"
 
-#: app/includes/models/admin/menu/TPFieldWizard.php:53
-msgid "English"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldWizard.php:58
+msgctxt "(English)"
+msgid "tp_admin_page_wizard_field_localization_value_2_label"
+msgstr "English"
 
-#: app/includes/models/admin/menu/TPFieldWizard.php:63
-msgid "Currency"
-msgstr ""
+#: app/includes/models/admin/menu/TPFieldWizard.php:69
+msgctxt "(Currency)"
+msgid "tp_admin_page_wizard_field_currency_label"
+msgstr "Currency"
 
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
-msgid "Settings saved."
-msgstr ""
+msgctxt "(Settings saved.)"
+msgid "tp_admin_page_admin_notice_modal_label"
+msgstr "Settings saved."
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"
@@ -2406,68 +2420,70 @@ msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
 msgstr "unpaid earnings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:180
-#: app/includes/views/admin/menu/TPDashboardView.php:284
+#: app/includes/views/admin/menu/TPDashboardView.php:287
 msgctxt "(Visit.)"
 msgid "tp_admin_page_dashboard_table_td_1_label"
 msgstr "Visit."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:181
-#: app/includes/views/admin/menu/TPDashboardView.php:285
+#: app/includes/views/admin/menu/TPDashboardView.php:288
 msgctxt "(Search)"
 msgid "tp_admin_page_dashboard_table_td_2_label"
 msgstr "Search"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:182
-#: app/includes/views/admin/menu/TPDashboardView.php:286
+#: app/includes/views/admin/menu/TPDashboardView.php:289
 msgctxt "(Clicks)"
 msgid "tp_admin_page_dashboard_table_td_3_label"
 msgstr "Clicks"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:184
-#: app/includes/views/admin/menu/TPDashboardView.php:288
+#: app/includes/views/admin/menu/TPDashboardView.php:291
 msgctxt "(Clicks income)"
 msgid "tp_admin_page_dashboard_table_td_4_label"
 msgstr "Clicks income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:185
-#: app/includes/views/admin/menu/TPDashboardView.php:289
+#: app/includes/views/admin/menu/TPDashboardView.php:292
 msgctxt "(Bookings)"
 msgid "tp_admin_page_dashboard_table_td_5_label"
 msgstr "Bookings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:186
-#: app/includes/views/admin/menu/TPDashboardView.php:290
+#: app/includes/views/admin/menu/TPDashboardView.php:293
 msgctxt "(Paid booking)"
 msgid "tp_admin_page_dashboard_table_td_6_label"
 msgstr "Paid booking"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:187
-#: app/includes/views/admin/menu/TPDashboardView.php:291
+#: app/includes/views/admin/menu/TPDashboardView.php:294
 msgctxt "(Booking income)"
 msgid "tp_admin_page_dashboard_table_td_7_label"
 msgstr "Booking income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:188
-#: app/includes/views/admin/menu/TPDashboardView.php:292
+#: app/includes/views/admin/menu/TPDashboardView.php:295
 msgctxt "(Possible. income)"
 msgid "tp_admin_page_dashboard_table_td_8_label"
 msgstr "Possible. income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
-#: app/includes/views/admin/menu/TPDashboardView.php:307
-#, fuzzy
-msgid "Flights"
-msgstr "Arial"
-
-#: app/includes/views/admin/menu/TPDashboardView.php:206
 #: app/includes/views/admin/menu/TPDashboardView.php:310
-msgid "Hotels"
-msgstr ""
+msgctxt "(Flights)"
+msgid "tp_admin_page_dashboard_table_td_flights"
+msgstr "Flights"
 
-#: app/includes/views/admin/menu/TPDashboardView.php:229
-#: app/includes/views/admin/menu/TPDashboardView.php:333
-msgid "Total"
-msgstr ""
+#: app/includes/views/admin/menu/TPDashboardView.php:207
+#: app/includes/views/admin/menu/TPDashboardView.php:314
+msgctxt "(Hotels)"
+msgid "tp_admin_page_dashboard_table_td_hotels"
+msgstr "Hotels"
+
+#: app/includes/views/admin/menu/TPDashboardView.php:231
+#: app/includes/views/admin/menu/TPDashboardView.php:338
+msgctxt "(Total)"
+msgid "tp_admin_page_dashboard_table_td_total"
+msgstr "Total"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:3
 msgctxt "(Flights)"
@@ -3429,6 +3445,19 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#, fuzzy
+#~ msgid "Auto-links"
+#~ msgstr "Auto-links"
+
+#, fuzzy
+#~ msgctxt "meta_box_post"
+#~ msgid "Auto-links"
+#~ msgstr "Auto-links"
+
+#, fuzzy
+#~ msgid "Flights"
+#~ msgstr "Arial"
 
 #, fuzzy
 #~ msgctxt "search_form_modal"

@@ -44,7 +44,7 @@ class TPFieldAutoReplLink
         <div class="TP-colFormCust">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _e('Limit replacements', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php //_e('Limit replacements', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
                         <label>
                             <input name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"
