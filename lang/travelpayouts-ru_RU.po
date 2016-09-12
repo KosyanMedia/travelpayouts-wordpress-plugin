@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 14:24+0300\n"
+"POT-Creation-Date: 2016-09-12 14:48+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -42,12 +42,10 @@ msgid "Hotel Name"
 msgstr "Название отеля"
 
 #: app/includes/TPLoaderScripts.php:310 app/includes/TPPluginWidget.php:249
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
 msgid "Destination"
 msgstr "Куда"
 
 #: app/includes/TPLoaderScripts.php:311 app/includes/TPPluginWidget.php:240
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
 msgid "Origin"
 msgstr "Откуда"
 
@@ -64,7 +62,6 @@ msgid "hotels"
 msgstr "отелей"
 
 #: app/includes/TPLoaderScripts.php:319
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:38
 msgid "City"
 msgstr "Город"
 
@@ -1544,56 +1541,94 @@ msgid "Currency"
 msgstr "Валюта"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
-msgid "Constructor link"
+msgctxt "(Constructor link)"
+msgid "tp_admin_page_settings_сonstructor_link_title"
 msgstr "Конструктор ссылок"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:8
-msgid "Text link"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:9
+msgctxt "(Text link)"
+msgid "tp_admin_page_settings_сonstructor_link_field_text_link_label"
 msgstr "Текст ссылки"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:14
-msgid "Select the link"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:17
+msgctxt "(Select the link)"
+msgid "tp_admin_page_settings_сonstructor_link_field_type_link_label"
 msgstr "Выберите ссылку"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:15
-msgid "Search for flights"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:21
+msgctxt "(Search for flights)"
+msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_1_label"
 msgstr "Поиск авиабилетов"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:16
-msgid "Search for hotels"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:25
+msgctxt "(Search for hotels)"
+msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_2_label"
 msgstr "Поиск отелей"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:44
-msgid "Subid"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:35
+msgctxt "(Origin)"
+msgid "tp_admin_page_settings_сonstructor_link_field_origin_label"
+msgstr "Откуда"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:43
+msgctxt "(Destination)"
+msgid "tp_admin_page_settings_сonstructor_link_field_destination_label"
+msgstr "Куда"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:51
+msgctxt "(City)"
+msgid "tp_admin_page_settings_сonstructor_link_field_city_label"
+msgstr "Город"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:59
+msgctxt "(Subid)"
+msgid "tp_admin_page_settings_сonstructor_link_field_subid_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:50
-msgid "Departure date"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
+msgctxt "(Departure date)"
+msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_label"
 msgstr "Дата отправления"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:52
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:62
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:81
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:91
-msgctxt "insert link date"
-msgid "today"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:69
+msgctxt "(today)"
+msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_btn_today_label"
 msgstr "сегодня"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:60
-msgid "Return date"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:78
+msgctxt "(Return date)"
+msgid "tp_admin_page_settings_сonstructor_link_field_return_date_label"
 msgstr "Дата возвращения"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:71
-msgid "One way"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:81
+msgctxt "(today)"
+msgid "tp_admin_page_settings_сonstructor_link_field_return_date_btn_today_label"
+msgstr "сегодня"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:91
+msgctxt "(One way)"
+msgid "tp_admin_page_settings_сonstructor_link_field_one_way_label"
 msgstr "В одну сторону"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:79
-msgid "Check in"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:100
+msgctxt "(Check in)"
+msgid "tp_admin_page_settings_сonstructor_link_field_check_in_label"
 msgstr "Дата прибытия"
 
-#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:89
-msgid "Check out"
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:103
+msgctxt "(today)"
+msgid "tp_admin_page_settings_сonstructor_link_field_check_in_date_btn_today_label"
+msgstr "сегодня"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:112
+msgctxt "(Check out)"
+msgid "tp_admin_page_settings_сonstructor_link_field_check_out_label"
 msgstr "Дата выезда"
+
+#: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:115
+msgctxt "(today)"
+msgid "tp_admin_page_settings_сonstructor_link_field_check_out_date_btn_today_label"
+msgstr "сегодня"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
 msgctxt "(Constructor search form)"
@@ -3340,6 +3375,43 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr ""
+
+#~ msgid "Constructor link"
+#~ msgstr "Конструктор ссылок"
+
+#~ msgid "Text link"
+#~ msgstr "Текст ссылки"
+
+#~ msgid "Select the link"
+#~ msgstr "Выберите ссылку"
+
+#~ msgid "Search for flights"
+#~ msgstr "Поиск авиабилетов"
+
+#~ msgid "Search for hotels"
+#~ msgstr "Поиск отелей"
+
+#~ msgid "Subid"
+#~ msgstr "Дополнительный маркер"
+
+#~ msgid "Departure date"
+#~ msgstr "Дата отправления"
+
+#~ msgctxt "insert link date"
+#~ msgid "today"
+#~ msgstr "сегодня"
+
+#~ msgid "Return date"
+#~ msgstr "Дата возвращения"
+
+#~ msgid "One way"
+#~ msgstr "В одну сторону"
+
+#~ msgid "Check in"
+#~ msgstr "Дата прибытия"
+
+#~ msgid "Check out"
+#~ msgstr "Дата выезда"
 
 #~ msgid "Constructor search form"
 #~ msgstr "Конструктор поисковых форм"
