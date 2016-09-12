@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-09 19:25+0300\n"
+"POT-Creation-Date: 2016-09-12 13:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -41,16 +41,11 @@ msgstr "Nome Hotel"
 
 #: app/includes/TPLoaderScripts.php:310 app/includes/TPPluginWidget.php:249
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:31
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:116
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:143
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:246
 msgid "Destination"
 msgstr "Destinazione"
 
 #: app/includes/TPLoaderScripts.php:311 app/includes/TPPluginWidget.php:240
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:24
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:109
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:137
 msgid "Origin"
 msgstr "Luogo di partenza"
 
@@ -88,12 +83,10 @@ msgid "Auto-links are applied"
 msgstr "Auto-links è applicato"
 
 #: app/includes/TPLoaderScripts.php:326 app/includes/TPPluginWidget.php:258
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:85
 msgid "Airline"
 msgstr "Compagnia Aerea"
 
 #: app/includes/TPLoaderScripts.php:327
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:88
 msgid "Delete"
 msgstr "Cancella"
 
@@ -192,8 +185,6 @@ msgid "Cheap Flights to destination"
 msgstr "Voli Economici per destinazione"
 
 #: app/includes/TPPluginWidget.php:267
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:124
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:281
 msgid "Limit"
 msgstr "Limite"
 
@@ -1577,7 +1568,6 @@ msgstr "Cerca per hotel"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:44
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:69
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:48
 msgid "Subid"
 msgstr "Subid"
 
@@ -1598,7 +1588,6 @@ msgid "Return date"
 msgstr "Data Ritorno"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:71
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:220
 msgid "One way"
 msgstr "Solo andata"
 
@@ -1824,120 +1813,208 @@ msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
 msgstr "Diretto"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:2
-msgid "Constructor widgets"
+msgctxt "(Constructor widgets)"
+msgid "tp_admin_page_settings_сonstructor_widgets_title"
 msgstr "Costruisci widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:32
-msgid "Select widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
+msgctxt "(Select widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_0"
 msgstr "Seleziona widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
-msgid "Map Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
+msgctxt "(Map Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_1"
 msgstr "Mappa Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:34
-msgid "Hotels Map Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:41
+msgctxt "(Hotels Map Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_2"
 msgstr "Widget Mappa Hotel"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:35
-msgid "Calendar Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:45
+msgctxt "(Calendar Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3"
 msgstr "Calendario Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
-msgid "Subscription Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
+msgctxt "(Subscription Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4"
 msgstr "Widget Sottoscrizione"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:39
-msgid "Hotel Widget"
-msgstr "Hotel Widget "
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
+msgctxt "(Hotel Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_5"
+msgstr "Hotel Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:40
-msgid "Popular Destinations Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:59
+msgctxt "(Popular Destinations Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_6"
 msgstr "Widget Destinazioni Popolari"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:41
-msgid "Hotels Selections Widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:63
+msgctxt "(Hotels Selections Widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_7"
 msgstr "Widget Selezione Hotel"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:42
-msgid "Best deals widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
+msgctxt "(Best deals widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_8"
 msgstr "Widget Migliori Offerte"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:53
-msgid "Widget type"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:76
+msgctxt "(Subid)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_subid_label"
+msgstr "Subid"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:83
+msgctxt "(Widget type)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_label"
 msgstr "Tipo Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:56
-msgid "Tile"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:89
+msgctxt "(Tile)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_0"
 msgstr "Tile"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:58
-msgid "Slider"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:94
+msgctxt "(Slider)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_1"
 msgstr "Slider"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
-msgid "Filter by airlines"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:105
+msgctxt "(Filter by airlines)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_0_label"
 msgstr "Filtra per compagnia"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:73
-msgid "Filter by routes"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:112
+msgctxt "(Filter by routes)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_1_label"
 msgstr "Filtra per rotta"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:98
-msgid "Add"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:125
+msgctxt "(Airline)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_label"
+msgstr "Compagnia Aerea"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:129
+msgctxt "(Delete)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_btn_delete_label"
+msgstr "Cancella"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:140
+msgctxt "(Add)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_widget_8_btn_add_label"
 msgstr "Aggiungi"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:155
-msgid "Year"
-msgstr "Anno"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:152
+msgctxt "(Origin)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_widget_8_label"
+msgstr "Luogo di partenza"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:158
-msgid "Current month"
-msgstr "Mese corrente"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:160
+msgctxt "(Destination)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_8_label"
+msgstr "Destinazione"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:170
+msgctxt "(Limit)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_8_label"
+msgstr "Limite"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:186
-msgid "Range, days"
+msgctxt "(Origin)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_label"
+msgstr "Luogo di partenza"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:194
+msgctxt "(Destination)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_label"
+msgstr "Destinazione"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:207
+msgctxt "(Year)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_year"
+msgstr "Anno"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:211
+msgctxt "(Current month)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
+msgstr "Mese corrente"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:240
+msgctxt "(Range, days)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
 msgstr "Raggio, giorni"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:197
-msgid "Hotel"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:253
+msgctxt "(Hotel)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
 msgstr "Hotel"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:202
-msgid "Size"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:259
+msgctxt "(Size)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_size_label"
 msgstr "Misura"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:212
-msgid "Direct Flights Only"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:270
+msgctxt "(Direct Flights Only)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
 msgstr "Solo Voli Diretti"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:228
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:259
-msgid "Width"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:279
+msgctxt "(One way)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
+msgstr "Solo Andata"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:288
+msgctxt "(Width)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
 msgstr "Larghezza"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:236
-msgid "Count"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:297
+msgctxt "(Count)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
 msgstr "Conto"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
-msgid "Responsive"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:309
+msgctxt "(Destination)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
+msgstr "Destinazione"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:319
+msgctxt "(Responsive)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
 msgstr "Responsive"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:268
-msgid "View widget"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:324
+msgctxt "(Width)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_width_label"
+msgstr "Larghezza"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:335
+msgctxt "(View widget)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
 msgstr "Vedi Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:271
-msgid "Full"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:341
+msgctxt "(Full)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
 msgstr "Pieno"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:273
-msgid "Compact"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:346
+msgctxt "(Compact)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
 msgstr "Compatto"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:310
-msgid "Zoom"
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:356
+msgctxt "(Limit)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
+msgstr "Limite"
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:387
+msgctxt "(Zoom)"
+msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
 msgstr "Zoom"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
@@ -3278,6 +3355,93 @@ msgstr "wpplugin@travelpayouts.com"
 #: core/controllers/TPOBaseController.php:24
 msgid "View "
 msgstr "Vista"
+
+#~ msgid "Constructor widgets"
+#~ msgstr "Costruisci widget"
+
+#~ msgid "Select widget"
+#~ msgstr "Seleziona widget"
+
+#~ msgid "Map Widget"
+#~ msgstr "Mappa Widget"
+
+#~ msgid "Hotels Map Widget"
+#~ msgstr "Widget Mappa Hotel"
+
+#~ msgid "Calendar Widget"
+#~ msgstr "Calendario Widget"
+
+#~ msgid "Subscription Widget"
+#~ msgstr "Widget Sottoscrizione"
+
+#~ msgid "Hotel Widget"
+#~ msgstr "Hotel Widget "
+
+#~ msgid "Popular Destinations Widget"
+#~ msgstr "Widget Destinazioni Popolari"
+
+#~ msgid "Hotels Selections Widget"
+#~ msgstr "Widget Selezione Hotel"
+
+#~ msgid "Best deals widget"
+#~ msgstr "Widget Migliori Offerte"
+
+#~ msgid "Widget type"
+#~ msgstr "Tipo Widget"
+
+#~ msgid "Tile"
+#~ msgstr "Tile"
+
+#~ msgid "Slider"
+#~ msgstr "Slider"
+
+#~ msgid "Filter by airlines"
+#~ msgstr "Filtra per compagnia"
+
+#~ msgid "Filter by routes"
+#~ msgstr "Filtra per rotta"
+
+#~ msgid "Add"
+#~ msgstr "Aggiungi"
+
+#~ msgid "Year"
+#~ msgstr "Anno"
+
+#~ msgid "Current month"
+#~ msgstr "Mese corrente"
+
+#~ msgid "Range, days"
+#~ msgstr "Raggio, giorni"
+
+#~ msgid "Hotel"
+#~ msgstr "Hotel"
+
+#~ msgid "Size"
+#~ msgstr "Misura"
+
+#~ msgid "Direct Flights Only"
+#~ msgstr "Solo Voli Diretti"
+
+#~ msgid "Width"
+#~ msgstr "Larghezza"
+
+#~ msgid "Count"
+#~ msgstr "Conto"
+
+#~ msgid "Responsive"
+#~ msgstr "Responsive"
+
+#~ msgid "View widget"
+#~ msgstr "Vedi Widget"
+
+#~ msgid "Full"
+#~ msgstr "Pieno"
+
+#~ msgid "Compact"
+#~ msgstr "Compatto"
+
+#~ msgid "Zoom"
+#~ msgstr "Zoom"
 
 #~ msgid "Constructor tables"
 #~ msgstr "Costruisci tabelle"
