@@ -98,7 +98,7 @@
                 <td>
                     <label>
                         <?php _ex('tp_admin_page_settings_сonstructor_link_field_check_in_label',
-                            '(Check in)', TPOPlUGIN_TEXTDOMAIN); ?>:
+                            '(Check in)' , TPOPlUGIN_TEXTDOMAIN); ?>:
                         <input type="text" name="check_in" id="check_in_link"
                                value="<?php _ex('tp_admin_page_settings_сonstructor_link_field_check_in_date_btn_today_label',
                                    '(today)', TPOPlUGIN_TEXTDOMAIN); ?>+1"
