@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 18:54+0300\n"
+"POT-Creation-Date: 2016-09-13 00:11+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -163,136 +163,173 @@ msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Отмена"
 
 #: app/includes/TPPluginWidget.php:163
-msgid "Title:"
+msgctxt "(Title:)"
+msgid "tp_plugin_widget_form_field_title_label"
 msgstr "Заголовок:"
 
-#: app/includes/TPPluginWidget.php:171 app/includes/TPPluginWidget.php:178
-#: app/includes/TPPluginWidget.php:208
-msgid "Select the table"
+#: app/includes/TPPluginWidget.php:172
+msgctxt "(Select the table)"
+msgid "tp_plugin_widget_form_field_select_table_label"
 msgstr "Выберите таблицу"
 
-#: app/includes/TPPluginWidget.php:181 app/includes/TPPluginWidget.php:210
-msgid "Flights from origin to destination, One Way (next month)"
+#: app/includes/TPPluginWidget.php:180 app/includes/TPPluginWidget.php:235
+msgctxt "(Select the table)"
+msgid "tp_plugin_widget_form_field_select_table_value_0_label"
+msgstr "Выберите таблицу"
+
+#: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:239
+msgctxt "(Flights from origin to destination, One Way (next month))"
+msgid "tp_plugin_widget_form_field_select_table_value_1_label"
 msgstr "Цены на месяц по направлению, в одну сторону "
 
-#: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:212
-msgid "Flights from Origin to Destination (next few days)"
+#: app/includes/TPPluginWidget.php:188 app/includes/TPPluginWidget.php:243
+msgctxt "(Flights from Origin to Destination (next few days))"
+msgid "tp_plugin_widget_form_field_select_table_value_2_label"
 msgstr "Билеты по направлению на ближайшие дни"
 
-#: app/includes/TPPluginWidget.php:187 app/includes/TPPluginWidget.php:215
-msgid "Cheapest Flights from origin to destination, Round-trip"
+#: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:248
+msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+msgid "tp_plugin_widget_form_field_select_table_value_3_label"
 msgstr "Самые дешевые билеты по направлению"
 
-#: app/includes/TPPluginWidget.php:189 app/includes/TPPluginWidget.php:217
-msgid "Cheapest Flights from origin to destination (next month)"
+#: app/includes/TPPluginWidget.php:197 app/includes/TPPluginWidget.php:252
+msgctxt "(Cheapest Flights from origin to destination (next month))"
+msgid "tp_plugin_widget_form_field_select_table_value_4_label"
 msgstr "Самые дешевые билеты по направлению в этом месяце"
 
-#: app/includes/TPPluginWidget.php:191 app/includes/TPPluginWidget.php:219
-msgid "Cheapest Flights from origin to destination (next year)"
+#: app/includes/TPPluginWidget.php:201 app/includes/TPPluginWidget.php:256
+msgctxt "(Cheapest Flights from origin to destination (next year))"
+msgid "tp_plugin_widget_form_field_select_table_value_5_label"
 msgstr "Цены на билеты по месяцам"
 
-#: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:221
-msgid "Direct Flights from origin to destination"
+#: app/includes/TPPluginWidget.php:205 app/includes/TPPluginWidget.php:260
+msgctxt "(Direct Flights from origin to destination)"
+msgid "tp_plugin_widget_form_field_select_table_value_6_label"
 msgstr "Билеты без пересадок по направлению"
 
-#: app/includes/TPPluginWidget.php:195 app/includes/TPPluginWidget.php:223
-msgid "Direct Flights from origin"
+#: app/includes/TPPluginWidget.php:209 app/includes/TPPluginWidget.php:264
+msgctxt "(Direct Flights from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_7_label"
 msgstr "Билеты без пересадок ИЗ"
 
-#: app/includes/TPPluginWidget.php:197
-msgid "Popular Destinations from origin"
+#: app/includes/TPPluginWidget.php:213
+msgctxt "(Popular Destinations from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_8_label"
 msgstr "Популярные направления из города"
 
-#: app/includes/TPPluginWidget.php:199 app/includes/TPPluginWidget.php:225
-msgid "Most popular flights within this Airlines"
+#: app/includes/TPPluginWidget.php:217 app/includes/TPPluginWidget.php:268
+msgctxt "(Most popular flights within this Airlines)"
+msgid "tp_plugin_widget_form_field_select_table_value_9_label"
 msgstr "Популярные направления авиакомпании"
 
-#: app/includes/TPPluginWidget.php:202 app/includes/TPPluginWidget.php:228
-msgid "Searched on our website"
+#: app/includes/TPPluginWidget.php:222 app/includes/TPPluginWidget.php:273
+msgctxt "(Searched on our website)"
+msgid "tp_plugin_widget_form_field_select_table_value_11_label"
 msgstr "На нашем сайте искали"
 
-#: app/includes/TPPluginWidget.php:204 app/includes/TPPluginWidget.php:230
-msgid "Cheap Flights from origin"
+#: app/includes/TPPluginWidget.php:226 app/includes/TPPluginWidget.php:277
+msgctxt "(Cheap Flights from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_12_label"
 msgstr "Дешевые перелеты из города"
 
-#: app/includes/TPPluginWidget.php:206 app/includes/TPPluginWidget.php:232
-msgid "Cheap Flights to destination"
+#: app/includes/TPPluginWidget.php:230 app/includes/TPPluginWidget.php:281
+msgctxt "(Cheap Flights to destination)"
+msgid "tp_plugin_widget_form_field_select_table_value_13_label"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/TPPluginWidget.php:240
-msgid "Origin"
+#: app/includes/TPPluginWidget.php:291
+msgctxt "(Origin)"
+msgid "tp_plugin_widget_form_field_origin_label"
 msgstr "Откуда"
 
-#: app/includes/TPPluginWidget.php:249
-msgid "Destination"
+#: app/includes/TPPluginWidget.php:301
+msgctxt "(Destination)"
+msgid "tp_plugin_widget_form_field_destination_label"
 msgstr "Куда"
 
-#: app/includes/TPPluginWidget.php:258
-msgid "Airline"
+#: app/includes/TPPluginWidget.php:311
+msgctxt "(Airline)"
+msgid "tp_plugin_widget_form_field_airline_label"
 msgstr "Авиакомпания"
 
-#: app/includes/TPPluginWidget.php:267
-msgid "Limit"
+#: app/includes/TPPluginWidget.php:321
+msgctxt "(Limit)"
+msgid "tp_plugin_widget_form_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/TPPluginWidget.php:279
-msgid "Paginate"
+#: app/includes/TPPluginWidget.php:334
+msgctxt "(Paginate)"
+msgid "tp_plugin_widget_form_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/TPPluginWidget.php:287
-msgid "One Way"
+#: app/includes/TPPluginWidget.php:343
+msgctxt "(One Way)"
+msgid "tp_plugin_widget_form_field_one_way_label"
 msgstr "В одну сторону "
 
-#: app/includes/TPPluginWidget.php:295
-msgid "No title"
+#: app/includes/TPPluginWidget.php:352
+msgctxt "(No title)"
+msgid "tp_plugin_widget_form_field_off_title_label"
 msgstr "Убрать заголовок"
 
-#: app/includes/TPPluginWidget.php:301
-msgid "Number of stops"
+#: app/includes/TPPluginWidget.php:359
+msgctxt "(Number of stops)"
+msgid "tp_plugin_widget_form_field_stops_label"
 msgstr "Пересадки"
 
-#: app/includes/TPPluginWidget.php:305
-msgid "All"
+#: app/includes/TPPluginWidget.php:364
+msgctxt "(All)"
+msgid "tp_plugin_widget_form_field_stops_value_0_label"
 msgstr "Все"
 
-#: app/includes/TPPluginWidget.php:307
-msgid "No more than one stop"
+#: app/includes/TPPluginWidget.php:366
+msgctxt "(No more than one stop)"
+msgid "tp_plugin_widget_form_field_stops_value_1_label"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/TPPluginWidget.php:309
-msgid "Direct"
+#: app/includes/TPPluginWidget.php:368
+msgctxt "(Direct)"
+msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "без пересадок"
 
 #: app/includes/TPRequestApi.php:598
-msgid "The variable $origin parameters not set or incorrectly."
+msgctxt "(The variable $origin parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_origin"
 msgstr "Переменная $origin не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:599
-msgid "The variable $destination parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:600
+msgctxt "(The variable $destination parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_destination"
 msgstr "Переменная $destination не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:600
-msgid "The variable $currency parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:602
+msgctxt "(The variable $currency parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_currency"
 msgstr "Переменная $currency не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:601
-msgid "The variable $departure_at parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:604
+msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_departure_at"
 msgstr "Переменная $departure_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:602
-msgid "The variable $calendar_type parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:606
+msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_calendar_type"
 msgstr "Переменная $calendar_type не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:603
-msgid "The variable $return_at parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:608
+msgctxt "(The variable $return_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_return_at"
 msgstr "Переменная $return_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:604
-msgid "The variable $airline parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:610
+msgctxt "(The variable $airline parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_airline"
 msgstr "Переменная $airline не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:608
-msgid "Unknown error."
+#: app/includes/TPRequestApi.php:615
+msgctxt "(Unknown error.)"
+msgid "tp_request_api_error_msg_unknown_error"
 msgstr "Произошла неизвестная ошибка."
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
@@ -3445,9 +3482,109 @@ msgctxt "(wpplugin@travelpayouts.com)"
 msgid "tp_admin_page_link_help_link_label"
 msgstr "wpplugin@travelpayouts.com"
 
-#: core/controllers/TPOBaseController.php:24
-msgid "View "
-msgstr ""
+#: core/controllers/TPOBaseController.php:25
+msgctxt "(View %s not found)"
+msgid "tp_base_controler_load_view_error_msg"
+msgstr "Вид %s не найден"
+
+#~ msgid "Title:"
+#~ msgstr "Заголовок:"
+
+#~ msgid "Select the table"
+#~ msgstr "Выберите таблицу"
+
+#~ msgid "Flights from origin to destination, One Way (next month)"
+#~ msgstr "Цены на месяц по направлению, в одну сторону "
+
+#~ msgid "Flights from Origin to Destination (next few days)"
+#~ msgstr "Билеты по направлению на ближайшие дни"
+
+#~ msgid "Cheapest Flights from origin to destination, Round-trip"
+#~ msgstr "Самые дешевые билеты по направлению"
+
+#~ msgid "Cheapest Flights from origin to destination (next month)"
+#~ msgstr "Самые дешевые билеты по направлению в этом месяце"
+
+#~ msgid "Cheapest Flights from origin to destination (next year)"
+#~ msgstr "Цены на билеты по месяцам"
+
+#~ msgid "Direct Flights from origin to destination"
+#~ msgstr "Билеты без пересадок по направлению"
+
+#~ msgid "Direct Flights from origin"
+#~ msgstr "Билеты без пересадок ИЗ"
+
+#~ msgid "Popular Destinations from origin"
+#~ msgstr "Популярные направления из города"
+
+#~ msgid "Most popular flights within this Airlines"
+#~ msgstr "Популярные направления авиакомпании"
+
+#~ msgid "Searched on our website"
+#~ msgstr "На нашем сайте искали"
+
+#~ msgid "Cheap Flights from origin"
+#~ msgstr "Дешевые перелеты из города"
+
+#~ msgid "Cheap Flights to destination"
+#~ msgstr "Дешевые перелеты в город"
+
+#~ msgid "Origin"
+#~ msgstr "Откуда"
+
+#~ msgid "Destination"
+#~ msgstr "Куда"
+
+#~ msgid "Airline"
+#~ msgstr "Авиакомпания"
+
+#~ msgid "Limit"
+#~ msgstr "Лимит"
+
+#~ msgid "Paginate"
+#~ msgstr "Пейджинация"
+
+#~ msgid "One Way"
+#~ msgstr "В одну сторону "
+
+#~ msgid "No title"
+#~ msgstr "Убрать заголовок"
+
+#~ msgid "Number of stops"
+#~ msgstr "Пересадки"
+
+#~ msgid "All"
+#~ msgstr "Все"
+
+#~ msgid "No more than one stop"
+#~ msgstr "Не более 1 пересадки"
+
+#~ msgid "Direct"
+#~ msgstr "без пересадок"
+
+#~ msgid "The variable $origin parameters not set or incorrectly."
+#~ msgstr "Переменная $origin не задана или задана не верно."
+
+#~ msgid "The variable $destination parameters not set or incorrectly."
+#~ msgstr "Переменная $destination не задана или задана не верно."
+
+#~ msgid "The variable $currency parameters not set or incorrectly."
+#~ msgstr "Переменная $currency не задана или задана не верно."
+
+#~ msgid "The variable $departure_at parameters not set or incorrectly."
+#~ msgstr "Переменная $departure_at не задана или задана не верно."
+
+#~ msgid "The variable $calendar_type parameters not set or incorrectly."
+#~ msgstr "Переменная $calendar_type не задана или задана не верно."
+
+#~ msgid "The variable $return_at parameters not set or incorrectly."
+#~ msgstr "Переменная $return_at не задана или задана не верно."
+
+#~ msgid "The variable $airline parameters not set or incorrectly."
+#~ msgstr "Переменная $airline не задана или задана не верно."
+
+#~ msgid "Unknown error."
+#~ msgstr "Произошла неизвестная ошибка."
 
 #~ msgid "Auto-links"
 #~ msgstr "Подстановка ссылок"

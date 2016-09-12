@@ -21,7 +21,8 @@ class TPOBaseController {
                     break;
             }
         } else {
-            wp_die(__("View ".$view." not found"));
+            //wp_die(__("View ".$view." not found"));
+            wp_die(sprintf(_x('tp_base_controler_load_view_error_msg', '(View %s not found)', TPOPlUGIN_TEXTDOMAIN), $view));
         }
     }
 }

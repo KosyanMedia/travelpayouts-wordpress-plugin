@@ -595,16 +595,24 @@ class TPRequestApi {
      */
     public function get_error( $error ) {
         $errors = array(
-            'origin'        =>  __( 'The variable $origin parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'destination'   =>  __( 'The variable $destination parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'currency'      =>  __( 'The variable $currency parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'departure_at'  =>  __( 'The variable $departure_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'calendar_type' =>  __( 'The variable $calendar_type parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'return_at'     =>  __( 'The variable $return_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'airline'       =>  __( 'The variable $airline parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
+            'origin'        =>  _x('tp_request_api_error_msg_origin',
+                '(The variable $origin parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'destination'   =>  _x('tp_request_api_error_msg_destination',
+                '(The variable $destination parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'currency'      =>  _x('tp_request_api_error_msg_currency',
+                '(The variable $currency parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'departure_at'  =>  _x('tp_request_api_error_msg_departure_at',
+                '(The variable $departure_at parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'calendar_type' =>  _x('tp_request_api_error_msg_calendar_type',
+                '(The variable $calendar_type parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'return_at'     =>  _x('tp_request_api_error_msg_return_at',
+                '(The variable $return_at parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
+            'airline'       =>  _x('tp_request_api_error_msg_airline',
+                '(The variable $airline parameters not set or incorrectly.)', TPOPlUGIN_TEXTDOMAIN ),
         );
         if( ! empty( $error ) && isset( $errors[$error] ) )
             return $errors[$error];
-        return __( 'Unknown error.', TPOPlUGIN_TEXTDOMAIN );
+        return _x('tp_request_api_error_msg_unknown_error',
+            '(Unknown error.)', TPOPlUGIN_TEXTDOMAIN );
     }
 }

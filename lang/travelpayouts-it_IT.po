@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-12 18:56+0300\n"
+"POT-Creation-Date: 2016-09-13 00:12+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -163,136 +163,173 @@ msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Cancella"
 
 #: app/includes/TPPluginWidget.php:163
-msgid "Title:"
-msgstr "Titolo:"
+msgctxt "(Title:)"
+msgid "tp_plugin_widget_form_field_title_label"
+msgstr "Title:"
 
-#: app/includes/TPPluginWidget.php:171 app/includes/TPPluginWidget.php:178
-#: app/includes/TPPluginWidget.php:208
-msgid "Select the table"
+#: app/includes/TPPluginWidget.php:172
+msgctxt "(Select the table)"
+msgid "tp_plugin_widget_form_field_select_table_label"
 msgstr "Seleziona la tabella"
 
-#: app/includes/TPPluginWidget.php:181 app/includes/TPPluginWidget.php:210
-msgid "Flights from origin to destination, One Way (next month)"
+#: app/includes/TPPluginWidget.php:180 app/includes/TPPluginWidget.php:235
+msgctxt "(Select the table)"
+msgid "tp_plugin_widget_form_field_select_table_value_0_label"
+msgstr "Seleziona la tabella"
+
+#: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:239
+msgctxt "(Flights from origin to destination, One Way (next month))"
+msgid "tp_plugin_widget_form_field_select_table_value_1_label"
 msgstr "Voli da luogo di partenza a destinazione, Solo Andata (mese prossimo)"
 
-#: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:212
-msgid "Flights from Origin to Destination (next few days)"
+#: app/includes/TPPluginWidget.php:188 app/includes/TPPluginWidget.php:243
+msgctxt "(Flights from Origin to Destination (next few days))"
+msgid "tp_plugin_widget_form_field_select_table_value_2_label"
 msgstr "Voli da Origine a Destinazione (prossimi giorni)"
 
-#: app/includes/TPPluginWidget.php:187 app/includes/TPPluginWidget.php:215
-msgid "Cheapest Flights from origin to destination, Round-trip"
+#: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:248
+msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+msgid "tp_plugin_widget_form_field_select_table_value_3_label"
 msgstr "Voli economici da luogo partenza a destinazione, andata e ritorno"
 
-#: app/includes/TPPluginWidget.php:189 app/includes/TPPluginWidget.php:217
-msgid "Cheapest Flights from origin to destination (next month)"
+#: app/includes/TPPluginWidget.php:197 app/includes/TPPluginWidget.php:252
+msgctxt "(Cheapest Flights from origin to destination (next month))"
+msgid "tp_plugin_widget_form_field_select_table_value_4_label"
 msgstr "Voli economici da luogo partenza a destinazione (mese prossimo)"
 
-#: app/includes/TPPluginWidget.php:191 app/includes/TPPluginWidget.php:219
-msgid "Cheapest Flights from origin to destination (next year)"
+#: app/includes/TPPluginWidget.php:201 app/includes/TPPluginWidget.php:256
+msgctxt "(Cheapest Flights from origin to destination (next year))"
+msgid "tp_plugin_widget_form_field_select_table_value_5_label"
 msgstr "Voli Economici da luogo di partenza a destinazione (anno prossimo)"
 
-#: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:221
-msgid "Direct Flights from origin to destination"
+#: app/includes/TPPluginWidget.php:205 app/includes/TPPluginWidget.php:260
+msgctxt "(Direct Flights from origin to destination)"
+msgid "tp_plugin_widget_form_field_select_table_value_6_label"
 msgstr "Voli diretti da origine a destinazione"
 
-#: app/includes/TPPluginWidget.php:195 app/includes/TPPluginWidget.php:223
-msgid "Direct Flights from origin"
+#: app/includes/TPPluginWidget.php:209 app/includes/TPPluginWidget.php:264
+msgctxt "(Direct Flights from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_7_label"
 msgstr "Voli diretti da origine"
 
-#: app/includes/TPPluginWidget.php:197
-msgid "Popular Destinations from origin"
+#: app/includes/TPPluginWidget.php:213
+msgctxt "(Popular Destinations from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_8_label"
 msgstr "Destinazioni Popolari dal luogo di partenza"
 
-#: app/includes/TPPluginWidget.php:199 app/includes/TPPluginWidget.php:225
-msgid "Most popular flights within this Airlines"
+#: app/includes/TPPluginWidget.php:217 app/includes/TPPluginWidget.php:268
+msgctxt "(Most popular flights within this Airlines)"
+msgid "tp_plugin_widget_form_field_select_table_value_9_label"
 msgstr "Viaggi più popolari con questa Compagnia"
 
-#: app/includes/TPPluginWidget.php:202 app/includes/TPPluginWidget.php:228
-msgid "Searched on our website"
+#: app/includes/TPPluginWidget.php:222 app/includes/TPPluginWidget.php:273
+msgctxt "(Searched on our website)"
+msgid "tp_plugin_widget_form_field_select_table_value_11_label"
 msgstr "Cerca sul nostro sito"
 
-#: app/includes/TPPluginWidget.php:204 app/includes/TPPluginWidget.php:230
-msgid "Cheap Flights from origin"
+#: app/includes/TPPluginWidget.php:226 app/includes/TPPluginWidget.php:277
+msgctxt "(Cheap Flights from origin)"
+msgid "tp_plugin_widget_form_field_select_table_value_12_label"
 msgstr "Voli Economici dalla città di partenza"
 
-#: app/includes/TPPluginWidget.php:206 app/includes/TPPluginWidget.php:232
-msgid "Cheap Flights to destination"
+#: app/includes/TPPluginWidget.php:230 app/includes/TPPluginWidget.php:281
+msgctxt "(Cheap Flights to destination)"
+msgid "tp_plugin_widget_form_field_select_table_value_13_label"
 msgstr "Voli Economici per destinazione"
 
-#: app/includes/TPPluginWidget.php:240
-msgid "Origin"
+#: app/includes/TPPluginWidget.php:291
+msgctxt "(Origin)"
+msgid "tp_plugin_widget_form_field_origin_label"
 msgstr "Luogo di partenza"
 
-#: app/includes/TPPluginWidget.php:249
-msgid "Destination"
+#: app/includes/TPPluginWidget.php:301
+msgctxt "(Destination)"
+msgid "tp_plugin_widget_form_field_destination_label"
 msgstr "Destinazione"
 
-#: app/includes/TPPluginWidget.php:258
-msgid "Airline"
+#: app/includes/TPPluginWidget.php:311
+msgctxt "(Airline)"
+msgid "tp_plugin_widget_form_field_airline_label"
 msgstr "Compagnia Aerea"
 
-#: app/includes/TPPluginWidget.php:267
-msgid "Limit"
+#: app/includes/TPPluginWidget.php:321
+msgctxt "(Limit)"
+msgid "tp_plugin_widget_form_field_limit_label"
 msgstr "Limite"
 
-#: app/includes/TPPluginWidget.php:279
-msgid "Paginate"
+#: app/includes/TPPluginWidget.php:334
+msgctxt "(Paginate)"
+msgid "tp_plugin_widget_form_field_paginate_label"
 msgstr "Impaginato"
 
-#: app/includes/TPPluginWidget.php:287
-msgid "One Way"
+#: app/includes/TPPluginWidget.php:343
+msgctxt "(One Way)"
+msgid "tp_plugin_widget_form_field_one_way_label"
 msgstr "Solo Andata "
 
-#: app/includes/TPPluginWidget.php:295
-msgid "No title"
+#: app/includes/TPPluginWidget.php:352
+msgctxt "(No title)"
+msgid "tp_plugin_widget_form_field_off_title_label"
 msgstr "Nessun titolo"
 
-#: app/includes/TPPluginWidget.php:301
-msgid "Number of stops"
+#: app/includes/TPPluginWidget.php:359
+msgctxt "(Number of stops)"
+msgid "tp_plugin_widget_form_field_stops_label"
 msgstr "Numero di scali"
 
-#: app/includes/TPPluginWidget.php:305
-msgid "All"
+#: app/includes/TPPluginWidget.php:364
+msgctxt "(All)"
+msgid "tp_plugin_widget_form_field_stops_value_0_label"
 msgstr "Tutto"
 
-#: app/includes/TPPluginWidget.php:307
-msgid "No more than one stop"
+#: app/includes/TPPluginWidget.php:366
+msgctxt "(No more than one stop)"
+msgid "tp_plugin_widget_form_field_stops_value_1_label"
 msgstr "Non più di uno scalo"
 
-#: app/includes/TPPluginWidget.php:309
-msgid "Direct"
+#: app/includes/TPPluginWidget.php:368
+msgctxt "(Direct)"
+msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "Diretto"
 
 #: app/includes/TPRequestApi.php:598
-msgid "The variable $origin parameters not set or incorrectly."
+msgctxt "(The variable $origin parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_origin"
 msgstr "La variabile dei parametri  $origin non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:599
-msgid "The variable $destination parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:600
+msgctxt "(The variable $destination parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_destination"
 msgstr "La variabile dei parametri  $destination non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:600
-msgid "The variable $currency parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:602
+msgctxt "(The variable $currency parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_currency"
 msgstr "La variabile dei parametri  $currency non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:601
-msgid "The variable $departure_at parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:604
+msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_departure_at"
 msgstr "La variabile dei parametri  $departure_at non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:602
-msgid "The variable $calendar_type parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:606
+msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_calendar_type"
 msgstr "La variabile dei parametri  $calendar_type non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:603
-msgid "The variable $return_at parameters not set or incorrectly."
-msgstr "Переменная $return_at не задана или задана не верно."
+#: app/includes/TPRequestApi.php:608
+msgctxt "(The variable $return_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_return_at"
+msgstr "The variable $return_at parameters not set or incorrectly."
 
-#: app/includes/TPRequestApi.php:604
-msgid "The variable $airline parameters not set or incorrectly."
+#: app/includes/TPRequestApi.php:610
+msgctxt "(The variable $airline parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_airline"
 msgstr "La variabile dei parametri  $airline non è settata o è sbagliata."
 
-#: app/includes/TPRequestApi.php:608
-msgid "Unknown error."
+#: app/includes/TPRequestApi.php:615
+msgctxt "(Unknown error.)"
+msgid "tp_request_api_error_msg_unknown_error"
 msgstr "Errore sconosciuto."
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
@@ -3455,9 +3492,112 @@ msgctxt "(wpplugin@travelpayouts.com)"
 msgid "tp_admin_page_link_help_link_label"
 msgstr "wpplugin@travelpayouts.com"
 
-#: core/controllers/TPOBaseController.php:24
-msgid "View "
-msgstr "Vista"
+#: core/controllers/TPOBaseController.php:25
+msgctxt "(View %s not found)"
+msgid "tp_base_controler_load_view_error_msg"
+msgstr "View %s not found"
+
+#~ msgid "View "
+#~ msgstr "Vista"
+
+#~ msgid "Title:"
+#~ msgstr "Titolo:"
+
+#~ msgid "Select the table"
+#~ msgstr "Seleziona la tabella"
+
+#~ msgid "Flights from origin to destination, One Way (next month)"
+#~ msgstr "Voli da luogo di partenza a destinazione, Solo Andata (mese prossimo)"
+
+#~ msgid "Flights from Origin to Destination (next few days)"
+#~ msgstr "Voli da Origine a Destinazione (prossimi giorni)"
+
+#~ msgid "Cheapest Flights from origin to destination, Round-trip"
+#~ msgstr "Voli economici da luogo partenza a destinazione, andata e ritorno"
+
+#~ msgid "Cheapest Flights from origin to destination (next month)"
+#~ msgstr "Voli economici da luogo partenza a destinazione (mese prossimo)"
+
+#~ msgid "Cheapest Flights from origin to destination (next year)"
+#~ msgstr "Voli Economici da luogo di partenza a destinazione (anno prossimo)"
+
+#~ msgid "Direct Flights from origin to destination"
+#~ msgstr "Voli diretti da origine a destinazione"
+
+#~ msgid "Direct Flights from origin"
+#~ msgstr "Voli diretti da origine"
+
+#~ msgid "Popular Destinations from origin"
+#~ msgstr "Destinazioni Popolari dal luogo di partenza"
+
+#~ msgid "Most popular flights within this Airlines"
+#~ msgstr "Viaggi più popolari con questa Compagnia"
+
+#~ msgid "Searched on our website"
+#~ msgstr "Cerca sul nostro sito"
+
+#~ msgid "Cheap Flights from origin"
+#~ msgstr "Voli Economici dalla città di partenza"
+
+#~ msgid "Cheap Flights to destination"
+#~ msgstr "Voli Economici per destinazione"
+
+#~ msgid "Origin"
+#~ msgstr "Luogo di partenza"
+
+#~ msgid "Destination"
+#~ msgstr "Destinazione"
+
+#~ msgid "Airline"
+#~ msgstr "Compagnia Aerea"
+
+#~ msgid "Limit"
+#~ msgstr "Limite"
+
+#~ msgid "Paginate"
+#~ msgstr "Impaginato"
+
+#~ msgid "One Way"
+#~ msgstr "Solo Andata "
+
+#~ msgid "No title"
+#~ msgstr "Nessun titolo"
+
+#~ msgid "Number of stops"
+#~ msgstr "Numero di scali"
+
+#~ msgid "All"
+#~ msgstr "Tutto"
+
+#~ msgid "No more than one stop"
+#~ msgstr "Non più di uno scalo"
+
+#~ msgid "Direct"
+#~ msgstr "Diretto"
+
+#~ msgid "The variable $origin parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $origin non è settata o è sbagliata."
+
+#~ msgid "The variable $destination parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $destination non è settata o è sbagliata."
+
+#~ msgid "The variable $currency parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $currency non è settata o è sbagliata."
+
+#~ msgid "The variable $departure_at parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $departure_at non è settata o è sbagliata."
+
+#~ msgid "The variable $calendar_type parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $calendar_type non è settata o è sbagliata."
+
+#~ msgid "The variable $return_at parameters not set or incorrectly."
+#~ msgstr "Переменная $return_at не задана или задана не верно."
+
+#~ msgid "The variable $airline parameters not set or incorrectly."
+#~ msgstr "La variabile dei parametri  $airline non è settata o è sbagliata."
+
+#~ msgid "Unknown error."
+#~ msgstr "Errore sconosciuto."
 
 #~ msgid "Auto-links"
 #~ msgstr "Auto-links"
