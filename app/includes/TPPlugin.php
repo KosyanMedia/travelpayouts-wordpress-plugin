@@ -23,14 +23,25 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             error_log($method." -> Start");
         parent::__construct();
         new TPLoader();
-        self::check_plugin_update();
+        //self::check_plugin_update();
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." -> End");
-
+        add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
+        add_action('plugins_loaded', array(&$this, 'checkPluginUpdate'));
     }
 
-    static private function check_plugin_update() {
-        //error_log("check_plugin_update");
+    public function setDefaultOptions(){
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("setDefaultOptions");
+        if( ! get_option(TPOPlUGIN_OPTION_NAME) )
+            update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+        if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
+            update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
+    }
+    public function checkPluginUpdate() {
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("checkPluginUpdate");
+        //error_log(print_r( TPDefault::defaultOptions(),true));
         //error_log(is_plugin_active('travelpayouts/travelpayouts.php'));
         if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
@@ -90,13 +101,10 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             deactivate_plugins(TPOPlUGIN_NAME);
             wp_die($error_msg);
         }else{
-            if( ! get_option(TPOPlUGIN_OPTION_NAME) )
-                update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
-            if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
-                update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
             models\admin\menu\TPSearchFormsModel::createTable();
             models\admin\menu\TPAutoReplacLinksModel::createTable();
             models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
+            //error_log(print_r( TPDefault::defaultOptions(),true));
         }
     }
 
@@ -108,7 +116,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         //models\admin\menu\TPSearchFormsModel::deleteTable();
         models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         self::deleteCacheAll();
-        //delete_option( TPOPlUGIN_OPTION_NAME);
+        delete_option( TPOPlUGIN_OPTION_NAME);
         //delete_option( TPOPlUGIN_OPTION_VERSION);
         //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
         //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);

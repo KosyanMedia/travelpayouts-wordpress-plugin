@@ -33,7 +33,9 @@
                     </a>,',
                     '<a href="'.$tp_wh_url.'" target="_blank">
                         travelpayouts.com/white_labels
-                    </a>');?>
+                    </a>');
+
+                ?>
             </p>
         </div>
         <nav class="TPNavigation">
