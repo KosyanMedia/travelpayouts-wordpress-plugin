@@ -24,6 +24,15 @@
                         </span>
                     </a>
                 </li>
+                <li>
+                    <a href="#tabs-tickets_themes" class="TPMainMenuA">
+                        <i class="icoItemNav ico-glass"></i>
+                        <span>
+                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_themes',
+                                '(Themes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div id="tabs-tickets_config">
@@ -46,6 +55,11 @@
                                '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </form>
+        </div>
+        <div id="tabs-tickets_themes">
+            <div class="TPmainContent TP-BalanceContent TP-SettingContent">
+            themes
+            </div>
         </div>
     </div>
 </div>
