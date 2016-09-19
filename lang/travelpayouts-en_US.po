@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-16 16:48+0300\n"
+"POT-Creation-Date: 2016-09-19 20:10+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2292,6 +2292,51 @@ msgctxt "(Currency)"
 msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Currency"
 
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:73
+msgctxt "(Red Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
+msgstr "Red Button Light Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:79
+msgctxt "(Blue Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
+msgstr "Blue Button Light Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:85
+msgctxt "(Salad Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
+msgstr "Salad Button Light Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:91
+msgctxt "(Purple Header Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
+msgstr "Purple Header Light Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:97
+msgctxt "(Yellow Button Dark Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
+msgstr "Yellow Button Dark Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:103
+msgctxt "(Coral Button Dark Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
+msgstr "Coral Button Dark Theme"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:109
+msgctxt "(Light Theme with Plum Search Column)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
+msgstr "Light Theme with Plum Search Column"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:115
+msgctxt "(Light Theme with Dark Search Column)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
+msgstr "Light Theme with Dark Search Column"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:121
+msgctxt "(Mint Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
+msgstr "Mint Button Light Theme"
+
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgctxt "(Settings saved.)"
 msgid "tp_admin_page_admin_notice_modal_label"
@@ -3194,6 +3239,11 @@ msgstr "Themes"
 msgctxt "(Save changes)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
 msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:72
+msgctxt "(Activate)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:8
 msgctxt "(Flights from origin to destination, One Way (next month))"

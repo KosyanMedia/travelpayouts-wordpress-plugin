@@ -60,34 +60,30 @@
             <div class="TPmainContent TPmainContentThemes">
 
                 <div class="TPThemes">
-                    <div class="TPTheme TPThemeActive" tabindex="0" aria-describedby="envision-action envision-name">
+                    <?php foreach($data['themes'] as $theme): ?>
+                        <div class="TPTheme">
+                            <div class="TPThemeScreenshot">
+                                <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
+                            </div>
+                            <h3 class="TPThemeName"><?php echo $theme['title']; ?></h3>
+                            <div class="TPThemeActions">
+                                <a class="button button-secondary activate">
+                                    <?php
+                                        _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
+                                            '(Activate)', TPOPlUGIN_TEXTDOMAIN );
+                                    ?>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    <!--<div class="TPTheme TPThemeActive" tabindex="0" aria-describedby="envision-action envision-name">
                         <div class="TPThemeScreenshot">
                             <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt=""
                                 >
                         </div>
-                        <h3 class="TPThemeName">Envision</h3>
-                        <!--<div class="TPThemeActions">
-                            <a class="button button-secondary activate">Активировать</a>
-                        </div>-->
-                    </div>
-                    <div class="TPTheme" tabindex="0" aria-describedby="envision-action envision-name">
-                        <div class="TPThemeScreenshot">
-                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
-                        </div>
-                        <h3 class="TPThemeName">Envision</h3>
-                        <div class="TPThemeActions">
-                            <a class="button button-secondary activate">Активировать</a>
-                        </div>
-                    </div>
-                    <div class="TPTheme" tabindex="0" aria-describedby="envision-action envision-name">
-                        <div class="TPThemeScreenshot">
-                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
-                        </div>
-                        <h3 class="TPThemeName">Envision</h3>
-                        <div class="TPThemeActions">
-                            <a class="button button-secondary activate">Активировать</a>
-                        </div>
-                    </div>
+                        <h3 class="TPThemeName">Salad Button Light Theme</h3>
+                    </div>-->
+
                 </div>
 
             </div>

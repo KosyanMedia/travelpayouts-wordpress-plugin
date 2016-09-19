@@ -29,6 +29,9 @@ class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController
     {
         // TODO: Implement render() method.
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
-        parent::loadView($pathView);
+        $data = array(
+            'themes' => $this->model->getThemesTables()
+        );
+        parent::loadView($pathView, 0, $data);
     }
 }
