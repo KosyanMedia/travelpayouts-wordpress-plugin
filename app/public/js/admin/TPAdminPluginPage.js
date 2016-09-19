@@ -981,6 +981,7 @@ jQuery(function($){
             }
         });
     });
+    doc.find( '.TPThemeActions a:last-child' ).focus();
 });
 
 

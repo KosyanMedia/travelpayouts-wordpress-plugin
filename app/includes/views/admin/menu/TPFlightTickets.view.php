@@ -57,8 +57,39 @@
             </form>
         </div>
         <div id="tabs-tickets_themes">
-            <div class="TPmainContent TP-BalanceContent TP-SettingContent">
-            themes
+            <div class="TPmainContent TPmainContentThemes">
+
+                <div class="TPThemes">
+                    <div class="TPTheme TPThemeActive" tabindex="0" aria-describedby="envision-action envision-name">
+                        <div class="TPThemeScreenshot">
+                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt=""
+                                >
+                        </div>
+                        <h3 class="TPThemeName">Envision</h3>
+                        <!--<div class="TPThemeActions">
+                            <a class="button button-secondary activate">Активировать</a>
+                        </div>-->
+                    </div>
+                    <div class="TPTheme" tabindex="0" aria-describedby="envision-action envision-name">
+                        <div class="TPThemeScreenshot">
+                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
+                        </div>
+                        <h3 class="TPThemeName">Envision</h3>
+                        <div class="TPThemeActions">
+                            <a class="button button-secondary activate">Активировать</a>
+                        </div>
+                    </div>
+                    <div class="TPTheme" tabindex="0" aria-describedby="envision-action envision-name">
+                        <div class="TPThemeScreenshot">
+                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
+                        </div>
+                        <h3 class="TPThemeName">Envision</h3>
+                        <div class="TPThemeActions">
+                            <a class="button button-secondary activate">Активировать</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
