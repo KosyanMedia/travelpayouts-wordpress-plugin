@@ -2955,6 +2955,8 @@ thead tr td.active-w {
 .TPThemeScreenshot img{
   width: 100%;
   height: 250px;
+  max-width: 361px;
+  max-height: 250px;
 }
 .TPThemeMoreDetails{
   opacity: 0;

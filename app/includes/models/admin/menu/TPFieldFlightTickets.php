@@ -9,6 +9,13 @@ class TPFieldFlightTickets {
     public function __construct(){
 
     }
+    public function TPFieldThemesTable(){
+        ?>
+        <input class="TPThemesNameHidden" type="hidden"
+               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[themes_table][name]"
+               value="<?php echo \app\includes\TPPlugin::$options['themes_table']['name']?>"/>
+        <?php
+    }
     public function TPFieldStyleTable(){
         $font_family_attr = array(
             _x('tp_admin_page_flights_tab_tickets_style_font_arial',

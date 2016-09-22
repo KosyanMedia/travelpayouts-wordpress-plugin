@@ -982,6 +982,15 @@ jQuery(function($){
         });
     });
     doc.find( '.TPThemeActions a:last-child' ).focus();
+    doc.find('.TPThemeBtnActivate').click(function () {
+        doc.find('.TPTheme').removeClass('TPThemeActive');
+        var TPTheme, TPThemeName;
+        TPTheme = $(this).parent('.TPThemeActions').parent('.TPTheme');
+        TPTheme.addClass('TPThemeActive');
+        TPThemeName = TPTheme.data('theme_name');
+        doc.find('.TPThemesNameHidden').val(TPThemeName);
+        //console.log(TPThemeName)
+    });
 });
 
 

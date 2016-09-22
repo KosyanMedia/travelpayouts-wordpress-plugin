@@ -58,6 +58,10 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
         add_settings_section( 'tp_settings_style_table_id', '', '', 'tp_settings_style_table' );
         add_settings_field('tp_style_table_td', '', array(&$field ,'TPFieldStyleTable'),
             'tp_settings_style_table', 'tp_settings_style_table_id' );
+
+        add_settings_section( 'tp_settings_themes_table_id', '', '', 'tp_settings_themes_table' );
+        add_settings_field('tp_themes_table_td', '', array(&$field ,'TPFieldThemesTable'),
+            'tp_settings_themes_table', 'tp_settings_themes_table_id' );
     }
 
     public function tpDefaultTableStyle(){
@@ -68,6 +72,12 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
     }
     public function getThemesTables(){
         $themesTables = array(
+            array(
+                'name' => 'default-theme',
+                'title' => _x('tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme',
+                    '(Default Theme)', TPOPlUGIN_TEXTDOMAIN ),
+                'screenshot' => 'default-theme.png'
+            ),
             array(
                 'name' => 'red-button-table',
                 'title' => _x('tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table',

@@ -808,6 +808,9 @@ class TPDefault implements  \core\TPODefault{
                 ),
 
             ),
+            'themes_table' => array(
+                'name' => 'default-theme'
+            ),
             'style_table' => array(
                 'title_style' => array(
                     'color' => '#191e23',

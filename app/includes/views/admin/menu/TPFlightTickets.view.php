@@ -60,30 +60,35 @@
             <div class="TPmainContent TPmainContentThemes">
 
                 <div class="TPThemes">
-                    <?php foreach($data['themes'] as $theme): ?>
-                        <div class="TPTheme">
-                            <div class="TPThemeScreenshot">
-                                <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt="">
-                            </div>
-                            <h3 class="TPThemeName"><?php echo $theme['title']; ?></h3>
-                            <div class="TPThemeActions">
-                                <a class="button button-secondary activate">
-                                    <?php
-                                        _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
-                                            '(Activate)', TPOPlUGIN_TEXTDOMAIN );
-                                    ?>
-                                </a>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <!--<div class="TPTheme TPThemeActive" tabindex="0" aria-describedby="envision-action envision-name">
-                        <div class="TPThemeScreenshot">
-                            <img src="http://localhost/tp/wp-content/themes/twentyfifteen/screenshot.png" alt=""
-                                >
-                        </div>
-                        <h3 class="TPThemeName">Salad Button Light Theme</h3>
-                    </div>-->
+                    <form action="options.php" class="formSettings TPFormNotReload" method="POST">
+                        <?php foreach($data['themes'] as $theme): ?>
+                            <?php
+                            $TPThemeActive = ($theme['name'] ==  \app\includes\TPPlugin::$options['themes_table']['name'])?'TPThemeActive':'';
 
+                            ?>
+                            <div class="TPTheme <?php echo $TPThemeActive; ?>" data-theme_name="<?php echo $theme['name']; ?>">
+                                <div class="TPThemeScreenshot">
+                                    <img src="<?php echo TPOPlUGIN_URL.'app/public/themes/screens-and-names/'.$theme['screenshot']?>" alt="">
+                                </div>
+                                <h3 class="TPThemeName"><?php echo $theme['title']; ?></h3>
+                                <div class="TPThemeActions">
+                                    <input type="submit" name="submit"
+                                           class="button button-secondary activate TPThemeBtnActivate "
+                                           value="<?php _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
+                                               '(Activate)', TPOPlUGIN_TEXTDOMAIN );?>">
+                                    <!--<a class="button button-secondary activate TPThemeBtnActivate ">
+                                        <?php
+                                            _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
+                                                '(Activate)', TPOPlUGIN_TEXTDOMAIN );
+                                        ?>
+                                    </a>-->
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                            <?php settings_fields('TPFlightTickets'); ?>
+                            <?php do_settings_fields('tp_settings_themes_table', 'tp_settings_themes_table_id'); ?>
+                    </form>
                 </div>
 
             </div>

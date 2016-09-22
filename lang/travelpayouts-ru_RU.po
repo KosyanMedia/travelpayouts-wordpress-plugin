@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-19 20:09+0300\n"
+"POT-Creation-Date: 2016-09-21 15:07+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2293,46 +2293,51 @@ msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Валюта"
 
 #: app/includes/models/admin/menu/TPFlightTicketsModel.php:73
+msgctxt "(Default Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
+msgstr "Стандартная тема"
+
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:79
 msgctxt "(Red Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
 msgstr "Светлая тема с красной кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:79
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:85
 msgctxt "(Blue Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
 msgstr "Светлая тема с синей кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:85
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:91
 msgctxt "(Salad Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
 msgstr "Светлая тема с салатовой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:91
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:97
 msgctxt "(Purple Header Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
 msgstr "Светлая тема с фиолетовой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:97
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:103
 msgctxt "(Yellow Button Dark Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
 msgstr "Темная тема с желтой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:103
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:109
 msgctxt "(Coral Button Dark Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
 msgstr "Темная тема с кораловой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:109
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:115
 msgctxt "(Light Theme with Plum Search Column)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
 msgstr "Светлая тема со сливовой колонкой поиска"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:115
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:121
 msgctxt "(Light Theme with Dark Search Column)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
 msgstr "Светлая тема с темной колонкой поиска"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:121
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:127
 msgctxt "(Mint Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
 msgstr "Светлая тема с мятной кнопкой"
