@@ -100,7 +100,7 @@ class TPDefault implements  \core\TPODefault{
                 'script' => 1,
                 'after_url' => 1,
                 'cache' => 1,
-                'cache_value' => 1,
+                'cache_value' => 3,
                 'airline_logo_size' => array(
                     'width' => 100,
                     'height' => 35

@@ -261,7 +261,7 @@ class TPFieldSettings {
                             <label>
                                 <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value]"
                                        type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']; ?>"
-                                       data-rule="quantity">
+                                       data-rule="cache_value">
                             </label>
                             <div class="navSpinner">
                                 <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
