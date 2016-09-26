@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-09-21 15:07+0300\n"
+"POT-Creation-Date: 2016-09-26 14:26+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:93
@@ -1176,132 +1176,132 @@ msgctxt "(The maximum number of anchor changes in one post)"
 msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "Максимальное количество замен каждого анкора в одном посте"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:14
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:21
 msgctxt "Arial"
 msgid "tp_admin_page_flights_tab_tickets_style_font_arial"
 msgstr "Arial"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:16
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:23
 msgctxt "Arial Black"
 msgid "tp_admin_page_flights_tab_tickets_style_font_arial_black"
 msgstr "Arial Black"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:18
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:25
 msgctxt "Comic Sans MS"
 msgid "tp_admin_page_flights_tab_tickets_style_font_comic_sans_MS"
 msgstr "Comic Sans MS"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:20
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:27
 msgctxt "Courier New"
 msgid "tp_admin_page_flights_tab_tickets_style_font_courier_new"
 msgstr "Courier New"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:22
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:29
 msgctxt "Georgia"
 msgid "tp_admin_page_flights_tab_tickets_style_font_georgia"
 msgstr "Georgia"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:24
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:31
 msgctxt "Impact"
 msgid "tp_admin_page_flights_tab_tickets_style_font_impact"
 msgstr "Impact"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:33
 msgctxt "Times New Roman"
 msgid "tp_admin_page_flights_tab_tickets_style_times_new_roman"
 msgstr "Times New Roman"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:28
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:35
 msgctxt "Trebuchet MS"
 msgid "tp_admin_page_flights_tab_tickets_style_trebuchet_MS"
 msgstr "Trebuchet MS"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:30
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:37
 msgctxt "Verdana"
 msgid "tp_admin_page_flights_tab_tickets_style_verdana"
 msgstr "Verdana"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:32
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:39
 msgctxt "Roboto"
 msgid "tp_admin_page_flights_tab_tickets_style_roboto"
 msgstr "Roboto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:37
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:44
 msgctxt "(Layout)"
 msgid "tp_admin_page_flights_tab_tickets_style_paragraph_1"
 msgstr "Внешний вид таблиц"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:46
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:53
 msgctxt "(Header style)"
 msgid "tp_admin_page_flights_tab_tickets_style_title_style_label"
 msgstr "Стили заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:106
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:113
 msgctxt "(Content)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_style_label"
 msgstr "Шрифт в таблицах"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:166
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:173
 msgctxt "(Borders)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label"
 msgstr "Границы таблиц"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:172
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:179
 msgctxt "(solid)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid"
 msgstr "Сплошная"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:176
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:183
 msgctxt "(dotted)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted"
 msgstr "С точками"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:180
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:187
 msgctxt "(dashed)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed"
 msgstr "Пунктир"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:210
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:217
 msgctxt "(Background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_background_color_label"
 msgstr "Фон таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:223
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:230
 msgctxt "(Table header background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_color_label"
 msgstr "Фон шапки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:235
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:242
 msgctxt "(Table header font)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_text_color_label"
 msgstr "Шрифт в шапке таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:251
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:258
 msgctxt "(Button background)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_background_label"
 msgstr "Фон кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:264
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:271
 msgctxt "(Button border)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_border_label"
 msgstr "Граница кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:276
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:283
 msgctxt "(Button font)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_font_label"
 msgstr "Шрифт кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:315
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:322
 msgctxt "(Show data as hyperlinks)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_hyperlink_label"
 msgstr "Отображать данные гиперссылками"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:323
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:330
 msgctxt "(Enable Horizontal Scroll)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label"
 msgstr "Разрешить горизонтальный скролл"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:329
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:336
 msgctxt ""
 "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
 "you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
@@ -1312,154 +1312,154 @@ msgstr ""
 "ширины контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - таблица "
 "\"впишется\" в новый размер, но с появлением горизонтального скролла."
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:342
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:349
 msgctxt "(Reset to Default styles)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Стили по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:359
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:366
 msgctxt "(Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
 msgstr "Заголовок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:373
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:380
 msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "Используйте переменные \"airline\"  для автоматической подстановки авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:380
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:387
 msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr "Используйте переменные \"origin\", \"destination\" для автоматической подстановки города"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
 msgctxt "(Title tag)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Тег заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:412
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:410
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:417
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:415
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:422
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:420
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:427
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:425
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:432
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 msgctxt "(Button Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Текст кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:453
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:460
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:484
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:491
 msgctxt "(Order by price)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label"
 msgstr "Сортировка по цене"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:494
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:501
 msgctxt "(Ascending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending"
 msgstr "по возрастанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:502
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:509
 msgctxt "(Descending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending"
 msgstr "по убыванию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:510
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:517
 msgctxt "(Do not sort)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort"
 msgstr "не сортировать"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:562
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:569
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Колонки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:568
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:575
 msgctxt "(Not selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Не выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:578
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:585
 msgctxt "(Selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:598
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:817
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:605
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:824
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:620
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:841
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:627
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:848
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:644
 msgctxt "(Limit)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:663
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:670
 msgctxt "(Departure date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label"
 msgstr "Дата отправления"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:682
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:689
 msgctxt "(Return date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label"
 msgstr "Дата возвращения"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:706
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:713
 msgctxt "(Number of stops)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label"
 msgstr "Пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:712
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:719
 msgctxt "(All)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1"
 msgstr "Все"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:717
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:724
 msgctxt "(No more than one stop)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:722
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:729
 msgctxt "(Direct)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3"
 msgstr "без пересадок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:739
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:746
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:770
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:777
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
@@ -2292,52 +2292,52 @@ msgctxt "(Currency)"
 msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:73
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:77
 msgctxt "(Default Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
 msgstr "Стандартная тема"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:79
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:83
 msgctxt "(Red Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
 msgstr "Светлая тема с красной кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:85
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:89
 msgctxt "(Blue Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
 msgstr "Светлая тема с синей кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:91
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:95
 msgctxt "(Salad Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
 msgstr "Светлая тема с салатовой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:97
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:101
 msgctxt "(Purple Header Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
 msgstr "Светлая тема с фиолетовой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:103
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:107
 msgctxt "(Yellow Button Dark Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
 msgstr "Темная тема с желтой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:109
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:113
 msgctxt "(Coral Button Dark Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
 msgstr "Темная тема с кораловой кнопкой"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:115
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:119
 msgctxt "(Light Theme with Plum Search Column)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
 msgstr "Светлая тема со сливовой колонкой поиска"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:121
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:125
 msgctxt "(Light Theme with Dark Search Column)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
 msgstr "Светлая тема с темной колонкой поиска"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:127
+#: app/includes/models/admin/menu/TPFlightTicketsModel.php:131
 msgctxt "(Mint Button Light Theme)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
 msgstr "Светлая тема с мятной кнопкой"
@@ -3245,7 +3245,8 @@ msgctxt "(Save changes)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
 msgstr "Сохранить изменения"
 
-#: app/includes/views/admin/menu/TPFlightTickets.view.php:72
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:77
+#: app/includes/views/admin/menu/TPFlightTickets.view.php:81
 msgctxt "(Activate)"
 msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
 msgstr "Активировать"

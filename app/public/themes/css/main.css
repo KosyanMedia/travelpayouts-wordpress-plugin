@@ -32,7 +32,7 @@
   margin-bottom: 1em; }
 
 .TP-sorting_asc:after {
-  content: " \25b2" !important;
+  content: "  ▴" !important;
   position: absolute;
   right: 10px;
   top: 6px;
@@ -40,7 +40,7 @@
   font-size: 8px; }
 
 .TP-sorting_desc:after {
-  content: " \25bc" !important;
+  content: "  ▾" !important;
   position: absolute;
   right: 10px;
   top: 6px;
