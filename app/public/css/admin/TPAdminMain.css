@@ -3013,3 +3013,6 @@ thead tr td.active-w {
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
 }
+.TPNotShowOption{
+  display: none !important;
+}

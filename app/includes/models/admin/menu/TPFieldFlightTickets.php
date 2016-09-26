@@ -17,6 +17,10 @@ class TPFieldFlightTickets {
         <?php
     }
     public function TPFieldStyleTable(){
+        $classNotShowOption = '';
+        if(\app\includes\TPPlugin::$options['themes_table']['name'] != 'default-theme')
+            $classNotShowOption = 'TPNotShowOption';
+
         $font_family_attr = array(
             _x('tp_admin_page_flights_tab_tickets_style_font_arial',
                 'Arial', TPOPlUGIN_TEXTDOMAIN),
@@ -211,7 +215,7 @@ class TPFieldFlightTickets {
 
             </div>
 
-            <div class="TP-StyleItem">
+            <div class="TP-StyleItem <?php echo $classNotShowOption; ?>">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span>
                         <?php _ex('tp_admin_page_flights_tab_tickets_style_table_background_color_label',
@@ -252,7 +256,7 @@ class TPFieldFlightTickets {
 
             </div>
 
-            <div class="TP-StyleItem">
+            <div class="TP-StyleItem <?php echo $classNotShowOption; ?>">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span>
                         <?php _ex('tp_admin_page_flights_tab_tickets_style_button_background_label',
