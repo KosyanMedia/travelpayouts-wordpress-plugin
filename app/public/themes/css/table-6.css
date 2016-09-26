@@ -530,10 +530,10 @@ a.paginate_button:hover {
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #ff6055; }
+  background-color: #a0cc28; }
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
-  background-color: #ff6857;
+  background-color: #a0cc28;
   color: #fff !important; }
 
 .dataTables_paginate span a:first-of-type {

@@ -519,6 +519,101 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         return $result;
     }
 
+    public function loadScriptSiteThemeTables(){
+        switch (\app\includes\TPPlugin::$options['themes_table']['name']){
+            case 'default-theme':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    //TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
+                    TPOPlUGIN_URL.'app/public/themes/css/main.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'red-button-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-8.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'blue-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-7.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'grey-salad-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-6.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'purple-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-5.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'black-and-yellow-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-4.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'dark-and-rainbow':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-2.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'light-and-plum-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-3.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'light-yellow-and-darkgray':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-1.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            case 'mint-table':
+                wp_register_style(
+                    TPOPlUGIN_SLUG.'-TPMain', //$handle
+                    TPOPlUGIN_URL.'app/public/themes/css/table-9.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                break;
+            default:
+
+        }
+
+
+
+
+         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
+
+
+    }
+
     /**
      * @param $hook
      */
@@ -607,26 +702,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
 
         if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
-            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto'){
+            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto') {
             wp_register_style(
-                TPOPlUGIN_SLUG. '-TPFontsRoboto',
+                TPOPlUGIN_SLUG . '-TPFontsRoboto',
                 'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
                 array(),
                 TPOPlUGIN_VERSION // $ver
             );
-            wp_register_style(
-                TPOPlUGIN_SLUG.'-TPMain', //$handle
-                TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
-                array(TPOPlUGIN_SLUG. '-TPFontsRoboto'), //$deps,
-                TPOPlUGIN_VERSION // $ver
-            );
-        }else{
-            wp_register_style(
-                TPOPlUGIN_SLUG.'-TPMain', //$handle
-                TPOPlUGIN_URL.'app/public/css/site/TPMain.css', // $src
-                array(), //$deps,
-                TPOPlUGIN_VERSION // $ver
-            );
+            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
         }
         wp_register_style(
             TPOPlUGIN_SLUG.'-jquery-ui',
@@ -634,6 +717,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(),
             TPOPlUGIN_VERSION
         );
+
+
 
         /** End register styles */
 
@@ -692,8 +777,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         /** End register scripts */
 
         /** Call scripts and style **/
+        $this->loadScriptSiteThemeTables();
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPNormalize');
-        wp_enqueue_style(TPOPlUGIN_SLUG. '-TPMain');
         wp_enqueue_style(TPOPlUGIN_SLUG. '-jquery-ui');
         wp_enqueue_style(TPOPlUGIN_SLUG.'-TPCurrencyMain');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
@@ -741,6 +826,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
             false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
         // TODO: Implement headScriptSite() method.
+
         ?>
         <script type="text/javascript">
             var ajaxurl, title_case_destination, title_case_origin, tpLocale;
@@ -841,72 +927,73 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 }
             ?>
             }
-            .TP-Plugin-Tables_box tbody tr td {
-                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
-            }
-            .TP-Plugin-Tables_box tbody tr:nth-child(even) {
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>;
-            }
-            .TP-Plugin-Tables_box tbody tr:nth-child(even) td p:after {
-                background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
-            }
-            .TPAirlineLogoTD{
-                width: auto !important;
-                <?php //echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>
-            }
-            .TP-Plugin-Tables_box thead tr td{
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-            }
-            .TP-Plugin-Tables_box thead tr td.TP-active {
-                background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
-               /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
-            }
+            <?php if(\app\includes\TPPlugin::$options['themes_table']['name'] == 'default-theme'): ?>
+                .TP-Plugin-Tables_box tbody tr td {
+                    color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
+                }
+                .TP-Plugin-Tables_box tbody tr:nth-child(even) {
+                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>;
+                }
+                .TP-Plugin-Tables_box tbody tr:nth-child(even) td p:after {
+                    background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
+                }
+                .TPAirlineLogoTD{
+                    width: auto !important;
+                    <?php //echo \app\includes\TPPlugin::$options['config']['airline_logo_size']['width']; ?>
+                }
+                .TP-Plugin-Tables_box thead tr td{
+                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                }
+                .TP-Plugin-Tables_box thead tr td.TP-active {
+                    background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
+                   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
+                }
 
-            .TP-Plugin-Tables_box thead tr td {
-                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
-            }
+                .TP-Plugin-Tables_box thead tr td {
+                    color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+                }
 
-            a.paginate_button.current {
-                border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
-            }
-            a.paginate_button:hover {
-                border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-                text-decoration: none;
-                cursor: pointer;
-                color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?> !important;
-            }
-            a.paginate_button.current:hover {
-                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?> !important;
-            }
+                a.paginate_button.current {
+                    border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                    color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+                }
+                a.paginate_button:hover {
+                    border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?> !important;
+                }
+                a.paginate_button.current:hover {
+                    color:  <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?> !important;
+                }
 
-            .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
-                border-bottom: 1px solid <?php echo \app\includes\TPPlugin::$options['style_table']['button']['border']; ?> !important;
-                background: <?php echo \app\includes\TPPlugin::$options['style_table']['button']['background']; ?> !important;
-                color:  <?php echo \app\includes\TPPlugin::$options['style_table']['button']['color']; ?> !important;
-                <?php
-                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold'])){
-                       echo 'font-weight: bold !important;';
-                   }else{
-                       echo 'font-weight: normal !important;';
-                   }
-                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic'])){
-                       echo 'font-style: italic !important;';
-                   }else{
-                       echo 'font-style: normal !important;';
-                   }
-                   if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline'])){
-                       echo 'text-decoration: underline !important;';
-                   }else{
-                       echo 'text-decoration: none !important;';
-                   }
-               ?>
-            }
-            .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
-                background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['button']['background'], 0.7); ?> !important;
-            }
-
+                .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+                    border-bottom: 1px solid <?php echo \app\includes\TPPlugin::$options['style_table']['button']['border']; ?> !important;
+                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['button']['background']; ?> !important;
+                    color:  <?php echo \app\includes\TPPlugin::$options['style_table']['button']['color']; ?> !important;
+                    <?php
+                       if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold'])){
+                           echo 'font-weight: bold !important;';
+                       }else{
+                           echo 'font-weight: normal !important;';
+                       }
+                       if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic'])){
+                           echo 'font-style: italic !important;';
+                       }else{
+                           echo 'font-style: normal !important;';
+                       }
+                       if(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline'])){
+                           echo 'text-decoration: underline !important;';
+                       }else{
+                           echo 'text-decoration: none !important;';
+                       }
+                   ?>
+                }
+                .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
+                    background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['button']['background'], 0.7); ?> !important;
+                }
+            <?php endif; ?>
         </style>
     <?php
     }

@@ -545,7 +545,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
             add_meta_box(
                 'tp_sectionid',
                 _x('tp_admin_page_edit_post_meta_box_auto_links',
-                    '(Auto-links)',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
+                    '(Auto-links)',  TPOPlUGIN_TEXTDOMAIN ),
                 array( &$this, 'tp_add_custom_box_callback'),
                 $screen,
                 'side',
