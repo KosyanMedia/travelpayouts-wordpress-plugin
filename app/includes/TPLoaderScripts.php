@@ -623,11 +623,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
         global $widgets;
         global $wp_styles;
-
-
         global $post;
+
+        //error_log(print_r(wp_get_sidebars_widgets(), true));
+        //error_log(term_description());
+
+
         if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
+            false === strpos( $post->post_content, '[tp' ) && !is_home() &&
+            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
 
         // TODO: Implement loadScriptSite() method.
         switch (\app\includes\TPPlugin::$options['config']['script']){
@@ -824,7 +828,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     {
         global $post;
         if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
+            false === strpos( $post->post_content, '[tp' ) && !is_home() &&
+            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
         // TODO: Implement headScriptSite() method.
 
         ?>

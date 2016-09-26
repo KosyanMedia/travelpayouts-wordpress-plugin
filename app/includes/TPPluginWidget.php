@@ -217,7 +217,7 @@ class TPPluginWidget extends WP_Widget{
                                 9. <?php _ex('tp_plugin_widget_form_field_select_table_value_9_label',
                                     '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
-                            <!--<option value="10">10. <?php// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>-->
+                            <!--<option value="10">10.// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN);</option>-->
                             <option value="11" <?php selected( $select, 11 ); ?>>
                                 10. <?php _ex('tp_plugin_widget_form_field_select_table_value_11_label',
                                     '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>
