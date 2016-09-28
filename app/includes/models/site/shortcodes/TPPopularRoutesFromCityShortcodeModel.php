@@ -12,9 +12,19 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
     {
         // TODO: Implement get_data() method.
         if(\app\includes\TPPlugin::$options['local']['currency'] != 'RUB') return false;
-        $defaults = array('origin' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB', 'limit' => false, 'title' => '', 'paginate' => true,
-            'off_title' => '', 'subid' => '');
+        $defaults = array(
+            'origin' => false,
+            'departure_at' => false,
+            'return_at' => false,
+            'currency' => 'RUB',
+            'limit' => false,
+            'title' => '',
+            'paginate' => true,
+            'off_title' => '',
+            'subid' => '',
+            'filter_flight_number' => false,
+            'filter_airline' => false
+        );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         $attr = array('origin' => $origin,
             'departure_at' => $departure_at, 'return_at' => $return_at,
@@ -60,9 +70,28 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         //error_log("{$method} rows = ".print_r($return, true));
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        return array('rows' => $this->iataAutocomplete($return, 9), 'origin' => $this->iataAutocomplete($origin, 0),
+
+        $return = $this->iataAutocomplete($return, 9);
+        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+
+        return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
                 'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate,
             'off_title' => $off_title, 'subid' => $subid, 'currency' => $this->typeCurrency());
 
+    }
+    public function getDataFilter($filter_flight_number, $filter_airline, $data){
+        if( $filter_flight_number !== false && !empty($filter_flight_number)){
+            $data = array_filter($data, function($value) use ($filter_flight_number) {
+                $flight_number = $value['airline_iata'].$value['flight_number'];
+                return ( strpos($flight_number, $filter_flight_number) !== false );
+            });
+        }
+        if( $filter_airline !== false && !empty($filter_airline)) {
+            $data = array_filter($data, function ($value) use ($filter_airline) {
+                return (strpos($value['airline_iata'], $filter_airline) !== false);
+            });
+        }
+
+        return $data;
     }
 }

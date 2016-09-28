@@ -261,6 +261,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
+                        $value['airline_iata'] = $value['airline'];
                         switch(\app\includes\TPPlugin::$options['local']['localization']) {
                             case "1":
                                 $value['city'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
@@ -279,6 +280,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
                 if(!empty($data)){
                     foreach($data as $key => $value){
                         $value['airline_img'] = $value['airline'];
+                        $value['airline_iata'] = $value['airline'];
                         $value['destination_iata'] = $key;
                         $value['origin_iata'] = $value['origin'];
                         switch(\app\includes\TPPlugin::$options['local']['localization']) {

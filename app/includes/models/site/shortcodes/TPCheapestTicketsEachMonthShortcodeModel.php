@@ -70,7 +70,10 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
             'title' => '' ,
             'paginate' => true,
             'off_title' => '',
-            'subid' => '');
+            'subid' => '',
+            'filter_flight_number' => false,
+            'filter_airline' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $return = $this->get_data(array(
             'origin' => $origin,
@@ -79,6 +82,9 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         ));
         if( ! $return )
             return false;
+
+        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+
         return array(
             'rows' => $return,
             'origin' => $this->iataAutocomplete($origin, 0),
@@ -94,6 +100,24 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
 
 
     }
+
+
+    public function getDataFilter($filter_flight_number, $filter_airline, $data){
+        if( $filter_flight_number !== false && !empty($filter_flight_number)){
+            $data = array_filter($data, function($value) use ($filter_flight_number) {
+                $flight_number = $value['airline_iata'].$value['flight_number'];
+                return ( strpos($flight_number, $filter_flight_number) !== false );
+            });
+        }
+        if( $filter_airline !== false && !empty($filter_airline)) {
+            $data = array_filter($data, function ($value) use ($filter_airline) {
+                return (strpos($value['airline_iata'], $filter_airline) !== false);
+            });
+        }
+
+        return $data;
+    }
+
     public function getMaxPrice($args = array())
     {
         $defaults = array(

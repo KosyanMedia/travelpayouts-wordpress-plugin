@@ -37,6 +37,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'currency' => $currency);
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if($this->cacheSecund()) {
@@ -49,30 +50,35 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false {$current_day}");
                 $return = array();
+
                 if($current_day < 20){
+
                     $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                     if($return_null)
-                        array_push($return, $return_null[$destination][0]);
+                        array_push($return, array_shift($return_null[$destination]));
                     $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
-                        array_push($return, $return_one[$destination][0]);
+                        array_push($return, array_shift($return_one[$destination]));
                     $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
-                        array_push($return, $return_two[$destination][0]);
+                        array_push($return, array_shift($return_two[$destination]));
                 }else{
+
                     $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
                     if($return_null)
-                        array_push($return, $return_null[$destination][0]);
+                        array_push($return, array_shift($return_null[$destination]));
+
                     $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
-                        array_push($return, $return_one[$destination][0]);
+                        array_push($return, array_shift($return_one[$destination]));
                     $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
-                        array_push($return, $return_two[$destination][0]);
+                        array_push($return, array_shift($return_two[$destination]));
                     $return_three = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_three);
                     if($return_three)
-                        array_push($return, $return_three[$destination][0]);
+                        array_push($return, array_shift($return_three[$destination]));
                 }
+
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 $cacheSecund = 0;
@@ -141,7 +147,9 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'title' => '' ,
             'paginate' => true,
             'off_title' => '',
-            'subid' => ''
+            'subid' => '',
+            'filter_flight_number' => false,
+            'filter_airline' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $return = $this->get_data(array(
@@ -149,8 +157,10 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'destination' => $destination,
             'currency' => $currency,
         ));
+
         if( ! $return )
             return false;
+        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
         return array(
             'rows' => $return,
             'type' => 7,
@@ -167,6 +177,23 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
 
 
     }
+
+    public function getDataFilter($filter_flight_number, $filter_airline, $data){
+        if( $filter_flight_number !== false && !empty($filter_flight_number)){
+            $data = array_filter($data, function($value) use ($filter_flight_number) {
+                $flight_number = $value['airline_iata'].$value['flight_number'];
+                return ( strpos($flight_number, $filter_flight_number) !== false );
+            });
+        }
+        if( $filter_airline !== false && !empty($filter_airline)) {
+            $data = array_filter($data, function ($value) use ($filter_airline) {
+                return (strpos($value['airline_iata'], $filter_airline) !== false);
+            });
+        }
+
+        return $data;
+    }
+
     public function getMaxPrice($args = array())
     {
         $defaults = array(
