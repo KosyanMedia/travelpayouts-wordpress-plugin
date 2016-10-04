@@ -402,7 +402,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
         </script>
         <style type="text/css">
-            @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
+
 
             .TP-Activate {
                 position: relative;
