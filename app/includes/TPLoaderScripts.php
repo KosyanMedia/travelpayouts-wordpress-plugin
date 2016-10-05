@@ -714,6 +714,37 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_VERSION // $ver
             );
             wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
+        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto Slab' ||
+            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto Slab'){
+            wp_register_style(
+                TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
+                'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
+                array(),
+                TPOPlUGIN_VERSION // $ver
+            );
+            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRobotoSlab');
+
+        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Ubuntu' ||
+            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Ubuntu'){
+            wp_register_style(
+                TPOPlUGIN_SLUG . '-TPFontsUbuntu',
+                'http://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,cyrillic-ext,cyrillic',
+                array(),
+                TPOPlUGIN_VERSION // $ver
+            );
+            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsUbuntu');
+
+        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Intro' ||
+            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Intro'){
+            //TPFontsIntro
+            wp_register_style(
+                TPOPlUGIN_SLUG . '-TPFontsIntro',
+                TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
+                array(), //$deps,
+                TPOPlUGIN_VERSION // $ver
+            );
+            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsIntro');
+
         }
         wp_register_style(
             TPOPlUGIN_SLUG.'-jquery-ui',
