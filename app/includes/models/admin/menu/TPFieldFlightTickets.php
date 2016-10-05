@@ -42,6 +42,12 @@ class TPFieldFlightTickets {
                 'Verdana', TPOPlUGIN_TEXTDOMAIN),
             _x('tp_admin_page_flights_tab_tickets_style_roboto',
                 'Roboto', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_roboto_slab',
+                'Roboto Slab', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_ubuntu',
+                'Ubuntu', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_intro',
+                'Intro', TPOPlUGIN_TEXTDOMAIN),
         );
         ?>
         <p class="TP-SettingTitle">
