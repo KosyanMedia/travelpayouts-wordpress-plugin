@@ -67,8 +67,7 @@
   background: #099dc7; }
 
 .TP-Plugin-Tables_box thead tr {
-  background-color: #101114;
-  background-image: linear-gradient(to top, #3f4154 0%, #292a3a 100%);
+  color: #262626;
   height: 44px; }
 
 .TP-Plugin-Tables_box thead tr td {
@@ -80,7 +79,7 @@
   border: 1px solid #332f35;
   border-width: 0 1px 1px 0;
   text-transform: uppercase;
-  color: #fff;
+  color: #b5abba;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400; }
@@ -98,11 +97,10 @@
   padding: 0 0 0 20px; }
 
 .TP-Plugin-Tables_box tbody tr:hover {
-  border: 1px solid #ff6055;
   box-sizing: border-box;
   cursor: pointer; }
   .TP-Plugin-Tables_box tbody tr:hover td {
-    background: #fff !important; }
+    background-color: #9f82ad; }
 
 .TP-Plugin-Tables_box tbody tr td {
   padding: 0 20px;
@@ -110,7 +108,7 @@
   vertical-align: middle;
   position: relative;
   border-spacing: 0;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #332f35;
   border-width: 0 1px 1px 0;
   outline: 0;
   background: none; }
@@ -167,10 +165,10 @@
   color: #fff !important; }
 
 .TP-Plugin-Tables_box tbody tr:nth-child(odd) {
-  background-color: #f4f4f4; }
+  background-color: #312b35; }
 
 .TP-Plugin-Tables_box tbody tr:nth-child(even) {
-  background-color: #f4f4f4; }
+  background-color: #28242a; }
 
 .TP-autoWidth-plugin {
   width: 100%; }
@@ -263,8 +261,8 @@
     margin: 0; }
 
   .TP-rwd-table tbody tr td:before {
-    color: white;
-    padding: 10px;
+    color: #b5abba;
+    padding: 11px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
@@ -278,7 +276,7 @@
     width: auto; }
 
   .TP-rwd-table-avio tbody tr td:before {
-    background: #432b5c; }
+    background: #221f23; }
 
   .TP-rwd-table .TP-Plugin-Tables_box_thead {
     display: none; } }
@@ -342,10 +340,10 @@
   float: left;
   width: 40px;
   height: 40px;
-  background-color: white;
-  border: 1px solid #ededed;
+  background-color: #28242a;
+  border: 1px solid #222;
   text-align: center;
-  color: #7a6c87;
+  color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -468,7 +466,7 @@ span.ellipsis {
 
 .TP-Plugin-Tables_box {
   display: table !important;
-  border: 1px solid #e3e3e3 !important; }
+  border: 1px solid #332f35 !important; }
 
 .TPTdButtonShow {
   overflow: hidden !important; }
@@ -495,7 +493,7 @@ span.ellipsis {
   font-family: Arial, sans-serif !important; }
 
 .TP-Plugin-Tables_box tbody tr td {
-  color: #7a6c87 !important; }
+  color: #fff !important; }
 
 .TP-Plugin-Tables_box tbody tr:nth-child(even) td p:after {
   background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), #f2f2f2) repeat scroll 0% 0%; }
@@ -504,80 +502,44 @@ span.ellipsis {
   width: auto !important; }
 
 .TP-Plugin-Tables_box thead tr td {
-  background-color: #432b5c;
+  background-color: #221f23;
   text-align: center; }
 
 .TP-Plugin-Tables_box thead tr td.TP-active {
-  background-color: #432b5c;
+  background-color: #221f23;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
 a.paginate_button.current {
-  border-color: #a987cc;
-  background-color: #a987cc;
+  border-color: #9f82ad;
+  background-color: #9f82ad;
   color: #ffffff; }
 
 a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid #f4f4f4;
-  background-color: #f4f4f4;
-  color: #716c87; }
+  border: 1px solid #ededed;
+  border-color: #9f82ad;
+  background-color: #9f82ad;
+  color: #fff; }
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+  border: 2px solid #ef643b;
   color: white;
   font-family: "Ubuntu";
   font-size: 13px;
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;
-  text-decoration: none;
-  background-color: #ff6055; }
+  text-decoration: none !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
-  background-color: #ff6857;
+  border: 2px solid #ef643b;
+  background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%);
   color: #fff !important; }
 
-.dataTables_paginate span a:first-of-type {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px; }
-
-.dataTables_paginate span a:last-of-type {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
-
-@media (max-width: 480px) {
-  .TP-Plugin-Tables_box tbody tr:hover {
-    border: none;
-    box-sizing: border-box;
-    cursor: pointer; } }
 /*# sourceMappingURL=table-1.css.map */
 
-/*# sourceMappingURL=table-5.css.map */
-
-
-/* add edits 2016/10/04 */
-.TP-Plugin-Tables_box thead tr td { font-family:'Roboto', serif !important; font-weight:400 !important; font-size:12px !important; cursor:pointer; }
-.TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { font-family:'Roboto', sans-serif !important; font-weight:400 !important; text-align:center; }
-.TP-Plugin-Tables_box tbody tr td a span { font-family:'Roboto', sans-serif !important; font-weight:700 !important; }
-.TP-tdContent::selection {background:#ecd9ff; color:#432b5c !important; }
-.TP-tdContent::-moz-selection {background:#ecd9ff; color:#432b5c !important; }
-
-
-
-/* add edits 2016/10/05 */
-.sorting_asc:after, .sorting_asc:before { display:none !important; content:'' !important; }
-.sorting_desc:after, .sorting_desc:before { display:none !important; content:''  !important; }
-.sorting_desc:after, .sorting_asc:after { content:'' !important; }
-
-.sorting_desc .TP-sort-chevron:before {content:"\f107" !important}
-.sorting_asc .TP-sort-chevron:before {content:"\f106" !important}
-.TP-sort-chevron { display:none; font-size:12px !important; transition:all 0.3s ease; cursor:pointer; position:relative; margin:0 0 0 9px; right:10px; top:14px; position:absolute; font-weight:400 !important; }
-.TP-sort-chevron:before { transition:all 0.3s ease; left:50%; top:0; position:absolute; transform:translateX(-50%); font-weight:400 !important; }
-.TP-sort-chevron:hover:before { font-size:14px !important; }
-.sorting_asc .TP-sort-chevron { display:inline; }
-.sorting_desc .TP-sort-chevron { display:inline; }
-.TP-Plugin-Tables_box thead tr td.sorting_desc, .TP-Plugin-Tables_box thead tr td.sorting_asc { padding-right:15px; padding-left:5px; }
-
-
-
-
+/*# sourceMappingURL=table-2.css.map */

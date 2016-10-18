@@ -518,7 +518,101 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         }
         return $result;
     }
+    public function loadScriptSiteFontStyle(){
+        if(\app\includes\TPPlugin::$options['themes_table']['name'] == 'default-theme'){
+            if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
+                \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto') {
+                wp_register_style(
+                    TPOPlUGIN_SLUG . '-TPFontsRoboto',
+                    'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
+                    array(),
+                    TPOPlUGIN_VERSION // $ver
+                );
+                wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
+            } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto Slab' ||
+                \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto Slab'){
+                wp_register_style(
+                    TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
+                    'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
+                    array(),
+                    TPOPlUGIN_VERSION // $ver
+                );
+                wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRobotoSlab');
 
+            } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Ubuntu' ||
+                \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Ubuntu'){
+                wp_register_style(
+                    TPOPlUGIN_SLUG . '-TPFontsUbuntu',
+                    'http://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,cyrillic-ext,cyrillic',
+                    array(),
+                    TPOPlUGIN_VERSION // $ver
+                );
+                wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsUbuntu');
+
+            } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Intro' ||
+                \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Intro'){
+                //TPFontsIntro
+                wp_register_style(
+                    TPOPlUGIN_SLUG . '-TPFontsIntro',
+                    TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
+                    array(), //$deps,
+                    TPOPlUGIN_VERSION // $ver
+                );
+                wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsIntro');
+
+            }
+        } else {
+            switch (\app\includes\TPPlugin::$options['themes_table']['name']){
+                //1
+                case 'default-theme':
+
+                    break;
+                //2
+                case 'red-button-table':
+                //3
+                case 'blue-table':
+                //4
+                case 'grey-salad-table':
+                //5
+                case 'purple-table':
+                //6
+                case 'black-and-yellow-table':
+                //7
+                case 'dark-and-rainbow':
+                //8
+                case 'light-and-plum-table':
+                //10
+                case 'mint-table':
+                    wp_register_style(
+                        TPOPlUGIN_SLUG . '-TPFontsRoboto',
+                        'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
+                        array(),
+                        TPOPlUGIN_VERSION // $ver
+                    );
+                    wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
+                    wp_register_style(
+                        TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
+                        'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
+                        array(),
+                        TPOPlUGIN_VERSION // $ver
+                    );
+                    wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRobotoSlab');
+                    break;
+                //9
+                case 'light-yellow-and-darkgray':
+                    wp_register_style(
+                        TPOPlUGIN_SLUG . '-TPFontsIntro',
+                        TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
+                        array(), //$deps,
+                        TPOPlUGIN_VERSION // $ver
+                    );
+                    wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsIntro');
+                    break;
+                default:
+
+            }
+        }
+    }
     public function loadScriptSiteThemeTables(){
         switch (\app\includes\TPPlugin::$options['themes_table']['name']){
             case 'default-theme':
@@ -650,34 +744,6 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_VERSION // $ver
         );
 
-
-        /*
-         *
-         wp_register_style(
-            TPOPlUGIN_SLUG.'-fontello', //$handle
-            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/fontello.css', // $src
-            array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
-        );
-         wp_register_style(
-            TPOPlUGIN_SLUG.'-animation', //$handle
-            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/animation.css', // $src
-            array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
-        );
-        wp_enqueue_style(
-            TPOPlUGIN_SLUG.'-fontello-ie7', //$handle
-            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/fontello-ie7.css', // $src
-            array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
-        );
-        $wp_styles->add_data(  TPOPlUGIN_SLUG.'-fontello-ie7', 'conditional', 'IE 7' );
-        wp_register_style(
-            TPOPlUGIN_SLUG.'-TPCurrencyMain', //$handle
-            TPOPlUGIN_URL.'app/public/css/lib/currency_fonts/css/TPCurrencyMain.css', // $src
-            array(TPOPlUGIN_SLUG.'-fontello', TPOPlUGIN_SLUG.'-animation'), //$deps,
-            TPOPlUGIN_VERSION // $ver
-        );*/
         wp_register_style(
             TPOPlUGIN_SLUG.'-fontello', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/fontello.css', // $src
@@ -705,47 +771,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         );
 
 
-        if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
-            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto') {
-            wp_register_style(
-                TPOPlUGIN_SLUG . '-TPFontsRoboto',
-                'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
-                array(),
-                TPOPlUGIN_VERSION // $ver
-            );
-            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
-        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto Slab' ||
-            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto Slab'){
-            wp_register_style(
-                TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
-                'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
-                array(),
-                TPOPlUGIN_VERSION // $ver
-            );
-            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRobotoSlab');
-
-        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Ubuntu' ||
-            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Ubuntu'){
-            wp_register_style(
-                TPOPlUGIN_SLUG . '-TPFontsUbuntu',
-                'http://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,cyrillic-ext,cyrillic',
-                array(),
-                TPOPlUGIN_VERSION // $ver
-            );
-            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsUbuntu');
-
-        } elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Intro' ||
-            \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Intro'){
-            //TPFontsIntro
-            wp_register_style(
-                TPOPlUGIN_SLUG . '-TPFontsIntro',
-                TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
-                array(), //$deps,
-                TPOPlUGIN_VERSION // $ver
-            );
-            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsIntro');
-
-        }
+        $this->loadScriptSiteFontStyle();
         wp_register_style(
             TPOPlUGIN_SLUG.'-jquery-ui',
             TPOPlUGIN_URL.'app/public/css/lib/jquery-ui/jquery-ui.min.css',
@@ -765,39 +791,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_VERSION,
             $in_footer
         );
-        /*wp_register_script(
-            TPOPlUGIN_SLUG. '-autocomplete-airlines',
-            TPOPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_airlines.js',
-            array(),
-            TPOPlUGIN_VERSION,
-            $in_footer //$in_foote
-        );
-        wp_register_script(
-            TPOPlUGIN_SLUG. '-autocomplete-case-ru',
-            TPOPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_case.js',
-            array(),
-            TPOPlUGIN_VERSION,
-            $in_footer //$in_foote
-        );
-        wp_register_script(
-            TPOPlUGIN_SLUG. '-autocomplete-cities',
-            TPOPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_cities.js',
-            array(),
-            TPOPlUGIN_VERSION,
-            $in_footer //$in_foote
-        );
-        wp_enqueue_script(TPOPlUGIN_SLUG. '-TPAutocomplete',
-            TPOPlUGIN_URL.'app/public/js/lib/TPAdminAutocomplete.js',
-            array(
-                'jquery',
-                'jquery-ui-autocomplete',
-                TPOPlUGIN_SLUG. '-autocomplete-airlines',
-                TPOPlUGIN_SLUG. '-autocomplete-case-ru',
-                TPOPlUGIN_SLUG. '-autocomplete-cities',
-            ),
-            TPOPlUGIN_VERSION,
-            $in_footer //$in_foote
-        );TPOPlUGIN_SLUG. '-TPAutocomplete'*/
+
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPPlugin', //$handle
             TPOPlUGIN_URL.'app/public/js/site/TPPlugin.js', //$src
@@ -927,9 +921,11 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             ?>
             }
 
-            .TP-tdContent a{
-                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
-                font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
+
+            <?php if(\app\includes\TPPlugin::$options['themes_table']['name'] == 'default-theme'): ?>
+                .TP-tdContent a{
+                    font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
+                    font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
                 <?php
                     if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold'])){
                         echo 'font-weight: bold !important;';
@@ -941,29 +937,28 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                         echo 'text-decoration: underline !important;';
                     }
                 ?>
-            }
-            .TPCurrencyIco{
-                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
-            }
-            .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td,
-            .TP-Plugin-Tables_box tbody tr td a span,
-            .TP-Plugin-Tables_box tbody tr td p
-            {
-                font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
-                font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
-            <?php
-                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold'])){
-                    echo 'font-weight: bold !important;';
                 }
-                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic'])){
-                    echo 'font-style: italic !important;';
+                .TPCurrencyIco{
+                    font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
                 }
-                if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline'])){
-                    echo 'text-decoration: underline !important;';
+                .TP-Plugin-Tables_box thead tr td,.TP-Plugin-Tables_box tbody tr td,
+                .TP-Plugin-Tables_box tbody tr td a span,
+                .TP-Plugin-Tables_box tbody tr td p
+                {
+                    font-size: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_size']; ?>px !important;
+                    font-family: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['font_family']; ?>, sans-serif !important;
+                <?php
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold'])){
+                        echo 'font-weight: bold !important;';
+                    }
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic'])){
+                        echo 'font-style: italic !important;';
+                    }
+                    if(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline'])){
+                        echo 'text-decoration: underline !important;';
+                    }
+                ?>
                 }
-            ?>
-            }
-            <?php if(\app\includes\TPPlugin::$options['themes_table']['name'] == 'default-theme'): ?>
                 .TP-Plugin-Tables_box tbody tr td {
                     color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
                 }

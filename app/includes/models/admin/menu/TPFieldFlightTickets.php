@@ -117,7 +117,7 @@ class TPFieldFlightTickets {
                 </div>
             </div>
 
-            <div class="TP-StyleItem">
+            <div class="TP-StyleItem  <?php echo $classNotShowOption; ?>">
                 <div class="TP-MainStyleTable">
                     <span>
                         <?php _ex('tp_admin_page_flights_tab_tickets_style_table_style_label',
@@ -177,7 +177,7 @@ class TPFieldFlightTickets {
                 </div>
             </div>
 
-            <div class="TP-StyleItem">
+            <div class="TP-StyleItem  <?php echo $classNotShowOption; ?>">
                 <div class="TP-MainStyleTable">
                     <span>
                         <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label',
