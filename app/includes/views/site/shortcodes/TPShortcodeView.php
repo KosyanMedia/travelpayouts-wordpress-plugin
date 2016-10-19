@@ -142,6 +142,7 @@ class TPShortcodeView {
                 case "departure_at":
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 //Дата возвращения
@@ -149,6 +150,7 @@ class TPShortcodeView {
                     if($one_way === 'false'){
                         $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
                             \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                            .'<i class="TP-sort-chevron fa"></i>'
                             .' </td>';
                     }
 
@@ -157,36 +159,43 @@ class TPShortcodeView {
                 case "found_at":
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-found-column">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 case "price":
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 case 'place':
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 case 'direction':
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 case 'airline_logo':
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 case 'button':
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
                 default:
                     $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
                         \app\includes\TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
+                        .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
             }
