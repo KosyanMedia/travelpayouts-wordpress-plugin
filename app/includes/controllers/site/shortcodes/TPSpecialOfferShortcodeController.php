@@ -30,6 +30,7 @@ class TPSpecialOfferShortcodeController extends \app\includes\controllers\site\T
         /*
         return $this->view->renderTable($data);*/
         $data = $this->model->getDataTable($args);
+        //var_dump(11);
         if(!$data) return false;
         var_dump($data);
     }

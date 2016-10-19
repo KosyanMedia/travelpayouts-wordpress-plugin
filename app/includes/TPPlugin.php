@@ -140,3 +140,4 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
 
 }
 $TPPlugin = TPPlugin::getInstance();//new TPPlugin();
+

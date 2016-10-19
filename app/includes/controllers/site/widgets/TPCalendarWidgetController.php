@@ -46,7 +46,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
-        error_log($currency);
+        //error_log($currency);
         $output = '';
         $output = '
             <div class="TPWidget TPCalendarWidget">

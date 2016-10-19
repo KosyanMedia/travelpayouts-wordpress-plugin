@@ -333,7 +333,8 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
             if(!empty($country) AND $country AND !empty($airline) AND $airline){
                 $where = "countries = '{$country}' AND airline_code = '{$airline}'" ;
             }
-            $resultRoute = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}",NULL),ARRAY_A);
+            //$resultRoute = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}",NULL),ARRAY_A);
+            $resultRoute = $wpdb->get_results("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}" ,ARRAY_A);
             $a_id = array();
             foreach($resultRoute as $key=>$route){
                 $a_id[$key] = $route["cat_id"];

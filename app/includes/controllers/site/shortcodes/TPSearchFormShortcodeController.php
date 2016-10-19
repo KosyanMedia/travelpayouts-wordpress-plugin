@@ -139,11 +139,11 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
 
                 if(count($params) == 6){
                     //error_log(print_r($params, true));
-                    error_log($params[4]);
+                   // error_log($params[4]);
                     $hotel_city_text = "";
                     switch($params[4]){
                         case 'hotel':
-                            error_log('hotel11111111');
+                           // error_log('hotel11111111');
                             $hotel_city_text = '"hotel": {
                                             "name": "'.$params[0].'",
                                             "location": "'.$params[1].', '.$params[2].'",
@@ -154,7 +154,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                                         }';
                             break;
                         case 'city':
-                            error_log('city11111111');
+                            //error_log('city11111111');
                             $hotel_city_text = '"hotel": {
                                             "name": "'.$params[0].'",
                                             "location": "'.$params[1].'",
@@ -165,7 +165,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
                                         }';
                             break;
                     }
-                    error_log('$hotel_city_text = '.$hotel_city_text);
+                    //error_log('$hotel_city_text = '.$hotel_city_text);
                     $form = preg_replace('/"hotel": \{.*?\}/s', $hotel_city_text, $form);
                     $form = preg_replace('/"hotel": \".*?\"/s', $hotel_city_text, $form);
                 }

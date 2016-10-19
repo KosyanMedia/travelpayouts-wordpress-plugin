@@ -27,7 +27,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
-        error_log('render = '.$white_label);
+        //error_log('render = '.$white_label);
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
