@@ -194,7 +194,7 @@ class TPWidgetsView {
             case 8:
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
-                    error_log($white_label);
+                    //error_log($white_label);
                     if( ! $white_label || empty( $white_label ) ) {
                         switch (\app\includes\TPPlugin::$options['local']['localization']) {
                             case 1:
@@ -255,7 +255,7 @@ class TPWidgetsView {
             7 => array('PLN', 'TRY', 'ILS'),
             8 => array('CAD', 'CHF', 'GBP', 'HKD', 'IDR', 'INR', 'NZD', 'PHP','PLN', 'SGD', 'TRY', 'ILS' )
         );
-        error_log($currency_option);
+        //error_log($currency_option);
         switch($widgetType){
             case 1:
                 $currency = $this->getCurrencyValid($currency_option);
