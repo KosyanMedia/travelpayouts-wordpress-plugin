@@ -191,6 +191,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
     }
 
     public function iataAutocomplete($data, $type, $title = 'origin'){
+        \app\includes\common\TPAutocompleteReplace::iataAutocomplete($data, $type, $title);
         TPAutocomplete::getInstance();
         switch($type){
             case 0:
