@@ -144,6 +144,9 @@ jQuery(function($) {
 
     /** **/
     jQuery.fn.getPaginateTP = function() {
+        //console.log($(this).data("paginate"));
+        //console.log($(this).rowCount());
+        //console.log( $(this).data("paginate_limit"));
         if($(this).data("paginate") == true){
             if($(this).rowCount() > $(this).data("paginate_limit") ){
                return true;

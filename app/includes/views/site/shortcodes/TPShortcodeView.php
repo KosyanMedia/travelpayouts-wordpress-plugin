@@ -62,7 +62,8 @@ class TPShortcodeView {
                 --$sort_column;
             }
         }
-
+        //error_log('$paginate = '.$paginate);
+        //error_log('$rows count = '.count($rows));
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix">
                     '.$this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline).'
                     <table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
