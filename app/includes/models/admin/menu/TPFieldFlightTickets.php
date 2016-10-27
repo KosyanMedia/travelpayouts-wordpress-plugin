@@ -556,14 +556,14 @@ class TPFieldFlightTickets {
                     $settingsShortcodeSortableSelected .= '<li data-key="' . $field . '"
                               data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes][' . $shortcode . '][selected][]"
                               class="">'
-                        .\app\includes\TPPlugin::$options['local']['fields'][$this->local[\app\includes\TPPlugin::$options['local']['localization']]]['label_default'][$field]
+                        .$this->getFieldSortTDLabel($field)
                         .'<input type="hidden" class="itemSortableSelected" name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes][' . $shortcode . '][selected][]" value="' . $field . '"/>'
                         .'</li>';
                 } else {
                     $settingsShortcodeSortable .= '<li data-key="' . $field . '"
                               data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes][' . $shortcode . '][selected][]"
                               class="">'
-                        .\app\includes\TPPlugin::$options['local']['fields'][$this->local[\app\includes\TPPlugin::$options['local']['localization']]]['label_default'][$field]
+                        .$this->getFieldSortTDLabel($field)
                         .'</li>';
                 }
                 $fieldsInput .= '<input type="hidden"  name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes][' . $shortcode . '][fields][]" value="' . $field . '"/>';
@@ -747,6 +747,17 @@ class TPFieldFlightTickets {
         </div>
         <?php
     }
+
+    public function getFieldSortTDLabel($fieldKey){
+        $fieldLabel = "";
+        if(isset(\app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getLang()]['label_default'][$fieldKey])){
+            $fieldLabel = \app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getLang()]['label_default'][$fieldKey];
+        }else{
+            $fieldLabel = \app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getDefaultLang()]['label_default'][$fieldKey];
+        }
+        return $fieldLabel;
+    }
+
     public function TPFieldSortTd($shortcode){
 
         ?>
@@ -763,7 +774,7 @@ class TPFieldFlightTickets {
                              foreach($selected as $key => $sel){
                                  ?>
                                  <option value="<?php echo $key;?>" <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort_column'], $key ); ?>>
-                                     <?php echo \app\includes\TPPlugin::$options['local']['fields'][$this->local[\app\includes\TPPlugin::$options['local']['localization']]]['label_default'][$sel];?>
+                                     <?php echo $this->getFieldSortTDLabel($sel);?>
                                  </option>
                                  <?php
                              }

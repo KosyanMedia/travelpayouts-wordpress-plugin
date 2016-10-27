@@ -11,25 +11,7 @@ namespace app\includes\common;
 
 class TPAutocompleteReplace
 {
-    public static function getLang()
-    {
-        $lang = "en";
-        switch (\app\includes\TPPlugin::$options['local']['localization']) {
-            case "1":
-                $lang = "ru";
-                break;
-            case "2":
-                $lang = "en";
-                break;
-            case "3":
-                $lang = "th";
-                break;
-            default:
-                $lang = "en";
-                break;
-        }
-        return $lang;
-    }
+
 
     /**
      * @param $data
@@ -42,7 +24,7 @@ class TPAutocompleteReplace
         //error_log("TPAutocompleteReplace iataAutocomplete");
         //error_log($type);
         //error_log($title);
-        //error_log(self::getLang());
+        //error_log(TPLang::getLang());
         \app\includes\models\site\TPAutocomplete::getInstance();
         switch ($type) {
             case 0:
@@ -134,10 +116,10 @@ class TPAutocompleteReplace
     public static function getTableAirlineReplace($airline){
         $airlineName = "";
         if (!array_key_exists($airline, \app\includes\models\site\TPAutocomplete::$data_airline)) return $airline;
-        if(isset(\app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names'][self::getLang()])){
-            $airlineName = \app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names'][self::getLang()];
+        if(isset(\app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names'][TPLang::getLang()])){
+            $airlineName = \app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names'][TPLang::getLang()];
         }else{
-            $airlineName = \app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names']['en'];
+            $airlineName = \app\includes\models\site\TPAutocomplete::$data_airline[$airline]['names'][TPLang::getDefaultLang()];
         }
         return $airlineName;
     }
@@ -148,10 +130,10 @@ class TPAutocompleteReplace
     public static function getTableIataReplace($iata){
         $cityName = "";
         if (!array_key_exists($iata, \app\includes\models\site\TPAutocomplete::$data)) return $iata;
-        if(isset(\app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][self::getLang()])){
-            $cityName = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][self::getLang()];
+        if(isset(\app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()])){
+            $cityName = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()];
         }else{
-            $cityName = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations']['en'];
+            $cityName = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getDefaultLang()];
         }
         return $cityName;
     }
@@ -166,27 +148,28 @@ class TPAutocompleteReplace
         //error_log("getTitleIataReplace type = {$type}");
         //error_log("getTitleIataReplace iata = {$iata}");
         if ($type != 'airline') {
-            if(self::getLang() == "ru"){
+            if(TPLang::getLang() == "ru"){
                 if (!array_key_exists($iata, \app\includes\models\site\TPAutocomplete::$title)) return $iata;
                 $title = \app\includes\models\site\TPAutocomplete::$title[$iata]['cases'][\app\includes\TPPlugin::$options['local']['title_case'][$type]];
             } else {
                 if (!array_key_exists($iata, \app\includes\models\site\TPAutocomplete::$data)) return $iata;
-                if(isset(\app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][self::getLang()])){
-                    $title = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][self::getLang()];
+                if(isset(\app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()])){
+                    $title = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()];
                 }else{
-                    $title = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations']['en'];
+                    $title = \app\includes\models\site\TPAutocomplete::$data[$iata]['name_translations'][TPLang::getDefaultLang()];
                 }
             }
         } else {
             if (!array_key_exists($iata, \app\includes\models\site\TPAutocomplete::$data_airline)) return $iata;
-            if(isset(\app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names'][self::getLang()])){
-                $title = \app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names'][self::getLang()];
+            if(isset(\app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names'][TPLang::getLang()])){
+                $title = \app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names'][TPLang::getLang()];
             }else{
-                $title = \app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names']['en'];
+                $title = \app\includes\models\site\TPAutocomplete::$data_airline[$iata]['names'][TPLang::getDefaultLang()];
             }
         }
 
         return $title;
     }
+
 
 }

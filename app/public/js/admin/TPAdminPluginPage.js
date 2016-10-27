@@ -554,7 +554,9 @@ jQuery(function($){
             e.preventDefault();
             doc.find('.TPFields_ru').addClass('TP-ListRowColumNot');
             doc.find('.TPFields_en').addClass('TP-ListRowColumNot');
+            doc.find('.TPFields_th').addClass('TP-ListRowColumNot');
             //doc.find('.TPFields_de').addClass('TP-ListRowColumNot');
+            console.log("selectLocalizationFields "+$(this).val())
             switch ($(this).val()){
                 case "1":
                     //ru
@@ -572,10 +574,13 @@ jQuery(function($){
 
                     break;
 
-                /*case "3":
-                    //en
-                    doc.find('.TPFields_de').removeClass('TP-ListRowColumNot');
-                    break;*/
+                case "3":
+                    //th
+                    doc.find('.TPFields_th').removeClass('TP-ListRowColumNot');
+                    doc.find('.TPLangFieldsLi').text("TH");
+                    doc.find('.TPFieldTitleCaseDiv').hide();
+                    TPFieldHostSelect("3");
+                    break;
             }
         });
 
@@ -594,10 +599,16 @@ jQuery(function($){
         if(host == '') {
             switch (local){
                 case "1":
+                    //ru
                     default_host = doc.find('.TPFieldHost').data('default_host_ru');
                     break;
                 case "2":
+                    //en
                     default_host = doc.find('.TPFieldHost').data('default_host_en');
+                    break;
+                case "3":
+                    //th
+                    default_host = doc.find('.TPFieldHost').data('default_host_th');
                     break;
             }
             console.log('default_host = '+default_host);
@@ -614,6 +625,9 @@ jQuery(function($){
             doc.find('.TPFieldTitleCaseDiv').show();
             break;
         case "2":
+            doc.find('.TPFieldTitleCaseDiv').hide();
+            break;
+        case "3":
             doc.find('.TPFieldTitleCaseDiv').hide();
             break;
     }

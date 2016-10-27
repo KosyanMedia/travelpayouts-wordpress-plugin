@@ -12,7 +12,7 @@ class TPFieldSettings {
     public $local = array(
         1 => 'ru',
         2 => 'en',
-        3 => 'de',
+        3 => 'th',
     );
     public function __construct(){
 
@@ -548,12 +548,16 @@ class TPFieldSettings {
         $default_host_option = \app\includes\TPPlugin::$options['local']['host'];
         $default_host_ru = 'aviasales.ru';
         $default_host_en = 'jetradar.com';
+        $default_host_th = 'jetradar.co.th';
         switch(\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 if(empty($host_option)) $host_option = $default_host_ru;
                 break;
             case 2:
                 if(empty($host_option)) $host_option = $default_host_en;
+                break;
+            case 3:
+                if(empty($host_option)) $host_option = $default_host_th;
                 break;
         }
         ?>
@@ -566,7 +570,8 @@ class TPFieldSettings {
                     class="TP-Zelect TPFieldHost"
                     data-host="<?php echo $default_host_option; ?>"
                     data-default_host_ru="<?php echo $default_host_ru; ?>"
-                    data-default_host_en="<?php echo $default_host_en; ?>">
+                    data-default_host_en="<?php echo $default_host_en; ?>"
+                    data-default_host_th="<?php echo $default_host_th; ?>">
                 <?php foreach($hosts as $host){ ?>
                 <option <?php selected($host_option, $host ); ?>
                     value="<?php echo $host; ?>">
