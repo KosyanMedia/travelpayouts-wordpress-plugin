@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-10-26 18:13+0300\n"
+"POT-Creation-Date: 2016-10-27 13:58+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -602,575 +602,605 @@ msgctxt "(Unknown error.)"
 msgid "tp_request_api_error_msg_unknown_error"
 msgstr "Errore sconosciuto."
 
-#: app/includes/common/TPFieldsLabelTable.php:20
+#: app/includes/common/TPFieldsLabelTable.php:22
 msgctxt "(Номер рейса)"
 msgid "tp_plugin_local_ru_fields_table_label_default_flight_number"
 msgstr "Номер рейса"
 
-#: app/includes/common/TPFieldsLabelTable.php:22
+#: app/includes/common/TPFieldsLabelTable.php:24
 msgctxt "(Рейс)"
 msgid "tp_plugin_local_ru_fields_table_label_default_flight"
 msgstr "Рейс"
 
-#: app/includes/common/TPFieldsLabelTable.php:24
+#: app/includes/common/TPFieldsLabelTable.php:26
 msgctxt "(Дата вылета)"
 msgid "tp_plugin_local_ru_fields_table_label_default_departure_at"
 msgstr "Дата вылета"
 
-#: app/includes/common/TPFieldsLabelTable.php:26
+#: app/includes/common/TPFieldsLabelTable.php:28
 msgctxt "(Дата возвращения)"
 msgid "tp_plugin_local_ru_fields_table_label_default_return_at"
 msgstr "Дата возвращения"
 
-#: app/includes/common/TPFieldsLabelTable.php:28
+#: app/includes/common/TPFieldsLabelTable.php:30
 msgctxt "(Пересадки)"
 msgid "tp_plugin_local_ru_fields_table_label_default_number_of_changes"
 msgstr "Пересадки"
 
-#: app/includes/common/TPFieldsLabelTable.php:30
+#: app/includes/common/TPFieldsLabelTable.php:32
 msgctxt "(Стоимость)"
 msgid "tp_plugin_local_ru_fields_table_label_default_price"
 msgstr "Стоимость"
 
-#: app/includes/common/TPFieldsLabelTable.php:32
+#: app/includes/common/TPFieldsLabelTable.php:34
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_default_airline"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:34
+#: app/includes/common/TPFieldsLabelTable.php:36
 msgctxt "(Лого авиакомпании)"
 msgid "tp_plugin_local_ru_fields_table_label_default_airline_logo"
 msgstr "Лого авиакомпании"
 
-#: app/includes/common/TPFieldsLabelTable.php:36
+#: app/includes/common/TPFieldsLabelTable.php:38
 msgctxt "(Откуда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_origin"
 msgstr "Откуда"
 
-#: app/includes/common/TPFieldsLabelTable.php:38
+#: app/includes/common/TPFieldsLabelTable.php:40
 msgctxt "(Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_destination"
 msgstr "Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:40
+#: app/includes/common/TPFieldsLabelTable.php:42
 msgctxt "(Место)"
 msgid "tp_plugin_local_ru_fields_table_label_default_place"
 msgstr "Место"
 
-#: app/includes/common/TPFieldsLabelTable.php:42
+#: app/includes/common/TPFieldsLabelTable.php:44
 msgctxt "(Направление)"
 msgid "tp_plugin_local_ru_fields_table_label_default_direction"
 msgstr "Направление"
 
-#: app/includes/common/TPFieldsLabelTable.php:44
+#: app/includes/common/TPFieldsLabelTable.php:46
 msgctxt "(Класс перелета)"
 msgid "tp_plugin_local_ru_fields_table_label_default_trip_class"
 msgstr "Класс перелета"
 
-#: app/includes/common/TPFieldsLabelTable.php:46
+#: app/includes/common/TPFieldsLabelTable.php:48
 msgctxt "(Расстояние)"
 msgid "tp_plugin_local_ru_fields_table_label_default_distance"
 msgstr "Расстояние"
 
-#: app/includes/common/TPFieldsLabelTable.php:48
+#: app/includes/common/TPFieldsLabelTable.php:50
 msgctxt "(Цена за километр)"
 msgid "tp_plugin_local_ru_fields_table_label_default_price_distance"
 msgstr "Цена за километр"
 
-#: app/includes/common/TPFieldsLabelTable.php:50
+#: app/includes/common/TPFieldsLabelTable.php:52
 msgctxt "(Когда найден)"
 msgid "tp_plugin_local_ru_fields_table_label_default_found_at"
 msgstr "Когда найден"
 
-#: app/includes/common/TPFieldsLabelTable.php:52
+#: app/includes/common/TPFieldsLabelTable.php:54
 msgctxt "(В одну/обе стороны)"
 msgid "tp_plugin_local_ru_fields_table_label_default_back_and_forth"
 msgstr "В одну/обе стороны"
 
-#: app/includes/common/TPFieldsLabelTable.php:54
+#: app/includes/common/TPFieldsLabelTable.php:56
 msgctxt "(Кнопка)"
 msgid "tp_plugin_local_ru_fields_table_label_default_button"
 msgstr "Кнопка"
 
-#: app/includes/common/TPFieldsLabelTable.php:56
+#: app/includes/common/TPFieldsLabelTable.php:58
 msgctxt "(Откуда - Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_origin_destination"
 msgstr "Откуда - Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:60
+#: app/includes/common/TPFieldsLabelTable.php:62
 msgctxt "(Номер рейса)"
 msgid "tp_plugin_local_ru_fields_table_label_flight_number"
 msgstr "Номер рейса"
 
-#: app/includes/common/TPFieldsLabelTable.php:62
+#: app/includes/common/TPFieldsLabelTable.php:64
 msgctxt "(Рейс)"
 msgid "tp_plugin_local_ru_fields_table_label_flight"
 msgstr "Рейс"
 
-#: app/includes/common/TPFieldsLabelTable.php:64
+#: app/includes/common/TPFieldsLabelTable.php:66
 msgctxt "(Дата вылета)"
 msgid "tp_plugin_local_ru_fields_table_label_departure_at"
 msgstr "Дата вылета"
 
-#: app/includes/common/TPFieldsLabelTable.php:66
+#: app/includes/common/TPFieldsLabelTable.php:68
 msgctxt "(Дата возвращения)"
 msgid "tp_plugin_local_ru_fields_table_label_return_at"
 msgstr "Дата возвращения"
 
-#: app/includes/common/TPFieldsLabelTable.php:68
+#: app/includes/common/TPFieldsLabelTable.php:70
 msgctxt "(Пересадки)"
 msgid "tp_plugin_local_ru_fields_table_label_number_of_changes"
 msgstr "Пересадки"
 
-#: app/includes/common/TPFieldsLabelTable.php:70
+#: app/includes/common/TPFieldsLabelTable.php:72
 msgctxt "(Стоимость)"
 msgid "tp_plugin_local_ru_fields_table_label_price"
 msgstr "Стоимость"
 
-#: app/includes/common/TPFieldsLabelTable.php:72
+#: app/includes/common/TPFieldsLabelTable.php:74
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_airline"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:74
+#: app/includes/common/TPFieldsLabelTable.php:76
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_airline_logo"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:76
+#: app/includes/common/TPFieldsLabelTable.php:78
 msgctxt "(Откуда)"
 msgid "tp_plugin_local_ru_fields_table_label_origin"
 msgstr "Откуда"
 
-#: app/includes/common/TPFieldsLabelTable.php:78
+#: app/includes/common/TPFieldsLabelTable.php:80
 msgctxt "(Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_destination"
 msgstr "Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:80
+#: app/includes/common/TPFieldsLabelTable.php:82
 msgctxt "(Место)"
 msgid "tp_plugin_local_ru_fields_table_label_place"
 msgstr "Место"
 
-#: app/includes/common/TPFieldsLabelTable.php:82
+#: app/includes/common/TPFieldsLabelTable.php:84
 msgctxt "(Направление)"
 msgid "tp_plugin_local_ru_fields_table_label_direction"
 msgstr "Направление"
 
-#: app/includes/common/TPFieldsLabelTable.php:84
+#: app/includes/common/TPFieldsLabelTable.php:86
 msgctxt "(Класс перелета)"
 msgid "tp_plugin_local_ru_fields_table_label_trip_class"
 msgstr "Класс перелета"
 
-#: app/includes/common/TPFieldsLabelTable.php:86
+#: app/includes/common/TPFieldsLabelTable.php:88
 msgctxt "(Расстояние)"
 msgid "tp_plugin_local_ru_fields_table_label_distance"
 msgstr "Расстояние"
 
-#: app/includes/common/TPFieldsLabelTable.php:88
+#: app/includes/common/TPFieldsLabelTable.php:90
 msgctxt "(Цена за километр)"
 msgid "tp_plugin_local_ru_fields_table_label_price_distance"
 msgstr "Цена за километр"
 
-#: app/includes/common/TPFieldsLabelTable.php:90
+#: app/includes/common/TPFieldsLabelTable.php:92
 msgctxt "(Когда найден)"
 msgid "tp_plugin_local_ru_fields_table_label_found_at"
 msgstr "Когда найден"
 
-#: app/includes/common/TPFieldsLabelTable.php:92
+#: app/includes/common/TPFieldsLabelTable.php:94
 msgctxt "(В одну/обе стороны)"
 msgid "tp_plugin_local_ru_fields_table_label_back_and_forth"
 msgstr "В одну/обе стороны"
 
-#: app/includes/common/TPFieldsLabelTable.php:94
+#: app/includes/common/TPFieldsLabelTable.php:96
 msgctxt "(Найти билет)"
 msgid "tp_plugin_local_ru_fields_table_label_button"
 msgstr "Найти билет"
 
-#: app/includes/common/TPFieldsLabelTable.php:96
+#: app/includes/common/TPFieldsLabelTable.php:98
 msgctxt "(Откуда - Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_origin_destination"
 msgstr "Откуда - Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:108
+#: app/includes/common/TPFieldsLabelTable.php:110
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_en_fields_table_label_default_flight_number"
 msgstr "Flight number"
 
-#: app/includes/common/TPFieldsLabelTable.php:110
+#: app/includes/common/TPFieldsLabelTable.php:112
 msgctxt "(Flight)"
 msgid "tp_plugin_local_en_fields_table_label_default_flight"
 msgstr "Flight"
 
-#: app/includes/common/TPFieldsLabelTable.php:112
+#: app/includes/common/TPFieldsLabelTable.php:114
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_en_fields_table_label_default_departure_at"
 msgstr "Departure date"
 
-#: app/includes/common/TPFieldsLabelTable.php:114
+#: app/includes/common/TPFieldsLabelTable.php:116
 msgctxt "(Return date)"
 msgid "tp_plugin_local_en_fields_table_label_default_return_at"
 msgstr "Return date"
 
-#: app/includes/common/TPFieldsLabelTable.php:116
+#: app/includes/common/TPFieldsLabelTable.php:118
 msgctxt "(Stops)"
 msgid "tp_plugin_local_en_fields_table_label_default_number_of_changes"
 msgstr "Stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:118
+#: app/includes/common/TPFieldsLabelTable.php:120
 msgctxt "(Price)"
 msgid "tp_plugin_local_en_fields_table_label_default_price"
 msgstr "Price"
 
-#: app/includes/common/TPFieldsLabelTable.php:120
+#: app/includes/common/TPFieldsLabelTable.php:122
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_default_airline"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:122
+#: app/includes/common/TPFieldsLabelTable.php:124
 msgctxt "(Logo airlines)"
 msgid "tp_plugin_local_en_fields_table_label_default_airline_logo"
 msgstr "Logo airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:124
+#: app/includes/common/TPFieldsLabelTable.php:126
 msgctxt "(Origin)"
 msgid "tp_plugin_local_en_fields_table_label_default_origin"
 msgstr "Origin"
 
-#: app/includes/common/TPFieldsLabelTable.php:126
+#: app/includes/common/TPFieldsLabelTable.php:128
 msgctxt "(Destination)"
 msgid "tp_plugin_local_en_fields_table_label_default_destination"
 msgstr "Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:128
+#: app/includes/common/TPFieldsLabelTable.php:130
 msgctxt "(Rank)"
 msgid "tp_plugin_local_en_fields_table_label_default_place"
 msgstr "Rank"
 
-#: app/includes/common/TPFieldsLabelTable.php:130
+#: app/includes/common/TPFieldsLabelTable.php:132
 msgctxt "(Direction)"
 msgid "tp_plugin_local_en_fields_table_label_default_direction"
 msgstr "Direction"
 
-#: app/includes/common/TPFieldsLabelTable.php:132
+#: app/includes/common/TPFieldsLabelTable.php:134
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_en_fields_table_label_default_trip_class"
 msgstr "Flight class"
 
-#: app/includes/common/TPFieldsLabelTable.php:134
+#: app/includes/common/TPFieldsLabelTable.php:136
 msgctxt "(Distance)"
 msgid "tp_plugin_local_en_fields_table_label_default_distance"
 msgstr "Distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:136
+#: app/includes/common/TPFieldsLabelTable.php:138
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_en_fields_table_label_default_price_distance"
 msgstr "Price/distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:138
+#: app/includes/common/TPFieldsLabelTable.php:140
 msgctxt "(When found)"
 msgid "tp_plugin_local_en_fields_table_label_default_found_at"
 msgstr "When found"
 
-#: app/includes/common/TPFieldsLabelTable.php:140
+#: app/includes/common/TPFieldsLabelTable.php:142
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_en_fields_table_label_default_back_and_forth"
 msgstr "One way / Round-Trip"
 
-#: app/includes/common/TPFieldsLabelTable.php:142
+#: app/includes/common/TPFieldsLabelTable.php:144
 msgctxt "(Button)"
 msgid "tp_plugin_local_en_fields_table_label_default_button"
 msgstr "Button"
 
-#: app/includes/common/TPFieldsLabelTable.php:144
+#: app/includes/common/TPFieldsLabelTable.php:146
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_en_fields_table_label_default_origin_destination"
 msgstr "Origin - Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:148
+#: app/includes/common/TPFieldsLabelTable.php:150
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_en_fields_table_label_flight_number"
 msgstr "Flight number"
 
-#: app/includes/common/TPFieldsLabelTable.php:150
+#: app/includes/common/TPFieldsLabelTable.php:152
 msgctxt "(Flight)"
 msgid "tp_plugin_local_en_fields_table_label_flight"
 msgstr "Flight"
 
-#: app/includes/common/TPFieldsLabelTable.php:152
+#: app/includes/common/TPFieldsLabelTable.php:154
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_en_fields_table_label_departure_at"
 msgstr "Departure date"
 
-#: app/includes/common/TPFieldsLabelTable.php:154
+#: app/includes/common/TPFieldsLabelTable.php:156
 msgctxt "(Return date)"
 msgid "tp_plugin_local_en_fields_table_label_return_at"
 msgstr "Return date"
 
-#: app/includes/common/TPFieldsLabelTable.php:156
+#: app/includes/common/TPFieldsLabelTable.php:158
 msgctxt "(Stops)"
 msgid "tp_plugin_local_en_fields_table_label_number_of_changes"
 msgstr "Stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:158
+#: app/includes/common/TPFieldsLabelTable.php:160
 msgctxt "(Price)"
 msgid "tp_plugin_local_en_fields_table_label_price"
 msgstr "Price"
 
-#: app/includes/common/TPFieldsLabelTable.php:160
+#: app/includes/common/TPFieldsLabelTable.php:162
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_airline"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:162
+#: app/includes/common/TPFieldsLabelTable.php:164
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_airline_logo"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:164
+#: app/includes/common/TPFieldsLabelTable.php:166
 msgctxt "(Origin)"
 msgid "tp_plugin_local_en_fields_table_label_origin"
 msgstr "Origin"
 
-#: app/includes/common/TPFieldsLabelTable.php:166
+#: app/includes/common/TPFieldsLabelTable.php:168
 msgctxt "(Destination)"
 msgid "tp_plugin_local_en_fields_table_label_destination"
 msgstr "Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:168
+#: app/includes/common/TPFieldsLabelTable.php:170
 msgctxt "(Rank)"
 msgid "tp_plugin_local_en_fields_table_label_place"
 msgstr "Rank"
 
-#: app/includes/common/TPFieldsLabelTable.php:170
+#: app/includes/common/TPFieldsLabelTable.php:172
 msgctxt "(Direction)"
 msgid "tp_plugin_local_en_fields_table_label_direction"
 msgstr "Direction"
 
-#: app/includes/common/TPFieldsLabelTable.php:172
+#: app/includes/common/TPFieldsLabelTable.php:174
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_en_fields_table_label_trip_class"
 msgstr "Flight class"
 
-#: app/includes/common/TPFieldsLabelTable.php:174
+#: app/includes/common/TPFieldsLabelTable.php:176
 msgctxt "(Distance)"
 msgid "tp_plugin_local_en_fields_table_label_distance"
 msgstr "Distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:176
+#: app/includes/common/TPFieldsLabelTable.php:178
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_en_fields_table_label_price_distance"
 msgstr "Price/distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:178
+#: app/includes/common/TPFieldsLabelTable.php:180
 msgctxt "(When found)"
 msgid "tp_plugin_local_en_fields_table_label_found_at"
 msgstr "When found"
 
-#: app/includes/common/TPFieldsLabelTable.php:180
+#: app/includes/common/TPFieldsLabelTable.php:182
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_en_fields_table_label_back_and_forth"
 msgstr "One way / Round-Trip"
 
-#: app/includes/common/TPFieldsLabelTable.php:182
+#: app/includes/common/TPFieldsLabelTable.php:184
 msgctxt "(Find Ticket)"
 msgid "tp_plugin_local_en_fields_table_label_button"
 msgstr "Find Ticket"
 
-#: app/includes/common/TPFieldsLabelTable.php:184
+#: app/includes/common/TPFieldsLabelTable.php:186
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_en_fields_table_label_origin_destination"
 msgstr "Origin - Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:196
+#: app/includes/common/TPFieldsLabelTable.php:198
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_th_fields_table_label_default_flight_number"
 msgstr "หมายเลขเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:198
+#: app/includes/common/TPFieldsLabelTable.php:200
 msgctxt "(Flight)"
 msgid "tp_plugin_local_th_fields_table_label_default_flight"
 msgstr "เที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:200
+#: app/includes/common/TPFieldsLabelTable.php:202
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_th_fields_table_label_default_departure_at"
 msgstr "วันเดินทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:202
+#: app/includes/common/TPFieldsLabelTable.php:204
 msgctxt "(Return date)"
 msgid "tp_plugin_local_th_fields_table_label_default_return_at"
 msgstr "วันกลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:204
+#: app/includes/common/TPFieldsLabelTable.php:206
 msgctxt "(Stops)"
 msgid "tp_plugin_local_th_fields_table_label_default_number_of_changes"
 msgstr "จุดพัก"
 
-#: app/includes/common/TPFieldsLabelTable.php:206
+#: app/includes/common/TPFieldsLabelTable.php:208
 msgctxt "(Price)"
 msgid "tp_plugin_local_th_fields_table_label_default_price"
 msgstr "ราคา"
 
-#: app/includes/common/TPFieldsLabelTable.php:208
+#: app/includes/common/TPFieldsLabelTable.php:210
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_default_airline"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:210
+#: app/includes/common/TPFieldsLabelTable.php:212
 msgctxt "(Logo airlines)"
 msgid "tp_plugin_local_th_fields_table_label_default_airline_logo"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:212
+#: app/includes/common/TPFieldsLabelTable.php:214
 msgctxt "(Origin)"
 msgid "tp_plugin_local_th_fields_table_label_default_origin"
 msgstr "ต้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:214
+#: app/includes/common/TPFieldsLabelTable.php:216
 msgctxt "(Destination)"
 msgid "tp_plugin_local_th_fields_table_label_default_destination"
 msgstr "ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:216
+#: app/includes/common/TPFieldsLabelTable.php:218
 msgctxt "(Rank)"
 msgid "tp_plugin_local_th_fields_table_label_default_place"
 msgstr "อันดับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:218
+#: app/includes/common/TPFieldsLabelTable.php:220
 msgctxt "(Direction)"
 msgid "tp_plugin_local_th_fields_table_label_default_direction"
 msgstr "เส้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:220
+#: app/includes/common/TPFieldsLabelTable.php:222
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_th_fields_table_label_default_trip_class"
 msgstr "คลาสเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:222
+#: app/includes/common/TPFieldsLabelTable.php:224
 msgctxt "(Distance)"
 msgid "tp_plugin_local_th_fields_table_label_default_distance"
 msgstr "ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:224
+#: app/includes/common/TPFieldsLabelTable.php:226
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_th_fields_table_label_default_price_distance"
 msgstr "ราคา/ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:226
+#: app/includes/common/TPFieldsLabelTable.php:228
 msgctxt "(When found)"
 msgid "tp_plugin_local_th_fields_table_label_default_found_at"
 msgstr "เมื่อพบ"
 
-#: app/includes/common/TPFieldsLabelTable.php:228
+#: app/includes/common/TPFieldsLabelTable.php:230
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_th_fields_table_label_default_back_and_forth"
 msgstr "ขาเดียว/ไปก-ลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:230
+#: app/includes/common/TPFieldsLabelTable.php:232
 msgctxt "(Button)"
 msgid "tp_plugin_local_th_fields_table_label_default_button"
 msgstr "ค้นหาตั๋ว"
 
-#: app/includes/common/TPFieldsLabelTable.php:232
+#: app/includes/common/TPFieldsLabelTable.php:234
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_th_fields_table_label_default_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:236
+#: app/includes/common/TPFieldsLabelTable.php:238
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_th_fields_table_label_flight_number"
 msgstr "หมายเลขเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:238
+#: app/includes/common/TPFieldsLabelTable.php:240
 msgctxt "(Flight)"
 msgid "tp_plugin_local_th_fields_table_label_flight"
 msgstr "เที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:240
+#: app/includes/common/TPFieldsLabelTable.php:242
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_th_fields_table_label_departure_at"
 msgstr "วันเดินทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:242
+#: app/includes/common/TPFieldsLabelTable.php:244
 msgctxt "(Return date)"
 msgid "tp_plugin_local_th_fields_table_label_return_at"
 msgstr "วันกลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:244
+#: app/includes/common/TPFieldsLabelTable.php:246
 msgctxt "(Stops)"
 msgid "tp_plugin_local_th_fields_table_label_number_of_changes"
 msgstr "จุดพัก"
 
-#: app/includes/common/TPFieldsLabelTable.php:246
+#: app/includes/common/TPFieldsLabelTable.php:248
 msgctxt "(Price)"
 msgid "tp_plugin_local_th_fields_table_label_price"
 msgstr "ราคา"
 
-#: app/includes/common/TPFieldsLabelTable.php:248
+#: app/includes/common/TPFieldsLabelTable.php:250
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_airline"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:250
+#: app/includes/common/TPFieldsLabelTable.php:252
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_airline_logo"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:252
+#: app/includes/common/TPFieldsLabelTable.php:254
 msgctxt "(Origin)"
 msgid "tp_plugin_local_th_fields_table_label_origin"
 msgstr "ต้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:254
+#: app/includes/common/TPFieldsLabelTable.php:256
 msgctxt "(Destination)"
 msgid "tp_plugin_local_th_fields_table_label_destination"
 msgstr "ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:256
+#: app/includes/common/TPFieldsLabelTable.php:258
 msgctxt "(Rank)"
 msgid "tp_plugin_local_th_fields_table_label_place"
 msgstr "อันดับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:258
+#: app/includes/common/TPFieldsLabelTable.php:260
 msgctxt "(Direction)"
 msgid "tp_plugin_local_th_fields_table_label_direction"
 msgstr "เส้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:260
+#: app/includes/common/TPFieldsLabelTable.php:262
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_th_fields_table_label_trip_class"
 msgstr "คลาสเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:262
+#: app/includes/common/TPFieldsLabelTable.php:264
 msgctxt "(Distance)"
 msgid "tp_plugin_local_th_fields_table_label_distance"
 msgstr "ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:264
+#: app/includes/common/TPFieldsLabelTable.php:266
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_th_fields_table_label_price_distance"
 msgstr "ราคา/ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:266
+#: app/includes/common/TPFieldsLabelTable.php:268
 msgctxt "(When found)"
 msgid "tp_plugin_local_th_fields_table_label_found_at"
 msgstr "เมื่อพบ"
 
-#: app/includes/common/TPFieldsLabelTable.php:268
+#: app/includes/common/TPFieldsLabelTable.php:270
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_th_fields_table_label_back_and_forth"
 msgstr "ขาเดียว/ไปก-ลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:270
+#: app/includes/common/TPFieldsLabelTable.php:272
 msgctxt "(Find Ticket)"
 msgid "tp_plugin_local_th_fields_table_label_button"
 msgstr "ค้นหาตั๋ว"
 
-#: app/includes/common/TPFieldsLabelTable.php:272
+#: app/includes/common/TPFieldsLabelTable.php:274
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_th_fields_table_label_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
+
+#: app/includes/common/TPFieldsLabelTable.php:284
+msgctxt "(Economy)"
+msgid "tp_plugin_local_en_trip_class_economy"
+msgstr "Economy"
+
+#: app/includes/common/TPFieldsLabelTable.php:285
+msgctxt "(Эконом)"
+msgid "tp_plugin_local_ru_trip_class_economy"
+msgstr "Эконом"
+
+#: app/includes/common/TPFieldsLabelTable.php:288
+msgctxt "(Business)"
+msgid "tp_plugin_local_en_trip_class_business"
+msgstr "Business"
+
+#: app/includes/common/TPFieldsLabelTable.php:289
+msgctxt "(Бизнес)"
+msgid "tp_plugin_local_ru_trip_class_business"
+msgstr "Бизнес"
+
+#: app/includes/common/TPFieldsLabelTable.php:292
+msgctxt "(First)"
+msgid "tp_plugin_local_en_trip_class_first"
+msgstr "First"
+
+#: app/includes/common/TPFieldsLabelTable.php:293
+msgctxt "(Первый)"
+msgid "tp_plugin_local_ru_trip_class_first"
+msgstr "Первый"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
@@ -1368,147 +1398,147 @@ msgctxt "(The maximum number of anchor changes in one post)"
 msgid "tp_admin_page_auto_links_input_limit_label_help"
 msgstr "Numero massimo di ancore da cambiare in un articolo"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:25
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:21
 msgctxt "Arial"
 msgid "tp_admin_page_flights_tab_tickets_style_font_arial"
 msgstr "Arial"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:27
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:23
 msgctxt "Arial Black"
 msgid "tp_admin_page_flights_tab_tickets_style_font_arial_black"
 msgstr "Arial Black"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:29
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:25
 msgctxt "Comic Sans MS"
 msgid "tp_admin_page_flights_tab_tickets_style_font_comic_sans_MS"
 msgstr "Comic Sans MS"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:31
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:27
 msgctxt "Courier New"
 msgid "tp_admin_page_flights_tab_tickets_style_font_courier_new"
 msgstr "Courier New"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:33
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:29
 msgctxt "Georgia"
 msgid "tp_admin_page_flights_tab_tickets_style_font_georgia"
 msgstr "Georgia"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:35
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:31
 msgctxt "Impact"
 msgid "tp_admin_page_flights_tab_tickets_style_font_impact"
 msgstr "Impact"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:37
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:33
 msgctxt "Times New Roman"
 msgid "tp_admin_page_flights_tab_tickets_style_times_new_roman"
 msgstr "Times New Roman"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:39
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:35
 msgctxt "Trebuchet MS"
 msgid "tp_admin_page_flights_tab_tickets_style_trebuchet_MS"
 msgstr "Trebuchet MS"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:41
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:37
 msgctxt "Verdana"
 msgid "tp_admin_page_flights_tab_tickets_style_verdana"
 msgstr "Verdana"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:43
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:39
 msgctxt "Roboto"
 msgid "tp_admin_page_flights_tab_tickets_style_roboto"
 msgstr "Roboto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:45
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:41
 msgctxt "Roboto Slab"
 msgid "tp_admin_page_flights_tab_tickets_style_roboto_slab"
 msgstr "Roboto Slab"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:47
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:43
 msgctxt "Ubuntu"
 msgid "tp_admin_page_flights_tab_tickets_style_ubuntu"
 msgstr "Ubuntu"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:49
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:45
 msgctxt "Intro"
 msgid "tp_admin_page_flights_tab_tickets_style_intro"
 msgstr "Intro"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:54
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:50
 msgctxt "(Layout)"
 msgid "tp_admin_page_flights_tab_tickets_style_paragraph_1"
 msgstr "Grafica "
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:63
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:59
 msgctxt "(Header style)"
 msgid "tp_admin_page_flights_tab_tickets_style_title_style_label"
 msgstr "Stile testata"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:123
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:119
 msgctxt "(Content)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_style_label"
 msgstr "Contenuto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:183
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:179
 msgctxt "(Borders)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label"
 msgstr "Bordi"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:189
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:185
 msgctxt "(solid)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid"
 msgstr "solido"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:193
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:189
 msgctxt "(dotted)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted"
 msgstr "dotted"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:197
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:193
 msgctxt "(dashed)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed"
 msgstr "dashed"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:227
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:223
 msgctxt "(Background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_background_color_label"
 msgstr "Sfondo"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:240
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:236
 msgctxt "(Table header background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_color_label"
 msgstr "Sfondo tabella testata"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:252
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:248
 msgctxt "(Table header font)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_text_color_label"
 msgstr "Font tabella testata"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:268
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:264
 msgctxt "(Button background)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_background_label"
 msgstr "Sfondo tasto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:281
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:277
 msgctxt "(Button border)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_border_label"
 msgstr "Bordo Pulsante"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:293
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:289
 msgctxt "(Button font)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_font_label"
 msgstr "Font tasto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:332
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:328
 msgctxt "(Show data as hyperlinks)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_hyperlink_label"
 msgstr "Mostra dati collegamenti ipertestuali"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:340
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:336
 msgctxt "(Enable Horizontal Scroll)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label"
 msgstr "Abilita lo scroll orizzontale"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:346
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:342
 msgctxt ""
 "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
 "you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
@@ -1519,155 +1549,155 @@ msgstr ""
 "ridimensiona la vostra zona di contenuti (ad esempio, avete un tema WP responsabile ) -le  "
 "tabelle non influenzeranno il vostro layout , ma avranno un scorrimento orizzontale ."
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:359
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:355
 msgctxt "(Reset to Default styles)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Resetta gli stili originali"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:376
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:372
 msgctxt "(Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
 msgstr "Titolo"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:390
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
 msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "usa variabile \"compagnia aerea\" per aggiungere automaticamente la Compagnia"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:397
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
 msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr ""
 "Usa la variabile \"luogo di partenza\" e \"destinazione\" per aggiungere automaticamente le città"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:415
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:423
 msgctxt "(Title tag)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Titolo tag"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:422
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:430
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:427
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:435
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:432
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:445
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:450
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:465
 msgctxt "(Button Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Titolo Tasto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:470
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:491
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "variabile \" Prezzo \" può essere utilizzato"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:501
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:522
 msgctxt "(Order by price)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label"
 msgstr "Ordina per prezzo"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:511
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:532
 msgctxt "(Ascending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending"
 msgstr "Ascendente"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:519
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:540
 msgctxt "(Descending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending"
 msgstr "Discendente"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:527
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:548
 msgctxt "(Do not sort)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort"
 msgstr "Non ordinare"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:579
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:600
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Colonne Tabella"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:585
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:606
 msgctxt "(Not selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Non selezionato"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:595
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:616
 msgctxt "(Selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Selezionato"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:615
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:834
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:636
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:866
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Righe per pagina"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:637
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:858
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:658
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:890
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Impaginato"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:654
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:675
 msgctxt "(Limit)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label"
 msgstr "Limite"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:680
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:701
 msgctxt "(Departure date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label"
 msgstr "Data Partenza"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:699
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:720
 msgctxt "(Return date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label"
 msgstr "Data Ritorno"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:723
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:744
 msgctxt "(Number of stops)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label"
 msgstr "Numero di scali"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:729
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:750
 msgctxt "(All)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1"
 msgstr "Tutto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:734
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:755
 msgctxt "(No more than one stop)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2"
 msgstr "Non più di uno scalo"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:739
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:760
 msgctxt "(Direct)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3"
 msgstr "Diretto"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:756
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:788
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Ordina per colonna"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:787
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:819
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Codice partner Extra"
@@ -1970,67 +2000,67 @@ msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Campi ( è possibile modificare i valori da soli , ad esempio per la propria lingua)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:562
+#: app/includes/models/admin/menu/TPFieldSettings.php:566
 msgctxt "(Host)"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Host"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:587
+#: app/includes/models/admin/menu/TPFieldSettings.php:592
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Luogo di partenza"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:595
+#: app/includes/models/admin/menu/TPFieldSettings.php:600
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Genitivo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:599
+#: app/includes/models/admin/menu/TPFieldSettings.php:604
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Dativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:603
+#: app/includes/models/admin/menu/TPFieldSettings.php:608
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Accusativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:607
+#: app/includes/models/admin/menu/TPFieldSettings.php:612
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Ablativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:611
+#: app/includes/models/admin/menu/TPFieldSettings.php:616
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Preposizionale"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:617
+#: app/includes/models/admin/menu/TPFieldSettings.php:622
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Destinazione"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:624
+#: app/includes/models/admin/menu/TPFieldSettings.php:629
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Genitivo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:628
+#: app/includes/models/admin/menu/TPFieldSettings.php:633
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Dativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:632
+#: app/includes/models/admin/menu/TPFieldSettings.php:637
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Accusativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:636
+#: app/includes/models/admin/menu/TPFieldSettings.php:641
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Ablativo"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:640
+#: app/includes/models/admin/menu/TPFieldSettings.php:645
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Preposizionale"

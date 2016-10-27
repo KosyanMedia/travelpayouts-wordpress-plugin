@@ -919,34 +919,7 @@ class TPShortcodeView {
      */
     public function getTripClass($trip_class){
         $class = '';
-        switch (\app\includes\TPPlugin::$options['local']['localization']){
-            case 1:
-                switch($trip_class){
-                    case "0":
-                        $class = "Эконом";
-                        break;
-                    case "1":
-                        $class = "Бизнес";
-                        break;
-                    case "2":
-                        $class = "Первый";
-                        break;
-                }
-                break;
-            case 2:
-                switch($trip_class){
-                    case "0":
-                        $class = "Economy";
-                        break;
-                    case "1":
-                        $class = "Business";
-                        break;
-                    case "2":
-                        $class = "First";
-                        break;
-                }
-                break;
-        }
+        $class = \app\includes\common\TPFieldsLabelTable::getTripClassLabel($trip_class);
 
         return $class;
     }

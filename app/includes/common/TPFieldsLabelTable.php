@@ -11,6 +11,8 @@ namespace app\includes\common;
 
 class TPFieldsLabelTable
 {
+
+
     /**
      * @return array
      */
@@ -273,6 +275,36 @@ class TPFieldsLabelTable
                     '(Origin - Destination)',TPOPlUGIN_TEXTDOMAIN),
             ),
         );
+    }
+
+    /**
+     * @param $tripClass
+     * @return string
+     */
+    public static function getTripClassLabel($tripClass){
+        $tripClassLabel = "";
+        $tripClassLabelData = array(
+            "0" => array(
+                "en" => _x('tp_plugin_local_en_trip_class_economy', '(Economy)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_trip_class_economy', '(Эконом)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+            "1" => array(
+                "en" => _x('tp_plugin_local_en_trip_class_business', '(Business)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_trip_class_business', '(Бизнес)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+            "2" => array(
+                "en" => _x('tp_plugin_local_en_trip_class_first', '(First)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_trip_class_first', '(Первый)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+        );
+
+        if(isset($tripClassLabelData[$tripClass][TPLang::getLang()])){
+            $tripClassLabel = $tripClassLabelData[$tripClass][TPLang::getLang()];
+        }else{
+            $tripClassLabel = $tripClassLabelData[$tripClass][TPLang::getDefaultLang()];
+        }
+
+        return $tripClassLabel;
     }
 
 }
