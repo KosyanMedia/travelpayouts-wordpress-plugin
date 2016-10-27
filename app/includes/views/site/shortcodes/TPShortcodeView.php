@@ -658,7 +658,7 @@ class TPShortcodeView {
                             <p data-price="'.$row["value"]/$row['distance'].'" class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
-                                number_format($row["value"]/$row['distance'], 0, '.', ' ').$this->currencyView(),
+                                number_format($row["value"]/$row['distance'], 0, '.', ' ').$this->currencyView($currency),
                                 $type,
                                 $count,
                                 $price, 0, $currency).'
