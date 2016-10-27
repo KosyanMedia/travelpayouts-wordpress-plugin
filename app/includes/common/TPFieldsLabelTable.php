@@ -307,4 +307,28 @@ class TPFieldsLabelTable
         return $tripClassLabel;
     }
 
+    /**
+     * @param $distanceType
+     * @return string
+     */
+    public static function getDistanceLabel($distanceType){
+        $distanceLabel = "";
+        $distanceLabelData = array(
+            1 => array(
+                "en" => _x('tp_plugin_local_en_distance_label_km', '(km)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_distance_label_km', '(км)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+            2 => array(
+                "en" => _x('tp_plugin_local_en_distance_label_m', '(m)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_distance_label_m', '(м)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+        );
+        if(isset($distanceLabelData[$distanceType][TPLang::getLang()])){
+            $distanceLabel = $distanceLabelData[$distanceType][TPLang::getLang()];
+        }else{
+            $distanceLabel = $distanceLabelData[$distanceType][TPLang::getDefaultLang()];
+        }
+        return $distanceLabel;
+
+    }
 }

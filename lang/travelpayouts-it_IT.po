@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-10-27 13:58+0300\n"
+"POT-Creation-Date: 2016-10-27 15:43+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: francesco <francesco.pusole@gmail.com>\n"
@@ -1172,35 +1172,55 @@ msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_th_fields_table_label_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:284
+#: app/includes/common/TPFieldsLabelTable.php:288
 msgctxt "(Economy)"
 msgid "tp_plugin_local_en_trip_class_economy"
 msgstr "Economy"
 
-#: app/includes/common/TPFieldsLabelTable.php:285
+#: app/includes/common/TPFieldsLabelTable.php:289
 msgctxt "(Эконом)"
 msgid "tp_plugin_local_ru_trip_class_economy"
 msgstr "Эконом"
 
-#: app/includes/common/TPFieldsLabelTable.php:288
+#: app/includes/common/TPFieldsLabelTable.php:292
 msgctxt "(Business)"
 msgid "tp_plugin_local_en_trip_class_business"
 msgstr "Business"
 
-#: app/includes/common/TPFieldsLabelTable.php:289
+#: app/includes/common/TPFieldsLabelTable.php:293
 msgctxt "(Бизнес)"
 msgid "tp_plugin_local_ru_trip_class_business"
 msgstr "Бизнес"
 
-#: app/includes/common/TPFieldsLabelTable.php:292
+#: app/includes/common/TPFieldsLabelTable.php:296
 msgctxt "(First)"
 msgid "tp_plugin_local_en_trip_class_first"
 msgstr "First"
 
-#: app/includes/common/TPFieldsLabelTable.php:293
+#: app/includes/common/TPFieldsLabelTable.php:297
 msgctxt "(Первый)"
 msgid "tp_plugin_local_ru_trip_class_first"
 msgstr "Первый"
+
+#: app/includes/common/TPFieldsLabelTable.php:318
+msgctxt "(km)"
+msgid "tp_plugin_local_en_distance_label_km"
+msgstr "km"
+
+#: app/includes/common/TPFieldsLabelTable.php:319
+msgctxt "(км)"
+msgid "tp_plugin_local_ru_distance_label_km"
+msgstr "км"
+
+#: app/includes/common/TPFieldsLabelTable.php:322
+msgctxt "(m)"
+msgid "tp_plugin_local_en_distance_label_m"
+msgstr "m"
+
+#: app/includes/common/TPFieldsLabelTable.php:323
+msgctxt "(м)"
+msgid "tp_plugin_local_ru_distance_label_m"
+msgstr "м"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"

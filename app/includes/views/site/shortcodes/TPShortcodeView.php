@@ -879,27 +879,12 @@ class TPShortcodeView {
      */
     public function tpDistanceView($distance = 0){
         switch(\app\includes\TPPlugin::$options['config']['distance']){
-            case 1:
-                switch(\app\includes\TPPlugin::$options['local']['localization']){
-                    case 1:
-                        $distance = $distance." км";
-                        break;
-                    case 2:
-                        $distance = $distance." km";
-                        break;
-                }
-                break;
             case 2:
-                switch(\app\includes\TPPlugin::$options['local']['localization']){
-                    case 1:
-                        $distance = ($distance * 0.62137)." м";
-                        break;
-                    case 2:
-                        $distance = ($distance * 0.62137)." m";
-                        break;
-                }
+                $distance = ($distance * 0.62137);
                 break;
         }
+        $distance = number_format($distance, 2, '.', ' ')." "
+            .\app\includes\common\TPFieldsLabelTable::getDistanceLabel(\app\includes\TPPlugin::$options['config']['distance']);
         return $distance;
     }
 
