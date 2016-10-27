@@ -1,11 +1,7 @@
 <?php
 namespace app\includes\models\admin\menu;
 class TPFieldFlightTickets {
-    public $local = array(
-        1 => 'ru',
-        2 => 'en',
-        3 => 'de',
-    );
+
     public function __construct(){
 
     }
@@ -377,13 +373,25 @@ class TPFieldFlightTickets {
                     '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
-            foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
-                $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
-                ?>
-                <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
-            <?php
+
+            if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options[$type][$shortcode]['title'])){
+                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+                    ?>
+                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                    <?php
+                }
+            } else {
+                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                    ?>
+                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                    <?php
+                }
             }
+
             switch($shortcode){
                 case 10:
                     ?><p>
@@ -458,13 +466,26 @@ class TPFieldFlightTickets {
                     '(Button Title)', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
-            foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
-                $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
-                ?>
-                <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
-            <?php
+
+            if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title'])){
+                foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
+                    $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+                    ?>
+                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
+                    <?php
+                }
+            } else {
+                foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
+                    $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                    ?>
+                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
+                    <?php
+                }
             }
+
+
             ?>
             <p>
                 <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help',
