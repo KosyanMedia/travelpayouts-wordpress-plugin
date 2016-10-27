@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-10-27 15:45+0300\n"
+"POT-Creation-Date: 2016-10-27 16:05+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1221,6 +1221,36 @@ msgstr "m"
 msgctxt "(м)"
 msgid "tp_plugin_local_ru_distance_label_m"
 msgstr "м"
+
+#: app/includes/common/TPFieldsLabelTable.php:339
+msgctxt "(Direct)"
+msgid "tp_plugin_local_en_number_changes_label_direct"
+msgstr "Direct"
+
+#: app/includes/common/TPFieldsLabelTable.php:340
+msgctxt "(Прямой)"
+msgid "tp_plugin_local_ru_number_changes_label_direct"
+msgstr "Прямой"
+
+#: app/includes/common/TPFieldsLabelTable.php:343
+msgctxt "(stop)"
+msgid "tp_plugin_local_en_number_changes_label_stop"
+msgstr "stop"
+
+#: app/includes/common/TPFieldsLabelTable.php:344
+msgctxt "(пересадка)"
+msgid "tp_plugin_local_ru_number_changes_label_stop"
+msgstr "пересадка"
+
+#: app/includes/common/TPFieldsLabelTable.php:347
+msgctxt "(stops)"
+msgid "tp_plugin_local_en_number_changes_label_stops"
+msgstr "stops"
+
+#: app/includes/common/TPFieldsLabelTable.php:348
+msgctxt "(пересадки)"
+msgid "tp_plugin_local_ru_number_changes_label_stops"
+msgstr "пересадки"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"

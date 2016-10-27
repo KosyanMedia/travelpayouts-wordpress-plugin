@@ -331,4 +331,32 @@ class TPFieldsLabelTable
         return $distanceLabel;
 
     }
+
+    /**
+     * @param $numberChangesType
+     * @return string
+     */
+    public static function getNumberChangesLabel($numberChangesType){
+        $numberChangesLabel = "";
+        $numberChangesLabelData = array(
+            0 => array(
+                "en" => _x('tp_plugin_local_en_number_changes_label_direct', '(Direct)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_number_changes_label_direct', '(Прямой)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+            1 => array(
+                "en" => _x('tp_plugin_local_en_number_changes_label_stop', '(stop)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_number_changes_label_stop', '(пересадка)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+            2 => array(
+                "en" => _x('tp_plugin_local_en_number_changes_label_stops', '(stops)', TPOPlUGIN_TEXTDOMAIN),
+                "ru" => _x('tp_plugin_local_ru_number_changes_label_stops', '(пересадки)', TPOPlUGIN_TEXTDOMAIN),
+            ),
+        );
+        if(isset($numberChangesLabelData[$numberChangesType][TPLang::getLang()])){
+            $numberChangesLabel = $numberChangesLabelData[$numberChangesType][TPLang::getLang()];
+        }else{
+            $numberChangesLabel = $numberChangesLabelData[$numberChangesType][TPLang::getDefaultLang()];
+        }
+        return $numberChangesLabel;
+    }
 }

@@ -914,40 +914,10 @@ class TPShortcodeView {
      * @return string
      */
     public function getNumberChangesView($numberChanges){
-        switch($numberChanges){
-            case 0:
-                switch(\app\includes\TPPlugin::$options['local']['localization']){
-                    case 1:
-                        //$numberChanges = "Без пересадок";
-                        $numberChanges = "Прямой";
-                        break;
-                    case 2:
-                        $numberChanges = "Direct";
-                        break;
-                }
-                break;
-            case 1:
-                switch(\app\includes\TPPlugin::$options['local']['localization']){
-                    case 1:
-                        $numberChanges = $numberChanges." пересадка";
-                        break;
-                    case 2:
-                        $numberChanges = $numberChanges." stop";
-                        break;
-                }
-                break;
-            case 2:
-                switch(\app\includes\TPPlugin::$options['local']['localization']){
-                    case 1:
-                        $numberChanges = $numberChanges." пересадки";
-                        break;
-                    case 2:
-                        $numberChanges = $numberChanges." stops";
-                        break;
-                }
-                break;
-        }
-        return $numberChanges;
+        if ($numberChanges > 0)
+            return $numberChanges." ".\app\includes\common\TPFieldsLabelTable::getNumberChangesLabel($numberChanges);
+        else
+            return \app\includes\common\TPFieldsLabelTable::getNumberChangesLabel($numberChanges);
     }
 
     /**
@@ -1109,8 +1079,8 @@ class TPShortcodeView {
             "rd" => "е",
             "th" => "ое"
         );
-        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-            case 1:
+        switch(\app\includes\common\TPLang::getLang()) {
+            case "ru":
 
                 if (!empty($time)) {
                     if(strpos($format, 'f') !== false){
@@ -1135,7 +1105,14 @@ class TPShortcodeView {
                     }
                 }
                 break;
-            case 2:
+            case "en":
+                if (!empty($time)) {
+                    return date($format, $time);
+                } else {
+                    return date($format);
+                }
+                break;
+            default:
                 if (!empty($time)) {
                     return date($format, $time);
                 } else {
