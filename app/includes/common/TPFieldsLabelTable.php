@@ -285,16 +285,16 @@ class TPFieldsLabelTable
         $tripClassLabel = "";
         $tripClassLabelData = array(
             "0" => array(
-                "en" => _x('tp_plugin_local_en_trip_class_economy', '(Economy)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_trip_class_economy', '(Эконом)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_economy', '(Economy)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_economy', '(Эконом)', TPOPlUGIN_TEXTDOMAIN),
             ),
             "1" => array(
-                "en" => _x('tp_plugin_local_en_trip_class_business', '(Business)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_trip_class_business', '(Бизнес)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_business', '(Business)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_business', '(Бизнес)', TPOPlUGIN_TEXTDOMAIN),
             ),
             "2" => array(
-                "en" => _x('tp_plugin_local_en_trip_class_first', '(First)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_trip_class_first', '(Первый)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_first', '(First)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_first', '(Первый)', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
 
@@ -315,12 +315,12 @@ class TPFieldsLabelTable
         $distanceLabel = "";
         $distanceLabelData = array(
             1 => array(
-                "en" => _x('tp_plugin_local_en_distance_label_km', '(km)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_distance_label_km', '(км)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_distance_label_km', '(km)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_distance_label_km', '(км)', TPOPlUGIN_TEXTDOMAIN),
             ),
             2 => array(
-                "en" => _x('tp_plugin_local_en_distance_label_m', '(m)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_distance_label_m', '(м)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_distance_label_m', '(m)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_distance_label_m', '(м)', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
         if(isset($distanceLabelData[$distanceType][TPLang::getLang()])){
@@ -340,16 +340,16 @@ class TPFieldsLabelTable
         $numberChangesLabel = "";
         $numberChangesLabelData = array(
             0 => array(
-                "en" => _x('tp_plugin_local_en_number_changes_label_direct', '(Direct)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_number_changes_label_direct', '(Прямой)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_direct', '(Direct)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_direct', '(Прямой)', TPOPlUGIN_TEXTDOMAIN),
             ),
             1 => array(
-                "en" => _x('tp_plugin_local_en_number_changes_label_stop', '(stop)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_number_changes_label_stop', '(пересадка)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_stop', '(stop)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_stop', '(пересадка)', TPOPlUGIN_TEXTDOMAIN),
             ),
             2 => array(
-                "en" => _x('tp_plugin_local_en_number_changes_label_stops', '(stops)', TPOPlUGIN_TEXTDOMAIN),
-                "ru" => _x('tp_plugin_local_ru_number_changes_label_stops', '(пересадки)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_stops', '(stops)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_stops', '(пересадки)', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
         if(isset($numberChangesLabelData[$numberChangesType][TPLang::getLang()])){

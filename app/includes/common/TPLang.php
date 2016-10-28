@@ -11,8 +11,11 @@ namespace app\includes\common;
 
 class TPLang
 {
-    private static $defaultLang = "en";
 
+    const TP_LANG_EN = "en";
+    const TP_LANG_RU = "ru";
+    const TP_LANG_TH = "th";
+    private static $defaultLang = self::TP_LANG_EN;
     /**
      * @return string
      */
@@ -21,16 +24,16 @@ class TPLang
         $lang = "en";
         switch (\app\includes\TPPlugin::$options['local']['localization']) {
             case "1":
-                $lang = "ru";
+                $lang = self::getLangRU();
                 break;
             case "2":
-                $lang = "en";
+                $lang = self::getLangEN();
                 break;
             case "3":
-                $lang = "th";
+                $lang = self::TP_LANG_TH;
                 break;
             default:
-                $lang = "en";
+                $lang = self::getLangEN();
                 break;
         }
         return $lang;
@@ -44,4 +47,13 @@ class TPLang
         return self::$defaultLang;
     }
 
+    /**
+     * @return string
+     */
+    public static function getLangEN(){
+        return self::TP_LANG_EN;
+    }
+    public static function getLangRU(){
+        return self::TP_LANG_EN;
+    }
 }

@@ -15,7 +15,7 @@ class TPLinkShortcodeController extends \app\includes\controllers\site\TPShortco
     {
         parent::__construct();
         $this->model = new \app\includes\models\site\shortcodes\TPLinkShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodesView();
+        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
     }
 
     /**

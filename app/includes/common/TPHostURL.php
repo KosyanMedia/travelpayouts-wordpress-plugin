@@ -331,11 +331,14 @@ class TPHostURL
         $host = \app\includes\TPPlugin::$options['local']['host'];
         $host = self::$hosts[$host]['table'];
         if( ! $host || empty( $host ) ) {
-            switch (\app\includes\TPPlugin::$options['local']['localization']) {
-                case 1:
+            switch (\app\includes\common\TPLang::getLang()) {
+                case \app\includes\common\TPLang::getLangRU():
                     $host = 'http://engine.aviasales.ru';
                     break;
-                case 2:
+                case \app\includes\common\TPLang::getLangEN():
+                    $host = 'http://jetradar.com';
+                    break;
+                default:
                     $host = 'http://jetradar.com';
                     break;
             }
@@ -344,6 +347,8 @@ class TPHostURL
         }
         return $host;
     }
+
+
 
     /**
      * @param $widget
@@ -362,5 +367,49 @@ class TPHostURL
      */
     public static function getHost(){
         return array_keys(self::$hosts);
+    }
+
+    /**
+     * @param $typeLink
+     * @return string
+     */
+    public static function getHostSearchLinkWhenEmptyWhiteLabel($typeLink){
+        $host = "";
+        $hostData = array(
+            //searches_ticket
+            1 => array(
+                \app\includes\common\TPLang::getLangRU() => "http://hydra.aviasales.ru",
+                \app\includes\common\TPLang::getLangEN() => "http://jetradar.com",
+            ),
+            //searches_hotel
+            2 => array(
+                \app\includes\common\TPLang::getLangEN() => "http://search.hotellook.com/",
+            ),
+        );
+        if (!array_key_exists($typeLink, $hostData)) return $host;
+
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData[$typeLink])){
+            $host = $hostData[$typeLink][\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $host = $hostData[$typeLink][\app\includes\common\TPLang::getLang()];
+        }
+        return $host;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public static function getHostLangParamSearchHotel(){
+        $langParam = "";
+        $langParamData = array(
+            \app\includes\common\TPLang::getLangRU() => "&language=ru-ru",
+            \app\includes\common\TPLang::getLangEN() => "&language=en-us",
+        );
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $langParamData)){
+            $langParam = $langParamData[\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $langParam = $langParamData[\app\includes\common\TPLang::getLang()];
+        }
+        return $langParam;
     }
 }

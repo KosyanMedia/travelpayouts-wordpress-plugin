@@ -10,7 +10,7 @@ class TPShortcodesView {
     public $local;
     public function __construct() {
         add_action( 'wp', array( &$this, 'redirect_plugins') );
-        add_filter( 'human_time_diff', array( &$this, 'tpHumanTimeDiff') , 10, 4);
+       // add_filter( 'human_time_diff', array( &$this, 'tpHumanTimeDiff') , 10, 4);
         switch (\app\includes\TPPlugin::$options['local']['localization']){
             case 1:
                 $this->local = 'ru';

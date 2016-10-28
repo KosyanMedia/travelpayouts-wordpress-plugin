@@ -10,25 +10,9 @@ namespace app\includes\views\site\shortcodes;
 
 
 class TPShortcodeView {
-    public $local;
     public function __construct()
     {
         add_action('wp', array(&$this, 'redirect_plugins'));
-        switch (\app\includes\TPPlugin::$options['local']['localization']){
-            case 1:
-                $this->local = 'ru';
-                break;
-            case 2:
-                $this->local = 'en';
-                break;
-            case 3:
-                $this->local = 'th';
-                break;
-            default:
-                $this->local = 'en';
-                break;
-        }
-
     }
 
     public function renderPrice($price, $currency){
@@ -750,7 +734,7 @@ class TPShortcodeView {
         $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
         if ($isWhiteLabel == true){
-            if (\app\includes\TPPlugin::$options['local']['localization'] == 2){
+            if (\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangEN()){
                 $url .= '&locale=en';
                 $url .= '&currency='.\app\includes\TPPlugin::$options['local']['currency'];
             }
@@ -1139,14 +1123,7 @@ class TPShortcodeView {
                         $white_label = 'http://'.$white_label;
                     }
                 }else{
-                    /*switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'http://engine.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'http://jetradar.com';
-                            break;
-                    }*/
+
                     $white_label = \app\includes\common\TPHostURL::getHostTable();
                     //error_log('0 = '.$white_label);
 
@@ -1171,15 +1148,11 @@ class TPShortcodeView {
                         $white_label = 'http://'.$white_label;
                     }
                 }else{
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'http://hydra.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'http://jetradar.com';
-                            break;
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel(1);
+
                 }
+                //error_log("searches_ticket");
+                //error_log($white_label);
                 $white_label = "{$white_label}/searches/".urldecode($_GET['searches_ticket']);
                 header("Location: {$white_label}", true, 302);
                 die;
@@ -1197,7 +1170,7 @@ class TPShortcodeView {
                         $white_label = 'http://'.$white_label;
                     }
                 }else{
-                    $white_label = 'http://search.hotellook.com/';
+                    $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel(2);
                 }
                 $white_label = "{$white_label}".urldecode($_GET['searches_hotel']);
                 header("Location: {$white_label}", true, 302);
@@ -1212,5 +1185,119 @@ class TPShortcodeView {
 
 
         }
+    }
+
+    /**
+     * @param array $args
+     * @return string
+     */
+    public function returnTpLink($args = array()){
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'text_link' => '',
+            'origin_date' => 1,
+            'destination_date' => 12,
+            'one_way' => false,
+            'hotel_id' => false,
+            'check_in' => 1,
+            'check_out' => 12,
+            'type' => 0,
+            'subid' => ''
+        );
+
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
+        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
+        if(!empty($white_label)){
+            if(strpos($white_label, 'http') === false){
+                $white_label = 'http://'.$white_label;
+            }
+        }
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            //error_log($subid);
+        }
+        $marker = \app\includes\TPPlugin::$options['account']['marker'];
+        $marker = '&marker='.$marker;
+        if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
+            $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
+        $marker = $marker.'_link';
+        if(!empty($subid))
+            $marker = $marker.'_'.$subid;
+        $marker = $marker.'.$69';
+        if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
+            $marker = $marker . '&with_request=true';
+        $rel = '';
+        if(isset(\app\includes\TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        $target_url = '';
+        if(isset(\app\includes\TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        $redirect = false;
+        if(isset(\app\includes\TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+
+
+        $output = '';
+        switch($type){
+            case 1:
+                if( ! $white_label || empty( $white_label ) )
+                    $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
+
+                $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : "?origin_iata=";
+                $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
+                $departure_at = (!empty($origin_date) && false !== $origin_date) ? '&depart_date='.date("Y-m-d", time()+(DAY_IN_SECONDS*$origin_date))  : "";
+                $return_at = ( !empty($destination_date) && false !== $destination_date) ? '&return_date='.date("Y-m-d", time()+(DAY_IN_SECONDS*$destination_date)) : "";
+                $one_way = "&one_way={$one_way}";
+
+
+                $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$one_way.$marker;
+
+                if($redirect) {
+                    $home = '';
+                    $home = get_option('home');
+                    $url = substr($url, 10);
+                    $output = '<a class="TPLink" href="'
+                        .$home.'/?searches_ticket='.rawurlencode($url).'" '
+                        .$target_url.' '
+                        .$rel.'>'
+                        .$text_link.'</a>';
+                }else{
+                    $output  = '<a class="TPLink" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'
+                        .$text_link.'</a>';
+                }
+
+                break;
+            case 2:
+
+                $locationId = ( false !== $hotel_id ) ? "?{$hotel_id}" : "?locationId=";
+
+                $checkIn = (!empty($check_in) && false !== $check_in) ? '&checkIn='.date("Y-m-d", time()+(DAY_IN_SECONDS*$check_in )) : "";
+                $checkOut = ( !empty($check_out) && false !== $check_out) ? '&checkOut='.date("Y-m-d", time()+(DAY_IN_SECONDS*$check_out )) : "";
+
+                $lang = \app\includes\common\TPHostURL::getHostLangParamSearchHotel();
+                $url = $locationId.$checkIn.$checkOut.'&adults=1'.$lang;
+
+                if( ! $white_label || empty( $white_label ) )
+                    $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
+
+                if($redirect) {
+                    $home = '';
+                    $home = get_option('home');
+                    $output = '<a class="TPLink" href="'
+                        .$home.'/?searches_hotel='.rawurlencode($url).'" '
+                        .$target_url.' '
+                        .$rel.'>'
+                        .$text_link.'</a>';
+                }else{
+                    $output  = '<a class="TPLink" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'
+                        .$text_link.'</a>';
+                }
+                break;
+
+        }
+
+        return $output;
     }
 }

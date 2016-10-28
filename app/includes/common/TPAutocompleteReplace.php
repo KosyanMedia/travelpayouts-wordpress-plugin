@@ -148,7 +148,7 @@ class TPAutocompleteReplace
         //error_log("getTitleIataReplace type = {$type}");
         //error_log("getTitleIataReplace iata = {$iata}");
         if ($type != 'airline') {
-            if(TPLang::getLang() == "ru"){
+            if(TPLang::getLang() == TPLang::getLangRU()){
                 if (!array_key_exists($iata, \app\includes\models\site\TPAutocomplete::$title)) return $iata;
                 $title = \app\includes\models\site\TPAutocomplete::$title[$iata]['cases'][\app\includes\TPPlugin::$options['local']['title_case'][$type]];
             } else {
