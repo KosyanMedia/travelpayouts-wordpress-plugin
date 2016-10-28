@@ -7,16 +7,9 @@
  */
 namespace app\includes\views\site\widgets;
 class TPWidgetsView {
-    public $locale;
+
     public function __construct(){
-        switch (\app\includes\TPPlugin::$options['local']['localization']){
-            case 1:
-                $this->locale = 'ru';
-                break;
-            case 2:
-                $this->locale = 'en';
-                break;
-        }
+
     }
     /**
      * @param bool $widgetType
@@ -169,14 +162,7 @@ class TPWidgetsView {
                 break;
             case 6:
                 if( ! $white_label || empty( $white_label ) ){
-                    /*switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'hydra.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'hydra.jetradar.com';
-                            break;
-                    }    */
+
                     $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
                     //error_log('6 = '.$white_label);
                     if( ! $white_label || empty( $white_label ) ) {

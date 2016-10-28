@@ -53,7 +53,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
             .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
-            .'&only_direct='.$direct.'&locale='.$this->view->locale
+            .'&only_direct='.$direct.'&locale='.\app\includes\common\TPLang::getLang()
             .'&period='.$period
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
             async></script></div>';

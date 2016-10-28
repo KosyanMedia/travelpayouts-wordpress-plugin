@@ -352,11 +352,14 @@ class TPFieldsLabelTable
                 TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_stops', '(пересадки)', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
+
         if(isset($numberChangesLabelData[$numberChangesType][TPLang::getLang()])){
+
             $numberChangesLabel = $numberChangesLabelData[$numberChangesType][TPLang::getLang()];
         }else{
             $numberChangesLabel = $numberChangesLabelData[$numberChangesType][TPLang::getDefaultLang()];
         }
+
         return $numberChangesLabel;
     }
 }

@@ -54,7 +54,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
         $currency = $this->view->getCurrency($widgets, $white_label);
         $output = '
         <div class="TPWidget TPHotelMapWidget">
-        <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.$this->view->locale.'&marker='.$this->view->getMarker($widgets, $subid)
+        <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.\app\includes\common\TPLang::getLang().'&marker='.$this->view->getMarker($widgets, $subid)
             .'&changeflag=0&draggable='.$draggable.'&map_styled='.$map_styled.'&map_color='.$map_color.'
                     &contrast_color='.$contrast_color.'&disable_zoom='.$disable_zoom.'
                     &base_diameter='.\app\includes\TPPlugin::$options['widgets'][$widgets]['base_diameter'].'

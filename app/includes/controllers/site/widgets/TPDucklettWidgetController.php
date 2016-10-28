@@ -60,20 +60,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
         }
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px";
         $url_params .= $width;
-        //error_log($url_params);
-        //error_log($this->view->getMarker($widgets));
-        //error_log($this->view->getWhiteLabel($widgets));
-        $url = '';
-        switch($this->view->locale){
-            case 'ru':
-                $url = '//www.travelpayouts.com/ducklett/scripts.js';
-                break;
-            case 'en':
-                $url = '//www.travelpayouts.com/ducklett/scripts_en.js';
-                break;
-            default:
-                $url = '//www.travelpayouts.com/ducklett/scripts.js';
-        }
+        $url = \app\includes\common\TPHostURL::getDucklettWidgetUrlScript();
        // error_log($url);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()

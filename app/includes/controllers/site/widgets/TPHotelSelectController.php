@@ -40,16 +40,8 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         $width = (isset($responsive) )? "" : "&width={$width}px";
 
         $url = '';
-        switch($this->view->locale){
-            case 'ru':
-                $url = '//www.travelpayouts.com/blissey/scripts.js';
-                break;
-            case 'en':
-                $url = '//www.travelpayouts.com/blissey/scripts_en.js';
-                break;
-            default:
-                $url = '//www.travelpayouts.com/blissey/scripts.js';
-        }
+
+        $url =  \app\includes\common\TPHostURL::getHotelSelectWidgetUrlScript();
         $cat = $cat1.'%2C'.$cat2.'%2C'.$cat3;
         //error_log($cat);
         $white_label = $this->view->getWhiteLabel($widgets);

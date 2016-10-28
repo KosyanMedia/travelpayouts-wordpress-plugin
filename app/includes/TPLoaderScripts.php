@@ -883,15 +883,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             ajaxurl = '<?php echo TPOPlUGIN_AJAX_URL; ?>';
             title_case_origin = '<?php echo \app\includes\TPPlugin::$options['local']['title_case']['origin']; ?>';
             title_case_destination = '<?php echo \app\includes\TPPlugin::$options['local']['title_case']['destination']; ?>';
-            switch ( <?php echo \app\includes\TPPlugin::$options['local']['localization'] ?>){
-                case 1:
-                    tpLocale = 'ru';
-                    break;
-                case 2:
-                    tpLocale = 'en';
-                    break;
-            }
-
+            tpLocale = '<?php echo \app\includes\common\TPLang::getLang();?>';
         </script>
         <style type="text/css">
             <?php

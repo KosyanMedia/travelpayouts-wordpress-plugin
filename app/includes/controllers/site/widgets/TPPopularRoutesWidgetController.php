@@ -36,7 +36,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
             <div class="TPWidget TPPopularRoutesWidget">
             <script async src="//www.travelpayouts.com/weedle/widget.js'.$width
             .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$white_label
-            .'&locale='.$this->view->locale.'&currency='.mb_strtolower($currency)
+            .'&locale='.\app\includes\common\TPLang::getLang().'&currency='.mb_strtolower($currency)
             .'&destination='.$destination.'" charset="UTF-8">
                    </script></div>';
         return $output;

@@ -30,7 +30,7 @@ class TPLang
                 $lang = self::getLangEN();
                 break;
             case "3":
-                $lang = self::TP_LANG_TH;
+                $lang = self::getLangTH();
                 break;
             default:
                 $lang = self::getLangEN();
@@ -54,6 +54,9 @@ class TPLang
         return self::TP_LANG_EN;
     }
     public static function getLangRU(){
-        return self::TP_LANG_EN;
+        return self::TP_LANG_RU;
+    }
+    public static function getLangTH(){
+        return self::TP_LANG_TH;
     }
 }

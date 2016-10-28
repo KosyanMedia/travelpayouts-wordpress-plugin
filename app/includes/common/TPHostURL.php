@@ -412,4 +412,38 @@ class TPHostURL
         }
         return $langParam;
     }
+
+    /**
+     * @return mixed|string
+     */
+    public static function getDucklettWidgetUrlScript(){
+        $urlDucklett = "";
+        $urlDucklettData = array(
+            \app\includes\common\TPLang::getLangRU() => "//www.travelpayouts.com/ducklett/scripts.js",
+            \app\includes\common\TPLang::getLangEN() => "//www.travelpayouts.com/ducklett/scripts_en.js",
+            \app\includes\common\TPLang::getLangTH() => "//www.travelpayouts.com/ducklett/scripts_th.js",
+        );
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $urlDucklettData)){
+            $urlDucklett = $urlDucklettData[\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $urlDucklett = $urlDucklettData[\app\includes\common\TPLang::getLang()];
+        }
+        return $urlDucklett;
+
+    }
+
+    public static function getHotelSelectWidgetUrlScript(){
+        $urlHotelSelect = "";
+        $urlHotelSelectData = array(
+            \app\includes\common\TPLang::getLangRU() => "//www.travelpayouts.com/blissey/scripts.js",
+            \app\includes\common\TPLang::getLangEN() => "//www.travelpayouts.com/blissey/scripts_en.js",
+            \app\includes\common\TPLang::getLangTH() => "//www.travelpayouts.com/blissey/scripts_th.js",
+        );
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $urlHotelSelectData)){
+            $urlHotelSelect = $urlHotelSelectData[\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $urlHotelSelect = $urlHotelSelectData[\app\includes\common\TPLang::getLang()];
+        }
+        return $urlHotelSelect;
+    }
 }
