@@ -42,6 +42,7 @@ if (!version_compare(PHP_VERSION, '5.3.0', '>=')) {
     register_activation_hook( __FILE__, array('app\includes\TPPlugin' ,  'activation' ) );
     register_deactivation_hook( __FILE__, array('app\includes\TPPlugin' ,  'deactivation' ) );
     register_uninstall_hook( __FILE__, array('app\includes\TPPlugin' ,  'uninstall' ) );
+
 }
 
 

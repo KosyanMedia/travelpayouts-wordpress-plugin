@@ -651,7 +651,7 @@ class TPDefault implements  \core\TPODefault{
 
             ),
             'themes_table' => array(
-                'name' => 'default-theme'
+                'name' => self::getRandomThemesTable()
             ),
             'style_table' => array(
                 'title_style' => array(
@@ -762,5 +762,11 @@ class TPDefault implements  \core\TPODefault{
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
         return $defaults;
+    }
+
+    public static function getRandomThemesTable(){
+        $TPFlightTicketsModel = new \app\includes\models\admin\menu\TPFlightTicketsModel();
+        $themesNames = array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+        return $themesNames[array_rand($themesNames)];
     }
 }
