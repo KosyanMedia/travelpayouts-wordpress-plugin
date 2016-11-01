@@ -499,7 +499,9 @@ class TPShortcodeView {
                             <p class="TP-tdContent TP-AirlineLogo">
                             '.$this->getTextTdTable(
                                 $urlLink,
-                                '<img src="http://pics.avs.io/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
+                                '<img src="'
+                                .\app\includes\common\TPHostURL::getHostUrlAirlineLogo()
+                                .\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']
                                 .'/'.\app\includes\TPPlugin::$options['config']['airline_logo_size']['height'].'/'.$row["airline_img"].'@2x.png">'
                                 ,
                                 $type, $count, $price, 0, $currency).'

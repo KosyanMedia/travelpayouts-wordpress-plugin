@@ -9,6 +9,7 @@
 namespace app\includes\common;
 class TPHostURL
 {
+    const TP_HOST_URL_AIRLINE_LOGO = "https://pics.avs.io/";
     private static $hosts = array(
         'aviasales.ru' => array(
             'table' => 'engine.aviasales.ru',
@@ -496,5 +497,9 @@ class TPHostURL
             $urlHotelSelect = $urlHotelSelectData[\app\includes\common\TPLang::getLang()];
         }
         return $urlHotelSelect;
+    }
+
+    public static function getHostUrlAirlineLogo(){
+        return self::TP_HOST_URL_AIRLINE_LOGO;
     }
 }
