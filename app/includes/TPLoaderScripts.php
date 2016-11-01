@@ -723,19 +723,20 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function loadScriptSite($hook)
     {
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
-        $this->getLimitScript();
-        global $widgets;
+
+        //global $widgets;
         global $wp_styles;
-        global $post;
+       // global $post;
 
         //error_log(print_r(wp_get_sidebars_widgets(), true));
         //error_log(term_description());
 
 
-        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === $this->isShortcodePost($post, '[tp') && !is_home() &&
-            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
+        //if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+       //     false === $this->isShortcodePost($post, '[tp') && !is_home() &&
+         //   false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
 
+        if ($this->isScriptSite() == false) return;
         // TODO: Implement loadScriptSite() method.
         switch (\app\includes\TPPlugin::$options['config']['script']){
             case 0:
@@ -872,11 +873,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function headScriptSite()
     {
-        global $post;
+        //global $post;
 
-        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === $this->isShortcodePost($post, '[tp') && !is_home() &&
-            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
+        //if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+        //    false === $this->isShortcodePost($post, '[tp') && !is_home() &&
+         //   false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
+        if ($this->isScriptSite() == false) return;
         // TODO: Implement headScriptSite() method.
 
         ?>
@@ -1046,10 +1048,11 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function footerScriptSite()
     {
         // TODO: Implement footerScriptSite() method.
-        global $post;
-        if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === $this->isShortcodePost($post, '[tp') && !is_home() &&
-            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
+        //global $post;
+        //if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+        //    false === $this->isShortcodePost($post, '[tp') && !is_home() &&
+        //    false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
+        if ($this->isScriptSite() == false) return;
         ?>
         <script type="text/javascript">
             <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga_ym'])){?>
@@ -1080,11 +1083,23 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         <?php
     }
 
-    public function getLimitScript(){
+    /**
+     * @return bool
+     */
+    public function isScriptSite(){
+        global $post;
+        $isScript = false;
         if (isset(\app\includes\TPPlugin::$options['config']['limit_script'])) {
-            error_log("isset");
+
+            $isScript = true;
         } else {
-            error_log("no");
+            if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
+                false === $this->isShortcodePost($post, '[tp') && !is_home() &&
+                false === strpos( term_description(), 'TP-Plugin-Tables' ))
+                $isScript = false;
+            else
+                $isScript = true;
         }
+        return $isScript;
     }
 }
