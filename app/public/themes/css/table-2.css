@@ -567,3 +567,6 @@ a.paginate_button:hover {
 .sorting_asc .TP-sort-chevron { display:inline; }
 .sorting_desc .TP-sort-chevron { display:inline; }
 .TP-Plugin-Tables_box thead tr td.sorting_desc, .TP-Plugin-Tables_box thead tr td.sorting_asc { padding-right:15px; padding-left:5px; }
+@media(max-width:480px){
+  .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { text-align:left; }
+}

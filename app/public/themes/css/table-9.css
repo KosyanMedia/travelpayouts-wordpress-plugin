@@ -559,7 +559,7 @@ a.paginate_button:hover {
 .TP-Plugin-Tables_box tbody tr td a span { font-family:'Roboto', sans-serif !important; font-weight:700 !important; }
 .TP-tdContent::selection {background:#3dc0c4; color:#fff; }
 .TP-tdContent::-moz-selection {background:#3dc0c4; color:#fff; }
-}
+
 
 /* add edits 2016/10/05 */
 .sorting_asc:after, .sorting_asc:before { display:none !important; content:'' !important; }
@@ -575,3 +575,6 @@ a.paginate_button:hover {
 .sorting_desc .TP-sort-chevron { display:inline; }
 .TP-Plugin-Tables_box thead tr td.sorting_desc, .TP-Plugin-Tables_box thead tr td.sorting_asc { padding-right:15px; padding-left:5px; }
 .TP-Plugin-Tables_box tbody tr td p { margin-top:1.1em; margin-bottom:1.1em; }
+@media(max-width:480px){
+  .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { text-align:left; }
+}
