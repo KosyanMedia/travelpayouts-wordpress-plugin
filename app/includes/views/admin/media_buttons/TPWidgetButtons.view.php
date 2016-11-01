@@ -45,7 +45,7 @@
                             <?php _ex('tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3',
                                 '(Calendar Widget)', TPOPlUGIN_TEXTDOMAIN ); ?>
                         </option>
-                        <?php if(\app\includes\TPPlugin::$options['local']['localization'] == 1){ ?>
+                        <?php if(\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangRU()){ ?>
                             <option value="4">
                                 <?php _ex('tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4',
                                     '(Subscription Widget)', TPOPlUGIN_TEXTDOMAIN ); ?>

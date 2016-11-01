@@ -59,4 +59,8 @@ class TPLang
     public static function getLangTH(){
         return self::TP_LANG_TH;
     }
+
+    public static function getLangAdminAutocomplete(){
+        error_log(get_locale());
+    }
 }

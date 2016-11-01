@@ -9,11 +9,7 @@ namespace app\includes\models\admin\menu;
 use app\includes\common\TPHostURL;
 
 class TPFieldSettings {
-    public $local = array(
-        1 => 'ru',
-        2 => 'en',
-        3 => 'th',
-    );
+
     public function __construct(){
 
     }
@@ -79,13 +75,28 @@ class TPFieldSettings {
                             '(Error Message)', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <?php
-                        foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
-                                $typeFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'hidden':'text';
-                            ?>
-                            <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
-                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
-                        <?php
+
+
+                        if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options['config']['message_error'])){
+                            foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+                                ?>
+                                <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
+                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                                <?php
+                            }
+                        } else {
+                            foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                                ?>
+                                <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
+                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                                <?php
+                            }
                         }
+
+
+
                         ?>
                     </label>
                 </div>
@@ -499,24 +510,13 @@ class TPFieldSettings {
                     '(Fields (you can edit values on your own, e.g. for your own language))', TPOPlUGIN_TEXTDOMAIN); ?></span>
             <?php
             $local_table_fields = '<ul class="titleHeadTable">
-                           <li class="TPLangFieldsLi">'.$this->local[\app\includes\TPPlugin::$options['local']['localization']].'</li>
+                           <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
                       </ul>';
             foreach(\app\includes\TPPlugin::$options['local']['fields'] as $key_local => $fields){
-                $showFields = ($this->local[\app\includes\TPPlugin::$options['local']['localization']] != $key_local)?'TP-ListRowColumNot':'';
+                $showFields = (\app\includes\common\TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
                 $local_table_fields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
                 $i = 0;
-                // foreach( $fields['label'] as $key_label => $label ){
-                /*$local_table_fields .= '<div class="TP-ListRowColum">
-                                            <div class="infoRow" title="'.$fields['label_default'][$key_label].'"></div>
-                                            <div>
-                                                <label>
-                                                    <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label]['.$key_label.']" type="text" value="'.$label.'"/>
-                                                    <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label_default]['.$key_label.']" type="hidden" value="'.$fields['label_default'][$key_label].'"/>
-                                                </label>
-                                            </div>
-                                        </div>';*/
 
-                //}
                 foreach(array_chunk($fields['label'], 2, true) as $value){
                     $local_table_fields .= '<div class="TP-ListRowColum">';
                     foreach( $value as $key_label => $label ){
@@ -549,14 +549,14 @@ class TPFieldSettings {
         $default_host_ru = 'aviasales.ru';
         $default_host_en = 'jetradar.com';
         $default_host_th = 'jetradar.co.th';
-        switch(\app\includes\TPPlugin::$options['local']['localization']){
-            case 1:
+        switch(\app\includes\common\TPLang::getLang()){
+            case \app\includes\common\TPLang::getLangRU():
                 if(empty($host_option)) $host_option = $default_host_ru;
                 break;
-            case 2:
+            case \app\includes\common\TPLang::getLangEN():
                 if(empty($host_option)) $host_option = $default_host_en;
                 break;
-            case 3:
+            case \app\includes\common\TPLang::getLangTH():
                 if(empty($host_option)) $host_option = $default_host_th;
                 break;
         }

@@ -363,6 +363,57 @@ class TPHostURL
     }
 
     /**
+     * @param $widgetType
+     * @return string
+     */
+    public static function getHostWidgetWhenEmptyWhiteLabel($widgetType){
+        $host = "";
+        $hostData = array(
+            1 => array(
+                TPLang::getLangRU() => 'http://map.aviasales.ru',
+                TPLang::getLangEN() => 'http://map.jetradar.com',
+            ),
+            2 => array(
+                TPLang::getLangRU() => 'hotellook.ru',
+                TPLang::getLangEN() => 'hotellook.com',
+            ),
+            3 => array(
+                TPLang::getLangRU() => 'hydra.aviasales.ru',
+                TPLang::getLangEN() => 'hydra.jetradar.com',
+            ),
+            4 => array(
+                TPLang::getLangRU() => 'hydra.aviasales.ru',
+                TPLang::getLangEN() => 'hydra.aviasales.ru',
+            ),
+            5 => array(
+                TPLang::getLangRU() => 'hotellook.ru',
+                TPLang::getLangEN() => 'hotellook.com',
+            ),
+            6 => array(
+                TPLang::getLangRU() => 'hydra.aviasales.ru',
+                TPLang::getLangEN() => 'hydra.aviasales.ru',
+            ),
+            7 => array(
+                TPLang::getLangRU() => 'search.hotellook.com',
+                TPLang::getLangEN() => 'search.hotellook.com',
+            ),
+            8 => array(
+                TPLang::getLangRU() => 'hydra.aviasales.ru',
+                TPLang::getLangEN() => 'www.jetradar.com%2Fsearches%2Fnew',
+            ),
+        );
+
+        if (!array_key_exists($widgetType, $hostData)) return $host;
+
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData[$widgetType])){
+            $host = $hostData[$widgetType][\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $host = $hostData[$widgetType][\app\includes\common\TPLang::getLang()];
+        }
+        return $host;
+
+    }
+    /**
      * @return array
      */
     public static function getHost(){

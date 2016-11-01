@@ -58,6 +58,10 @@ class TPFieldWizard {
                                     <?php _ex('tp_admin_page_wizard_field_localization_value_2_label',
                                         '(English)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </option>
+                                <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
+                                    <?php _ex('tp_admin_page_wizard_field_localization_value_3_label',
+                                        '(Thai)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                </option>
                             </select>
                         </label>
                     </div>

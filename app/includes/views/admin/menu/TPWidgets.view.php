@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <?php if(\app\includes\TPPlugin::$options['local']['localization'] == 1){ ?>
+                <?php if(\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangRU()){ ?>
                     <div class="bellows__item">
                         <div class="bellows__header">
                             <h3>

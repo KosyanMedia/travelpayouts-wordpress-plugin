@@ -337,7 +337,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             <?php
                 }
                 global $locale;
+                \app\includes\common\TPLang::getLangAdminAutocomplete();
             ?>
+
             <?php
                 if(  ! isset( \app\includes\TPPlugin::$options['account']['marker'] ) || empty( \app\includes\TPPlugin::$options['account']['marker'] )) {
                     ?>

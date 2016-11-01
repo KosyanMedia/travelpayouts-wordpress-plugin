@@ -97,28 +97,14 @@ class TPWidgetsView {
         switch($widgetType){
             case 1:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'http://map.aviasales.ru';
-                            break;
-                        case 2:
-                            $white_label = 'http://map.jetradar.com';
-                            break;
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/map';
                 }
                 break;
             case 2:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'hotellook.ru';
-                            break;
-                        case 2:
-                            $white_label = 'hotellook.com';
-                            break;
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/hotels';
                 }
@@ -127,16 +113,7 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = \app\includes\common\TPHostURL::getHostWidget(3);
                     //error_log($white_label);
-                    if( ! $white_label || empty( $white_label ) ){
-                        switch (\app\includes\TPPlugin::$options['local']['localization']){
-                            case 1:
-                                $white_label = 'hydra.aviasales.ru';
-                                break;
-                            case 2:
-                                $white_label = 'hydra.jetradar.com';
-                                break;
-                        }
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/flights';
                 }
@@ -148,14 +125,7 @@ class TPWidgetsView {
                 break;
             case 5:
                 if( ! $white_label || empty( $white_label ) ){
-                    switch (\app\includes\TPPlugin::$options['local']['localization']){
-                        case 1:
-                            $white_label = 'hotellook.ru';
-                            break;
-                        case 2:
-                            $white_label = 'hotellook.com';
-                            break;
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/hotels';
                 }
@@ -181,16 +151,7 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
                     //error_log($white_label);
-                    if( ! $white_label || empty( $white_label ) ) {
-                        switch (\app\includes\TPPlugin::$options['local']['localization']) {
-                            case 1:
-                                $white_label = 'hydra.aviasales.ru';
-                                break;
-                            case 2:
-                                $white_label = 'www.jetradar.com%2Fsearches%2Fnew';
-                                break;
-                        }
-                    }
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                     //$white_label = 'hydra.aviasales.ru';
                 }else{
                     $white_label .= '/flights';
@@ -201,6 +162,7 @@ class TPWidgetsView {
         return $white_label;
 
     }
+
     /**
      * @return string
      */

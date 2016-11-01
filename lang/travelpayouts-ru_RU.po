@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-10-27 16:05+0300\n"
+"POT-Creation-Date: 2016-10-31 15:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1222,32 +1222,32 @@ msgctxt "(м)"
 msgid "tp_plugin_local_ru_distance_label_m"
 msgstr "м"
 
-#: app/includes/common/TPFieldsLabelTable.php:339
+#: app/includes/common/TPFieldsLabelTable.php:343
 msgctxt "(Direct)"
 msgid "tp_plugin_local_en_number_changes_label_direct"
 msgstr "Direct"
 
-#: app/includes/common/TPFieldsLabelTable.php:340
+#: app/includes/common/TPFieldsLabelTable.php:344
 msgctxt "(Прямой)"
 msgid "tp_plugin_local_ru_number_changes_label_direct"
 msgstr "Прямой"
 
-#: app/includes/common/TPFieldsLabelTable.php:343
+#: app/includes/common/TPFieldsLabelTable.php:347
 msgctxt "(stop)"
 msgid "tp_plugin_local_en_number_changes_label_stop"
 msgstr "stop"
 
-#: app/includes/common/TPFieldsLabelTable.php:344
+#: app/includes/common/TPFieldsLabelTable.php:348
 msgctxt "(пересадка)"
 msgid "tp_plugin_local_ru_number_changes_label_stop"
 msgstr "пересадка"
 
-#: app/includes/common/TPFieldsLabelTable.php:347
+#: app/includes/common/TPFieldsLabelTable.php:351
 msgctxt "(stops)"
 msgid "tp_plugin_local_en_number_changes_label_stops"
 msgstr "stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:348
+#: app/includes/common/TPFieldsLabelTable.php:352
 msgctxt "(пересадки)"
 msgid "tp_plugin_local_ru_number_changes_label_stops"
 msgstr "пересадки"
@@ -1749,92 +1749,92 @@ msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:30
+#: app/includes/models/admin/menu/TPFieldSettings.php:26
 msgctxt "(Token)"
 msgid "tp_admin_page_settings_tab_account_field_token_label"
 msgstr "Токен"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:38
+#: app/includes/models/admin/menu/TPFieldSettings.php:34
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_settings_tab_account_field_extra_marker_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:50
+#: app/includes/models/admin/menu/TPFieldSettings.php:46
 msgctxt "(Marker)"
 msgid "tp_admin_page_settings_tab_account_field_marker_label"
 msgstr "Маркер"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:58
+#: app/includes/models/admin/menu/TPFieldSettings.php:54
 msgctxt "White Label"
 msgid "tp_admin_page_settings_tab_account_field_white_label_label"
 msgstr "White Label"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:78
+#: app/includes/models/admin/menu/TPFieldSettings.php:74
 msgctxt "(Error Message)"
 msgid "tp_admin_page_settings_tab_config_field_message_error_label"
 msgstr "При ошибке в API вместо таблиц выводить"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:93
+#: app/includes/models/admin/menu/TPFieldSettings.php:104
 msgctxt "Action after click"
 msgid "tp_admin_page_settings_tab_config_field_after_url_label"
 msgstr "После клика по кнопке Найти"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:100
+#: app/includes/models/admin/menu/TPFieldSettings.php:111
 msgctxt "(Show Search Form)"
 msgid "tp_admin_page_settings_tab_config_field_after_url_value_0_label"
 msgstr "Переходить на заполненные формы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:108
+#: app/includes/models/admin/menu/TPFieldSettings.php:119
 msgctxt "(Show Search Results)"
 msgid "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
 msgstr "Инициировать новый поиск"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:115
+#: app/includes/models/admin/menu/TPFieldSettings.php:126
 msgctxt "(Distance Units)"
 msgid "tp_admin_page_settings_tab_config_field_distance_label"
 msgstr "Единица измерения расстояния"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:119
+#: app/includes/models/admin/menu/TPFieldSettings.php:130
 msgctxt "(km)"
 msgid "tp_admin_page_settings_tab_config_field_distance_value_1_label"
 msgstr "км"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:123
+#: app/includes/models/admin/menu/TPFieldSettings.php:134
 msgctxt "miles"
 msgid "tp_admin_page_settings_tab_config_field_distance_value_2_label"
 msgstr "мили"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:130
+#: app/includes/models/admin/menu/TPFieldSettings.php:141
 msgctxt "(Airlines logo size)"
 msgid "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
 msgstr "Размер лого Авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:162
+#: app/includes/models/admin/menu/TPFieldSettings.php:173
 msgctxt "(Buttons in the editor)"
 msgid "tp_admin_page_settings_tab_config_field_media_button_label"
 msgstr "Кнопки в редакторе"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:168
+#: app/includes/models/admin/menu/TPFieldSettings.php:179
 msgctxt "Default"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "По умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:173
+#: app/includes/models/admin/menu/TPFieldSettings.php:184
 msgctxt "Compact"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "Компактный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:178
+#: app/includes/models/admin/menu/TPFieldSettings.php:189
 msgctxt "Hide"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
 msgstr "Скрыть"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:197
+#: app/includes/models/admin/menu/TPFieldSettings.php:208
 msgctxt "Redirect"
 msgid "tp_admin_page_settings_tab_config_field_redirect_label"
 msgstr "Переходить на результаты через редирект"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:202
+#: app/includes/models/admin/menu/TPFieldSettings.php:213
 msgctxt ""
 "(In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
 "We recommend that you don’t change this option.)"
@@ -1843,17 +1843,17 @@ msgstr ""
 "При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять "
 "этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:214
+#: app/includes/models/admin/menu/TPFieldSettings.php:225
 msgctxt "(Open in a New Window)"
 msgid "tp_admin_page_settings_tab_config_field_target_url_label"
 msgstr "Открывать результаты в новом окне"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:221
+#: app/includes/models/admin/menu/TPFieldSettings.php:232
 msgctxt "(Add Nofollow Attribute)"
 msgid "tp_admin_page_settings_tab_config_field_nofollow_label"
 msgstr "Добавлять для ссылок атрибут nofollow"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:226
+#: app/includes/models/admin/menu/TPFieldSettings.php:237
 msgctxt ""
 "(This attribute avoids getting undesirable search results into the search engines index. We "
 "recommend that you don’t change this option.)"
@@ -1862,37 +1862,37 @@ msgstr ""
 "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
 "этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:238
+#: app/includes/models/admin/menu/TPFieldSettings.php:249
 msgctxt "(Turn off statistics and blog updates)"
 msgid "tp_admin_page_settings_tab_config_field_statistics_label"
 msgstr "Отключить обновление статистики и новостей"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:246
+#: app/includes/models/admin/menu/TPFieldSettings.php:257
 msgctxt "(Default settings)"
 msgid "tp_admin_page_settings_tab_config_btn_default"
 msgstr "Настройки по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:256
+#: app/includes/models/admin/menu/TPFieldSettings.php:267
 msgctxt "(Cache Timeout)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
 msgstr "Частота обновления данных для таблиц"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:276
+#: app/includes/models/admin/menu/TPFieldSettings.php:287
 msgctxt "(Day)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 msgstr "День"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:284
+#: app/includes/models/admin/menu/TPFieldSettings.php:295
 msgctxt "(Hour)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_1_label"
 msgstr "Час"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:294
+#: app/includes/models/admin/menu/TPFieldSettings.php:305
 msgctxt "(Script Include)"
 msgid "tp_admin_page_settings_tab_config_field_script_label"
 msgstr "Размещать скрипты плагина"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:299
+#: app/includes/models/admin/menu/TPFieldSettings.php:310
 msgctxt ""
 "(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
 "switching to &lt;footer&gt;)"
@@ -1901,77 +1901,77 @@ msgstr ""
 "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
 "попробуйте переставить в &lt;footer&gt;      "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:309
+#: app/includes/models/admin/menu/TPFieldSettings.php:320
 msgctxt "(Inside &lt;head&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
 msgstr "Внутри тега &lt;head&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:316
+#: app/includes/models/admin/menu/TPFieldSettings.php:327
 msgctxt "(Inside &lt;footer&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
 msgstr "Внутри тега &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:325
+#: app/includes/models/admin/menu/TPFieldSettings.php:336
 msgctxt "(Date Format)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_label"
 msgstr "Формат даты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:332
+#: app/includes/models/admin/menu/TPFieldSettings.php:343
 msgctxt "(Use variables to set the date:)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
 msgstr "Используйте переменные для настройки даты:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:334
+#: app/includes/models/admin/menu/TPFieldSettings.php:345
 msgctxt "(day)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
 msgstr "день месяца"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:336
+#: app/includes/models/admin/menu/TPFieldSettings.php:347
 msgctxt "(month name (small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
 msgstr "название месяца с маленькой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:338
+#: app/includes/models/admin/menu/TPFieldSettings.php:349
 msgctxt "(month name (capital letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
 msgstr "название месяца с большой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:340
+#: app/includes/models/admin/menu/TPFieldSettings.php:351
 msgctxt "(month number)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
 msgstr "месяц цифрой"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:342
+#: app/includes/models/admin/menu/TPFieldSettings.php:353
 msgctxt "(month (3 letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
 msgstr "месяц 3 буквами"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:344
+#: app/includes/models/admin/menu/TPFieldSettings.php:355
 msgctxt "(month (3 small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:346
+#: app/includes/models/admin/menu/TPFieldSettings.php:357
 msgctxt "(last 2 digits of the year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:348
+#: app/includes/models/admin/menu/TPFieldSettings.php:359
 msgctxt "(year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:362
+#: app/includes/models/admin/menu/TPFieldSettings.php:373
 msgctxt "(Current format)"
 msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:370
+#: app/includes/models/admin/menu/TPFieldSettings.php:381
 msgctxt "(Event tracking. \"Find\" button)"
 msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:375
+#: app/includes/models/admin/menu/TPFieldSettings.php:386
 msgctxt ""
 "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
@@ -1982,67 +1982,67 @@ msgstr ""
 "для отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
 "\"ga('send', 'event', 'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:394
+#: app/includes/models/admin/menu/TPFieldSettings.php:405
 msgctxt "(Event tracking. Table is loaded)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
 msgstr "Отслеживание события. Загрузка таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:399
+#: app/includes/models/admin/menu/TPFieldSettings.php:410
 msgctxt "(Google Analytics event that will be fired every time a table loads.)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
 msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:419
+#: app/includes/models/admin/menu/TPFieldSettings.php:430
 msgctxt "(Import settings)"
 msgid "tp_admin_page_settings_tab_config_btn_import_settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:424
+#: app/includes/models/admin/menu/TPFieldSettings.php:435
 msgctxt "(Browse)"
 msgid "tp_admin_page_settings_tab_config_btn_browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:429
+#: app/includes/models/admin/menu/TPFieldSettings.php:440
 msgctxt "(Import)"
 msgid "tp_admin_page_settings_tab_config_btn_import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:431
+#: app/includes/models/admin/menu/TPFieldSettings.php:442
 msgctxt "(The file is not selected)"
 msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:436
+#: app/includes/models/admin/menu/TPFieldSettings.php:447
 msgctxt "(Export)"
 msgid "tp_admin_page_settings_tab_config_btn_export_settings"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:456
+#: app/includes/models/admin/menu/TPFieldSettings.php:467
 msgctxt "(Tables and Widgets Language)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_label"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:460
+#: app/includes/models/admin/menu/TPFieldSettings.php:471
 msgctxt "(Russian)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:464
+#: app/includes/models/admin/menu/TPFieldSettings.php:475
 msgctxt "(English)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:468
+#: app/includes/models/admin/menu/TPFieldSettings.php:479
 msgctxt "(Thai)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
 msgstr "Тайский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:474
+#: app/includes/models/admin/menu/TPFieldSettings.php:485
 msgctxt "(Currency)"
 msgid "tp_admin_page_settings_tab_localization_field_currency_label"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:498
+#: app/includes/models/admin/menu/TPFieldSettings.php:509
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Названия ячеек (можете менять название по своему усмотрению)"
@@ -2572,7 +2572,12 @@ msgctxt "(English)"
 msgid "tp_admin_page_wizard_field_localization_value_2_label"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldWizard.php:69
+#: app/includes/models/admin/menu/TPFieldWizard.php:62
+msgctxt "(Thai)"
+msgid "tp_admin_page_wizard_field_localization_value_3_label"
+msgstr "Тайский"
+
+#: app/includes/models/admin/menu/TPFieldWizard.php:73
 msgctxt "(Currency)"
 msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Валюта"
