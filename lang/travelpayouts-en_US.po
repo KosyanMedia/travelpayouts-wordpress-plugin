@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-10-31 15:54+0200\n"
+"POT-Creation-Date: 2016-11-01 13:30+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -377,57 +377,57 @@ msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Error invalid file"
 
-#: app/includes/TPLoaderScripts.php:344
+#: app/includes/TPLoaderScripts.php:346
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:345
+#: app/includes/TPLoaderScripts.php:347
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:349
+#: app/includes/TPLoaderScripts.php:351
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:350
+#: app/includes/TPLoaderScripts.php:352
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:354
+#: app/includes/TPLoaderScripts.php:356
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "No data"
 
-#: app/includes/TPLoaderScripts.php:355
+#: app/includes/TPLoaderScripts.php:357
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "There are no payments yet"
 
-#: app/includes/TPLoaderScripts.php:359
+#: app/includes/TPLoaderScripts.php:361
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "No search form."
 
-#: app/includes/TPLoaderScripts.php:360
+#: app/includes/TPLoaderScripts.php:362
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "No anchors."
 
-#: app/includes/TPLoaderScripts.php:361
+#: app/includes/TPLoaderScripts.php:363
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Grand total this month"
 
-#: app/includes/TPLoaderScripts.php:364
+#: app/includes/TPLoaderScripts.php:366
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Create"
 
-#: app/includes/TPLoaderScripts.php:365
+#: app/includes/TPLoaderScripts.php:367
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Cancel"
@@ -1868,31 +1868,36 @@ msgid "tp_admin_page_settings_tab_config_field_statistics_label"
 msgstr "Turn off statistics and blog updates"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:257
+msgctxt "(Use plugin's scripts on all pages)"
+msgid "tp_admin_page_settings_tab_config_field_limit_script_label"
+msgstr "Use plugin's scripts on all pages"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:265
 msgctxt "(Default settings)"
 msgid "tp_admin_page_settings_tab_config_btn_default"
 msgstr "Default settings"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:267
+#: app/includes/models/admin/menu/TPFieldSettings.php:275
 msgctxt "(Cache Timeout)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
 msgstr "Cache Timeout"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:287
+#: app/includes/models/admin/menu/TPFieldSettings.php:295
 msgctxt "(Day)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 msgstr "Day"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:295
+#: app/includes/models/admin/menu/TPFieldSettings.php:303
 msgctxt "(Hour)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_1_label"
 msgstr "Hour"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:305
+#: app/includes/models/admin/menu/TPFieldSettings.php:313
 msgctxt "(Script Include)"
 msgid "tp_admin_page_settings_tab_config_field_script_label"
 msgstr "Script Include"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:310
+#: app/includes/models/admin/menu/TPFieldSettings.php:318
 msgctxt ""
 "(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
 "switching to &lt;footer&gt;)"
@@ -1901,77 +1906,77 @@ msgstr ""
 "Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
 "switching to &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:320
+#: app/includes/models/admin/menu/TPFieldSettings.php:328
 msgctxt "(Inside &lt;head&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
 msgstr "Inside &lt;head&gt; tag "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:327
+#: app/includes/models/admin/menu/TPFieldSettings.php:335
 msgctxt "(Inside &lt;footer&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
 msgstr "Inside &lt;footer&gt; tag"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:336
+#: app/includes/models/admin/menu/TPFieldSettings.php:344
 msgctxt "(Date Format)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_label"
 msgstr "Date Format"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:343
+#: app/includes/models/admin/menu/TPFieldSettings.php:351
 msgctxt "(Use variables to set the date:)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
 msgstr "Use variables to set the date:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:345
+#: app/includes/models/admin/menu/TPFieldSettings.php:353
 msgctxt "(day)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
 msgstr "day"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:347
+#: app/includes/models/admin/menu/TPFieldSettings.php:355
 msgctxt "(month name (small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
 msgstr "month name (small letters)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:349
+#: app/includes/models/admin/menu/TPFieldSettings.php:357
 msgctxt "(month name (capital letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
 msgstr "month name (capital letters)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:351
+#: app/includes/models/admin/menu/TPFieldSettings.php:359
 msgctxt "(month number)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
 msgstr "month number"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:353
+#: app/includes/models/admin/menu/TPFieldSettings.php:361
 msgctxt "(month (3 letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
 msgstr "month (3 letters)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:355
+#: app/includes/models/admin/menu/TPFieldSettings.php:363
 msgctxt "(month (3 small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
 msgstr "month (3 small letters)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:357
+#: app/includes/models/admin/menu/TPFieldSettings.php:365
 msgctxt "(last 2 digits of the year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
 msgstr "last 2 digits of the year"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:359
+#: app/includes/models/admin/menu/TPFieldSettings.php:367
 msgctxt "(year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
 msgstr "year"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:373
+#: app/includes/models/admin/menu/TPFieldSettings.php:381
 msgctxt "(Current format)"
 msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
 msgstr "Current format"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:381
+#: app/includes/models/admin/menu/TPFieldSettings.php:389
 msgctxt "(Event tracking. \"Find\" button)"
 msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
 msgstr "Event tracking. \"Find\" button"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:386
+#: app/includes/models/admin/menu/TPFieldSettings.php:394
 msgctxt ""
 "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
@@ -1982,132 +1987,132 @@ msgstr ""
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal(\\'TARGET_NAME\\');"
 "\" or \"ga(\\'send\\', \\'event\\', \\'category\\', \\'action\\');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:405
+#: app/includes/models/admin/menu/TPFieldSettings.php:413
 msgctxt "(Event tracking. Table is loaded)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
 msgstr "Event tracking. Table is loaded"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:410
+#: app/includes/models/admin/menu/TPFieldSettings.php:418
 msgctxt "(Google Analytics event that will be fired every time a table loads.)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
 msgstr "Google Analytics event that will be fired every time a table loads."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:430
+#: app/includes/models/admin/menu/TPFieldSettings.php:438
 msgctxt "(Import settings)"
 msgid "tp_admin_page_settings_tab_config_btn_import_settings"
 msgstr "Import settings"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:435
+#: app/includes/models/admin/menu/TPFieldSettings.php:443
 msgctxt "(Browse)"
 msgid "tp_admin_page_settings_tab_config_btn_browse"
 msgstr "Browse"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:440
+#: app/includes/models/admin/menu/TPFieldSettings.php:448
 msgctxt "(Import)"
 msgid "tp_admin_page_settings_tab_config_btn_import"
 msgstr "Import"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:442
+#: app/includes/models/admin/menu/TPFieldSettings.php:450
 msgctxt "(The file is not selected)"
 msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
 msgstr "The file is not selected"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:447
+#: app/includes/models/admin/menu/TPFieldSettings.php:455
 msgctxt "(Export)"
 msgid "tp_admin_page_settings_tab_config_btn_export_settings"
 msgstr "Export"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:467
+#: app/includes/models/admin/menu/TPFieldSettings.php:475
 msgctxt "(Tables and Widgets Language)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_label"
 msgstr "Tables and Widgets Language"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:471
+#: app/includes/models/admin/menu/TPFieldSettings.php:479
 msgctxt "(Russian)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
 msgstr "Russian"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:475
+#: app/includes/models/admin/menu/TPFieldSettings.php:483
 msgctxt "(English)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
 msgstr "English"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:479
+#: app/includes/models/admin/menu/TPFieldSettings.php:487
 msgctxt "(Thai)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
 msgstr "Thai"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:485
+#: app/includes/models/admin/menu/TPFieldSettings.php:493
 msgctxt "(Currency)"
 msgid "tp_admin_page_settings_tab_localization_field_currency_label"
 msgstr "Currency"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:509
+#: app/includes/models/admin/menu/TPFieldSettings.php:517
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Fields (you can edit values on your own, e.g. for your own language)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:566
+#: app/includes/models/admin/menu/TPFieldSettings.php:574
 msgctxt "(Host)"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Host"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:592
+#: app/includes/models/admin/menu/TPFieldSettings.php:600
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Origin"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:600
+#: app/includes/models/admin/menu/TPFieldSettings.php:608
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Genitive"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:604
+#: app/includes/models/admin/menu/TPFieldSettings.php:612
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Dative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:608
+#: app/includes/models/admin/menu/TPFieldSettings.php:616
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Accusative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:612
+#: app/includes/models/admin/menu/TPFieldSettings.php:620
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Ablative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:616
+#: app/includes/models/admin/menu/TPFieldSettings.php:624
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Prepositional"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:622
+#: app/includes/models/admin/menu/TPFieldSettings.php:630
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Destination"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:629
+#: app/includes/models/admin/menu/TPFieldSettings.php:637
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Genitive"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:633
+#: app/includes/models/admin/menu/TPFieldSettings.php:641
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Dative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:637
+#: app/includes/models/admin/menu/TPFieldSettings.php:645
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Accusative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:641
+#: app/includes/models/admin/menu/TPFieldSettings.php:649
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Ablative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:645
+#: app/includes/models/admin/menu/TPFieldSettings.php:653
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Prepositional"

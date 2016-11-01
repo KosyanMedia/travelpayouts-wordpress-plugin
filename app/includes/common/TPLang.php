@@ -61,6 +61,6 @@ class TPLang
     }
 
     public static function getLangAdminAutocomplete(){
-        error_log(get_locale());
+        //error_log(get_locale());
     }
 }

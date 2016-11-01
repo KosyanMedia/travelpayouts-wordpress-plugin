@@ -330,25 +330,33 @@ class TPHostURL
      */
     public static function getHostTable(){
         $host = \app\includes\TPPlugin::$options['local']['host'];
-        $host = self::$hosts[$host]['table'];
-        if( ! $host || empty( $host ) ) {
-            switch (\app\includes\common\TPLang::getLang()) {
-                case \app\includes\common\TPLang::getLangRU():
-                    $host = 'http://engine.aviasales.ru';
-                    break;
-                case \app\includes\common\TPLang::getLangEN():
-                    $host = 'http://jetradar.com';
-                    break;
-                default:
-                    $host = 'http://jetradar.com';
-                    break;
+        if (! $host || empty( $host )){
+            $host = self::getDefaultHostTable();
+        } else {
+            $host = self::$hosts[$host]['table'];
+            if (! $host || empty( $host )){
+                $host = self::getDefaultHostTable();
+            }else{
+                $host = 'http://'.$host;
             }
-        }else{
-            $host = 'http://'.$host;
         }
         return $host;
     }
 
+    public static function getDefaultHostTable(){
+        $host = "";
+        $hostData = array(
+            TPLang::getLangRU() => 'http://engine.aviasales.ru',
+            TPLang::getLangEN() => 'http://jetradar.com',
+            TPLang::getLangTH() => 'http://jetradar.co.th',
+        );
+        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData)){
+            $host = $hostData[\app\includes\common\TPLang::getDefaultLang()];
+        } else {
+            $host = $hostData[\app\includes\common\TPLang::getLang()];
+        }
+        return $host;
+    }
 
 
     /**
@@ -357,8 +365,17 @@ class TPHostURL
      */
     public static function getHostWidget($widget){
         $host = \app\includes\TPPlugin::$options['local']['host'];
+        if (! $host || empty( $host )){
+            $host = self::getDefaultHostTable();
+        }
+
         //3,6,8
-        $host = self::$hosts[$host]['widget'][$widget];
+        if (array_key_exists($host, self::$hosts)){
+            if (array_key_exists($widget, self::$hosts[$host]['widget'])){
+                $host = self::$hosts[$host]['widget'][$widget];
+            }
+        }
+
         //error_log($widget.$host);
         return $host;
     }

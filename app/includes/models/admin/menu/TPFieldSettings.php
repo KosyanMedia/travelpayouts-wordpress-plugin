@@ -250,14 +250,17 @@ class TPFieldSettings {
                             </label>
 
                         </li>
+                        <li>
+                            <input id="chek35" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][limit_script]"
+                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['limit_script']), 1) ?> hidden />
+                            <label for="chek35">
+                                <?php _ex('tp_admin_page_settings_tab_config_field_limit_script_label', '(Use plugin\'s scripts on all pages)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </label>
+
+                        </li>
                     </ul>
                 </div>
-                <div class="TP-FormItem TPDefaultSettingsItem">
-                    <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust" id="TPDefaultSettings">
-                        <i></i><?php _ex('tp_admin_page_settings_tab_config_btn_default',
-                            '(Default settings)', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </a>
-                </div>
+
             </div>
         </div>
         <div class="TP-colForm">
@@ -452,7 +455,14 @@ class TPFieldSettings {
                         </div>
                     </div>
                 </div>
+                <div class="TP-FormItem TPDefaultSettingsItem">
+                    <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust" id="TPDefaultSettings">
+                        <i></i><?php _ex('tp_admin_page_settings_tab_config_btn_default',
+                            '(Default settings)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </a>
+                </div>
             </div>
+
         </div>
     <?php
     }

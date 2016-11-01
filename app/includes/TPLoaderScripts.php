@@ -337,7 +337,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             <?php
                 }
                 global $locale;
-                \app\includes\common\TPLang::getLangAdminAutocomplete();
+                //\app\includes\common\TPLang::getLangAdminAutocomplete();
             ?>
 
             <?php
@@ -723,7 +723,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function loadScriptSite($hook)
     {
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
-
+        $this->getLimitScript();
         global $widgets;
         global $wp_styles;
         global $post;
@@ -1048,7 +1048,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         // TODO: Implement footerScriptSite() method.
         global $post;
         if(false === $this->in_array_recursive('travelpayouts',wp_get_sidebars_widgets()) &&
-            false === strpos( $post->post_content, '[tp' ) && !is_home()) return;
+            false === $this->isShortcodePost($post, '[tp') && !is_home() &&
+            false === strpos( term_description(), 'TP-Plugin-Tables' )) return;
         ?>
         <script type="text/javascript">
             <?php if(!empty(\app\includes\TPPlugin::$options['config']['code_ga_ym'])){?>
@@ -1077,5 +1078,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             <?php }?>
         </script>
         <?php
+    }
+
+    public function getLimitScript(){
+        if (isset(\app\includes\TPPlugin::$options['config']['limit_script'])) {
+            error_log("isset");
+        } else {
+            error_log("no");
+        }
     }
 }
