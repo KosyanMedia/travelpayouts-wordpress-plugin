@@ -96,12 +96,15 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDE4IDIxIj48cGF0aCBkPSJNMTUgN2wzLTdIMHYyMWgydi03aDE2Ii8+PC9zdmc+");
 }
 /*******************************************/
-.TPMainMenu li.ui-tabs-active a {
-    background-color: #69c7f4;
-    color: #fff;
-    -moz-box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+.TPMainMenu li.ui-tabs-active a{
+    background-color: #69c7f4!important;
+    color: #fff !important;
+    -moz-box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15)!important;
+    -webkit-box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15)!important;
+    box-shadow: 0 1px 2px #69c7f4, inset 0 -2px 0 rgba(0, 0, 0, 0.15)!important;
+}
+.TPMainMenu li.ui-tabs-active a span{
+  color: #fff !important;
 }
 .TPMainMenu li.ui-tabs-active a .ico-table {
     background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDMwIj48cGF0aCBkPSJNMjEgMEgzQzEuMzQ2IDAgMCAxLjM0NiAwIDN2MjRjMCAxLjY1NCAxLjM0NiAzIDMgM2gxOGMxLjY1NCAwIDMtMS4zNDYgMy0zVjNjMC0xLjY1NC0xLjM0Ni0zLTMtM3ptMCAyYy41NTIgMCAxIC40NSAxIDF2NEg5VjJoMTJ6TTcgMTZ2NUgydi01aDV6bS01LTJWOWg1djVIMnptNyAyaDEzdjVIOXYtNXptMC0yVjloMTN2NUg5ek0zIDJoNHY1SDJWM2MwLS41NS40NDgtMSAxLTF6TTIgMjd2LTRoNXY1SDNjLS41NTIgMC0xLS40NS0xLTF6bTE5IDFIOXYtNWgxM3Y0YzAgLjU1LS40NDggMS0xIDF6Ii8+PC9zdmc+");
@@ -1856,7 +1859,7 @@ thead tr td.active-w {
 .itemIncome span {
     display: block;
     font-size: 14px;
-    color: #6f777c;
+    /*color: #6f777c;*/
 }
 /*News Style Page*/
 .TP-shortDescription p {
@@ -3016,7 +3019,7 @@ thead tr td.active-w {
 .TPNotShowOption{
   display: none !important;
 }
-.itemIncome span,
+/*.itemIncome span,
 .TP-ListBalance thead tr td,
 .TP-ListBalance tbody tr td,
 .bellows__header h3,
@@ -3035,4 +3038,33 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .titleHeadTable li,
 .TPMainMenu li a span,
 .TP-SettingTitle,
-.TP-HeadTable label span{ font-weight:400 !important; color:#333 !important; }
+.TP-HeadTable label span,
+.TP-HeadTable label p { font-weight:400; color:#333; }
+thead tr td.active-w { color:#fff !important; }
+
+.itemIncome span, .TPMainMenu li a span{
+  font-weight:400;
+  color:#333;
+}*/
+.itemIncome span,
+.TP-ListBalance thead tr td,
+.TP-ListBalance tbody tr td,
+.bellows__header h3,
+.TP-listShort tr td,
+.TP-listShort tbody tr td,
+.ItemSub span,
+input[type="radio"] + label, input[type="checkbox"] + label,
+.TP-ViewStatistics label span,
+.TP-ListFilter label span,
+.infoLittleReport,
+.zelected,
+.dropdown ol li,
+.TP-titleSub--custom,
+.TP-LocalHead label span,
+.TP-listColum span,
+.titleHeadTable li,
+.TP-HeadTable label span,
+.TP-HeadTable label p,
+.TP-MainStyleTable span { font-weight:400; color:#333; }
+
+.TP-ListBalance thead tr td.active-w { color:#fff; }
