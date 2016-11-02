@@ -1688,12 +1688,12 @@ input[type="checkbox"]:checked + label::before {
     color: #6f777c;
 }
 .sorting_asc:after{
-    content: " ▾" !important;
+    content: " \25b2" !important;
     position: absolute;
     margin-left: 5px;
 }
 .sorting_desc:after{
-    content: " ▴" !important;
+    content: " \25bc" !important;
     position: absolute;
     margin-left: 5px;
 
@@ -3016,3 +3016,23 @@ thead tr td.active-w {
 .TPNotShowOption{
   display: none !important;
 }
+.itemIncome span,
+.TP-ListBalance thead tr td,
+.TP-ListBalance tbody tr td,
+.bellows__header h3,
+.TP-listShort tr td,
+.TP-listShort tbody tr td,
+.ItemSub span,
+input[type="radio"] + label, input[type="checkbox"] + label,
+.TP-ViewStatistics label span,
+.TP-ListFilter label span,
+.infoLittleReport,
+.zelected,
+.dropdown ol li,
+.TP-titleSub--custom,
+.TP-LocalHead label span,
+.TP-listColum span,
+.titleHeadTable li,
+.TPMainMenu li a span,
+.TP-SettingTitle,
+.TP-HeadTable label span{ font-weight:400 !important; color:#333 !important; }

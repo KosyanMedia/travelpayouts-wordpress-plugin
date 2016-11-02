@@ -79,7 +79,9 @@ function TPCityAutocomplete(){
                                     response(
                                         $.map(data, function(item){
 
-                                            var iata = (typeof(item.city_iata) !== 'undefined') ? item.city_iata : item.iata;
+                                            var iata = (typeof(item.city_iata) !== 'undefined' && item.city_iata !== null) ? item.city_iata : item.iata;
+                                            //console.log(item.city_iata)
+                                            //console.log(item.iata)
                                             var airport = (item.airport_name !== null) ? item.airport_name : "";
                                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                                 return {
