@@ -345,7 +345,7 @@ class TPFieldWidgets {
                 $m = true;
             }
             if($m){
-                $out_c .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"'
+                $out_c .= '<option value="'.date('Y').'-'.str_pad(($key+1),  2, '0', STR_PAD_LEFT).'-01'.'"'
                     .selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y').'-'.($key+1).'-01', false).'>'
                     .$month.'</option>';
                 /*$d_o[] = array(
@@ -353,7 +353,7 @@ class TPFieldWidgets {
                     'F' => $month,
                 );*/
             }else{
-                $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.($key+1).'-01'.'"'
+                $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.str_pad(($key+1),  2, '0', STR_PAD_LEFT).'-01'.'"'
                     .selected( \app\includes\TPPlugin::$options['widgets'][$widgets]['period'], date('Y', strtotime('+1 year')).'-'.($key+1).'-01', false).'>'
                     .$month.'</option>';
                 /*$d_t[] = array(

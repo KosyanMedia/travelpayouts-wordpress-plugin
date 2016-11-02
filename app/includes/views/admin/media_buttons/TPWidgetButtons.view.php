@@ -215,15 +215,17 @@
                         $out_c = '';
                         $out_n = '';
                         foreach ($monthNames as $key=>$month) {
+
                             if(($key+1) == $current_date['mon']){
                                 $m = true;
                             }
                             if($m){
-                                $out_c .= '<option value="'.date('Y').'-'.($key+1).'-01'.'"'
+                                $out_c .= '<option value="'.date('Y').'-'.str_pad(($key+1),  2, '0', STR_PAD_LEFT).'-01'.'"'
                                     .selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], date('Y').'-'.($key+1).'-01', false).'>'
                                     .$month.'</option>';
                             }else{
-                                $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.($key+1).'-01'.'"'
+
+                                $out_n .= '<option value="'.date('Y', strtotime('+1 year')).'-'.str_pad(($key+1),  2, '0', STR_PAD_LEFT).'-01'.'"'
                                     .selected( \app\includes\TPPlugin::$options['widgets']['3']['period'], date('Y', strtotime('+1 year')).'-'.($key+1).'-01', false).'>'
                                     .$month.'</option>';
                             }

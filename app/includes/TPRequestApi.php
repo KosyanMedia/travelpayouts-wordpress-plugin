@@ -88,12 +88,14 @@ class TPRequestApi {
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
         $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!isset($this->status)) return false;
         $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
             'currency' => 'RUB' );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
             return false;
