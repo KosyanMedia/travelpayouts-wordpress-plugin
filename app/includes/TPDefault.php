@@ -766,7 +766,18 @@ class TPDefault implements  \core\TPODefault{
 
     public static function getRandomThemesTable(){
         $TPFlightTicketsModel = new \app\includes\models\admin\menu\TPFlightTicketsModel();
-        $themesNames = array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+        if(!function_exists("array_column"))
+        {
+            $themesNames = self::array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+        } else {
+            $themesNames = array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+        }
+
         return $themesNames[array_rand($themesNames)];
+    }
+
+    public static function array_column($array,$column_name)
+    {
+        return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
     }
 }
