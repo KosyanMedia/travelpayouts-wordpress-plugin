@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-11-01 13:31+0200\n"
+"POT-Creation-Date: 2016-11-07 13:20+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:96
@@ -562,42 +562,42 @@ msgctxt "(Direct)"
 msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "без пересадок"
 
-#: app/includes/TPRequestApi.php:598
+#: app/includes/TPRequestApi.php:600
 msgctxt "(The variable $origin parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_origin"
 msgstr "Переменная $origin не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:600
+#: app/includes/TPRequestApi.php:602
 msgctxt "(The variable $destination parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_destination"
 msgstr "Переменная $destination не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:602
+#: app/includes/TPRequestApi.php:604
 msgctxt "(The variable $currency parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_currency"
 msgstr "Переменная $currency не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:604
+#: app/includes/TPRequestApi.php:606
 msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_departure_at"
 msgstr "Переменная $departure_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:606
+#: app/includes/TPRequestApi.php:608
 msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_calendar_type"
 msgstr "Переменная $calendar_type не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:608
+#: app/includes/TPRequestApi.php:610
 msgctxt "(The variable $return_at parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_return_at"
 msgstr "Переменная $return_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:610
+#: app/includes/TPRequestApi.php:612
 msgctxt "(The variable $airline parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_airline"
 msgstr "Переменная $airline не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:615
+#: app/includes/TPRequestApi.php:617
 msgctxt "(Unknown error.)"
 msgid "tp_request_api_error_msg_unknown_error"
 msgstr "Произошла неизвестная ошибка."
@@ -1511,82 +1511,87 @@ msgctxt "Intro"
 msgid "tp_admin_page_flights_tab_tickets_style_intro"
 msgstr "Intro"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:50
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:47
+msgctxt "Open Sans"
+msgid "tp_admin_page_flights_tab_tickets_style_open_sans"
+msgstr "Open Sans"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:52
 msgctxt "(Layout)"
 msgid "tp_admin_page_flights_tab_tickets_style_paragraph_1"
 msgstr "Внешний вид таблиц"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:59
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:61
 msgctxt "(Header style)"
 msgid "tp_admin_page_flights_tab_tickets_style_title_style_label"
 msgstr "Стили заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:119
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:121
 msgctxt "(Content)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_style_label"
 msgstr "Шрифт в таблицах"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:179
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:181
 msgctxt "(Borders)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label"
 msgstr "Границы таблиц"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:185
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:187
 msgctxt "(solid)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid"
 msgstr "Сплошная"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:189
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:191
 msgctxt "(dotted)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted"
 msgstr "С точками"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:193
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:195
 msgctxt "(dashed)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed"
 msgstr "Пунктир"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:223
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:225
 msgctxt "(Background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_background_color_label"
 msgstr "Фон таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:236
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:238
 msgctxt "(Table header background)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_color_label"
 msgstr "Фон шапки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:248
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:250
 msgctxt "(Table header font)"
 msgid "tp_admin_page_flights_tab_tickets_style_table_head_text_color_label"
 msgstr "Шрифт в шапке таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:264
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:266
 msgctxt "(Button background)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_background_label"
 msgstr "Фон кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:277
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:279
 msgctxt "(Button border)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_border_label"
 msgstr "Граница кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:289
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:291
 msgctxt "(Button font)"
 msgid "tp_admin_page_flights_tab_tickets_style_button_font_label"
 msgstr "Шрифт кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:328
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:330
 msgctxt "(Show data as hyperlinks)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_hyperlink_label"
 msgstr "Отображать данные гиперссылками"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:336
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:338
 msgctxt "(Enable Horizontal Scroll)"
 msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label"
 msgstr "Разрешить горизонтальный скролл"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:342
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:344
 msgctxt ""
 "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
 "you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
@@ -1597,154 +1602,154 @@ msgstr ""
 "ширины контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - таблица "
 "\"впишется\" в новый размер, но с появлением горизонтального скролла."
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:355
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:357
 msgctxt "(Reset to Default styles)"
 msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Стили по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:372
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:374
 msgctxt "(Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
 msgstr "Заголовок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:398
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:400
 msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "Используйте переменные \"airline\"  для автоматической подстановки авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:407
 msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr "Используйте переменные \"origin\", \"destination\" для автоматической подстановки города"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:423
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:425
 msgctxt "(Title tag)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Тег заголовка"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:430
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:432
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:435
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:440
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:445
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:450
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:465
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:467
 msgctxt "(Button Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Текст кнопки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:491
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:493
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:522
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:524
 msgctxt "(Order by price)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label"
 msgstr "Сортировка по цене"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:532
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:534
 msgctxt "(Ascending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending"
 msgstr "по возрастанию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:540
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:542
 msgctxt "(Descending)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending"
 msgstr "по убыванию"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:548
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:550
 msgctxt "(Do not sort)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort"
 msgstr "не сортировать"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:600
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:602
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Колонки таблицы"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:606
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:608
 msgctxt "(Not selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Не выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:616
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:618
 msgctxt "(Selected)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:636
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:866
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:638
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:868
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:658
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:890
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:660
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:892
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:675
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:677
 msgctxt "(Limit)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:701
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:703
 msgctxt "(Departure date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label"
 msgstr "Дата отправления"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:720
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:722
 msgctxt "(Return date)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label"
 msgstr "Дата возвращения"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:744
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:746
 msgctxt "(Number of stops)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label"
 msgstr "Пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:750
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:752
 msgctxt "(All)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1"
 msgstr "Все"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:755
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:757
 msgctxt "(No more than one stop)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:760
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:762
 msgctxt "(Direct)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3"
 msgstr "без пересадок"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:788
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:790
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:819
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:821
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
@@ -1872,32 +1877,27 @@ msgctxt "(Use plugin's scripts on all pages)"
 msgid "tp_admin_page_settings_tab_config_field_limit_script_label"
 msgstr "Вызывать скрипты на всех страницах"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:265
-msgctxt "(Default settings)"
-msgid "tp_admin_page_settings_tab_config_btn_default"
-msgstr "Настройки по умолчанию"
-
-#: app/includes/models/admin/menu/TPFieldSettings.php:275
+#: app/includes/models/admin/menu/TPFieldSettings.php:270
 msgctxt "(Cache Timeout)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
 msgstr "Частота обновления данных для таблиц"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:295
+#: app/includes/models/admin/menu/TPFieldSettings.php:290
 msgctxt "(Day)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 msgstr "День"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:303
+#: app/includes/models/admin/menu/TPFieldSettings.php:298
 msgctxt "(Hour)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_1_label"
 msgstr "Час"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:313
+#: app/includes/models/admin/menu/TPFieldSettings.php:308
 msgctxt "(Script Include)"
 msgid "tp_admin_page_settings_tab_config_field_script_label"
 msgstr "Размещать скрипты плагина"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:318
+#: app/includes/models/admin/menu/TPFieldSettings.php:313
 msgctxt ""
 "(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
 "switching to &lt;footer&gt;)"
@@ -1906,77 +1906,77 @@ msgstr ""
 "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
 "попробуйте переставить в &lt;footer&gt;      "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:328
+#: app/includes/models/admin/menu/TPFieldSettings.php:323
 msgctxt "(Inside &lt;head&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
 msgstr "Внутри тега &lt;head&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:335
+#: app/includes/models/admin/menu/TPFieldSettings.php:330
 msgctxt "(Inside &lt;footer&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
 msgstr "Внутри тега &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:344
+#: app/includes/models/admin/menu/TPFieldSettings.php:339
 msgctxt "(Date Format)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_label"
 msgstr "Формат даты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:351
+#: app/includes/models/admin/menu/TPFieldSettings.php:346
 msgctxt "(Use variables to set the date:)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
 msgstr "Используйте переменные для настройки даты:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:353
+#: app/includes/models/admin/menu/TPFieldSettings.php:348
 msgctxt "(day)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
 msgstr "день месяца"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:355
+#: app/includes/models/admin/menu/TPFieldSettings.php:350
 msgctxt "(month name (small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
 msgstr "название месяца с маленькой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:357
+#: app/includes/models/admin/menu/TPFieldSettings.php:352
 msgctxt "(month name (capital letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
 msgstr "название месяца с большой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:359
+#: app/includes/models/admin/menu/TPFieldSettings.php:354
 msgctxt "(month number)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
 msgstr "месяц цифрой"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:361
+#: app/includes/models/admin/menu/TPFieldSettings.php:356
 msgctxt "(month (3 letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
 msgstr "месяц 3 буквами"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:363
+#: app/includes/models/admin/menu/TPFieldSettings.php:358
 msgctxt "(month (3 small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:365
+#: app/includes/models/admin/menu/TPFieldSettings.php:360
 msgctxt "(last 2 digits of the year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:367
+#: app/includes/models/admin/menu/TPFieldSettings.php:362
 msgctxt "(year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:381
+#: app/includes/models/admin/menu/TPFieldSettings.php:376
 msgctxt "(Current format)"
 msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:389
+#: app/includes/models/admin/menu/TPFieldSettings.php:384
 msgctxt "(Event tracking. \"Find\" button)"
 msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:394
+#: app/includes/models/admin/menu/TPFieldSettings.php:389
 msgctxt ""
 "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
@@ -1987,132 +1987,137 @@ msgstr ""
 "для отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
 "\"ga('send', 'event', 'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:413
+#: app/includes/models/admin/menu/TPFieldSettings.php:408
 msgctxt "(Event tracking. Table is loaded)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
 msgstr "Отслеживание события. Загрузка таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:418
+#: app/includes/models/admin/menu/TPFieldSettings.php:413
 msgctxt "(Google Analytics event that will be fired every time a table loads.)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
 msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:438
+#: app/includes/models/admin/menu/TPFieldSettings.php:433
 msgctxt "(Import settings)"
 msgid "tp_admin_page_settings_tab_config_btn_import_settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:443
+#: app/includes/models/admin/menu/TPFieldSettings.php:438
 msgctxt "(Browse)"
 msgid "tp_admin_page_settings_tab_config_btn_browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:448
+#: app/includes/models/admin/menu/TPFieldSettings.php:443
 msgctxt "(Import)"
 msgid "tp_admin_page_settings_tab_config_btn_import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:450
+#: app/includes/models/admin/menu/TPFieldSettings.php:445
 msgctxt "(The file is not selected)"
 msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:455
+#: app/includes/models/admin/menu/TPFieldSettings.php:450
 msgctxt "(Export)"
 msgid "tp_admin_page_settings_tab_config_btn_export_settings"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:475
+#: app/includes/models/admin/menu/TPFieldSettings.php:460
+msgctxt "(Default settings)"
+msgid "tp_admin_page_settings_tab_config_btn_default"
+msgstr "Настройки по умолчанию"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:477
 msgctxt "(Tables and Widgets Language)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_label"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:479
+#: app/includes/models/admin/menu/TPFieldSettings.php:481
 msgctxt "(Russian)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:483
+#: app/includes/models/admin/menu/TPFieldSettings.php:485
 msgctxt "(English)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:487
+#: app/includes/models/admin/menu/TPFieldSettings.php:489
 msgctxt "(Thai)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
 msgstr "Тайский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:493
+#: app/includes/models/admin/menu/TPFieldSettings.php:495
 msgctxt "(Currency)"
 msgid "tp_admin_page_settings_tab_localization_field_currency_label"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:517
+#: app/includes/models/admin/menu/TPFieldSettings.php:519
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Названия ячеек (можете менять название по своему усмотрению)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:574
+#: app/includes/models/admin/menu/TPFieldSettings.php:576
 msgctxt "(Host)"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Хост"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:600
+#: app/includes/models/admin/menu/TPFieldSettings.php:602
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Откуда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:608
+#: app/includes/models/admin/menu/TPFieldSettings.php:610
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:612
+#: app/includes/models/admin/menu/TPFieldSettings.php:614
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:616
+#: app/includes/models/admin/menu/TPFieldSettings.php:618
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:620
+#: app/includes/models/admin/menu/TPFieldSettings.php:622
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:624
+#: app/includes/models/admin/menu/TPFieldSettings.php:626
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Предложный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:630
+#: app/includes/models/admin/menu/TPFieldSettings.php:632
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Куда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:637
+#: app/includes/models/admin/menu/TPFieldSettings.php:639
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:641
+#: app/includes/models/admin/menu/TPFieldSettings.php:643
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:645
+#: app/includes/models/admin/menu/TPFieldSettings.php:647
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:649
+#: app/includes/models/admin/menu/TPFieldSettings.php:651
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:653
+#: app/includes/models/admin/menu/TPFieldSettings.php:655
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Предложный"
@@ -3071,77 +3076,77 @@ msgctxt "(Current month)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
 msgstr "Текущий месяц"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:240
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:242
 msgctxt "(Range, days)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
 msgstr "Период, дни"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:253
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
 msgctxt "(Hotel)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
 msgstr "Отель"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:259
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:261
 msgctxt "(Size)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_size_label"
 msgstr "Размер"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:270
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:272
 msgctxt "(Direct Flights Only)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
 msgstr "Только прямые рейсы"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:279
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:281
 msgctxt "(One way)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
 msgstr "В одну сторону"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:288
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:290
 msgctxt "(Width)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
 msgstr "Ширина"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:297
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:299
 msgctxt "(Count)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
 msgstr "Количество"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:309
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:311
 msgctxt "(Destination)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
 msgstr "Куда"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:319
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:321
 msgctxt "(Responsive)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:324
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:326
 msgctxt "(Width)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:335
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:337
 msgctxt "(View widget)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
 msgstr "Вид виджета"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:341
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:343
 msgctxt "(Full)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
 msgstr "Расширенный"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:346
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:348
 msgctxt "(Compact)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
 msgstr "Компактный"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:356
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:358
 msgctxt "(Limit)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
 msgstr "Лимит"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:387
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:389
 msgctxt "(Zoom)"
 msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
 msgstr "Zoom"

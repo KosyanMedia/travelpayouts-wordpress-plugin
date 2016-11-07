@@ -562,6 +562,17 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 );
                 wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsIntro');
 
+            }//Open Sans
+            elseif (\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Open Sans' ||
+                \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Open Sans'){
+                wp_register_style(
+                    TPOPlUGIN_SLUG . '-TPFontsOpenSans',
+                    'http://fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,cyrillic-ext,cyrillic',
+                    array(),
+                    TPOPlUGIN_VERSION // $ver
+                );
+                wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsOpenSans');
+
             }
         } else {
             wp_register_style(

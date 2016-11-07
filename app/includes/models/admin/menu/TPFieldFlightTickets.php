@@ -44,6 +44,8 @@ class TPFieldFlightTickets {
                 'Ubuntu', TPOPlUGIN_TEXTDOMAIN),
             _x('tp_admin_page_flights_tab_tickets_style_intro',
                 'Intro', TPOPlUGIN_TEXTDOMAIN),
+            _x('tp_admin_page_flights_tab_tickets_style_open_sans',
+                'Open Sans', TPOPlUGIN_TEXTDOMAIN),
         );
         ?>
         <p class="TP-SettingTitle">
