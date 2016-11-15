@@ -508,7 +508,7 @@ span.ellipsis {
   background-color: #f1d600;
   text-align: center; }
 
-.TP-Plugin-Tables_box thead tr td.tp-price-column,
+.TP-Plugin-Tables_box thead tr td.TPbuttonTd,
 .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
   background-color: #222;
   color: white;
