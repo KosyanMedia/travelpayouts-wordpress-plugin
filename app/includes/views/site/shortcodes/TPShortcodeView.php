@@ -48,7 +48,7 @@ class TPShortcodeView {
             $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
         }else{
             $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
-            if($sort_column == count(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) - 1){
+            if($sort_column == count($this->getSelectField($type)) - 1){
                 --$sort_column;
             }
         }
@@ -140,10 +140,8 @@ class TPShortcodeView {
 
         $headTable = '';
 
-
-
         $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
-        foreach(array_unique(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) as $key=>$selected_field){
+        foreach($this->getSelectField($type) as $key=>$selected_field){
             switch($selected_field) {
                 //Дата вылета
                 case "departure_at":
@@ -240,7 +238,7 @@ class TPShortcodeView {
             $count_row++;
             $bodyTable .= '<tr>';
             $count = 0;
-            foreach(array_unique(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) as $key=>$selected_field){
+            foreach($this->getSelectField($type) as $key=>$selected_field){
                 $count++;
                 // get Url
                 switch($type){
@@ -1301,5 +1299,9 @@ class TPShortcodeView {
         }
 
         return $output;
+    }
+
+    public function getSelectField($shortcode){
+        return array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
     }
 }
