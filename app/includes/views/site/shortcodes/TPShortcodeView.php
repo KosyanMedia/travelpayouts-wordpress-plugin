@@ -143,7 +143,7 @@ class TPShortcodeView {
 
 
         $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
-        foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
+        foreach(array_unique(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) as $key=>$selected_field){
             switch($selected_field) {
                 //Дата вылета
                 case "departure_at":
@@ -240,7 +240,7 @@ class TPShortcodeView {
             $count_row++;
             $bodyTable .= '<tr>';
             $count = 0;
-            foreach(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected'] as $key=>$selected_field){
+            foreach(array_unique(\app\includes\TPPlugin::$options['shortcodes'][$type]['selected']) as $key=>$selected_field){
                 $count++;
                 // get Url
                 switch($type){
