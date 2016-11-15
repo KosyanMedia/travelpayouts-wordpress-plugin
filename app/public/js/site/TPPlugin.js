@@ -169,7 +169,17 @@ jQuery(function($) {
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
+    jQuery.fn.dataTableExt.oSort['tp-airline_logo-asc']  = function(a,b) {
 
+        var x = ($(a).data("tpairline"));
+        var y = ($(b).data("tpairline"));
+        return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+    };
+    jQuery.fn.dataTableExt.oSort['tp-airline_logo-desc'] = function(a,b) {
+        var x = ($(a).data("tpairline"));
+        var y = ($(b).data("tpairline"));
+        return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
+    };
     /** **/
     function tpTableCod(selector){
         var tpTable, tableSortColumn;
@@ -190,7 +200,8 @@ jQuery(function($) {
                 },
                 { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
                 { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
-                { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"}
+                { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"},
+                { "aTargets" : ["tp-airline_logo-column"] , "sType" : "tp-airline_logo"}
             ],
             "oLanguage":{
                 "oPaginate": {

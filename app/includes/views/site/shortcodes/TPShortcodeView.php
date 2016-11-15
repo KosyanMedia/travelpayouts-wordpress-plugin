@@ -189,7 +189,7 @@ class TPShortcodeView {
                         .' </td>';
                     break;
                 case 'airline_logo':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
+                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-airline_logo-column">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
@@ -494,7 +494,8 @@ class TPShortcodeView {
                     case "airline_logo":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p class="TP-tdContent TP-AirlineLogo">
+                            <p class="TP-tdContent TP-AirlineLogo" data-tpairline="'.$row['airline'].'">
+
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 '<img src="'
