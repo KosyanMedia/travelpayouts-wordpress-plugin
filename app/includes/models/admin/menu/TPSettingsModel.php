@@ -65,7 +65,10 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists true plugin_version');
             }
+            //error_log(print_r($import_options, true));
             $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
+
+            //error_log(print_r($settings, true));
             if(TPOPlUGIN_ERROR_LOG)
                 error_log(print_r($settings['local']['currency'], true));
             update_option( TPOPlUGIN_OPTION_NAME, $settings);

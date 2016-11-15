@@ -564,7 +564,8 @@ class TPFieldFlightTickets {
         $settingsShortcodeSortableSelected = '';
         $fieldsInput = '';
         if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])){
-            $selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
+            //$selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
+            $selected = array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
             $fields = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['fields'];
             $arraySort = array();
             foreach($selected as $key_s => $selec){

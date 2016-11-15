@@ -1302,6 +1302,7 @@ class TPShortcodeView {
     }
 
     public function getSelectField($shortcode){
+        //error_log(print_r(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'], true));
         return array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
     }
 }
