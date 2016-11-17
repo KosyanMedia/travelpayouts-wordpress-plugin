@@ -21,3 +21,5 @@ define("TPOPlUGIN_TABLE_ARL_VERSION", TPOPlUGIN_SLUG.'_table_arl_version');
 define("TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION", TPOPlUGIN_SLUG.'_table_special_offer_version');
 define("TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION", TPOPlUGIN_SLUG.'_table_special_route_version');
 define("TPOPlUGIN_ERROR_LOG", false);
+//Использование своих файлов переводов
+define("TPOPlUGIN_CUSTOM_LOCALIZATION", false);

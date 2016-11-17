@@ -6,28 +6,27 @@ class TPOLocalization {
         'ru_RU',
         'it_IT'
     );
+    const TPO_DEFAULT_LOCALIZATION = 'en_US';
     public function __construct(){
         add_action('plugins_loaded', array(&$this, 'localization'));
         //add_action('init', array(&$this, 'localization'));
 
     }
     public function localization(){
-        //load_plugin_textdomain(TPOPlUGIN_TEXTDOMAIN, false, TPOPlUGIN_DIR_LOCALIZATION);
-        /*error_log(TPOPlUGIN_DIR_LOCALIZATION);
-        error_log(TPOPlUGIN_TEXTDOMAIN);
-        error_log(TPOPlUGIN_DIR);
-        error_log(get_locale());
-        error_log(TPOPlUGIN_DIR_LOCALIZATION.'/'.TPOPlUGIN_TEXTDOMAIN.'-en_US.mo');*/
-        self::isLocale();
-        load_textdomain( TPOPlUGIN_TEXTDOMAIN, TPOPlUGIN_ABSPATH_DIR_LOCALIZATION.'/'.TPOPlUGIN_TEXTDOMAIN.'-en_US.mo' );
+        //load_plugin_textdomain(TPOPlUGIN_TEXTDOMAIN, false, TPOPlUGIN_DIR_LOCALIZATION);*/
+        if (self::isLocale() == true || TPOPlUGIN_CUSTOM_LOCALIZATION == true){
+            //error_log('standart or custom local');
+            load_plugin_textdomain(TPOPlUGIN_TEXTDOMAIN, false, TPOPlUGIN_DIR_LOCALIZATION);
+        } else {
+            //error_log('default local');
+            load_textdomain( TPOPlUGIN_TEXTDOMAIN,
+                TPOPlUGIN_ABSPATH_DIR_LOCALIZATION.'/'.TPOPlUGIN_TEXTDOMAIN.'-'
+                .self::TPO_DEFAULT_LOCALIZATION.'.mo' );
+        }
+
+
     }
     protected static function isLocale(){
-        if (in_array('en_US', self::TPO_IS_LOCALIZATION)) {
-            error_log('true');
-        } else {
-            error_log('false');
-        }
-        error_log(print_r(self::TPO_IS_LOCALIZATION, true));
         return in_array(get_locale(), self::TPO_IS_LOCALIZATION);
     }
 }
