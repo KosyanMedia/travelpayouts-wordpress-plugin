@@ -7,6 +7,7 @@ define("TPOPlUGIN_OPTION_VERSION", TPOPlUGIN_SLUG.'_version');
 define("TPOPlUGIN_OPTION_NAME", TPOPlUGIN_SLUG.'_options');
 define("TPOPlUGIN_AJAX_URL", admin_url('admin-ajax.php'));
 define("TPOPlUGIN_DIR_LOCALIZATION", plugin_basename(TPOPlUGIN_DIR.'/lang/'));
+define("TPOPlUGIN_ABSPATH_DIR_LOCALIZATION", TPOPlUGIN_DIR.'/lang/');
 if ( ! function_exists( 'get_plugins' ) ) {
     require_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
