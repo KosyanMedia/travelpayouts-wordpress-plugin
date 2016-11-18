@@ -1679,12 +1679,28 @@ jQuery(function($) {
     }
     /** **/
     function setShortcodes(shortcodes, selector){
+
         if(typeof tinyMCE  != "undefined"){
             if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                //console.log("tinyMCE not activeEditor")
                 if(QTags.insertContent(shortcodes) != true)
                     document.getElementById('content').value += shortcodes;
             } else if(tinyMCE && tinyMCE.activeEditor) {
+                //console.log("tinyMCE activeEditor");
                 tinyMCE.activeEditor.selection.setContent(shortcodes);
+                //var el = tinyMCE.activeEditor.dom.create('p', {id : 'test', 'class' : 'myclass'}, 'some content');
+                //tinyMCE.activeEditor.getBody().insertBefore(el, tinyMCE.activeEditor.getBody().firstChild);
+                //tinyMCE.activeEditor.execInstanceCommand('content','mceInsertContent',false, shortcodes);
+
+                /*tinyMCE.activeEditor.selection.select(tinyMCE.activeEditor.getBody(), true);
+                tinyMCE.activeEditor.selection.collapse(false);
+                tinyMCE.activeEditor.selection.setContent(shortcodes);
+                tinyMCE.activeEditor.focus()
+                tinyMCE.activeEditor.insertContent(shortcodes)
+                tinyMCE.activeEditor.setContent(shortcodes);
+                tinyMCE.activeEditor.execCommand('mceInsertContent', false, shortcodes);
+                tinyMCE.activeEditor.execCommand('mceReplaceContent', false, shortcodes);*/
+                //tinyMCE.activeEditor.execInstanceCommand('text',"mceInsertContent",false,"This is the text to be inserted");
             }
         } else{
             document.getElementById('description').value += shortcodes;
