@@ -1,7 +1,7 @@
 <?php
 namespace core;
 class TPOLocalization {
-    const TPO_IS_LOCALIZATION = array(
+    protected static $isLocalization = array(
         'en_US',
         'ru_RU',
         'it_IT'
@@ -27,6 +27,6 @@ class TPOLocalization {
 
     }
     protected static function isLocale(){
-        return in_array(get_locale(), self::TPO_IS_LOCALIZATION);
+        return in_array(get_locale(), self::$isLocalization);
     }
 }

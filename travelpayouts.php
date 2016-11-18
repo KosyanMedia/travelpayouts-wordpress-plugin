@@ -1,4 +1,4 @@
-git<?php
+<?php
 /*
 Plugin Name: Travelpayouts
 Plugin URI: https://wordpress.org/plugins/travelpayouts/
