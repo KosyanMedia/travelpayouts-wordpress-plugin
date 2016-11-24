@@ -1176,4 +1176,8 @@ class TPFieldFlightTickets {
         $this->TPFieldSortTd($shortcode);
         $this->TPSortableSection($shortcode);
     }
+
+    public function TPFieldOtherSettings(){
+        echo 111;
+    }
 }

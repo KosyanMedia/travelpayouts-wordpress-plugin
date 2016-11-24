@@ -62,6 +62,12 @@ class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
         add_settings_section( 'tp_settings_themes_table_id', '', '', 'tp_settings_themes_table' );
         add_settings_field('tp_themes_table_td', '', array(&$field ,'TPFieldThemesTable'),
             'tp_settings_themes_table', 'tp_settings_themes_table_id' );
+
+
+        add_settings_section( 'tp_settings_other_settings_id', '', '', 'tp_settings_other_settings' );
+        add_settings_field('tp_other_settings_td', '', array(&$field ,'TPFieldOtherSettings'),
+            'tp_settings_other_settings', 'tp_settings_other_settings_id' );
+
     }
 
     public function tpDefaultTableStyle(){
