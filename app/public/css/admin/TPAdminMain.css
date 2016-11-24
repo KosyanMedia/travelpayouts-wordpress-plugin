@@ -3071,3 +3071,6 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPWrapperFlights{
   width: 910px;
 }
+.TPOtherSettingContent{
+  padding-bottom: 100px;
+}

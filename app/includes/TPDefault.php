@@ -650,6 +650,12 @@ class TPDefault implements  \core\TPODefault{
                 ),
 
             ),
+            'shortcodes_settings' => array(
+                'empty' => array(
+                    'type' => 0,
+                    'value' => ''
+                )
+            ),
             'themes_table' => array(
                 'name' => self::getRandomThemesTable()
             ),

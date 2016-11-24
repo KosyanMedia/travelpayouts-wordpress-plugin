@@ -1181,10 +1181,48 @@ class TPFieldFlightTickets {
     }
 
     public function TPFieldOtherSettings(){
+        ?>
+        <div class="TP-HeadTable">
+            <label>
+                <h3><?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table',
+                    '(If empty answer received)', TPOPlUGIN_TEXTDOMAIN); ?></h3>
+            </label>
+            <label></label>
+        </div>
+        <?php
         $searchForms = TPSearchFormsModel::getData();
-
         if ($searchForms != false):
-
+            ?>
+            <div class="TP-colForm">
+                <div class="TP-FormItem">
+                    <div class="ItemSub">
+                        <ul class="TP-listSet">
+                            <li>
+                                <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
+                                    <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
+                                <label for="rchek1">
+                                    <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_0_label',
+                                        '(Show Search Form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
+                                    <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
+                                <label for="rchek2">
+                                    <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_1_label',
+                                        '(Show Search Results)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="TP-colForm">
+                <div class="TP-FormItem">
+                    <div class="ItemSub">2</div>
+                </div>
+            </div>
+            <?php
         else:
         endif;
     }

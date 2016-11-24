@@ -104,7 +104,11 @@
         </div>
         <div id="tabs-other_settings">
             <form action="options.php" class="formSettings TPFormNotReload" method="POST">
-                <div class="TPmainContent TP-BalanceContent TP-SettingContent">
+                <div class="TPmainContent TP-BalanceContent TP-SettingContent TPOtherSettingContent">
+                    <p class="TP-SettingTitle">
+                        <?php _ex('tp_admin_page_flights_tab_menu_other_settings',
+                            '(Other settings)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
                     <?php settings_fields('TPFlightTickets'); ?>
                     <?php do_settings_fields('tp_settings_other_settings', 'tp_settings_other_settings_id'); ?>
 
