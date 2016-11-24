@@ -1,5 +1,8 @@
 <?php
 namespace app\includes\models\admin\menu;
+
+use app\includes\models\admin\menu\TPSearchFormsModel;
+
 class TPFieldFlightTickets {
 
     public function __construct(){
@@ -1178,6 +1181,11 @@ class TPFieldFlightTickets {
     }
 
     public function TPFieldOtherSettings(){
-        echo 111;
+        $searchForms = TPSearchFormsModel::getData();
+
+        if ($searchForms != false):
+
+        else:
+        endif;
     }
 }
