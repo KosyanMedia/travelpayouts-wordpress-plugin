@@ -1198,19 +1198,19 @@ class TPFieldFlightTickets {
                     <div class="ItemSub">
                         <ul class="TP-listSet">
                             <li>
-                                <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                    <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
-                                <label for="rchek1">
-                                    <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_0_label',
-                                        '(Show Search Form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <input id="shortcoderchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                                    <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?> hidden value="0" />
+                                <label for="shortcoderchek1">
+                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
+                                        '(Show notification)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
                             <li>
-                                <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                    <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
-                                <label for="rchek2">
-                                    <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_1_label',
-                                        '(Show Search Results)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <input id="shortcoderchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                                    <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?> hidden value="1" />
+                                <label for="shortcoderchek2">
+                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label',
+                                        '(Show search form)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
                         </ul>

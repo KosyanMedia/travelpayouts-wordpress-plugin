@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-11-24 22:02+0200\n"
+"POT-Creation-Date: 2016-11-25 00:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1758,6 +1758,16 @@ msgstr "Дополнительный маркер"
 msgctxt "(If empty answer received)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table"
 msgstr "При получении пустого ответа"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1204
+msgctxt "(Show notification)"
+msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
+msgstr "Показывать предупреждение "
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1212
+msgctxt "(Show search form)"
+msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label"
+msgstr "Показывать форму поиска"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:26
 msgctxt "(Token)"
