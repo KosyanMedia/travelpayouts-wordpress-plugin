@@ -2,6 +2,7 @@
 namespace app\includes\models\admin\menu;
 
 use app\includes\models\admin\menu\TPSearchFormsModel;
+use \app\includes\TPPlugin;
 
 class TPFieldFlightTickets {
 
@@ -1191,6 +1192,7 @@ class TPFieldFlightTickets {
         </div>
         <?php
         $searchForms = TPSearchFormsModel::getData();
+
         if ($searchForms != false):
             ?>
             <div class="TP-colForm">
@@ -1200,7 +1202,7 @@ class TPFieldFlightTickets {
                             <li>
                                 <input id="shortcoderchek1" class="TPEmptyTableType" type="radio"
                                        name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
-                                    <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?> hidden value="0" />
+                                    <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?> hidden value="0" />
                                 <label for="shortcoderchek1">
                                     <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
                                         '(Show notification)', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -1209,7 +1211,7 @@ class TPFieldFlightTickets {
                             <li>
                                 <input id="shortcoderchek2" class="TPEmptyTableType"  type="radio"
                                        name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
-                                    <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?> hidden value="1" />
+                                    <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?> hidden value="1" />
                                 <label for="shortcoderchek2">
                                     <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label',
                                         '(Show search form)', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -1221,12 +1223,64 @@ class TPFieldFlightTickets {
             </div>
             <div class="TP-colForm">
                 <div class="TP-FormItem">
-                    <div class="ItemSub" id="TPEmptyTableShowNotification">TPEmptyTableShowNotification</div>
-                    <div class="ItemSub" id="TPEmptyTableShowSearchForm">TPEmptyTableShowSearchForm</div>
+                    <?php $this->TPFieldOtherSettingsTableValueMsg(); ?>
+                    <div class="ItemSub" id="TPEmptyTableShowSearchForm">
+                        <?php $this->TPFieldOtherSettingsTableValueSearchForm($searchForms); ?>
+                    </div>
                 </div>
             </div>
             <?php
         else:
+            $this->TPFieldOtherSettingsTableValueMsg(true);
+            ?>
+            <?php
         endif;
+    }
+
+    public function TPFieldOtherSettingsTableValueMsg($show = false){
+        $parameters = "";
+        if($show == false) $parameters = 'id="TPEmptyTableShowNotification"';
+        ?>
+        <div class="ItemSub" <?php echo $parameters; ?>>
+            <?php
+            $TPEditorEmptyTableValueMsg = array(
+                'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]',
+                'media_buttons' => false,
+                'textarea_rows' => 10,
+                'quicktags' => 1,
+                'wpautop' => 0,
+                'editor_class' => 'TPEditorEmptyTableValueMsg',
+                'tinymce' => true
+            );
+
+            wp_editor(
+                TPPlugin::$options['shortcodes_settings']['empty']['value'][0],
+                'TPEditorEmptyTableValueMsg',
+                $TPEditorEmptyTableValueMsg
+            );
+            ?>
+        </div>
+        <?php
+    }
+
+    public function TPFieldOtherSettingsTableValueSearchForm($searchForms){
+        ?>
+        <label>
+            <span>
+                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form',
+                    '(Choose form)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
+
+            <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]" class="TP-Zelect">
+                <?php foreach($searchForms as $searchForm): ?>
+                <option <?php selected( TPPlugin::$options['shortcodes_settings']['empty']['value'][1], $searchForm['id'] ); ?>
+                    value="<?php echo $searchForm['id']; ?>">
+                    <?php echo $searchForm['title']; ?>
+                </option>
+                <?php endforeach; ?>
+            </select>
+
+        </label>
+        <?php
     }
 }
