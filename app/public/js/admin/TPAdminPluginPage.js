@@ -1005,6 +1005,29 @@ jQuery(function($){
         doc.find('.TPThemesNameHidden').val(TPThemeName);
         //console.log(TPThemeName)
     });
+
+
+    switch ( doc.find(".TPEmptyTableType:checked").val()){
+        case '0':
+            doc.find("#TPEmptyTableShowNotification").show();
+            break;
+        case '1':
+            doc.find("#TPEmptyTableShowSearchForm").show();
+            break;
+    }
+    doc.find(".TPEmptyTableType:radio").change(function () {
+        doc.find("#TPEmptyTableShowNotification").hide();
+        doc.find("#TPEmptyTableShowSearchForm").hide();
+        switch ($(this).val()){
+            case '0':
+                doc.find("#TPEmptyTableShowNotification").show();
+                break;
+            case '1':
+                doc.find("#TPEmptyTableShowSearchForm").show();
+                break;
+        }
+    });
+
 });
 
 

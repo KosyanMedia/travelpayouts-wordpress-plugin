@@ -1198,7 +1198,8 @@ class TPFieldFlightTickets {
                     <div class="ItemSub">
                         <ul class="TP-listSet">
                             <li>
-                                <input id="shortcoderchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                                <input id="shortcoderchek1" class="TPEmptyTableType" type="radio"
+                                       name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
                                     <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?> hidden value="0" />
                                 <label for="shortcoderchek1">
                                     <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
@@ -1206,7 +1207,8 @@ class TPFieldFlightTickets {
                                 </label>
                             </li>
                             <li>
-                                <input id="shortcoderchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                                <input id="shortcoderchek2" class="TPEmptyTableType"  type="radio"
+                                       name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
                                     <?php checked(\app\includes\TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?> hidden value="1" />
                                 <label for="shortcoderchek2">
                                     <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label',
@@ -1219,7 +1221,8 @@ class TPFieldFlightTickets {
             </div>
             <div class="TP-colForm">
                 <div class="TP-FormItem">
-                    <div class="ItemSub">2</div>
+                    <div class="ItemSub" id="TPEmptyTableShowNotification">TPEmptyTableShowNotification</div>
+                    <div class="ItemSub" id="TPEmptyTableShowSearchForm">TPEmptyTableShowSearchForm</div>
                 </div>
             </div>
             <?php

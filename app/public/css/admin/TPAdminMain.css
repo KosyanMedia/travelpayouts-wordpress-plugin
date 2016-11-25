@@ -3074,3 +3074,6 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPOtherSettingContent{
   padding-bottom: 100px;
 }
+#TPEmptyTableShowNotification, #TPEmptyTableShowSearchForm{
+  display: none;
+}

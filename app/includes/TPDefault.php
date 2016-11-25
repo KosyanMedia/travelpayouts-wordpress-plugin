@@ -653,7 +653,10 @@ class TPDefault implements  \core\TPODefault{
             'shortcodes_settings' => array(
                 'empty' => array(
                     'type' => 0,
-                    'value' => ''
+                    'value' => array(
+                        0 => '',
+                        1 => ''
+                    )
                 )
             ),
             'themes_table' => array(
