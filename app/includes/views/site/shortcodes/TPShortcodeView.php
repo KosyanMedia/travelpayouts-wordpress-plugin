@@ -8,6 +8,8 @@
 
 namespace app\includes\views\site\shortcodes;
 
+use app\includes\common\TPSearchFormEmptyTable;
+
 use \app\includes\TPPlugin;
 class TPShortcodeView {
     public function __construct()
@@ -1359,6 +1361,10 @@ class TPShortcodeView {
                 break;
             //search form
             case 1:
+                $searchForm = TPSearchFormEmptyTable::getSearchFormByID($valueShortcodesSettings, $originIata, $destinationIata);
+                if ($searchForm == false) return false;
+
+                $valueShortcodesSettings = $searchForm;
                 break;
         }
 

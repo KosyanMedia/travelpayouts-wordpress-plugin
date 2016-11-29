@@ -261,6 +261,18 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         if(count($data) > 0) return $data;
         return false;
     }
+
+    public static function getSearchFormByID($id){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_row(
+            $wpdb->prepare('SELECT * FROM '.$tableName.' WHERE id = %d ', $id),
+            ARRAY_A);
+
+        if(count($data) > 0) return $data;
+        return false;
+    }
+
     /**
      *
      */
