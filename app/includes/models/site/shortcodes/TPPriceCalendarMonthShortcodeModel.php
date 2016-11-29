@@ -108,7 +108,7 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             }
         }
         return array(
-            'rows' => $rows,
+            'rows' => array(),//$rows
             'type' => 1,
             'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'),

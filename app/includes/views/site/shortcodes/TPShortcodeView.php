@@ -42,7 +42,9 @@ class TPShortcodeView {
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //error_log('currency = '.$currency);
         $html = '';
-        if(count($rows) < 1) return false;
+
+        if(count($rows) < 1) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
+            $origin, $destination, $limit, $subid, $currency);
 
         if($one_way === 'false'){
             $sort_column = \app\includes\TPPlugin::$options['shortcodes'][$type]['sort_column'];
@@ -1305,5 +1307,10 @@ class TPShortcodeView {
     public function getSelectField($shortcode){
         //error_log(print_r(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'], true));
         return array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
+    }
+
+    public function renderViewIfEmptyTable($type, $oneWay, $rows, $originIata, $destinationIata, $origin, $destination,
+                                           $limit, $subid, $currency){
+        return 'renderViewIfEmptyTable';
     }
 }
