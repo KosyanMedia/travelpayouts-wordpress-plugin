@@ -1233,6 +1233,9 @@ class TPFieldFlightTickets {
         else:
             $this->TPFieldOtherSettingsTableValueMsg(true);
             ?>
+            <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]" value="0">
+            <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]"
+                   value="<?php echo  TPPlugin::$options['shortcodes_settings']['empty']['value'][1]; ?>">
             <?php
         endif;
     }
@@ -1259,6 +1262,7 @@ class TPFieldFlightTickets {
                 $TPEditorEmptyTableValueMsg
             );
             ?>
+
         </div>
         <?php
     }
