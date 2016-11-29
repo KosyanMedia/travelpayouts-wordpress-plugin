@@ -1347,9 +1347,9 @@ class TPShortcodeView {
                         $title = $this->getAttrTitleShortcodeEmptyTableMsg($matches[0], $origin, $destination);
                         $replace = '';
                         if(strpos($matches[0], $shortcodesMsg[0]) !== false){
-                            $replace = '<a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$title.'</a>';
+                            $replace = '<a href="'.$url.'" class="TPLinkTable TPEmptyTableLink" '.$target_url.'  '.$rel.'>'.$title.'</a>';
                         } else if (strpos($matches[0], $shortcodesMsg[1]) !== false){
-                            $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable" '
+                            $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable TPEmptyTableButton" '
                                 .$target_url.' '.$rel.'>'.$title.'</a>';
                         }
                         return $replace;

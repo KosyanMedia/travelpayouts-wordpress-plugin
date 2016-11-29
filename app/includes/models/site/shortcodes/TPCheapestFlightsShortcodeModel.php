@@ -114,6 +114,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
     }
 
     public function getDataFilter($filter_flight_number, $filter_airline, $data){
+        $dataAll = $data;
         if( $filter_flight_number !== false && !empty($filter_flight_number)){
             $data = array_filter($data, function($value) use ($filter_flight_number) {
                 $flight_number = $value['airline_iata'].$value['flight_number'];
@@ -125,7 +126,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-
+        if(count($data) < 1) return $dataAll;
         return $data;
     }
 

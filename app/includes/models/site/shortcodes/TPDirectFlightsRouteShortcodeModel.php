@@ -179,6 +179,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
     }
 
     public function getDataFilter($filter_flight_number, $filter_airline, $data){
+        $dataAll = $data;
         if( $filter_flight_number !== false && !empty($filter_flight_number)){
             $data = array_filter($data, function($value) use ($filter_flight_number) {
                 $flight_number = $value['airline_iata'].$value['flight_number'];
@@ -190,7 +191,7 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-
+        if(count($data) < 1) return $dataAll;
         return $data;
     }
 
