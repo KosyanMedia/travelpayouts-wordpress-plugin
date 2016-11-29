@@ -250,6 +250,17 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         if(count($data) > 0) return $data;
         return false;
     }
+
+    public static function getAllSearchForms(){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_results(
+            $wpdb->prepare('SELECT * FROM '.$tableName.' WHERE type_shortcode = %d ORDER BY date_add DESC', 0),
+            ARRAY_A);
+
+        if(count($data) > 0) return $data;
+        return false;
+    }
     /**
      *
      */

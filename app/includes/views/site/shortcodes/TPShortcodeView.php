@@ -8,7 +8,7 @@
 
 namespace app\includes\views\site\shortcodes;
 
-
+use \app\includes\TPPlugin;
 class TPShortcodeView {
     public function __construct()
     {
@@ -860,6 +860,8 @@ class TPShortcodeView {
         return $textTd;
     }
 
+
+
     /**
      * @param int $distance
      * @return int
@@ -1311,6 +1313,76 @@ class TPShortcodeView {
 
     public function renderViewIfEmptyTable($type, $oneWay, $rows, $originIata, $destinationIata, $origin, $destination,
                                            $limit, $subid, $currency){
-        return 'renderViewIfEmptyTable';
+        $typeShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['type'];
+        $valueShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['value'][$typeShortcodesSettings];
+
+        $rel = '';
+        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        $target_url = '';
+        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+
+        $url = $this->getUrlTable(array(
+            'origin' => $originIata,
+            'destination' => $destinationIata,
+            'departure_at' => date('Y-m-d'),
+            'return_at' => '',
+            'type' => $type,
+            'subid' => $subid
+        ) );
+
+        switch ($typeShortcodesSettings){
+            //text
+            case 0:
+                //[link]
+                //[button]
+                $shortcodesMsg = array(
+                    'link',
+                    'button'
+                );
+                $valueShortcodesSettings = preg_replace_callback(
+                    '/\['.$shortcodesMsg[0].'(.*?)\]|\['.$shortcodesMsg[1].'(.*?)\]/',//m
+                    function($matches) use ($shortcodesMsg, $origin, $destination, $rel, $target_url, $url){
+                        $title = $this->getAttrTitleShortcodeEmptyTableMsg($matches[0], $origin, $destination);
+                        $replace = '';
+                        if(strpos($matches[0], $shortcodesMsg[0]) !== false){
+                            $replace = '<a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$title.'</a>';
+                        } else if (strpos($matches[0], $shortcodesMsg[1]) !== false){
+                            $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable" '
+                                .$target_url.' '.$rel.'>'.$title.'</a>';
+                        }
+                        return $replace;
+                    },
+                    $valueShortcodesSettings,
+                    -1,
+                    $count
+                );
+                break;
+            //search form
+            case 1:
+                break;
+        }
+
+
+        return $valueShortcodesSettings;
     }
+
+    public function getAttrTitleShortcodeEmptyTableMsg($shortcode, $origin, $destination){
+        preg_match('/title=\"(.*?)\"/',  $shortcode, $titleData);
+        if (array_key_exists(1, $titleData)){
+            //{origin} {destination}
+            $title = $titleData[1];
+            if(strpos($title, '{origin}') !== false){
+                $title = str_replace('{origin}', $origin , $title);
+            }
+            if(strpos($title, '{destination}') !== false){
+                $title = str_replace('{destination}', $destination , $title);
+            }
+            return $title;
+        }
+        return "";
+    }
+
+
+
+
 }

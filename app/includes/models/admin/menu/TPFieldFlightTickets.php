@@ -1191,7 +1191,7 @@ class TPFieldFlightTickets {
             <label></label>
         </div>
         <?php
-        $searchForms = TPSearchFormsModel::getData();
+        $searchForms = TPSearchFormsModel::getAllSearchForms();
 
         if ($searchForms != false):
             ?>
