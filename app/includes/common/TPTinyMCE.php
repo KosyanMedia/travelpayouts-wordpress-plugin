@@ -37,7 +37,7 @@ class TPTinyMCE
 
     public function addTinyMCEToolbar( $buttons ) {
 
-        array_push( $buttons, 'tp_custom_class' );
+        array_push( $buttons, 'tp_link_btn' , 'tp_button_btn' );
         return $buttons;
 
     }
@@ -58,7 +58,6 @@ class TPTinyMCE
 
         </script>
         <?php
-        // TPHotelWidgetLabel = '<?php _ex('tp_head_script_admin_var_hotel_widget_label', '(Hotel Name)', TPOPlUGIN_TEXTDOMAIN ); ? >';
     }
 
     public function addQuicktags(){

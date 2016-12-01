@@ -2,19 +2,28 @@
 
     tinymce.PluginManager.add( 'tp_custom_class', function( editor, url ) {
         // Add Button to Visual Editor Toolbar
-        console.log(11);
-        console.log(url);
-        console.log(editor);
-        console.log(url + '../../../images/tp_link_btn_tinymce.png');
-        editor.addButton('tp_custom_class', {
-            title: 'Insert CSS Class',
-            cmd: 'tp_custom_class',
+
+        editor.addButton('tp_link_btn', {
+            title: linkShortcodeBtnLabel,
+            cmd: 'tp_link_btn',
             image: url + '../../../images/tp_link_btn_tinymce.png',
         });
 
         // Add Command when Button Clicked
-        editor.addCommand('tp_custom_class', function() {
-            alert('Button clicked!');
+        editor.addCommand('tp_link_btn', function() {
+            alert('tp_link_btn clicked!');
+        });
+
+
+        editor.addButton('tp_button_btn', {
+            title: buttonShortcodeBtnLabel,
+            cmd: 'tp_button_btn',
+            image: url + '../../../images/tp_button_btn_tinymce.png',
+        });
+
+        // Add Command when Button Clicked
+        editor.addCommand('tp_button_btn', function() {
+            alert('tp_button_btn clicked!');
         });
     });
 })();
