@@ -11,7 +11,7 @@
 
         // Add Command when Button Clicked
         editor.addCommand('tp_link_btn', function() {
-            alert('tp_link_btn clicked!');
+            editor.execCommand('mceReplaceContent', false, '' + linkShortcode + '');
         });
 
 
@@ -23,7 +23,7 @@
 
         // Add Command when Button Clicked
         editor.addCommand('tp_button_btn', function() {
-            alert('tp_button_btn clicked!');
+            editor.execCommand('mceReplaceContent', false, '' + buttonShortcode + '');
         });
     });
 })();

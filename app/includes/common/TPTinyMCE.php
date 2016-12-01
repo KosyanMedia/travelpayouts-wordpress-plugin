@@ -54,7 +54,7 @@ class TPTinyMCE
 
             buttonShortcodeBtnLabel = 'Вставить кнопку поиска';
             buttonShortcodeAttrTitleValue = 'Найти билет из {origin} {destination}';
-            buttonShortcode = '[link title="'+buttonShortcodeAttrTitleValue+'"]';
+            buttonShortcode = '[button title="'+buttonShortcodeAttrTitleValue+'"]';
 
         </script>
         <?php
