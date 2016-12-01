@@ -19,6 +19,7 @@ class TPTinyMCE
         if ( is_admin() && in_array($page, $this->usePages)) {
             add_action( 'init', array( &$this, 'setupTinyMCE' ) );
             add_action( 'admin_print_scripts', array( &$this, 'setupJSTinyMCE' ) );
+            add_action( 'admin_print_footer_scripts', array( &$this, 'addQuicktags') );
         }
     }
 
@@ -42,7 +43,33 @@ class TPTinyMCE
     }
 
     public function setupJSTinyMCE(){
+        ?>
+        <script type="text/javascript">
+            var linkShortcode, linkShortcodeBtnLabel, linkShortcodeAttrTitleValue, buttonShortcode, buttonShortcodeBtnLabel,
+                buttonShortcodeAttrTitleValue ;
 
+            linkShortcodeBtnLabel = 'Вставить ссылку поиска';//'< ? php _ex('tp_head_script_admin_var_hotel_widget_label', '(Hotel Name)', TPOPlUGIN_TEXTDOMAIN ); ? >'
+            linkShortcodeAttrTitleValue = 'Найти билет из {origin} {destination}';
+            linkShortcode = '[link title="'+linkShortcodeAttrTitleValue+'"]';
+
+            buttonShortcodeBtnLabel = 'Вставить кнопку поиска';
+            buttonShortcodeAttrTitleValue = 'Найти билет из {origin} {destination}';
+            buttonShortcode = '[link title="'+buttonShortcodeAttrTitleValue+'"]';
+
+        </script>
+        <?php
+        // TPHotelWidgetLabel = '<?php _ex('tp_head_script_admin_var_hotel_widget_label', '(Hotel Name)', TPOPlUGIN_TEXTDOMAIN ); ? >';
+    }
+
+    public function addQuicktags(){
+        if ( ! wp_script_is('quicktags') )
+            return;
+        ?>
+        <script type="text/javascript">
+            QTags.addButton( 'eg_tp_link', '[link]', linkShortcode, '', 'h', linkShortcodeBtnLabel, 200 );
+            QTags.addButton( 'eg_tp_button', '[button]', buttonShortcode, '', 'h', buttonShortcodeBtnLabel, 201 );
+        </script>
+        <?php
     }
 
 }
