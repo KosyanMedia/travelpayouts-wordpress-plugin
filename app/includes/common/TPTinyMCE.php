@@ -11,8 +11,12 @@ namespace app\includes\common;
 
 class TPTinyMCE
 {
+    public $usePages = array(
+        'tp_control_tickets'
+    );
     public function __construct() {
-        if ( is_admin() ) {
+        $page = isset($_GET['page']) ? $_GET['page'] : null ;
+        if ( is_admin() && in_array($page, $this->usePages)) {
             add_action( 'init', array( &$this, 'setupTinyMCE' ) );
             add_action( 'admin_print_scripts', array( &$this, 'setupJSTinyMCE' ) );
         }
