@@ -581,3 +581,67 @@ a.paginate_button:hover {
 @media(max-width:480px){
   .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { text-align:left; }
 }
+
+.TPEmptyTableButton {
+  min-width: 130px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 30px;
+  display: block;
+  margin-top: 2px !important;
+  top: 0;
+  right: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px !important;
+  border-bottom: none !important;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.TPEmptyTableButton span {
+  line-height: 30px; }
+
+.TPEmptyTableButton i {
+  font-size: 14px;
+  font-weight: normal;
+  /*font-family: ALSRubl, sans-serif;*/
+  font-style: normal;
+  line-height: 26px;
+  margin-left: 2px; }
+
+.TPEmptyTableButton:hover {
+  background: #ce6408;
+  text-decoration: none;
+  color: #fff !important; }
+
+.TPEmptyTableButton {
+  display: inline-block;
+  overflow: inherit;
+  min-width: 100px;
+  width: auto; }
+
+.TPEmptyTableButton{
+  background-color: #222;
+  border-bottom: 2px solid #f1d600 !important;
+  border: 2px solid #f1d600;
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;}
+
+.TPEmptyTableButton:hover {
+  background-color: #f1d600;
+  color: #222 !important;}
