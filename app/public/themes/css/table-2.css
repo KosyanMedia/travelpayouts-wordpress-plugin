@@ -170,6 +170,13 @@
 .TP-Plugin-Tables_box tbody tr:nth-child(even) {
   background-color: #28242a; }
 
+.TP-Plugin-Tables_box tbody tr:nth-child(odd) > .TPairline_logoTd{
+  background-color: #A7A9C7 ; }
+
+.TP-Plugin-Tables_box tbody tr:nth-child(even) > .TPairline_logoTd{
+  background-color: #DCDDF0 ;
+}
+
 .TP-autoWidth-plugin {
   width: 100%; }
 
