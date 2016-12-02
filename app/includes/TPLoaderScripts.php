@@ -526,7 +526,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto') {
                 wp_register_style(
                     TPOPlUGIN_SLUG . '-TPFontsRoboto',
-                    'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
+                    'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
                     array(),
                     TPOPlUGIN_VERSION // $ver
                 );
@@ -535,7 +535,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Roboto Slab'){
                 wp_register_style(
                     TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
-                    'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
+                    'https://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
                     array(),
                     TPOPlUGIN_VERSION // $ver
                 );
@@ -545,7 +545,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Ubuntu'){
                 wp_register_style(
                     TPOPlUGIN_SLUG . '-TPFontsUbuntu',
-                    'http://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,cyrillic-ext,cyrillic',
+                    'https://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,cyrillic-ext,cyrillic',
                     array(),
                     TPOPlUGIN_VERSION // $ver
                 );
@@ -567,7 +567,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 \app\includes\TPPlugin::$options['style_table']['table']['font_family'] == 'Open Sans'){
                 wp_register_style(
                     TPOPlUGIN_SLUG . '-TPFontsOpenSans',
-                    'http://fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,cyrillic-ext,cyrillic',
+                    'https://fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,cyrillic-ext,cyrillic',
                     array(),
                     TPOPlUGIN_VERSION // $ver
                 );
@@ -605,14 +605,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 case 'mint-table':
                     wp_register_style(
                         TPOPlUGIN_SLUG . '-TPFontsRoboto',
-                        'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
+                        'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,cyrillic',
                         array(),
                         TPOPlUGIN_VERSION // $ver
                     );
                     wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontsRoboto');
                     wp_register_style(
                         TPOPlUGIN_SLUG . '-TPFontsRobotoSlab',
-                        'http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
+                        'https://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic-ext,cyrillic',
                         array(),
                         TPOPlUGIN_VERSION // $ver
                     );
