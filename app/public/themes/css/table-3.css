@@ -623,6 +623,7 @@ a.paginate_button:hover {
   width: auto; }
 
 .TPEmptyTableButton {
+  background-image: linear-gradient(to top, #f60f3d 0%, #1d234e 100%);
   border: 2px solid #fff;
   color: white;
   font-family: "Ubuntu";
@@ -636,5 +637,18 @@ a.paginate_button:hover {
   border-radius: 20px; }
 
 .TPEmptyTableButton:hover {
+  border-top: 2px solid #1d234e !important;
+  border-right: 2px solid #1d234e !important;
+  border-bottom: 2px solid #f60f3d !important;
+  border-left: 2px solid #f60f3d !important;
+  /*border-radius: 20px !important;
+  border: 2px solid transparent;
+  border-bottom: 2px solid transparent !important;
+  -moz-border-image: -moz-linear-gradient(right, #f60f3d 0%, #1d234e 100%);
+  -webkit-border-image: -webkit-linear-gradient(right, #f60f3d 0%, #1d234e 100%);
+  -webkit-border-radius: 20px !important;
+  border-image: linear-gradient(to left, #f60f3d 0%, #1d234e 100%);
+  border-image-slice: 1;*/
+
   background-color: #fff;
   color: #15234e !important; }
