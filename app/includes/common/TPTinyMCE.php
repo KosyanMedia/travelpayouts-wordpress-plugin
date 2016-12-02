@@ -48,12 +48,17 @@ class TPTinyMCE
             var linkShortcode, linkShortcodeBtnLabel, linkShortcodeAttrTitleValue, buttonShortcode, buttonShortcodeBtnLabel,
                 buttonShortcodeAttrTitleValue ;
 
-            linkShortcodeBtnLabel = 'Вставить ссылку поиска';//'< ? php _ex('tp_head_script_admin_var_hotel_widget_label', '(Hotel Name)', TPOPlUGIN_TEXTDOMAIN ); ? >'
-            linkShortcodeAttrTitleValue = 'Найти билет из {origin} {destination}';
+            linkShortcodeBtnLabel = '<?php _ex('tp_tinymce_link_shortcode_label',
+                '(Press to insert a link into the notification)', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            linkShortcodeAttrTitleValue = '<?php _ex('tp_tinymce_link_shortcode_attr_title_value',
+                '(Go to tickets search {origin} {destination})', TPOPlUGIN_TEXTDOMAIN ); ?>';
             linkShortcode = '[link title="'+linkShortcodeAttrTitleValue+'"]';
 
-            buttonShortcodeBtnLabel = 'Вставить кнопку поиска';
-            buttonShortcodeAttrTitleValue = 'Найти билет из {origin} {destination}';
+            buttonShortcodeBtnLabel = '<?php _ex('tp_tinymce_button_shortcode_label',
+                '(Press to insert a button link into the notification. It will have the same look as search button in the table theme chosen)'
+                , TPOPlUGIN_TEXTDOMAIN ); ?>';
+            buttonShortcodeAttrTitleValue = '<?php _ex('tp_tinymce_button_shortcode_attr_title_value',
+                '(Find tickets {origin} {destination})', TPOPlUGIN_TEXTDOMAIN ); ?>';
             buttonShortcode = '[button title="'+buttonShortcodeAttrTitleValue+'"]';
 
         </script>
