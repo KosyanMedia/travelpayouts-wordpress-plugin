@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-02 15:18+0200\n"
+"POT-Creation-Date: 2016-12-02 15:41+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1267,9 +1267,7 @@ msgctxt ""
 "(Press to insert a button link into the notification. It will have the same look as search "
 "button in the table theme chosen)"
 msgid "tp_tinymce_button_shortcode_label"
-msgstr ""
-"Press to insert a button link into the notification. It will have the same look as search button "
-"in the table theme chosen"
+msgstr "tp_tinymce_button_shortcode_label"
 
 #: app/includes/common/TPTinyMCE.php:60
 msgctxt "(Find tickets {origin} {destination})"
@@ -1783,17 +1781,26 @@ msgctxt "(If empty answer received)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table"
 msgstr "If empty answer received"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1207
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1194
+msgctxt ""
+"(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
+"you can set what users will see in such cases)"
+msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_help"
+msgstr ""
+"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
+"you can set what users will see in such cases"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1223
 msgctxt "(Show notification)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
 msgstr "Show notification"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1216
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1232
 msgctxt "(Show search form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label"
 msgstr "Show search form"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1274
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1290
 msgctxt "(Choose form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form"
 msgstr "Choose form"

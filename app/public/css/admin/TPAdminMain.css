@@ -3077,3 +3077,12 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 #TPEmptyTableShowNotification, #TPEmptyTableShowSearchForm{
   display: none;
 }
+.TPFieldEmptyResultH3{
+  width: 285px;
+}
+.TPFieldEmptyResultH3 .svg-img-1{
+  float: right
+}
+.TPFieldEmptyResultH3 .svg-img-1 a svg{
+  padding-top: 5px!important;
+}
