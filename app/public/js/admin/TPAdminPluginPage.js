@@ -1015,6 +1015,11 @@ jQuery(function($){
             doc.find("#TPEmptyTableShowSearchForm").show();
             break;
     }
+    $('label[id^="cheker-label-"]').on('click', function(){
+        var s = $(this).attr('id').replace(/[^0-9]/g,'');
+        $('div[id^="chekar-content-"]').removeClass('active');
+        $('div[id^="chekar-content-'+s+'"]').addClass('active');
+    })
     doc.find(".TPEmptyTableType:radio").change(function () {
         doc.find("#TPEmptyTableShowNotification").hide();
         doc.find("#TPEmptyTableShowSearchForm").hide();

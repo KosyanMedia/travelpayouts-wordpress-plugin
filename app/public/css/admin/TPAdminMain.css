@@ -3072,7 +3072,7 @@ input[type="radio"] + label, input[type="checkbox"] + label,
   width: 910px;
 }
 .TPOtherSettingContent{
-  padding-bottom: 400px;
+
 }
 #TPEmptyTableShowNotification, #TPEmptyTableShowSearchForm{
   display: none;
@@ -3086,3 +3086,81 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPFieldEmptyResultH3 .svg-img-1 a svg{
   padding-top: 5px!important;
 }
+.title  .svg-img-1{
+  float: right
+}
+.title .svg-img-1 a svg{
+  padding-top: 2px!important;
+}
+.title{
+  width: 250px;
+}
+.TPTab-check__inner {
+  cursor: pointer;
+  float: left;
+  margin: 2%;
+  position: relative;
+  width: 46%;
+  min-width: 360px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block; }
+
+.TPTab-check__innerAll{
+  cursor: pointer;
+  float: left;
+  margin: 2%;
+  position: relative;
+  width: 96%;
+  min-width: 360px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+.TPTab-check__innerAll span.title {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 8px; }
+
+.TPTab-check__inner span.title {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 8px; }
+.TPTab-check__inner input[type="checkbox"] + label::before,
+.TPTab-check__inner input[type="radio"] + label::before {
+  background: url("../../images/chek.png"); }
+.TPTab-check__inner input[type="radio"] + label:hover::before,
+.TPTab-check__inner input[type="checkbox"] + label:hover::before {
+  background-image: url("../../images/chek.png");
+  background-position: 0 40px; }
+.TPTab-check__inner input[type="radio"]:checked + label::before,
+.TPTab-check__inner input[type="checkbox"]:checked + label::before {
+  background-image: url("../../images/chek.png");
+  background-position: 0 20px; }
+.TPTab-check__inner .box-for-wp {
+  min-height: 100px;
+  border: 1px solid #ccc; }
+.TPTab-check__inner .block-swap-two {
+  padding: 20px 0; }
+.TPTab-check__inner .block-swap-one,
+.TPTab-check__inner .block-swap-two {
+  display: none; }
+.TPTab-check__inner .block-swap-one.active,
+.TPTab-check__inner .block-swap-two.active {
+  display: block; }
+
+
+.TPOtherSettingTPFormNotReload .TP-navsPan{
+  margin-top: 30px;
+}
+/*# sourceMappingURL=main.css.map */
