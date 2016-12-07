@@ -83,8 +83,8 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             'destination' => $destination,
             'currency' => $currency
         ));
-        if( ! $return )
-            return false;
+        //if( ! $return )
+        //    return false;
         $rows = array();
         if($return){
             switch($stops){

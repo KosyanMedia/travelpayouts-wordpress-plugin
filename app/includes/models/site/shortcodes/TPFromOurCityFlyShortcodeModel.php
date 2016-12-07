@@ -101,8 +101,9 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             'limit' => $limit,
             'one_way' => $one_way
         ));
-        if( ! $rows )
-            return false;
+        //if( ! $rows )
+         //   return false;
+
         $rows_sort = array();
         if($rows){
             switch($stops){

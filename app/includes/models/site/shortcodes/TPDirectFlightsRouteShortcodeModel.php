@@ -158,8 +158,8 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'currency' => $currency,
         ));
 
-        if( ! $return )
-            return false;
+        //if( ! $return )
+         //   return false;
         $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
         return array(
             'rows' => $return,

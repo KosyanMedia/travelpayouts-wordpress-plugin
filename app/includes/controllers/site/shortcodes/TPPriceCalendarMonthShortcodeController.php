@@ -25,7 +25,7 @@ class TPPriceCalendarMonthShortcodeController extends \app\includes\controllers\
     public function actionTable($args = array())
     {
         $data = $this->model->getDataTable($args);
-        if(!$data) return false;
+       // if(!$data) return false;
         return $this->view->renderTable($data);
     }
 

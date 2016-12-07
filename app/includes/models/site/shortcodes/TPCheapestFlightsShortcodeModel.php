@@ -91,8 +91,8 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
             'departure_at' => $departure_at,
             'return_at' => $return_at,
         ));
-        if( ! $return )
-            return false;
+        //if( ! $return )
+        //    return false;
 
         $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
 

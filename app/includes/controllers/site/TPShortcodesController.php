@@ -16,7 +16,7 @@ abstract class TPShortcodesController extends \core\controllers\TPOShortcodesCon
     public function render($data)
     {
         // TODO: Implement render() method.
-        if(!$data) return false;
+        //if(!$data) return false;
         return $this->view->renderTable($data);
     }
 

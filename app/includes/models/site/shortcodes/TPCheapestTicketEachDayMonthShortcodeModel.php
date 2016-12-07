@@ -84,8 +84,8 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends \app\includes\models\si
             'destination' => $destination,
             'currency' => $currency,
         ));
-        if( ! $rows )
-            return false;
+        //if( ! $rows )
+        //    return false;
 
         $rows_sort = array();
         if($rows){

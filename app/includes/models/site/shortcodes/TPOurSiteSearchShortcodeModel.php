@@ -98,8 +98,8 @@ class TPOurSiteSearchShortcodeModel extends \app\includes\models\site\TPShortcod
             'limit' => $limit,
             'one_way' => $one_way
         ));
-        if( ! $rows )
-            return false;
+        //if( ! $rows )
+         //   return false;
         $rows_sort = array();
         if($rows){
             switch($stops){

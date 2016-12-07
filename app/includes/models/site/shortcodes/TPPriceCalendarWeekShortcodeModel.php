@@ -83,8 +83,8 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
             'destination' => $destination,
             'currency' => $currency
         ));
-        if( ! $return )
-            return false;
+        //if( ! $return )
+        //    return false;
         return array(
             'rows' => $return,
             'type' => 2,

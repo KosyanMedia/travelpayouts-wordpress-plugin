@@ -45,7 +45,8 @@ class TPShortcodeView {
         //error_log('currency = '.$currency);
         $html = '';
 
-        if(count($rows) < 1) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
+
+        if(count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
             $origin, $destination, $limit, $subid, $currency);
 
         if($one_way === 'false'){

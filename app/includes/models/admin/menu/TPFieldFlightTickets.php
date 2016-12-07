@@ -1185,6 +1185,7 @@ class TPFieldFlightTickets {
 
         $searchForms = TPSearchFormsModel::getAllSearchForms();
 
+
         if ($searchForms != false):
             ?>
             <div class="TPTab-check">
@@ -1231,10 +1232,12 @@ class TPFieldFlightTickets {
                     </ul>
                 </div>
                 <div class="TPTab-check__inner">
-                    <div class="block-swap-one active" id="chekar-content-1">
+                    <div class="block-swap-one <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 0)?'active':''; ?>"
+                         id="chekar-content-1">
                         <?php $this->TPFieldOtherSettingsTableValueMsg(); ?>
                     </div>
-                    <div class="block-swap-two" id="chekar-content-2">
+                    <div class="block-swap-two <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 1)?'active':''; ?>"
+                         id="chekar-content-2">
                         <?php $this->TPFieldOtherSettingsTableValueSearchForm($searchForms); ?>
                     </div>
                 </div>
