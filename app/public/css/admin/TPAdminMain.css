@@ -3163,4 +3163,8 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPOtherSettingTPFormNotReload .TP-navsPan{
   margin-top: 30px;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURLTets=main.css.map */
+.zelect .dropdown {
+  max-height: 200px;
+  overflow-y: auto;
+}
