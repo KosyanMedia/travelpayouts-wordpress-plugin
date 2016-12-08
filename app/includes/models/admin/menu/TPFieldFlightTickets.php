@@ -3,6 +3,7 @@ namespace app\includes\models\admin\menu;
 
 use app\includes\models\admin\menu\TPSearchFormsModel;
 use \app\includes\TPPlugin;
+use \app\includes\common\TPLang;
 
 class TPFieldFlightTickets {
 
@@ -1353,28 +1354,70 @@ class TPFieldFlightTickets {
     public function TPFieldOtherSettingsTableValueMsg($show = false){
         $parameters = "";
         if($show == false) $parameters = 'id="TPEmptyTableShowNotification"';
-        ?>
-        <!--<div class="ItemSub" <?php echo $parameters; ?>>-->
-            <?php
-            $TPEditorEmptyTableValueMsg = array(
-                'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]',
-                'media_buttons' => false,
-                'textarea_rows' => 10,
-                'quicktags' => 1,
-                'wpautop' => 0,
-                'editor_class' => 'TPEditorEmptyTableValueMsg',
-                'tinymce' => true
-            );
 
-            wp_editor(
-                TPPlugin::$options['shortcodes_settings']['empty']['value'][0],
-                'TPEditorEmptyTableValueMsg',
-                $TPEditorEmptyTableValueMsg
-            );
-            ?>
 
-        <!--</div> -->
-        <?php
+        if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes_settings']['empty']['value'][0])){
+            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][0] as $key_local => $title){
+
+                if (TPLang::getDefaultLang() != $key_local):
+                    ?>
+                    <input type="hidden"
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][0][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local]) ?>"/>
+                    <?php
+                else:
+
+                    $TPEditorEmptyTableValueMsg = array(
+                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]['.$key_local.']',
+                        'media_buttons' => false,
+                        'textarea_rows' => 10,
+                        'quicktags' => 1,
+                        'wpautop' => 0,
+                        'editor_class' => 'TPEditorEmptyTableValueMsg',
+                        'tinymce' => true
+                    );
+
+                    wp_editor(
+                        TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local],
+                        'TPEditorEmptyTableValueMsg',
+                        $TPEditorEmptyTableValueMsg
+                    );
+
+                endif;
+
+            }
+        } else {
+            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][0] as $key_local => $title){
+
+                if (TPLang::getLang() != $key_local):
+                    ?>
+                    <input type="hidden"
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][0][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local]) ?>"/>
+                    <?php
+                else:
+
+                    $TPEditorEmptyTableValueMsg = array(
+                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]['.$key_local.']',
+                        'media_buttons' => false,
+                        'textarea_rows' => 10,
+                        'quicktags' => 1,
+                        'wpautop' => 0,
+                        'editor_class' => 'TPEditorEmptyTableValueMsg',
+                        'tinymce' => true
+                    );
+
+                    wp_editor(
+                        TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local],
+                        'TPEditorEmptyTableValueMsg',
+                        $TPEditorEmptyTableValueMsg
+                    );
+
+                endif;
+            }
+        }
+
+
     }
 
     public function TPFieldOtherSettingsTableValueSearchForm($searchForms){
