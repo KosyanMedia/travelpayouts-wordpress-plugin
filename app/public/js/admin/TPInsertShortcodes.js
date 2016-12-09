@@ -17,7 +17,7 @@ jQuery(function($) {
             autoOpen: true,
             resizable: false,
             draggable: false,
-            maxHeight:450,
+            maxHeight:500,
             maxWidth: 450,
             minWidth: 406,
             minHeight:200,
@@ -54,7 +54,10 @@ jQuery(function($) {
                     click: function() {
                         var origin, destination, airline, shortcodes, title,
                             off_title, limit, trip_class,paginate, one_way, tp_subid, currency,
-                            country;
+                            country,filter_airline, filter_flight_number;
+
+
+
                         shortcodes = "";
                         currency = doc.find('#currency').val();
                         origin = doc.find('#origin').val();
@@ -83,6 +86,12 @@ jQuery(function($) {
                         }else{
                             off_title = "";
                         }
+                        filter_airline = doc.find('#filter_airline').val();
+                        filter_airline = filter_airline.substring(filter_airline.indexOf('[')+1,filter_airline.indexOf(']'));
+                        filter_flight_number = doc.find('#filter_flight_number').val();
+                        filter_airline = (filter_airline != "") ? " filter_airline=\""+filter_airline+"\"" : "";
+                        filter_flight_number = (filter_flight_number != "") ? " filter_flight_number=\""+filter_flight_number+"\"" : "";
+
                         tp_subid = doc.find('#tp_subid').val();
                         if(!validSubid(tp_subid)){
                             doc.find('#tp_subid').addClass('constructorShortcodesError');
@@ -132,9 +141,11 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
+
                                         setShortcodes("[tp_cheapest_flights_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -146,10 +157,11 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+off_title
-                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -161,9 +173,10 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_cheapest_tickets_each_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -175,9 +188,10 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_direct_flights_route_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -185,9 +199,10 @@ jQuery(function($) {
                                     if(origin == ""){
                                         doc.find('#origin').addClass('constructorShortcodesError');
                                     }else{
+
                                         setShortcodes("[tp_direct_flights_shortcodes origin="+origin+" " +
                                             " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -295,13 +310,16 @@ jQuery(function($) {
                 doc.find('#tr_off_title').hide();
                 doc.find('#tr_currency').hide();
                 doc.find('#tr_country').hide();
+                doc.find('#tr_filter_airline').hide();
+                doc.find('#tr_filter_flight_number').hide();
+
                 doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #country').removeClass('constructorShortcodesError');
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
-
+        //doc.tooltip();
         doc.find('#origin, #destination, #airline, #tp_subid, #country').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
@@ -385,6 +403,8 @@ jQuery(function($) {
             doc.find('#tr_off_title').hide();
             doc.find('#tr_currency').hide();
             doc.find('#tr_country').hide();
+            doc.find('#tr_filter_airline').hide();
+            doc.find('#tr_filter_flight_number').hide();
 
             doc.find("#limit").val("");
             switch($(this).val()) {
@@ -420,6 +440,8 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '4':
                     doc.find('#tr_paginate').show();
@@ -430,6 +452,8 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '5':
                     doc.find('#tr_paginate').show();
@@ -439,6 +463,8 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
 
                     break;
                 case '6':
@@ -449,6 +475,8 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '7':
                     doc.find('#tr_paginate').show();
@@ -459,6 +487,8 @@ jQuery(function($) {
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_off_title').show();
                     doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '8':
                     doc.find('#tr_paginate').show();
@@ -571,6 +601,8 @@ jQuery(function($) {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
                             cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid,
                             calendar_period, calendar_period_from, calendar_period_to;
+
+
                         selected = doc.find('#select_widgets').val();
 
                         //doc.find('#select_widgets option[value=0]').attr('selected','selected')

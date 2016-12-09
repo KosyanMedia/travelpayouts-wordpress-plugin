@@ -79,7 +79,9 @@
 #tr_cat_widget-2, #tr_cat_widget-3, #tr_zoom_widget, #tr_filter_widget,
 #tr_type_widget_8, #tr_airline_widget_8, #tr_iata_widget_8, #tr_limit_widget_8,
 #tr_type_search_form, #tr_search_shortcode_hotel_city, #tr_subid_widget, #tr_subid_sf,
-#tr_subid_link, #tr_currency, #tr_calendar_period_widget, #tr_calendar_period_size_widget, #tr_country{
+#tr_subid_link, #tr_currency, #tr_calendar_period_widget, #tr_calendar_period_size_widget, #tr_country,
+#tr_filter_airline, #tr_filter_flight_number
+{
     display: none;
 }
 #table_iata_widget_8, #table_airline_widget_8{
@@ -283,7 +285,7 @@
     width: 92% !important;
 }
 .TPCustomDialog .ui-dialog-content .constructorCityShortcodesAutocomplete {
-    width: 100%!important;
+  /*  width: 99%!important;*/
 }
 
 

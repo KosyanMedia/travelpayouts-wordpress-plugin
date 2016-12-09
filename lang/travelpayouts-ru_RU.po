@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-08 11:57+0200\n"
+"POT-Creation-Date: 2016-12-09 13:59+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:96
@@ -2967,58 +2967,78 @@ msgctxt "(Subid)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_subid_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:225
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:214
+msgctxt "(Only aircompany)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
+msgstr "Только по авиакомпании"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:216
+msgctxt "(Type aircompany name and chose the one you need. Only its flights will be shown.)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_help"
+msgstr "Начните вводить название авиакомпании и выберите нужную. Будут показаны ТОЛЬКО ее рейсы."
+
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:229
+msgctxt "(Only route №)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
+msgstr "Только рейс №"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:231
+msgctxt "(Use this filter only if you absolutely accurately know the route number)"
+msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help"
+msgstr "Используйте этот фильтр, только если абсолютно точно знаете номер маршрута"
+
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:256
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:260
 msgctxt "(Limit)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:237
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:268
 msgctxt "(Economy)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_0"
 msgstr "Эконом"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:241
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:272
 msgctxt "(Business)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_1"
 msgstr "Бизнес"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:245
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:276
 msgctxt "(First)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_2"
 msgstr "Первый"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:254
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:285
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:261
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:292
 msgctxt "(One Way)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_one_way_label"
 msgstr "В одну сторону "
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:268
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:299
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_off_title_label"
 msgstr "Убрать заголовок"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:275
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:306
 msgctxt "(Number of stops)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_label"
 msgstr "Пересадки"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:279
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:310
 msgctxt "(All)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_0"
 msgstr "Все"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:282
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:313
 msgctxt "(No more than one stop)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_1"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:285
+#: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:316
 msgctxt "Direct"
 msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
 msgstr "без пересадок"

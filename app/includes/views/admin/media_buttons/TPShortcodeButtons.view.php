@@ -206,6 +206,37 @@
                            '(Subid)', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+
+        <tr id="tr_filter_airline">
+            <td>
+                <input type="text" name="filter_airline" id="filter_airline" value=""
+                       class="constructorAirlineShortcodesAutocomplete regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_airline_label',
+                           '(Only aircompany)', TPOPlUGIN_TEXTDOMAIN); ?>"
+                       title="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_airline_help',
+                           '(Type aircompany name and chose the one you need. Only its flights will be shown.)',
+                           TPOPlUGIN_TEXTDOMAIN); ?>">
+                <!--<p class="description">
+
+                </p>-->
+            </td>
+        </tr>
+
+        <tr id="tr_filter_flight_number">
+            <td>
+                <input type="text" name="filter_flight_number" id="filter_flight_number" value=""
+                       class="regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label',
+                           '(Only route №)', TPOPlUGIN_TEXTDOMAIN); ?>"
+                       title="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help',
+                           '(Use this filter only if you absolutely accurately know the route number)',
+                           TPOPlUGIN_TEXTDOMAIN); ?>">
+
+            </td>
+        </tr>
+
+
+
         <tr id="tr_currency">
             <td>
                 <select name="currency" id="currency" class="TP-Zelect">
