@@ -15,10 +15,10 @@ class TPCurrencyUtils
         'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
         'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
         'SGD', 'THB', 'GBP', 'ZAR', 'UAH', 'KZT',
-        'AUD', 'TRY', 'ILS', 'ARS', 'COP', 'PEN',
+        'AUD', 'TRY', 'ILS', /*'ARS', 'COP', 'PEN',
         'CLP', 'AED', 'SAR', 'SEK', 'HUF', 'KGS',
         'MXN', 'AMD', 'XOF', 'VND', 'BGN', 'GEL',
-        'RON', 'DKK', 'BDT', 'KRW', 'RSD'
+        'RON', 'DKK', 'BDT', 'KRW', 'RSD'*/
     );
 
     /**

@@ -28,6 +28,7 @@ class TPCheapestTicketsEachMonthShortcodeController extends \app\includes\contro
 
 
         //if(!$data) return false;
+        //error_log(print_r($data, true));
 
         return $this->view->renderTable($data);
     }

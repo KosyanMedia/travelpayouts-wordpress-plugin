@@ -84,7 +84,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         //if( ! $return )
          //   return false;
 
-
+        //error_log(print_r($return, true));
 
 
         $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
