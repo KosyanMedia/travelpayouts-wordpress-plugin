@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-09 13:59+0200\n"
+"POT-Creation-Date: 2016-12-15 23:58+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:96
@@ -580,42 +580,42 @@ msgctxt "(Direct)"
 msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "без пересадок"
 
-#: app/includes/TPRequestApi.php:600
+#: app/includes/TPRequestApi.php:601
 msgctxt "(The variable $origin parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_origin"
 msgstr "Переменная $origin не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:602
+#: app/includes/TPRequestApi.php:603
 msgctxt "(The variable $destination parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_destination"
 msgstr "Переменная $destination не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:604
+#: app/includes/TPRequestApi.php:605
 msgctxt "(The variable $currency parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_currency"
 msgstr "Переменная $currency не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:606
+#: app/includes/TPRequestApi.php:607
 msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_departure_at"
 msgstr "Переменная $departure_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:608
+#: app/includes/TPRequestApi.php:609
 msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_calendar_type"
 msgstr "Переменная $calendar_type не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:610
+#: app/includes/TPRequestApi.php:611
 msgctxt "(The variable $return_at parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_return_at"
 msgstr "Переменная $return_at не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:612
+#: app/includes/TPRequestApi.php:613
 msgctxt "(The variable $airline parameters not set or incorrectly.)"
 msgid "tp_request_api_error_msg_airline"
 msgstr "Переменная $airline не задана или задана не верно."
 
-#: app/includes/TPRequestApi.php:617
+#: app/includes/TPRequestApi.php:618
 msgctxt "(Unknown error.)"
 msgid "tp_request_api_error_msg_unknown_error"
 msgstr "Произошла неизвестная ошибка."
@@ -2968,7 +2968,7 @@ msgid "tp_admin_page_settings_сonstructor_tables_field_subid_label"
 msgstr "Дополнительный маркер"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:214
-msgctxt "(Only aircompany)"
+msgctxt "(Filter by airline)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
 msgstr "Только по авиакомпании"
 
@@ -2978,7 +2978,7 @@ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_help"
 msgstr "Начните вводить название авиакомпании и выберите нужную. Будут показаны ТОЛЬКО ее рейсы."
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:229
-msgctxt "(Only route №)"
+msgctxt "(Filter by flight # (enter manually) )"
 msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
 msgstr "Только рейс №"
 
@@ -4601,6 +4601,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Only aircompany)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
+#~ msgstr "Только по авиакомпании"
+
+#~ msgctxt "(Only route №)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
+#~ msgstr "Только рейс №"
 
 #~ msgid "Title:"
 #~ msgstr "Заголовок:"
