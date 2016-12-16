@@ -8,10 +8,29 @@
 
 namespace app\includes\common;
 
+use \app\includes\models\site\TPAutocomplete;
 
 class TPAutocompleteReplace
 {
 
+
+    public static function replaceIataCase($iata, $case = 'ro'){
+        if(empty($iata) || $iata == false) return false;
+        TPAutocomplete::getInstance();
+        $city = '';
+        if(TPLang::getLang() == TPLang::getLangRU()){
+            if (!array_key_exists($iata, TPAutocomplete::$title)) return $iata;
+            $city = TPAutocomplete::$title[$iata]['cases'][$case];
+        } else {
+            if (!array_key_exists($iata, TPAutocomplete::$data)) return $iata;
+            if(isset(TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()])){
+                $city = TPAutocomplete::$data[$iata]['name_translations'][TPLang::getLang()];
+            }else{
+                $city = TPAutocomplete::$data[$iata]['name_translations'][TPLang::getDefaultLang()];
+            }
+        }
+        return $city;
+    }
 
     /**
      * @param $data
@@ -25,7 +44,7 @@ class TPAutocompleteReplace
         //error_log($type);
         //error_log($title);
         //error_log(TPLang::getLang());
-        \app\includes\models\site\TPAutocomplete::getInstance();
+        TPAutocomplete::getInstance();
         switch ($type) {
             case 0:
                 $data = self::getTitleIataReplace($data, $title);
@@ -106,6 +125,7 @@ class TPAutocompleteReplace
                 }
             }
                 break;
+
         }
         //error_log("TPAutocompleteReplace iataAutocomplete");
        // error_log(print_r($data, true));

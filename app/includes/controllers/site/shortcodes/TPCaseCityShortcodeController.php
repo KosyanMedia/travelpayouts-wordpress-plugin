@@ -29,7 +29,6 @@ class TPCaseCityShortcodeController extends \app\includes\controllers\site\TPSho
 
     public function render($data)
     {
-        return 333;
-
+        return $data;
     }
 }

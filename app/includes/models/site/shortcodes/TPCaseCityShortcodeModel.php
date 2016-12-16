@@ -8,7 +8,8 @@
 
 namespace app\includes\models\site\shortcodes;
 
-//app\includes\models\site\shortcodes
+use \app\includes\common\TPAutocompleteReplace;
+
 class TPCaseCityShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel
 {
 
@@ -21,7 +22,8 @@ class TPCaseCityShortcodeModel extends \app\includes\models\site\TPShortcodesCha
         );
 
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        var_dump($iata);
-        var_dump($case);
+        if(empty($iata) || $iata == false) return false;
+        return TPAutocompleteReplace::replaceIataCase($iata, $case);
+
     }
 }
