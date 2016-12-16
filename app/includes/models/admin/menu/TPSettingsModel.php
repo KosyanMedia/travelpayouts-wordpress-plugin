@@ -6,6 +6,8 @@
  * Time: 11:05
  */
 namespace app\includes\models\admin\menu;
+use app\includes\common\TPCurrencyUtils;
+
 class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     public function __construct(){
         parent::__construct();
@@ -60,7 +62,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
             if (!array_key_exists('plugin_version', $import_options)){
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists false plugin_version < 0.5.2');
-                $import_options['local']['currency'] = \app\includes\TPDefault::getDefaultCurrency();
+                $import_options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
             } else {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists true plugin_version');

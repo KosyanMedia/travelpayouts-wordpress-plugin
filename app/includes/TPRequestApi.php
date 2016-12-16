@@ -6,6 +6,9 @@
  * Time: 17:18
  */
 namespace app\includes;
+use app\includes\common\TPCurrencyUtils;
+use \app\includes\TPPlugin;
+
 class TPRequestApi {
     protected $status;
     protected $marker;
@@ -51,7 +54,7 @@ class TPRequestApi {
             //new TPAdminNotice("error", "Токен не указан или указан не верно.");
             //new TPAdminPointers("#toplevel_page_Travelpayouts", "token");
         }else{
-            $this->currencys = \app\includes\common\TPCurrencyUtils::getCurrencyAll();
+            $this->currencys = TPCurrencyUtils::getCurrencyAll();
             $this->currencyValid();
             $this->status = true;
             $this->marker = TPPlugin::$options['account']['marker'];
@@ -64,10 +67,10 @@ class TPRequestApi {
     }
 
     public function currencyValid(){
-        if ( ! \app\includes\TPPlugin::$options['local']['currency'] ||
-            ! in_array( \app\includes\TPPlugin::$options['local']['currency'], $this->currencys ) ) {
-            \app\includes\TPPlugin::$options['local']['currency'] = \app\includes\TPDefault::getDefaultCurrency();
-            update_option( TPOPlUGIN_OPTION_NAME,  \app\includes\TPPlugin::$options);
+        if ( ! TPPlugin::$options['local']['currency'] ||
+            ! in_array( TPPlugin::$options['local']['currency'], $this->currencys ) ) {
+            TPPlugin::$options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
+            update_option( TPOPlUGIN_OPTION_NAME,  TPPlugin::$options);
         }
     }
 

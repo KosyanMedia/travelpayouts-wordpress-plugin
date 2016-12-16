@@ -6,6 +6,10 @@
  * Time: 13:03
  */
 namespace app\includes\views\site\widgets;
+
+use \app\includes\common\TPCurrencyUtils;
+use \app\includes\TPPlugin;
+
 class TPWidgetsView {
 
     public function __construct(){
@@ -163,25 +167,13 @@ class TPWidgetsView {
 
     }
 
-    /**
-     * @return string
-     */
-    public function typeCurrency(){
-        switch((int) \app\includes\TPPlugin::$options['local']['currency']){
-            case 1:
-                $currency = 'RUB';
-                break;
-            case 2:
-                $currency = 'USD';
-                break;
-            case 3:
-                $currency = 'EUR';
-                break;
-        }
-        return $currency;
-    }
+
     public function getCurrencyValid($currency_option){
-        $currency_default = array('USD', 'RUB', 'EUR');
+        $currency_default = array(
+            TPCurrencyUtils::TP_CURRENCY_USD,
+            TPCurrencyUtils::TP_CURRENCY_RUB,
+            TPCurrencyUtils::TP_CURRENCY_EUR
+        );
         $currency = '';
         if (in_array($currency_option, $currency_default)) {
             //error_log("true");
@@ -196,7 +188,11 @@ class TPWidgetsView {
     public function getCurrency($widgetType = false, $white_label = ''){
         $currency = '';
         $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
-        $currency_default = array('USD', 'RUB', 'EUR');
+        $currency_default = array(
+            TPCurrencyUtils::TP_CURRENCY_USD,
+            TPCurrencyUtils::TP_CURRENCY_RUB,
+            TPCurrencyUtils::TP_CURRENCY_EUR
+        );
         $currencyNotMaintained = array(
             3 => array('TRY', 'ILS'),
             6 => array('PLN', 'TRY', 'ILS'),

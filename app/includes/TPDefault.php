@@ -6,6 +6,9 @@
  * Time: 13:50
  */
 namespace app\includes;
+
+use \app\includes\common\TPCurrencyUtils;
+
 class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
         'title_style' => array(
@@ -38,22 +41,7 @@ class TPDefault implements  \core\TPODefault{
         )
     );
 
-    public static function getDefaultCurrency(){
-        $currency = 'USD';
-        global $locale;
-        switch($locale) {
-            case "ru_RU":
-                $currency = 'RUB';
-                break;
-            case "en_US":
-                $currency = 'USD';
-                break;
-            default:
-                $currency = 'RUB';
-                break;
-        }
-        return $currency;
-    }
+
 
     public static function getDefaultLocal(){
         $localization = 2;
@@ -82,7 +70,7 @@ class TPDefault implements  \core\TPODefault{
     {
         // TODO: Implement defaultOptions() method.
         $localization = self::getDefaultLocal();
-        $currency = self::getDefaultCurrency();
+        $currency = TPCurrencyUtils::getDefaultCurrency();
         $defaults = array(
             'account' => array(
                 'marker' => '',

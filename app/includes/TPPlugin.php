@@ -1,6 +1,8 @@
 <?php
 
 namespace app\includes;
+use app\includes\common\TPCurrencyUtils;
+
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public static $TPRequestApi;
     private static $instance = null;
@@ -55,7 +57,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.5.2', '<')) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("currency default version = ".get_option(TPOPlUGIN_OPTION_VERSION) );
-                self::$options['local']['currency'] = TPDefault::getDefaultCurrency();
+                self::$options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
                 update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
             }
             if(!empty(self::$options['account']['marker'])){

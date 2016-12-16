@@ -28,7 +28,7 @@
                         data-paginate-13="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['13']['paginate_switch']))? 1 : 0;?>"
                         data-paginate-14="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['14']['paginate_switch']))? 1 : 0;?>"
                     >
-                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 'RUB'){ ?>
+                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == \app\includes\common\TPCurrencyUtils::TP_CURRENCY_RUB ){ ?>
                         <option selected="selected" value="0">
                             <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_0',
                                 '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -124,7 +124,7 @@
                             8. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_9',
                                 '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
-                        <!--<option value="10">10. <?php// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>-->
+
                         <option value="11">
                             9. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_11',
                                 '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>

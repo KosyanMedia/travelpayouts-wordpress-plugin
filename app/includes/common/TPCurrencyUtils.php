@@ -54,31 +54,6 @@ class TPCurrencyUtils
     const TP_CURRENCY_RSD = 'RSD';
 
 
-
-    /*public static function getCurrencyRUB()
-    {
-        return self::TP_CURRENCY_RUB;
-    }
-    public static function getCurrencyUSD()
-    {
-        return self::TP_CURRENCY_USD;
-    }
-    public static function getCurrencyEUR()
-    {
-        return self::TP_CURRENCY_EUR;
-    }*/
-
-
-    private static $currency = array(
-        'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
-        'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
-        'SGD', 'THB', 'GBP', 'ZAR', 'UAH', 'KZT',
-        'AUD', 'TRY', 'ILS', /*'ARS', 'COP', 'PEN',
-        'CLP', 'AED', 'SAR', 'SEK', 'HUF', 'KGS',
-        'MXN', 'AMD', 'XOF', 'VND', 'BGN', 'GEL',
-        'RON', 'DKK', 'BDT', 'KRW', 'RSD'*/
-    );
-
     /**
      * @return mixed
      */
@@ -128,5 +103,46 @@ class TPCurrencyUtils
         );
     }
 
+    public static function getDefaultCurrency(){
+        $currency = self::TP_CURRENCY_USD;
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $currency = self::TP_CURRENCY_RUB;
+                break;
+            case "en_US":
+                $currency = self::TP_CURRENCY_USD;
+                break;
+            default:
+                $currency = self::TP_CURRENCY_RUB;
+                break;
+        }
+        return $currency;
+    }
+
+
+    /*public static function getCurrencyRUB()
+   {
+       return self::TP_CURRENCY_RUB;
+   }
+   public static function getCurrencyUSD()
+   {
+       return self::TP_CURRENCY_USD;
+   }
+   public static function getCurrencyEUR()
+   {
+       return self::TP_CURRENCY_EUR;
+   }*
+
+
+   private static $currency = array(
+       'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
+       'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
+       'SGD', 'THB', 'GBP', 'ZAR', 'UAH', 'KZT',
+       'AUD', 'TRY', 'ILS', /*'ARS', 'COP', 'PEN',
+       'CLP', 'AED', 'SAR', 'SEK', 'HUF', 'KGS',
+       'MXN', 'AMD', 'XOF', 'VND', 'BGN', 'GEL',
+       'RON', 'DKK', 'BDT', 'KRW', 'RSD'*
+   );*/
 
 }
