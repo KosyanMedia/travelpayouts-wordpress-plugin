@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-15 23:58+0200\n"
+"POT-Creation-Date: 2016-12-16 16:13+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -295,20 +295,38 @@ msgstr "Билеты от price"
 
 #: app/includes/TPDefault.php:658
 msgctxt ""
+"(Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
+"\"Go to tickets search {origin} destination}\"])"
+msgid "tp_plugin_local_en_table_shortcodes_settings_link_msg"
+msgstr ""
+"Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
+"\"Go to tickets search {origin} destination}\"]"
+
+#: app/includes/TPDefault.php:660
+msgctxt ""
+"(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
+"поиску билетов {origin} {destination}\"])"
+msgid "tp_plugin_local_ru_table_shortcodes_settings_link_msg"
+msgstr ""
+"К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
+"поиску билетов {origin} {destination}\"]"
+
+#: app/includes/TPDefault.php:665
+msgctxt ""
 "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets {origin} - {destination}\"])"
-msgid "tp_plugin_local_en_table_shortcodes_settings_msg"
+msgid "tp_plugin_local_en_table_shortcodes_settings_button_msg"
 msgstr ""
 "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets {origin} - {destination}\"]"
 
-#: app/includes/TPDefault.php:660
+#: app/includes/TPDefault.php:667
 msgctxt ""
-"(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+"(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты {origin} - {destination}\"])"
-msgid "tp_plugin_local_ru_table_shortcodes_settings_msg"
+msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
 msgstr ""
-"К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+"К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты {origin} - {destination}\"]"
 
 #: app/includes/TPLoader.php:103
@@ -1795,15 +1813,13 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_mark
 msgstr "Extra marker"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1195
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1252
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1283
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1304
 msgctxt "(If empty answer received)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table"
 msgstr "If empty answer received"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1200
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1257
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1289
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1310
 msgctxt ""
 "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
 "you can set what users will see in such cases)"
@@ -1813,18 +1829,27 @@ msgstr ""
 "you can set what users will see in such cases"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1218
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1318
-msgctxt "(Show notification)"
+msgctxt "(Show notification (link))"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
-msgstr "Show notification"
+msgstr "Show notification (link)"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1228
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1327
+msgctxt "(Show notification (button))"
+msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_2_label"
+msgstr "Show notification (button)"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1239
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1350
 msgctxt "(Show search form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label"
 msgstr "Show search form"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1427
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1339
+msgctxt "(Show notification)"
+msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
+msgstr "Show notification"
+
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1450
 msgctxt "(Choose form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form"
 msgstr "Choose form"
@@ -4594,6 +4619,38 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt ""
+#~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [link title="
+#~ "\"К поиску билетов {origin} {destination}\"])"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_settings_link_msg"
+#~ msgstr ""
+#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [link title="
+#~ "\"К поиску билетов {origin} {destination}\"]"
+
+#~ msgctxt ""
+#~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+#~ "\"Найти билеты {origin} - {destination}\"])"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
+#~ msgstr ""
+#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+#~ "\"Найти билеты {origin} - {destination}\"]"
+
+#~ msgctxt ""
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"])"
+#~ msgid "tp_plugin_local_en_table_shortcodes_settings_msg"
+#~ msgstr ""
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"]"
+
+#~ msgctxt ""
+#~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+#~ "\"Найти билеты {origin} - {destination}\"])"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_settings_msg"
+#~ msgstr ""
+#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
+#~ "\"Найти билеты {origin} - {destination}\"]"
 
 #~ msgctxt "(Only aircompany)"
 #~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
