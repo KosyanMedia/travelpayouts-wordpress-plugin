@@ -185,10 +185,83 @@ class TPWidgetsView {
         return $currency;
     }
 
+    public function getCurrencyMaintained($widgetType, $currencySelected){
+        $currencyNewNotMaintained = array(
+            TPCurrencyUtils::TP_CURRENCY_ARS,
+            TPCurrencyUtils::TP_CURRENCY_COP,
+            TPCurrencyUtils::TP_CURRENCY_PEN,
+            TPCurrencyUtils::TP_CURRENCY_CLP,
+            TPCurrencyUtils::TP_CURRENCY_AED,
+            TPCurrencyUtils::TP_CURRENCY_SAR,
+            TPCurrencyUtils::TP_CURRENCY_SEK,
+            TPCurrencyUtils::TP_CURRENCY_HUF,
+            TPCurrencyUtils::TP_CURRENCY_KGS,
+            TPCurrencyUtils::TP_CURRENCY_MXN,
+            TPCurrencyUtils::TP_CURRENCY_AMD,
+            TPCurrencyUtils::TP_CURRENCY_XOF,
+            TPCurrencyUtils::TP_CURRENCY_VND,
+            TPCurrencyUtils::TP_CURRENCY_BGN,
+            TPCurrencyUtils::TP_CURRENCY_GEL,
+            TPCurrencyUtils::TP_CURRENCY_RON,
+            TPCurrencyUtils::TP_CURRENCY_DKK,
+            TPCurrencyUtils::TP_CURRENCY_BDT,
+            TPCurrencyUtils::TP_CURRENCY_KRW,
+            TPCurrencyUtils::TP_CURRENCY_RSD
+        );
+
+        $currencyNotMaintained = array(
+            3 => array_merge(
+                array(
+                    TPCurrencyUtils::TP_CURRENCY_TRY,
+                    TPCurrencyUtils::TP_CURRENCY_ILS
+                ), $currencyNewNotMaintained
+            ),
+            6 => array_merge(
+                array(
+                    TPCurrencyUtils::TP_CURRENCY_PLN,
+                    TPCurrencyUtils::TP_CURRENCY_TRY,
+                    TPCurrencyUtils::TP_CURRENCY_ILS
+                ), $currencyNewNotMaintained),
+            7 => array_merge(
+                array(
+                    TPCurrencyUtils::TP_CURRENCY_PLN,
+                    TPCurrencyUtils::TP_CURRENCY_TRY,
+                    TPCurrencyUtils::TP_CURRENCY_ILS
+                ), $currencyNewNotMaintained),
+            8 => array_merge(
+                array(
+                    TPCurrencyUtils::TP_CURRENCY_CAD,
+                    TPCurrencyUtils::TP_CURRENCY_CHF,
+                    TPCurrencyUtils::TP_CURRENCY_GBP,
+                    TPCurrencyUtils::TP_CURRENCY_HKD,
+                    TPCurrencyUtils::TP_CURRENCY_IDR,
+                    TPCurrencyUtils::TP_CURRENCY_INR,
+                    TPCurrencyUtils::TP_CURRENCY_NZD,
+                    TPCurrencyUtils::TP_CURRENCY_PHP,
+                    TPCurrencyUtils::TP_CURRENCY_PLN,
+                    TPCurrencyUtils::TP_CURRENCY_SGD,
+                    TPCurrencyUtils::TP_CURRENCY_TRY,
+                    TPCurrencyUtils::TP_CURRENCY_ILS
+                ), $currencyNewNotMaintained)
+        );
+
+
+        //error_log(print_r($currencyNotMaintained[$widgetType], true));
+
+        $currency = '';
+
+        if (in_array($currencySelected, $currencyNotMaintained[$widgetType])) {
+            $currency = TPCurrencyUtils::TP_CURRENCY_USD;
+        } else {
+            $currency = $currencySelected;
+        }
+        return $currency;
+    }
+
     public function getCurrency($widgetType = false, $white_label = ''){
         $currency = '';
         $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
-        $currency_default = array(
+        /*$currency_default = array(
             TPCurrencyUtils::TP_CURRENCY_USD,
             TPCurrencyUtils::TP_CURRENCY_RUB,
             TPCurrencyUtils::TP_CURRENCY_EUR
@@ -199,6 +272,9 @@ class TPWidgetsView {
             7 => array('PLN', 'TRY', 'ILS'),
             8 => array('CAD', 'CHF', 'GBP', 'HKD', 'IDR', 'INR', 'NZD', 'PHP','PLN', 'SGD', 'TRY', 'ILS' )
         );
+
+        $this->getCurrencyMaintained($widgetType);*/
+
         //error_log($currency_option);
         switch($widgetType){
             case 1:
@@ -228,11 +304,12 @@ class TPWidgetsView {
                     $currency = $currency_option;
                 }*/
                 //$currency = $currency_option;
-                if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
+                /*if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
                     $currency = $currency_default[0];
                 } else {
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $this->getCurrencyMaintained($widgetType, $currency_option);
                 break;
             case 4:
                 /*if(strpos($white_label, 'jetradar') !== false){
@@ -260,20 +337,22 @@ class TPWidgetsView {
                 }else{
                     $currency = $currency_option;
                 }*/
-                if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
+                /*if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
                     $currency = $currency_default[0];
                 } else {
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $this->getCurrencyMaintained($widgetType, $currency_option);
 
                 break;
             case 7:
                 //$currency = $currency_option;
-                if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
+                /*if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
                     $currency = $currency_default[0];
                 } else {
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $this->getCurrencyMaintained($widgetType, $currency_option);
                 break;
             case 8:
                 /*if(strpos($white_label, 'jetradar') !== false){
@@ -286,11 +365,12 @@ class TPWidgetsView {
                     $currency = $currency_option;
                 }*/
                 //$currency = $currency_option;
-                if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
+               /* if (in_array($currency_option, $currencyNotMaintained[$widgetType])) {
                     $currency = $currency_default[0];
                 } else {
                     $currency = $currency_option;
-                }
+                }*/
+                $currency = $this->getCurrencyMaintained($widgetType, $currency_option);
                 break;
         }
         return $currency;
