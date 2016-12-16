@@ -1260,7 +1260,7 @@ class TPFieldFlightTickets {
                     </div>
                 <?php else: ?>
                     <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]"
-                           value="">
+                           value="<?php echo  TPPlugin::$options['shortcodes_settings']['empty']['value'][1]; ?>">
                 <?php endif; ?>
             </div>
         </div>
