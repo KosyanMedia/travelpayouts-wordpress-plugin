@@ -1187,38 +1187,49 @@ class TPFieldFlightTickets {
         $searchForms = TPSearchFormsModel::getAllSearchForms();
 
 
-        if ($searchForms != false):
-            ?>
-            <div class="TPTab-check">
-                <div class="TPTab-check__inner">
-                <span class="title">
-                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table',
-                        '(If empty answer received)', TPOPlUGIN_TEXTDOMAIN); ?>
-                    <div class="svg-img-1">
-                        <a href="#" class="tooltip-settings">
-                                    <span>
-                                        <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_help',
-                                            '(Sometimes it happens our cash doesn\'t contain relevant '
-                                            .'data to the request you have set. Here you can set what '
-                                            .'users will see in such cases)', TPOPlUGIN_TEXTDOMAIN); ?></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
-                                            <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
-                                            <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
-                        </a>
-                    </div>
-                </span>
-                    <ul class="TP-listSet">
-                        <li>
-                            <input id="chekar-tabs-1" type="radio"
-                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
-                                   value="0" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?>
-                                   hidden="">
-                            <label for="chekar-tabs-1" id="cheker-label-1">
-                                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
-                                    '(Show notification)', TPOPlUGIN_TEXTDOMAIN); ?>
-                            </label>
-                        </li>
+        //if ($searchForms != false):
+        ?>
+          <div class="TPTab-check">
+            <div class="TPTab-check__inner">
+            <span class="title">
+                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table',
+                    '(If empty answer received)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <div class="svg-img-1">
+                    <a href="#" class="tooltip-settings">
+                                <span>
+                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_help',
+                                        '(Sometimes it happens our cash doesn\'t contain relevant '
+                                        .'data to the request you have set. Here you can set what '
+                                        .'users will see in such cases)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
+                                        <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
+                                        <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg>
+                    </a>
+                </div>
+            </span>
+                <ul class="TP-listSet">
+                    <li>
+                        <input id="chekar-tabs-1" type="radio"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                               value="0" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?>
+                               hidden="">
+                        <label for="chekar-tabs-1" id="cheker-label-1">
+                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
+                                '(Show notification (link))', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="chekar-tabs-3" type="radio"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                               value="2" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 2) ?>
+                               hidden="">
+                        <label for="chekar-tabs-3" id="cheker-label-3">
+                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_2_label',
+                                '(Show notification (button))', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
+                    </li>
+                    <?php if ($searchForms != false): ?>
                         <li>
                             <input id="chekar-tabs-2" type="radio"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
@@ -1229,22 +1240,32 @@ class TPFieldFlightTickets {
                                     '(Show search form)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
+                    <?php endif; ?>
 
-                    </ul>
+                </ul>
+            </div>
+            <div class="TPTab-check__inner">
+                <div class="block-swap-one <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 0)?'active':''; ?>"
+                     id="chekar-content-1">
+                    <?php $this->TPFieldOtherSettingsTableValueMsg(false, 0); ?>
                 </div>
-                <div class="TPTab-check__inner">
-                    <div class="block-swap-one <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 0)?'active':''; ?>"
-                         id="chekar-content-1">
-                        <?php $this->TPFieldOtherSettingsTableValueMsg(); ?>
-                    </div>
+                <div class="block-swap-three <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 2)?'active':''; ?>"
+                     id="chekar-content-3">
+                    <?php $this->TPFieldOtherSettingsTableValueMsg(false, 2); ?>
+                </div>
+                <?php if ($searchForms != false): ?>
                     <div class="block-swap-two <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 1)?'active':''; ?>"
                          id="chekar-content-2">
                         <?php $this->TPFieldOtherSettingsTableValueSearchForm($searchForms); ?>
                     </div>
-                </div>
+                <?php else: ?>
+                    <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]"
+                           value="">
+                <?php endif; ?>
             </div>
-            <?php
-        else:
+        </div>
+        <?php
+        /*else:
             ?>
             <div class="TPTab-check">
                 <div class="TPTab-check__innerAll">
@@ -1272,7 +1293,7 @@ class TPFieldFlightTickets {
             <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]"
                    value="<?php echo  TPPlugin::$options['shortcodes_settings']['empty']['value'][1]; ?>">
             <?php
-        endif;
+        endif;*/
 
 
     }
@@ -1319,6 +1340,8 @@ class TPFieldFlightTickets {
                                         '(Show notification)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
+
+
                             <li>
                                 <input id="shortcoderchek2" class="TPEmptyTableType"  type="radio"
                                        name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
@@ -1351,24 +1374,24 @@ class TPFieldFlightTickets {
         endif;
     }
 
-    public function TPFieldOtherSettingsTableValueMsg($show = false){
+    public function TPFieldOtherSettingsTableValueMsg($show = false, $type = 0){
         $parameters = "";
         if($show == false) $parameters = 'id="TPEmptyTableShowNotification"';
 
 
-        if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes_settings']['empty']['value'][0])){
-            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][0] as $key_local => $title){
+        if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes_settings']['empty']['value'][$type])){
+            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][$type] as $key_local => $title){
 
                 if (TPLang::getDefaultLang() != $key_local):
                     ?>
                     <input type="hidden"
-                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][0][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local]) ?>"/>
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][<?php echo $type; ?>][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local]) ?>"/>
                     <?php
                 else:
 
                     $TPEditorEmptyTableValueMsg = array(
-                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]['.$key_local.']',
+                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value]['.$type.']['.$key_local.']',
                         'media_buttons' => false,
                         'textarea_rows' => 10,
                         'quicktags' => 1,
@@ -1378,8 +1401,8 @@ class TPFieldFlightTickets {
                     );
 
                     wp_editor(
-                        TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local],
-                        'TPEditorEmptyTableValueMsg',
+                        TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local],
+                        'TPEditorEmptyTableValueMsg-'.$type,
                         $TPEditorEmptyTableValueMsg
                     );
 
@@ -1387,18 +1410,18 @@ class TPFieldFlightTickets {
 
             }
         } else {
-            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][0] as $key_local => $title){
+            foreach(TPPlugin::$options['shortcodes_settings']['empty']['value'][$type] as $key_local => $title){
 
                 if (TPLang::getLang() != $key_local):
                     ?>
                     <input type="hidden"
-                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][0][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local]) ?>"/>
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][<?php echo $type; ?>][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local]) ?>"/>
                     <?php
                 else:
 
                     $TPEditorEmptyTableValueMsg = array(
-                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value][0]['.$key_local.']',
+                        'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value]['.$type.']['.$key_local.']',
                         'media_buttons' => false,
                         'textarea_rows' => 10,
                         'quicktags' => 1,
@@ -1408,8 +1431,8 @@ class TPFieldFlightTickets {
                     );
 
                     wp_editor(
-                        TPPlugin::$options['shortcodes_settings']['empty']['value'][0][$key_local],
-                        'TPEditorEmptyTableValueMsg',
+                        TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local],
+                        'TPEditorEmptyTableValueMsg-'.$type,
                         $TPEditorEmptyTableValueMsg
                     );
 

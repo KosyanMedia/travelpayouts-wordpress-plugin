@@ -3136,7 +3136,7 @@ input[type="radio"] + label, input[type="checkbox"] + label,
   font-weight: 400;
   color: #333;
   margin-bottom: 8px; }
-.TPTab-check__inner input[type="checkbox"] + label::before,
+/*.TPTab-check__inner input[type="checkbox"] + label::before,
 .TPTab-check__inner input[type="radio"] + label::before {
   background: url("../../images/chek.png"); }
 .TPTab-check__inner input[type="radio"] + label:hover::before,
@@ -3146,16 +3146,18 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPTab-check__inner input[type="radio"]:checked + label::before,
 .TPTab-check__inner input[type="checkbox"]:checked + label::before {
   background-image: url("../../images/chek.png");
-  background-position: 0 20px; }
+  background-position: 0 20px; }*/
 .TPTab-check__inner .box-for-wp {
   min-height: 100px;
   border: 1px solid #ccc; }
 .TPTab-check__inner .block-swap-two {
   padding: 20px 0; }
 .TPTab-check__inner .block-swap-one,
+.TPTab-check__inner .block-swap-three,
 .TPTab-check__inner .block-swap-two {
   display: none; }
 .TPTab-check__inner .block-swap-one.active,
+.TPTab-check__inner .block-swap-three.active,
 .TPTab-check__inner .block-swap-two.active {
   display: block; }
 

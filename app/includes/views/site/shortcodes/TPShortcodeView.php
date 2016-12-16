@@ -1340,6 +1340,7 @@ class TPShortcodeView {
         switch ($typeShortcodesSettings){
             //text
             case 0:
+            case 2:
                 //[link]
                 //[button]
                 $shortcodesMsg = array(
