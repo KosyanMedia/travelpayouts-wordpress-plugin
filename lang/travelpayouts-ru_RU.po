@@ -309,7 +309,7 @@ msgctxt ""
 msgid "tp_plugin_local_ru_table_shortcodes_settings_link_msg"
 msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
-"поиску билетов {origin} {destination}\"]"
+"поиску билетов из {origin} {destination}\"]"
 
 #: app/includes/TPDefault.php:665
 msgctxt ""
@@ -327,7 +327,7 @@ msgctxt ""
 msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
 msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
-"\"Найти билеты {origin} - {destination}\"]"
+"\"Найти билеты из {origin} - {destination}\"]"
 
 #: app/includes/TPLoader.php:103
 msgctxt "(Set details and enable plugin features)"
