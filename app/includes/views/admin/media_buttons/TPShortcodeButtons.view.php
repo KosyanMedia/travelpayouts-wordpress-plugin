@@ -82,10 +82,10 @@
                             12. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_13',
                                 '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
-                        <option value="14">
+                        <!--<option value="14">
                             13. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_14',
                                 '(Special offers airline)', TPOPlUGIN_TEXTDOMAIN); ?>
-                        </option>
+                        </option>-->
                     <?php } else { ?>
                         <option selected="selected" value="0">
                             <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_0',
@@ -137,10 +137,10 @@
                             11. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_13',
                                 '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
-                        <option value="14">
+                        <!--<option value="14">
                             12. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_14',
                                 '(Special offers airline)', TPOPlUGIN_TEXTDOMAIN); ?>
-                        </option>
+                        </option>-->
                     <?php }?>
 
                 </select>
