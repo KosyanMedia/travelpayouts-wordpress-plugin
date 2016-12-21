@@ -1210,6 +1210,16 @@ class TPFieldFlightTickets {
             </span>
                 <ul class="TP-listSet">
                     <li>
+                        <input id="chekar-tabs-4" type="radio"
+                               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
+                               value="3" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 3) ?>
+                               hidden="">
+                        <label for="chekar-tabs-4" id="cheker-label-4">
+                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label',
+                                '(Don\'t show a table)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </label>
+                    </li>
+                    <li>
                         <input id="chekar-tabs-1" type="radio"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
                                value="0" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?>
@@ -1245,6 +1255,11 @@ class TPFieldFlightTickets {
                 </ul>
             </div>
             <div class="TPTab-check__inner">
+                <div class="block-swap-four <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 3)?'active':''; ?>"
+                     id="chekar-content-4">
+                    <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][3]"
+                           value="<?php echo  TPPlugin::$options['shortcodes_settings']['empty']['value'][3]; ?>">
+                </div>
                 <div class="block-swap-one <?php echo (TPPlugin::$options['shortcodes_settings']['empty']['type'] == 0)?'active':''; ?>"
                      id="chekar-content-1">
                     <?php $this->TPFieldOtherSettingsTableValueMsg(false, 0); ?>

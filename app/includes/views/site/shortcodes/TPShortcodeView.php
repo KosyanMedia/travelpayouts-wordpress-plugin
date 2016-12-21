@@ -1328,19 +1328,20 @@ class TPShortcodeView {
         $target_url = '';
         if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
 
-        $url = $this->getUrlTable(array(
-            'origin' => $originIata,
-            'destination' => $destinationIata,
-            'departure_at' => date('Y-m-d'),
-            'return_at' => '',
-            'type' => $type,
-            'subid' => $subid
-        ) );
+
 
         switch ($typeShortcodesSettings){
             //text
             case 0:
             case 2:
+                $url = $this->getUrlTable(array(
+                    'origin' => $originIata,
+                    'destination' => $destinationIata,
+                    'departure_at' => date('Y-m-d'),
+                    'return_at' => '',
+                    'type' => $type,
+                    'subid' => $subid
+                ) );
                 //[link]
                 //[button]
                 $shortcodesMsg = array(

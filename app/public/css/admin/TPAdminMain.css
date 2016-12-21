@@ -3154,10 +3154,12 @@ input[type="radio"] + label, input[type="checkbox"] + label,
   padding: 20px 0; }
 .TPTab-check__inner .block-swap-one,
 .TPTab-check__inner .block-swap-three,
+.TPTab-check__inner .block-swap-four,
 .TPTab-check__inner .block-swap-two {
   display: none; }
 .TPTab-check__inner .block-swap-one.active,
 .TPTab-check__inner .block-swap-three.active,
+.TPTab-check__inner .block-swap-four.active,
 .TPTab-check__inner .block-swap-two.active {
   display: block; }
 
