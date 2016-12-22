@@ -1316,63 +1316,35 @@ class TPShortcodeView {
         return array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
     }
 
+    /**
+     * @param $type
+     * @param $oneWay
+     * @param $rows
+     * @param $originIata
+     * @param $destinationIata
+     * @param $origin
+     * @param $destination
+     * @param $limit
+     * @param $subid
+     * @param $currency
+     * @return bool|mixed
+     */
     public function renderViewIfEmptyTable($type, $oneWay, $rows, $originIata, $destinationIata, $origin, $destination,
                                            $limit, $subid, $currency){
 
         //error_log('renderViewIfEmptyTable type = '.$type);
         $typeShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['type'];
         $valueShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['value'][$typeShortcodesSettings];
-
-        $rel = '';
-        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
-        $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
-
-
-
         switch ($typeShortcodesSettings){
             //text
             case 0:
             case 2:
-                $url = $this->getUrlTable(array(
-                    'origin' => $originIata,
-                    'destination' => $destinationIata,
-                    'departure_at' => date('Y-m-d'),
-                    'return_at' => '',
-                    'type' => $type,
-                    'subid' => $subid
-                ) );
-                //[link]
-                //[button]
-                $shortcodesMsg = array(
-                    'link',
-                    'button'
-                );
-                if (!array_key_exists(TPLang::getLang(), $valueShortcodesSettings)){
-                    $valueShortcodesSettings = $valueShortcodesSettings[TPLang::getDefaultLang()];
-                } else {
-                    $valueShortcodesSettings = $valueShortcodesSettings[TPLang::getLang()];
-                }
+                $valueShortcodesSettings = $this->getMsgValueEmptyTableFromLang($valueShortcodesSettings);
                 //error_log($valueShortcodesSettings);
                 $valueShortcodesSettings = $this->replaceOriginDestinationShortcodeEmptyTableMsg($valueShortcodesSettings,
                     $origin, $destination);
-                $valueShortcodesSettings = preg_replace_callback(
-                    '/\['.$shortcodesMsg[0].'(.*?)\]|\['.$shortcodesMsg[1].'(.*?)\]/',//m
-                    function($matches) use ($shortcodesMsg, $origin, $destination, $rel, $target_url, $url){
-                        $title = $this->getAttrTitleShortcodeEmptyTableMsg($matches[0], $origin, $destination);
-                        $replace = '';
-                        if(strpos($matches[0], $shortcodesMsg[0]) !== false){
-                            $replace = '<a href="'.$url.'" class="TPLinkTable TPEmptyTableLink" '.$target_url.'  '.$rel.'>'.$title.'</a>';
-                        } else if (strpos($matches[0], $shortcodesMsg[1]) !== false){
-                            $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable TPEmptyTableButton" '
-                                .$target_url.' '.$rel.'>'.$title.'</a>';
-                        }
-                        return $replace;
-                    },
-                    $valueShortcodesSettings,
-                    -1,
-                    $count
-                );
+                $valueShortcodesSettings = $this->replaceLinkButtonShortcodeMsgValueEmptyTable($valueShortcodesSettings, $originIata,
+                    $destinationIata, $origin, $destination, $type, $subid);
                 break;
             //search form
             case 1:
@@ -1382,11 +1354,80 @@ class TPShortcodeView {
                 $valueShortcodesSettings = $searchForm;
                 break;
         }
-
         //error_log(print_r($valueShortcodesSettings, true));
         return $valueShortcodesSettings;
     }
 
+    /**
+     * @param $msg
+     * @param $originIata
+     * @param $destinationIata
+     * @param $origin
+     * @param $destination
+     * @param $type
+     * @param $subid
+     * @return mixed
+     */
+    public function replaceLinkButtonShortcodeMsgValueEmptyTable($msg, $originIata, $destinationIata, $origin, $destination,
+                                                       $type, $subid){
+        //[link]
+        //[button]
+        $shortcodesMsg = array(
+            'link',
+            'button'
+        );
+        $rel = '';
+        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        $target_url = '';
+        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        $url = $this->getUrlTable(array(
+            'origin' => $originIata,
+            'destination' => $destinationIata,
+            'departure_at' => date('Y-m-d'),
+            'return_at' => '',
+            'type' => $type,
+            'subid' => $subid
+        ) );
+
+        $msg = preg_replace_callback(
+            '/\['.$shortcodesMsg[0].'(.*?)\]|\['.$shortcodesMsg[1].'(.*?)\]/',//m
+            function($matches) use ($shortcodesMsg, $origin, $destination, $rel, $target_url, $url){
+                $title = TPShortcodeView::getAttrTitleShortcodeEmptyTableMsg($matches[0], $origin, $destination);
+                $replace = '';
+                if(strpos($matches[0], $shortcodesMsg[0]) !== false){
+                    $replace = '<a href="'.$url.'" class="TPLinkTable TPEmptyTableLink" '.$target_url.'  '.$rel.'>'.$title.'</a>';
+                } else if (strpos($matches[0], $shortcodesMsg[1]) !== false){
+                    $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable TPEmptyTableButton" '
+                        .$target_url.' '.$rel.'>'.$title.'</a>';
+                }
+                return $replace;
+            },
+            $msg,
+            -1,
+            $count
+        );
+        return $msg;
+    }
+
+    /**
+     * @param $msg
+     * @return mixed
+     */
+    public function getMsgValueEmptyTableFromLang($msg){
+        if (!array_key_exists(TPLang::getLang(), $msg)){
+            $msg = $msg[TPLang::getDefaultLang()];
+        } else {
+            $msg = $msg[TPLang::getLang()];
+        }
+        return $msg;
+    }
+
+    /**
+     * @param $msg
+     * @param $origin
+     * @param $destination
+     * @return mixed
+     */
     public function replaceOriginDestinationShortcodeEmptyTableMsg($msg, $origin, $destination){
         if(strpos($msg, '{origin}') !== false){
             $msg = str_replace('{origin}', $origin , $msg);
@@ -1398,7 +1439,7 @@ class TPShortcodeView {
         return $msg;
     }
 
-    public function getAttrTitleShortcodeEmptyTableMsg($shortcode, $origin, $destination){
+    public static function getAttrTitleShortcodeEmptyTableMsg($shortcode, $origin, $destination){
         preg_match('/title=\"(.*?)\"/',  $shortcode, $titleData);
         if (array_key_exists(1, $titleData)){
             //{origin} {destination}
