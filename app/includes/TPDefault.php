@@ -644,14 +644,14 @@ class TPDefault implements  \core\TPODefault{
                     'value' => array(
                         0 => array(
                             'en' => _x('tp_plugin_local_en_table_shortcodes_settings_link_msg',
-                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [link title="Go to tickets search {origin} destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [link title="Find tickets from {origin} to {destination}"])', TPOPlUGIN_TEXTDOMAIN),
                             'ru' => _x('tp_plugin_local_ru_table_shortcodes_settings_link_msg',
                                 '(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title="К поиску билетов {origin} {destination}"])', TPOPlUGIN_TEXTDOMAIN),
                         ),
                         1 => '',
                         2 =>  array(
                             'en' => _x('tp_plugin_local_en_table_shortcodes_settings_button_msg',
-                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [button title="Find tickets {origin} - {destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [button title="Find tickets from {origin} to {destination}"])', TPOPlUGIN_TEXTDOMAIN),
                             'ru' => _x('tp_plugin_local_ru_table_shortcodes_settings_button_msg',
                                 '(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="Найти билеты {origin} - {destination}"])', TPOPlUGIN_TEXTDOMAIN),
                         ),
