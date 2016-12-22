@@ -1237,8 +1237,7 @@ class TPShortcodeView {
         if(!empty($subid))
             $marker = $marker.'_'.$subid;
         $marker = $marker.'.$69';
-        if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
-            $marker = $marker . '&with_request=true';
+
         $rel = '';
         if(isset(\app\includes\TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
         $target_url = '';
@@ -1252,6 +1251,8 @@ class TPShortcodeView {
         $output = '';
         switch($type){
             case 1:
+                if( (int) \app\includes\TPPlugin::$options['config']['after_url'] == 1 )
+                    $marker = $marker . '&with_request=true';
                 if( ! $white_label || empty( $white_label ) )
                     $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
 
@@ -1287,7 +1288,7 @@ class TPShortcodeView {
                 $checkOut = ( !empty($check_out) && false !== $check_out) ? '&checkOut='.date("Y-m-d", time()+(DAY_IN_SECONDS*$check_out )) : "";
 
                 $lang = \app\includes\common\TPHostURL::getHostLangParamSearchHotel();
-                $url = $locationId.$checkIn.$checkOut.'&adults=1'.$lang;
+                $url = $locationId.$checkIn.$checkOut.'&adults=1'.$lang.$marker;
 
                 if( ! $white_label || empty( $white_label ) )
                     $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
