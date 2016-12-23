@@ -743,7 +743,7 @@ class TPShortcodeView {
         $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
         if ($isWhiteLabel == true){
             if (\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangEN()){
-                $url .= '&locale=en';
+                //$url .= '&locale=en';
                 $url .= '&currency='.\app\includes\TPPlugin::$options['local']['currency'];
             }
         }
