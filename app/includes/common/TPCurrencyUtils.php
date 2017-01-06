@@ -8,6 +8,7 @@
 
 namespace app\includes\common;
 
+use \app\includes\TPPlugin;
 
 class TPCurrencyUtils
 {
@@ -120,6 +121,20 @@ class TPCurrencyUtils
         return $currency;
     }
 
+
+    public static function currencyValid(){
+        if ( ! TPPlugin::$options['local']['currency'] ||
+            ! in_array( TPPlugin::$options['local']['currency'], self::getCurrencyAll() ) ) {
+            TPPlugin::$options['local']['currency'] = self::getDefaultCurrency();
+            update_option( TPOPlUGIN_OPTION_NAME,  TPPlugin::$options);
+        }
+    }
+
+    public static function isCurrency($currency){
+        if (! $currency || ! in_array( $currency, self::getCurrencyAll() ))
+            return false;
+        return true;
+    }
 
     /*public static function getCurrencyRUB()
    {
