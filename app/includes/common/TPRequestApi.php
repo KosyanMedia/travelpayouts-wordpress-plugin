@@ -11,7 +11,7 @@ namespace app\includes\common;
 use app\includes\common\TPCurrencyUtils;
 use \app\includes\TPPlugin;
 
-class TPRequestApi
+abstract class TPRequestApi implements SingletonInterface
 {
 
     protected $status;
@@ -22,7 +22,7 @@ class TPRequestApi
         'departure_date',
         'return_date'
     );
-    protected static $instance = null;
+
 
     protected function __construct() {
         if( empty( TPPlugin::$options ) ) {
@@ -41,17 +41,12 @@ class TPRequestApi
             $this->setErrorJson(TPPlugin::$options['config']['message_error']);
 
             error_log('TPRequestApi NEW');
+            error_log(get_called_class());
 
         }
     }
-    public static function getInstance(){
-        if (null === self::$instance) {
-            $class = get_called_class();
-            //self::$instance = new self();
-            self::$instance = new $class();
-        }
-        return self::$instance;
-    }
+
+
 
 
 
@@ -172,7 +167,7 @@ class TPRequestApi
         $string = htmlspecialchars($string);
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
-            'X-Access-Token' => $this->token
+            'X-Access-Token' => $this->getToken()
         )) );
         if( is_wp_error( $response ) ){
             $json = $response;

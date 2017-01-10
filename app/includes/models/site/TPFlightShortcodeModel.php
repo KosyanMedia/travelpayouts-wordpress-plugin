@@ -10,7 +10,7 @@ namespace app\includes\models\site;
 
 use \app\includes\common\TPRequestApiTable;
 
-abstract class TPTableShortcodeModel extends TPShortcodesChacheModel
+abstract class TPFlightShortcodeModel extends TPShortcodesChacheModel
 {
     protected static $TPRequestApi;
     public function __construct()

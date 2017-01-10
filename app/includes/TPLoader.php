@@ -6,7 +6,11 @@ class TPLoader extends \core\TPOLoader{
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
 
         $hotel = \app\includes\common\TPRequestApiHotel::getInstance();
-        error_log($hotel->getCache());
+        $hotel->getCache(array(
+            'location' => 'Moscow',
+            'check_in' => '2017-06-10',
+            'check_out' => '2017-06-12',
+        ));
 
     }
 

@@ -15,6 +15,17 @@ class TPRequestApiTable extends TPRequestApi
     const TP_API_URL = 'http://api.travelpayouts.com/v1';
     const TP_API_URL_2 = 'http://api.travelpayouts.com/v2';
 
+    private static $instance = null;
+
+    public static function getInstance()
+    {
+        // TODO: Implement getInstance() method.
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
     public static function getApiUrl(){
         return self::TP_API_URL;
     }
@@ -485,4 +496,6 @@ class TPRequestApiTable extends TPRequestApi
             error_log($name_method);
         return $this->objectToArray($this->request($request_string));
     }
+
+
 }
