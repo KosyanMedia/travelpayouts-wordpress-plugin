@@ -13,8 +13,7 @@ use \app\includes\TPPlugin;
 
 class TPRequestApi
 {
-    const TP_API_URL = 'http://api.travelpayouts.com/v1';
-    const TP_API_URL_2 = 'http://api.travelpayouts.com/v2';
+
     protected $status;
     protected $marker;
     protected $token;
@@ -41,16 +40,20 @@ class TPRequestApi
             $this->setToken(TPPlugin::$options['account']['token']);
             $this->setErrorJson(TPPlugin::$options['config']['message_error']);
 
-            error_log(11);
-            error_log( self::TP_API_URL);
+            error_log('TPRequestApi NEW');
+
         }
     }
     public static function getInstance(){
         if (null === self::$instance) {
-            self::$instance = new self();
+            $class = get_called_class();
+            //self::$instance = new self();
+            self::$instance = new $class();
         }
         return self::$instance;
     }
+
+
 
     /**
      * @return boolean

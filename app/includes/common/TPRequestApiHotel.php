@@ -9,7 +9,20 @@
 namespace app\includes\common;
 
 
-class TPRequestApiHotel
+class TPRequestApiHotel extends TPRequestApi
 {
+    const TP_API_URL = 'https://engine.hotellook.com/api/v2';
+
+    public static function getApiUrl(){
+        return self::TP_API_URL;
+    }
+
+    public function getHotels(){
+
+    }
+
+    public function getCache(){
+
+    }
 
 }

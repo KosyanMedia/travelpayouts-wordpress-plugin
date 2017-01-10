@@ -6,7 +6,11 @@
  * Time: 10:33
  */
 namespace app\includes\models\site\shortcodes;
-class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+
+use \app\includes\models\site\TPTableShortcodeModel;
+
+class TPCheapestFlightsShortcodeModel extends TPTableShortcodeModel{
+
     /**
      * @param array $args
      * @return array|bool
@@ -35,7 +39,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
             if (false === ($rows = get_transient($this->cacheKey('4'.$currency, $origin . $destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} -> cache false");
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
+                $return = self::$TPRequestApi->get_cheapest($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
 
@@ -53,7 +57,7 @@ class TPCheapestFlightsShortcodeModel extends \app\includes\models\site\TPShortc
                 set_transient( $this->cacheKey('4'.$currency, $origin.$destination) , $rows, $cacheSecund);
             }
         }else{
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_cheapest($attr);
+            $return = self::$TPRequestApi->get_cheapest($attr);
             if( ! $return )
                 return false;
             $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);

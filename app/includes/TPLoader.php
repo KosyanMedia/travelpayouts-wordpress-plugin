@@ -5,8 +5,9 @@ class TPLoader extends \core\TPOLoader{
         parent::__construct();
         TPPlugin::$TPRequestApi = TPRequestApi::getInstance();
 
-        \app\includes\common\TPRequestApiTable::getInstance();
-        error_log('TPLoader');
+        $hotel = \app\includes\common\TPRequestApiHotel::getInstance();
+        error_log($hotel->getCache());
+
     }
 
     protected function admin()
