@@ -5,6 +5,7 @@
  * User: romansolomashenko
  * Date: 10.01.17
  * Time: 8:07 PM
+ * Таблица "Стоимость проживания В ГОРОДЕ на уикенд"
  */
 namespace app\includes\controllers\site\shortcodes\hotels;
 
@@ -29,9 +30,16 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
 
     public function actionTable($args = array())
     {
+
         $data = $this->model->getDataTable($args);
         //if(!$data) return false;
         //return $this->view->renderTable($data);
-        return var_dump($data);
+        /*$d  = mktime(0, 0, 0, date("m"), date("d")+ 6 - date("N"), date("Y"));
+        echo date('Y-m-d', $d).'<br>';
+        echo date('Y-m-d', strtotime("next Saturday")).'<br>';
+        echo date('Y-m-d', strtotime("next Sunday")).'<br>';*/
+        //return date('w', time());
+        return print_r($data);
+
     }
 }

@@ -9,7 +9,7 @@
 namespace app\includes\common;
 
 
-class TPRequestApiTable extends TPRequestApi
+class TPRequestApiFlight extends TPRequestApi
 {
 
     const TP_API_URL = 'http://api.travelpayouts.com/v1';

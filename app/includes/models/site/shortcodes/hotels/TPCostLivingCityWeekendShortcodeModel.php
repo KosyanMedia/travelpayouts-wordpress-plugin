@@ -32,35 +32,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        /*if($this->cacheSecund()){
-            if ( false === ($rows = get_transient($this->cacheKey('14'.$one_way.$currency, $destination)))) {
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
-
-
-                $rows = array();
-                $cacheSecund = 0;
-                if( ! $return ) {
-                    $rows = array();
-                    $cacheSecund = $this->cacheEmptySecund();
-                } else {
-                    $rows = $return;
-                    $rows = $this->iataAutocomplete($rows, 13);
-                    $cacheSecund = $this->cacheSecund();
-                }
-                if(TPOPlUGIN_ERROR_LOG)
-                    error_log("{$method} cache secund = ".$cacheSecund);
-
-                set_transient( $this->cacheKey('14'.$one_way.$currency, $destination) , $rows, $cacheSecund);
-            }
-        }else{
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
-            if( ! $return )
-                return false;
-            $rows = array();
-            $rows = $return;
-            $rows = $this->iataAutocomplete($rows, 13);
-        }*/
-        $rows = self::$TPRequestApi->getCache(array(
+        $attr = array(
             'location' => $location,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -73,7 +45,35 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'limit' => $limit,
             'currency' => $currency,
             'return_url' => $return_url
-        ));
+        );
+
+        $cacheKey = "hotel_1_{$location}{$currency}".(int)$return_url;
+
+        if($this->cacheSecund()){
+            if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
+
+                $return = self::$TPRequestApi->getCache($attr);
+                $rows = array();
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    $cacheSecund = $this->cacheEmptySecund();
+                } else {
+                    $rows = $return;
+                    //$rows = $this->iataAutocomplete($rows, 13);
+                    $cacheSecund = $this->cacheSecund();
+                }
+
+                set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
+            }
+        }else{
+            $return = self::$TPRequestApi->getCache($attr);
+            if( ! $return )
+                return false;
+            $rows = array();
+            $rows = $return;
+            //$rows = $this->iataAutocomplete($rows, 13);
+        }
         return $rows;
     }
 
