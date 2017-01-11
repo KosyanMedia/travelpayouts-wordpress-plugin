@@ -31,6 +31,7 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
     {
         $data = $this->model->getDataTable($args);
         //if(!$data) return false;
-        return $this->view->renderTable($data);
+        //return $this->view->renderTable($data);
+        return var_dump($data);
     }
 }

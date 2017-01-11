@@ -25,6 +25,7 @@ abstract class TPRequestApi implements SingletonInterface
 
 
     protected function __construct() {
+        //error_log("TPRequestApi ".get_called_class());
         if( empty( TPPlugin::$options ) ) {
             $this->setStatus(false);
         }elseif( ! isset( TPPlugin::$options['account']['marker'] ) || empty( TPPlugin::$options['account']['marker'] )
@@ -40,8 +41,6 @@ abstract class TPRequestApi implements SingletonInterface
             $this->setToken(TPPlugin::$options['account']['token']);
             $this->setErrorJson(TPPlugin::$options['config']['message_error']);
 
-            error_log('TPRequestApi NEW');
-            error_log(get_called_class());
 
         }
     }

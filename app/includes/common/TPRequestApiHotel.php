@@ -145,15 +145,35 @@ class TPRequestApiHotel extends TPRequestApi
             $currency = "currency={$currency}";
         }
 
-        $requestURL = self::getApiUrl()."/cache.json?{$location}&{$check_in}&{$check_out}";
+        $token = 'token=' .$this->getToken();
+
+        $requestURL = self::getApiUrl()."/cache.json?{$location}&{$check_in}&{$check_out}&{$token}";
 
         if ($return_url == true){
             return $requestURL;
         }
 
+       // return $this->request($requestURL);
 
-        error_log($requestURL);
+        return $this->request($requestURL);
+        //return wp_remote_get($requestURL);
 
+    }
+
+
+    public function request($string)
+    {
+        $string = htmlspecialchars($string);
+        $response = wp_remote_get( $string, array('headers' => array(
+            'Accept-Encoding' => 'gzip, deflate',
+        )) );
+        if( is_wp_error( $response ) ){
+            $json = $response;
+        } else {
+            $json = json_decode( $response['body'] );
+        }
+        if( ! is_wp_error( $json ))
+            return $this->objectToArray($json);
     }
 
 
