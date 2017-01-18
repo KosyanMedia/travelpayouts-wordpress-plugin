@@ -6,7 +6,9 @@
  * Time: 12:18
  */
 namespace app\includes\models\site\shortcodes;
-class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+
+class TPCheapestTicketsEachMonthShortcodeModel extends TPFlightShortcodeModel{
 
     public function get_data($args = array())
     {
@@ -15,7 +17,9 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
         $attr = array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency);
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -23,14 +27,14 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
             ." 5. Цены на билеты по месяцам ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('6'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
-                $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
+                $return = $this->iataAutocomplete((array) self::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 $cacheSecund = 0;
@@ -46,9 +50,14 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
                     $origin.$destination) , $return, $this->cacheSecund());
             }
         }else{
-            $return = $this->iataAutocomplete((array) \app\includes\TPPlugin::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
+
+            $return = self::$TPRequestApi->get_cheapest_tickets_each_month($attr);
             if( ! $return )
                 return false;
+            if ($return_url == false){
+                $return = $this->iataAutocomplete((array) $return, 6);
+            }
+
         }
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($return, true));
@@ -72,22 +81,31 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
-            'filter_airline' => false
+            'filter_airline' => false,
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
+        if ($return_url == 1){
+            $return_url = true;
+        }
+
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
+            'return_url' => $return_url
         ));
+
 
         //if( ! $return )
          //   return false;
 
         //error_log(print_r($return, true));
 
-
-        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        if ($return_url == false) {
+            $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        }
 
         return array(
             'rows' => $return,
@@ -100,7 +118,9 @@ class TPCheapestTicketsEachMonthShortcodeModel extends \app\includes\models\site
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency);
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
 
 
     }
