@@ -6,7 +6,8 @@
  * Time: 11:42
  */
 namespace app\includes\models\site\shortcodes;
-class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPFlightShortcodeModel{
 
     /**
      * @param array $args
@@ -20,7 +21,8 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             'origin' => $origin,
             'departure_at' => $departure_at,
             'return_at' => $return_at,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
@@ -29,13 +31,13 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             ." 7. Билеты без пересадок ИЗ ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if ( false === ($rows = get_transient($this->cacheKey('8'.$currency, $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+                $return = self::$TPRequestApi->get_direct($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 //if( ! $return )
@@ -59,15 +61,20 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
                 set_transient( $this->cacheKey('8'.$currency, $origin) , $rows, $cacheSecund);
             }
         }else{
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+            $return = self::$TPRequestApi->get_direct($attr);
             if( ! $return )
                 return false;
-            $rows = array();
-            foreach($return as $city => $flights){
-                $rows[$city] = $this->single_flight( $flights );
+            if ($return_url == false){
+                $rows = array();
+                foreach($return as $city => $flights){
+                    $rows[$city] = $this->single_flight( $flights );
+                }
+                array_multisort($rows, SORT_ASC, $rows);
+                $rows = $this->iataAutocomplete($rows, 8);
+            } else {
+                $rows = $return;
             }
-            array_multisort($rows, SORT_ASC, $rows);
-            $rows = $this->iataAutocomplete($rows, 8);
+
 
         }
         if(TPOPlUGIN_ERROR_LOG)
@@ -93,18 +100,25 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
-            'filter_airline' => false
+            'filter_airline' => false,
+            'return_url' => false
             );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
+        if ($return_url == 1){
+            $return_url = true;
+        }
         $return = $this->get_data(array(
             'origin' => $origin,
             'currency' => $currency,
             'departure_at' => $departure_at,
             'return_at' => $return_at,
+            'return_url' => $return_url
         ));
         //if( ! $return )
          //   return false;
-        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        if ($return_url == false) {
+            $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        }
         return array(
             'rows' => $return,
             'type' => 8,
@@ -115,7 +129,8 @@ class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPShortcod
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
 
 
