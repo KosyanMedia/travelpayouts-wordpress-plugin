@@ -223,6 +223,30 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
                     }
                 }
                 break;
+            case 13:
+
+                if($rows){
+                    switch($stops){
+                        case 0:
+                            $rows_sort = $rows;
+                            break;
+                        case 1:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] <= 1){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                        case 2:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] == 0){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
         }
         return $rows_sort;
     }

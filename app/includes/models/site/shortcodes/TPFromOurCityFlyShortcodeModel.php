@@ -6,7 +6,8 @@
  * Time: 12:47
  */
 namespace app\includes\models\site\shortcodes;
-class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
 
     public function get_data($args = array())
     {
@@ -19,7 +20,8 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             'period_type' => $period_type,
             'trip_class' => $trip_class,
             'limit' => $limit,
-            'one_way' => $one_way
+            'one_way' => $one_way,
+            'return_url' => $return_url
         );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
@@ -31,13 +33,13 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." cacheKey = ".$one_way);
 
-        if($this->cacheSecund()){
+        if($this->cacheSecund() && $return_url == false){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if ( false === ($rows = get_transient($this->cacheKey('13'.$one_way.$currency, $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
+                $return = self::$TPRequestApi->get_latest($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 //if( ! $return )
@@ -58,12 +60,16 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
                 set_transient( $this->cacheKey('13'.$one_way.$currency, $origin) , $rows, $cacheSecund);
             }
         }else{
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_latest($attr);
+            $return = self::$TPRequestApi->get_latest($attr);
             if( ! $return )
                 return false;
-            $rows = array();
-            $rows = $return;
-            $rows = $this->iataAutocomplete($rows, 13);
+            if ($return_url == false) {
+                $rows = array();
+                $rows = $return;
+                $rows = $this->iataAutocomplete($rows, 13);
+            } else {
+                $rows = $return;
+            }
         }
 
 
@@ -90,45 +96,33 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] ,
             'paginate' => true,
             'off_title' => '',
-            'subid' => ''
+            'subid' => '',
+            'return_url' => false
         );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
+
+        if ($return_url == 1){
+            $return_url = true;
+        }
+
         $rows = $this->get_data(array(
             'currency' => $currency,
             'origin' => $origin,
             'period_type' => $period_type,
             'trip_class' => $trip_class,
             'limit' => $limit,
-            'one_way' => $one_way
+            'one_way' => $one_way,
+            'return_url' => $return_url
         ));
         //if( ! $rows )
          //   return false;
-
-        $rows_sort = array();
-        if($rows){
-            switch($stops){
-                case 0:
-                    $rows_sort = $rows;
-                    break;
-                case 1:
-                    foreach($rows as $value){
-                        if($value['number_of_changes'] <= 1){
-                            $rows_sort[] = $value;
-                        }
-                    }
-                    break;
-                case 2:
-                    foreach($rows as $value){
-                        if($value['number_of_changes'] == 0){
-                            $rows_sort[] = $value;
-                        }
-                    }
-                    break;
-            }
+        if ($return_url == false) {
+            $rows = $this->sortTransfers(13, $rows, $stops);
         }
 
+
         return array(
-            'rows' => $rows_sort,
+            'rows' => $rows,
             'origin' => $this->iataAutocomplete($origin, 0),
             'type' => 13,
             'title' => $title,
@@ -136,7 +130,8 @@ class TPFromOurCityFlyShortcodeModel extends \app\includes\models\site\TPShortco
             'one_way' => $one_way,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
 
 

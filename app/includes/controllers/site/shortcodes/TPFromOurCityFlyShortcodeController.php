@@ -25,6 +25,9 @@ class TPFromOurCityFlyShortcodeController extends \app\includes\controllers\site
     {
         $data = $this->model->getDataTable($args);
        // if(!$data) return false;
+        if ($data['return_url'] == true){
+            return print_r($data['rows'], true);
+        }
         return $this->view->renderTable($data);
     }
 

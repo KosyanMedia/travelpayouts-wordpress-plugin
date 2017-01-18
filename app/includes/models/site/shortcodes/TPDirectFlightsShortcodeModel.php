@@ -7,7 +7,7 @@
  */
 namespace app\includes\models\site\shortcodes;
 use \app\includes\models\site\TPFlightShortcodeModel;
-class TPDirectFlightsShortcodeModel extends \app\includes\models\site\TPFlightShortcodeModel{
+class TPDirectFlightsShortcodeModel extends TPFlightShortcodeModel{
 
     /**
      * @param array $args
