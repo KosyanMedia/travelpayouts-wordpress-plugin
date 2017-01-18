@@ -6,12 +6,14 @@
  * Time: 12:33
  */
 namespace app\includes\models\site\shortcodes;
-class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use app\includes\common\TPCurrencyUtils;
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
 
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
-        if(\app\includes\TPPlugin::$options['local']['currency'] != 'RUB') return false;
+        if(\app\includes\TPPlugin::$options['local']['currency'] != TPCurrencyUtils::TP_CURRENCY_RUB) return false;
         $defaults = array(
             'origin' => false,
             'departure_at' => false,
@@ -23,12 +25,20 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
-            'filter_airline' => false
+            'filter_airline' => false,
+            'return_url' => false
         );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
-        $attr = array('origin' => $origin,
-            'departure_at' => $departure_at, 'return_at' => $return_at,
-            'currency' => $this->typeCurrency());
+        if ($return_url == 1){
+            $return_url = true;
+        }
+        $attr = array(
+            'origin' => $origin,
+            'departure_at' => $departure_at,
+            'return_at' => $return_at,
+            'currency' => $this->typeCurrency(),
+            'return_url' => $return_url
+        );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
@@ -36,14 +46,14 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
             ." 8. Популярные направления из города ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if ($this->cacheSecund()) {
+        if ($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('9',
                     $origin)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
+                $return = self::$TPRequestApi->get_popular_routes_from_city($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 //if (!$return)
@@ -61,7 +71,7 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
                     $origin), $return, $cacheSecund);
             }
         } else {
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_popular_routes_from_city($attr);
+            $return = self::$TPRequestApi->get_popular_routes_from_city($attr);
             if (!$return)
                 return false;
         }
@@ -70,13 +80,23 @@ class TPPopularRoutesFromCityShortcodeModel extends \app\includes\models\site\TP
         //error_log("{$method} rows = ".print_r($return, true));
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == false) {
+            $return = $this->iataAutocomplete($return, 9);
+            $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        }
 
-        $return = $this->iataAutocomplete($return, 9);
-        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
-
-        return array('rows' => $return, 'origin' => $this->iataAutocomplete($origin, 0),
-                'type' => 9, 'title' => $title, 'origin_iata' => $origin, 'paginate' => $paginate,
-            'off_title' => $off_title, 'subid' => $subid, 'currency' => $this->typeCurrency());
+        return array(
+            'rows' => $return,
+            'origin' => $this->iataAutocomplete($origin, 0),
+            'type' => 9,
+            'title' => $title,
+            'origin_iata' => $origin,
+            'paginate' => $paginate,
+            'off_title' => $off_title,
+            'subid' => $subid,
+            'currency' => $this->typeCurrency(),
+            'return_url' => $return_url
+        );
 
     }
     public function getDataFilter($filter_flight_number, $filter_airline, $data){

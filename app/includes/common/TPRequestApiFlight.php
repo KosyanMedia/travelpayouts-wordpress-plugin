@@ -13,7 +13,7 @@ class TPRequestApiFlight extends TPRequestApi
 {
 
     const TP_API_URL = 'http://api.travelpayouts.com/v1';
-    const TP_API_URL_2 = 'http://api.travelpayouts.com/v2';
+    const TP_API_URL_2 = 'https://api.travelpayouts.com/v2';
 
     private static $instance = null;
 
