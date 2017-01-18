@@ -6,7 +6,8 @@
  * Time: 12:12
  */
 namespace app\includes\models\site\shortcodes;
-class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
 
     public function get_data($args = array())
     {
@@ -15,7 +16,8 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
         $attr = array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
@@ -24,14 +26,14 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
             ." 2. Билеты по направлению на ближайшие дни  ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('2'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
-                $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
+                $return = $this->sort_dates(self::$TPRequestApi->get_price_week_calendar($attr));
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 //if( ! $return )
@@ -51,10 +53,14 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
                     $origin.$destination) , $return, $cacheSecund);
             }
         }else{
-            $return = $this->sort_dates(\app\includes\TPPlugin::$TPRequestApi->get_price_week_calendar($attr));
+            $return = self::$TPRequestApi->get_price_week_calendar($attr);
             if( ! $return )
                 return false;
-            $return = $this->iataAutocomplete($return, 2);
+            if ($return_url == false) {
+                $return = $this->sort_dates($return);
+                $return = $this->iataAutocomplete($return, 2);
+            }
+
         }
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($return, true));
@@ -76,12 +82,18 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
             'title' => '',
             'paginate' => true,
             'off_title' => '',
-            'subid' => '');
+            'subid' => '',
+            'return_url' => false
+            );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if ($return_url == 1){
+            $return_url = true;
+        }
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         ));
         //if( ! $return )
         //    return false;
@@ -96,7 +108,8 @@ class TPPriceCalendarWeekShortcodeModel extends \app\includes\models\site\TPShor
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
 
 

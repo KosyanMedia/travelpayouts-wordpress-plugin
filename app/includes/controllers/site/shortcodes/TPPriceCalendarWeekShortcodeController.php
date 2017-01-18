@@ -26,6 +26,9 @@ class TPPriceCalendarWeekShortcodeController extends \app\includes\controllers\s
     {
         $data = $this->model->getDataTable($args);
         //if(!$data) return false;
+        if ($data['return_url'] == true){
+            return print_r($data['rows'], true);
+        }
         return $this->view->renderTable($data);
     }
 

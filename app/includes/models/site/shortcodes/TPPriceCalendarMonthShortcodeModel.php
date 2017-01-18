@@ -6,7 +6,8 @@
  * Time: 12:05
  */
 namespace app\includes\models\site\shortcodes;
-class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
     /**
      * @param array $args
      * @return array|bool
@@ -18,7 +19,8 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
         $attr =  array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
         $name_method = "***************".__METHOD__."***************";
         if(TPOPlUGIN_ERROR_LOG)
@@ -27,14 +29,14 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             ." 1. Цены на месяц по направлению, в одну сторону  ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('1'.$currency,
                     $origin.$destination)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
-                $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
+                $return = self::$TPRequestApi->get_price_mounth_calendar($attr);
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 //if( ! $return )
@@ -54,10 +56,13 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
                     $origin.$destination) , $return, $cacheSecund);
             }
         }else{
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_price_mounth_calendar($attr);
+            $return = self::$TPRequestApi->get_price_mounth_calendar($attr);
             if( ! $return )
                 return false;
-            $return = $this->iataAutocomplete($return, 1);
+            if ($return_url == false) {
+                $return = $this->iataAutocomplete($return, 1);
+            }
+
         }
         return $return;
     }
@@ -75,40 +80,27 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             'stops' => \app\includes\TPPlugin::$options['shortcodes']['1']['transplant'],
             'paginate' => true,
             'off_title' => '',
-            'subid' => ''
+            'subid' => '',
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if ($return_url == 1){
+            $return_url = true;
+        }
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         ));
         //if( ! $return )
         //    return false;
-        $rows = array();
-        if($return){
-            switch($stops){
-                case 0:
-                    $rows = $return;
-                    break;
-                case 1:
-                    foreach($return as $value){
-                        if($value['number_of_changes'] <= 1){
-                            $rows[] = $value;
-                        }
-                    }
-                    break;
-                case 2:
-                    foreach($return as $value){
-                        if($value['number_of_changes'] == 0){
-                            $rows[] = $value;
-                        }
-                    }
-                    break;
-            }
+        if ($return_url == false) {
+            $return = $this->sortTransfers(1, $return, $stops);
         }
+
         return array(
-            'rows' => $rows,//$rows,//array()
+            'rows' => $return,//$rows,//array()
             'type' => 1,
             'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
@@ -118,7 +110,9 @@ class TPPriceCalendarMonthShortcodeModel extends \app\includes\models\site\TPSho
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency);
+            'currency' => $currency,
+            'return_url' => $return_url
+            );
 
 
     }

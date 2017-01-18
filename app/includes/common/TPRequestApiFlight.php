@@ -8,6 +8,7 @@
 
 namespace app\includes\common;
 
+use \app\includes\TPPlugin;
 
 class TPRequestApiFlight extends TPRequestApi
 {
