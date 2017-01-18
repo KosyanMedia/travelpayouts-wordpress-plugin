@@ -11,6 +11,7 @@ class TPStatisticModel extends TPDashboardModel{
     public $detailed_sales;
     public $payments;
     public function __construct(){
+        parent::__construct();
         if (!isset(\app\includes\TPPlugin::$options['config']['statistics']))
             add_action( 'admin_init', array( &$this, 'setData' ) );
         add_action('wp_ajax_tp_get_detailed_sales',      array( &$this, 'tpGetDetailedSalesAjax'));
@@ -27,7 +28,7 @@ class TPStatisticModel extends TPDashboardModel{
         $cacheKey = TPOPlUGIN_NAME."_TPDetailedSalesStats";
         $TPDetailedSales = array();
         if ( false === ( $TPDetailedSales = get_transient($cacheKey) ) ) {
-            $TPDetailedSales = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales();
+            $TPDetailedSales = self::$TPRequestApi->get_detailed_sales();
             if( !$TPDetailedSales)
                 return false;
             $TPDetailedSales = array_reverse($TPDetailedSales["sales"]);
@@ -39,7 +40,7 @@ class TPStatisticModel extends TPDashboardModel{
         $cacheKey = TPOPlUGIN_NAME."_TPPaymentsStats";
         $TPpayments = array();
         if ( false === ( $TPpayments = get_transient($cacheKey) ) ) {
-            $TPpayments = \app\includes\TPPlugin::$TPRequestApi->get_payments();
+            $TPpayments = self::$TPRequestApi->get_payments();
             if( !$TPpayments)
                 return false;
             $TPpayments = array_reverse($TPpayments["payments"]);
@@ -52,7 +53,7 @@ class TPStatisticModel extends TPDashboardModel{
     {
         if (isset($_POST)) {
             $output = '';
-            $TPDetailedSales = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales(
+            $TPDetailedSales = self::$TPRequestApi->get_detailed_sales(
                 array('date' => date("Y-m-d", strtotime($_POST["date"])))
             );
             $TPDetailedSalesSort = array();

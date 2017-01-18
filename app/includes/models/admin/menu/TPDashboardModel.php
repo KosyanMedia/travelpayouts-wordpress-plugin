@@ -6,12 +6,15 @@
  * Time: 16:37
  */
 namespace app\includes\models\admin\menu;
-class TPDashboardModel {
+use app\includes\models\admin\TPStatModel;
+
+class TPDashboardModel extends TPStatModel {
     public $balance;
     public $detailed_sales;
     public $rss;
     public $rssEn;
     public function __construct(){
+        parent::__construct();
         if (!isset(\app\includes\TPPlugin::$options['config']['statistics']))
             add_action( 'admin_init', array( &$this, 'setData' ) );
 
@@ -43,7 +46,7 @@ class TPDashboardModel {
                 error_log($method." cache false get api put cache");
           //  error_log('tpGetBalance');
             //$TPBalance['time'] = current_time('timestamp',1);
-            $return = \app\includes\TPPlugin::$TPRequestApi->get_balance();
+            $return = self::$TPRequestApi->get_balance();
             //if( ! $return )
             //    return false;
             if( ! $return )
@@ -73,10 +76,14 @@ class TPDashboardModel {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log($method." cache false get api put cache");
            // error_log('tpGetDetailedSales');
-            $TPDetailedSales['current_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales();
+            $TPDetailedSales['current_month'] = self::$TPRequestApi->get_detailed_sales();
             if( !$TPDetailedSales['current_month'])
                 return false;
-            $TPDetailedSales['last_month'] = \app\includes\TPPlugin::$TPRequestApi->get_detailed_sales(array('date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y")))));
+            $TPDetailedSales['last_month'] = self::$TPRequestApi->get_detailed_sales(
+                array(
+                    'date' => date("Y-m-d",mktime(0,0,0,date("n"),0,date("Y"))
+                    )
+                ));
            // if( !$TPDetailedSales['last_month'])
             //    return false;
             if( ! $TPDetailedSales['last_month'] )
@@ -109,7 +116,7 @@ class TPDashboardModel {
             try {
                 $sxml = @simplexml_load_file("http://blog.travelpayouts.com/feed/", 'SimpleXMLElement', LIBXML_NOCDATA);
                 if ($sxml !== false) {
-                    $TPRss['data'] = \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
+                    $TPRss['data'] = self::$TPRequestApi->objectToArray($sxml->channel);
                     set_transient($cacheKey, $TPRss, HOUR_IN_SECONDS * 12);
                 } else {
                     $TPRss['data'] = array();
@@ -146,7 +153,7 @@ class TPDashboardModel {
                 $sxml = @simplexml_load_file("http://feeds.feedburner.com/TravelpayoutsBlog", 'SimpleXMLElement', LIBXML_NOCDATA);
                 if ($sxml !== false) {
                     $TPRssEn['data'] =
-                        \app\includes\TPPlugin::$TPRequestApi->objectToArray($sxml->channel);
+                        self::$TPRequestApi-> objectToArray($sxml->channel);
                     set_transient($cacheKey, $TPRssEn, HOUR_IN_SECONDS * 12);
                 } else {
                     $TPRssEn['data'] = array();

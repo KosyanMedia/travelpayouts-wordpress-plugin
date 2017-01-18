@@ -4,7 +4,7 @@ namespace app\includes;
 use app\includes\common\TPCurrencyUtils;
 
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
-    public static $TPRequestApi;
+
     private static $instance = null;
 
     /**

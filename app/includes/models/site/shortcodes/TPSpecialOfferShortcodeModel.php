@@ -253,8 +253,27 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         $wpdb->query("TRUNCATE TABLE `".$tableNameOffer."`");
         $wpdb->query("TRUNCATE TABLE `".$tableNameRoute."`");
     }
+
+    public static function getSpecialOffer(){
+        $data = array();
+        try {
+            $sxml = @simplexml_load_file("http://www.aviasales.ru/latest-offers.xml",
+                'SimpleXMLElement', LIBXML_NOCDATA);
+            $sxml = simplexml_load_file("http://www.aviasales.ru/latest-offers.xml");
+
+            if ($sxml !== false) {
+                $data = $sxml;
+            } else {
+                $data = array();
+            }
+        }   catch (Exception $e) {
+
+        }
+        return $data;
+    }
+
     public static function getSpecialOfferApi(){
-        $data = \app\includes\TPPlugin::$TPRequestApi->getSpecialOffer();
+        $data = self::getSpecialOffer();
         if(count($data) > 0) {
             if($data->offer) {
                 self::truncateTable();
