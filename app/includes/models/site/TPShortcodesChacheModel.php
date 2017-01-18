@@ -196,4 +196,34 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         return $data;
 
     }
+
+    public function sortTransfers($type, $rows, $stops){
+        $rows_sort = array();
+        switch ($type){
+            case 5:
+                if($rows){
+                    switch($stops){
+                        case 0:
+                            $rows_sort = $rows;
+                            break;
+                        case 1:
+                            foreach($rows as $value){
+                                if($value['transfers'] <= 1){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                        case 2:
+                            foreach($rows as $value){
+                                if($value['transfers'] == 0){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+        }
+        return $rows_sort;
+    }
 }

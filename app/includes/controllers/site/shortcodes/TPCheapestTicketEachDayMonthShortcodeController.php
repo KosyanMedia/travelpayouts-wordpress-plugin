@@ -26,6 +26,11 @@ class TPCheapestTicketEachDayMonthShortcodeController extends \app\includes\cont
     {
         $data = $this->model->getDataTable($args);
         //if(!$data) return false;
+
+        if ($data['return_url'] == true){
+
+            return $data['rows'][0];
+        }
         return $this->view->renderTable($data);
     }
 

@@ -101,7 +101,8 @@ class TPRequestApiFlight extends TPRequestApi
             'destination' => false,
             'departure_at' => false,
             'return_at' => false,
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
@@ -123,6 +124,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -142,7 +146,8 @@ class TPRequestApiFlight extends TPRequestApi
         }
         $defaults = array(
             'airline' => false,
-            'limit' => false
+            'limit' => false,
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $airline || empty( $airline ) ) {
@@ -157,6 +162,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request( $request_string ));
     }
     /**
@@ -175,7 +183,8 @@ class TPRequestApiFlight extends TPRequestApi
         $defaults = array(
             'origin' => false,
             'destination' => false,
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
@@ -203,9 +212,17 @@ class TPRequestApiFlight extends TPRequestApi
             $type = 1;
             $month_next = date('Y-m-d', mktime(0, 0, 0, $current_month + $type, 1, date("Y")));
             $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month_next}{$token}";
-            $return_two = $this->objectToArray($this->request($request_string));
+            if ($return_url == true){
+                $return_two = $request_string;
+            } else {
+                $return_two = $this->objectToArray($this->request($request_string));
+            }
+
         }
         $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month}{$token}";
+        if ($return_url == true){
+            return $request_string.' | '.$return_two;
+        }
         $return = array();
         $return = $this->objectToArray($this->request($request_string));
         if(is_array($return_two) && is_array($return))
@@ -235,7 +252,8 @@ class TPRequestApiFlight extends TPRequestApi
             'destination' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'depart_date' => date('Y-m-d'),
-            'return_date' => date('Y-m-d')
+            'return_date' => date('Y-m-d'),
+            'return_url' => false
         );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if (!$origin || $origin == '') {
@@ -266,6 +284,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -277,8 +298,16 @@ class TPRequestApiFlight extends TPRequestApi
         if(!$this->isStatus()){
             return false;
         }
+        $defaults = array(
+            'return_url' => false
+        );
+
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $token = '&token=' .$this->getToken();
         $request_string = self::TP_API_URL_2."/prices/holidays-by-routes?{$token}";
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -299,7 +328,8 @@ class TPRequestApiFlight extends TPRequestApi
         $defaults = array(
             'origin' => false,
             'destination' => false,
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
 
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -320,6 +350,9 @@ class TPRequestApiFlight extends TPRequestApi
         $extra = $currency.$origin.$destination.$token;
         $request_string = self::getApiUrl()."/prices/monthly?{$extra}";
         $return = array();
+        if ($return_url == true){
+            return $request_string;
+        }
         $return = $this->objectToArray($this->request($request_string));
         /*if(array_key_exists(0, (array)$return)){
             return array(2);
@@ -348,7 +381,8 @@ class TPRequestApiFlight extends TPRequestApi
             'origin' => false,
             'destination' => false,
             'calendar_type' => 'departure_date',
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -379,6 +413,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -398,7 +435,8 @@ class TPRequestApiFlight extends TPRequestApi
         }
         $defaults = array(
             'origin' => false,
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -418,6 +456,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
 
     }
@@ -474,7 +515,8 @@ class TPRequestApiFlight extends TPRequestApi
             'limit' => 100,
             'sorting' => 'price',
             'trip_class' => 0,
-            'trip_duration' => false
+            'trip_duration' => false,
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $token = '&token=' .$this->getToken();
@@ -497,6 +539,9 @@ class TPRequestApiFlight extends TPRequestApi
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 

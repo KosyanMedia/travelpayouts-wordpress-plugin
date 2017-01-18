@@ -62,6 +62,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             if( ! $return )
                 return false;
             if ($return_url == false){
+                $rows = array();
                 $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
             } else {
                 $rows = $return;
