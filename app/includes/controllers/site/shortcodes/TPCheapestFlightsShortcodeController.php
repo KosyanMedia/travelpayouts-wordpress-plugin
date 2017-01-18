@@ -25,6 +25,9 @@ class TPCheapestFlightsShortcodeController extends \app\includes\controllers\sit
     {
         $data = $this->model->getDataTable($args);
         //if(!$data) return false;
+        if ($data['return_url'] == true){
+            return $data['rows'];
+        }
         return $this->view->renderTable($data);
     }
 

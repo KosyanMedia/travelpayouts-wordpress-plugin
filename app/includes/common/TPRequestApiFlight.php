@@ -53,7 +53,8 @@ class TPRequestApiFlight extends TPRequestApi
             'destination' => false,
             'departure_at' => false,
             'return_at' => false,
-            'currency' => TPCurrencyUtils::getDefaultCurrency()
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -71,7 +72,9 @@ class TPRequestApiFlight extends TPRequestApi
         $token = '&token=' .$this->getToken();
         $extra = $currency.$departure_at.$return_at.$token ;
         $request_string = self::getApiUrl()."/prices/cheap?origin=$origin&destination=$destination&currency=$extra";
-        //return $request_string;
+        if ($return_url == true){
+            return $request_string;
+        }
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." url = {$request_string}");
         if(TPOPlUGIN_ERROR_LOG)

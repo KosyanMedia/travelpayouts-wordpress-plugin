@@ -25,6 +25,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             'departure_at' => $departure_at,
             'return_at' => $return_at,
             'currency' => $currency,
+            'return_url' => $return_url
         );
         $name_method = "***************".__METHOD__."***************";
         $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
@@ -33,7 +34,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             error_log($name_method);
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} -> cache");
             if (false === ($rows = get_transient($this->cacheKey('4'.$currency, $origin . $destination)))) {
@@ -60,7 +61,12 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             $return = self::$TPRequestApi->get_cheapest($attr);
             if( ! $return )
                 return false;
-            $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
+            if ($return_url == false){
+                $rows = $this->iataAutocomplete($this->tpSortCheapestFlightsShortcodes($return), 4);
+            } else {
+                $rows = $return;
+            }
+
         }
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($rows, true));
@@ -85,20 +91,28 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
-            'filter_airline' => false
+            'filter_airline' => false,
+            'return_url' => false
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
+        if ($return_url == 1){
+            $return_url = true;
+        }
+
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'departure_at' => $departure_at,
             'return_at' => $return_at,
+            'return_url' => $return_url
         ));
         //if( ! $return )
         //    return false;
-
-        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        if ($return_url == false) {
+            $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        }
 
         return array(
             'rows' => $return,
@@ -111,7 +125,8 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
 
 
