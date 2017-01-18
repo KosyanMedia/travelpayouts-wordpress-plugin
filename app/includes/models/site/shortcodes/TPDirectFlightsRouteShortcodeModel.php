@@ -6,7 +6,8 @@
  * Time: 11:21
  */
 namespace app\includes\models\site\shortcodes;
-class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use \app\includes\models\site\TPFlightShortcodeModel;
+class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
 
     public function get_data($args = array())
     {
@@ -20,27 +21,42 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
         $current_day = date("d",time());
         $current_month = date("m");
 
-        $attr =  array( 'origin' => $origin, 'destination' => $destination,
-            'departure_at' => date('Y-m'), 'return_at' => date('Y-m'),
-            'currency' => $currency );
+        $attr =  array(
+            'origin' => $origin,
+            'destination' => $destination,
+            'departure_at' => date('Y-m'),
+            'return_at' => date('Y-m'),
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
 
-        $attr_one =  array( 'origin' => $origin, 'destination' => $destination,
+        $attr_one =  array(
+            'origin' => $origin,
+            'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
-            'currency' => $currency  );
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
 
-        $attr_two =  array( 'origin' => $origin, 'destination' => $destination,
+        $attr_two =  array(
+            'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
-            'currency' => $currency  );
-        $attr_three =  array( 'origin' => $origin, 'destination' => $destination,
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
+        $attr_three =  array(
+            'origin' => $origin, 'destination' => $destination,
             'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
             'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
-            'currency' => $currency);
+            'currency' => $currency,
+            'return_url' => $return_url
+        );
 
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
-        if($this->cacheSecund()) {
+        if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('7'.$currency,
@@ -53,28 +69,28 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
 
                 if($current_day < 20){
 
-                    $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+                    $return_null = self::$TPRequestApi->get_direct($attr);
                     if($return_null)
                         array_push($return, array_shift($return_null[$destination]));
-                    $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
+                    $return_one = self::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
                         array_push($return, array_shift($return_one[$destination]));
-                    $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
+                    $return_two = self::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
                         array_push($return, array_shift($return_two[$destination]));
                 }else{
 
-                    $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+                    $return_null = self::$TPRequestApi->get_direct($attr);
                     if($return_null)
                         array_push($return, array_shift($return_null[$destination]));
 
-                    $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
+                    $return_one = self::$TPRequestApi->get_direct($attr_one);
                     if($return_one)
                         array_push($return, array_shift($return_one[$destination]));
-                    $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
+                    $return_two = self::$TPRequestApi->get_direct($attr_two);
                     if($return_two)
                         array_push($return, array_shift($return_two[$destination]));
-                    $return_three = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_three);
+                    $return_three = self::$TPRequestApi->get_direct($attr_three);
                     if($return_three)
                         array_push($return, array_shift($return_three[$destination]));
                 }
@@ -98,33 +114,75 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
         }else{
             $return = array();
             if($current_day < 20){
-                $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
+                $return_null = self::$TPRequestApi->get_direct($attr);
+                if($return_null){
+                    if ($return_url == false) {
+                        array_push($return, $return_null[$destination][0]);
+                    } else {
+                        array_push($return, $return_null);
+                    }
+                }
 
-                if($return_null)
-                    array_push($return, $return_null[$destination][0]);
-                $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
-                if($return_one)
-                    array_push($return, $return_one[$destination][0]);
-                $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
-                if($return_two)
-                    array_push($return, $return_two[$destination][0]);
+                $return_one = self::$TPRequestApi->get_direct($attr_one);
+                if($return_one){
+                    if ($return_url == false) {
+                        array_push($return, $return_one[$destination][0]);
+                    } else {
+                        array_push($return, $return_one);
+                    }
+                }
+                $return_two = self::$TPRequestApi->get_direct($attr_two);
+                if($return_two){
+                    if ($return_url == false) {
+                        array_push($return, $return_two[$destination][0]);
+                    } else {
+                        array_push($return, $return_two);
+                    }
+                }
+
             }else{
-                $return_null = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr);
-                if($return_null)
-                    array_push($return, $return_null[$destination][0]);
-                $return_one = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_one);
-                if($return_one)
-                    array_push($return, $return_one[$destination][0]);
-                $return_two = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_two);
-                if($return_two)
-                    array_push($return, $return_two[$destination][0]);
-                $return_three = \app\includes\TPPlugin::$TPRequestApi->get_direct($attr_three);
-                if($return_three)
-                    array_push($return, $return_three[$destination][0]);
+                $return_null = self::$TPRequestApi->get_direct($attr);
+                if($return_null){
+                    if ($return_url == false) {
+                        array_push($return, $return_null[$destination][0]);
+                    } else {
+                        array_push($return, $return_null);
+                    }
+                }
+
+                $return_one = self::$TPRequestApi->get_direct($attr_one);
+                if($return_one){
+                    if ($return_url == false) {
+                        array_push($return, $return_one[$destination][0]);
+                    } else {
+                        array_push($return, $return_one);
+                    }
+                }
+                $return_two = self::$TPRequestApi->get_direct($attr_two);
+                if($return_two){
+                    if ($return_url == false) {
+                        array_push($return, $return_two[$destination][0]);
+                    } else {
+                        array_push($return, $return_two);
+                    }
+                }
+                $return_three = self::$TPRequestApi->get_direct($attr_three);
+                if($return_three){
+                    if ($return_url == false) {
+                        array_push($return, $return_three[$destination][0]);
+                    } else {
+                        array_push($return, $return_three);
+                    }
+                }
+
             }
+
             if( ! $return )
                 return false;
-            $return = $this->iataAutocomplete($return, 7);
+
+            if ($return_url == false){
+                $return = $this->iataAutocomplete($return, 7);
+            }
         }
         if(TPOPlUGIN_ERROR_LOG)
             error_log("{$method} rows = ".print_r($return, true));
@@ -149,18 +207,25 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
-            'filter_airline' => false
+            'filter_airline' => false,
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if ($return_url == 1){
+            $return_url = true;
+        }
         $return = $this->get_data(array(
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
+            'return_url' => $return_url
         ));
 
         //if( ! $return )
          //   return false;
-        $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        if ($return_url == false) {
+            $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
+        }
         return array(
             'rows' => $return,
             'type' => 7,
@@ -172,7 +237,8 @@ class TPDirectFlightsRouteShortcodeModel extends \app\includes\models\site\TPSho
             'paginate' => $paginate,
             'off_title' => $off_title,
             'subid' => $subid,
-            'currency' => $currency
+            'currency' => $currency,
+            'return_url' => $return_url
         );
 
 

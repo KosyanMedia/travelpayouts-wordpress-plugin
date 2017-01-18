@@ -32,7 +32,7 @@ class TPCheapestTicketsEachMonthShortcodeController extends \app\includes\contro
         if ($data['return_url'] == true){
 
             //return $data['rows'][0];
-            return $data['rows'];
+            return print_r($data['rows'], true);
         }
         return $this->view->renderTable($data);
     }
