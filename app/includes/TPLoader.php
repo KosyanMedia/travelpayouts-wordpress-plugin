@@ -90,7 +90,8 @@ class TPLoader extends \core\TPOLoader{
 
         new \app\includes\TPLoaderScripts();
         //new controllers\admin\menu\TPAdminBarMenuController();
-        \app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel::modelHooks();
+        //Загрузка спецпредложения
+        //\app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel::modelHooks();
 
     }
 
