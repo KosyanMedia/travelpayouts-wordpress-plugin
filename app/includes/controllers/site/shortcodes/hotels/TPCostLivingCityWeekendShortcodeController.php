@@ -25,6 +25,7 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
+        //Таблица "Стоимость проживания В ГОРОДЕ на уикенд"
         add_shortcode( 'tp_cost_living_city_weekend_shortcodes', array(&$this, 'actionTable'));
     }
 
