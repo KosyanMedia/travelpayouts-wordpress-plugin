@@ -3,6 +3,8 @@ namespace app\includes;
 
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityWeekendShortcodeController;
 use app\includes\common\TPRequestApiStatistic;
+use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityWeekShortcodeController;
+
 class TPLoader extends \core\TPOLoader{
     public function __construct(){
         parent::__construct();
@@ -62,6 +64,7 @@ class TPLoader extends \core\TPOLoader{
         new \app\includes\controllers\site\shortcodes\TPSpecialOfferShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPCaseCityShortcodeController();
         new TPCostLivingCityWeekendShortcodeController();
+        new TPCostLivingCityWeekShortcodeController();
 
         //Widgets
         new \app\includes\controllers\site\widgets\TPMapWidgetController();
