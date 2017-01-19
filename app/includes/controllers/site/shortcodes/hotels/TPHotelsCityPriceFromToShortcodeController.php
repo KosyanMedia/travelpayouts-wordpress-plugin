@@ -10,7 +10,7 @@
 namespace app\includes\controllers\site\shortcodes\hotels;
 
 use \app\includes\controllers\site\TPShortcodesController;
-//use \app\includes\models\site\shortcodes\hotels\TPCostLivingCityWeekShortcodeModel;
+use \app\includes\models\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeModel;
 
 class TPHotelsCityPriceFromToShortcodeController extends TPShortcodesController
 {
@@ -19,7 +19,7 @@ class TPHotelsCityPriceFromToShortcodeController extends TPShortcodesController
     public $view;
     public function __construct(){
         parent::__construct();
-        //$this->model = new TPCostLivingCityWeekShortcodeModel();
+        $this->model = new TPHotelsCityPriceFromToShortcodeModel();
         //$this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
     }
     public function initShortcode()
