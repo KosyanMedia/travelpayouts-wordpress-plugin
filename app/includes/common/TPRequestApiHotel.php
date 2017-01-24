@@ -31,6 +31,7 @@ class TPRequestApiHotel extends TPRequestApi
 
     /**
      * @param array $args
+     * Отели Города по цене ОТ-ДО
      * Запрос «Hotels list»
      * Параметры запроса
      * locationId — id локации, обязательный параметр.

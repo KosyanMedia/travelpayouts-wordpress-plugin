@@ -11,7 +11,7 @@ namespace app\includes\models\site\shortcodes\hotels;
 use \app\includes\models\site\TPHotelShortcodeModel;
 use \app\includes\common\TPCurrencyUtils;
 
-class TPCostLivingCityWeekShortcodeModel extends TPHotelShortcodeModel
+class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
 {
 
     public function get_data($args = array())
