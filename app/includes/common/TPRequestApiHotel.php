@@ -39,8 +39,20 @@ class TPRequestApiHotel extends TPRequestApi
     public function getHotels($args = array()){
         $defaults = array(
             'location_id' => false,
+            'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if (!$location_id || empty($location_id)){
+            $location_id = "";
+        } else {
+            $location_id = "locationId={$location_id}";
+        }
+        $token = 'token=' .$this->getToken();
+        $requestURL = self::getApiUrl()."/static/hotels.json?{$location_id}&{$token}";
+        if ($return_url == true){
+            return $requestURL;
+        }
+        return $this->request($requestURL);
     }
 
     /**

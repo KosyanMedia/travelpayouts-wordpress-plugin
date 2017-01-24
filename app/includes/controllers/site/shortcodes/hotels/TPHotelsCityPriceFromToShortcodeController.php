@@ -30,6 +30,8 @@ class TPHotelsCityPriceFromToShortcodeController extends TPShortcodesController
     }
     public function actionTable($args = array())
     {
+        $data = $this->model->getDataTable($args);
 
+        return print_r($data);
     }
 }
