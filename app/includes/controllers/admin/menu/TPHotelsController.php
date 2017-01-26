@@ -8,8 +8,18 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use \core\controllers\TPOAdminMenuController;
 
-class TPHotelsController
+class TPHotelsController extends TPOAdminMenuController
 {
 
+    public function action()
+    {
+        // TODO: Implement action() method.
+    }
+
+    public function render()
+    {
+        // TODO: Implement render() method.
+    }
 }
