@@ -6,6 +6,7 @@ use app\includes\common\TPRequestApiStatistic;
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityDaysShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityStarFilterShortcodeController;
+use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsShortcodeController;
 
 class TPLoader extends \core\TPOLoader{
     public function __construct(){
@@ -69,6 +70,7 @@ class TPLoader extends \core\TPOLoader{
         new TPCostLivingCityDaysShortcodeController();
         new TPHotelsCityPriceFromToShortcodeController();
         new TPHotelsCityStarFilterShortcodeController();
+        new TPHotelsSelectionsShortcodeController();
 
         //Widgets
         new \app\includes\controllers\site\widgets\TPMapWidgetController();
