@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2016-12-22 17:47+0200\n"
+"POT-Creation-Date: 2017-01-26 15:52+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -329,17 +329,17 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты из {origin} - {destination}\"]"
 
-#: app/includes/TPLoader.php:105
+#: app/includes/TPLoader.php:119
 msgctxt "(Set details and enable plugin features)"
 msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
 msgstr "Set details and enable plugin features"
 
-#: app/includes/TPLoader.php:110
+#: app/includes/TPLoader.php:124
 msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_1"
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
-#: app/includes/TPLoader.php:111
+#: app/includes/TPLoader.php:125
 msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
@@ -597,46 +597,6 @@ msgstr "No more than one stop"
 msgctxt "(Direct)"
 msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "Direct"
-
-#: app/includes/TPRequestApi.php:604
-msgctxt "(The variable $origin parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_origin"
-msgstr "The variable $origin parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:606
-msgctxt "(The variable $destination parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_destination"
-msgstr "The variable $destination parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:608
-msgctxt "(The variable $currency parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_currency"
-msgstr "The variable $currency parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:610
-msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_departure_at"
-msgstr "The variable $departure_at parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:612
-msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_calendar_type"
-msgstr "The variable $calendar_type parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:614
-msgctxt "(The variable $return_at parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_return_at"
-msgstr "The variable $return_at parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:616
-msgctxt "(The variable $airline parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_airline"
-msgstr "The variable $airline parameters not set or incorrectly."
-
-#: app/includes/TPRequestApi.php:621
-msgctxt "(Unknown error.)"
-msgid "tp_request_api_error_msg_unknown_error"
-msgstr "Unknown error."
 
 #: app/includes/common/TPFieldsLabelTable.php:22
 msgctxt "(Номер рейса)"
@@ -1288,6 +1248,46 @@ msgctxt "(пересадки)"
 msgid "tp_plugin_local_ru_number_changes_label_stops"
 msgstr "пересадки"
 
+#: app/includes/common/TPRequestApi.php:186
+msgctxt "(The variable $origin parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_origin"
+msgstr "The variable $origin parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:188
+msgctxt "(The variable $destination parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_destination"
+msgstr "The variable $destination parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:190
+msgctxt "(The variable $currency parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_currency"
+msgstr "The variable $currency parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:192
+msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_departure_at"
+msgstr "The variable $departure_at parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:194
+msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_calendar_type"
+msgstr "The variable $calendar_type parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:196
+msgctxt "(The variable $return_at parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_return_at"
+msgstr "The variable $return_at parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:198
+msgctxt "(The variable $airline parameters not set or incorrectly.)"
+msgid "tp_request_api_error_msg_airline"
+msgstr "The variable $airline parameters not set or incorrectly."
+
+#: app/includes/common/TPRequestApi.php:203
+msgctxt "(Unknown error.)"
+msgid "tp_request_api_error_msg_unknown_error"
+msgstr "Unknown error."
+
 #: app/includes/common/TPTinyMCE.php:51
 msgctxt "(Press to insert a link into the notification)"
 msgid "tp_tinymce_link_shortcode_label"
@@ -1437,6 +1437,12 @@ msgstr "Travelpayouts"
 msgctxt "admin menu page title flight tickets"
 msgid "tp_admin_menu_page_flight_tickets_title"
 msgstr "Flight Tickets"
+
+#: app/includes/controllers/admin/menu/TPHotelsController.php:25
+#: app/includes/controllers/admin/menu/TPHotelsController.php:26
+msgctxt "admin menu page title hotels"
+msgid "tp_admin_menu_page_hotels_title"
+msgstr "Hotels"
 
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:21
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:22

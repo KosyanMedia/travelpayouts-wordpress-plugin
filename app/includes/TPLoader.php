@@ -1,6 +1,7 @@
 <?php
 namespace app\includes;
 
+use app\includes\controllers\admin\menu\TPHotelsController;
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityWeekendShortcodeController;
 use app\includes\common\TPRequestApiStatistic;
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityDaysShortcodeController;
@@ -23,6 +24,7 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\menu\TPDashboardController();
         new controllers\admin\menu\TPAutoReplacLinksController();
         new controllers\admin\menu\TPFlightTicketsController();
+        new TPHotelsController();
         new controllers\admin\menu\TPWidgetsController();
         new controllers\admin\menu\TPSearchFormsController();
         new controllers\admin\menu\TPStatisticController();
