@@ -9,7 +9,13 @@
 namespace app\includes\models\admin\menu;
 
 
-class TPHotelsModel
+use app\includes\models\admin\TPOptionModel;
+
+class TPHotelsModel extends TPOptionModel
 {
 
+    public function create_option()
+    {
+        // TODO: Implement create_option() method.
+    }
 }
