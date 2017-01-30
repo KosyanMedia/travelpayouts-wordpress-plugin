@@ -95,9 +95,6 @@ jQuery(function($){
         return false;
     }
 
-
-
-
     /** **/
 
 
@@ -206,6 +203,8 @@ jQuery(function($){
 
 
     });
+
+
     doc.ready(function(){
 
         selectLocalizationFields();
@@ -224,6 +223,7 @@ jQuery(function($){
         });
         var selectedTabHotelsId = sessionStorage.getItem("selectedTabHotels");
         selectedTabHotelsId = selectedTabHotelsId === null ? 0 : selectedTabHotelsId;
+
         $( "#tabs-hotels" ).tabs({
             active: selectedTabFlightsId,
             activate : function( event, ui ) {

@@ -138,9 +138,16 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPAdminPluginPage', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminPluginPage.js', //$src
-            array('jquery', 'wp-color-picker','jquery-ui-autocomplete',
-                'jquery-ui-accordion','jquery-ui-sortable', 'jquery-ui-dialog',
-                'jquery-ui-button','jquery-form', 'jquery-ui-tabs',
+            array(
+                'jquery',
+                'wp-color-picker',
+                'jquery-ui-autocomplete',
+                'jquery-ui-accordion',
+                'jquery-ui-sortable',
+                'jquery-ui-dialog',
+                'jquery-ui-button',
+                'jquery-form',
+                'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-fileDownload', TPOPlUGIN_SLUG.'-jqColorPicker',
                 TPOPlUGIN_SLUG.'-excellentexport', TPOPlUGIN_SLUG.'-dataTables',
                 TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver',
@@ -281,7 +288,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             wp_enqueue_style(TPOPlUGIN_SLUG.'-InsertWidgets');
 
         }
+
         if(strripos($hook, 'travelpayouts') !== false || strripos($hook, 'tp_control') !== false){
+
             wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminNormalize');
             wp_enqueue_style(TPOPlUGIN_SLUG.'-TPAdminMain');
             wp_enqueue_script(TPOPlUGIN_SLUG.'-TPAdminPluginPage');
