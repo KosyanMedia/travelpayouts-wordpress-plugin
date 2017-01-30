@@ -8,6 +8,7 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use app\includes\models\admin\menu\TPHotelsModel;
 use \core\controllers\TPOAdminMenuController;
 
 class TPHotelsController extends TPOAdminMenuController
@@ -15,7 +16,7 @@ class TPHotelsController extends TPOAdminMenuController
     public $model;
     public function __construct(){
         parent::__construct();
-        //$this->model = new \app\includes\models\admin\menu\TPFlightTicketsModel();
+        $this->model = new TPHotelsModel();
     }
 
     public function action()
