@@ -9,7 +9,9 @@
 namespace app\includes\models\admin\menu;
 
 
-class TPBaseShortcodeOptionModel
+use app\includes\models\admin\TPOptionModel;
+
+abstract class TPBaseShortcodeOptionModel extends TPOptionModel
 {
 
 }
