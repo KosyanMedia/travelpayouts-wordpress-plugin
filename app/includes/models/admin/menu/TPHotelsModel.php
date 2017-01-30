@@ -9,8 +9,6 @@
 namespace app\includes\models\admin\menu;
 
 
-
-
 class TPHotelsModel extends TPBaseShortcodeOptionModel
 {
 
