@@ -9,9 +9,9 @@
 namespace app\includes\models\admin\menu;
 
 
-use app\includes\models\admin\TPOptionModel;
 
-class TPHotelsModel extends TPOptionModel
+
+class TPHotelsModel extends TPBaseShortcodeOptionModel
 {
 
     public function create_option()
