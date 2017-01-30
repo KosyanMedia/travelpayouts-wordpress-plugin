@@ -15,5 +15,6 @@ class TPHotelsModel extends TPBaseShortcodeOptionModel
     public function create_option()
     {
         // TODO: Implement create_option() method.
+        $field = new TPHotelsModel();
     }
 }
