@@ -224,10 +224,11 @@ jQuery(function($){
         var selectedTabHotelsId = sessionStorage.getItem("selectedTabHotels");
         selectedTabHotelsId = selectedTabHotelsId === null ? 0 : selectedTabHotelsId;
 
+
         $( "#tabs-hotels" ).tabs({
-            active: selectedTabFlightsId,
+            active: selectedTabHotelsId,
             activate : function( event, ui ) {
-                selectedTabFlightsId = $(this).tabs("option", "active");
+                selectedTabHotelsId = $(this).tabs("option", "active");
                 sessionStorage.setItem("selectedTabHotels", selectedTabHotelsId);
             }
         });

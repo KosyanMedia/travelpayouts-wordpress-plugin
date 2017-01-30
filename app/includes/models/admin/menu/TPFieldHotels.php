@@ -14,4 +14,19 @@ class TPFieldHotels
     public function __construct(){
 
     }
+    public function TPFieldShortcode_1(){
+
+    }
+    public function TPFieldShortcode_2(){
+
+    }
+    public function TPFieldShortcode_3(){
+
+    }
+    public function TPFieldShortcode_4(){
+
+    }
+    public function TPFieldShortcode_5(){
+
+    }
 }
