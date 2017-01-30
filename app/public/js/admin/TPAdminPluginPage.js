@@ -222,6 +222,15 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabFlights", selectedTabFlightsId);
             }
         });
+        var selectedTabHotelsId = sessionStorage.getItem("selectedTabHotels");
+        selectedTabHotelsId = selectedTabHotelsId === null ? 0 : selectedTabHotelsId;
+        $( "#tabs-hotels" ).tabs({
+            active: selectedTabFlightsId,
+            activate : function( event, ui ) {
+                selectedTabFlightsId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabHotels", selectedTabHotelsId);
+            }
+        });
         var selectedTabSettingsId = sessionStorage.getItem("selectedTabSettings");
         selectedTabSettingsId = selectedTabSettingsId === null ? 0 : selectedTabSettingsId;
         $( "#tabs-settings" ).tabs({
