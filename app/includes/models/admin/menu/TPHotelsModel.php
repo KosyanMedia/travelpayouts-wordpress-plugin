@@ -15,6 +15,11 @@ class TPHotelsModel extends TPBaseShortcodeOptionModel
     public function create_option()
     {
         // TODO: Implement create_option() method.
+        register_setting(
+            'TPHotels',
+            TPOPlUGIN_OPTION_NAME,
+            array(&$this,'save_option')
+        );
         $field = new TPHotelsModel();
     }
 }
