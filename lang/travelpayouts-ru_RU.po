@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-01-26 15:53+0200\n"
+"POT-Creation-Date: 2017-01-30 12:50+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1440,8 +1440,8 @@ msgctxt "admin menu page title flight tickets"
 msgid "tp_admin_menu_page_flight_tickets_title"
 msgstr "Авиабилеты"
 
-#: app/includes/controllers/admin/menu/TPHotelsController.php:25
 #: app/includes/controllers/admin/menu/TPHotelsController.php:26
+#: app/includes/controllers/admin/menu/TPHotelsController.php:27
 msgctxt "admin menu page title hotels"
 msgid "tp_admin_menu_page_hotels_title"
 msgstr "Отели"
@@ -1481,6 +1481,56 @@ msgstr "Виджеты"
 msgctxt "admin menu page title wizard"
 msgid "tp_admin_menu_page_wizard_title"
 msgstr "Визард"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:20
+msgctxt "(Default Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
+msgstr "Стандартная тема"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:26
+msgctxt "(Red Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
+msgstr "Светлая тема с красной кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:32
+msgctxt "(Blue Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
+msgstr "Светлая тема с синей кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:38
+msgctxt "(Salad Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
+msgstr "Светлая тема с салатовой кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:44
+msgctxt "(Purple Header Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
+msgstr "Светлая тема с фиолетовой кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:50
+msgctxt "(Yellow Button Dark Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
+msgstr "Темная тема с желтой кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:56
+msgctxt "(Coral Button Dark Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
+msgstr "Темная тема с кораловой кнопкой"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:62
+msgctxt "(Light Theme with Plum Search Column)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
+msgstr "Светлая тема со сливовой колонкой поиска"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:68
+msgctxt "(Light Theme with Dark Search Column)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
+msgstr "Светлая тема с темной колонкой поиска"
+
+#: app/includes/models/admin/menu/TPBaseShortcodeOptionModel.php:74
+msgctxt "(Mint Button Light Theme)"
+msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
+msgstr "Светлая тема с мятной кнопкой"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
 msgctxt "(Don't add links to all titles)"
@@ -2705,56 +2755,6 @@ msgctxt "(Currency)"
 msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:83
-msgctxt "(Default Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
-msgstr "Стандартная тема"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:89
-msgctxt "(Red Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
-msgstr "Светлая тема с красной кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:95
-msgctxt "(Blue Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
-msgstr "Светлая тема с синей кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:101
-msgctxt "(Salad Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
-msgstr "Светлая тема с салатовой кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:107
-msgctxt "(Purple Header Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
-msgstr "Светлая тема с фиолетовой кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:113
-msgctxt "(Yellow Button Dark Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
-msgstr "Темная тема с желтой кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:119
-msgctxt "(Coral Button Dark Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
-msgstr "Темная тема с кораловой кнопкой"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:125
-msgctxt "(Light Theme with Plum Search Column)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
-msgstr "Светлая тема со сливовой колонкой поиска"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:131
-msgctxt "(Light Theme with Dark Search Column)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
-msgstr "Светлая тема с темной колонкой поиска"
-
-#: app/includes/models/admin/menu/TPFlightTicketsModel.php:137
-msgctxt "(Mint Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
-msgstr "Светлая тема с мятной кнопкой"
-
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
 msgctxt "(Settings saved.)"
 msgid "tp_admin_page_admin_notice_modal_label"
@@ -3810,6 +3810,11 @@ msgstr "Дешевые перелеты в город"
 msgctxt "(Save changes)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
 msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPHotels.view.php:3
+msgctxt "(Hotels)"
+msgid "tp_admin_page_hotels_paragraph_1"
+msgstr "Отели"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:4
 msgctxt "(Search forms)"

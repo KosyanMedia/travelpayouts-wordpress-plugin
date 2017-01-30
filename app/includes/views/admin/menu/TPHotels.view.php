@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: romansolomashenko
- * Date: 30.01.17
- * Time: 10:46 AM
- */
+<div class="TPWrapper TPWrapperFlights">
+    <p class="TPMainTitle">
+        <?php _ex('tp_admin_page_hotels_paragraph_1',
+            '(Hotels)', TPOPlUGIN_TEXTDOMAIN); ?>
+    </p>
+    <div id="tabs-hotels">
+
+    </div>
+</div>
