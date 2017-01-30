@@ -1,6 +1,6 @@
 <?php
 namespace app\includes\models\admin\menu;
-class TPFlightTicketsModel extends \app\includes\models\admin\TPOptionModel{
+class TPFlightTicketsModel extends TPBaseShortcodeOptionModel {
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_tp_default_style', array( &$this, 'tpDefaultTableStyle'));
