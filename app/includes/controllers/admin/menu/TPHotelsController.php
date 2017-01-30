@@ -34,5 +34,8 @@ class TPHotelsController extends TPOAdminMenuController
     public function render()
     {
         // TODO: Implement render() method.
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotels.view.php";
+        $data = array();
+        parent::loadView($pathView, 0, $data);
     }
 }
