@@ -117,7 +117,7 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 'hotels_fields' => array(
                     'ru' => TPFieldsLabelTable::getHotelsFieldsLabelRU(),
-                    'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),,
+                    'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),
                 ),
                 'title_case' => array(
                     'origin' => 'ro',
