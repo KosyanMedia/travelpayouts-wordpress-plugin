@@ -8,6 +8,7 @@
 namespace app\includes;
 
 use \app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPFieldsLabelTable;
 
 class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
@@ -110,9 +111,13 @@ class TPDefault implements  \core\TPODefault{
                 'localization' => $localization,
                 'currency' => $currency,
                 'fields' => array(
-                    'ru' => \app\includes\common\TPFieldsLabelTable::getFieldsLabelRU(),
-                    'en' => \app\includes\common\TPFieldsLabelTable::getFieldsLabelEN(),
-                    'th' => \app\includes\common\TPFieldsLabelTable::getFieldsLabelTH(),
+                    'ru' => TPFieldsLabelTable::getFieldsLabelRU(),
+                    'en' => TPFieldsLabelTable::getFieldsLabelEN(),
+                    'th' => TPFieldsLabelTable::getFieldsLabelTH(),
+                ),
+                'hotels_fields' => array(
+                    'ru' => TPFieldsLabelTable::getHotelsFieldsLabelRU(),
+                    'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),,
                 ),
                 'title_case' => array(
                     'origin' => 'ro',
