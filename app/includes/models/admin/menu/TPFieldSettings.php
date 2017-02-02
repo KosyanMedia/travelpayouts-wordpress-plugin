@@ -7,6 +7,8 @@
  */
 namespace app\includes\models\admin\menu;
 use app\includes\common\TPHostURL;
+use app\includes\common\TPLang;
+use app\includes\TPPlugin;
 
 class TPFieldSettings {
 
@@ -518,40 +520,104 @@ class TPFieldSettings {
         <div class="TP-listColum">
             <span><?php _ex('tp_admin_page_settings_tab_localization_field_table_td_label',
                     '(Fields (you can edit values on your own, e.g. for your own language))', TPOPlUGIN_TEXTDOMAIN); ?></span>
-            <?php
-            $local_table_fields = '<ul class="titleHeadTable">
-                           <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
-                      </ul>';
-            foreach(\app\includes\TPPlugin::$options['local']['fields'] as $key_local => $fields){
-                $showFields = (\app\includes\common\TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
-                $local_table_fields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
-                $i = 0;
+            <div id="tabs-local_field">
+                <nav class="TPNavigation TPNavigationLocal">
+                    <ul class="TPMainMenu TPMainMenuLocal">
+                        <li>
+                            <a href="#tabs-local_field_flight" class="TPMainMenuA">
+                            <span>
+                            <?php _ex('tp_admin_page_settings_tab_menu_local_tab_field_local_flight',
+                                '(Flight Tickets)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
+                            </a>
+                        </li>
 
-                foreach(array_chunk($fields['label'], 2, true) as $value){
-                    $local_table_fields .= '<div class="TP-ListRowColum">';
-                    foreach( $value as $key_label => $label ){
-                        $local_table_fields .= '<div class="infoRow" title="'.$fields['label_default'][$key_label].'"></div>
-                                                    <div>
-                                                        <label>
-                                                            <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label]['.$key_label.']" type="text" value="'.$label.'"/>
-                                                            <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label_default]['.$key_label.']" type="hidden" value="'.$fields['label_default'][$key_label].'"/>
-                                                        </label>
-                                                    </div>';
-                    }
-                    $local_table_fields .= '</div>';
-                }
-                //error_log(print_r(array_chunk($fields['label'], 2, true), TRUE));
+                        <li>
+                            <a href="#tabs-local_field_hotel" class="TPMainMenuA">
+                            <span>
+                            <?php _ex('tp_admin_page_settings_tab_menu_local_tab_field_local_hotel',
+                                '(Hotels)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
+                            </a>
+                        </li>
 
-                $local_table_fields .= '</div>';
-            }
-            //error_log($local_table_fields);
-            echo $local_table_fields;
-            ?>
+                    </ul>
+                </nav>
+                <div id="tabs-local_field_flight">
+                    <?php $this->tabLocalFieldFlight(); ?>
+                </div>
+                <div id="tabs-local_field_hotel">
+                    <?php $this->tabLocalFieldHotel(); ?>
+                </div>
+            </div>
+
+
 
 
         </div>
     <?php
     }
+
+
+    public function tabLocalFieldFlight(){
+        $local_table_fields = '<ul class="titleHeadTable">
+               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+          </ul>';
+        foreach(\app\includes\TPPlugin::$options['local']['fields'] as $key_local => $fields){
+            $showFields = (\app\includes\common\TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
+            $local_table_fields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
+            $i = 0;
+
+            foreach(array_chunk($fields['label'], 2, true) as $value){
+                $local_table_fields .= '<div class="TP-ListRowColum">';
+                foreach( $value as $key_label => $label ){
+                    $local_table_fields .= '<div class="infoRow" title="'.$fields['label_default'][$key_label].'"></div>
+                                        <div>
+                                            <label>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label]['.$key_label.']" type="text" value="'.$label.'"/>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][fields]['.$key_local.'][label_default]['.$key_label.']" type="hidden" value="'.$fields['label_default'][$key_label].'"/>
+                                            </label>
+                                        </div>';
+                }
+                $local_table_fields .= '</div>';
+            }
+            //error_log(print_r(array_chunk($fields['label'], 2, true), TRUE));
+
+            $local_table_fields .= '</div>';
+        }
+        //error_log($local_table_fields);
+        echo $local_table_fields;
+    }
+
+    public function tabLocalFieldHotel(){
+        $localFields = '';
+        $localFields = '<ul class="titleHeadTable">
+               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+          </ul>';
+        foreach(TPPlugin::$options['local']['hotels_fields'] as $key_local => $fields){
+            $showFields = (TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
+            $localFields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
+
+            foreach(array_chunk($fields['label'], 2, true) as $value){
+                $localFields .= '<div class="TP-ListRowColum">';
+                foreach( $value as $key_label => $label ){
+                    $localFields .= '<div class="infoRow" title="'.$fields['label_default'][$key_label].'"></div>
+                                        <div>
+                                            <label>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][hotels_fields]['.$key_local.'][label]['.$key_label.']" type="text" value="'.$label.'"/>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][hotels_fields]['.$key_local.'][label_default]['.$key_label.']" type="hidden" value="'.$fields['label_default'][$key_label].'"/>
+                                            </label>
+                                        </div>';
+                }
+                $localFields .= '</div>';
+            }
+
+            $localFields .= '</div>';
+        }
+        echo $localFields;
+    }
+
+
     public function TPFieldHost(){
         $hosts = \app\includes\common\TPHostURL::getHost();
         $host_option = \app\includes\TPPlugin::$options['local']['host'];

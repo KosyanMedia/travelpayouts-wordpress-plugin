@@ -241,6 +241,19 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabSettings", selectedTabSettingsId);
             }
         });
+
+
+        var selectedTabLocalFieldId = sessionStorage.getItem("selectedTabLocalField");
+        selectedTabLocalFieldId = selectedTabLocalFieldId === null ? 0 : selectedTabLocalFieldId;
+        $( "#tabs-local_field" ).tabs({
+            active: selectedTabLocalFieldId,
+            activate : function( event, ui ) {
+                selectedTabLocalFieldId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabLocalField", selectedTabLocalFieldId);
+            }
+        });
+
+
         var selectedTabStatisticId = sessionStorage.getItem("selectedTabStatistic");
         selectedTabStatisticId = selectedTabStatisticId === null ? 0 : selectedTabStatisticId;
         $( "#tabs-statistic" ).tabs({

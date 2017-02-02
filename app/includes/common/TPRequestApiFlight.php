@@ -208,19 +208,24 @@ class TPRequestApiFlight extends TPRequestApi
         $origin = "&origin={$origin}";
         $destination = "&destination={$destination}&show_to_affiliates=true";
         $extra = $currency.$origin.$destination;
-        $return_two = array();
+        $return_two = '';
         if($current_day > ceil($number_days / 2)){
             $type = 1;
             $month_next = date('Y-m-d', mktime(0, 0, 0, $current_month + $type, 1, date("Y")));
             $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month_next}{$token}";
             if ($return_url == true){
+                $return_two = '';
                 $return_two = $request_string;
             } else {
+                $return_two = array();
                 $return_two = $this->objectToArray($this->request($request_string));
             }
 
         }
         $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month}{$token}";
+
+
+
         if ($return_url == true){
             return $request_string.' | '.$return_two;
         }
