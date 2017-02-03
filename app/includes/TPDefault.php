@@ -772,6 +772,13 @@ class TPDefault implements  \core\TPODefault{
                 'all_link' => 1,
                 'limit' => 2,
                 'not_title' => 1,
+            ),
+            'shortcodes_hotels' => array(
+                '1' => array(),
+                '2' => array(),
+                '3' => array(),
+                '4' => array(),
+                '5' => array(),
             )
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
