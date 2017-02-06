@@ -35,25 +35,29 @@ class TPFieldHotels
      * Отели Города по цене ОТ-ДО
      */
     public function TPFieldShortcode_2(){
-
+        $shortcode = 2;
+        $this->getFieldSortableSection($shortcode);
     }
     /**
      * Отели в городе по звездам
      */
     public function TPFieldShortcode_3(){
-
+        $shortcode = 3;
+        $this->getFieldSortableSection($shortcode);
     }
     /**
      * Стоимость проживания В ГОРОДЕ на Х дней
      */
     public function TPFieldShortcode_4(){
-
+        $shortcode = 4;
+        $this->getFieldSortableSection($shortcode);
     }
     /**
      * Стоимость проживания В ГОРОДЕ на уикенд
      */
     public function TPFieldShortcode_5(){
-
+        $shortcode = 5;
+        $this->getFieldSortableSection($shortcode);
     }
 
     public function getFieldTitle($shortcode, $type = 'shortcodes'){
