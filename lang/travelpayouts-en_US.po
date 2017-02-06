@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 18:04+0200\n"
+"POT-Creation-Date: 2017-02-06 18:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2042,31 +2042,31 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label
 msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
-#: app/includes/models/admin/menu/TPFieldHotels.php:161
+#: app/includes/models/admin/menu/TPFieldHotels.php:213
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
-#: app/includes/models/admin/menu/TPFieldHotels.php:166
+#: app/includes/models/admin/menu/TPFieldHotels.php:218
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
-#: app/includes/models/admin/menu/TPFieldHotels.php:171
+#: app/includes/models/admin/menu/TPFieldHotels.php:223
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
-#: app/includes/models/admin/menu/TPFieldHotels.php:176
+#: app/includes/models/admin/menu/TPFieldHotels.php:228
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
-#: app/includes/models/admin/menu/TPFieldHotels.php:181
+#: app/includes/models/admin/menu/TPFieldHotels.php:233
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2225,57 +2225,79 @@ msgctxt "(Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label"
 msgstr "Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:141
-msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
-msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
+#: app/includes/models/admin/menu/TPFieldHotels.php:144
+msgctxt "(Use {location} variable for city autoset)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1"
+msgstr "Use {location} variable for city autoset"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:154
+#: app/includes/models/admin/menu/TPFieldHotels.php:153
+msgctxt ""
+"(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
+msgstr ""
+"Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:164
+msgctxt "(Use {location} variable for city autoset, {stars} - number of stars)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3"
+msgstr "Use {location} variable for city autoset, {stars} - number of stars"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:175
+msgctxt "(Use {location} variable for city autoset, {number} - number of days)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4"
+msgstr "Use {location} variable for city autoset, {number} - number of days"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:186
+msgctxt "(Use {location} variable for city autoset)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5"
+msgstr "Use {location} variable for city autoset"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:206
 msgctxt "(Title tag)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Title tag"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:233
+#: app/includes/models/admin/menu/TPFieldHotels.php:285
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Table Columns"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:239
+#: app/includes/models/admin/menu/TPFieldHotels.php:291
 msgctxt "(Not selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Not selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:249
+#: app/includes/models/admin/menu/TPFieldHotels.php:301
 msgctxt "(Selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:295
+#: app/includes/models/admin/menu/TPFieldHotels.php:347
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Extra marker"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:316
+#: app/includes/models/admin/menu/TPFieldHotels.php:368
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Rows per page"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:338
+#: app/includes/models/admin/menu/TPFieldHotels.php:390
 msgctxt "(Paginate)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:354
+#: app/includes/models/admin/menu/TPFieldHotels.php:406
 msgctxt "(Button Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Button Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:380
+#: app/includes/models/admin/menu/TPFieldHotels.php:432
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "\"price\" variable can be used"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:395
+#: app/includes/models/admin/menu/TPFieldHotels.php:447
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Sort by column"
@@ -5052,6 +5074,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
+#~ msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
 
 #~ msgctxt ""
 #~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "

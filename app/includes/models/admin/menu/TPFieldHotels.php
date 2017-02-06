@@ -137,10 +137,62 @@ class TPFieldHotels
                 }
             }
 
-            ?><p>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2',
-                    '(Use "origin" and "destination" variables to add the city automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
-            </p>
+            switch($shortcode){
+                case 1:
+                    ?>
+                    <p>
+                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1',
+                            '(Use {location} variable for city autoset)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <?php
+                    break;
+                case 2:
+                    ?>
+                    <p>
+                        <?php
+                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2',
+                            '(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </p>
+                    <?php
+                    break;
+                case 3:
+                    ?>
+                    <p>
+                        <?php
+                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3',
+                            '(Use {location} variable for city autoset, {stars} - number of stars)',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </p>
+                    <?php
+                    break;
+                case 4:
+                    ?>
+                    <p>
+                        <?php
+                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4',
+                            '(Use {location} variable for city autoset, {number} - number of days)',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </p>
+                    <?php
+                    break;
+                case 5:
+                    ?>
+                    <p>
+                        <?php
+                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5',
+                            '(Use {location} variable for city autoset)',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </p>
+                    <?php
+                    break;
+
+            }
+            ?>
         </label>
         <?php
     }
