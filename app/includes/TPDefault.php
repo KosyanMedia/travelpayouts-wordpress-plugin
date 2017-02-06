@@ -780,6 +780,12 @@ class TPDefault implements  \core\TPODefault{
             'shortcodes_hotels' => array(
                 //Подборки отелей
                 '1' => array(
+                    'title' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsCollections',
                     'selected' => array(
                         'name',
                         'stars',
@@ -804,10 +810,15 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
-                    'extra_table_marker' => 'hotelsCollections'
                 ),
                 //Отели Города по цене ОТ-ДО
                 '2' => array(
+                    'title' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsFromTo',
                     'selected' => array(
                         'name',
                         'stars',
@@ -832,10 +843,15 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
-                    'extra_table_marker' => 'hotelsFromTo'
                 ),
                 //Отели в городе по звездам
                 '3' => array(
+                    'title' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsStars',
                     'selected' => array(
                         'name',
                         'stars',
@@ -860,10 +876,15 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
-                    'extra_table_marker' => 'hotelsStars'
                 ),
                 //Стоимость проживания В ГОРОДЕ на Х дней
                 '4' => array(
+                    'title' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsPrice',
                     'selected' => array(
                         'name',
                         'stars',
@@ -888,10 +909,15 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
-                    'extra_table_marker' => 'hotelsPrice'
                 ),
                 //Стоимость проживания В ГОРОДЕ на уикенд
                 '5' => array(
+                    'title' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsPriceWeekend',
                     'selected' => array(
                         'name',
                         'stars',
@@ -916,7 +942,6 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
-                    'extra_table_marker' => 'hotelsPriceWeekend'
                 ),
             )
         );

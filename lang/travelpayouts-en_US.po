@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 15:14+0200\n"
+"POT-Creation-Date: 2017-02-06 15:30+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1922,55 +1922,51 @@ msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
 msgstr "Reset to Default styles"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:379
-#: app/includes/models/admin/menu/TPFieldHotels.php:72
 msgctxt "(Title)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label"
 msgstr "Title"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:405
-#: app/includes/models/admin/menu/TPFieldHotels.php:98
 msgctxt "(Use \"airline\" variable to add the Airlines automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "Use \"airline\" variable to add the Airlines automatically"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:412
-#: app/includes/models/admin/menu/TPFieldHotels.php:105
 msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:430
-#: app/includes/models/admin/menu/TPFieldHotels.php:123
 msgctxt "(Title tag)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
-#: app/includes/models/admin/menu/TPFieldHotels.php:130
+#: app/includes/models/admin/menu/TPFieldHotels.php:146
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
-#: app/includes/models/admin/menu/TPFieldHotels.php:135
+#: app/includes/models/admin/menu/TPFieldHotels.php:151
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
-#: app/includes/models/admin/menu/TPFieldHotels.php:140
+#: app/includes/models/admin/menu/TPFieldHotels.php:156
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
-#: app/includes/models/admin/menu/TPFieldHotels.php:145
+#: app/includes/models/admin/menu/TPFieldHotels.php:161
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
-#: app/includes/models/admin/menu/TPFieldHotels.php:150
+#: app/includes/models/admin/menu/TPFieldHotels.php:166
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2124,22 +2120,37 @@ msgctxt "(Choose form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form"
 msgstr "Choose form"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:202
+#: app/includes/models/admin/menu/TPFieldHotels.php:100
+msgctxt "(Title)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label"
+msgstr "Title"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:126
+msgctxt "(Use \"origin\" and \"destination\" variables to add the city automatically)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
+msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:139
+msgctxt "(Title tag)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label"
+msgstr "Title tag"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:218
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Table Columns"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:208
+#: app/includes/models/admin/menu/TPFieldHotels.php:224
 msgctxt "(Not selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Not selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:218
+#: app/includes/models/admin/menu/TPFieldHotels.php:234
 msgctxt "(Selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:264
+#: app/includes/models/admin/menu/TPFieldHotels.php:280
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Extra marker"

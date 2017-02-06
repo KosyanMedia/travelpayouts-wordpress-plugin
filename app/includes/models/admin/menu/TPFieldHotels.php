@@ -38,6 +38,10 @@ class TPFieldHotels
     public function TPFieldShortcode_2(){
         $shortcode = 2;
         ?>
+        <div class="TP-HeadTable">
+            <?php $this->getFieldTitle($shortcode); ?>
+            <?php $this->getFieldTitleTag($shortcode); ?>
+        </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
@@ -48,6 +52,10 @@ class TPFieldHotels
     public function TPFieldShortcode_3(){
         $shortcode = 3;
         ?>
+        <div class="TP-HeadTable">
+            <?php $this->getFieldTitle($shortcode); ?>
+            <?php $this->getFieldTitleTag($shortcode); ?>
+        </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
@@ -58,6 +66,10 @@ class TPFieldHotels
     public function TPFieldShortcode_4(){
         $shortcode = 4;
         ?>
+        <div class="TP-HeadTable">
+            <?php $this->getFieldTitle($shortcode); ?>
+            <?php $this->getFieldTitleTag($shortcode); ?>
+        </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
@@ -68,6 +80,10 @@ class TPFieldHotels
     public function TPFieldShortcode_5(){
         $shortcode = 5;
         ?>
+        <div class="TP-HeadTable">
+            <?php $this->getFieldTitle($shortcode); ?>
+            <?php $this->getFieldTitleTag($shortcode); ?>
+        </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
@@ -77,67 +93,55 @@ class TPFieldHotels
      * @param $shortcode
      * @param string $type
      */
-    public function getFieldTitle($shortcode, $type = 'shortcodes'){
+    public function getFieldTitle($shortcode, $type = 'shortcodes_hotels'){
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label',
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label',
                     '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
 
-            if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options[$type][$shortcode]['title'])){
-                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+            if (!array_key_exists(TPLang::getLang(), TPPlugin::$options[$type][$shortcode]['title'])){
+                foreach(TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
                     ?>
-                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                    <input type="<?php echo $typeFields; ?>"
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
                     <?php
                 }
             } else {
-                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                foreach(TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
                     ?>
-                    <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                    <input type="<?php echo $typeFields; ?>"
+                           name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
+                           value="<?php echo esc_attr(TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
                     <?php
                 }
             }
 
-            switch($shortcode){
-                case 10:
-                    ?><p>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1',
-                    '(Use "airline" variable to add the Airlines automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
-
-                    </p><?php
-                    break;
-                default:
-                    ?><p>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2',
+            ?><p>
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2',
                     '(Use "origin" and "destination" variables to add the city automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </p>
-                    <?php
-                    break;
-            }
-            ?>
-
+            </p>
         </label>
         <?php
     }
     /**
      * @param $shortcode
      */
-    public function getFieldTitleTag($shortcode, $type = 'shortcodes'){
+    public function getFieldTitleTag($shortcode, $type = 'shortcodes_hotels'){
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label',
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label',
                     '(Title tag)', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
+                <option <?php selected(TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
                     value="div">
                     <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1',
                         '(DIV)', TPOPlUGIN_TEXTDOMAIN); ?>
