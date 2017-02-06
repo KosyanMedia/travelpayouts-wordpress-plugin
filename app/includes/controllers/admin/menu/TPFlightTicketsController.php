@@ -6,11 +6,14 @@
  * Time: 17:52
  */
 namespace app\includes\controllers\admin\menu;
+
+use \app\includes\models\admin\menu\TPFlightTicketsModel;
+
 class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\admin\menu\TPFlightTicketsModel();
+        $this->model = new TPFlightTicketsModel();
     }
     public function action()
     {
@@ -30,7 +33,7 @@ class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController
         // TODO: Implement render() method.
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
         $data = array(
-            'themes' => $this->model->getThemesTables()
+            'themes' => TPFlightTicketsModel::getThemesTables()
         );
         parent::loadView($pathView, 0, $data);
     }

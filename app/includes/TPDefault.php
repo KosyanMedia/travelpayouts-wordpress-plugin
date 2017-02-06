@@ -9,6 +9,7 @@ namespace app\includes;
 
 use \app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPFieldsLabelTable;
+use app\includes\models\admin\menu\TPBaseShortcodeOptionModel;
 
 class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
@@ -773,7 +774,11 @@ class TPDefault implements  \core\TPODefault{
                 'limit' => 2,
                 'not_title' => 1,
             ),
+            'themes_table_hotels' => array(
+                'name' => self::getRandomThemesTable()
+            ),
             'shortcodes_hotels' => array(
+                //Подборки отелей
                 '1' => array(
                     'selected' => array(
                         'name',
@@ -799,7 +804,9 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
+                    'extra_table_marker' => 'hotelsCollections'
                 ),
+                //Отели Города по цене ОТ-ДО
                 '2' => array(
                     'selected' => array(
                         'name',
@@ -825,7 +832,9 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
+                    'extra_table_marker' => 'hotelsFromTo'
                 ),
+                //Отели в городе по звездам
                 '3' => array(
                     'selected' => array(
                         'name',
@@ -851,7 +860,9 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
+                    'extra_table_marker' => 'hotelsStars'
                 ),
+                //Стоимость проживания В ГОРОДЕ на Х дней
                 '4' => array(
                     'selected' => array(
                         'name',
@@ -877,7 +888,9 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
+                    'extra_table_marker' => 'hotelsPrice'
                 ),
+                //Стоимость проживания В ГОРОДЕ на уикенд
                 '5' => array(
                     'selected' => array(
                         'name',
@@ -903,6 +916,7 @@ class TPDefault implements  \core\TPODefault{
                         'price_avg',
                         'button',
                     ),
+                    'extra_table_marker' => 'hotelsPriceWeekend'
                 ),
             )
         );
@@ -911,12 +925,12 @@ class TPDefault implements  \core\TPODefault{
     }
 
     public static function getRandomThemesTable(){
-        $TPFlightTicketsModel = new \app\includes\models\admin\menu\TPFlightTicketsModel();
+        $themes = TPBaseShortcodeOptionModel::getThemesTables();
         if(!function_exists("array_column"))
         {
-            $themesNames = self::array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+            $themesNames = self::array_column($themes, 'name');
         } else {
-            $themesNames = array_column($TPFlightTicketsModel->getThemesTables(), 'name');
+            $themesNames = array_column($themes, 'name');
         }
 
         return $themesNames[array_rand($themesNames)];

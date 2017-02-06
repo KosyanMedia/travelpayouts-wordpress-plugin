@@ -27,6 +27,7 @@ class TPFieldHotels
             <?php $this->getFieldTitle($shortcode); ?>
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
 
@@ -36,6 +37,9 @@ class TPFieldHotels
      */
     public function TPFieldShortcode_2(){
         $shortcode = 2;
+        ?>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php
         $this->getFieldSortableSection($shortcode);
     }
     /**
@@ -43,6 +47,9 @@ class TPFieldHotels
      */
     public function TPFieldShortcode_3(){
         $shortcode = 3;
+        ?>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php
         $this->getFieldSortableSection($shortcode);
     }
     /**
@@ -50,6 +57,9 @@ class TPFieldHotels
      */
     public function TPFieldShortcode_4(){
         $shortcode = 4;
+        ?>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php
         $this->getFieldSortableSection($shortcode);
     }
     /**
@@ -57,6 +67,9 @@ class TPFieldHotels
      */
     public function TPFieldShortcode_5(){
         $shortcode = 5;
+        ?>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php
         $this->getFieldSortableSection($shortcode);
     }
 
@@ -227,6 +240,10 @@ class TPFieldHotels
         <?php
     }
 
+    /**
+     * @param $fieldKey
+     * @return string
+     */
     public function getFieldSortTDLabel($fieldKey){
         $fieldLabel = "";
         if(isset(TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label_default'][$fieldKey])){
@@ -235,6 +252,39 @@ class TPFieldHotels
             $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getDefaultLang()]['label_default'][$fieldKey];
         }
         return $fieldLabel;
+    }
+
+    /**
+     *
+     */
+    public function TPFieldHotelsThemesTable(){
+        ?>
+        <input class="TPThemesNameHidden" type="hidden"
+               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[themes_table_hotels][name]"
+               value="<?php echo TPPlugin::$options['themes_table_hotels']['name']?>"/>
+        <?php
+    }
+
+    /**
+     * @param $shortcode
+     */
+    public function getFieldExtraMarker($shortcode){
+        ?>
+        <div class="TP-HeadTable">
+            <label>
+                <span>
+                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label',
+                        '(Extra marker)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+                <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][extra_table_marker]"
+                       value="<?php echo esc_attr(TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker']) ?>"
+                       class="TPFieldInputText"/>
+            </label>
+            <label>
+
+            </label>
+        </div>
+        <?php
     }
 
 }

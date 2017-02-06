@@ -13,7 +13,7 @@ use app\includes\models\admin\TPOptionModel;
 
 abstract class TPBaseShortcodeOptionModel extends TPOptionModel
 {
-    public function getThemesTables(){
+    public static function getThemesTables(){
         $themesTables = array(
             array(
                 'name' => 'default-theme',

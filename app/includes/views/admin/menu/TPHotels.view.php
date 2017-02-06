@@ -31,13 +31,13 @@
         <div id="tabs-hotels_config">
             <?php
                 $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotelsTabConfig.view.php";
-                $this->loadView($pathView);
+                $this->loadView($pathView, 0, $data);
             ?>
         </div>
         <div id="tabs-hotels_themes">
             <?php
                 $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotelsTabThemes.view.php";
-                $this->loadView($pathView);
+                $this->loadView($pathView, 0, $data);
             ?>
         </div>
     </div>

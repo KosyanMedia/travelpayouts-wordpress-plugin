@@ -41,5 +41,9 @@ class TPHotelsModel extends TPBaseShortcodeOptionModel
         add_settings_field('tp_hotels_shortcode_5_td', '', array(&$field ,'TPFieldShortcode_5'),
             'tp_settings_hotels_shortcode_5', 'tp_settings_hotels_shortcode_5_id' );
 
+        add_settings_section( 'tp_settings_hotels_themes_table_id', '', '', 'tp_settings_hotels_themes_table' );
+        add_settings_field('tp_hotels_themes_table_td', '', array(&$field ,'TPFieldHotelsThemesTable'),
+            'tp_settings_hotels_themes_table', 'tp_settings_hotels_themes_table_id' );
+
     }
 }
