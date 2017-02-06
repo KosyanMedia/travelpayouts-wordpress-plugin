@@ -60,6 +60,10 @@ class TPFieldHotels
         $this->getFieldSortableSection($shortcode);
     }
 
+    /**
+     * @param $shortcode
+     * @param string $type
+     */
     public function getFieldTitle($shortcode, $type = 'shortcodes'){
         ?>
         <label>
@@ -151,6 +155,9 @@ class TPFieldHotels
         <?php
     }
 
+    /**
+     * @param $shortcode
+     */
     public function getFieldSortableSection($shortcode){
         $settingsShortcodeSortable = '';
         $settingsShortcodeSortableSelected = '';
@@ -191,13 +198,13 @@ class TPFieldHotels
 
         <div class="TP-SortableSection">
             <p class="titleSortable">
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label',
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label',
                     '(Table Columns)', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
             <div class="TP-ContainerSorTable">
                 <div data-force="30" class="layer TP-blockSortable" >
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
+                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
                             '(Not selected)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
@@ -207,7 +214,7 @@ class TPFieldHotels
 
                 <div data-force="18" class="layer TP-blockSortable">
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select',
+                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select',
                             '(Selected)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
