@@ -8,6 +8,8 @@
 
 namespace app\includes\models\admin\menu;
 
+use \app\includes\TPPlugin;
+use \app\includes\common\TPLang;
 
 class TPFieldHotels
 {
@@ -26,6 +28,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php
+        $this->getFieldSortableSection($shortcode);
 
     }
     /**
@@ -142,6 +145,85 @@ class TPFieldHotels
 
         </label>
         <?php
+    }
+
+    public function getFieldSortableSection($shortcode){
+        $settingsShortcodeSortable = '';
+        $settingsShortcodeSortableSelected = '';
+        $fieldsInput = '';
+        if(!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected'])){
+            $selected = array_unique(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected']);
+            $fields = TPPlugin::$options['shortcodes_hotels'][$shortcode]['fields'];
+            $arraySort = array();
+            foreach($selected as $key_s => $selec){
+                if (($key = array_search($selec, $fields)) !== false) {
+                    $arraySort[] = $selec;
+                    unset($fields[$key]);
+                }
+            }
+            $arraySort = array_merge($arraySort, $fields);
+            foreach($arraySort as $key_f => $field) {
+                if(in_array($field, $selected)){
+                    $settingsShortcodeSortableSelected .= '<li data-key="' . $field . '"
+                              data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_hotels][' . $shortcode . '][selected][]"
+                              class="">'
+                        .$this->getFieldSortTDLabel($field)
+                        .'<input type="hidden" class="itemSortableSelected" name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_hotels][' . $shortcode . '][selected][]" value="' . $field . '"/>'
+                        .'</li>';
+                } else {
+                    $settingsShortcodeSortable .= '<li data-key="' . $field . '"
+                              data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_hotels][' . $shortcode . '][selected][]"
+                              class="">'
+                        .$this->getFieldSortTDLabel($field)
+                        .'</li>';
+                }
+                $fieldsInput .= '<input type="hidden"  name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_hotels][' . $shortcode . '][fields][]" value="' . $field . '"/>';
+            }
+
+        }else{
+
+        }
+        ?>
+
+        <div class="TP-SortableSection">
+            <p class="titleSortable">
+                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label',
+                    '(Table Columns)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </p>
+            <div class="TP-ContainerSorTable">
+                <div data-force="30" class="layer TP-blockSortable" >
+                    <p class="TP-titleBlockSortable">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
+                            '(Not selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
+                        <?php echo $settingsShortcodeSortable; ?>
+                    </ul>
+                </div>
+
+                <div data-force="18" class="layer TP-blockSortable">
+                    <p class="TP-titleBlockSortable">
+                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select',
+                            '(Selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
+                        <?php echo $settingsShortcodeSortableSelected; ?>
+                    </ul>
+                </div>
+                <?php echo $fieldsInput; ?>
+            </div>
+        </div>
+        <?php
+    }
+
+    public function getFieldSortTDLabel($fieldKey){
+        $fieldLabel = "";
+        if(isset(TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label_default'][$fieldKey])){
+            $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label_default'][$fieldKey];
+        }else{
+            $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getDefaultLang()]['label_default'][$fieldKey];
+        }
+        return $fieldLabel;
     }
 
 }
