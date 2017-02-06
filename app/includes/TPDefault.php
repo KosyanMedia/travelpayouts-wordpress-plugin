@@ -788,6 +788,11 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'hotelsCollections',
                     'paginate' => 10,
                     'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'sort_column' => 0,
                     'selected' => array(
                         'name',
                         'stars',
@@ -823,6 +828,11 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'hotelsFromTo',
                     'paginate' => 10,
                     'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'sort_column' => 0,
                     'selected' => array(
                         'name',
                         'stars',
@@ -858,6 +868,11 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'hotelsStars',
                     'paginate' => 10,
                     'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'sort_column' => 0,
                     'selected' => array(
                         'name',
                         'stars',
@@ -893,6 +908,11 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'hotelsPrice',
                     'paginate' => 10,
                     'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'sort_column' => 0,
                     'selected' => array(
                         'name',
                         'stars',
@@ -928,6 +948,11 @@ class TPDefault implements  \core\TPODefault{
                     'extra_table_marker' => 'hotelsPriceWeekend',
                     'paginate' => 10,
                     'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => '',
+                        'ru' => '',
+                    ),
+                    'sort_column' => 0,
                     'selected' => array(
                         'name',
                         'stars',

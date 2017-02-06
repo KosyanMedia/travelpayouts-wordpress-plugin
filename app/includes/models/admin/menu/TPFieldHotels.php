@@ -29,6 +29,8 @@ class TPFieldHotels
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
 
@@ -45,6 +47,8 @@ class TPFieldHotels
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -60,6 +64,8 @@ class TPFieldHotels
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -75,6 +81,8 @@ class TPFieldHotels
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -90,6 +98,8 @@ class TPFieldHotels
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
         <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -333,6 +343,79 @@ class TPFieldHotels
         </div>
 
 
+        <?php
+    }
+
+    public function getFieldTitleButton($shortcode){
+        ?>
+        <div class="TP-HeadTable">
+            <label>
+                <span>
+                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label',
+                        '(Button Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+                <?php
+
+                if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'])){
+                    foreach(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'] as $key_local => $title){
+                        $typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+                        ?>
+                        <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'][$key_local]) ?>"/>
+                        <?php
+                    }
+                } else {
+                    foreach(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'] as $key_local => $title){
+                        $typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
+                        ?>
+                        <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'][$key_local]) ?>"/>
+                        <?php
+                    }
+                }
+
+
+                ?>
+                <p>
+                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help',
+                        '("price" variable can be used)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </p>
+            </label>
+            <label></label>
+        </div>
+        <?php
+    }
+
+    public function getFieldSortTd($shortcode){
+
+        ?>
+        <div class="TP-HeadTable TPSortFieldSelect">
+            <label class="TPSortFieldLabel">
+                <span>
+                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label',
+                        '(Sort by column)', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
+                    <?php
+                    if(!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected'])) {
+                        $selected = TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected'];
+                        foreach($selected as $key => $sel){
+                            ?>
+                            <option value="<?php echo $key;?>" <?php selected( TPPlugin::$options['shortcodes_hotels'][$shortcode]['sort_column'], $key ); ?>>
+                                <?php echo $this->getFieldSortTDLabel($sel);?>
+                            </option>
+                            <?php
+                        }
+                    }else{
+                        ?>
+                        <option disabled></option>
+                        <?php
+                    }
+                    ?>
+                </select>
+            </label>
+            <label></label>
+        </div>
         <?php
     }
 
