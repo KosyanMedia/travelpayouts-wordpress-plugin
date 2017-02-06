@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 15:30+0200\n"
+"POT-Creation-Date: 2017-02-06 15:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2156,6 +2156,16 @@ msgstr "Выбранные"
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:301
+msgctxt "(Rows per page)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
+msgstr "Количество строк на странице"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:323
+msgctxt "(Paginate)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
+msgstr "Пейджинация"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:28
 msgctxt "(Token)"

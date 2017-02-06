@@ -28,6 +28,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
 
@@ -43,6 +44,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -57,6 +59,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -71,6 +74,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -85,6 +89,7 @@ class TPFieldHotels
             <?php $this->getFieldTitleTag($shortcode); ?>
         </div>
         <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
     }
@@ -288,6 +293,46 @@ class TPFieldHotels
 
             </label>
         </div>
+        <?php
+    }
+
+    /**
+     * @param $shortcode
+     */
+    public function getFieldPaginate($shortcode){
+        ?>
+        <div class="ItemSub">
+            <span>
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label',
+                    '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
+            <div class="TP-childF">
+                <div class="spinnerW clearfix" data-trigger="spinner">
+                    <label>
+                        <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][paginate]"
+                               type="text" data-rule="quantity"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate']) ?>">
+                    </label>
+                    <div class="navSpinner">
+                        <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                        <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="TP-HeadTable">
+            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][paginate_switch]"
+                   value="1" <?php checked(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate_switch']), 1) ?> hidden />
+            <label for="chek-p1">
+                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label',
+                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
+            <label></label>
+
+        </div>
+
+
         <?php
     }
 

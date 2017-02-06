@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 15:30+0200\n"
+"POT-Creation-Date: 2017-02-06 15:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2154,6 +2154,16 @@ msgstr "Selected"
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Extra marker"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:301
+msgctxt "(Rows per page)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
+msgstr "Rows per page"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:323
+msgctxt "(Paginate)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
+msgstr "Paginate"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:28
 msgctxt "(Token)"
