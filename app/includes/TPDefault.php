@@ -781,16 +781,20 @@ class TPDefault implements  \core\TPODefault{
                 //Подборки отелей
                 '1' => array(
                     'title' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title',
+                            '(Hotel seleсtions)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_1_title',
+                            '(Подборки отелей)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsCollections',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -821,16 +825,20 @@ class TPDefault implements  \core\TPODefault{
                 //Отели Города по цене ОТ-ДО
                 '2' => array(
                     'title' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title',
+                            '(location hotels with price from priceAvgMin to priceAvgMax)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_2_title',
+                            '(Отели location по цене от priceAvgMin до priceAvgMax)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsFromTo',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -861,16 +869,20 @@ class TPDefault implements  \core\TPODefault{
                 //Отели в городе по звездам
                 '3' => array(
                     'title' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title',
+                            '(location hotels with stars stars )', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_3_title',
+                            '(Отели в location c stars звезд)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsStars',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -901,16 +913,20 @@ class TPDefault implements  \core\TPODefault{
                 //Стоимость проживания В ГОРОДЕ на Х дней
                 '4' => array(
                     'title' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title',
+                            '(Stay price in location for number days)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_4_title',
+                            '(Стоимость проживания в location на number дней)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsPrice',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -941,16 +957,20 @@ class TPDefault implements  \core\TPODefault{
                 //Стоимость проживания В ГОРОДЕ на уикенд
                 '5' => array(
                     'title' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title',
+                            '(Stay price in location for weekend)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_5_title',
+                            '(Стоимость проживания в location на уикенд)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsPriceWeekend',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => '',
-                        'ru' => '',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 17:15+0200\n"
+"POT-Creation-Date: 2017-02-06 18:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -328,6 +328,106 @@ msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
 msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты из {origin} - {destination}\"]"
+
+#: app/includes/TPDefault.php:784
+msgctxt "(Hotel seleсtions)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
+msgstr "Hotel seleсtions"
+
+#: app/includes/TPDefault.php:786
+msgctxt "(Подборки отелей)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
+msgstr "Подборки отелей"
+
+#: app/includes/TPDefault.php:794
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:796
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
+msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:828
+msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
+msgstr "{location} hotels with price from {priceAvgMin} to {priceAvgMax}"
+
+#: app/includes/TPDefault.php:830
+msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
+msgstr "Отели {location} по цене от {priceAvgMin} до {priceAvgMax}"
+
+#: app/includes/TPDefault.php:838
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:840
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
+msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:872
+msgctxt "(location hotels with stars stars )"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title"
+msgstr "{location} hotels with {stars} stars "
+
+#: app/includes/TPDefault.php:874
+msgctxt "(Отели в location c stars звезд)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_3_title"
+msgstr "Отели в {location} c {stars} звезд"
+
+#: app/includes/TPDefault.php:882
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:884
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
+msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:916
+msgctxt "(Stay price in location for number days)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title"
+msgstr "Stay price in {location} for {number} days"
+
+#: app/includes/TPDefault.php:918
+msgctxt "(Стоимость проживания в location на number дней)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_4_title"
+msgstr "Стоимость проживания в {location} на {number} дней"
+
+#: app/includes/TPDefault.php:926
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:928
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
+msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:960
+msgctxt "(Stay price in location for weekend)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title"
+msgstr "Stay price in {location} for weekend"
+
+#: app/includes/TPDefault.php:962
+msgctxt "(Стоимость проживания в location на уикенд)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_5_title"
+msgstr "Стоимость проживания в {location} на уикенд"
+
+#: app/includes/TPDefault.php:970
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:972
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
+msgstr "Забронировать"
 
 #: app/includes/TPLoader.php:119
 msgctxt "(Set details and enable plugin features)"
