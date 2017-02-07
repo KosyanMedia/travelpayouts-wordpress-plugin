@@ -9,7 +9,16 @@
 namespace app\includes\controllers\admin\media_buttons;
 
 
-class TPHotelsButtonsController
+class TPHotelsButtonsController extends TPAdminMediaButtonsController
 {
 
+    public function action($args = array())
+    {
+        // TODO: Implement action() method.
+    }
+
+    public function render()
+    {
+        // TODO: Implement render() method.
+    }
 }
