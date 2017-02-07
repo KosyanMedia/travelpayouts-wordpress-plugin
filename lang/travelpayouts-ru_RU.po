@@ -1615,12 +1615,12 @@ msgstr "Найти билеты {origin} {destination}"
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
 msgctxt "admin media button insert hotels title"
 msgid "tp_admin_media_button_insert_hotels_title"
-msgstr "Отели"
+msgstr "Вставить отель"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
 msgctxt "admin media button hotels title"
 msgid "tp_admin_media_button_hotels_short_title"
-msgstr "Отели"
+msgstr "Отель"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"

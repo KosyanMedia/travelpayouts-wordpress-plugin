@@ -1,6 +1,7 @@
 <?php
 namespace app\includes;
 
+use app\includes\controllers\admin\media_buttons\TPHotelsButtonsController;
 use app\includes\controllers\admin\menu\TPHotelsController;
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityWeekendShortcodeController;
 use app\includes\common\TPRequestApiStatistic;
@@ -36,6 +37,7 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\TPModalAdminNoticeController();
         if( \app\includes\TPPlugin::$options['config']['media_button']['view'] != 2){
             new controllers\admin\media_buttons\TPShortcodeButtonsController();
+            new TPHotelsButtonsController();
             new controllers\admin\media_buttons\TPWidgetButtonsController();
             new controllers\admin\media_buttons\TPSearchFormButtonsController();
             new controllers\admin\media_buttons\TPLinkButtonsController();
