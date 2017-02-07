@@ -44,5 +44,7 @@ class TPHotelsButtonsController extends TPAdminMediaButtonsController
     public function render()
     {
         // TODO: Implement render() method.
+        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPHotelsButtons.view.php";
+        parent::loadView($pathView);
     }
 }
