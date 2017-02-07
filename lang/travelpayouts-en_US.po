@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-06 18:35+0200\n"
+"POT-Creation-Date: 2017-02-07 14:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:86
@@ -1609,6 +1609,16 @@ msgstr "tp_tinymce_button_shortcode_label"
 msgctxt "(Find tickets {origin} {destination})"
 msgid "tp_tinymce_button_shortcode_attr_title_value"
 msgstr "Find tickets {origin} {destination}"
+
+#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
+msgctxt "admin media button insert hotels title"
+msgid "tp_admin_media_button_insert_hotels_title"
+msgstr "Hotels"
+
+#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
+msgctxt "admin media button hotels title"
+msgid "tp_admin_media_button_hotels_short_title"
+msgstr "Hotels"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
