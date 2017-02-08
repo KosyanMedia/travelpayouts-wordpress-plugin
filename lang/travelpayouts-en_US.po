@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-07 14:39+0200\n"
+"POT-Creation-Date: 2017-02-08 16:00+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -444,47 +444,47 @@ msgctxt "(Enter your Travelpayouts authorization details and start earning now.)
 msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
 
-#: app/includes/TPLoaderScripts.php:318
+#: app/includes/TPLoaderScripts.php:325
 msgctxt "(Hotel Name)"
 msgid "tp_head_script_admin_var_hotel_widget_label"
 msgstr "Hotel Name"
 
-#: app/includes/TPLoaderScripts.php:319
+#: app/includes/TPLoaderScripts.php:326
 msgctxt "(Destination)"
 msgid "tp_head_script_admin_var_destination_title_label"
 msgstr "Destination"
 
-#: app/includes/TPLoaderScripts.php:320
+#: app/includes/TPLoaderScripts.php:327
 msgctxt "Origin"
 msgid "tp_head_script_admin_var_origin_title_label"
 msgstr "Origin"
 
-#: app/includes/TPLoaderScripts.php:321
+#: app/includes/TPLoaderScripts.php:328
 msgctxt "(Location)"
 msgid "tp_head_script_admin_var_location_title_label"
 msgstr "Location"
 
-#: app/includes/TPLoaderScripts.php:326
+#: app/includes/TPLoaderScripts.php:333
 msgctxt "(Settings saved.)"
 msgid "tp_head_script_admin_var_mesg_update_settings_label"
 msgstr "Settings saved."
 
-#: app/includes/TPLoaderScripts.php:327
+#: app/includes/TPLoaderScripts.php:334
 msgctxt "(hotels)"
 msgid "tp_head_script_admin_var_hotels_autocomplete_label"
 msgstr "hotels"
 
-#: app/includes/TPLoaderScripts.php:328
+#: app/includes/TPLoaderScripts.php:335
 msgctxt "(City)"
 msgid "tp_head_script_admin_var_city_label"
 msgstr "City"
 
-#: app/includes/TPLoaderScripts.php:332
+#: app/includes/TPLoaderScripts.php:339
 msgctxt "(Complete!)"
 msgid "tp_head_script_admin_var_label_progress_bar_label"
 msgstr "Complete!"
 
-#: app/includes/TPLoaderScripts.php:333
+#: app/includes/TPLoaderScripts.php:340
 msgctxt ""
 "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?)"
@@ -493,77 +493,77 @@ msgstr ""
 "You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?"
 
-#: app/includes/TPLoaderScripts.php:334
+#: app/includes/TPLoaderScripts.php:341
 msgctxt "(Auto-links are applied)"
 msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
 msgstr "Auto-links are applied"
 
-#: app/includes/TPLoaderScripts.php:335
+#: app/includes/TPLoaderScripts.php:342
 msgctxt "(Airline)"
 msgid "tp_head_script_admin_var_airline_widget_8_label"
 msgstr "Airline"
 
-#: app/includes/TPLoaderScripts.php:336
+#: app/includes/TPLoaderScripts.php:343
 msgctxt "(Delete)"
 msgid "tp_head_script_admin_var_delete_widget_8_label"
 msgstr "Delete"
 
-#: app/includes/TPLoaderScripts.php:337
+#: app/includes/TPLoaderScripts.php:344
 msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Error invalid file"
 
-#: app/includes/TPLoaderScripts.php:355
+#: app/includes/TPLoaderScripts.php:362
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:356
+#: app/includes/TPLoaderScripts.php:363
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:360
+#: app/includes/TPLoaderScripts.php:367
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:361
+#: app/includes/TPLoaderScripts.php:368
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:365
+#: app/includes/TPLoaderScripts.php:372
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "No data"
 
-#: app/includes/TPLoaderScripts.php:366
+#: app/includes/TPLoaderScripts.php:373
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "There are no payments yet"
 
-#: app/includes/TPLoaderScripts.php:370
+#: app/includes/TPLoaderScripts.php:377
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "No search form."
 
-#: app/includes/TPLoaderScripts.php:371
+#: app/includes/TPLoaderScripts.php:378
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "No anchors."
 
-#: app/includes/TPLoaderScripts.php:372
+#: app/includes/TPLoaderScripts.php:379
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Grand total this month"
 
-#: app/includes/TPLoaderScripts.php:375
+#: app/includes/TPLoaderScripts.php:382
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Create"
 
-#: app/includes/TPLoaderScripts.php:376
+#: app/includes/TPLoaderScripts.php:383
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Cancel"
@@ -3169,6 +3169,36 @@ msgstr "Settings saved."
 msgctxt "(Constructor hotels)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
 msgstr "Constructor hotels"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:8
+msgctxt "(Select the table)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0"
+msgstr "Select the table"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:12
+msgctxt "(Hotel seleсtions)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1"
+msgstr "Hotel seleсtions"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:16
+msgctxt "(City hotels with price from to)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2"
+msgstr "City hotels with price from to"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:20
+msgctxt "(City hotels by stars)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3"
+msgstr "City hotels by stars"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:24
+msgctxt "(Stay price in city for X days)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4"
+msgstr "Stay price in city for X days"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:28
+msgctxt "(Stay price in city for weekend)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
+msgstr "Stay price in city for weekend"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"

@@ -582,17 +582,15 @@ jQuery(function($) {
             position: "absolute",
             //appendTo: "#post-body-content",
             create: function (event) {
-                console.log(win.width())
-                console.log(win.height())
-                $(event.target).parent().css({
+
+            },
+            open : function() {
+                $(this).parent().css({
+                    'position': 'fixed',
                     'left': (win.width() - $(this).parent().outerWidth())/2,
                     'top': (win.height() - $(this).parent().outerHeight())/2,
                     'transition': 'none'
-
                 });
-            },
-            open : function() {
-
             },
             buttons: [
                 {

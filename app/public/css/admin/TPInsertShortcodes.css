@@ -59,7 +59,11 @@
     float: left;
 }
 
-#select_shortcodes, #select_widgets, #select_search_form,#constructorLinkModalSelect{
+#select_shortcodes,
+#select_widgets,
+#select_search_form,
+#constructorLinkModalSelect,
+#select_hotels_shortcodes{
     width: 350px;
 }
 #tr_title, #tr_subid, #tr_origin, #tr_destination, #tr_depart_date,
@@ -160,7 +164,7 @@
     padding-right: 7px;
 }
 
-.validate > #constructorHotelsShortcodesButton{
+.validate > #constructorLinkButton{
     margin-right: 5px;
     margin-bottom: 4px;
     padding-left: 7px;
