@@ -3,6 +3,9 @@
     <table>
         <tr>
             <td id="td_select_hotels_shortcodes">
+                <select name="select_hotels_shortcodes" id="select_hotels_shortcodes">
+
+                </select>
             </td>
         </tr>
     </table>

@@ -102,6 +102,11 @@
 #constructorLinkButton img {
     margin-top: -3px;
 }
+
+#constructorHotelsShortcodesButton img {
+    margin-top: -3px;
+}
+
 .validate > #constructorShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;
@@ -118,6 +123,11 @@
     margin-top: -3px;
 }
 .validate > #constructorLinkButton img{
+    padding: 0 4px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.validate > #constructorHotelsShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;
     margin-top: -3px;
@@ -150,6 +160,12 @@
     padding-right: 7px;
 }
 
+.validate > #constructorHotelsShortcodesButton{
+    margin-right: 5px;
+    margin-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
 
 /* WP Theme */
 
