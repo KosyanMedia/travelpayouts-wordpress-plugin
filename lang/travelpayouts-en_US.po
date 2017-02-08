@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-08 16:00+0200\n"
+"POT-Creation-Date: 2017-02-08 16:32+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -3199,6 +3199,16 @@ msgstr "Stay price in city for X days"
 msgctxt "(Stay price in city for weekend)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
 msgstr "Stay price in city for weekend"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:38
+msgctxt "(Alternate title)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
+msgstr "Alternate title"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:46
+msgctxt "(City)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
+msgstr "City"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"

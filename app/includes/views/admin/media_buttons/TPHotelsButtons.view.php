@@ -31,5 +31,21 @@
                 </select>
             </td>
         </tr>
+        <tr id="tr_hotels_title">
+            <td>
+                <input type="text" name="tp_hotels_title" id="tp_hotels_title" value=""
+                       class="regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_title_label',
+                           '(Alternate title)', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
+        <tr id="tr_hotels_origin">
+            <td>
+                <input type="text" name="hotels_city" id="hotels_city" value=""
+                       class="constructorCityShortcodesAutocomplete regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_city_label',
+                           '(City)', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
     </table>
 </div>

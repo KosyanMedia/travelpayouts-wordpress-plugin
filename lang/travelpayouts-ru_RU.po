@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-08 16:01+0200\n"
+"POT-Creation-Date: 2017-02-08 16:32+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -3202,6 +3202,16 @@ msgstr "Стоимость проживания В ГОРОДЕ на Х дней
 msgctxt "(Stay price in city for weekend)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
 msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:38
+msgctxt "(Alternate title)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
+msgstr "Альтернативный заголовок"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:46
+msgctxt "(City)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
+msgstr "Город"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"
