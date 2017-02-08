@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-07 14:04+0200\n"
+"POT-Creation-Date: 2017-02-07 14:39+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -429,17 +429,17 @@ msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPLoader.php:119
+#: app/includes/TPLoader.php:121
 msgctxt "(Set details and enable plugin features)"
 msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
 msgstr "Set details and enable plugin features"
 
-#: app/includes/TPLoader.php:124
+#: app/includes/TPLoader.php:126
 msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_1"
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
-#: app/includes/TPLoader.php:125
+#: app/includes/TPLoader.php:127
 msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
@@ -3164,6 +3164,11 @@ msgstr "Currency"
 msgctxt "(Settings saved.)"
 msgid "tp_admin_page_admin_notice_modal_label"
 msgstr "Settings saved."
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:2
+msgctxt "(Constructor hotels)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
+msgstr "Constructor hotels"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"

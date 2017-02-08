@@ -565,6 +565,109 @@ jQuery(function($) {
         });
     }
 
+    /**
+     * Hotels
+     */
+    doc.find('#constructorHotelsShortcodesButton').click(function (e) {
+        doc.find( "#constructorHotelsShortcodesModal" ).dialog({
+            autoOpen: true,
+            resizable: false,
+            draggable: false,
+            maxHeight:500,
+            maxWidth: 450,
+            minWidth: 406,
+            minHeight:200,
+            modal: true,
+            dialogClass:"TPCustomDialog",
+            position: "absolute",
+            //appendTo: "#post-body-content",
+            create: function (event) {
+                console.log(win.width())
+                console.log(win.height())
+                $(event.target).parent().css({
+                    'left': (win.width() - $(this).parent().outerWidth())/2,
+                    'top': (win.height() - $(this).parent().outerHeight())/2,
+                    'transition': 'none'
+
+                });
+            },
+            open : function() {
+
+            },
+            buttons: [
+                {
+                    id: "constructorHotelsShortcodesButtonOk",
+                    text: button_ok,
+                    click: function() {
+
+                    }
+                },
+                {
+                    id: "constructorHotelsShortcodesButtonCancel",
+                    text: button_cancel,
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+
+            ],
+            close: function( event, ui ) {
+                $('body').css({'overflow': 'auto'});
+                doc.find("#limit").val("");
+                $("#select_shortcodes :first").attr("selected", "selected");
+                doc.find('#tr_title').hide();
+                doc.find('#tr_subid').hide();
+                doc.find('#tr_origin').hide();
+                doc.find('#tr_destination').hide();
+                doc.find('#tr_airline').hide();
+                doc.find('#tr_limit').hide();
+                doc.find('#tr_trip_class').hide();
+                doc.find('#tr_paginate').hide();
+                doc.find('#tr_transplant').hide();
+                doc.find('#tr_one_way').hide();
+                doc.find('#tr_off_title').hide();
+                doc.find('#tr_currency').hide();
+                doc.find('#tr_country').hide();
+                doc.find('#tr_filter_airline').hide();
+                doc.find('#tr_filter_flight_number').hide();
+
+                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #country').removeClass('constructorShortcodesError');
+            }
+        });
+        tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
+        tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
+        tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
+
+        doc.find('#origin, #destination, #airline, #tp_subid, #country').focus(function() {
+            $(this).removeClass('constructorShortcodesError');
+        });
+
+        doc.find('.constructorDateShortcodes').datepicker({
+            dateFormat : "dd-mm-yy"
+        });
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: '&#x3c;Пред',
+            nextText: 'След&#x3e;',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+        constructorShortcodesSelect();
+    });
+
+
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
         e.preventDefault();

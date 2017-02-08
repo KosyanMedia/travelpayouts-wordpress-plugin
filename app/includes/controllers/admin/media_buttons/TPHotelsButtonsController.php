@@ -32,7 +32,7 @@ class TPHotelsButtonsController extends TPAdminMediaButtonsController
         ) );
         // Prepare icon
         if ( $args['icon'] ) $args['icon'] = '<img src="' . $args['icon'] . '" /> ';
-        $button = '<a href="#" id="constructorShortcodesButton" class="su-generator-button '.$args['class'].'">'.
+        $button = '<a href="#" id="constructorHotelsShortcodesButton" class="su-generator-button '.$args['class'].'">'.
             $args['icon'] . $args['text'].'</a>';
         add_action( 'wp_footer',    array( &$this, 'render' ) );
         add_action( 'admin_footer', array( &$this, 'render' ) );

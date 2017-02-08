@@ -80,10 +80,17 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-InsertShortcodes', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPInsertShortcodes.js', //$src
-            array('jquery', 'jquery-ui-autocomplete','jquery-ui-dialog',
-                'jquery-ui-core', 'jquery-ui-datepicker','jquery-form',
-                'jquery-ui-progressbar'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            array(
+                'jquery',
+                'jquery-ui-autocomplete',
+                'jquery-ui-dialog',
+                'jquery-ui-core',
+                'jquery-ui-datepicker',
+                'jquery-form',
+                'jquery-ui-progressbar'
+            ), //$deps
+            false,
+            //TPOPlUGIN_VERSION, //$ver
             true //$$in_footer
         );
         wp_register_script(

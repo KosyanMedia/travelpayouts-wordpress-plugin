@@ -384,7 +384,8 @@
 }
 #constructorShortcodesModal input[type="checkbox"],
 #constructorWidgetModalForm input[type="checkbox"],
-#constructorLinkModalTable input[type="checkbox"]{
+#constructorLinkModalTable input[type="checkbox"],
+#constructorHotelsShortcodesModal input[type="checkbox"]{
     display: inline-block;
 }
 .TPProgressbarDialog .ui-progressbar {
