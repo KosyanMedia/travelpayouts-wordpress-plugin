@@ -173,6 +173,21 @@ class TPRequestApiHotel extends TPRequestApi
 
     }
 
+    /**
+     * https://engine.hotellook.com/api/v2/static/hotelTypes.json?language=en&token=УкажитеВашТокен
+     */
+    public function getHotelsType(){
+
+    }
+
+    public function getHotelsTypeRu(){
+
+    }
+
+    public function getHotelsTypeEn(){
+
+    }
+
 
     public function request($string)
     {
