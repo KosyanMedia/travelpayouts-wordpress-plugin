@@ -611,32 +611,16 @@ jQuery(function($) {
             ],
             close: function( event, ui ) {
                 $('body').css({'overflow': 'auto'});
-                doc.find("#limit").val("");
-                $("#select_shortcodes :first").attr("selected", "selected");
+                $("#select_hotels_shortcodes :first").attr("selected", "selected");
                 doc.find('#tr_title').hide();
-                doc.find('#tr_subid').hide();
-                doc.find('#tr_origin').hide();
-                doc.find('#tr_destination').hide();
-                doc.find('#tr_airline').hide();
-                doc.find('#tr_limit').hide();
-                doc.find('#tr_trip_class').hide();
-                doc.find('#tr_paginate').hide();
-                doc.find('#tr_transplant').hide();
-                doc.find('#tr_one_way').hide();
-                doc.find('#tr_off_title').hide();
-                doc.find('#tr_currency').hide();
-                doc.find('#tr_country').hide();
-                doc.find('#tr_filter_airline').hide();
-                doc.find('#tr_filter_flight_number').hide();
-
-                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #country').removeClass('constructorShortcodesError');
+                doc.find('#select_hotels_shortcodes, hotels_city').removeClass('constructorShortcodesError');
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
 
-        doc.find('#origin, #destination, #airline, #tp_subid, #country').focus(function() {
+        doc.find('#select_hotels_shortcodes, hotels_city').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
 
@@ -662,9 +646,12 @@ jQuery(function($) {
             showMonthAfterYear: false,
             yearSuffix: ''};
         $.datepicker.setDefaults($.datepicker.regional['ru']);
-        constructorShortcodesSelect();
+        constructorHotelsShortcodesSelect();
     });
 
+    function constructorHotelsShortcodesSelect(){
+
+    }
 
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
