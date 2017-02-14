@@ -186,13 +186,13 @@ class TPRequestApiHotel extends TPRequestApi
     public function getHotelsTypeRu(){
         $token = 'token=' .$this->getToken();
         $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=ru&{$token}";
-        return $this->request($requestURL);
+        return $this->requestJson($requestURL);
     }
 
     public function getHotelsTypeEn(){
         $token = 'token=' .$this->getToken();
         $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=en&{$token}";
-        return $this->request($requestURL);
+        return $this->requestJson($requestURL);
     }
 
 
@@ -209,6 +209,20 @@ class TPRequestApiHotel extends TPRequestApi
         }
         if( ! is_wp_error( $json ))
             return $this->objectToArray($json);
+    }
+    public function requestJson($string)
+    {
+        $string = htmlspecialchars($string);
+        $response = wp_remote_get( $string, array('headers' => array(
+            'Accept-Encoding' => 'gzip, deflate',
+        )) );
+        if( is_wp_error( $response ) ){
+            $json = $response;
+        } else {
+            $json = $response['body'];
+        }
+        if( ! is_wp_error( $json ))
+            return $json;
     }
 
 
