@@ -9,6 +9,7 @@ use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityDaysShortcod
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityStarFilterShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsShortcodeController;
+use app\includes\models\admin\TPHotelsTypeModel;
 
 class TPLoader extends \core\TPOLoader{
     public function __construct(){
@@ -44,6 +45,7 @@ class TPLoader extends \core\TPOLoader{
         }
 
         new \app\includes\common\TPTinyMCE();
+        new TPHotelsTypeModel();
 
 
 
