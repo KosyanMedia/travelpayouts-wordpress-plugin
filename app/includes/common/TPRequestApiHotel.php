@@ -181,11 +181,15 @@ class TPRequestApiHotel extends TPRequestApi
     }
 
     public function getHotelsTypeRu(){
-
+        $token = 'token=' .$this->getToken();
+        $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=ru&{$token}";
+        return $this->request($requestURL);
     }
 
     public function getHotelsTypeEn(){
-
+        $token = 'token=' .$this->getToken();
+        $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=en&{$token}";
+        return $this->request($requestURL);
     }
 
 
