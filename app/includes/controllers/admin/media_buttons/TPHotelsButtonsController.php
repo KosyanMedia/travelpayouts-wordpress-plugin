@@ -44,7 +44,28 @@ class TPHotelsButtonsController extends TPAdminMediaButtonsController
     public function render()
     {
         // TODO: Implement render() method.
+        $data = array(
+            'hotelTypes' => $this->getHotelTypes()
+        );
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPHotelsButtons.view.php";
-        parent::loadView($pathView);
+        parent::loadView($pathView, 0, $data);
+    }
+
+    public function getHotelTypes(){
+        $file = "";
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $file = TPOPlUGIN_DIR.'/app/public/hotel_types/hotelTypesRU.json';
+                break;
+            case "en_US":
+                $file = TPOPlUGIN_DIR.'/app/public/hotel_types/hotelTypesEN.json';
+                break;
+            default:
+                $file = TPOPlUGIN_DIR.'/app/public/hotel_types/hotelTypesRU.json';
+                break;
+        }
+        $hotelTypes = json_decode(file_get_contents($file), true);
+        return $hotelTypes;
     }
 }
