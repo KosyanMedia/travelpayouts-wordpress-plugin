@@ -55,7 +55,7 @@
         <tr id="tr_hotels_type">
             <td id="td_hotels_type">
                 <select name="select_hotels_type" id="select_hotels_type">
-                    <option selected="selected" value="0">
+                    <option selected="selected" value="all">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label',
                             '(Hotel type)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
