@@ -3,7 +3,12 @@
     <table>
         <tr>
             <td id="td_select_hotels_shortcodes">
-                <select name="select_hotels_shortcodes" id="select_hotels_shortcodes">
+                <select name="select_hotels_shortcodes" id="select_hotels_shortcodes"
+                        data-paginate-1="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['1']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-2="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['2']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-3="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['3']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-4="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['4']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-5="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['5']['paginate_switch']))? 1 : 0;?>">
                     <option selected="selected" value="0">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0',
                             '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -80,11 +85,26 @@
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars',
                             '(No stars)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="1">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1',
+                            '(1 star)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+                    <option value="2">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2',
+                            '(2 stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+                    <option value="3">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3',
+                            '(3 stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+                    <option value="4">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4',
+                            '(4 stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+                    <option value="5">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5',
+                            '(5 stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
                     <option selected="selected" value="all">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all',
                             '(All)', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -121,7 +141,7 @@
             <td>
                 <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label',
                     '(Number of results)', TPOPlUGIN_TEXTDOMAIN); ?>
-                <input type="number" id="hotels_number_results" value="0">
+                <input type="number" id="hotels_number_results" value="20" min="1">
 
             </td>
         </tr>
