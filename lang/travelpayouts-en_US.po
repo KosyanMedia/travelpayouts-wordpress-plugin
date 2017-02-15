@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-10 09:50+0200\n"
+"POT-Creation-Date: 2017-02-15 14:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -429,17 +429,17 @@ msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPLoader.php:121
+#: app/includes/TPLoader.php:123
 msgctxt "(Set details and enable plugin features)"
 msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
 msgstr "Set details and enable plugin features"
 
-#: app/includes/TPLoader.php:126
+#: app/includes/TPLoader.php:128
 msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_1"
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
-#: app/includes/TPLoader.php:127
+#: app/includes/TPLoader.php:129
 msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
@@ -3210,12 +3210,67 @@ msgctxt "(City)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
 msgstr "City"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:55
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:54
+msgctxt "(Hotel type)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
+msgstr "Hotel type"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:68
+msgctxt "(Number of days)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_day_label"
+msgstr "Number of days"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:76
+msgctxt "(Stars)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
+msgstr "Stars"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:80
+msgctxt "(No stars)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
+msgstr "No stars"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:89
+msgctxt "(All)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
+msgstr "All"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:98
+msgctxt "(User rating from)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
+msgstr "User rating from "
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:101
+msgctxt "(to)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
+msgstr "to"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:109
+msgctxt "(Distance to center from )"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
+msgstr "Distance to center from "
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:112
+msgctxt "(to)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
+msgstr "to"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:115
+msgctxt "(km)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
+msgstr "km"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:122
+msgctxt "(Number of results)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
+msgstr "Number of results"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:132
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:62
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:139
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "No title"

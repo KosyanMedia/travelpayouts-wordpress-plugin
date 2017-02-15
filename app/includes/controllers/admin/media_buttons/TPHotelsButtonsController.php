@@ -47,6 +47,7 @@ class TPHotelsButtonsController extends TPAdminMediaButtonsController
         $data = array(
             'hotelTypes' => $this->getHotelTypes()
         );
+        //error_log(print_r($data, true));
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPHotelsButtons.view.php";
         parent::loadView($pathView, 0, $data);
     }
