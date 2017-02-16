@@ -12,18 +12,20 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     {
         // TODO: Implement loadScriptAdmin() method.
         /** Register styles */
+        //$version = TPOPlUGIN_VERSION;
+        $version = false;
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
             TPOPlUGIN_URL.'app/public/css/admin/TPInsertWidgets.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertShortcodes', //$handle
             TPOPlUGIN_URL.'app/public/css/admin/TPInsertShortcodes.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         wp_register_style(
             TPOPlUGIN_SLUG.'-TPAdminNormalize', //$handle
@@ -35,14 +37,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-bellows',
             TPOPlUGIN_URL.'app/public/css/lib/bellows.css',
             array(),
-            TPOPlUGIN_VERSION
+            $version
         );
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-jquery-ui',
             TPOPlUGIN_URL.'app/public/css/lib/jquery-ui/jquery-ui.min.css',
             array(),
-            TPOPlUGIN_VERSION
+            $version
         );
 
         wp_register_style(
@@ -52,7 +54,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_SLUG.'-bellows',
                 //TPOPlUGIN_SLUG.'-jquery-ui'
             ), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         /** End register styles */
         /** Register scripts */
@@ -67,14 +69,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-AutocompleteCountries', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/autocomplete/autocomplete_countries.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-AutocompleteScript', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/TPAdminAutocomplete.js', //$src
             array('jquery', 'jquery-ui-autocomplete'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
@@ -89,36 +91,35 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 'jquery-form',
                 'jquery-ui-progressbar'
             ), //$deps
-            false,
-            //TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-fileDownload', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/download.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-jqColorPicker', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/jqColorPicker.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-excellentexport', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/excellentexport.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-dataTables', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/jquery.dataTables.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_enqueue_script(
@@ -131,14 +132,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG. '-FileSaver', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/FileSaver.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG. '-jquery-csv', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/jquery.csv.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
 
@@ -160,35 +161,35 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver',
                 'jquery-ui-progressbar', TPOPlUGIN_SLUG. '-jquery-csv'
             ), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-velocity', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/velocity.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-bellows', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/bellows.min.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-zelect', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/zelect.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG. '-jquery-spinner', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/jquery.spinner.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
 
@@ -201,7 +202,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPOPlUGIN_SLUG.'-jquery-spinner',
                 'jquery', 'jquery-ui-core', 'jquery-ui-tooltip',
                 'jquery-ui-datepicker'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
 
@@ -215,7 +216,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPInsertWidgets.js', //$src
             array('jquery', 'jquery-ui-autocomplete', 'jquery-ui-core'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_enqueue_style('wp-jquery-ui-dialog');
@@ -225,7 +226,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminEditPage.js', //$src
             array('jquery', 'jquery-ui-core', 'jquery-ui-progressbar',
                 'jquery-ui-dialog'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_style(
@@ -234,27 +235,27 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(
 
             ), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPPostAddNew', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/post/TPPostAddNew.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPPostUpdate', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/post/TPPostUpdate.js', //$src
             array(), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPPost', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/post/TPPost.js', //$src
             array('jquery', 'jquery-ui-core','jquery-form'), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             true //$$in_footer
         );
         switch($hook) {

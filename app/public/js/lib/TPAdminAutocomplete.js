@@ -223,6 +223,7 @@ function TPCityAutocomplete(){
                                 })*/
                                 $.map(data.cities, function(city, key_city){
                                     var location = new Object();
+
                                     location.label = city.fullname+" ["+city.hotelsCount+" "+TPLabelAutocomplete+"]";
                                     location.val = '{'+city.location.lat+', '+city.location.lon+'}';
                                     locations.push(location);
@@ -285,7 +286,28 @@ function TPCityAutocomplete(){
 
                                     })
                                 )
-                            }else{
+                            } else if($(selector).hasClass('HotelCityAutocomplete')) {
+                                var records =[];
+
+                                $.map(data.cities, function(city, key_city){
+                                    //console.log(city);
+                                    var record = new Object();
+                                    record.label = city.fullname+" ["+city.id+"]";
+                                    /*record.val = '{'+city.city+', '+city.country+', '+city.hotelsCount+', '
+                                        +city.id+', city, '+city.country+'}';*/
+                                    records.push(record);
+
+                                })
+                                response(
+                                    $.map(records, function(item, key){
+                                        return {
+                                            label: item.label,
+                                            value: item.label,
+                                            val: item.val
+                                        }
+                                    })
+                                )
+                            } else{
                                 response(
                                     $.map(data.hotels, function(item){
                                         return {
