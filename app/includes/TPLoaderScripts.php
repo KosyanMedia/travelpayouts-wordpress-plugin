@@ -313,6 +313,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function headScriptAdmin()
     {
         // TODO: Implement headScriptAdmin() method.
+        $blogName = get_bloginfo('name');
+        $blogName = preg_replace ("/[^a-zA-ZА-Яа-я0-9]/i","", $blogName);
         ?>
         <script type="text/javascript">
             var ajaxurl, tpLocale, button_ok, button_cancel, TPdatepicker, wpLocale, TPStatsTotal, TPStatsTotalTrText,
@@ -328,7 +330,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOriginTitle = '<?php _ex('tp_head_script_admin_var_origin_title_label', 'Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPLocationTitlt = '<?php _ex('tp_head_script_admin_var_location_title_label', '(Location)', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPFileNameExport = '<?php echo TPOPlUGIN_NAME."Settings_v"
-            .TPOPlUGIN_VERSION."_".get_bloginfo('name')."_".date('Ymd').".txt"; ?>';
+            .TPOPlUGIN_VERSION."_".$blogName."_".date('Ymd').".txt"; ?>';
             TPFileNameCsvExport = '<?php echo TPOPlUGIN_NAME."Links.csv"; ?>';
             TPPluginName = '<?php echo TPOPlUGIN_NAME; ?>';
             TPMesgUpdateSettings = '<?php  _ex('tp_head_script_admin_var_mesg_update_settings_label', '(Settings saved.)', TPOPlUGIN_TEXTDOMAIN ); ?>';
