@@ -30,8 +30,9 @@ class TPCostLivingCityDaysShortcodeController extends TPShortcodesController
     }
     public function actionTable($args = array())
     {
+
         $data = $this->model->getDataTable($args);
 
-        return print_r($data);
+        return var_dump("<pre>", $data, "</pre>");
     }
 }

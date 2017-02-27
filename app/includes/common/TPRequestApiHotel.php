@@ -97,9 +97,9 @@ class TPRequestApiHotel extends TPRequestApi
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if (!$location || empty($location)){
-            echo $this->get_error('location');
+            //echo $this->get_error('location');
             $location = "";
-            return false;
+            //return false;
         } else {
             $location = "location={$location}";
         }
@@ -118,7 +118,9 @@ class TPRequestApiHotel extends TPRequestApi
             $check_out = "checkOut={$check_out}";
         }
         if (!$location_id || empty($location_id)){
-            $location_id = "";
+            echo $this->get_error('location');
+            //$location_id = "";
+            return false;
         } else {
             $location_id = "locationId={$location_id}";
         }
@@ -160,7 +162,8 @@ class TPRequestApiHotel extends TPRequestApi
 
         $token = 'token=' .$this->getToken();
 
-        $requestURL = self::getApiUrl()."/cache.json?{$location}&{$check_in}&{$check_out}&{$token}";
+        $requestURL = self::getApiUrl()."/cache.json?{$location_id}&{$check_in}&{$check_out}&{$limit}&{$currency}"
+            ."&{$token}";
 
         if ($return_url == true){
             return $requestURL;
