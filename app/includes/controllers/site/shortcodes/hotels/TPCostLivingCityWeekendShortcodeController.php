@@ -38,9 +38,9 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
         /*$d  = mktime(0, 0, 0, date("m"), date("d")+ 6 - date("N"), date("Y"));
         echo date('Y-m-d', $d).'<br>';
         echo date('Y-m-d', strtotime("next Saturday")).'<br>';
-        echo date('Y-m-d', strtotime("next Sunday")).'<br>';*/
-        //return date('w', time());
-        return print_r($data);
+        echo date('Y-m-d', strtotime("next Sunday")).'<br>';
+        //return date('w', time());*/
+        return var_dump("<pre>", $data, "</pre>");
 
     }
 }

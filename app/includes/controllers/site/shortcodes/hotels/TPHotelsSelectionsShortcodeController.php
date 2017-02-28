@@ -32,5 +32,6 @@ class TPHotelsSelectionsShortcodeController extends TPShortcodesController
         //$data = $this->model->getDataTable($args);
 
         //return print_r($data);
+        //return var_dump("<pre>", $data, "</pre>");
     }
 }
