@@ -30,6 +30,7 @@ class TPRequestApiHotel extends TPRequestApi
 
 
     /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hotellist
      * Запрос «Hotels list»
      * locationId — id локации, обязательный параметр.
      * @param array $args

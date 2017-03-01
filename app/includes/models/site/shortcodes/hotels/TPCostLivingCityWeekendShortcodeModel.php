@@ -74,14 +74,43 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             $rows = $return;
             //$rows = $this->iataAutocomplete($rows, 13);
         }*/
+        $return = '';
         $return = self::$TPRequestApi->getCache($attr);
         if (!$return){
             return false;
         }
+        $hotelId = array_column($return, 'hotelId');
+        error_log(print_r($hotelId, true));
+        error_log(count($hotelId));
+        $hotelList = self::$TPRequestApi->getHotelList($attr);
 
-        $hotelList = getHotelList($attr);
-
+        //$hotelListId = array_column($hotelList['hotels'], 'id');
+        //error_log(print_r($hotelListId, true));
+        //$strcasecmp = array_uintersect_assoc($hotelId, $hotelList['hotels'], array(&$this, 'strcasecmp'));
+        $hotelData = array();
+        $count = 0;
+        foreach ($hotelId as $id){
+            foreach ($hotelList['hotels'] as $hotel){
+                $count++;
+                if ($id == $hotel['id']){
+                    //error_log(print_r($hotel, true));
+                    $hotelData[$id] = $hotel;
+                    break;
+                }
+            }
+        }
+        error_log($count);
+        error_log(count($hotelData));
+        //error_log(print_r($hotelData, true));
+        //error_log(print_r($hotelList['hotels'], true));
+//hotelId == id
         return $return;
+    }
+
+    public function strcasecmp($a, $b){
+        error_log(print_r($a, true));
+        error_log(print_r($b, true));
+
     }
 
     public function getDataTable($args = array()){
@@ -111,7 +140,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
         $check_out = date('Y-m-d', strtotime("next Sunday + 1 week"));
 
         $return = $this->get_data(array(
-            'rows' => $return,
+            //'rows' => $return,
             'title' => $title,
             'city' => $city,
             'off_title' => $off_title,
