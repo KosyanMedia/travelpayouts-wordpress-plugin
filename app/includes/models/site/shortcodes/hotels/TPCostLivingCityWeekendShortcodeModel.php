@@ -47,7 +47,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'return_url' => $return_url
         );
 
-        $cacheKey = "hotel_1_{$location}{$currency}".(int)$return_url;
+        $cacheKey = "hotel_1_{$location}{$currency}";
 
         /*if($this->cacheSecund()){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
@@ -74,11 +74,11 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             $rows = $return;
             //$rows = $this->iataAutocomplete($rows, 13);
         }*/
-        $return = '';
-        $return = self::$TPRequestApi->getCache($attr);
-        if (!$return){
-            return false;
-        }
+
+
+
+        $hotelCache = $this->getHotelCache($attr, $cacheKey);
+
         $hotelId = array_column($return, 'hotelId');
         error_log(print_r($hotelId, true));
         error_log(count($hotelId));
@@ -113,6 +113,40 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
 
     }
 
+    /**
+     * @param $attr
+     * @param $cacheKey
+     * @return bool
+     */
+    public function getHotelCache($attr, $cacheKey){
+        $cacheKey .= 'hotel_cache';
+        if($this->cacheSecund() && $attr['return_url'] == false){
+            if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
+                $return = self::$TPRequestApi->getCache($attr);
+                $rows = array();
+                $cacheSecund = 0;
+                if( ! $return ) {
+                    $rows = array();
+                    //$cacheSecund = $this->cacheEmptySecund();
+                    $cacheSecund = 1;
+                } else {
+                    $rows = $return;
+                    $cacheSecund = $this->cacheSecund();
+                }
+                set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
+            }
+
+        } else {
+            $rows = self::$TPRequestApi->getCache($attr);
+            if (!$rows){
+                return false;
+            }
+        }
+    }
+    /**
+     * @param array $args
+     * @return array
+     */
     public function getDataTable($args = array()){
         $defaults = array(
             'city' => false,
