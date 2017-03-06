@@ -78,6 +78,9 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
 
 
         $hotelCache = $this->getHotelCache($attr, $cacheKey);
+        if ($return_url == true) return $hotelCache;
+        if ($hotelCache == false || count($hotelCache) < 1) return false;
+
 
         $hotelId = array_column($return, 'hotelId');
         error_log(print_r($hotelId, true));
