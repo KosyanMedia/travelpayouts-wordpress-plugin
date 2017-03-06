@@ -145,6 +145,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
                 return false;
             }
         }
+        return $rows;
     }
     /**
      * @param array $args
