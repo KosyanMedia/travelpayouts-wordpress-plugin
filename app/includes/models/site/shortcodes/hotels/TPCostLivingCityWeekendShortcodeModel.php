@@ -85,12 +85,12 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
         //$hotelId = array_column($return, 'hotelId');
        // error_log(print_r($hotelId, true));
         //error_log(count($hotelId));
-        $hotelList = self::$TPRequestApi->getHotelList($attr);
+        //$hotelList = self::$TPRequestApi->getHotelList($attr);
 
         //$hotelListId = array_column($hotelList['hotels'], 'id');
         //error_log(print_r($hotelListId, true));
         //$strcasecmp = array_uintersect_assoc($hotelId, $hotelList['hotels'], array(&$this, 'strcasecmp'));
-        tpErrorLog('Test', __CLASS__, __METHOD__,__LINE__);
+        tpErrorLog('$hotelCache count == '.count($hotelCache), __CLASS__, __METHOD__,__LINE__);
         $hotelData = array();
         $count = 0;
        /* foreach ($hotelId as $id){
@@ -125,7 +125,9 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
     public function getHotelCache($attr, $cacheKey){
         $cacheKey .= 'hotel_cache';
         if($this->cacheSecund() && $attr['return_url'] == false){
+            tpErrorLog('hotel cache', __CLASS__, __METHOD__,__LINE__);
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
+                tpErrorLog('set hotel cache', __CLASS__, __METHOD__,__LINE__);
                 $return = self::$TPRequestApi->getCache($attr);
                 $rows = array();
                 $cacheSecund = 0;
@@ -141,6 +143,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             }
 
         } else {
+            tpErrorLog('hotel cache disabled', __CLASS__, __METHOD__,__LINE__);
             $rows = self::$TPRequestApi->getCache($attr);
             if (!$rows){
                 return false;
