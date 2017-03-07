@@ -71,9 +71,20 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
         $wpdb->query("DROP TABLE IF EXISTS $tableName");
     }
 
-    public function insert($data)
+    public function insertHotelList($locationID, $hotelList)
     {
         // TODO: Implement insert() method.
+
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+
+        $inputData = array(
+            'location_id' => $locationID,
+            'date_add' => time(),
+            'type_shortcode' => $hotelList,
+        );
+        $wpdb->insert($tableName, $inputData);
+
     }
 
     public function update($data)
@@ -89,6 +100,9 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
     public function deleteId($id)
     {
         // TODO: Implement deleteId() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $wpdb->query("DELETE FROM ".$tableName." WHERE id = '".$id ."'");
     }
 
     public function query()
@@ -99,5 +113,10 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
     public function get_data()
     {
         // TODO: Implement get_data() method.
+    }
+
+    public function insert($data)
+    {
+        // TODO: Implement insert() method.
     }
 }
