@@ -11,15 +11,64 @@ namespace app\includes\models\site\shortcodes\hotels;
 
 class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
 {
-
+    public static $tableName = "tp_hotel_list_shortcode";
     public static function createTable()
     {
         // TODO: Implement createTable() method.
+        $version = get_option(TPOPlUGIN_TABLE_HOTEL_LIST_VERSION);
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $sql = "CREATE TABLE " . $tableName . "(
+                  id int(11) NOT NULL AUTO_INCREMENT,
+                  location_id int(11) NOT NULL,
+                  date_add int(11) NOT NULL,
+                  hotel_list text NOT NULL,
+                  PRIMARY KEY (id)
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+        if($version != TPOPlUGIN_DATABASE) {
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
+                dbDelta($sql);
+            }else{
+                $data = self::getData();
+                //error_log(print_r($data, true));
+                self::deleteTable();
+                dbDelta($sql);
+                if($data != false) {
+                    $rows = array();
+                    foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
+                        foreach($data as $key=>$values) {
+                            $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
+                        }
+
+                    }
+                    //error_log('$rows = '.print_r($rows, true));
+                    foreach($rows as $row) {
+                        $wpdb->insert($tableName, $row);
+                    }
+                }
+            }
+            update_option(TPOPlUGIN_TABLE_HOTEL_LIST_VERSION, TPOPlUGIN_DATABASE);
+        }
     }
+
+    public static function getData()
+    {
+        // TODO: Implement get_data() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
+
 
     public static function deleteTable()
     {
         // TODO: Implement deleteTable() method.
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $wpdb->query("DROP TABLE IF EXISTS $tableName");
     }
 
     public function insert($data)

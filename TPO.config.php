@@ -17,6 +17,7 @@ define("TPOPlUGIN_VERSION", $TPOPlUGINs['Version']);
 define("TPOPlUGIN_NAME", $TPOPlUGINs['Name']);
 define("TPOPlUGIN_DATABASE", 5);
 define("TPOPlUGIN_TABLE_SF_VERSION", TPOPlUGIN_SLUG.'_table_sf_version');
+define("TPOPlUGIN_TABLE_HOTEL_LIST_VERSION", TPOPlUGIN_SLUG.'_table_hotel_list_version');
 define("TPOPlUGIN_TABLE_ARL_VERSION", TPOPlUGIN_SLUG.'_table_arl_version');
 define("TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION", TPOPlUGIN_SLUG.'_table_special_offer_version');
 define("TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION", TPOPlUGIN_SLUG.'_table_special_route_version');
