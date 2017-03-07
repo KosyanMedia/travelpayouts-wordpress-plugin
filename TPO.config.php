@@ -23,3 +23,22 @@ define("TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION", TPOPlUGIN_SLUG.'_table_special_r
 define("TPOPlUGIN_ERROR_LOG", false);
 //Использование своих файлов переводов
 define("TPOPlUGIN_CUSTOM_LOCALIZATION", false);
+define("TPOPlUGIN_DEBUG_LOG", true);
+/**
+ * error_log
+ * @param $message
+ */
+function tpErrorLog($message, $className = "", $method = "", $line = ""){
+    if (TPOPlUGIN_DEBUG_LOG == true){
+        if (!empty($className)){
+            error_log($className);
+        }
+        if (!empty($method)){
+            error_log($method);
+        }
+        if (!empty($line)){
+            error_log($line);
+        }
+        error_log($message);
+    }
+}

@@ -82,17 +82,18 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
         if ($hotelCache == false || count($hotelCache) < 1) return false;
 
 
-        $hotelId = array_column($return, 'hotelId');
-        error_log(print_r($hotelId, true));
-        error_log(count($hotelId));
+        //$hotelId = array_column($return, 'hotelId');
+       // error_log(print_r($hotelId, true));
+        //error_log(count($hotelId));
         $hotelList = self::$TPRequestApi->getHotelList($attr);
 
         //$hotelListId = array_column($hotelList['hotels'], 'id');
         //error_log(print_r($hotelListId, true));
         //$strcasecmp = array_uintersect_assoc($hotelId, $hotelList['hotels'], array(&$this, 'strcasecmp'));
+        tpErrorLog('Test', __CLASS__, __METHOD__,__LINE__);
         $hotelData = array();
         $count = 0;
-        foreach ($hotelId as $id){
+       /* foreach ($hotelId as $id){
             foreach ($hotelList['hotels'] as $hotel){
                 $count++;
                 if ($id == $hotel['id']){
@@ -103,11 +104,11 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             }
         }
         error_log($count);
-        error_log(count($hotelData));
+        error_log(count($hotelData));*/
         //error_log(print_r($hotelData, true));
         //error_log(print_r($hotelList['hotels'], true));
 //hotelId == id
-        return $return;
+        //return $return;
     }
 
     public function strcasecmp($a, $b){

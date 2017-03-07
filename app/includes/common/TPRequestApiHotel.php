@@ -58,6 +58,7 @@ class TPRequestApiHotel extends TPRequestApi
 
 
     /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hotellist
      * @param array $args
      * Отели Города по цене ОТ-ДО
      * Запрос «Hotels list»
@@ -85,6 +86,7 @@ class TPRequestApiHotel extends TPRequestApi
     }
 
     /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#price
      * Вывод стоимости проживания в отелях
      * @param array $args
      * location — имя локации (может использоваться IATA код локации);
@@ -205,6 +207,7 @@ class TPRequestApiHotel extends TPRequestApi
     }
 
     /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hoteltype
      * https://engine.hotellook.com/api/v2/static/hotelTypes.json?language=en&token=УкажитеВашТокен
      */
     public function getHotelsType(){
@@ -214,12 +217,20 @@ class TPRequestApiHotel extends TPRequestApi
         );
     }
 
+    /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hoteltype
+     * @return mixed
+     */
     public function getHotelsTypeRu(){
         $token = 'token=' .$this->getToken();
         $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=ru&{$token}";
         return $this->requestJson($requestURL);
     }
 
+    /**
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hoteltype
+     * @return mixed
+     */
     public function getHotelsTypeEn(){
         $token = 'token=' .$this->getToken();
         $requestURL = self::getApiUrl()."/static/hotelTypes.json?language=en&{$token}";
