@@ -81,10 +81,35 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
         $inputData = array(
             'location_id' => $locationID,
             'date_add' => time(),
-            'type_shortcode' => $hotelList,
+            'hotel_list' => $hotelList,
         );
         $wpdb->insert($tableName, $inputData);
 
+    }
+
+    public function getHotelListByLocationID($locationID){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+
+        //$data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE location_id= ". $locationID, ARRAY_A);
+        $parameter = array(
+            $locationID
+        );
+        $data = $wpdb->get_results(
+            $wpdb->prepare('SELECT * FROM '.$tableName
+                .' WHERE location_id = %d', $parameter),
+            ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
+
+    public function deleteHotelListByLocationID($locationID){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $parameter = array(
+            $locationID
+        );
+        $wpdb->query($wpdb->prepare('DELETE FROM '.$tableName .' WHERE location_id = %d', $parameter));
     }
 
     public function update($data)
@@ -100,9 +125,9 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
     public function deleteId($id)
     {
         // TODO: Implement deleteId() method.
-        global $wpdb;
+        /*global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
-        $wpdb->query("DELETE FROM ".$tableName." WHERE id = '".$id ."'");
+        $wpdb->query("DELETE FROM ".$tableName." WHERE id = '".$id ."'");*/
     }
 
     public function query()
