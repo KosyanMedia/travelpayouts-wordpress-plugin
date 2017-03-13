@@ -12,6 +12,7 @@ namespace app\includes\common;
 class TPRequestApiHotel extends TPRequestApi
 {
     const TP_API_URL = 'https://engine.hotellook.com/api/v2';
+    const TP_API_URL_V1 = 'https://yasen.hotellook.com/tp/v1';
 
     private static $instance = null;
 
@@ -27,7 +28,9 @@ class TPRequestApiHotel extends TPRequestApi
     public static function getApiUrl(){
         return self::TP_API_URL;
     }
-
+    public static function getApiUrlV1(){
+        return self::TP_API_URL_V1;
+    }
 
     /**
      * https://support.travelpayouts.com/hc/ru/articles/115000343268#hotellist
@@ -305,7 +308,7 @@ class TPRequestApiHotel extends TPRequestApi
 
         $token = 'token=' .$this->getToken();
 
-        $requestURL = self::getApiUrl()."/widget_location_dump.json?{$id}&{$check_in}&{$check_out}&{$currency}&{$limit}"
+        $requestURL = self::getApiUrlV1()."/widget_location_dump.json?{$id}&{$check_in}&{$check_out}&{$currency}&{$limit}"
             ."&{$language}&{$type}&{$token}";
 
         if ($return_url == true){
