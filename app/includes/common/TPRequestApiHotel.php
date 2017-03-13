@@ -237,6 +237,83 @@ class TPRequestApiHotel extends TPRequestApi
         return $this->requestJson($requestURL);
     }
 
+    /**
+     * Подборки отелей
+     * https://support.travelpayouts.com/hc/ru/articles/115000343268#hotelcollections
+     * @param array $args
+     * check_in — дата заселения;
+     * check_out — дата выселения;
+     * currency — валюта ответа;
+     * language — язык ответа;
+     * limit — ограничение на выводимое количество отелей;
+     * type — типы отелей из запроса /tp/public/available_selections.json (см. ниже); type=popularity
+     * id — id города
+     */
+    public function getHotelSelection($args = array()){
+        $defaults = array(
+            'id' => false,
+            'check_in' => false,
+            'check_out' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'language' => 'ru',
+            'limit' => false,
+            'type' => 'popularity',
+            'return_url' => false
+        );
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        if (!$id || empty($id)){
+            echo $this->get_error('id');
+            $id = "";
+            return false;
+        } else {
+            $id = "id={$id}";
+        }
+        if (!$check_in || empty($check_in)){
+            echo $this->get_error('check_in');
+            $check_in = "";
+            return false;
+        } else {
+            $check_in = "check_in={$check_in}";
+        }
+        if (!$check_out || empty($check_out)){
+            echo $this->get_error('check_out');
+            $check_out = "";
+            return false;
+        } else {
+            $check_out = "check_out={$check_out}";
+        }
+        if (!$currency || empty($currency)){
+            $currency = "";
+        } else {
+            $currency = "currency={$currency}";
+        }
+        if (!$language || empty($language)){
+            $language = "";
+        } else {
+            $language = "language={$language}";
+        }
+        if (!$limit || empty($limit)){
+            $limit = "";
+        } else {
+            $limit = "limit={$limit}";
+        }
+        if (!$type || empty($type)){
+            $type = "";
+        } else {
+            $type = "type={$type}";
+        }
+
+        $token = 'token=' .$this->getToken();
+
+        $requestURL = self::getApiUrl()."/widget_location_dump.json?{$id}&{$check_in}&{$check_out}&{$currency}&{$limit}"
+            ."&{$language}&{$type}&{$token}";
+
+        if ($return_url == true){
+            return $requestURL;
+        }
+        return $this->request($requestURL);
+
+    }
 
     public function request($string)
     {
