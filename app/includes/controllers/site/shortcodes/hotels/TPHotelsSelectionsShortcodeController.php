@@ -37,10 +37,8 @@ class TPHotelsSelectionsShortcodeController extends TPShortcodesController
      */
     public function actionTableDiscount($args = array())
     {
-        //$data = $this->model->getDataTable($args);
-
-        //return print_r($data);
-        //return var_dump("<pre>", $data, "</pre>");
+        $data = $this->model->getDataTable($args);
+        return var_dump("<pre>", $data, "</pre>");
     }
 
     /**
@@ -49,7 +47,8 @@ class TPHotelsSelectionsShortcodeController extends TPShortcodesController
      */
     public function actionTableDate($args = array())
     {
-
+        $data = $this->model->getDataTable($args);
+        return var_dump("<pre>", $data, "</pre>");
     }
 
 }

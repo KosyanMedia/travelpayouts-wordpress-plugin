@@ -161,13 +161,6 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
     }
 
 
-    public function getCheckOut($day){
-        if ($day > 0){
-            $check_out = date('Y-m-d', DAY_IN_SECONDS * $day + time());
-        } else {
-            $check_out = date('Y-m-d');
-        }
-        return $check_out;
-    }
+
 
 }

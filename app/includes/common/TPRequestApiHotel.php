@@ -8,6 +8,7 @@
 
 namespace app\includes\common;
 
+use \app\includes\common\TPLang;
 
 class TPRequestApiHotel extends TPRequestApi
 {
@@ -258,7 +259,7 @@ class TPRequestApiHotel extends TPRequestApi
             'check_in' => false,
             'check_out' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
-            'language' => 'ru',
+            'language' => TPLang::getLang(),
             'limit' => false,
             'type' => 'popularity',
             'return_url' => false
@@ -269,21 +270,21 @@ class TPRequestApiHotel extends TPRequestApi
             $id = "";
             return false;
         } else {
-            $id = "id={$id}";
+            $id = "&id={$id}";
         }
         if (!$check_in || empty($check_in)){
-            echo $this->get_error('check_in');
+            //echo $this->get_error('check_in');
             $check_in = "";
-            return false;
+            //return false;
         } else {
-            $check_in = "check_in={$check_in}";
+            $check_in = "&check_in={$check_in}";
         }
         if (!$check_out || empty($check_out)){
-            echo $this->get_error('check_out');
+            //echo $this->get_error('check_out');
             $check_out = "";
-            return false;
+            //return false;
         } else {
-            $check_out = "check_out={$check_out}";
+            $check_out = "&check_out={$check_out}";
         }
         if (!$currency || empty($currency)){
             $currency = "";
@@ -293,23 +294,23 @@ class TPRequestApiHotel extends TPRequestApi
         if (!$language || empty($language)){
             $language = "";
         } else {
-            $language = "language={$language}";
+            $language = "&language={$language}";
         }
         if (!$limit || empty($limit)){
             $limit = "";
         } else {
-            $limit = "limit={$limit}";
+            $limit = "&limit={$limit}";
         }
         if (!$type || empty($type)){
             $type = "";
         } else {
-            $type = "type={$type}";
+            $type = "&type={$type}";
         }
 
-        $token = 'token=' .$this->getToken();
+        $token = '&token=' .$this->getToken();
 
-        $requestURL = self::getApiUrlV1()."/widget_location_dump.json?{$id}&{$check_in}&{$check_out}&{$currency}&{$limit}"
-            ."&{$language}&{$type}&{$token}";
+        $requestURL = self::getApiUrlV1()."/widget_location_dump.json?{$currency}{$id}{$check_in}{$check_out}{$limit}"
+            ."{$language}{$type}{$token}";
 
         if ($return_url == true){
             return $requestURL;
