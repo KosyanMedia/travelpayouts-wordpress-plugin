@@ -1,5 +1,6 @@
 <?php
 /**
+ * Подборки отелей на даты
  * Created by PhpStorm.
  * User: romansolomashenko
  * Date: 14.03.17
@@ -112,6 +113,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false,
             'language' => TPLang::getLang(),
+            'type_selections' => 'all',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -129,7 +131,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'currency' => $currency,
             'language' => $language,
             'limit' => $number_results,
-            'type' => $type,
+            'type' => $type_selections,
             'return_url' => $return_url
         ));
 

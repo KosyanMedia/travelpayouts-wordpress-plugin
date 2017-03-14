@@ -29,7 +29,7 @@ class TPHotelsSelectionsDateShortcodeController extends TPShortcodesController
     {
         // TODO: Implement initShortcode() method.
         // Подборки отелей на даты
-        add_shortcode( 'tp_hotels_selections_date_shortcodes', array(&$this, 'actionTableDate'));
+        add_shortcode( 'tp_hotels_selections_date_shortcodes', array(&$this, 'actionTable'));
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 /**
+ * Подборка отелей - Скидки
  * Created by PhpStorm.
  * User: romansolomashenko
  * Date: 14.03.17
