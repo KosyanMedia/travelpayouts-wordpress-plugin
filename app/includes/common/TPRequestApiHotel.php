@@ -261,7 +261,7 @@ class TPRequestApiHotel extends TPRequestApi
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'language' => TPLang::getLang(),
             'limit' => false,
-            'type' => 'popularity',
+            'type' => 'all',
             'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -315,7 +315,7 @@ class TPRequestApiHotel extends TPRequestApi
         if ($return_url == true){
             return $requestURL;
         }
-        return $this->request($requestURL);
+        return  $this->request($requestURL);
 
     }
 
@@ -325,11 +325,13 @@ class TPRequestApiHotel extends TPRequestApi
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
         )) );
-        if( is_wp_error( $response ) ){
+        /*if( is_wp_error( $response ) ){
             $json = $response;
         } else {
             $json = json_decode( $response['body'] );
-        }
+        }*/
+        $body = wp_remote_retrieve_body($response);
+        $json = json_decode( $body );
         if( ! is_wp_error( $json ))
             return $this->objectToArray($json);
     }
