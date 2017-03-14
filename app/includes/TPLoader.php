@@ -8,6 +8,8 @@ use app\includes\common\TPRequestApiStatistic;
 use app\includes\controllers\site\shortcodes\hotels\TPCostLivingCityDaysShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityStarFilterShortcodeController;
+use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDateShortcodeController;
+use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsShortcodeController;
 use app\includes\models\admin\TPHotelsTypeModel;
 
@@ -76,7 +78,9 @@ class TPLoader extends \core\TPOLoader{
         new TPCostLivingCityDaysShortcodeController();
         new TPHotelsCityPriceFromToShortcodeController();
         new TPHotelsCityStarFilterShortcodeController();
-        new TPHotelsSelectionsShortcodeController();
+        //new TPHotelsSelectionsShortcodeController();
+        new TPHotelsSelectionsDiscountShortcodeController();
+        new TPHotelsSelectionsDateShortcodeController();
 
         //Widgets
         new \app\includes\controllers\site\widgets\TPMapWidgetController();
