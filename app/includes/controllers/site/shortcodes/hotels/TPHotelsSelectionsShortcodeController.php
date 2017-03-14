@@ -25,13 +25,31 @@ class TPHotelsSelectionsShortcodeController extends TPShortcodesController
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_hotels_selections_shortcodes', array(&$this, 'actionTable'));
+        // Подборка отелей - Скидки
+        add_shortcode( 'tp_hotels_selections_discount_shortcodes', array(&$this, 'actionTableDiscount'));
+        // Подборки отелей на даты
+        add_shortcode( 'tp_hotels_selections_date_shortcodes', array(&$this, 'actionTableDate'));
     }
-    public function actionTable($args = array())
+
+    /**
+     * Подборка отелей - Скидки
+     * @param array $args
+     */
+    public function actionTableDiscount($args = array())
     {
         //$data = $this->model->getDataTable($args);
 
         //return print_r($data);
         //return var_dump("<pre>", $data, "</pre>");
     }
+
+    /**
+     * Подборки отелей на даты
+     * @param array $args
+     */
+    public function actionTableDate($args = array())
+    {
+
+    }
+
 }
