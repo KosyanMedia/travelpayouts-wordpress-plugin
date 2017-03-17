@@ -37,7 +37,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'language' => TPLang::getLang(),
             'limit' => 5,
-            'type' => 'all',
+            'type' => 'popularity',
             'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -64,6 +64,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $return;
+                    $rows = array_shift($rows);
                     $cacheSecund = $this->cacheSecund();
                 }
                 set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
@@ -74,6 +75,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             if (!$rows){
                 return false;
             }
+            $rows = array_shift($rows);
         }
 
         //tpErrorLog(print_r($rows, true));
@@ -117,7 +119,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false,
             'language' => TPLang::getLang(),
-            'type_selections' => 'all',
+            'type_selections' => 'popularity',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -138,6 +140,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type' => $type_selections,
             'return_url' => $return_url
         ));
+
 
 
         return array(
