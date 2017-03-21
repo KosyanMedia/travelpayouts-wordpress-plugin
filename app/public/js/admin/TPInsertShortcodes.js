@@ -631,7 +631,7 @@ jQuery(function($) {
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
-                                    setShortcodes("[tp_hotels_selections_shortcodes city=\""+hotels_city+"\" " +
+                                    setShortcodes("[tp_hotels_selections_discount_shortcodes city=\""+hotels_city+"\" " +
                                         "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                         " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
                                         " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
@@ -644,7 +644,7 @@ jQuery(function($) {
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
-                                    setShortcodes("[tp_hotels_selections_shortcodes city=\""+hotels_city+"\" " +
+                                    setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
                                         "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                         " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
                                         " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
