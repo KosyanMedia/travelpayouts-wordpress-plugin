@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:05
+ * 1. Цены на месяц по направлению, в одну сторону
  */
 namespace app\includes\models\site\shortcodes;
 use \app\includes\models\site\TPFlightShortcodeModel;

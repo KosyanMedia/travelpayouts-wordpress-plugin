@@ -5,7 +5,7 @@
  * Date: 14.03.17
  * Time: 3:23 PM
  *
- * Подборки отелей на даты
+ * Подборки отелей на даты    Hotels collections for dates
  *
  */
 

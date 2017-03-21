@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:04
+ * 1. Цены на месяц по направлению, в одну сторону
  */
 namespace app\includes\controllers\site\shortcodes;
 class TPPriceCalendarMonthShortcodeController extends \app\includes\controllers\site\TPShortcodesController {

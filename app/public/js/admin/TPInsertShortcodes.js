@@ -644,7 +644,7 @@ jQuery(function($) {
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
-                                    setShortcodes("[tp_hotels_city_price_from_to_shortcodes city=\""+hotels_city+"\" " +
+                                    setShortcodes("[tp_hotels_selections_shortcodes city=\""+hotels_city+"\" " +
                                         "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                         " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
                                         " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
@@ -657,7 +657,7 @@ jQuery(function($) {
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
-                                    setShortcodes("[tp_hotels_city_star_filter_shortcodes city=\""+hotels_city+"\" " +
+                                    setShortcodes("[tp_hotels_city_price_from_to_shortcodes city=\""+hotels_city+"\" " +
                                         "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                         " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
                                         " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
@@ -670,7 +670,7 @@ jQuery(function($) {
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
-                                    setShortcodes("[tp_cost_living_city_days_shortcodes city=\""+hotels_city+"\" " +
+                                    setShortcodes("[tp_hotels_city_star_filter_shortcodes city=\""+hotels_city+"\" " +
                                         "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                         " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
                                         " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
@@ -680,6 +680,19 @@ jQuery(function($) {
                                 }
                                 break;
                             case '5':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                } else {
+                                    setShortcodes("[tp_cost_living_city_days_shortcodes city=\""+hotels_city+"\" " +
+                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
+                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
+                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
+                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"]",
+                                        $(this));
+                                }
+                                break;
+                            case '6':
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
                                 } else {
@@ -766,6 +779,9 @@ jQuery(function($) {
                     constructorHotelsShortcodesFieldsShow();
                     break;
                 case '5':
+                    constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '6':
                     constructorHotelsShortcodesFieldsShow();
                     break;
             }

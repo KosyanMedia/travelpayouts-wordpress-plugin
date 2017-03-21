@@ -15,22 +15,26 @@
                     </option>
                     <option value="1">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1',
-                            '(Hotel seleсtions)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(Hotels collection - Discounts)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="2">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2',
-                            '(City hotels with price from to)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(Hotels collections for dates)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="3">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3',
-                            '(City hotels by stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(City hotels with price from to)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="4">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4',
-                            '(Stay price in city for X days)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(City hotels by stars)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="5">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5',
+                            '(Stay price in city for X days)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+                    <option value="6">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6',
                             '(Stay price in city for weekend)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>

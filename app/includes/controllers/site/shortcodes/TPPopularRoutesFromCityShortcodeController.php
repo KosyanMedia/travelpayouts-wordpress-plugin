@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:31
+ * 8. Популярные направления из города
  */
 namespace app\includes\controllers\site\shortcodes;
 class TPPopularRoutesFromCityShortcodeController extends \app\includes\controllers\site\TPShortcodesController{

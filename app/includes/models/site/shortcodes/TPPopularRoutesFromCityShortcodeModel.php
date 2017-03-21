@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:33
+ * 8. Популярные направления из города
  */
 namespace app\includes\models\site\shortcodes;
 use app\includes\common\TPCurrencyUtils;

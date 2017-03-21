@@ -220,7 +220,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $currency,
             'return_url' => $return_url
         ));
-
+        //error_log(print_r($return, true));
         //if( ! $return )
          //   return false;
         if ($return_url == false) {

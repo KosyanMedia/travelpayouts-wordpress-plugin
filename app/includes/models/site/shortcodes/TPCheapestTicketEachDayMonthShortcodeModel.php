@@ -4,6 +4,8 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:27
+ *
+ *  4. Самые дешевые билеты по направлению в этом месяце
  */
 namespace app\includes\models\site\shortcodes;
 use \app\includes\models\site\TPFlightShortcodeModel;
@@ -36,6 +38,9 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
                 $return = (array) self::$TPRequestApi->get_calendar($attr);
+
+                //error_log(print_r($return, true));
+
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )

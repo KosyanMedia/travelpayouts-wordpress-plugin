@@ -128,6 +128,9 @@ class TPRequestApiFlight extends TPRequestApi
         if ($return_url == true){
             return $request_string;
         }
+        //error_log(print_r($request_string, true));
+        //error_log(print_r($this->request($request_string), true));
+
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -422,6 +425,7 @@ class TPRequestApiFlight extends TPRequestApi
         if ($return_url == true){
             return $request_string;
         }
+
         return $this->objectToArray($this->request($request_string));
     }
 

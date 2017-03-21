@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:18
+ * 5. Цены на билеты по месяцам
  */
 namespace app\includes\models\site\shortcodes;
 use \app\includes\models\site\TPFlightShortcodeModel;

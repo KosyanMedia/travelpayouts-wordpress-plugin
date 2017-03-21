@@ -5,7 +5,8 @@
  * Date: 14.03.17
  * Time: 3:22 PM
  *
- * Подборка отелей - Скидки
+ * Подборка отелей - Скидки   Hotels collection - Discounts
+
  */
 
 namespace app\includes\controllers\site\shortcodes\hotels;

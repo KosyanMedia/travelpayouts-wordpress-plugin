@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:17
+ * 5. Цены на билеты по месяцам
  */
 namespace app\includes\controllers\site\shortcodes;
 class TPCheapestTicketsEachMonthShortcodeController extends \app\includes\controllers\site\TPShortcodesController{
