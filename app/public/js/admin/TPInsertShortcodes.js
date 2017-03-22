@@ -736,6 +736,8 @@ jQuery(function($) {
             $(this).removeClass('constructorShortcodesError');
         });
 
+        console.log(hotelsSelectionsType);
+
         constructorHotelsShortcodesSelect();
     });
 

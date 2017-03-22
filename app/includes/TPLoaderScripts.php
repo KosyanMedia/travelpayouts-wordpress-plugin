@@ -13,7 +13,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         // TODO: Implement loadScriptAdmin() method.
         /** Register styles */
         //$version = TPOPlUGIN_VERSION;
-        $version = null;
+        $version = false;
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
@@ -79,6 +79,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             $version, //$ver
             true //$$in_footer
         );
+
+        wp_register_script(
+            TPOPlUGIN_SLUG.'-HotelsSelectionsType', //$handle
+            TPOPlUGIN_URL.'app/public/js/lib/TPHotelsSelectionsType.js', //$src
+            array('jquery', 'jquery-ui-autocomplete'), //$deps
+            $version, //$ver
+            true //$$in_footer
+        );
+
         wp_register_script(
             TPOPlUGIN_SLUG.'-InsertShortcodes', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPInsertShortcodes.js', //$src
@@ -89,7 +98,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 'jquery-ui-core',
                 'jquery-ui-datepicker',
                 'jquery-form',
-                'jquery-ui-progressbar'
+                'jquery-ui-progressbar',
+                TPOPlUGIN_SLUG.'-HotelsSelectionsType', //$handle
             ), //$deps
             $version, //$ver
             true //$$in_footer
