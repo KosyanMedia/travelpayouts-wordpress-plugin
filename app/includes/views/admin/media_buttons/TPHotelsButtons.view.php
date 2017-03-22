@@ -56,6 +56,14 @@
                            '(City)', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+        <tr id="tr_hotels_subid">
+            <td>
+                <input type="text" name="hotels_subid" id="hotels_subid" value=""
+                       class="regular-text code"
+                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_subid_label',
+                           '(Subid)', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
         <tr id="tr_hotels_type">
             <td id="td_hotels_type">
                 <select name="select_hotels_type" id="select_hotels_type">

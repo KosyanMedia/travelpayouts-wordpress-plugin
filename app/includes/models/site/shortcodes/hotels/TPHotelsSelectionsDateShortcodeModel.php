@@ -117,6 +117,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
+            'subid' => '',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -155,6 +156,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'limit' => $number_results,
             'currency' => $currency,
             'return_url' => $return_url,
+            'subid' => $subid,
 
         );
 

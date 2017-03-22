@@ -59,7 +59,8 @@ class TPHotelsCityPriceFromToShortcodeModel extends TPHotelShortcodeModel
     public function getDataTable($args = array()){
         $defaults = array(
             'location_id' => false,
-            'return_url' => false
+            'return_url' => false,
+            'subid' => '',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -75,6 +76,7 @@ class TPHotelsCityPriceFromToShortcodeModel extends TPHotelShortcodeModel
 
         return array(
             'rows' => $return,
+            'subid' => $subid,
         );
 
 

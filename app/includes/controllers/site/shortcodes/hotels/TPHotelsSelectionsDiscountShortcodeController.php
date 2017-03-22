@@ -13,6 +13,7 @@ namespace app\includes\controllers\site\shortcodes\hotels;
 
 use \app\includes\controllers\site\TPShortcodesController;
 use \app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeModel;
+use app\includes\views\site\shortcodes\TPHotelShortcodeView;
 
 class TPHotelsSelectionsDiscountShortcodeController extends TPShortcodesController
 {
@@ -22,7 +23,7 @@ class TPHotelsSelectionsDiscountShortcodeController extends TPShortcodesControll
     public function __construct(){
         parent::__construct();
         $this->model = new TPHotelsSelectionsDiscountShortcodeModel();
-        //$this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+        $this->view = new TPHotelShortcodeView();
     }
 
     public function initShortcode()
@@ -39,6 +40,11 @@ class TPHotelsSelectionsDiscountShortcodeController extends TPShortcodesControll
     public function actionTable($args = array())
     {
         $data = $this->model->getDataTable($args);
-        return var_dump("<pre>", $data, "</pre>");
+
+        if ($data['return_url'] == true){
+            return var_dump("<pre>", $data, "</pre>");
+        }
+        return $this->view->renderTable($data);
+
     }
 }

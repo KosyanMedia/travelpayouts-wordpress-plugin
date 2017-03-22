@@ -112,7 +112,8 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'distance_to' => 3,
             'number_results' => 20,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
-            'return_url' => false
+            'return_url' => false,
+            'subid' => '',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -154,6 +155,7 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'limit' => $number_results,
             'currency' => $currency,
             'return_url' => $return_url,
+            'subid' => $subid,
 
         );
 
