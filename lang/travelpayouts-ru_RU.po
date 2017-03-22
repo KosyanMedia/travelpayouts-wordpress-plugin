@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-21 16:56+0200\n"
+"POT-Creation-Date: 2017-03-22 12:24+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -446,124 +446,124 @@ msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
 "услуг. "
 
-#: app/includes/TPLoaderScripts.php:328
+#: app/includes/TPLoaderScripts.php:338
 msgctxt "(Hotel Name)"
 msgid "tp_head_script_admin_var_hotel_widget_label"
 msgstr "Название отеля"
 
-#: app/includes/TPLoaderScripts.php:329
+#: app/includes/TPLoaderScripts.php:339
 msgctxt "(Destination)"
 msgid "tp_head_script_admin_var_destination_title_label"
 msgstr "Куда"
 
-#: app/includes/TPLoaderScripts.php:330
+#: app/includes/TPLoaderScripts.php:340
 msgctxt "Origin"
 msgid "tp_head_script_admin_var_origin_title_label"
 msgstr "Откуда"
 
-#: app/includes/TPLoaderScripts.php:331
+#: app/includes/TPLoaderScripts.php:341
 msgctxt "(Location)"
 msgid "tp_head_script_admin_var_location_title_label"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:336
+#: app/includes/TPLoaderScripts.php:346
 msgctxt "(Settings saved.)"
 msgid "tp_head_script_admin_var_mesg_update_settings_label"
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:337
+#: app/includes/TPLoaderScripts.php:347
 msgctxt "(hotels)"
 msgid "tp_head_script_admin_var_hotels_autocomplete_label"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:338
+#: app/includes/TPLoaderScripts.php:348
 msgctxt "(City)"
 msgid "tp_head_script_admin_var_city_label"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:342
+#: app/includes/TPLoaderScripts.php:352
 msgctxt "(Complete!)"
 msgid "tp_head_script_admin_var_label_progress_bar_label"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:343
+#: app/includes/TPLoaderScripts.php:353
 msgctxt ""
 "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?)"
 msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
 msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
 
-#: app/includes/TPLoaderScripts.php:344
+#: app/includes/TPLoaderScripts.php:354
 msgctxt "(Auto-links are applied)"
 msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
 msgstr "Подстановка ссылок завершена"
 
-#: app/includes/TPLoaderScripts.php:345
+#: app/includes/TPLoaderScripts.php:355
 msgctxt "(Airline)"
 msgid "tp_head_script_admin_var_airline_widget_8_label"
 msgstr "Авиакомпания"
 
-#: app/includes/TPLoaderScripts.php:346
+#: app/includes/TPLoaderScripts.php:356
 msgctxt "(Delete)"
 msgid "tp_head_script_admin_var_delete_widget_8_label"
 msgstr "Удалить"
 
-#: app/includes/TPLoaderScripts.php:347
+#: app/includes/TPLoaderScripts.php:357
 msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Ошибка невалидный файл"
 
-#: app/includes/TPLoaderScripts.php:365
+#: app/includes/TPLoaderScripts.php:375
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:366
+#: app/includes/TPLoaderScripts.php:376
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:370
+#: app/includes/TPLoaderScripts.php:380
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:371
+#: app/includes/TPLoaderScripts.php:381
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:375
+#: app/includes/TPLoaderScripts.php:385
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:376
+#: app/includes/TPLoaderScripts.php:386
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:380
+#: app/includes/TPLoaderScripts.php:390
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:381
+#: app/includes/TPLoaderScripts.php:391
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "Нет анкоров"
 
-#: app/includes/TPLoaderScripts.php:382
+#: app/includes/TPLoaderScripts.php:392
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:385
+#: app/includes/TPLoaderScripts.php:395
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:386
+#: app/includes/TPLoaderScripts.php:396
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Отмена"
@@ -3223,87 +3223,92 @@ msgctxt "(Hotel type)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
 msgstr "Тип отеля"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:77
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:79
+msgctxt "(Selection type)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label"
+msgstr "Тип подборки"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:89
 msgctxt "(Number of days)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_day_label"
 msgstr "Количество дней"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:85
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:97
 msgctxt "(Stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
 msgstr "Звезды"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:89
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:101
 msgctxt "(No stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
 msgstr "Без звезд"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:93
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:105
 msgctxt "(1 star)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
 msgstr "1 звезда"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:97
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:109
 msgctxt "(2 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
 msgstr "2 звезды"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:101
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:113
 msgctxt "(3 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
 msgstr "3 звезды"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:105
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:117
 msgctxt "(4 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
 msgstr "4 звезды"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:109
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:121
 msgctxt "(5 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
 msgstr "5 звёзд"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:113
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:125
 msgctxt "(All)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
 msgstr "Все"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:122
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:134
 msgctxt "(User rating from)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
 msgstr "Рейтинг от "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:125
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:137
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
 msgstr "до"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:133
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:145
 msgctxt "(Distance to center from )"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
 msgstr "Расстояние до центра от "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:136
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:148
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
 msgstr "до"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:139
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:151
 msgctxt "(km)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
 msgstr "км"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:146
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:158
 msgctxt "(Number of results)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
 msgstr "Количество результатов"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:156
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:168
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:163
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:175
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "Убрать заголовок"

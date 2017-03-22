@@ -75,7 +75,11 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             if (!$rows){
                 return false;
             }
-            $rows = array_shift($rows);
+            if ($return_url == false){
+                $rows = array();
+                $rows = array_shift($rows);
+            }
+
         }
 
         //tpErrorLog(print_r($rows, true));

@@ -72,6 +72,18 @@
             </td>
         </tr>
 
+        <tr id="tr_hotels_selections_type">
+            <td id="td_hotels_selections_type">
+                <select name="select_hotels_selections_type" id="select_hotels_selections_type">
+                    <option selected="selected" value="all">
+                        <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label',
+                            '(Selection type)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </option>
+
+                </select>
+            </td>
+        </tr>
+
         <tr id="tr_hotels_day">
             <td>
                 <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_day_label',

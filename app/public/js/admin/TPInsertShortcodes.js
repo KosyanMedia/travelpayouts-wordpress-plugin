@@ -599,7 +599,8 @@ jQuery(function($) {
                     click: function() {
                         var select_hotels_shortcodes, tp_hotels_title, hotels_city, select_hotels_type, hotels_day,
                             select_hotels_star, hotels_rating_from, hotels_rating_to, hotels_distance_from,
-                            hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title;
+                            hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title,
+                            hotels_selections_type;
                         select_hotels_shortcodes = doc.find('#select_hotels_shortcodes').val();
                         tp_hotels_title = doc.find('#tp_hotels_title').val();
                         hotels_city = doc.find('#hotels_city').val();
@@ -612,6 +613,7 @@ jQuery(function($) {
                         hotels_distance_from = doc.find('#hotels_distance_from').val();
                         hotels_distance_to = doc.find('#hotels_distance_to').val();
                         hotels_number_results = doc.find('#hotels_number_results').val();
+                        hotels_selections_type = doc.find('#select_hotels_selections_type').val();
                         if(doc.find('#hotels_paginate').is(":checked")){
                             hotels_paginate = "paginate=true";
                         }else{
@@ -630,28 +632,33 @@ jQuery(function($) {
                             case '1':
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
-                                } else {
-                                    setShortcodes("[tp_hotels_selections_discount_shortcodes city=\""+hotels_city+"\" " +
-                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
-                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
-                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
-                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
-                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"]",
-                                        $(this));
+                                    break;
                                 }
+                                if (hotels_selections_type == "all"){
+                                    doc.find('#select_hotels_selections_type').addClass('constructorShortcodesError');
+                                    break;
+                                }
+                                setShortcodes("[tp_hotels_selections_discount_shortcodes city=\""+hotels_city+"\" " +
+                                    "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                    " type_selections=\""+hotels_selections_type+"\" number_results=\""+hotels_number_results+"\"]",
+                                    $(this));
+
                                 break;
                             case '2':
                                 if (hotels_city == ""){
                                     doc.find('#hotels_city').addClass('constructorShortcodesError');
-                                } else {
-                                    setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
-                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
-                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
-                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
-                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
-                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"]",
-                                        $(this));
+                                    break;
                                 }
+                                if (hotels_selections_type == "all"){
+                                    doc.find('#select_hotels_selections_type').addClass('constructorShortcodesError');
+                                    break;
+                                }
+
+                                setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
+                                    "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                    " type_selections=\""+hotels_selections_type+"\" number_results=\""+hotels_number_results+"\"]",
+                                    $(this));
+
                                 break;
                             case '3':
                                 if (hotels_city == ""){
@@ -732,14 +739,36 @@ jQuery(function($) {
         //tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
 
-        doc.find('#select_hotels_shortcodes, #hotels_city').focus(function() {
+        doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
 
-        console.log(hotelsSelectionsType);
+        //console.log(hotelsSelectionsType);
+        switch (tpLocale) {
+            case 'ru':
+                addHotelsSelectionsType('ru');
+                break;
+            case 'en':
+                addHotelsSelectionsType('en');
+                break;
+            default:
+                addHotelsSelectionsType('ru');
+                
+        }
 
         constructorHotelsShortcodesSelect();
     });
+    
+    function addHotelsSelectionsType(locale) {
+        if(typeof hotelsSelectionsType  == "undefined") return;
+        if(typeof hotelsSelectionsType[locale]  == "undefined") return;
+        $.each(hotelsSelectionsType[locale], function(key, value) {
+            $('#select_hotels_selections_type')
+                .append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
+        });
+    }
 
     function constructorHotelsShortcodesSelect(){
         doc.find('#td_select_hotels_shortcodes').on('change', '#select_hotels_shortcodes', function(e) {
@@ -769,10 +798,22 @@ jQuery(function($) {
                 case '0':
                     break;
                 case '1':
-                    constructorHotelsShortcodesFieldsShow();
+                    doc.find('#tr_hotels_title').show();
+                    doc.find('#tr_hotels_city').show();
+                    doc.find('#tr_hotels_paginate').show();
+                    doc.find('#tr_hotels_off_title').show();
+                    doc.find('#tr_hotels_number_results').show();
+                    doc.find('#tr_hotels_selections_type').show();
+                    //constructorHotelsShortcodesFieldsShow();
                     break;
                 case '2':
-                    constructorHotelsShortcodesFieldsShow();
+                    doc.find('#tr_hotels_title').show();
+                    doc.find('#tr_hotels_city').show();
+                    doc.find('#tr_hotels_paginate').show();
+                    doc.find('#tr_hotels_off_title').show();
+                    doc.find('#tr_hotels_number_results').show();
+                    doc.find('#tr_hotels_selections_type').show();
+                    //constructorHotelsShortcodesFieldsShow();
                     break;
                 case '3':
                     constructorHotelsShortcodesFieldsShow();
@@ -802,6 +843,7 @@ jQuery(function($) {
         doc.find('#tr_hotels_star').hide();
         doc.find('#tr_hotels_distance').hide();
         doc.find('#tr_hotels_number_results').hide();
+        doc.find('#tr_hotels_selections_type').hide();
         doc.find('#tp_hotels_title').val("");
         doc.find('#hotels_city').val("");
         $('#select_hotels_type option[value=all]').attr('selected','selected');
@@ -811,7 +853,7 @@ jQuery(function($) {
         doc.find('#hotels_distance_from').val(0);
         doc.find('#hotels_distance_to').val(3);
         doc.find('#hotels_number_results').val(20);
-        doc.find('#select_hotels_shortcodes, #hotels_city').removeClass('constructorShortcodesError');
+        doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').removeClass('constructorShortcodesError');
     }
 
 

@@ -64,7 +64,8 @@
 #select_search_form,
 #constructorLinkModalSelect,
 #select_hotels_shortcodes,
-#select_hotels_type{
+#select_hotels_type,
+#select_hotels_selections_type{
     width: 350px;
 }
 #tr_title,
@@ -133,14 +134,16 @@
 #tr_hotels_rating,
 #tr_hotels_star,
 #tr_hotels_distance,
-#tr_hotels_number_results
+#tr_hotels_number_results,
+#tr_hotels_selections_type
 {
     display: none;
 }
 .hotels-distance{
     width: 75px;
 }
-#table_iata_widget_8, #table_airline_widget_8{
+#table_iata_widget_8,
+#table_airline_widget_8{
     width: 100%;
 }
 .constructorShortcodesError{
