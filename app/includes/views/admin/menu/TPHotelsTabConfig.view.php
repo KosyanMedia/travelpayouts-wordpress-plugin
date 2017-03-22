@@ -7,7 +7,7 @@
                 <div class="bellows__header">
                     <h3>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_1_label',
-                            '(Hotel colletions)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(Hotels collection - Discounts)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </h3>
                 </div>
                 <div class="bellows__content">
@@ -20,11 +20,12 @@
                     </div>
                 </div>
             </div>
+
             <div class="bellows__item">
                 <div class="bellows__header">
                     <h3>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_2_label',
-                            '(City hotels with price from to)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(Hotels collections for dates)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </h3>
                 </div>
                 <div class="bellows__content">
@@ -37,11 +38,12 @@
                     </div>
                 </div>
             </div>
+
             <div class="bellows__item">
                 <div class="bellows__header">
                     <h3>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_3_label',
-                            '(City hotels by stars)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(City hotels with price from to)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </h3>
                 </div>
                 <div class="bellows__content">
@@ -54,12 +56,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="bellows__item">
                 <div class="bellows__header">
                     <h3>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_4_label',
-                            '(Stay price in city for X days)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(City hotels by stars)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </h3>
                 </div>
                 <div class="bellows__content">
@@ -77,7 +78,7 @@
                 <div class="bellows__header">
                     <h3>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_5_label',
-                            '(Stay price in city for weekend)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            '(Stay price in city for X days)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </h3>
                 </div>
                 <div class="bellows__content">
@@ -85,6 +86,24 @@
                     <div class="TP-navsPan">
                         <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                         <input type="submit" name="submit" id="TPSaveSettingsHotels_5" class="TP-BtnTab"
+                               value="<?php _ex('tp_admin_page_hotels_tab_tables_content_btn_save_label',
+                                   '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bellows__item">
+                <div class="bellows__header">
+                    <h3>
+                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_6_label',
+                            '(Stay price in city for weekend)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </h3>
+                </div>
+                <div class="bellows__content">
+                    <?php do_settings_fields('tp_settings_hotels_shortcode_6', 'tp_settings_hotels_shortcode_6_id'); ?>
+                    <div class="TP-navsPan">
+                        <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
+                        <input type="submit" name="submit" id="TPSaveSettingsHotels_6" class="TP-BtnTab"
                                value="<?php _ex('tp_admin_page_hotels_tab_tables_content_btn_save_label',
                                    '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
                     </div>

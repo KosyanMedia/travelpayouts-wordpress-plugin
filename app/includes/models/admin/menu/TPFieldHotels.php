@@ -18,7 +18,8 @@ class TPFieldHotels
     }
 
     /**
-     * Подборки отелей
+     * Подборка отелей - Скидки
+     * Hotels collection - Discounts
      */
     public function TPFieldShortcode_1(){
         $shortcode = 1;
@@ -35,9 +36,12 @@ class TPFieldHotels
         $this->getFieldSortableSection($shortcode);
 
     }
+
     /**
-     * Отели Города по цене ОТ-ДО
+     * Подборки отелей на даты
+     * Hotels collections for dates
      */
+
     public function TPFieldShortcode_2(){
         $shortcode = 2;
         ?>
@@ -51,9 +55,12 @@ class TPFieldHotels
         <?php $this->getFieldSortTd($shortcode); ?>
         <?php
         $this->getFieldSortableSection($shortcode);
+
     }
+
     /**
-     * Отели в городе по звездам
+     * Отели Города по цене ОТ-ДО
+     * City hotels with price from to
      */
     public function TPFieldShortcode_3(){
         $shortcode = 3;
@@ -70,7 +77,8 @@ class TPFieldHotels
         $this->getFieldSortableSection($shortcode);
     }
     /**
-     * Стоимость проживания В ГОРОДЕ на Х дней
+     * Отели в городе по звездам
+     * City hotels by stars
      */
     public function TPFieldShortcode_4(){
         $shortcode = 4;
@@ -87,10 +95,29 @@ class TPFieldHotels
         $this->getFieldSortableSection($shortcode);
     }
     /**
-     * Стоимость проживания В ГОРОДЕ на уикенд
+     * Стоимость проживания В ГОРОДЕ на Х дней
+     * Stay price in city for X days
      */
     public function TPFieldShortcode_5(){
         $shortcode = 5;
+        ?>
+        <div class="TP-HeadTable">
+            <?php $this->getFieldTitle($shortcode); ?>
+            <?php $this->getFieldTitleTag($shortcode); ?>
+        </div>
+        <?php $this->getFieldExtraMarker($shortcode); ?>
+        <?php $this->getFieldPaginate($shortcode); ?>
+        <?php $this->getFieldTitleButton($shortcode); ?>
+        <?php $this->getFieldSortTd($shortcode); ?>
+        <?php
+        $this->getFieldSortableSection($shortcode);
+    }
+    /**
+     * Стоимость проживания В ГОРОДЕ на уикенд
+     * Stay price in city for weekend
+     */
+    public function TPFieldShortcode_6(){
+        $shortcode = 6;
         ?>
         <div class="TP-HeadTable">
             <?php $this->getFieldTitle($shortcode); ?>
@@ -139,6 +166,7 @@ class TPFieldHotels
 
             switch($shortcode){
                 case 1:
+                case 2:
                     ?>
                     <p>
                         <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1',
@@ -146,7 +174,7 @@ class TPFieldHotels
                     </p>
                     <?php
                     break;
-                case 2:
+                case 3:
                     ?>
                     <p>
                         <?php
@@ -157,7 +185,7 @@ class TPFieldHotels
                     </p>
                     <?php
                     break;
-                case 3:
+                case 4:
                     ?>
                     <p>
                         <?php
@@ -168,7 +196,7 @@ class TPFieldHotels
                     </p>
                     <?php
                     break;
-                case 4:
+                case 5:
                     ?>
                     <p>
                         <?php
@@ -179,7 +207,7 @@ class TPFieldHotels
                     </p>
                     <?php
                     break;
-                case 5:
+                case 6:
                     ?>
                     <p>
                         <?php
