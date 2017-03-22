@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-22 16:51+0200\n"
+"POT-Creation-Date: 2017-03-22 17:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -329,104 +329,124 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты из {origin} - {destination}\"]"
 
-#: app/includes/TPDefault.php:784 app/includes/TPDefault.php:827
-msgctxt "(Hotel seleсtions)"
+#: app/includes/TPDefault.php:784
+msgctxt "(Hotels collection - Discounts)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
-msgstr "Hotel seleсtions"
+msgstr "Hotels collection - Discounts"
 
-#: app/includes/TPDefault.php:786 app/includes/TPDefault.php:829
-msgctxt "(Подборки отелей)"
+#: app/includes/TPDefault.php:786
+msgctxt "(Подборка отелей - Скидки)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
-msgstr "Подборки отелей"
+msgstr "Подборка отелей - Скидки"
 
-#: app/includes/TPDefault.php:794 app/includes/TPDefault.php:837
+#: app/includes/TPDefault.php:794
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:796 app/includes/TPDefault.php:839
+#: app/includes/TPDefault.php:796
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:871
-msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
+#: app/includes/TPDefault.php:828
+msgctxt "(Hotels collections for dates)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
-msgstr "{location} hotels with price from {priceAvgMin} to {priceAvgMax}"
+msgstr "Hotels collections for dates"
 
-#: app/includes/TPDefault.php:873
-msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
+#: app/includes/TPDefault.php:830
+msgctxt "(Подборки отелей на даты)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
-msgstr "Отели {location} по цене от {priceAvgMin} до {priceAvgMax}"
+msgstr "Подборки отелей на даты"
 
-#: app/includes/TPDefault.php:881
+#: app/includes/TPDefault.php:838
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:883
+#: app/includes/TPDefault.php:840
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:915
-msgctxt "(location hotels with stars stars )"
+#: app/includes/TPDefault.php:872
+msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title"
-msgstr "{location} hotels with {stars} stars "
+msgstr "location hotels with price from priceAvgMin to priceAvgMax"
 
-#: app/includes/TPDefault.php:917
-msgctxt "(Отели в location c stars звезд)"
+#: app/includes/TPDefault.php:874
+msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_3_title"
-msgstr "Отели в {location} c {stars} звезд"
+msgstr "Отели location по цене от priceAvgMin до priceAvgMax"
 
-#: app/includes/TPDefault.php:925
+#: app/includes/TPDefault.php:882
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:927
+#: app/includes/TPDefault.php:884
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:959
-msgctxt "(Stay price in location for number days)"
+#: app/includes/TPDefault.php:916
+msgctxt "(location hotels with stars stars )"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title"
-msgstr "Stay price in {location} for {number} days"
+msgstr "location hotels with stars stars "
 
-#: app/includes/TPDefault.php:961
-msgctxt "(Стоимость проживания в location на number дней)"
+#: app/includes/TPDefault.php:918
+msgctxt "(Отели в location c stars звезд)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_4_title"
-msgstr "Стоимость проживания в {location} на {number} дней"
+msgstr "Отели в location c stars звезд"
 
-#: app/includes/TPDefault.php:969
+#: app/includes/TPDefault.php:926
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:971
+#: app/includes/TPDefault.php:928
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:1003
-msgctxt "(Stay price in location for weekend)"
+#: app/includes/TPDefault.php:960
+msgctxt "(Stay price in location for number days)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title"
-msgstr "Stay price in {location} for weekend"
+msgstr "Stay price in location for number days"
 
-#: app/includes/TPDefault.php:1005
-msgctxt "(Стоимость проживания в location на уикенд)"
+#: app/includes/TPDefault.php:962
+msgctxt "(Стоимость проживания в location на number дней)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_5_title"
-msgstr "Стоимость проживания в {location} на уикенд"
+msgstr "Стоимость проживания в location на number дней"
 
-#: app/includes/TPDefault.php:1013
+#: app/includes/TPDefault.php:970
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:1015
+#: app/includes/TPDefault.php:972
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
+msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:1004
+msgctxt "(Stay price in location for weekend)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title"
+msgstr "Stay price in location for weekend"
+
+#: app/includes/TPDefault.php:1006
+msgctxt "(Стоимость проживания в location на уикенд)"
+msgid "tp_plugin_local_ru_table_shortcodes_hotels_6_title"
+msgstr "Стоимость проживания в location на уикенд"
+
+#: app/includes/TPDefault.php:1014
+msgctxt "(Book now)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
+msgstr "Book now"
+
+#: app/includes/TPDefault.php:1016
+msgctxt "(Забронировать)"
+msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Забронировать"
 
 #: app/includes/TPLoader.php:127
@@ -2052,31 +2072,31 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label
 msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
-#: app/includes/models/admin/menu/TPFieldHotels.php:240
+#: app/includes/models/admin/menu/TPFieldHotels.php:241
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
-#: app/includes/models/admin/menu/TPFieldHotels.php:245
+#: app/includes/models/admin/menu/TPFieldHotels.php:246
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
-#: app/includes/models/admin/menu/TPFieldHotels.php:250
+#: app/includes/models/admin/menu/TPFieldHotels.php:251
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
-#: app/includes/models/admin/menu/TPFieldHotels.php:255
+#: app/includes/models/admin/menu/TPFieldHotels.php:256
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
-#: app/includes/models/admin/menu/TPFieldHotels.php:260
+#: app/includes/models/admin/menu/TPFieldHotels.php:261
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2235,79 +2255,79 @@ msgctxt "(Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label"
 msgstr "Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:171
+#: app/includes/models/admin/menu/TPFieldHotels.php:172
 msgctxt "(Use {location} variable for city autoset)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "Use {location} variable for city autoset"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:180
+#: app/includes/models/admin/menu/TPFieldHotels.php:181
 msgctxt ""
 "(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr ""
 "Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:191
+#: app/includes/models/admin/menu/TPFieldHotels.php:192
 msgctxt "(Use {location} variable for city autoset, {stars} - number of stars)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3"
 msgstr "Use {location} variable for city autoset, {stars} - number of stars"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:202
+#: app/includes/models/admin/menu/TPFieldHotels.php:203
 msgctxt "(Use {location} variable for city autoset, {number} - number of days)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4"
 msgstr "Use {location} variable for city autoset, {number} - number of days"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:213
+#: app/includes/models/admin/menu/TPFieldHotels.php:214
 msgctxt "(Use {location} variable for city autoset)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5"
 msgstr "Use {location} variable for city autoset"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:233
+#: app/includes/models/admin/menu/TPFieldHotels.php:234
 msgctxt "(Title tag)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Title tag"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:312
+#: app/includes/models/admin/menu/TPFieldHotels.php:313
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Table Columns"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:318
+#: app/includes/models/admin/menu/TPFieldHotels.php:319
 msgctxt "(Not selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Not selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:328
+#: app/includes/models/admin/menu/TPFieldHotels.php:329
 msgctxt "(Selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:374
+#: app/includes/models/admin/menu/TPFieldHotels.php:375
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Extra marker"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:395
+#: app/includes/models/admin/menu/TPFieldHotels.php:396
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Rows per page"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:417
+#: app/includes/models/admin/menu/TPFieldHotels.php:418
 msgctxt "(Paginate)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:433
+#: app/includes/models/admin/menu/TPFieldHotels.php:434
 msgctxt "(Button Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Button Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:459
+#: app/includes/models/admin/menu/TPFieldHotels.php:460
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "\"price\" variable can be used"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:474
+#: app/includes/models/admin/menu/TPFieldHotels.php:475
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Sort by column"
@@ -4374,7 +4394,7 @@ msgid "tp_admin_page_hotels_paragraph_1"
 msgstr "Hotels"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
-msgctxt "(Hotel colletions)"
+msgctxt "(Hotels collection - Discounts)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
 msgstr "Hotels collection - Discounts"
 
@@ -4389,7 +4409,7 @@ msgid "tp_admin_page_hotels_tab_tables_content_btn_save_label"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:27
-msgctxt "(City hotels with price from to)"
+msgctxt "(Hotels collections for dates)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
 msgstr "Hotels collections for dates"
 
@@ -5240,6 +5260,54 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Hotel seleсtions)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
+#~ msgstr "Hotel seleсtions"
+
+#~ msgctxt "(Подборки отелей)"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
+#~ msgstr "Подборки отелей"
+
+#~ msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
+#~ msgstr "{location} hotels with price from {priceAvgMin} to {priceAvgMax}"
+
+#~ msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
+#~ msgstr "Отели {location} по цене от {priceAvgMin} до {priceAvgMax}"
+
+#~ msgctxt "(location hotels with stars stars )"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title"
+#~ msgstr "{location} hotels with {stars} stars "
+
+#~ msgctxt "(Отели в location c stars звезд)"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_hotels_3_title"
+#~ msgstr "Отели в {location} c {stars} звезд"
+
+#~ msgctxt "(Stay price in location for number days)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title"
+#~ msgstr "Stay price in {location} for {number} days"
+
+#~ msgctxt "(Стоимость проживания в location на number дней)"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_hotels_4_title"
+#~ msgstr "Стоимость проживания в {location} на {number} дней"
+
+#~ msgctxt "(Stay price in location for weekend)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title"
+#~ msgstr "Stay price in {location} for weekend"
+
+#~ msgctxt "(Стоимость проживания в location на уикенд)"
+#~ msgid "tp_plugin_local_ru_table_shortcodes_hotels_5_title"
+#~ msgstr "Стоимость проживания в {location} на уикенд"
+
+#~ msgctxt "(Hotel colletions)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
+#~ msgstr "Hotels collection - Discounts"
+
+#~ msgctxt "(City hotels with price from to)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
+#~ msgstr "Hotels collections for dates"
 
 #~ msgctxt "(City hotels by stars)"
 #~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_3_label"
