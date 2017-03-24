@@ -2751,7 +2751,7 @@ msgstr "Справка Travelpayouts"
 #: app/includes/models/admin/menu/TPFieldWidgets.php:114
 msgctxt "(Draggable)"
 msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
-msgstr "Возможность перетаскивать"
+msgstr "Запретить перетаскивать"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:121
 msgctxt "(Disable zoom)"

@@ -111,6 +111,8 @@ class TPFieldWidgets {
             <input id="chek3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][draggable]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['draggable']), 1) ?> hidden />
             <label for="chek3">
+                <!-- Draggable -->
+                <!-- Возможность перетаскивать -->
                 <?php _ex('tp_admin_page_widgets_shortcode_2_field_draggable_label',
                     '(Draggable)', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
