@@ -321,7 +321,7 @@ class TPRequestApiHotel extends TPRequestApi
 
     public function request($string)
     {
-        $string = htmlspecialchars($string);
+        //$string = htmlspecialchars($string);
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
         )) );
@@ -337,7 +337,7 @@ class TPRequestApiHotel extends TPRequestApi
     }
     public function requestJson($string)
     {
-        $string = htmlspecialchars($string);
+        //$string = htmlspecialchars($string);
         $response = wp_remote_get( $string, array('headers' => array(
             'Accept-Encoding' => 'gzip, deflate',
         )) );
