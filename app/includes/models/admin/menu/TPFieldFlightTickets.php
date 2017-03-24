@@ -824,6 +824,8 @@ class TPFieldFlightTickets {
         <div class="TP-HeadTable">
             <label>
                 <span>
+                    <!-- Extra marker -->
+                    <!-- Дополнительный маркер -->
                     <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label',
                         '(Extra marker)', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
