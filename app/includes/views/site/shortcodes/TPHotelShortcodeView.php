@@ -61,6 +61,6 @@ class TPHotelShortcodeView extends TPShortcodeView
     }
 
     public function renderTitleTable($off_title, $title, $shortcode, $city){
-
+        return 'Title';
     }
 }
