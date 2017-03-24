@@ -61,6 +61,39 @@ class TPHotelShortcodeView extends TPShortcodeView
     }
 
     public function renderTitleTable($off_title, $title, $shortcode, $city){
-        return 'Title';
+        if($off_title !== 'true'){
+            if(empty($title)) {
+                if(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()])){
+                    $title = TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()];
+                }else{
+                    $title = \app\includes\TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getDefaultLang()];
+                }
+
+                /*if(\app\includes\TPPlugin::$options['local']['title_case']['destination'] == 'vi'){
+                    $title = str_replace('в destination', 'destination', $title);
+                }*/
+            }
+            if(!empty($title)){
+
+                /*if (TPLang::getLang() == "ru"){
+                    if(strpos($title, 'origin') !== false){
+                        $title = str_replace('origin', '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' , $title);
+                    }
+                    if(strpos($title, 'destination') !== false){
+                        $title = str_replace('destination', '<span data-title-case-destination-iata="'.$destination.'">'.$destination.'</span>', $title);
+                    }
+                } else {
+                    if(strpos($title, 'origin') !== false){
+                        $title = str_replace('origin', '<span data-city-iata="'.$origin.'">'.$origin.'</span>' , $title);
+                    }
+                    if(strpos($title, 'destination') !== false){
+                        $title = str_replace('destination', '<span data-city-iata="'.$destination.'">'.$destination.'</span>', $title);
+                    }
+                }*/
+
+            }
+            return '<'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].'>';
+        }
+        return '';
     }
 }
