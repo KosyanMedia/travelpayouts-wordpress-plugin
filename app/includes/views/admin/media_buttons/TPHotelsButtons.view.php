@@ -21,7 +21,7 @@
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2',
                             '(Hotels collections for dates)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option value="3">
+                    <!--<option value="3">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3',
                             '(City hotels with price from to)', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
@@ -36,7 +36,7 @@
                     <option value="6">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6',
                             '(Stay price in city for weekend)', TPOPlUGIN_TEXTDOMAIN); ?>
-                    </option>
+                    </option>-->
                 </select>
             </td>
         </tr>
