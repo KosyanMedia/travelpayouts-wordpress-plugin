@@ -48,18 +48,380 @@ class TPHotelShortcodeView extends TPShortcodeView
                         data-paginate="'.$paginate.'"
                         data-paginate_limit="'.TPPlugin::$options['shortcodes'][$type]['paginate']
                         .'" data-sort_column="'.$sort_column.'">'
-                        //.$this->renderHeadTable($type, $one_way)
-                        //.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency)
+                        .$this->renderHeadTable($shortcode)
+                        .$this->renderBodyTable($shortcode, $city, $rows, $subid, $number_results, $currency)
                     .'</table>
                 </div>';
 
         return $html;
     }
 
+    /**
+     * @param $shortcode
+     * @param $city
+     * @param $rows
+     * @param $subid
+     * @param $limit
+     * @param $currency
+     * @return string
+     *
+     *
+     * name => Название
+     * stars => Звезды
+     * distance => Расстояние до центра
+     * rating => Оценка пользователей
+     * address => Адрес
+     * property_type => Тип
+     * popularity => Популярность
+     * price_from => Цена от
+     * price_avg => Средняя цена
+     * button => Кнопка
+     */
+    public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency){
+        //error_log("renderBodyTable subid = ".$subid);
+        if(!empty($subid)){
+            $subid = trim($subid);
+            $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+            //error_log($subid);
+        }
+
+        $bodyTable = '';
+        $bodyTable .= '<tbody>';
+        $count_row = 0;
+        foreach($rows as $key_row => $row){
+            $count_row++;
+            $bodyTable .= '<tr>';
+            $count = 0;
+            foreach($this->getSelectField($shortcode) as $key=>$selected_field){
+                $count++;
+                // get Url
+                /*
+                switch($type){
+                    case 1:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $destination_iata,
+                            'departure_at' => $row['depart_date'],
+                            //'return_at' => $row['return_date'],
+                            'price' => number_format($row["value"], 0, '.', ' '),
+                            'type' => $type,
+                            'subid' => $subid
+                        ) );
+                        break;
+
+                    default:
+                        $urlLink = $this->getUrlTable(array(
+                            'origin' => $origin_iata,
+                            'destination' => $destination_iata,
+                            'departure_at' => $row['departure_at'],
+                            'return_at' => $row['return_at'],
+                            'price' => number_format($row["price"], 0, '.', ' '),
+                            'type' => $type,
+                            'subid' => $subid
+                        ));
+                }
+                // get Price
+                $price = '';
+                if($type != 10){
+
+                    switch($type) {
+                        case 1:
+                        case 2:
+                        case 12:
+                        case 13:
+                        case 14:
+                            $price = $row["value"];
+                            break;
+                        default:
+                            $price = $row["price"];
+                    }
+                }*/
+
+
+                //Td
+                switch($selected_field){
+                    // name => Название
+                    case "name":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> name'
+
+                                .'</p>'
+                            .'</td>';
+                        break;
+                    // stars => Звезды
+                    case "stars":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> stars'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // distance => Расстояние до центра
+                    case "distance":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> distance'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // rating => Оценка пользователей
+                    case "rating":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> rating'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // address => Адрес
+                    case "address":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> address'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // property_type => Тип
+                    case "property_type":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> property_type'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // popularity => Популярность
+                    case "popularity":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> popularity'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // price_from => Цена от
+                    case "price_from":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> price_from'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // price_avg => Средняя цена
+                    case "price_avg":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> price_avg'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // button => Кнопка
+                    case "button":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> button'
+
+                            .'</p>'
+                            .'</td>';
+                        break;
+
+                }
+            }
+            $bodyTable .= '</tr>';
+            /*if(!empty($limit)){
+                if($limit == $count_row){
+                    break;
+                }
+            }*/
+        }
+        $bodyTable .= '</tbody>';
+        return $bodyTable;
+
+    }
+
+    /**
+     * @param $shortcode
+     * @return string
+     *
+     * name => Название
+     * stars => Звезды
+     * distance => Расстояние до центра
+     * rating => Оценка пользователей
+     * address => Адрес
+     * property_type => Тип
+     * popularity => Популярность
+     * price_from => Цена от
+     * price_avg => Средняя цена
+     * button => Кнопка
+     */
+    public function renderHeadTable($shortcode){
+        $headTable = '';
+
+        $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
+        foreach($this->getSelectField($shortcode) as $key=>$selected_field){
+            switch($selected_field) {
+                //name => Название
+                case "name":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // stars => Звезды
+                case "stars":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // distance => Расстояние до центра
+                case "distance":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // rating => Оценка пользователей
+                case "rating":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // address => Адрес
+                case "address":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // property_type => Тип
+                case "property_type":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // popularity => Популярность
+                case "popularity":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // price_from => Цена от
+                case "price_from":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // price_avg => Средняя цена
+                case "price_avg":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // button => Кнопка
+                case "button":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                default:
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead">'
+                        . $this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+
+            }
+        }
+        $headTable .= '</tr></thead>';
+        return $headTable;
+    }
+
+    /**
+     * @param $shortcode
+     * @return array
+     */
+    public function getSelectField($shortcode){
+        //error_log(print_r(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'], true));
+        return array_unique(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected']);
+    }
+
+    public function tdClassHidden($shortcode, $field){
+        $fields = array(
+            '1' => array(
+
+            ),
+            '2' => array(
+
+            )
+        );
+        if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
+        return '';
+    }
+
+    /**
+     * @param $fieldKey
+     * @return string
+     */
+    public function getTableTheadTDFieldLabel($fieldKey)
+    {
+        $fieldLabel = "";
+        if(isset(TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label'][$fieldKey])){
+            $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label'][$fieldKey];
+        }else{
+            $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getDefaultLang()]['label'][$fieldKey];
+        }
+        return $fieldLabel;
+    }
+
+    /**
+     * @return string
+     */
     public function renderViewIfEmptyTable(){
         return 'Empty table';
     }
 
+    /**
+     * @param $off_title
+     * @param $title
+     * @param $shortcode
+     * @param $city
+     * @return string
+     */
     public function renderTitleTable($off_title, $title, $shortcode, $city){
         if($off_title !== 'true'){
             if(empty($title)) {

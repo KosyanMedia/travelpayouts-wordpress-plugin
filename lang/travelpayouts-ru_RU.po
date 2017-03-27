@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-22 17:24+0200\n"
+"POT-Creation-Date: 2017-03-27 15:51+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -332,12 +332,12 @@ msgstr ""
 #: app/includes/TPDefault.php:784
 msgctxt "(Hotels collection - Discounts)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
-msgstr "Hotels collection - Discounts"
+msgstr "Hotels {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:786
 msgctxt "(Подборка отелей - Скидки)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
-msgstr "Подборка отелей - Скидки"
+msgstr "Отели {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:794
 msgctxt "(Book now)"
@@ -352,12 +352,12 @@ msgstr "Забронировать"
 #: app/includes/TPDefault.php:828
 msgctxt "(Hotels collections for dates)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
-msgstr "Hotels collections for dates"
+msgstr "Hotels {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:830
 msgctxt "(Подборки отелей на даты)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
-msgstr "Подборки отелей на даты"
+msgstr "Отели {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:838
 msgctxt "(Book now)"
@@ -2149,13 +2149,13 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_tabl
 msgstr "Выбранные"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:644
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:874
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:876
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:666
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:898
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:900
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Пейджинация"
@@ -2200,19 +2200,19 @@ msgctxt "(Sort by column)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:827
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:829
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1195
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1319
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1197
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1321
 msgctxt "(If empty answer received)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table"
 msgstr "При получении пустого ответа"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1200
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1325
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1202
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1327
 msgctxt ""
 "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
 "you can set what users will see in such cases)"
@@ -2221,33 +2221,33 @@ msgstr ""
 "Возможна ситуация, когда по вашему запросу в кеше не будет релевантных данных. Здесь можно "
 "настроить поведение таблиц в таком случае"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1218
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1220
 msgctxt "(Don't show a table)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label"
 msgstr "Не показывать таблицу"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1228
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1230
 msgctxt "(Show notification (link))"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
 msgstr "Показывать уведомление (ссылка)"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1238
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1240
 msgctxt "(Show notification (button))"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_2_label"
 msgstr "Показывать уведомление (кнопка)"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1249
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1365
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1251
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1367
 msgctxt "(Show search form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label"
 msgstr "Показывать форму поиска"
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1354
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1356
 msgctxt "(Show notification)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label"
 msgstr "Показывать предупреждение "
 
-#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1465
+#: app/includes/models/admin/menu/TPFieldFlightTickets.php:1467
 msgctxt "(Choose form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form"
 msgstr "Выбрать форму"
@@ -2305,32 +2305,32 @@ msgctxt "(Selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Выбранные"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:375
+#: app/includes/models/admin/menu/TPFieldHotels.php:377
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "Дополнительный маркер"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:396
+#: app/includes/models/admin/menu/TPFieldHotels.php:398
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Количество строк на странице"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:418
+#: app/includes/models/admin/menu/TPFieldHotels.php:420
 msgctxt "(Paginate)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Пейджинация"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:434
+#: app/includes/models/admin/menu/TPFieldHotels.php:436
 msgctxt "(Button Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Текст кнопки"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:460
+#: app/includes/models/admin/menu/TPFieldHotels.php:462
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "Можно использовать переменную \"price\""
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:475
+#: app/includes/models/admin/menu/TPFieldHotels.php:477
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
@@ -2748,397 +2748,397 @@ msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_2_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:114
+#: app/includes/models/admin/menu/TPFieldWidgets.php:116
 msgctxt "(Draggable)"
 msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
 msgstr "Запретить перетаскивать"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:121
+#: app/includes/models/admin/menu/TPFieldWidgets.php:123
 msgctxt "(Disable zoom)"
 msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
 msgstr "Отключить зуммирование"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:127
+#: app/includes/models/admin/menu/TPFieldWidgets.php:129
 msgctxt "(Scroll Wheel Zoom)"
 msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
 msgstr "Увеличение при прокрутке"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:136
+#: app/includes/models/admin/menu/TPFieldWidgets.php:138
 msgctxt "(Pin Size)"
 msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
 msgstr "Размер маркера"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:147
+#: app/includes/models/admin/menu/TPFieldWidgets.php:149
 msgctxt "(Zoom)"
 msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
 msgstr "Zoom"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:167
+#: app/includes/models/admin/menu/TPFieldWidgets.php:169
 msgctxt "(Map Style)"
 msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
 msgstr "Раскрасить карту"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:177
+#: app/includes/models/admin/menu/TPFieldWidgets.php:179
 msgctxt "(select color)"
 msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
 msgstr "выбрать цвет"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:188
+#: app/includes/models/admin/menu/TPFieldWidgets.php:190
 msgctxt "(select color)"
 msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
 msgstr "выбрать цвет"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:200
+#: app/includes/models/admin/menu/TPFieldWidgets.php:202
 msgctxt "(select color)"
 msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
 msgstr "выбрать цвет"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:210
+#: app/includes/models/admin/menu/TPFieldWidgets.php:212
 msgctxt "(Size)"
 msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
 msgstr "Размер"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:237
+#: app/includes/models/admin/menu/TPFieldWidgets.php:239
 msgctxt "(Widget Example)"
 msgid "tp_admin_page_widgets_shortcode_3_link_example"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:246
+#: app/includes/models/admin/menu/TPFieldWidgets.php:248
 msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_3_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:254
+#: app/includes/models/admin/menu/TPFieldWidgets.php:256
 msgctxt "(City of Departure)"
 msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
 msgstr "Город вылета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:267
+#: app/includes/models/admin/menu/TPFieldWidgets.php:269
 msgctxt "(City of Arrival)"
 msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
 msgstr "Город прилета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:279
+#: app/includes/models/admin/menu/TPFieldWidgets.php:281
 msgctxt "(Range, days)"
 msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
 msgstr "Период, дни"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:302
+#: app/includes/models/admin/menu/TPFieldWidgets.php:304
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:309
+#: app/includes/models/admin/menu/TPFieldWidgets.php:311
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:327
+#: app/includes/models/admin/menu/TPFieldWidgets.php:329
 msgctxt "(Year)"
 msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
 msgstr "Год"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:331
+#: app/includes/models/admin/menu/TPFieldWidgets.php:333
 msgctxt "(Current month)"
 msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
 msgstr "Текущий месяц"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:370
+#: app/includes/models/admin/menu/TPFieldWidgets.php:372
 msgctxt "(Period)"
 msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
 msgstr "Период"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:383
+#: app/includes/models/admin/menu/TPFieldWidgets.php:385
 msgctxt "(Direct Flights Only)"
 msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
 msgstr "Только прямые рейсы"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:389
+#: app/includes/models/admin/menu/TPFieldWidgets.php:391
 msgctxt "(One way)"
 msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
 msgstr "В одну сторону"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:404
+#: app/includes/models/admin/menu/TPFieldWidgets.php:406
 msgctxt "(Widget Example)"
 msgid "tp_admin_page_widgets_shortcode_4_link_example"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:413
+#: app/includes/models/admin/menu/TPFieldWidgets.php:415
 msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_4_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:421
+#: app/includes/models/admin/menu/TPFieldWidgets.php:423
 msgctxt "(City of Departure)"
 msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
 msgstr "Город вылета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:434
+#: app/includes/models/admin/menu/TPFieldWidgets.php:436
 msgctxt "(City of Arrival)"
 msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
 msgstr "Город прилета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:451
+#: app/includes/models/admin/menu/TPFieldWidgets.php:453
 msgctxt "(select color)"
 msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
 msgstr "выбрать цвет"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:461
+#: app/includes/models/admin/menu/TPFieldWidgets.php:463
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:468
+#: app/includes/models/admin/menu/TPFieldWidgets.php:470
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:486
+#: app/includes/models/admin/menu/TPFieldWidgets.php:488
 msgctxt "(Widget Example)"
 msgid "tp_admin_page_widgets_shortcode_5_link_example"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:495
+#: app/includes/models/admin/menu/TPFieldWidgets.php:497
 msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_5_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:502
+#: app/includes/models/admin/menu/TPFieldWidgets.php:504
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:509
+#: app/includes/models/admin/menu/TPFieldWidgets.php:511
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:528
+#: app/includes/models/admin/menu/TPFieldWidgets.php:530
 msgctxt "(Widget Example)"
 msgid "tp_admin_page_widgets_shortcode_6_link_example"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:537
+#: app/includes/models/admin/menu/TPFieldWidgets.php:539
 msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_6_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:544
+#: app/includes/models/admin/menu/TPFieldWidgets.php:546
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:551
+#: app/includes/models/admin/menu/TPFieldWidgets.php:553
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:564
+#: app/includes/models/admin/menu/TPFieldWidgets.php:566
 msgctxt "(Number of Widgets)"
 msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
 msgstr "Количество виджетов при вставке в запись"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:588
+#: app/includes/models/admin/menu/TPFieldWidgets.php:590
 msgctxt "1 звезда"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
 msgstr "1 звезда"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:591
+#: app/includes/models/admin/menu/TPFieldWidgets.php:593
 msgctxt "2 звезды"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
 msgstr "2 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:593
+#: app/includes/models/admin/menu/TPFieldWidgets.php:595
 msgctxt "3 звезды"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
 msgstr "3 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:595
+#: app/includes/models/admin/menu/TPFieldWidgets.php:597
 msgctxt "4 звезды"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
 msgstr "4 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:597
+#: app/includes/models/admin/menu/TPFieldWidgets.php:599
 msgctxt "5 звёзд"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
 msgstr "5 звёзд"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:599
+#: app/includes/models/admin/menu/TPFieldWidgets.php:601
 msgctxt "Дешёвые"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
 msgstr "Дешёвые"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:601
+#: app/includes/models/admin/menu/TPFieldWidgets.php:603
 msgctxt "Близко к центру"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
 msgstr "Близко к центру"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:603
+#: app/includes/models/admin/menu/TPFieldWidgets.php:605
 msgctxt "Отели в центре"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
 msgstr "Отели в центре"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:605
+#: app/includes/models/admin/menu/TPFieldWidgets.php:607
 msgctxt "Рейтинг"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
 msgstr "Рейтинг"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:607
+#: app/includes/models/admin/menu/TPFieldWidgets.php:609
 msgctxt "Популярные"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
 msgstr "Популярные"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:609
+#: app/includes/models/admin/menu/TPFieldWidgets.php:611
 msgctxt "Дорогие"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
 msgstr "Дорогие"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:615
+#: app/includes/models/admin/menu/TPFieldWidgets.php:617
 msgctxt "1 star"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
 msgstr "1 star"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:618
+#: app/includes/models/admin/menu/TPFieldWidgets.php:620
 msgctxt "2 stars"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
 msgstr "2 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:620
+#: app/includes/models/admin/menu/TPFieldWidgets.php:622
 msgctxt "3 stars"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
 msgstr "3 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:622
+#: app/includes/models/admin/menu/TPFieldWidgets.php:624
 msgctxt "4 stars"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
 msgstr "4 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:624
+#: app/includes/models/admin/menu/TPFieldWidgets.php:626
 msgctxt "5 stars"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
 msgstr "5 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:626
+#: app/includes/models/admin/menu/TPFieldWidgets.php:628
 msgctxt "Cheap"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
 msgstr "Cheap"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:628
+#: app/includes/models/admin/menu/TPFieldWidgets.php:630
 msgctxt "Close to city center"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
 msgstr "Close to city center"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:630
+#: app/includes/models/admin/menu/TPFieldWidgets.php:632
 msgctxt "Hotels in the center"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
 msgstr "Hotels in the center"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:632
+#: app/includes/models/admin/menu/TPFieldWidgets.php:634
 msgctxt "Rating"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
 msgstr "Rating"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:634
+#: app/includes/models/admin/menu/TPFieldWidgets.php:636
 msgctxt "Popular"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
 msgstr "Popular"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:636
+#: app/includes/models/admin/menu/TPFieldWidgets.php:638
 msgctxt "Expensive"
 msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
 msgstr "Expensive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:656
+#: app/includes/models/admin/menu/TPFieldWidgets.php:658
 msgctxt "(Widget Example)"
 msgid "tp_admin_page_widgets_shortcode_7_link_example"
 msgstr "Пример виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:665
+#: app/includes/models/admin/menu/TPFieldWidgets.php:667
 msgctxt "(Travepayouts Help)"
 msgid "tp_admin_page_widgets_shortcode_7_link_help"
 msgstr "Справка Travelpayouts"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:672
+#: app/includes/models/admin/menu/TPFieldWidgets.php:674
 msgctxt "(Select selection)"
 msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
 msgstr "Выберите подборку"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:687
+#: app/includes/models/admin/menu/TPFieldWidgets.php:689
 msgctxt "(Select selection)"
 msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
 msgstr "Выберите подборку"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:702
+#: app/includes/models/admin/menu/TPFieldWidgets.php:704
 msgctxt "(Select selection)"
 msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
 msgstr "Выберите подборку"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:719
+#: app/includes/models/admin/menu/TPFieldWidgets.php:721
 msgctxt "(Limit)"
 msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:737
+#: app/includes/models/admin/menu/TPFieldWidgets.php:739
 msgctxt "(View widget)"
 msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
 msgstr "Вид виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:743
+#: app/includes/models/admin/menu/TPFieldWidgets.php:745
 msgctxt "(Full)"
 msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
 msgstr "Расширенный"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:748
+#: app/includes/models/admin/menu/TPFieldWidgets.php:750
 msgctxt "(Compact)"
 msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
 msgstr "Компактный"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:761
+#: app/includes/models/admin/menu/TPFieldWidgets.php:763
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:768
+#: app/includes/models/admin/menu/TPFieldWidgets.php:770
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
 msgstr "Ширина"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:787
+#: app/includes/models/admin/menu/TPFieldWidgets.php:789
 msgctxt "(Widget type)"
 msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
 msgstr "Вид виджета"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:793
+#: app/includes/models/admin/menu/TPFieldWidgets.php:795
 msgctxt "(Tile)"
 msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
 msgstr "Плитка"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:798
+#: app/includes/models/admin/menu/TPFieldWidgets.php:800
 msgctxt "(Slider)"
 msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
 msgstr "Слайдер"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:815
+#: app/includes/models/admin/menu/TPFieldWidgets.php:817
 msgctxt "(Filter by airlines)"
 msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
 msgstr "Фильтр по авиакомпаниям"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:823
+#: app/includes/models/admin/menu/TPFieldWidgets.php:825
 msgctxt "(Filter by routes)"
 msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
 msgstr "Фильтр по направлениям"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:836
+#: app/includes/models/admin/menu/TPFieldWidgets.php:838
 msgctxt "(Limit)"
 msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
 msgstr "Лимит"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:855
+#: app/includes/models/admin/menu/TPFieldWidgets.php:857
 msgctxt "(Responsive)"
 msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
 msgstr "Резиновая"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:862
+#: app/includes/models/admin/menu/TPFieldWidgets.php:864
 msgctxt "(Width)"
 msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
 msgstr "Ширина"
@@ -4397,6 +4397,7 @@ msgid "tp_admin_page_hotels_paragraph_1"
 msgstr "Отели"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
 msgctxt "(Hotels collection - Discounts)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
 msgstr "Подборка отелей - Скидки "
@@ -4407,11 +4408,14 @@ msgstr "Подборка отелей - Скидки "
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:71
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:89
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:107
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:18
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:36
 msgctxt "(Save changes)"
 msgid "tp_admin_page_hotels_tab_tables_content_btn_save_label"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:27
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:27
 msgctxt "(Hotels collections for dates)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
 msgstr "Подборки отелей на даты"
