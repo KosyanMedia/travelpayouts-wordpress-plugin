@@ -46,14 +46,19 @@ class TPHotelShortcodeView extends TPShortcodeView
                         .$this->renderTitleTable($off_title, $title, $shortcode, $city)
                     .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"
-                        data-paginate_limit="'.TPPlugin::$options['shortcodes'][$type]['paginate']
-                        .'" data-sort_column="'.$sort_column.'">'
+                        data-paginate_limit="'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate']
+                        .'" data-sort_column="'.$this->getSortColumn($shortcode).'">'
                         .$this->renderHeadTable($shortcode)
                         .$this->renderBodyTable($shortcode, $city, $rows, $subid, $number_results, $currency)
                     .'</table>
                 </div>';
 
         return $html;
+    }
+
+
+    public function getSortColumn($shortcode){
+        return TPPlugin::$options['shortcodes_hotels'][$shortcode]['sort_column'];
     }
 
     /**
@@ -234,11 +239,11 @@ class TPHotelShortcodeView extends TPShortcodeView
                 }
             }
             $bodyTable .= '</tr>';
-            /*if(!empty($limit)){
+            if(!empty($limit)){
                 if($limit == $count_row){
                     break;
                 }
-            }*/
+            }
         }
         $bodyTable .= '</tbody>';
         return $bodyTable;
