@@ -149,8 +149,8 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "name":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> name'
-
+                                <p class="TP-tdContent">'
+                                .$row['name']
                                 .'</p>'
                             .'</td>';
                         break;
@@ -158,8 +158,8 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "stars":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> stars'
-
+                                <p class="TP-tdContent">'
+                            .$row['stars']
                             .'</p>'
                             .'</td>';
                         break;
@@ -167,8 +167,8 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "distance":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> distance'
-
+                                <p class="TP-tdContent">'
+                            .$row['distance']
                             .'</p>'
                             .'</td>';
                         break;
@@ -176,8 +176,8 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "rating":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> rating'
-
+                                <p class="TP-tdContent"> '
+                            .$row['rating']
                             .'</p>'
                             .'</td>';
                         break;
@@ -185,17 +185,18 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "address":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> address'
-
+                                <p class="TP-tdContent"> '
+                            .$row['address']
                             .'</p>'
                             .'</td>';
                         break;
                     // property_type => Тип
+                    // hotel_type
                     case "property_type":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                 <p class="TP-tdContent"> property_type'
-
+                            .$row['property_type']
                             .'</p>'
                             .'</td>';
                         break;
@@ -204,7 +205,6 @@ class TPHotelShortcodeView extends TPShortcodeView
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                 <p class="TP-tdContent"> popularity'
-
                             .'</p>'
                             .'</td>';
                         break;
@@ -212,8 +212,8 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "price_from":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> price_from'
-
+                                <p class="TP-tdContent"> '
+                                .$row['last_price_info']['price']
                             .'</p>'
                             .'</td>';
                         break;
