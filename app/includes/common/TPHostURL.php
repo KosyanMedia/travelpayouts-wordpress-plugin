@@ -325,6 +325,24 @@ class TPHostURL
         ),
     );
 
+    private static $hostsHotel = array(
+        'hotellook.ru' => 'hotellook.ru',
+        'hotellook.com&language=en-GB' => 'hotellook.com en-GB',
+        'hotellook.com&language=en-US' => 'hotellook.com en-US',
+        'hotellook.com&language=pt-BR' => 'hotellook.com pt-BR',
+        'hotellook.com&language=pt-PT' => 'hotellook.com pt-PT',
+        'hotellook.com&language=id-ID' => 'hotellook.com id-ID',
+        'hotellook.com&language=fr-FR' => 'hotellook.com fr-FR',
+        'hotellook.com&language=it-IT' => 'hotellook.com it-IT',
+        'hotellook.com&language=de-DE' => 'hotellook.com de-DE',
+        'hotellook.com&language=pl-PL' => 'hotellook.com pl-PL',
+        'hotellook.com&language=es-ES' => 'hotellook.com es-ES',
+        'hotellook.com&language=th-TH' => 'hotellook.com th-TH',
+        'hotellook.com&language=en-AU' => 'hotellook.com en-AU',
+        'hotellook.com&language=en-CA' => 'hotellook.com en-CA',
+        'hotellook.com&language=en-IE' => 'hotellook.com en-IE',
+    );
+
     /**
      * @return string
      */

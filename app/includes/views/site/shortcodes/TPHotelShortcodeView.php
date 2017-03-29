@@ -195,7 +195,7 @@ class TPHotelShortcodeView extends TPShortcodeView
                     case "property_type":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> property_type'
+                                <p class="TP-tdContent"> '
                             .$row['property_type']
                             .'</p>'
                             .'</td>';
