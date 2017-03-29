@@ -109,6 +109,7 @@ class TPDefault implements  \core\TPODefault{
             ),
             'local' => array(
                 'host' => '',
+                'host_hotel' => '',
                 'localization' => $localization,
                 'currency' => $currency,
                 'fields' => array(

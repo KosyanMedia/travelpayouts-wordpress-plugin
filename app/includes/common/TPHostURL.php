@@ -7,6 +7,9 @@
  * Time: 13:11
  */
 namespace app\includes\common;
+
+use \app\includes\TPPlugin;
+
 class TPHostURL
 {
     const TP_HOST_URL_AIRLINE_LOGO = "https://pics.avs.io/";
@@ -347,7 +350,7 @@ class TPHostURL
         $host = "";
         $hostData = array(
             TPLang::getLangRU() => 'https://hotellook.ru',
-            TPLang::getLangEN() => 'http://jetradar.com',
+            TPLang::getLangEN() => 'https://hotellook.com/?language=en-GB',
         );
         if (!array_key_exists(TPLang::getLang(), $hostData)){
             $host = $hostData[TPLang::getDefaultLang()];
@@ -356,11 +359,22 @@ class TPHostURL
         }
         return $host;
     }
+
+    public static function getHostHotel(){
+        $host = TPPlugin::$options['local']['host_hotel'];
+        if (! $host || empty( $host )){
+            $host = self::getDefaultHostHotel();
+        } else {
+            $host = 'https://'.$host;
+        }
+        return $host;
+    }
+
     /**
      * @return string
      */
     public static function getHostTable(){
-        $host = \app\includes\TPPlugin::$options['local']['host'];
+        $host = TPPlugin::$options['local']['host'];
         if (! $host || empty( $host )){
             $host = self::getDefaultHostTable();
         } else {
@@ -381,10 +395,10 @@ class TPHostURL
             TPLang::getLangEN() => 'http://jetradar.com',
             TPLang::getLangTH() => 'http://jetradar.co.th',
         );
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData)){
-            $host = $hostData[\app\includes\common\TPLang::getDefaultLang()];
+        if (!array_key_exists(TPLang::getLang(), $hostData)){
+            $host = $hostData[TPLang::getDefaultLang()];
         } else {
-            $host = $hostData[\app\includes\common\TPLang::getLang()];
+            $host = $hostData[TPLang::getLang()];
         }
         return $host;
     }
