@@ -250,6 +250,8 @@ class TPHotelShortcodeView extends TPShortcodeView
 
     }
 
+    public function getUrlTable(){}
+
     /**
      * @param $shortcode
      * @return string
