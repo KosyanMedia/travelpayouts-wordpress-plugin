@@ -331,77 +331,77 @@ class TPHostURL
     private static $hostsHotel = array(
         'hotellook.ru' => array(
             'label' => 'hotellook.ru',
-            'host' => 'search.hotellook.ru',
+            'host' => 'hotellook.ru',
             'language' => '',
         ),
         'hotellook.com&language=en-GB' => array(
             'label' => 'hotellook.com en-GB',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'en-GB',
         ),
         'hotellook.com&language=en-US' => array(
             'label' => 'hotellook.com en-US',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'en-US',
         ),
         'hotellook.com&language=pt-BR' => array(
             'label' => 'hotellook.com pt-BR',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'pt-BR',
         ),
         'hotellook.com&language=pt-PT' => array(
             'label' => 'hotellook.com pt-PT',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'pt-PT',
         ),
         'hotellook.com&language=id-ID' => array(
             'label' => 'hotellook.com id-ID',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'id-ID',
         ),
         'hotellook.com&language=fr-FR' => array(
             'label' => 'hotellook.com fr-FR',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'fr-FR',
         ),
         'hotellook.com&language=it-IT' => array(
             'label' => 'hotellook.com it-IT',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'it-IT',
         ),
         'hotellook.com&language=de-DE' => array(
             'label' => 'hotellook.com de-DE',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'de-DE',
         ),
         'hotellook.com&language=pl-PL' => array(
             'label' => 'hotellook.com pl-PL',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'pl-PL',
         ),
         'hotellook.com&language=es-ES' => array(
             'label' => 'hotellook.com es-ES',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'es-ES',
         ),
         'hotellook.com&language=th-TH' => array(
             'label' => 'hotellook.com th-TH',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'th-TH',
         ),
         'hotellook.com&language=en-AU' => array(
             'label' => 'hotellook.com en-AU',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'en-AU',
         ),
         'hotellook.com&language=en-CA' => array(
             'label' => 'hotellook.com en-CA',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'en-CA',
         ),
         'hotellook.com&language=en-IE' => array(
             'label' => 'hotellook.com en-IE',
-            'host' => 'search.hotellook.com',
+            'host' => 'hotellook.com',
             'language' => 'en-IE',
         ),
     );

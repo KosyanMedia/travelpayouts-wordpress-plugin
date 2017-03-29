@@ -11,6 +11,7 @@ namespace app\includes\views\site\shortcodes;
 use \app\includes\TPPlugin;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
+use \app\includes\common\TPAutocompleteReplace;
 
 class TPHotelShortcodeView extends TPShortcodeView
 {
@@ -83,6 +84,7 @@ class TPHotelShortcodeView extends TPShortcodeView
      * button => Кнопка
      */
     public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency){
+        //TPAutocompleteReplace::
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);
@@ -100,22 +102,15 @@ class TPHotelShortcodeView extends TPShortcodeView
             foreach($this->getSelectField($shortcode) as $key=>$selected_field){
                 $count++;
                 // get Url
-                /*
-                switch($type){
+
+                switch($shortcode){
                     case 1:
-                        $urlLink = $this->getUrlTable(array(
-                            'origin' => $origin_iata,
-                            'destination' => $destination_iata,
-                            'departure_at' => $row['depart_date'],
-                            //'return_at' => $row['return_date'],
-                            'price' => number_format($row["value"], 0, '.', ' '),
-                            'type' => $type,
-                            'subid' => $subid
-                        ) );
+                    case 2:
+                        $urlLink = $this->getUrlTable($shortcode);
                         break;
 
                     default:
-                        $urlLink = $this->getUrlTable(array(
+                        $urlLink = '';/*$this->getUrlTable(array(
                             'origin' => $origin_iata,
                             'destination' => $destination_iata,
                             'departure_at' => $row['departure_at'],
@@ -123,24 +118,24 @@ class TPHotelShortcodeView extends TPShortcodeView
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid
-                        ));
+                        ));*/
                 }
-                // get Price
-                $price = '';
-                if($type != 10){
+                /* // get Price
+                 $price = '';
+                 if($type != 10){
 
-                    switch($type) {
-                        case 1:
-                        case 2:
-                        case 12:
-                        case 13:
-                        case 14:
-                            $price = $row["value"];
-                            break;
-                        default:
-                            $price = $row["price"];
-                    }
-                }*/
+                     switch($type) {
+                         case 1:
+                         case 2:
+                         case 12:
+                         case 13:
+                         case 14:
+                             $price = $row["value"];
+                             break;
+                         default:
+                             $price = $row["price"];
+                     }
+                 }*/
 
 
                 //Td
@@ -250,7 +245,7 @@ class TPHotelShortcodeView extends TPShortcodeView
 
     }
 
-    public function getUrlTable(){}
+    public function getUrlTable($shortcode){}
 
     /**
      * @param $shortcode
@@ -387,6 +382,11 @@ class TPHotelShortcodeView extends TPShortcodeView
         return array_unique(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected']);
     }
 
+    /**
+     * @param $shortcode
+     * @param $field
+     * @return string
+     */
     public function tdClassHidden($shortcode, $field){
         /*
          * Скрывать (в порядке неважности): Тип, Скидка, Старая Цена, Рейтинг, Расстояние до центра

@@ -191,5 +191,9 @@ class TPAutocompleteReplace
         return $title;
     }
 
+    public static function getCityById($id){
+
+    }
+
 
 }
