@@ -627,14 +627,14 @@ class TPFieldSettings {
         <label>
             <span>
                 <?php _ex('tp_admin_page_settings_tab_localization_field_host_hotel_label',
-                    '(Host)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    '(Host(Hotels))', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host_hotel]"
                     class="TP-Zelect TPFieldHostHotel">
                 <?php foreach($hosts as $key => $host){ ?>
                     <option <?php selected($host_option, $key ); ?>
                         value="<?php echo $key; ?>">
-                        <?php echo $host; ?>
+                        <?php echo $host['label']; ?>
                     </option>
                 <?php } ?>
             </select>
@@ -664,7 +664,7 @@ class TPFieldSettings {
         <label class="TPFieldHostLabel">
             <span>
                 <?php _ex('tp_admin_page_settings_tab_localization_field_host_label',
-                    '(Host)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    '(Host(Flights))', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host]"
                     class="TP-Zelect TPFieldHost"
