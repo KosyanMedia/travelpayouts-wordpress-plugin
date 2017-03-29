@@ -192,7 +192,8 @@ class TPAutocompleteReplace
     }
 
     public static function getCityById($id){
-
+       // TPAutocomplete::getInstance();
+        return TPAutocomplete::getLocationsById($id);
     }
 
 

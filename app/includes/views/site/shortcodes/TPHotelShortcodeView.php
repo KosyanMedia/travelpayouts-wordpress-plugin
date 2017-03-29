@@ -13,7 +13,7 @@ use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
 use \app\includes\common\TPAutocompleteReplace;
 
-class TPHotelShortcodeView extends TPShortcodeView
+class TPHotelShortcodeView //extends TPShortcodeView
 {
     public function renderTable($args = array()) {
         $defaults = array(
@@ -84,7 +84,15 @@ class TPHotelShortcodeView extends TPShortcodeView
      * button => Кнопка
      */
     public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency){
-        //TPAutocompleteReplace::
+        /*//error_log(11);
+        $locations = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/locations.json');
+        error_log(print_r($locations, true));
+        $locations = json_decode($locations, true);
+        $locations_my = array();
+        foreach($locations as $value){
+            $locations_my[$value['id']] = $value;
+        }
+        error_log(print_r($locations_my, true));*/
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);
@@ -103,22 +111,14 @@ class TPHotelShortcodeView extends TPShortcodeView
                 $count++;
                 // get Url
 
-                switch($shortcode){
+               /* switch($shortcode){
                     case 1:
                     case 2:
-                        $urlLink = $this->getUrlTable($shortcode);
+                        $urlLink = '';//$this->getUrlTable($shortcode);
                         break;
 
                     default:
-                        $urlLink = '';/*$this->getUrlTable(array(
-                            'origin' => $origin_iata,
-                            'destination' => $destination_iata,
-                            'departure_at' => $row['departure_at'],
-                            'return_at' => $row['return_at'],
-                            'price' => number_format($row["price"], 0, '.', ' '),
-                            'type' => $type,
-                            'subid' => $subid
-                        ));*/
+                        $urlLink = '';
                 }
                 /* // get Price
                  $price = '';
@@ -181,7 +181,7 @@ class TPHotelShortcodeView extends TPShortcodeView
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                 <p class="TP-tdContent"> '
-                            .$row['address']
+                            //.$row['address']
                             .'</p>'
                             .'</td>';
                         break;
