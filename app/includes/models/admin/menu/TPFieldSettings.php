@@ -10,7 +10,10 @@ use app\includes\common\TPHostURL;
 use app\includes\common\TPLang;
 use app\includes\TPPlugin;
 
+
 class TPFieldSettings {
+
+
 
     public function __construct(){
 
@@ -511,8 +514,8 @@ class TPFieldSettings {
         </div>
          <div class="TP-LocalHead">
              <?php $this->TPFieldHost(); ?>
-            <label>
-            </label>
+             <?php $this->tpFieldHostHotel(); ?>
+
          </div>
         <div class="TP-LocalHead TPFieldTitleCaseDiv">
             <?php $this->TPFieldTitleCase(); ?>
@@ -617,6 +620,27 @@ class TPFieldSettings {
         echo $localFields;
     }
 
+    public function tpFieldHostHotel(){
+        $hosts = TPHostURL::getHostsHotel();
+        $host_option = \app\includes\TPPlugin::$options['local']['host_hotel'];
+        ?>
+        <label>
+            <span>
+                <?php _ex('tp_admin_page_settings_tab_localization_field_host_hotel_label',
+                    '(Host)', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
+            <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host_hotel]"
+                    class="TP-Zelect TPFieldHostHotel">
+                <?php foreach($hosts as $key => $host){ ?>
+                    <option <?php selected($host_option, $key ); ?>
+                        value="<?php echo $key; ?>">
+                        <?php echo $host; ?>
+                    </option>
+                <?php } ?>
+            </select>
+        </label>
+        <?php
+    }
 
     public function TPFieldHost(){
         $hosts = \app\includes\common\TPHostURL::getHost();

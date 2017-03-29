@@ -370,6 +370,10 @@ class TPHostURL
         return $host;
     }
 
+    public static function getHostsHotel(){
+        return self::$hostsHotel;
+    }
+
     /**
      * @return string
      */
