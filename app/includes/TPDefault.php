@@ -92,6 +92,7 @@ class TPDefault implements  \core\TPODefault{
                 'nofollow' => 0,
                 'script' => 1,
                 'after_url' => 1,
+                'hotel_after_url' => 1,
                 'cache' => 1,
                 'cache_value' => 3,
                 'airline_logo_size' => array(

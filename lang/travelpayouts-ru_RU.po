@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-29 16:50+0300\n"
+"POT-Creation-Date: 2017-03-29 17:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -33,267 +33,267 @@ msgctxt "(Что-то пошло не так, обновите страницу)
 msgid "tp_plugin_request_api_error_msg_message_error_ru"
 msgstr "Что-то пошло не так, обновите страницу"
 
-#: app/includes/TPDefault.php:132
+#: app/includes/TPDefault.php:133
 msgctxt "(Flight Prices for a Month from origin to destination, One Way)"
 msgid "tp_plugin_local_en_table_shortcodes_1_title"
 msgstr "Flight Prices for a Month from origin to destination, One Way"
 
-#: app/includes/TPDefault.php:134
+#: app/includes/TPDefault.php:135
 msgctxt "(Цены на месяц из origin в destination, в одну сторону)"
 msgid "tp_plugin_local_ru_table_shortcodes_1_title"
 msgstr "Цены на месяц из origin в destination, в одну сторону"
 
-#: app/includes/TPDefault.php:143
+#: app/includes/TPDefault.php:144
 msgctxt "(OW tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_1_title_btn"
 msgstr "OW tickets from price"
 
-#: app/includes/TPDefault.php:145
+#: app/includes/TPDefault.php:146
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_1_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:166
+#: app/includes/TPDefault.php:167
 msgctxt "(Flights from origin to destination for the Next Few Days)"
 msgid "tp_plugin_local_en_table_shortcodes_2_title"
 msgstr "Flights from origin to destination for the Next Few Days"
 
-#: app/includes/TPDefault.php:168
+#: app/includes/TPDefault.php:169
 msgctxt "(Билеты из origin в destination на ближайшие дни)"
 msgid "tp_plugin_local_ru_table_shortcodes_2_title"
 msgstr "Билеты из origin в destination на ближайшие дни"
 
-#: app/includes/TPDefault.php:178
+#: app/includes/TPDefault.php:179
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_2_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:180
+#: app/includes/TPDefault.php:181
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_2_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:229
+#: app/includes/TPDefault.php:230
 msgctxt "(The Cheapest Round-trip Tickets from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_4_title"
 msgstr "The Cheapest Round-trip Tickets from origin to destination"
 
-#: app/includes/TPDefault.php:231
+#: app/includes/TPDefault.php:232
 msgctxt "(Самые дешевые билеты из origin в destination и обратно)"
 msgid "tp_plugin_local_ru_table_shortcodes_4_title"
 msgstr "Самые дешевые билеты из origin в destination и обратно"
 
-#: app/includes/TPDefault.php:239
+#: app/includes/TPDefault.php:240
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_4_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:241
+#: app/includes/TPDefault.php:242
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_4_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:266
+#: app/includes/TPDefault.php:267
 msgctxt "(The Cheapest Flights for this Month from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_5_title"
 msgstr "The Cheapest Flights for this Month from origin to destination"
 
-#: app/includes/TPDefault.php:268
+#: app/includes/TPDefault.php:269
 msgctxt "(Самые дешевые билеты  из origin в destination в этом месяце)"
 msgid "tp_plugin_local_ru_table_shortcodes_5_title"
 msgstr "Самые дешевые билеты  из origin в destination в этом месяце"
 
-#: app/includes/TPDefault.php:277
+#: app/includes/TPDefault.php:278
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_5_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:279
+#: app/includes/TPDefault.php:280
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_5_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:305
+#: app/includes/TPDefault.php:306
 msgctxt "(The Cheapest Flights from origin to destination for the Year Ahead)"
 msgid "tp_plugin_local_en_table_shortcodes_6_title"
 msgstr "The Cheapest Flights from origin to destination for the Year Ahead"
 
-#: app/includes/TPDefault.php:307
+#: app/includes/TPDefault.php:308
 msgctxt "(Самые дешевые авиабилеты из origin в destination на год вперед)"
 msgid "tp_plugin_local_ru_table_shortcodes_6_title"
 msgstr "Самые дешевые авиабилеты из origin в destination на год вперед"
 
-#: app/includes/TPDefault.php:315
+#: app/includes/TPDefault.php:316
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_6_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:317
+#: app/includes/TPDefault.php:318
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_6_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:343
+#: app/includes/TPDefault.php:344
 msgctxt "(Direct Flights from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_7_title"
 msgstr "Direct Flights from origin to destination"
 
-#: app/includes/TPDefault.php:345
+#: app/includes/TPDefault.php:346
 msgctxt "(Билеты без пересадок из origin в destination)"
 msgid "tp_plugin_local_ru_table_shortcodes_7_title"
 msgstr "Билеты без пересадок из origin в destination"
 
-#: app/includes/TPDefault.php:353
+#: app/includes/TPDefault.php:354
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_7_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:355
+#: app/includes/TPDefault.php:356
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_7_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:379
+#: app/includes/TPDefault.php:380
 msgctxt "(Direct Flights from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_8_title"
 msgstr "Direct Flights from origin"
 
-#: app/includes/TPDefault.php:381
+#: app/includes/TPDefault.php:382
 msgctxt "(Билеты без пересадок из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_8_title"
 msgstr "Билеты без пересадок из origin"
 
-#: app/includes/TPDefault.php:390
+#: app/includes/TPDefault.php:391
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_8_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:392
+#: app/includes/TPDefault.php:393
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_8_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:419
+#: app/includes/TPDefault.php:420
 msgctxt "(Popular Destinations from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_9_title"
 msgstr "Popular Destinations from origin"
 
-#: app/includes/TPDefault.php:421
+#: app/includes/TPDefault.php:422
 msgctxt "(Популярные направления из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_9_title"
 msgstr "Популярные направления из origin"
 
-#: app/includes/TPDefault.php:429
+#: app/includes/TPDefault.php:430
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_9_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:431
+#: app/includes/TPDefault.php:432
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_9_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:457
+#: app/includes/TPDefault.php:458
 msgctxt "(Airline's popular flights airline)"
 msgid "tp_plugin_local_en_table_shortcodes_10_title"
 msgstr "Airline's popular flights airline"
 
-#: app/includes/TPDefault.php:459
+#: app/includes/TPDefault.php:460
 msgctxt "(Популярные направления авиакомпании airline)"
 msgid "tp_plugin_local_ru_table_shortcodes_10_title"
 msgstr "Популярные направления авиакомпании airline"
 
-#: app/includes/TPDefault.php:468
+#: app/includes/TPDefault.php:469
 msgctxt "(Find tickets)"
 msgid "tp_plugin_local_en_table_shortcodes_10_title_btn"
 msgstr "Find tickets"
 
-#: app/includes/TPDefault.php:470
+#: app/includes/TPDefault.php:471
 msgctxt "(Узнать цену)"
 msgid "tp_plugin_local_ru_table_shortcodes_10_title_btn"
 msgstr "Узнать цену"
 
-#: app/includes/TPDefault.php:483
+#: app/includes/TPDefault.php:484
 msgctxt "(Special offer airlines)"
 msgid "tp_plugin_local_en_table_shortcodes_11_title"
 msgstr "Special offer airlines"
 
-#: app/includes/TPDefault.php:485
+#: app/includes/TPDefault.php:486
 msgctxt "(Спецпредложения авиакомпаний)"
 msgid "tp_plugin_local_ru_table_shortcodes_11_title"
 msgstr "Спецпредложения авиакомпаний"
 
-#: app/includes/TPDefault.php:492
+#: app/includes/TPDefault.php:493
 msgctxt "(Find tickets on price)"
 msgid "tp_plugin_local_en_table_shortcodes_11_title_btn"
 msgstr "Find tickets on price"
 
-#: app/includes/TPDefault.php:494
+#: app/includes/TPDefault.php:495
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_11_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:518
+#: app/includes/TPDefault.php:519
 msgctxt "(Flights That Have Been Found on Our Website)"
 msgid "tp_plugin_local_en_table_shortcodes_12_title"
 msgstr "Flights That Have Been Found on Our Website"
 
-#: app/includes/TPDefault.php:520
+#: app/includes/TPDefault.php:521
 msgctxt "(На нашем сайте искали)"
 msgid "tp_plugin_local_ru_table_shortcodes_12_title"
 msgstr "На нашем сайте искали"
 
-#: app/includes/TPDefault.php:532
+#: app/includes/TPDefault.php:533
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_12_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:534
+#: app/includes/TPDefault.php:535
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_12_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:561
+#: app/includes/TPDefault.php:562
 msgctxt "(Cheap Flights from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_13_title"
 msgstr "Cheap Flights from origin"
 
-#: app/includes/TPDefault.php:563
+#: app/includes/TPDefault.php:564
 msgctxt "(Дешевые перелеты из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_13_title"
 msgstr "Дешевые перелеты из origin"
 
-#: app/includes/TPDefault.php:575
+#: app/includes/TPDefault.php:576
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_13_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:577
+#: app/includes/TPDefault.php:578
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_13_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:605
+#: app/includes/TPDefault.php:606
 msgctxt "(Cheap Flights to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title"
 msgstr "Cheap Flights to destination"
 
-#: app/includes/TPDefault.php:607
+#: app/includes/TPDefault.php:608
 msgctxt "(Дешевые перелеты в destination)"
 msgid "tp_plugin_local_ru_table_shortcodes_14_title"
 msgstr "Дешевые перелеты в destination"
 
-#: app/includes/TPDefault.php:619
+#: app/includes/TPDefault.php:620
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:621
+#: app/includes/TPDefault.php:622
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:653
+#: app/includes/TPDefault.php:654
 msgctxt ""
 "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
 "\"Find tickets from {origin} to {destination}\"])"
@@ -302,7 +302,7 @@ msgstr ""
 "Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
 "\"Find tickets from {origin} to {destination}\"]"
 
-#: app/includes/TPDefault.php:655
+#: app/includes/TPDefault.php:656
 msgctxt ""
 "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
 "поиску билетов {origin} {destination}\"])"
@@ -311,7 +311,7 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
 "поиску билетов из {origin} {destination}\"]"
 
-#: app/includes/TPDefault.php:660
+#: app/includes/TPDefault.php:661
 msgctxt ""
 "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets from {origin} to {destination}\"])"
@@ -320,7 +320,7 @@ msgstr ""
 "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets from {origin} to {destination}\"]"
 
-#: app/includes/TPDefault.php:662
+#: app/includes/TPDefault.php:663
 msgctxt ""
 "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты {origin} - {destination}\"])"
@@ -329,122 +329,122 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты из {origin} - {destination}\"]"
 
-#: app/includes/TPDefault.php:785
+#: app/includes/TPDefault.php:786
 msgctxt "(Hotels collection - Discounts)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
 msgstr "Hotels {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:787
+#: app/includes/TPDefault.php:788
 msgctxt "(Подборка отелей - Скидки)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
 msgstr "Отели {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:795
+#: app/includes/TPDefault.php:796
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:797
+#: app/includes/TPDefault.php:798
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:829
+#: app/includes/TPDefault.php:830
 msgctxt "(Hotels collections for dates)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
 msgstr "Hotels {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:831
+#: app/includes/TPDefault.php:832
 msgctxt "(Подборки отелей на даты)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
 msgstr "Отели {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:839
+#: app/includes/TPDefault.php:840
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:841
+#: app/includes/TPDefault.php:842
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:873
+#: app/includes/TPDefault.php:874
 msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title"
 msgstr "location hotels with price from priceAvgMin to priceAvgMax"
 
-#: app/includes/TPDefault.php:875
+#: app/includes/TPDefault.php:876
 msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_3_title"
 msgstr "Отели location по цене от priceAvgMin до priceAvgMax"
 
-#: app/includes/TPDefault.php:883
+#: app/includes/TPDefault.php:884
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:885
+#: app/includes/TPDefault.php:886
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:917
+#: app/includes/TPDefault.php:918
 msgctxt "(location hotels with stars stars )"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title"
 msgstr "location hotels with stars stars "
 
-#: app/includes/TPDefault.php:919
+#: app/includes/TPDefault.php:920
 msgctxt "(Отели в location c stars звезд)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_4_title"
 msgstr "Отели в location c stars звезд"
 
-#: app/includes/TPDefault.php:927
+#: app/includes/TPDefault.php:928
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:929
+#: app/includes/TPDefault.php:930
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:961
+#: app/includes/TPDefault.php:962
 msgctxt "(Stay price in location for number days)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title"
 msgstr "Stay price in location for number days"
 
-#: app/includes/TPDefault.php:963
+#: app/includes/TPDefault.php:964
 msgctxt "(Стоимость проживания в location на number дней)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_5_title"
 msgstr "Стоимость проживания в location на number дней"
 
-#: app/includes/TPDefault.php:971
+#: app/includes/TPDefault.php:972
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:973
+#: app/includes/TPDefault.php:974
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:1005
+#: app/includes/TPDefault.php:1006
 msgctxt "(Stay price in location for weekend)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title"
 msgstr "Stay price in location for weekend"
 
-#: app/includes/TPDefault.php:1007
+#: app/includes/TPDefault.php:1008
 msgctxt "(Стоимость проживания в location на уикенд)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_6_title"
 msgstr "Стоимость проживания в location на уикенд"
 
-#: app/includes/TPDefault.php:1015
+#: app/includes/TPDefault.php:1016
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:1017
+#: app/includes/TPDefault.php:1018
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Забронировать"
@@ -2361,9 +2361,9 @@ msgid "tp_admin_page_settings_tab_config_field_message_error_label"
 msgstr "При ошибке в API вместо таблиц выводить"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:109
-msgctxt "Action after click"
+msgctxt "Action after click (Flights)"
 msgid "tp_admin_page_settings_tab_config_field_after_url_label"
-msgstr "После клика по кнопке Найти"
+msgstr "После клика по кнопке Найти (Авиа)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:116
 msgctxt "(Show Search Form)"
@@ -2376,51 +2376,66 @@ msgid "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
 msgstr "Инициировать новый поиск"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:131
+msgctxt " Action after click (Hotels)"
+msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_label"
+msgstr "После клика по кнопке Найти (Отели)"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:138
+msgctxt "(Show city page)"
+msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label"
+msgstr "Переход на страницу города"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:146
+msgctxt "(Show hotel page)"
+msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label"
+msgstr "Переход на страницу отеля"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:153
 msgctxt "(Distance Units)"
 msgid "tp_admin_page_settings_tab_config_field_distance_label"
 msgstr "Единица измерения расстояния"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:135
+#: app/includes/models/admin/menu/TPFieldSettings.php:157
 msgctxt "(km)"
 msgid "tp_admin_page_settings_tab_config_field_distance_value_1_label"
 msgstr "км"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:139
+#: app/includes/models/admin/menu/TPFieldSettings.php:161
 msgctxt "miles"
 msgid "tp_admin_page_settings_tab_config_field_distance_value_2_label"
 msgstr "мили"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:146
+#: app/includes/models/admin/menu/TPFieldSettings.php:168
 msgctxt "(Airlines logo size)"
 msgid "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
 msgstr "Размер лого Авиакомпании"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:178
+#: app/includes/models/admin/menu/TPFieldSettings.php:200
 msgctxt "(Buttons in the editor)"
 msgid "tp_admin_page_settings_tab_config_field_media_button_label"
 msgstr "Кнопки в редакторе"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:184
+#: app/includes/models/admin/menu/TPFieldSettings.php:206
 msgctxt "Default"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "По умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:189
+#: app/includes/models/admin/menu/TPFieldSettings.php:211
 msgctxt "Compact"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
 msgstr "Компактный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:194
+#: app/includes/models/admin/menu/TPFieldSettings.php:216
 msgctxt "Hide"
 msgid "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
 msgstr "Скрыть"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:213
+#: app/includes/models/admin/menu/TPFieldSettings.php:235
 msgctxt "Redirect"
 msgid "tp_admin_page_settings_tab_config_field_redirect_label"
 msgstr "Переходить на результаты через редирект"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:218
+#: app/includes/models/admin/menu/TPFieldSettings.php:240
 msgctxt ""
 "(In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
 "We recommend that you don’t change this option.)"
@@ -2429,17 +2444,17 @@ msgstr ""
 "При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять "
 "этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:230
+#: app/includes/models/admin/menu/TPFieldSettings.php:252
 msgctxt "(Open in a New Window)"
 msgid "tp_admin_page_settings_tab_config_field_target_url_label"
 msgstr "Открывать результаты в новом окне"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:237
+#: app/includes/models/admin/menu/TPFieldSettings.php:259
 msgctxt "(Add Nofollow Attribute)"
 msgid "tp_admin_page_settings_tab_config_field_nofollow_label"
 msgstr "Добавлять для ссылок атрибут nofollow"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:242
+#: app/includes/models/admin/menu/TPFieldSettings.php:264
 msgctxt ""
 "(This attribute avoids getting undesirable search results into the search engines index. We "
 "recommend that you don’t change this option.)"
@@ -2448,37 +2463,37 @@ msgstr ""
 "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
 "этот параметр."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:254
+#: app/includes/models/admin/menu/TPFieldSettings.php:276
 msgctxt "(Turn off statistics and blog updates)"
 msgid "tp_admin_page_settings_tab_config_field_statistics_label"
 msgstr "Отключить обновление статистики и новостей"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:262
+#: app/includes/models/admin/menu/TPFieldSettings.php:284
 msgctxt "(Use plugin's scripts on all pages)"
 msgid "tp_admin_page_settings_tab_config_field_limit_script_label"
 msgstr "Вызывать скрипты на всех страницах"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:275
+#: app/includes/models/admin/menu/TPFieldSettings.php:297
 msgctxt "(Cache Timeout)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
 msgstr "Частота обновления данных для таблиц"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:295
+#: app/includes/models/admin/menu/TPFieldSettings.php:317
 msgctxt "(Day)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 msgstr "День"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:303
+#: app/includes/models/admin/menu/TPFieldSettings.php:325
 msgctxt "(Hour)"
 msgid "tp_admin_page_settings_tab_config_field_cache_value_1_label"
 msgstr "Час"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:313
+#: app/includes/models/admin/menu/TPFieldSettings.php:339
 msgctxt "(Script Include)"
 msgid "tp_admin_page_settings_tab_config_field_script_label"
 msgstr "Размещать скрипты плагина"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:318
+#: app/includes/models/admin/menu/TPFieldSettings.php:344
 msgctxt ""
 "(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
 "switching to &lt;footer&gt;)"
@@ -2487,77 +2502,77 @@ msgstr ""
 "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
 "попробуйте переставить в &lt;footer&gt;      "
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:328
+#: app/includes/models/admin/menu/TPFieldSettings.php:354
 msgctxt "(Inside &lt;head&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
 msgstr "Внутри тега &lt;head&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:335
+#: app/includes/models/admin/menu/TPFieldSettings.php:361
 msgctxt "(Inside &lt;footer&gt; tag )"
 msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
 msgstr "Внутри тега &lt;footer&gt;"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:344
+#: app/includes/models/admin/menu/TPFieldSettings.php:370
 msgctxt "(Date Format)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_label"
 msgstr "Формат даты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:351
+#: app/includes/models/admin/menu/TPFieldSettings.php:377
 msgctxt "(Use variables to set the date:)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
 msgstr "Используйте переменные для настройки даты:"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:353
+#: app/includes/models/admin/menu/TPFieldSettings.php:379
 msgctxt "(day)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
 msgstr "день месяца"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:355
+#: app/includes/models/admin/menu/TPFieldSettings.php:381
 msgctxt "(month name (small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
 msgstr "название месяца с маленькой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:357
+#: app/includes/models/admin/menu/TPFieldSettings.php:383
 msgctxt "(month name (capital letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
 msgstr "название месяца с большой буквы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:359
+#: app/includes/models/admin/menu/TPFieldSettings.php:385
 msgctxt "(month number)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
 msgstr "месяц цифрой"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:361
+#: app/includes/models/admin/menu/TPFieldSettings.php:387
 msgctxt "(month (3 letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
 msgstr "месяц 3 буквами"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:363
+#: app/includes/models/admin/menu/TPFieldSettings.php:389
 msgctxt "(month (3 small letters))"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:365
+#: app/includes/models/admin/menu/TPFieldSettings.php:391
 msgctxt "(last 2 digits of the year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
 msgstr "2 последние цифры года"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:367
+#: app/includes/models/admin/menu/TPFieldSettings.php:393
 msgctxt "(year)"
 msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
 msgstr "год полностью"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:381
+#: app/includes/models/admin/menu/TPFieldSettings.php:407
 msgctxt "(Current format)"
 msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
 msgstr "Текущий формат"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:389
+#: app/includes/models/admin/menu/TPFieldSettings.php:415
 msgctxt "(Event tracking. \"Find\" button)"
 msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:394
+#: app/includes/models/admin/menu/TPFieldSettings.php:420
 msgctxt ""
 "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
 "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
@@ -2568,152 +2583,152 @@ msgstr ""
 "для отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
 "\"ga('send', 'event', 'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:413
+#: app/includes/models/admin/menu/TPFieldSettings.php:439
 msgctxt "(Event tracking. Table is loaded)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
 msgstr "Отслеживание события. Загрузка таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:418
+#: app/includes/models/admin/menu/TPFieldSettings.php:444
 msgctxt "(Google Analytics event that will be fired every time a table loads.)"
 msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
 msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:438
+#: app/includes/models/admin/menu/TPFieldSettings.php:464
 msgctxt "(Import settings)"
 msgid "tp_admin_page_settings_tab_config_btn_import_settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:443
+#: app/includes/models/admin/menu/TPFieldSettings.php:469
 msgctxt "(Browse)"
 msgid "tp_admin_page_settings_tab_config_btn_browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:448
+#: app/includes/models/admin/menu/TPFieldSettings.php:474
 msgctxt "(Import)"
 msgid "tp_admin_page_settings_tab_config_btn_import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:450
+#: app/includes/models/admin/menu/TPFieldSettings.php:476
 msgctxt "(The file is not selected)"
 msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:455
+#: app/includes/models/admin/menu/TPFieldSettings.php:481
 msgctxt "(Export)"
 msgid "tp_admin_page_settings_tab_config_btn_export_settings"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:465
+#: app/includes/models/admin/menu/TPFieldSettings.php:491
 msgctxt "(Default settings)"
 msgid "tp_admin_page_settings_tab_config_btn_default"
 msgstr "Настройки по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:482
+#: app/includes/models/admin/menu/TPFieldSettings.php:508
 msgctxt "(Tables and Widgets Language)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_label"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:486
+#: app/includes/models/admin/menu/TPFieldSettings.php:512
 msgctxt "(Russian)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:490
+#: app/includes/models/admin/menu/TPFieldSettings.php:516
 msgctxt "(English)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:494
+#: app/includes/models/admin/menu/TPFieldSettings.php:520
 msgctxt "(Thai)"
 msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
 msgstr "Тайский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:500
+#: app/includes/models/admin/menu/TPFieldSettings.php:526
 msgctxt "(Currency)"
 msgid "tp_admin_page_settings_tab_localization_field_currency_label"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:524
+#: app/includes/models/admin/menu/TPFieldSettings.php:550
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Названия ячеек (можете менять название по своему усмотрению)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:532
+#: app/includes/models/admin/menu/TPFieldSettings.php:558
 msgctxt "(Flight Tickets)"
 msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_flight"
 msgstr "Авиабилеты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:541
+#: app/includes/models/admin/menu/TPFieldSettings.php:567
 msgctxt "(Hotels)"
 msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
 msgstr "Отели"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:629
+#: app/includes/models/admin/menu/TPFieldSettings.php:655
 msgctxt "(Host(Hotels))"
 msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
 msgstr "Хост(Отели)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:666
+#: app/includes/models/admin/menu/TPFieldSettings.php:692
 msgctxt "(Host(Flights))"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Хост(Авиа)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:692
+#: app/includes/models/admin/menu/TPFieldSettings.php:718
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Откуда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:700
+#: app/includes/models/admin/menu/TPFieldSettings.php:726
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:704
+#: app/includes/models/admin/menu/TPFieldSettings.php:730
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:708
+#: app/includes/models/admin/menu/TPFieldSettings.php:734
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:712
+#: app/includes/models/admin/menu/TPFieldSettings.php:738
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:716
+#: app/includes/models/admin/menu/TPFieldSettings.php:742
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Предложный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:722
+#: app/includes/models/admin/menu/TPFieldSettings.php:748
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Куда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:729
+#: app/includes/models/admin/menu/TPFieldSettings.php:755
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:733
+#: app/includes/models/admin/menu/TPFieldSettings.php:759
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:737
+#: app/includes/models/admin/menu/TPFieldSettings.php:763
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:741
+#: app/includes/models/admin/menu/TPFieldSettings.php:767
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:745
+#: app/includes/models/admin/menu/TPFieldSettings.php:771
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Предложный"
@@ -5277,6 +5292,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "Action after click"
+#~ msgid "tp_admin_page_settings_tab_config_field_after_url_label"
+#~ msgstr "После клика по кнопке Найти"
 
 #~ msgctxt "(Host)"
 #~ msgid "tp_admin_page_settings_tab_localization_field_host_label"

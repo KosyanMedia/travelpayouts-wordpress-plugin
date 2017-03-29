@@ -107,7 +107,7 @@ class TPFieldSettings {
                 </div>
                 <div class="ItemSub">
                     <span><?php _ex('tp_admin_page_settings_tab_config_field_after_url_label',
-                            'Action after click', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                            'Action after click (Flights)', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
@@ -123,6 +123,28 @@ class TPFieldSettings {
                             <label for="rchek2">
                                 <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_1_label',
                                     '(Show Search Results)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ItemSub">
+                    <span><?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_label',
+                            ' Action after click (Hotels)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <ul class="TP-listSet">
+                        <li>
+                            <input id="rchek11" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
+                                <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 0) ?> hidden value="0" />
+                            <label for="rchek11">
+                                <?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label',
+                                    '(Show city page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input id="rchek22" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
+                                <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 1) ?> hidden value="1" />
+                            <label for="rchek22">
+                                <?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label',
+                                    '(Show hotel page)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     </ul>
@@ -307,6 +329,10 @@ class TPFieldSettings {
                         </ul>
                     </div>
                 </div>
+
+
+
+
                 <div class="ItemSub">
                     <span class="clearfix">
                         <div class="box-span-1">
