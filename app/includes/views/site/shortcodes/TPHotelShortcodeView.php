@@ -388,12 +388,23 @@ class TPHotelShortcodeView extends TPShortcodeView
     }
 
     public function tdClassHidden($shortcode, $field){
+        /*
+         * Скрывать (в порядке неважности): Тип, Скидка, Старая Цена, Рейтинг, Расстояние до центра
+         */
         $fields = array(
             '1' => array(
-
+                'property_type',
+                'discount',
+                'old_price',
+                'rating',
+                'distance',
             ),
             '2' => array(
-
+                'property_type',
+                'discount',
+                'old_price',
+                'rating',
+                'distance',
             )
         );
         if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
