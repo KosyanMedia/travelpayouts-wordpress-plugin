@@ -11,7 +11,19 @@ namespace app\includes\common;
 
 class TPFieldsLabelTable
 {
-
+    /*
+     * Отель | Hotel | name
+     * Звездность | Stars | stars
+     * Рейтинг | Rating | rating
+     * Расстояние до центра (км) | Distance to the center (km) | distance
+     * Цена за ночь | Price per night | price_pn
+     * Цена до скидки | Price before discount | old_price_pn
+     * Скидка | Discount | discount
+     * Цена до скидки | Price before discount | (в настройках ` Старая цена и скидка` `Price before and discount`)
+     * Цена за ночь | Price per night (в настройках Старая и новая цена Old and new price)
+     * Цена за ночь | Price per night (в настройках Кнопка Button)
+     * Цена | Price | price
+     */
 
     public static function getHotelsFieldsLabelRU(){
         return  array(

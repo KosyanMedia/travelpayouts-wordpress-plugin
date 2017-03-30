@@ -84,15 +84,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * button => Кнопка
      */
     public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency){
-        /*//error_log(11);
-        $locations = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/locations.json');
-        error_log(print_r($locations, true));
-        $locations = json_decode($locations, true);
-        $locations_my = array();
-        foreach($locations as $value){
-            $locations_my[$value['id']] = $value;
-        }
-        error_log(print_r($locations_my, true));*/
+
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);

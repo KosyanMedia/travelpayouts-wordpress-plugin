@@ -11,12 +11,12 @@ class TPAutocomplete {
     public static $data;
     public static $title;
     public static $data_airline;
-    private static $locations;
+    //private static $locations;
     private function __construct() {
         self::getIataAutocomplete();
         self::getIataAutocompleteTitle();
         self::getIataAutocompleteAir();
-        self::setLocations();
+        //self::setLocations();
     }
     public static function getInstance(){
         if (null === self::$instance) {
@@ -47,7 +47,7 @@ class TPAutocomplete {
         self::$data_airline = $rows;
     }
 
-    private function setLocations(){
+   /* private function setLocations(){
         $locations = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/locations.json');
         $locations = json_decode($locations, true);
         $rows = array();
@@ -61,5 +61,5 @@ class TPAutocomplete {
     public static function getLocationsById($id){
         if (!array_key_exists($id, self::$locations)) return array();
         return self::$locations[$id];
-    }
+    }*/
 }

@@ -191,10 +191,10 @@ class TPAutocompleteReplace
         return $title;
     }
 
-    public static function getCityById($id){
+   /* public static function getCityById($id){
        // TPAutocomplete::getInstance();
         return TPAutocomplete::getLocationsById($id);
-    }
+    }*/
 
 
 }
