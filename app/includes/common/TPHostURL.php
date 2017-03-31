@@ -331,77 +331,77 @@ class TPHostURL
     private static $hostsHotel = array(
         'hotellook.ru' => array(
             'label' => 'hotellook.ru',
-            'host' => 'hotellook.ru',
+            'host' => 'search.hotellook.ru',
             'language' => '',
         ),
         'hotellook.com&language=en-GB' => array(
             'label' => 'hotellook.com en-GB',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'en-GB',
         ),
         'hotellook.com&language=en-US' => array(
             'label' => 'hotellook.com en-US',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'en-US',
         ),
         'hotellook.com&language=pt-BR' => array(
             'label' => 'hotellook.com pt-BR',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'pt-BR',
         ),
         'hotellook.com&language=pt-PT' => array(
             'label' => 'hotellook.com pt-PT',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'pt-PT',
         ),
         'hotellook.com&language=id-ID' => array(
             'label' => 'hotellook.com id-ID',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'id-ID',
         ),
         'hotellook.com&language=fr-FR' => array(
             'label' => 'hotellook.com fr-FR',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'fr-FR',
         ),
         'hotellook.com&language=it-IT' => array(
             'label' => 'hotellook.com it-IT',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'it-IT',
         ),
         'hotellook.com&language=de-DE' => array(
             'label' => 'hotellook.com de-DE',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'de-DE',
         ),
         'hotellook.com&language=pl-PL' => array(
             'label' => 'hotellook.com pl-PL',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'pl-PL',
         ),
         'hotellook.com&language=es-ES' => array(
             'label' => 'hotellook.com es-ES',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'es-ES',
         ),
         'hotellook.com&language=th-TH' => array(
             'label' => 'hotellook.com th-TH',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'th-TH',
         ),
         'hotellook.com&language=en-AU' => array(
             'label' => 'hotellook.com en-AU',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'en-AU',
         ),
         'hotellook.com&language=en-CA' => array(
             'label' => 'hotellook.com en-CA',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'en-CA',
         ),
         'hotellook.com&language=en-IE' => array(
             'label' => 'hotellook.com en-IE',
-            'host' => 'hotellook.com',
+            'host' => 'search.hotellook.com',
             'language' => 'en-IE',
         ),
     );
@@ -411,12 +411,12 @@ class TPHostURL
         $hostData = array(
             TPLang::getLangRU() => array(
                 'label' => 'hotellook.ru',
-                'host' => 'hotellook.ru',
+                'host' => 'search.hotellook.ru',
                 'language' => '',
             ),
             TPLang::getLangEN() =>  array(
                 'label' => 'hotellook.com en-GB',
-                'host' => 'hotellook.com',
+                'host' => 'search.hotellook.com',
                 'language' => 'en-GB',
             ),
         );

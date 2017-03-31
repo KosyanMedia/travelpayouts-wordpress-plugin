@@ -822,6 +822,7 @@ jQuery(function($) {
                     doc.find('#tr_hotels_number_results').show();
                     doc.find('#tr_hotels_selections_type').show();
                     doc.find('#tr_hotels_subid').show();
+                    //doc.find('#tr_hotels_day').show();
                     //constructorHotelsShortcodesFieldsShow();
                     break;
                 case '3':
