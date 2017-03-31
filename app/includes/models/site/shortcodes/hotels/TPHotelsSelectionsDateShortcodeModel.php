@@ -64,7 +64,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
                 } else {
                     $rows = $return;
                     $rows = array_shift($rows);
-                    $cacheSecund = $this->cacheSecund();
+                    $cacheSecund = $this->cacheSecund('hotel');
                 }
                 set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
             }

@@ -297,11 +297,52 @@ class TPFieldSettings {
                         <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label',
                             '(Cache Timeout)', TPOPlUGIN_TEXTDOMAIN);?>
                     </span>
+
                     <div class="TP-childF">
+
+
+
+
+                        <span>
+                            <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_flights',
+                                '(Flights)', TPOPlUGIN_TEXTDOMAIN);?>
+                        </span>
+
                         <div class="spinnerW clearfix" data-trigger="spinner">
                             <label>
-                                <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value]"
-                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']; ?>"
+                                <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][flight]"
+                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['flight']; ?>"
+                                       data-rule="cache_value">
+                            </label>
+                            <div class="navSpinner">
+                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            </div>
+                        </div>
+
+                        <span>
+                            <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_hotels',
+                                '(Hotels)', TPOPlUGIN_TEXTDOMAIN);?>
+                        </span>
+
+                        <div class="spinnerW clearfix" data-trigger="spinner">
+                            <label>
+                                <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][hotel]"
+                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['hotel']; ?>"
+                                       data-rule="cache_value">
+                            </label>
+                            <div class="navSpinner">
+                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            </div>
+                        </div>
+
+
+
+                        <!--<div class="spinnerW clearfix" data-trigger="spinner">
+                            <label>
+                                <input name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value]"
+                                       type="text" value="<?php //echo \app\includes\TPPlugin::$options['config']['cache_value']; ?>"
                                        data-rule="cache_value">
                             </label>
                             <div class="navSpinner">
@@ -312,20 +353,20 @@ class TPFieldSettings {
                         <ul class="TP-listSet TP-listSet--row">
                             <li>
                                 <input  id="rchek3" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache]"
-                                    <?php checked(\app\includes\TPPlugin::$options['config']['cache'], 0) ?> value="0" hidden/>
+                                    <?php //checked(\app\includes\TPPlugin::$options['config']['cache'], 0) ?> value="0" hidden/>
                                 <label for="rchek3">
-                                    <?php  _ex('tp_admin_page_settings_tab_config_field_cache_value_0_label',
-                                        '(Day)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    <?php  //_ex('tp_admin_page_settings_tab_config_field_cache_value_0_label',
+                                        //'(Day)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
                             <li>
                                 <input id="rchek4" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache]"
-                                    <?php checked(\app\includes\TPPlugin::$options['config']['cache'], 1) ?> value="1" hidden/>
+                                    <?php //checked(\app\includes\TPPlugin::$options['config']['cache'], 1) ?> value="1" hidden/>
                                 <label for="rchek4">
-                                    <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_1_label',
-                                        '(Hour)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    <?php //_ex('tp_admin_page_settings_tab_config_field_cache_value_1_label',
+                                        //'(Hour)', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>

@@ -46,6 +46,7 @@
     currency: {min: 0.00, max: null, step: 0.01, precision: 2},
     quantity: {min: 1, max: 999, step: 1, precision:0},
     cache_value: {min: 2, max: 999, step: 1, precision:0},
+    cache_hotel: {min: 2, max: 999, step: 1, precision:0},
     percent:  {min: 1, max: 100, step: 1, precision:0},
     month:    {min: 1, max: 12, step: 1, precision:0},
     day:      {min: 1, max: 31, step: 1, precision:0},

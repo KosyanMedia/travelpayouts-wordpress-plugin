@@ -94,7 +94,11 @@ class TPDefault implements  \core\TPODefault{
                 'after_url' => 1,
                 'hotel_after_url' => 1,
                 'cache' => 1,
-                'cache_value' => 3,
+                //'cache_value' => 3,
+                'cache_value' => array(
+                    'hotel' => 24,
+                    'flight' => 3,
+                ),
                 'airline_logo_size' => array(
                     'width' => 100,
                     'height' => 35

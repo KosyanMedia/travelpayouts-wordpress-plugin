@@ -322,6 +322,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     break;
 
                 // price_pn => Цена за ночь
+                // [last_price_info][price_pn] => Цена за ночь
+
                 case "price_pn":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
@@ -331,6 +333,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .' </td>';
                     break;
                 // old_price_pn => Цена до скидки
+                //  [last_price_info][old_price_pn] => Цена до скидки
                 case "old_price_pn":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
@@ -349,6 +352,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .' </td>';
                     break;
                 // old_price_and_discount => Старая цена и скидка
+                //  [last_price_info][price_pn]  -  [last_price_info][discount] %
                 case "old_price_and_discount":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
@@ -358,6 +362,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .' </td>';
                     break;
                 // old_price_and_new_price => Старая и новая цена
+                //  [last_price_info][old_price_pn]  [last_price_info][price_pn]
                 case "old_price_and_new_price":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
