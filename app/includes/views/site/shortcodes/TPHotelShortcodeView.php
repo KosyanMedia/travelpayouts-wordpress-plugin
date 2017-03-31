@@ -129,7 +129,18 @@ class TPHotelShortcodeView //extends TPShortcodeView
                      }
                  }*/
 
-
+                /*
+                 * 'name',
+                    'stars',
+                    'rating',
+                    'distance',
+                    'price_pn',
+                    'old_price_pn',
+                    'discount',
+                    'old_price_and_discount',
+                    'old_price_and_new_price',
+                    'button',
+                 */
                 //Td
                 switch($selected_field){
                     // name => Название
@@ -150,15 +161,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                             .'</p>'
                             .'</td>';
                         break;
-                    // distance => Расстояние до центра
-                    case "distance":
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent">'
-                            .$row['distance']
-                            .'</p>'
-                            .'</td>';
-                        break;
+
                     // rating => Оценка пользователей
                     case "rating":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
@@ -168,47 +171,55 @@ class TPHotelShortcodeView //extends TPShortcodeView
                             .'</p>'
                             .'</td>';
                         break;
-                    // address => Адрес
-                    case "address":
+                    // distance => Расстояние до центра
+                    case "distance":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> '
+                                <p class="TP-tdContent">'
+                            .$row['distance']
+                            .'</p>'
+                            .'</td>';
+                        break;
+                    // price_pn => Цена за ночь
+                    case "price_pn":
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                <p class="TP-tdContent"> price_pn '
                             //.$row['address']
                             .'</p>'
                             .'</td>';
                         break;
-                    // property_type => Тип
-                    // hotel_type
-                    case "property_type":
+                    // old_price_pn => Цена до скидки
+                    case "old_price_pn":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> '
-                            .$row['property_type']
+                                <p class="TP-tdContent"> old_price_pn'
+                            //.$row['property_type']
                             .'</p>'
                             .'</td>';
                         break;
-                    // popularity => Популярность
-                    case "popularity":
+                    // discount => Скидка
+                    case "discount":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> popularity'
+                                <p class="TP-tdContent"> Скидка'
                             .'</p>'
                             .'</td>';
                         break;
-                    // price_from => Цена от
-                    case "price_from":
+                    // old_price_and_discount => Старая цена и скидка
+                    case "old_price_and_discount":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> '
-                                .$row['last_price_info']['price']
+                                <p class="TP-tdContent"> Старая цена и скидка'
+                                //.$row['last_price_info']['price']
                             .'</p>'
                             .'</td>';
                         break;
-                    // price_avg => Средняя цена
-                    case "price_avg":
+                    // old_price_and_new_price => Старая и новая цена
+                    case "old_price_and_new_price":
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                <p class="TP-tdContent"> price_avg'
+                                <p class="TP-tdContent"> Старая и новая цена'
 
                             .'</p>'
                             .'</td>';
@@ -257,6 +268,19 @@ class TPHotelShortcodeView //extends TPShortcodeView
     public function renderHeadTable($shortcode){
         $headTable = '';
 
+        /*
+         * 'name',
+            'stars',
+            'rating',
+            'distance',
+            'price_pn',
+            'old_price_pn',
+            'discount',
+            'old_price_and_discount',
+            'old_price_and_new_price',
+            'button',
+         */
+
         $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
         foreach($this->getSelectField($shortcode) as $key=>$selected_field){
             switch($selected_field) {
@@ -278,15 +302,6 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // distance => Расстояние до центра
-                case "distance":
-                    $headTable .= '<td class="TP'.$selected_field.'Td '
-                        .$this->tdClassHidden($shortcode, $selected_field)
-                        .' TPTableHead tp-date-column">'
-                        .$this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
-                    break;
                 // rating => Оценка пользователей
                 case "rating":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
@@ -296,8 +311,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // address => Адрес
-                case "address":
+                // distance => Расстояние до центра
+                case "distance":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
                         .' TPTableHead tp-date-column">'
@@ -305,8 +320,9 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // property_type => Тип
-                case "property_type":
+
+                // price_pn => Цена за ночь
+                case "price_pn":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
                         .' TPTableHead tp-date-column">'
@@ -314,8 +330,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // popularity => Популярность
-                case "popularity":
+                // old_price_pn => Цена до скидки
+                case "old_price_pn":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
                         .' TPTableHead tp-date-column">'
@@ -323,8 +339,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // price_from => Цена от
-                case "price_from":
+                // discount => Скидка
+                case "discount":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
                         .' TPTableHead tp-date-column">'
@@ -332,8 +348,17 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
-                // price_avg => Средняя цена
-                case "price_avg":
+                // old_price_and_discount => Старая цена и скидка
+                case "old_price_and_discount":
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .$this->getTableTheadTDFieldLabel($selected_field)
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
+                // old_price_and_new_price => Старая и новая цена
+                case "old_price_and_new_price":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
                         .' TPTableHead tp-date-column">'
@@ -385,18 +410,18 @@ class TPHotelShortcodeView //extends TPShortcodeView
          */
         $fields = array(
             '1' => array(
-                'property_type',
-                'discount',
-                'old_price',
                 'rating',
                 'distance',
+                'price_pn',
+                'old_price_pn',
+                'old_price_and_discount',
+                'old_price_and_new_price',
+
             ),
             '2' => array(
-                'property_type',
-                'discount',
-                'old_price',
                 'rating',
                 'distance',
+                'price_pn',
             )
         );
         if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
