@@ -19,61 +19,87 @@ class TPFieldsLabelTable
      * Цена за ночь | Price per night | price_pn
      * Цена до скидки | Price before discount | old_price_pn
      * Скидка | Discount | discount
+     *
      * Цена до скидки | Price before discount | (в настройках ` Старая цена и скидка` `Price before and discount`)
      * Цена за ночь | Price per night (в настройках Старая и новая цена Old and new price)
-     * Цена за ночь | Price per night (в настройках Кнопка Button)
-     * Цена | Price | price
+     *
+     *  Цена за ночь | Price per night (в настройках Кнопка Button)
+     *
      */
 
     public static function getHotelsFieldsLabelRU(){
         return  array(
             'label_default' => array(
                 'name' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_name',
-                    '(Название)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Отель)', TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_stars',
-                    '(Звезды)', TPOPlUGIN_TEXTDOMAIN),
-                'distance' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_distance',
-                    '(Расстояние до центра)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Звездность)', TPOPlUGIN_TEXTDOMAIN),
                 'rating' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_rating',
-                    '(Оценка пользователей)', TPOPlUGIN_TEXTDOMAIN),
-                'address' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_address',
-                    '(Адрес)', TPOPlUGIN_TEXTDOMAIN),
-                'property_type' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_property_type',
+                    '(Рейтинг)', TPOPlUGIN_TEXTDOMAIN),
+                'distance' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_distance',
+                    '(Расстояние до центра (км))', TPOPlUGIN_TEXTDOMAIN),
+                'price_pn' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_price_pn',
+                    '(Цена за ночь)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_pn' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_old_price_pn',
+                    '(Цена до скидки)', TPOPlUGIN_TEXTDOMAIN),
+                'discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_default_discount',
+                    '(Скидка)', TPOPlUGIN_TEXTDOMAIN),
+
+                'old_price_and_discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_default_old_price_and_discount',
+                    '(Старая цена и скидка)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_and_new_price' =>_x('tp_plugin_local_ru_hotels_fields_table_label_default_old_price_and_new_price',
+                    '(Старая и новая цена)', TPOPlUGIN_TEXTDOMAIN),
+
+                'button' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_button',
+                    '(Кнопка)', TPOPlUGIN_TEXTDOMAIN),
+                //'address' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_address',
+                //    '(Адрес)', TPOPlUGIN_TEXTDOMAIN),
+                /*'property_type' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_property_type',
                     '(Тип)', TPOPlUGIN_TEXTDOMAIN),
                 'popularity' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_popularity',
                     '(Популярность)', TPOPlUGIN_TEXTDOMAIN),
                 'price_from' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_price_from',
                     '(Цена от)', TPOPlUGIN_TEXTDOMAIN),
                 'price_avg' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_price_avg',
-                    '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),
-                'discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_default_discount',
-                    '(Скидка)', TPOPlUGIN_TEXTDOMAIN),
-                'button' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_button',
-                    '(Кнопка)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),*/
+
             ),
             'label' => array(
                 'name' => _x('tp_plugin_local_ru_hotels_fields_table_label_name',
-                    '(Название)',TPOPlUGIN_TEXTDOMAIN),
+                    '(Отель)',TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('tp_plugin_local_ru_hotels_fields_table_label_stars',
-                    '(Звезды)', TPOPlUGIN_TEXTDOMAIN),
-                'distance' => _x('tp_plugin_local_ru_hotels_fields_table_label_distance',
-                    '(Расстояние до центра)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Звездность)', TPOPlUGIN_TEXTDOMAIN),
                 'rating' => _x('tp_plugin_local_ru_hotels_fields_table_label_rating',
-                    '(Оценка пользователей)', TPOPlUGIN_TEXTDOMAIN),
-                'address' => _x('tp_plugin_local_ru_hotels_fields_table_label_address',
-                    '(Адрес)', TPOPlUGIN_TEXTDOMAIN),
-                'property_type' => _x('tp_plugin_local_ru_hotels_fields_table_label_property_type',
+                    '(Рейтинг)', TPOPlUGIN_TEXTDOMAIN),
+                'distance' => _x('tp_plugin_local_ru_hotels_fields_table_label_distance',
+                    '(Расстояние до центра (км))', TPOPlUGIN_TEXTDOMAIN),
+                'price_pn' => _x('tp_plugin_local_ru_hotels_fields_table_label_price_pn',
+                    '(Цена за ночь)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_pn' => _x('tp_plugin_local_ru_hotels_fields_table_label_old_price_pn',
+                    '(Цена до скидки)', TPOPlUGIN_TEXTDOMAIN),
+                'discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_discount',
+                    '(Скидка)', TPOPlUGIN_TEXTDOMAIN),
+
+                //Цена до скидки  Старая цена и скидка
+                'old_price_and_discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_old_price_and_discount',
+                    '(Цена до скидки)', TPOPlUGIN_TEXTDOMAIN),
+                //Старая и новая цена
+                'old_price_and_new_price' =>_x('tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price',
+                    '(Цена за ночь)', TPOPlUGIN_TEXTDOMAIN),
+
+                'button' => _x('tp_plugin_local_ru_hotels_fields_table_label_button',
+                    '(Цена за ночь)', TPOPlUGIN_TEXTDOMAIN),
+                //'address' => _x('tp_plugin_local_ru_hotels_fields_table_label_address',
+                //    '(Адрес)', TPOPlUGIN_TEXTDOMAIN),
+                /*'property_type' => _x('tp_plugin_local_ru_hotels_fields_table_label_property_type',
                     '(Тип)', TPOPlUGIN_TEXTDOMAIN),
                 'popularity' => _x('tp_plugin_local_ru_hotels_fields_table_label_popularity',
                     '(Популярность)', TPOPlUGIN_TEXTDOMAIN),
                 'price_from' => _x('tp_plugin_local_ru_hotels_fields_table_label_price_from',
                     '(Цена от)', TPOPlUGIN_TEXTDOMAIN),
                 'price_avg' => _x('tp_plugin_local_ru_hotels_fields_table_label_price_avg',
-                    '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),
-                'discount' =>_x('tp_plugin_local_ru_hotels_fields_table_label_discount',
-                    '(Скидка)', TPOPlUGIN_TEXTDOMAIN),
-                'button' => _x('tp_plugin_local_ru_hotels_fields_table_label_button',
-                    '(Кнопка)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),*/
+
             ),
         );
     }
@@ -81,53 +107,75 @@ class TPFieldsLabelTable
         return  array(
             'label_default' => array(
                 'name' => _x('tp_plugin_local_en_hotels_fields_table_label_default_name',
-                    '(Hotel name)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Hotel)', TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('tp_plugin_local_en_hotels_fields_table_label_default_stars',
                     '(Stars)', TPOPlUGIN_TEXTDOMAIN),
-                'distance' => _x('tp_plugin_local_en_hotels_fields_table_label_default_distance',
-                    '(Distance to center)', TPOPlUGIN_TEXTDOMAIN),
                 'rating' => _x('tp_plugin_local_en_hotels_fields_table_label_default_rating',
-                    '(User rating)', TPOPlUGIN_TEXTDOMAIN),
-                'address' => _x('tp_plugin_local_en_hotels_fields_table_label_default_address',
-                    '(Address)', TPOPlUGIN_TEXTDOMAIN),
-                'property_type' => _x('tp_plugin_local_en_hotels_fields_table_label_default_property_type',
+                    '(Rating)', TPOPlUGIN_TEXTDOMAIN),
+                'distance' => _x('tp_plugin_local_en_hotels_fields_table_label_default_distance',
+                    '(Distance to the center (km))', TPOPlUGIN_TEXTDOMAIN),
+                'price_pn' => _x('tp_plugin_local_en_hotels_fields_table_label_default_price_pn',
+                    '(Price per night)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_pn' => _x('tp_plugin_local_en_hotels_fields_table_label_default_old_price_pn',
+                    '(Price before discount)', TPOPlUGIN_TEXTDOMAIN),
+                'discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_default_discount',
+                    '(Discount)', TPOPlUGIN_TEXTDOMAIN),
+
+                'old_price_and_discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_default_old_price_and_discount',
+                    '(Price before and discount)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_and_new_price' =>_x('tp_plugin_local_en_hotels_fields_table_label_default_old_price_and_new_price',
+                    '(Old and new price)', TPOPlUGIN_TEXTDOMAIN),
+
+                'button' => _x('tp_plugin_local_en_hotels_fields_table_label_default_button',
+                    '(Button)', TPOPlUGIN_TEXTDOMAIN),
+                //'address' => _x('tp_plugin_local_en_hotels_fields_table_label_default_address',
+                //    '(Address)', TPOPlUGIN_TEXTDOMAIN),
+                /*'property_type' => _x('tp_plugin_local_en_hotels_fields_table_label_default_property_type',
                     '(Type)', TPOPlUGIN_TEXTDOMAIN),
                 'popularity' => _x('tp_plugin_local_en_hotels_fields_table_label_default_popularity',
                     '(Popularity)', TPOPlUGIN_TEXTDOMAIN),
                 'price_from' => _x('tp_plugin_local_en_hotels_fields_table_label_default_price_from',
                     '(Price from)', TPOPlUGIN_TEXTDOMAIN),
                 'price_avg' => _x('tp_plugin_local_en_hotels_fields_table_label_default_price_avg',
-                    '(Average price)', TPOPlUGIN_TEXTDOMAIN),
-                'discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_default_discount',
-                    '(Discount)', TPOPlUGIN_TEXTDOMAIN),
-                'button' => _x('tp_plugin_local_en_hotels_fields_table_label_default_button',
-                    '(Button)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Average price)', TPOPlUGIN_TEXTDOMAIN),*/
+
 
 
             ),
             'label' => array(
                 'name' => _x('tp_plugin_local_en_hotels_fields_table_label_name',
-                    '(Hotel name)',TPOPlUGIN_TEXTDOMAIN),
+                    '(Hotel)',TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('tp_plugin_local_en_hotels_fields_table_label_stars',
                     '(Stars)', TPOPlUGIN_TEXTDOMAIN),
-                'distance' => _x('tp_plugin_local_en_hotels_fields_table_label_distance',
-                    '(Distance to center)', TPOPlUGIN_TEXTDOMAIN),
                 'rating' => _x('tp_plugin_local_en_hotels_fields_table_label_rating',
-                    '(User rating)', TPOPlUGIN_TEXTDOMAIN),
-                'address' => _x('tp_plugin_local_en_hotels_fields_table_label_address',
-                    '(Address)', TPOPlUGIN_TEXTDOMAIN),
-                'property_type' => _x('tp_plugin_local_en_hotels_fields_table_label_property_type',
+                    '(Rating)', TPOPlUGIN_TEXTDOMAIN),
+                'distance' => _x('tp_plugin_local_en_hotels_fields_table_label_distance',
+                    '(Distance to the center (km))', TPOPlUGIN_TEXTDOMAIN),
+                'price_pn' => _x('tp_plugin_local_en_hotels_fields_table_label_price_pn',
+                    '(Price per night)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_pn' => _x('tp_plugin_local_en_hotels_fields_table_label_old_price_pn',
+                    '(Price before discount)', TPOPlUGIN_TEXTDOMAIN),
+                'discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_discount',
+                    '(Discount)', TPOPlUGIN_TEXTDOMAIN),
+
+                'old_price_and_discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_old_price_and_discount',
+                    '(Price before discount)', TPOPlUGIN_TEXTDOMAIN),
+                'old_price_and_new_price' =>_x('tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price',
+                    '(Price per night)', TPOPlUGIN_TEXTDOMAIN),
+
+                'button' => _x('tp_plugin_local_en_hotels_fields_table_label_button',
+                    '(Price per night)', TPOPlUGIN_TEXTDOMAIN),
+                //'address' => _x('tp_plugin_local_en_hotels_fields_table_label_address',
+                //    '(Address)', TPOPlUGIN_TEXTDOMAIN),
+                /*'property_type' => _x('tp_plugin_local_en_hotels_fields_table_label_property_type',
                     '(Type)', TPOPlUGIN_TEXTDOMAIN),
                 'popularity' => _x('tp_plugin_local_en_hotels_fields_table_label_popularity',
                     '(Popularity)', TPOPlUGIN_TEXTDOMAIN),
                 'price_from' => _x('tp_plugin_local_en_hotels_fields_table_label_price_from',
                     '(Price from)', TPOPlUGIN_TEXTDOMAIN),
                 'price_avg' => _x('tp_plugin_local_en_hotels_fields_table_label_price_avg',
-                    '(Average price)', TPOPlUGIN_TEXTDOMAIN),
-                'discount' =>_x('tp_plugin_local_en_hotels_fields_table_label_discount',
-                    '(Discount)', TPOPlUGIN_TEXTDOMAIN),
-                'button' => _x('tp_plugin_local_en_hotels_fields_table_label_button',
-                    '(Button)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Average price)', TPOPlUGIN_TEXTDOMAIN),*/
+
             ),
         );
     }
