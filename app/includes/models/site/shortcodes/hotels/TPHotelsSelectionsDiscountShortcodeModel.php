@@ -109,6 +109,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
     public function getDataTable($args = array()){
         $defaults = array(
             'city' => false,
+            'city_label' => false,
             'title' => '',
             'paginate' => true,
             'off_title' => '',
@@ -152,6 +153,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'rows' => $return,
             'title' => $title,
             'city' => $city,
+            'city_label' => $city_label,
             'off_title' => $off_title,
             'location_id' => $city,
             'check_in' => false,

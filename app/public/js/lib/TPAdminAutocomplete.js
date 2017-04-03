@@ -292,7 +292,7 @@ function TPCityAutocomplete(){
                                 $.map(data.cities, function(city, key_city){
                                     //console.log(city);
                                     var record = new Object();
-                                    record.label = city.fullname+" ["+city.id+"]";
+                                    record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
                                     /*record.val = '{'+city.city+', '+city.country+', '+city.hotelsCount+', '
                                         +city.id+', city, '+city.country+'}';*/
                                     records.push(record);

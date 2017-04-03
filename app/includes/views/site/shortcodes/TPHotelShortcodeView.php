@@ -50,6 +50,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
             'rows' => array(),
             'title' => '',
             'city' => false,
+            'city_label' => false,
             'off_title' => '',
             'check_in' => false,
             'check_out' => false,
@@ -75,7 +76,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
         if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
-                        .$this->renderTitleTable($off_title, $title, $shortcode, $city)
+                        .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label)
                     .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"
                         data-paginate_limit="'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate']
@@ -741,7 +742,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * @param $city
      * @return string
      */
-    public function renderTitleTable($off_title, $title, $shortcode, $city){
+    public function renderTitleTable($off_title, $title, $shortcode, $city, $cityLabel){
         if($off_title !== 'true'){
             if(empty($title)) {
                 if(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()])){
@@ -749,28 +750,12 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 }else{
                     $title = \app\includes\TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getDefaultLang()];
                 }
-
-                /*if(\app\includes\TPPlugin::$options['local']['title_case']['destination'] == 'vi'){
-                    $title = str_replace('в destination', 'destination', $title);
-                }*/
             }
             if(!empty($title)){
 
-                /*if (TPLang::getLang() == "ru"){
-                    if(strpos($title, 'origin') !== false){
-                        $title = str_replace('origin', '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' , $title);
-                    }
-                    if(strpos($title, 'destination') !== false){
-                        $title = str_replace('destination', '<span data-title-case-destination-iata="'.$destination.'">'.$destination.'</span>', $title);
-                    }
-                } else {
-                    if(strpos($title, 'origin') !== false){
-                        $title = str_replace('origin', '<span data-city-iata="'.$origin.'">'.$origin.'</span>' , $title);
-                    }
-                    if(strpos($title, 'destination') !== false){
-                        $title = str_replace('destination', '<span data-city-iata="'.$destination.'">'.$destination.'</span>', $title);
-                    }
-                }*/
+                if(strpos($title, '{location}') !== false){
+                    $title = str_replace('{location}', '<span data-city-location="'.$cityLabel.'">'.$cityLabel.'</span>' , $title);
+                }
 
             }
             return '<'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].'>';
