@@ -930,6 +930,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             tpLocale = '<?php echo \app\includes\common\TPLang::getLang();?>';
         </script>
         <style type="text/css">
+            .TPHotelStar{
+                color: #fdb931;
+            }
             <?php
                 if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
                     ?>
