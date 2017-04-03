@@ -107,7 +107,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                  case 1:
                  case 2:
                      $hotelURL = $this->getUrlTable($shortcode, $city,
-                         $row['hotel_id'], false, false, $currency);
+                         $row['hotel_id'], false, false, $currency, $subid);
                      break;
 
                  default:
@@ -257,27 +257,23 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * hotelId=8992 — id отеля.
      * https://search.hotellook.com/?locationId=12153&checkIn=2016-12-15&checkOut=2016-12-19&adults=2&children=7,2&language=ru-ru¤cy=rub&marker=УкажитеЗдесьВашМаркер#f%5Btypes%5D=7
      */
-    public function getUrlTable($shortcode, $locationId, $hotelId, $checkIn, $checkOut, $currency){
+    public function getUrlTable($shortcode, $locationId, $hotelId, $checkIn, $checkOut, $currency, $subid){
         $white_label = '';
         $language = '';
         $URL = '';
-        $white_label = TPPlugin::$options['account']['white_label_hotel'];
-        if(!empty($white_label)){
-            if(strpos($white_label, 'http') === false){
-                $white_label = 'http://'.$white_label;
-            }
-        }
-        if( ! $white_label || empty( $white_label ) ){
-            $white_label = TPHostURL::getHostHotel();
-            $language = '&language='.$white_label['language'];
-            $white_label = 'https://'.$white_label['host'].'/';
-        }
+
+        $whiteLabel = $this->getWhiteLabel();
+        $white_label = $whiteLabel['white_label'];
+        $language = $whiteLabel['language'];
+
         $URL = '?locationId='.$locationId;
         if ((int) TPPlugin::$options['config']['hotel_after_url'] == 1){
             $URL .= '&hotelId='.$hotelId;
         }
 
-        if ($shortcode !== 1){
+        if ($shortcode == 1) {
+            $URL .= '&autoDates=1';
+        } else {
             if ($checkIn !== false){
                 $URL .= '&checkIn'.$checkIn;
             }
@@ -287,12 +283,52 @@ class TPHotelShortcodeView //extends TPShortcodeView
             }
         }
 
+        $URL .= $language;
+        $URL .= '&currency='.$currency;
+
+        $URL .= $this->getMarker($shortcode, $subid);
 
         return $white_label.$URL;
     }
 
-    public function getMarker(){
+    public function getWhiteLabel(){
+        $white_label = '';
+        $language = '';
+        $white_label = TPPlugin::$options['account']['white_label_hotel'];
+        if(!empty($white_label)){
+            if(strpos($white_label, 'http') === false){
+                $white_label = 'http://'.$white_label;
+            }
+        }
+        if( ! $white_label || empty( $white_label ) ){
+            $white_label = TPHostURL::getHostHotel();
+            if (!empty($white_label['language'])){
+                $language = '&language='.$white_label['language'];
+            }
+            $white_label = 'https://'.$white_label['host'].'/';
+        }
+        return array(
+            'language' => $language,
+            'white_label' => $white_label,
+        );
+    }
 
+    public function getMarker($shortcode, $subid){
+        $marker = TPPlugin::$options['account']['marker'];
+        $marker = '&marker='.$marker;
+        if (!empty(TPPlugin::$options['account']['extra_marker'])){
+            $marker = $marker .'.'.TPPlugin::$options['account']['extra_marker'];
+        }
+
+        if (!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker'])){
+            $marker = $marker.'_'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker'];
+        }
+
+        if(!empty($subid))
+            $marker = $marker.'_'.$subid;
+        $marker = $marker.'.$69';
+
+        return $marker;
     }
 
     /**
