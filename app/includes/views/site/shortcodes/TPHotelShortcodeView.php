@@ -16,15 +16,42 @@ use \app\includes\common\TPHostURL;
 
 class TPHotelShortcodeView //extends TPShortcodeView
 {
+    public function __construct()
+    {
+        add_action('wp', array(&$this, 'redirectPlugins'));
+    }
+
+    public function redirectPlugins(){
+        $redirect = false;
+        if(isset(TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+
+        if($redirect){
+            if(isset($_GET['search_hotel'])){
+                $whiteLabel = $this->getWhiteLabel();
+                $white_label = $whiteLabel['white_label'];
+                $white_label = "{$white_label}".urldecode($_GET['search_hotel']);
+                header("Location: {$white_label}", true, 302);
+                die;
+                /*
+                 * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
+                 * problem
+                 * $location = wp_sanitize_redirect($location);
+                 * delete marker special symbol.
+                 */
+            }
+        }
+    }
+
     public function renderTable($args = array()) {
         $defaults = array(
             'rows' => array(),
-            'city' => false,
             'title' => '',
-            'paginate' => true,
+            'city' => false,
             'off_title' => '',
-            'type' => 'all',
-            'day' => 3,
+            'check_in' => false,
+            'check_out' => false,
             'star' => 'all',
             'rating_from' => 7,
             'rating_to' => 10,
@@ -37,6 +64,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
             'type_selections' => 'popularity',
             'subid' => '',
             'shortcode' => false,
+            'paginate' => true,
+
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $html = '';
@@ -51,7 +80,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         data-paginate_limit="'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate']
                         .'" data-sort_column="'.$this->getSortColumn($shortcode).'">'
                         .$this->renderHeadTable($shortcode)
-                        .$this->renderBodyTable($shortcode, $city, $rows, $subid, $number_results, $currency)
+                        .$this->renderBodyTable($shortcode, $city, $rows, $subid, $number_results, $currency, $check_in,
+                                                $check_out)
                     .'</table>
                 </div>';
 
@@ -84,7 +114,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * price_avg => Средняя цена
      * button => Кнопка
      */
-    public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency){
+    public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency, $checkIn, $checkOut){
 
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
@@ -107,14 +137,14 @@ class TPHotelShortcodeView //extends TPShortcodeView
                  case 1:
                  case 2:
                      $hotelURL = $this->getUrlTable($shortcode, $city,
-                         $row['hotel_id'], false, false, $currency, $subid);
+                         $row['hotel_id'], $checkIn, $checkOut, $currency, $subid);
                      break;
 
                  default:
                      $hotelURL = '';
              }
 
-             error_log($hotelURL);
+            //error_log($hotelURL);
             foreach($this->getSelectField($shortcode) as $key=>$selected_field){
                  $count++;
 
@@ -216,11 +246,13 @@ class TPHotelShortcodeView //extends TPShortcodeView
                                 .'</td>';
                             break;
                         // button => Кнопка
+                        // [last_price_info][price_pn] => Цена за ночь
                         case "button":
                             $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent"> button'
-
+                                    <p class="TP-tdContent" data-price="'.$row['last_price_info']['price_pn'].'">'
+                                    .$this->getTextTdTable($hotelURL, '', $shortcode, 1, $row['last_price_info']['price_pn'],
+                                                            $currency)
                                 .'</p>'
                                 .'</td>';
                             break;
@@ -237,6 +269,74 @@ class TPHotelShortcodeView //extends TPShortcodeView
         $bodyTable .= '</tbody>';
         return $bodyTable;
 
+    }
+
+    /**
+     * @param $url
+     * @param $text
+     * @param $shortcode
+     * @param int $type
+     * @param $price
+     * @param $currency
+     * @return string
+     */
+    public function getTextTdTable($url, $text, $shortcode, $type = 0, $price, $currency){
+        $textTd = '';
+        $rel = '';
+        if (isset(TPPlugin::$options['config']['nofollow'])) {
+            $rel ='rel="nofollow"';
+        }
+        $target_url = '';
+        if (isset(TPPlugin::$options['config']['target_url'])){
+            $target_url ='target="_blank"';
+        }
+        $redirect = false;
+        if (isset(TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+
+        switch($type){
+            //text When hyperlinks are disabled
+            case 0:
+                $textTd = $text;
+                break;
+            //button
+            case 1:
+                $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable " '.$target_url.' '.$rel.'>'
+                    .$this->getButtonText($shortcode, $price, $currency)
+                    .'</a>';
+                break;
+        }
+
+        return $textTd;
+    }
+
+    /**
+     * @param $shortcode
+     * @param $price
+     * @param $currency
+     * @return mixed|string
+     */
+    public function getButtonText($shortcode, $price, $currency){
+        $btnTxt = "";
+        if(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'][TPLang::getLang()])){
+            $btnTxt = TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'][TPLang::getLang()];
+        }else{
+            $btnTxt = TPPlugin::$options['shortcodes_hotels'][$shortcode]['title_button'][TPLang::getDefaultLang()];
+        }
+
+        $button_text = "<span>".$btnTxt."</span>";
+
+        if (!empty($button_text)){
+            if(strpos($button_text, 'price') !== false){
+                if (!is_string($price)) {
+                    $price = number_format($price, 0, '.', ' ');
+                }
+                $button_text = str_replace('{price}', $price, $button_text);
+                $button_text .= $this->currencyView($currency);
+            }
+        }
+        return $button_text;
     }
 
     /**
@@ -288,7 +388,21 @@ class TPHotelShortcodeView //extends TPShortcodeView
 
         $URL .= $this->getMarker($shortcode, $subid);
 
-        return $white_label.$URL;
+        $redirect = false;
+        if (isset(TPPlugin::$options['config']['redirect'])){
+            $redirect = true;
+        }
+
+        if($redirect){
+            $home = '';
+            $home = get_option('home');
+            //$url = substr($url, 10);
+            return $home.'/?search_hotel='.rawurlencode($URL);
+        }else{
+            return $white_label.$URL;
+        }
+
+
     }
 
     public function getWhiteLabel(){
