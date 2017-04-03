@@ -169,7 +169,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                             $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                                    .$row['name']
+                                    .$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0,
+                                                            $row['last_price_info']['price_pn'], $currency)
                                     .'</p>'
                                 .'</td>';
                             break;
@@ -483,7 +484,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 case "name":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
-                        .' TPTableHead tp-date-column">'
+                        .' TPTableHead">'
                         .$this->getTableTheadTDFieldLabel($selected_field)
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
@@ -510,7 +511,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 case "distance":
                     $headTable .= '<td class="TP'.$selected_field.'Td '
                         .$this->tdClassHidden($shortcode, $selected_field)
-                        .' TPTableHead tp-date-column">'
+                        .' TPTableHead">'
                         .$this->getTableTheadTDFieldLabel($selected_field)
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
