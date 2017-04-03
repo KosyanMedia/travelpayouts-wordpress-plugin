@@ -600,7 +600,7 @@ jQuery(function($) {
                         var select_hotels_shortcodes, tp_hotels_title, hotels_city, select_hotels_type, hotels_day,
                             select_hotels_star, hotels_rating_from, hotels_rating_to, hotels_distance_from,
                             hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title,
-                            hotels_selections_type, hotels_subid;
+                            hotels_selections_type, hotels_subid, check_in, check_out;
                         select_hotels_shortcodes = doc.find('#select_hotels_shortcodes').val();
                         tp_hotels_title = doc.find('#tp_hotels_title').val();
                         hotels_city = doc.find('#hotels_city').val();
@@ -614,6 +614,8 @@ jQuery(function($) {
                         hotels_distance_to = doc.find('#hotels_distance_to').val();
                         hotels_number_results = doc.find('#hotels_number_results').val();
                         hotels_selections_type = doc.find('#select_hotels_selections_type').val();
+                        check_in = doc.find('#check_in').val();
+                        check_out = doc.find('#check_out').val();
                         hotels_subid = doc.find('#hotels_subid').val();
                         if(doc.find('#hotels_paginate').is(":checked")){
                             hotels_paginate = "paginate=true";
@@ -655,11 +657,12 @@ jQuery(function($) {
                                     doc.find('#select_hotels_selections_type').addClass('constructorShortcodesError');
                                     break;
                                 }
-
+                                //check_out check_in
                                 setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
                                     "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                     " type_selections=\""+hotels_selections_type+"\" " +
-                                    " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"]",
+                                    " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
+                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\"]",
                                     $(this));
 
                                 break;
@@ -746,6 +749,30 @@ jQuery(function($) {
         //tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
 
+        //console.log(11);
+        doc.find('.constructorDateShortcodes').datepicker({
+            dateFormat : "dd-mm-yy"
+        });
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: '&#x3c;Пред',
+            nextText: 'След&#x3e;',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+
         doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
@@ -822,6 +849,8 @@ jQuery(function($) {
                     doc.find('#tr_hotels_number_results').show();
                     doc.find('#tr_hotels_selections_type').show();
                     doc.find('#tr_hotels_subid').show();
+                    doc.find('#tr_hotels_check_in').show();
+                    doc.find('#tr_hotels_check_out').show();
                     //doc.find('#tr_hotels_day').show();
                     //constructorHotelsShortcodesFieldsShow();
                     break;
@@ -855,6 +884,8 @@ jQuery(function($) {
         doc.find('#tr_hotels_number_results').hide();
         doc.find('#tr_hotels_selections_type').hide();
         doc.find('#tr_hotels_subid').hide();
+        doc.find('#tr_hotels_check_in').hide();
+        doc.find('#tr_hotels_check_out').hide();
         doc.find('#tp_hotels_title').val("");
         doc.find('#hotels_city').val("");
         doc.find('#hotels_subid').val("");

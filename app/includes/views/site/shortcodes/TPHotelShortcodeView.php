@@ -273,6 +273,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
         $bodyTable .= '<tbody>';
         $count_row = 0;
         foreach($rows as $key_row => $row){
+            //error_log(print_r($row,true));
             $count_row++;
 
             $count = 0;
@@ -325,7 +326,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     $old_price_and_new_price .= ' '.number_format($price_pn, 0, '.', ' ').$this->currencyView($currency);
                 }
             }
-            if (empty($price_pn)) continue;
+            //if (empty($price_pn)) continue;
             $bodyTable .= '<tr>';
             //error_log($hotelURL);
             foreach($this->getSelectField($shortcode) as $key=>$selected_field){
@@ -730,7 +731,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * @return string
      */
     public function renderViewIfEmptyTable(){
-        return 'Empty table';
+        return '';
     }
 
     /**

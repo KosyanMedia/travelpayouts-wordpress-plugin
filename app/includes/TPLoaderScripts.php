@@ -13,7 +13,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         // TODO: Implement loadScriptAdmin() method.
         /** Register styles */
         //$version = TPOPlUGIN_VERSION;
-        $version = null;
+        $version = false;
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle

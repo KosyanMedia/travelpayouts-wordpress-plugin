@@ -92,11 +92,18 @@
             </td>
         </tr>
 
-        <tr id="tr_hotels_day">
+        <tr id="tr_hotels_check_in">
             <td>
-                <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_day_label',
-                    '(Number of days)', TPOPlUGIN_TEXTDOMAIN); ?>
-                <input type="number" id="hotels_day" value="3" max="365" min="1">
+                <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label',
+                    '(Check-in date)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <input type="text" id="check_in" value="<?php echo date('d-m-Y'); ?>" class="constructorDateShortcodes">
+            </td>
+        </tr>
+        <tr id="tr_hotels_check_out">
+            <td>
+                <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label',
+                    '(Check-out date)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <input type="text" id="check_out" value="<?php echo date('d-m-Y', time()+DAY_IN_SECONDS); ?>" class="constructorDateShortcodes">
             </td>
         </tr>
 

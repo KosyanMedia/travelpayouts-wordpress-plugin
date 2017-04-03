@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-03 18:33+0300\n"
+"POT-Creation-Date: 2017-04-03 19:08+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -3276,86 +3276,91 @@ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections
 msgstr "Selection type"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:97
-msgctxt "(Number of days)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_day_label"
-msgstr "Number of days"
+msgctxt "(Check-in date)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label"
+msgstr "Check-in date"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:105
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:104
+msgctxt "(Check-out date)"
+msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label"
+msgstr "Check-out date"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:112
 msgctxt "(Stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
 msgstr "Stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:109
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:116
 msgctxt "(No stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
 msgstr "No stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:113
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:120
 msgctxt "(1 star)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
 msgstr "1 star"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:117
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:124
 msgctxt "(2 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
 msgstr "2 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:121
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:128
 msgctxt "(3 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
 msgstr "3 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:125
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:132
 msgctxt "(4 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
 msgstr "4 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:129
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:136
 msgctxt "(5 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
 msgstr "5 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:133
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:140
 msgctxt "(All)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
 msgstr "All"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:142
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:149
 msgctxt "(User rating from)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
 msgstr "User rating from "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:145
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:152
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
 msgstr "to"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:153
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:160
 msgctxt "(Distance to center from )"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
 msgstr "Distance to center from "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:156
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:163
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
 msgstr "to"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:159
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:166
 msgctxt "(km)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
 msgstr "km"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:166
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:173
 msgctxt "(Number of results)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
 msgstr "Number of results"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:176
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:183
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:183
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:190
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "No title"
@@ -5289,6 +5294,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Number of days)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_day_label"
+#~ msgstr "Number of days"
 
 #~ msgctxt "(Расстояние до центра (км))"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"

@@ -136,7 +136,9 @@
 #tr_hotels_distance,
 #tr_hotels_number_results,
 #tr_hotels_selections_type,
-#tr_hotels_subid
+#tr_hotels_subid,
+#tr_hotels_check_in,
+#tr_hotels_check_out
 {
     display: none;
 }

@@ -51,7 +51,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => $return_url
         );
 
-        $cacheKey = "hotel_1_selections_discount_{$id}{$currency}";
+        $cacheKey = "hotel_1_selections_date_{$id}{$currency}";
 
         if($this->cacheSecund() && $return_url == false){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
@@ -74,7 +74,10 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             if (!$rows){
                 return false;
             }
-            $rows = array_shift($rows);
+            if ($return_url == false){
+                $rows = array_shift($rows);
+            }
+
         }
 
         return $rows;
@@ -118,6 +121,8 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
             'subid' => '',
+            'check_in' => date('d-m-Y'),
+            'check_out' => date('d-m-Y', time()+DAY_IN_SECONDS),
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -125,8 +130,8 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             $return_url = true;
         }
 
-        $check_in = date('Y-m-d');
-        $check_out = $this->getCheckOut($day);
+        //$check_in = date('Y-m-d');
+        //$check_out = $this->getCheckOut($day);
 
         $return = $this->get_data(array(
             'id' => $city,
@@ -157,6 +162,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'currency' => $currency,
             'return_url' => $return_url,
             'subid' => $subid,
+            'shortcode' => 2,
 
         );
 
