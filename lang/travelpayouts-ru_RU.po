@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-03-31 15:42+0300\n"
+"POT-Creation-Date: 2017-04-03 18:32+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -734,9 +734,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_rating"
 msgstr "Рейтинг"
 
 #: app/includes/common/TPFieldsLabelTable.php:39
-msgctxt "(Расстояние до центра (км))"
+msgctxt "(Расстояние до центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
-msgstr "Расстояние до центра (км)"
+msgstr "Расстояние до центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:41
 msgctxt "(Цена за ночь)"
@@ -784,9 +784,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_rating"
 msgstr "Рейтинг"
 
 #: app/includes/common/TPFieldsLabelTable.php:74
-msgctxt "(Расстояние до центра (км))"
+msgctxt "(Расстояние до центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
-msgstr "Расстояние до центра (км)"
+msgstr "Расстояние до центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:76
 msgctxt "(Цена за ночь)"
@@ -834,9 +834,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_default_rating"
 msgstr "Rating"
 
 #: app/includes/common/TPFieldsLabelTable.php:115
-msgctxt "(Distance to the center (km))"
+msgctxt "(Distance to the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
-msgstr "Distance to the center (km)"
+msgstr "Distance to the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:117
 msgctxt "(Price per night)"
@@ -884,9 +884,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_rating"
 msgstr "Rating"
 
 #: app/includes/common/TPFieldsLabelTable.php:152
-msgctxt "(Distance to the center (km))"
+msgctxt "(Distance to the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
-msgstr "Distance to the center (km)"
+msgstr "Distance to the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:154
 msgctxt "(Price per night)"
@@ -5298,6 +5298,22 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Расстояние до центра (км))"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
+#~ msgstr "Расстояние до центра (км)"
+
+#~ msgctxt "(Расстояние до центра (км))"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
+#~ msgstr "Расстояние до центра (км)"
+
+#~ msgctxt "(Distance to the center (km))"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
+#~ msgstr "Distance to the center (km)"
+
+#~ msgctxt "(Distance to the center (km))"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
+#~ msgstr "Distance to the center (km)"
+
 #~ msgctxt "(Day)"
 #~ msgid "tp_admin_page_settings_tab_config_field_cache_value_0_label"
 #~ msgstr "День"
@@ -5313,10 +5329,6 @@ msgstr "Вид %s не найден"
 #~ msgctxt "(Звезды)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_stars"
 #~ msgstr "Звезды"
-
-#~ msgctxt "(Расстояние до центра)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
-#~ msgstr "Расстояние до центра"
 
 #~ msgctxt "(Оценка пользователей)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_rating"
@@ -5349,10 +5361,6 @@ msgstr "Вид %s не найден"
 #~ msgctxt "(Звезды)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_stars"
 #~ msgstr "Звезды"
-
-#~ msgctxt "(Расстояние до центра)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
-#~ msgstr "Расстояние до центра"
 
 #~ msgctxt "(Оценка пользователей)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_rating"
