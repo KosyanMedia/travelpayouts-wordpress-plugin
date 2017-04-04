@@ -794,7 +794,7 @@ class TPDefault implements  \core\TPODefault{
                             '(Подборка отелей - Скидки)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'hotelsCollections',
+                    'extra_table_marker' => 'hotelsSelections',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
@@ -836,7 +836,7 @@ class TPDefault implements  \core\TPODefault{
                             '(Подборки отелей на даты)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
-                    'extra_table_marker' => 'hotelsCollections',
+                    'extra_table_marker' => 'hotelsSelections',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
