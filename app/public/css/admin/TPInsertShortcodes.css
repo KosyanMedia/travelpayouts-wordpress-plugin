@@ -418,6 +418,8 @@
     background: #00abfd;
     color: #fff;
     border-color: #00abfd;
+    text-align: center;
+
 }
 
 .ui-datepicker-header {
@@ -427,6 +429,7 @@
 }
 
 .ui-datepicker-prev, .ui-datepicker-next {
+    background-size: cover;
     position: absolute;
     top: 0;
     display: block;
