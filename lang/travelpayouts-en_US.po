@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-03 19:08+0300\n"
+"POT-Creation-Date: 2017-04-04 15:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1633,12 +1633,12 @@ msgstr "Find tickets {origin} {destination}"
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
 msgctxt "admin media button insert hotels title"
 msgid "tp_admin_media_button_insert_hotels_title"
-msgstr "Insert hotel"
+msgstr "Insert Hotels Table"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
 msgctxt "admin media button hotels title"
 msgid "tp_admin_media_button_hotels_short_title"
-msgstr "Hotel"
+msgstr "Hotels"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
@@ -1663,12 +1663,12 @@ msgstr "Form"
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:15
 msgctxt "admin media button insert table title"
 msgid "tp_admin_media_button_insert_table_title"
-msgstr "Insert table"
+msgstr "Insert Flights Tabel"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
 msgctxt "admin media button table title"
 msgid "tp_admin_media_button_table_short_title"
-msgstr "Table"
+msgstr "Flights"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
 msgctxt "admin media button insert widget title"

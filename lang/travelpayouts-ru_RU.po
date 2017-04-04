@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-03 19:07+0300\n"
+"POT-Creation-Date: 2017-04-04 15:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1635,12 +1635,12 @@ msgstr "Найти билеты {origin} {destination}"
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
 msgctxt "admin media button insert hotels title"
 msgid "tp_admin_media_button_insert_hotels_title"
-msgstr "Вставить отель"
+msgstr "Вставить таблицу отелей"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
 msgctxt "admin media button hotels title"
 msgid "tp_admin_media_button_hotels_short_title"
-msgstr "Отель"
+msgstr "Отели"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
@@ -1665,12 +1665,12 @@ msgstr "Форма"
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:15
 msgctxt "admin media button insert table title"
 msgid "tp_admin_media_button_insert_table_title"
-msgstr "Insert table"
+msgstr "Вставить авиа таблицу"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
 msgctxt "admin media button table title"
 msgid "tp_admin_media_button_table_short_title"
-msgstr "Таблица"
+msgstr "Авиа"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
 msgctxt "admin media button insert widget title"
