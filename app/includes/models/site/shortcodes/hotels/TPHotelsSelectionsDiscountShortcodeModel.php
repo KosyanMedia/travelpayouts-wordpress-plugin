@@ -53,6 +53,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
         );
 
         $cacheKey = "hotel_1_selections_discount_{$currency}_{$language}_{$limit}_{$type}_{$id}";
+        //error_log($cacheKey);
 
         if($this->cacheSecund() && $return_url == false){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {

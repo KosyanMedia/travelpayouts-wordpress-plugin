@@ -805,25 +805,31 @@ class TPDefault implements  \core\TPODefault{
                     ),
                     'sort_column' => 0,
                     'selected' => array(
+                        // Отель
                         'name',
+                        // Звездность
                         'stars',
-                        'rating',
+                        // Скидка
+                        'discount',
+                        // Старая новая цена
+                        'old_price_and_new_price',
+                        /*'rating',
                         'distance',
                         'price_pn',
-                        'old_price_pn',
-                        'discount',
+                        'old_price_pn',*/
+                        // Кнопка
                         'button',
                     ),
                     'fields' => array(
                         'name',
                         'stars',
-                        'rating',
-                        'distance',
-                        'price_pn',
-                        'old_price_pn',
                         'discount',
-                        'old_price_and_discount',
                         'old_price_and_new_price',
+                        'price_pn',
+                        'old_price_and_discount',
+                        'distance',
+                        'old_price_pn',
+                        'rating',
                         'button',
                     ),
                 ),
@@ -849,17 +855,17 @@ class TPDefault implements  \core\TPODefault{
                     'selected' => array(
                         'name',
                         'stars',
-                        'rating',
-                        'distance',
+                        //'rating',
+                        //'distance',
                         'price_pn',
                         'button',
                     ),
                     'fields' => array(
                         'name',
                         'stars',
-                        'rating',
-                        'distance',
                         'price_pn',
+                        'distance',
+                        'rating',
                         'button',
                     ),
                 ),

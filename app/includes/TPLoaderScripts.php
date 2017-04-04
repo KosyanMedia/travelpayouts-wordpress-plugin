@@ -13,7 +13,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         // TODO: Implement loadScriptAdmin() method.
         /** Register styles */
         //$version = TPOPlUGIN_VERSION;
-        $version = 68;
+        $version = false;
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
@@ -932,6 +932,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         <style type="text/css">
             .TPHotelStar{
                 color: #fdb931;
+            }
+            .TPHotelPriceStrike{
+                white-space: nowrap;
             }
             <?php
                 if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
