@@ -292,9 +292,9 @@ function TPCityAutocomplete(){
                                 $.map(data.cities, function(city, key_city){
                                     //console.log(city);
                                     var record = new Object();
-                                    record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
-                                    /*record.val = '{'+city.city+', '+city.country+', '+city.hotelsCount+', '
-                                        +city.id+', city, '+city.country+'}';*/
+                                   // record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
+                                    record.label = city.fullname+" ["+city.id+"]";
+                                    record.val = city.fullname+" ["+city.id+"]{"+city.city+"}"
                                     records.push(record);
 
                                 })
@@ -302,7 +302,7 @@ function TPCityAutocomplete(){
                                     $.map(records, function(item, key){
                                         return {
                                             label: item.label,
-                                            value: item.label,
+                                            value: item.val,
                                             val: item.val
                                         }
                                     })
