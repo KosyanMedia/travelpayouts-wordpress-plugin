@@ -290,20 +290,22 @@ function TPCityAutocomplete(){
                                 var records =[];
 
                                 $.map(data.cities, function(city, key_city){
-                                    //console.log(city);
+                                    console.log(city);
                                     var record = new Object();
                                    // record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
                                     record.label = city.fullname+" ["+city.id+"]";
-                                    record.val = city.fullname+" ["+city.id+"]{"+city.city+"}"
+                                    record.val = city.fullname+" ["+city.id+"]{"+city.city+"}";
+                                    record.id = city.id;
                                     records.push(record);
 
                                 })
                                 response(
                                     $.map(records, function(item, key){
+                                        //console.log(item)
                                         return {
                                             label: item.label,
                                             value: item.val,
-                                            val: item.val
+                                            val: item.id
                                         }
                                     })
                                 )
@@ -396,6 +398,27 @@ function TPCityAutocomplete(){
                                     .on('change', '#cat_widget-2', function(e) {
                                         tbodyModal.children('#tr_cat_widget-3').show();
                                     });
+
+
+                            })
+                        }
+                        if($(selector).hasClass('HotelCityAutocomplete')){
+                            $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
+
+                                data.sort();
+
+                                //console.log(hotelsSelectionsType);
+                                $.map(data, function(item){
+                                    if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
+                                        $('#select_hotels_selections_type')
+                                            .append($("<option></option>")
+                                                .attr("value",item)
+                                                .attr("data-selections-title-ru",hotelsSelectionsType['ru'][item]['title'])
+                                                .attr("data-selections-title-en",hotelsSelectionsType['en'][item]['title'])
+                                                .text(hotelsSelectionsType[tpLocale][item]['label']));
+                                    }
+
+                                });
 
 
                             })

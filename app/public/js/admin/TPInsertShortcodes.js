@@ -665,7 +665,7 @@ jQuery(function($) {
                                     "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                     " type_selections=\""+hotels_selections_type+"\" " +
                                     " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
-                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\"  city_label=\""+hotels_city_label+"\" ]",
+                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\" ]",
                                     $(this));
 
                                 break;
@@ -781,7 +781,7 @@ jQuery(function($) {
         });
 
         //console.log(hotelsSelectionsType);
-        switch (tpLocale) {
+        /*switch (tpLocale) {
             case 'ru':
                 addHotelsSelectionsType('ru');
                 break;
@@ -791,7 +791,7 @@ jQuery(function($) {
             default:
                 addHotelsSelectionsType('ru');
                 
-        }
+        }*/
 
         constructorHotelsShortcodesSelect();
     });
@@ -803,6 +803,7 @@ jQuery(function($) {
             $('#select_hotels_selections_type')
                 .append($("<option></option>")
                     .attr("value",key)
+
                     .text(value));
         });
     }
