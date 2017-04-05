@@ -549,6 +549,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         }
         return $result;
     }
+
+    /**
+     *
+     */
     public function loadScriptSiteFontStyle(){
         if(\app\includes\TPPlugin::$options['themes_table']['name'] == 'default-theme'){
             if(\app\includes\TPPlugin::$options['style_table']['title_style']['font_family'] == 'Roboto' ||
@@ -662,6 +666,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             }
         }
     }
+
+    /**
+     *
+     */
     public function loadScriptSiteThemeTables(){
         switch (\app\includes\TPPlugin::$options['themes_table']['name']){
             case 'default-theme':
@@ -762,6 +770,8 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
      */
     public function loadScriptSite($hook)
     {
+        //$version = TPOPlUGIN_VERSION;
+        $version = false;
         //add_filter( 'widget_text', array(&$this, 'widget_content_wrap') );
 
         //global $widgets;
@@ -791,33 +801,33 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-TPNormilize', //$handle
             TPOPlUGIN_URL.'app/public/css/site/TPNormalize.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
 
         wp_register_style(
             TPOPlUGIN_SLUG.'-fontello', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/fontello.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         wp_register_style(
             TPOPlUGIN_SLUG.'-animation', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/animation.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         wp_enqueue_style(
             TPOPlUGIN_SLUG.'-fontello-ie7', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/fontello-ie7.css', // $src
             array(), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
         $wp_styles->add_data(  TPOPlUGIN_SLUG.'-fontello-ie7', 'conditional', 'IE 7' );
         wp_register_style(
             TPOPlUGIN_SLUG.'-TPCurrencyMain', //$handle
             TPOPlUGIN_URL.'app/public/css/lib/currency_fonts_new/css/TPCurrencyMainNew.css', // $src
             array(TPOPlUGIN_SLUG.'-fontello', TPOPlUGIN_SLUG.'-animation'), //$deps,
-            TPOPlUGIN_VERSION // $ver
+            $version // $ver
         );
 
 
@@ -826,7 +836,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG.'-jquery-ui',
             TPOPlUGIN_URL.'app/public/css/lib/jquery-ui/jquery-ui.min.css',
             array(),
-            TPOPlUGIN_VERSION
+            $version
         );
 
 
@@ -838,7 +848,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG. '-dataTables',
             TPOPlUGIN_URL.'app/public/js/lib/jquery.dataTables.min.js',
             array(),
-            TPOPlUGIN_VERSION,
+            $version,
             $in_footer
         );
 
@@ -850,7 +860,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-dataTables',
                 ), //$deps
-            TPOPlUGIN_VERSION, //$ver
+            $version, //$ver
             $in_footer //$$in_footer
         );
         /** End register scripts */

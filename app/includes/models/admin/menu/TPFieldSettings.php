@@ -310,41 +310,45 @@ class TPFieldSettings {
                     <div class="TP-childF">
 
 
-
-
-                        <span>
+                        <div class="TP-colCacheFlight">
+                            <span>
                             <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_flights',
                                 '(Flights)', TPOPlUGIN_TEXTDOMAIN);?>
-                        </span>
+                            </span>
 
-                        <div class="spinnerW clearfix" data-trigger="spinner">
-                            <label>
-                                <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][flight]"
-                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['flight']; ?>"
-                                       data-rule="cache_value">
-                            </label>
-                            <div class="navSpinner">
-                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
-                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            <div class="spinnerW clearfix" data-trigger="spinner">
+                                <label>
+                                    <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][flight]"
+                                           type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['flight']; ?>"
+                                           data-rule="cache_value">
+                                </label>
+                                <div class="navSpinner">
+                                    <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                    <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                                </div>
                             </div>
                         </div>
 
-                        <span>
+                        <div class="TP-colCacheHotel">
+                             <span>
                             <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_hotels',
                                 '(Hotels)', TPOPlUGIN_TEXTDOMAIN);?>
-                        </span>
+                            </span>
 
-                        <div class="spinnerW clearfix" data-trigger="spinner">
-                            <label>
-                                <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][hotel]"
-                                       type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['hotel']; ?>"
-                                       data-rule="cache_value">
-                            </label>
-                            <div class="navSpinner">
-                                <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
-                                <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                            <div class="spinnerW clearfix" data-trigger="spinner">
+                                <label>
+                                    <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][hotel]"
+                                           type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['hotel']; ?>"
+                                           data-rule="cache_value">
+                                </label>
+                                <div class="navSpinner">
+                                    <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                                    <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                                </div>
                             </div>
                         </div>
+
+
 
 
 
