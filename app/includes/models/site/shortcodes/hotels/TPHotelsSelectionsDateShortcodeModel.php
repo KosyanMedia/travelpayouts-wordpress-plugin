@@ -121,6 +121,8 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
+            'type_selections_label_ru' => '',
+            'type_selections_label_en' => '',
             'subid' => '',
             'check_in' => date('d-m-Y'),
             'check_out' => date('d-m-Y', time()+DAY_IN_SECONDS),
@@ -165,6 +167,9 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => $return_url,
             'subid' => $subid,
             'shortcode' => 2,
+            'type_selections' => $type_selections,
+            'type_selections_label_ru' => $type_selections_label_ru,
+            'type_selections_label_en' => $type_selections_label_en,
 
         );
 

@@ -290,7 +290,7 @@ function TPCityAutocomplete(){
                                 var records =[];
 
                                 $.map(data.cities, function(city, key_city){
-                                    console.log(city);
+                                    //console.log(city);
                                     var record = new Object();
                                    // record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
                                     record.label = city.fullname+" ["+city.id+"]";

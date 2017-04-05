@@ -126,6 +126,8 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
+            'type_selections_label_ru' => '',
+            'type_selections_label_en' => '',
             'subid' => '',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -168,6 +170,9 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'currency' => $currency,
             'return_url' => $return_url,
             'shortcode' => 1,
+            'type_selections' => $type_selections,
+            'type_selections_label_ru' => $type_selections_label_ru,
+            'type_selections_label_en' => $type_selections_label_en,
             'subid' => $subid,
 
         );

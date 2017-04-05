@@ -64,6 +64,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
+            'type_selections_label_ru' => '',
+            'type_selections_label_en' => '',
             'subid' => '',
             'shortcode' => false,
             'paginate' => true,
@@ -76,7 +78,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
         if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
-                        .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label)
+                        .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label,
+                $type_selections_label_ru, $type_selections_label_en)
                     .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"
                         data-paginate_limit="'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate']
@@ -742,7 +745,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * @param $city
      * @return string
      */
-    public function renderTitleTable($off_title, $title, $shortcode, $city, $cityLabel){
+    public function renderTitleTable($off_title, $title, $shortcode, $city, $cityLabel,  $type_selections_label_ru,
+                                     $type_selections_label_en){
         if($off_title !== 'true'){
             if(empty($title)) {
                 if(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()])){
@@ -755,6 +759,18 @@ class TPHotelShortcodeView //extends TPShortcodeView
 
                 if(strpos($title, '{location}') !== false){
                     $title = str_replace('{location}', '<span data-city-location="'.$cityLabel.'">'.$cityLabel.'</span>' , $title);
+                }
+
+                $type_selections_label = '';
+                if (TPLang::getLang() == TPLang::getLangRU()){
+                    $type_selections_label = $type_selections_label_ru;
+                } else {
+                    $type_selections_label = $type_selections_label_en;
+                }
+                if(strpos($title, '{selection_name}') !== false){
+                    $title = str_replace('{selection_name}',
+                        '<span data-city-location="'.$type_selections_label.'">'.$type_selections_label.'</span>' ,
+                        $title);
                 }
 
             }
