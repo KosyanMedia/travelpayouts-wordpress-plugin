@@ -855,7 +855,7 @@ class TPDefault implements  \core\TPODefault{
                     'selected' => array(
                         'name',
                         'stars',
-                        //'rating',
+                        'rating',
                         //'distance',
                         'price_pn',
                         'button',
