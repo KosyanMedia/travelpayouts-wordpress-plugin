@@ -803,7 +803,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
                             '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 3,
                     'selected' => array(
                         // Отель
                         'name',
@@ -851,7 +851,7 @@ class TPDefault implements  \core\TPODefault{
                         'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
                             '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
                     ),
-                    'sort_column' => 0,
+                    'sort_column' => 3,
                     'selected' => array(
                         'name',
                         'stars',
