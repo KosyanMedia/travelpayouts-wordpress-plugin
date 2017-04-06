@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-06 16:00+0300\n"
+"POT-Creation-Date: 2017-04-06 16:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -739,9 +739,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
 msgstr "До центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:41
-msgctxt "(Цена за ночь)"
+msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
-msgstr "Цена за ночь"
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:43
 msgctxt "(Цена до скидки)"
@@ -789,9 +789,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
 msgstr "До центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:76
-msgctxt "(Цена за ночь)"
+msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
-msgstr "Цена за ночь"
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:78
 msgctxt "(Цена до скидки)"
@@ -809,9 +809,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_discount"
 msgstr "Цена до скидки"
 
 #: app/includes/common/TPFieldsLabelTable.php:87
-msgctxt "(Цена за ночь)"
+msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
-msgstr "Цена за ночь"
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:90
 msgctxt "(Цена за ночь)"
@@ -839,9 +839,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
 msgstr "To the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:117
-msgctxt "(Price per night)"
+msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
-msgstr "Price per night"
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:119
 msgctxt "(Price before discount)"
@@ -889,9 +889,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
 msgstr "To the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:154
-msgctxt "(Price per night)"
+msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
-msgstr "Price per night"
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:156
 msgctxt "(Price before discount)"
@@ -909,9 +909,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_discount"
 msgstr "Price before discount"
 
 #: app/includes/common/TPFieldsLabelTable.php:163
-msgctxt "(Price per night)"
+msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
-msgstr "Price per night"
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:166
 msgctxt "(Price per night)"
@@ -5300,6 +5300,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
+#~ msgstr "Цена за ночь"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
+#~ msgstr "Price per night"
+
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
+#~ msgstr "Цена за ночь"
+
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
+#~ msgstr "Цена за ночь"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
+#~ msgstr "Price per night"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
+#~ msgstr "Price per night"
 
 #~ msgctxt "(Расстояние до центра)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
