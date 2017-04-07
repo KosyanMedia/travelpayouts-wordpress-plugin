@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-06 16:59+0300\n"
+"POT-Creation-Date: 2017-04-07 14:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -340,14 +340,14 @@ msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
 msgstr "Отели {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:801
-msgctxt "(Book now)"
+msgctxt "(View Hotel)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
-msgstr "Book now"
+msgstr "View Hotel"
 
 #: app/includes/TPDefault.php:803
-msgctxt "(Забронировать)"
+msgctxt "(Посмотреть отель)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
-msgstr "Забронировать"
+msgstr "Посмотреть отель"
 
 #: app/includes/TPDefault.php:839
 msgctxt "(Hotels collections for dates)"
@@ -360,14 +360,14 @@ msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
 msgstr "Отели {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:849
-msgctxt "(Book now)"
+msgctxt "(View Hotel)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
-msgstr "Book now"
+msgstr "View Hotel"
 
 #: app/includes/TPDefault.php:851
-msgctxt "(Забронировать)"
+msgctxt "(Посмотреть отель)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
-msgstr "Забронировать"
+msgstr "Посмотреть отель"
 
 #: app/includes/TPDefault.php:875
 msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
@@ -814,9 +814,9 @@ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
 msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:90
-msgctxt "(Цена за ночь)"
+msgctxt "(Выбрать даты)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
-msgstr "Цена за ночь"
+msgstr "Выбрать даты"
 
 #: app/includes/common/TPFieldsLabelTable.php:109
 msgctxt "(Hotel)"
@@ -914,9 +914,9 @@ msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
 msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:166
-msgctxt "(Price per night)"
+msgctxt "(Choose dates)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_button"
-msgstr "Price per night"
+msgstr "Choose dates"
 
 #: app/includes/common/TPFieldsLabelTable.php:188
 msgctxt "(Номер рейса)"
@@ -5300,6 +5300,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Book now)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
+#~ msgstr "Book now"
+
+#~ msgctxt "(Забронировать)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
+#~ msgstr "Забронировать"
+
+#~ msgctxt "(Book now)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
+#~ msgstr "Book now"
+
+#~ msgctxt "(Забронировать)"
+#~ msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
+#~ msgstr "Забронировать"
+
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
+#~ msgstr "Цена за ночь"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_button"
+#~ msgstr "Price per night"
 
 #~ msgctxt "(Цена за ночь)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"

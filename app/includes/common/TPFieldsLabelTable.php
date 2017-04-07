@@ -88,7 +88,7 @@ class TPFieldsLabelTable
                     '(Цена за ночь, от)', TPOPlUGIN_TEXTDOMAIN),
 
                 'button' => _x('tp_plugin_local_ru_hotels_fields_table_label_button',
-                    '(Цена за ночь)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Выбрать даты)', TPOPlUGIN_TEXTDOMAIN),
                 //'address' => _x('tp_plugin_local_ru_hotels_fields_table_label_address',
                 //    '(Адрес)', TPOPlUGIN_TEXTDOMAIN),
                 /*'property_type' => _x('tp_plugin_local_ru_hotels_fields_table_label_property_type',
@@ -164,7 +164,7 @@ class TPFieldsLabelTable
                     '(Price per night, from)', TPOPlUGIN_TEXTDOMAIN),
 
                 'button' => _x('tp_plugin_local_en_hotels_fields_table_label_button',
-                    '(Price per night)', TPOPlUGIN_TEXTDOMAIN),
+                    '(Choose dates)', TPOPlUGIN_TEXTDOMAIN),
                 //'address' => _x('tp_plugin_local_en_hotels_fields_table_label_address',
                 //    '(Address)', TPOPlUGIN_TEXTDOMAIN),
                 /*'property_type' => _x('tp_plugin_local_en_hotels_fields_table_label_property_type',

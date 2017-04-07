@@ -799,9 +799,9 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
-                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                            '(View Hotel)', TPOPlUGIN_TEXTDOMAIN),
                         'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
-                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Посмотреть отель)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 3,
                     'selected' => array(
@@ -847,9 +847,9 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'title_button' => array(
                         'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
-                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                            '(View Hotel)', TPOPlUGIN_TEXTDOMAIN),
                         'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
-                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Посмотреть отель)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 3,
                     'selected' => array(
