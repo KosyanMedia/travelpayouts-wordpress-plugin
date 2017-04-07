@@ -302,18 +302,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
 
             $count = 0;
 
-            // get Url
-            $hotelURL = '';
-            switch($shortcode){
-                 case 1:
-                 case 2:
-                     $hotelURL = $this->getUrlTable($shortcode, $city,
-                         $row['hotel_id'], $checkIn, $checkOut, $currency, $subid);
-                     break;
 
-                 default:
-                     $hotelURL = '';
-             }
 
             $price_pn = '';
             $old_price_pn = '';
@@ -321,6 +310,10 @@ class TPHotelShortcodeView //extends TPShortcodeView
             $discount = '';
             $discountNum = '';
             $old_price_and_new_price = '';
+
+            $checkInURL = '';
+            $checkOutURL = '';
+
             if (isset($row['last_price_info'])){
                 // price_pn => Цена за ночь
                 if (isset($row['last_price_info']['price_pn'])){
@@ -349,8 +342,35 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 if (!empty($price_pn)){
                     $old_price_and_new_price .= ' '.number_format($price_pn, 0, '.', ' ').$this->currencyView($currency);
                 }
+
+                if (isset($row['last_price_info']['search_params'])){
+                    if (isset($row['last_price_info']['search_params']['checkIn'])){
+                        $checkInURL = $row['last_price_info']['search_params']['checkIn'];
+                    }
+                    if (isset($row['last_price_info']['search_params']['checkOut'])){
+                        $checkOutURL = $row['last_price_info']['search_params']['checkOut'];
+                    }
+                }
             }
             if (empty($price_pn)) continue;
+
+
+            // get Url
+            $hotelURL = '';
+            switch($shortcode){
+                case 1:
+                    $hotelURL = $this->getUrlTable($shortcode, $city,
+                        $row['hotel_id'], $checkInURL, $checkOutURL, $currency, $subid);
+                    break;
+                case 2:
+                    $hotelURL = $this->getUrlTable($shortcode, $city,
+                        $row['hotel_id'], $checkIn, $checkOut, $currency, $subid);
+                    break;
+
+                default:
+                    $hotelURL = '';
+            }
+
             $bodyTable .= '<tr>';
             //error_log($hotelURL);
             foreach($this->getSelectField($shortcode) as $key=>$selected_field){
@@ -623,15 +643,27 @@ class TPHotelShortcodeView //extends TPShortcodeView
             $URL .= '&hotelId='.$hotelId;
         }
 
+        /**
+         * $checkInURL = '';
+        $checkOutURL = '';
+
+         */
+
         if ($shortcode == 1) {
-            $URL .= '&autoDates=1';
+            if (empty($checkIn) || empty($checkOut)) {
+                $URL .= '&autoDates=1';
+            } else {
+                $URL .= '&checkIn='.$checkIn;
+                $URL .= '&checkOut='.$checkOut;
+            }
+
         } else {
             if ($checkIn !== false){
-                $URL .= '&checkIn'.$checkIn;
+                $URL .= '&checkIn='.$checkIn;
             }
 
             if ($checkOut !== false){
-                $URL .= '&checkOut'.$checkOut;
+                $URL .= '&checkOut='.$checkOut;
             }
         }
 
