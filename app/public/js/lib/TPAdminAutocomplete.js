@@ -403,6 +403,7 @@ function TPCityAutocomplete(){
                             })
                         }
                         if($(selector).hasClass('HotelCityAutocomplete')){
+                            $('#select_hotels_selections_type').find("option:gt(0)").remove();
                             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
 
                                 data.sort();

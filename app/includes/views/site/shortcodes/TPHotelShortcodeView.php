@@ -45,6 +45,25 @@ class TPHotelShortcodeView //extends TPShortcodeView
         }
     }
 
+    /**
+     * @param array $rows
+     * @return bool
+     */
+    public function isEmptyPrice($rows = array()){
+        //$i = 0;
+        foreach($rows as $key_row => $row){
+            //error_log($i);
+            //$i++;
+            if (isset($row['last_price_info'])) {
+                // price_pn => Цена за ночь
+                if (isset($row['last_price_info']['price_pn'])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public function renderTable($args = array()) {
         $defaults = array(
             'rows' => array(),
@@ -76,6 +95,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
         if ($shortcode == false) return false;
 
         if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
+        if ($this->isEmptyPrice($rows) == true) return $this->renderViewIfEmptyTable();
 
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
                         .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label,
@@ -330,7 +350,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     $old_price_and_new_price .= ' '.number_format($price_pn, 0, '.', ' ').$this->currencyView($currency);
                 }
             }
-            //if (empty($price_pn)) continue;
+            if (empty($price_pn)) continue;
             $bodyTable .= '<tr>';
             //error_log($hotelURL);
             foreach($this->getSelectField($shortcode) as $key=>$selected_field){
