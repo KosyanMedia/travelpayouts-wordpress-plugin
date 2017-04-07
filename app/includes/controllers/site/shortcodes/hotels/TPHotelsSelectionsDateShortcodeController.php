@@ -43,6 +43,8 @@ class TPHotelsSelectionsDateShortcodeController extends TPShortcodesController
         if ($data['return_url'] == true){
             return var_dump("<pre>", $data, "</pre>");
         }
+        //error_log('tp_hotels_selections_date_shortcodes');
+        //error_log(print_r($data, true));
         return $this->view->renderTable($data);
     }
 

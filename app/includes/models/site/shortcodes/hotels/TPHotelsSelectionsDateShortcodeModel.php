@@ -51,7 +51,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => $return_url
         );
 
-        $cacheKey = "hotel_1_selections_date_{$id}{$currency}";
+        $cacheKey = "hotel_1_selections_date_{$currency}_{$language}_{$limit}_{$type}_{$id}";
 
         if($this->cacheSecund() && $return_url == false){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
@@ -79,6 +79,9 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             }
 
         }
+
+        //error_log('Date');
+        //error_log(print_r($rows, true));
 
         return $rows;
 

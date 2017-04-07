@@ -84,6 +84,8 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
         }
 
         //tpErrorLog(print_r($rows, true));
+        //error_log('Discount');
+        //error_log(print_r($rows, true));
 
         return $rows;
 
