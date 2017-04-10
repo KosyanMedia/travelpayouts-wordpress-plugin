@@ -946,6 +946,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             .TPHotelPriceStrike{
                 white-space: nowrap;
             }
+            .TP-old-price-and {
+                display: block;
+                white-space: nowrap;
+            }
             <?php
                 if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
                     ?>
