@@ -74,7 +74,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
-        $data = $wpdb->get_results( "SELECT * FROM ".$tableNameOffer." ORDER BY date_add DESC", ARRAY_A);
+        $data = $wpdb->get_results( "SELECT * FROM ".$tableNameOffer, ARRAY_A);
         if(count($data) > 0) return $data;
         return false;
     }

@@ -66,6 +66,15 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
             } else {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists true plugin_version');
+                //error_log($import_options['plugin_version']);
+                if (version_compare($import_options['plugin_version'], '0.7.0', '<')) {
+                    //error_log($import_options['plugin_version'].'Test');
+                    $import_options['config']['cache_value'] = array(
+                        'hotel' => 24,
+                        'flight' => 3
+                    );
+                }
+
             }
             //error_log(print_r($import_options, true));
             $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);

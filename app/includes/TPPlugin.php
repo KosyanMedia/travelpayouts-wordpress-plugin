@@ -60,6 +60,15 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
                 self::$options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
                 update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
             }
+
+            if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.7.0', '<')) {
+                self::$options['config']['cache_value'] = array(
+                    'hotel' => 24,
+                    'flight' => 3
+                );
+                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
+            }
+
             if(!empty(self::$options['account']['marker'])){
                 $request = 'http://metrics.aviasales.ru/?goal=tp_wp_plugin_activation&data={"merker":'
                     .self::$options['account']['marker'].',"domain":"'.preg_replace("(^https?://)", "", get_option('home')).'"}';
@@ -74,7 +83,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         }
         models\admin\menu\TPSearchFormsModel::createTable();
         models\admin\menu\TPAutoReplacLinksModel::createTable();
-        models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
+        //models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
         models\site\shortcodes\hotels\TPHotelListModel::createTable();
 
     }
@@ -106,7 +115,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         }else{
             models\admin\menu\TPSearchFormsModel::createTable();
             models\admin\menu\TPAutoReplacLinksModel::createTable();
-            models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
+            //models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
             models\site\shortcodes\hotels\TPHotelListModel::createTable();
             //error_log(print_r( TPDefault::defaultOptions(),true));
         }
