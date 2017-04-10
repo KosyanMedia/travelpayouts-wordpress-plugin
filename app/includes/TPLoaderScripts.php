@@ -8,6 +8,24 @@
 namespace app\includes;
 class TPLoaderScripts extends \core\TPOLoaderScripts{
 
+    public function __construct(){
+        parent::__construct();
+        if ( ! is_admin() ) {
+            add_filter('script_loader_tag', array(&$this, 'addAttrScript'), 200, 3);
+        }
+
+
+    }
+
+    public function addAttrScript($tag, $handle, $src){
+
+            error_log(print_r($handle, true));
+            error_log(print_r($tag, true));
+            error_log(print_r($src, true));
+
+
+    }
+
     public function loadScriptAdmin($hook)
     {
         // TODO: Implement loadScriptAdmin() method.
