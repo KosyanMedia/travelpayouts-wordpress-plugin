@@ -329,18 +329,29 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     $discount = '-'.$row['last_price_info']['discount'].'%';
                     $discountNum = $row['last_price_info']['discount'];
                     if (!empty($price_pn)){
-                        $old_price_and_discount = '<strike class="TPHotelPriceStrike">'.number_format($price_pn, 0, '.', ' ')
-                            .$this->currencyView($currency).'</strike> '.$discount;
+                        $old_price_and_discount =   '<span class="TP-old-price">'
+                                                        .'<strike class="TPHotelPriceStrike">'
+                                                            .number_format($price_pn, 0, '.', ' ')
+                                                            .$this->currencyView($currency)
+                                                        .'</strike>'
+                                                    .'</span>'
+                                                    .'<span class="TP-old-price-discount">'.$discount.'</span>';
                     }
 
                 }
                 // old_price_and_new_price => Старая и новая цена
                 if (!empty($old_price_pn)){
-                    $old_price_and_new_price = '<strike  class="TPHotelPriceStrike">'.number_format($old_price_pn, 0, '.', ' ')
-                        .$this->currencyView($currency).'</strike>';
+                    $old_price_and_new_price = '<span class="TP-old-price-and">'
+                                                    .'<strike  class="TPHotelPriceStrike">'
+                                                        .number_format($old_price_pn, 0, '.', ' ')
+                                                        .$this->currencyView($currency)
+                                                    .'</strike>'
+                                                .'</span>';
                 }
                 if (!empty($price_pn)){
-                    $old_price_and_new_price .= ' '.number_format($price_pn, 0, '.', ' ').$this->currencyView($currency);
+                    $old_price_and_new_price .= '<span class="TP-old-price-and-new-price">'
+                                                    .number_format($price_pn, 0, '.', ' ').$this->currencyView($currency)
+                                                .'</span>';
                 }
 
                 if (isset($row['last_price_info']['search_params'])){
