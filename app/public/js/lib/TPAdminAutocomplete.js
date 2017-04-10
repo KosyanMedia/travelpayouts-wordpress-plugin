@@ -27,6 +27,7 @@ function TPCityAutocomplete(){
             lake_view: "С видом на озеро",
             river_view: "С видом на реку",
             panoramic_view: "С панорамным видом",
+            popularity: "Популярные"
         },
         "en":{
             tophotels: "Popular",
@@ -51,6 +52,7 @@ function TPCityAutocomplete(){
             lake_view: "Lake view",
             river_view: "River view",
             panoramic_view: "Panoramic view",
+            popularity: "Popularity"
         }
     };
     /**
@@ -348,6 +350,8 @@ function TPCityAutocomplete(){
 
 
                                 $.map(data, function(item){
+                                    //console.log(item)
+                                    //console.log(catHotelSelec[tpLocale][item])
                                     if (typeof catHotelSelec[tpLocale][item] != "undefined"){
                                         select_option += '<option value="'+item+'">'
                                             +catHotelSelec[tpLocale][item]+'</option>';
@@ -356,6 +360,30 @@ function TPCityAutocomplete(){
                                     }
 
                                 })
+
+                                //console.log(data);
+                                // console.log(select_option);
+                                // console.log(TPHotelSelectWidgetCat1);
+                                //console.log(TPHotelSelectWidgetCat2);
+                                //console.log(TPHotelSelectWidgetCat3);
+
+
+                                tbodyModal.children('#tr_cat_widget-1')
+                                    .children('#td_cat_widget-1')
+                                    .children('#cat_widget-1')
+                                    .find("option").remove();
+
+                                tbodyModal.children('#tr_cat_widget-2')
+                                    .children('#td_cat_widget-2')
+                                    .children('#cat_widget-2')
+                                    .find("option").remove();
+                                tbodyModal.children('#tr_cat_widget-3')
+                                    .children('#td_cat_widget-3')
+                                    .children('#cat_widget-3')
+                                    .find("option").remove();
+
+
+                                /***/
 
                                 tbodyModal.children('#tr_cat_widget-1')
                                     .children('#td_cat_widget-1')
