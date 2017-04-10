@@ -950,6 +950,15 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 display: block;
                 white-space: nowrap;
             }
+            .TP-old-price-discount {
+                margin-left: 5px;
+            }
+            .TPprice_pnTd p{
+                white-space: nowrap;
+            }
+            .TPold_price_pnTd p{
+                white-space: nowrap;
+            }
             <?php
                 if(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive'])){
                     ?>
