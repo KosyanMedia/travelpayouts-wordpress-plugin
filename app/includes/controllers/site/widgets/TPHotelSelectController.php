@@ -52,14 +52,14 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         //error_log("currency = ".mb_strtolower($currency));
         $output = '
         <div class="TPWidget TPHotelSelectWidget">
-        <script async src="'.$url.'?categories='.$cat.'&id='
+        <script data-cfasync="false" async src="'.$url.'?categories='.$cat.'&id='
         .$id
         .'&type='.$type
         .'&currency='.mb_strtolower($currency)
         .$width.'&host='.$white_label
         .'&marker='.$this->view->getMarker($widgets, $subid).'.&limit='
         .$limit
-        .'" charset="UTF-8"></script></div>';
+        .'" charset="UTF-8" data-wpfc-render="false"></script></div>';
         return $output;
     }
 }

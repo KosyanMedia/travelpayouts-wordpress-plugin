@@ -69,9 +69,9 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
         //error_log($currency);
         //error_log($white_label);
         $output = '';
-        $output = '<script async src="'.$url.'?widget_type='.$type
+        $output = '<script data-cfasync="false" async src="'.$url.'?widget_type='.$type
             .'&currency='.mb_strtolower($currency).'&host='.$white_label.'&marker='
-            .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8">
+            .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8" data-wpfc-render="false">
         </script>';
         return $output;
     }

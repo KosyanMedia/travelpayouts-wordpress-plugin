@@ -51,13 +51,13 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
         $output = '';
         $output = '
             <div class="TPWidget TPCalendarWidget">
-            <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
+            <script data-cfasync="false" src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
             .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.\app\includes\common\TPLang::getLang()
             .'&period='.$period
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
-            async></script></div>';
+             data-wpfc-render="false" async></script></div>';
         //error_log($output);
         return $output;
     }

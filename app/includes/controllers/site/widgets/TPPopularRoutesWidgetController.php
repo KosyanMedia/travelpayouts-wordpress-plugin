@@ -34,10 +34,10 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         $output = '';
         $output = '
             <div class="TPWidget TPPopularRoutesWidget">
-            <script async src="//www.travelpayouts.com/weedle/widget.js'.$width
+            <script data-cfasync="false" async src="//www.travelpayouts.com/weedle/widget.js'.$width
             .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$white_label
             .'&locale='.\app\includes\common\TPLang::getLang().'&currency='.mb_strtolower($currency)
-            .'&destination='.$destination.'" charset="UTF-8">
+            .'&destination='.$destination.'" charset="UTF-8" data-wpfc-render="false">
                    </script></div>';
         return $output;
     }
