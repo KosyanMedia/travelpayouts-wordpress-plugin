@@ -138,6 +138,9 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
 
                     $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
+                    $white_label = str_replace("http://", "", $white_label);
+                    //
+                    //error_log($white_label);
                     //error_log('6 = '.$white_label);
                     if( ! $white_label || empty( $white_label ) ) {
                         $white_label = 'hydra.aviasales.ru';
