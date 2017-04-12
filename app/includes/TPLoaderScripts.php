@@ -22,9 +22,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         //error_log(print_r($handle, true));
         //$tags = explode(' ', $tag);
         //error_log(print_r($tags, true));
+        //<script type='text/javascript' src='http://localhost/tp/wp-content/plugins/travelpayouts/app/public/js/site/TPPlugin.js'></script>
         //error_log(print_r($tag, true));
-        $tag = str_replace('<script', '<script data-cfasync="false"', $tag);
-        $tag = str_replace('></script>', ' data-wpfc-render="false"></script>', $tag);
+        if (strpos($handle, TPOPlUGIN_SLUG) !== false) {
+            $tag = str_replace('<script type=\'text/javascript\'',
+                '<script type=\'text/javascript\' data-cfasync="false"', $tag);
+            $tag = str_replace('></script>', ' data-wpfc-render="false"></script>', $tag);
+        }
+
         //error_log(print_r($tag, true));
         //error_log(print_r($src, true));
         return $tag;
