@@ -20,6 +20,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function addAttrScript($tag, $handle, $src){
 
         //error_log(print_r($handle, true));
+        //$tags = explode(' ', $tag);
+        //error_log(print_r($tags, true));
+        //error_log(print_r($tag, true));
         $tag = str_replace('<script', '<script data-cfasync="false"', $tag);
         $tag = str_replace('></script>', ' data-wpfc-render="false"></script>', $tag);
         //error_log(print_r($tag, true));

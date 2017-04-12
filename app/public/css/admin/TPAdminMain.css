@@ -643,6 +643,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ItemSubFormatDate{
   margin-bottom: 10px !important;
+  padding-bottom: 78px;
 }
 .ItemSub {
   margin-bottom: 30px;
