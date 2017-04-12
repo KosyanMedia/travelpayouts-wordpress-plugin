@@ -31,8 +31,11 @@ class TPHotelShortcodeView //extends TPShortcodeView
         if($redirect){
             if(isset($_GET['search_hotel'])){
                 $whiteLabel = $this->getWhiteLabel();
+
                 $white_label = $whiteLabel['white_label'];
+
                 $white_label = "{$white_label}".urldecode($_GET['search_hotel']);
+                //error_log($white_label);
                 header("Location: {$white_label}", true, 302);
                 die;
                 /*

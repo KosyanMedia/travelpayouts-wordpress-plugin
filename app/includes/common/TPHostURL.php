@@ -331,8 +331,8 @@ class TPHostURL
     private static $hostsHotel = array(
         'hotellook.ru' => array(
             'label' => 'hotellook.ru',
-            'host' => 'search.hotellook.ru',
-            'language' => '',
+            'host' => 'search.hotellook.com',
+            'language' => 'ru-RU',
         ),
         'hotellook.com&language=en-GB' => array(
             'label' => 'hotellook.com en-GB',
@@ -411,8 +411,8 @@ class TPHostURL
         $hostData = array(
             TPLang::getLangRU() => array(
                 'label' => 'hotellook.ru',
-                'host' => 'search.hotellook.ru',
-                'language' => '',
+                'host' => 'search.hotellook.com',
+                'language' => 'ru-RU',
             ),
             TPLang::getLangEN() =>  array(
                 'label' => 'hotellook.com en-GB',
