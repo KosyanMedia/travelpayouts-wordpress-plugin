@@ -130,6 +130,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type_selections' => 'popularity',
             'type_selections_label_ru' => '',
             'type_selections_label_en' => '',
+            'type_selections_label' => '',
             'subid' => '',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -175,6 +176,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type_selections' => $type_selections,
             'type_selections_label_ru' => $type_selections_label_ru,
             'type_selections_label_en' => $type_selections_label_en,
+            'type_selections_label' => $type_selections_label,
             'subid' => $subid,
 
         );

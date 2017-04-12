@@ -442,6 +442,7 @@ function TPCityAutocomplete(){
                                         $('#select_hotels_selections_type')
                                             .append($("<option></option>")
                                                 .attr("value",item)
+                                                .attr("data-selections-title", hotelsSelectionsType[tpLocale][item]['title'])
                                                 .attr("data-selections-title-ru",hotelsSelectionsType['ru'][item]['title'])
                                                 .attr("data-selections-title-en",hotelsSelectionsType['en'][item]['title'])
                                                 .text(hotelsSelectionsType[tpLocale][item]['label']));

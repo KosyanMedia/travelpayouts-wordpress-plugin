@@ -601,7 +601,7 @@ jQuery(function($) {
                             select_hotels_star, hotels_rating_from, hotels_rating_to, hotels_distance_from,
                             hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title,
                             hotels_selections_type, hotels_subid, check_in, check_out, hotels_city_label,
-                            hotels_selections_type_ru_label, hotels_selections_type_en_label;
+                            hotels_selections_type_ru_label, hotels_selections_type_en_label, hotels_selections_type_label;
                         select_hotels_shortcodes = doc.find('#select_hotels_shortcodes').val();
                         tp_hotels_title = doc.find('#tp_hotels_title').val();
                         hotels_city = doc.find('#hotels_city').val();
@@ -621,11 +621,14 @@ jQuery(function($) {
                             .data('selections-title-ru');
                         hotels_selections_type_en_label = doc.find('#select_hotels_selections_type option:selected')
                             .data('selections-title-en');
+                        hotels_selections_type_label = doc.find('#select_hotels_selections_type option:selected')
+                            .data('selections-title');
                        // console.log(hotels_selections_type_ru_label)
                        // console.log(hotels_selections_type_en_label)
 
                         hotels_selections_type_ru_label = "type_selections_label_ru=\""+hotels_selections_type_ru_label+"\"";
                         hotels_selections_type_en_label = "type_selections_label_en=\""+hotels_selections_type_en_label+"\"";
+                        hotels_selections_type_label = "type_selections_label=\""+hotels_selections_type_label+"\"";
 
                         check_in = doc.find('#check_in').val();
                         check_out = doc.find('#check_out').val();
@@ -658,8 +661,7 @@ jQuery(function($) {
                                     "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                     " type_selections=\""+hotels_selections_type+"\" " +
                                     " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
-                                    " city_label=\""+hotels_city_label+"\" "+hotels_selections_type_ru_label+" " +
-                                    hotels_selections_type_en_label+" ]",
+                                    " city_label=\""+hotels_city_label+"\" "+hotels_selections_type_label+" ]",
                                     $(this));
 
                                 break;
@@ -677,8 +679,7 @@ jQuery(function($) {
                                     "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
                                     " type_selections=\""+hotels_selections_type+"\" " +
                                     " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
-                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\" "+hotels_selections_type_ru_label+" " +
-                                    hotels_selections_type_en_label+" ]",
+                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\" "+hotels_selections_type_label+" ]",
                                     $(this));
 
                                 break;
