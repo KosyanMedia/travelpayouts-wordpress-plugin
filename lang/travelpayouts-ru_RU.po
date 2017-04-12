@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-07 14:18+0300\n"
+"POT-Creation-Date: 2017-04-12 14:52+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -337,7 +337,7 @@ msgstr "Hotels {location}: {selection_name}"
 #: app/includes/TPDefault.php:793
 msgctxt "(Подборка отелей - Скидки)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
-msgstr "Отели {location}: {selection_name}"
+msgstr "Отели в г. {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:801
 msgctxt "(View Hotel)"
@@ -357,7 +357,7 @@ msgstr "Hotels {location}: {selection_name}"
 #: app/includes/TPDefault.php:841
 msgctxt "(Подборки отелей на даты)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
-msgstr "Отели {location}: {selection_name}"
+msgstr "Отели в г. {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:849
 msgctxt "(View Hotel)"
@@ -466,124 +466,124 @@ msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
 "услуг. "
 
-#: app/includes/TPLoaderScripts.php:338
+#: app/includes/TPLoaderScripts.php:366
 msgctxt "(Hotel Name)"
 msgid "tp_head_script_admin_var_hotel_widget_label"
 msgstr "Название отеля"
 
-#: app/includes/TPLoaderScripts.php:339
+#: app/includes/TPLoaderScripts.php:367
 msgctxt "(Destination)"
 msgid "tp_head_script_admin_var_destination_title_label"
 msgstr "Куда"
 
-#: app/includes/TPLoaderScripts.php:340
+#: app/includes/TPLoaderScripts.php:368
 msgctxt "Origin"
 msgid "tp_head_script_admin_var_origin_title_label"
 msgstr "Откуда"
 
-#: app/includes/TPLoaderScripts.php:341
+#: app/includes/TPLoaderScripts.php:369
 msgctxt "(Location)"
 msgid "tp_head_script_admin_var_location_title_label"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:346
+#: app/includes/TPLoaderScripts.php:374
 msgctxt "(Settings saved.)"
 msgid "tp_head_script_admin_var_mesg_update_settings_label"
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:347
+#: app/includes/TPLoaderScripts.php:375
 msgctxt "(hotels)"
 msgid "tp_head_script_admin_var_hotels_autocomplete_label"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:348
+#: app/includes/TPLoaderScripts.php:376
 msgctxt "(City)"
 msgid "tp_head_script_admin_var_city_label"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:352
+#: app/includes/TPLoaderScripts.php:380
 msgctxt "(Complete!)"
 msgid "tp_head_script_admin_var_label_progress_bar_label"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:353
+#: app/includes/TPLoaderScripts.php:381
 msgctxt ""
 "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?)"
 msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
 msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
 
-#: app/includes/TPLoaderScripts.php:354
+#: app/includes/TPLoaderScripts.php:382
 msgctxt "(Auto-links are applied)"
 msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
 msgstr "Подстановка ссылок завершена"
 
-#: app/includes/TPLoaderScripts.php:355
+#: app/includes/TPLoaderScripts.php:383
 msgctxt "(Airline)"
 msgid "tp_head_script_admin_var_airline_widget_8_label"
 msgstr "Авиакомпания"
 
-#: app/includes/TPLoaderScripts.php:356
+#: app/includes/TPLoaderScripts.php:384
 msgctxt "(Delete)"
 msgid "tp_head_script_admin_var_delete_widget_8_label"
 msgstr "Удалить"
 
-#: app/includes/TPLoaderScripts.php:357
+#: app/includes/TPLoaderScripts.php:385
 msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Ошибка невалидный файл"
 
-#: app/includes/TPLoaderScripts.php:375
+#: app/includes/TPLoaderScripts.php:403
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:376
+#: app/includes/TPLoaderScripts.php:404
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:380
+#: app/includes/TPLoaderScripts.php:408
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:381
+#: app/includes/TPLoaderScripts.php:409
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:385
+#: app/includes/TPLoaderScripts.php:413
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:386
+#: app/includes/TPLoaderScripts.php:414
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:390
+#: app/includes/TPLoaderScripts.php:418
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:391
+#: app/includes/TPLoaderScripts.php:419
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "Нет анкоров"
 
-#: app/includes/TPLoaderScripts.php:392
+#: app/includes/TPLoaderScripts.php:420
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:395
+#: app/includes/TPLoaderScripts.php:423
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:396
+#: app/includes/TPLoaderScripts.php:424
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Отмена"
@@ -736,12 +736,12 @@ msgstr "Рейтинг"
 #: app/includes/common/TPFieldsLabelTable.php:39
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
-msgstr "До центра"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:41
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
-msgstr "Цена за ночь, от"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:43
 msgctxt "(Цена до скидки)"
@@ -786,12 +786,12 @@ msgstr "Рейтинг"
 #: app/includes/common/TPFieldsLabelTable.php:74
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
-msgstr "До центра"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:76
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
-msgstr "Цена за ночь, от"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:78
 msgctxt "(Цена до скидки)"
@@ -811,12 +811,12 @@ msgstr "Цена до скидки"
 #: app/includes/common/TPFieldsLabelTable.php:87
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
-msgstr "Цена за ночь, от"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:90
 msgctxt "(Выбрать даты)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
-msgstr "Выбрать даты"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:109
 msgctxt "(Hotel)"
@@ -836,12 +836,12 @@ msgstr "Rating"
 #: app/includes/common/TPFieldsLabelTable.php:115
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
-msgstr "To the center"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:117
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
-msgstr "Price per night, from"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:119
 msgctxt "(Price before discount)"
@@ -886,12 +886,12 @@ msgstr "Rating"
 #: app/includes/common/TPFieldsLabelTable.php:152
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
-msgstr "To the center"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:154
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
-msgstr "Price per night, from"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:156
 msgctxt "(Price before discount)"
@@ -911,12 +911,12 @@ msgstr "Price before discount"
 #: app/includes/common/TPFieldsLabelTable.php:163
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
-msgstr "Price per night, from"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:166
 msgctxt "(Choose dates)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_button"
-msgstr "Choose dates"
+msgstr ""
 
 #: app/includes/common/TPFieldsLabelTable.php:188
 msgctxt "(Номер рейса)"
@@ -5317,53 +5317,53 @@ msgstr "Вид %s не найден"
 #~ msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 #~ msgstr "Забронировать"
 
-#~ msgctxt "(Цена за ночь)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
-#~ msgstr "Цена за ночь"
-
-#~ msgctxt "(Price per night)"
-#~ msgid "tp_plugin_local_en_hotels_fields_table_label_button"
-#~ msgstr "Price per night"
-
-#~ msgctxt "(Цена за ночь)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
-#~ msgstr "Цена за ночь"
-
-#~ msgctxt "(Price per night)"
-#~ msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
-#~ msgstr "Price per night"
+#~ msgctxt "(Расстояние до центра)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
+#~ msgstr "Расстояние до центра"
 
 #~ msgctxt "(Цена за ночь)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
 #~ msgstr "Цена за ночь"
 
+#~ msgctxt "(Расстояние до центра)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
+#~ msgstr "Расстояние до центра"
+
 #~ msgctxt "(Цена за ночь)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
 #~ msgstr "Цена за ночь"
 
-#~ msgctxt "(Price per night)"
-#~ msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
-#~ msgstr "Price per night"
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
+#~ msgstr "Цена за ночь"
 
-#~ msgctxt "(Price per night)"
-#~ msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
-#~ msgstr "Price per night"
-
-#~ msgctxt "(Расстояние до центра)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
-#~ msgstr "Расстояние до центра"
-
-#~ msgctxt "(Расстояние до центра)"
-#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
-#~ msgstr "Расстояние до центра"
+#~ msgctxt "(Цена за ночь)"
+#~ msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
+#~ msgstr "Цена за ночь"
 
 #~ msgctxt "(Distance to the center)"
 #~ msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
 #~ msgstr "Distance to the center"
 
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
+#~ msgstr "Price per night"
+
 #~ msgctxt "(Distance to the center)"
 #~ msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
 #~ msgstr "Distance to the center"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
+#~ msgstr "Price per night"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
+#~ msgstr "Price per night"
+
+#~ msgctxt "(Price per night)"
+#~ msgid "tp_plugin_local_en_hotels_fields_table_label_button"
+#~ msgstr "Price per night"
 
 #~ msgctxt "(Number of days)"
 #~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_day_label"
