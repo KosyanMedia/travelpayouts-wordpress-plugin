@@ -115,7 +115,7 @@ class TPWidgetsView {
                 break;
             case 3:
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidget(3);
+                    //$white_label = \app\includes\common\TPHostURL::getHostWidget(3);
                     //error_log($white_label);
                     $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
@@ -137,8 +137,9 @@ class TPWidgetsView {
             case 6:
                 if( ! $white_label || empty( $white_label ) ){
 
-                    $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
-                    $white_label = str_replace("http://", "", $white_label);
+                    //$white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel(6);
+                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    //$white_label = str_replace("http://", "", $white_label);
                     //
                     //error_log($white_label);
                     //error_log('6 = '.$white_label);
@@ -156,7 +157,7 @@ class TPWidgetsView {
                 break;
             case 8:
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidget(6);
+                    //$white_label = \app\includes\common\TPHostURL::getHostWidget(6);
                     //error_log($white_label);
                     $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                     //$white_label = 'hydra.aviasales.ru';
