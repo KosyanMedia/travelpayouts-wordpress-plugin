@@ -736,12 +736,12 @@ msgstr "Рейтинг"
 #: app/includes/common/TPFieldsLabelTable.php:39
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
-msgstr ""
+msgstr "До центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:41
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
-msgstr ""
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:43
 msgctxt "(Цена до скидки)"
@@ -786,12 +786,12 @@ msgstr "Рейтинг"
 #: app/includes/common/TPFieldsLabelTable.php:74
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
-msgstr ""
+msgstr "До центра"
 
 #: app/includes/common/TPFieldsLabelTable.php:76
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
-msgstr ""
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:78
 msgctxt "(Цена до скидки)"
@@ -811,12 +811,12 @@ msgstr "Цена до скидки"
 #: app/includes/common/TPFieldsLabelTable.php:87
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
-msgstr ""
+msgstr "Цена за ночь, от"
 
 #: app/includes/common/TPFieldsLabelTable.php:90
 msgctxt "(Выбрать даты)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
-msgstr ""
+msgstr "Выбрать даты"
 
 #: app/includes/common/TPFieldsLabelTable.php:109
 msgctxt "(Hotel)"
@@ -836,12 +836,12 @@ msgstr "Rating"
 #: app/includes/common/TPFieldsLabelTable.php:115
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
-msgstr ""
+msgstr "To the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:117
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
-msgstr ""
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:119
 msgctxt "(Price before discount)"
@@ -886,12 +886,12 @@ msgstr "Rating"
 #: app/includes/common/TPFieldsLabelTable.php:152
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
-msgstr ""
+msgstr "To the center"
 
 #: app/includes/common/TPFieldsLabelTable.php:154
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
-msgstr ""
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:156
 msgctxt "(Price before discount)"
@@ -911,12 +911,12 @@ msgstr "Price before discount"
 #: app/includes/common/TPFieldsLabelTable.php:163
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
-msgstr ""
+msgstr "Price per night, from"
 
 #: app/includes/common/TPFieldsLabelTable.php:166
 msgctxt "(Choose dates)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_button"
-msgstr ""
+msgstr "Choose dates"
 
 #: app/includes/common/TPFieldsLabelTable.php:188
 msgctxt "(Номер рейса)"
