@@ -64,7 +64,8 @@
 .tp-plugin-icon-nzd:before { content: 'NZ\f155'; }
 .tp-plugin-icon-cad:before { content: 'C\f155'; }
 .tp-plugin-icon-sgd:before { content: 'S\f155'; }
-.tp-plugin-icon-chf:before { content: 'Fr'; }
+/*.tp-plugin-icon-chf:before { content: 'Fr'; }*/
+.tp-plugin-icon-chf:before { content: 'CHF'; }
 .tp-plugin-icon-idr:before { content: 'Rp'; }
 .tp-plugin-icon-php:before { content: '₱'; }
 .tp-plugin-icon-pln:before { content: 'zł'; }
