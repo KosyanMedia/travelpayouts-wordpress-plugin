@@ -113,6 +113,7 @@ class TPFieldWidgets {
             <label for="chek3">
                 <!-- Draggable -->
                 <!-- Возможность перетаскивать -->
+                <!-- Not draggable -->
                 <?php _ex('tp_admin_page_widgets_shortcode_2_field_draggable_label',
                     '(Draggable)', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
