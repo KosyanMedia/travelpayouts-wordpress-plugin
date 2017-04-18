@@ -40,6 +40,15 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'return_url' => false
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
+
+        /*
+         *  'check_in' => $check_in,
+            'check_out' => $check_out,
+         */
+        $check_in = date('Y-m-d', strtotime($check_in));
+        $check_out = date('Y-m-d', strtotime($check_out));
+
         $attr = array(
             'id' => $id,
             'check_in' => $check_in,
