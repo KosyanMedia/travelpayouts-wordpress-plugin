@@ -719,6 +719,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 $language = '&language='.$white_label['language'];
             }
             $white_label = 'https://'.$white_label['host'].'/';
+        } else {
+            $white_label =  rtrim($white_label, '/' ).'/hotels';
         }
         return array(
             'language' => $language,
