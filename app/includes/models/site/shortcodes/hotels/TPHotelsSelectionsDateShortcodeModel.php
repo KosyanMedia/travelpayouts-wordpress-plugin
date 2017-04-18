@@ -161,6 +161,11 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
         ));
 
 
+        $dates_label = '';
+        $dates_label .= date('d.m', strtotime($check_in));
+        $dates_label .= '-';
+        $dates_label .= date('d.m', strtotime($check_out));
+
         return array(
             'rows' => $return,
             'title' => $title,
@@ -184,6 +189,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'type_selections_label_ru' => $type_selections_label_ru,
             'type_selections_label_en' => $type_selections_label_en,
             'type_selections_label' => $type_selections_label,
+            'dates_label' => $dates_label
 
         );
 
