@@ -789,9 +789,9 @@ class TPDefault implements  \core\TPODefault{
                 '1' => array(
                     'title' => array(
                         'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title',
-                            '(Hotels collection - Discounts)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Hotels {location}: {selection_name})', TPOPlUGIN_TEXTDOMAIN),
                         'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_1_title',
-                            '(Подборка отелей - Скидки)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Отели в г. {location}: {selection_name})', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsSelections',
@@ -837,9 +837,9 @@ class TPDefault implements  \core\TPODefault{
                 '2' => array(
                     'title' => array(
                         'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title',
-                            '(Hotels collections for dates)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Hotels {location}: {selection_name} ({dates}))', TPOPlUGIN_TEXTDOMAIN),
                         'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_2_title',
-                            '(Подборки отелей на даты)', TPOPlUGIN_TEXTDOMAIN),
+                            '(Отели в г. {location}: {selection_name} ({dates}))', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'hotelsSelections',

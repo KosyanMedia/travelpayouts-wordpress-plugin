@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-04-18 14:21+0300\n"
+"POT-Creation-Date: 2017-04-18 15:07+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -330,12 +330,12 @@ msgstr ""
 "\"Найти билеты из {origin} - {destination}\"]"
 
 #: app/includes/TPDefault.php:791
-msgctxt "(Hotels collection - Discounts)"
+msgctxt "(Hotels {location}: {selection_name})"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
 msgstr "Hotels {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:793
-msgctxt "(Подборка отелей - Скидки)"
+msgctxt "(Отели в г. {location}: {selection_name})"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
 msgstr "Отели в г. {location}: {selection_name}"
 
@@ -350,14 +350,14 @@ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Посмотреть отель"
 
 #: app/includes/TPDefault.php:839
-msgctxt "(Hotels collections for dates)"
+msgctxt "(Hotels {location}: {selection_name} ({dates}))"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
-msgstr "Hotels {location}: {selection_name}"
+msgstr "Hotels {location}: {selection_name} ({dates})"
 
 #: app/includes/TPDefault.php:841
-msgctxt "(Подборки отелей на даты)"
+msgctxt "(Отели в г. {location}: {selection_name} ({dates}))"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
-msgstr "Отели в г. {location}: {selection_name}"
+msgstr "Отели в г. {location}: {selection_name} ({dates})"
 
 #: app/includes/TPDefault.php:849
 msgctxt "(View Hotel)"
