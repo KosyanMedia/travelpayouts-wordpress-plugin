@@ -296,8 +296,10 @@ function TPCityAutocomplete(){
                                     var record = new Object();
                                    // record.label = city.fullname+" ["+city.id+"]{"+city.city+"}";
                                     record.label = city.fullname+" ["+city.id+"]";
-                                    record.val = city.fullname+" ["+city.id+"]{"+city.city+"}";
+                                    record.val = city.fullname+" ["+city.id+"]";
                                     record.id = city.id;
+                                    //record.city = "{"+city.city+"}";
+                                    record.city = city.city;
                                     records.push(record);
 
                                 })
@@ -307,7 +309,8 @@ function TPCityAutocomplete(){
                                         return {
                                             label: item.label,
                                             value: item.val,
-                                            val: item.id
+                                            val: item.id,
+                                            city: item.city,
                                         }
                                     })
                                 )
@@ -431,6 +434,10 @@ function TPCityAutocomplete(){
                             })
                         }
                         if($(selector).hasClass('HotelCityAutocomplete')){
+                            //console.log(ui.item);
+                            //console.log( $(selector));
+                            input.attr('data-city', ui.item.city);
+                            //$(selector).data( "city", ui.item.city );
                             $('#select_hotels_selections_type').find("option:gt(0)").remove();
                             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
 

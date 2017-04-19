@@ -605,9 +605,9 @@ jQuery(function($) {
                         select_hotels_shortcodes = doc.find('#select_hotels_shortcodes').val();
                         tp_hotels_title = doc.find('#tp_hotels_title').val();
                         hotels_city = doc.find('#hotels_city').val();
-                        hotels_city_label = doc.find('#hotels_city').val();
+                        hotels_city_label = doc.find('#hotels_city').data('city');
                         hotels_city = hotels_city.substring(hotels_city.indexOf('[')+1,hotels_city.indexOf(']'));
-                        hotels_city_label = hotels_city_label.substring(hotels_city_label.indexOf('{')+1,hotels_city_label.indexOf('}'));
+                        //hotels_city_label = hotels_city_label.substring(hotels_city_label.indexOf('{')+1,hotels_city_label.indexOf('}'));
                         select_hotels_type = doc.find('#select_hotels_type').val();
                         hotels_day = doc.find('#hotels_day').val();
                         select_hotels_star = doc.find('#select_hotels_star').val();
