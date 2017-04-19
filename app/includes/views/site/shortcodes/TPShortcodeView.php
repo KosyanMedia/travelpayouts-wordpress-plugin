@@ -8,6 +8,7 @@
 
 namespace app\includes\views\site\shortcodes;
 
+use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPSearchFormEmptyTable;
 
 use \app\includes\TPPlugin;
@@ -257,7 +258,8 @@ class TPShortcodeView {
                             //'return_at' => $row['return_date'],
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ) );
                         break;
                     case 2:
@@ -268,7 +270,8 @@ class TPShortcodeView {
                             'return_at' => $row['return_date'],
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ));
                         break;
                     case 8:
@@ -280,7 +283,8 @@ class TPShortcodeView {
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ) );
                         break;
                     case 9:
@@ -291,7 +295,8 @@ class TPShortcodeView {
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ));
                         break;
                     case 10:
@@ -302,7 +307,8 @@ class TPShortcodeView {
                             'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
                             'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ));
                         break;
                     case 12:
@@ -316,7 +322,8 @@ class TPShortcodeView {
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
                             'one_way' =>  '&one_way='.$one_way,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ));
                         break;
                     default:
@@ -327,7 +334,8 @@ class TPShortcodeView {
                             'return_at' => $row['return_at'],
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
-                            'subid' => $subid
+                            'subid' => $subid,
+                            'currency' => $currency
                         ));
                 }
                 // get Price
@@ -706,7 +714,9 @@ class TPShortcodeView {
             'link_text' => '',
             'price' => '',
             'one_way' => '',
-            'subid' => '');
+            'subid' => '',
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //error_log("getUrlTable subid = ".$subid);
         $isWhiteLabel = false;
@@ -740,13 +750,17 @@ class TPShortcodeView {
         $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : "&destination_iata=";
         $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : "";
         $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
-        $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$marker;
-        if ($isWhiteLabel == true){
+        $currency = '&currency='.$currency;
+
+        $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$currency.$marker;
+
+        /*if ($isWhiteLabel == true){
             if (\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangEN()){
                 //$url .= '&locale=en';
                 $url .= '&currency='.\app\includes\TPPlugin::$options['local']['currency'];
             }
-        }
+        }*/
+
         switch($type){
             case 1:
             case 10:
@@ -1345,7 +1359,7 @@ class TPShortcodeView {
                 $valueShortcodesSettings = $this->replaceOriginDestinationShortcodeEmptyTableMsg($valueShortcodesSettings,
                     $origin, $destination);
                 $valueShortcodesSettings = $this->replaceLinkButtonShortcodeMsgValueEmptyTable($valueShortcodesSettings, $originIata,
-                    $destinationIata, $origin, $destination, $type, $subid);
+                    $destinationIata, $origin, $destination, $type, $subid, $currency);
                 break;
             //search form
             case 1:
@@ -1370,7 +1384,7 @@ class TPShortcodeView {
      * @return mixed
      */
     public function replaceLinkButtonShortcodeMsgValueEmptyTable($msg, $originIata, $destinationIata, $origin, $destination,
-                                                       $type, $subid){
+                                                       $type, $subid, $currency){
         //[link]
         //[button]
         $shortcodesMsg = array(
@@ -1387,7 +1401,8 @@ class TPShortcodeView {
             'departure_at' => date('Y-m-d'),
             'return_at' => '',
             'type' => $type,
-            'subid' => $subid
+            'subid' => $subid,
+            'currency' => $currency,
         ) );
 
         $msg = preg_replace_callback(
