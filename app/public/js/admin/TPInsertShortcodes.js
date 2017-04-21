@@ -677,7 +677,7 @@ jQuery(function($) {
                                 //check_out check_in
                                 setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
                                     "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
-                                    " type_selections=\""+hotels_selections_type+"\" " +
+                                    " type_selections=\""+hotels_selections_type+"\"  city_label=\""+hotels_city_label+"\" " +
                                     " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
                                     " check_in=\""+check_in+"\" check_out=\""+check_out+"\" "+hotels_selections_type_label+" ]",
                                     $(this));
