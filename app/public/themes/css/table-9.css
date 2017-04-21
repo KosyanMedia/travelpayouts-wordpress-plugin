@@ -581,6 +581,7 @@ a.paginate_button:hover {
   .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p {
     text-align:left;
     margin: 0;
+    white-space: nowrap;
   }
 }
 
