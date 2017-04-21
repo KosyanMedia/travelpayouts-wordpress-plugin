@@ -280,14 +280,25 @@ jQuery(function($) {
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){
         var $items = $(this).find('.TP-PopularRoutesWidget');
-        var width = Math.round(100/$items.length - 3);
-        console.log($items.length)
+        //var width = Math.round(100/$items.length - 3);
+        var width = 100/$items.length - 1;
+
+        //console.log(100/$items.length);
+        //console.log(width_new);
+
+        //console.log($items.length)
         var count = $items.length - 1;
         $items.each(function(i,e){
-            console.log(i)
-            $(e).css('width', width+"%");
-            if (i != count)
+            //console.log(i)
+
+            if (i != count){
+                var width_new = width;
                 $(e).css('margin-right', "1%");
+                $(e).css('width', (width_new - 1)+"%");
+            } else {
+                $(e).css('width', width+"%");
+            }
+
         });
     });
 
