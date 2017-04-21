@@ -19,11 +19,15 @@
   }
 }
 */
+.TPButtonTable [class^="tp-plugin-icon-"]:before, [class*=" tp-plugin-icon-"]:before {
+    font-weight: 700 !important;
+}
 
 [class^="tp-plugin-icon-"]:before, [class*=" tp-plugin-icon-"]:before {
     font-family: "fontello";
     font-style: normal;
     font-weight: normal;
+
     speak: none;
 
     display: inline-block;
