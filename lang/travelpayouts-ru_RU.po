@@ -332,7 +332,7 @@ msgstr ""
 #: app/includes/TPDefault.php:791
 msgctxt "(Hotels {location}: {selection_name})"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
-msgstr "Hotels {location}: {selection_name}"
+msgstr "Hotels in {location}: {selection_name}"
 
 #: app/includes/TPDefault.php:793
 msgctxt "(Отели в г. {location}: {selection_name})"
@@ -352,7 +352,7 @@ msgstr "Посмотреть отель"
 #: app/includes/TPDefault.php:839
 msgctxt "(Hotels {location}: {selection_name} ({dates}))"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
-msgstr "Hotels {location}: {selection_name} ({dates})"
+msgstr "Hotels in {location}: {selection_name} ({dates})"
 
 #: app/includes/TPDefault.php:841
 msgctxt "(Отели в г. {location}: {selection_name} ({dates}))"
