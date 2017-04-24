@@ -102,7 +102,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
         if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
         if ($this->isEmptyPrice($rows) == true) return $this->renderViewIfEmptyTable();
 
-        $html .= '<div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
+        $html .= '<div class="TPHotelTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
                         .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label,
                 $type_selections_label, $dates_label)
                     .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
