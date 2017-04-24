@@ -9,7 +9,7 @@ namespace app\includes;
 
 use \app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPFieldsLabelTable;
-use app\includes\models\admin\menu\TPBaseShortcodeOptionModel;
+use app\includes\common\TPThemes;
 
 class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
@@ -1052,7 +1052,7 @@ class TPDefault implements  \core\TPODefault{
     }
 
     public static function getRandomThemesTable(){
-        $themes = TPBaseShortcodeOptionModel::getThemesTables();
+        $themes = TPThemes::getThemesTables();
         if(!function_exists("array_column"))
         {
             $themesNames = self::array_column($themes, 'name');

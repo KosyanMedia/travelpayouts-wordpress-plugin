@@ -7,6 +7,7 @@
  */
 namespace app\includes\controllers\admin\menu;
 
+use app\includes\common\TPThemes;
 use \app\includes\models\admin\menu\TPFlightTicketsModel;
 
 class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController{
@@ -33,7 +34,7 @@ class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController
         // TODO: Implement render() method.
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
         $data = array(
-            'themes' => TPFlightTicketsModel::getThemesTables()
+            'themes' => TPThemes::getThemesTables()
         );
         parent::loadView($pathView, 0, $data);
     }

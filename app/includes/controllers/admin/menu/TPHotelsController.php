@@ -8,6 +8,7 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use app\includes\common\TPThemes;
 use app\includes\models\admin\menu\TPHotelsModel;
 use \core\controllers\TPOAdminMenuController;
 
@@ -36,7 +37,7 @@ class TPHotelsController extends TPOAdminMenuController
         // TODO: Implement render() method.
         $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotels.view.php";
         $data = array(
-            'themes' => TPHotelsModel::getThemesTables()
+            'themes' => TPThemes::getThemesTables()
         );
 
         parent::loadView($pathView, 0, $data);
