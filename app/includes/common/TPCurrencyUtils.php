@@ -59,10 +59,11 @@ class TPCurrencyUtils
      * @return mixed
      */
     public static function getCurrencyAll(){
-        return array(
-            self::TP_CURRENCY_RUB,
-            self::TP_CURRENCY_USD,
-            self::TP_CURRENCY_EUR,
+        $currency = array();
+        $currency = array(
+            //self::TP_CURRENCY_RUB,
+            //self::TP_CURRENCY_USD,
+            //self::TP_CURRENCY_EUR,
             self::TP_CURRENCY_BRL,
             self::TP_CURRENCY_CAD,
             self::TP_CURRENCY_CHF,
@@ -102,6 +103,10 @@ class TPCurrencyUtils
             self::TP_CURRENCY_KRW,
             self::TP_CURRENCY_RSD
         );
+        sort($currency);
+        array_unshift($currency, self::TP_CURRENCY_RUB, self::TP_CURRENCY_USD, self::TP_CURRENCY_EUR);
+        //error_log(print_r($currency, true));
+        return $currency;
     }
 
     public static function getDefaultCurrency(){
