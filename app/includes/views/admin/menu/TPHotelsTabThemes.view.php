@@ -7,7 +7,7 @@
             ?>
             <div class="TPTheme <?php echo $TPThemeActive; ?>" data-theme_name="<?php echo $theme['name']; ?>">
                 <div class="TPThemeScreenshot">
-                    <img src="<?php echo TPOPlUGIN_URL.'app/public/themes/screens-and-names/'.$theme['screenshot']?>" alt="">
+                    <img src="<?php echo TPOPlUGIN_URL.'app/public/themes/hotel/screens-and-names/'.$theme['screenshot']?>" alt="">
                 </div>
                 <h3 class="TPThemeName"><?php echo $theme['title']; ?></h3>
                 <div class="TPThemeActions">
