@@ -139,6 +139,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'subid' => '',
             'check_in' => date('d-m-Y'),
             'check_out' => date('d-m-Y', time()+DAY_IN_SECONDS),
+            'link_without_dates' => 'false',
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
@@ -189,8 +190,9 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'type_selections_label_ru' => $type_selections_label_ru,
             'type_selections_label_en' => $type_selections_label_en,
             'type_selections_label' => $type_selections_label,
-            'dates_label' => $dates_label
-
+            'dates_label' => $dates_label,
+            'paginate' => $paginate,
+            'link_without_dates' => $link_without_dates,
         );
 
 

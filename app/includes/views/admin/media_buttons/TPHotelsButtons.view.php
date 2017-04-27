@@ -192,5 +192,12 @@
                     '(No title)', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
+        <tr id="tr_hotels_link_without_dates">
+            <td>
+                <input type="checkbox" id="hotels_link_without_dates" value="1">
+                <?php _ex('Land without dates',
+                    'tp admin page settings сonstructor hotels tables field hotels_link_without_dates label', TPOPlUGIN_TEXTDOMAIN); ?>
+            </td>
+        </tr>
     </table>
 </div>

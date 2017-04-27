@@ -92,7 +92,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
             'subid' => '',
             'shortcode' => false,
             'paginate' => true,
-            'dates_label' => ''
+            'dates_label' => '',
+            'link_without_dates' => 'false',
 
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -111,7 +112,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                         .'" data-sort_column="'.$this->getSortColumn($shortcode).'">'
                         .$this->renderHeadTable($shortcode)
                         .$this->renderBodyTable($shortcode, $city, $rows, $subid, $number_results, $currency, $check_in,
-                                                $check_out)
+                                                $check_out, $link_without_dates)
                     .'</table>
                 </div>';
 
@@ -289,7 +290,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * price_avg => Средняя цена
      * button => Кнопка
      */
-    public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency, $checkIn, $checkOut){
+    public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency, $checkIn, $checkOut, $link_without_dates){
 
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
@@ -376,11 +377,11 @@ class TPHotelShortcodeView //extends TPShortcodeView
             switch($shortcode){
                 case 1:
                     $hotelURL = $this->getUrlTable($shortcode, $city,
-                        $row['hotel_id'], $checkInURL, $checkOutURL, $currency, $subid);
+                        $row['hotel_id'], $checkInURL, $checkOutURL, $currency, $subid, $link_without_dates);
                     break;
                 case 2:
                     $hotelURL = $this->getUrlTable($shortcode, $city,
-                        $row['hotel_id'], $checkIn, $checkOut, $currency, $subid);
+                        $row['hotel_id'], $checkIn, $checkOut, $currency, $subid, $link_without_dates);
                     break;
 
                 default:
@@ -645,7 +646,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
      * hotelId=8992 — id отеля.
      * https://search.hotellook.com/?locationId=12153&checkIn=2016-12-15&checkOut=2016-12-19&adults=2&children=7,2&language=ru-ru¤cy=rub&marker=УкажитеЗдесьВашМаркер#f%5Btypes%5D=7
      */
-    public function getUrlTable($shortcode, $locationId, $hotelId, $checkIn, $checkOut, $currency, $subid){
+    public function getUrlTable($shortcode, $locationId, $hotelId, $checkIn, $checkOut, $currency, $subid, $link_without_dates){
         $white_label = '';
         $language = '';
         $URL = '';
@@ -664,24 +665,26 @@ class TPHotelShortcodeView //extends TPShortcodeView
         $checkOutURL = '';
 
          */
+        if ($link_without_dates == 'false'){
+            if ($shortcode == 1) {
+                if (empty($checkIn) || empty($checkOut)) {
+                    $URL .= '&autoDates=1';
+                } else {
+                    $URL .= '&checkIn='.$checkIn;
+                    $URL .= '&checkOut='.$checkOut;
+                }
 
-        if ($shortcode == 1) {
-            if (empty($checkIn) || empty($checkOut)) {
-                $URL .= '&autoDates=1';
             } else {
-                $URL .= '&checkIn='.$checkIn;
-                $URL .= '&checkOut='.$checkOut;
-            }
+                if ($checkIn !== false){
+                    $URL .= '&checkIn='.$checkIn;
+                }
 
-        } else {
-            if ($checkIn !== false){
-                $URL .= '&checkIn='.$checkIn;
-            }
-
-            if ($checkOut !== false){
-                $URL .= '&checkOut='.$checkOut;
+                if ($checkOut !== false){
+                    $URL .= '&checkOut='.$checkOut;
+                }
             }
         }
+
 
         $URL .= $language;
         $URL .= '&currency='.$currency;
