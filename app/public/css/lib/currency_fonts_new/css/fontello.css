@@ -104,3 +104,12 @@
 .tp-plugin-icon-bdt:before { content: '৳'; }
 .tp-plugin-icon-krw:before { content: '₩'; }
 .tp-plugin-icon-rsd:before { content: 'din'; }
+
+.tp-plugin-icon-azn:before { content: 'AZN'; }
+.tp-plugin-icon-byn:before { content: 'BYN'; }
+.tp-plugin-icon-cny:before { content: 'CNY'; }
+.tp-plugin-icon-egp:before { content: 'EGP'; }
+.tp-plugin-icon-jpy:before { content: 'JPY'; }
+.tp-plugin-icon-myr:before { content: 'MYR'; }
+.tp-plugin-icon-nok:before { content: 'NOK'; }
+.tp-plugin-icon-pkr:before { content: 'PKR'; }

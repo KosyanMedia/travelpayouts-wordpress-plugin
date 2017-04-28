@@ -54,6 +54,15 @@ class TPCurrencyUtils
     const TP_CURRENCY_KRW = 'KRW';
     const TP_CURRENCY_RSD = 'RSD';
 
+    const TP_CURRENCY_AZN = 'AZN';
+    const TP_CURRENCY_BYN = 'BYN';
+    const TP_CURRENCY_CNY = 'CNY';
+    const TP_CURRENCY_EGP = 'EGP';
+    const TP_CURRENCY_JPY = 'JPY';
+    const TP_CURRENCY_MYR = 'MYR';
+    const TP_CURRENCY_NOK = 'NOK';
+    const TP_CURRENCY_PKR = 'PKR';
+
 
     /**
      * @return mixed
@@ -101,7 +110,16 @@ class TPCurrencyUtils
             self::TP_CURRENCY_DKK,
             self::TP_CURRENCY_BDT,
             self::TP_CURRENCY_KRW,
-            self::TP_CURRENCY_RSD
+            self::TP_CURRENCY_RSD,
+
+            self::TP_CURRENCY_AZN,
+            self::TP_CURRENCY_BYN,
+            self::TP_CURRENCY_CNY,
+            self::TP_CURRENCY_EGP,
+            self::TP_CURRENCY_JPY,
+            self::TP_CURRENCY_MYR,
+            self::TP_CURRENCY_NOK,
+            self::TP_CURRENCY_PKR,
         );
         sort($currency);
         array_unshift($currency, self::TP_CURRENCY_RUB, self::TP_CURRENCY_USD, self::TP_CURRENCY_EUR);
@@ -140,29 +158,5 @@ class TPCurrencyUtils
             return false;
         return true;
     }
-
-    /*public static function getCurrencyRUB()
-   {
-       return self::TP_CURRENCY_RUB;
-   }
-   public static function getCurrencyUSD()
-   {
-       return self::TP_CURRENCY_USD;
-   }
-   public static function getCurrencyEUR()
-   {
-       return self::TP_CURRENCY_EUR;
-   }*
-
-
-   private static $currency = array(
-       'RUB', 'USD','EUR', 'BRL', 'CAD', 'CHF',
-       'HKD', 'IDR', 'INR', 'NZD', 'PHP', 'PLN',
-       'SGD', 'THB', 'GBP', 'ZAR', 'UAH', 'KZT',
-       'AUD', 'TRY', 'ILS', /*'ARS', 'COP', 'PEN',
-       'CLP', 'AED', 'SAR', 'SEK', 'HUF', 'KGS',
-       'MXN', 'AMD', 'XOF', 'VND', 'BGN', 'GEL',
-       'RON', 'DKK', 'BDT', 'KRW', 'RSD'*
-   );*/
 
 }
