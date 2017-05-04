@@ -63,6 +63,21 @@ class TPCurrencyUtils
     const TP_CURRENCY_NOK = 'NOK';
     const TP_CURRENCY_PKR = 'PKR';
 
+    const TP_CURRENCY_BHD = 'BHD';
+    const TP_CURRENCY_CZK = 'CZK';
+    const TP_CURRENCY_IQD = 'IQD';
+    const TP_CURRENCY_ISK = 'ISK';
+    const TP_CURRENCY_JOD = 'JOD';
+    const TP_CURRENCY_KWD = 'KWD';
+    const TP_CURRENCY_LKR = 'LKR';
+    const TP_CURRENCY_LYD = 'LYD';
+    const TP_CURRENCY_MUR = 'MUR';
+    const TP_CURRENCY_NGN = 'NGN';
+    const TP_CURRENCY_NPR = 'NPR';
+    const TP_CURRENCY_OMR = 'OMR';
+    const TP_CURRENCY_QAR = 'QAR';
+    const TP_CURRENCY_TJS = 'TJS';
+
 
     /**
      * @return mixed
@@ -120,10 +135,25 @@ class TPCurrencyUtils
             self::TP_CURRENCY_MYR,
             self::TP_CURRENCY_NOK,
             self::TP_CURRENCY_PKR,
+            self::TP_CURRENCY_BHD,
+            self::TP_CURRENCY_CZK,
+            self::TP_CURRENCY_IQD,
+            self::TP_CURRENCY_ISK,
+            self::TP_CURRENCY_JOD,
+            self::TP_CURRENCY_KWD,
+            self::TP_CURRENCY_LKR,
+            self::TP_CURRENCY_LYD,
+            self::TP_CURRENCY_MUR,
+            self::TP_CURRENCY_NGN,
+            self::TP_CURRENCY_NPR,
+            self::TP_CURRENCY_OMR,
+            self::TP_CURRENCY_QAR,
+            self::TP_CURRENCY_TJS,
         );
         sort($currency);
         array_unshift($currency, self::TP_CURRENCY_RUB, self::TP_CURRENCY_USD, self::TP_CURRENCY_EUR);
         //error_log(print_r($currency, true));
+        //error_log(count($currency));
         return $currency;
     }
 

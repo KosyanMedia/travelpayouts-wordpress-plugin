@@ -106,10 +106,25 @@
 .tp-plugin-icon-rsd:before { content: 'din'; }
 
 .tp-plugin-icon-azn:before { content: 'AZN'; }
-.tp-plugin-icon-byn:before { content: 'BYN'; }
-.tp-plugin-icon-cny:before { content: 'CNY'; }
-.tp-plugin-icon-egp:before { content: 'EGP'; }
-.tp-plugin-icon-jpy:before { content: 'JPY'; }
-.tp-plugin-icon-myr:before { content: 'MYR'; }
-.tp-plugin-icon-nok:before { content: 'NOK'; }
-.tp-plugin-icon-pkr:before { content: 'PKR'; }
+.tp-plugin-icon-byn:before { content: 'Br'; }
+.tp-plugin-icon-cny:before { content: '元'; }
+.tp-plugin-icon-egp:before { content: 'ج.م'; }
+.tp-plugin-icon-jpy:before { content: '¥'; }
+.tp-plugin-icon-myr:before { content: 'RM'; }
+.tp-plugin-icon-nok:before { content: 'kr'; }
+.tp-plugin-icon-pkr:before { content: '₨'; }
+
+.tp-plugin-icon-bhd:before { content: '.د.ب'; }
+.tp-plugin-icon-czk:before { content: 'Kč'; }
+.tp-plugin-icon-iqd:before { content: '.د.ع'; }
+.tp-plugin-icon-isk:before { content: 'kr.'; }
+.tp-plugin-icon-jod:before { content: '.د.إ'; }
+.tp-plugin-icon-kwd:before { content: '.د.ك'; }
+.tp-plugin-icon-lkr:before { content: 'Rp'; }
+.tp-plugin-icon-lyd:before { content: '.د.ل'; }
+.tp-plugin-icon-mur:before { content: 'Rs'; }
+.tp-plugin-icon-ngn:before { content: '₦'; }
+.tp-plugin-icon-npr:before { content: 'रु'; }
+.tp-plugin-icon-omr:before { content: '.ر.ع'; }
+.tp-plugin-icon-qar:before { content: '.ر.ق'; }
+.tp-plugin-icon-tjs:before { content: 'TJS'; }
