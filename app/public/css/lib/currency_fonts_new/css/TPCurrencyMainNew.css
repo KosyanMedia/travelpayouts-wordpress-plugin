@@ -18,6 +18,12 @@
 .TPpriceTd .TP-currency-icons i:before {
     margin: 5px !important;
 }
+.tp-currency{
+    margin: 5px !important;
+}
+.tp-currency-before{
+
+}
 @font-face {
     font-family: 'fontello';
     src: url('../font/fontello.eot?48402870');

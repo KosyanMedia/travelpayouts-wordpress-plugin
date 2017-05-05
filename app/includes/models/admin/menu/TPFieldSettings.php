@@ -577,20 +577,62 @@ class TPFieldSettings {
                 </select>
             </label>
             <label>
-                <span><?php _ex('tp_admin_page_settings_tab_localization_field_currency_label',
-                        '(Currency)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+
+            </label>
+
+        </div>
+        <div class="TP-LocalHead">
+            <label>
+                 <span><?php _ex('tp_admin_page_settings_tab_localization_field_currency_label',
+                         '(Currency)', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
                     <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
                         <option
                             <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
-                            value="<?php echo $currency ?>">
+                                value="<?php echo $currency ?>">
                             <?php echo $currency; ?>
                         </option>
                     <?php } ?>
 
                 </select>
             </label>
+            <label>
 
+                <span>
+                    <?php _ex('Show the currency',
+                        'Admin page settings tab localization field currency_symbol_display label', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency_symbol_display]" class="TP-Zelect">
+                    <option value="0">
+                        <?php
+                        _ex('After the price',
+                            'Admin page settings tab localization field currency_symbol_display option 0 label',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </option>
+                    <option value="1">
+                        <?php
+                        _ex('Before the price',
+                            'Admin page settings tab localization field currency_symbol_display option 1 label',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </option>
+                    <option value="2">
+                        <?php
+                        _ex('Hide',
+                            'Admin page settings tab localization field currency_symbol_display option 2 label',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </option>
+                    <option value="3">
+                        <?php
+                        _ex('Show currency code',
+                            'Admin page settings tab localization field currency_symbol_display option 3 label',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </option>
+                </select>
+            </label>
         </div>
          <div class="TP-LocalHead">
              <?php $this->TPFieldHost(); ?>

@@ -118,6 +118,7 @@ class TPDefault implements  \core\TPODefault{
                 'host_hotel' => '',
                 'localization' => $localization,
                 'currency' => $currency,
+                'currency_symbol_display' => 0,
                 'fields' => array(
                     'ru' => TPFieldsLabelTable::getFieldsLabelRU(),
                     'en' => TPFieldsLabelTable::getFieldsLabelEN(),

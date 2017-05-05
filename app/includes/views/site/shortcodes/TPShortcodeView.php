@@ -900,10 +900,25 @@ class TPShortcodeView {
      * @return string
      */
     public function currencyView($currency){
-        //$currency = mb_strtolower(\app\includes\TPPlugin::$options['local']['currency']);
-        //return '<i class="TP-currency-icons"><i class="demo-icon icon-'.$currency.'"></i></i>';
-        $currency = mb_strtolower($currency);
-        return '<i class="TP-currency-icons"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
+        $currencySymbol = '';
+        switch (TPPlugin::$options['local']['currency_symbol_display']){
+            case 0:
+                $currency = mb_strtolower($currency);
+                $currencySymbol = '<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
+                break;
+            case 1:
+                $currency = mb_strtolower($currency);
+                $currencySymbol = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
+                break;
+            case 2:
+                $currencySymbol = '';
+                break;
+            case 3:
+                $currencySymbol = '<span class="tp-currency">'.$currency.'</span>';
+                break;
+        }
+
+        return $currencySymbol;
     }
 
     /**
