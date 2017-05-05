@@ -62,8 +62,8 @@
 .tp-plugin-icon-rub:before { content: '\f158'; }
 .tp-plugin-icon-yen:before { content: '\f157'; }
 .tp-plugin-icon-inr:before { content: '\f156'; }
-/*.tp-plugin-icon-usd:before { content: '\f155'; }*/
-.tp-plugin-icon-usd:before { content: 'USD'; }
+.tp-plugin-icon-usd:before { content: '\f155'; }
+/*.tp-plugin-icon-usd:before { content: 'USD'; }*/
 .tp-plugin-icon-brl:before { content: 'R\f155'; }
 .tp-plugin-icon-hkd:before { content: 'HK\f155'; }
 .tp-plugin-icon-nzd:before { content: 'NZ\f155'; }
