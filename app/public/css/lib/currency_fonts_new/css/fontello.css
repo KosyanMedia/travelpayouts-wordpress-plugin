@@ -64,11 +64,11 @@
 .tp-plugin-icon-inr:before { content: '\f156'; }
 .tp-plugin-icon-usd:before { content: '\f155'; }
 /*.tp-plugin-icon-usd:before { content: 'USD'; }*/
-.tp-plugin-icon-brl:before { content: 'R\f155'; }
+.tp-plugin-icon-brl:before { content: 'R$'; }/*R\f155*/
 .tp-plugin-icon-hkd:before { content: 'HK\f155'; }
-.tp-plugin-icon-nzd:before { content: 'NZ\f155'; }
-.tp-plugin-icon-cad:before { content: 'C\f155'; }
-.tp-plugin-icon-sgd:before { content: 'S\f155'; }
+.tp-plugin-icon-nzd:before { content: 'NZ$'; }/*NZ\f155*/
+.tp-plugin-icon-cad:before { content: 'C$'; }/*C\f155*/
+.tp-plugin-icon-sgd:before { content: 'S$'; }/*S\f155*/
 /*.tp-plugin-icon-chf:before { content: 'Fr'; }*/
 .tp-plugin-icon-chf:before { content: 'CHF'; }
 .tp-plugin-icon-idr:before { content: 'Rp'; }
@@ -81,7 +81,7 @@
 .tp-plugin-icon-won:before { content: '\f159'; }
 .tp-plugin-icon-zar:before { content: 'R'; }
 .tp-plugin-icon-uah:before { content: '₴'; }
-.tp-plugin-icon-aud:before { content: 'A\f155'; }
+.tp-plugin-icon-aud:before { content: 'A$'; }/*A\f155*/
 .tp-plugin-icon-kzt:before { content: '₸'; }
 .tp-plugin-icon-try:before { content: '₺'; }
 .tp-plugin-icon-ars:before { content: 'A$'; }
@@ -94,7 +94,7 @@
 .tp-plugin-icon-huf:before { content: 'Ft'; }
 .tp-plugin-icon-kgs:before { content: 'com'; }
 .tp-plugin-icon-mxn:before { content: '$'; }
-.tp-plugin-icon-amd:before { content: '֏'; }
+.tp-plugin-icon-amd:before { content: '\058F'; }
 .tp-plugin-icon-xof:before { content: 'FCFA'; }
 .tp-plugin-icon-vnd:before { content: '₫'; }
 .tp-plugin-icon-bgn:before { content: 'лв.'; }
