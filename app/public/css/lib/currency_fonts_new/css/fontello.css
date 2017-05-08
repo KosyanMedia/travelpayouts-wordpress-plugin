@@ -105,7 +105,7 @@
 .tp-plugin-icon-krw:before { content: '₩'; }
 .tp-plugin-icon-rsd:before { content: 'din'; }
 
-.tp-plugin-icon-azn:before { content: 'AZN'; }
+.tp-plugin-icon-azn:before { content: '\20BC'; } /*AZN*/
 .tp-plugin-icon-byn:before { content: 'Br'; }
 .tp-plugin-icon-cny:before { content: '元'; }
 .tp-plugin-icon-egp:before { content: 'ج.م'; }
