@@ -654,3 +654,35 @@
 .TPHotelTable .TPEmptyTableButton:hover {
   background-color: #ff6857;
   color: #fff !important; }
+
+@media (max-width: 480px) {
+
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
+    text-align: left !important;
+  }
+
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd .TP-tdContent,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p.TPbuttonTd .TP-tdContent {
+    top: 0 !important;
+  }
+
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-old-price-and,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p .TP-old-price-and {
+    float: left;
+    margin-right: 5px;
+  }
+
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr {
+    height: auto;
+    background: none;
+  }
+}
+@media (max-width: 350px) {
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd .TP-tdContent,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p.TPbuttonTd .TP-tdContent {
+    top: 0 !important;
+    position: static;
+    width: 100%;
+  }
+}
