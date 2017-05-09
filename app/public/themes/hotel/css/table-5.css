@@ -511,12 +511,12 @@ span.ellipsis {
   background: #432b5c;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
-a.paginate_button.current {
+.TPHotelTable a.paginate_button.current {
   border-color: #a987cc;
   background-color: #a987cc;
   color: #ffffff; }
 
-a.paginate_button:hover {
+.TPHotelTable a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid #f4f4f4;
@@ -546,6 +546,9 @@ a.paginate_button:hover {
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   background-color: #ff6857;
   color: #fff !important; }
+
+.TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
+  background: inherit; }
 
 .dataTables_paginate span a:first-of-type {
   border-top-left-radius: 3px;

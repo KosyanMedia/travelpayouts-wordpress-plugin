@@ -512,7 +512,7 @@ span.ellipsis {
 .TPHotelTable .TP-Plugin-Tables_box thead tr td {
   background: #f1d600;
   text-align: center}
-.TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
+
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd  {
   background-color: #222;
   color: white;
@@ -529,7 +529,7 @@ span.ellipsis {
 .TPHotelTable a.paginate_button.current {
   border-color: #222;
   background: #222;
-  color: #ffffff; }
+  color: #fff !important; }
 
 .TPHotelTable a.paginate_button:hover {
   text-decoration: none;
@@ -540,7 +540,7 @@ color: #222}
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
   border: 2px solid #f1d600 !important;
-  background: none;
+  background: none!important;
   color: white;
   font-family: "Ubuntu";
   font-size: 13px;

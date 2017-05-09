@@ -501,21 +501,21 @@ span.ellipsis {
   background: #fff;
   text-align: center; }
 
-.TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
-  background: none !important;
+  background: none;
   color: white;
   border: none; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TP-active {
+  background: #fff;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
-a.paginate_button.current {
+.TPHotelTable a.paginate_button.current {
   border-color: #f60f3d;
   background-color: #f60f3d;
   color: #ffffff; }
 
-a.paginate_button:hover {
+.TPHotelTable a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
   background-color: #fff;
@@ -524,7 +524,7 @@ a.paginate_button:hover {
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
   border: 2px solid #fff !important;
-  background: none;
+  background: none !important;
   color: white;
   font-family: "Ubuntu";
   font-size: 13px;
