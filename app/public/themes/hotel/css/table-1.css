@@ -510,7 +510,7 @@ span.ellipsis {
   text-align: center; }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
-  background-color: #222;
+  background-color: #222 !important;
   color: white;
   border: none; }
 
@@ -548,13 +548,16 @@ span.ellipsis {
   border-radius: 20px; }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
-  background-color: #f1d600;
+  background-color: #f1d600 !important;
   color: #222 !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd {
-  background: #222;
+  background: #222 !important;
   color: #fff;
   border: none; }
+
+.TPHotelTable .TP-Plugin-Tables_box {
+  background: none; }
 
 /*# sourceMappingURL=table-1.css.map */
 

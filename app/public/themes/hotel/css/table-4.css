@@ -553,6 +553,12 @@ span.ellipsis {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px; }
 
+.TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
+  background: #292a3a; }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover .TP-Plugin-Tables_box tbody tr td,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
+    background: none !important; }
+
 @media (max-width: 480px) {
   .TPHotelTable .TP-Plugin-Tables_box tbody tr:nth-child(even) {
     background-color: #292a3a; }

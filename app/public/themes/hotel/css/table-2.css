@@ -335,7 +335,7 @@
   top: 0;
   margin-top: 12px; }
 
-.dataTables_paginate span a {
+.TPHotelTable .dataTables_paginate span a {
   display: block;
   float: left;
   width: 40px;
@@ -501,7 +501,8 @@ span.ellipsis {
 .TPAirlineLogoTD {
   width: auto !important; }
 
-.TPHotelTable .TP-Plugin-Tables_box thead tr td {
+.TPHotelTable .TP-Plugin-Tables_box thead tr td,
+.TP-Plugin-Tables_box thead tr td.TPbuttonTd {
   background: #221f23;
   text-align: center; }
 
