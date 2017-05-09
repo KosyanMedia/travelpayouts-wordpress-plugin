@@ -502,7 +502,7 @@ span.ellipsis {
   width: auto !important; }
 
 .TP-Plugin-Tables_box thead tr td {
-  background-color: #221f23;
+  background: #221f23;
   text-align: center; }
 
 .TP-Plugin-Tables_box thead tr td.TP-active {
@@ -535,6 +535,9 @@ a.paginate_button:hover {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px; }
+
+.TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
+  background: inherit; }
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   border: 2px solid #ef643b !important;

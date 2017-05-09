@@ -510,7 +510,7 @@ span.ellipsis {
   width: auto !important; }
 
 .TP-Plugin-Tables_box thead tr td {
-  background-color: #432b5c;
+  background: #432b5c;
   text-align: center}
 //.TP-Plugin-Tables_box thead tr td.tp-price-column,
 //.TP-Plugin-Tables_box tbody tr td.TPbuttonTd  {
@@ -520,7 +520,7 @@ span.ellipsis {
 //}
 
 .TP-Plugin-Tables_box thead tr td.TP-active {
-  background-color: #432b5c;
+  background: #432b5c;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
 
@@ -546,10 +546,22 @@ a.paginate_button:hover {
   text-transform: uppercase;
   text-decoration: none;
   background-color: #ff6055;}
-
+.TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ff6055 !important;
+}
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   background-color: #ff6857;
   color: #fff!important;
+}
+.TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
+  background: inherit;
 }
 .dataTables_paginate span a:first-of-type{
   border-top-left-radius: 3px;

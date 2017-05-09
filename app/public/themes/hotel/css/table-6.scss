@@ -509,7 +509,7 @@ span.ellipsis {
   width: auto !important; }
 
 .TP-Plugin-Tables_box thead tr td {
-  background-color: #dfe2ed;
+  background: #dfe2ed;
   text-align: center}
 //.TP-Plugin-Tables_box thead tr td.tp-price-column,
 //.TP-Plugin-Tables_box tbody tr td.TPbuttonTd  {
@@ -519,7 +519,7 @@ span.ellipsis {
 //}
 
 .TP-Plugin-Tables_box thead tr td.TP-active {
-  background-color: #dfe2ed;
+  background: #dfe2ed;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
 
@@ -529,6 +529,16 @@ a.paginate_button.current {
   background-color: #a0cc28;
   color: #ffffff; }
 
+.TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #a0cc28 !important; }
+
 a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
@@ -536,6 +546,9 @@ a.paginate_button:hover {
   background-color: #f5f6f9;
   color: #716c87;}
 
+.TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
+  background: inherit;
+}
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
   color: white;
   font-family: "Ubuntu";
