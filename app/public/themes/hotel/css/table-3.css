@@ -540,6 +540,11 @@ span.ellipsis {
   background-color: #fff;
   color: #15234e !important; }
 
+.TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd {
+  background: none;
+  color: #fff;
+  border: none; }
+
 @media (max-width: 480px) {
   .TP-Plugin-Tables_box thead tr td.tp-price-column, .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
     background-color: #f60f3d !important; }
