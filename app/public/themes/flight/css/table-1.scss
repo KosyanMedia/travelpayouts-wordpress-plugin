@@ -100,7 +100,8 @@
 
 .TP-Plugin-Tables_box tbody tr:hover {
   td{
-    background: rgba(241, 214, 0, .1);
+    //background: rgba(241, 214, 0, .1);
+    //background: none;
   }
   box-sizing: border-box;
   cursor: pointer}

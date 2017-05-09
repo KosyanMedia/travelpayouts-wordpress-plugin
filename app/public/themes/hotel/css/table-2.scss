@@ -536,7 +536,8 @@ a.paginate_button:hover {
 color: #fff}
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
-  border: 2px solid #ef643b;
+  background: none;
+  border: 2px solid #ef643b !important;
   color: white;
   font-family: "Ubuntu";
   font-size: 13px;
@@ -549,7 +550,7 @@ color: #fff}
   border-radius: 20px;}
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
-  border: 2px solid #ef643b;
+  border: 2px solid #ef643b !important;
   background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%);
   color: #fff!important;
 }

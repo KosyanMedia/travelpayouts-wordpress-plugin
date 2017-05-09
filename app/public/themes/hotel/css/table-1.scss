@@ -92,6 +92,7 @@
 .TP-Plugin-Tables_box tbody tr {
   color: #262626;
   font-size: 13px;
+  background: none;
   font-family: Arial, sans-serif;
   height: 46px; }
 
@@ -509,7 +510,7 @@ span.ellipsis {
   width: auto !important; }
 
 .TP-Plugin-Tables_box thead tr td {
-  background-color: #f1d600;
+  background: #f1d600;
   text-align: center}
 .TP-Plugin-Tables_box thead tr td.tp-price-column,
 .TP-Plugin-Tables_box tbody tr td.TPbuttonTd  {
@@ -519,7 +520,7 @@ span.ellipsis {
 }
 
 .TP-Plugin-Tables_box thead tr td.TP-active {
-  background-color: #f1d600;
+  background: #f1d600;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
 .TP-Plugin-Tables_box thead tr td {
@@ -538,7 +539,8 @@ a.paginate_button:hover {
 color: #222}
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
-  border: 2px solid #f1d600;
+  border: 2px solid #f1d600 !important;
+  background: none;
   color: white;
   font-family: "Ubuntu";
   font-size: 13px;
