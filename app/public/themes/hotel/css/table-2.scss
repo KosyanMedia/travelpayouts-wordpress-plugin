@@ -507,8 +507,8 @@ span.ellipsis {
   width: auto !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td,
-.TP-Plugin-Tables_box thead tr td.TPbuttonTd{
-  background: #221f23;
+.TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd{
+  background: #221f23 !important;
   text-align: center}
 //.TP-Plugin-Tables_box thead tr td.tp-price-column,
 //.TP-Plugin-Tables_box tbody tr td.TPbuttonTd  {

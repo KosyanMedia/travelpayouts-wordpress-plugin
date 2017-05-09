@@ -498,7 +498,7 @@ span.ellipsis {
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td,
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd {
-  background-image: linear-gradient(to top, #3f4a54 0%, #1d2a38 100%);
+  background-image: linear-gradient(to top, #3f4a54 0%, #1d2a38 100%) !important;
   text-align: center; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TP-active {

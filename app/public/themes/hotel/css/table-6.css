@@ -101,7 +101,7 @@
   box-sizing: border-box;
   cursor: pointer; }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover td {
-    background-color: #fcfff4; }
+    background: #fcfff4 !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td {
   padding: 0 20px;
@@ -467,6 +467,7 @@ span.ellipsis {
 
 .TPHotelTable .TP-Plugin-Tables_box {
   display: table !important;
+  background: none;
   border: 1px solid #e3e3e3 !important; }
 
 .TPTdButtonShow {
@@ -502,8 +503,9 @@ span.ellipsis {
 .TPAirlineLogoTD {
   width: auto !important; }
 
+.TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd,
 .TPHotelTable .TP-Plugin-Tables_box thead tr td {
-  background: #dfe2ed;
+  background: #dfe2ed !important;
   text-align: center; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TP-active {
