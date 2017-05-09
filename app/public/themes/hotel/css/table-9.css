@@ -506,15 +506,14 @@ span.ellipsis {
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td.TPbuttonTd, .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
-  background: none;
   color: white; }
 
-a.paginate_button.current {
+.TPHotelTable a.paginate_button.current {
   border-color: #5ad3d7;
   background-color: #5ad3d7;
   color: #ffffff !important; }
 
-a.paginate_button:hover {
+.TPHotelTable a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid #f4f4f4;
