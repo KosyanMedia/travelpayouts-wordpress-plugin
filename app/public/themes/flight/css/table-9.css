@@ -100,8 +100,6 @@
 .TP-Plugin-Tables_box tbody tr:hover {
   box-sizing: border-box;
   cursor: pointer; }
-  .TP-Plugin-Tables_box tbody tr:hover td {
-    background-color: #d8f1f3 !important; }
 
 .TP-Plugin-Tables_box tbody tr td {
   padding: 0 20px;
@@ -383,11 +381,7 @@ span.ellipsis {
   margin-bottom: 15px;
   float: left;
   width: 30.3333%;
-  min-width: 180px;
-  /*
-  min-width: 200px;
-  */
-}
+  min-width: 200px; }
 
 .TP-tdContent a {
   border: none !important; }
@@ -556,103 +550,3 @@ a.paginate_button:hover {
 /*# sourceMappingURL=table-1.css.map */
 
 /*# sourceMappingURL=table-9.css.map */
-
-/* add edits 2016/10/04 */
-.TP-Plugin-Tables_box thead tr td { font-family:'Roboto', serif !important; font-weight:400 !important; font-size:12px !important; cursor:pointer; }
-.TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p {
-  font-family:'Roboto', sans-serif !important;
-  font-weight:400 !important;
-  text-align:center;
-  color:#6c7a87;
-  white-space: nowrap;
-}
-.TP-Plugin-Tables_box tbody tr td a span { font-family:'Roboto', sans-serif !important; font-weight:700 !important; }
-.TP-tdContent::selection {background:#3dc0c4; color:#fff; }
-.TP-tdContent::-moz-selection {background:#3dc0c4; color:#fff; }
-
-
-/* add edits 2016/10/05 */
-.sorting_asc:after, .sorting_asc:before { display:none !important; content:'' !important; }
-.sorting_desc:after, .sorting_desc:before { display:none !important; content:''  !important; }
-.sorting_desc:after, .sorting_asc:after { content:'' !important; }
-
-.sorting_desc .TP-sort-chevron:before {content:"\f107" !important}
-.sorting_asc .TP-sort-chevron:before {content:"\f106" !important}
-.TP-sort-chevron { display:none; font-size:12px !important; transition:all 0.3s ease; cursor:pointer; position:relative; margin:0 0 0 9px; right:10px; top:14px; position:absolute; font-weight:400 !important; }
-.TP-sort-chevron:before { transition:all 0.3s ease; left:50%; top:0; position:absolute; transform:translateX(-50%); font-weight:400 !important; }
-.TP-sort-chevron:hover:before { font-size:14px !important; }
-.sorting_asc .TP-sort-chevron { display:inline; }
-.sorting_desc .TP-sort-chevron { display:inline; }
-.TP-Plugin-Tables_box thead tr td.sorting_desc, .TP-Plugin-Tables_box thead tr td.sorting_asc { padding-right:15px; padding-left:5px; }
-.TP-Plugin-Tables_box tbody tr td p { margin-top:1.1em; margin-bottom:1.1em; }
-@media(max-width:480px){
-  .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p {
-    text-align:left;
-    margin: 0;
-
-  }
-}
-
-
-
-.TPEmptyTableButton {
-  min-width: 130px;
-  margin: 0 auto;
-  padding: 0 10px;
-  height: 30px;
-  display: block;
-  margin-top: 2px !important;
-  top: 0;
-  right: 10px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 30px !important;
-  border-bottom: none !important;
-  text-decoration: none;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  -ms-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.TPEmptyTableButton span {
-  line-height: 30px; }
-
-.TPEmptyTableButton i {
-  font-size: 14px;
-  font-weight: normal;
-  /*font-family: ALSRubl, sans-serif;*/
-  font-style: normal;
-  line-height: 26px;
-  margin-left: 2px; }
-
-.TPEmptyTableButton:hover {
-  background: #ce6408;
-  text-decoration: none;
-  color: #fff !important; }
-
-.TPEmptyTableButton {
-  display: inline-block;
-  overflow: inherit;
-  min-width: 100px;
-  width: auto; }
-
-.TPEmptyTableButton {
-  color: white;
-  font-family: "Ubuntu";
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 22px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #3dc0c4;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15); }
-
-.TPEmptyTableButton:hover {
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
-  background-color: #5ad3d7;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
-  color: #fff !important; }
