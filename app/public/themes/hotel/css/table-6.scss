@@ -537,7 +537,12 @@ span.ellipsis {
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #a0cc28 !important; }
+  background: #a0cc28 !important;
+  border-bottom-color: #81cc29 !important;
+  &:hover{
+    background: #a8cc22 !important;
+  }
+}
 
 a.paginate_button:hover {
   text-decoration: none;
