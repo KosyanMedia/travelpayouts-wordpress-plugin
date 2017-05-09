@@ -511,12 +511,12 @@ span.ellipsis {
   background-image: linear-gradient(to top, #3f4154 0%, #292a3a 100%);
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */ }
 
-a.paginate_button.current {
+.TPHotelTable a.paginate_button.current {
   border-color: #63bfff;
   background-color: #63bfff;
   color: #ffffff !important; }
 
-a.paginate_button:hover {
+.TPHotelTable a.paginate_button:hover {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid #f4f4f4;

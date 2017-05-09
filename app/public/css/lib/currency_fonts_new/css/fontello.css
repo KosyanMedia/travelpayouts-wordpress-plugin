@@ -9,6 +9,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'NatoSansArmenian';
+    src: url('../font/Noto Sans Armenian.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -94,7 +100,11 @@
 .tp-plugin-icon-huf:before { content: 'Ft'; }
 .tp-plugin-icon-kgs:before { content: 'com'; }
 .tp-plugin-icon-mxn:before { content: '$'; }
-.tp-plugin-icon-amd:before { content: '\058F'; }
+.tp-plugin-icon-amd:before {
+    content: '\058F';
+    font-family: 'NatoSansArmenian';
+
+}
 .tp-plugin-icon-xof:before { content: 'FCFA'; }
 .tp-plugin-icon-vnd:before { content: '₫'; }
 .tp-plugin-icon-bgn:before { content: 'лв.'; }
