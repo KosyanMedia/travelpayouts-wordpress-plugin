@@ -115,6 +115,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
      * @return array
      */
     public function getDataTable($args = array()){
+	    $linkWithoutDates = isset(TPPlugin::$options['shortcodes_hotels'][2]['link_without_dates']) ? 'true' : 'false';
         $defaults = array(
             'city' => false,
             'city_label' => false,
@@ -139,7 +140,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'subid' => '',
             'check_in' => date('d-m-Y'),
             'check_out' => date('d-m-Y', time()+DAY_IN_SECONDS),
-            'link_without_dates' => 'false',
+            'link_without_dates' => $linkWithoutDates,
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 

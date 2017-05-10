@@ -8,7 +8,10 @@
                         data-paginate-2="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['2']['paginate_switch']))? 1 : 0;?>"
                         data-paginate-3="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['3']['paginate_switch']))? 1 : 0;?>"
                         data-paginate-4="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['4']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-5="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['5']['paginate_switch']))? 1 : 0;?>">
+                        data-paginate-5="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['5']['paginate_switch']))? 1 : 0;?>"
+                        data-link_without_dates-1="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['1']['link_without_dates']))? 1 : 0;?>"
+                        data-link_without_dates-2="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes_hotels']['2']['link_without_dates']))? 1 : 0;?>"
+                >
                     <option selected="selected" value="0">
                         <?php _ex('tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0',
                             '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>

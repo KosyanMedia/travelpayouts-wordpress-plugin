@@ -12,6 +12,7 @@ namespace app\includes\models\site\shortcodes\hotels;
 use \app\includes\models\site\TPHotelShortcodeModel;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
+use app\includes\TPPlugin;
 
 class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
 {
@@ -110,6 +111,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
      * @return array
      */
     public function getDataTable($args = array()){
+	    $linkWithoutDates = isset(TPPlugin::$options['shortcodes_hotels'][1]['link_without_dates']) ? 'true' : 'false';
         $defaults = array(
             'city' => false,
             'city_label' => false,
@@ -132,8 +134,11 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type_selections_label_en' => '',
             'type_selections_label' => '',
             'subid' => '',
-            'link_without_dates' => 'false',
+            'link_without_dates' => $linkWithoutDates,
         );
+
+
+
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){

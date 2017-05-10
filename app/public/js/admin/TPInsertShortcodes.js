@@ -842,6 +842,16 @@ jQuery(function($) {
                     doc.find('#hotels_paginate').attr('checked', true);
                     break;
             }
+
+            switch ($(this).data('link_without_dates-'+$(this).val())){
+                case 0:
+                    doc.find('#hotels_link_without_dates').attr('checked', false);
+                    break;
+                case 1:
+                    doc.find('#hotels_link_without_dates').attr('checked', true);
+                    break;
+            }
+
             doc.find('#td_hotels_off_title').on('change', '#hotels_off_title', function(e) {
                 if($(this).is(":checked")) {
                     doc.find('#tr_hotels_title').hide();
@@ -928,6 +938,7 @@ jQuery(function($) {
         doc.find('#hotels_number_results').val(20);
         doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').removeClass('constructorShortcodesError');
         doc.find('#tr_hotels_link_without_dates').hide();
+        doc.find('#hotels_link_without_dates').attr('checked', false);
     }
 
 
