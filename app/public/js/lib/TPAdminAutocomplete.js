@@ -201,6 +201,7 @@ function TPCityAutocomplete(){
                         //console.log(request.term, AppendTo);
                         console.log(tpLocale);
                         $.get("https://yasen.hotellook.com/autocomplete?term=" + request.term + "&lang=" + tpLocale, function(data) {
+
                             if($(selector).hasClass('TPCoordinatesAutocomplete')){
                                 var locations=[];
                                 /*$.map(data, function(items, keys){
@@ -315,6 +316,7 @@ function TPCityAutocomplete(){
                                     })
                                 )
                             } else{
+
                                 response(
                                     $.map(data.hotels, function(item){
                                         return {

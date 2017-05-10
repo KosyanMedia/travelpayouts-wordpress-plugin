@@ -251,7 +251,7 @@
             <tr id="tr_hotel_id_widget">
                 <td>
                     <input type="text" name="origin" id="hotel_id_widget" value=""
-                           class="constructorHotelShortcodesAutocomplete regular-text code"
+                           class="constructorWidgetHotelShortcodesAutocomplete regular-text code"
                            placeholder="<?php _ex('tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label',
                                '(Hotel)', TPOPlUGIN_TEXTDOMAIN ); ?>">
                 </td>

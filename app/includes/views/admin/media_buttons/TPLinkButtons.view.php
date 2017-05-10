@@ -47,7 +47,7 @@
             <tr id="tr_city_link">
                 <td>
                     <input type="text" name="city" id="city_link" value=""
-                           class="constructorHotelShortcodesAutocomplete regular-text code"
+                           class="constructorLinkHotelShortcodesAutocomplete regular-text code"
                            placeholder="<?php _ex('tp_admin_page_settings_сonstructor_link_field_city_label',
                                '(City)', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </td>

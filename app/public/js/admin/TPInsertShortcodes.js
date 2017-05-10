@@ -1250,7 +1250,7 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
-        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
+        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete", "#constructorWidgetModal");
         doc.find('#origin_widget, #hotel_id_widget, #destination_widget, #tp_subid_widget').focus(function() {
             $(this).removeClass('constructorShortcodesError');
 
@@ -1998,7 +1998,7 @@ jQuery(function($) {
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
-        tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
+        tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorLinkHotelShortcodesAutocomplete", "#constructorLinkModal");
         //doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         //doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
         doc.find('#origin_link, #destination_link, #city_link, #tp_subid_link').focus(function() {
