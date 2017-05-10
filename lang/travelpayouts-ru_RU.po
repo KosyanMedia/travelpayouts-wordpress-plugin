@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -686,7 +686,7 @@ msgstr "Лимит"
 #: app/includes/TPPluginWidget.php:334
 msgctxt "(Paginate)"
 msgid "tp_plugin_widget_form_field_paginate_label"
-msgstr "Пейджинация"
+msgstr "Пагинация"
 
 #: app/includes/TPPluginWidget.php:343
 msgctxt "(One Way)"
@@ -2158,7 +2158,7 @@ msgstr "Количество строк на странице"
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:900
 msgctxt "(Paginate)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label"
-msgstr "Пейджинация"
+msgstr "Пагинация"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:683
 msgctxt "(Limit)"
@@ -2318,7 +2318,7 @@ msgstr "Количество строк на странице"
 #: app/includes/models/admin/menu/TPFieldHotels.php:420
 msgctxt "(Paginate)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
-msgstr "Пейджинация"
+msgstr "Пагинация"
 
 #: app/includes/models/admin/menu/TPFieldHotels.php:436
 msgctxt "(Button Title)"
@@ -3386,7 +3386,7 @@ msgstr "Количество результатов"
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:184
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
-msgstr "Пейджинация"
+msgstr "Пагинация"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:191
 msgctxt "(No title)"
@@ -3685,7 +3685,7 @@ msgstr "Первый"
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:285
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
-msgstr "Пейджинация"
+msgstr "Пагинация"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:292
 msgctxt "(One Way)"
