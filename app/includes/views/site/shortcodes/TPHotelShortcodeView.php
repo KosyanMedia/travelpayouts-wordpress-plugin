@@ -337,8 +337,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     if (!empty($price_pn)){
                         $old_price_and_discount =   '<span class="TP-old-price">'
                                                         .'<strike class="TPHotelPriceStrike">'
-                                                            .number_format($price_pn, 0, '.', ' ')
-                                                            .$this->currencyView($currency)
+                                                            .$this->renderPrice(number_format($price_pn, 0, '.', ' '),
+		                                                            $currency)
                                                         .'</strike>'
                                                     .'</span>'
                                                     .'<span class="TP-old-price-discount">'.$discount.'</span>';
@@ -349,14 +349,14 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 if (!empty($old_price_pn)){
                     $old_price_and_new_price = '<span class="TP-old-price-and">'
                                                     .'<strike  class="TPHotelPriceStrike">'
-                                                        .number_format($old_price_pn, 0, '.', ' ')
-                                                        .$this->currencyView($currency)
+	                                                    .$this->renderPrice(number_format($old_price_pn, 0, '.', ' '),
+			                                                        $currency)
                                                     .'</strike>'
                                                 .'</span>';
                 }
                 if (!empty($price_pn)){
                     $old_price_and_new_price .= '<span class="TP-old-price-and-new-price">'
-                                                    .number_format($price_pn, 0, '.', ' ').$this->currencyView($currency)
+                                                .$this->renderPrice(number_format($price_pn, 0, '.', ' '), $currency)
                                                 .'</span>';
                 }
 
@@ -455,7 +455,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent" data-price="'.$price_pn.'"> '
                                 //.$row['address']
-                                .$this->getTextTdTable($hotelURL, number_format($price_pn, 0, '.', ' ').$this->currencyView($currency),
+                                .$this->getTextTdTable($hotelURL, $this->renderPrice(number_format($price_pn, 0, '.', ' '), $currency),
                                     $shortcode, 0, $price_pn, $currency)
                                 .'</p>'
                                 .'</td>';
@@ -465,7 +465,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                             $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent" data-price="'.$old_price_pn.'">'
-                                .$this->getTextTdTable($hotelURL, number_format($old_price_pn, 0, '.', ' ').$this->currencyView($currency),
+                                .$this->getTextTdTable($hotelURL,$this->renderPrice(number_format($old_price_pn, 0, '.', ' '), $currency),
                                     $shortcode, 0, $price_pn, $currency)
                                 .'</p>'
                                 .'</td>';
@@ -552,30 +552,31 @@ class TPHotelShortcodeView //extends TPShortcodeView
         return $distance;
     }
 
-    /**
-     * @return string
-     */
-    public function currencyView($currency){
-        $currencySymbol = '';
-        switch (TPPlugin::$options['local']['currency_symbol_display']){
-            case 0:
-                $currency = mb_strtolower($currency);
-                $currencySymbol = '<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
-                break;
-            case 1:
-                $currency = mb_strtolower($currency);
-                $currencySymbol = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
-                break;
-            case 2:
-                $currencySymbol = '';
-                break;
-            case 3:
-                $currencySymbol = '<span class="tp-currency">'.$currency.'</span>';
-                break;
-        }
 
-        return $currencySymbol;
-    }
+
+	public function renderPrice($price, $currency){
+		$currencyView = '';
+		switch (TPPlugin::$options['local']['currency_symbol_display']){
+			case 0:
+				$currency = mb_strtolower($currency);
+				$currencyView = $price.'<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
+				                .$currency.'"></i></i>';
+				break;
+			case 1:
+				$currency = mb_strtolower($currency);
+				$currencyView = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'
+				                .$currency.'"></i></i>'.$price;
+				break;
+			case 2:
+				$currencyView = $price;
+				break;
+			case 3:
+				$currencyView = $price.'<span class="tp-currency">'.$currency.'</span>';
+				break;
+		}
+
+		return $currencyView;
+	}
 
     /**
      * @param $url
@@ -637,9 +638,10 @@ class TPHotelShortcodeView //extends TPShortcodeView
             if(strpos($button_text, 'price') !== false){
                 if (!is_string($price)) {
                     $price = number_format($price, 0, '.', ' ');
+	                $price = $this->renderPrice($price, $currency);
                 }
                 $button_text = str_replace('{price}', $price, $button_text);
-                $button_text .= $this->currencyView($currency);
+
             }
         }
         return $button_text;

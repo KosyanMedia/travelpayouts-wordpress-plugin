@@ -20,9 +20,7 @@ class TPShortcodeView {
         add_action('wp', array(&$this, 'redirect_plugins'));
     }
 
-    public function renderPrice($price, $currency){
-        return '<span class="TPPriceSpan">'.number_format($price, 0, '.', ' ').$this->currencyView($currency).'</span>';
-    }
+
     /**
      * @param array $args
      * @return bool|string
@@ -476,7 +474,11 @@ class TPShortcodeView {
                             '.$this->getTextTdTable(
                                 $urlLink,
                                 $number_of_changes,
-                                $type, $count, $price, 0, $currency).'
+                                $type,
+                                $count,
+                                $price,
+                                0,
+                                $currency).'
                             </p>
                             </td>';
                         break;
@@ -486,9 +488,14 @@ class TPShortcodeView {
                             class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
                                 <p data-price="'.$price.'" class="TP-tdContent">
                                 '.$this->getTextTdTable(
-                                $urlLink,
-                                number_format($price, 0, '.', ' '),
-                                $type, $count, $price, 0, $currency).$this->currencyView($currency).'
+                                    $urlLink,
+                                    $this->renderPrice(number_format($price, 0, '.', ' '), $currency),
+                                    $type,
+                                    $count,
+                                    $price,
+                                    0,
+                                    $currency
+                                ).'
                                 </p>
                             </td>';
                         break;
@@ -658,10 +665,13 @@ class TPShortcodeView {
                             <p data-price="'.$row["value"]/$row['distance'].'" class="TP-tdContent">
                             '.$this->getTextTdTable(
                                 $urlLink,
-                                number_format($row["value"]/$row['distance'], 0, '.', ' ').$this->currencyView($currency),
+                                $this->renderPrice(number_format($row["value"]/$row['distance'], 0, '.', ' '), $currency),
                                 $type,
                                 $count,
-                                $price, 0, $currency).'
+                                $price,
+                                0,
+                                $currency
+                            ).'
                             </p>
                             </td>';
                         break;
@@ -800,13 +810,46 @@ class TPShortcodeView {
             if(strpos($button_text, 'price') !== false){
                 if (!is_string($price)) {
                     $price = number_format($price, 0, '.', ' ');
+                    $price = $this->renderPrice($price, $currency);
                 }
                 $button_text = str_replace('price', $price, $button_text);
-                $button_text .= $this->currencyView($currency);
+
             }
         }
         return $button_text;
     }
+
+
+    /**
+     * @param $price
+     * @param $currency
+     *
+     * @return string
+     */
+    public function renderPrice($price, $currency){
+        $currencyView = '';
+        switch (TPPlugin::$options['local']['currency_symbol_display']){
+            case 0:
+                $currency = mb_strtolower($currency);
+                $currencyView = $price.'<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
+                                .$currency.'"></i></i>';
+                break;
+            case 1:
+                $currency = mb_strtolower($currency);
+                $currencyView = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'
+                                .$currency.'"></i></i>'.$price;
+                break;
+            case 2:
+                $currencyView = $price;
+                break;
+            case 3:
+                $currencyView = $price.'<span class="tp-currency">'.$currency.'</span>';
+                break;
+        }
+
+        return $currencyView;
+    }
+
     /**
      * @param $url
      * @param $text
@@ -845,29 +888,15 @@ class TPShortcodeView {
                     break;
             }
         }else{
-            //error_log("button");
-            //pop-up button
-            /*$buttonOnOff = in_array('button', \app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected']);
-            if(!$buttonOnOff){
 
-                if($count == count(\app\includes\TPPlugin::$options['shortcodes'][$typeShortcode]['selected'])){
-                    //pop-up button
-                    $textTd = $text.' <a href="'.$url.'" class="TPPopUpButtonTable">'.$button_text.'</a>';
-                    //error_log($textTd);
-                }else{
-                    $textTd = $text;
-                }
-
-            }else{       */
             switch($type){
-                //text When hyperlinks are disabled
+
                 case 0:
                     $textTd = $text;
                     break;
                 //button
                 case 1:
-                    //error_log($this->getButtonText($typeShortcode, $price));
-                    //error_log($price);
+
                     $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable " '.$target_url.' '.$rel.'>'
                         .$this->getButtonText($typeShortcode, $price, $currency).'</a>';
                     break;
@@ -896,30 +925,7 @@ class TPShortcodeView {
         return $distance;
     }
 
-    /**
-     * @return string
-     */
-    public function currencyView($currency){
-        $currencySymbol = '';
-        switch (TPPlugin::$options['local']['currency_symbol_display']){
-            case 0:
-                $currency = mb_strtolower($currency);
-                $currencySymbol = '<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
-                break;
-            case 1:
-                $currency = mb_strtolower($currency);
-                $currencySymbol = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'.$currency.'"></i></i>';
-                break;
-            case 2:
-                $currencySymbol = '';
-                break;
-            case 3:
-                $currencySymbol = '<span class="tp-currency">'.$currency.'</span>';
-                break;
-        }
 
-        return $currencySymbol;
-    }
 
     /**
      * return Trip Class
