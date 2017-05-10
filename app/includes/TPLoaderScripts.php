@@ -636,13 +636,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
             }
         } else {
-            wp_register_style(
-                TPOPlUGIN_SLUG . '-TPFontAwesome',
-                'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
-                array(),
-                TPOPlUGIN_VERSION // $ver
-            );
-            wp_enqueue_style(TPOPlUGIN_SLUG. '-TPFontAwesome');
+
             switch (\app\includes\TPPlugin::$options['themes_table']['name']){
                 //1
                 case 'default-theme':
