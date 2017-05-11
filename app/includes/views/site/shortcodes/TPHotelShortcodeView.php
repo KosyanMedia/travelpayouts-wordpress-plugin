@@ -573,6 +573,9 @@ class TPHotelShortcodeView //extends TPShortcodeView
 			case 3:
 				$currencyView = $price.'<span class="tp-currency">'.$currency.'</span>';
 				break;
+			case 4:
+				$currencyView = '<span class="tp-currency">'.$currency.'</span>'.$price;
+				break;
 		}
 
 		return $currencyView;

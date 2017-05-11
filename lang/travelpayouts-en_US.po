@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-04 17:39+0300\n"
+"POT-Creation-Date: 2017-05-11 23:29+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -2072,31 +2072,31 @@ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label
 msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
-#: app/includes/models/admin/menu/TPFieldHotels.php:241
+#: app/includes/models/admin/menu/TPFieldHotels.php:243
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
-#: app/includes/models/admin/menu/TPFieldHotels.php:246
+#: app/includes/models/admin/menu/TPFieldHotels.php:248
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
-#: app/includes/models/admin/menu/TPFieldHotels.php:251
+#: app/includes/models/admin/menu/TPFieldHotels.php:253
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
-#: app/includes/models/admin/menu/TPFieldHotels.php:256
+#: app/includes/models/admin/menu/TPFieldHotels.php:258
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
-#: app/includes/models/admin/menu/TPFieldHotels.php:261
+#: app/includes/models/admin/menu/TPFieldHotels.php:263
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2250,84 +2250,90 @@ msgctxt "(Choose form)"
 msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form"
 msgstr "Choose form"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:142
+#: app/includes/models/admin/menu/TPFieldHotels.php:144
 msgctxt "(Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label"
 msgstr "Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:172
+#: app/includes/models/admin/menu/TPFieldHotels.php:174
 msgctxt "(Use {location} variable for city autoset)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1"
 msgstr "Use {location} variable for city autoset"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:181
+#: app/includes/models/admin/menu/TPFieldHotels.php:183
 msgctxt ""
 "(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
 msgstr ""
 "Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:192
+#: app/includes/models/admin/menu/TPFieldHotels.php:194
 msgctxt "(Use {location} variable for city autoset, {stars} - number of stars)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3"
 msgstr "Use {location} variable for city autoset, {stars} - number of stars"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:203
+#: app/includes/models/admin/menu/TPFieldHotels.php:205
 msgctxt "(Use {location} variable for city autoset, {number} - number of days)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4"
 msgstr "Use {location} variable for city autoset, {number} - number of days"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:214
+#: app/includes/models/admin/menu/TPFieldHotels.php:216
 msgctxt "(Use {location} variable for city autoset)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5"
 msgstr "Use {location} variable for city autoset"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:234
+#: app/includes/models/admin/menu/TPFieldHotels.php:236
 msgctxt "(Title tag)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label"
 msgstr "Title tag"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:313
+#: app/includes/models/admin/menu/TPFieldHotels.php:315
 msgctxt "(Table Columns)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label"
 msgstr "Table Columns"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:319
+#: app/includes/models/admin/menu/TPFieldHotels.php:321
 msgctxt "(Not selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select"
 msgstr "Not selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:329
+#: app/includes/models/admin/menu/TPFieldHotels.php:331
 msgctxt "(Selected)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select"
 msgstr "Selected"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:377
+#: app/includes/models/admin/menu/TPFieldHotels.php:379
 msgctxt "(Extra marker)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label"
 msgstr "SubId"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:398
+#: app/includes/models/admin/menu/TPFieldHotels.php:400
 msgctxt "(Rows per page)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label"
 msgstr "Rows per page"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:420
+#: app/includes/models/admin/menu/TPFieldHotels.php:422
 msgctxt "(Paginate)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:436
+#: app/includes/models/admin/menu/TPFieldHotels.php:442
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:201
+msgctxt "tp admin page settings сonstructor hotels tables field hotels_link_without_dates label"
+msgid "Land without dates"
+msgstr "Land without dates"
+
+#: app/includes/models/admin/menu/TPFieldHotels.php:457
 msgctxt "(Button Title)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label"
 msgstr "Button Title"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:462
+#: app/includes/models/admin/menu/TPFieldHotels.php:483
 msgctxt "(\"price\" variable can be used)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help"
 msgstr "\"price\" variable can be used"
 
-#: app/includes/models/admin/menu/TPFieldHotels.php:477
+#: app/includes/models/admin/menu/TPFieldHotels.php:498
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Sort by column"
@@ -2672,90 +2678,95 @@ msgstr "Hide"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:629
 msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
-msgid "Show currency code"
-msgstr "Show currency code"
+msgid "Сurrency code (after the price)"
+msgstr "Сurrency code (after the price)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:646
+#: app/includes/models/admin/menu/TPFieldSettings.php:636
+msgctxt "Admin page settings tab localization field currency_symbol_display option 4 label"
+msgid "Currency code (before the price)"
+msgstr "Currency code (before the price)"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:653
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
 msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
 msgstr "Fields (you can edit values on your own, e.g. for your own language)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:654
+#: app/includes/models/admin/menu/TPFieldSettings.php:661
 msgctxt "(Flight Tickets)"
 msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_flight"
 msgstr "Flight Tickets"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:663
+#: app/includes/models/admin/menu/TPFieldSettings.php:670
 msgctxt "(Hotels)"
 msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
 msgstr "Hotels"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:751
+#: app/includes/models/admin/menu/TPFieldSettings.php:758
 msgctxt "(Host(Hotels))"
 msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
 msgstr "Host(Hotels)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:788
+#: app/includes/models/admin/menu/TPFieldSettings.php:795
 msgctxt "(Host(Flights))"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Host(Flights)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:814
+#: app/includes/models/admin/menu/TPFieldSettings.php:821
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Origin"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:822
+#: app/includes/models/admin/menu/TPFieldSettings.php:829
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Genitive"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:826
+#: app/includes/models/admin/menu/TPFieldSettings.php:833
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Dative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:830
+#: app/includes/models/admin/menu/TPFieldSettings.php:837
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Accusative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:834
+#: app/includes/models/admin/menu/TPFieldSettings.php:841
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Ablative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:838
+#: app/includes/models/admin/menu/TPFieldSettings.php:845
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Prepositional"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:844
+#: app/includes/models/admin/menu/TPFieldSettings.php:851
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Destination"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:851
+#: app/includes/models/admin/menu/TPFieldSettings.php:858
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Genitive"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:855
+#: app/includes/models/admin/menu/TPFieldSettings.php:862
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Dative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:859
+#: app/includes/models/admin/menu/TPFieldSettings.php:866
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Accusative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:863
+#: app/includes/models/admin/menu/TPFieldSettings.php:870
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Ablative"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:867
+#: app/includes/models/admin/menu/TPFieldSettings.php:874
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Prepositional"
@@ -3240,160 +3251,155 @@ msgctxt "(Constructor hotels)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
 msgstr "Constructor hotels"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:13
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:16
 msgctxt "(Select the table)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0"
 msgstr "Select the table"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:17
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:20
 msgctxt "(Hotels collection - Discounts)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1"
 msgstr "Hotels collection - Discounts"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:21
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:24
 msgctxt "(Hotels collections for dates)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2"
 msgstr "Hotels collections for dates"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:25
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:28
 msgctxt "(City hotels with price from to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3"
 msgstr "City hotels with price from to"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:29
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:32
 msgctxt "(City hotels by stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4"
 msgstr "City hotels by stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:36
 msgctxt "(Stay price in city for X days)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
 msgstr "Stay price in city for X days"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:37
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:40
 msgctxt "(Stay price in city for weekend)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6"
 msgstr "Stay price in city for weekend"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:47
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:50
 msgctxt "(Alternate title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
 msgstr "Alternate title"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:56
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:59
 msgctxt "(City)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
 msgstr "City"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:64
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:67
 msgctxt "(Subid)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_subid_label"
 msgstr "Subid"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:72
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:75
 msgctxt "(Hotel type)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
 msgstr "Hotel type"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:88
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:91
 msgctxt "(Selection type)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label"
 msgstr "Selection type"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:98
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:101
 msgctxt "(Check-in date)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label"
 msgstr "Check-in date"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:105
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:108
 msgctxt "(Check-out date)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label"
 msgstr "Check-out date"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:113
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:116
 msgctxt "(Stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
 msgstr "Stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:117
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:120
 msgctxt "(No stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
 msgstr "No stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:121
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:124
 msgctxt "(1 star)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
 msgstr "1 star"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:125
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:128
 msgctxt "(2 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
 msgstr "2 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:129
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:132
 msgctxt "(3 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
 msgstr "3 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:133
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:136
 msgctxt "(4 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
 msgstr "4 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:137
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:140
 msgctxt "(5 stars)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
 msgstr "5 stars"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:141
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:144
 msgctxt "(All)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
 msgstr "All"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:150
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:153
 msgctxt "(User rating from)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
 msgstr "User rating from "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:153
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:156
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
 msgstr "to"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:161
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:164
 msgctxt "(Distance to center from )"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
 msgstr "Distance to center from "
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:164
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:167
 msgctxt "(to)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
 msgstr "to"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:167
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:170
 msgctxt "(km)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
 msgstr "km"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:174
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:177
 msgctxt "(Number of results)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
 msgstr "Number of results"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:184
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:187
 msgctxt "(Paginate)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
 msgstr "Paginate"
 
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:191
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:194
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "No title"
-
-#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:198
-msgctxt "tp admin page settings сonstructor hotels tables field hotels_link_without_dates label"
-msgid "Land without dates"
-msgstr "Land without dates"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"
@@ -5324,6 +5330,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
+#~ msgid "Show currency code"
+#~ msgstr "Show currency code"
 
 #~ msgctxt "(Book now)"
 #~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"

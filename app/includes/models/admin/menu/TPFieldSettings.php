@@ -626,8 +626,15 @@ class TPFieldSettings {
                     </option>
                     <option value="3">
                         <?php
-                        _ex('Show currency code',
+                        _ex('Сurrency code (after the price)',
                             'Admin page settings tab localization field currency_symbol_display option 3 label',
+                            TPOPlUGIN_TEXTDOMAIN);
+                        ?>
+                    </option>
+                    <option value="4">
+                        <?php
+                        _ex('Currency code (before the price)',
+                            'Admin page settings tab localization field currency_symbol_display option 4 label',
                             TPOPlUGIN_TEXTDOMAIN);
                         ?>
                     </option>
