@@ -202,5 +202,13 @@
                     'tp admin page settings сonstructor hotels tables field hotels_link_without_dates label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
+        <tr id="tr_hotels_help_text">
+            <td>
+                <i>
+                    <?php _ex('If we don\'t have prices in our cache for these dates – no table will be shown',
+                        'tp admin page settings сonstructor hotels tables', TPOPlUGIN_TEXTDOMAIN); ?>
+                </i>
+            </td>
+        </tr>
     </table>
 </div>

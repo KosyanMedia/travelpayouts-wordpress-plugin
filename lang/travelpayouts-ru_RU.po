@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-11 23:28+0300\n"
+"POT-Creation-Date: 2017-05-12 18:00+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -3403,6 +3403,11 @@ msgstr "Пагинация"
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "Убрать заголовок"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:208
+msgctxt "tp admin page settings сonstructor hotels tables"
+msgid "If we don't have prices in our cache for these dates – no table will be shown"
+msgstr "Если цен в кеше на данные даты в городе нет – таблица не отобразится"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"

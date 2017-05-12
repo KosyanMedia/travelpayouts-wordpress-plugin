@@ -139,7 +139,8 @@
 #tr_hotels_subid,
 #tr_hotels_check_in,
 #tr_hotels_check_out,
-#tr_hotels_link_without_dates
+#tr_hotels_link_without_dates,
+#tr_hotels_help_text
 {
     display: none;
 }

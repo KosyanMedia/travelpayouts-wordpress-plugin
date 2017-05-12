@@ -877,6 +877,7 @@ jQuery(function($) {
                     doc.find('#tr_hotels_selections_type').show();
                     doc.find('#tr_hotels_subid').show();
                     doc.find('#tr_hotels_link_without_dates').show();
+                    doc.find('#tr_hotels_help_text').show();
                     //constructorHotelsShortcodesFieldsShow();
                     break;
                 case '2':
@@ -890,6 +891,7 @@ jQuery(function($) {
                     doc.find('#tr_hotels_check_in').show();
                     doc.find('#tr_hotels_check_out').show();
                     doc.find('#tr_hotels_link_without_dates').show();
+                    doc.find('#tr_hotels_help_text').show();
                     //doc.find('#tr_hotels_day').show();
                     //constructorHotelsShortcodesFieldsShow();
                     break;
@@ -939,6 +941,7 @@ jQuery(function($) {
         doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').removeClass('constructorShortcodesError');
         doc.find('#tr_hotels_link_without_dates').hide();
         doc.find('#hotels_link_without_dates').attr('checked', false);
+        doc.find('#tr_hotels_help_text').hide();
     }
 
 

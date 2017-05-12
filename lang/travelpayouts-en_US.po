@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-11 23:29+0300\n"
+"POT-Creation-Date: 2017-05-12 18:00+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -3400,6 +3400,11 @@ msgstr "Paginate"
 msgctxt "(No title)"
 msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
 msgstr "No title"
+
+#: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:208
+msgctxt "tp admin page settings сonstructor hotels tables"
+msgid "If we don't have prices in our cache for these dates – no table will be shown"
+msgstr "If we don’t have prices in our cache for these dates – no table will be shown"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
 msgctxt "(Constructor link)"
