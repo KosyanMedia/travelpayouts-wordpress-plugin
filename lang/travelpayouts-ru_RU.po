@@ -2682,12 +2682,12 @@ msgstr "Скрыть"
 #: app/includes/models/admin/menu/TPFieldSettings.php:629
 msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
 msgid "Сurrency code (after the price)"
-msgstr "Кодом (до цены)"
+msgstr "Кодом (после цены)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:636
 msgctxt "Admin page settings tab localization field currency_symbol_display option 4 label"
 msgid "Currency code (before the price)"
-msgstr "Кодом (после цены)"
+msgstr "Кодом (до цены)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:653
 msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
