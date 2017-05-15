@@ -15,7 +15,7 @@ class TPStatisticModel extends TPDashboardModel{
 	    if (!isset(\app\includes\TPPlugin::$options['config']['statistics'])
 	        && self::$TPRequestApi->isStatus() == true){
 		    $page = isset($_GET['page']) ? $_GET['page'] : null ;
-		    error_log('TPStatisticModel $page = '.$page);
+
 		    if ( $page == 'tp_control_stats'){
 			    add_action( 'admin_init', array( &$this, 'setData' ) );
 		    }
@@ -27,8 +27,6 @@ class TPStatisticModel extends TPDashboardModel{
         add_action('wp_ajax_nopriv_tp_save_stats_total',array( &$this, 'tpSaveStatsTotal'));
     }
     public function setData(){
-	    error_log('TPStatisticModel setData');
-	    error_log('+++++++++++++++++++++++++++');
         $this->balance = $this->tpGetBalance();
         $this->detailed_sales = $this->tpGetDetailedSales();
         $this->payments = $this->tpGetPayments();

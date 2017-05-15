@@ -457,7 +457,7 @@ class TPHostURL
             if (! $host || empty( $host )){
                 $host = self::getDefaultHostTable();
             }else{
-                $host = 'http://'.$host;
+                $host = 'https://'.$host;
             }
         }
         return $host;
@@ -466,9 +466,9 @@ class TPHostURL
     public static function getDefaultHostTable(){
         $host = "";
         $hostData = array(
-            TPLang::getLangRU() => 'http://engine.aviasales.ru',
-            TPLang::getLangEN() => 'http://jetradar.com',
-            TPLang::getLangTH() => 'http://jetradar.co.th',
+            TPLang::getLangRU() => 'https://engine.aviasales.ru',
+            TPLang::getLangEN() => 'https://jetradar.com',
+            TPLang::getLangTH() => 'https://jetradar.co.th',
         );
         if (!array_key_exists(TPLang::getLang(), $hostData)){
             $host = $hostData[TPLang::getDefaultLang()];
@@ -567,12 +567,12 @@ class TPHostURL
         $hostData = array(
             //searches_ticket
             1 => array(
-                \app\includes\common\TPLang::getLangRU() => "http://hydra.aviasales.ru",
-                \app\includes\common\TPLang::getLangEN() => "http://jetradar.com",
+                \app\includes\common\TPLang::getLangRU() => "https://hydra.aviasales.ru",
+                \app\includes\common\TPLang::getLangEN() => "https://jetradar.com",
             ),
             //searches_hotel
             2 => array(
-                \app\includes\common\TPLang::getLangEN() => "http://search.hotellook.com/",
+                \app\includes\common\TPLang::getLangEN() => "https://search.hotellook.com/",
             ),
         );
         if (!array_key_exists($typeLink, $hostData)) return $host;

@@ -21,7 +21,6 @@ class TPDashboardModel extends TPStatModel {
         if (!isset(\app\includes\TPPlugin::$options['config']['statistics'])
             && self::$TPRequestApi->isStatus() == true){
 	        $page = isset($_GET['page']) ? $_GET['page'] : null ;
-	        error_log('TPDashboardModel $page = '.$page);
         	if ($page == 'travelpayouts'){
 		        add_action( 'admin_init', array( &$this, 'setData' ) );
 	        }
@@ -36,8 +35,6 @@ class TPDashboardModel extends TPStatModel {
      *
      */
     public function setData(){
-	    error_log('TPDashboardModel setData');
-	    error_log('+++++++++++++++++++++++++++');
         $this->balance = $this->tpGetBalance();
         $this->detailed_sales = $this->tpGetDetailedSales();
         $this->rss = $this->tpGetXmlRss();
