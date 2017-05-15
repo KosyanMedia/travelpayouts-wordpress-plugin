@@ -12,14 +12,23 @@ class TPStatisticModel extends TPDashboardModel{
     public $payments;
     public function __construct(){
         parent::__construct();
-        if (!isset(\app\includes\TPPlugin::$options['config']['statistics']))
-            add_action( 'admin_init', array( &$this, 'setData' ) );
+	    if (!isset(\app\includes\TPPlugin::$options['config']['statistics'])
+	        && self::$TPRequestApi->isStatus() == true){
+		    $page = isset($_GET['page']) ? $_GET['page'] : null ;
+		    error_log('TPStatisticModel $page = '.$page);
+		    if ( $page == 'tp_control_stats'){
+			    add_action( 'admin_init', array( &$this, 'setData' ) );
+		    }
+
+	    }
         add_action('wp_ajax_tp_get_detailed_sales',      array( &$this, 'tpGetDetailedSalesAjax'));
         add_action('wp_ajax_nopriv_tp_get_detailed_sales', array( &$this, 'tpGetDetailedSalesAjax'));
         add_action('wp_ajax_tp_save_stats_total',      array( &$this, 'tpSaveStatsTotal'));
         add_action('wp_ajax_nopriv_tp_save_stats_total',array( &$this, 'tpSaveStatsTotal'));
     }
     public function setData(){
+	    error_log('TPStatisticModel setData');
+	    error_log('+++++++++++++++++++++++++++');
         $this->balance = $this->tpGetBalance();
         $this->detailed_sales = $this->tpGetDetailedSales();
         $this->payments = $this->tpGetPayments();
@@ -32,7 +41,7 @@ class TPStatisticModel extends TPDashboardModel{
             if( !$TPDetailedSales)
                 return false;
             $TPDetailedSales = array_reverse($TPDetailedSales["sales"]);
-            set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 10);
+            set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 15);
         }
         return $TPDetailedSales;
     }

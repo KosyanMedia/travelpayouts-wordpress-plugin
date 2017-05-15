@@ -13,10 +13,21 @@ class TPDashboardModel extends TPStatModel {
     public $detailed_sales;
     public $rss;
     public $rssEn;
+    protected $status;
     public function __construct(){
         parent::__construct();
-        if (!isset(\app\includes\TPPlugin::$options['config']['statistics']))
-            add_action( 'admin_init', array( &$this, 'setData' ) );
+
+
+        if (!isset(\app\includes\TPPlugin::$options['config']['statistics'])
+            && self::$TPRequestApi->isStatus() == true){
+	        $page = isset($_GET['page']) ? $_GET['page'] : null ;
+	        error_log('TPDashboardModel $page = '.$page);
+        	if ($page == 'travelpayouts'){
+		        add_action( 'admin_init', array( &$this, 'setData' ) );
+	        }
+
+        }
+
 
 
     }
@@ -25,6 +36,8 @@ class TPDashboardModel extends TPStatModel {
      *
      */
     public function setData(){
+	    error_log('TPDashboardModel setData');
+	    error_log('+++++++++++++++++++++++++++');
         $this->balance = $this->tpGetBalance();
         $this->detailed_sales = $this->tpGetDetailedSales();
         $this->rss = $this->tpGetXmlRss();
@@ -52,7 +65,7 @@ class TPDashboardModel extends TPStatModel {
             if( ! $return )
                 $return = array();
             $TPBalance['data'] = $return;
-            set_transient( $cacheKey, $TPBalance, MINUTE_IN_SECONDS * 10);
+            set_transient( $cacheKey, $TPBalance, MINUTE_IN_SECONDS * 15);
         } else {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log($method." cache");
@@ -89,7 +102,7 @@ class TPDashboardModel extends TPStatModel {
             if( ! $TPDetailedSales['last_month'] )
                 $TPDetailedSales['last_month'] = array();
             $TPDetailedSales['time'] = current_time('timestamp',0);
-            set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 10);
+            set_transient( $cacheKey, $TPDetailedSales, MINUTE_IN_SECONDS * 15);
         }else {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log($method." cache");
@@ -120,7 +133,7 @@ class TPDashboardModel extends TPStatModel {
                     set_transient($cacheKey, $TPRss, HOUR_IN_SECONDS * 12);
                 } else {
                     $TPRss['data'] = array();
-                    set_transient($cacheKey, $TPRss, MINUTE_IN_SECONDS * 10);
+                    set_transient($cacheKey, $TPRss, MINUTE_IN_SECONDS * 15);
                 }
             }   catch (Exception $e) {
 
@@ -157,7 +170,7 @@ class TPDashboardModel extends TPStatModel {
                     set_transient($cacheKey, $TPRssEn, HOUR_IN_SECONDS * 12);
                 } else {
                     $TPRssEn['data'] = array();
-                    set_transient($cacheKey, $TPRssEn, MINUTE_IN_SECONDS * 10);
+                    set_transient($cacheKey, $TPRssEn, MINUTE_IN_SECONDS * 15);
                 }
             }   catch (Exception $e) {
 
