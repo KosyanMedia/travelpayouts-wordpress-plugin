@@ -877,7 +877,7 @@ jQuery(function($) {
                     doc.find('#tr_hotels_selections_type').show();
                     doc.find('#tr_hotels_subid').show();
                     doc.find('#tr_hotels_link_without_dates').show();
-                    doc.find('#tr_hotels_help_text').show();
+                    //doc.find('#tr_hotels_help_text').show();
                     //constructorHotelsShortcodesFieldsShow();
                     break;
                 case '2':
