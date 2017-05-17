@@ -571,7 +571,7 @@ a.paginate_button.current:hover {
 
 /*# sourceMappingURL=main.css.map */
 @media(max-width:480px){
-  .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { text-align:left; }
+  .TP-Plugin-Tables_box tbody tr td, .TP-Plugin-Tables_box tbody tr td p { text-align:left !important; }
 }
 
 
