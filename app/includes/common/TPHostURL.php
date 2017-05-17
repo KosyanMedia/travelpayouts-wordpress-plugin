@@ -15,7 +15,7 @@ class TPHostURL
     const TP_HOST_URL_AIRLINE_LOGO = "https://pics.avs.io/";
     private static $hosts = array(
         'aviasales.ru' => array(
-            'table' => 'engine.aviasales.ru',
+            'table' => 'hydra.aviasales.ru',//'engine.aviasales.ru',
             'widget' => array(
                 1 => '',
                 2 => '',
@@ -466,7 +466,7 @@ class TPHostURL
     public static function getDefaultHostTable(){
         $host = "";
         $hostData = array(
-            TPLang::getLangRU() => 'https://engine.aviasales.ru',
+            TPLang::getLangRU() => 'https://hydra.aviasales.ru',//'https://engine.aviasales.ru',
             TPLang::getLangEN() => 'https://jetradar.com',
             TPLang::getLangTH() => 'https://jetradar.co.th',
         );
