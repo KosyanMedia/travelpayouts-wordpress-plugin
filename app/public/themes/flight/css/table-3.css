@@ -570,12 +570,12 @@ a.paginate_button:hover {
 
 
 /* add edits 2016/10/05 */
-.sorting_asc:after, .sorting_asc:before { display:none !important; content:'' !important; }
+/*.sorting_asc:after, .sorting_asc:before { display:none !important; content:'' !important; }
 .sorting_desc:after, .sorting_desc:before { display:none !important; content:''  !important; }
 .sorting_desc:after, .sorting_asc:after { content:'' !important; }
 
 .sorting_desc .TP-sort-chevron:before {content:"\f107" !important}
-.sorting_asc .TP-sort-chevron:before {content:"\f106" !important}
+.sorting_asc .TP-sort-chevron:before {content:"\f106" !important}*/
 .TP-sort-chevron { display:none; font-size:12px !important; transition:all 0.3s ease; cursor:pointer; position:relative; margin:0 0 0 9px; right:10px; top:14px; position:absolute; font-weight:400 !important; }
 .TP-sort-chevron:before { transition:all 0.3s ease; left:50%; top:0; position:absolute; transform:translateX(-50%); font-weight:400 !important; }
 .TP-sort-chevron:hover:before { font-size:14px !important; }
