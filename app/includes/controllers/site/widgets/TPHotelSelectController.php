@@ -40,29 +40,26 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         $width = (isset($responsive) )? "" : "&width={$width}px";
 
         $url = '';
-        switch($this->view->locale){
-            case 'ru':
-                $url = '//www.travelpayouts.com/blissey/scripts.js';
-                break;
-            case 'en':
-                $url = '//www.travelpayouts.com/blissey/scripts_en.js';
-                break;
-            default:
-                $url = '//www.travelpayouts.com/blissey/scripts.js';
-        }
-        $cat = $cat1.'%2C'.$cat2.'%2C'.$cat3;
-        error_log($cat);
 
+        $url =  \app\includes\common\TPHostURL::getHotelSelectWidgetUrlScript();
+        $cat = $cat1.'%2C'.$cat2.'%2C'.$cat3;
+        //error_log($cat);
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
+        //error_log("currency = ".$currency);
+        //error_log("currency = ".mb_strtolower($currency));
         $output = '
         <div class="TPWidget TPHotelSelectWidget">
-        <script async src="'.$url.'?categories='.$cat.'&id='
+        <script data-cfasync="false" async src="'.$url.'?categories='.$cat.'&id='
         .$id
         .'&type='.$type
-        .'&currency='.mb_strtolower($this->view->typeCurrency())
-        .$width.'&host='.$this->view->getWhiteLabel($widgets)
+        .'&currency='.mb_strtolower($currency)
+        .$width.'&host='.$white_label
         .'&marker='.$this->view->getMarker($widgets, $subid).'.&limit='
         .$limit
-        .'" charset="UTF-8"></script></div>';
+        .'" charset="UTF-8" data-wpfc-render="false"></script></div>';
         return $output;
     }
 }

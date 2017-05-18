@@ -1,86 +1,68 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: freeman
- * Date: 10.08.15
- * Time: 17:18
+ * User: romansolomashenko
+ * Date: 04.01.17
+ * Time: 2:14 PM
  */
-namespace app\includes;
-class TPRequestApi {
-    protected $status;
-    protected $marker;
-    protected $token;
-    protected $api_url;
-    protected $api_url_2;
-    protected $error_json;
-    public $currencys = array('RUB', 'USD', 'EUR');
-    public $calendar_types = array( 'departure_date', 'return_date' );
-    private static $instance = null;
-    private function __construct() {
-        if( empty( TPPlugin::$options ) ) {
-            $this->status = false;
-            /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
-                'class_notice' => 'error',
-                'title_notice' => __('Plugin '.TPOPlUGIN_NAME.' returned an error', TPOPlUGIN_TEXTDOMAIN),
-                'message_notice' => __('The settings are not tasks', TPOPlUGIN_TEXTDOMAIN),
-                'link_notice' => array(
-                    'url' => admin_url('admin.php?page=tp_control_settings'),
-                    'title' => __('Set the options', TPOPlUGIN_TEXTDOMAIN)
-                ),
-            ));*/
-            //new TPAdminNotice("error", "Настройки не заданы.");
-            //new TPAdminPointers("#toplevel_page_Travelpayouts", "settings");
-        }elseif( ! isset( TPPlugin::$options['account']['marker'] ) || empty( TPPlugin::$options['account']['marker'] )
-            || ! is_string( TPPlugin::$options['account']['marker'] ) ) {
-            $this->status = false;
-            //_e('Marker missing or incorrect', TPOPlUGIN_TEXTDOMAIN);
-            /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
-                'class_notice' => 'error',
-                'title_notice' => __('Plugin '.TPOPlUGIN_NAME.' returned an error', TPOPlUGIN_TEXTDOMAIN),
-                'message_notice' => __('Marker missing or incorrect', TPOPlUGIN_TEXTDOMAIN),
-                'link_notice' => array(
-                    'url' => admin_url('admin.php?page=tp_control_settings'),
-                    'title' => __('Set the options', TPOPlUGIN_TEXTDOMAIN)
-                ),
-            ));*/
-            //new TPAdminNotice("error", "Маркер не указан или указан не верно.");
-            //new TPAdminPointers("#toplevel_page_Travelpayouts", "marker");
-        }elseif( ! isset( TPPlugin::$options['account']['token'] ) || empty( TPPlugin::$options['account']['token'] )
-            || ! is_string( TPPlugin::$options['account']['token'] ) ){
-            $this->status = false;
-            //new TPAdminNotice("error", "Токен не указан или указан не верно.");
-            //new TPAdminPointers("#toplevel_page_Travelpayouts", "token");
-        }else{
-            $this->status = true;
-            $this->marker = TPPlugin::$options['account']['marker'];
-            $this->token = TPPlugin::$options['account']['token'];
-            $this->api_url = rtrim('http://api.travelpayouts.com/v1', '/' );
-            $this->api_url_2 = rtrim('http://api.travelpayouts.com/v2', '/' );
-            $this->error_json = TPPlugin::$options['config']['message_error'];
-        }
 
-    }
-    public function get_status(){
-        return $this->status;
-    }
-    public static function getInstance(){
+namespace app\includes\common;
+
+use \app\includes\TPPlugin;
+
+class TPRequestApiFlight extends TPRequestApi
+{
+
+    const TP_API_URL = 'http://api.travelpayouts.com/v1';
+    const TP_API_URL_2 = 'https://api.travelpayouts.com/v2';
+
+    private static $instance = null;
+
+    public static function getInstance()
+    {
+        // TODO: Implement getInstance() method.
         if (null === self::$instance) {
             self::$instance = new self();
         }
         return self::$instance;
     }
+
+    public static function getApiUrl(){
+        return self::TP_API_URL;
+    }
+
+    public static function getApiUrl2(){
+        return self::TP_API_URL_2;
+    }
+
     /**
      * Функция возвращает самые дешевые авиабилеты
      **/
     public function get_cheapest( $args = array() ) {
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB' );
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'departure_at' => false,
+            'return_at' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
             return false;
-        } elseif( ! $currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         }
@@ -88,24 +70,46 @@ class TPRequestApi {
         $destination = ( false !== $destination ) ? $destination : '-';
         $departure_at = ( false !== $departure_at ) ? '&depart_date=' . $departure_at : '';
         $return_at = ( false !== $return_at ) ? '&return_date=' . $return_at : '';
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $extra = $currency.$departure_at.$return_at.$token ;
-        $request_string = "$this->api_url/prices/cheap?origin=$origin&destination=$destination&currency=$extra";
-        //return $request_string;
+        $request_string = self::getApiUrl()."/prices/cheap?origin=$origin&destination=$destination&currency=$extra";
+        if ($return_url == true){
+            return $request_string;
+        }
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return $this->request($request_string);
     }
     /**
      * Функция возвращает билеты без пересадок
      **/
     public function get_direct( $args = array() ) {
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'destination' => false, 'departure_at' => false, 'return_at' => false,
-            'currency' => 'RUB' );
+
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'departure_at' => false,
+            'return_at' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
             return false;
-        } elseif( ! $currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         }
@@ -113,10 +117,20 @@ class TPRequestApi {
         $destination    = ( false !== $destination ) ? $destination : '-';
         $departure_at   = ( false !== $departure_at ) ? '&depart_date=' . $departure_at : '';
         $return_at      = ( false !== $return_at ) ? '&return_date=' . $return_at : '';
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $extra          = $currency.$departure_at.$return_at.$token ;
 
-        $request_string = "$this->api_url/prices/direct?origin=$origin&destination=$destination&currency=$extra";
+        $request_string = self::getApiUrl()."/prices/direct?origin=$origin&destination=$destination&currency=$extra";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
+        //error_log(print_r($request_string, true));
+        //error_log(print_r($this->request($request_string), true));
+
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -124,25 +138,58 @@ class TPRequestApi {
      * Функция возвращает популярные направления авиакомпании
      **/
     public function get_popular( $args = array() ) {
-        if(!isset($this->status)) return false;
-        $defaults = array( 'airline' => false, 'limit' => false);
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'airline' => false,
+            'limit' => false,
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $airline || empty( $airline ) ) {
             echo $this->get_error('airline');
             return false;
         }
-        $limit          = ( false !== $limit ) ? '&limit=' . $limit : '';
-        $token = '&token=' .$this->token;
+        $limit = ( false !== $limit ) ? '&limit=' . $limit : '';
+        $token = '&token=' .$this->getToken();
         //$request_string = "$this->api_url/airlines/$airline/directions.json$limit";
-        $request_string = "$this->api_url/airline-directions?airline_code=$airline$limit$token";
+        $request_string = self::getApiUrl()."/airline-directions?airline_code=$airline$limit$token";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request( $request_string ));
     }
     /**
      * Календарь цен на месяц по маршруту
      **/
     public function get_price_mounth_calendar($args = array()){
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB' );
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
@@ -150,7 +197,7 @@ class TPRequestApi {
         }elseif( ! $destination  || $destination  == '' ) {
             echo $this->get_error('destination');
             return false;
-        } elseif( ! $currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         }
@@ -159,23 +206,40 @@ class TPRequestApi {
         $current_month = date("m");
         $current_day = date("d",time());
         $number_days = date("t", strtotime($current_year . "-" . $current_month . "-01"));
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $currency = "currency={$currency}";
         $origin = "&origin={$origin}";
         $destination = "&destination={$destination}&show_to_affiliates=true";
         $extra = $currency.$origin.$destination;
-        $return_two = array();
+        $return_two = '';
         if($current_day > ceil($number_days / 2)){
             $type = 1;
             $month_next = date('Y-m-d', mktime(0, 0, 0, $current_month + $type, 1, date("Y")));
-            $request_string = "$this->api_url_2/prices/month-matrix?{$extra}&month={$month_next}{$token}";
-            $return_two = $this->objectToArray($this->request($request_string));
+            $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month_next}{$token}";
+            if ($return_url == true){
+                $return_two = '';
+                $return_two = $request_string;
+            } else {
+                $return_two = array();
+                $return_two = $this->objectToArray($this->request($request_string));
+            }
+
         }
-        $request_string = "$this->api_url_2/prices/month-matrix?{$extra}&month={$month}{$token}";
+        $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month}{$token}";
+
+
+
+        if ($return_url == true){
+            return $request_string.' | '.$return_two;
+        }
         $return = array();
         $return = $this->objectToArray($this->request($request_string));
         if(is_array($return_two) && is_array($return))
             $return = array_merge($return, $return_two);
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return $return;
     }
     /**
@@ -183,10 +247,23 @@ class TPRequestApi {
      **/
     public function get_price_week_calendar($args = array())
     {
-        if(!isset($this->status)) return false;
-        $defaults = array('origin' => false, 'destination' => false, 'currency' => 'RUB',
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'depart_date' => date('Y-m-d'),
-            'return_date' => date('Y-m-d'));
+            'return_date' => date('Y-m-d'),
+            'return_url' => false
+        );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if (!$origin || $origin == '') {
             echo $this->get_error('origin');
@@ -194,7 +271,7 @@ class TPRequestApi {
         } elseif (!$destination || $destination == '') {
             echo $this->get_error('destination');
             return false;
-        } elseif (!$currency || !in_array($currency, $this->currencys)) {
+        } elseif (! TPCurrencyUtils::isCurrency($currency)) {
             echo $this->get_error('currency');
             return false;
         }
@@ -206,12 +283,19 @@ class TPRequestApi {
         if(TPPlugin::$options['shortcodes']['2']['plus_return_date'] > 0){
             $return_date = "&return_date=".date('Y-m-d', DAY_IN_SECONDS * TPPlugin::$options['shortcodes']['2']['plus_return_date'] + time());
         }
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $currency = "currency={$currency}";
         $origin = "&origin={$origin}";
         $destination = "&destination={$destination}&show_to_affiliates=true";
         $extra = $currency.$origin.$destination.$depart_date.$return_date.$token;
-        $request_string = "$this->api_url_2/prices/week-matrix?{$extra}";
+        $request_string = self::getApiUrl2()."/prices/week-matrix?{$extra}";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -220,9 +304,19 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_cheap_flights_holidays($args = array()){
-        if(!isset($this->status)) return false;
-        $token = '&token=' .$this->token;
-        $request_string = "$this->api_url_2/prices/holidays-by-routes?{$token}";
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'return_url' => false
+        );
+
+        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        $token = '&token=' .$this->getToken();
+        $request_string = self::TP_API_URL_2."/prices/holidays-by-routes?{$token}";
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
 
@@ -231,8 +325,22 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_cheapest_tickets_each_month($args = array()){
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'destination' => false, 'currency' => 'RUB' );
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
+
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
@@ -240,36 +348,57 @@ class TPRequestApi {
         }elseif( ! $destination  || $destination  == '' ) {
             echo $this->get_error('destination');
             return false;
-        } elseif( ! $currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         }
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $currency = "currency={$currency}";
         $origin = "&origin={$origin}";
         $destination = "&destination={$destination}";
         $extra = $currency.$origin.$destination.$token;
-        $request_string = "$this->api_url/prices/monthly?{$extra}";
+        $request_string = self::getApiUrl()."/prices/monthly?{$extra}";
         $return = array();
+        if ($return_url == true){
+            return $request_string;
+        }
         $return = $this->objectToArray($this->request($request_string));
         /*if(array_key_exists(0, (array)$return)){
             return array(2);
         }*/
+
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
         return $return;
     }
     /**
      * Функция возвращает Самые дешевый билеты на каждый день месяца
      **/
     public function get_calendar( $args = array() ) {
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'destination' => false,
-            'calendar_type' => 'departure_date', 'currency' => 'RUB');
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'calendar_type' => 'departure_date',
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if( ! $origin || empty( $origin ) ) {
             echo $this->get_error('origin');
             return false;
-        } elseif( !$currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         } elseif( !$calendar_type || ! in_array( $calendar_type, $this->calendar_types ) ) {
@@ -286,9 +415,16 @@ class TPRequestApi {
         $destination = "&destination={$destination}";
         $currency       = 'currency=' . $currency;
         $calendar_type = '&calendar_type=departure_date';
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $extra = $currency.$origin.$destination.$calendar_type.$token;
-        $request_string = "$this->api_url/prices/calendar?{$extra}";
+        $request_string = self::getApiUrl()."/prices/calendar?{$extra}";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
 
         return $this->objectToArray($this->request($request_string));
     }
@@ -298,22 +434,41 @@ class TPRequestApi {
      * @param array $args
      */
     public function get_popular_routes_from_city( $args = array() ) {
-        if(!isset($this->status)) return false;
-        $defaults = array( 'origin' => false, 'currency' => 'RUB');
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'origin' => false,
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if( ! $origin || empty( $origin ) ) {
             echo $this->get_error('origin');
             return false;
-        } elseif( !$currency || ! in_array( $currency, $this->currencys ) ) {
+        } elseif( ! TPCurrencyUtils::isCurrency($currency) ) {
             echo $this->get_error('currency');
             return false;
         }
         $origin = "&origin={$origin}";
         $currency       = 'currency=' . $currency;
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $extra = $currency.$origin.$token;
-        $request_string = "$this->api_url/city-directions?{$extra}";
+        $request_string = self::getApiUrl()."/city-directions?{$extra}";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
 
     }
@@ -350,12 +505,31 @@ class TPRequestApi {
      *      Длительность пребывания в неделях или днях (для period_type=day). false.
      */
     public function get_latest($args = array()){
-        if(!isset($this->status)) return false;
-        $defaults = array( 'currency' => 'RUB', 'origin' => false, 'destination' => false, 'beginning_of_period' => false,
-            'period_type' => 'year', 'one_way' => false, 'page' => 1, 'limit' => 100, 'sorting' => 'price',
-            'trip_class' => 0, 'trip_duration' => false);
+        $name_method = "***************".__METHOD__."***************";
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method);
+        if(!$this->isStatus()){
+            return false;
+        }
+        $defaults = array(
+            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'origin' => false,
+            'destination' => false,
+            'beginning_of_period' => false,
+            'period_type' => 'year',
+            'one_way' => false,
+            'page' => 1,
+            'limit' => 100,
+            'sorting' => 'price',
+            'trip_class' => 0,
+            'trip_duration' => false,
+            'return_url' => false
+        );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $token = '&token=' .$this->token;
+        $token = '&token=' .$this->getToken();
         $currency  = "currency={$currency}";
         $origin = ( false !== $origin ) ? "&origin={$origin}" : "";
         $destination = ( false !== $destination ) ? "&destination={$destination}" : "";
@@ -368,113 +542,18 @@ class TPRequestApi {
         $trip_class  = ( false !== $trip_class ) ? "&trip_class={$trip_class}" : "&trip_class=0";
         $extra = $currency.$origin.$destination.$beginning_of_period.$period_type.$one_way.$page.$limit
             ."&show_to_affiliates=true".$sorting.$trip_class.$token;
-        $request_string = "$this->api_url_2/prices/latest?{$extra}";
+        $request_string = self::TP_API_URL_2."/prices/latest?{$extra}";
         //return $request_string;
         //error_log($request_string);
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." url = {$request_string}");
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($name_method);
+        if ($return_url == true){
+            return $request_string;
+        }
         return $this->objectToArray($this->request($request_string));
     }
-    /** **/
-    public function get_balance($args = array()){
-        if(!isset($this->status)) return false;
-        $request_string = "$this->api_url_2/statistics/balance";
-        return $this->objectToArray($this->request_two($request_string));
-    }
-    public function get_detailed_sales($args = array()){
-        if(!isset($this->status)) return false;
-        $defaults = array( 'date' => date("Y-m-d"));
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $request_string = "$this->api_url_2/statistics/detailed-sales?group_by=date_marker&month="
-            . $date . "&host_filter=null&marker_filter=null";
-        return $this->objectToArray($this->request_two($request_string));
-    }
-    public function get_payments(){
-        $request_string = "$this->api_url_2/statistics/payments";
-        return $this->objectToArray($this->request_two($request_string));
-    }
-    /**
-     * object to array
-     * @param $d
-     * @return array
-     */
-    public  function objectToArray($d) {
-        if (is_object($d)) {
-            // Gets the properties of the given object
-            // with get_object_vars function
-            $d = get_object_vars($d);
-        }
 
-        if (is_array($d)) {
-            /*
-            * Return array converted to object
-            * Using __FUNCTION__ (Magic constant)
-            * for recursive call
-            */
-            return array_map(array(&$this, __FUNCTION__), $d);
-        }
-        else {
-            // Return array
-            return $d;
-        }
-    }
-    /**
-     * Функция которой передаётся url и которая возвращает body ответа
-     **/
-    public function request( $string ){
-        $string = htmlspecialchars($string);
-        //error_log($string);
-        $response = wp_remote_get( $string, array('headers' => array(
-            'Accept-Encoding' => 'gzip, deflate',
-        )) );
-        if( is_wp_error( $response ) ){
-            $json = $response;
-        } else {
-            $json = json_decode( $response['body'] );
-        }
-        /*error_log(111);
-        return $json;*/
-        if( ! is_wp_error( $json ) && $json->success == true )
-            return $json->data;
-        if( is_wp_error( $json ) )
-            echo "<p>".$this->error_json."</p>";
-        return false;
-    }
-    /**
-     * Функция которой передаётся url и которая возвращает body ответа
-     **/
-    public function request_two( $string ){
-        $string = htmlspecialchars($string);
-        //error_log($string);
-        $response = wp_remote_get( $string, array('headers' => array(
-            'Accept-Encoding' => 'gzip, deflate',
-            'X-Access-Token' => $this->token
-        )) );
-        if( is_wp_error( $response ) ){
-            $json = $response;
-        } else {
-            $json = json_decode( $response['body'] );
-        }
-        if( ! is_wp_error( $json ) && $json->success == true )
-            return $json->data;
-        //if( is_wp_error( $json ) )
-        //echo "<p>".$this->error_json."</p>";
-        return false;
-    }
-    /**
-     * @param $error
-     * @return string|void
-     */
-    public function get_error( $error ) {
-        $errors = array(
-            'origin'        =>  __( 'The variable $origin parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'destination'   =>  __( 'The variable $destination parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'currency'      =>  __( 'The variable $currency parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'departure_at'  =>  __( 'The variable $departure_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'calendar_type' =>  __( 'The variable $calendar_type parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'return_at'     =>  __( 'The variable $return_at parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-            'airline'       =>  __( 'The variable $airline parameters not set or incorrectly.', TPOPlUGIN_TEXTDOMAIN ),
-        );
-        if( ! empty( $error ) && isset( $errors[$error] ) )
-            return $errors[$error];
-        return __( 'Unknown error.', TPOPlUGIN_TEXTDOMAIN );
-    }
+
 }

@@ -11,12 +11,15 @@ abstract class TPShortcodesController extends \core\controllers\TPOShortcodesCon
     {
         // TODO: Implement action() method.
         $data = $this->model->get_data($args);
+        if ($data['return_url'] == true){
+            return print_r($data['rows'], true);
+        }
         return $this->render($data);
     }
     public function render($data)
     {
         // TODO: Implement render() method.
-        if(!$data) return false;
+        //if(!$data) return false;
         return $this->view->renderTable($data);
     }
 

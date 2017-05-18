@@ -1,46 +1,34 @@
 jQuery(function($) {
     $(document).ready(function () {
-        var conteiner = '.TP-Plugin-Tables_wrapper';
-        var table = conteiner + ' .TP-Plugin-Tables_box';
+        var size_list = $(".TPReadMoreList  > div").size();
+        var x=1;
+        console.log(size_list)
+        /*$('.TPReadMoreList div:lt('+x+')').show();
+        $('.TPReadMoreButton').click(function () {
+            x= (x+5 <= size_li) ? x+5 : size_li;
+            $('.TPReadMoreList div:lt('+x+')').show();
+        });*/
 
-        function checkSize() {
-            var widthWrapper, widthBox, hidden, small;
-            $(table).each(function () {
-                $(this).removeClass('TP-autoWidth-plugin');
-                widthWrapper = $(conteiner).width();
-                widthBox = $(this).width();
-                if (widthBox > widthWrapper) {
-                    while (widthBox > widthWrapper) {
-                        if (!$(this).find('tr td.TP-unessential:not(.TP-hidden)').length)
-                            return false;
-                        $('td.TP-unessential:not(.TP-hidden):last', $(this).find('tr')).addClass('TP-hidden');
-                        widthWrapper = $(conteiner).width();
-                        widthBox = $(this).width();
-                    }
-                    $(this).addClass('TP-autoWidth-plugin');
-                } else {
-                    small = true;
-                    while (small) {
-                        small = false;
-                        if ($(this).find('tr td.TP-unessential.TP-hidden').length) {
-                            hidden = $('td.TP-unessential.TP-hidden:first', $(this).find('tr'));
-                            hidden.removeClass('TP-hidden');
-                            widthWrapper = $(conteiner).width();
-                            widthBox = $(this).width();
-                            if (widthBox > widthWrapper) {
-                                hidden.addClass('TP-hidden');
-                                $(this).addClass('TP-autoWidth-plugin');
-                            } else {
-                                small = true;
-                            }
-                        }
-                    }
-                }
-            });
-        }
+        $('.TPReadMoreList > div:lt('+x+')').show();
+        $('.TPReadMoreButton').click(function () {
+            console.log("click");
+            x= (x+1 <= size_list) ? x+1 : size_list;
+            console.log(x)
+            $('.TPReadMoreList > div:lt('+x+')').show();
+        });
+        if ( x == size_list)  $('.TPReadMoreButton').hide()
 
-        checkSize();
-        $(window).resize(checkSize);
+        $( ".TPTabs" ).tabs({
+            beforeActivate: function( event, ui ) {
+                console.log('beforeActivate');
+               /* setTimeout(function() {
+                    checkSize();
+                }, 2000)*/
+
+            }
+        });
+
+
         /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
             if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
                 $(this).children("td:last").hasClass('TP-hidden')){
@@ -70,6 +58,47 @@ jQuery(function($) {
 
 
     });
+    var conteiner = '.TP-Plugin-Tables_wrapper';
+    var table = ' .TP-Plugin-Tables_box';
+
+    function checkSize() {
+        console.log('checkSize');
+        var widthWrapper, widthBox, hidden, small;
+        $(table).each(function () {
+            $(this).removeClass('TP-autoWidth-plugin');
+            widthWrapper = $(this).parents(conteiner).width();
+            widthBox = $(this).width();
+            if (widthBox > widthWrapper) {
+                while (widthBox > widthWrapper) {
+                    if (!$(this).find('tr td.TP-unessential:not(.TP-hidden)').length)
+                        return false;
+                    $('td.TP-unessential:not(.TP-hidden):last', $(this).find('tr')).addClass('TP-hidden');
+                    widthWrapper = $(this).parents(conteiner).width();
+                    widthBox = $(this).width();
+                }
+                $(this).addClass('TP-autoWidth-plugin');
+            } else {
+                small = true;
+                while (small) {
+                    small = false;
+                    if ($(this).find('tr td.TP-unessential.TP-hidden').length) {
+                        hidden = $('td.TP-unessential.TP-hidden:first', $(this).find('tr'));
+                        hidden.removeClass('TP-hidden');
+                        widthWrapper = $(this).parents(conteiner).width();
+                        widthBox = $(this).width();
+                        if (widthBox > widthWrapper) {
+                            hidden.addClass('TP-hidden');
+                            $(this).addClass('TP-autoWidth-plugin');
+                        } else {
+                            small = true;
+                        }
+                    }
+                }
+            }
+        });
+    }
+    checkSize();
+    $(window).resize(checkSize);
 });
 
 
@@ -115,6 +144,9 @@ jQuery(function($) {
 
     /** **/
     jQuery.fn.getPaginateTP = function() {
+        //console.log($(this).data("paginate"));
+        //console.log($(this).rowCount());
+        //console.log( $(this).data("paginate_limit"));
         if($(this).data("paginate") == true){
             if($(this).rowCount() > $(this).data("paginate_limit") ){
                return true;
@@ -137,7 +169,17 @@ jQuery(function($) {
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
+    jQuery.fn.dataTableExt.oSort['tp-airline_logo-asc']  = function(a,b) {
 
+        var x = ($(a).data("tpairline"));
+        var y = ($(b).data("tpairline"));
+        return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+    };
+    jQuery.fn.dataTableExt.oSort['tp-airline_logo-desc'] = function(a,b) {
+        var x = ($(a).data("tpairline"));
+        var y = ($(b).data("tpairline"));
+        return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
+    };
     /** **/
     function tpTableCod(selector){
         var tpTable, tableSortColumn;
@@ -158,7 +200,8 @@ jQuery(function($) {
                 },
                 { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
                 { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
-                { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"}
+                { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"},
+                { "aTargets" : ["tp-airline_logo-column"] , "sType" : "tp-airline_logo"}
             ],
             "oLanguage":{
                 "oPaginate": {
@@ -237,9 +280,25 @@ jQuery(function($) {
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){
         var $items = $(this).find('.TP-PopularRoutesWidget');
-        var width = 100/$items.length - 3;
+        //var width = Math.round(100/$items.length - 3);
+        var width = 100/$items.length - 1;
+
+        //console.log(100/$items.length);
+        //console.log(width_new);
+
+        //console.log($items.length)
+        var count = $items.length - 1;
         $items.each(function(i,e){
-            $(e).css('width', width+"%");
+            //console.log(i)
+
+            if (i != count){
+                var width_new = width;
+                $(e).css('margin-right', "1%");
+                $(e).css('width', (width_new - 1)+"%");
+            } else {
+                $(e).css('width', width+"%");
+            }
+
         });
     });
 

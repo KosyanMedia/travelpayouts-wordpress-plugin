@@ -19,4 +19,5 @@ class TPPopularDestinationsAirlinesShortcodeController extends \app\includes\con
         // TODO: Implement initShortcode() method.
         add_shortcode( 'tp_popular_destinations_airlines_shortcodes', array(&$this, 'action'));
     }
+
 }

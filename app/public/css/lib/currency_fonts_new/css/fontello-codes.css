@@ -1,0 +1,9 @@
+
+.icon-rouble:before { content: '\e800'; } /* '' */
+.icon-yen:before { content: '\e801'; } /* '' */
+.icon-rupee:before { content: '\e802'; } /* '' */
+.icon-dollar:before { content: '\e803'; } /* '' */
+.icon-pound:before { content: '\e804'; } /* '' */
+.icon-euro:before { content: '\e805'; } /* '' */
+.icon-shekel:before { content: '\e806'; } /* '' */
+.icon-won:before { content: '\e807'; } /* '' */

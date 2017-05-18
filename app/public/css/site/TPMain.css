@@ -1,3 +1,9 @@
+.TPReadMoreList > div{ display:none;  }
+.TPReadMoreButton{
+    display: block;
+    cursor: pointer;
+}
+
 .TP-Plugin-Tables_wrapper {
     border: 0;
     width: 100%;
@@ -106,7 +112,7 @@
     white-space: nowrap;
 }
 .TP-Plugin-Tables_box tbody tr .TPflight_numberTd p{
-    display: block;
+    display: inline;
     white-space: nowrap;
 }
 
@@ -142,10 +148,10 @@
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link i {
     font-size: 14px;
     font-weight: normal;
-    font-family: ALSRubl, sans-serif;
+    /*font-family: ALSRubl, sans-serif;*/
     font-style: normal;
     line-height: 26px;
-    margin-left: 5px; }
+    margin-left: 2px; }
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
     background: #ce6408;
     text-decoration: none;
@@ -252,7 +258,9 @@
     .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
         display: inline-block;
         overflow: inherit;
-        min-width: 100px; }
+        min-width: 100px;
+        width: 100%;
+    }
 
     .TP-rwd-table-avio tbody tr td:before {
         background: #1db1db; }
@@ -300,7 +308,7 @@
 .TP-Plugin-Tables_box tbody tr:hover .TPPopUpButtonTable{
     display: block;
 }
-@font-face {
+/*@font-face {
     font-family: 'ALSRubl';
     src: url("../lib/fonts/ALSRubl.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/ALSRubl.otf") format("opentype"), url("../lib/fonts/ALSRubl.woff") format("woff"), url("../lib/fonts/ALSRubl.ttf") format("truetype"), url("../lib/fonts/ALSRubl.svg#ALSRubl") format("svg");
     font-weight: normal;
@@ -313,7 +321,18 @@
     font-style: normal;
     line-height: 26px;
     margin-left: 5px;
-}
+}*/
+/*@font-face {
+    font-family: 'Currency Font';
+    src: url("../lib/currency_fonts/currency-regular-webfont.eot");
+    src: url("../lib/currency_fonts/currency-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../lib/currency_fonts/currency-regular-webfont.woff") format("woff"), url("../lib/currency_fonts/currency-regular-webfont.ttf") format("truetype"), url("../lib/currency_fonts/currency-regular-webfont.svg#untitledregular") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+.currency-font {
+    font-family: 'Currency Font', Helvetica, sans;
+    font-weight: normal;
+    margin-left: 0.3ex;
+}*/
 
 .TP-Plugin-Tables_box tbody tr td p {
     display: inline;
@@ -377,7 +396,7 @@ span.ellipsis {
     vertical-align: top;
 }
 .TP-PopularRoutesWidget{
-    margin-right: 13px;
+    /*margin-right: 1%;/*13px*/
     margin-bottom: 15px;
     float: left;
     width: 30.3333%;
@@ -386,3 +405,85 @@ span.ellipsis {
 .TP-tdContent a {
     border: none !important;
 }
+
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+    border: none;
+}
+
+
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a{
+    background-color: #69c7f4;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a{
+    display: block;
+    outline: none;
+    padding: 0 30px;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    color: #929a9f;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    line-height: 60px;
+    background: #fff;
+    -moz-box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+.TPTabs.ui-tabs .ui-tabs-nav li a br {
+    display: none;
+}
+.TPTabs.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    height: auto;
+    display: inline-block;
+    width: auto;
+    /*margin-bottom: 30px;*/
+    overflow: hidden;
+    background-color: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.TPTabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li{
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+}
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover a{
+    background-color: #69c7f4;
+    color: #fff;
+    border: none;
+}
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover{
+    border: 1px solid transparent;
+}
+.TPTabs.ui-tabs .ui-tabs-nav li{
+    margin: 0!important;
+    border: 0!important;
+}
+
+.TPflight_numberTd .TP-tdContent{
+    margin: 0 !important;
+}
+

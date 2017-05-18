@@ -1,15 +1,51 @@
 <?php
 
 namespace app\includes;
+use app\includes\common\TPCurrencyUtils;
+
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
-    public static $TPRequestApi;
-    public function __construct() {
-        parent::__construct();
-        new TPLoader();
-        self::check_plugin_update();
+
+    private static $instance = null;
+
+    /**
+     * @return TPPlugin|null
+     */
+    public static function getInstance()
+    {
+        if (null === self::$instance)
+        {
+            self::$instance = new self();
+        }
+        return self::$instance;
     }
 
-    static private function check_plugin_update() {
+    protected function __construct() {
+        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." -> Start");
+        parent::__construct();
+        new TPLoader();
+        //self::check_plugin_update();
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log($method." -> End");
+        add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
+        add_action('plugins_loaded', array(&$this, 'checkPluginUpdate'));
+    }
+
+    public function setDefaultOptions(){
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("setDefaultOptions");
+        if( ! get_option(TPOPlUGIN_OPTION_NAME) )
+            update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
+        if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
+            update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
+    }
+    public function checkPluginUpdate() {
+        if(TPOPlUGIN_ERROR_LOG)
+            error_log("checkPluginUpdate");
+        //error_log(print_r( TPDefault::defaultOptions(),true));
+        //error_log(is_plugin_active('travelpayouts/travelpayouts.php'));
+        if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
@@ -17,6 +53,20 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
                 //$settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
                 $settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
                 update_option( TPOPlUGIN_OPTION_NAME, $settings);
+            }
+            if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.5.2', '<')) {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log("currency default version = ".get_option(TPOPlUGIN_OPTION_VERSION) );
+                self::$options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
+                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
+            }
+
+            if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.7.0', '<')) {
+                self::$options['config']['cache_value'] = array(
+                    'hotel' => 24,
+                    'flight' => 3
+                );
+                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
             }
 
             if(!empty(self::$options['account']['marker'])){
@@ -33,6 +83,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         }
         models\admin\menu\TPSearchFormsModel::createTable();
         models\admin\menu\TPAutoReplacLinksModel::createTable();
+        //models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
+        models\site\shortcodes\hotels\TPHotelListModel::createTable();
 
     }
     static public function activation()
@@ -61,27 +113,28 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             deactivate_plugins(TPOPlUGIN_NAME);
             wp_die($error_msg);
         }else{
-            if( ! get_option(TPOPlUGIN_OPTION_NAME) )
-                update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
-            if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
-                update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
             models\admin\menu\TPSearchFormsModel::createTable();
             models\admin\menu\TPAutoReplacLinksModel::createTable();
+            //models\site\shortcodes\TPSpecialOfferShortcodeModel::createTable();
+            models\site\shortcodes\hotels\TPHotelListModel::createTable();
+            //error_log(print_r( TPDefault::defaultOptions(),true));
         }
     }
 
     static public function deactivation()
     {
         // TODO: Implement deactivation() method.
-        //delete_option( TPOPlUGIN_OPTION_NAME);
-        //delete_option( TPOPlUGIN_OPTION_VERSION);
-        //$settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
-        //error_log(print_r($settings, true));
-        //error_log(print_r(self::$options, true));
+
         //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
         //models\admin\menu\TPSearchFormsModel::deleteTable();
+        //models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         self::deleteCacheAll();
-
+        delete_option( TPOPlUGIN_OPTION_NAME);
+        //delete_option( TPOPlUGIN_OPTION_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
+        //delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
     }
 
     static public function uninstall()
@@ -89,11 +142,17 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();
         models\admin\menu\TPAutoReplacLinksModel::deleteTable();
+        models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
+        models\site\shortcodes\hotels\TPHotelListModel::deleteTable();
         delete_option( TPOPlUGIN_OPTION_NAME);
         delete_option( TPOPlUGIN_OPTION_VERSION);
         delete_option( TPOPlUGIN_TABLE_SF_VERSION);
+        delete_option( TPOPlUGIN_TABLE_HOTEL_LIST_VERSION);
         delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
+        delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
     }
 
 }
-$TPPlugin = new TPPlugin();
+$TPPlugin = TPPlugin::getInstance();//new TPPlugin();
+

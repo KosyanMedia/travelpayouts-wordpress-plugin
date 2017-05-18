@@ -6,6 +6,8 @@
  * Time: 11:05
  */
 namespace app\includes\models\admin\menu;
+use app\includes\common\TPCurrencyUtils;
+
 class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
     public function __construct(){
         parent::__construct();
@@ -46,13 +48,40 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
         fclose($file);
 
         echo  TPOPlUGIN_URL.TPOPlUGIN_NAME."Settings.txt";*/
-        $export = json_encode( \app\includes\TPPlugin::$options);
-
+        $options = \app\includes\TPPlugin::$options;
+        $options['plugin_version'] = TPOPlUGIN_VERSION;
+        $export = json_encode($options);
         echo $export;
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
-            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $_POST['value']);
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log($_POST['value']);
+            $import_options = $_POST['value'];
+            //error_log(print_r($import_options, true));
+            if (!array_key_exists('plugin_version', $import_options)){
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log('array_key_exists false plugin_version < 0.5.2');
+                $import_options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
+            } else {
+                if(TPOPlUGIN_ERROR_LOG)
+                    error_log('array_key_exists true plugin_version');
+                //error_log($import_options['plugin_version']);
+                if (version_compare($import_options['plugin_version'], '0.7.0', '<')) {
+                    //error_log($import_options['plugin_version'].'Test');
+                    $import_options['config']['cache_value'] = array(
+                        'hotel' => 24,
+                        'flight' => 3
+                    );
+                }
+
+            }
+            //error_log(print_r($import_options, true));
+            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
+
+            //error_log(print_r($settings, true));
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log(print_r($settings['local']['currency'], true));
             update_option( TPOPlUGIN_OPTION_NAME, $settings);
 
             //error_log(print_r($settings,true));

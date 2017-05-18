@@ -95,9 +95,6 @@ jQuery(function($){
         return false;
     }
 
-
-
-
     /** **/
 
 
@@ -206,6 +203,8 @@ jQuery(function($){
 
 
     });
+
+
     doc.ready(function(){
 
         selectLocalizationFields();
@@ -222,6 +221,17 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabFlights", selectedTabFlightsId);
             }
         });
+        var selectedTabHotelsId = sessionStorage.getItem("selectedTabHotels");
+        selectedTabHotelsId = selectedTabHotelsId === null ? 0 : selectedTabHotelsId;
+
+
+        $( "#tabs-hotels" ).tabs({
+            active: selectedTabHotelsId,
+            activate : function( event, ui ) {
+                selectedTabHotelsId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabHotels", selectedTabHotelsId);
+            }
+        });
         var selectedTabSettingsId = sessionStorage.getItem("selectedTabSettings");
         selectedTabSettingsId = selectedTabSettingsId === null ? 0 : selectedTabSettingsId;
         $( "#tabs-settings" ).tabs({
@@ -231,6 +241,19 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabSettings", selectedTabSettingsId);
             }
         });
+
+
+        var selectedTabLocalFieldId = sessionStorage.getItem("selectedTabLocalField");
+        selectedTabLocalFieldId = selectedTabLocalFieldId === null ? 0 : selectedTabLocalFieldId;
+        $( "#tabs-local_field" ).tabs({
+            active: selectedTabLocalFieldId,
+            activate : function( event, ui ) {
+                selectedTabLocalFieldId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabLocalField", selectedTabLocalFieldId);
+            }
+        });
+
+
         var selectedTabStatisticId = sessionStorage.getItem("selectedTabStatistic");
         selectedTabStatisticId = selectedTabStatisticId === null ? 0 : selectedTabStatisticId;
         $( "#tabs-statistic" ).tabs({
@@ -424,15 +447,30 @@ jQuery(function($){
                 fileReader.readAsText(file);
                 fileReader.onload = (function(file) {
                     return function(e) {
-                        $.ajax({
-                            url: ajaxurl+'?action=import_settings',
-                            type: "post", // Делаем POST запрос
-                            data: ({name : file.name, value : JSON.parse(this.result)}),
-                            success: function(data) {
-                                //console.log(data.substring(0, data.length - 1));
-                                document.location.href = "";
+                        //.match( /\{(.+?)\}/ig)
+                        var re = /\{.*\}|\[.*\]/g;
+                        var jsonSettings = this.result.match(re);
+
+                        //console.log(JSON.stringify(this.result).match(re));
+                        if (jsonSettings != null){
+                            //console.log(JSON.parse(jsonSettings[0]));
+                            $.ajax({
+                                url: ajaxurl+'?action=import_settings',
+                                type: "post", // Делаем POST запрос
+                                data: ({name:file.name, value:JSON.parse(jsonSettings[0])}),
+                                success: function(data) {
+                                    //console.log(data.substring(0, data.length - 1));
+                                    document.location.href = "";
+                                }
+                            });
+                        } else {
+                            if (doc.find('#'+TPPluginName+'AdminNotice').length > 0) {
+                                doc.find('#'+TPPluginName+'AdminNotice').replaceWith(adminNotice('error', TPImportSettingsErrorNoticeTxt , ''));
+                            }else{
+                                $('#wpbody-content').before(adminNotice('error', TPImportSettingsErrorNoticeTxt , ''));
                             }
-                        });
+                        }
+
                     };
                 })(files[index]);
                 // Инициируем функцию FileReader
@@ -539,33 +577,80 @@ jQuery(function($){
             e.preventDefault();
             doc.find('.TPFields_ru').addClass('TP-ListRowColumNot');
             doc.find('.TPFields_en').addClass('TP-ListRowColumNot');
+            doc.find('.TPFields_th').addClass('TP-ListRowColumNot');
             //doc.find('.TPFields_de').addClass('TP-ListRowColumNot');
+            console.log("selectLocalizationFields "+$(this).val())
             switch ($(this).val()){
                 case "1":
                     //ru
                     doc.find('.TPFields_ru').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("RU");
                     doc.find('.TPFieldTitleCaseDiv').show();
+                    TPFieldHostSelect("1");
                     break;
                 case "2":
                     //en
                     doc.find('.TPFields_en').removeClass('TP-ListRowColumNot');
                     doc.find('.TPLangFieldsLi').text("EN");
                     doc.find('.TPFieldTitleCaseDiv').hide();
+                    TPFieldHostSelect("2");
+
                     break;
-                /*case "3":
-                    //en
-                    doc.find('.TPFields_de').removeClass('TP-ListRowColumNot');
-                    break;*/
+
+                case "3":
+                    //th
+                    doc.find('.TPFields_th').removeClass('TP-ListRowColumNot');
+                    doc.find('.TPLangFieldsLi').text("TH");
+                    doc.find('.TPFieldTitleCaseDiv').hide();
+                    TPFieldHostSelect("3");
+                    break;
             }
         });
 
     }
+
+    /**
+     *
+     * @param local
+     * @constructor
+     */
+    function TPFieldHostSelect(local){
+        console.log('local = '+local);
+        var host, default_host;
+        host = doc.find('.TPFieldHost').data('host');
+        console.log('host = '+host);
+        if(host == '') {
+            switch (local){
+                case "1":
+                    //ru
+                    default_host = doc.find('.TPFieldHost').data('default_host_ru');
+                    break;
+                case "2":
+                    //en
+                    default_host = doc.find('.TPFieldHost').data('default_host_en');
+                    break;
+                case "3":
+                    //th
+                    default_host = doc.find('.TPFieldHost').data('default_host_th');
+                    break;
+            }
+            console.log('default_host = '+default_host);
+            doc.find('.TPFieldHost').find('option:selected').removeAttr("selected");
+            doc.find('.TPFieldHost option[value="' + default_host + '"]')
+                .attr('selected', 'selected');
+            doc.find('.TPFieldHostLabel').children('.zelect').remove();
+            doc.find('.TPFieldHost').zelect({});
+        }
+    }
+
     switch ($('select.TPFieldLocalization').val()){
         case "1":
             doc.find('.TPFieldTitleCaseDiv').show();
             break;
         case "2":
+            doc.find('.TPFieldTitleCaseDiv').hide();
+            break;
+        case "3":
             doc.find('.TPFieldTitleCaseDiv').hide();
             break;
     }
@@ -933,6 +1018,44 @@ jQuery(function($){
             }
         });
     });
+    doc.find( '.TPThemeActions a:last-child' ).focus();
+    doc.find('.TPThemeBtnActivate').click(function () {
+        doc.find('.TPTheme').removeClass('TPThemeActive');
+        var TPTheme, TPThemeName;
+        TPTheme = $(this).parent('.TPThemeActions').parent('.TPTheme');
+        TPTheme.addClass('TPThemeActive');
+        TPThemeName = TPTheme.data('theme_name');
+        doc.find('.TPThemesNameHidden').val(TPThemeName);
+        //console.log(TPThemeName)
+    });
+
+
+    switch ( doc.find(".TPEmptyTableType:checked").val()){
+        case '0':
+            doc.find("#TPEmptyTableShowNotification").show();
+            break;
+        case '1':
+            doc.find("#TPEmptyTableShowSearchForm").show();
+            break;
+    }
+    $('label[id^="cheker-label-"]').on('click', function(){
+        var s = $(this).attr('id').replace(/[^0-9]/g,'');
+        $('div[id^="chekar-content-"]').removeClass('active');
+        $('div[id^="chekar-content-'+s+'"]').addClass('active');
+    })
+    doc.find(".TPEmptyTableType:radio").change(function () {
+        doc.find("#TPEmptyTableShowNotification").hide();
+        doc.find("#TPEmptyTableShowSearchForm").hide();
+        switch ($(this).val()){
+            case '0':
+                doc.find("#TPEmptyTableShowNotification").show();
+                break;
+            case '1':
+                doc.find("#TPEmptyTableShowSearchForm").show();
+                break;
+        }
+    });
+
 });
 
 

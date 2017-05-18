@@ -59,30 +59,96 @@
     float: left;
 }
 
-#select_shortcodes, #select_widgets, #select_search_form,#constructorLinkModalSelect{
+#select_shortcodes,
+#select_widgets,
+#select_search_form,
+#constructorLinkModalSelect,
+#select_hotels_shortcodes,
+#select_hotels_type,
+#select_hotels_selections_type{
     width: 350px;
 }
-#tr_title, #tr_subid, #tr_origin, #tr_destination, #tr_depart_date,
-#tr_return_date, #tr_airline, #tr_limit, #tr_trip_class,
-#tr_origin_search_form, #tr_destination_search_form,
-#tr_origin_widget, #tr_size_widget, #tr_direct_widget,
-#tr_destination_widget, #tr_one_way_widget,
-#tr_responsive_widget, #tr_hotel_id_widget,
-#tr_hotel_id_widget_size, #tr_popular_routes_widget,
-.TPPopularRoutes, #tr_paginate, #tr_transplant,
-#tr_one_way, #tr_origin_link, #tr_destination_link,
-#tr_origin_date_link, #tr_destination_date_link,
-#tr_one_way_link, #tr_city_link, #tr_origin_date_link,
-#tr_destination_date_link, #tr_origin_date_hotel_link,
-#tr_destination_date_hotel_link, #tr_off_title,
-#tr_type_widget, #tr_limit_widget, #tr_cat_widget-1,
-#tr_cat_widget-2, #tr_cat_widget-3, #tr_zoom_widget, #tr_filter_widget,
-#tr_type_widget_8, #tr_airline_widget_8, #tr_iata_widget_8, #tr_limit_widget_8,
-#tr_type_search_form, #tr_search_shortcode_hotel_city, #tr_subid_widget, #tr_subid_sf,
-#tr_subid_link{
+#tr_title,
+#tr_subid,
+#tr_origin,
+#tr_destination,
+#tr_depart_date,
+#tr_return_date,
+#tr_airline,
+#tr_limit,
+#tr_trip_class,
+#tr_origin_search_form,
+#tr_destination_search_form,
+#tr_origin_widget,
+#tr_size_widget,
+#tr_direct_widget,
+#tr_destination_widget,
+#tr_one_way_widget,
+#tr_responsive_widget,
+#tr_hotel_id_widget,
+#tr_hotel_id_widget_size,
+#tr_popular_routes_widget,
+.TPPopularRoutes,
+#tr_paginate,
+#tr_transplant,
+#tr_one_way,
+#tr_origin_link,
+#tr_destination_link,
+#tr_origin_date_link,
+#tr_destination_date_link,
+#tr_one_way_link,
+#tr_city_link,
+#tr_origin_date_link,
+#tr_destination_date_link,
+#tr_origin_date_hotel_link,
+#tr_destination_date_hotel_link,
+#tr_off_title,
+#tr_type_widget,
+#tr_limit_widget,
+#tr_cat_widget-1,
+#tr_cat_widget-2,
+#tr_cat_widget-3,
+#tr_zoom_widget,
+#tr_filter_widget,
+#tr_type_widget_8,
+#tr_airline_widget_8,
+#tr_iata_widget_8,
+#tr_limit_widget_8,
+#tr_type_search_form,
+#tr_search_shortcode_hotel_city,
+#tr_subid_widget,
+#tr_subid_sf,
+#tr_subid_link,
+#tr_currency,
+#tr_calendar_period_widget,
+#tr_calendar_period_size_widget,
+#tr_country,
+#tr_filter_airline,
+#tr_filter_flight_number,
+#tr_hotels_title,
+#tr_hotels_city,
+#tr_hotels_paginate,
+#tr_hotels_off_title,
+#tr_hotels_type,
+#tr_hotels_day,
+#tr_hotels_rating,
+#tr_hotels_star,
+#tr_hotels_distance,
+#tr_hotels_number_results,
+#tr_hotels_selections_type,
+#tr_hotels_subid,
+#tr_hotels_check_in,
+#tr_hotels_check_out,
+#tr_hotels_link_without_dates,
+#tr_hotels_help_text
+{
     display: none;
 }
-#table_iata_widget_8, #table_airline_widget_8{
+.hotels-distance{
+    width: 75px;
+}
+#table_iata_widget_8,
+#table_airline_widget_8{
     width: 100%;
 }
 .constructorShortcodesError{
@@ -100,6 +166,11 @@
 #constructorLinkButton img {
     margin-top: -3px;
 }
+
+#constructorHotelsShortcodesButton img {
+    margin-top: -3px;
+}
+
 .validate > #constructorShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;
@@ -116,6 +187,11 @@
     margin-top: -3px;
 }
 .validate > #constructorLinkButton img{
+    padding: 0 4px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.validate > #constructorHotelsShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;
     margin-top: -3px;
@@ -148,6 +224,12 @@
     padding-right: 7px;
 }
 
+.validate > #constructorLinkButton{
+    margin-right: 5px;
+    margin-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
 
 /* WP Theme */
 
@@ -283,12 +365,12 @@
     width: 92% !important;
 }
 .TPCustomDialog .ui-dialog-content .constructorCityShortcodesAutocomplete {
-    width: 100%!important;
+  /*  width: 99%!important;*/
 }
 
 
 .ui-datepicker {
-    width: 255px;
+    width: 300px;
     height: auto;
     background: #fff;
     border-width: 0 1px 1px 1px;
@@ -338,6 +420,8 @@
     background: #00abfd;
     color: #fff;
     border-color: #00abfd;
+    text-align: center;
+
 }
 
 .ui-datepicker-header {
@@ -347,6 +431,7 @@
 }
 
 .ui-datepicker-prev, .ui-datepicker-next {
+    background-size: cover;
     position: absolute;
     top: 0;
     display: block;
@@ -382,7 +467,8 @@
 }
 #constructorShortcodesModal input[type="checkbox"],
 #constructorWidgetModalForm input[type="checkbox"],
-#constructorLinkModalTable input[type="checkbox"]{
+#constructorLinkModalTable input[type="checkbox"],
+#constructorHotelsShortcodesModal input[type="checkbox"]{
     display: inline-block;
 }
 .TPProgressbarDialog .ui-progressbar {

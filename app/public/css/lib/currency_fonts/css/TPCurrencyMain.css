@@ -1,0 +1,49 @@
+.TP-currency-icons {
+    font-family: Arial, sans-serif !important;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+   /* color: #999;*/
+}
+.TP-currency-icons i {
+    font-style: normal;
+    width: auto;
+}
+.TP-currency-icons i:before {
+    font-weight: 300;
+    margin: 0 !important;
+    width: auto;
+}
+.TPpriceTd .TP-currency-icons i:before {
+    margin: 5px !important;
+}
+
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?48402870');
+    src: url('../font/fontello.eot?48402870#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff?48402870') format('woff'),
+    url('../font/fontello.ttf?48402870') format('truetype'),
+    url('../font/fontello.svg?48402870#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.demo-icon
+{
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -4,6 +4,7 @@
  * User: freeman
  * Date: 13.08.15
  * Time: 12:17
+ * 5. Цены на билеты по месяцам
  */
 namespace app\includes\controllers\site\shortcodes;
 class TPCheapestTicketsEachMonthShortcodeController extends \app\includes\controllers\site\TPShortcodesController{
@@ -17,6 +18,38 @@ class TPCheapestTicketsEachMonthShortcodeController extends \app\includes\contro
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_cheapest_tickets_each_month_shortcodes', array(&$this, 'action'));
+        add_shortcode( 'tp_cheapest_tickets_each_month_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_cheapest_tickets_each_month_shortcodes_max_price', array(&$this, 'actionMaxPrice'));
+        add_shortcode( 'tp_cheapest_tickets_each_month_shortcodes_min_price', array(&$this, 'actionMinPrice'));
+    }
+    public function actionTable($args = array())
+    {
+
+        $data = $this->model->getDataTable($args);
+
+
+        //if(!$data) return false;
+        //error_log(print_r($data, true));
+        if ($data['return_url'] == true){
+
+            //return $data['rows'][0];
+            return print_r($data['rows'], true);
+        }
+        return $this->view->renderTable($data);
+    }
+
+    public function actionMaxPrice($args = array())
+    {
+        $data = $this->model->getMaxPrice($args);
+        if(!$data) return false;
+        extract($data, EXTR_SKIP);
+        return $this->view->renderPrice($price, $currency);
+    }
+    public function actionMinPrice($args = array())
+    {
+        $data = $this->model->getMinPrice($args);
+        if(!$data) return false;
+        extract($data, EXTR_SKIP);
+        return $this->view->renderPrice($price, $currency);
     }
 }

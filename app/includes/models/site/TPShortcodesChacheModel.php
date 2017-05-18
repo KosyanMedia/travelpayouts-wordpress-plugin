@@ -6,6 +6,9 @@
  * Time: 10:37
  */
 namespace app\includes\models\site;
+
+use \app\includes\TPPlugin;
+
 abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheModel{
     public function __construct(){
         parent::__construct();
@@ -13,10 +16,52 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         add_filter( 'term_description',  'do_shortcode' );
         add_filter( 'widget_text', 'do_shortcode');
     }
+    public function cacheEmptySecund(){
+        //10 minut
+        return 60 * 10;
+    }
+
+    /**
+     * @param string $type
+     * @return bool
+     */
+    public function cacheSecund($type = 'flight'){
+        $cacheSecund = false;
+        switch ($type){
+            case 'flight':
+                if(TPPlugin::$options['config']['cache_value']['flight'] != 0 ) {
+                    //time
+                    if (!empty(TPPlugin::$options['config']['cache_value']['flight'])){
+                        $cacheSecund =  HOUR_IN_SECONDS * TPPlugin::$options['config']['cache_value']['flight'];
+                    } else {//default
+                        $cacheSecund =  DAY_IN_SECONDS;
+                    }
+                } else {
+                    $cacheSecund = false;
+                }
+                break;
+            case 'hotel':
+                if(TPPlugin::$options['config']['cache_value']['hotel'] != 0 ) {
+                    if (!empty(TPPlugin::$options['config']['cache_value']['hotel'])){
+                        $cacheSecund =  HOUR_IN_SECONDS * TPPlugin::$options['config']['cache_value']['hotel'];
+                    } else {//default
+                        $cacheSecund =  DAY_IN_SECONDS;
+                    }
+                } else {
+                    $cacheSecund = false;
+                }
+                break;
+        }
+        //error_log($type);
+        //error_log($cacheSecund);
+        //error_log(__CLASS__);
+        return $cacheSecund;
+    }
+
     /**
      * @return bool|int
      */
-    public function cacheSecund(){
+    /*public function cacheSecund(){
         if(\app\includes\TPPlugin::$options['config']['cache_value'] != 0 ) {
             switch (\app\includes\TPPlugin::$options['config']['cache']) {
                 case 1:
@@ -41,13 +86,13 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         }else{
             return false;
         }
-    }
+    }*/
 
     /**
      * @return string
      */
     public function typeCurrency(){
-        switch((int) \app\includes\TPPlugin::$options['local']['currency']){
+        /*switch((int) \app\includes\TPPlugin::$options['local']['currency']){
             case 1:
                 $currency = 'RUB';
                 break;
@@ -57,8 +102,8 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
             case 3:
                 $currency = 'EUR';
                 break;
-        }
-        return $currency;
+        }*/
+        return \app\includes\TPPlugin::$options['local']['currency'];
     }
 
     /**
@@ -186,156 +231,87 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
     }
 
     public function iataAutocomplete($data, $type, $title = 'origin'){
-        TPAutocomplete::getInstance();
-        switch($type){
-            case 0:
-                if($title != 'airline'){
-                    switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                        case "1":
-                            $data = TPAutocomplete::$title[$data]['cases'][\app\includes\TPPlugin::$options['local']['title_case'][$title]];
-                            break;
-                        case "2":
-                            $data = TPAutocomplete::$data[$data]['name_translations']['en'];
-                            break;
-                    }
-                }else{
+        $data = \app\includes\common\TPAutocompleteReplace::iataAutocomplete($data, $type, $title);
 
-                    switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                        case "1":
-                            $data = (isset(TPAutocomplete::$data_airline[$data]['names']['ru'])) ? TPAutocomplete::$data_airline[$data]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                            break;
-                        case "2":
-                            $data = TPAutocomplete::$data_airline[$data]['names']['en'];
-                            break;
-                    }
-                }
-
-                break;
-            case 1:
-            case 2:
-                if(!empty($data)) {
-                    foreach ($data as $key => $value) {
-                        $value['origin_iata'] = $value['origin'];
-                        $value['destination_iata'] = $value['destination'];
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
-                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['ru'];
-                                break;
-                            case "2":
-                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['en'];
-                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-                }
-                break;
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-                //data_airline
-                if(!empty($data)){
-                    foreach($data as $key => $value){
-                        $value['airline_img'] = $value['airline'];
-                        $value['airline_iata'] = $value['airline'];
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                break;
-                            case "2":
-                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-                }
-                break;
-            case 8:
-                if(!empty($data)){
-                    foreach($data as $key => $value){
-                        $value['airline_img'] = $value['airline'];
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value['city'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
-                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                break;
-                            case "2":
-                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                $value['city'] = TPAutocomplete::$data[$key]['name_translations']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-                }
-                break;
-            case 9:
-                if(!empty($data)){
-                    foreach($data as $key => $value){
-                        $value['airline_img'] = $value['airline'];
-                        $value['destination_iata'] = $key;
-                        $value['origin_iata'] = $value['origin'];
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value['origin']  = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
-                                $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['ru'];
-                                $value['airline'] = (isset(TPAutocomplete::$data_airline[$value['airline']]['names']['ru'])) ? TPAutocomplete::$data_airline[$value['airline']]['names']['ru']:TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                break;
-                            case "2":
-                                $value['airline'] = TPAutocomplete::$data_airline[$value['airline']]['names']['en'];
-                                $value['destination'] = TPAutocomplete::$data[$key]['name_translations']['en'];
-                                $value['origin']  = TPAutocomplete::$data[$value['origin']]['name_translations']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-                }
-                break;
-            case 10:
-                if(!empty($data)){
-                    foreach($data as $key => $value){
-                        $citys = explode( '-', $key );
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value = TPAutocomplete::$data[$citys[0]]['name_translations']['ru'];
-                                $value .= ' → '.TPAutocomplete::$data[$citys[1]]['name_translations']['ru'];
-                                break;
-                            case "2":
-                                $value = TPAutocomplete::$data[$citys[0]]['name_translations']['en'];
-                                $value .= ' → '.TPAutocomplete::$data[$citys[1]]['name_translations']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-
-                }
-                break;
-            case 12:
-            case 13:
-            case 14:
-                if(!empty($data)) {
-                    foreach ($data as $key => $value) {
-                        $value['origin_iata'] = $value['origin'];
-                        $value['destination_iata'] = $value['destination'];
-                        switch(\app\includes\TPPlugin::$options['local']['localization']) {
-                            case "1":
-                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['ru'];
-                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['ru'];
-                                break;
-                            case "2":
-                                $value['origin'] = TPAutocomplete::$data[$value['origin']]['name_translations']['en'];
-                                $value['destination'] = TPAutocomplete::$data[$value['destination']]['name_translations']['en'];
-                                break;
-                        }
-                        $data[$key] = $value;
-                    }
-                }
-                break;
-            default:
-                break;
-        }
         return $data;
 
+    }
+
+    public function sortTransfers($type, $rows, $stops){
+        $rows_sort = array();
+        switch ($type){
+            case 1:
+
+                if($rows){
+                    switch($stops){
+                        case 0:
+                            $rows_sort = $rows;
+                            break;
+                        case 1:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] <= 1){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                        case 2:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] == 0){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+            case 5:
+                if($rows){
+                    switch($stops){
+                        case 0:
+                            $rows_sort = $rows;
+                            break;
+                        case 1:
+                            foreach($rows as $value){
+                                if($value['transfers'] <= 1){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                        case 2:
+                            foreach($rows as $value){
+                                if($value['transfers'] == 0){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+            case 13:
+
+                if($rows){
+                    switch($stops){
+                        case 0:
+                            $rows_sort = $rows;
+                            break;
+                        case 1:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] <= 1){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                        case 2:
+                            foreach($rows as $value){
+                                if($value['number_of_changes'] == 0){
+                                    $rows_sort[] = $value;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+        }
+        return $rows_sort;
     }
 }

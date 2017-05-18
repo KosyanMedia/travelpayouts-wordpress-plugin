@@ -6,6 +6,11 @@
  * Time: 13:50
  */
 namespace app\includes;
+
+use \app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPFieldsLabelTable;
+use app\includes\common\TPThemes;
+
 class TPDefault implements  \core\TPODefault{
     public  static $defaultTableStyle = array(
         'title_style' => array(
@@ -38,46 +43,63 @@ class TPDefault implements  \core\TPODefault{
         )
     );
 
+
+
+    public static function getDefaultLocal(){
+        $localization = 2;
+        global $locale;
+        switch($locale) {
+            case "ru_RU":
+                $localization = 1;
+                break;
+            case "en_US":
+                $localization = 2;
+                break;
+            case "th_TH":
+                $localization = 3;
+                break;
+            default:
+                $localization = 1;
+                break;
+        }
+        return $localization;
+    }
+
     /**
      * @return array
      */
     public static function defaultOptions()
     {
-        global $locale;
-        switch($locale) {
-            case "ru_RU":
-                $localization = 1;
-                $currency = 1;
-                break;
-            case "en_US":
-                $localization = 2;
-                $currency = 2;
-                break;
-            default:
-                $localization = 1;
-                $currency = 1;
-                break;
-        }
         // TODO: Implement defaultOptions() method.
+        $localization = self::getDefaultLocal();
+        $currency = TPCurrencyUtils::getDefaultCurrency();
         $defaults = array(
             'account' => array(
                 'marker' => '',
                 'extra_marker' => 'wpplugin',
                 'token' => '',
                 'white_label' => '',
+                'white_label_hotel' => '',
             ),
             'config' =>array(
                 'redirect' => 0,
                 'message_error' => array(
-                    'en' => 'Something went wrong, please try to update a page',
-                    'ru' =>  'Что-то пошло не так, обновите страницу',
+                    'en' => _x('tp_plugin_request_api_error_msg_message_error_en',
+                        '(Something went wrong, please try to update a page)', TPOPlUGIN_TEXTDOMAIN),
+                    'ru' =>   _x('tp_plugin_request_api_error_msg_message_error_ru',
+                        '(Что-то пошло не так, обновите страницу)', TPOPlUGIN_TEXTDOMAIN),
                 ),
                 'target_url' => 0,
                 'nofollow' => 0,
                 'script' => 1,
                 'after_url' => 1,
+                'hotel_after_url' => 1,
                 'cache' => 1,
-                'cache_value' => 1,
+                //'cache_value' => 3,
+                'cache_value' => array(
+                    'hotel' => 24,
+                    'flight' => 3,
+                ),
                 'airline_logo_size' => array(
                     'width' => 100,
                     'height' => 35
@@ -86,100 +108,25 @@ class TPDefault implements  \core\TPODefault{
                 'format_date' => 'd.m.Y',
                 'code_ga_ym' => '',
                 'code_table_ga_ym' => '',
-                'compact_button' => 1
+                'compact_button' => 1,
+                'media_button' => array(
+                    'view' => 1
+                )
             ),
             'local' => array(
+                'host' => '',
+                'host_hotel' => '',
                 'localization' => $localization,
                 'currency' => $currency,
+                'currency_symbol_display' => 0,
                 'fields' => array(
-                    'ru' => array(
-                        'label_default' => array(
-                            'flight_number' => 'Номер рейса',
-                            'flight' => 'Рейс',
-                            'departure_at' => 'Дата вылета',
-                            'return_at' => 'Дата возвращения',
-                            'number_of_changes' => 'Пересадки',
-                            'price' => 'Стоимость',
-                            'airline' => 'Авиакомпания',
-                            'airline_logo' => 'Лого авиакомпании',
-                            'origin' => 'Откуда',
-                            'destination' => 'Куда',
-                            'place' => 'Место',
-                            'direction' => 'Направление',
-                            'trip_class' => 'Класс перелета',
-                            'distance' => 'Расстояние',
-                            'price_distance' => 'Цена за километр',
-                            'found_at' => 'Когда найден',
-                            'back_and_forth' => 'В одну/обе стороны',
-                            'button' => 'Кнопка',
-                            'origin_destination' => 'Откуда - Куда',
-                        ),
-                        'label' => array(
-                            'flight_number' => 'Номер рейса',
-                            'flight' => 'Рейс',
-                            'departure_at' => 'Дата вылета',
-                            'return_at' => 'Дата возвращения',
-                            'number_of_changes' => 'Пересадки',
-                            'price' => 'Стоимость',
-                            'airline' => 'Авиакомпания',
-                            'airline_logo' => 'Авиакомпания',
-                            'origin' => 'Откуда',
-                            'destination' => 'Куда',
-                            'place' => 'Место',
-                            'direction' => 'Направление',
-                            'trip_class' => 'Класс перелета',
-                            'distance' => 'Расстояние',
-                            'price_distance' => 'Цена за километр',
-                            'found_at' => 'Когда найден',
-                            'back_and_forth' => 'В одну/обе стороны',
-                            'button' => 'Найти билет',
-                            'origin_destination' => 'Откуда - Куда',
-                        ),
-                    ),
-                    'en' => array(
-                        'label_default' => array(
-                            'flight_number' => 'Flight number',
-                            'flight' => 'Flight',
-                            'departure_at' => 'Departure date',
-                            'return_at' => 'Return date',
-                            'number_of_changes' => 'Stops',
-                            'price' => 'Price',
-                            'airline' => 'Airlines',
-                            'airline_logo' => 'Logo airlines',
-                            'origin' => 'Origin',
-                            'destination' => 'Destination',
-                            'place' => 'Rank',
-                            'direction' => 'Direction',
-                            'trip_class' => 'Flight class',
-                            'distance' => 'Distance',
-                            'price_distance' => 'Price/distance',
-                            'found_at' => 'When found',
-                            'back_and_forth' => 'One way / Round-Trip',
-                            'button' => 'Button',
-                            'origin_destination' => 'Origin - Destination',
-                        ),
-                        'label' => array(
-                            'flight_number' => 'Flight number',
-                            'flight' => 'Flight',
-                            'departure_at' => 'Departure date',
-                            'return_at' => 'Return date',
-                            'number_of_changes' => 'Stops',
-                            'price' => 'Price',
-                            'airline' => 'Airlines',
-                            'airline_logo' => 'Airlines',
-                            'origin' => 'Origin',
-                            'destination' => 'Destination',
-                            'place' => 'Rank',
-                            'direction' => 'Direction',
-                            'trip_class' => 'Flight class',
-                            'distance' => 'Distance',
-                            'price_distance' => 'Price/distance',
-                            'found_at' => 'When found',
-                            'back_and_forth' => 'One way / Round-Trip',
-                            'button' => 'Find Ticket',
-                            'origin_destination' => 'Origin - Destination',
-                        ),
-                    ),
+                    'ru' => TPFieldsLabelTable::getFieldsLabelRU(),
+                    'en' => TPFieldsLabelTable::getFieldsLabelEN(),
+                    'th' => TPFieldsLabelTable::getFieldsLabelTH(),
+                ),
+                'hotels_fields' => array(
+                    'ru' => TPFieldsLabelTable::getHotelsFieldsLabelRU(),
+                    'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),
                 ),
                 'title_case' => array(
                     'origin' => 'ro',
@@ -189,8 +136,10 @@ class TPDefault implements  \core\TPODefault{
             'shortcodes' => array(
                 '1' => array(
                     'title' => array(
-                        'en' => 'Flight Prices for a Month from origin to destination, One Way',
-                        'ru' => 'Цены на месяц из origin в destination, в одну сторону'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_1_title',
+                            '(Flight Prices for a Month from origin to destination, One Way)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_1_title',
+                            '(Цены на месяц из origin в destination, в одну сторону)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'calMonth',
@@ -198,8 +147,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'OW tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_1_title_btn',
+                            '(OW tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_1_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -219,8 +170,10 @@ class TPDefault implements  \core\TPODefault{
                 '2' => array(
                     //Календарь цен на неделю по маршруту из origin в destination
                     'title' => array(
-                        'en' => 'Flights from origin to destination for the Next Few Days',
-                        'ru' => 'Билеты из origin в destination на ближайшие дни'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_2_title',
+                            '(Flights from origin to destination for the Next Few Days)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_2_title',
+                            '(Билеты из origin в destination на ближайшие дни)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'plus_depart_date' => 1,
@@ -229,8 +182,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_2_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_2_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -278,16 +233,20 @@ class TPDefault implements  \core\TPODefault{
                 ),*/
                 '4' => array(
                     'title' => array(
-                        'en' => 'The Cheapest Round-trip Tickets from origin to destination',
-                        'ru' => 'Самые дешевые билеты из origin в destination и обратно'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_4_title',
+                            '(The Cheapest Round-trip Tickets from origin to destination)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_4_title',
+                            '(Самые дешевые билеты из origin в destination и обратно)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_4_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_4_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -311,8 +270,10 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '5' => array(
                     'title' => array(
-                        'en' => 'The Cheapest Flights for this Month from origin to destination',
-                        'ru' => 'Самые дешевые билеты  из origin в destination в этом месяце'
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_5_title',
+                            '(The Cheapest Flights for this Month from origin to destination)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_5_title',
+                            '(Самые дешевые билеты  из origin в destination в этом месяце)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'directionMonth',
@@ -320,8 +281,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_5_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_5_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -346,16 +309,20 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '6' => array(
                     'title' => array(
-                        'en' => 'The Cheapest Flights from origin to destination for the Year Ahead',
-                        'ru' => 'Самые дешевые авиабилеты из origin в destination на год вперед'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_6_title',
+                            '(The Cheapest Flights from origin to destination for the Year Ahead)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_6_title',
+                            '(Самые дешевые авиабилеты из origin в destination на год вперед)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'direction12months',
                     'paginate' => 12,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_6_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_6_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -380,16 +347,20 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '7' => array(
                     'title' => array(
-                        'en' => 'Direct Flights from origin to destination',
-                        'ru' => 'Билеты без пересадок из origin в destination'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_7_title',
+                            '(Direct Flights from origin to destination)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_7_title',
+                            '(Билеты без пересадок из origin в destination)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'directionNostops',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_7_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_7_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -412,8 +383,10 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '8' => array(
                     'title' => array(
-                        'en' => 'Direct Flights from origin',
-                        'ru' => 'Билеты без пересадок из origin'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_8_title',
+                            '(Direct Flights from origin)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_8_title',
+                            '(Билеты без пересадок из origin)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'nostopsFrom',
@@ -421,8 +394,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_8_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_8_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -448,16 +423,20 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '9' => array(
                     'title' => array(
-                        'en' => 'Popular Destinations from origin',
-                        'ru' => 'Популярные направления из origin'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_9_title',
+                            '(Popular Destinations from origin)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_9_title',
+                            '(Популярные направления из origin)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'extra_table_marker' => 'popularCity',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_9_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_9_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 4,
                     'selected' => array(
@@ -482,8 +461,10 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '10' => array(
                     'title' => array(
-                        'en' => 'Airline\'s popular flights airline',
-                        'ru' =>  'Популярные направления авиакомпании airline',
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_10_title',
+                            '(Airline\'s popular flights airline)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>   _x('tp_plugin_local_ru_table_shortcodes_10_title',
+                            '(Популярные направления авиакомпании airline)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'limit' => 10,
@@ -491,8 +472,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Find tickets',
-                        'ru' => 'Узнать цену'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_10_title_btn',
+                            '(Find tickets)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_10_title_btn',
+                            '(Узнать цену)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array('place', 'direction', 'button'),
@@ -504,15 +487,19 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '11' => array(
                     'title' => array(
-                        'en' => 'Special offer airlines',
-                        'ru' =>  'Спецпредложения авиакомпаний',
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_11_title',
+                            '(Special offer airlines)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_11_title',
+                            '(Спецпредложения авиакомпаний)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'paginate' => 10,
                     'paginate_switch' => true,
                     'title_button' => array(
-                        'en' => 'Find tickets on price',
-                        'ru' => 'Билеты от price'
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_11_title_btn',
+                            '(Find tickets on price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_11_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -535,8 +522,10 @@ class TPDefault implements  \core\TPODefault{
                 //"depart_date""return_date"
                 '12' => array(
                     'title' => array(
-                        'en' => 'Flights That Have Been Found on Our Website',
-                        'ru' =>  'На нашем сайте искали',
+                        'en' =>  _x('tp_plugin_local_en_table_shortcodes_12_title',
+                            '(Flights That Have Been Found on Our Website)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>   _x('tp_plugin_local_ru_table_shortcodes_12_title',
+                            '(На нашем сайте искали)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'limit' => 100,
@@ -547,8 +536,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_12_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_12_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 0,
                     'selected' => array(
@@ -574,8 +565,10 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '13' => array(
                     'title' => array(
-                        'en' => 'Cheap Flights from origin',
-                        'ru' =>  'Дешевые перелеты из origin',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_13_title',
+                            '(Cheap Flights from origin)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_13_title',
+                            '(Дешевые перелеты из origin)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'period_type' => 'year',
@@ -586,8 +579,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_13_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_ru_table_shortcodes_13_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 3,
                     'selected' => array(
@@ -614,8 +609,10 @@ class TPDefault implements  \core\TPODefault{
                 ),
                 '14' => array(
                     'title' => array(
-                        'en' => 'Cheap Flights to destination',
-                        'ru' =>  'Дешевые перелеты в destination',
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_14_title',
+                            '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_14_title',
+                            '(Дешевые перелеты в destination)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'tag' => 'h3',
                     'period_type' => 'year',
@@ -626,8 +623,10 @@ class TPDefault implements  \core\TPODefault{
                     'paginate_switch' => true,
                     'transplant' => 0,
                     'title_button' => array(
-                        'en' => 'Tickets from price',
-                        'ru' => 'Билеты от price'
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_14_title_btn',
+                            '(Tickets from price)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_14_title_btn',
+                            '(Билеты от price)', TPOPlUGIN_TEXTDOMAIN),
                     ),
                     'sort_column' => 3,
                     'selected' => array(
@@ -652,6 +651,30 @@ class TPDefault implements  \core\TPODefault{
                     ),
                 ),
 
+            ),
+            'shortcodes_settings' => array(
+                'empty' => array(
+                    'type' => 3,
+                    'value' => array(
+                        0 => array(
+                            'en' => _x('tp_plugin_local_en_table_shortcodes_settings_link_msg',
+                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [link title="Find tickets from {origin} to {destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                            'ru' => _x('tp_plugin_local_ru_table_shortcodes_settings_link_msg',
+                                '(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title="К поиску билетов {origin} {destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                        ),
+                        1 => '',
+                        2 =>  array(
+                            'en' => _x('tp_plugin_local_en_table_shortcodes_settings_button_msg',
+                                '(Unfortunately we don\'t have actual data for flights from {origin} to {destination}. [button title="Find tickets from {origin} to {destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                            'ru' => _x('tp_plugin_local_ru_table_shortcodes_settings_button_msg',
+                                '(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="Найти билеты {origin} - {destination}"])', TPOPlUGIN_TEXTDOMAIN),
+                        ),
+                        3 => ''
+                    )
+                )
+            ),
+            'themes_table' => array(
+                'name' => self::getRandomThemesTable()
             ),
             'style_table' => array(
                 'title_style' => array(
@@ -758,9 +781,291 @@ class TPDefault implements  \core\TPODefault{
                 'all_link' => 1,
                 'limit' => 2,
                 'not_title' => 1,
+            ),
+            'themes_table_hotels' => array(
+                'name' => self::getRandomThemesTable()
+            ),
+            'shortcodes_hotels' => array(
+                //Подборка отелей - Скидки
+                '1' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title',
+                            '(Hotels {location}: {selection_name})', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_1_title',
+                            '(Отели в г. {location}: {selection_name})', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsSelections',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
+                            '(View Hotel)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_1_title_btn',
+                            '(Посмотреть отель)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 3,
+                    'selected' => array(
+                        // Отель
+                        'name',
+                        // Звездность
+                        'stars',
+                        // Скидка
+                        'discount',
+                        // Старая новая цена
+                        'old_price_and_new_price',
+                        /*'rating',
+                        'distance',
+                        'price_pn',
+                        'old_price_pn',*/
+                        // Кнопка
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'discount',
+                        'old_price_and_new_price',
+                        'price_pn',
+                        'old_price_and_discount',
+                        'distance',
+                        'old_price_pn',
+                        'rating',
+                        'button',
+                    ),
+                ),
+                //Подборки отелей на даты
+                '2' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title',
+                            '(Hotels {location}: {selection_name} ({dates}))', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_2_title',
+                            '(Отели в г. {location}: {selection_name} ({dates}))', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsSelections',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
+                            '(View Hotel)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_2_title_btn',
+                            '(Посмотреть отель)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 3,
+                    'selected' => array(
+                        'name',
+                        'stars',
+                        'rating',
+                        //'distance',
+                        'price_pn',
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'price_pn',
+                        'distance',
+                        'rating',
+                        'button',
+                    ),
+                ),
+                //Отели Города по цене ОТ-ДО
+                '3' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title',
+                            '(location hotels with price from priceAvgMin to priceAvgMax)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_3_title',
+                            '(Отели location по цене от priceAvgMin до priceAvgMax)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsFromTo',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_3_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 0,
+                    'selected' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                ),
+                //Отели в городе по звездам
+                '4' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title',
+                            '(location hotels with stars stars )', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_4_title',
+                            '(Отели в location c stars звезд)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsStars',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_4_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 0,
+                    'selected' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                ),
+                //Стоимость проживания В ГОРОДЕ на Х дней
+                '5' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title',
+                            '(Stay price in location for number days)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_5_title',
+                            '(Стоимость проживания в location на number дней)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsPrice',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_5_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 0,
+                    'selected' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                ),
+                //Стоимость проживания В ГОРОДЕ на уикенд
+                '6' => array(
+                    'title' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_6_title',
+                            '(Stay price in location for weekend)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' =>  _x('tp_plugin_local_ru_table_shortcodes_hotels_6_title',
+                            '(Стоимость проживания в location на уикенд)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'tag' => 'h3',
+                    'extra_table_marker' => 'hotelsPriceWeekend',
+                    'paginate' => 10,
+                    'paginate_switch' => true,
+                    'title_button' => array(
+                        'en' => _x('tp_plugin_local_en_table_shortcodes_hotels_6_title_btn',
+                            '(Book now)', TPOPlUGIN_TEXTDOMAIN),
+                        'ru' => _x('tp_plugin_local_en_table_shortcodes_hotels_6_title_btn',
+                            '(Забронировать)', TPOPlUGIN_TEXTDOMAIN),
+                    ),
+                    'sort_column' => 0,
+                    'selected' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                    'fields' => array(
+                        'name',
+                        'stars',
+                        'distance',
+                        'rating',
+                        'address',
+                        'property_type',
+                        'popularity',
+                        'price_from',
+                        'price_avg',
+                        'button',
+                    ),
+                ),
             )
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
         return $defaults;
+    }
+
+    public static function getRandomThemesTable(){
+        $themes = TPThemes::getThemesTables();
+        if(!function_exists("array_column"))
+        {
+            $themesNames = self::array_column($themes, 'name');
+        } else {
+            $themesNames = array_column($themes, 'name');
+        }
+
+        return $themesNames[array_rand($themesNames)];
+    }
+
+    public static function array_column($array,$column_name)
+    {
+        return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
     }
 }

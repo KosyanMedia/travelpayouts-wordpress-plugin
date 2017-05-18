@@ -34,23 +34,30 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'direct' => 'false',
             'one_way' => 'false',
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'subid' => ''
+            'subid' => '',
+            'period_day_from' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
+            'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
+            'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period']
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $period_day_from = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'];
-        $period_day_to = \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'];
-        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
 
+        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
+        $white_label = $this->view->getWhiteLabel($widgets);
+        //$this->view->TypeCurrency()
+        $currency = '';
+        $currency = $this->view->getCurrency($widgets, $white_label);
+        //error_log($period_day_from);
+        //error_log($period_day_to);
         $output = '';
         $output = '
             <div class="TPWidget TPCalendarWidget">
-            <script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
-            .'&origin='.$origin.'&destination='.$destination.'&currency='.$this->view->TypeCurrency()
-            .$width.'&searchUrl='.$this->view->getWhiteLabel($widgets).'&one_way='.$one_way
-            .'&only_direct='.$direct.'&locale='.$this->view->locale
-            .'&period='.\app\includes\TPPlugin::$options['widgets'][$widgets]['period']
+            <script data-cfasync="false" src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
+            .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
+            .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
+            .'&only_direct='.$direct.'&locale='.\app\includes\common\TPLang::getLang()
+            .'&period='.$period
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
-            async></script></div>';
+             data-wpfc-render="false" async></script></div>';
         //error_log($output);
         return $output;
     }

@@ -6,12 +6,16 @@
  * Time: 15:43
  */
 namespace app\includes\controllers\admin\media_buttons;
-class TPWidgetButtonsController extends \core\controllers\TPOAdminMediaButtonsController{
+class TPWidgetButtonsController extends TPAdminMediaButtonsController{
 
     public function action($args = array())
     {
         // TODO: Implement action() method.
-        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Widget', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert widget', TPOPlUGIN_TEXTDOMAIN  );
+        $text = $this->getTextBtn(
+            _x( 'tp_admin_media_button_insert_widget_title',  'admin media button insert widget title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'tp_admin_media_button_widget_short_title',  'admin media button widget title', TPOPlUGIN_TEXTDOMAIN  )
+            );
+
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
             'text'      => $text,

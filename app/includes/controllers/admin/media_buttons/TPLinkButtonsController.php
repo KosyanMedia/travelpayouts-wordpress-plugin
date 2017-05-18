@@ -9,13 +9,16 @@
 namespace app\includes\controllers\admin\media_buttons;
 
 
-class TPLinkButtonsController extends \core\controllers\TPOAdminMediaButtonsController
+class TPLinkButtonsController extends TPAdminMediaButtonsController
 {
 
     public function action($args = array())
     {
-        $text = isset(\app\includes\TPPlugin::$options['config']['compact_button']) ? __( 'Link', TPOPlUGIN_TEXTDOMAIN  ) : __( 'Insert link', TPOPlUGIN_TEXTDOMAIN  );
         // TODO: Implement action() method.
+        $text = $this->getTextBtn(
+            _x( 'tp_admin_media_button_link_title',  'admin media button link title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'tp_admin_media_button_link_short_title',  'admin media button link short title', TPOPlUGIN_TEXTDOMAIN  )
+        );
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
             'text'      => $text,

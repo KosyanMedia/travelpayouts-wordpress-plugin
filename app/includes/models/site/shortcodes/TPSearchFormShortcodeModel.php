@@ -17,4 +17,15 @@ class TPSearchFormShortcodeModel {
         if(count($data) > 0) return $data;
         return false;
     }
+    /**
+     * @param $form
+     * @return string
+     */
+    public function getTypeForm($form){
+        $type = "";
+        preg_match('/"form_type":\s*"(.*?)"/', $form,  $matches);
+        if(isset($matches[1]) && !empty($matches[1]))
+            return $matches[1];
+        return $type;
+    }
 }

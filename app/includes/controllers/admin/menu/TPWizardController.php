@@ -19,8 +19,8 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
         // TODO: Implement action() method.
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( null,
-            _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
-            _x('Wizard',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_wizard_title',  'admin menu page title wizard', TPOPlUGIN_TEXTDOMAIN ),
+            _x('tp_admin_menu_page_wizard_title',  'admin menu page title wizard', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_wizard',
             array(&$this, 'render'));

@@ -17,7 +17,7 @@ jQuery(function($) {
             autoOpen: true,
             resizable: false,
             draggable: false,
-            maxHeight:400,
+            maxHeight:500,
             maxWidth: 450,
             minWidth: 406,
             minHeight:200,
@@ -53,12 +53,19 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, airline, shortcodes, title,
-                            off_title, limit, trip_class,paginate, one_way, tp_subid;
+                            off_title, limit, trip_class,paginate, one_way, tp_subid, currency,
+                            country,filter_airline, filter_flight_number;
+
+
+
                         shortcodes = "";
+                        currency = doc.find('#currency').val();
                         origin = doc.find('#origin').val();
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination').val();
                         destination = destination.substring(destination.indexOf('[')+1,destination.indexOf(']'));
+                        country = doc.find('#country').val();
+                        country = country.substring(country.indexOf('[')+1,country.indexOf(']'));
                         airline = doc.find('#airline').val();
                         airline = airline.substring(airline.indexOf('[')+1,airline.indexOf(']'));
                         title = doc.find('#tp_title').val();
@@ -79,6 +86,12 @@ jQuery(function($) {
                         }else{
                             off_title = "";
                         }
+                        filter_airline = doc.find('#filter_airline').val();
+                        filter_airline = filter_airline.substring(filter_airline.indexOf('[')+1,filter_airline.indexOf(']'));
+                        filter_flight_number = doc.find('#filter_flight_number').val();
+                        filter_airline = (filter_airline != "") ? " filter_airline=\""+filter_airline+"\"" : "";
+                        filter_flight_number = (filter_flight_number != "") ? " filter_flight_number=\""+filter_flight_number+"\"" : "";
+
                         tp_subid = doc.find('#tp_subid').val();
                         if(!validSubid(tp_subid)){
                             doc.find('#tp_subid').addClass('constructorShortcodesError');
@@ -98,7 +111,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_price_calendar_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" " +
                                             "stops="+doc.find('#transplant').val()+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\" currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -112,7 +125,7 @@ jQuery(function($) {
                                     if(origin != "" && destination != ""){
                                         setShortcodes("[tp_price_calendar_week_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -128,9 +141,11 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
+
                                         setShortcodes("[tp_cheapest_flights_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -142,10 +157,11 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_cheapest_ticket_each_day_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -157,9 +173,10 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_cheapest_tickets_each_month_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -171,9 +188,10 @@ jQuery(function($) {
                                         doc.find('#destination').addClass('constructorShortcodesError');
                                     }
                                     if(origin != "" && destination != ""){
+
                                         setShortcodes("[tp_direct_flights_route_shortcodes origin="+origin+" " +
                                             "destination="+destination+" title=\""+title+"\" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -181,9 +199,10 @@ jQuery(function($) {
                                     if(origin == ""){
                                         doc.find('#origin').addClass('constructorShortcodesError');
                                     }else{
+
                                         setShortcodes("[tp_direct_flights_shortcodes origin="+origin+" " +
                                             " title=\""+title+"\" limit="+limit+" "+paginate+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\""+filter_airline+filter_flight_number+"]",
                                             $(this));
                                     }
                                     break;
@@ -214,7 +233,7 @@ jQuery(function($) {
                                     setShortcodes("[tp_our_site_search_shortcodes " +
                                         " title=\""+title+"\" limit="+limit+" "+paginate
                                         +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                        +" subid=\""+tp_subid+"\"]",
+                                        +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                         $(this));
                                     break;
                                 case '12':
@@ -224,7 +243,7 @@ jQuery(function($) {
                                         setShortcodes("[tp_from_our_city_fly_shortcodes origin="+origin+" " +
                                             " title=\""+title+"\" limit="+limit+" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -235,9 +254,22 @@ jQuery(function($) {
                                         setShortcodes("[tp_in_our_city_fly_shortcodes destination="+destination+
                                             " title=\""+title+"\" limit="+limit+" "+paginate
                                             +" stops="+doc.find('#transplant').val()+" "+one_way+" "+off_title
-                                            +" subid=\""+tp_subid+"\"]",
+                                            +" subid=\""+tp_subid+"\"  currency=\""+currency+"\"]",
                                             $(this));
                                     }
+                                    break;
+                                case '14':
+                                    /*if(country == ""){
+                                        doc.find('#country').addClass('constructorShortcodesError');
+                                    }
+                                    if(airline == ""){
+                                        doc.find('#airline').addClass('constructorShortcodesError');
+                                    }*/
+                                    //if(country != "" || airline != ""){
+                                        setShortcodes("[tp_special_offer_shortcodes country=\""+country+"\" " +
+                                            "airline=\""+airline+"\" title=\""+title+"\" limit=\""+limit+"\"]",
+                                            $(this));
+                                    //}
                                     break;
                                 default :
                                     if(origin == ""){
@@ -276,13 +308,19 @@ jQuery(function($) {
                 doc.find('#tr_transplant').hide();
                 doc.find('#tr_one_way').hide();
                 doc.find('#tr_off_title').hide();
-                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid').removeClass('constructorShortcodesError');
+                doc.find('#tr_currency').hide();
+                doc.find('#tr_country').hide();
+                doc.find('#tr_filter_airline').hide();
+                doc.find('#tr_filter_flight_number').hide();
+
+                doc.find('#origin, #destination, #airline, #select_shortcodes, #tp_subid, #country').removeClass('constructorShortcodesError');
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorShortcodesModal");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorShortcodesModal");
-
-        doc.find('#origin, #destination, #airline, #tp_subid').focus(function() {
+        tpCityAutocomplete.TPCountryAutocompleteInit(".constructorCountryShortcodesAutocomplete", "#constructorShortcodesModal");
+        //doc.tooltip();
+        doc.find('#origin, #destination, #airline, #tp_subid, #country').focus(function() {
             $(this).removeClass('constructorShortcodesError');
         });
         /*doc.find('#constructorShortcodesButtonOk').click(function (e) {
@@ -350,6 +388,7 @@ jQuery(function($) {
 
             doc.find('#select_shortcodes').removeClass('constructorShortcodesError');
             doc.find('#tp_subid').removeClass('constructorShortcodesError');
+            doc.find('#country').removeClass('constructorShortcodesError');
 
             doc.find('#tr_title').hide();
             doc.find('#tr_subid').hide();
@@ -362,7 +401,10 @@ jQuery(function($) {
             doc.find('#tr_transplant').hide();
             doc.find('#tr_one_way').hide();
             doc.find('#tr_off_title').hide();
-
+            doc.find('#tr_currency').hide();
+            doc.find('#tr_country').hide();
+            doc.find('#tr_filter_airline').hide();
+            doc.find('#tr_filter_flight_number').hide();
 
             doc.find("#limit").val("");
             switch($(this).val()) {
@@ -376,6 +418,7 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '2':
                     doc.find('#tr_paginate').show();
@@ -384,6 +427,7 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 /*case '3':
                     doc.find('#tr_title').show();
@@ -395,6 +439,9 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '4':
                     doc.find('#tr_paginate').show();
@@ -404,6 +451,9 @@ jQuery(function($) {
                     doc.find('#tr_destination').show();
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '5':
                     doc.find('#tr_paginate').show();
@@ -412,6 +462,9 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
 
                     break;
                 case '6':
@@ -421,6 +474,9 @@ jQuery(function($) {
                     doc.find('#tr_origin').show();
                     doc.find('#tr_destination').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '7':
                     doc.find('#tr_paginate').show();
@@ -430,6 +486,9 @@ jQuery(function($) {
                     doc.find('#tr_limit').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    doc.find('#tr_filter_airline').show();
+                    doc.find('#tr_filter_flight_number').show();
                     break;
                 case '8':
                     doc.find('#tr_paginate').show();
@@ -446,12 +505,14 @@ jQuery(function($) {
                     doc.find('#tr_limit').show();
                     doc.find('#tr_off_title').show();
                     doc.find('#limit').val($(this).data("limit-"+$(this).val()));
+                    //doc.find('#tr_currency').show();
                     break;
                 case '10':
                     doc.find('#tr_paginate').show();
                     doc.find('#tr_title').show();
                     doc.find('#tr_subid').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '11':
                     doc.find('#tr_paginate').show();
@@ -463,6 +524,7 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '12':
                     doc.find('#tr_paginate').show();
@@ -475,6 +537,7 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
                     break;
                 case '13':
                     doc.find('#tr_paginate').show();
@@ -487,6 +550,13 @@ jQuery(function($) {
                     doc.find('#tr_transplant').show();
                     doc.find('#tr_one_way').show();
                     doc.find('#tr_off_title').show();
+                    doc.find('#tr_currency').show();
+                    break;
+                case '14':
+                    doc.find('#tr_title').show();
+                    doc.find('#tr_country').show();
+                    doc.find('#tr_airline').show();
+                    doc.find('#tr_limit').show();
                     break;
             }
             if(doc.find('#off_title').is(":checked")) {
@@ -494,6 +564,403 @@ jQuery(function($) {
             }
         });
     }
+
+    /**
+     * Hotels
+     */
+    doc.find('#constructorHotelsShortcodesButton').click(function (e) {
+        doc.find( "#constructorHotelsShortcodesModal" ).dialog({
+            autoOpen: true,
+            resizable: false,
+            draggable: false,
+            maxHeight:500,
+            maxWidth: 450,
+            minWidth: 406,
+            minHeight:200,
+            modal: true,
+            dialogClass:"TPCustomDialog",
+            position: "absolute",
+            //appendTo: "#post-body-content",
+            create: function (event) {
+
+            },
+            open : function() {
+                $(this).parent().css({
+                    'position': 'fixed',
+                    'left': (win.width() - $(this).parent().outerWidth())/2,
+                    'top': (win.height() - $(this).parent().outerHeight())/2,
+                    'transition': 'none'
+                });
+            },
+            buttons: [
+                {
+                    id: "constructorHotelsShortcodesButtonOk",
+                    text: button_ok,
+                    click: function() {
+                        var select_hotels_shortcodes, tp_hotels_title, hotels_city, select_hotels_type, hotels_day,
+                            select_hotels_star, hotels_rating_from, hotels_rating_to, hotels_distance_from,
+                            hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title,
+                            hotels_selections_type, hotels_subid, check_in, check_out, hotels_city_label,
+                            hotels_selections_type_ru_label, hotels_selections_type_en_label, hotels_selections_type_label,
+                            hotels_link_without_dates;
+                        select_hotels_shortcodes = doc.find('#select_hotels_shortcodes').val();
+                        tp_hotels_title = doc.find('#tp_hotels_title').val();
+                        hotels_city = doc.find('#hotels_city').val();
+                        hotels_city_label = doc.find('#hotels_city').data('city');
+                        hotels_city = hotels_city.substring(hotels_city.indexOf('[')+1,hotels_city.indexOf(']'));
+                        //hotels_city_label = hotels_city_label.substring(hotels_city_label.indexOf('{')+1,hotels_city_label.indexOf('}'));
+                        select_hotels_type = doc.find('#select_hotels_type').val();
+                        hotels_day = doc.find('#hotels_day').val();
+                        select_hotels_star = doc.find('#select_hotels_star').val();
+                        hotels_rating_from = doc.find('#hotels_rating_from').val();
+                        hotels_rating_to = doc.find('#hotels_rating_to').val();
+                        hotels_distance_from = doc.find('#hotels_distance_from').val();
+                        hotels_distance_to = doc.find('#hotels_distance_to').val();
+                        hotels_number_results = doc.find('#hotels_number_results').val();
+                        hotels_selections_type = doc.find('#select_hotels_selections_type').val();
+                        hotels_selections_type_ru_label = doc.find('#select_hotels_selections_type option:selected')
+                            .data('selections-title-ru');
+                        hotels_selections_type_en_label = doc.find('#select_hotels_selections_type option:selected')
+                            .data('selections-title-en');
+                        hotels_selections_type_label = doc.find('#select_hotels_selections_type option:selected')
+                            .data('selections-title');
+                       // console.log(hotels_selections_type_ru_label)
+                       // console.log(hotels_selections_type_en_label)
+
+                        hotels_selections_type_ru_label = "type_selections_label_ru=\""+hotels_selections_type_ru_label+"\"";
+                        hotels_selections_type_en_label = "type_selections_label_en=\""+hotels_selections_type_en_label+"\"";
+                        hotels_selections_type_label = "type_selections_label=\""+hotels_selections_type_label+"\"";
+
+                        check_in = doc.find('#check_in').val();
+                        check_out = doc.find('#check_out').val();
+                        hotels_subid = doc.find('#hotels_subid').val();
+                        if(doc.find('#hotels_paginate').is(":checked")){
+                            hotels_paginate = "paginate=true";
+                        }else{
+                            hotels_paginate = "paginate=false";
+                        }
+                        if(doc.find('#hotels_off_title').is(":checked")){
+                            hotels_off_title = "off_title=true";
+                        }else{
+                            hotels_off_title = "off_title=false";
+                        }
+
+                        if(doc.find('#hotels_link_without_dates').is(":checked")){
+                            hotels_link_without_dates = "link_without_dates=true";
+                        }else{
+                            hotels_link_without_dates = "link_without_dates=false";
+                        }
+
+                        switch (select_hotels_shortcodes) {
+                            case '0':
+                                doc.find('#select_hotels_shortcodes').addClass('constructorShortcodesError');
+                                break;
+                            case '1':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                    break;
+                                }
+                                if (hotels_selections_type == "all"){
+                                    doc.find('#select_hotels_selections_type').addClass('constructorShortcodesError');
+                                    break;
+                                }
+                                setShortcodes("[tp_hotels_selections_discount_shortcodes city=\""+hotels_city+"\" " +
+                                    "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                    " type_selections=\""+hotels_selections_type+"\" " +
+                                    " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
+                                    " city_label=\""+hotels_city_label+"\" "+hotels_selections_type_label+" "
+                                    +hotels_link_without_dates+"]",
+                                    $(this));
+
+                                break;
+                            case '2':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                    break;
+                                }
+                                if (hotels_selections_type == "all"){
+                                    doc.find('#select_hotels_selections_type').addClass('constructorShortcodesError');
+                                    break;
+                                }
+                                //check_out check_in
+                                setShortcodes("[tp_hotels_selections_date_shortcodes city=\""+hotels_city+"\" " +
+                                    "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                    " type_selections=\""+hotels_selections_type+"\"  city_label=\""+hotels_city_label+"\" " +
+                                    " number_results=\""+hotels_number_results+"\" subid=\""+hotels_subid+"\"" +
+                                    " check_in=\""+check_in+"\" check_out=\""+check_out+"\" "+hotels_selections_type_label
+                                    +" "+hotels_link_without_dates+"]",
+                                    $(this));
+
+                                break;
+                            case '3':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                } else {
+                                    setShortcodes("[tp_hotels_city_price_from_to_shortcodes city=\""+hotels_city+"\" " +
+                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
+                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
+                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
+                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"" +
+                                        " subid=\""+hotels_subid+"\"]",
+                                        $(this));
+                                }
+                                break;
+                            case '4':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                } else {
+                                    setShortcodes("[tp_hotels_city_star_filter_shortcodes city=\""+hotels_city+"\" " +
+                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
+                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
+                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
+                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"" +
+                                        " subid=\""+hotels_subid+"\"]",
+                                        $(this));
+                                }
+                                break;
+                            case '5':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                } else {
+                                    setShortcodes("[tp_cost_living_city_days_shortcodes city=\""+hotels_city+"\" " +
+                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
+                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
+                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
+                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"" +
+                                        " subid=\""+hotels_subid+"\"]",
+                                        $(this));
+                                }
+                                break;
+                            case '6':
+                                if (hotels_city == ""){
+                                    doc.find('#hotels_city').addClass('constructorShortcodesError');
+                                } else {
+                                    setShortcodes("[tp_cost_living_city_weekend_shortcodes city=\""+hotels_city+"\" " +
+                                        "title=\""+tp_hotels_title+"\" "+hotels_paginate+ " " +hotels_off_title+
+                                        " type=\""+select_hotels_type+"\" day=\""+hotels_day+"\" "+
+                                        " star=\""+select_hotels_star+"\" rating_from=\""+hotels_rating_from+"\""
+                                        +" rating_to=\""+hotels_rating_to+"\" distance_from=\""+hotels_distance_from+"\""
+                                        +" distance_to=\""+hotels_distance_to+"\" number_results=\""+hotels_number_results+"\"" +
+                                        " subid=\""+hotels_subid+"\"]",
+                                        $(this));
+                                }
+                                break;
+                        }
+
+
+
+                        console.log(select_hotels_shortcodes, tp_hotels_title, hotels_city, select_hotels_type, hotels_day,
+                            select_hotels_star, hotels_rating_from, hotels_rating_to, hotels_distance_from,
+                            hotels_distance_to, hotels_number_results, hotels_paginate, hotels_off_title, check_in, check_out);
+                    }
+                },
+                {
+                    id: "constructorHotelsShortcodesButtonCancel",
+                    text: button_cancel,
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+
+            ],
+            close: function( event, ui ) {
+                $('body').css({'overflow': 'auto'});
+                $("#select_hotels_shortcodes :first").attr("selected", "selected");
+                constructorHotelsShortcodesReload();
+            }
+        });
+        //tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
+        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorHotelsShortcodesModal");
+
+        //console.log(11);
+        doc.find('.constructorDateShortcodes').datepicker({
+            dateFormat : "dd-mm-yy"
+        });
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: '&#x3c;Пред',
+            nextText: 'След&#x3e;',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+        doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').focus(function() {
+            $(this).removeClass('constructorShortcodesError');
+        });
+
+        //console.log(hotelsSelectionsType);
+        /*switch (tpLocale) {
+            case 'ru':
+                addHotelsSelectionsType('ru');
+                break;
+            case 'en':
+                addHotelsSelectionsType('en');
+                break;
+            default:
+                addHotelsSelectionsType('ru');
+                
+        }*/
+
+        constructorHotelsShortcodesSelect();
+    });
+    
+    function addHotelsSelectionsType(locale) {
+        if(typeof hotelsSelectionsType  == "undefined") return;
+        if(typeof hotelsSelectionsType[locale]  == "undefined") return;
+        $.each(hotelsSelectionsType[locale], function(key, value) {
+            $('#select_hotels_selections_type')
+                .append($("<option></option>")
+                    .attr("value",key)
+
+                    .text(value));
+        });
+    }
+
+    function constructorHotelsShortcodesSelect(){
+        doc.find('#td_select_hotels_shortcodes').on('change', '#select_hotels_shortcodes', function(e) {
+            e.preventDefault();
+            switch ($(this).data('paginate-'+$(this).val())){
+                case 0:
+                    doc.find('#hotels_paginate').attr('checked', false);
+                    break;
+                case 1:
+                    doc.find('#hotels_paginate').attr('checked', true);
+                    break;
+            }
+
+            switch ($(this).data('link_without_dates-'+$(this).val())){
+                case 0:
+                    doc.find('#hotels_link_without_dates').attr('checked', false);
+                    break;
+                case 1:
+                    doc.find('#hotels_link_without_dates').attr('checked', true);
+                    break;
+            }
+
+            doc.find('#td_hotels_off_title').on('change', '#hotels_off_title', function(e) {
+                if($(this).is(":checked")) {
+                    doc.find('#tr_hotels_title').hide();
+                }else{
+                    doc.find('#tr_hotels_title').show();
+
+                }
+
+            });
+            if(doc.find('#hotels_off_title').is(":checked")) {
+                doc.find('#tr_hotels_title').hide();
+            }
+            constructorHotelsShortcodesReload();
+            switch($(this).val()) {
+                case '0':
+                    break;
+                case '1':
+                    doc.find('#tr_hotels_title').show();
+                    doc.find('#tr_hotels_city').show();
+                    doc.find('#tr_hotels_paginate').show();
+                    doc.find('#tr_hotels_off_title').show();
+                    doc.find('#tr_hotels_number_results').show();
+                    doc.find('#tr_hotels_selections_type').show();
+                    doc.find('#tr_hotels_subid').show();
+                    doc.find('#tr_hotels_link_without_dates').show();
+                    //doc.find('#tr_hotels_help_text').show();
+                    //constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '2':
+                    doc.find('#tr_hotels_title').show();
+                    doc.find('#tr_hotels_city').show();
+                    doc.find('#tr_hotels_paginate').show();
+                    doc.find('#tr_hotels_off_title').show();
+                    doc.find('#tr_hotels_number_results').show();
+                    doc.find('#tr_hotels_selections_type').show();
+                    doc.find('#tr_hotels_subid').show();
+                    doc.find('#tr_hotels_check_in').show();
+                    doc.find('#tr_hotels_check_out').show();
+                    doc.find('#tr_hotels_link_without_dates').show();
+                    doc.find('#tr_hotels_help_text').show();
+                    //doc.find('#tr_hotels_day').show();
+                    //constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '3':
+                    constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '4':
+                    constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '5':
+                    constructorHotelsShortcodesFieldsShow();
+                    break;
+                case '6':
+                    constructorHotelsShortcodesFieldsShow();
+                    break;
+            }
+        });
+    }
+    
+    function constructorHotelsShortcodesReload() {
+        //
+        doc.find('#tr_hotels_title').hide();
+        doc.find('#tr_hotels_city').hide();
+        doc.find('#tr_hotels_paginate').hide();
+        doc.find('#tr_hotels_off_title').hide();
+        doc.find('#tr_hotels_type').hide();
+        doc.find('#tr_hotels_day').hide();
+        doc.find('#tr_hotels_rating').hide();
+        doc.find('#tr_hotels_star').hide();
+        doc.find('#tr_hotels_distance').hide();
+        doc.find('#tr_hotels_number_results').hide();
+        doc.find('#tr_hotels_selections_type').hide();
+        doc.find('#tr_hotels_subid').hide();
+        doc.find('#tr_hotels_check_in').hide();
+        doc.find('#tr_hotels_check_out').hide();
+        doc.find('#tp_hotels_title').val("");
+        doc.find('#hotels_city').val("");
+        doc.find('#hotels_subid').val("");
+        $('#select_hotels_type option[value=all]').attr('selected','selected');
+        doc.find('#hotels_day').val(3);
+        $('#select_hotels_star option[value=all]').attr('selected','selected');
+        $('#select_hotels_selections_type option[value=all]').attr('selected','selected');
+        doc.find('#hotels_rating_from').val(7);
+        doc.find('#hotels_distance_from').val(0);
+        doc.find('#hotels_distance_to').val(3);
+        doc.find('#hotels_number_results').val(20);
+        doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').removeClass('constructorShortcodesError');
+        doc.find('#tr_hotels_link_without_dates').hide();
+        doc.find('#hotels_link_without_dates').attr('checked', false);
+        doc.find('#tr_hotels_help_text').hide();
+    }
+
+
+    function constructorHotelsShortcodesFieldsShow(){
+        doc.find('#tr_hotels_title').show();
+        doc.find('#tr_hotels_city').show();
+        doc.find('#tr_hotels_paginate').show();
+        doc.find('#tr_hotels_off_title').show();
+        doc.find('#tr_hotels_type').show();
+        doc.find('#tr_hotels_day').show();
+        doc.find('#tr_hotels_rating').show();
+        doc.find('#tr_hotels_star').show();
+        doc.find('#tr_hotels_distance').show();
+        doc.find('#tr_hotels_number_results').show();
+        doc.find('#tr_hotels_subid').show();
+    }
+    
+    
+    /** Hotels end**/
 
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
@@ -529,11 +996,18 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var origin, destination, width, height, direct, one_way, responsive, hotel_id, count, location,
-                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid;
+                            cat, cat1, cat2, cat3, selected, zoom, typeHotelSelectView, limit, tp_subid,
+                            calendar_period, calendar_period_from, calendar_period_to;
+
+
                         selected = doc.find('#select_widgets').val();
 
                         //doc.find('#select_widgets option[value=0]').attr('selected','selected')
                         origin = doc.find('#origin_widget').val();
+
+                        calendar_period = doc.find('#calendar_period').val();
+                        calendar_period_from = doc.find('#calendar_period_from').val();
+                        calendar_period_to = doc.find('#calendar_period_to').val();
                         doc.find('#origin_widget').val("");
                         origin = origin.substring(origin.indexOf('[')+1,origin.indexOf(']'));
                         destination = doc.find('#destination_widget').val();
@@ -618,8 +1092,12 @@ jQuery(function($) {
                                         }else{
                                             responsive = "width="+doc.find('#responsive_width').val();
                                         }
+
                                         setShortcodes("[tp_calendar_widget origin="+origin+" destination="+destination+" "
-                                            +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"]",
+                                            +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"" +
+                                            " period_day_from=\""+calendar_period_from+"\" " +
+                                            " period_day_to=\""+calendar_period_to+"\"" +
+                                            " period=\""+calendar_period+"\"]",
                                             $(this));
                                     }
                                     break;
@@ -786,7 +1264,7 @@ jQuery(function($) {
         });
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineShortcodesAutocomplete", "#constructorWidgetModal");
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorWidgetModal");
-        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorWidgetModal");
+        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete", "#constructorWidgetModal");
         doc.find('#origin_widget, #hotel_id_widget, #destination_widget, #tp_subid_widget').focus(function() {
             $(this).removeClass('constructorShortcodesError');
 
@@ -884,6 +1362,8 @@ jQuery(function($) {
                     doc.find('#tr_subid_widget').show();
                     doc.find('#tr_origin_widget').show();
                     doc.find('#tr_destination_widget').show();
+                    doc.find('#tr_calendar_period_widget').show();
+                    doc.find('#tr_calendar_period_size_widget').show();
                     doc.find('#tr_direct_widget').show();
                     doc.find('#tr_one_way_widget').show();
 
@@ -1532,7 +2012,7 @@ jQuery(function($) {
             }
         });
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#constructorLinkModal");
-        tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#constructorLinkModal");
+        tpCityAutocomplete.TPHotelTypeAutocompleteInit(".constructorLinkHotelShortcodesAutocomplete", "#constructorLinkModal");
         //doc.find('.constructorDate').datepicker(TPdatepickerPlus);
         //doc.find('.constructorDatePlus').datepicker(TPdatepickerPlus);
         doc.find('#origin_link, #destination_link, #city_link, #tp_subid_link').focus(function() {
@@ -1621,17 +2101,35 @@ jQuery(function($) {
         doc.find('.airline_widget_8').val();
         doc.find('#constructorWidgetModalTable').off( 'click', '.TPBtnAdd');
         doc.find('#tr_subid_widget').hide();
+        doc.find('#tr_calendar_period_widget').hide();
+        doc.find('#tr_calendar_period_size_widget').hide();
         //doc.find('#popular_routes_widget_count').val(1);
         //doc.find('.TPPopularRoutes').remove();
     }
     /** **/
     function setShortcodes(shortcodes, selector){
+
         if(typeof tinyMCE  != "undefined"){
             if( ! tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()){
+                //console.log("tinyMCE not activeEditor")
                 if(QTags.insertContent(shortcodes) != true)
                     document.getElementById('content').value += shortcodes;
             } else if(tinyMCE && tinyMCE.activeEditor) {
+                //console.log("tinyMCE activeEditor");
                 tinyMCE.activeEditor.selection.setContent(shortcodes);
+                //var el = tinyMCE.activeEditor.dom.create('p', {id : 'test', 'class' : 'myclass'}, 'some content');
+                //tinyMCE.activeEditor.getBody().insertBefore(el, tinyMCE.activeEditor.getBody().firstChild);
+                //tinyMCE.activeEditor.execInstanceCommand('content','mceInsertContent',false, shortcodes);
+
+                /*tinyMCE.activeEditor.selection.select(tinyMCE.activeEditor.getBody(), true);
+                tinyMCE.activeEditor.selection.collapse(false);
+                tinyMCE.activeEditor.selection.setContent(shortcodes);
+                tinyMCE.activeEditor.focus()
+                tinyMCE.activeEditor.insertContent(shortcodes)
+                tinyMCE.activeEditor.setContent(shortcodes);
+                tinyMCE.activeEditor.execCommand('mceInsertContent', false, shortcodes);
+                tinyMCE.activeEditor.execCommand('mceReplaceContent', false, shortcodes);*/
+                //tinyMCE.activeEditor.execInstanceCommand('text',"mceInsertContent",false,"This is the text to be inserted");
             }
         } else{
             document.getElementById('description').value += shortcodes;

@@ -160,7 +160,8 @@ class TPPluginWidget extends WP_Widget{
         <div class="TP-MainWidget">
             <p>
                 <label for="<?php echo $this->get_field_id('title'); ?>">
-                    <?php _e('Title:');?>
+                    <?php _ex('tp_plugin_widget_form_field_title_label',
+                        '(Title:)', TPOPlUGIN_TEXTDOMAIN);?>
                     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
                            name="<?php echo $this->get_field_name('title'); ?>" type="text"
                            value="<?php echo $title; ?>" />
@@ -168,68 +169,118 @@ class TPPluginWidget extends WP_Widget{
             </p>
             <p class="TP-SelectWidget">
                 <label for="<?php echo $this->get_field_id('select'); ?>" class="TPSelectWidgetLabel">
-                    <?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_select_table_label',
+                        '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <select class="TPSelectShortcodeWidget widefat"
                             id="<?php echo $this->get_field_id('select'); ?>"
                             name="<?php echo $this->get_field_name('select'); ?>"
                             style="max-width:400px;" data-select_table="<?php echo $select; ?>">
-                        <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 1){ ?>
+                        <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 'RUB'){ ?>
                             <option value="0">
-                                <?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('tp_plugin_widget_form_field_select_table_value_0_label',
+                                    '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="1" <?php selected( $select, 1 ); ?>>
-                                1. <?php _e('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                1. <?php _ex('tp_plugin_widget_form_field_select_table_value_1_label',
+                                    '(Flights from origin to destination, One Way (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="2" <?php selected( $select, 2 ); ?>>
-                                2. <?php _e('Flights from Origin to Destination (next few days)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                2. <?php _ex('tp_plugin_widget_form_field_select_table_value_2_label',
+                                    '(Flights from Origin to Destination (next few days))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
                             <option value="3" <?php selected( $select, 3 ); ?>>
-                                3. <?php _e('Cheapest Flights from origin to destination, Round-trip', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                3. <?php _ex('tp_plugin_widget_form_field_select_table_value_3_label',
+                                    '(Cheapest Flights from origin to destination, Round-trip)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="4" <?php selected( $select, 4 ); ?>>
-                                4. <?php _e('Cheapest Flights from origin to destination (next month)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                4. <?php _ex('tp_plugin_widget_form_field_select_table_value_4_label',
+                                    '(Cheapest Flights from origin to destination (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="5" <?php selected( $select, 5 ); ?>>
-                                5. <?php _e('Cheapest Flights from origin to destination (next year)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                5. <?php _ex('tp_plugin_widget_form_field_select_table_value_5_label',
+                                    '(Cheapest Flights from origin to destination (next year))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="6" <?php selected( $select, 6 ); ?>>
-                                6. <?php _e('Direct Flights from origin to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                6. <?php _ex('tp_plugin_widget_form_field_select_table_value_6_label',
+                                    '(Direct Flights from origin to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="7" <?php selected( $select, 7 ); ?>>
-                                7. <?php _e('Direct Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                7. <?php _ex('tp_plugin_widget_form_field_select_table_value_7_label',
+                                    '(Direct Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="8" <?php selected( $select, 8 ); ?>>
-                                8. <?php _e('Popular Destinations from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                8. <?php _ex('tp_plugin_widget_form_field_select_table_value_8_label',
+                                    '(Popular Destinations from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="9" <?php selected( $select, 9 ); ?>>
-                                9. <?php _e('Most popular flights within this Airlines', TPOPlUGIN_TEXTDOMAIN); ?></option>
-                            <!--<option value="10">10. <?php// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>-->
+                                9. <?php _ex('tp_plugin_widget_form_field_select_table_value_9_label',
+                                    '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
+                            <!--<option value="10">10.// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN);</option>-->
                             <option value="11" <?php selected( $select, 11 ); ?>>
-                                10. <?php _e('Searched on our website', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                10. <?php _ex('tp_plugin_widget_form_field_select_table_value_11_label',
+                                    '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="12" <?php selected( $select, 12 ); ?>>
-                                11. <?php _e('Cheap Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                11. <?php _ex('tp_plugin_widget_form_field_select_table_value_12_label',
+                                    '(Cheap Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="13" <?php selected( $select, 13 ); ?>>
-                                12. <?php _e('Cheap Flights to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                12. <?php _ex('tp_plugin_widget_form_field_select_table_value_13_label',
+                                    '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                         <?php } else { ?>
-                            <option selected="selected" value="0"> <?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                            <option selected="selected" value="0">
+                                <?php _ex('tp_plugin_widget_form_field_select_table_value_0_label',
+                                    '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="1" <?php selected( $select, 1 ); ?>>
-                                1. <?php _e('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                1. <?php _ex('tp_plugin_widget_form_field_select_table_value_1_label',
+                                    '(Flights from origin to destination, One Way (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="2" <?php selected( $select, 2 ); ?>>
-                                2. <?php _e('Flights from Origin to Destination (next few days)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                2.  <?php _ex('tp_plugin_widget_form_field_select_table_value_2_label',
+                                    '(Flights from Origin to Destination (next few days))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
                             <option value="3" <?php selected( $select, 3 ); ?>>
-                                3. <?php _e('Cheapest Flights from origin to destination, Round-trip', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                3. <?php _ex('tp_plugin_widget_form_field_select_table_value_3_label',
+                                    '(Cheapest Flights from origin to destination, Round-trip)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="4" <?php selected( $select, 4 ); ?>>
-                                4. <?php _e('Cheapest Flights from origin to destination (next month)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                4. <?php _ex('tp_plugin_widget_form_field_select_table_value_4_label',
+                                    '(Cheapest Flights from origin to destination (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="5" <?php selected( $select, 5 ); ?>>
-                                5. <?php _e('Cheapest Flights from origin to destination (next year)', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                5. <?php _ex('tp_plugin_widget_form_field_select_table_value_5_label',
+                                    '(Cheapest Flights from origin to destination (next year))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="6" <?php selected( $select, 6 ); ?>>
-                                6. <?php _e('Direct Flights from origin to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                6. <?php _ex('tp_plugin_widget_form_field_select_table_value_6_label',
+                                    '(Direct Flights from origin to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="7" <?php selected( $select, 7 ); ?>>
-                                7. <?php _e('Direct Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                7. <?php _ex('tp_plugin_widget_form_field_select_table_value_7_label',
+                                    '(Direct Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="9" <?php selected( $select, 9 ); ?>>
-                                8. <?php _e('Most popular flights within this Airlines', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                8.  <?php _ex('tp_plugin_widget_form_field_select_table_value_9_label',
+                                    '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <!--<option value="10">10. <?php// _e('Special offers airline', TPOPlUGIN_TEXTDOMAIN); ?></option>-->
                             <option value="11" <?php selected( $select, 11 ); ?>>
-                                9. <?php _e('Searched on our website', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                9. <?php _ex('tp_plugin_widget_form_field_select_table_value_11_label',
+                                    '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="12" <?php selected( $select, 12 ); ?>>
-                                10. <?php _e('Cheap Flights from origin', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                10. <?php _ex('tp_plugin_widget_form_field_select_table_value_12_label',
+                                    '(Cheap Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                             <option value="13" <?php selected( $select, 13 ); ?>>
-                                11. <?php _e('Cheap Flights to destination', TPOPlUGIN_TEXTDOMAIN); ?></option>
+                                11. <?php _ex('tp_plugin_widget_form_field_select_table_value_13_label',
+                                    '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </option>
                         <?php }?>
 
                     </select>
@@ -237,7 +288,8 @@ class TPPluginWidget extends WP_Widget{
             </p>
             <p class="TP-OriginWidget">
                 <label for="<?php echo $this->get_field_id('origin'); ?>">
-                    <?php _e('Origin', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_origin_label',
+                        '(Origin)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <input placeholder="<?php echo $origin; ?>" type="text"
                            id="<?php echo $this->get_field_id('origin'); ?>"
                            name="<?php echo $this->get_field_name('origin'); ?>"
@@ -246,7 +298,8 @@ class TPPluginWidget extends WP_Widget{
             </p>
             <p class="TP-DestinationWidget">
                 <label for="<?php echo $this->get_field_id('destination'); ?>">
-                    <?php _e('Destination', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_destination_label',
+                        '(Destination)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <input placeholder="<?php echo $destination; ?>" type="text"
                            id="<?php echo $this->get_field_id('destination'); ?>"
                            name="<?php echo $this->get_field_name('destination'); ?>"
@@ -255,7 +308,8 @@ class TPPluginWidget extends WP_Widget{
             </p>
             <p class="TP-AirlineWidget">
                 <label for="<?php echo $this->get_field_id('airline'); ?>">
-                    <?php _e('Airline', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_airline_label',
+                        '(Airline)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <input placeholder="<?php echo $airline; ?>" type="text"
                            id="<?php echo $this->get_field_id('airline'); ?>"
                            name="<?php echo $this->get_field_name('airline'); ?>"
@@ -264,7 +318,8 @@ class TPPluginWidget extends WP_Widget{
             </p>
             <p class="TP-LimitWidget">
                 <label for="<?php echo $this->get_field_id('limit'); ?>">
-                    <?php _e('Limit', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_limit_label',
+                        '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <input value="<?php echo $limit; ?>" type="number"
                            id="<?php echo $this->get_field_id('limit'); ?>"
                            name="<?php echo $this->get_field_name('limit'); ?>"
@@ -276,7 +331,8 @@ class TPPluginWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('paginate'); ?>"
                            name="<?php echo $this->get_field_name('paginate'); ?>"
                            value="1" <?php checked($paginate, true)?>>
-                    <?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_plugin_widget_form_field_paginate_label',
+                        '(Paginate)', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </label>
             </p>
             <p class="TP-OneWayWidget">
@@ -284,7 +340,8 @@ class TPPluginWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('one_way'); ?>"
                            name="<?php echo $this->get_field_name('one_way'); ?>"
                            value="1" <?php checked($one_way, true)?>>
-                    <?php _e('One Way', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_plugin_widget_form_field_one_way_label',
+                        '(One Way)', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </label>
             </p>
             <p class="TP-Off_TitleWidget">
@@ -292,21 +349,23 @@ class TPPluginWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('off_title'); ?>"
                            name="<?php echo $this->get_field_name('off_title'); ?>"
                            value="1" <?php checked($off_title, true)?>>
-                    <?php _e('No title', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('tp_plugin_widget_form_field_off_title_label',
+                        '(No title)', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </label>
             </p>
 
             <p class="TP-StopsWidget">
                 <label for="<?php echo $this->get_field_id('stops'); ?>">
-                    <?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>:
+                    <?php _ex('tp_plugin_widget_form_field_stops_label',
+                        '(Number of stops)', TPOPlUGIN_TEXTDOMAIN); ?>:
                     <select id="<?php echo $this->get_field_id('stops'); ?>"
                             name="<?php echo $this->get_field_name('stops'); ?>">
                         <option value="0" <?php selected( $stops, 0 ); ?>>
-                            <?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php _ex('tp_plugin_widget_form_field_stops_value_0_label', '(All)', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1" <?php selected( $stops, 1 ); ?>>
-                            <?php _e('No more than one stop', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php _ex('tp_plugin_widget_form_field_stops_value_1_label', '(No more than one stop)', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="2" <?php selected( $stops, 2 ); ?>>
-                            <?php _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php  _ex('tp_plugin_widget_form_field_stops_value_2_label', '(Direct)', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
                 </label>
             </p>

@@ -7,7 +7,7 @@
  */
 namespace core\controllers;
 class TPOBaseController {
-    protected function loadView($view, $type = 0){
+    protected function loadView($view, $type = 0, $data = array()){
         if (file_exists($view)) {
             switch($type){
                 case 0:
@@ -21,7 +21,9 @@ class TPOBaseController {
                     break;
             }
         } else {
-            wp_die(__("View ".$view." not found"));
+            //wp_die(__("View ".$view." not found"));
+            wp_die(sprintf(_x('tp_base_controler_load_view_error_msg', '(View %s not found)', TPOPlUGIN_TEXTDOMAIN), $view));
         }
     }
+
 }

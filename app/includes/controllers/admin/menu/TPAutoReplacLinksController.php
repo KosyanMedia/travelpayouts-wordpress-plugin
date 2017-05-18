@@ -112,7 +112,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                    //     .text('1').appendTo('select[name="action"]');
                 });
                 jQuery('<a href="#" class="button action TPAutoReplaceLinkPostBtn">'
-                    +'<?php _e('Auto-links', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
+                    +'<?php _ex('tp_admin_page_edit_post_btn_auto_links', '(Auto-links)', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
                     .appendTo('.bulkactions');
             </script>
             <?php
@@ -131,7 +131,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($tag, true));
         $actions['tp-auto-replace-link-action-class'] = '<a href="#" data-post_id="'.$tag->ID .'"
              class="TPAutoReplaceLinkPostById">'
-            . __('Auto-links', TPOPlUGIN_TEXTDOMAIN ).'</a>';
+            ._x('tp_admin_page_edit_post_table_post_link_auto_links','(Auto-links)', TPOPlUGIN_TEXTDOMAIN ).'</a>';
         return $actions;
     }
 
@@ -280,7 +280,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $post_content = preg_replace_callback(
                     '/\b('.preg_quote($anchor).')\b|(<a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a>)'
                     .'|(<h[1-6](.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/h[1-6]>)|'
-                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)/um',//m
+                    .'(<h[1-6](.*?)><a(.*?)>(.*?)'.preg_quote($anchor).'(.?)<\/a><\/h[1-6]>)|(<img(.*?)>)/um',//m
                     function($matches) use ($anchor, $url, $nofollow, $replace, $target, $event){
                         //error_log('matches = '.print_r($matches, true));
                         if(strpos($matches[0], '<a') === false){
@@ -409,6 +409,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @return string
      */
     public function matchesReplace($matches, $anchor, $url, $nofollow, $target, $event){
+        //error_log($matches);
+        if(strpos($matches, '<img') !== false)  return  stripslashes($matches);
         if(strpos($matches, '<h1') !== false){
             //Если в тексте нет заголовка
             if(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title'])){
@@ -468,7 +470,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                 $matches = '<h6><a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                     .' '.$event.'>'.$anchor.'</a></h6>';
             }
-        }else {
+        }
+        else {
             //Если в тексте нет заголовка
             $matches = '<a href="'.$url.'" '.$nofollow.' class="TPAutoLinks" '.$target
                 .' '.$event.'>'.$anchor.'</a>';
@@ -485,9 +488,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('Auto-links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            _x('tp_admin_menu_page_auto_links_title',  'admin menu page title auto links', TPOPlUGIN_TEXTDOMAIN )
             .' (beta)',
-            _x('Auto-links',  'add_menu_page page title', TPOPlUGIN_TEXTDOMAIN )
+            _x('tp_admin_menu_page_auto_links_title',  'admin menu page title auto links', TPOPlUGIN_TEXTDOMAIN )
             .'<span class="update-plugins"><span class="plugin-count">beta</span></span>',
             'manage_options',
             'tp_control_substitution_links',
@@ -541,7 +544,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         foreach ( $screens as $screen ){
             add_meta_box(
                 'tp_sectionid',
-                _x('Auto-links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ),
+                _x('tp_admin_page_edit_post_meta_box_auto_links',
+                    '(Auto-links)',  TPOPlUGIN_TEXTDOMAIN ),
                 array( &$this, 'tp_add_custom_box_callback'),
                 $screen,
                 'side',
@@ -583,19 +587,22 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         ?>
         <fieldset>
             <legend class="screen-reader-text">
-                <?php echo _x('Auto-links',  'meta_box_post', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links',
+                    '(Auto-links)',  TPOPlUGIN_TEXTDOMAIN ); ?>
             </legend>
             <input type="radio" name="tp_auto_replac_link" <?php echo $disabled; ?>
                    class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="1"
                     <?php checked( $tp_auto_replac_link, 1 ); ?> >
             <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
-                <?php _e('Enable', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_enable',
+                    '(Enable)', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
             <br><input type="radio" name="tp_auto_replac_link"
                        class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="2"
                         <?php checked( $tp_auto_replac_link, 2 ); ?>>
             <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
-                <?php _e('Disable', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_disable',
+                    '(Disable)', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
         </fieldset>
         <?php
@@ -713,7 +720,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         <div id="TPProgressbarDialog">
             <div id="TPProgressbar">
                 <div class="TPProgressbar-label">
-                    <?php _e('Placing links', TPOPlUGIN_TEXTDOMAIN ); ?>...
+                    <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label',
+                        '(Placing links)', TPOPlUGIN_TEXTDOMAIN ); ?>...
                 </div>
             </div>
         </div>

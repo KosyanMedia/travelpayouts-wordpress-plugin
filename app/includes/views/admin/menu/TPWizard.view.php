@@ -1,22 +1,26 @@
 <div class="TPWrapper">
     <div id="tabs-wizard">
         <p class="TP-SettingTitle TP-DashboardTitle">
-            <?php _e('Earn by selling tourist services', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('tp_admin_page_wizard_title', 'admin page wizard title', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
         <p class="TP-titleNews TP-titleNewsR">
-            <?php _e('Install our convenient and useful tools to your website and help your visitors to find the cheapest flights and hotels. Earn on commission for each booking.', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('tp_admin_page_wizard_title_description', 'admin page wizard title description', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
 
         <nav class="TPNavigation">
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-waccount" class="TPMainMenuA">
-                        <span><?php _e('I have Travelpayouts account', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <span>
+                            <?php _ex('tp_admin_page_wizard_tab_menu_account', 'admin page wizard tab menu account', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                     </a>
                 </li>
                 <li >
                     <a href="#tabs-wreg" class="TPMainMenuA">
-                        <span><?php _e('New to Travelpayouts?', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                        <span>
+                            <?php _ex('tp_admin_page_wizard_tab_menu_registration', 'admin page wizard tab menu registration', TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
                     </a>
                 </li>
             </ul>

@@ -11,10 +11,12 @@ class TPAutocomplete {
     public static $data;
     public static $title;
     public static $data_airline;
+    //private static $locations;
     private function __construct() {
         self::getIataAutocomplete();
         self::getIataAutocompleteTitle();
         self::getIataAutocompleteAir();
+        //self::setLocations();
     }
     public static function getInstance(){
         if (null === self::$instance) {
@@ -23,7 +25,7 @@ class TPAutocomplete {
         return self::$instance;
     }
     private function getIataAutocomplete(){
-        $cities = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/cities.json');
+        $cities = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/cities.json');//cities|airports
         $cities = json_decode($cities, true);
         foreach($cities as $value){
             $rows[$value['code']] = $value;
@@ -44,4 +46,20 @@ class TPAutocomplete {
         }
         self::$data_airline = $rows;
     }
+
+   /* private function setLocations(){
+        $locations = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/locations.json');
+        $locations = json_decode($locations, true);
+        $rows = array();
+        foreach($locations as $value){
+            $rows[$value['id']] = $value;
+        }
+        error_log(print_r($rows, true));
+        self::$locations = $rows;
+    }
+
+    public static function getLocationsById($id){
+        if (!array_key_exists($id, self::$locations)) return array();
+        return self::$locations[$id];
+    }*/
 }
