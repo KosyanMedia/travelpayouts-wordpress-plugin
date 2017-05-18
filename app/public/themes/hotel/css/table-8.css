@@ -207,6 +207,14 @@
 @media (max-width: 480px) {
   .TPpriceTd {
     display: none !important; }
+    .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+      position: relative;
+      top: -10px;
+      left: -2px;
+    }
+    .TP-old-price-and {
+      display: inline !important;
+    } 
 
   /*.TPHotelTable .TP-Plugin-Tables_box tbody tr td:first-of-type p {
       padding-left: 4px;
