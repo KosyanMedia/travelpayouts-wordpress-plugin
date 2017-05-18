@@ -206,7 +206,7 @@
 @media (max-width: 480px) {
   .TPpriceTd {
     display: none !important; }
-        .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link{
+    .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link{
       position: relative;
       top: -10px;
       left: -2px;
@@ -259,7 +259,7 @@
   .TP-rwd-table tbody tr td img {
     max-height: 35px;
     vertical-align: middle;
-    max-width: 30%;
+    /*max-width: 30%;*/
     display: inline-block;
     width: auto; }
 
@@ -274,7 +274,7 @@
 
   .TP-rwd-table tbody tr td:before {
     color: #000;
-    padding: 11px;
+    padding: 9px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
