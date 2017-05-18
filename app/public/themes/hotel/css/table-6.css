@@ -260,7 +260,7 @@
   .TP-rwd-table tbody tr td img {
     max-height: 35px;
     vertical-align: middle;
-    max-width: 30%;
+    /*max-width: 30%;*/
     display: inline-block;
     width: auto; }
 
@@ -271,7 +271,7 @@
 
   .TP-rwd-table tbody tr td:before {
     color: #687087;
-    padding: 10px;
+    padding: 9px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
