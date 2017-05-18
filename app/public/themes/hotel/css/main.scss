@@ -199,6 +199,14 @@
   .TPpriceTd {
     display: none !important;
   }
+    .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link{
+      position: relative;
+      top: -10px;
+      left: -2px;
+    } 
+    .TP-old-price-and {
+      display: inline !important;
+    }
   /*.TP-Plugin-Tables_box tbody tr td:first-of-type p {
       padding-left: 4px;
   }
@@ -236,7 +244,7 @@
   .TP-rwd-table tbody tr td img{
     max-height: 35px;
     vertical-align: middle;
-    max-width: 30%;
+    // max-width: 30%;
     display: inline-block;
     width: auto;
 
@@ -247,9 +255,9 @@
     margin: 0;
   }
   .TP-rwd-table tbody tr td:before {
-    color: white;
-    background: #00b443;
-    padding: 10px;
+    // color: white;
+    // background: #00b443;
+    padding: 9px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
@@ -262,8 +270,8 @@
     width: auto;
   }
 
-  .TP-rwd-table-avio tbody tr td:before {
-    background: #1db1db; }
+  // .TP-rwd-table-avio tbody tr td:before {
+  //   background: #1db1db; }
 
   .TP-rwd-table .TP-Plugin-Tables_box_thead {
     display: none; } }
@@ -339,14 +347,14 @@
 }
 
 .sorting_asc:after{
-  content: " ?–?" !important;
+  content: " â–¾" !important;
   position: absolute;
   right: 5px;
   top: 0;
   margin-top: 12px;
 }
 .sorting_desc:after{
-  content: " ?–?" !important;
+  content: " â–´" !important;
   position: absolute;
   right: 5px;
   top: 0;

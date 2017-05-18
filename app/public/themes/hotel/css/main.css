@@ -262,7 +262,7 @@
   .TP-rwd-table tbody tr td img {
     max-height: 35px;
     vertical-align: middle;
-    max-width: 30%;
+    /*max-width: 30%;*/
     display: inline-block;
     width: auto; }
 
@@ -272,9 +272,9 @@
     margin: 0; }
 
   .TP-rwd-table tbody tr td:before {
-    color: white;
-    background: #00b443;
-    padding: 10px;
+    /*color: white;*/
+    /*background: #00b443;*/
+    padding: 9px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
@@ -287,8 +287,8 @@
     min-width: 100px;
     width: auto; }
 
-  .TP-rwd-table-avio tbody tr td:before {
-    background: #1db1db; }
+  /*.TP-rwd-table-avio tbody tr td:before {
+    background: #1db1db; }*/
 
   .TP-rwd-table .TP-Plugin-Tables_box_thead {
     display: none; } }
@@ -359,14 +359,14 @@
   display: inline; }
 
 .sorting_asc:after {
-  content: " ?Ц?" !important;
+  content: " ▾" !important;
   position: absolute;
   right: 5px;
   top: 0;
   margin-top: 12px; }
 
 .sorting_desc:after {
-  content: " ?Ц?" !important;
+  content: " ▴" !important;
   position: absolute;
   right: 5px;
   top: 0;
