@@ -337,7 +337,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                     if (!empty($price_pn)){
                         $old_price_and_discount =   '<span class="TP-old-price">'
                                                         .'<strike class="TPHotelPriceStrike">'
-                                                            .$this->renderPrice(number_format($price_pn, 0, '.', ' '),
+                                                            .$this->renderPrice(number_format($old_price_pn, 0, '.', ' '),
 		                                                            $currency)
                                                         .'</strike>'
                                                     .'</span>'
