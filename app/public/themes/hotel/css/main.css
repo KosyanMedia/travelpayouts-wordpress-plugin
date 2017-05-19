@@ -1,8 +1,8 @@
 @charset "UTF-8";
-.TPHotelTable .TPReadMoreList > div {
+.TPReadMoreList > div {
   display: none; }
 
-.TPHotelTable .TPReadMoreButton {
+.TPReadMoreButton {
   display: block;
   cursor: pointer; }
 
@@ -31,7 +31,7 @@
   margin-top: 2em;
   margin-bottom: 1em; }
 
-.TPHotelTable .TP-sorting_asc:after {
+.TP-sorting_asc:after {
   content: " \25b2" !important;
   position: absolute;
   right: 10px;
@@ -39,7 +39,7 @@
   margin-top: 12px;
   font-size: 8px; }
 
-.TPHotelTable .TP-sorting_desc:after {
+.TP-sorting_desc:after {
   content: " \25bc" !important;
   position: absolute;
   right: 10px;
@@ -173,10 +173,10 @@
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:nth-child(even) {
   background: #f2f2f2; }
 
-.TPHotelTable .TP-autoWidth-plugin {
+.TP-autoWidth-plugin {
   width: 100%; }
 
-.TPHotelTable .TP-hidden {
+.TP-hidden {
   display: none !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box-h thead tr {
@@ -187,10 +187,10 @@
 .TPHotelTable .TP-Plugin-Tables_box-h .TP-active {
   background: #008a33; }
 
-.TPHotelTable .TP-rwd-table td {
+.TP-rwd-table td {
   display: block; }
 
-.TPHotelTable .TP-rwd-table td:before {
+.TP-rwd-table td:before {
   content: attr(data-th) ": "; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td p, .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
@@ -198,28 +198,25 @@
   line-height: 1 !important; }
 
 @media (min-width: 480px) {
- .TPHotelTable  .TP-rwd-table td:before {
+  .TP-rwd-table td:before {
     display: none; } }
-.TPHotelTable .TP-rwd-table th, .TP-rwd-table td {
+.TP-rwd-table th, .TP-rwd-table td {
   text-align: left; }
 
 @media (min-width: 480px) {
- .TPHotelTable .TP-rwd-table th, .TP-rwd-table td {
+  .TP-rwd-table th, .TP-rwd-table td {
     display: table-cell; } }
 @media (max-width: 480px) {
- .TPHotelTable .TPpriceTd {
+  .TPpriceTd {
     display: none !important; }
-    .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link{
+    .TP-old-price-and {
+      display: inline !important;
+    }
+    .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
       position: relative;
       top: -10px;
       left: -2px;
-    } 
-  .TPHotelTable  .TP-old-price-and {
-      display: inline !important;
     }
- .TPHotelTable .TP-rwd-table tbody tr td:first-of-type {
-    border-top: 1px solid rgba(51, 51, 51, 0.26) !important;
-}
 
   /*.TP-Plugin-Tables_box tbody tr td:first-of-type p {
       padding-left: 4px;
@@ -227,42 +224,42 @@
   .TP-rwd-table tbody tr td:nth-child(2) p {
       padding-left: 4px;
   } */
- .TPHotelTable .TP-tdContent {
+  .TP-tdContent {
     position: absolute;
     top: 32%; }
 
-.TPHotelTable  .TP-AirlineLogo {
+  .TP-AirlineLogo {
     top: 0 !important; }
 
- .TPHotelTable .TPPopUpButtonTable {
+  .TPPopUpButtonTable {
     display: none !important; }
 
- .TPHotelTable .TP-rwd-table {
+  .TP-rwd-table {
     width: 100%; }
 
- .TPHotelTable .TP-rwd-table tbody tr {
+  .TP-rwd-table tbody tr {
     margin-bottom: 10px;
     display: inline-block;
     height: auto;
     width: 100%; }
 
- .TPHotelTable .TP-rwd-table tbody tr .stars {
+  .TP-rwd-table tbody tr .stars {
     padding: 0; }
 
-.TPHotelTable  .TP-rwd-table tbody tr .stars img {
+  .TP-rwd-table tbody tr .stars img {
     position: relative;
     top: 2px;
     margin-right: 2px; }
 
- .TPHotelTable .TP-rwd-table tbody tr td:first-of-type {
+  .TP-rwd-table tbody tr td:first-of-type {
     border-top: 1px solid #f2f2f2; }
 
-.TPHotelTable .TP-rwd-table tbody tr td {
+  .TP-rwd-table tbody tr td {
     text-align: left;
     overflow: hidden;
     padding: 0 !important; }
 
- .TPHotelTable .TP-rwd-table tbody tr td img {
+  .TP-rwd-table tbody tr td img {
     max-height: 35px;
     vertical-align: middle;
     /*max-width: 30%;*/
@@ -274,7 +271,7 @@
     white-space: nowrap;
     margin: 0; }
 
- .TPHotelTable .TP-rwd-table tbody tr td:before {
+  .TP-rwd-table tbody tr td:before {
     /*color: white;*/
     /*background: #00b443;*/
     padding: 9px;
@@ -284,18 +281,18 @@
     vertical-align: middle;
     margin-right: 9px; }
 
- .TPHotelTable .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
+  .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
     display: inline-block;
     overflow: inherit;
     min-width: 100px;
     width: auto; }
 
-/*  .TP-rwd-table-avio tbody tr td:before {
+  /*.TP-rwd-table-avio tbody tr td:before {
     background: #1db1db; }*/
 
-.TPHotelTable  .TP-rwd-table .TP-Plugin-Tables_box_thead {
+  .TP-rwd-table .TP-Plugin-Tables_box_thead {
     display: none; } }
-.TPHotelTable .TPPopUpButtonTable {
+.TPPopUpButtonTable {
   width: 100px;
   padding: 0 10px;
   height: 30px;
@@ -322,10 +319,10 @@
   transition: all ease 0.3s;
   white-space: nowrap; }
 
-.TPHotelTable .TPPopUpButtonTable span {
+.TPPopUpButtonTable span {
   line-height: 30px; }
 
-.TPHotelTable .TPPopUpButtonTable:hover {
+.TPPopUpButtonTable:hover {
   background: #ce6408;
   text-decoration: none;
   color: #fff !important; }
@@ -375,7 +372,7 @@
   top: 0;
   margin-top: 12px; }
 
-.TPHotelTable .dataTables_paginate span a {
+.dataTables_paginate span a {
   margin-right: 5px;
   display: block;
   float: left;
@@ -388,7 +385,7 @@
   color: black;
   background: none; }
 
-.TPHotelTable span.ellipsis {
+span.ellipsis {
   display: block;
   float: left;
   width: 30px;
@@ -410,32 +407,32 @@
   vertical-align: middle;
   width: auto; }
 
-.TPHotelTable .TP-PopularRoutesWidgets {
+.TP-PopularRoutesWidgets {
   width: 100%;
   display: inline-block;
   vertical-align: top; }
 
-.TPHotelTable .TP-PopularRoutesWidget {
+.TP-PopularRoutesWidget {
   /*margin-right: 1%;/*13px*/
   margin-bottom: 15px;
   float: left;
   width: 30.3333%;
   min-width: 200px; }
 
-.TPHotelTable .TP-tdContent a {
+.TP-tdContent a {
   border: none !important; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
   border: none; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
   background-color: #69c7f4;
   color: #fff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+.TPTabs.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
   display: block;
   outline: none;
   padding: 0 30px;
@@ -455,10 +452,10 @@
   -webkit-box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 2px #DEDDDD, inset 0 -2px 0 rgba(0, 0, 0, 0.15); }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li a br {
+.TPTabs.ui-tabs .ui-tabs-nav li a br {
   display: none; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav {
+.TPTabs.ui-tabs .ui-tabs-nav {
   margin: 0;
   padding: 0;
   background: none;
@@ -473,13 +470,13 @@
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
-.TPHotelTable .TPTabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all {
+.TPTabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
   border: none; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li {
+.TPTabs.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li {
   margin: 0;
   padding: 0;
   -webkit-border-radius: 0;
@@ -487,29 +484,29 @@
   border-radius: 0;
   border: 1px solid transparent; }
 
-.TPHotelTable .TPTabs .ui-state-default.ui-corner-top.ui-state-hover a {
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover a {
   background-color: #69c7f4;
   color: #fff;
   border: none; }
 
-.TPHotelTable .TPTabs .ui-state-default.ui-corner-top.ui-state-hover {
+.TPTabs .ui-state-default.ui-corner-top.ui-state-hover {
   border: 1px solid transparent; }
 
-.TPHotelTable .TPTabs.ui-tabs .ui-tabs-nav li {
+.TPTabs.ui-tabs .ui-tabs-nav li {
   margin: 0 !important;
   border: 0 !important; }
 
-.TPHotelTable .TPflight_numberTd .TP-tdContent {
+.TPflight_numberTd .TP-tdContent {
   margin: 0 !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box {
   display: table !important;
   border: 1px solid #f2f2f2 !important; }
 
-.TPHotelTable .TPTdButtonShow {
+.TPTdButtonShow {
   overflow: hidden !important; }
 
-.TPHotelTable .TP-TitleTables {
+.TP-TitleTables {
   font-size: 22px !important;
   font-family: Arial, sans-serif !important;
   color: #191e23 !important;
@@ -517,11 +514,11 @@
   font-style: normal !important;
   text-decoration: none !important; }
 
-.TPHotelTable .TP-tdContent a {
+.TP-tdContent a {
   font-size: 13px !important;
   font-family: Arial, sans-serif !important; }
 
-.TPHotelTable .TPCurrencyIco {
+.TPCurrencyIco {
   font-size: 13px !important; }
 
 .TPHotelTable .TP-Plugin-Tables_box thead tr td, .TPHotelTable .TP-Plugin-Tables_box tbody tr td,
