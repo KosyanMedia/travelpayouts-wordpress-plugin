@@ -115,9 +115,7 @@
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
-  td {
-
-  }
+  td {}
   box-sizing: border-box;
   cursor: pointer
 }
@@ -633,9 +631,12 @@ span.ellipsis {
   }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: normal;
     margin: 0;
     color: #fff !important;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
+    margin-top: -6px;
   }
   .TP-rwd-table tbody tr td:before {
     color: #b5abba;

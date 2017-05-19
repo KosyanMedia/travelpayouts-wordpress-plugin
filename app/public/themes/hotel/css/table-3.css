@@ -540,7 +540,6 @@ span.ellipsis {
   border-radius: 20px;
 }
 
-
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   background-color: #fff !important;
   color: #15234e !important;
@@ -617,8 +616,11 @@ span.ellipsis {
   }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: normal;
     margin: 0;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
+    margin-top: -6px;
   }
   .TP-rwd-table tbody tr td:before {
     color: #15234e;
