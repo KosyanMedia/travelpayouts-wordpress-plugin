@@ -99,8 +99,6 @@
   font-weight: 400;
 }
 
-//.TPHotelTable .TP-Plugin-Tables_box tbody tr:first-of-type td {
-//  border-top: 0px none; }
 .TPHotelTable .TP-Plugin-Tables_box tbody tr {
   color: #262626;
   font-size: 13px;
@@ -113,11 +111,9 @@
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
-  //td{
-  //  background-color: #d8f1f3!important;
-  //}
   box-sizing: border-box;
-  cursor: pointer
+  cursor: pointer;
+  background: rgba(61, 192, 196, 0.27) !important;
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td {
@@ -230,109 +226,9 @@
   line-height: 1 !important;
 }
 
-@media (min-width: 480px) {
-  .TP-rwd-table td:before {
-    display: none;
-  }
-}
-
 .TP-rwd-table th,
 .TP-rwd-table td {
   text-align: left;
-}
-
-@media (min-width: 480px) {
-  .TP-rwd-table th,
-  .TP-rwd-table td {
-    display: table-cell;
-  }
-}
-
-@media (max-width: 480px) {
-  .TPpriceTd {
-    display: none !important;
-  }
-  .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
-    position: relative;
-    top: -10px;
-    left: -2px;
-  }
-  .TP-old-price-and {
-    display: inline !important;
-  }
-  /*.TPHotelTable .TP-Plugin-Tables_box tbody tr td:first-of-type p {
-      padding-left: 4px;
-  }
-  .TP-rwd-table tbody tr td:nth-child(2) p {
-      padding-left: 4px;
-  } */
-  .TP-tdContent {
-    position: absolute;
-    top: 32%;
-  }
-  .TP-AirlineLogo {
-    top: 0 !important;
-  }
-  .TPPopUpButtonTable {
-    display: none !important;
-  }
-  .TP-rwd-table {
-    width: 100%;
-  }
-  .TP-rwd-table tbody tr {
-    margin-bottom: 10px;
-    display: inline-block;
-    height: auto;
-    width: 100%;
-  }
-  .TP-rwd-table tbody tr .stars {
-    padding: 0;
-  }
-  .TP-rwd-table tbody tr .stars img {
-    position: relative;
-    top: 2px;
-    margin-right: 2px;
-  }
-  .TP-rwd-table tbody tr td:first-of-type {
-    border-top: 1px solid #f2f2f2;
-  }
-  .TP-rwd-table tbody tr td {
-    text-align: left;
-    overflow: hidden;
-    padding: 0 !important;
-  }
-  .TP-rwd-table tbody tr td img {
-    max-height: 35px;
-    vertical-align: middle; // max-width: 30%;
-    display: inline-block;
-    width: auto;
-  }
-  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
-    vertical-align: middle;
-    white-space: nowrap;
-    margin: 0;
-  }
-  .TP-rwd-table tbody tr td:before {
-    color: white;
-    padding: 9px;
-    display: inline-block;
-    width: 113px;
-    min-height: inherit;
-    vertical-align: middle;
-    margin-right: 9px;
-  }
-  .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
-    display: inline-block;
-    overflow: inherit;
-    min-width: 100px;
-    width: auto;
-  }
-  .TP-rwd-table-avio tbody tr td:before {
-    background: #3f4a54;
-  }
-  .TP-rwd-table .TP-Plugin-Tables_box_thead {
-    display: none;
-  }
 }
 
 .TPPopUpButtonTable {
@@ -379,6 +275,7 @@
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
   display: inline;
+  color: #7a6c87 !important;
 }
 
 .sorting_asc:after {
@@ -645,6 +542,7 @@ span.ellipsis {
   background: #3dc0c4!important;
   border-bottom-color: #33bac4 !important;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
@@ -664,7 +562,96 @@ span.ellipsis {
   border-bottom-right-radius: 3px;
 }
 
+@media (min-width: 480px) {
+  .TP-rwd-table td:before {
+    display: none;
+  }
+  .TP-rwd-table th,
+  .TP-rwd-table td {
+    display: table-cell;
+  }
+}
+
 @media (max-width: 480px) {
+  .TPpriceTd {
+    display: none !important;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    position: relative;
+    top: -10px;
+    left: -2px;
+  }
+  .TP-old-price-and {
+    display: inline !important;
+  }
+  .TP-tdContent {
+    position: absolute;
+    top: 32%;
+  }
+  .TP-AirlineLogo {
+    top: 0 !important;
+  }
+  .TPPopUpButtonTable {
+    display: none !important;
+  }
+  .TP-rwd-table {
+    width: 100%;
+  }
+  .TP-rwd-table tbody tr {
+    margin-bottom: 10px;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+  }
+  .TP-rwd-table tbody tr .stars {
+    padding: 0;
+  }
+  .TP-rwd-table tbody tr .stars img {
+    position: relative;
+    top: 2px;
+    margin-right: 2px;
+  }
+  .TP-rwd-table tbody tr td:first-of-type {
+    border-top: 1px solid #f2f2f2;
+  }
+  .TP-rwd-table tbody tr td {
+    text-align: left;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+  .TP-rwd-table tbody tr td img {
+    max-height: 35px;
+    vertical-align: middle;
+    /*max-width: 30%;*/
+    display: inline-block;
+    width: auto;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td p {
+    vertical-align: middle;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .TP-rwd-table tbody tr td:before {
+    color: white;
+    padding: 9px;
+    display: inline-block;
+    width: 113px;
+    min-height: inherit;
+    vertical-align: middle;
+    margin-right: 9px;
+  }
+  .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
+    display: inline-block;
+    overflow: inherit;
+    min-width: 100px;
+    width: auto;
+  }
+  .TP-rwd-table-avio tbody tr td:before {
+    background: #3f4a54;
+  }
+  .TP-rwd-table .TP-Plugin-Tables_box_thead {
+    display: none;
+  }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr:nth-child(even) {
     background-color: #fff;
   }
