@@ -116,7 +116,7 @@
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
   td {
-    background-color: #9f82ad !important;
+
   }
   box-sizing: border-box;
   cursor: pointer
@@ -548,13 +548,17 @@ span.ellipsis {
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
-  background: inherit;
+  border: 2px solid #9f82ad !important;
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   border: 2px solid #ef643b !important;
-  background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%);
+  background-image: -webkit-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
+  background-image: -moz-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
+  background-image: -o-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
+  background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%) !;
   color: #fff!important;
+  box-shadow: none !important;
 }
 
 @media (min-width: 480px) {
