@@ -551,10 +551,10 @@ span.ellipsis {
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   border: 2px solid #ef643b !important;
-  background-image: -webkit-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
-  background-image: -moz-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
-  background-image: -o-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !;
-  background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%) !;
+  background-image: -webkit-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !important;
+  background-image: -moz-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !important;
+  background-image: -o-linear-gradient(left, #f17d1b 0%, #ed4a5e 100%) !important;
+  background-image: linear-gradient(to right, #f17d1b 0%, #ed4a5e 100%) !important;
   color: #fff!important;
   box-shadow: none !important;
 }
@@ -633,7 +633,7 @@ span.ellipsis {
     vertical-align: middle;
     white-space: normal;
     margin: 0;
-    color: #fff !important;
+    color: #000 !important;
   }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
     margin-top: -6px;
