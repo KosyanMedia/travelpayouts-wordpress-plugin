@@ -657,7 +657,7 @@ span.ellipsis {
   .TPHotelTable .TP-rwd-table-avio tbody tr td:before {
     background: #f1d600;
   }
-  .TP-rwd-table .TPHotelTable .TP-Plugin-Tables_box_thead {
+  .TPHotelTable .TP-rwd-table .TPHotelTable .TP-Plugin-Tables_box_thead {
     display: none;
   }
   .TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
