@@ -648,7 +648,7 @@ a.paginate_button:hover {
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
     margin-top: -6px;
   }
-  .TP-rwd-table tbody tr td:before {
+  .TPHotelTable .TP-rwd-table tbody tr td:before {
     color: #687087;
     padding: 9px;
     display: inline-block;
@@ -663,7 +663,7 @@ a.paginate_button:hover {
     min-width: 100px;
     width: auto;
   }
-  .TP-rwd-table-avio tbody tr td:before {
+  .TPHotelTable .TP-rwd-table-avio tbody tr td:before {
     background: #dfe2ed;
   }
   .TP-rwd-table .TP-Plugin-Tables_box_thead {

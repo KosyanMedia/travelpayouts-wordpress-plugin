@@ -628,7 +628,7 @@ span.ellipsis {
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
     margin-top: -6px;
   }
-  .TP-rwd-table tbody tr td:before {
+  .TPHotelTable .TP-rwd-table tbody tr td:before {
     color: white;
     background: #00b443;
     padding: 9px;
@@ -644,7 +644,7 @@ span.ellipsis {
     min-width: 100px;
     width: auto;
   }
-  .TP-rwd-table-avio tbody tr td:before {
+  .TPHotelTable  .TP-rwd-table-avio tbody tr td:before {
     background: #292a3a;
   }
   .TP-rwd-table .TP-Plugin-Tables_box_thead {

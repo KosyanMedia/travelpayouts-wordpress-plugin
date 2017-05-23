@@ -791,7 +791,7 @@ a.paginate_button:hover {
   .TP-rwd-table tbody tr td img {
     max-height: 35px;
     vertical-align: middle;
-    max-width: 30%;
+    /*max-width: 30%;*/
     display: inline-block;
     width: auto;
   }
@@ -803,7 +803,7 @@ a.paginate_button:hover {
   .TP-rwd-table tbody tr td:before {
     color: white;
     background: #00b443;
-    padding: 10px;
+    padding: 8px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
