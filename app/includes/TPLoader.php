@@ -11,6 +11,7 @@ use app\includes\controllers\site\shortcodes\hotels\TPHotelsCityStarFilterShortc
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDateShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsShortcodeController;
+use app\includes\controllers\site\shortcodes\railway\TPTutuShortcodeController;
 use app\includes\models\admin\TPHotelsTypeModel;
 
 class TPLoader extends \core\TPOLoader{
@@ -57,7 +58,7 @@ class TPLoader extends \core\TPOLoader{
     protected function site()
     {
         // TODO: Implement site() method.
-        //Shortcodes
+        //Shortcodes Flight
         new \app\includes\controllers\site\shortcodes\TPSearchFormShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPCheapestFlightsShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPDirectFlightsRouteShortcodeController();
@@ -74,6 +75,8 @@ class TPLoader extends \core\TPOLoader{
         new \app\includes\controllers\site\shortcodes\TPLinkShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPSpecialOfferShortcodeController();
         new \app\includes\controllers\site\shortcodes\TPCaseCityShortcodeController();
+
+        //hotel
         new TPCostLivingCityWeekendShortcodeController();
         new TPCostLivingCityDaysShortcodeController();
         new TPHotelsCityPriceFromToShortcodeController();
@@ -81,6 +84,9 @@ class TPLoader extends \core\TPOLoader{
         //new TPHotelsSelectionsShortcodeController();
         new TPHotelsSelectionsDiscountShortcodeController();
         new TPHotelsSelectionsDateShortcodeController();
+
+        //Railway
+	    new TPTutuShortcodeController();
 
         //Widgets
         new \app\includes\controllers\site\widgets\TPMapWidgetController();
