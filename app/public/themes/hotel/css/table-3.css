@@ -637,18 +637,18 @@ span.ellipsis {
     min-width: 100px;
     width: auto;
   }
-  .TP-rwd-table-avio tbody tr td:before {
+  .TPHotelTable  .TP-rwd-table-avio tbody tr td:before {
     background: #fff;
   }
   .TP-rwd-table .TP-Plugin-Tables_box_thead {
     display: none;
   }
-  .TP-Plugin-Tables_box thead tr td.tp-price-column,
-  .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
+  .TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
     background-color: #f60f3d !important;
   }
-  .TP-Plugin-Tables_box thead tr td.tp-price-column,
-  .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:before {
+  .TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:before {
     background-color: #f60f3d !important;
     color: #fff;
   }

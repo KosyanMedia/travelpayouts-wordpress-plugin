@@ -633,12 +633,11 @@ span.ellipsis {
     vertical-align: middle;
     white-space: normal;
     margin: 0;
-    color: #000 !important;
   }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPnameTd p {
     margin-top: -6px;
   }
-  .TP-rwd-table tbody tr td:before {
+  .TPHotelTable .TP-rwd-table tbody tr td:before {
     color: #b5abba;
     padding: 9px;
     display: inline-block;
@@ -653,7 +652,7 @@ span.ellipsis {
     min-width: 100px;
     width: auto;
   }
-  .TP-rwd-table-avio tbody tr td:before {
+  .TPHotelTable .TP-rwd-table-avio tbody tr td:before {
     background: #221f23;
   }
   .TP-rwd-table .TP-Plugin-Tables_box_thead {
@@ -664,6 +663,9 @@ span.ellipsis {
   }
   .TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:before {
+    background-color: #221f23 !important;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td {
     background-color: #221f23 !important;
   }
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
