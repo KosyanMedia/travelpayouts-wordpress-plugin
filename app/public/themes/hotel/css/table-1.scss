@@ -639,7 +639,7 @@ span.ellipsis {
     color: #fff;
     background: #222;
   }
-  .TP-rwd-table tbody tr td:before {
+  .TPHotelTable .TP-rwd-table tbody tr td:before {
     color: #000;
     padding: 9px;
     display: inline-block;
@@ -648,20 +648,20 @@ span.ellipsis {
     vertical-align: middle;
     margin-right: 9px;
   }
-  .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
+  .TPHotelTable .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
     display: inline-block;
     overflow: inherit;
     min-width: 100px;
     width: auto;
   }
-  .TP-rwd-table-avio tbody tr td:before {
+  .TPHotelTable .TP-rwd-table-avio tbody tr td:before {
     background: #f1d600;
   }
-  .TP-rwd-table .TPHotelTable .TP-Plugin-Tables_box_thead {
+  .TPHotelTable .TP-rwd-table .TPHotelTable .TP-Plugin-Tables_box_thead {
     display: none;
   }
-  .TP-Plugin-Tables_box thead tr td.tp-price-column,
-  .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:before {
+  .TPHotelTable .TP-Plugin-Tables_box thead tr td.tp-price-column,
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:before {
     background-color: #f1d600 !important;
     color: #000;
   }

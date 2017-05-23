@@ -315,7 +315,7 @@
   }
   .TP-rwd-table tbody tr td:before {
     color: white;
-    padding: 10px;
+    padding: 8px;
     display: inline-block;
     width: 113px;
     min-height: inherit;
