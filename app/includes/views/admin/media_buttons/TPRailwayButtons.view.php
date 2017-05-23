@@ -1,7 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: solomashenko
- * Date: 23.05.17
- * Time: 18:36
- */
+<div id="constructorRailwayModal"
+     title="<?php _ex('tp_admin_page_settings_сonstructor_tables_title', '(Constructor tables)', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
+</div>

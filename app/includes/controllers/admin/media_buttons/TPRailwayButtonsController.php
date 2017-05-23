@@ -41,5 +41,7 @@ class TPRailwayButtonsController extends TPAdminMediaButtonsController{
 
 	public function render() {
 		// TODO: Implement render() method.
+		$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/media_buttons/TPRailwayButtons.view.php";
+		parent::loadView($pathView);
 	}
 }
