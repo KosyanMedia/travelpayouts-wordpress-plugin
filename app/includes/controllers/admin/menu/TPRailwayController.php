@@ -8,6 +8,7 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use app\includes\models\admin\menu\TPRailwayModel;
 use \core\controllers\TPOAdminMenuController;
 
 class TPRailwayController extends TPOAdminMenuController{
@@ -15,6 +16,7 @@ class TPRailwayController extends TPOAdminMenuController{
 	public $model;
 	public function __construct() {
 		parent::__construct();
+		$this->model = new TPRailwayModel();
 	}
 
 	public function action() {
