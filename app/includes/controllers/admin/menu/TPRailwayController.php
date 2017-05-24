@@ -8,7 +8,15 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use \core\controllers\TPOAdminMenuController;
 
-class TPRailwayController {
+class TPRailwayController extends TPOAdminMenuController{
 
+	public function action() {
+		// TODO: Implement action() method.
+	}
+
+	public function render() {
+		// TODO: Implement render() method.
+	}
 }
