@@ -31,8 +31,14 @@
             </ul>
         </nav>
         <div id="tabs-railway_config">
+	        <?php
+	        //$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php";
+	        //$this->loadView($pathView, 0, $data);
+	        ?>
         </div>
-        <div id="tabs-railway_themes"></div>
+        <div id="tabs-railway_themes">
+
+        </div>
     </div>
 
 </div>
