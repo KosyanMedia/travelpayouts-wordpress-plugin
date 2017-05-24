@@ -1,7 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: solomashenko
- * Date: 24.05.17
- * Time: 17:44
- */
+<form action="options.php" class="formSettings TPFormNotReload" method="POST" id="TPHotelsConfig">
+	<?php settings_fields('TPRailway'); ?>
+	<div class="TPmainContent TP-BalanceContent">
+	</div>
+</form>
