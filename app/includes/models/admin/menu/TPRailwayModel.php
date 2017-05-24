@@ -13,5 +13,10 @@ class TPRailwayModel extends TPBaseShortcodeOptionModel {
 
 	public function create_option() {
 		// TODO: Implement create_option() method.
+		register_setting(
+			'TPRailway',
+			TPOPlUGIN_OPTION_NAME,
+			array(&$this,'save_option')
+		);
 	}
 }
