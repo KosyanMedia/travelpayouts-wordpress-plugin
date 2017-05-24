@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: solomashenko
- * Date: 24.05.17
- * Time: 14:10
- */
+<div class="TPWrapper TPWrapperFlights">
+	<p class="TPMainTitle">
+		<?php _ex('Railway tables',
+			'admin page menu railway', TPOPlUGIN_TEXTDOMAIN); ?>
+	</p>
+</div>
