@@ -1,0 +1,14 @@
+/* include fonts */
+
+
+@font-face {
+    font-family:'intro';
+    src: url('../font/intro.eot');
+    src: url('../font/intro.eot?#iefix') format('embedded-opentype'),
+         url('../font/intro.woff2') format('woff2'),
+         url('../font/intro.woff') format('woff'),
+         url('../font/intro.ttf') format('truetype'),
+         url('../font/intro.svg#intro_regular') format('svg');
+    font-weight:400;
+    font-style:normal;
+}
