@@ -9,6 +9,9 @@
 namespace app\includes\models\admin\menu;
 
 
-class TPRailwayModel {
+class TPRailwayModel extends TPBaseShortcodeOptionModel {
 
+	public function create_option() {
+		// TODO: Implement create_option() method.
+	}
 }
