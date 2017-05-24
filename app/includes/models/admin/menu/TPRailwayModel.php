@@ -19,5 +19,9 @@ class TPRailwayModel extends TPBaseShortcodeOptionModel {
 			array(&$this,'save_option')
 		);
 		$field = new TPFieldRailway();
+
+		add_settings_section( 'tp_settings_railway_themes_table_id', '', '', 'tp_settings_railway_themes_table' );
+		add_settings_field('tp_railway_themes_table_td', '', array(&$field ,'TPFieldThemesTable'),
+			'tp_settings_railway_themes_table', 'tp_settings_railway_themes_table_id' );
 	}
 }
