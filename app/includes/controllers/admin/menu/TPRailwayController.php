@@ -8,6 +8,7 @@
 
 namespace app\includes\controllers\admin\menu;
 
+use app\includes\common\TPThemes;
 use app\includes\models\admin\menu\TPRailwayModel;
 use \core\controllers\TPOAdminMenuController;
 
@@ -33,7 +34,9 @@ class TPRailwayController extends TPOAdminMenuController{
 	public function render() {
 		// TODO: Implement render() method.
 		$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailway.view.php";
-		$data = array();
+		$data = array(
+			'themes' => TPThemes::getThemesTables()
+		);
 
 		parent::loadView($pathView, 0, $data);
 	}
