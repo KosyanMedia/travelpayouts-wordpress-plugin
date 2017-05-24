@@ -18,5 +18,6 @@ class TPRailwayModel extends TPBaseShortcodeOptionModel {
 			TPOPlUGIN_OPTION_NAME,
 			array(&$this,'save_option')
 		);
+		$field = new TPFieldRailway();
 	}
 }
