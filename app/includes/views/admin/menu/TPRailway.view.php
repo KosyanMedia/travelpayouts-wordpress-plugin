@@ -37,7 +37,10 @@
 	        ?>
         </div>
         <div id="tabs-railway_themes">
-
+	        <?php
+	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabThemes.view.php";
+	            $this->loadView($pathView, 0, $data);
+	        ?>
         </div>
     </div>
 
