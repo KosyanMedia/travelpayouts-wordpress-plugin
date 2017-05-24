@@ -7,7 +7,8 @@
  */
 
 namespace app\includes\models\admin\menu;
-
+use \app\includes\TPPlugin;
+use \app\includes\common\TPLang;
 
 class TPFieldRailway {
 	public function TPFieldThemesTable(){
