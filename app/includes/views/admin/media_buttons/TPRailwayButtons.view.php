@@ -33,5 +33,12 @@
 				           'modal railway сonstructor subid label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+        <tr id="tr_railway_paginate">
+            <td>
+                <input type="checkbox" id="tp_railway_paginate" name="tp_railway_paginate" value="1">
+			    <?php _ex('Paginate',
+				    'modal railway сonstructor paginate label', TPOPlUGIN_TEXTDOMAIN); ?>
+            </td>
+        </tr>
     </table>
 </div>
