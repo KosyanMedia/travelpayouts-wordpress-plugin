@@ -966,7 +966,7 @@ jQuery(function($) {
      * Railway
      */
     doc.find('#constructorRailwayShortcodesButton').click(function (e) {
-        doc.find( "#constructorHotelsShortcodesModal" ).dialog({
+        doc.find( "#constructorRailwayShortcodesModal" ).dialog({
             autoOpen: true,
             resizable: false,
             draggable: false,
