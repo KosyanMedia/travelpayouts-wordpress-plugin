@@ -994,7 +994,8 @@ jQuery(function($) {
                     id: "constructorRailwayShortcodesButtonOk",
                     text: button_ok,
                     click: function() {
-
+                        var railway_title, railway_origin, railway_destination, railway_subid,
+                            railway_paginate, railway_off_title;
                     }
                 },
                 {
