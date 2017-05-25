@@ -962,6 +962,61 @@ jQuery(function($) {
     
     /** Hotels end**/
 
+    /**
+     * Railway
+     */
+    doc.find('#constructorRailwayShortcodesButton').click(function (e) {
+        doc.find( "#constructorHotelsShortcodesModal" ).dialog({
+            autoOpen: true,
+            resizable: false,
+            draggable: false,
+            maxHeight:500,
+            maxWidth: 450,
+            minWidth: 406,
+            minHeight:200,
+            modal: true,
+            dialogClass:"TPCustomDialog",
+            position: "absolute",
+            //appendTo: "#post-body-content",
+            create: function (event) {
+
+            },
+            open : function() {
+                $(this).parent().css({
+                    'position': 'fixed',
+                    'left': (win.width() - $(this).parent().outerWidth())/2,
+                    'top': (win.height() - $(this).parent().outerHeight())/2,
+                    'transition': 'none'
+                });
+            },
+            buttons: [
+                {
+                    id: "constructorHotelsShortcodesButtonOk",
+                    text: button_ok,
+                    click: function() {
+
+                    }
+                },
+                {
+                    id: "constructorHotelsShortcodesButtonCancel",
+                    text: button_cancel,
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+
+            ],
+            close: function( event, ui ) {
+                $('body').css({'overflow': 'auto'});
+                $("#select_hotels_shortcodes :first").attr("selected", "selected");
+                constructorHotelsShortcodesReload();
+            }
+        });
+
+    });
+
+    /** end railway**/
+
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
         e.preventDefault();
