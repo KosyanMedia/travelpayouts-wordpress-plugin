@@ -991,14 +991,14 @@ jQuery(function($) {
             },
             buttons: [
                 {
-                    id: "constructorHotelsShortcodesButtonOk",
+                    id: "constructorRailwayShortcodesButtonOk",
                     text: button_ok,
                     click: function() {
 
                     }
                 },
                 {
-                    id: "constructorHotelsShortcodesButtonCancel",
+                    id: "constructorRailwayShortcodesButtonCancel",
                     text: button_cancel,
                     click: function() {
                         $( this ).dialog( "close" );
