@@ -1703,12 +1703,12 @@ msgstr "Link"
 #: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:17
 msgctxt "admin media button insert railway title"
 msgid "Railway Schedule"
-msgstr ""
+msgstr "Railway Schedule"
 
 #: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:19
 msgctxt "admin media button railway title"
 msgid "Railway Schedule"
-msgstr ""
+msgstr "Railway Schedule"
 
 #: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
 msgctxt "admin media button insert search form title"
@@ -4568,22 +4568,22 @@ msgstr "Activate"
 #: app/includes/views/admin/menu/TPRailway.view.php:3
 msgctxt "admin page menu railway"
 msgid "Railway tables"
-msgstr ""
+msgstr "Railway tables"
 
 #: app/includes/views/admin/menu/TPRailway.view.php:13
 msgctxt "admin page railway tab menu railway config"
 msgid "Tables Content"
-msgstr ""
+msgstr "Tables Content"
 
 #: app/includes/views/admin/menu/TPRailway.view.php:24
 msgctxt "admin page railway tab menu railway themes"
 msgid "Themes"
-msgstr ""
+msgstr "Themes"
 
 #: app/includes/views/admin/menu/TPRailwayTabThemes.view.php:20
 msgctxt "admin page railway tab themes btn active"
 msgid "Activate"
-msgstr ""
+msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:4
 msgctxt "(Search forms)"
