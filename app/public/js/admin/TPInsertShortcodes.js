@@ -995,7 +995,7 @@ jQuery(function($) {
                     text: button_ok,
                     click: function() {
                         var railway_title, railway_origin, railway_destination, railway_subid,
-                            railway_paginate, railway_off_title;
+                            railway_paginate, railway_off_title, status;
                         railway_title = doc.find('#tp_railway_title').val();
                         railway_origin = doc.find('#tp_railway_origin').val();
                         railway_destination = doc.find('#tp_railway_destination').val();
@@ -1011,13 +1011,16 @@ jQuery(function($) {
                             railway_off_title = "off_title=false";
                         }
 
-
+                        status = true;
                         if (railway_origin == ""){
-                            doc.find('#hotels_city').addClass('constructorShortcodesError');
-                            return;
+                            doc.find('#tp_railway_origin').addClass('constructorShortcodesError');
+                            status = false;
                         }
                         if (railway_destination == ""){
-                            doc.find('#hotels_city').addClass('constructorShortcodesError');
+                            doc.find('#tp_railway_destination').addClass('constructorShortcodesError');
+                            status = false;
+                        }
+                        if (status == false){
                             return;
                         }
 
