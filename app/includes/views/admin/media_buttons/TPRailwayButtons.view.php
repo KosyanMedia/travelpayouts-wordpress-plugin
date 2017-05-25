@@ -1,5 +1,5 @@
 <div id="constructorRailwayShortcodesModal"
-     title="<?php _ex('tp_admin_page_settings_сonstructor_tables_title', '(Constructor tables)', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
+     title="<?php _ex('Railway timetable', 'modal railway сonstructor title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
     <table>
         <tr id="tr_railway_title">
             <td>
