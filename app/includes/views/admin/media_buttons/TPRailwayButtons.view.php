@@ -40,5 +40,12 @@
 				    'modal railway сonstructor paginate label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
+        <tr id="tr_railway_off_title">
+            <td id="td_railway_off_title">
+                <input type="checkbox" id="tp_railway_off_title" name="tp_railway_off_title" value="1">
+			    <?php _ex('No title',
+				    'modal railway сonstructor no title label', TPOPlUGIN_TEXTDOMAIN); ?>
+            </td>
+        </tr>
     </table>
 </div>
