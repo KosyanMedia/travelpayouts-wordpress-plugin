@@ -25,5 +25,13 @@
 				           'modal railway сonstructor destination label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+        <tr id="tr_railway_subid">
+            <td>
+                <input type="text" name="tp_railway_subid" id="tp_railway_subid" value=""
+                       class="regular-text code"
+                       placeholder="<?php _ex('Subid',
+				           'modal railway сonstructor subid label', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
     </table>
 </div>
