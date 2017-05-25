@@ -996,6 +996,32 @@ jQuery(function($) {
                     click: function() {
                         var railway_title, railway_origin, railway_destination, railway_subid,
                             railway_paginate, railway_off_title;
+                        railway_title = doc.find('#tp_railway_title').val();
+                        railway_origin = doc.find('#tp_railway_origin').val();
+                        railway_destination = doc.find('#tp_railway_destination').val();
+                        railway_subid = doc.find('#tp_railway_subid').val();
+                        if(doc.find('#tp_railway_paginate').is(":checked")){
+                            railway_paginate = "paginate=true";
+                        }else{
+                            railway_paginate = "paginate=false";
+                        }
+                        if(doc.find('#tp_railway_off_title').is(":checked")){
+                            railway_off_title = "off_title=true";
+                        }else{
+                            railway_off_title = "off_title=false";
+                        }
+
+
+                        if (railway_origin == ""){
+                            doc.find('#hotels_city').addClass('constructorShortcodesError');
+                            return;
+                        }
+                        if (railway_destination == ""){
+                            doc.find('#hotels_city').addClass('constructorShortcodesError');
+                            return;
+                        }
+
+                        setShortcodes("[tp_tutu]", $(this));
                     }
                 },
                 {
