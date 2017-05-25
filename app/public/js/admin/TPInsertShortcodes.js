@@ -1008,12 +1008,20 @@ jQuery(function($) {
             ],
             close: function( event, ui ) {
                 $('body').css({'overflow': 'auto'});
-                $("#select_hotels_shortcodes :first").attr("selected", "selected");
-                constructorHotelsShortcodesReload();
+                constructorRailwayShortcodesModalReload();
             }
         });
 
     });
+
+    function constructorRailwayShortcodesModalReload() {
+        doc.find('#tp_railway_title').val("");
+        doc.find('#tp_railway_origin').val("");
+        doc.find('#tp_railway_destination').val("");
+        doc.find('#tp_railway_subid').val("");
+
+        doc.find('#tp_railway_origin, #tp_railway_destination').removeClass('constructorShortcodesError');
+    }
 
     /** end railway**/
 
