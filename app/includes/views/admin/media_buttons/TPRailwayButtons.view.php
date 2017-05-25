@@ -17,5 +17,13 @@
 				           'modal railway сonstructor origin label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
+        <tr id="tr_railway_destination">
+            <td>
+                <input type="text" name="tp_railway_destination" id="tp_railway_destination" value=""
+                       class="tpCityRailwayAutocomplete regular-text code"
+                       placeholder="<?php _ex('Destination',
+				           'modal railway сonstructor destination label', TPOPlUGIN_TEXTDOMAIN); ?>">
+            </td>
+        </tr>
     </table>
 </div>
