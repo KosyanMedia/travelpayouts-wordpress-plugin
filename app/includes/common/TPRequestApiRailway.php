@@ -34,7 +34,8 @@ class TPRequestApiRailway extends TPRequestApi{
 	public function getTutu($args = array()){
 		$defaults = array(
 			'origin' => false,
-			'destination' => false
+			'destination' => false,
+			'return_url' => false
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		if (!$origin || empty($origin)){
