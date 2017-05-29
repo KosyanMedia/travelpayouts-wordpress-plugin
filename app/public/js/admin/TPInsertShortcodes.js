@@ -998,7 +998,9 @@ jQuery(function($) {
                             railway_paginate, railway_off_title, status;
                         railway_title = doc.find('#tp_railway_title').val();
                         railway_origin = doc.find('#tp_railway_origin').val();
+                        railway_origin = railway_origin.substring(railway_origin.indexOf('[')+1,railway_origin.indexOf(']'));
                         railway_destination = doc.find('#tp_railway_destination').val();
+                        railway_destination = railway_destination.substring(railway_destination.indexOf('[')+1,railway_destination.indexOf(']'));
                         railway_subid = doc.find('#tp_railway_subid').val();
                         if(doc.find('#tp_railway_paginate').is(":checked")){
                             railway_paginate = "paginate=true";
@@ -1023,8 +1025,10 @@ jQuery(function($) {
                         if (status == false){
                             return;
                         }
-
-                        setShortcodes("[tp_tutu]", $(this));
+                        setShortcodes("[tp_tutu origin="+railway_origin+" " + "destination="+railway_destination+" " +
+                            "title=\""+railway_title+"\" "+railway_paginate+" "+railway_off_title
+                            +" subid=\""+railway_subid+"\"]",
+                            $(this));
                     }
                 },
                 {
