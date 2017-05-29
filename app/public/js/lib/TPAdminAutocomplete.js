@@ -690,38 +690,25 @@ function TPCityAutocomplete(){
                     source: function(request, response){
                         console.log(request.term)
                         console.log(tpLocale)
-                        switch (tpLocale){
-                            case 'ru':
-                                $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
-                                    response(
-                                        $.map(data, function(item){
 
-                                            var iata = (typeof(item.city_iata) !== 'undefined' && item.city_iata !== null) ? item.city_iata : item.iata;
-                                            //console.log(item.city_iata)
-                                            //console.log(item.iata)
-                                            var airport = (item.airport_name !== null) ? item.airport_name : "";
-                                            if($(selector).hasClass('TPCoordinatesAutocomplete')){
-                                                return {
-                                                    label: item.name+" "+airport+" ["+iata +"]",
-                                                    value: item.name+" "+airport+" ["+item.coordinates+"]",
-                                                    val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
-                                                }
-                                                //TPAutocompleteID
-                                            }else{
-                                                return {
-                                                    label: item.name+" "+airport+" ["+iata+"]",
-                                                    value: item.name+" "+airport+" ["+iata+"]",
-                                                    val: item.iata//item.name+" "+airport+" ["+item.iata+"]"
-                                                }
-                                            }
-                                        })
-                                    )
+                        $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                            response(
+                                $.map(data, function(item){
+
+                                    var iata = (typeof(item.city_iata) !== 'undefined' && item.city_iata !== null) ? item.city_iata : item.iata;
+                                    //console.log(item.city_iata)
+                                    //console.log(item.iata)
+                                    var airport = (item.airport_name !== null) ? item.airport_name : "";
+                                        return {
+                                            label: item.name+" "+airport+" ["+iata +"]",
+                                            value: item.name+" "+airport+" ["+item.coordinates+"]",
+                                            val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
+                                        }
 
                                 })
-                                break;
+                            )
 
-
-                        }
+                        })
                     },
                     select: function( event, ui ) {
                         input.attr('value',ui.item.val).val(ui.item.val);
