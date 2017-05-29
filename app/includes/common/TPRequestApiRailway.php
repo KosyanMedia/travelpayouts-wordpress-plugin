@@ -12,6 +12,7 @@ namespace app\includes\common;
 class TPRequestApiRailway extends TPRequestApi{
 
 	private static $instance = null;
+	const TP_API_URL = 'https://www.tutu.ru/poezda/api';
 
 	public static function getInstance()
 	{
