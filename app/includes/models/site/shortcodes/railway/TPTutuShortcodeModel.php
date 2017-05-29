@@ -48,32 +48,33 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			$return_url = true;
 		}
 
-		return array(
-			'rows' => $return,
+
+		$return = $this->get_data(array(
+			'origin' => $origin,
+			'destination' => $destination,
 			'title' => $title,
-			'city' => $city,
-			'city_label' => $city_label,
+			'paginate' => $paginate,
 			'off_title' => $off_title,
-			'location_id' => $city,
-			'check_in' => false,
-			'check_out' => false,
-			'star' => $star,
-			'rating_from' => $rating_from,
-			'rating_to' => $rating_from,
-			'distance_from' => $distance_from,
-			'distance_to' => $distance_to,
-			'limit' => $number_results,
+			'subid' => $subid,
 			'currency' => $currency,
 			'return_url' => $return_url,
+			'language' => $language,
 			'shortcode' => 1,
-			'type_selections' => $type_selections,
-			'type_selections_label_ru' => $type_selections_label_ru,
-			'type_selections_label_en' => $type_selections_label_en,
-			'type_selections_label' => $type_selections_label,
-			'subid' => $subid,
-			'paginate' => $paginate,
-			'link_without_dates' => $link_without_dates,
+		));
 
+
+		return array(
+			'rows' => $return,
+			'origin' => $origin,
+			'destination' => $destination,
+			'title' => $title,
+			'paginate' => $paginate,
+			'off_title' => $off_title,
+			'subid' => $subid,
+			'currency' => $currency,
+			'return_url' => $return_url,
+			'language' => $language,
+			'shortcode' => 1,
 		);
 	}
 }
