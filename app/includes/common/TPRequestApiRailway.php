@@ -21,4 +21,8 @@ class TPRequestApiRailway extends TPRequestApi{
 		}
 		return self::$instance;
 	}
+
+	public function getTutu(){
+
+	}
 }

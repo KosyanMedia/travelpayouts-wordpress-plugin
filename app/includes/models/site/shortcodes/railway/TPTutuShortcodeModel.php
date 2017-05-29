@@ -35,8 +35,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'shortcode' => $shortcode,
 		);
 
-		$cacheKey = "hotel_1_selections_discount_{$currency}_{$language}_{$limit}_{$type}_{$id}";
-		//error_log($cacheKey);
+		$cacheKey = "railway_1_tutu_{$origin}_{$destination}_{$shortcode}";
 
 		if($this->cacheSecund() && $return_url == false){
 			if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
