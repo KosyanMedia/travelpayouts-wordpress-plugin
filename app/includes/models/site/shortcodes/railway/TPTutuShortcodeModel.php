@@ -8,8 +8,8 @@
  */
 namespace app\includes\controllers\site\shortcodes\railway;
 
-use \app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\TPRailwayShortcodeModel;
 
-class TPTutuShortcodeModel extends TPShortcodesController{
+class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
 }
