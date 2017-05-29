@@ -27,7 +27,15 @@ class TPRequestApiRailway extends TPRequestApi{
 		return self::TP_API_URL;
 	}
 
-	public function getTutu(){
-
+	/**
+	 * https://www.tutu.ru/poezda/api/travelpayouts/?departureStation=2000000&arrivalStation=2004000
+	 * @param array $args
+	 */
+	public function getTutu($args = array()){
+		$defaults = array(
+			'origin' => false,
+			'destination' => false
+		);
+		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 	}
 }
