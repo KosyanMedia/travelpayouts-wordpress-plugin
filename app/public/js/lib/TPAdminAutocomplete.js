@@ -671,6 +671,75 @@ function TPCityAutocomplete(){
     }
 
     /**
+     * Railway
+     * @param selector
+     * @param AppendTo
+     * @constructor
+     */
+    this.TPRailwayAutocompleteInit = function(selector, AppendTo){
+        if (typeof(AppendTo)==='undefined') AppendTo = null;
+        jQuery(function($) {
+            var doc, win;
+            doc = $(document);
+            win = $(window);
+            doc.find(selector).each(function () {
+                var input = $(this);
+                $(this).val(function(index, value){
+                    return value;
+                }).autocomplete({
+                    source: function(request, response){
+                        console.log(request.term)
+                        console.log(tpLocale)
+                        switch (tpLocale){
+                            case 'ru':
+                                $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                                    response(
+                                        $.map(data, function(item){
+
+                                            var iata = (typeof(item.city_iata) !== 'undefined' && item.city_iata !== null) ? item.city_iata : item.iata;
+                                            //console.log(item.city_iata)
+                                            //console.log(item.iata)
+                                            var airport = (item.airport_name !== null) ? item.airport_name : "";
+                                            if($(selector).hasClass('TPCoordinatesAutocomplete')){
+                                                return {
+                                                    label: item.name+" "+airport+" ["+iata +"]",
+                                                    value: item.name+" "+airport+" ["+item.coordinates+"]",
+                                                    val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                                //TPAutocompleteID
+                                            }else{
+                                                return {
+                                                    label: item.name+" "+airport+" ["+iata+"]",
+                                                    value: item.name+" "+airport+" ["+iata+"]",
+                                                    val: item.iata//item.name+" "+airport+" ["+item.iata+"]"
+                                                }
+                                            }
+                                        })
+                                    )
+
+                                })
+                                break;
+
+
+                        }
+                    },
+                    select: function( event, ui ) {
+                        input.attr('value',ui.item.val).val(ui.item.val);
+                    },
+                    change: function( event, ui ) {
+                        if( ! ui.item )
+                            input.attr('value','').val('');
+                    },
+                    minLength: 1,
+                    delay: 500,
+                    autoFocus: true,
+                    appendTo: AppendTo
+                });
+            });
+        });
+    }
+
+    /**
      *
      * @param selector
      * @param key_data
