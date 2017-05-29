@@ -10,5 +10,7 @@ namespace app\includes\views\site\shortcodes;
 
 
 class TPRailwayShortcodeView {
+	public function renderTable($args = array()) {
 
+	}
 }
