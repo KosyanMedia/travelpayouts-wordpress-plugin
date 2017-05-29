@@ -9,7 +9,7 @@ Install our [wordpress travel plugin](https://wordpress.org/plugins/travelpayout
 * for your website visitors: 12 different tables and widgets helping your website visitors to find the best offers according to their travel needs.
 * for you: a new source of income and added value to your website.
 
-[Travelpayouts](http://www.travelpayouts.com/?marker=78606.github&locale=en) – Affiliate Network that monetizes your Travel Traffic. Travelpayouts Registration is totally free of charge and takes less than 1 minute.
+[Travelpayouts Travel Affiliate Network](https://www.travelpayouts.com/?utm_source=github&utm_medium=wpplugin&locale=en) – Affiliate Network that monetizes your Travel Traffic. Travelpayouts Registration is totally free of charge and takes less than 1 minute.
 
 ## How it works?
 
