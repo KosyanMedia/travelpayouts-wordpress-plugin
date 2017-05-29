@@ -12,4 +12,7 @@ use app\includes\models\site\TPRailwayShortcodeModel;
 
 class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
+	public function get_data( $args = array() ) {
+		// TODO: Implement get_data() method.
+	}
 }
