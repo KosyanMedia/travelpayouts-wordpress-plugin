@@ -1042,6 +1042,7 @@ jQuery(function($) {
             }
         });
 
+        tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete", "#constructorRailwayShortcodesModal");
     });
 
     function constructorRailwayShortcodesModalReload() {
