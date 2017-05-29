@@ -37,5 +37,18 @@ class TPRequestApiRailway extends TPRequestApi{
 			'destination' => false
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+		if (!$location_id || empty($location_id)){
+			echo $this->get_error('location');
+			return false;
+		} else {
+			$location_id = "locationId={$location_id}";
+		}
+		$token = 'token=' .$this->getToken();
+		$requestURL = self::getApiUrl()."/static/hotels.json?{$location_id}&{$token}";
+		if ($return_url == true){
+			return $requestURL;
+		}
+		return $this->request($requestURL);
 	}
 }
