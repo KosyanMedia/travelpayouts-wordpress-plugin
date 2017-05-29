@@ -1050,7 +1050,11 @@ class TPDefault implements  \core\TPODefault{
 	        'themes_table_railway' => array(
 		        'name' => self::getRandomThemesTable()
 	        ),
-	        'shortcodes_railway' => array(),
+	        'shortcodes_railway' => array(
+	        	'1' => array(
+	        		'paginate_switch' => true
+		        )
+	        ),
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
         return $defaults;
