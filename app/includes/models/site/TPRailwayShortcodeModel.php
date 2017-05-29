@@ -9,6 +9,6 @@
 namespace app\includes\models\site;
 
 
-class TPRailwayShortcodeModel extends TPShortcodesChacheModel{
+abstract class TPRailwayShortcodeModel extends TPShortcodesChacheModel{
 
 }
