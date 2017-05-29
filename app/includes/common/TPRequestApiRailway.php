@@ -44,10 +44,11 @@ class TPRequestApiRailway extends TPRequestApi{
 			echo $this->get_error('destination');
 			return false;
 		} else {
-			$location_id = "locationId={$location_id}";
+			$origin = "departureStation={$origin}";
+			$destination = "arrivalStation={$destination}";
 		}
 		$token = 'token=' .$this->getToken();
-		$requestURL = self::getApiUrl()."/static/hotels.json?{$location_id}&{$token}";
+		$requestURL = self::getApiUrl()."/travelpayouts/?{$origin}&{$destination}";
 		if ($return_url == true){
 			return $requestURL;
 		}
