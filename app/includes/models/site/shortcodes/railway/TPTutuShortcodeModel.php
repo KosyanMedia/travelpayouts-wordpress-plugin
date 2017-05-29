@@ -48,7 +48,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 				} else {
 					$rows = $return;
 					$rows = array_shift($rows);
-					$cacheSecund = $this->cacheSecund('hotel');
+					$cacheSecund = $this->cacheSecund();
 				}
 				set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
 			}

@@ -48,7 +48,6 @@ class TPRequestApiRailway extends TPRequestApi{
 			$origin = "departureStation={$origin}";
 			$destination = "arrivalStation={$destination}";
 		}
-		$token = 'token=' .$this->getToken();
 		$requestURL = self::getApiUrl()."/travelpayouts/?{$origin}&{$destination}";
 		if ($return_url == true){
 			return $requestURL;
