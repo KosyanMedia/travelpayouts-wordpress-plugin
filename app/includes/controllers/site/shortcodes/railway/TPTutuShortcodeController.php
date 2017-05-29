@@ -11,6 +11,7 @@ namespace app\includes\controllers\site\shortcodes\railway;
 
 use app\includes\controllers\site\TPShortcodesController;
 use app\includes\models\site\shortcodes\railway\TPTutuShortcodeModel;
+use app\includes\views\site\shortcodes\TPRailwayShortcodeView;
 
 class TPTutuShortcodeController extends TPShortcodesController {
 
@@ -19,7 +20,7 @@ class TPTutuShortcodeController extends TPShortcodesController {
 	public function __construct(){
 		parent::__construct();
 		$this->model = new TPTutuShortcodeModel();
-		//$this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+		$this->view = new TPRailwayShortcodeView();
 	}
 	public function initShortcode() {
 		// TODO: Implement initShortcode() method.
