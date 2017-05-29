@@ -18,25 +18,21 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	public function get_data( $args = array() ) {
 		// TODO: Implement get_data() method.
 		$defaults = array(
-			'id' => false,
-			'check_in' => false,
-			'check_out' => false,
+			'origin' => false,
+			'destination' => false,
 			'currency' => TPCurrencyUtils::getDefaultCurrency(),
+			'return_url' => false,
 			'language' => TPLang::getLang(),
-			'limit' => 5,
-			'type' => 'popularity',
-			'return_url' => false
+			'shortcode' => 1,
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		$attr = array(
-			'id' => $id,
-			'check_in' => false,
-			'check_out' => false,
+			'origin' => $origin,
+			'destination' => $destination,
 			'currency' => $currency,
+			'return_url' => $return_url,
 			'language' => $language,
-			'limit' => $limit,
-			'type' => $type,
-			'return_url' => $return_url
+			'shortcode' => $shortcode,
 		);
 
 		$cacheKey = "hotel_1_selections_discount_{$currency}_{$language}_{$limit}_{$type}_{$id}";
