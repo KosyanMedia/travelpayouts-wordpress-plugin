@@ -32,7 +32,10 @@ class TPTutuShortcodeController extends TPShortcodesController {
 	{
 
 		$data = $this->model->getDataTable($args);
-		return var_dump("<pre>", $data, "</pre>");
+		if ($data['return_url'] == true){
+			return var_dump("<pre>", $data, "</pre>");
+		}
+		return $this->view->renderTable($data);
 	}
 
 }
