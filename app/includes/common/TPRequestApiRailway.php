@@ -23,6 +23,10 @@ class TPRequestApiRailway extends TPRequestApi{
 		return self::$instance;
 	}
 
+	public static function getApiUrl(){
+		return self::TP_API_URL;
+	}
+
 	public function getTutu(){
 
 	}
