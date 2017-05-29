@@ -39,7 +39,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
 		if($this->cacheSecund() && $return_url == false){
 			if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
-				$return = self::$TPRequestApi->getHotelSelection($attr);
+				$return = self::$TPRequestApi->getTutu($attr);
 				$rows = array();
 				$cacheSecund = 0;
 				if( ! $return ) {
@@ -54,7 +54,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			}
 
 		} else {
-			$rows = self::$TPRequestApi->getHotelSelection($attr);
+			$rows = self::$TPRequestApi->getTutu($attr);
 			if (!$rows){
 				return false;
 			}
@@ -64,10 +64,6 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			}
 
 		}
-
-		//tpErrorLog(print_r($rows, true));
-		//error_log('Discount');
-		//error_log(print_r($rows, true));
 
 		return $rows;
 	}
