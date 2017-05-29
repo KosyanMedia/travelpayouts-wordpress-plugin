@@ -9,6 +9,9 @@
 namespace app\includes\models\site\shortcodes\railway;
 
 use app\includes\models\site\TPRailwayShortcodeModel;
+use \app\includes\common\TPCurrencyUtils;
+use \app\includes\common\TPLang;
+use app\includes\TPPlugin;
 
 class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
@@ -17,29 +20,24 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	}
 
 	public function getDataTable($args = array()){
+		/**
+		 * Откуда
+		 * Куда
+		 * Альтернативный заголов
+		 * Пагинация
+		 * Убрать заголовок
+		 * Дополнительный маркер
+		 */
 		$defaults = array(
-			'city' => false,
-			'city_label' => false,
+			'origin' => false,
+			'destination' => false,
 			'title' => '',
 			'paginate' => true,
 			'off_title' => '',
-			'type' => 'all',
-			'day' => 3,
-			'star' => 'all',
-			'rating_from' => 7,
-			'rating_to' => 10,
-			'distance_from' => 0,
-			'distance_to' => 3,
-			'number_results' => 20,
+			'subid' => '',
 			'currency' => TPCurrencyUtils::getDefaultCurrency(),
 			'return_url' => false,
-			'language' => TPLang::getLang(),
-			'type_selections' => 'popularity',
-			'type_selections_label_ru' => '',
-			'type_selections_label_en' => '',
-			'type_selections_label' => '',
-			'subid' => '',
-			'link_without_dates' => $linkWithoutDates,
+			'language' => TPLang::getLang()
 		);
 
 
