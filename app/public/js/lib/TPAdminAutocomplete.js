@@ -691,19 +691,17 @@ function TPCityAutocomplete(){
                         console.log(request.term)
                         console.log(tpLocale)
 
-                        $.get("https://places.aviasales.ru/?term=" + request.term + "&locale=" + tpLocale, function(data) {
+                        $.get("https://www.tutu.ru/suggest/railway_simple/?name=" + request.term, function(data) {
+                            var data = $.parseJSON( data);
+                            //console.log(data);
                             response(
                                 $.map(data, function(item){
-
-                                    var iata = (typeof(item.city_iata) !== 'undefined' && item.city_iata !== null) ? item.city_iata : item.iata;
-                                    //console.log(item.city_iata)
-                                    //console.log(item.iata)
-                                    var airport = (item.airport_name !== null) ? item.airport_name : "";
-                                        return {
-                                            label: item.name+" "+airport+" ["+iata +"]",
-                                            value: item.name+" "+airport+" ["+item.coordinates+"]",
-                                            val: item.coordinates//item.name+" "+airport+" ["+item.iata+"]"
-                                        }
+                                    //console.log(item);
+                                    return {
+                                        label: item.value+" ["+item.id +"]",
+                                        value: item.value+" ["+item.id +"]",
+                                        val: item.id
+                                    }
 
                                 })
                             )
