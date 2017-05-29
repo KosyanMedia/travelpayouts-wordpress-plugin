@@ -51,4 +51,26 @@ class TPRequestApiRailway extends TPRequestApi{
 		}
 		return $this->request($requestURL);
 	}
+
+	/**
+	 * @param $string
+	 *
+	 * @return array
+	 */
+	public function request($string)
+	{
+		//$string = htmlspecialchars($string);
+		$response = wp_remote_get( $string, array('headers' => array(
+			'Accept-Encoding' => 'gzip, deflate',
+		)) );
+		/*if( is_wp_error( $response ) ){
+			$json = $response;
+		} else {
+			$json = json_decode( $response['body'] );
+		}*/
+		$body = wp_remote_retrieve_body($response);
+		$json = json_decode( $body );
+		if( ! is_wp_error( $json ))
+			return $this->objectToArray($json);
+	}
 }
