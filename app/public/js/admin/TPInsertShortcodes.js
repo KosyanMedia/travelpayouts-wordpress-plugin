@@ -1047,6 +1047,16 @@ jQuery(function($) {
         });
 
         tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete", "#constructorRailwayShortcodesModal");
+
+        doc.find('#td_railway_off_title').on('change', '#tp_railway_off_title', function(e) {
+            if($(this).is(":checked")) {
+                doc.find('#tr_railway_title').hide();
+            }else{
+                doc.find('#tr_railway_title').show();
+
+            }
+
+        });
     });
 
     function constructorRailwayShortcodesModalReload() {
