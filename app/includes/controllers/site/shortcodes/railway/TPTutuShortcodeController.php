@@ -10,6 +10,7 @@ namespace app\includes\controllers\site\shortcodes\railway;
 
 
 use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\railway\TPTutuShortcodeModel;
 
 class TPTutuShortcodeController extends TPShortcodesController {
 
@@ -17,7 +18,7 @@ class TPTutuShortcodeController extends TPShortcodesController {
 	public $view;
 	public function __construct(){
 		parent::__construct();
-		//$this->model = new TPCostLivingCityDaysShortcodeModel();
+		$this->model = new TPTutuShortcodeModel();
 		//$this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
 	}
 	public function initShortcode() {
@@ -29,8 +30,7 @@ class TPTutuShortcodeController extends TPShortcodesController {
 	public function actionTable($args = array())
 	{
 
-		//$data = $this->model->getDataTable($args);
-		$data = 'tu tu';
+		$data = $this->model->getDataTable($args);
 		return var_dump("<pre>", $data, "</pre>");
 	}
 
