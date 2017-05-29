@@ -11,6 +11,6 @@ namespace app\includes\views\site\shortcodes;
 
 class TPRailwayShortcodeView {
 	public function renderTable($args = array()) {
-
+		return var_dump("<pre>", $args, "</pre>");
 	}
 }
