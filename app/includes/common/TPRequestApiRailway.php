@@ -37,9 +37,11 @@ class TPRequestApiRailway extends TPRequestApi{
 			'destination' => false
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-		if (!$location_id || empty($location_id)){
-			echo $this->get_error('location');
+		if (!$origin || empty($origin)){
+			echo $this->get_error('origin');
+			return false;
+		}elseif (!$destination || empty($destination)){
+			echo $this->get_error('destination');
 			return false;
 		} else {
 			$location_id = "locationId={$location_id}";
@@ -59,15 +61,9 @@ class TPRequestApiRailway extends TPRequestApi{
 	 */
 	public function request($string)
 	{
-		//$string = htmlspecialchars($string);
 		$response = wp_remote_get( $string, array('headers' => array(
 			'Accept-Encoding' => 'gzip, deflate',
 		)) );
-		/*if( is_wp_error( $response ) ){
-			$json = $response;
-		} else {
-			$json = json_decode( $response['body'] );
-		}*/
 		$body = wp_remote_retrieve_body($response);
 		$json = json_decode( $body );
 		if( ! is_wp_error( $json ))
