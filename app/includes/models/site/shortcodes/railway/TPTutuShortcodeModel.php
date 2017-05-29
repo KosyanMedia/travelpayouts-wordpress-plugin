@@ -6,6 +6,10 @@
  * Date: 29.05.17
  * Time: 22:41
  */
-class TPTutuShortcodeModel {
+namespace app\includes\controllers\site\shortcodes\railway;
+
+use \app\includes\controllers\site\TPShortcodesController;
+
+class TPTutuShortcodeModel extends TPShortcodesController{
 
 }
