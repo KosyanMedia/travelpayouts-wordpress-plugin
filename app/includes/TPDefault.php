@@ -1052,7 +1052,33 @@ class TPDefault implements  \core\TPODefault{
 	        ),
 	        'shortcodes_railway' => array(
 	        	'1' => array(
-	        		'paginate_switch' => true
+			        'title' => array(
+				        'en' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
+				        'ru' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
+			        ),
+			        'tag' => 'h3',
+			        'extra_table_marker' => 'calMonth',
+			        'paginate' => 10,
+	        		'paginate_switch' => true,
+			        'title_button' => array(
+				        'en' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
+				        'ru' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
+			        ),
+			        'sort_column' => 0,
+			        'selected' => array(
+				        'departure_at',//'depart_date',
+				        'number_of_changes',
+				        'button',
+			        ),
+			        'fields' => array(
+				        'departure_at',//'depart_date',
+				        'price',
+				        'number_of_changes',
+				        'trip_class',
+				        'distance',
+				        'button',
+			        ),
+
 		        )
 	        ),
         );
