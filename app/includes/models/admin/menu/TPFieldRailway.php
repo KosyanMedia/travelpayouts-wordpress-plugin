@@ -43,8 +43,8 @@ class TPFieldRailway {
 		?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label',
-	                '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title',
+	                'admin page railway tab tables content title label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 			<?php
 
@@ -71,8 +71,8 @@ class TPFieldRailway {
 
             ?>
             <p>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1',
-                    '(Use {location} variable for city autoset)', TPOPlUGIN_TEXTDOMAIN); ?>
+	            <?php _ex('Use {origin} and {destination} variables to add the city automatically',
+		            'admin page railway tab tables content title help', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
         </label>
 		<?php
