@@ -31,11 +31,11 @@ class TPRailwayShortcodeView {
 			'currency' => TPPlugin::$options['local']['currency'],
 			'return_url' => false,
 			'language' => TPLang::getLang(),
-			'shortcode' => null
+			'shortcode' => false
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-		//error_log('currency = '.$currency);
 		$html = '';
+		if ($shortcode == false) return false;
 
 		return var_dump("<pre>", $args, "</pre>");
 	}
