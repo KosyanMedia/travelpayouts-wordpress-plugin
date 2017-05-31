@@ -692,7 +692,7 @@ class TPFieldSettings {
                     <?php $this->tabLocalFieldHotel(); ?>
                 </div>
                 <div id="tabs-local_field_railway">
-                    1
+	                <?php $this->tabLocalFieldRailway(); ?>
                 </div>
             </div>
 
@@ -761,6 +761,34 @@ class TPFieldSettings {
         }
         echo $localFields;
     }
+
+	public function tabLocalFieldRailway(){
+		$localFields = '';
+		$localFields = '<ul class="titleHeadTable">
+               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+          </ul>';
+		foreach(TPPlugin::$options['local']['railway_fields'] as $key_local => $fields){
+			$showFields = (TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
+			$localFields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
+
+			foreach(array_chunk($fields['label'], 2, true) as $value){
+				$localFields .= '<div class="TP-ListRowColum">';
+				foreach( $value as $key_label => $label ){
+					$localFields .= '<div class="infoRow" title="'.$fields['label_default'][$key_label].'"></div>
+                                        <div>
+                                            <label>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][railway_fields]['.$key_local.'][label]['.$key_label.']" type="text" value="'.$label.'"/>
+                                                <input name="'.TPOPlUGIN_OPTION_NAME.'[local][railway_fields]['.$key_local.'][label_default]['.$key_label.']" type="hidden" value="'.$fields['label_default'][$key_label].'"/>
+                                            </label>
+                                        </div>';
+				}
+				$localFields .= '</div>';
+			}
+
+			$localFields .= '</div>';
+		}
+		echo $localFields;
+	}
 
     public function tpFieldHostHotel(){
         $hosts = TPHostURL::getHostsHotel();
