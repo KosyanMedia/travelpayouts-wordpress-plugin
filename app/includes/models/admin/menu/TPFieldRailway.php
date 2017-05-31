@@ -28,7 +28,7 @@ class TPFieldRailway {
 		<?php //$this->getFieldExtraMarker($shortcode); ?>
 		<?php $this->getFieldPaginate($shortcode); ?>
 		<?php $this->getFieldTitleButton($shortcode); ?>
-		<?php //$this->getFieldSortTd($shortcode); ?>
+		<?php $this->getFieldSortTd($shortcode); ?>
 		<?php
 		//$this->getFieldSortableSection($shortcode);
 
@@ -189,6 +189,39 @@ class TPFieldRailway {
 
 
 				?>
+            </label>
+            <label></label>
+        </div>
+		<?php
+	}
+
+	public function getFieldSortTd($shortcode){
+
+		?>
+        <div class="TP-HeadTable TPSortFieldSelect">
+            <label class="TPSortFieldLabel">
+                <span>
+                    <?php _ex('Sort by column',
+	                    'admin page railway tab tables content sort_column', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+                <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
+					<?php
+					if(!empty(TPPlugin::$options['shortcodes_railway'][$shortcode]['selected'])) {
+						$selected = TPPlugin::$options['shortcodes_railway'][$shortcode]['selected'];
+						foreach($selected as $key => $sel){
+							?>
+                            <option value="<?php echo $key;?>" <?php selected( TPPlugin::$options['shortcodes_railway'][$shortcode]['sort_column'], $key ); ?>>
+								<?php echo $this->getFieldSortTDLabel($sel);?>
+                            </option>
+							<?php
+						}
+					}else{
+						?>
+                        <option disabled></option>
+						<?php
+					}
+					?>
+                </select>
             </label>
             <label></label>
         </div>
