@@ -38,6 +38,22 @@ class TPRailwayShortcodeView {
 		if ($shortcode == false) return false;
 		if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
+		$html .= '<div class="TPTrainTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
+		         .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label,
+				$type_selections_label, $dates_label)
+		         .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
+                        data-paginate="'.$paginate.'"
+                        data-paginate_limit="'
+		                .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate']
+		         .'" data-sort_column="'.$this->getSortColumn($shortcode).'">'
+		         .$this->renderHeadTable($shortcode)
+		         .$this->renderBodyTable()
+		         .'</table>
+                </div>';
+
+		return $html;
+
+
 		return var_dump("<pre>", $args, "</pre>");
 	}
 
