@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-31 23:56+0300\n"
+"POT-Creation-Date: 2017-06-01 00:00+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2649,6 +2649,11 @@ msgstr "Rows per page"
 msgctxt "admin page railway tab tables content paginate"
 msgid "Paginate"
 msgstr "Paginate"
+
+#: app/includes/models/admin/menu/TPFieldRailway.php:167
+msgctxt "admin page railway tab tables content button"
+msgid "Button Title"
+msgstr "Button Title"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:31
 msgctxt "(Token)"

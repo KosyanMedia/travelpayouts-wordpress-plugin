@@ -27,7 +27,7 @@ class TPFieldRailway {
         </div>
 		<?php //$this->getFieldExtraMarker($shortcode); ?>
 		<?php $this->getFieldPaginate($shortcode); ?>
-		<?php //$this->getFieldTitleButton($shortcode); ?>
+		<?php $this->getFieldTitleButton($shortcode); ?>
 		<?php //$this->getFieldSortTd($shortcode); ?>
 		<?php
 		//$this->getFieldSortableSection($shortcode);
@@ -159,4 +159,39 @@ class TPFieldRailway {
 		<?php
 	}
 
+	public function getFieldTitleButton($shortcode){
+		?>
+        <div class="TP-HeadTable">
+            <label>
+                <span>
+                    <?php _ex('Button Title',
+	                    'admin page railway tab tables content button', TPOPlUGIN_TEXTDOMAIN); ?>
+                </span>
+				<?php
+
+				if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes_railway'][$shortcode]['title'])){
+					foreach(TPPlugin::$options['shortcodes_railway'][$shortcode]['title_button'] as $key_local => $title){
+						$typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+						?>
+                        <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_railway'][$shortcode]['title_button'][$key_local]) ?>"/>
+						<?php
+					}
+				} else {
+					foreach(TPPlugin::$options['shortcodes_railway'][$shortcode]['title_button'] as $key_local => $title){
+						$typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
+						?>
+                        <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_railway'][$shortcode]['title_button'][$key_local]) ?>"/>
+						<?php
+					}
+				}
+
+
+				?>
+            </label>
+            <label></label>
+        </div>
+		<?php
+	}
 }
