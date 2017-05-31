@@ -26,8 +26,7 @@ class TPFieldRailway {
 			<?php $this->getFieldTitleTag($shortcode); ?>
         </div>
 		<?php //$this->getFieldExtraMarker($shortcode); ?>
-		<?php //$this->getFieldPaginate($shortcode); ?>
-		<?php //$this->getFieldLinkWithoutDates($shortcode); ?>
+		<?php $this->getFieldPaginate($shortcode); ?>
 		<?php //$this->getFieldTitleButton($shortcode); ?>
 		<?php //$this->getFieldSortTd($shortcode); ?>
 		<?php
@@ -119,4 +118,45 @@ class TPFieldRailway {
         </label>
 		<?php
 	}
+
+	/**
+	 * @param $shortcode
+	 */
+	public function getFieldPaginate($shortcode){
+		?>
+        <div class="ItemSub">
+            <span>
+                <?php _ex('Rows per page',
+	                'admin page railway tab tables content paginate limit', TPOPlUGIN_TEXTDOMAIN); ?>
+            </span>
+            <div class="TP-childF">
+                <div class="spinnerW clearfix" data-trigger="spinner">
+                    <label>
+                        <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][paginate]"
+                               type="text" data-rule="quantity"
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate']) ?>">
+                    </label>
+                    <div class="navSpinner">
+                        <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
+                        <a class="navUp" href="javascript:void(0);" data-spin="up"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="TP-HeadTable">
+            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][paginate_switch]"
+                   value="1" <?php checked(isset(TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate_switch']), 1) ?> hidden />
+            <label for="chek-p1">
+				<?php _ex('Paginate',
+					'admin page railway tab tables content paginate', TPOPlUGIN_TEXTDOMAIN); ?>
+            </label>
+            <label></label>
+
+        </div>
+
+
+		<?php
+	}
+
 }
