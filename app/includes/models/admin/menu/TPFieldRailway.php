@@ -30,7 +30,7 @@ class TPFieldRailway {
 		<?php $this->getFieldTitleButton($shortcode); ?>
 		<?php $this->getFieldSortTd($shortcode); ?>
 		<?php
-		//$this->getFieldSortableSection($shortcode);
+		$this->getFieldSortableSection($shortcode);
 
 	}
 
@@ -240,5 +240,77 @@ class TPFieldRailway {
 			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getDefaultLang()]['label_default'][$fieldKey];
 		}
 		return $fieldLabel;
+	}
+
+	/**
+	 * @param $shortcode
+	 */
+	public function getFieldSortableSection($shortcode){
+		$settingsShortcodeSortable = '';
+		$settingsShortcodeSortableSelected = '';
+		$fieldsInput = '';
+		if(!empty(TPPlugin::$options['shortcodes_railway'][$shortcode]['selected'])){
+			$selected = array_unique(TPPlugin::$options['shortcodes_railway'][$shortcode]['selected']);
+			$fields = TPPlugin::$options['shortcodes_railway'][$shortcode]['fields'];
+			$arraySort = array();
+			foreach($selected as $key_s => $selec){
+				if (($key = array_search($selec, $fields)) !== false) {
+					$arraySort[] = $selec;
+					unset($fields[$key]);
+				}
+			}
+			$arraySort = array_merge($arraySort, $fields);
+			foreach($arraySort as $key_f => $field) {
+				if(in_array($field, $selected)){
+					$settingsShortcodeSortableSelected .= '<li data-key="' . $field . '"
+                              data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_railway][' . $shortcode . '][selected][]"
+                              class="">'
+					                                      .$this->getFieldSortTDLabel($field)
+					                                      .'<input type="hidden" class="itemSortableSelected" name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_railway][' . $shortcode . '][selected][]" value="' . $field . '"/>'
+					                                      .'</li>';
+				} else {
+					$settingsShortcodeSortable .= '<li data-key="' . $field . '"
+                              data-input-name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_railway][' . $shortcode . '][selected][]"
+                              class="">'
+					                              .$this->getFieldSortTDLabel($field)
+					                              .'</li>';
+				}
+				$fieldsInput .= '<input type="hidden"  name="' . TPOPlUGIN_OPTION_NAME . '[shortcodes_railway][' . $shortcode . '][fields][]" value="' . $field . '"/>';
+			}
+
+		}else{
+
+		}
+		?>
+
+        <div class="TP-SortableSection">
+            <p class="titleSortable">
+				<?php _ex('Table Columns',
+					'admin page railway tab tables content field_sort_column_table_label', TPOPlUGIN_TEXTDOMAIN); ?>
+            </p>
+            <div class="TP-ContainerSorTable">
+                <div data-force="30" class="layer TP-blockSortable" >
+                    <p class="TP-titleBlockSortable">
+						<?php _ex('Not selected',
+							'admin page railway tab tables content field_sort_column_table_label_not_select', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
+						<?php echo $settingsShortcodeSortable; ?>
+                    </ul>
+                </div>
+
+                <div data-force="18" class="layer TP-blockSortable">
+                    <p class="TP-titleBlockSortable">
+						<?php _ex('Selected',
+							'admin page railway tab tables content field_sort_column_table_label_select', TPOPlUGIN_TEXTDOMAIN); ?>
+                    </p>
+                    <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
+						<?php echo $settingsShortcodeSortableSelected; ?>
+                    </ul>
+                </div>
+				<?php echo $fieldsInput; ?>
+            </div>
+        </div>
+		<?php
 	}
 }
