@@ -227,4 +227,18 @@ class TPFieldRailway {
         </div>
 		<?php
 	}
+
+	/**
+	 * @param $fieldKey
+	 * @return string
+	 */
+	public function getFieldSortTDLabel($fieldKey){
+		$fieldLabel = "";
+		if(isset(TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label_default'][$fieldKey])){
+			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label_default'][$fieldKey];
+		}else{
+			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getDefaultLang()]['label_default'][$fieldKey];
+		}
+		return $fieldLabel;
+	}
 }
