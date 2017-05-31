@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-25 17:25+0300\n"
+"POT-Creation-Date: 2017-05-31 22:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -33,267 +33,267 @@ msgctxt "(Что-то пошло не так, обновите страницу)
 msgid "tp_plugin_request_api_error_msg_message_error_ru"
 msgstr "Что-то пошло не так, обновите страницу"
 
-#: app/includes/TPDefault.php:139
+#: app/includes/TPDefault.php:143
 msgctxt "(Flight Prices for a Month from origin to destination, One Way)"
 msgid "tp_plugin_local_en_table_shortcodes_1_title"
 msgstr "Flight Prices for a Month from origin to destination, One Way"
 
-#: app/includes/TPDefault.php:141
+#: app/includes/TPDefault.php:145
 msgctxt "(Цены на месяц из origin в destination, в одну сторону)"
 msgid "tp_plugin_local_ru_table_shortcodes_1_title"
 msgstr "Цены на месяц из origin в destination, в одну сторону"
 
-#: app/includes/TPDefault.php:150
+#: app/includes/TPDefault.php:154
 msgctxt "(OW tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_1_title_btn"
 msgstr "OW tickets from price"
 
-#: app/includes/TPDefault.php:152
+#: app/includes/TPDefault.php:156
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_1_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:173
+#: app/includes/TPDefault.php:177
 msgctxt "(Flights from origin to destination for the Next Few Days)"
 msgid "tp_plugin_local_en_table_shortcodes_2_title"
 msgstr "Flights from origin to destination for the Next Few Days"
 
-#: app/includes/TPDefault.php:175
+#: app/includes/TPDefault.php:179
 msgctxt "(Билеты из origin в destination на ближайшие дни)"
 msgid "tp_plugin_local_ru_table_shortcodes_2_title"
 msgstr "Билеты из origin в destination на ближайшие дни"
 
-#: app/includes/TPDefault.php:185
+#: app/includes/TPDefault.php:189
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_2_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:187
+#: app/includes/TPDefault.php:191
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_2_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:236
+#: app/includes/TPDefault.php:240
 msgctxt "(The Cheapest Round-trip Tickets from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_4_title"
 msgstr "The Cheapest Round-trip Tickets from origin to destination"
 
-#: app/includes/TPDefault.php:238
+#: app/includes/TPDefault.php:242
 msgctxt "(Самые дешевые билеты из origin в destination и обратно)"
 msgid "tp_plugin_local_ru_table_shortcodes_4_title"
 msgstr "Самые дешевые билеты из origin в destination и обратно"
 
-#: app/includes/TPDefault.php:246
+#: app/includes/TPDefault.php:250
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_4_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:248
+#: app/includes/TPDefault.php:252
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_4_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:273
+#: app/includes/TPDefault.php:277
 msgctxt "(The Cheapest Flights for this Month from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_5_title"
 msgstr "The Cheapest Flights for this Month from origin to destination"
 
-#: app/includes/TPDefault.php:275
+#: app/includes/TPDefault.php:279
 msgctxt "(Самые дешевые билеты  из origin в destination в этом месяце)"
 msgid "tp_plugin_local_ru_table_shortcodes_5_title"
 msgstr "Самые дешевые билеты  из origin в destination в этом месяце"
 
-#: app/includes/TPDefault.php:284
+#: app/includes/TPDefault.php:288
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_5_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:286
+#: app/includes/TPDefault.php:290
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_5_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:312
+#: app/includes/TPDefault.php:316
 msgctxt "(The Cheapest Flights from origin to destination for the Year Ahead)"
 msgid "tp_plugin_local_en_table_shortcodes_6_title"
 msgstr "The Cheapest Flights from origin to destination for the Year Ahead"
 
-#: app/includes/TPDefault.php:314
+#: app/includes/TPDefault.php:318
 msgctxt "(Самые дешевые авиабилеты из origin в destination на год вперед)"
 msgid "tp_plugin_local_ru_table_shortcodes_6_title"
 msgstr "Самые дешевые авиабилеты из origin в destination на год вперед"
 
-#: app/includes/TPDefault.php:322
+#: app/includes/TPDefault.php:326
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_6_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:324
+#: app/includes/TPDefault.php:328
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_6_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:350
+#: app/includes/TPDefault.php:354
 msgctxt "(Direct Flights from origin to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_7_title"
 msgstr "Direct Flights from origin to destination"
 
-#: app/includes/TPDefault.php:352
+#: app/includes/TPDefault.php:356
 msgctxt "(Билеты без пересадок из origin в destination)"
 msgid "tp_plugin_local_ru_table_shortcodes_7_title"
 msgstr "Билеты без пересадок из origin в destination"
 
-#: app/includes/TPDefault.php:360
+#: app/includes/TPDefault.php:364
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_7_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:362
+#: app/includes/TPDefault.php:366
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_7_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:386
+#: app/includes/TPDefault.php:390
 msgctxt "(Direct Flights from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_8_title"
 msgstr "Direct Flights from origin"
 
-#: app/includes/TPDefault.php:388
+#: app/includes/TPDefault.php:392
 msgctxt "(Билеты без пересадок из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_8_title"
 msgstr "Билеты без пересадок из origin"
 
-#: app/includes/TPDefault.php:397
+#: app/includes/TPDefault.php:401
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_8_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:399
+#: app/includes/TPDefault.php:403
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_8_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:426
+#: app/includes/TPDefault.php:430
 msgctxt "(Popular Destinations from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_9_title"
 msgstr "Popular Destinations from origin"
 
-#: app/includes/TPDefault.php:428
+#: app/includes/TPDefault.php:432
 msgctxt "(Популярные направления из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_9_title"
 msgstr "Популярные направления из origin"
 
-#: app/includes/TPDefault.php:436
+#: app/includes/TPDefault.php:440
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_9_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:438
+#: app/includes/TPDefault.php:442
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_9_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:464
+#: app/includes/TPDefault.php:468
 msgctxt "(Airline's popular flights airline)"
 msgid "tp_plugin_local_en_table_shortcodes_10_title"
 msgstr "Airline's popular flights airline"
 
-#: app/includes/TPDefault.php:466
+#: app/includes/TPDefault.php:470
 msgctxt "(Популярные направления авиакомпании airline)"
 msgid "tp_plugin_local_ru_table_shortcodes_10_title"
 msgstr "Популярные направления авиакомпании airline"
 
-#: app/includes/TPDefault.php:475
+#: app/includes/TPDefault.php:479
 msgctxt "(Find tickets)"
 msgid "tp_plugin_local_en_table_shortcodes_10_title_btn"
 msgstr "Find tickets"
 
-#: app/includes/TPDefault.php:477
+#: app/includes/TPDefault.php:481
 msgctxt "(Узнать цену)"
 msgid "tp_plugin_local_ru_table_shortcodes_10_title_btn"
 msgstr "Узнать цену"
 
-#: app/includes/TPDefault.php:490
+#: app/includes/TPDefault.php:494
 msgctxt "(Special offer airlines)"
 msgid "tp_plugin_local_en_table_shortcodes_11_title"
 msgstr "Special offer airlines"
 
-#: app/includes/TPDefault.php:492
+#: app/includes/TPDefault.php:496
 msgctxt "(Спецпредложения авиакомпаний)"
 msgid "tp_plugin_local_ru_table_shortcodes_11_title"
 msgstr "Спецпредложения авиакомпаний"
 
-#: app/includes/TPDefault.php:499
+#: app/includes/TPDefault.php:503
 msgctxt "(Find tickets on price)"
 msgid "tp_plugin_local_en_table_shortcodes_11_title_btn"
 msgstr "Find tickets on price"
 
-#: app/includes/TPDefault.php:501
+#: app/includes/TPDefault.php:505
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_11_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:525
+#: app/includes/TPDefault.php:529
 msgctxt "(Flights That Have Been Found on Our Website)"
 msgid "tp_plugin_local_en_table_shortcodes_12_title"
 msgstr "Flights That Have Been Found on Our Website"
 
-#: app/includes/TPDefault.php:527
+#: app/includes/TPDefault.php:531
 msgctxt "(На нашем сайте искали)"
 msgid "tp_plugin_local_ru_table_shortcodes_12_title"
 msgstr "На нашем сайте искали"
 
-#: app/includes/TPDefault.php:539
+#: app/includes/TPDefault.php:543
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_12_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:541
+#: app/includes/TPDefault.php:545
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_12_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:568
+#: app/includes/TPDefault.php:572
 msgctxt "(Cheap Flights from origin)"
 msgid "tp_plugin_local_en_table_shortcodes_13_title"
 msgstr "Cheap Flights from origin"
 
-#: app/includes/TPDefault.php:570
+#: app/includes/TPDefault.php:574
 msgctxt "(Дешевые перелеты из origin)"
 msgid "tp_plugin_local_ru_table_shortcodes_13_title"
 msgstr "Дешевые перелеты из origin"
 
-#: app/includes/TPDefault.php:582
+#: app/includes/TPDefault.php:586
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_13_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:584
+#: app/includes/TPDefault.php:588
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_ru_table_shortcodes_13_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:612
+#: app/includes/TPDefault.php:616
 msgctxt "(Cheap Flights to destination)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title"
 msgstr "Cheap Flights to destination"
 
-#: app/includes/TPDefault.php:614
+#: app/includes/TPDefault.php:618
 msgctxt "(Дешевые перелеты в destination)"
 msgid "tp_plugin_local_ru_table_shortcodes_14_title"
 msgstr "Дешевые перелеты в destination"
 
-#: app/includes/TPDefault.php:626
+#: app/includes/TPDefault.php:630
 msgctxt "(Tickets from price)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title_btn"
 msgstr "Tickets from price"
 
-#: app/includes/TPDefault.php:628
+#: app/includes/TPDefault.php:632
 msgctxt "(Билеты от price)"
 msgid "tp_plugin_local_en_table_shortcodes_14_title_btn"
 msgstr "Билеты от price"
 
-#: app/includes/TPDefault.php:660
+#: app/includes/TPDefault.php:664
 msgctxt ""
 "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
 "\"Find tickets from {origin} to {destination}\"])"
@@ -302,7 +302,7 @@ msgstr ""
 "Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
 "\"Find tickets from {origin} to {destination}\"]"
 
-#: app/includes/TPDefault.php:662
+#: app/includes/TPDefault.php:666
 msgctxt ""
 "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
 "поиску билетов {origin} {destination}\"])"
@@ -311,7 +311,7 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [link title=\"К "
 "поиску билетов из {origin} {destination}\"]"
 
-#: app/includes/TPDefault.php:667
+#: app/includes/TPDefault.php:671
 msgctxt ""
 "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets from {origin} to {destination}\"])"
@@ -320,7 +320,7 @@ msgstr ""
 "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
 "title=\"Find tickets from {origin} to {destination}\"]"
 
-#: app/includes/TPDefault.php:669
+#: app/includes/TPDefault.php:673
 msgctxt ""
 "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты {origin} - {destination}\"])"
@@ -329,125 +329,131 @@ msgstr ""
 "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 "\"Найти билеты из {origin} - {destination}\"]"
 
-#: app/includes/TPDefault.php:792
+#: app/includes/TPDefault.php:796
 msgctxt "(Hotels {location}: {selection_name})"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
 msgstr "Hotels in {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:794
+#: app/includes/TPDefault.php:798
 msgctxt "(Отели в г. {location}: {selection_name})"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_1_title"
 msgstr "Отели в г. {location}: {selection_name}"
 
-#: app/includes/TPDefault.php:802
+#: app/includes/TPDefault.php:806
 msgctxt "(View Hotel)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "View Hotel"
 
-#: app/includes/TPDefault.php:804
+#: app/includes/TPDefault.php:808
 msgctxt "(Посмотреть отель)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title_btn"
 msgstr "Посмотреть отель"
 
-#: app/includes/TPDefault.php:840
+#: app/includes/TPDefault.php:844
 msgctxt "(Hotels {location}: {selection_name} ({dates}))"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title"
 msgstr "Hotels in {location}: {selection_name} ({dates})"
 
-#: app/includes/TPDefault.php:842
+#: app/includes/TPDefault.php:846
 msgctxt "(Отели в г. {location}: {selection_name} ({dates}))"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_2_title"
 msgstr "Отели в г. {location}: {selection_name} ({dates})"
 
-#: app/includes/TPDefault.php:850
+#: app/includes/TPDefault.php:854
 msgctxt "(View Hotel)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "View Hotel"
 
-#: app/includes/TPDefault.php:852
+#: app/includes/TPDefault.php:856
 msgctxt "(Посмотреть отель)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_2_title_btn"
 msgstr "Посмотреть отель"
 
-#: app/includes/TPDefault.php:876
+#: app/includes/TPDefault.php:880
 msgctxt "(location hotels with price from priceAvgMin to priceAvgMax)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title"
 msgstr "location hotels with price from priceAvgMin to priceAvgMax"
 
-#: app/includes/TPDefault.php:878
+#: app/includes/TPDefault.php:882
 msgctxt "(Отели location по цене от priceAvgMin до priceAvgMax)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_3_title"
 msgstr "Отели location по цене от priceAvgMin до priceAvgMax"
 
-#: app/includes/TPDefault.php:886
+#: app/includes/TPDefault.php:890
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:888
+#: app/includes/TPDefault.php:892
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_3_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:920
+#: app/includes/TPDefault.php:924
 msgctxt "(location hotels with stars stars )"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title"
 msgstr "location hotels with stars stars "
 
-#: app/includes/TPDefault.php:922
+#: app/includes/TPDefault.php:926
 msgctxt "(Отели в location c stars звезд)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_4_title"
 msgstr "Отели в location c stars звезд"
 
-#: app/includes/TPDefault.php:930
+#: app/includes/TPDefault.php:934
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:932
+#: app/includes/TPDefault.php:936
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_4_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:964
+#: app/includes/TPDefault.php:968
 msgctxt "(Stay price in location for number days)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title"
 msgstr "Stay price in location for number days"
 
-#: app/includes/TPDefault.php:966
+#: app/includes/TPDefault.php:970
 msgctxt "(Стоимость проживания в location на number дней)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_5_title"
 msgstr "Стоимость проживания в location на number дней"
 
-#: app/includes/TPDefault.php:974
+#: app/includes/TPDefault.php:978
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:976
+#: app/includes/TPDefault.php:980
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_5_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:1008
+#: app/includes/TPDefault.php:1012
 msgctxt "(Stay price in location for weekend)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title"
 msgstr "Stay price in location for weekend"
 
-#: app/includes/TPDefault.php:1010
+#: app/includes/TPDefault.php:1014
 msgctxt "(Стоимость проживания в location на уикенд)"
 msgid "tp_plugin_local_ru_table_shortcodes_hotels_6_title"
 msgstr "Стоимость проживания в location на уикенд"
 
-#: app/includes/TPDefault.php:1018
+#: app/includes/TPDefault.php:1022
 msgctxt "(Book now)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Book now"
 
-#: app/includes/TPDefault.php:1020
+#: app/includes/TPDefault.php:1024
 msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Забронировать"
+
+#: app/includes/TPDefault.php:1060 app/includes/TPDefault.php:1061 app/includes/TPDefault.php:1068
+#: app/includes/TPDefault.php:1069
+msgctxt ""
+msgid ""
+msgstr ""
 
 #: app/includes/TPLoader.php:137
 msgctxt "(Set details and enable plugin features)"
@@ -718,852 +724,1112 @@ msgctxt "(Direct)"
 msgid "tp_plugin_widget_form_field_stops_value_2_label"
 msgstr "Direct"
 
-#: app/includes/common/TPFieldsLabelTable.php:33
+#: app/includes/common/TPFieldsLabelTable.php:37
+msgctxt "local ru railway fields table label default"
+msgid "Train"
+msgstr "Номер поезда"
+
+#: app/includes/common/TPFieldsLabelTable.php:38
+msgctxt "local ru railway fields table label default"
+msgid "Route"
+msgstr "Маршрут"
+
+#: app/includes/common/TPFieldsLabelTable.php:39
+msgctxt "local ru railway fields table label default"
+msgid "Departure"
+msgstr "Отправление"
+
+#: app/includes/common/TPFieldsLabelTable.php:40
+msgctxt "local ru railway fields table label default"
+msgid "Arrival"
+msgstr "Прибытие"
+
+#: app/includes/common/TPFieldsLabelTable.php:41
+msgctxt "local ru railway fields table label default"
+msgid "Duration"
+msgstr "В пути"
+
+#: app/includes/common/TPFieldsLabelTable.php:42
+msgctxt "local ru railway fields table label default"
+msgid "Prices"
+msgstr "Примерные цены"
+
+#: app/includes/common/TPFieldsLabelTable.php:43
+msgctxt "local ru railway fields table label default"
+msgid "Dates"
+msgstr "Дата поездки"
+
+#: app/includes/common/TPFieldsLabelTable.php:44
+msgctxt "local ru railway fields table label default"
+msgid "From"
+msgstr "Откуда"
+
+#: app/includes/common/TPFieldsLabelTable.php:45
+msgctxt "local ru railway fields table label default"
+msgid "To"
+msgstr "Куда"
+
+#: app/includes/common/TPFieldsLabelTable.php:46
+msgctxt "local ru railway fields table label default"
+msgid "Departure Time"
+msgstr "Время отправления"
+
+#: app/includes/common/TPFieldsLabelTable.php:47
+msgctxt "local ru railway fields table label default"
+msgid "Arrival Time"
+msgstr "Время прибытия"
+
+#: app/includes/common/TPFieldsLabelTable.php:48
+msgctxt "local ru railway fields table label default"
+msgid "Route's First Station"
+msgstr "Начальная станция маршрута"
+
+#: app/includes/common/TPFieldsLabelTable.php:49
+msgctxt "local ru railway fields table label default"
+msgid "Route's Last Station"
+msgstr "Конечная станция маршрута"
+
+#: app/includes/common/TPFieldsLabelTable.php:52
+msgctxt "local ru railway fields table label"
+msgid "Train"
+msgstr "Номер поезда"
+
+#: app/includes/common/TPFieldsLabelTable.php:53
+msgctxt "local ru railway fields table label"
+msgid "Route"
+msgstr "Маршрут"
+
+#: app/includes/common/TPFieldsLabelTable.php:54
+msgctxt "local ru railway fields table label"
+msgid "Departure"
+msgstr "Отправление"
+
+#: app/includes/common/TPFieldsLabelTable.php:55
+msgctxt "local ru railway fields table label"
+msgid "Arrival"
+msgstr "Прибытие"
+
+#: app/includes/common/TPFieldsLabelTable.php:56
+msgctxt "local ru railway fields table label"
+msgid "Duration"
+msgstr "В пути"
+
+#: app/includes/common/TPFieldsLabelTable.php:57
+msgctxt "local ru railway fields table label"
+msgid "Prices"
+msgstr "Примерные цены"
+
+#: app/includes/common/TPFieldsLabelTable.php:58
+msgctxt "local ru railway fields table label"
+msgid "Dates"
+msgstr "Дата поездки"
+
+#: app/includes/common/TPFieldsLabelTable.php:59
+msgctxt "local ru railway fields table label"
+msgid "From"
+msgstr "Откуда"
+
+#: app/includes/common/TPFieldsLabelTable.php:60
+msgctxt "local ru railway fields table label"
+msgid "To"
+msgstr "Куда"
+
+#: app/includes/common/TPFieldsLabelTable.php:61
+msgctxt "local ru railway fields table label"
+msgid "Departure Time"
+msgstr "Время отправления"
+
+#: app/includes/common/TPFieldsLabelTable.php:62
+msgctxt "local ru railway fields table label"
+msgid "Arrival Time"
+msgstr "Время прибытия"
+
+#: app/includes/common/TPFieldsLabelTable.php:63
+msgctxt "local ru railway fields table label"
+msgid "Route's First Station"
+msgstr "Начальная станция маршрута"
+
+#: app/includes/common/TPFieldsLabelTable.php:64
+msgctxt "local ru railway fields table label"
+msgid "Route's Last Station"
+msgstr "Конечная станция маршрута"
+
+#: app/includes/common/TPFieldsLabelTable.php:71
+msgctxt "local en railway fields table label default"
+msgid "Train"
+msgstr "Train"
+
+#: app/includes/common/TPFieldsLabelTable.php:72
+msgctxt "local en railway fields table label default"
+msgid "Route"
+msgstr "Route"
+
+#: app/includes/common/TPFieldsLabelTable.php:73
+msgctxt "local en railway fields table label default"
+msgid "Departure"
+msgstr "Departure"
+
+#: app/includes/common/TPFieldsLabelTable.php:74
+msgctxt "local en railway fields table label default"
+msgid "Arrival"
+msgstr "Arrival"
+
+#: app/includes/common/TPFieldsLabelTable.php:75
+msgctxt "local en railway fields table label default"
+msgid "Duration"
+msgstr "Duration"
+
+#: app/includes/common/TPFieldsLabelTable.php:76
+msgctxt "local en railway fields table label default"
+msgid "Prices"
+msgstr "Prices"
+
+#: app/includes/common/TPFieldsLabelTable.php:77
+msgctxt "local en railway fields table label default"
+msgid "Dates"
+msgstr "Dates"
+
+#: app/includes/common/TPFieldsLabelTable.php:78
+msgctxt "local en railway fields table label default"
+msgid "From"
+msgstr "From"
+
+#: app/includes/common/TPFieldsLabelTable.php:79
+msgctxt "local en railway fields table label default"
+msgid "To"
+msgstr "To"
+
+#: app/includes/common/TPFieldsLabelTable.php:80
+msgctxt "local en railway fields table label default"
+msgid "Departure Time"
+msgstr "Departure Time"
+
+#: app/includes/common/TPFieldsLabelTable.php:81
+msgctxt "local en railway fields table label default"
+msgid "Arrival Time"
+msgstr "Arrival Time"
+
+#: app/includes/common/TPFieldsLabelTable.php:82
+msgctxt "local en railway fields table label default"
+msgid "Route's First Station"
+msgstr "Route's First Station"
+
+#: app/includes/common/TPFieldsLabelTable.php:83
+msgctxt "local en railway fields table label default"
+msgid "Route's Last Station"
+msgstr "Route's Last Station"
+
+#: app/includes/common/TPFieldsLabelTable.php:86
+msgctxt "local en railway fields table label"
+msgid "Train"
+msgstr "Train"
+
+#: app/includes/common/TPFieldsLabelTable.php:87
+msgctxt "local en railway fields table label"
+msgid "Route"
+msgstr "Route"
+
+#: app/includes/common/TPFieldsLabelTable.php:88
+msgctxt "local en railway fields table label"
+msgid "Departure"
+msgstr "Departure"
+
+#: app/includes/common/TPFieldsLabelTable.php:89
+msgctxt "local en railway fields table label"
+msgid "Arrival"
+msgstr "Arrival"
+
+#: app/includes/common/TPFieldsLabelTable.php:90
+msgctxt "local en railway fields table label"
+msgid "Duration"
+msgstr "Duration"
+
+#: app/includes/common/TPFieldsLabelTable.php:91
+msgctxt "local en railway fields table label"
+msgid "Prices"
+msgstr "Prices"
+
+#: app/includes/common/TPFieldsLabelTable.php:92
+msgctxt "local en railway fields table label"
+msgid "Dates"
+msgstr "Dates"
+
+#: app/includes/common/TPFieldsLabelTable.php:93
+msgctxt "local en railway fields table label"
+msgid "From"
+msgstr "From"
+
+#: app/includes/common/TPFieldsLabelTable.php:94
+msgctxt "local en railway fields table label"
+msgid "To"
+msgstr "To"
+
+#: app/includes/common/TPFieldsLabelTable.php:95
+msgctxt "local en railway fields table label"
+msgid "Departure Time"
+msgstr "Departure Time"
+
+#: app/includes/common/TPFieldsLabelTable.php:96
+msgctxt "local en railway fields table label"
+msgid "Arrival Time"
+msgstr "Arrival Time"
+
+#: app/includes/common/TPFieldsLabelTable.php:97
+msgctxt "local en railway fields table label"
+msgid "Route's First Station"
+msgstr "Route's First Station"
+
+#: app/includes/common/TPFieldsLabelTable.php:98
+msgctxt "local en railway fields table label"
+msgid "Route's Last Station"
+msgstr "Route's Last Station"
+
+#: app/includes/common/TPFieldsLabelTable.php:122
 msgctxt "(Отель)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_name"
 msgstr "Отель"
 
-#: app/includes/common/TPFieldsLabelTable.php:35
+#: app/includes/common/TPFieldsLabelTable.php:124
 msgctxt "(Звездность)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_stars"
 msgstr "Звездность"
 
-#: app/includes/common/TPFieldsLabelTable.php:37
+#: app/includes/common/TPFieldsLabelTable.php:126
 msgctxt "(Рейтинг)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_rating"
 msgstr "Рейтинг"
 
-#: app/includes/common/TPFieldsLabelTable.php:39
+#: app/includes/common/TPFieldsLabelTable.php:128
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_distance"
 msgstr "До центра"
 
-#: app/includes/common/TPFieldsLabelTable.php:41
+#: app/includes/common/TPFieldsLabelTable.php:130
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_price_pn"
 msgstr "Цена за ночь, от"
 
-#: app/includes/common/TPFieldsLabelTable.php:43
+#: app/includes/common/TPFieldsLabelTable.php:132
 msgctxt "(Цена до скидки)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_old_price_pn"
 msgstr "Цена до скидки"
 
-#: app/includes/common/TPFieldsLabelTable.php:45
+#: app/includes/common/TPFieldsLabelTable.php:134
 msgctxt "(Скидка)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_discount"
 msgstr "Скидка"
 
-#: app/includes/common/TPFieldsLabelTable.php:48
+#: app/includes/common/TPFieldsLabelTable.php:137
 msgctxt "(Старая цена и скидка)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_old_price_and_discount"
 msgstr "Старая цена и скидка"
 
-#: app/includes/common/TPFieldsLabelTable.php:50
+#: app/includes/common/TPFieldsLabelTable.php:139
 msgctxt "(Старая и новая цена)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_old_price_and_new_price"
 msgstr "Старая и новая цена"
 
-#: app/includes/common/TPFieldsLabelTable.php:53
+#: app/includes/common/TPFieldsLabelTable.php:142
 msgctxt "(Кнопка)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_default_button"
 msgstr "Кнопка"
 
-#: app/includes/common/TPFieldsLabelTable.php:68
+#: app/includes/common/TPFieldsLabelTable.php:157
 msgctxt "(Отель)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_name"
 msgstr "Отель"
 
-#: app/includes/common/TPFieldsLabelTable.php:70
+#: app/includes/common/TPFieldsLabelTable.php:159
 msgctxt "(Звездность)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_stars"
 msgstr "Звездность"
 
-#: app/includes/common/TPFieldsLabelTable.php:72
+#: app/includes/common/TPFieldsLabelTable.php:161
 msgctxt "(Рейтинг)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_rating"
 msgstr "Рейтинг"
 
-#: app/includes/common/TPFieldsLabelTable.php:74
+#: app/includes/common/TPFieldsLabelTable.php:163
 msgctxt "(До центра)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_distance"
 msgstr "До центра"
 
-#: app/includes/common/TPFieldsLabelTable.php:76
+#: app/includes/common/TPFieldsLabelTable.php:165
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_price_pn"
 msgstr "Цена за ночь, от"
 
-#: app/includes/common/TPFieldsLabelTable.php:78
+#: app/includes/common/TPFieldsLabelTable.php:167
 msgctxt "(Цена до скидки)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_pn"
 msgstr "Цена до скидки"
 
-#: app/includes/common/TPFieldsLabelTable.php:80
+#: app/includes/common/TPFieldsLabelTable.php:169
 msgctxt "(Скидка)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_discount"
 msgstr "Скидка"
 
-#: app/includes/common/TPFieldsLabelTable.php:84
+#: app/includes/common/TPFieldsLabelTable.php:173
 msgctxt "(Цена до скидки)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_discount"
 msgstr "Цена до скидки"
 
-#: app/includes/common/TPFieldsLabelTable.php:87
+#: app/includes/common/TPFieldsLabelTable.php:176
 msgctxt "(Цена за ночь, от)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_old_price_and_new_price"
 msgstr "Цена за ночь, от"
 
-#: app/includes/common/TPFieldsLabelTable.php:90
+#: app/includes/common/TPFieldsLabelTable.php:179
 msgctxt "(Выбрать даты)"
 msgid "tp_plugin_local_ru_hotels_fields_table_label_button"
 msgstr "Выбрать даты"
 
-#: app/includes/common/TPFieldsLabelTable.php:109
+#: app/includes/common/TPFieldsLabelTable.php:198
 msgctxt "(Hotel)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_name"
 msgstr "Hotel"
 
-#: app/includes/common/TPFieldsLabelTable.php:111
+#: app/includes/common/TPFieldsLabelTable.php:200
 msgctxt "(Stars)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_stars"
 msgstr "Stars"
 
-#: app/includes/common/TPFieldsLabelTable.php:113
+#: app/includes/common/TPFieldsLabelTable.php:202
 msgctxt "(Rating)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_rating"
 msgstr "Rating"
 
-#: app/includes/common/TPFieldsLabelTable.php:115
+#: app/includes/common/TPFieldsLabelTable.php:204
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_distance"
 msgstr "To the center"
 
-#: app/includes/common/TPFieldsLabelTable.php:117
+#: app/includes/common/TPFieldsLabelTable.php:206
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_price_pn"
 msgstr "Price per night, from"
 
-#: app/includes/common/TPFieldsLabelTable.php:119
+#: app/includes/common/TPFieldsLabelTable.php:208
 msgctxt "(Price before discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_old_price_pn"
 msgstr "Price before discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:121
+#: app/includes/common/TPFieldsLabelTable.php:210
 msgctxt "(Discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_discount"
 msgstr "Discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:124
+#: app/includes/common/TPFieldsLabelTable.php:213
 msgctxt "(Price before and discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_old_price_and_discount"
 msgstr "Price before and discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:126
+#: app/includes/common/TPFieldsLabelTable.php:215
 msgctxt "(Old and new price)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_old_price_and_new_price"
 msgstr "Old and new price"
 
-#: app/includes/common/TPFieldsLabelTable.php:129
+#: app/includes/common/TPFieldsLabelTable.php:218
 msgctxt "(Button)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_default_button"
 msgstr "Button"
 
-#: app/includes/common/TPFieldsLabelTable.php:146
+#: app/includes/common/TPFieldsLabelTable.php:235
 msgctxt "(Hotel)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_name"
 msgstr "Hotel"
 
-#: app/includes/common/TPFieldsLabelTable.php:148
+#: app/includes/common/TPFieldsLabelTable.php:237
 msgctxt "(Stars)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_stars"
 msgstr "Stars"
 
-#: app/includes/common/TPFieldsLabelTable.php:150
+#: app/includes/common/TPFieldsLabelTable.php:239
 msgctxt "(Rating)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_rating"
 msgstr "Rating"
 
-#: app/includes/common/TPFieldsLabelTable.php:152
+#: app/includes/common/TPFieldsLabelTable.php:241
 msgctxt "(To the center)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_distance"
 msgstr "To the center"
 
-#: app/includes/common/TPFieldsLabelTable.php:154
+#: app/includes/common/TPFieldsLabelTable.php:243
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_price_pn"
 msgstr "Price per night, from"
 
-#: app/includes/common/TPFieldsLabelTable.php:156
+#: app/includes/common/TPFieldsLabelTable.php:245
 msgctxt "(Price before discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_pn"
 msgstr "Price before discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:158
+#: app/includes/common/TPFieldsLabelTable.php:247
 msgctxt "(Discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_discount"
 msgstr "Discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:161
+#: app/includes/common/TPFieldsLabelTable.php:250
 msgctxt "(Price before discount)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_discount"
 msgstr "Price before discount"
 
-#: app/includes/common/TPFieldsLabelTable.php:163
+#: app/includes/common/TPFieldsLabelTable.php:252
 msgctxt "(Price per night, from)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_old_price_and_new_price"
 msgstr "Price per night, from"
 
-#: app/includes/common/TPFieldsLabelTable.php:166
+#: app/includes/common/TPFieldsLabelTable.php:255
 msgctxt "(Choose dates)"
 msgid "tp_plugin_local_en_hotels_fields_table_label_button"
 msgstr "Choose dates"
 
-#: app/includes/common/TPFieldsLabelTable.php:188
+#: app/includes/common/TPFieldsLabelTable.php:277
 msgctxt "(Номер рейса)"
 msgid "tp_plugin_local_ru_fields_table_label_default_flight_number"
 msgstr "Номер рейса"
 
-#: app/includes/common/TPFieldsLabelTable.php:190
+#: app/includes/common/TPFieldsLabelTable.php:279
 msgctxt "(Рейс)"
 msgid "tp_plugin_local_ru_fields_table_label_default_flight"
 msgstr "Рейс"
 
-#: app/includes/common/TPFieldsLabelTable.php:192
+#: app/includes/common/TPFieldsLabelTable.php:281
 msgctxt "(Дата вылета)"
 msgid "tp_plugin_local_ru_fields_table_label_default_departure_at"
 msgstr "Дата вылета"
 
-#: app/includes/common/TPFieldsLabelTable.php:194
+#: app/includes/common/TPFieldsLabelTable.php:283
 msgctxt "(Дата возвращения)"
 msgid "tp_plugin_local_ru_fields_table_label_default_return_at"
 msgstr "Дата возвращения"
 
-#: app/includes/common/TPFieldsLabelTable.php:196
+#: app/includes/common/TPFieldsLabelTable.php:285
 msgctxt "(Пересадки)"
 msgid "tp_plugin_local_ru_fields_table_label_default_number_of_changes"
 msgstr "Пересадки"
 
-#: app/includes/common/TPFieldsLabelTable.php:198
+#: app/includes/common/TPFieldsLabelTable.php:287
 msgctxt "(Стоимость)"
 msgid "tp_plugin_local_ru_fields_table_label_default_price"
 msgstr "Стоимость"
 
-#: app/includes/common/TPFieldsLabelTable.php:200
+#: app/includes/common/TPFieldsLabelTable.php:289
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_default_airline"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:202
+#: app/includes/common/TPFieldsLabelTable.php:291
 msgctxt "(Лого авиакомпании)"
 msgid "tp_plugin_local_ru_fields_table_label_default_airline_logo"
 msgstr "Лого авиакомпании"
 
-#: app/includes/common/TPFieldsLabelTable.php:204
+#: app/includes/common/TPFieldsLabelTable.php:293
 msgctxt "(Откуда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_origin"
 msgstr "Откуда"
 
-#: app/includes/common/TPFieldsLabelTable.php:206
+#: app/includes/common/TPFieldsLabelTable.php:295
 msgctxt "(Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_destination"
 msgstr "Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:208
+#: app/includes/common/TPFieldsLabelTable.php:297
 msgctxt "(Место)"
 msgid "tp_plugin_local_ru_fields_table_label_default_place"
 msgstr "Место"
 
-#: app/includes/common/TPFieldsLabelTable.php:210
+#: app/includes/common/TPFieldsLabelTable.php:299
 msgctxt "(Направление)"
 msgid "tp_plugin_local_ru_fields_table_label_default_direction"
 msgstr "Направление"
 
-#: app/includes/common/TPFieldsLabelTable.php:212
+#: app/includes/common/TPFieldsLabelTable.php:301
 msgctxt "(Класс перелета)"
 msgid "tp_plugin_local_ru_fields_table_label_default_trip_class"
 msgstr "Класс перелета"
 
-#: app/includes/common/TPFieldsLabelTable.php:214
+#: app/includes/common/TPFieldsLabelTable.php:303
 msgctxt "(Расстояние)"
 msgid "tp_plugin_local_ru_fields_table_label_default_distance"
 msgstr "Расстояние"
 
-#: app/includes/common/TPFieldsLabelTable.php:216
+#: app/includes/common/TPFieldsLabelTable.php:305
 msgctxt "(Цена за километр)"
 msgid "tp_plugin_local_ru_fields_table_label_default_price_distance"
 msgstr "Цена за километр"
 
-#: app/includes/common/TPFieldsLabelTable.php:218
+#: app/includes/common/TPFieldsLabelTable.php:307
 msgctxt "(Когда найден)"
 msgid "tp_plugin_local_ru_fields_table_label_default_found_at"
 msgstr "Когда найден"
 
-#: app/includes/common/TPFieldsLabelTable.php:220
+#: app/includes/common/TPFieldsLabelTable.php:309
 msgctxt "(В одну/обе стороны)"
 msgid "tp_plugin_local_ru_fields_table_label_default_back_and_forth"
 msgstr "В одну/обе стороны"
 
-#: app/includes/common/TPFieldsLabelTable.php:222
+#: app/includes/common/TPFieldsLabelTable.php:311
 msgctxt "(Кнопка)"
 msgid "tp_plugin_local_ru_fields_table_label_default_button"
 msgstr "Кнопка"
 
-#: app/includes/common/TPFieldsLabelTable.php:224
+#: app/includes/common/TPFieldsLabelTable.php:313
 msgctxt "(Откуда - Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_default_origin_destination"
 msgstr "Откуда - Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:228
+#: app/includes/common/TPFieldsLabelTable.php:317
 msgctxt "(Номер рейса)"
 msgid "tp_plugin_local_ru_fields_table_label_flight_number"
 msgstr "Номер рейса"
 
-#: app/includes/common/TPFieldsLabelTable.php:230
+#: app/includes/common/TPFieldsLabelTable.php:319
 msgctxt "(Рейс)"
 msgid "tp_plugin_local_ru_fields_table_label_flight"
 msgstr "Рейс"
 
-#: app/includes/common/TPFieldsLabelTable.php:232
+#: app/includes/common/TPFieldsLabelTable.php:321
 msgctxt "(Дата вылета)"
 msgid "tp_plugin_local_ru_fields_table_label_departure_at"
 msgstr "Дата вылета"
 
-#: app/includes/common/TPFieldsLabelTable.php:234
+#: app/includes/common/TPFieldsLabelTable.php:323
 msgctxt "(Дата возвращения)"
 msgid "tp_plugin_local_ru_fields_table_label_return_at"
 msgstr "Дата возвращения"
 
-#: app/includes/common/TPFieldsLabelTable.php:236
+#: app/includes/common/TPFieldsLabelTable.php:325
 msgctxt "(Пересадки)"
 msgid "tp_plugin_local_ru_fields_table_label_number_of_changes"
 msgstr "Пересадки"
 
-#: app/includes/common/TPFieldsLabelTable.php:238
+#: app/includes/common/TPFieldsLabelTable.php:327
 msgctxt "(Стоимость)"
 msgid "tp_plugin_local_ru_fields_table_label_price"
 msgstr "Стоимость"
 
-#: app/includes/common/TPFieldsLabelTable.php:240
+#: app/includes/common/TPFieldsLabelTable.php:329
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_airline"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:242
+#: app/includes/common/TPFieldsLabelTable.php:331
 msgctxt "(Авиакомпания)"
 msgid "tp_plugin_local_ru_fields_table_label_airline_logo"
 msgstr "Авиакомпания"
 
-#: app/includes/common/TPFieldsLabelTable.php:244
+#: app/includes/common/TPFieldsLabelTable.php:333
 msgctxt "(Откуда)"
 msgid "tp_plugin_local_ru_fields_table_label_origin"
 msgstr "Откуда"
 
-#: app/includes/common/TPFieldsLabelTable.php:246
+#: app/includes/common/TPFieldsLabelTable.php:335
 msgctxt "(Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_destination"
 msgstr "Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:248
+#: app/includes/common/TPFieldsLabelTable.php:337
 msgctxt "(Место)"
 msgid "tp_plugin_local_ru_fields_table_label_place"
 msgstr "Место"
 
-#: app/includes/common/TPFieldsLabelTable.php:250
+#: app/includes/common/TPFieldsLabelTable.php:339
 msgctxt "(Направление)"
 msgid "tp_plugin_local_ru_fields_table_label_direction"
 msgstr "Направление"
 
-#: app/includes/common/TPFieldsLabelTable.php:252
+#: app/includes/common/TPFieldsLabelTable.php:341
 msgctxt "(Класс перелета)"
 msgid "tp_plugin_local_ru_fields_table_label_trip_class"
 msgstr "Класс перелета"
 
-#: app/includes/common/TPFieldsLabelTable.php:254
+#: app/includes/common/TPFieldsLabelTable.php:343
 msgctxt "(Расстояние)"
 msgid "tp_plugin_local_ru_fields_table_label_distance"
 msgstr "Расстояние"
 
-#: app/includes/common/TPFieldsLabelTable.php:256
+#: app/includes/common/TPFieldsLabelTable.php:345
 msgctxt "(Цена за километр)"
 msgid "tp_plugin_local_ru_fields_table_label_price_distance"
 msgstr "Цена за километр"
 
-#: app/includes/common/TPFieldsLabelTable.php:258
+#: app/includes/common/TPFieldsLabelTable.php:347
 msgctxt "(Когда найден)"
 msgid "tp_plugin_local_ru_fields_table_label_found_at"
 msgstr "Когда найден"
 
-#: app/includes/common/TPFieldsLabelTable.php:260
+#: app/includes/common/TPFieldsLabelTable.php:349
 msgctxt "(В одну/обе стороны)"
 msgid "tp_plugin_local_ru_fields_table_label_back_and_forth"
 msgstr "В одну/обе стороны"
 
-#: app/includes/common/TPFieldsLabelTable.php:262
+#: app/includes/common/TPFieldsLabelTable.php:351
 msgctxt "(Найти билет)"
 msgid "tp_plugin_local_ru_fields_table_label_button"
 msgstr "Найти билет"
 
-#: app/includes/common/TPFieldsLabelTable.php:264
+#: app/includes/common/TPFieldsLabelTable.php:353
 msgctxt "(Откуда - Куда)"
 msgid "tp_plugin_local_ru_fields_table_label_origin_destination"
 msgstr "Откуда - Куда"
 
-#: app/includes/common/TPFieldsLabelTable.php:276
+#: app/includes/common/TPFieldsLabelTable.php:365
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_en_fields_table_label_default_flight_number"
 msgstr "Flight number"
 
-#: app/includes/common/TPFieldsLabelTable.php:278
+#: app/includes/common/TPFieldsLabelTable.php:367
 msgctxt "(Flight)"
 msgid "tp_plugin_local_en_fields_table_label_default_flight"
 msgstr "Flight"
 
-#: app/includes/common/TPFieldsLabelTable.php:280
+#: app/includes/common/TPFieldsLabelTable.php:369
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_en_fields_table_label_default_departure_at"
 msgstr "Departure date"
 
-#: app/includes/common/TPFieldsLabelTable.php:282
+#: app/includes/common/TPFieldsLabelTable.php:371
 msgctxt "(Return date)"
 msgid "tp_plugin_local_en_fields_table_label_default_return_at"
 msgstr "Return date"
 
-#: app/includes/common/TPFieldsLabelTable.php:284
+#: app/includes/common/TPFieldsLabelTable.php:373
 msgctxt "(Stops)"
 msgid "tp_plugin_local_en_fields_table_label_default_number_of_changes"
 msgstr "Stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:286
+#: app/includes/common/TPFieldsLabelTable.php:375
 msgctxt "(Price)"
 msgid "tp_plugin_local_en_fields_table_label_default_price"
 msgstr "Price"
 
-#: app/includes/common/TPFieldsLabelTable.php:288
+#: app/includes/common/TPFieldsLabelTable.php:377
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_default_airline"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:290
+#: app/includes/common/TPFieldsLabelTable.php:379
 msgctxt "(Logo airlines)"
 msgid "tp_plugin_local_en_fields_table_label_default_airline_logo"
 msgstr "Logo airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:292
+#: app/includes/common/TPFieldsLabelTable.php:381
 msgctxt "(Origin)"
 msgid "tp_plugin_local_en_fields_table_label_default_origin"
 msgstr "Origin"
 
-#: app/includes/common/TPFieldsLabelTable.php:294
+#: app/includes/common/TPFieldsLabelTable.php:383
 msgctxt "(Destination)"
 msgid "tp_plugin_local_en_fields_table_label_default_destination"
 msgstr "Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:296
+#: app/includes/common/TPFieldsLabelTable.php:385
 msgctxt "(Rank)"
 msgid "tp_plugin_local_en_fields_table_label_default_place"
 msgstr "Rank"
 
-#: app/includes/common/TPFieldsLabelTable.php:298
+#: app/includes/common/TPFieldsLabelTable.php:387
 msgctxt "(Direction)"
 msgid "tp_plugin_local_en_fields_table_label_default_direction"
 msgstr "Direction"
 
-#: app/includes/common/TPFieldsLabelTable.php:300
+#: app/includes/common/TPFieldsLabelTable.php:389
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_en_fields_table_label_default_trip_class"
 msgstr "Flight class"
 
-#: app/includes/common/TPFieldsLabelTable.php:302
+#: app/includes/common/TPFieldsLabelTable.php:391
 msgctxt "(Distance)"
 msgid "tp_plugin_local_en_fields_table_label_default_distance"
 msgstr "Distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:304
+#: app/includes/common/TPFieldsLabelTable.php:393
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_en_fields_table_label_default_price_distance"
 msgstr "Price/distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:306
+#: app/includes/common/TPFieldsLabelTable.php:395
 msgctxt "(When found)"
 msgid "tp_plugin_local_en_fields_table_label_default_found_at"
 msgstr "When found"
 
-#: app/includes/common/TPFieldsLabelTable.php:308
+#: app/includes/common/TPFieldsLabelTable.php:397
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_en_fields_table_label_default_back_and_forth"
 msgstr "One way / Round-Trip"
 
-#: app/includes/common/TPFieldsLabelTable.php:310
+#: app/includes/common/TPFieldsLabelTable.php:399
 msgctxt "(Button)"
 msgid "tp_plugin_local_en_fields_table_label_default_button"
 msgstr "Button"
 
-#: app/includes/common/TPFieldsLabelTable.php:312
+#: app/includes/common/TPFieldsLabelTable.php:401
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_en_fields_table_label_default_origin_destination"
 msgstr "Origin - Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:316
+#: app/includes/common/TPFieldsLabelTable.php:405
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_en_fields_table_label_flight_number"
 msgstr "Flight number"
 
-#: app/includes/common/TPFieldsLabelTable.php:318
+#: app/includes/common/TPFieldsLabelTable.php:407
 msgctxt "(Flight)"
 msgid "tp_plugin_local_en_fields_table_label_flight"
 msgstr "Flight"
 
-#: app/includes/common/TPFieldsLabelTable.php:320
+#: app/includes/common/TPFieldsLabelTable.php:409
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_en_fields_table_label_departure_at"
 msgstr "Departure date"
 
-#: app/includes/common/TPFieldsLabelTable.php:322
+#: app/includes/common/TPFieldsLabelTable.php:411
 msgctxt "(Return date)"
 msgid "tp_plugin_local_en_fields_table_label_return_at"
 msgstr "Return date"
 
-#: app/includes/common/TPFieldsLabelTable.php:324
+#: app/includes/common/TPFieldsLabelTable.php:413
 msgctxt "(Stops)"
 msgid "tp_plugin_local_en_fields_table_label_number_of_changes"
 msgstr "Stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:326
+#: app/includes/common/TPFieldsLabelTable.php:415
 msgctxt "(Price)"
 msgid "tp_plugin_local_en_fields_table_label_price"
 msgstr "Price"
 
-#: app/includes/common/TPFieldsLabelTable.php:328
+#: app/includes/common/TPFieldsLabelTable.php:417
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_airline"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:330
+#: app/includes/common/TPFieldsLabelTable.php:419
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_en_fields_table_label_airline_logo"
 msgstr "Airlines"
 
-#: app/includes/common/TPFieldsLabelTable.php:332
+#: app/includes/common/TPFieldsLabelTable.php:421
 msgctxt "(Origin)"
 msgid "tp_plugin_local_en_fields_table_label_origin"
 msgstr "Origin"
 
-#: app/includes/common/TPFieldsLabelTable.php:334
+#: app/includes/common/TPFieldsLabelTable.php:423
 msgctxt "(Destination)"
 msgid "tp_plugin_local_en_fields_table_label_destination"
 msgstr "Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:336
+#: app/includes/common/TPFieldsLabelTable.php:425
 msgctxt "(Rank)"
 msgid "tp_plugin_local_en_fields_table_label_place"
 msgstr "Rank"
 
-#: app/includes/common/TPFieldsLabelTable.php:338
+#: app/includes/common/TPFieldsLabelTable.php:427
 msgctxt "(Direction)"
 msgid "tp_plugin_local_en_fields_table_label_direction"
 msgstr "Direction"
 
-#: app/includes/common/TPFieldsLabelTable.php:340
+#: app/includes/common/TPFieldsLabelTable.php:429
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_en_fields_table_label_trip_class"
 msgstr "Flight class"
 
-#: app/includes/common/TPFieldsLabelTable.php:342
+#: app/includes/common/TPFieldsLabelTable.php:431
 msgctxt "(Distance)"
 msgid "tp_plugin_local_en_fields_table_label_distance"
 msgstr "Distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:344
+#: app/includes/common/TPFieldsLabelTable.php:433
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_en_fields_table_label_price_distance"
 msgstr "Price/distance"
 
-#: app/includes/common/TPFieldsLabelTable.php:346
+#: app/includes/common/TPFieldsLabelTable.php:435
 msgctxt "(When found)"
 msgid "tp_plugin_local_en_fields_table_label_found_at"
 msgstr "When found"
 
-#: app/includes/common/TPFieldsLabelTable.php:348
+#: app/includes/common/TPFieldsLabelTable.php:437
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_en_fields_table_label_back_and_forth"
 msgstr "One way / Round-Trip"
 
-#: app/includes/common/TPFieldsLabelTable.php:350
+#: app/includes/common/TPFieldsLabelTable.php:439
 msgctxt "(Find Ticket)"
 msgid "tp_plugin_local_en_fields_table_label_button"
 msgstr "Find Ticket"
 
-#: app/includes/common/TPFieldsLabelTable.php:352
+#: app/includes/common/TPFieldsLabelTable.php:441
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_en_fields_table_label_origin_destination"
 msgstr "Origin - Destination"
 
-#: app/includes/common/TPFieldsLabelTable.php:364
+#: app/includes/common/TPFieldsLabelTable.php:453
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_th_fields_table_label_default_flight_number"
 msgstr "หมายเลขเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:366
+#: app/includes/common/TPFieldsLabelTable.php:455
 msgctxt "(Flight)"
 msgid "tp_plugin_local_th_fields_table_label_default_flight"
 msgstr "เที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:368
+#: app/includes/common/TPFieldsLabelTable.php:457
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_th_fields_table_label_default_departure_at"
 msgstr "วันเดินทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:370
+#: app/includes/common/TPFieldsLabelTable.php:459
 msgctxt "(Return date)"
 msgid "tp_plugin_local_th_fields_table_label_default_return_at"
 msgstr "วันกลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:372
+#: app/includes/common/TPFieldsLabelTable.php:461
 msgctxt "(Stops)"
 msgid "tp_plugin_local_th_fields_table_label_default_number_of_changes"
 msgstr "จุดพัก"
 
-#: app/includes/common/TPFieldsLabelTable.php:374
+#: app/includes/common/TPFieldsLabelTable.php:463
 msgctxt "(Price)"
 msgid "tp_plugin_local_th_fields_table_label_default_price"
 msgstr "จุดพัก"
 
-#: app/includes/common/TPFieldsLabelTable.php:376
+#: app/includes/common/TPFieldsLabelTable.php:465
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_default_airline"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:378
+#: app/includes/common/TPFieldsLabelTable.php:467
 msgctxt "(Logo airlines)"
 msgid "tp_plugin_local_th_fields_table_label_default_airline_logo"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:380
+#: app/includes/common/TPFieldsLabelTable.php:469
 msgctxt "(Origin)"
 msgid "tp_plugin_local_th_fields_table_label_default_origin"
 msgstr "ต้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:382
+#: app/includes/common/TPFieldsLabelTable.php:471
 msgctxt "(Destination)"
 msgid "tp_plugin_local_th_fields_table_label_default_destination"
 msgstr "ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:384
+#: app/includes/common/TPFieldsLabelTable.php:473
 msgctxt "(Rank)"
 msgid "tp_plugin_local_th_fields_table_label_default_place"
 msgstr "อันดับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:386
+#: app/includes/common/TPFieldsLabelTable.php:475
 msgctxt "(Direction)"
 msgid "tp_plugin_local_th_fields_table_label_default_direction"
 msgstr "เส้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:388
+#: app/includes/common/TPFieldsLabelTable.php:477
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_th_fields_table_label_default_trip_class"
 msgstr "คลาสเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:390
+#: app/includes/common/TPFieldsLabelTable.php:479
 msgctxt "(Distance)"
 msgid "tp_plugin_local_th_fields_table_label_default_distance"
 msgstr "ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:392
+#: app/includes/common/TPFieldsLabelTable.php:481
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_th_fields_table_label_default_price_distance"
 msgstr "ราคา/ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:394
+#: app/includes/common/TPFieldsLabelTable.php:483
 msgctxt "(When found)"
 msgid "tp_plugin_local_th_fields_table_label_default_found_at"
 msgstr "เมื่อพบ"
 
-#: app/includes/common/TPFieldsLabelTable.php:396
+#: app/includes/common/TPFieldsLabelTable.php:485
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_th_fields_table_label_default_back_and_forth"
 msgstr "ขาเดียว/ไปก-ลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:398
+#: app/includes/common/TPFieldsLabelTable.php:487
 msgctxt "(Button)"
 msgid "tp_plugin_local_th_fields_table_label_default_button"
 msgstr "ค้นหาตั๋ว"
 
-#: app/includes/common/TPFieldsLabelTable.php:400
+#: app/includes/common/TPFieldsLabelTable.php:489
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_th_fields_table_label_default_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:404
+#: app/includes/common/TPFieldsLabelTable.php:493
 msgctxt "(Flight number)"
 msgid "tp_plugin_local_th_fields_table_label_flight_number"
 msgstr "หมายเลขเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:406
+#: app/includes/common/TPFieldsLabelTable.php:495
 msgctxt "(Flight)"
 msgid "tp_plugin_local_th_fields_table_label_flight"
 msgstr "เที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:408
+#: app/includes/common/TPFieldsLabelTable.php:497
 msgctxt "(Departure date)"
 msgid "tp_plugin_local_th_fields_table_label_departure_at"
 msgstr "วันเดินทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:410
+#: app/includes/common/TPFieldsLabelTable.php:499
 msgctxt "(Return date)"
 msgid "tp_plugin_local_th_fields_table_label_return_at"
 msgstr "วันกลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:412
+#: app/includes/common/TPFieldsLabelTable.php:501
 msgctxt "(Stops)"
 msgid "tp_plugin_local_th_fields_table_label_number_of_changes"
 msgstr "จุดพัก"
 
-#: app/includes/common/TPFieldsLabelTable.php:414
+#: app/includes/common/TPFieldsLabelTable.php:503
 msgctxt "(Price)"
 msgid "tp_plugin_local_th_fields_table_label_price"
 msgstr "ราคา"
 
-#: app/includes/common/TPFieldsLabelTable.php:416
+#: app/includes/common/TPFieldsLabelTable.php:505
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_airline"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:418
+#: app/includes/common/TPFieldsLabelTable.php:507
 msgctxt "(Airlines)"
 msgid "tp_plugin_local_th_fields_table_label_airline_logo"
 msgstr "สายการบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:420
+#: app/includes/common/TPFieldsLabelTable.php:509
 msgctxt "(Origin)"
 msgid "tp_plugin_local_th_fields_table_label_origin"
 msgstr "ต้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:422
+#: app/includes/common/TPFieldsLabelTable.php:511
 msgctxt "(Destination)"
 msgid "tp_plugin_local_th_fields_table_label_destination"
 msgstr "ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:424
+#: app/includes/common/TPFieldsLabelTable.php:513
 msgctxt "(Rank)"
 msgid "tp_plugin_local_th_fields_table_label_place"
 msgstr "อันดับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:426
+#: app/includes/common/TPFieldsLabelTable.php:515
 msgctxt "(Direction)"
 msgid "tp_plugin_local_th_fields_table_label_direction"
 msgstr "เส้นทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:428
+#: app/includes/common/TPFieldsLabelTable.php:517
 msgctxt "(Flight class)"
 msgid "tp_plugin_local_th_fields_table_label_trip_class"
 msgstr "คลาสเที่ยวบิน"
 
-#: app/includes/common/TPFieldsLabelTable.php:430
+#: app/includes/common/TPFieldsLabelTable.php:519
 msgctxt "(Distance)"
 msgid "tp_plugin_local_th_fields_table_label_distance"
 msgstr "ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:432
+#: app/includes/common/TPFieldsLabelTable.php:521
 msgctxt "(Price/distance)"
 msgid "tp_plugin_local_th_fields_table_label_price_distance"
 msgstr "ราคา/ระยะทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:434
+#: app/includes/common/TPFieldsLabelTable.php:523
 msgctxt "(When found)"
 msgid "tp_plugin_local_th_fields_table_label_found_at"
 msgstr "เมื่อพบ"
 
-#: app/includes/common/TPFieldsLabelTable.php:436
+#: app/includes/common/TPFieldsLabelTable.php:525
 msgctxt "(One way / Round-Trip)"
 msgid "tp_plugin_local_th_fields_table_label_back_and_forth"
 msgstr "ขาเดียว/ไปก-ลับ"
 
-#: app/includes/common/TPFieldsLabelTable.php:438
+#: app/includes/common/TPFieldsLabelTable.php:527
 msgctxt "(Find Ticket)"
 msgid "tp_plugin_local_th_fields_table_label_button"
 msgstr "ค้นหาตั๋ว"
 
-#: app/includes/common/TPFieldsLabelTable.php:440
+#: app/includes/common/TPFieldsLabelTable.php:529
 msgctxt "(Origin - Destination)"
 msgid "tp_plugin_local_th_fields_table_label_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
 
-#: app/includes/common/TPFieldsLabelTable.php:454
+#: app/includes/common/TPFieldsLabelTable.php:543
 msgctxt "(Economy)"
 msgid "tp_plugin_local_en_trip_class_economy"
 msgstr "Economy"
 
-#: app/includes/common/TPFieldsLabelTable.php:455
+#: app/includes/common/TPFieldsLabelTable.php:544
 msgctxt "(Эконом)"
 msgid "tp_plugin_local_ru_trip_class_economy"
 msgstr "Эконом"
 
-#: app/includes/common/TPFieldsLabelTable.php:458
+#: app/includes/common/TPFieldsLabelTable.php:547
 msgctxt "(Business)"
 msgid "tp_plugin_local_en_trip_class_business"
 msgstr "Business"
 
-#: app/includes/common/TPFieldsLabelTable.php:459
+#: app/includes/common/TPFieldsLabelTable.php:548
 msgctxt "(Бизнес)"
 msgid "tp_plugin_local_ru_trip_class_business"
 msgstr "Бизнес"
 
-#: app/includes/common/TPFieldsLabelTable.php:462
+#: app/includes/common/TPFieldsLabelTable.php:551
 msgctxt "(First)"
 msgid "tp_plugin_local_en_trip_class_first"
 msgstr "First"
 
-#: app/includes/common/TPFieldsLabelTable.php:463
+#: app/includes/common/TPFieldsLabelTable.php:552
 msgctxt "(Первый)"
 msgid "tp_plugin_local_ru_trip_class_first"
 msgstr "Первый"
 
-#: app/includes/common/TPFieldsLabelTable.php:484
+#: app/includes/common/TPFieldsLabelTable.php:573
 msgctxt "(km)"
 msgid "tp_plugin_local_en_distance_label_km"
 msgstr "km"
 
-#: app/includes/common/TPFieldsLabelTable.php:485
+#: app/includes/common/TPFieldsLabelTable.php:574
 msgctxt "(км)"
 msgid "tp_plugin_local_ru_distance_label_km"
 msgstr "км"
 
-#: app/includes/common/TPFieldsLabelTable.php:488
+#: app/includes/common/TPFieldsLabelTable.php:577
 msgctxt "(m)"
 msgid "tp_plugin_local_en_distance_label_m"
 msgstr "m"
 
-#: app/includes/common/TPFieldsLabelTable.php:489
+#: app/includes/common/TPFieldsLabelTable.php:578
 msgctxt "(м)"
 msgid "tp_plugin_local_ru_distance_label_m"
 msgstr "м"
 
-#: app/includes/common/TPFieldsLabelTable.php:509
+#: app/includes/common/TPFieldsLabelTable.php:598
 msgctxt "(Direct)"
 msgid "tp_plugin_local_en_number_changes_label_direct"
 msgstr "Direct"
 
-#: app/includes/common/TPFieldsLabelTable.php:510
+#: app/includes/common/TPFieldsLabelTable.php:599
 msgctxt "(Прямой)"
 msgid "tp_plugin_local_ru_number_changes_label_direct"
 msgstr "Прямой"
 
-#: app/includes/common/TPFieldsLabelTable.php:513
+#: app/includes/common/TPFieldsLabelTable.php:602
 msgctxt "(stop)"
 msgid "tp_plugin_local_en_number_changes_label_stop"
 msgstr "stop"
 
-#: app/includes/common/TPFieldsLabelTable.php:514
+#: app/includes/common/TPFieldsLabelTable.php:603
 msgctxt "(пересадка)"
 msgid "tp_plugin_local_ru_number_changes_label_stop"
 msgstr "пересадка"
 
-#: app/includes/common/TPFieldsLabelTable.php:517
+#: app/includes/common/TPFieldsLabelTable.php:606
 msgctxt "(stops)"
 msgid "tp_plugin_local_en_number_changes_label_stops"
 msgstr "stops"
 
-#: app/includes/common/TPFieldsLabelTable.php:518
+#: app/includes/common/TPFieldsLabelTable.php:607
 msgctxt "(пересадки)"
 msgid "tp_plugin_local_ru_number_changes_label_stops"
 msgstr "пересадки"
@@ -3537,12 +3803,12 @@ msgctxt "modal railway сonstructor subid label"
 msgid "Subid"
 msgstr "Subid"
 
-#: app/includes/views/admin/media_buttons/TPRailwayButtons.view.php:39
+#: app/includes/views/admin/media_buttons/TPRailwayButtons.view.php:40
 msgctxt "modal railway сonstructor paginate label"
 msgid "Paginate"
 msgstr "Paginate"
 
-#: app/includes/views/admin/media_buttons/TPRailwayButtons.view.php:46
+#: app/includes/views/admin/media_buttons/TPRailwayButtons.view.php:47
 msgctxt "modal railway сonstructor no title label"
 msgid "No title"
 msgstr "No title"
