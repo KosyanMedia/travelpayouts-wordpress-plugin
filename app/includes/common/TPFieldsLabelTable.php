@@ -29,14 +29,24 @@ class TPFieldsLabelTable
 	 * Время прибытия/ Arrival Time
 	 * Начальная станция маршрута / Route's First Station
 	 * Конечная станция маршрута / Route's Last Station
+	 *
 	 */
 	public static function getRailwayFieldsLabelRU(){
 		return  array(
 			'label_default' => array(
-				'name' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_name',
-					'(Отель)', TPOPlUGIN_TEXTDOMAIN),
-
-
+				'train' => _x('Train', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'route' => _x('Route', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'departure' => _x('Departure', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'arrival' => _x('Arrival', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'duration' => _x('Duration', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'prices' => _x('Prices', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'dates' => _x('Dates', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'origin' => _x('From', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'destination' => _x('To', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'departure_time' => _x('Departure Time', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'arrival_time' => _x('Arrival Time', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'route_first_station' => _x('Route\'s First Station', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
+				'route_last_station' => _x('Route\'s Last Station', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 
 			),
 			'label' => array(
