@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-31 23:18+0300\n"
+"POT-Creation-Date: 2017-05-31 23:49+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2357,30 +2357,35 @@ msgstr "Тег заголовка"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
 #: app/includes/models/admin/menu/TPFieldHotels.php:243
+#: app/includes/models/admin/menu/TPFieldRailway.php:94
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
 #: app/includes/models/admin/menu/TPFieldHotels.php:248
+#: app/includes/models/admin/menu/TPFieldRailway.php:99
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 #: app/includes/models/admin/menu/TPFieldHotels.php:253
+#: app/includes/models/admin/menu/TPFieldRailway.php:104
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
 #: app/includes/models/admin/menu/TPFieldHotels.php:258
+#: app/includes/models/admin/menu/TPFieldRailway.php:109
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
 #: app/includes/models/admin/menu/TPFieldHotels.php:263
+#: app/includes/models/admin/menu/TPFieldRailway.php:114
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2622,6 +2627,21 @@ msgstr "Можно использовать переменную \"price\""
 msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Сортировка по столбцу"
+
+#: app/includes/models/admin/menu/TPFieldRailway.php:46
+msgctxt "admin page railway tab tables content title label"
+msgid "Title"
+msgstr "Заголовок"
+
+#: app/includes/models/admin/menu/TPFieldRailway.php:74
+msgctxt "admin page railway tab tables content title help"
+msgid "Use {origin} and {destination} variables to add the city automatically"
+msgstr "Используйте переменные {origin}, {destination} для автоматической подстановки города"
+
+#: app/includes/models/admin/menu/TPFieldRailway.php:87
+msgctxt "admin page railway tab tables content title tag"
+msgid "Title tag"
+msgstr "Тег заголовка"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:31
 msgctxt "(Token)"
@@ -2991,72 +3011,72 @@ msgctxt "admin page settings tab menu local tab field local railway"
 msgid "Railway tables"
 msgstr "ЖД таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:771
+#: app/includes/models/admin/menu/TPFieldSettings.php:799
 msgctxt "(Host(Hotels))"
 msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
 msgstr "Хост(Отели)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:808
+#: app/includes/models/admin/menu/TPFieldSettings.php:836
 msgctxt "(Host(Flights))"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Хост(Авиа)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:834
+#: app/includes/models/admin/menu/TPFieldSettings.php:862
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Откуда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:842
+#: app/includes/models/admin/menu/TPFieldSettings.php:870
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:846
+#: app/includes/models/admin/menu/TPFieldSettings.php:874
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:850
+#: app/includes/models/admin/menu/TPFieldSettings.php:878
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:854
+#: app/includes/models/admin/menu/TPFieldSettings.php:882
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:858
+#: app/includes/models/admin/menu/TPFieldSettings.php:886
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Предложный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:864
+#: app/includes/models/admin/menu/TPFieldSettings.php:892
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Куда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:871
+#: app/includes/models/admin/menu/TPFieldSettings.php:899
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:875
+#: app/includes/models/admin/menu/TPFieldSettings.php:903
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:879
+#: app/includes/models/admin/menu/TPFieldSettings.php:907
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:883
+#: app/includes/models/admin/menu/TPFieldSettings.php:911
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:887
+#: app/includes/models/admin/menu/TPFieldSettings.php:915
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Предложный"

@@ -84,8 +84,8 @@ class TPFieldRailway {
 		?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label',
-	                '(Title tag)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title tag',
+	                'admin page railway tab tables content title tag', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
