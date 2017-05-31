@@ -80,7 +80,7 @@ class TPFieldRailway {
 	/**
 	 * @param $shortcode
 	 */
-	public function getFieldTitleTag($shortcode, $type = 'shortcodes_hotels'){
+	public function getFieldTitleTag($shortcode, $type = 'shortcodes_railway'){
 		?>
         <label>
             <span>
