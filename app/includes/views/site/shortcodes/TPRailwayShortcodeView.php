@@ -36,7 +36,12 @@ class TPRailwayShortcodeView {
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		$html = '';
 		if ($shortcode == false) return false;
+		if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
 		return var_dump("<pre>", $args, "</pre>");
+	}
+
+	public function renderViewIfEmptyTable(){
+		return '';
 	}
 }
