@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-01 00:15+0300\n"
+"POT-Creation-Date: 2017-06-01 00:24+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -449,11 +449,25 @@ msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:1060 app/includes/TPDefault.php:1061 app/includes/TPDefault.php:1068
-#: app/includes/TPDefault.php:1069
-msgctxt ""
-msgid ""
-msgstr ""
+#: app/includes/TPDefault.php:1060
+msgctxt "local en table shortcodes railway 1 title text"
+msgid "Train schedule {origin} — {destination}"
+msgstr "Train schedule {origin} — {destination}"
+
+#: app/includes/TPDefault.php:1062
+msgctxt "local ru table shortcodes railway 1 title text"
+msgid "Train schedule {origin} — {destination}"
+msgstr "Расписание поездов {origin} — {destination}"
+
+#: app/includes/TPDefault.php:1070
+msgctxt "local en table shortcodes railway 1 title_button text"
+msgid "Select dates"
+msgstr "Select dates"
+
+#: app/includes/TPDefault.php:1072
+msgctxt "local ru table shortcodes railway 1 title_button text"
+msgid "Select dates"
+msgstr "Выбрать даты"
 
 #: app/includes/TPLoader.php:137
 msgctxt "(Set details and enable plugin features)"

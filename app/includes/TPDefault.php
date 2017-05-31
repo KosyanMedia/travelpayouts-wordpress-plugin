@@ -1060,7 +1060,7 @@ class TPDefault implements  \core\TPODefault{
 				        'en' => _x('Train schedule {origin} — {destination}',
 					        'local en table shortcodes railway 1 title text', TPOPlUGIN_TEXTDOMAIN),
 				        'ru' => _x('Train schedule {origin} — {destination}',
-					        'local en table shortcodes railway 1 title text', TPOPlUGIN_TEXTDOMAIN),
+					        'local ru table shortcodes railway 1 title text', TPOPlUGIN_TEXTDOMAIN),
 			        ),
 			        'tag' => 'h3',
 			        'extra_table_marker' => 'calMonth',
@@ -1070,7 +1070,7 @@ class TPDefault implements  \core\TPODefault{
 				        'en' => _x('Select dates',
 					        'local en table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
 				        'ru' => _x('Select dates',
-					        'local en table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
+					        'local ru table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
 			        ),
 			        'sort_column' => 0,
 			        'selected' => array(
