@@ -128,6 +128,10 @@ class TPDefault implements  \core\TPODefault{
                     'ru' => TPFieldsLabelTable::getHotelsFieldsLabelRU(),
                     'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),
                 ),
+                'railway_fields' => array(
+                	'ru' => TPFieldsLabelTable::getRailwayFieldsLabelRU(),
+                	'en' => TPFieldsLabelTable::getRailwayFieldsLabelEN(),
+                ),
                 'title_case' => array(
                     'origin' => 'ro',
                     'destination' => 'vi',
