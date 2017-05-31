@@ -39,7 +39,7 @@ class TPFieldRailway {
 	 * @param $shortcode
 	 * @param string $type
 	 */
-	public function getFieldTitle($shortcode, $type = 'shortcodes_hotels'){
+	public function getFieldTitle($shortcode, $type = 'shortcodes_railway'){
 		?>
         <label>
             <span>
