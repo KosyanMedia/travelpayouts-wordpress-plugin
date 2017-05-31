@@ -1057,8 +1057,10 @@ class TPDefault implements  \core\TPODefault{
 	        'shortcodes_railway' => array(
 	        	'1' => array(
 			        'title' => array(
-				        'en' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
-				        'ru' => _x('', '', TPOPlUGIN_TEXTDOMAIN),
+				        'en' => _x('Train schedule {origin} — {destination}',
+					        'local en table shortcodes railway 1 title', TPOPlUGIN_TEXTDOMAIN),
+				        'ru' => _x('Train schedule {origin} — {destination}',
+					        'local en table shortcodes railway 1 title', TPOPlUGIN_TEXTDOMAIN),
 			        ),
 			        'tag' => 'h3',
 			        'extra_table_marker' => 'calMonth',
