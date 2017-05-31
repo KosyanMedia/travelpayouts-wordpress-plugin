@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-05-31 22:59+0300\n"
+"POT-Creation-Date: 2017-05-31 23:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2986,72 +2986,77 @@ msgctxt "(Hotels)"
 msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
 msgstr "Отели"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:758
+#: app/includes/models/admin/menu/TPFieldSettings.php:678
+msgctxt "admin page settings tab menu local tab field local railway"
+msgid "Railway tables"
+msgstr "ЖД таблицы"
+
+#: app/includes/models/admin/menu/TPFieldSettings.php:771
 msgctxt "(Host(Hotels))"
 msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
 msgstr "Хост(Отели)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:795
+#: app/includes/models/admin/menu/TPFieldSettings.php:808
 msgctxt "(Host(Flights))"
 msgid "tp_admin_page_settings_tab_localization_field_host_label"
 msgstr "Хост(Авиа)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:821
+#: app/includes/models/admin/menu/TPFieldSettings.php:834
 msgctxt "(Origin)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
 msgstr "Откуда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:829
+#: app/includes/models/admin/menu/TPFieldSettings.php:842
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:833
+#: app/includes/models/admin/menu/TPFieldSettings.php:846
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:837
+#: app/includes/models/admin/menu/TPFieldSettings.php:850
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:841
+#: app/includes/models/admin/menu/TPFieldSettings.php:854
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:845
+#: app/includes/models/admin/menu/TPFieldSettings.php:858
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
 msgstr "Предложный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:851
+#: app/includes/models/admin/menu/TPFieldSettings.php:864
 msgctxt "Destination"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
 msgstr "Куда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:858
+#: app/includes/models/admin/menu/TPFieldSettings.php:871
 msgctxt "(Genitive)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:862
+#: app/includes/models/admin/menu/TPFieldSettings.php:875
 msgctxt "(Dative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:866
+#: app/includes/models/admin/menu/TPFieldSettings.php:879
 msgctxt "(Accusative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:870
+#: app/includes/models/admin/menu/TPFieldSettings.php:883
 msgctxt "(Ablative)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:874
+#: app/includes/models/admin/menu/TPFieldSettings.php:887
 msgctxt "(Prepositional)"
 msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
 msgstr "Предложный"

@@ -672,6 +672,16 @@ class TPFieldSettings {
                         </span>
                             </a>
                         </li>
+                        <li>
+                            <a href="#tabs-local_field_railway" class="TPMainMenuA">
+                            <span>
+                            <?php _ex('Railway tables',
+                                'admin page settings tab menu local tab field local railway',
+                                TPOPlUGIN_TEXTDOMAIN); ?>
+                        </span>
+                            </a>
+                        </li>
+
 
                     </ul>
                 </nav>
@@ -680,6 +690,9 @@ class TPFieldSettings {
                 </div>
                 <div id="tabs-local_field_hotel">
                     <?php $this->tabLocalFieldHotel(); ?>
+                </div>
+                <div id="tabs-local_field_railway">
+                    1
                 </div>
             </div>
 
