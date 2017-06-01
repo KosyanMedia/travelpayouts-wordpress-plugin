@@ -142,4 +142,21 @@ class TPRailwayShortcodeView {
 	public function getSelectField($shortcode){
 		return array_unique(TPPlugin::$options['shortcodes_railway'][$shortcode]['selected']);
 	}
+
+	/**
+	 * @param $shortcode
+	 * @param $field
+	 * @return string
+	 */
+	public function tdClassHidden($shortcode, $field){
+		$fields = array(
+			'1' => array(
+
+			),
+		);
+		if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
+		return '';
+	}
+
+
 }
