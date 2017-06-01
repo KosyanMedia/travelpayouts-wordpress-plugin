@@ -158,5 +158,20 @@ class TPRailwayShortcodeView {
 		return '';
 	}
 
+	/**
+	 * @param $fieldKey
+	 * @return string
+	 */
+	public function getTableTheadTDFieldLabel($fieldKey)
+	{
+		$fieldLabel = "";
+		if(isset(TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label'][$fieldKey])){
+			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label'][$fieldKey];
+		}else{
+			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getDefaultLang()]['label'][$fieldKey];
+		}
+		return $fieldLabel;
+	}
+
 
 }
