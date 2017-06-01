@@ -45,6 +45,7 @@ class TPRailwayShortcodeView {
 		                .'data-paginate="'.$paginate.'" '
 		                .'data-paginate_limit="' .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate'].'" '
 		                .'data-sort_column="'.$this->getSortColumn($shortcode).'">'
+		                .$this->renderHeadTable($shortcode)
 		            .'</table>'
 		         .'</div>';
 
@@ -96,5 +97,127 @@ class TPRailwayShortcodeView {
 	 */
 	public function getSortColumn($shortcode){
 		return TPPlugin::$options['shortcodes_hotels'][$shortcode]['sort_column'];
+	}
+
+	/**
+	 * @param $shortcode
+	 *
+	 * @return string
+	 */
+	public function renderHeadTable($shortcode){
+		$headTable = '';
+
+		$headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
+		foreach($this->getSelectField($shortcode) as $key=>$selected_field){
+			switch($selected_field) {
+				//name => Название
+				case "name":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// stars => Звезды
+				case "stars":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// rating => Оценка пользователей
+				case "rating":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// distance => Расстояние до центра
+				case "distance":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+
+				// price_pn => Цена за ночь
+				// [last_price_info][price_pn] => Цена за ночь
+
+				case "price_pn":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// old_price_pn => Цена до скидки
+				//  [last_price_info][old_price_pn] => Цена до скидки
+				case "old_price_pn":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// discount => Скидка
+				case "discount":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// old_price_and_discount => Старая цена и скидка
+				//  [last_price_info][price_pn]  -  [last_price_info][discount] %
+				case "old_price_and_discount":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// old_price_and_new_price => Старая и новая цена
+				//  [last_price_info][old_price_pn]  [last_price_info][price_pn]
+				case "old_price_and_new_price":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				// button => Кнопка
+				case "button":
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-price-column">'
+					              .$this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				default:
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              . $this->getTableTheadTDFieldLabel($selected_field)
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+
+			}
+		}
+		$headTable .= '</tr></thead>';
+		return $headTable;
 	}
 }
