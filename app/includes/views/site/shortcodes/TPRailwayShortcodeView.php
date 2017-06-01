@@ -40,19 +40,17 @@ class TPRailwayShortcodeView {
 
 		$html .= '<div class="TPTrainTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
 		         .$this->renderTitleTable($off_title, $title, $shortcode, $origin, $destination)
-		         .'<!--<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
-                        data-paginate="'.$paginate.'"
-                        data-paginate_limit="'
-		                .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate']
-		         .'" data-sort_column="$this->getSortColumn($shortcode)">'
+		         .'<div class="dataTables_wrapper no-footer">'
+		            .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table no-footer dataTable" '
+		                .'data-paginate="'.$paginate.'" '
+		                .'data-paginate_limit="' .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate'].'" '
+		                .'data-sort_column="'.$this->getSortColumn($shortcode).'">'
+		            .'</table>'
+		         .'</div>';
+
 		         //$this->renderHeadTable($shortcode)
 		         //$this->renderBodyTable()
-		         .'</table>-->
-                </div>';
-
 		return $html;
-
-
 		//return var_dump("<pre>", $args, "</pre>");
 	}
 
@@ -89,5 +87,14 @@ class TPRailwayShortcodeView {
 			return '<'.TPPlugin::$options['shortcodes_railway'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.TPPlugin::$options['shortcodes_railway'][$shortcode]['tag'].'>';
 		}
 		return '';
+	}
+
+	/**
+	 * @param $shortcode
+	 *
+	 * @return mixed
+	 */
+	public function getSortColumn($shortcode){
+		return TPPlugin::$options['shortcodes_hotels'][$shortcode]['sort_column'];
 	}
 }
