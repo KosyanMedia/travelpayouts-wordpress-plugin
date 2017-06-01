@@ -109,26 +109,12 @@ class TPRailwayShortcodeView {
 
 		$headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
 		foreach($this->getSelectField($shortcode) as $key=>$selected_field){
-			switch($selected_field) {
-				//name => Название
-				case "name":
-					$headTable .= '<td class="TP'.$selected_field.'Td '
-					              .$this->tdClassHidden($shortcode, $selected_field)
-					              .' TPTableHead">'
-					              .$this->getTableTheadTDFieldLabel($selected_field)
-					              .'<i class="TP-sort-chevron fa"></i>'
-					              .' </td>';
-					break;
-				default:
-					$headTable .= '<td class="TP'.$selected_field.'Td '
-					              .$this->tdClassHidden($shortcode, $selected_field)
-					              .' TPTableHead">'
-					              . $this->getTableTheadTDFieldLabel($selected_field)
-					              .'<i class="TP-sort-chevron fa"></i>'
-					              .' </td>';
-					break;
-
-			}
+			$headTable .= '<td class="TP'.$selected_field.'Td '
+			              .$this->tdClassHidden($shortcode, $selected_field)
+			              .' TPTableHead">'
+			              . $this->getTableTheadTDFieldLabel($selected_field)
+			              .'<i class="TP-sort-chevron fa"></i>'
+			              .' </td>';
 		}
 		$headTable .= '</tr></thead>';
 		return $headTable;
