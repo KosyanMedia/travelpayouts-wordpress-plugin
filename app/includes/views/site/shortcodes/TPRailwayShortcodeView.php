@@ -39,8 +39,7 @@ class TPRailwayShortcodeView {
 		if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
 		$html .= '<div class="TPTrainTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
-		         .$this->renderTitleTable($off_title, $title, $shortcode, $city, $city_label,
-				$type_selections_label, $dates_label)
+		         .$this->renderTitleTable($off_title, $title, $shortcode, $origin, $destination)
 		         .'<!--<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
                         data-paginate="'.$paginate.'"
                         data-paginate_limit="'
@@ -71,22 +70,23 @@ class TPRailwayShortcodeView {
 	public function renderTitleTable($off_title, $title, $shortcode, $origin, $destination){
 		if($off_title !== 'true'){
 			if(empty($title)) {
-				if(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()])){
-					$title = TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getLang()];
+				if(isset(TPPlugin::$options['shortcodes_railway'][$shortcode]['title'][TPLang::getLang()])){
+					$title = TPPlugin::$options['shortcodes_railway'][$shortcode]['title'][TPLang::getLang()];
 				}else{
-					$title = \app\includes\TPPlugin::$options['shortcodes_hotels'][$shortcode]['title'][TPLang::getDefaultLang()];
+					$title = TPPlugin::$options['shortcodes_railway'][$shortcode]['title'][TPLang::getDefaultLang()];
 				}
 			}
 			if(!empty($title)){
 
-				if(strpos($title, '{location}') !== false){
-					$title = str_replace('{location}', '<span data-city-location="'.$cityLabel.'">'.$cityLabel.'</span>' , $title);
+				if(strpos($title, '{origin}') !== false){
+					$title = str_replace('{origin}', '<span data-origin="'.$origin.'">'.$origin.'</span>' , $title);
 				}
 
-
-
+				if(strpos($title, '{destination}') !== false){
+					$title = str_replace('{destination}', '<span data-destination="'.$destination.'">'.$destination.'</span>' , $title);
+				}
 			}
-			return '<'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].'>';
+			return '<'.TPPlugin::$options['shortcodes_railway'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.TPPlugin::$options['shortcodes_railway'][$shortcode]['tag'].'>';
 		}
 		return '';
 	}

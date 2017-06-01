@@ -874,7 +874,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
                 }
 
             }
-            return '<'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['tag'].'>';
+            return '<'.\app\includes\TPPlugin::$options['shortcodes_hotels'][$shortcode]['tag'].' class="TP-TitleTables">'.$title.'</'.\app\includes\TPPlugin::$options['shortcodes_hotels'][$shortcode]['tag'].'>';
         }
         return '';
     }
