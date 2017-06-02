@@ -165,38 +165,31 @@ class TPRailwayShortcodeView {
 		$bodyTable .= '<tbody>';
 		$count_row = 0;
 		foreach($rows as $key_row => $row){
-			//error_log(print_r($row,true));
 			$count_row++;
-
 			$count = 0;
-
+			error_log(print_r($row, true));
 			// get Url
 			$hotelURL = '';
-			switch($shortcode){
+			/*switch($shortcode){
 				case 1:
 					$hotelURL = $this->getUrlTable($shortcode, $city,
 						$row['hotel_id'], $checkInURL, $checkOutURL, $currency, $subid, $link_without_dates);
 					break;
-				case 2:
-					$hotelURL = $this->getUrlTable($shortcode, $city,
-						$row['hotel_id'], $checkIn, $checkOut, $currency, $subid, $link_without_dates);
-					break;
-
 				default:
 					$hotelURL = '';
-			}
-
+			}*/
 			$bodyTable .= '<tr>';
 			//error_log($hotelURL);
 			foreach($this->getSelectField($shortcode) as $key=>$selected_field){
+
 				$count++;
 				switch($selected_field){
 					// name => Название
-					case "name":
+					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-						              .$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+						              //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
 						              .'</p>'
 						              .'</td>';
 						break;
@@ -205,11 +198,6 @@ class TPRailwayShortcodeView {
 				}
 			}
 			$bodyTable .= '</tr>';
-			if(!empty($limit)){
-				if($limit == $count_row){
-					break;
-				}
-			}
 		}
 		$bodyTable .= '</tbody>';
 		return $bodyTable;
