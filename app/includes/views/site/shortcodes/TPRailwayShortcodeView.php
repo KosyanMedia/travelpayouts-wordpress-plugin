@@ -167,7 +167,7 @@ class TPRailwayShortcodeView {
 		foreach($rows as $key_row => $row){
 			$count_row++;
 			$count = 0;
-			error_log(print_r($row, true));
+			//error_log(print_r($row, true));
 			// get Url
 			$hotelURL = '';
 			/*switch($shortcode){
@@ -184,7 +184,15 @@ class TPRailwayShortcodeView {
 
 				$count++;
 				switch($selected_field){
-					// name => Название
+					//Номер поезда / Train
+					case 'train':
+						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+						              .$this->getTrain($row)
+						              .'</p>'
+						              .'</td>';
+						break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
@@ -193,8 +201,6 @@ class TPRailwayShortcodeView {
 						              .'</p>'
 						              .'</td>';
 						break;
-
-
 				}
 			}
 			$bodyTable .= '</tr>';
@@ -210,5 +216,36 @@ class TPRailwayShortcodeView {
 			//error_log($subid);
 		}
 		return $subid;
+	}
+
+	/**
+	 * Номер поезда / Train
+	 * @param array $row
+	 *
+	 * @return string
+	 */
+	public function getTrain($row = array()){
+		$train = '';
+		if (array_key_exists('trainNumber', $row)) {
+			$train .= $row['trainNumber'].' ';
+		}
+		if (array_key_exists('name', $row)) {
+			if (!empty($row['name'])){
+				$train .= '<span class="train-color t-gray">"'
+				            .$row['name']
+						.'"</span>';
+			} else {
+				//error_log(print_r($row, true) );
+				if (array_key_exists('firm', $row)) {
+					if ($row['firm'] == true){
+						$train .= '<span class="train-color t-gray">"'
+						        ._x('brand', 'railway shortcode view train', TPOPlUGIN_TEXTDOMAIN)
+						        .'"</span>';
+					}
+				}
+
+			}
+		}
+		return $train;
 	}
 }
