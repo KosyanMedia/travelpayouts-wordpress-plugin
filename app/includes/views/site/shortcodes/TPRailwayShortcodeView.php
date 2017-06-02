@@ -49,8 +49,6 @@ class TPRailwayShortcodeView {
 		            .'</table>'
 		         .'</div>';
 
-		         //$this->renderHeadTable($shortcode)
-		         //$this->renderBodyTable()
 		return $html;
 		//return var_dump("<pre>", $args, "</pre>");
 	}
@@ -160,4 +158,7 @@ class TPRailwayShortcodeView {
 	}
 
 
+	public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency, $checkIn, $checkOut, $link_without_dates){
+
+	}
 }
