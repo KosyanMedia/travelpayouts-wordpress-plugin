@@ -46,6 +46,7 @@ class TPRailwayShortcodeView {
 		                .'data-paginate_limit="' .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate'].'" '
 		                .'data-sort_column="'.$this->getSortColumn($shortcode).'">'
 		                .$this->renderHeadTable($shortcode)
+		                .$this->renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency)
 		            .'</table>'
 		         .'</div>';
 
@@ -158,7 +159,68 @@ class TPRailwayShortcodeView {
 	}
 
 
-	public function renderBodyTable($shortcode, $city, $rows, $subid, $limit, $currency, $checkIn, $checkOut, $link_without_dates){
+	public function renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency){
+		$subid = $this->getSubid($subid);
+		$bodyTable = '';
+		$bodyTable .= '<tbody>';
+		$count_row = 0;
+		foreach($rows as $key_row => $row){
+			//error_log(print_r($row,true));
+			$count_row++;
 
+			$count = 0;
+
+			// get Url
+			$hotelURL = '';
+			switch($shortcode){
+				case 1:
+					$hotelURL = $this->getUrlTable($shortcode, $city,
+						$row['hotel_id'], $checkInURL, $checkOutURL, $currency, $subid, $link_without_dates);
+					break;
+				case 2:
+					$hotelURL = $this->getUrlTable($shortcode, $city,
+						$row['hotel_id'], $checkIn, $checkOut, $currency, $subid, $link_without_dates);
+					break;
+
+				default:
+					$hotelURL = '';
+			}
+
+			$bodyTable .= '<tr>';
+			//error_log($hotelURL);
+			foreach($this->getSelectField($shortcode) as $key=>$selected_field){
+				$count++;
+				switch($selected_field){
+					// name => Название
+					case "name":
+						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+						              .$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+						              .'</p>'
+						              .'</td>';
+						break;
+
+
+				}
+			}
+			$bodyTable .= '</tr>';
+			if(!empty($limit)){
+				if($limit == $count_row){
+					break;
+				}
+			}
+		}
+		$bodyTable .= '</tbody>';
+		return $bodyTable;
+	}
+
+	public function getSubid($subid){
+		if(!empty($subid)){
+			$subid = trim($subid);
+			$subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
+			//error_log($subid);
+		}
+		return $subid;
 	}
 }
