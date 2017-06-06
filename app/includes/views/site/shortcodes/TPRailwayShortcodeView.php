@@ -216,10 +216,8 @@ class TPRailwayShortcodeView {
                     //В пути, Duration
                     case 'duration':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getDuration($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Примерные цены / Prices
@@ -464,7 +462,7 @@ class TPRailwayShortcodeView {
             $travelTimeInSeconds = $this->secondsToTime($row['travelTimeInSeconds']);
         }
         $duration = '<span class="TP-trainWayTime">'.$travelTimeInSeconds.'<span>';
-        return $duration;
+        return '<p class="TP-tdContent">'.$duration.'</p>';
     }
 
     public function secondsToTime($seconds)
