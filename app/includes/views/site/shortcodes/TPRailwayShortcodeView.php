@@ -195,10 +195,8 @@ class TPRailwayShortcodeView {
                     //Маршрут, Route
                     case 'route':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                             .$this->getRoute($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Отправление / Departure
@@ -384,7 +382,7 @@ class TPRailwayShortcodeView {
         $departure = $this->getDepartureStation($runDepartureStation, $departureStation);
         $arrival = $this->getArrivalStation($runArrivalStation, $arrivalStation);
         $route = '<span class="marshrut">'.$departure.' → '.$arrival .'</span>';
-        return $route;
+        return '<p class="TP-tdContent">'.$route.'</p>';
     }
 
     /**
