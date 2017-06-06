@@ -284,9 +284,8 @@ class TPRailwayShortcodeView {
             $runArrivalStation = $row['runArrivalStation'];
         }
         $departure = $this->getDepartureStation($runDepartureStation, $departureStation);
-        $route = '<span class="marshrut">'.$departure.' → '.$arrivalStation.' → '
-                .$runArrivalStation
-                .'</span>';
+        $arrival = $this->getArrivalStation($runArrivalStation, $arrivalStation);
+        $route = '<span class="marshrut">'.$departure.' → '.$arrival .'</span>';
         return $route;
     }
 
@@ -303,5 +302,20 @@ class TPRailwayShortcodeView {
             $departure = $runDepartureStation.' → '.$departureStation;
         }
         return $departure;
+    }
+
+    /**
+     * @param $runArrivalStation
+     * @param $arrivalStation
+     * @return string
+     */
+    public function getArrivalStation($runArrivalStation, $arrivalStation){
+        $arrival = '';
+        if ($runArrivalStation == $arrivalStation){
+            $arrival = $runArrivalStation;
+        } else {
+            $arrival = $arrivalStation.' → '.$runArrivalStation;
+        }
+        return $arrival;
     }
 }
