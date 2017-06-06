@@ -631,6 +631,9 @@ class TPRailwayShortcodeView {
 	 */
 	public function getDepartureTime($row = array()){
 		$departureTime = '';
+		if (array_key_exists('departureTime', $row)) {
+			$departureTime = date('H:i', strtotime($row['departureTime']));
+		}
 		return $departureTime;
 	}
 }
