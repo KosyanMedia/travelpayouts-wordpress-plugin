@@ -251,19 +251,15 @@ class TPRailwayShortcodeView {
                     //Время отправления / Departure Time
                     case 'departure_time':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getDepartureTime($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Время прибытия/ Arrival Time
                     case 'arrival_time':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                       .$this->getArrivalTime($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Начальная станция маршрута / Route's First Station
@@ -616,7 +612,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('departureTime', $row)) {
 			$departureTime = date('H:i', strtotime($row['departureTime']));
 		}
-		return $departureTime;
+		return '<p class="TP-tdContent">'.$departureTime.'</p>';
 	}
 
 	/**
