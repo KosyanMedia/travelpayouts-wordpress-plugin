@@ -665,9 +665,18 @@ class TPRailwayShortcodeView {
 		return $routeFirstStation;
 	}
 
+	/**
+	 * Конечная станция маршрута / Route's Last Station
+	 * @param array $row
+	 *
+	 * @return mixed|string
+	 */
+	public function getRouteLastStation($row = array()){
+		$routeLastStation = '';
+		if (array_key_exists('runArrivalStation', $row)) {
+			$routeLastStation = $row['runArrivalStation'];
+		}
+		return $routeLastStation;
+	}
 
-	//
-	//getRouteFirstStation
-	//Конечная станция маршрута / Route's Last Station
-	//getRouteLastStation
 }
