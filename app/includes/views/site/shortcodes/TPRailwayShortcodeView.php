@@ -289,7 +289,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                      .$this->getRouteFirstStation($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -298,7 +298,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                      .$this->getRouteLastStation($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -650,4 +650,24 @@ class TPRailwayShortcodeView {
 		}
 		return $arrivalTime;
 	}
+
+	/**
+	 * Начальная станция маршрута / Route's First Station
+	 * @param array $row
+	 *
+	 * @return mixed|string
+	 */
+	public function getRouteFirstStation($row = array()){
+		$routeFirstStation = '';
+		if (array_key_exists('runDepartureStation', $row)) {
+			$routeFirstStation = $row['runDepartureStation'];
+		}
+		return $routeFirstStation;
+	}
+
+
+	//
+	//getRouteFirstStation
+	//Конечная станция маршрута / Route's Last Station
+	//getRouteLastStation
 }
