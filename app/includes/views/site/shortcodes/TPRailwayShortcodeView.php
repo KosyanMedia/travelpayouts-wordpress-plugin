@@ -220,6 +220,12 @@ class TPRailwayShortcodeView {
                     //Откуда / From
                     case 'origin':
                         break;
+                    //Куда / To
+                    case 'destination':
+                        break;
+                    //Время отправления / Departure Time
+                    case 'departure_time':
+                        break;
 
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
