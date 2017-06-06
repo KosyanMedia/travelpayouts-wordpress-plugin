@@ -9,6 +9,7 @@
 namespace app\includes\views\site\shortcodes;
 
 
+use app\includes\common\TPFieldsLabelTable;
 use app\includes\common\TPLang;
 use app\includes\TPPlugin;
 
@@ -495,13 +496,15 @@ class TPRailwayShortcodeView {
 
         if($h > 0)
         {
-            $hw = //$h > 1 ? ' hours ' : ' hour ';
+            $hw = TPFieldsLabelTable::getDateLabel('hour');
+	        //$h > 1 ? ' hours ' : ' hour ';
             $string .= $h . $hw;
         }
 
         if($m > 0)
         {
-            $mw = //$m > 1 ? ' minutes ' : ' minute ';
+            $mw = TPFieldsLabelTable::getDateLabel('minute');
+	        //$m > 1 ? ' minutes ' : ' minute ';
             $string .= $m . $mw;
         }
 
