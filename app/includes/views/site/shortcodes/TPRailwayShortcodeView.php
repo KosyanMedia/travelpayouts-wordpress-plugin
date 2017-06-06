@@ -257,4 +257,14 @@ class TPRailwayShortcodeView {
 		}
 		return $train;
 	}
+
+    /**
+     * Маршрут, Route
+     * @param array $row
+     * @return string
+     */
+	public function getRoute($row = array()){
+        $route = '';
+        return $route;
+    }
 }
