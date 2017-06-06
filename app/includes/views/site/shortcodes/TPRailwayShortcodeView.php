@@ -211,6 +211,12 @@ class TPRailwayShortcodeView {
                     //В пути, Duration
                     case 'duration':
                         break;
+                    //Примерные цены / Prices
+                    case 'prices':
+                        break;
+                    //Примерные цены / Prices
+                    case 'prices':
+                        break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
