@@ -524,6 +524,46 @@ class TPRailwayShortcodeView {
 	 */
     public function getPrices($row = array()){
     	$prices = '';
+	    $categories = array();
+	    if (array_key_exists('categories', $row)) {
+		    $categories = $row['categories'];
+	    }
+	    if (count($categories) < 1 || $categories == false) return $prices;
+		foreach ($categories as $category){
+			$prices .= '<div class="TP-train-text">'
+			           .'<div class="TP-train-text_left">'.$category['type'].'</div>'
+			           .'<div class="TP-train-text_center t-gray">~</div>'
+			           .'<div class="TP-train-text_right">'.$category['price'].'</div>'
+			           .'</div>';
+		}
+
     	return $prices;
     }
+
+	public function renderPrice($price, $currency){
+		$currencyView = '';
+		switch (TPPlugin::$options['local']['currency_symbol_display']){
+			case 0:
+				$currency = mb_strtolower($currency);
+				$currencyView = $price.'<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
+				                .$currency.'"></i></i>';
+				break;
+			case 1:
+				$currency = mb_strtolower($currency);
+				$currencyView = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'
+				                .$currency.'"></i></i>'.$price;
+				break;
+			case 2:
+				$currencyView = $price;
+				break;
+			case 3:
+				$currencyView = $price.'<span class="tp-currency">'.$currency.'</span>';
+				break;
+			case 4:
+				$currencyView = '<span class="tp-currency">'.$currency.'</span>'.$price;
+				break;
+		}
+
+		return $currencyView;
+	}
 }
