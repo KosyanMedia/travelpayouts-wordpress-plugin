@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-01 00:24+0300\n"
+"POT-Creation-Date: 2017-06-06 17:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -4920,6 +4920,11 @@ msgctxt "admin page railway tab menu railway themes"
 msgid "Themes"
 msgstr "Themes"
 
+#: app/includes/views/admin/menu/TPRailwayTabConfig.view.php:8
+msgctxt "admin page railway tab tables content save button label"
+msgid "Save changes"
+msgstr "Save changes"
+
 #: app/includes/views/admin/menu/TPRailwayTabThemes.view.php:20
 msgctxt "admin page railway tab themes btn active"
 msgid "Activate"
@@ -5676,6 +5681,11 @@ msgstr "1. Sign up"
 msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Enter settings "
+
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:350
+msgctxt "railway shortcode view train"
+msgid "brand"
+msgstr ""
 
 #: core/controllers/TPOAdminMenuController.php:24
 msgctxt "(Please, don't delete the information below. It makes helping you easier)"

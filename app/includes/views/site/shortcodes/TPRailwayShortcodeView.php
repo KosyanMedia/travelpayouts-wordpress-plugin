@@ -419,11 +419,14 @@ class TPRailwayShortcodeView {
     }
 
     /**
+     * Отправление / Departure
      * @param array $row
      * @return string
      */
     public function getDeparture($row = array()){
         $departure = '';
+        $departure = '<span class="departure_time">'.date('H:i', strtotime($row['departureTime'])).'</span>'
+            .' <span class="train-color span-timeComming t-gray">'.$row['departureStation'].'</span>';
         return $departure;
     }
 }
