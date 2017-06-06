@@ -232,7 +232,9 @@ class TPRailwayShortcodeView {
                     //Начальная станция маршрута / Route's First Station
                     case 'route_first_station':
                         break;
-
+                    //Конечная станция маршрута / Route's Last Station
+                    case 'route_last_station':
+                        break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
