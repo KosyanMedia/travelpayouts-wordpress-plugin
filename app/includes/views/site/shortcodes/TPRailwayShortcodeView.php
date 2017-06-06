@@ -198,7 +198,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            .$this->getTrain($row)
+                            .$this->getRoute($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -265,6 +265,23 @@ class TPRailwayShortcodeView {
      */
 	public function getRoute($row = array()){
         $route = '';
+        $departureStation = '';
+        $arrivalStation = '';
+        $runDepartureStation = '';
+        $runArrivalStation = '';
+        if (array_key_exists('departureStation', $row)) {
+            $departureStation = $row['departureStation'];
+        }
+        if (array_key_exists('arrivalStation', $row)) {
+            $arrivalStation = $row['arrivalStation'];
+        }
+        if (array_key_exists('runDepartureStation', $row)) {
+            $runDepartureStation = $row['runDepartureStation'];
+        }
+        if (array_key_exists('runArrivalStation', $row)) {
+            $runArrivalStation = $row['runArrivalStation'];
+        }
+
         return $route;
     }
 }
