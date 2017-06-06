@@ -244,7 +244,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                .$this->getDates($row, $shortcode)
                             .'</p>'
                             .'</td>';
                         break;
@@ -575,5 +575,23 @@ class TPRailwayShortcodeView {
 		}
 
 		return $currencyView;
+	}
+
+	/**
+	 * Дата поездки/ Dates
+	 * @param array $row
+	 *
+	 * @return string
+	 */
+	public function getDates($row = array(), $typeShortcode){
+		$dates = '';
+		$btnTxt = "";
+		if(isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
+			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()];
+		}else{
+			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
+		}
+		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable">'.$btnTxt.'</a>';
+		return $dates;
 	}
 }
