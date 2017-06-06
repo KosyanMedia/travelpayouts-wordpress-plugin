@@ -214,8 +214,8 @@ class TPRailwayShortcodeView {
                     //Примерные цены / Prices
                     case 'prices':
                         break;
-                    //Примерные цены / Prices
-                    case 'prices':
+                    //Дата поездки/ Dates
+                    case 'dates':
                         break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
