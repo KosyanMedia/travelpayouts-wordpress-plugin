@@ -417,4 +417,13 @@ class TPRailwayShortcodeView {
         }
         return $arrival;
     }
+
+    /**
+     * @param array $row
+     * @return string
+     */
+    public function getDeparture($row = array()){
+        $departure = '';
+        return $departure;
+    }
 }
