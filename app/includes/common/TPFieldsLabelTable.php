@@ -617,4 +617,30 @@ class TPFieldsLabelTable
 
         return $numberChangesLabel;
     }
+
+	/**
+	 * @param $dateType
+	 *
+	 * @return string
+	 */
+    public static function getDateLabel($dateType){
+	    $dateLabel = "";
+    	$dateLabelData = array(
+    		'hour' => array(
+			    TPLang::getLangEN() => _x('h.', 'local en date label hour', TPOPlUGIN_TEXTDOMAIN),
+			    TPLang::getLangRU() => _x('ч.', 'local ru date label hour', TPOPlUGIN_TEXTDOMAIN),
+		    ),
+    		'minute' => array(
+			    TPLang::getLangEN() => _x('m.', 'local en date label minute', TPOPlUGIN_TEXTDOMAIN),
+			    TPLang::getLangRU() => _x('м.', 'local ru date label minute', TPOPlUGIN_TEXTDOMAIN),
+		    ),
+	    );
+	    if(isset($dateLabelData[$dateType][TPLang::getLang()])){
+		    $dateLabel = $dateLabelData[$dateType][TPLang::getLang()];
+	    }else{
+		    $dateLabel = $dateLabelData[$dateType][TPLang::getDefaultLang()];
+	    }
+
+	    return $dateLabel;
+    }
 }

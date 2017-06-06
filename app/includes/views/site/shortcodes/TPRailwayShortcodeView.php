@@ -476,52 +476,40 @@ class TPRailwayShortcodeView {
 
     public function secondsToTime($seconds)
     {
-        /**
-         * Convert number of seconds into years, days, hours, minutes and seconds
-         * and return an string containing those values
-         *
-         * @param integer $seconds Number of seconds to parse
-         * @return string
-         */
-
-        $y = floor($seconds / (86400*365.25));
-        $d = floor(($seconds - ($y*(86400*365.25))) / 86400);
+        //$y = floor($seconds / (86400*365.25));
+        //$d = floor(($seconds - ($y*(86400*365.25))) / 86400);
+	    $string = '';
         $h = gmdate('H', $seconds);
         $m = gmdate('i', $seconds);
-        $s = gmdate('s', $seconds);
-
-        $string = '';
-
-        if($y > 0)
+        //$s = gmdate('s', $seconds);
+	    /*if($y > 0)
         {
             $yw = $y > 1 ? ' years ' : ' year ';
             $string .= $y . $yw;
         }
-
         if($d > 0)
         {
             $dw = $d > 1 ? ' days ' : ' day ';
             $string .= $d . $dw;
-        }
+        }*/
 
         if($h > 0)
         {
-            $hw = $h > 1 ? ' hours ' : ' hour ';
+            $hw = //$h > 1 ? ' hours ' : ' hour ';
             $string .= $h . $hw;
         }
 
         if($m > 0)
         {
-            $mw = $m > 1 ? ' minutes ' : ' minute ';
+            $mw = //$m > 1 ? ' minutes ' : ' minute ';
             $string .= $m . $mw;
         }
 
-        if($s > 0)
+        /*if($s > 0)
         {
             $sw = $s > 1 ? ' seconds ' : ' second ';
             $string .= $s . $sw;
-        }
-
+        }*/
         return preg_replace('/\s+/',' ',$string);
     }
 }
