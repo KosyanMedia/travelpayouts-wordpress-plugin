@@ -244,10 +244,8 @@ class TPRailwayShortcodeView {
                     //Куда / To
                     case 'destination':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getDestination($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Время отправления / Departure Time
@@ -604,7 +602,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('arrivalStation', $row)) {
 			$destination = $row['arrivalStation'];
 		}
-		return $destination;
+		return '<p class="TP-tdContent">'.$destination.'</p>';
 	}
 
 	/**
