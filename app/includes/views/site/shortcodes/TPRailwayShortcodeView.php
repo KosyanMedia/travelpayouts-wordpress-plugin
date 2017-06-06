@@ -202,19 +202,15 @@ class TPRailwayShortcodeView {
                     //Отправление / Departure
                     case 'departure':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getDeparture($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Прибытие / Arrival
                     case 'arrival':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getArrival($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //В пути, Duration
@@ -433,7 +429,7 @@ class TPRailwayShortcodeView {
 
         $departure = '<span class="departure_time">'.date('H:i', strtotime($departureTime)).'</span>'
             .' <span class="train-color span-timeComming t-gray">'.$departureStation.'</span>';
-        return $departure;
+        return '<p class="TP-tdContent">'.$departure.'</p>';
     }
 
     /**
@@ -453,7 +449,7 @@ class TPRailwayShortcodeView {
         }
         $arrival = '<span class="comming_time">'.date('H:i', strtotime($arrivalTime)).'</span>'
             .' <span class="train-color span-timeComming t-gray">'.$arrivalStation.'</span>';
-        return $arrival;
+        return '<p class="TP-tdContent">'.$arrival.'</p>';
     }
 
     /**
