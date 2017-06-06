@@ -225,7 +225,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                .$this->getDuration($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -466,6 +466,62 @@ class TPRailwayShortcodeView {
      */
     public function getDuration($row = array()){
         $duration = '';
+        $travelTimeInSeconds = '';
+        if (array_key_exists('travelTimeInSeconds', $row)) {
+            $travelTimeInSeconds = $this->secondsToTime($row['travelTimeInSeconds']);
+        }
+        $duration = '<span class="TP-trainWayTime">'.$travelTimeInSeconds.'<span>';
         return $duration;
+    }
+
+    public function secondsToTime($seconds)
+    {
+        /**
+         * Convert number of seconds into years, days, hours, minutes and seconds
+         * and return an string containing those values
+         *
+         * @param integer $seconds Number of seconds to parse
+         * @return string
+         */
+
+        $y = floor($seconds / (86400*365.25));
+        $d = floor(($seconds - ($y*(86400*365.25))) / 86400);
+        $h = gmdate('H', $seconds);
+        $m = gmdate('i', $seconds);
+        $s = gmdate('s', $seconds);
+
+        $string = '';
+
+        if($y > 0)
+        {
+            $yw = $y > 1 ? ' years ' : ' year ';
+            $string .= $y . $yw;
+        }
+
+        if($d > 0)
+        {
+            $dw = $d > 1 ? ' days ' : ' day ';
+            $string .= $d . $dw;
+        }
+
+        if($h > 0)
+        {
+            $hw = $h > 1 ? ' hours ' : ' hour ';
+            $string .= $h . $hw;
+        }
+
+        if($m > 0)
+        {
+            $mw = $m > 1 ? ' minutes ' : ' minute ';
+            $string .= $m . $mw;
+        }
+
+        if($s > 0)
+        {
+            $sw = $s > 1 ? ' seconds ' : ' second ';
+            $string .= $s . $sw;
+        }
+
+        return preg_replace('/\s+/',' ',$string);
     }
 }
