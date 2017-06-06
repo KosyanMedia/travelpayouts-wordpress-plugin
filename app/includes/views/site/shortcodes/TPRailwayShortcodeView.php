@@ -193,6 +193,15 @@ class TPRailwayShortcodeView {
 						              .'</p>'
 						              .'</td>';
 						break;
+                    //Маршрут, Route
+                    case 'route':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            .$this->getTrain($row)
+                            .'</p>'
+                            .'</td>';
+                        break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
