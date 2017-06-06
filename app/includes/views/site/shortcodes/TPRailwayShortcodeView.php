@@ -229,6 +229,9 @@ class TPRailwayShortcodeView {
                     //Время прибытия/ Arrival Time
                     case 'arrival_time':
                         break;
+                    //Начальная станция маршрута / Route's First Station
+                    case 'route_first_station':
+                        break;
 
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
