@@ -265,19 +265,15 @@ class TPRailwayShortcodeView {
                     //Начальная станция маршрута / Route's First Station
                     case 'route_first_station':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                       .$this->getRouteFirstStation($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Конечная станция маршрута / Route's Last Station
                     case 'route_last_station':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                       .$this->getRouteLastStation($row)
-                            .'</p>'
                             .'</td>';
                         break;
 					default:
@@ -640,7 +636,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('runDepartureStation', $row)) {
 			$routeFirstStation = $row['runDepartureStation'];
 		}
-		return $routeFirstStation;
+		return '<p class="TP-tdContent">'.$routeFirstStation.'</p>';
 	}
 
 	/**
@@ -654,7 +650,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('runArrivalStation', $row)) {
 			$routeLastStation = $row['runArrivalStation'];
 		}
-		return $routeLastStation;
+		return '<p class="TP-tdContent">'.$routeLastStation.'</p>';
 	}
 
 }
