@@ -188,10 +188,8 @@ class TPRailwayShortcodeView {
 					//Номер поезда / Train
 					case 'train':
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
 						              .$this->getTrain($row)
-						              .'</p>'
 						              .'</td>';
 						break;
                     //Маршрут, Route
@@ -355,7 +353,7 @@ class TPRailwayShortcodeView {
 
 			}
 		}
-		return $train;
+		return '<p class="TP-tdContent">'.$train.'</p>';
 	}
 
     /**
