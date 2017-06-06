@@ -425,8 +425,37 @@ class TPRailwayShortcodeView {
      */
     public function getDeparture($row = array()){
         $departure = '';
-        $departure = '<span class="departure_time">'.date('H:i', strtotime($row['departureTime'])).'</span>'
-            .' <span class="train-color span-timeComming t-gray">'.$row['departureStation'].'</span>';
+        $departureTime = '';
+        $departureStation = '';
+        if (array_key_exists('departureTime', $row)) {
+            $departureTime = $row['departureTime'];
+        }
+        if (array_key_exists('departureStation', $row)) {
+            $departureStation = $row['departureStation'];
+        }
+
+        $departure = '<span class="departure_time">'.date('H:i', strtotime($departureTime)).'</span>'
+            .' <span class="train-color span-timeComming t-gray">'.$departureStation.'</span>';
         return $departure;
+    }
+
+    /**
+     * Прибытие / Arrival
+     * @param array $row
+     * @return string
+     */
+    public function getArrival($row = array()){
+        $arrival = '';
+        $arrivalTime = '';
+        $arrivalStation = '';
+        if (array_key_exists('arrivalTime', $row)) {
+            $arrivalTime = $row['arrivalTime'];
+        }
+        if (array_key_exists('arrivalStation', $row)) {
+            $arrivalStation = $row['arrivalStation'];
+        }
+        $arrival = '<span class="comming_time">'.date('H:i', strtotime($arrivalTime)).'</span>'
+            .' <span class="train-color span-timeComming t-gray">'.$arrivalStation.'</span>';
+        return $arrival;
     }
 }
