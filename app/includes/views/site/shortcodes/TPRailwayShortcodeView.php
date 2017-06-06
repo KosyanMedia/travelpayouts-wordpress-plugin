@@ -202,6 +202,9 @@ class TPRailwayShortcodeView {
                             .'</p>'
                             .'</td>';
                         break;
+                    //Отправление / Departure
+                    case 'departure':
+                        break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
