@@ -253,7 +253,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                .$this->getOrigin($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -593,5 +593,16 @@ class TPRailwayShortcodeView {
 		}
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable">'.$btnTxt.'</a>';
 		return $dates;
+	}
+
+	/**
+	 * Откуда / From
+	 * @param array $row
+	 *
+	 * @return string
+	 */
+	public function getOrigin($row = array()){
+		$origin = '';
+		return $origin;
 	}
 }
