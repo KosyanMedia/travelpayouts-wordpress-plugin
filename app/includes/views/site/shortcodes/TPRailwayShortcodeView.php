@@ -603,6 +603,9 @@ class TPRailwayShortcodeView {
 	 */
 	public function getOrigin($row = array()){
 		$origin = '';
+		if (array_key_exists('departureStation', $row)) {
+			$origin = $row['departureStation'];
+		}
 		return $origin;
 	}
 }
