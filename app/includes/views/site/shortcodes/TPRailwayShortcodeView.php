@@ -204,36 +204,102 @@ class TPRailwayShortcodeView {
                         break;
                     //Отправление / Departure
                     case 'departure':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Прибытие / Arrival
                     case 'arrival':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //В пути, Duration
                     case 'duration':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Примерные цены / Prices
                     case 'prices':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Дата поездки/ Dates
                     case 'dates':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Откуда / From
                     case 'origin':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Куда / To
                     case 'destination':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Время отправления / Departure Time
                     case 'departure_time':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Время прибытия/ Arrival Time
                     case 'arrival_time':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Начальная станция маршрута / Route's First Station
                     case 'route_first_station':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
                     //Конечная станция маршрута / Route's Last Station
                     case 'route_last_station':
+                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
+                                    <p class="TP-tdContent">'
+                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                            .'</p>'
+                            .'</td>';
                         break;
 					default:
 						$bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
