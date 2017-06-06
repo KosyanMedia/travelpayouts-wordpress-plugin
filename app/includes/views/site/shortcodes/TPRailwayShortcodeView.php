@@ -223,28 +223,22 @@ class TPRailwayShortcodeView {
                     //Примерные цены / Prices
                     case 'prices':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getPrices($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Дата поездки/ Dates
                     case 'dates':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getDates($row, $shortcode)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Откуда / From
                     case 'origin':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
-                                    <p class="TP-tdContent">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
                                 .$this->getOrigin($row)
-                            .'</p>'
                             .'</td>';
                         break;
                     //Куда / To
@@ -537,7 +531,7 @@ class TPRailwayShortcodeView {
 			           .'</div>';
 		}
 
-    	return $prices;
+    	return '<p class="TP-tdContent">'.$prices.'</p>';
     }
 
 	public function renderPrice($price, $currency){
@@ -582,7 +576,7 @@ class TPRailwayShortcodeView {
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
 		}
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable">'.$btnTxt.'</a>';
-		return $dates;
+		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
 
 	/**
@@ -596,7 +590,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('departureStation', $row)) {
 			$origin = $row['departureStation'];
 		}
-		return $origin;
+		return '<p class="TP-tdContent">'.$origin.'</p>';
 	}
 
 	/**
