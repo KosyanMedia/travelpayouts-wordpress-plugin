@@ -626,7 +626,7 @@ class TPRailwayShortcodeView {
 		if (array_key_exists('arrivalTime', $row)) {
 			$arrivalTime = date('H:i', strtotime($row['arrivalTime']));
 		}
-		return $arrivalTime;
+		return '<p class="TP-tdContent">'.$arrivalTime.'</p>';
 	}
 
 	/**
