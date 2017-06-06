@@ -269,6 +269,8 @@ class TPRailwayShortcodeView {
         $arrivalStation = '';
         $runDepartureStation = '';
         $runArrivalStation = '';
+        $departure = '';
+        $arrival = '';
         if (array_key_exists('departureStation', $row)) {
             $departureStation = $row['departureStation'];
         }
@@ -281,7 +283,25 @@ class TPRailwayShortcodeView {
         if (array_key_exists('runArrivalStation', $row)) {
             $runArrivalStation = $row['runArrivalStation'];
         }
-
+        $departure = $this->getDepartureStation($runDepartureStation, $departureStation);
+        $route = '<span class="marshrut">'.$departure.' → '.$arrivalStation.' → '
+                .$runArrivalStation
+                .'</span>';
         return $route;
+    }
+
+    /**
+     * @param $runDepartureStation
+     * @param $departureStation
+     * @return string
+     */
+    public function getDepartureStation($runDepartureStation, $departureStation){
+        $departure = '';
+        if ($runDepartureStation == $departureStation){
+            $departure = $runDepartureStation;
+        } else {
+            $departure = $runDepartureStation.' → '.$departureStation;
+        }
+        return $departure;
     }
 }
