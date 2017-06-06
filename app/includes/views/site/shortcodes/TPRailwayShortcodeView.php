@@ -235,7 +235,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                .$this->getPrices($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -498,7 +498,7 @@ class TPRailwayShortcodeView {
         {
             $hw = TPFieldsLabelTable::getDateLabel('hour');
 	        //$h > 1 ? ' hours ' : ' hour ';
-            $string .= $h . $hw;
+            $string .= $h.$hw.' ';
         }
 
         if($m > 0)
@@ -514,5 +514,16 @@ class TPRailwayShortcodeView {
             $string .= $s . $sw;
         }*/
         return preg_replace('/\s+/',' ',$string);
+    }
+
+	/**
+	 * Примерные цены / Prices
+	 * @param array $row
+	 *
+	 * @return string
+	 */
+    public function getPrices($row = array()){
+    	$prices = '';
+    	return $prices;
     }
 }
