@@ -271,7 +271,7 @@ class TPRailwayShortcodeView {
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">
                                     <p class="TP-tdContent">'
-                            //.$this->getTextTdTable($hotelURL, $row['name'], $shortcode, 0, $price_pn, $currency)
+                                .$this->getDepartureTime($row)
                             .'</p>'
                             .'</td>';
                         break;
@@ -621,5 +621,16 @@ class TPRailwayShortcodeView {
 			$destination = $row['arrivalStation'];
 		}
 		return $destination;
+	}
+
+	/**
+	 * Время отправления / Departure Time
+	 * @param array $row
+	 *
+	 * @return string
+	 */
+	public function getDepartureTime($row = array()){
+		$departureTime = '';
+		return $departureTime;
 	}
 }
