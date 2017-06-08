@@ -137,7 +137,22 @@ class TPRailwayShortcodeView {
 	public function tdClassHidden($shortcode, $field){
 		$fields = array(
 			'1' => array(
-
+				//Маршрут, Route
+				'route',
+				//В пути, Duration
+				'duration',
+				//Откуда / From
+				'origin',
+				//Куда / To
+				'destination',
+				//Время отправления / Departure Time
+				'departure_time',
+				//Время прибытия/ Arrival Time
+				'arrival_time',
+				//Начальная станция маршрута / Route's First Station
+				'route_first_station',
+				//Конечная станция маршрута / Route's Last Station
+				'route_last_station'
 			),
 		);
 		if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
