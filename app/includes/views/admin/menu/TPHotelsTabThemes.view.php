@@ -1,5 +1,6 @@
 <div class="TPThemes">
     <form action="options.php" class="formSettings TPFormNotReload" method="POST">
+	    <?php $numberTheme = 1; ?>
         <?php foreach($data['themes'] as $theme): ?>
             <?php
             $TPThemeActive = ($theme['name'] ==  \app\includes\TPPlugin::$options['themes_table_hotels']['name'])?'TPThemeActive':'';
@@ -9,7 +10,10 @@
                 <div class="TPThemeScreenshot">
                     <img src="<?php echo TPOPlUGIN_URL.'app/public/themes/hotel/screens-and-names/'.$theme['screenshot']?>" alt="">
                 </div>
-                <h3 class="TPThemeName"><?php echo $theme['title']; ?></h3>
+                <h3 class="TPThemeName">
+                    <?php echo $numberTheme.'. '; ?>
+                    <?php echo $theme['title']; ?>
+                </h3>
                 <div class="TPThemeActions">
                     <input type="submit" name="submit"
                            class="button button-secondary activate TPThemeBtnActivate "
@@ -23,6 +27,7 @@
                                     </a>-->
                 </div>
             </div>
+	        <?php $numberTheme++; ?>
         <?php endforeach; ?>
 
         <?php settings_fields('TPHotels'); ?>

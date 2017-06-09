@@ -232,6 +232,18 @@ jQuery(function($){
                 sessionStorage.setItem("selectedTabHotels", selectedTabHotelsId);
             }
         });
+
+        var selectedTabRailwayId = sessionStorage.getItem("selectedTabRailway");
+        selectedTabRailwayId = selectedTabRailwayId === null ? 0 : selectedTabRailwayId;
+        $( "#tabs-railway" ).tabs({
+            active: selectedTabRailwayId,
+            activate : function( event, ui ) {
+                selectedTabRailwayId = $(this).tabs("option", "active");
+                sessionStorage.setItem("selectedTabRailway", selectedTabRailwayId);
+            }
+        });
+
+
         var selectedTabSettingsId = sessionStorage.getItem("selectedTabSettings");
         selectedTabSettingsId = selectedTabSettingsId === null ? 0 : selectedTabSettingsId;
         $( "#tabs-settings" ).tabs({

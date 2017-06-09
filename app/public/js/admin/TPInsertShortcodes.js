@@ -962,6 +962,114 @@ jQuery(function($) {
     
     /** Hotels end**/
 
+    /**
+     * Railway
+     */
+    doc.find('#constructorRailwayShortcodesButton').click(function (e) {
+        doc.find( "#constructorRailwayShortcodesModal" ).dialog({
+            autoOpen: true,
+            resizable: false,
+            draggable: false,
+            maxHeight:500,
+            maxWidth: 450,
+            minWidth: 406,
+            minHeight:200,
+            modal: true,
+            dialogClass:"TPCustomDialog",
+            position: "absolute",
+            //appendTo: "#post-body-content",
+            create: function (event) {
+
+            },
+            open : function() {
+                $(this).parent().css({
+                    'position': 'fixed',
+                    'left': (win.width() - $(this).parent().outerWidth())/2,
+                    'top': (win.height() - $(this).parent().outerHeight())/2,
+                    'transition': 'none'
+                });
+            },
+            buttons: [
+                {
+                    id: "constructorRailwayShortcodesButtonOk",
+                    text: button_ok,
+                    click: function() {
+                        var railway_title, railway_origin, railway_destination, railway_subid,
+                            railway_paginate, railway_off_title, status;
+                        railway_title = doc.find('#tp_railway_title').val();
+                        railway_origin = doc.find('#tp_railway_origin').val();
+                        railway_origin = railway_origin.substring(railway_origin.indexOf('[')+1,railway_origin.indexOf(']'));
+                        railway_destination = doc.find('#tp_railway_destination').val();
+                        railway_destination = railway_destination.substring(railway_destination.indexOf('[')+1,railway_destination.indexOf(']'));
+                        railway_subid = doc.find('#tp_railway_subid').val();
+                        if(doc.find('#tp_railway_paginate').is(":checked")){
+                            railway_paginate = "paginate=true";
+                        }else{
+                            railway_paginate = "paginate=false";
+                        }
+                        if(doc.find('#tp_railway_off_title').is(":checked")){
+                            railway_off_title = "off_title=true";
+                        }else{
+                            railway_off_title = "off_title=false";
+                        }
+
+                        status = true;
+                        if (railway_origin == ""){
+                            doc.find('#tp_railway_origin').addClass('constructorShortcodesError');
+                            status = false;
+                        }
+                        if (railway_destination == ""){
+                            doc.find('#tp_railway_destination').addClass('constructorShortcodesError');
+                            status = false;
+                        }
+                        if (status == false){
+                            return;
+                        }
+                        setShortcodes("[tp_tutu origin="+railway_origin+" " + "destination="+railway_destination+" " +
+                            "title=\""+railway_title+"\" "+railway_paginate+" "+railway_off_title
+                            +" subid=\""+railway_subid+"\"]",
+                            $(this));
+                    }
+                },
+                {
+                    id: "constructorRailwayShortcodesButtonCancel",
+                    text: button_cancel,
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+
+            ],
+            close: function( event, ui ) {
+                $('body').css({'overflow': 'auto'});
+                constructorRailwayShortcodesModalReload();
+            }
+        });
+
+        tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete", "#constructorRailwayShortcodesModal");
+
+        doc.find('#td_railway_off_title').on('change', '#tp_railway_off_title', function(e) {
+            if($(this).is(":checked")) {
+                doc.find('#tr_railway_title').hide();
+            }else{
+                doc.find('#tr_railway_title').show();
+
+            }
+
+        });
+    });
+
+    function constructorRailwayShortcodesModalReload() {
+        doc.find('#tp_railway_title').val("");
+        doc.find('#tp_railway_origin').val("");
+        doc.find('#tp_railway_destination').val("");
+        doc.find('#tp_railway_subid').val("");
+
+        doc.find('#tp_railway_origin, #tp_railway_destination').removeClass('constructorShortcodesError');
+    }
+
+    /** end railway**/
+
     /*** **/
     doc.find('#constructorWidgetButton').click(function (e) {
         e.preventDefault();

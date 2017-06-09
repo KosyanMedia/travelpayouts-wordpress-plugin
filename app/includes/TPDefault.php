@@ -128,6 +128,10 @@ class TPDefault implements  \core\TPODefault{
                     'ru' => TPFieldsLabelTable::getHotelsFieldsLabelRU(),
                     'en' => TPFieldsLabelTable::getHotelsFieldsLabelEN(),
                 ),
+                'railway_fields' => array(
+                	'ru' => TPFieldsLabelTable::getRailwayFieldsLabelRU(),
+                	'en' => TPFieldsLabelTable::getRailwayFieldsLabelEN(),
+                ),
                 'title_case' => array(
                     'origin' => 'ro',
                     'destination' => 'vi',
@@ -1046,7 +1050,56 @@ class TPDefault implements  \core\TPODefault{
                         'button',
                     ),
                 ),
-            )
+            ),
+	        'themes_table_railway' => array(
+		        'name' => self::getRandomThemesTable()
+	        ),
+	        'shortcodes_railway' => array(
+	        	'1' => array(
+			        'title' => array(
+				        'en' => _x('Train schedule {origin} — {destination}',
+					        'local en table shortcodes railway 1 title text', TPOPlUGIN_TEXTDOMAIN),
+				        'ru' => _x('Train schedule {origin} — {destination}',
+					        'local ru table shortcodes railway 1 title text', TPOPlUGIN_TEXTDOMAIN),
+			        ),
+			        'tag' => 'h3',
+			        'extra_table_marker' => 'calMonth',
+			        'paginate' => 10,
+	        		'paginate_switch' => true,
+			        'title_button' => array(
+				        'en' => _x('Select dates',
+					        'local en table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
+				        'ru' => _x('Select dates',
+					        'local ru table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
+			        ),
+			        'sort_column' => 0,
+			        'selected' => array(
+				        'train',
+				        'route',
+				        'departure',
+				        'arrival',
+				        'duration',
+				        'prices',
+				        'dates',
+			        ),
+			        'fields' => array(
+				        'train',
+						'route',
+						'departure',
+						'arrival',
+						'duration',
+						'prices',
+						'dates',
+						'origin',
+						'destination',
+						'departure_time',
+						'arrival_time',
+						'route_first_station',
+						'route_last_station',
+			        ),
+
+		        )
+	        ),
         );
         $defaults = apply_filters('travelpayouts_defaults', $defaults );
         return $defaults;

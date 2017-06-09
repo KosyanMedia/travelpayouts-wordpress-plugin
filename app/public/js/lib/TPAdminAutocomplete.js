@@ -671,6 +671,60 @@ function TPCityAutocomplete(){
     }
 
     /**
+     * Railway
+     * @param selector
+     * @param AppendTo
+     * @constructor
+     */
+    this.TPRailwayAutocompleteInit = function(selector, AppendTo){
+        if (typeof(AppendTo)==='undefined') AppendTo = null;
+        jQuery(function($) {
+            var doc, win;
+            doc = $(document);
+            win = $(window);
+            doc.find(selector).each(function () {
+                var input = $(this);
+                $(this).val(function(index, value){
+                    return value;
+                }).autocomplete({
+                    source: function(request, response){
+                        console.log(request.term)
+                        console.log(tpLocale)
+
+                        $.get("https://www.tutu.ru/suggest/railway_simple/?name=" + request.term, function(data) {
+                            var data = $.parseJSON( data);
+                            //console.log(data);
+                            response(
+                                $.map(data, function(item){
+                                    //console.log(item);
+                                    return {
+                                        label: item.value+" ["+item.id +"]",
+                                        value: item.value+" ["+item.id +"]",
+                                        val: item.id
+                                    }
+
+                                })
+                            )
+
+                        })
+                    },
+                    select: function( event, ui ) {
+                        input.attr('value',ui.item.val).val(ui.item.val);
+                    },
+                    change: function( event, ui ) {
+                        if( ! ui.item )
+                            input.attr('value','').val('');
+                    },
+                    minLength: 1,
+                    delay: 500,
+                    autoFocus: true,
+                    appendTo: AppendTo
+                });
+            });
+        });
+    }
+
+    /**
      *
      * @param selector
      * @param key_data
