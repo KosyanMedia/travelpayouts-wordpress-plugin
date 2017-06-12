@@ -530,7 +530,9 @@ class TPRailwayShortcodeView {
 				$price = $category['price'];
 			}
 			$prices .= '<div class="TP-train-text">'
-				           .'<div class="TP-train-text_left">'.$type.'</div>'
+				           .'<div class="TP-train-text_left">'
+			                .TPFieldsLabelTable::getRailwayWagonTypeLabel($type)
+			               .'</div>'
 				           .'<div class="TP-train-text_center t-gray">~</div>'
 				           .'<div class="TP-train-text_right">'
 				                .$this->renderPrice($price, 'RUB')

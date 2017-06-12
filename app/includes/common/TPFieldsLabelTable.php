@@ -12,6 +12,57 @@ namespace app\includes\common;
 class TPFieldsLabelTable
 {
 
+	/**
+	 * @param $wagonType
+	 *
+	 * @return string
+	 */
+	/*
+	 *  plazcard - Плац
+		coupe - Купе
+		sedentary - Сид
+		lux - Люкс
+		soft - Мягк
+		common - Общ
+	 * */
+	public static function getRailwayWagonTypeLabel($wagonType){
+		$wagonTypeLabel = "";
+		$wagonTypeLabelData = array(
+			'plazcard' => array(
+				TPLang::getLangEN() => _x('Plazcard', 'en railway wagon plazcard type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Plazcard', 'ru railway wagon plazcard type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+			'coupe' => array(
+				TPLang::getLangEN() => _x('Coupe', 'en railway wagon coupe type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Coupe', 'ru railway wagon coupe type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+			'sedentary' => array(
+				TPLang::getLangEN() => _x('Sedentary', 'en railway wagon sedentary type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Sedentary', 'ru railway wagon sedentary type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+			'lux' => array(
+				TPLang::getLangEN() => _x('Lux', 'en railway wagon lux type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Lux', 'ru railway wagon lux type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+			'soft' => array(
+				TPLang::getLangEN() => _x('Soft', 'en railway wagon soft type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Soft', 'ru railway wagon soft type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+			'common' => array(
+				TPLang::getLangEN() => _x('Common', 'en railway wagon common type label', TPOPlUGIN_TEXTDOMAIN),
+				TPLang::getLangRU() => _x('Common', 'ru railway wagon common type label', TPOPlUGIN_TEXTDOMAIN),
+			),
+		);
+
+		if(isset($wagonTypeLabelData[$wagonType][TPLang::getLang()])){
+
+			$wagonTypeLabel = $wagonTypeLabelData[$wagonType][TPLang::getLang()];
+		}else{
+			$wagonTypeLabel = $wagonTypeLabelData[$wagonType][TPLang::getDefaultLang()];
+		}
+
+		return $wagonTypeLabel;
+	}
 
 	/** Railway */
 	/*
