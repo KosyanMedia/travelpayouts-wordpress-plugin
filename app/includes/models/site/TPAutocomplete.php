@@ -11,6 +11,7 @@ class TPAutocomplete {
     public static $data;
     public static $title;
     public static $data_airline;
+    public static $railway;
     //private static $locations;
     private function __construct() {
         self::getIataAutocomplete();
@@ -46,6 +47,13 @@ class TPAutocomplete {
         }
         self::$data_airline = $rows;
     }
+
+	private function setRailwayAutocomplete(){
+		$railway = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/railway.json');
+		$railway = json_decode($railway, true);
+
+		self::$railway = $railway;
+	}
 
    /* private function setLocations(){
         $locations = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/locations.json');
