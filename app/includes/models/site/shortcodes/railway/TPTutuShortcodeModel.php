@@ -48,6 +48,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 				} else {
 					$rows = $return;
 					$rows = array_shift($rows);
+					//TPAutocompleteReplace
 					$cacheSecund = $this->cacheSecund();
 				}
 				set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);

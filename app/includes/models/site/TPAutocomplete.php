@@ -52,8 +52,25 @@ class TPAutocomplete {
 	private function setRailwayAutocomplete(){
 		$railway = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/railway.json');
 		$railway = json_decode($railway, true);
+		$rows = array();
+		foreach($railway as $value){
+			$rows[$value['number']] = $value;
+		}
+		//error_log(print_r($rows, true));
+		self::$railway = $rows;
+	}
 
-		self::$railway = $railway;
+	/**
+	 * @param $number
+	 *
+	 * @return bool|string
+	 */
+	public static function getRailwayAutocomplete($number){
+		if(empty($number) || $number == false) return false;
+		if (!array_key_exists($number, self::$railway)) return $number;
+		$name = '';
+		$name = self::$railway[$number]['name'];
+		return $name;
 	}
 
    /* private function setLocations(){
