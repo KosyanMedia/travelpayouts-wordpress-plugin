@@ -49,7 +49,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 				} else {
 					$rows = $return;
 					$rows = array_shift($rows);
-					//TPAutocompleteReplace
+					$rows = $this->setStation($rows);
 					$cacheSecund = $this->cacheSecund();
 				}
 				set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
@@ -63,10 +63,30 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			if ($return_url == false){
 				$rows = array();
 				$rows = array_shift($rows);
+				$rows = $this->setStation($rows);
 			}
 
 		}
 
+		return $rows;
+	}
+
+	public function setStation($rows){
+		foreach ($rows as $key => $row){
+			if (array_key_exists('departureStation', $row)) {
+				$row['departureStation'] = TPAutocompleteReplace::replaceNumberRailway($row['departureStation']);
+			}
+			if (array_key_exists('arrivalStation', $row)) {
+				$row['arrivalStation'] = TPAutocompleteReplace::replaceNumberRailway($row['arrivalStation']);
+			}
+			if (array_key_exists('runDepartureStation', $row)) {
+				$row['runDepartureStation'] = TPAutocompleteReplace::replaceNumberRailway($row['runDepartureStation']);
+			}
+			if (array_key_exists('runArrivalStation', $row)) {
+				$row['runArrivalStation'] = TPAutocompleteReplace::replaceNumberRailway($row['runArrivalStation']);
+			}
+			$rows[$key] = $row;
+		}
 		return $rows;
 	}
 
