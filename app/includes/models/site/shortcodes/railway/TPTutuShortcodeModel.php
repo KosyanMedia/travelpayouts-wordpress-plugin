@@ -8,6 +8,7 @@
  */
 namespace app\includes\models\site\shortcodes\railway;
 
+use app\includes\common\TPAutocompleteReplace;
 use app\includes\models\site\TPRailwayShortcodeModel;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
@@ -101,10 +102,16 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'language' => $language,
 			'shortcode' => 1,
 		));
+		$originTitle = '';
+		$destinationTitle = '';
+		$originTitle = TPAutocompleteReplace::replaceNumberRailway($origin);
+		$destinationTitle = TPAutocompleteReplace::replaceNumberRailway($destination);
 		return array(
 			'rows' => $return,
 			'origin' => $origin,
 			'destination' => $destination,
+			'origin_title' => $originTitle,
+			'destination_title' => $destinationTitle,
 			'title' => $title,
 			'paginate' => $paginate,
 			'off_title' => $off_title,
