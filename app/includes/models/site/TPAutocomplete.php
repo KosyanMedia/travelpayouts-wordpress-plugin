@@ -17,6 +17,7 @@ class TPAutocomplete {
         self::getIataAutocomplete();
         self::getIataAutocompleteTitle();
         self::getIataAutocompleteAir();
+        self::setRailwayAutocomplete();
         //self::setLocations();
     }
     public static function getInstance(){
