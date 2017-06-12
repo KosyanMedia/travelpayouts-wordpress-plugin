@@ -17,6 +17,7 @@ class TPAutocompleteReplace
 		if(empty($number) || $number == false) return false;
 		TPAutocomplete::getInstance();
 		$name = '';
+		$name = TPAutocomplete::getRailwayAutocomplete($number);
 		return $name;
 	}
 
