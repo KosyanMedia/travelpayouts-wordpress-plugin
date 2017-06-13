@@ -109,7 +109,7 @@
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td {
-    padding: 0 20px;
+    padding: 3px 0px;
     font-weight: normal;
     vertical-align: middle;
     position: relative;
@@ -529,8 +529,19 @@ span.ellipsis {
 }
 
 .span-timeComming {
-    width: 150px;
-    display: inline-block;
+    width: auto;
+    text-align: center;
+    display: block;
+}
+
+.TPtrainTd.TPTableHead.sorting {
+    width: 100px !important;
+}
+
+.TP-train-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .departure_time {
@@ -645,6 +656,7 @@ span.ellipsis {
         min-height: inherit;
         vertical-align: middle;
         margin-right: 9px;
+        float: left;
     }
     .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
         display: inline-block;
@@ -659,8 +671,10 @@ span.ellipsis {
         height: 30px;
     }
     .TP-train-text {
-        display: flex !important;
-        justify-content: center;
+        position: relative;
+        float: left;
+        text-align: left;
+        height: 15px;
     }
     .tp-price-column-mobile .TP-tdContent {
         top: 20%;
@@ -671,7 +685,6 @@ span.ellipsis {
     }
     .comming_time,
     .departure_time {
-        width: 100%;
         float: left;
     }
 }
