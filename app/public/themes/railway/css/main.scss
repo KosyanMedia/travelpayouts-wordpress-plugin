@@ -109,7 +109,7 @@
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td {
-    padding: 3px 0px;
+    padding: 3px 10px;
     font-weight: normal;
     vertical-align: middle;
     position: relative;
@@ -468,6 +468,7 @@ span.ellipsis {
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td p {
     font-size: 13px !important;
     font-family: Arial, sans-serif !important;
+    text-align: left;
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td {
@@ -542,6 +543,7 @@ span.ellipsis {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 15px;
 }
 
 .departure_time {
@@ -561,7 +563,7 @@ span.ellipsis {
 
 .TP-train-text_center {
     display: inline-block;
-    margin-left: 8px;
+    margin: 0 6px
 }
 
 .TP-train-text_left {
