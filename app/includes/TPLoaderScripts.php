@@ -1039,6 +1039,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             $version // $ver
         );
 
+        wp_register_style(
+            TPOPlUGIN_SLUG.'-pikaday', //$handle
+            TPOPlUGIN_URL.'app/public/css/lib/pikaday.css', // $src
+            array(), //$deps,
+            $version // $ver
+        );
+
 
         $this->loadScriptSiteFontStyle();
         wp_register_style(
@@ -1086,6 +1093,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         /** Call scripts and style **/
         $this->loadScriptSiteThemeTables();
         wp_enqueue_style(TPOPlUGIN_SLUG. '-TPNormalize');
+        wp_enqueue_style( TPOPlUGIN_SLUG.'-pikaday');
         wp_enqueue_style(TPOPlUGIN_SLUG. '-jquery-ui');
         wp_enqueue_style(TPOPlUGIN_SLUG.'-TPCurrencyMain');
         wp_enqueue_script(TPOPlUGIN_SLUG. '-TPPlugin');
