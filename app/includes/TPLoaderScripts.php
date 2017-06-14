@@ -617,7 +617,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 //TPFontsIntro
                 wp_register_style(
                     TPOPlUGIN_SLUG . '-TPFontsIntro',
-                    TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
+                    TPOPlUGIN_URL.'app/public/themes/flight/css/TPFontsIntro.css', // $src
                     array(), //$deps,
                     TPOPlUGIN_VERSION // $ver
                 );
@@ -677,7 +677,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 case 'light-yellow-and-darkgray':
                     wp_register_style(
                         TPOPlUGIN_SLUG . '-TPFontsIntro',
-                        TPOPlUGIN_URL.'app/public/themes/css/TPFontsIntro.css', // $src
+                        TPOPlUGIN_URL.'app/public/themes/flight/css/TPFontsIntro.css', // $src
                         array(), //$deps,
                         TPOPlUGIN_VERSION // $ver
                     );
