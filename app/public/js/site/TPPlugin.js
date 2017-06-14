@@ -53,7 +53,26 @@ jQuery(function($) {
             console.log(picker)*
             $(this).pikaday();
         })*/
-        $('.TPButtonTableDates').pikaday({ firstDay: 1 });
+        var $datepicker = $('.TPButtonTableDates').pikaday({
+            firstDay: 1,
+            i18n: {
+                previousMonth : 'Предыдущий месяц',
+                nextMonth     : 'Следующий месяц',
+                months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
+                weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+            },
+            minDate: new Date(),
+            maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
+            yearRange: [2000,2020],
+            onSelect: function() {
+                // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
+                // console.log(this.getMoment().format().substring(0, 10));
+            }
+        });
+
+
+
 
 
 
