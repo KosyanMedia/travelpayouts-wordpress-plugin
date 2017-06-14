@@ -1062,12 +1062,21 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         );
 
         wp_register_script(
+            TPOPlUGIN_SLUG. '-pikaday',
+            TPOPlUGIN_URL.'app/public/js/lib/pikaday.js',
+            array(),
+            $version,
+            $in_footer
+        );
+
+        wp_register_script(
             TPOPlUGIN_SLUG.'-TPPlugin', //$handle
             TPOPlUGIN_URL.'app/public/js/site/TPPlugin.js', //$src
             array(
                 'jquery',
                 'jquery-ui-tabs',
                 TPOPlUGIN_SLUG.'-dataTables',
+                TPOPlUGIN_SLUG. '-pikaday',
                 ), //$deps
             $version, //$ver
             $in_footer //$$in_footer
