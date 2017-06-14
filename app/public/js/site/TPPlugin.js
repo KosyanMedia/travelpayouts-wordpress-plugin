@@ -29,6 +29,9 @@ jQuery(function($) {
         });
 
 
+        $(document).find('.TPButtonTableDates').click(function (e) {
+            alert('Hello');
+        })
         /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
             if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
                 $(this).children("td:last").hasClass('TP-hidden')){
