@@ -30,7 +30,7 @@ jQuery(function($) {
 
 
         $(document).find('.TPButtonTableDates').click(function (e) {
-            alert('Hello');
+            alert('Hello tet ss');
         })
         /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
             if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
