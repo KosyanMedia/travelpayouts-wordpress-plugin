@@ -607,6 +607,7 @@ class TPRailwayShortcodeView {
         $runArrivalStation = '';
         $trainNumber = '';
         $from = '';
+        $date = '';
         $URL = 'https://c45.travelpayouts.com/click';
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '?shmarker='.$marker;
@@ -615,12 +616,12 @@ class TPRailwayShortcodeView {
         $type = '&type=click';
         $custom_url = '&custom_url=https://www.tutu.ru/poezda/order/';
         $departureStation = '?dep_st=';
-        if (array_key_exists('departureStation', $row)) {
-            $departureStation .= $row['departureStation'];
+        if (array_key_exists('departureStationCode', $row)) {
+            $departureStation .= $row['departureStationCode'];
         }
         $arrivalStation = '&arr_st=';
-        if (array_key_exists('arrivalStation', $row)) {
-            $arrivalStation .= $row['arrivalStation'];
+        if (array_key_exists('arrivalStationCode', $row)) {
+            $arrivalStation .= $row['arrivalStationCode'];
         }
         $trainNumber = '&tn=';
         if (array_key_exists('trainNumber', $row)) {
@@ -628,16 +629,17 @@ class TPRailwayShortcodeView {
         }
         $from = '&from=calendar';
         $runDepartureStation = '&departure_st=';
-        if (array_key_exists('runDepartureStation', $row)) {
-            $runDepartureStation .= $row['runDepartureStation'];
+        if (array_key_exists('runDepartureStationCode', $row)) {
+            $runDepartureStation .= $row['runDepartureStationCode'];
         }
         $runArrivalStation = '&arrival_st=';
-        if (array_key_exists('runArrivalStation', $row)) {
-            $runArrivalStation .= $row['runArrivalStation'];
+        if (array_key_exists('runArrivalStationCode', $row)) {
+            $runArrivalStation .= $row['runArrivalStationCode'];
         }
+        $date = '&date=';
 
         $URL .= $marker.$promo_id.$source_type.$type.$custom_url.$departureStation.$arrivalStation.$trainNumber
-            .$from.$runDepartureStation.$runArrivalStation;
+            .$from.$runDepartureStation.$runArrivalStation.$date;
         return $URL;
     }
 
