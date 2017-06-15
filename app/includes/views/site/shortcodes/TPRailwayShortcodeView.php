@@ -331,7 +331,7 @@ class TPRailwayShortcodeView {
 		}
 		if (array_key_exists('name', $row)) {
 			if (!empty($row['name'])){
-				$train .= '<span class="train-color t-gray">"'
+				$train .= '<span class="train-color">"'
 				            .$row['name']
 						.'"</span>';
 			} else {
