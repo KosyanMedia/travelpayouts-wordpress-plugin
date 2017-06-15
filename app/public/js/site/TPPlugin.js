@@ -48,7 +48,7 @@ jQuery(function($) {
                 console.log(dateFormat.getFullYear())
                 console.log(dateFormat.getMonth())
                 console.log(dateFormat.getDate())
-                console.log(dateFormat.format('m/dd/yyyy'))
+                console.log(dateFormat.format('d m yyyy'))
             }
         });
 
