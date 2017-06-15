@@ -29,30 +29,6 @@ jQuery(function($) {
         });
 
 
-        /*$(document).find('.TPButtonTableDates').click(function (e) {
-            console.log($(this))
-           /* var button = $(this)
-            var picker = new Pikaday({
-                field: button,
-                firstDay: 1,
-                i18n: {
-                    previousMonth : 'Предыдущий месяц',
-                    nextMonth     : 'Следующий месяц',
-                    months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                    weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-                    weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-                },
-                minDate: new Date(),
-                maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-                yearRange: [2000,2020],
-                onSelect: function() {
-                    // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-                    // console.log(this.getMoment().format().substring(0, 10));
-                }
-            });
-            console.log(picker)*
-            $(this).pikaday();
-        })*/
         var $datepicker = $('.TPButtonTableDates').pikaday({
             firstDay: 1,
             i18n: {
@@ -64,10 +40,15 @@ jQuery(function($) {
             },
             minDate: new Date(),
             maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-            yearRange: [2000,2020],
-            onSelect: function() {
+            /*yearRange: [2000,2020],*/
+            onSelect: function(date) {
                 // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
                 // console.log(this.getMoment().format().substring(0, 10));
+                var dateFormat = new Date(date);
+                console.log(dateFormat.getFullYear())
+                console.log(dateFormat.getMonth())
+                console.log(dateFormat.getDate())
+                console.log(dateFormat.format('m/dd/yyyy'))
             }
         });
 
