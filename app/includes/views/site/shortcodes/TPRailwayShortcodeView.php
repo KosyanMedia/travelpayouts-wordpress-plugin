@@ -605,7 +605,7 @@ class TPRailwayShortcodeView {
         $arrivalStation = '';
         $runDepartureStation = '';
         $runArrivalStation = '';
-        $trainNumber = '';
+        $numberForUrl = '';
         $from = '';
         $date = '';
         $URL = 'https://c45.travelpayouts.com/click';
@@ -614,7 +614,7 @@ class TPRailwayShortcodeView {
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';
-        $custom_url = '&custom_url=https://www.tutu.ru/poezda/order/';
+        $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/order/');
         $departureStation = '?dep_st=';
         if (array_key_exists('departureStationCode', $row)) {
             $departureStation .= $row['departureStationCode'];
@@ -623,23 +623,23 @@ class TPRailwayShortcodeView {
         if (array_key_exists('arrivalStationCode', $row)) {
             $arrivalStation .= $row['arrivalStationCode'];
         }
-        $trainNumber = '&tn=';
-        if (array_key_exists('trainNumber', $row)) {
-            $trainNumber .= $row['trainNumber'];
+        $numberForUrl = '&tn=';
+        if (array_key_exists('numberForUrl', $row)) {
+            $numberForUrl .= urlencode($row['numberForUrl']);
         }
         $from = '&from=calendar';
-        $runDepartureStation = '&departure_st=';
+        /*$runDepartureStation = '&departure_st=';
         if (array_key_exists('runDepartureStationCode', $row)) {
             $runDepartureStation .= $row['runDepartureStationCode'];
         }
         $runArrivalStation = '&arrival_st=';
         if (array_key_exists('runArrivalStationCode', $row)) {
             $runArrivalStation .= $row['runArrivalStationCode'];
-        }
+        }*/
         $date = '&date=';
 
-        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.$departureStation.$arrivalStation.$trainNumber
-            .$from.$runDepartureStation.$runArrivalStation.$date;
+        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation.$numberForUrl
+            .$from.$runDepartureStation.$runArrivalStation.$date);
         return $URL;
     }
 
