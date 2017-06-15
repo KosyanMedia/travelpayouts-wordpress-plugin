@@ -591,28 +591,50 @@ class TPRailwayShortcodeView {
 	}
 
 	public function getURL($row = array()){
-        //trainNumber
-        /*
-         *  $departureStation = '';
+        $URL = '';
+        $marker = '';
+        $promo_id = '';
+        $source_type = '';
+        $type = '';
+        $custom_url = '';
+        $departureStation = '';
         $arrivalStation = '';
         $runDepartureStation = '';
         $runArrivalStation = '';
-        $departure = '';
-        $arrival = '';
+        $trainNumber = '';
+        $from = '';
+        $URL = 'https://c45.travelpayouts.com/click';
+        $marker = TPPlugin::$options['account']['marker'];
+        $marker = '?shmarker='.$marker;
+        $promo_id = '&promo_id=1294';
+        $source_type = '&source_type=customlink';
+        $type = '&type=click';
+        $custom_url = '&custom_url=https://www.tutu.ru/poezda/order/';
+        $departureStation = '?dep_st=';
         if (array_key_exists('departureStation', $row)) {
-            $departureStation = $row['departureStation'];
+            $departureStation .= $row['departureStation'];
         }
+        $arrivalStation = '&arr_st=';
         if (array_key_exists('arrivalStation', $row)) {
-            $arrivalStation = $row['arrivalStation'];
+            $arrivalStation .= $row['arrivalStation'];
         }
+        $trainNumber = '&tn=';
+        if (array_key_exists('trainNumber', $row)) {
+            $trainNumber .= $row['trainNumber'];
+        }
+        $from = '&from=calendar';
+        $runDepartureStation = '&departure_st=';
         if (array_key_exists('runDepartureStation', $row)) {
-            $runDepartureStation = $row['runDepartureStation'];
+            $runDepartureStation .= $row['runDepartureStation'];
         }
+        $runArrivalStation = '&arrival_st=';
         if (array_key_exists('runArrivalStation', $row)) {
-            $runArrivalStation = $row['runArrivalStation'];
+            $runArrivalStation .= $row['runArrivalStation'];
         }
-         */
 
+        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.$departureStation.$arrivalStation.$trainNumber
+            .$from.$runDepartureStation.$runArrivalStation;
+        return $URL;
     }
 
 	/**

@@ -13,6 +13,7 @@ use \app\includes\TPPlugin;
 class TPHostURL
 {
     const TP_HOST_URL_AIRLINE_LOGO = "https://pics.avs.io/";
+    const TP_HOST_URL_RAILWAY = "";
     private static $hosts = array(
         'aviasales.ru' => array(
             'table' => 'hydra.aviasales.ru',//'engine.aviasales.ru',
