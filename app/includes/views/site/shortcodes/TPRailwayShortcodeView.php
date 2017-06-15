@@ -585,12 +585,33 @@ class TPRailwayShortcodeView {
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
 		}
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
-            .' data-href="">'
+            .' data-href="'.$this->getURL($row).'">'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
 
-	public function getURL(){
+	public function getURL($row = array()){
+        //trainNumber
+        /*
+         *  $departureStation = '';
+        $arrivalStation = '';
+        $runDepartureStation = '';
+        $runArrivalStation = '';
+        $departure = '';
+        $arrival = '';
+        if (array_key_exists('departureStation', $row)) {
+            $departureStation = $row['departureStation'];
+        }
+        if (array_key_exists('arrivalStation', $row)) {
+            $arrivalStation = $row['arrivalStation'];
+        }
+        if (array_key_exists('runDepartureStation', $row)) {
+            $runDepartureStation = $row['runDepartureStation'];
+        }
+        if (array_key_exists('runArrivalStation', $row)) {
+            $runArrivalStation = $row['runArrivalStation'];
+        }
+         */
 
     }
 
