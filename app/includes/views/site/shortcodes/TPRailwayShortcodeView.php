@@ -545,7 +545,7 @@ class TPRailwayShortcodeView {
 
 	public function renderPrice($price, $currency){
 		$currencyView = '';
-		switch (TPPlugin::$options['local']['currency_symbol_display']){
+		/*switch (TPPlugin::$options['local']['currency_symbol_display']){
 			case 0:
 				$currency = mb_strtolower($currency);
 				$currencyView = $price.'<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
@@ -565,7 +565,8 @@ class TPRailwayShortcodeView {
 			case 4:
 				$currencyView = '<span class="tp-currency">'.$currency.'</span>'.$price;
 				break;
-		}
+		}*/
+        $currencyView = $price.'<span class="tp-currency">р</span>';
 
 		return $currencyView;
 	}
