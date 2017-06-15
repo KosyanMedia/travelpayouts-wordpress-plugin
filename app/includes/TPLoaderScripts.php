@@ -1069,6 +1069,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         );
 
         wp_register_script(
+            TPOPlUGIN_SLUG. '-date-format',
+            TPOPlUGIN_URL.'app/public/js/lib/date.format.js',
+            array(),
+            $version,
+            $in_footer
+        );
+
+        wp_register_script(
             TPOPlUGIN_SLUG. '-pikaday',
             TPOPlUGIN_URL.'app/public/js/lib/pikaday.js',
             array(),
@@ -1080,6 +1088,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             TPOPlUGIN_SLUG. '-pikaday-jquery',
             TPOPlUGIN_URL.'app/public/js/lib/pikaday.jquery.js',
             array(
+                TPOPlUGIN_SLUG. '-date-format',
                 TPOPlUGIN_SLUG. '-pikaday',
             ),
             $version,
