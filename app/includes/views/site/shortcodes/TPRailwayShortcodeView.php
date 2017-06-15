@@ -590,6 +590,10 @@ class TPRailwayShortcodeView {
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
 
+    /**
+     * @param array $row
+     * @return string
+     */
 	public function getURL($row = array()){
         $URL = '';
         $marker = '';

@@ -74,15 +74,19 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	public function setStation($rows){
 		foreach ($rows as $key => $row){
 			if (array_key_exists('departureStation', $row)) {
+                $row['departureStationCode'] = $row['departureStation'];
 				$row['departureStation'] = TPAutocompleteReplace::replaceNumberRailway($row['departureStation']);
 			}
 			if (array_key_exists('arrivalStation', $row)) {
+                $row['arrivalStationCode'] = $row['arrivalStation'];
 				$row['arrivalStation'] = TPAutocompleteReplace::replaceNumberRailway($row['arrivalStation']);
 			}
 			if (array_key_exists('runDepartureStation', $row)) {
+                $row['runDepartureStationCode'] = $row['runDepartureStation'];
 				$row['runDepartureStation'] = TPAutocompleteReplace::replaceNumberRailway($row['runDepartureStation']);
 			}
 			if (array_key_exists('runArrivalStation', $row)) {
+                $row['runArrivalStationCode'] = $row['runArrivalStation'];
 				$row['runArrivalStation'] = TPAutocompleteReplace::replaceNumberRailway($row['runArrivalStation']);
 			}
 			$rows[$key] = $row;
