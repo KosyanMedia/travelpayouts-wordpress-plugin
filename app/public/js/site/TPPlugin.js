@@ -42,46 +42,50 @@ jQuery(function($) {
                 maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
                 //yearRange: [2000,2020],
                 onSelect: function(date) {
-                    // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-                    // console.log(this.getMoment().format().substring(0, 10));
                     var dateFormat = new Date(date);
-                    console.log(dateFormat.getFullYear())
-                    console.log(dateFormat.getMonth())
-                    console.log(dateFormat.getDate())
                     console.log(dateFormat.format('yyyy-mm-d'))
                     console.log($(element).data('href'))
-                    document.location.href=$(element).data('href')+dateFormat.format('yyyy-mm-d')
+                    var tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
+                    console.log(tutuURL)
+                    document.location.href=tutuURL;
+                    //$(element).attr("href", tutuURL).trigger('click');
 
-                    //console.log($(this).fieldValue())
                 }
             });
         });
-       /* var datepicker = $('.TPButtonTableDates').pikaday({
-            firstDay: 1,
-            i18n: {
-                previousMonth : 'Предыдущий месяц',
-                nextMonth     : 'Следующий месяц',
-                months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-                weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-            },
-            minDate: new Date(),
-            maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-            //yearRange: [2000,2020],
-            onSelect: function(date) {
-                // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-                // console.log(this.getMoment().format().substring(0, 10));
-                var dateFormat = new Date(date);
-                console.log(dateFormat.getFullYear())
-                console.log(dateFormat.getMonth())
-                console.log(dateFormat.getDate())
-                console.log(dateFormat.format('yyyy-mm-d'))
-                console.log($(this))
-                console.log(datepicker.data('href'))
 
-                //console.log($(this).fieldValue())
-            }
-        });*/
+       /* function openInNewTab(url) {
+            console.log(url)
+            var redirectWindow = window.open(url, '_blank');
+            redirectWindow.location;
+        }*/
+
+        /* var datepicker = $('.TPButtonTableDates').pikaday({
+             firstDay: 1,
+             i18n: {
+                 previousMonth : 'Предыдущий месяц',
+                 nextMonth     : 'Следующий месяц',
+                 months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                 weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
+                 weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+             },
+             minDate: new Date(),
+             maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
+             //yearRange: [2000,2020],
+             onSelect: function(date) {
+                 // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
+                 // console.log(this.getMoment().format().substring(0, 10));
+                 var dateFormat = new Date(date);
+                 console.log(dateFormat.getFullYear())
+                 console.log(dateFormat.getMonth())
+                 console.log(dateFormat.getDate())
+                 console.log(dateFormat.format('yyyy-mm-d'))
+                 console.log($(this))
+                 console.log(datepicker.data('href'))
+
+                 //console.log($(this).fieldValue())
+             }
+         });*/
 
 
 
