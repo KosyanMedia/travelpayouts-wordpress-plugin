@@ -1204,7 +1204,7 @@ class TPShortcodeView {
                 }
                 //error_log("searches_ticket");
                 //error_log($white_label);
-                $white_label = "{$white_label}/searches/".urldecode($_GET['searches_ticket']);
+                $white_label = "{$white_label}/flights/".urldecode($_GET['searches_ticket']);
                 header("Location: {$white_label}", true, 302);
                 die;
                 /*
