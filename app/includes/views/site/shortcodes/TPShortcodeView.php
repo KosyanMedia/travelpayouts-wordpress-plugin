@@ -1176,10 +1176,13 @@ class TPShortcodeView {
                     //error_log('0 = '.$white_label);
 
                 }
+
                 //error_log('1 = '.$_GET['searches']);
                 //error_log('1 = '.urldecode($_GET['searches']));
-                $white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
-                //error_log('2 = '.$white_label);
+                //$white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
+                $white_label = "{$white_label}/flights/".urldecode($_GET['searches']);
+
+                //header("Location: {$white_label}", true, 302);
                 header("Location: {$white_label}", true, 302);
                 die;
                 /*
