@@ -50,13 +50,15 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
         echo  TPOPlUGIN_URL.TPOPlUGIN_NAME."Settings.txt";*/
         $options = \app\includes\TPPlugin::$options;
         $options['plugin_version'] = TPOPlUGIN_VERSION;
+        $options['search_forms'] = TPSearchFormsModel::getAllSearchForms();
+        //error_log(print_r($options['search_forms'], true));
         $export = json_encode($options);
         echo $export;
     }
     public function importSettings(){
         if(is_array($_POST['value'])){
             if(TPOPlUGIN_ERROR_LOG)
-                error_log($_POST['value']);
+                error_log(print_r($_POST['value'], true));
             $import_options = $_POST['value'];
             //error_log(print_r($import_options, true));
             if (!array_key_exists('plugin_version', $import_options)){
@@ -76,32 +78,22 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
                 }
 
             }
+
+            $searchForms = array();
+            if (array_key_exists('search_forms', $import_options)){
+                $searchForms = $import_options['search_forms'];
+                unset($import_options['search_forms']);
+                error_log(print_r($searchForms, true));
+            }
+
             //error_log(print_r($import_options, true));
             $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
-
-            //error_log(print_r($settings, true));
             if(TPOPlUGIN_ERROR_LOG)
                 error_log(print_r($settings['local']['currency'], true));
             update_option( TPOPlUGIN_OPTION_NAME, $settings);
-
-            //error_log(print_r($settings,true));
-            //error_log(print_r(\app\includes\TPPlugin::$options, true));
             \app\includes\TPPlugin::deleteCacheAll();
         }
-        //error_log(print_r($_POST, true));
-        /*$base64 = $_POST['value'];
 
-        if ( strpos($base64, 'text/plain') ) {
-            $file = str_replace('data:text/plain;base64,', '', $base64);
-            $file = str_replace(' ', '+', $file);
-            $data = base64_decode($file);
-
-            $options = json_decode($data,true);
-            error_log(print_r($options,true));
-            if(is_array($options)){
-                update_option( TPOPlUGIN_OPTION_NAME, $options);
-            }
-        }*/
     }
     public function defaultSettings(){
         update_option( TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());

@@ -29,6 +29,7 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
         if(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']))
             $hide_logo = true;
         $white_label = $this->view->getWhiteLabel($widgets);
+        //error_log($white_label);
         //$this->view->TypeCurrency()
         $currency = '';
         $currency = $this->view->getCurrency($widgets, $white_label);
