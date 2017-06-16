@@ -47,18 +47,19 @@ jQuery(function($) {
                     console.log($(element).data('href'))
                     var tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
                     console.log(tutuURL)
-                    document.location.href=tutuURL;
+                   // document.location.href=tutuURL;
                     //$(element).attr("href", tutuURL).trigger('click');
+                    openInNewTab(tutuURL)
 
                 }
             });
         });
 
-       /* function openInNewTab(url) {
+        function openInNewTab(url) {
             console.log(url)
             var redirectWindow = window.open(url, '_blank');
-            redirectWindow.location;
-        }*/
+            return falseж
+        }
 
         /* var datepicker = $('.TPButtonTableDates').pikaday({
              firstDay: 1,
