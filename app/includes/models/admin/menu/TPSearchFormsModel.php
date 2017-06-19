@@ -163,7 +163,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'to_city' => $_POST["search_shortcode_to"],
             'hotel_city' => $_POST["search_shortcode_hotel_city"],
             'type_form' => $type_form,
-            'slug' => ''
+            'slug' => $slug
         );
         $wpdb->insert($tableName, $inputData);
     }

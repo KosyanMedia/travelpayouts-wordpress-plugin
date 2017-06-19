@@ -121,7 +121,15 @@
                                 <?php echo date('d.m.Y', $record['date_add']);?>
                             </p>
                         </td>
-                        <td>[tp_search_shortcodes id="<?php echo $record['id'];?>"]</td>
+                        <?php
+                            $shortcodeAttr = '';
+                            if (empty($record['slug'])){
+                                $shortcodeAttr = ' id="'.$record['id'].'"';
+                            } else {
+                                $shortcodeAttr = ' slug="'.$record['slug'].'"';
+                            }
+                        ?>
+                        <td>[tp_search_shortcodes <?php echo $shortcodeAttr; ?>]</td>
                         <td>
                             <a class="TP-icoDeleteShortTable" href="admin.php?page=tp_control_search_shortcodes&action=delete_search_shortcode&id=<?php echo $record['id'];?>"></a>
                             <a class="TP-icoFormatShortTable" href="admin.php?page=tp_control_search_shortcodes&action=edit_search_shortcode&id=<?php echo $record['id'];?>"></a>
