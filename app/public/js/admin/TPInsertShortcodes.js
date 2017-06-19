@@ -1683,7 +1683,7 @@ jQuery(function($) {
                     id: "constructorSearchFormButtonOk",
                     text: button_ok,
                     click: function() {
-                        var origin, destination, select, type, hotel_city, tp_subid;
+                        var origin, destination, select, type, hotel_city, tp_subid, selectAttr, slug;
                         select = doc.find('#select_search_form').val();
                         console.log(select);
                         if(!isNaN(select)){
@@ -1701,9 +1701,18 @@ jQuery(function($) {
                             //type = doc.find('#select_search_form').find(':selected').data('type_form');
                             if(doc.find('#select_search_form').is("input")){
                                 type = doc.find('#select_search_form').data('type_form');
+                                slug = doc.find('#select_search_form').data('slug');
                             }else {
                                 type = doc.find('#select_search_form').find(':selected').data('type_form');
+                                slug = doc.find('#select_search_form').find(':selected').data('slug');
                             }
+
+                            if (slug == ''){
+                                selectAttr = ' id="'+select+'"';
+                            } else {
+                                selectAttr = ' slug="'+slug+'"';
+                            }
+
                             tp_subid = doc.find('#tp_subid_sf').val();
                             if(!validSubid(tp_subid)){
                                 doc.find('#tp_subid_sf').addClass('constructorShortcodesError');
@@ -1712,23 +1721,23 @@ jQuery(function($) {
                                 console.log(type+'type');
                                 switch (type){
                                     case "avia":
-                                        setShortcodes("[tp_search_shortcodes id="+select
+                                        setShortcodes("[tp_search_shortcodes "+selectAttr
                                             +" origin=\""+origin+"\" "+"destination=\""+destination
                                             +"\" type=\""+type+"\" subid=\""+tp_subid+"\"]", $(this));
                                         break;
                                     case "hotel":
-                                        setShortcodes("[tp_search_shortcodes id="+select
+                                        setShortcodes("[tp_search_shortcodes "+selectAttr
                                             +" hotel_city=\""+hotel_city+"\" type=\""
                                             +type+"\" subid=\""+tp_subid+"\"]", $(this));
                                         break;
                                     case "avia_hotel":
-                                        setShortcodes("[tp_search_shortcodes id="+select
+                                        setShortcodes("[tp_search_shortcodes "+selectAttr
                                             +" origin=\""+origin+"\" "+"destination=\""+destination
                                             +"\" hotel_city=\""+hotel_city+"\" type=\""+type
                                             +"\" subid=\""+tp_subid+"\"]", $(this));
                                         break;
                                     default:
-                                        setShortcodes("[tp_search_shortcodes id="+select
+                                        setShortcodes("[tp_search_shortcodes "+selectAttr
                                             +" origin=\""+origin+"\" "+"destination=\""+destination
                                             +"\" type=\""+type+"\" subid=\""+tp_subid+"\"]", $(this));
                                 }

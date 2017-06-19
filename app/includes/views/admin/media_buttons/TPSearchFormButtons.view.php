@@ -9,7 +9,8 @@
                             <?php foreach($this->data as $key => $record): ?>
 
                                 <option value="<?php echo $record['id'];?>"
-                                    <?php echo selected($key, 0); ?> data-type_form="<?php echo $record['type_form'];?>">
+                                    <?php echo selected($key, 0); ?> data-type_form="<?php echo $record['type_form'];?>"
+                                        data-slug="<?php echo $record['slug'];?>">
                                     <?php echo $record['title'];?></option>
                             <?php endforeach; ?>
                         </select>
@@ -18,7 +19,8 @@
                         <?php foreach($this->data as $key => $record): ?>
                             <?php echo $record['title'];  ?>
                             <input type="hidden" name="select_search_form"  data-type_form="<?php echo $record['type_form'];?>"
-                                   id="select_search_form" value="<?php echo $record['id'];?>">
+                                   id="select_search_form" value="<?php echo $record['id'];?>"
+                                   data-slug="<?php echo $record['slug']; ?>">
                         <?php endforeach; ?>
                         </label>
                     <?php } ?>

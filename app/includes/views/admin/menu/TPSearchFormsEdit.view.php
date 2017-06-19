@@ -101,7 +101,15 @@
                 <p class="TP-ViewShortCode">
                     <?php _ex('tp_admin_page_edit_search_forms_field_search_shortcodes_label',
                         '(Shortcode)', TPOPlUGIN_TEXTDOMAIN); ?>:
-                    <span>[tp_search_shortcodes id=<?php echo $this->data['id'] ?>]</span>
+                    <?php
+                    $shortcodeAttr = '';
+                    if (empty($this->data['slug'])){
+                        $shortcodeAttr = ' id="'.$this->data['id'].'"';
+                    } else {
+                        $shortcodeAttr = ' slug="'.$this->data['slug'].'"';
+                    }
+                    ?>
+                    <span>[tp_search_shortcodes <?php echo $shortcodeAttr ?>]</span>
                 </p>
             </div>
 
