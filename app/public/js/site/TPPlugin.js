@@ -43,11 +43,11 @@ jQuery(function($) {
                 //yearRange: [2000,2020],
                 onSelect: function(date) {
                     var dateFormat = new Date(date);
-                    console.log(dateFormat.format('yyyy-mm-d'))
-                    console.log($(element).data('href'))
+                    //console.log(dateFormat.format('yyyy-mm-d'))
+                    //console.log($(element).data('href'))
                     var tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
                     console.log(tutuURL)
-                   // document.location.href=tutuURL;
+                    //document.location.href=tutuURL;
                     //$(element).attr("href", tutuURL).trigger('click');
                     openInNewTab(tutuURL)
 
@@ -56,9 +56,9 @@ jQuery(function($) {
         });
 
         function openInNewTab(url) {
-            console.log(url)
+            //console.log(url)
             var redirectWindow = window.open(url, '_blank');
-            return falseж
+            return false;
         }
 
         /* var datepicker = $('.TPButtonTableDates').pikaday({

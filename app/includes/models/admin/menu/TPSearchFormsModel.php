@@ -146,12 +146,14 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
     {
         // TODO: Implement insert() method.
         global $wpdb;
+        $slug = "";
         $tableName = $wpdb->prefix .self::$tableName;
         $code_form = wp_unslash($_POST["search_shortcode_code_form"]);
         $type_form = $this->getTypeForm($code_form);
         //error_log('$type_form = '.$type_form);
         $code_form = $this->replaceDefault($type_form, $code_form, $_POST["search_shortcode_from"],
             $_POST["search_shortcode_to"], $_POST["search_shortcode_hotel_city"]);
+        $slug = $this->get_nextId().substr(uniqid(), -7);
         $inputData = array(
             'title' => $_POST["search_shortcode_title"],
             'date_add' => time(),
@@ -161,8 +163,17 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             'to_city' => $_POST["search_shortcode_to"],
             'hotel_city' => $_POST["search_shortcode_hotel_city"],
             'type_form' => $type_form,
+            'slug' => ''
         );
         $wpdb->insert($tableName, $inputData);
+    }
+
+
+    public function getTableName(){
+        $tableName = "";
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        return $tableName;
     }
 
     public function update($data)
@@ -292,6 +303,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
                   to_city varchar(255) NOT NULL,
                   hotel_city varchar(255) NOT NULL,
                   type_form varchar(255) NOT NULL,
+                  slug varchar(255) NOT NULL,
                   PRIMARY KEY (id)
                 ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
         if($version != TPOPlUGIN_DATABASE) {
