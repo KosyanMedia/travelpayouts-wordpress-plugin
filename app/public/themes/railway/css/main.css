@@ -121,7 +121,7 @@
   background: none;
 }
 
-.TPTrainTable .TP-Plugin-Tables_box tbody tr .TPflightTd span {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr .TPflightTd span, .TPTrainTable .TP-Plugin-Tables_box tbody tr .TPtrainTd span {
   display: block;
   white-space: nowrap;
 }
@@ -567,6 +567,7 @@ span.ellipsis {
     text-align: right;
     display: block;
     float: right;
+    width: 60px;
 }
 .TP-train-text_center {
     display: inline-block;
@@ -577,6 +578,7 @@ span.ellipsis {
     min-width: 33px;
     display: inline-block;
     text-align: left;
+    width: 40px;
 }
 
 /* data picker */
@@ -607,9 +609,23 @@ span.ellipsis {
 .calendar.left, .calendar.right {
   float: left;
 }
++
 .marshrut {
     min-width: 146px;
     display: inline-block;
+}
+
+.pika-lendar table, .pika-lendar table th, .pika-lendar table td {
+    border: 0;
+    padding: 10px;
+}
+
+abbr, tla, acronym{
+	text-decoration: none;
+}
+
+.TPdepartureTd .span-timeComming{
+  	display: none !important;
 }
 /*      */
 
@@ -718,12 +734,13 @@ span.ellipsis {
   .departure_time {
     float: left;
   }
-    .TP-train-text {
-        position: relative;
-        float: left;
-        text-align: left;
-        height: 15px;
-    }
+  .TP-train-text {
+    position: relative;
+    float: none;
+    text-align: left;
+    height: 15px;
+    padding-top: 17px;
+  }
   .tp-price-column-mobile .TP-tdContent {
     top: 20%;
     left: 129px;
@@ -752,6 +769,9 @@ span.ellipsis {
   .TP-rwd-table tbody tr td:nth-child(2):before {
     display: none;
   }
+  .TPtrainTd span{
+  	display: block;
+  }
 }
 
 @media (max-width: 868px) {
@@ -761,11 +781,15 @@ span.ellipsis {
   .TPTrainTable td:nth-child(2) {
     display: none !important;
   }
-  .span-timeComming {
-    width: 106px;
+  .TP-tdContent .span-timeComming {
+    width: 100%;
+    text-align: left;
   }
   .TPTrainTable .TP-Plugin-Tables_box tbody tr td {
     padding: 3px 8px;
+  }
+  .TPdepartureTd .span-timeComming{
+  	display: block !important;
   }
 }
 
@@ -775,6 +799,9 @@ span.ellipsis {
   }
   .TPTrainTable td:nth-child(5) {
     display: none !important;
+  }
+  .TP-tdContent .span-timeComming {
+    font-size: 12px;
   }
 }
 
