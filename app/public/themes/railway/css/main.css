@@ -473,6 +473,7 @@ span.ellipsis {
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td {
   color: #262626 !important;
+  line-height: 16px;
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr:nth-child(even) {
@@ -617,14 +618,14 @@ span.ellipsis {
 
 .pika-lendar table, .pika-lendar table th, .pika-lendar table td {
     border: 0;
-    padding: 10px;
+    padding: 0;
 }
 
 abbr, tla, acronym{
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
-.TPdepartureTd .span-timeComming{
+.TPdepartureTd .span-timeComming, .TParrivalTd .span-timeComming {
   	display: none !important;
 }
 /*      */
@@ -649,7 +650,7 @@ abbr, tla, acronym{
   }
   .TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
     position: relative;
-    top: -11px;
+	top: -6px;
     left: 0px;
     height: 32px;
   }
@@ -710,13 +711,14 @@ abbr, tla, acronym{
     margin: 0;
   }
   .TP-rwd-table tbody tr td:before {
-    padding: 9px;
+    padding: 14px 6px;
     display: inline-block;
     width: 102px;
     min-height: inherit;
     vertical-align: middle;
     margin-right: 9px;
     float: left;
+    line-height: 14px;
   }
   .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
     display: inline-block;
@@ -790,6 +792,9 @@ abbr, tla, acronym{
   }
   .TPdepartureTd .span-timeComming{
   	display: block !important;
+  }
+  .TPTrainTable .TP-Plugin-Tables_box {
+    border: 0;
   }
 }
 
