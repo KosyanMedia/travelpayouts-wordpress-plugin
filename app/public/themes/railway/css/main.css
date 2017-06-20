@@ -618,7 +618,6 @@ abbr, tla, acronym{
   	display: none !important;
 }
 
-
 @media (min-width: 480px) {
   .TP-rwd-table th,
   .TP-rwd-table td {
@@ -627,6 +626,9 @@ abbr, tla, acronym{
   .TP-rwd-table td:before {
     display: none;
   }
+}
+
+@media (max-width: 480px) {
   .TPpriceTd {
     display: none !important;
   }
