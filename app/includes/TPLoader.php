@@ -1,6 +1,7 @@
 <?php
 namespace app\includes;
 
+use app\includes\common\TPLang;
 use app\includes\controllers\admin\media_buttons\TPHotelsButtonsController;
 use app\includes\controllers\admin\media_buttons\TPRailwayButtonsController;
 use app\includes\controllers\admin\menu\TPHotelsController;
@@ -42,10 +43,14 @@ class TPLoader extends \core\TPOLoader{
         // Media buttons
         new models\admin\TPPostsModel();
         new controllers\admin\TPModalAdminNoticeController();
-        if( \app\includes\TPPlugin::$options['config']['media_button']['view'] != 2){
+        if( TPPlugin::$options['config']['media_button']['view'] != 2){
             new controllers\admin\media_buttons\TPShortcodeButtonsController();
             new TPHotelsButtonsController();
-            new TPRailwayButtonsController();
+
+            if (TPLang::getLang() == TPLang::getLangRU()){
+                new TPRailwayButtonsController();
+            }
+
             new controllers\admin\media_buttons\TPWidgetButtonsController();
             new controllers\admin\media_buttons\TPSearchFormButtonsController();
             new controllers\admin\media_buttons\TPLinkButtonsController();
