@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-12 16:23+0300\n"
+"POT-Creation-Date: 2017-06-20 03:34+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -1910,23 +1910,23 @@ msgstr "пересадки"
 
 #: app/includes/common/TPFieldsLabelTable.php:681
 msgctxt "local en date label hour"
-msgid "h."
-msgstr ""
+msgid "h"
+msgstr "h"
 
 #: app/includes/common/TPFieldsLabelTable.php:682
 msgctxt "local ru date label hour"
-msgid "ч."
-msgstr ""
+msgid "ч"
+msgstr "ч"
 
 #: app/includes/common/TPFieldsLabelTable.php:685
 msgctxt "local en date label minute"
-msgid "m."
-msgstr ""
+msgid "m"
+msgstr "m"
 
 #: app/includes/common/TPFieldsLabelTable.php:686
 msgctxt "local ru date label minute"
-msgid "м."
-msgstr ""
+msgid "м"
+msgstr "м"
 
 #: app/includes/common/TPRequestApi.php:189
 msgctxt "(The variable $origin parameters not set or incorrectly.)"
@@ -3975,32 +3975,32 @@ msgctxt "(Constructor search form)"
 msgid "tp_admin_page_settings_сonstructor_search_form_title"
 msgstr "Конструктор поисковых форм"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:26
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:28
 msgctxt "(No customized search form. )"
 msgid "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
 msgstr "Нет настроенных Поисковых форм."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:29
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:31
 msgctxt "(Go to setting.)"
 msgid "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
 msgstr "Перейти к настройке."
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:54
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:56
 msgctxt "(City of departure default)"
 msgid "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
 msgstr "Город вылета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:62
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:64
 msgctxt "(City Arrival default)"
 msgid "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
 msgstr "Город прилета по-умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:70
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:72
 msgctxt "(Default City/Hotel)"
 msgid "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
 msgstr "Город/Отель по умолчанию"
 
-#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:78
+#: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:80
 msgctxt "(Subid)"
 msgid "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
 msgstr "Дополнительный маркер"
@@ -4993,16 +4993,6 @@ msgctxt "admin page menu railway"
 msgid "Railway tables"
 msgstr "ЖД таблицы"
 
-#: app/includes/views/admin/menu/TPRailway.view.php:13
-msgctxt "admin page railway tab menu railway config"
-msgid "Tables Content"
-msgstr "Содержание таблиц"
-
-#: app/includes/views/admin/menu/TPRailway.view.php:24
-msgctxt "admin page railway tab menu railway themes"
-msgid "Themes"
-msgstr "Темы"
-
 #: app/includes/views/admin/menu/TPRailwayTabConfig.view.php:8
 msgctxt "admin page railway tab tables content save button label"
 msgid "Save changes"
@@ -5241,19 +5231,19 @@ msgctxt "(Shortcode)"
 msgid "tp_admin_page_edit_search_forms_field_search_shortcodes_label"
 msgstr "Шорткод"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:109
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:117
 msgctxt ""
 "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away )"
 msgid "tp_admin_page_edit_search_forms_paragraph_4"
 msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:115
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:123
 msgctxt "(cancel)"
 msgid "tp_admin_page_edit_search_forms_btn_cancel"
 msgstr "отменить"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:120
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:128
 msgctxt "(save changes)"
 msgid "tp_admin_page_edit_search_forms_btn_save"
 msgstr "сохранить изменения"
@@ -5844,6 +5834,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin page railway tab menu railway config"
+#~ msgid "Tables Content"
+#~ msgstr "Содержание таблиц"
+
+#~ msgctxt "admin page railway tab menu railway themes"
+#~ msgid "Themes"
+#~ msgstr "Темы"
 
 #~ msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
 #~ msgid "Show currency code"
@@ -7583,9 +7581,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Test"
 #~ msgstr "Тест 1111"
-
-#~ msgid "m"
-#~ msgstr "м"
 
 #~ msgid ""
 #~ "Shortcode generated automatically when you save and available for insertion into the posts"
