@@ -168,6 +168,20 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         $wpdb->insert($tableName, $inputData);
     }
 
+    /**
+     * @param $searchForms
+     * @return mixed
+     */
+    public static function importSearchForm($searchForms){
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        if(count($searchForms) < 1 || $searchForms == false) return;
+        foreach ($searchForms as $searchForm){
+            $wpdb->insert($tableName, $searchForm);
+        }
+        return true;
+    }
+
 
     public function getTableName(){
         $tableName = "";

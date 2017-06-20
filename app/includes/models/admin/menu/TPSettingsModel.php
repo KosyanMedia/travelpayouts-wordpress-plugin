@@ -83,7 +83,8 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel{
             if (array_key_exists('search_forms', $import_options)){
                 $searchForms = $import_options['search_forms'];
                 unset($import_options['search_forms']);
-                error_log(print_r($searchForms, true));
+                //error_log(print_r($searchForms, true));
+                TPSearchFormsModel::importSearchForm($searchForms);
             }
 
             //error_log(print_r($import_options, true));
