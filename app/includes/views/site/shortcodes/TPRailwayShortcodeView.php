@@ -468,28 +468,30 @@ class TPRailwayShortcodeView {
 
     public function secondsToTime($seconds)
     {
-        //$y = floor($seconds / (86400*365.25));
-        //$d = floor(($seconds - ($y*(86400*365.25))) / 86400);
-	    $string = '';
-        $h = gmdate('H', $seconds);
-        $m = gmdate('i', $seconds);
-        //$s = gmdate('s', $seconds);
-	    /*if($y > 0)
-        {
-            $yw = $y > 1 ? ' years ' : ' year ';
-            $string .= $y . $yw;
+        $string = '';
+        $d = floor($seconds/DAY_IN_SECONDS);
+        $seconds -= $d * DAY_IN_SECONDS;
+        $h = floor($seconds/HOUR_IN_SECONDS);
+        $seconds -= $h * HOUR_IN_SECONDS;
+        $m = floor($seconds/MINUTE_IN_SECONDS);
+
+        /*error_log($seconds);
+        error_log($d);
+        error_log($h);
+        error_log($m);*/
+        $dayHour = 0;
+        if ($d > 0){
+            $dayHour = $d * 24;
         }
-        if($d > 0)
-        {
-            $dw = $d > 1 ? ' days ' : ' day ';
-            $string .= $d . $dw;
-        }*/
+        $h += $dayHour;
 
         if($h > 0)
         {
             $hw = TPFieldsLabelTable::getDateLabel('hour');
 	        //$h > 1 ? ' hours ' : ' hour ';
-            $string .= $h.$hw.' ';
+
+            $string .= $h;
+            $string .= $hw.' ';
         }
 
         if($m > 0)
