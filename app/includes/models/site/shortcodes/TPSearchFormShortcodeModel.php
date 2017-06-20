@@ -17,6 +17,17 @@ class TPSearchFormShortcodeModel {
         if(count($data) > 0) return $data;
         return false;
     }
+
+    public function getDataFromSlug($slug)
+    {
+        if(!$slug) return false;
+        global $wpdb;
+        $tableName = $wpdb->prefix .self::$tableName;
+        $data = $wpdb->get_row("SELECT * FROM ".$tableName ." WHERE slug='{$slug}'", ARRAY_A);
+        if(count($data) > 0) return $data;
+        return false;
+    }
+
     /**
      * @param $form
      * @return string

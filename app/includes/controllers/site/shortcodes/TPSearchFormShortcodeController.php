@@ -23,6 +23,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         // TODO: Implement action() method.
         $defaults = array(
             'id' => false,
+            'slug' => false,
             'type' => 'avia',
             'origin' => false,
             'destination' => false,
@@ -30,8 +31,13 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
             'subid' => ''
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        if($id == false) return;
-        $data = $this->model->get_dataId($id);
+        if ($id == false && $slug == false) return;
+        if (empty($slug) || $slug == false){
+            $data = $this->model->get_dataId($id);
+        } else {
+            $data = $this->model->getDataFromSlug($slug);
+        }
+
         //var_dump($data);
         $code_form = wp_unslash($data["code_form"]);
         $typeForm = $this->model->getTypeForm($code_form);
