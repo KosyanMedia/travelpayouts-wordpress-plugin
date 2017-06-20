@@ -4,15 +4,15 @@
 			'admin page menu railway', TPOPlUGIN_TEXTDOMAIN); ?>
 	</p>
     <div id="tabs-railway">
-        <nav class="TPNavigation">
+        <!--<nav class="TPNavigation">
             <ul class="TPMainMenu">
                 <li>
                     <a href="#tabs-railway_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
                         <span>
-                            <?php _ex('Tables Content',
+                            <?php /*_ex('Tables Content',
 	                            'admin page railway tab menu railway config',
-                                TPOPlUGIN_TEXTDOMAIN); ?>
+                                TPOPlUGIN_TEXTDOMAIN);*/ ?>
                         </span>
                     </a>
                 </li>
@@ -21,27 +21,27 @@
                     <a href="#tabs-railway_themes" class="TPMainMenuA">
                         <i class="icoItemNav ico-glass"></i>
                         <span>
-                            <?php _ex('Themes',
+                            <?php /*_ex('Themes',
 	                            'admin page railway tab menu railway themes',
-                                TPOPlUGIN_TEXTDOMAIN); ?>
+                                TPOPlUGIN_TEXTDOMAIN);*/ ?>
                         </span>
                     </a>
                 </li>
 
             </ul>
-        </nav>
+        </nav>-->
         <div id="tabs-railway_config">
 	        <?php
 	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabConfig.view.php";
 	            $this->loadView($pathView, 0, $data);
 	        ?>
         </div>
-        <div id="tabs-railway_themes">
+        <!--<div id="tabs-railway_themes">
 	        <?php
-	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabThemes.view.php";
-	            $this->loadView($pathView, 0, $data);
+	            //$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabThemes.view.php";
+	            //$this->loadView($pathView, 0, $data);
 	        ?>
-        </div>
+        </div>-->
     </div>
 
 </div>
