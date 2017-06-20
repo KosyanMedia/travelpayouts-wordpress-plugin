@@ -171,6 +171,16 @@
     margin-top: -3px;
 }
 
+#constructorRailwayShortcodesButton img {
+    margin-top: -3px;
+}
+
+.validate > #constructorRailwayShortcodesButton img{
+    padding: 0 4px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
 .validate > #constructorShortcodesButton img{
     padding: 0 4px;
     vertical-align: middle;
