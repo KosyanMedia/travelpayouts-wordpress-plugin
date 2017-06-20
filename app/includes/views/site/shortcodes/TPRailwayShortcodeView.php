@@ -580,13 +580,19 @@ class TPRailwayShortcodeView {
 	public function getDates($row = array(), $typeShortcode){
 		$dates = '';
 		$btnTxt = "";
-		if(isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
+		if (isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()];
 		}else{
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
 		}
+
+        $targetURL = 'false';
+        if (isset(TPPlugin::$options['config']['target_url'])) {
+            $targetURL = 'true';
+        }
+
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
-            .' data-href="'.$this->getURL($row).'">'
+            .' data-href="'.$this->getURL($row).'" data-target="'.$targetURL.'">'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
