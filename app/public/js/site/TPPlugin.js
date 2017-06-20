@@ -44,9 +44,9 @@ jQuery(function($) {
                 onSelect: function(date) {
                     var dateFormat, tutuURL, target;
                     dateFormat = new Date(date);
-                    target = $(element).data('target');
+                    target = parseInt($(element).data('target'));
                     tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
-                    openInNewTab(tutuURL)
+                    openInNewTab(tutuURL, target);
 
                 }
             });
@@ -54,8 +54,9 @@ jQuery(function($) {
 
         function openInNewTab(url, target) {
             console.log(url);
-            if (target == "true"){
-                window.open(url, '_blank');
+            console.log(target);
+            if (target == 1){
+               window.open(url, '_blank');
             } else {
                 document.location.href = url;
             }

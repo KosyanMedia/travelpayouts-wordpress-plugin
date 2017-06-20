@@ -586,9 +586,9 @@ class TPRailwayShortcodeView {
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
 		}
 
-        $targetURL = 'false';
+        $targetURL = 0;
         if (isset(TPPlugin::$options['config']['target_url'])) {
-            $targetURL = 'true';
+            $targetURL = 1;
         }
 
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
