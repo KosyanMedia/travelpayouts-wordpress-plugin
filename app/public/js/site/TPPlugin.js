@@ -42,22 +42,23 @@ jQuery(function($) {
                 maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
                 //yearRange: [2000,2020],
                 onSelect: function(date) {
-                    var dateFormat = new Date(date);
-                    //console.log(dateFormat.format('yyyy-mm-d'))
-                    //console.log($(element).data('href'))
-                    var tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
-                    console.log(tutuURL)
-                    //document.location.href=tutuURL;
-                    //$(element).attr("href", tutuURL).trigger('click');
+                    var dateFormat, tutuURL, target;
+                    dateFormat = new Date(date);
+                    target = $(element).data('target');
+                    tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
                     openInNewTab(tutuURL)
 
                 }
             });
         });
 
-        function openInNewTab(url) {
-            //console.log(url)
-            var redirectWindow = window.open(url, '_blank');
+        function openInNewTab(url, target) {
+            console.log(url);
+            if (target == "true"){
+                window.open(url, '_blank');
+            } else {
+                document.location.href = url;
+            }
             return false;
         }
 
