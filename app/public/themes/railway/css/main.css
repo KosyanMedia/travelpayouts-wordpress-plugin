@@ -10,24 +10,6 @@
   text-decoration: none;
 }
 
-.TP-Plugin-Tables_wrapper h1 {
-  line-height: 1;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
-.TP-Plugin-Tables_wrapper h2 {
-  line-height: 1;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
-.TP-Plugin-Tables_wrapper h3 {
-  line-height: 1;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
 .TP-sorting_asc:after {
   content: " \25b2" !important;
   position: absolute;
@@ -46,11 +28,14 @@
   font-size: 8px;
 }
 
-.TP-Plugin-Tables_wrapper h3,
+.TP-Plugin-Tables_wrapper h1,
 .TP-Plugin-Tables_wrapper h2,
-.TP-Plugin-Tables_wrapper h1 {
+.TP-Plugin-Tables_wrapper h3 {
   margin-bottom: 0 !important;
   margin-top: 1em !important;
+  line-height: 1;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .TPTrainTable .TP-Plugin-Tables_box {
@@ -197,7 +182,7 @@
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr:nth-child(odd) {
-  background: #FFF;
+  background: #fff;
 }
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr:nth-child(even) {
@@ -513,6 +498,14 @@ span.ellipsis {
   color: #1db1db !important;
 }
 
+.TPTrainTable tbody tr:hover{
+  cursor: auto;
+}
+
+.TP-Plugin-Tables_link:hover{
+  cursor: pointer;
+}
+
 .TPTrainTable a.paginate_button.current:hover {
   color: #ffffff !important;
 }
@@ -529,10 +522,6 @@ span.ellipsis {
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
   background: rgba(234, 158, 0, 0.7) !important;
 }
-
-/*.train-color {
-  color: #b0b0b0;
-}*/
 
 .span-timeComming {
     width: auto;
@@ -628,7 +617,6 @@ abbr, tla, acronym{
 .TPdepartureTd .span-timeComming, .TParrivalTd .span-timeComming {
   	display: none !important;
 }
-/*      */
 
 
 @media (min-width: 480px) {
@@ -639,9 +627,6 @@ abbr, tla, acronym{
   .TP-rwd-table td:before {
     display: none;
   }
-}
-
-@media (max-width: 480px) {
   .TPpriceTd {
     display: none !important;
   }
