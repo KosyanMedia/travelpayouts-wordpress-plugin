@@ -742,7 +742,7 @@ abbr, tla, acronym{
     float: none;
     text-align: left;
     height: 15px;
-    padding-top: 5px;
+    padding-top: 16px;
     width: 128px;
   }
   .tp-price-column-mobile .TP-tdContent {
