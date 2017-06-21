@@ -699,7 +699,27 @@ class TPFieldsLabelTable
 	    return $dateLabel;
     }
 
-    public static function getDurationDayLabel(){
+    /**
+     * @param $number
+     * @return string
+     */
+    public static function getDurationDayLabel($number){
+        $dayLabel = "";
+        $dayLabelData = array(
+            TPLang::getLangEN() => array(
+                'day', 'days'
+            ),
+            TPLang::getLangRU() => array(
+                'день', 'дня', 'дней'
+            )
+        );
 
+        if (array_key_exists(TPLang::getLang(), $dayLabelData)) {
+            $dayLabel = $dayLabelData[TPLang::getLang()][$number];
+        } else {
+            $dayLabel = $dayLabelData[TPLang::getDefaultLang()][$number];
+        }
+
+        return $dayLabel;
     }
 }

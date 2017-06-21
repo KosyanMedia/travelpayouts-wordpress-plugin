@@ -473,13 +473,13 @@ class TPRailwayShortcodeView {
         $durationDay = '';
         $travelTimeInSeconds = 0;
         if (array_key_exists('travelTimeInSeconds', $row)) {
-            $travelTimeInSeconds = $this->durationSecondsToTime($row['travelTimeInSeconds']);
+            $travelTimeInSeconds = $row['travelTimeInSeconds'];
         }
         if ($travelTimeInSeconds > 0){
             $day = 0;
             $day = floor($travelTimeInSeconds/DAY_IN_SECONDS);
             if ($day > 0){
-                $durationDay = $day;
+                $durationDay = $day.' '.TPFieldsLabelTable::getDurationDayLabel($this->getPluralType($day));
             }
         }
         return $durationDay;
