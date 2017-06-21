@@ -620,6 +620,7 @@ abbr, tla, acronym{
 
 .TParrivalTd .span-timeComming {
   	display: block !important;
+  	text-align: left;
 }
 
 @media (min-width: 480px) {
@@ -805,13 +806,45 @@ abbr, tla, acronym{
 }
 
 @media (max-width: 680px) {
-  .TPtimeTravelTd {
-    display: none !important;
-  }
   .TP-tdContent .span-timeComming {
     font-size: 12px;
   }
 }
 
+@media (max-width: 460px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 440px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 230px;
+  }
+}
+
+@media (max-width: 420px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 210px;
+  }
+}
+
+@media (max-width: 400px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 320px) {
+.TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: 148px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
