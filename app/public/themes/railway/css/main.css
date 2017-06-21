@@ -712,6 +712,15 @@ abbr, tla, acronym{
   .TP-rwd-table tbody tr td.TPpricesTd:before {
     padding: 24px 6px;
   }
+  .TP-rwd-table tbody tr td.TPpricesTd.TPTd_3:before {
+    padding: 17px 6px;
+  }
+  .TP-rwd-table tbody tr td.TPpricesTd.TPTd_2:before {
+    padding: 8px 6px;
+  }
+  .TP-rwd-table tbody tr td.TPpricesTd.TPTd_1:before {
+    padding: 2px 6px;
+  }
   .TP-rwd-table tbody tr td .TP-Plugin-Tables_link {
     display: inline-block;
     overflow: inherit;
@@ -734,7 +743,7 @@ abbr, tla, acronym{
     text-align: left;
     height: 15px;
     padding-top: 5px;
-    width: 102px;
+    width: 128px;
   }
   .tp-price-column-mobile .TP-tdContent {
     top: 20%;
@@ -793,9 +802,6 @@ abbr, tla, acronym{
 
 @media (max-width: 680px) {
   .TPtimeTravelTd {
-    display: none !important;
-  }
-  .TPTrainTable td:nth-child(5) {
     display: none !important;
   }
   .TP-tdContent .span-timeComming {
