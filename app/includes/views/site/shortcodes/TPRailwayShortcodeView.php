@@ -240,7 +240,8 @@ class TPRailwayShortcodeView {
                     //Примерные цены / Prices
                     case 'prices':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
+                                class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).' '
+                                    .$this->getTDPriceClass($row).'">'
                                 .$this->getPrices($row)
                             .'</td>';
                         break;
@@ -543,6 +544,26 @@ class TPRailwayShortcodeView {
 		}
 
     	return '<p class="TP-tdContent">'.$prices.'</p>';
+    }
+
+    /**
+     * @param array $row
+     * @return string
+     */
+    public function getTDPriceClass($row = array()){
+        $tdPriceClass = "";
+        if (array_key_exists('categories', $row)) {
+            $categories = $row['categories'];
+        }
+        if (count($categories)  == 1) {
+            $tdPriceClass = 'TPTd_1';
+        } elseif (count($categories)  == 2) {
+            $tdPriceClass = 'TPTd_2';
+        } elseif (count($categories)  == 3) {
+            $tdPriceClass = 'TPTd_3';
+        }
+
+        return $tdPriceClass;
     }
 
 	public function renderPrice($price, $currency){
