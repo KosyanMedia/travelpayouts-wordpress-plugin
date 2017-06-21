@@ -480,6 +480,7 @@ class TPRailwayShortcodeView {
             $day = floor($travelTimeInSeconds/DAY_IN_SECONDS);
             if ($day > 0){
                 $durationDay = $day.' '.TPFieldsLabelTable::getDurationDayLabel($this->getPluralType($day));
+                $durationDay = ' <span class="tp-duration-day">'.$durationDay.'</span>';
             }
         }
         return $durationDay;
