@@ -592,6 +592,7 @@ class TPRailwayShortcodeView {
 				$currencyView = '<span class="tp-currency">'.$currency.'</span>'.$price;
 				break;
 		}*/
+		$price = number_format($price, 0, '.', ' ');
         $currencyView = $price.'<span class="tp-currency">р.</span>';
 
 		return $currencyView;
