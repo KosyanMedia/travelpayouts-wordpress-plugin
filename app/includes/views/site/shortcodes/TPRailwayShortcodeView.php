@@ -473,43 +473,28 @@ class TPRailwayShortcodeView {
     public function durationSecondsToTime($seconds)
     {
         $string = '';
-        $d = floor($seconds/DAY_IN_SECONDS);
-        $seconds -= $d * DAY_IN_SECONDS;
-        $h = floor($seconds/HOUR_IN_SECONDS);
-        $seconds -= $h * HOUR_IN_SECONDS;
-        $m = floor($seconds/MINUTE_IN_SECONDS);
+        $day = floor($seconds/DAY_IN_SECONDS);
+        $seconds -= $day * DAY_IN_SECONDS;
+        $hour = floor($seconds/HOUR_IN_SECONDS);
+        $seconds -= $hour * HOUR_IN_SECONDS;
+        $minute = floor($seconds/MINUTE_IN_SECONDS);
 
-        if ($d > 0){
+        if ($day > 0){
+            $string .= $day.TPFieldsLabelTable::getDateLabel('day').' ';
+            if ($hour > 0){
+                $string .= $hour.TPFieldsLabelTable::getDateLabel('hour').' ';
+            }
+        } else {
+            if ($hour > 0){
+                $string .= $hour.TPFieldsLabelTable::getDateLabel('hour').' ';
+            }
+            if ($minute > 0){
+                $string .= $minute.TPFieldsLabelTable::getDateLabel('minute').' ';
+            }
 
         }
 
-        /*$dayHour = 0;
-        if ($d > 0){
-            $dayHour = $d * 24;
-        }
-        $h += $dayHour;*/
 
-        if($h > 0)
-        {
-            $hw = TPFieldsLabelTable::getDateLabel('hour');
-	        //$h > 1 ? ' hours ' : ' hour ';
-
-            $string .= $h;
-            $string .= $hw.' ';
-        }
-
-        if($m > 0)
-        {
-            $mw = TPFieldsLabelTable::getDateLabel('minute');
-	        //$m > 1 ? ' minutes ' : ' minute ';
-            $string .= $m . $mw;
-        }
-
-        /*if($s > 0)
-        {
-            $sw = $s > 1 ? ' seconds ' : ' second ';
-            $string .= $s . $sw;
-        }*/
         return preg_replace('/\s+/',' ',$string);
     }
 
