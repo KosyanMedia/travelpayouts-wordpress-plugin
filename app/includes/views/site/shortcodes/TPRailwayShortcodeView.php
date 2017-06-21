@@ -391,8 +391,10 @@ class TPRailwayShortcodeView {
         if ($runDepartureStation == $departureStation){
             $departure = $runDepartureStation;
         } else {
-            $departure = $runDepartureStation.' → '.$departureStation;
+            $departure = '<span class="train-color t-gray">'.$runDepartureStation.'</span>'
+                .' → '.$departureStation;
         }
+        //
         return $departure;
     }
 
@@ -406,7 +408,8 @@ class TPRailwayShortcodeView {
         if ($runArrivalStation == $arrivalStation){
             $arrival = $runArrivalStation;
         } else {
-            $arrival = $arrivalStation.' → '.$runArrivalStation;
+            $arrival = $arrivalStation.' → '
+                .'<span class="train-color t-gray">'.$runArrivalStation.'</span>';
         }
         return $arrival;
     }
