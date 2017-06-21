@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-21 14:24+0300\n"
+"POT-Creation-Date: 2017-06-21 16:25+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1937,6 +1937,31 @@ msgstr "m"
 msgctxt "local ru date label minute"
 msgid "м"
 msgstr "м"
+
+#: app/includes/common/TPFieldsLabelTable.php:710
+msgctxt "local en duration label day"
+msgid "day"
+msgstr "day"
+
+#: app/includes/common/TPFieldsLabelTable.php:711
+msgctxt "local en duration label day"
+msgid "days"
+msgstr "days"
+
+#: app/includes/common/TPFieldsLabelTable.php:714
+msgctxt "local ru duration label день"
+msgid "день"
+msgstr "день"
+
+#: app/includes/common/TPFieldsLabelTable.php:715
+msgctxt "local ru duration label дня"
+msgid "дня"
+msgstr "дня"
+
+#: app/includes/common/TPFieldsLabelTable.php:716
+msgctxt "local ru duration label дней"
+msgid "дней"
+msgstr "дней"
 
 #: app/includes/common/TPRequestApi.php:189
 msgctxt "(The variable $origin parameters not set or incorrectly.)"

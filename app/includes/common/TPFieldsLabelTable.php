@@ -707,10 +707,13 @@ class TPFieldsLabelTable
         $dayLabel = "";
         $dayLabelData = array(
             TPLang::getLangEN() => array(
-                'day', 'days'
+                _x('day', 'local en duration label day', TPOPlUGIN_TEXTDOMAIN),
+                _x('days', 'local en duration label day', TPOPlUGIN_TEXTDOMAIN),
             ),
             TPLang::getLangRU() => array(
-                'день', 'дня', 'дней'
+                _x('день', 'local ru duration label день', TPOPlUGIN_TEXTDOMAIN),
+                _x('дня', 'local ru duration label дня', TPOPlUGIN_TEXTDOMAIN),
+                _x('дней', 'local ru duration label дней', TPOPlUGIN_TEXTDOMAIN),
             )
         );
 
