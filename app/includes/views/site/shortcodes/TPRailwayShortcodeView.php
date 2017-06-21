@@ -464,13 +464,13 @@ class TPRailwayShortcodeView {
         $duration = '';
         $travelTimeInSeconds = '';
         if (array_key_exists('travelTimeInSeconds', $row)) {
-            $travelTimeInSeconds = $this->secondsToTime($row['travelTimeInSeconds']);
+            $travelTimeInSeconds = $this->durationSecondsToTime($row['travelTimeInSeconds']);
         }
         $duration = '<span class="TP-trainWayTime">'.$travelTimeInSeconds.'<span>';
         return '<p class="TP-tdContent">'.$duration.'</p>';
     }
 
-    public function secondsToTime($seconds)
+    public function durationSecondsToTime($seconds)
     {
         $string = '';
         $d = floor($seconds/DAY_IN_SECONDS);
@@ -479,15 +479,15 @@ class TPRailwayShortcodeView {
         $seconds -= $h * HOUR_IN_SECONDS;
         $m = floor($seconds/MINUTE_IN_SECONDS);
 
-        /*error_log($seconds);
-        error_log($d);
-        error_log($h);
-        error_log($m);*/
-        $dayHour = 0;
+        if ($d > 0){
+
+        }
+
+        /*$dayHour = 0;
         if ($d > 0){
             $dayHour = $d * 24;
         }
-        $h += $dayHour;
+        $h += $dayHour;*/
 
         if($h > 0)
         {

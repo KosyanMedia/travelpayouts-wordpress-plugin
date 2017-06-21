@@ -677,6 +677,10 @@ class TPFieldsLabelTable
     public static function getDateLabel($dateType){
 	    $dateLabel = "";
     	$dateLabelData = array(
+    	    'day' => array(
+                TPLang::getLangEN() => _x('d', 'local en date label day', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('д', 'local ru date label day', TPOPlUGIN_TEXTDOMAIN),
+            ),
     		'hour' => array(
 			    TPLang::getLangEN() => _x('h', 'local en date label hour', TPOPlUGIN_TEXTDOMAIN),
 			    TPLang::getLangRU() => _x('ч', 'local ru date label hour', TPOPlUGIN_TEXTDOMAIN),
