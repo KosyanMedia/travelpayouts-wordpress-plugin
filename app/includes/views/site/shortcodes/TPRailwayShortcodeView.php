@@ -481,6 +481,11 @@ class TPRailwayShortcodeView {
 
         if ($day > 0){
             $string .= $day.TPFieldsLabelTable::getDateLabel('day').' ';
+
+            if ($minute > 30){
+                $hour += 1;
+            }
+
             if ($hour > 0){
                 $string .= $hour.TPFieldsLabelTable::getDateLabel('hour').' ';
             }
