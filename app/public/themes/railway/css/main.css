@@ -614,8 +614,12 @@ abbr, tla, acronym{
 	text-decoration: none !important;
 }
 
-.TPdepartureTd .span-timeComming, .TParrivalTd .span-timeComming {
+.TPdepartureTd .span-timeComming {
   	display: none !important;
+}
+
+.TParrivalTd .span-timeComming {
+  	display: block !important;
 }
 
 @media (min-width: 480px) {
