@@ -451,8 +451,38 @@ class TPRailwayShortcodeView {
             $arrivalStation = $row['arrivalStation'];
         }
         $arrival = '<span class="comming_time">'.date('H:i', strtotime($arrivalTime)).'</span>'
+            .$this->getDurationDay($row)
             .' <span class="train-color span-timeComming t-gray">'.$arrivalStation.'</span>';
         return '<p class="TP-tdContent">'.$arrival.'</p>';
+    }
+
+    /**
+     * @param $n
+     * @return int
+     */
+    public function getPluralType($n){
+        if (TPLang::getLang() == TPLang::getLangRU()){
+            return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2));
+        } else {
+            return ($n != 1) ? 1 : 0;
+        }
+
+    }
+
+    public function getDurationDay($row = array()){
+        $durationDay = '';
+        $travelTimeInSeconds = 0;
+        if (array_key_exists('travelTimeInSeconds', $row)) {
+            $travelTimeInSeconds = $this->durationSecondsToTime($row['travelTimeInSeconds']);
+        }
+        if ($travelTimeInSeconds > 0){
+            $day = 0;
+            $day = floor($travelTimeInSeconds/DAY_IN_SECONDS);
+            if ($day > 0){
+                $durationDay = $day;
+            }
+        }
+        return $durationDay;
     }
 
     /**

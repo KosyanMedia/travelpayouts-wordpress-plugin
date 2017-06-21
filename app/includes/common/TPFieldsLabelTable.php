@@ -698,4 +698,8 @@ class TPFieldsLabelTable
 
 	    return $dateLabel;
     }
+
+    public static function getDurationDayLabel(){
+
+    }
 }
