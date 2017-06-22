@@ -114,7 +114,7 @@ class TPRailwayShortcodeView {
 			$headTable .= '<td class="TP'.$selected_field.'Td '
 			              .$this->tdClassHidden($shortcode, $selected_field)
 			              .' TPTableHead">'
-			              . $this->getTableTheadTDFieldLabel($selected_field)
+			              .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
 			              .'<i class="TP-sort-chevron fa"></i>'
 			              .' </td>';
 		}
