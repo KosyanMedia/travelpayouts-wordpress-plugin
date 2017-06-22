@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-21 16:25+0300\n"
+"POT-Creation-Date: 2017-06-22 17:01+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -449,22 +449,22 @@ msgctxt "(Забронировать)"
 msgid "tp_plugin_local_en_table_shortcodes_hotels_6_title_btn"
 msgstr "Забронировать"
 
-#: app/includes/TPDefault.php:1060
+#: app/includes/TPDefault.php:1063
 msgctxt "local en table shortcodes railway 1 title text"
 msgid "Train schedule {origin} — {destination}"
 msgstr "Train schedule {origin} — {destination}"
 
-#: app/includes/TPDefault.php:1062
+#: app/includes/TPDefault.php:1065
 msgctxt "local ru table shortcodes railway 1 title text"
 msgid "Train schedule {origin} — {destination}"
 msgstr "Расписание поездов {origin} — {destination}"
 
-#: app/includes/TPDefault.php:1070
+#: app/includes/TPDefault.php:1073
 msgctxt "local en table shortcodes railway 1 title_button text"
 msgid "Select dates"
 msgstr "Select dates"
 
-#: app/includes/TPDefault.php:1072
+#: app/includes/TPDefault.php:1075
 msgctxt "local ru table shortcodes railway 1 title_button text"
 msgid "Select dates"
 msgstr "Выбрать даты"
@@ -2232,8 +2232,8 @@ msgstr "Hotels"
 #: app/includes/controllers/admin/menu/TPRailwayController.php:26
 #: app/includes/controllers/admin/menu/TPRailwayController.php:27
 msgctxt "admin menu page title railway"
-msgid "Railway tables"
-msgstr "Railway tables"
+msgid "Railways schedule"
+msgstr "Railways schedule"
 
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:21
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
@@ -5022,8 +5022,33 @@ msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPRailway.view.php:3
 msgctxt "admin page menu railway"
-msgid "Railway tables"
-msgstr "Railway tables"
+msgid "Railways schedule"
+msgstr "Railways schedule"
+
+#: app/includes/views/admin/menu/TPRailway.view.php:38
+msgctxt "admin page railway tab railway help"
+msgid "You need to activate "
+msgstr "You need to activate "
+
+#: app/includes/views/admin/menu/TPRailway.view.php:42
+msgctxt "admin page railway tab railway help"
+msgid "Tutu.ru campaign "
+msgstr "Tutu.ru campaign "
+
+#: app/includes/views/admin/menu/TPRailway.view.php:46
+msgctxt "admin page railway tab railway help"
+msgid "at Travelpayouts.com beforehand. Links won't work without campaign activation. "
+msgstr "at Travelpayouts.com beforehand. Links won’t work without campaign activation. "
+
+#: app/includes/views/admin/menu/TPRailway.view.php:52
+msgctxt "admin page railway tab railway help"
+msgid "Activate Tutu.ru campaign "
+msgstr "Activate Tutu.ru campaign "
+
+#: app/includes/views/admin/menu/TPRailway.view.php:63
+msgctxt "admin page railway tab railway help"
+msgid "Tutu.ru campaign is activated. Let's go"
+msgstr "Tutu.ru campaign is activated. Let’s go"
 
 #: app/includes/views/admin/menu/TPRailwayTabConfig.view.php:8
 msgctxt "admin page railway tab tables content save button label"
@@ -5861,6 +5886,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin menu page title railway"
+#~ msgid "Railway tables"
+#~ msgstr "Railway tables"
+
+#~ msgctxt "admin page menu railway"
+#~ msgid "Railway tables"
+#~ msgstr "Railway tables"
 
 #~ msgctxt "admin page railway tab menu railway config"
 #~ msgid "Tables Content"

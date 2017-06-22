@@ -23,8 +23,8 @@ class TPRailwayController extends TPOAdminMenuController{
 	public function action() {
 		// TODO: Implement action() method.
 		$plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-			_x('Railway tables',  'admin menu page title railway', TPOPlUGIN_TEXTDOMAIN ),
-			_x('Railway tables',  'admin menu page title railway', TPOPlUGIN_TEXTDOMAIN ),
+			_x('Railways schedule',  'admin menu page title railway', TPOPlUGIN_TEXTDOMAIN ),
+			_x('Railways schedule',  'admin menu page title railway', TPOPlUGIN_TEXTDOMAIN ),
 			'manage_options',
 			'tp_control_railway',
 			array(&$this, 'render'));
