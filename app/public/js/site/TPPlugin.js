@@ -409,7 +409,6 @@ jQuery(function($) {
     });**/
 
 
-    });
     
     
     $(document).ready(function () {
@@ -428,3 +427,4 @@ jQuery(function($) {
            	$(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
         }
     });
+});
