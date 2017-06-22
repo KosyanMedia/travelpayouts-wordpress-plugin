@@ -632,6 +632,11 @@ abbr, tla, acronym{
     display: none;
   }
 }
+@media (max-width: 1390px) {
+  .tp-duration-day{
+	display: block;
+  }
+}
 
 @media (max-width: 480px) {
   .TPpriceTd {
