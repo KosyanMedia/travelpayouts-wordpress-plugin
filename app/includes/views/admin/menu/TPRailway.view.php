@@ -30,15 +30,22 @@
 
             </ul>
         </nav>-->
-        <div id="tabs-railway-help">
+        <div id="tabs-railway-help" class="">
             <div class="TPmainContent TP-BalanceContent TPRailwayContent">
-                You need to activate <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Tutu.ru campaign</a>
-                at Travelpayouts.com beforehand. Links won't work without campaign activation. </br>
-                <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Activate Tutu.ru campaign</a>
-                <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust">
-                    <i></i> Tutu.ru campaign is activated. Let's go
-                </a>
+                <div class="TP-StyleItem">
+                    <p>
+                        You need to activate <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Tutu.ru campaign</a>
+                        at Travelpayouts.com beforehand. Links won't work without campaign activation. </br>
+                        <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Activate Tutu.ru campaign</a>
+                    </p>
+                </div>
+                <div class="TP-navsPan">
+                    <a href="#" class="TP-BtnTab tp-help-railway-active">
+                        <i></i> Tutu.ru campaign is activated. Let's go
+                    </a>
+                </div>
             </div>
+
         </div>
         <!--<div id="tabs-railway_config">
 	        <?php

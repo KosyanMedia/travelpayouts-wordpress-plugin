@@ -3200,3 +3200,14 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .TPRailwayContent{
   padding-top: 30px;
 }
+
+.tp-help-railway-active{
+  /*margin-top: 30px;*/
+}
+
+.tp-railway-layout-show{
+  display: block;
+}
+.tp-railway-layout-hidden{
+  display: none;
+}
