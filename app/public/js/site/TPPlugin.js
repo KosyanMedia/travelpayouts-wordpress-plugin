@@ -4,10 +4,10 @@ jQuery(function($) {
         var x=1;
         console.log(size_list)
         /*$('.TPReadMoreList div:lt('+x+')').show();
-        $('.TPReadMoreButton').click(function () {
-            x= (x+5 <= size_li) ? x+5 : size_li;
-            $('.TPReadMoreList div:lt('+x+')').show();
-        });*/
+         $('.TPReadMoreButton').click(function () {
+         x= (x+5 <= size_li) ? x+5 : size_li;
+         $('.TPReadMoreList div:lt('+x+')').show();
+         });*/
 
         $('.TPReadMoreList > div:lt('+x+')').show();
         $('.TPReadMoreButton').click(function () {
@@ -21,9 +21,9 @@ jQuery(function($) {
         $( ".TPTabs" ).tabs({
             beforeActivate: function( event, ui ) {
                 console.log('beforeActivate');
-               /* setTimeout(function() {
-                    checkSize();
-                }, 2000)*/
+                /* setTimeout(function() {
+                 checkSize();
+                 }, 2000)*/
 
             }
         });
@@ -56,7 +56,7 @@ jQuery(function($) {
             console.log(url);
             console.log(target);
             if (target == 1){
-               window.open(url, '_blank');
+                window.open(url, '_blank');
             } else {
                 document.location.href = url;
             }
@@ -64,30 +64,29 @@ jQuery(function($) {
         }
 
         /* var datepicker = $('.TPButtonTableDates').pikaday({
-             firstDay: 1,
-             i18n: {
-                 previousMonth : 'Предыдущий месяц',
-                 nextMonth     : 'Следующий месяц',
-                 months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                 weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-                 weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-             },
-             minDate: new Date(),
-             maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-             //yearRange: [2000,2020],
-             onSelect: function(date) {
-                 // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-                 // console.log(this.getMoment().format().substring(0, 10));
-                 var dateFormat = new Date(date);
-                 console.log(dateFormat.getFullYear())
-                 console.log(dateFormat.getMonth())
-                 console.log(dateFormat.getDate())
-                 console.log(dateFormat.format('yyyy-mm-d'))
-                 console.log($(this))
-                 console.log(datepicker.data('href'))
-
-                 //console.log($(this).fieldValue())
-             }
+         firstDay: 1,
+         i18n: {
+         previousMonth : 'Предыдущий месяц',
+         nextMonth     : 'Следующий месяц',
+         months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+         weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
+         weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+         },
+         minDate: new Date(),
+         maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
+         //yearRange: [2000,2020],
+         onSelect: function(date) {
+         // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
+         // console.log(this.getMoment().format().substring(0, 10));
+         var dateFormat = new Date(date);
+         console.log(dateFormat.getFullYear())
+         console.log(dateFormat.getMonth())
+         console.log(dateFormat.getDate())
+         console.log(dateFormat.format('yyyy-mm-d'))
+         console.log($(this))
+         console.log(datepicker.data('href'))
+         //console.log($(this).fieldValue())
+         }
          });*/
 
 
@@ -97,31 +96,31 @@ jQuery(function($) {
 
 
         /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
-            if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
-                $(this).children("td:last").hasClass('TP-hidden')){
-                //$(this).children("td:last").children('.TPPopUpButtonTable').clone();
-                if ( $(".TP-Plugin-Tables_box tbody tr td:last-child").hasClass("TP-hidden") ) {
-                    if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").hasClass("TP-hidden") ) {
-                        if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").hasClass("TP-hidden") ) {
-                            if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").hasClass("TP-hidden") ) {
-                                ;
-                            }else{
-                                $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-                                console.log("eq(-3)");
-                            };
-                        }else{
-                            $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-                            console.log("eq(-2)");
-                        };
-                    }else{
-                        $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-                        console.log("eq(-1)");
-                    };
-                }else{
-                    $(".TP-Plugin-Tables_box tbody tr td:last-child").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-                }
-            }
-        })*/
+         if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
+         $(this).children("td:last").hasClass('TP-hidden')){
+         //$(this).children("td:last").children('.TPPopUpButtonTable').clone();
+         if ( $(".TP-Plugin-Tables_box tbody tr td:last-child").hasClass("TP-hidden") ) {
+         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").hasClass("TP-hidden") ) {
+         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").hasClass("TP-hidden") ) {
+         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").hasClass("TP-hidden") ) {
+         ;
+         }else{
+         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
+         console.log("eq(-3)");
+         };
+         }else{
+         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
+         console.log("eq(-2)");
+         };
+         }else{
+         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
+         console.log("eq(-1)");
+         };
+         }else{
+         $(".TP-Plugin-Tables_box tbody tr td:last-child").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
+         }
+         }
+         })*/
 
 
     });
@@ -174,11 +173,10 @@ jQuery(function($) {
     doc = $(document);
     win = $(window);
     /*tpCityAutocomplete = new TPCityAutocomplete();
-    tpCityAutocomplete.TPCityStandTable("[data-city-iata]", "city-iata");
-    tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
-    tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
-
-    tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
+     tpCityAutocomplete.TPCityStandTable("[data-city-iata]", "city-iata");
+     tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
+     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
+     tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
 
     /** **/
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
@@ -216,7 +214,7 @@ jQuery(function($) {
         //console.log( $(this).data("paginate_limit"));
         if($(this).data("paginate") == true){
             if($(this).rowCount() > $(this).data("paginate_limit") ){
-               return true;
+                return true;
             }
         }
         return false;
@@ -370,43 +368,60 @@ jQuery(function($) {
     });
 
     /*doc.find('td.TPTableTbodyTd').hover(function() {
-        $(this).children("p").each(function(){
-            if(textWidth($(this).text(), $(this).html(), $(this)) > $(this).width()){
-                var textIndentLeft = ((textWidth($(this).text(), $(this)) - $(this).width()+16));
-                $(this).animate({"textIndent":"-"+textIndentLeft}, 1500);
-            }
-        });
-    }, function(){
-        $(this).children("p").each(function(){
-            if(textWidth($(this).text(),$(this).html(), $(this)) > $(this).width()){
-                $(this).animate({"textIndent":"0"}, 1500);
-            }
-        });
-    });
-    /**
+     $(this).children("p").each(function(){
+     if(textWidth($(this).text(), $(this).html(), $(this)) > $(this).width()){
+     var textIndentLeft = ((textWidth($(this).text(), $(this)) - $(this).width()+16));
+     $(this).animate({"textIndent":"-"+textIndentLeft}, 1500);
+     }
+     });
+     }, function(){
+     $(this).children("p").each(function(){
+     if(textWidth($(this).text(),$(this).html(), $(this)) > $(this).width()){
+     $(this).animate({"textIndent":"0"}, 1500);
+     }
+     });
+     });
+     /**
      *
      * @param text
      * @param selector
      * @returns {*}
      *
-    function textWidth(text, html_data, selector){
-        /*console.log(text);
-        console.log(html_data);
-        console.log(selector);
+     function textWidth(text, html_data, selector){
+     /*console.log(text);
+     console.log(html_data);
+     console.log(selector);
+     /*selector.html('<span>'+text+'</span>');
+     var width = selector.find('span:first').width();
+     selector.html(html_data);
+     return width;  *
+     }
+     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
+     PopularRoutesWidgets.each(function(){
+     var $items = $(this).find('.TP-PopularRoutesWidget');
+     var width = 100/$items.length - 3;
+     $items.each(function(i,e){
+     $(e).css('width', width+"%");
+     });
+     });**/
 
-        /*selector.html('<span>'+text+'</span>');
-        var width = selector.find('span:first').width();
-        selector.html(html_data);
-        return width;  *
-    }
-    var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
-    PopularRoutesWidgets.each(function(){
-        var $items = $(this).find('.TP-PopularRoutesWidget');
-        var width = 100/$items.length - 3;
-        $items.each(function(i,e){
-            $(e).css('width', width+"%");
-        });
-    });**/
 
 
+
+    $(document).ready(function () {
+        var width_departure = $(".TPTrainTable .TP-Plugin-Tables_box_thead tr td:nth-child(2)").width();
+        if(width_departure<="128"){
+            $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
+        }else{
+            $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
+        }
     });
+    $(document).resize(function () {
+        var width_departure = $(".TPTrainTable .TP-Plugin-Tables_box_thead tr td:nth-child(2)").width();
+        if(width_departure<="128"){
+            $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
+        }else{
+            $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
+        }
+    });
+});

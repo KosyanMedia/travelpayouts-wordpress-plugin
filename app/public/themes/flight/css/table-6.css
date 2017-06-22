@@ -528,7 +528,6 @@ a.paginate_button:hover {
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
-<<<<<<< HEAD
   background: #a0cc28 !important;
   border-bottom-color: #81cc29 !important; }
 
@@ -536,7 +535,7 @@ a.paginate_button:hover {
   background: #a8cc22 !important;
   color: #fff !important; }
 =======
-  background-color: #ff6055;
+background-color: #ff6055;
 }
 
 .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link:hover {
@@ -545,10 +544,10 @@ a.paginate_button:hover {
 }
 >>>>>>> ff34eb896080a61bd709e517e1ab5a7fa22474be
 
-.dataTables_paginate span a:first-of-type {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
+        .dataTables_paginate span a:first-of-type {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
 
 .dataTables_paginate span a:last-of-type {
   border-top-right-radius: 3px;
