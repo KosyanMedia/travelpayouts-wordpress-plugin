@@ -678,10 +678,9 @@ class TPRailwayShortcodeView {
         if (array_key_exists('arrivalStationCode', $row)) {
             $arrivalStation .= $row['arrivalStationCode'];
         }
-        $numberForUrl = urlencode('&tn=');
+        $numberForUrl = '&tn=';
         if (array_key_exists('numberForUrl', $row)) {
             $numberForUrl .= $row['numberForUrl'];
-            //$numberForUrl .= urlencode($row['numberForUrl']);
         }
         $from = '&from=calendar';
         /*$runDepartureStation = '&departure_st=';
@@ -694,8 +693,8 @@ class TPRailwayShortcodeView {
         }*/
         $date = '&date=';
 
-        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation).$numberForUrl
-            .urlencode($from.$runDepartureStation.$runArrivalStation.$date);
+        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation
+                .$numberForUrl.$from.$runDepartureStation.$runArrivalStation.$date);
         return $URL;
     }
 
