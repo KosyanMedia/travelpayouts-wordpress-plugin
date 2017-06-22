@@ -30,12 +30,22 @@
 
             </ul>
         </nav>-->
-        <div id="tabs-railway_config">
-	        <?php
-	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabConfig.view.php";
-	            $this->loadView($pathView, 0, $data);
-	        ?>
+        <div id="tabs-railway-help">
+            <div class="TPmainContent TP-BalanceContent TPRailwayContent">
+                You need to activate <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Tutu.ru campaign</a>
+                at Travelpayouts.com beforehand. Links won't work without campaign activation. </br>
+                <a href="https://www.travelpayouts.com/campaigns/45" target="_blank">Activate Tutu.ru campaign</a>
+                <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust">
+                    <i></i> Tutu.ru campaign is activated. Let's go
+                </a>
+            </div>
         </div>
+        <!--<div id="tabs-railway_config">
+	        <?php
+	            //$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabConfig.view.php";
+	            //$this->loadView($pathView, 0, $data);
+	        ?>
+        </div>-->
         <!--<div id="tabs-railway_themes">
 	        <?php
 	            //$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabThemes.view.php";

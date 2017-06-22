@@ -2662,10 +2662,9 @@ thead tr td.active-w {
 }
 
 .TP-AdminFooter{
-  margin-top: -14px;
-
   color: #777;
   position: absolute;
+  bottom: 25px;
 }
 .TP-AdminFooter p{
   margin-left: 180px;
