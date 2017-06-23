@@ -409,7 +409,7 @@ jQuery(function($) {
 
 
 
-   /* $(document).ready(function () {
+   $(document).ready(function () {
         var width_departure = $(".TPTrainTable .TP-Plugin-Tables_box_thead tr td:nth-child(2)").width();
         if(width_departure<="128"){
             $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
@@ -419,15 +419,6 @@ jQuery(function($) {
     });
     
     
-    $(document).ready(function () {
-        var width_departure = $(".TPTrainTable .TP-Plugin-Tables_box_thead tr td:nth-child(2)").width();
-        if(width_departure<="128"){
-           	$(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
-        }else{
-           	$(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
-
-        }
-    });
     $(document).resize(function () {
         var width_departure = $(".TPTrainTable .TP-Plugin-Tables_box_thead tr td:nth-child(2)").width();
         if(width_departure<="128"){
@@ -435,11 +426,6 @@ jQuery(function($) {
             $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
         }else{
             $(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
-
-           	$(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отпра-вление");
-        }else{
-           	$(".TPTrainTable .TPdepartureTd.TPTableHead.sorting span").text("Отправление");
-
         }
-    });*/
+    });
 });
