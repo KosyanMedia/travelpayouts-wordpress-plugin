@@ -1069,7 +1069,6 @@ jQuery(function($){
     });
 
     doc.find('.tp-help-railway-active').click(function () {
-        console.log(11);
         doc.find('#tabs-railway-help').hide();
         doc.find('#tabs-railway_config').show();
         doc.find('.TPActiveRailwayHidden').val(0);
