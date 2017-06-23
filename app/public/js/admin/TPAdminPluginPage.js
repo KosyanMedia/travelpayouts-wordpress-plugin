@@ -1072,6 +1072,13 @@ jQuery(function($){
         console.log(11);
         doc.find('#tabs-railway-help').hide();
         doc.find('#tabs-railway_config').show();
+        /*
+         var TPTheme, TPThemeName;
+         TPTheme = $(this).parent('.TPThemeActions').parent('.TPTheme');
+         TPTheme.addClass('TPThemeActive');
+         TPThemeName = TPTheme.data('theme_name');
+         doc.find('.TPThemesNameHidden').val(TPThemeName);
+         */
 
     });
 
