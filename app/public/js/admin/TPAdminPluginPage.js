@@ -1070,6 +1070,7 @@ jQuery(function($){
 
     doc.find('a.tp-help-railway-active').click(function () {
         console.log(11);
+        doc.find('#tabs-railway-help').hide();
 
     });
 
