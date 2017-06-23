@@ -25,12 +25,11 @@
 
 		</div>
 		<div class="TP-navsPan">
-			<a href="#" class="TP-BtnTab tp-help-railway-active">
-				<i></i>
-				<?php _ex('Tutu.ru campaign is activated. Let\'s go',
-					'admin page railway tab railway help',
-					TPOPlUGIN_TEXTDOMAIN); ?>
-			</a>
+			<input type="submit" name="submit"
+			       class="TP-BtnTab tp-help-railway-active "
+			       value="<?php _ex('Tutu.ru campaign is activated. Let\'s go',
+				       'admin page railway tab railway help',
+				       TPOPlUGIN_TEXTDOMAIN); ?>">
 		</div>
 	</div>
 

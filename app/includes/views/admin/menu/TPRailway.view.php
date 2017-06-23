@@ -31,7 +31,7 @@
             </ul>
         </nav>-->
         <div id="tabs-railway-help"
-             class="<?php if(isset(\app\includes\TPPlugin::$options['railway']['active'])) echo 'tp-railway-layout-hidden';?>">
+             class="<?php if(\app\includes\TPPlugin::$options['railway']['active'] == 1) echo 'tp-railway-layout-hidden';?>">
 	        <?php
 	        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabHelp.view.php";
 	        $this->loadView($pathView, 0, $data);
@@ -39,7 +39,7 @@
 
         </div>
         <div id="tabs-railway_config"
-             class="<?php if(!isset(\app\includes\TPPlugin::$options['railway']['active'])) echo 'tp-railway-layout-hidden';?>">
+             class="<?php if(\app\includes\TPPlugin::$options['railway']['active'] == 0) echo 'tp-railway-layout-hidden';?>">
 	        <?php
 	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabConfig.view.php";
 	            $this->loadView($pathView, 0, $data);
