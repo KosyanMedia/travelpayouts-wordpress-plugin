@@ -11,6 +11,15 @@ use \app\includes\TPPlugin;
 use \app\includes\common\TPLang;
 
 class TPFieldRailway {
+
+	public function TPFieldActiveRailway(){
+		?>
+        <input class="TPActiveRailwayHidden" type="hidden"
+               name="<?php echo TPOPlUGIN_OPTION_NAME;?>[railway][active]"
+               value="<?php echo TPPlugin::$options['railway']['active']?>"/>
+		<?php
+	}
+
 	public function TPFieldThemesTable(){
 		?>
 		<input class="TPThemesNameHidden" type="hidden"

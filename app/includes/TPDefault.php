@@ -1055,7 +1055,7 @@ class TPDefault implements  \core\TPODefault{
 		        'name' => self::getRandomThemesTable()
 	        ),
             'railway' => array(
-
+				'active' => 0
             ),
 	        'shortcodes_railway' => array(
 	        	'1' => array(
