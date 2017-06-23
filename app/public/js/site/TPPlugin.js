@@ -251,6 +251,7 @@ jQuery(function($) {
     function tpTableCod(selector){
         var tpTable, tableSortColumn;
         tableSortColumn = getSortColumn(selector);
+        console.log("tableSortColumn = " + tableSortColumn)
         tpTable = selector.dataTable( {
             ordering: true,
             "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
