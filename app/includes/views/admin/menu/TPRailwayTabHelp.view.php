@@ -35,6 +35,6 @@
 	</div>
 
 	<?php settings_fields('TPRailway'); ?>
-	<?php do_settings_fields('tp_settings_railway_themes_table',
-		'tp_settings_railway_themes_table_id'); ?>
+	<?php do_settings_fields('tp_settings_railway_active',
+		'tp_settings_railway_active_id'); ?>
 </form>
