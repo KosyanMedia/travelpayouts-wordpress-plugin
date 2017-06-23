@@ -571,6 +571,10 @@ span.ellipsis {
     width: 40px;
 }
 
+.TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead{
+	max-width: 20px;
+}
+
 /* data picker */
 
 .dropdown-menu {
