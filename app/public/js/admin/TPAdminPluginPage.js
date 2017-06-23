@@ -1068,7 +1068,7 @@ jQuery(function($){
         }
     });
 
-    doc.find('a.tp-help-railway-active').click(function () {
+    doc.find('.tp-help-railway-active').click(function () {
         console.log(11);
         doc.find('#tabs-railway-help').hide();
         doc.find('#tabs-railway_config').show();
@@ -1078,6 +1078,7 @@ jQuery(function($){
          TPTheme.addClass('TPThemeActive');
          TPThemeName = TPTheme.data('theme_name');
          doc.find('.TPThemesNameHidden').val(TPThemeName);
+         active railway
          */
 
     });

@@ -112,6 +112,7 @@ class TPRailwayShortcodeView {
 		$headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
 		foreach($this->getSelectField($shortcode) as $key=>$selected_field){
 			$headTable .= '<td class="TP'.$selected_field.'Td '
+			              .' TPTH'.$selected_field.'Td '
 			              .$this->tdClassHidden($shortcode, $selected_field)
 			              .' TPTableHead">'
 			              .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
