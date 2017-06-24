@@ -182,6 +182,7 @@ jQuery(function($) {
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
+        console.log(y);
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
     jQuery.fn.dataTableExt.oSort['tp-date-desc'] = function(a,b) {
@@ -209,9 +210,6 @@ jQuery(function($) {
 
     /** **/
     jQuery.fn.getPaginateTP = function() {
-        //console.log($(this).data("paginate"));
-        //console.log($(this).rowCount());
-        //console.log( $(this).data("paginate_limit"));
         if($(this).data("paginate") == true){
             if($(this).rowCount() > $(this).data("paginate_limit") ){
                 return true;
@@ -220,7 +218,6 @@ jQuery(function($) {
         return false;
 
     };
-
 
     /** **/
     jQuery.fn.dataTableExt.oSort['tp-price-asc']  = function(a,b) {

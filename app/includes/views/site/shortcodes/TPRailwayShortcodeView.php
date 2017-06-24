@@ -111,13 +111,29 @@ class TPRailwayShortcodeView {
 
 		$headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
 		foreach($this->getSelectField($shortcode) as $key=>$selected_field){
-			$headTable .= '<td class="TP'.$selected_field.'Td '
-			              .' TPTH'.$selected_field.'Td '
-			              .$this->tdClassHidden($shortcode, $selected_field)
-			              .' TPTableHead">'
-			              .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
-			              .'<i class="TP-sort-chevron fa"></i>'
-			              .' </td>';
+
+			switch($selected_field) {
+				//Отправление / Departure
+				case 'departure':
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .' TPTH'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead tp-date-column">'
+					              .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+				default:
+					$headTable .= '<td class="TP'.$selected_field.'Td '
+					              .' TPTH'.$selected_field.'Td '
+					              .$this->tdClassHidden($shortcode, $selected_field)
+					              .' TPTableHead">'
+					              .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+					              .'<i class="TP-sort-chevron fa"></i>'
+					              .' </td>';
+					break;
+			}
+
 		}
 		$headTable .= '</tr></thead>';
 		return $headTable;
@@ -158,7 +174,7 @@ class TPRailwayShortcodeView {
 				'route_last_station'
 			),
 		);
-		if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
+		//if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
 		return '';
 	}
 
@@ -431,9 +447,15 @@ class TPRailwayShortcodeView {
             $departureStation = $row['departureStation'];
         }
 
-        $departure = '<span class="departure_time">'.date('H:i', strtotime($departureTime)).'</span>'
+        $date = date('H:i', strtotime($departureTime));
+
+	    $subsDate = explode(':',$date);
+	    $secondTime =  ($subsDate[0] * HOUR_IN_SECONDS) + ($subsDate[1] * MINUTE_IN_SECONDS);
+
+        $departure = '<span class="departure_time">'.$date.'</span>'
             .' <span class="train-color span-timeComming t-gray">'.$departureStation.'</span>';
-        return '<p class="TP-tdContent">'.$departure.'</p>';
+        return '<p class="TP-tdContent" data-tptime="'.$secondTime.'">'
+               .$departure.'</p>';
     }
 
     /**
