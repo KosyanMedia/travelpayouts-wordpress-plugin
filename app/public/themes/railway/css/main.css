@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-.TP-sorting_asc:after {
+/*.TP-sorting_asc:after {
   content: " \25b2" !important;
   position: absolute;
   right: 10px;
@@ -26,7 +26,7 @@
   top: 6px;
   margin-top: 12px;
   font-size: 8px;
-}
+}*/
 
 .TP-Plugin-Tables_wrapper h1,
 .TP-Plugin-Tables_wrapper h2,
@@ -270,7 +270,8 @@
 }
 
 .sorting_asc:after {
-  content: " ▾" !important;
+
+  content: " ▴" !important;
   position: absolute;
   right: 5px;
   top: 0;
@@ -278,7 +279,7 @@
 }
 
 .sorting_desc:after {
-  content: " ▴" !important;
+  content: " ▾" !important;
   position: absolute;
   right: 5px;
   top: 0;

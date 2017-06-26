@@ -182,7 +182,7 @@ jQuery(function($) {
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
-        console.log(y);
+        //console.log(y);
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
     jQuery.fn.dataTableExt.oSort['tp-date-desc'] = function(a,b) {

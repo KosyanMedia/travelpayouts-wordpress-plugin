@@ -448,13 +448,17 @@ class TPRailwayShortcodeView {
         }
 
         $date = date('H:i', strtotime($departureTime));
+        //error_log($departureTime);
+        //error_log(date('d-m-Y H:i', strtotime($departureTime)));
 
-	    $subsDate = explode(':',$date);
-	    $secondTime =  ($subsDate[0] * HOUR_IN_SECONDS) + ($subsDate[1] * MINUTE_IN_SECONDS);
+	    /*G*/
+        //$subsDate = explode(':',$date);
+	    //$secondTime =  ($subsDate[0] * HOUR_IN_SECONDS) + ($subsDate[1] * MINUTE_IN_SECONDS);
 
         $departure = '<span class="departure_time">'.$date.'</span>'
             .' <span class="train-color span-timeComming t-gray">'.$departureStation.'</span>';
-        return '<p class="TP-tdContent" data-tptime="'.$secondTime.'">'
+        return '<p class="TP-tdContent" data-tptime="'.strtotime($departureTime).'" '
+               .'data-date="'.date('d-m-Y H:i', strtotime($departureTime)).'">'
                .$departure.'</p>';
     }
 
@@ -473,7 +477,8 @@ class TPRailwayShortcodeView {
         if (array_key_exists('arrivalStation', $row)) {
             $arrivalStation = $row['arrivalStation'];
         }
-        $arrival = '<span class="comming_time">'.date('H:i', strtotime($arrivalTime)).'</span>'
+        $arrival = '<span class="comming_time" data-date="'.date('d-m-Y H:i', strtotime($arrivalTime)).'">'
+                   .date('H:i', strtotime($arrivalTime)).'</span>'
             .$this->getDurationDay($row)
             .' <span class="train-color span-timeComming t-gray">'.$arrivalStation.'</span>';
         return '<p class="TP-tdContent">'.$arrival.'</p>';
