@@ -143,6 +143,16 @@ class TPRailwayShortcodeView {
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
+                //В пути, Duration
+                case 'duration':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
 				default:
 					$headTable .= '<td class="TP'.$selected_field.'Td '
 					              .' TPTH'.$selected_field.'Td '
@@ -546,7 +556,7 @@ class TPRailwayShortcodeView {
             $travelTimeInSeconds = $this->durationSecondsToTime($row['travelTimeInSeconds']);
         }
         $duration = '<span class="TP-trainWayTime">'.$travelTimeInSeconds.'<span>';
-        return '<p class="TP-tdContent">'.$duration.'</p>';
+        return '<p class="TP-tdContent" data-tptime="'.$travelTimeInSeconds.'">'.$duration.'</p>';
     }
 
     public function durationSecondsToTime($seconds)
