@@ -123,6 +123,16 @@ class TPRailwayShortcodeView {
 					              .'<i class="TP-sort-chevron fa"></i>'
 					              .' </td>';
 					break;
+                //Прибытие / Arrival
+                case 'arrival':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
                 //Дата поездки/ Dates
                 case 'dates':
                     $headTable .= '<td class="TP'.$selected_field.'Td '
@@ -531,7 +541,8 @@ class TPRailwayShortcodeView {
                    .date('H:i', strtotime($arrivalTime)).'</span>'
             .$this->getDurationDay($row)
             .' <span class="train-color span-timeComming t-gray">'.$arrivalStation.'</span>';
-        return '<p class="TP-tdContent">'.$arrival.'</p>';
+        return '<p class="TP-tdContent" data-tptime="'.strtotime($arrivalTime).'" '
+        .' data-date="'.date('d-m-Y H:i', strtotime($arrivalTime)).'">'.$arrival.'</p>';
     }
 
     /**
