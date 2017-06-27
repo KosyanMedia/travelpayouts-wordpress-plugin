@@ -153,6 +153,16 @@ class TPRailwayShortcodeView {
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
+                //Время отправления / Departure Time
+                case 'departure_time':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
 				default:
 					$headTable .= '<td class="TP'.$selected_field.'Td '
 					              .' TPTH'.$selected_field.'Td '
@@ -797,10 +807,12 @@ class TPRailwayShortcodeView {
 	 */
 	public function getDepartureTime($row = array()){
 		$departureTime = '';
+        $departureTimeSecond = 0;
 		if (array_key_exists('departureTime', $row)) {
 			$departureTime = date('H:i', strtotime($row['departureTime']));
+            $departureTimeSecond = strtotime($row['departureTime']);
 		}
-		return '<p class="TP-tdContent">'.$departureTime.'</p>';
+		return '<p class="TP-tdContent" data-tptime="'.$departureTimeSecond.'">'.$departureTime.'</p>';
 	}
 
 	/**
