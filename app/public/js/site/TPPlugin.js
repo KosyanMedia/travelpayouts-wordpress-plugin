@@ -246,6 +246,7 @@ jQuery(function($) {
     function tpTableCod(selector){
         var tpTable, tableSortColumn;
         tableSortColumn = getSortColumn(selector);
+
         tpTable = selector.dataTable( {
             ordering: true,
             "order": [[ tableSortColumn, "asc" ]],//[[ $(this).data('sort_column'), "asc" ]],
@@ -320,6 +321,7 @@ jQuery(function($) {
      */
     function getSortColumn(selector){
         var column = selector.data('sort_column');
+        console.log('getSortColumn = '+column);
         if(selector.children('thead').children('tr').children('td:eq('+column+')').hasClass("TP-hidden") === false){
             return column;
         } else  {

@@ -98,7 +98,7 @@ class TPRailwayShortcodeView {
 	 * @return mixed
 	 */
 	public function getSortColumn($shortcode){
-		return TPPlugin::$options['shortcodes_hotels'][$shortcode]['sort_column'];
+		return TPPlugin::$options['shortcodes_railway'][$shortcode]['sort_column'];
 	}
 
 	/**
@@ -163,6 +163,16 @@ class TPRailwayShortcodeView {
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
+                //Время прибытия/ Arrival Time
+                case 'arrival_time':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-date-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
 				default:
 					$headTable .= '<td class="TP'.$selected_field.'Td '
 					              .' TPTH'.$selected_field.'Td '
@@ -214,7 +224,7 @@ class TPRailwayShortcodeView {
 				'route_last_station'
 			),
 		);
-		//if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
+		if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
 		return '';
 	}
 
@@ -823,10 +833,12 @@ class TPRailwayShortcodeView {
 	 */
 	public function getArrivalTime($row = array()){
 		$arrivalTime = '';
+		$arrivalTimeSecond = 0;
 		if (array_key_exists('arrivalTime', $row)) {
 			$arrivalTime = date('H:i', strtotime($row['arrivalTime']));
+            $arrivalTimeSecond = strtotime($row['arrivalTime']);
 		}
-		return '<p class="TP-tdContent">'.$arrivalTime.'</p>';
+		return '<p class="TP-tdContent" data-tptime="'.$arrivalTimeSecond.'">'.$arrivalTime.'</p>';
 	}
 
 	/**
