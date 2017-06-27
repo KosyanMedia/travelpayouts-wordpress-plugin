@@ -962,13 +962,13 @@ class TPShortcodeView {
             '1' => array(
                 'trip_class',
                 'distance',
-                'price'
+                //'price'
             ),
             '2' => array(
                 'return_at',
                 'trip_class',
                 'distance',
-                'price'
+                //'price'
             ),
             '4' => array(
                 'number_of_changes',
@@ -976,7 +976,7 @@ class TPShortcodeView {
                 'flight_number',
                 'flight',
                 'airline',
-                'price'
+                //'price'
             ),
             '5' => array(
                 'number_of_changes',
@@ -984,7 +984,7 @@ class TPShortcodeView {
                 'flight_number',
                 'flight',
                 'airline',
-                'price'
+                //'price'
             ),
             '6' => array(
                 'number_of_changes',
@@ -992,14 +992,14 @@ class TPShortcodeView {
                 'flight_number',
                 'flight',
                 'airline',
-                'price'
+                //'price'
             ),
             '7' => array(
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
-                'price'
+                //'price'
             ),
             '8' => array(
                 'airline_logo',
@@ -1008,7 +1008,7 @@ class TPShortcodeView {
                 'flight',
                 'airline',
                 'origin_destination',
-                'price'
+                //'price'
             ),
             '9' => array(
                 'airline_logo',
@@ -1017,7 +1017,7 @@ class TPShortcodeView {
                 'flight',
                 'airline',
                 'origin_destination',
-                'price'
+                //'price'
             ),
             '10' => array(),
             '12' => array(
@@ -1027,7 +1027,7 @@ class TPShortcodeView {
                 'distance',
                 'price_distance',
                 'origin_destination',
-                'price',
+                //'price',
                 'departure_at',
                 'return_at',
             ),
@@ -1039,7 +1039,7 @@ class TPShortcodeView {
                 'distance',
                 'price_distance',
                 'origin_destination',
-                'price',
+                //'price',
                 'return_at',
             ),
             '14' => array(
@@ -1050,9 +1050,10 @@ class TPShortcodeView {
                 'distance',
                 'price_distance',
                 'origin_destination',
-                'price'
+                //'price'
             ),
         );
+
         if(in_array($field, $fields[$type])) return 'TP-unessential';
         return '';
     }

@@ -3,11 +3,6 @@ jQuery(function($) {
         var size_list = $(".TPReadMoreList  > div").size();
         var x=1;
         console.log(size_list)
-        /*$('.TPReadMoreList div:lt('+x+')').show();
-         $('.TPReadMoreButton').click(function () {
-         x= (x+5 <= size_li) ? x+5 : size_li;
-         $('.TPReadMoreList div:lt('+x+')').show();
-         });*/
 
         $('.TPReadMoreList > div:lt('+x+')').show();
         $('.TPReadMoreButton').click(function () {
@@ -63,64 +58,7 @@ jQuery(function($) {
             return false;
         }
 
-        /* var datepicker = $('.TPButtonTableDates').pikaday({
-         firstDay: 1,
-         i18n: {
-         previousMonth : 'Предыдущий месяц',
-         nextMonth     : 'Следующий месяц',
-         months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-         weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-         weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-         },
-         minDate: new Date(),
-         maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-         //yearRange: [2000,2020],
-         onSelect: function(date) {
-         // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-         // console.log(this.getMoment().format().substring(0, 10));
-         var dateFormat = new Date(date);
-         console.log(dateFormat.getFullYear())
-         console.log(dateFormat.getMonth())
-         console.log(dateFormat.getDate())
-         console.log(dateFormat.format('yyyy-mm-d'))
-         console.log($(this))
-         console.log(datepicker.data('href'))
-         //console.log($(this).fieldValue())
-         }
-         });*/
 
-
-
-
-
-
-
-        /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
-         if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
-         $(this).children("td:last").hasClass('TP-hidden')){
-         //$(this).children("td:last").children('.TPPopUpButtonTable').clone();
-         if ( $(".TP-Plugin-Tables_box tbody tr td:last-child").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").hasClass("TP-hidden") ) {
-         ;
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-3)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-2)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-1)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:last-child").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         }
-         }
-         })*/
 
 
     });
@@ -134,7 +72,11 @@ jQuery(function($) {
             $(this).removeClass('TP-autoWidth-plugin');
             widthWrapper = $(this).parents(conteiner).width();
             widthBox = $(this).width();
+
+
+
             if (widthBox > widthWrapper) {
+
                 while (widthBox > widthWrapper) {
                     if (!$(this).find('tr td.TP-unessential:not(.TP-hidden)').length)
                         return false;
@@ -144,10 +86,13 @@ jQuery(function($) {
                 }
                 $(this).addClass('TP-autoWidth-plugin');
             } else {
+
                 small = true;
                 while (small) {
                     small = false;
+
                     if ($(this).find('tr td.TP-unessential.TP-hidden').length) {
+
                         hidden = $('td.TP-unessential.TP-hidden:first', $(this).find('tr'));
                         hidden.removeClass('TP-hidden');
                         widthWrapper = $(this).parents(conteiner).width();
@@ -172,11 +117,6 @@ jQuery(function($) {
     var doc, win;
     doc = $(document);
     win = $(window);
-    /*tpCityAutocomplete = new TPCityAutocomplete();
-     tpCityAutocomplete.TPCityStandTable("[data-city-iata]", "city-iata");
-     tpCityAutocomplete.TPCityStandTitle("[data-title-case-origin-iata]", "title-case-origin-iata", title_case_origin);
-     tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
-     tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
 
     /** **/
     jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
