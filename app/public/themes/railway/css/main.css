@@ -542,7 +542,7 @@ span.ellipsis {
 }
 
 .departure_time {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -570,10 +570,6 @@ span.ellipsis {
     display: inline-block;
     text-align: left;
     width: 40px;
-}
-
-.TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead{
-	max-width: 20px;
 }
 
 /* data picker */
@@ -792,6 +788,11 @@ abbr, tla, acronym{
   }
   .TPtrainTd span{
   	display: block;
+  }
+  .tp-duration-day {
+    display: block;
+    padding-left: 42px;
+    padding-top: 1px;
   }
 }
 
