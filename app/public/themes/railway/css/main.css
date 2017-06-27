@@ -619,14 +619,16 @@ abbr, tla, acronym{
 	text-decoration: none !important;
 }
 
-.TPdepartureTd .span-timeComming {
+.TPdepartureTd .span-timeComming, .TParrivalTd .span-timeComming {
   	display: none !important;
-}
-
-.TParrivalTd .span-timeComming {
-  	display: block !important;
   	text-align: left;
 }
+
+.TPdepartureTd .span-timeComming.TPactive, .TParrivalTd .span-timeComming.TPactive {
+  	display: block !important;
+}
+
+
 
 @media (min-width: 480px) {
   .TP-rwd-table th,
