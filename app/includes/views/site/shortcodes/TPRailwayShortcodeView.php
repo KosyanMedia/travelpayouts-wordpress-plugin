@@ -417,7 +417,7 @@ class TPRailwayShortcodeView {
 				if (array_key_exists('firm', $row)) {
 					if ($row['firm'] == true){
 						$train .= '<span class="train-color t-gray">"'
-						        ._x('brand', 'railway shortcode view train', TPOPlUGIN_TEXTDOMAIN)
+						        ._x('фирм', 'railway shortcode view train', TPOPlUGIN_TEXTDOMAIN)
 						        .'"</span>';
 					}
 				}
