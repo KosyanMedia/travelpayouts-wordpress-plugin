@@ -133,6 +133,16 @@ class TPRailwayShortcodeView {
                         .'<i class="TP-sort-chevron fa"></i>'
                         .' </td>';
                     break;
+                //Примерные цены / Prices
+                case 'prices':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-price-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
 				default:
 					$headTable .= '<td class="TP'.$selected_field.'Td '
 					              .' TPTH'.$selected_field.'Td '
@@ -585,6 +595,7 @@ class TPRailwayShortcodeView {
 		    $categories = $row['categories'];
 	    }
 	    if (count($categories) < 1 || $categories == false) return $prices;
+        $priceData = array();
 		foreach ($categories as $category){
 			$type = '';
 			$price = '';
@@ -593,6 +604,7 @@ class TPRailwayShortcodeView {
 			}
 			if (array_key_exists('price', $category)) {
 				$price = $category['price'];
+                $priceData[] = $price;
 			}
 			$prices .= '<div class="TP-train-text">'
 				           .'<div class="TP-train-text_left">'
@@ -604,8 +616,11 @@ class TPRailwayShortcodeView {
 				           .'</div>'
 			           .'</div>';
 		}
-
-    	return '<p class="TP-tdContent">'.$prices.'</p>';
+		$priceMin = 0;
+        if (count($priceData) > 0){
+            $priceMin = min($priceData);
+        }
+    	return '<p class="TP-tdContent" data-price="'.$priceMin.'">'.$prices.'</p>';
     }
 
     /**
