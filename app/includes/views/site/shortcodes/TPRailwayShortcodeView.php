@@ -123,6 +123,16 @@ class TPRailwayShortcodeView {
 					              .'<i class="TP-sort-chevron fa"></i>'
 					              .' </td>';
 					break;
+                //Дата поездки/ Dates
+                case 'dates':
+                    $headTable .= '<td class="TP'.$selected_field.'Td '
+                        .' TPTH'.$selected_field.'Td '
+                        .$this->tdClassHidden($shortcode, $selected_field)
+                        .' TPTableHead tp-nosort-column">'
+                        .'<span>'. $this->getTableTheadTDFieldLabel($selected_field) .'</span>'
+                        .'<i class="TP-sort-chevron fa"></i>'
+                        .' </td>';
+                    break;
 				default:
 					$headTable .= '<td class="TP'.$selected_field.'Td '
 					              .' TPTH'.$selected_field.'Td '

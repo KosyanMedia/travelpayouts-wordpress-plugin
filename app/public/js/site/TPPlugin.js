@@ -260,6 +260,7 @@ jQuery(function($) {
                     targets: tableSortColumn,//$(this).data('sort_column'),
                     className: 'TP-active'
                 },
+                { "aTargets" : ["tp-nosort-column"] , "orderable" : false},
                 { "aTargets" : ["tp-date-column"] , "sType" : "tp-date"},
                 { "aTargets" : ["tp-found-column"] , "sType" : "tp-found"},
                 { "aTargets" : ["tp-price-column"] , "sType" : "tp-price"},
@@ -334,10 +335,13 @@ jQuery(function($) {
     }
 
     doc.find('td.TPTableHead').click(function () {
-        $(this).parent('tr').find("td.TP-active").each(function(){
-            $(this).removeClass("TP-active");
-        });
-        $(this).addClass("TP-active");
+        if ($(this).hasClass( "tp-nosort-column" ) == false){
+            $(this).parent('tr').find("td.TP-active").each(function(){
+                $(this).removeClass("TP-active");
+            });
+            $(this).addClass("TP-active");
+        }
+
     });
     var PopularRoutesWidgets = $('.TP-PopularRoutesWidgets');
     PopularRoutesWidgets.each(function(){
