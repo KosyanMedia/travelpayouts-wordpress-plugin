@@ -413,21 +413,21 @@ jQuery(function($) {
     $(document).ready(function () {
         $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("width", "auto !important");
         var width_departure = $(".TPTrainTable .TPTHdepartureTd").width();
-        if(width_departure<="100"){
+        if(width_departure<="85"){
             $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("max-width", "20px");
         }else {
             $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("max-width", "100px");
         }
         
         var width_departure_description = $(".TPTrainTable .TPdepartureTd").width();
-        if(width_departure_description<="100"){
+        if(width_departure_description<="85"){
             $(".TPdepartureTd .span-timeComming").removeClass("TPactive");
         }else {
             $(".TPdepartureTd .span-timeComming").addClass("TPactive");
         }
         
         var width_departure_description = $(".TPTrainTable .TParrivalTd").width();
-        if(width_departure_description<="100"){
+        if(width_departure_description<="85"){
             $(".TParrivalTd .span-timeComming").removeClass("TPactive");
         }else {
             $(".TParrivalTd .span-timeComming").addClass("TPactive");
@@ -438,21 +438,21 @@ jQuery(function($) {
     $(document).resize(function () {
         $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("width", "auto !important");
         var width_departure = $(".TPTrainTable .TPTHdepartureTd").width();
-        if(width_departure<="100"){
+        if(width_departure<="85"){
             $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("max-width", "20px");
         }else {
             $(".TP-Plugin-Tables_box_thead .TPdepartureTd.TPTableHead").css("max-width", "100px");
         }
         
         var width_departure_description = $(".TPTrainTable .TPdepartureTd").width();
-        if(width_departure_description<="100"){
+        if(width_departure_description<="85"){
             $(".TPdepartureTd .span-timeComming").removeClass("TPactive");
         }else {
             $(".TPdepartureTd .span-timeComming").addClass("TPactive");
         }
         
         var width_departure_description = $(".TPTrainTable .TParrivalTd").width();
-        if(width_departure_description<="100"){
+        if(width_departure_description<="85"){
             $(".TParrivalTd .span-timeComming").removeClass("TPactive");
         }else {
             $(".TParrivalTd .span-timeComming").addClass("TPactive");
