@@ -645,6 +645,9 @@ abbr, tla, acronym{
   .TPpriceTd {
     display: none !important;
   }
+  .TP-rwd-table-avio .TPpriceTd {
+    display: inline !important;
+  }
   .TP-old-price-and {
     display: inline !important;
   }
@@ -653,6 +656,9 @@ abbr, tla, acronym{
 	top: -6px;
     left: 0px;
     height: 32px;
+  }
+  .TP-rwd-table-avio .TP-Plugin-Tables_link {
+    top: 0;
   }
   .TPTrainTable tbody tr td:before {
     background: #1db1db !important;
@@ -821,6 +827,12 @@ abbr, tla, acronym{
 @media (max-width: 680px) {
   .TP-tdContent .span-timeComming {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TPTrainTable td:nth-child(2) {
+    display: inline !important;
   }
 }
 
