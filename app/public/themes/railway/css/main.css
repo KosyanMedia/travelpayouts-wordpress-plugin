@@ -789,9 +789,6 @@ abbr, tla, acronym{
   .marshrut {
     display: none;
   }
-  .TP-rwd-table tbody tr td:nth-child(2):before {
-    display: none;
-  }
   .TPtrainTd span{
   	display: block;
   }
