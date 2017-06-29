@@ -834,6 +834,12 @@ abbr, tla, acronym{
   .TPTrainTable td:nth-child(2) {
     display: inline !important;
   }
+  .TPTrainTable .TPnumber_of_changesTd{
+  	display: none !important;
+  }
+  td.TPdepartureTd:before {
+    content: attr(data-th) ": ";
+  }
 }
 
 @media (max-width: 460px) {
