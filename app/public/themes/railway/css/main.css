@@ -646,7 +646,7 @@ abbr, tla, acronym{
     display: none !important;
   }
   .TP-rwd-table-avio .TPpriceTd {
-    display: inline !important;
+    display: block !important;
   }
   .TP-old-price-and {
     display: inline !important;
@@ -829,7 +829,7 @@ abbr, tla, acronym{
 
 @media (max-width: 480px) {
   .TPTrainTable td:nth-child(2) {
-    display: inline !important;
+    display: block !important;
   }
   .TPTrainTable .TPnumber_of_changesTd{
   	display: none !important;
