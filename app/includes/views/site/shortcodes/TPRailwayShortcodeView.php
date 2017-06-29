@@ -52,8 +52,9 @@ class TPRailwayShortcodeView {
                             .$this->renderHeadTable($shortcode)
                             .$this->renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency)
                         .'</table>'
-                     .'</div>'
-		         .'</div>';
+                        .'</div>'
+		            .'</div>'
+				.'</div>';
 
 		return $html;
 		//return var_dump("<pre>", $args, "</pre>");
