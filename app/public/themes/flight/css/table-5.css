@@ -118,7 +118,6 @@
 .TP-Plugin-Tables_box tbody tr:hover {
   border: 2px solid #ff6055;
   box-sizing: border-box;
-  cursor: pointer;
 }
 
 .TP-Plugin-Tables_box tbody tr td {
