@@ -504,6 +504,12 @@ span.ellipsis {
   border: none;
 }
 
+.TP-Plugin-Tables_box thead tr td.TPpriceTd {
+  background-color: #f1d600;
+  color: #222;
+  border: 1px solid #eaeaea;
+}
+
 .TP-Plugin-Tables_box thead tr td.TP-active {
   background-color: #f1d600;
   /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
