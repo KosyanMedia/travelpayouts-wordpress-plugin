@@ -128,8 +128,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         //models\admin\menu\TPSearchFormsModel::deleteTable();
         //models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         self::deleteCacheAll();
-        delete_option( TPOPlUGIN_OPTION_NAME);
-        //delete_option( TPOPlUGIN_OPTION_VERSION);
+        //delete_option( TPOPlUGIN_OPTION_NAME);
+        delete_option( TPOPlUGIN_OPTION_VERSION);
         //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
         //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
         //delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
