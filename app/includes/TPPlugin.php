@@ -45,7 +45,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             error_log("checkPluginUpdate");
         if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
-            if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
+	        self::deleteCacheAll();
+        	if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
             } else{
                 //$settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
