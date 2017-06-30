@@ -28,8 +28,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         //self::check_plugin_update();
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method." -> End");
-        add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
-        add_action('plugins_loaded', array(&$this, 'checkPluginUpdate'));
+        add_action('plugins_loaded', array(&$this, 'setDefaultOptions'), 100);
+        add_action('plugins_loaded', array(&$this, 'checkPluginUpdate'), 100);
     }
 
     public function setDefaultOptions(){

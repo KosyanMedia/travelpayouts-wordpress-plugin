@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-06-22 17:33+0300\n"
+"POT-Creation-Date: 2017-06-30 10:50+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -2095,12 +2095,12 @@ msgctxt "admin media button link short title"
 msgid "tp_admin_media_button_link_short_title"
 msgstr "Link"
 
-#: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:17
+#: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:19
 msgctxt "admin media button insert railway title"
 msgid "Railway Schedule"
 msgstr "Railway Schedule"
 
-#: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:19
+#: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:21
 msgctxt "admin media button railway title"
 msgid "Railway Schedule"
 msgstr "Railway Schedule"
@@ -2484,35 +2484,35 @@ msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
 #: app/includes/models/admin/menu/TPFieldHotels.php:243
-#: app/includes/models/admin/menu/TPFieldRailway.php:93
+#: app/includes/models/admin/menu/TPFieldRailway.php:102
 msgctxt "(DIV)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
 #: app/includes/models/admin/menu/TPFieldHotels.php:248
-#: app/includes/models/admin/menu/TPFieldRailway.php:98
+#: app/includes/models/admin/menu/TPFieldRailway.php:107
 msgctxt "(H1)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 #: app/includes/models/admin/menu/TPFieldHotels.php:253
-#: app/includes/models/admin/menu/TPFieldRailway.php:103
+#: app/includes/models/admin/menu/TPFieldRailway.php:112
 msgctxt "(H2)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
 #: app/includes/models/admin/menu/TPFieldHotels.php:258
-#: app/includes/models/admin/menu/TPFieldRailway.php:108
+#: app/includes/models/admin/menu/TPFieldRailway.php:117
 msgctxt "(H3)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
 #: app/includes/models/admin/menu/TPFieldHotels.php:263
-#: app/includes/models/admin/menu/TPFieldRailway.php:113
+#: app/includes/models/admin/menu/TPFieldRailway.php:122
 msgctxt "(H4)"
 msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgstr "H4"
@@ -2754,52 +2754,52 @@ msgctxt "(Sort by column)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label"
 msgstr "Sort by column"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:45
+#: app/includes/models/admin/menu/TPFieldRailway.php:54
 msgctxt "admin page railway tab tables content title label"
 msgid "Title"
 msgstr "Title"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:73
+#: app/includes/models/admin/menu/TPFieldRailway.php:82
 msgctxt "admin page railway tab tables content title help"
 msgid "Use {origin} and {destination} variables to add the city automatically"
 msgstr "Use {origin} and {destination} variables to add the city automatically"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:86
+#: app/includes/models/admin/menu/TPFieldRailway.php:95
 msgctxt "admin page railway tab tables content title tag"
 msgid "Title tag"
 msgstr "Title tag"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:129
+#: app/includes/models/admin/menu/TPFieldRailway.php:138
 msgctxt "admin page railway tab tables content paginate limit"
 msgid "Rows per page"
 msgstr "Rows per page"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:151
+#: app/includes/models/admin/menu/TPFieldRailway.php:160
 msgctxt "admin page railway tab tables content paginate"
 msgid "Paginate"
 msgstr "Paginate"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:167
+#: app/includes/models/admin/menu/TPFieldRailway.php:176
 msgctxt "admin page railway tab tables content button"
 msgid "Button Title"
 msgstr "Button Title"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:204
+#: app/includes/models/admin/menu/TPFieldRailway.php:213
 msgctxt "admin page railway tab tables content sort_column"
 msgid "Sort by column"
 msgstr "Sort by column"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:288
+#: app/includes/models/admin/menu/TPFieldRailway.php:297
 msgctxt "admin page railway tab tables content field_sort_column_table_label"
 msgid "Table Columns"
 msgstr "Table Columns"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:294
+#: app/includes/models/admin/menu/TPFieldRailway.php:303
 msgctxt "admin page railway tab tables content field_sort_column_table_label_not_select"
 msgid "Not selected"
 msgstr "Not selected"
 
-#: app/includes/models/admin/menu/TPFieldRailway.php:304
+#: app/includes/models/admin/menu/TPFieldRailway.php:313
 msgctxt "admin page railway tab tables content field_sort_column_table_label_select"
 msgid "Selected"
 msgstr "Selected"
@@ -5025,35 +5025,35 @@ msgctxt "admin page menu railway"
 msgid "Railways schedule"
 msgstr "Railways schedule"
 
-#: app/includes/views/admin/menu/TPRailway.view.php:38
-msgctxt "admin page railway tab railway help"
-msgid "You need to activate "
-msgstr "You need to activate "
-
-#: app/includes/views/admin/menu/TPRailway.view.php:42
-msgctxt "admin page railway tab railway help"
-msgid "Tutu.ru campaign "
-msgstr "Tutu.ru campaign "
-
-#: app/includes/views/admin/menu/TPRailway.view.php:46
-msgctxt "admin page railway tab railway help"
-msgid "at Travelpayouts.com beforehand. Links won't work without campaign activation. "
-msgstr "at Travelpayouts.com beforehand. Links won’t work without campaign activation. "
-
-#: app/includes/views/admin/menu/TPRailway.view.php:52
-msgctxt "admin page railway tab railway help"
-msgid "Activate Tutu.ru campaign "
-msgstr "Activate Tutu.ru campaign "
-
-#: app/includes/views/admin/menu/TPRailway.view.php:63
-msgctxt "admin page railway tab railway help"
-msgid "Tutu.ru campaign is activated. Let's go"
-msgstr "Tutu.ru campaign is activated. Let’s go"
-
 #: app/includes/views/admin/menu/TPRailwayTabConfig.view.php:8
 msgctxt "admin page railway tab tables content save button label"
 msgid "Save changes"
 msgstr "Save changes"
+
+#: app/includes/views/admin/menu/TPRailwayTabHelp.view.php:5
+msgctxt "admin page railway tab railway help"
+msgid "You need to activate "
+msgstr "You need to activate "
+
+#: app/includes/views/admin/menu/TPRailwayTabHelp.view.php:9
+msgctxt "admin page railway tab railway help"
+msgid "Tutu.ru campaign "
+msgstr "Tutu.ru campaign "
+
+#: app/includes/views/admin/menu/TPRailwayTabHelp.view.php:13
+msgctxt "admin page railway tab railway help"
+msgid "at Travelpayouts.com beforehand. Links won't work without campaign activation. "
+msgstr "at Travelpayouts.com beforehand. Links won’t work without campaign activation. "
+
+#: app/includes/views/admin/menu/TPRailwayTabHelp.view.php:19
+msgctxt "admin page railway tab railway help"
+msgid "Activate Tutu.ru campaign "
+msgstr "Activate Tutu.ru campaign "
+
+#: app/includes/views/admin/menu/TPRailwayTabHelp.view.php:30
+msgctxt "admin page railway tab railway help"
+msgid "Tutu.ru campaign is activated. Let's go"
+msgstr "Tutu.ru campaign is activated. Let’s go"
 
 #: app/includes/views/admin/menu/TPRailwayTabThemes.view.php:20
 msgctxt "admin page railway tab themes btn active"
@@ -5082,47 +5082,47 @@ msgctxt "(Check our step-by-step manual )"
 msgid "tp_admin_page_search_forms_paragraph_3"
 msgstr "Check our step-by-step manual "
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:49
+#: app/includes/views/admin/menu/TPSearchForms.view.php:64
 msgctxt "(here )"
 msgid "tp_admin_page_search_forms_paragraph_3_link"
 msgstr "here"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:57
+#: app/includes/views/admin/menu/TPSearchForms.view.php:72
 msgctxt "(Search Form Shortcodes)"
 msgid "tp_admin_page_search_forms_paragraph_4"
 msgstr "Search Form Shortcodes"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:65
+#: app/includes/views/admin/menu/TPSearchForms.view.php:80
 msgctxt "(Add a shortcode)"
 msgid "tp_admin_page_search_forms_btn_add_shortcode"
 msgstr "Add a shortcode"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:71
+#: app/includes/views/admin/menu/TPSearchForms.view.php:86
 msgctxt "(Remove)"
 msgid "tp_admin_page_search_forms_btn_remove"
 msgstr "Remove"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:76
+#: app/includes/views/admin/menu/TPSearchForms.view.php:91
 msgctxt "(All)"
 msgid "tp_admin_page_search_forms_btn_all"
 msgstr "All"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:90
+#: app/includes/views/admin/menu/TPSearchForms.view.php:105
 msgctxt "(Title )"
 msgid "tp_admin_page_search_forms_table_td_1"
 msgstr "Title"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:94
+#: app/includes/views/admin/menu/TPSearchForms.view.php:109
 msgctxt "(Add Date )"
 msgid "tp_admin_page_search_forms_table_td_2"
 msgstr "Add Date"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:98
+#: app/includes/views/admin/menu/TPSearchForms.view.php:113
 msgctxt "(Shortcode )"
 msgid "tp_admin_page_search_forms_table_td_3"
 msgstr "Shortcode"
 
-#: app/includes/views/admin/menu/TPSearchForms.view.php:115
+#: app/includes/views/admin/menu/TPSearchForms.view.php:130
 msgctxt "(Edit)"
 msgid "tp_admin_page_search_forms_table_edit_link"
 msgstr "Edit"
@@ -5132,72 +5132,72 @@ msgctxt "(Search forms)"
 msgid "tp_admin_page_add_search_forms_paragraph_1"
 msgstr "Search forms"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:23
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:24
 msgctxt "(Check our step-by-step manual )"
 msgid "tp_admin_page_add_search_forms_paragraph_2"
 msgstr "Check our step-by-step manual "
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:26
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:27
 msgctxt "(here)"
 msgid "tp_admin_page_add_search_forms_paragraph_2_link"
 msgstr "here"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:34
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:35
 msgctxt "(Adding shortcode)"
 msgid "tp_admin_page_add_search_forms_paragraph_3"
 msgstr "Adding shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:43
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:44
 msgctxt "(Title)"
 msgid "tp_admin_page_add_search_forms_field_title_label"
 msgstr "Title"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:50
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:51
 msgctxt "(Type shortcode)"
 msgid "tp_admin_page_add_search_forms_field_type_label"
 msgstr "Type shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:55
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:56
 msgctxt "(Search Form)"
 msgid "tp_admin_page_add_search_forms_field_type_value_1"
 msgstr "Search Form"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:59
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:60
 msgctxt "(Other)"
 msgid "tp_admin_page_add_search_forms_field_type_value_2"
 msgstr "Other"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:67
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:68
 msgctxt "(TravelPayouts Form Code)"
 msgid "tp_admin_page_add_search_forms_field_code_form_label"
 msgstr "TravelPayouts Form Code"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:71
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:72
 msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
 msgid "tp_admin_page_add_search_forms_field_code_form_help"
 msgstr "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:79
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:80
 msgctxt "(Default City of Departure)"
 msgid "tp_admin_page_add_search_forms_field_from_label"
 msgstr "Default City of Departure"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:86
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:87
 msgctxt "(Default City of Arrival)"
 msgid "tp_admin_page_add_search_forms_field_to_label"
 msgstr "Default City of Arrival"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:93
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:94
 msgctxt "(Default City/Hotel)"
 msgid "tp_admin_page_add_search_forms_field_city_label"
 msgstr "Default City/Hotel"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:100
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:101
 msgctxt "(Shortcode)"
 msgid "tp_admin_page_add_search_forms_field_search_shortcodes_label"
 msgstr "Shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:107
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:108
 msgctxt ""
 "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away )"
@@ -5206,12 +5206,12 @@ msgstr ""
 "Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:113
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:114
 msgctxt "(cancel)"
 msgid "tp_admin_page_add_search_forms_btn_cancel"
 msgstr "cancel"
 
-#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:117
+#: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:118
 msgctxt "(save changes)"
 msgid "tp_admin_page_add_search_forms_btn_save"
 msgstr "save changes"
@@ -5221,72 +5221,72 @@ msgctxt "(Search forms)"
 msgid "tp_admin_page_edit_search_forms_paragraph_1"
 msgstr "Search forms"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:23
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:24
 msgctxt "(Check our step-by-step manual )"
 msgid "tp_admin_page_edit_search_forms_paragraph_2"
 msgstr "Check our step-by-step manual "
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:26
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:27
 msgctxt "(here)"
 msgid "tp_admin_page_edit_search_forms_paragraph_2_link"
 msgstr "here"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:34
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:35
 msgctxt "(Adding shortcode)"
 msgid "tp_admin_page_edit_search_forms_paragraph_3"
 msgstr "Adding shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:43
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:44
 msgctxt "(Title)"
 msgid "tp_admin_page_edit_search_forms_field_title_label"
 msgstr "Title"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:50
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:51
 msgctxt "(Type shortcode)"
 msgid "tp_admin_page_edit_search_forms_field_type_label"
 msgstr "Type shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:55
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:56
 msgctxt "(Search Form)"
 msgid "tp_admin_page_edit_search_forms_field_type_value_1"
 msgstr "Search Form"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:59
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:60
 msgctxt "(Other)"
 msgid "tp_admin_page_edit_search_forms_field_type_value_2"
 msgstr "Other"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:67
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:68
 msgctxt "(TravelPayouts Form Code)"
 msgid "tp_admin_page_edit_search_forms_field_code_form_label"
 msgstr "TravelPayouts Form Code"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:71
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:72
 msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
 msgid "tp_admin_page_edit_search_forms_field_code_form_help"
 msgstr "Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:79
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:80
 msgctxt "(Default City of Departure)"
 msgid "tp_admin_page_edit_search_forms_field_from_label"
 msgstr "Default City of Departure"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:87
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:88
 msgctxt "(Default City of Arrival)"
 msgid "tp_admin_page_edit_search_forms_field_to_label"
 msgstr "Default City of Arrival"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:95
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:96
 msgctxt "(Default City/Hotel)"
 msgid "tp_admin_page_edit_search_forms_field_city_label"
 msgstr "Default City/Hotel"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:102
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:103
 msgctxt "(Shortcode)"
 msgid "tp_admin_page_edit_search_forms_field_search_shortcodes_label"
 msgstr "Shortcode"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:117
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:118
 msgctxt ""
 "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away )"
@@ -5295,12 +5295,12 @@ msgstr ""
 "Shortcode will be automatically generated after you press the Save Changes button. It can also "
 "be placed into your posts right away"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:123
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:124
 msgctxt "(cancel)"
 msgid "tp_admin_page_edit_search_forms_btn_cancel"
 msgstr "cancel"
 
-#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:128
+#: app/includes/views/admin/menu/TPSearchFormsEdit.view.php:129
 msgctxt "(save changes)"
 msgid "tp_admin_page_edit_search_forms_btn_save"
 msgstr "save changes"
@@ -5812,9 +5812,9 @@ msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Enter settings "
 
-#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:343
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:423
 msgctxt "railway shortcode view train"
-msgid "brand"
+msgid "фирм"
 msgstr ""
 
 #: core/controllers/TPOAdminMenuController.php:24
