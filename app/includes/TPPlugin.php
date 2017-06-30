@@ -43,30 +43,30 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
     public function checkPluginUpdate() {
         if(TPOPlUGIN_ERROR_LOG)
             error_log("checkPluginUpdate");
-        //error_log(print_r( TPDefault::defaultOptions(),true));
-        //error_log(is_plugin_active('travelpayouts/travelpayouts.php'));
         if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             if( ! get_option(TPOPlUGIN_OPTION_NAME) ){
                 update_option( TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions() );
             } else{
                 //$settings = array_replace_recursive(self::$options, TPDefault::defaultOptions());
-                $settings = array_replace_recursive(TPDefault::defaultOptions(), self::$options);
+                $settings = array_replace_recursive(TPDefault::defaultOptions(), get_option(TPOPlUGIN_OPTION_NAME));
                 update_option( TPOPlUGIN_OPTION_NAME, $settings);
             }
             if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.5.2', '<')) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("currency default version = ".get_option(TPOPlUGIN_OPTION_VERSION) );
-                self::$options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
-                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
+                $options = get_option(TPOPlUGIN_OPTION_NAME);
+                $options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
+                update_option( TPOPlUGIN_OPTION_NAME,  $options);
             }
 
             if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.7.0', '<')) {
-                self::$options['config']['cache_value'] = array(
+                $options = get_option(TPOPlUGIN_OPTION_NAME);
+                $options['config']['cache_value'] = array(
                     'hotel' => 24,
                     'flight' => 3
                 );
-                update_option( TPOPlUGIN_OPTION_NAME,  self::$options);
+                update_option( TPOPlUGIN_OPTION_NAME,  $options);
             }
 
             if(!empty(self::$options['account']['marker'])){
@@ -78,7 +78,6 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
                 )) );
 
             }
-
             update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
         }
         models\admin\menu\TPSearchFormsModel::createTable();
