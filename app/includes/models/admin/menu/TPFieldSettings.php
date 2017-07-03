@@ -43,12 +43,13 @@ class TPFieldSettings {
                                value="<?php //echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
                     </label>
                 </div>-->
+
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_hotel_label',
-                            'White Label (Hotels)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_label',
+                            'White Label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
-                        <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label_hotel]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label_hotel']) ?>"/>
+                        <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label]"
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label']) ?>"/>
                     </label>
                 </div>
             </div>
@@ -64,13 +65,14 @@ class TPFieldSettings {
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_label',
-                            'White Label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_hotel_label',
+                            'White Label (Hotels)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
-                        <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label']) ?>"/>
+                        <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label_hotel]"
+                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label_hotel']) ?>"/>
                     </label>
                 </div>
+
 
             </div>
         </div>
