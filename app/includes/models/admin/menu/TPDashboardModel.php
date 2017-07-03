@@ -8,6 +8,7 @@
 namespace app\includes\models\admin\menu;
 use app\includes\models\admin\TPStatModel;
 
+
 class TPDashboardModel extends TPStatModel {
     public $balance;
     public $detailed_sales;

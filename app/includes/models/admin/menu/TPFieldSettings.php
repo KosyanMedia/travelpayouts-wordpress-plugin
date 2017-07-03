@@ -35,14 +35,14 @@ class TPFieldSettings {
                                value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['token']) ?>"/>
                     </label>
                 </div>
-                <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_extra_marker_label',
-                            '(Extra marker)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                <!--<div class="ItemSub">
+                    <span><?php //_ex('tp_admin_page_settings_tab_account_field_extra_marker_label',
+                            //'(Extra marker)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
-                        <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][extra_marker]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
+                        <input type="text" name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[account][extra_marker]"
+                               value="<?php// echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
                     </label>
-                </div>
+                </div>-->
                 <div class="ItemSub">
                     <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_hotel_label',
                             'White Label (Hotels)', TPOPlUGIN_TEXTDOMAIN ); ?></span>

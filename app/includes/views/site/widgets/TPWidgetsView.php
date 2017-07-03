@@ -21,8 +21,7 @@ class TPWidgetsView {
      */
     public function getMarker($widgetType = false, $subid = ''){
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
-        if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
-            $marker = $marker .'.'.\app\includes\TPPlugin::$options['account']['extra_marker'];
+        $marker .= TPOption::getExtraMarker();
         if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
             $marker = $marker.'_'.\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
         }
