@@ -743,7 +743,7 @@ class TPShortcodeView {
         }
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
-        $marker .= '.'.TPOption::getExtraMarker();
+        $marker .= TPOption::getExtraMarker();
         if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
             $marker = $marker.'_'.\app\includes\TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
         if(!empty($subid))
@@ -1272,7 +1272,7 @@ class TPShortcodeView {
         }
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
-        $marker .= '.'.TPOption::getExtraMarker();
+        $marker .= TPOption::getExtraMarker();
         $marker = $marker.'_link';
         if(!empty($subid))
             $marker = $marker.'_'.$subid;

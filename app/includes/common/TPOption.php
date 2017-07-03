@@ -17,7 +17,7 @@ class TPOption
         //if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
         //TPPlugin::
         $extraMarker = '';
-        $extraMarker = 'wpplugin';
+        $extraMarker = '.wpplugin';
         return $extraMarker;
     }
 }

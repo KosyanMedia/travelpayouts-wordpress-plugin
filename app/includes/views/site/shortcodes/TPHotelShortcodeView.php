@@ -758,7 +758,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
     public function getMarker($shortcode, $subid){
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
-        $marker .= '.'.TPOption::getExtraMarker();
+        $marker .= TPOption::getExtraMarker();
 
 
         if (!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker'])){
