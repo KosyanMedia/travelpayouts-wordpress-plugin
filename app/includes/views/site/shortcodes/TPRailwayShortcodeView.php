@@ -763,6 +763,7 @@ class TPRailwayShortcodeView {
         $URL = 'https://c45.travelpayouts.com/click';
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '?shmarker='.$marker;
+        $marker .= '.'.TPOption::getExtraMarker();
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';
