@@ -40,7 +40,7 @@ class TPFieldSettings {
                             //'(Extra marker)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php //echo TPOPlUGIN_OPTION_NAME;?>[account][extra_marker]"
-                               value="<?php// echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
+                               value="<?php //echo esc_attr(\app\includes\TPPlugin::$options['account']['extra_marker']) ?>"/>
                     </label>
                 </div>-->
                 <div class="ItemSub">

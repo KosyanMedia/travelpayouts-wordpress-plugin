@@ -9,6 +9,7 @@
 namespace app\includes\views\site\shortcodes;
 
 use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPOption;
 use app\includes\common\TPSearchFormEmptyTable;
 
 use \app\includes\TPPlugin;
@@ -761,7 +762,7 @@ class TPShortcodeView {
         $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
         $currency = '&currency='.$currency;
 
-        $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$currency.$marker;
+        $url = 'new'.$origin.$destination.$departure_at.$return_at.$currency.$marker;
 
         /*if ($isWhiteLabel == true){
             if (\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangEN()){
@@ -785,9 +786,16 @@ class TPShortcodeView {
         if($redirect){
             $home = '';
             $home = get_option('home');
-            $url = substr($url, 10);
+            //$url = substr($url, 10);
             return $home.'/?searches='.rawurlencode($url);
         }else{
+            if ($isWhiteLabel == true) {
+                $url = '/flights/'.$url;
+            } else {
+                $url = '/searches/'.$url;
+
+            }
+
             return $white_label.$url;
         }
     }
@@ -1170,17 +1178,19 @@ class TPShortcodeView {
                     if(strpos($white_label, 'http') === false){
                         $white_label = 'http://'.$white_label;
                     }
+                    $white_label = "{$white_label}/flights/".urldecode($_GET['searches']);
                 }else{
 
                     $white_label = \app\includes\common\TPHostURL::getHostTable();
                     //error_log('0 = '.$white_label);
+                    $white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
 
                 }
 
                 //error_log('1 = '.$_GET['searches']);
                 //error_log('1 = '.urldecode($_GET['searches']));
-                //$white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
-                $white_label = "{$white_label}/flights/".urldecode($_GET['searches']);
+
+
 
                 //header("Location: {$white_label}", true, 302);
                 header("Location: {$white_label}", true, 302);
@@ -1198,13 +1208,15 @@ class TPShortcodeView {
                     if(strpos($white_label, 'http') === false){
                         $white_label = 'http://'.$white_label;
                     }
+                    $white_label = "{$white_label}/flights/".urldecode($_GET['searches_ticket']);
                 }else{
                     $white_label = \app\includes\common\TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel(1);
+                    $white_label = "{$white_label}/searches/".urldecode($_GET['searches_ticket']);
 
                 }
                 //error_log("searches_ticket");
                 //error_log($white_label);
-                $white_label = "{$white_label}/flights/".urldecode($_GET['searches_ticket']);
+
                 header("Location: {$white_label}", true, 302);
                 die;
                 /*

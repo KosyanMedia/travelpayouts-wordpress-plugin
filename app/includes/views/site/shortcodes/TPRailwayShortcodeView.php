@@ -11,6 +11,7 @@ namespace app\includes\views\site\shortcodes;
 
 use app\includes\common\TPFieldsLabelTable;
 use app\includes\common\TPLang;
+use app\includes\common\TPOption;
 use app\includes\TPPlugin;
 
 class TPRailwayShortcodeView {

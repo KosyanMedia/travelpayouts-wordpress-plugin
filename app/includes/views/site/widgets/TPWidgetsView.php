@@ -8,6 +8,7 @@
 namespace app\includes\views\site\widgets;
 
 use \app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPOption;
 use \app\includes\TPPlugin;
 
 class TPWidgetsView {
