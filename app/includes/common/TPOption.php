@@ -9,7 +9,15 @@
 namespace app\includes\common;
 
 
+use app\includes\TPPlugin;
+
 class TPOption
 {
-
+    public static function getExtraMarker(){
+        //if(!empty(\app\includes\TPPlugin::$options['account']['extra_marker']))
+        //TPPlugin::
+        $extraMarker = '';
+        $extraMarker = 'wpplugin';
+        return $extraMarker;
+    }
 }

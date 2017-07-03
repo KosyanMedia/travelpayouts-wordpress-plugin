@@ -8,6 +8,7 @@
 
 namespace app\includes\views\site\shortcodes;
 
+use app\includes\common\TPOption;
 use \app\includes\TPPlugin;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
@@ -757,9 +758,8 @@ class TPHotelShortcodeView //extends TPShortcodeView
     public function getMarker($shortcode, $subid){
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
-        if (!empty(TPPlugin::$options['account']['extra_marker'])){
-            $marker = $marker .'.'.TPPlugin::$options['account']['extra_marker'];
-        }
+        $marker .= '.'.TPOption::getExtraMarker();
+
 
         if (!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker'])){
             $marker = $marker.'_'.TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker'];
