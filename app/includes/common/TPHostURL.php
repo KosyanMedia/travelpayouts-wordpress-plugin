@@ -33,7 +33,8 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.com/new_searches/',
+                //3 => 'jetradar.com/new_searches/',
+                3 => 'jetradar.com/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -46,7 +47,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.com.br/new_searches/',
+                3 => 'jetradar.com.br/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -59,7 +60,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'ca.jetradar.com/new_searches/',
+                3 => 'ca.jetradar.com/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -72,7 +73,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.ch/new_searches/',
+                3 => 'jetradar.ch/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -85,7 +86,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.at/new_searches/',
+                3 => 'jetradar.at/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -98,7 +99,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.be/new_searches/',
+                3 => 'jetradar.be/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -111,7 +112,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.co.nl/new_searches/',
+                3 => 'jetradar.co.nl/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -124,7 +125,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.gr/new_searches/',
+                3 => 'jetradar.gr/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -137,7 +138,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.com.au/new_searches/',
+                3 => 'jetradar.com.au/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -150,7 +151,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.de/new_searches/',
+                3 => 'jetradar.de/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -163,7 +164,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.es/new_searches/',
+                3 => 'jetradar.es/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -176,7 +177,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.fr/new_searches/',
+                3 => 'jetradar.fr/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -189,7 +190,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.it/new_searches/',
+                3 => 'jetradar.it/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -202,7 +203,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.pt/new_searches/',
+                3 => 'jetradar.pt/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -215,7 +216,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'ie.jetradar.com/new_searches/',
+                3 => 'ie.jetradar.com/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -228,7 +229,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.co.uk/new_searches/',
+                3 => 'jetradar.co.uk/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -241,7 +242,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.hk/new_searches/',
+                3 => 'jetradar.hk/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -254,7 +255,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.in/new_searches/',
+                3 => 'jetradar.in/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -267,7 +268,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.co.nz/new_searches/',
+                3 => 'jetradar.co.nz/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -280,7 +281,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.ph/new_searches/',
+                3 => 'jetradar.ph/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -293,7 +294,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.pl/new_searches/',
+                3 => 'jetradar.pl/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -306,7 +307,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.sg/new_searches/',
+                3 => 'jetradar.sg/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
@@ -319,7 +320,7 @@ class TPHostURL
             'widget' => array(
                 1 => '',
                 2 => '',
-                3 => 'jetradar.co.th/new_searches/',
+                3 => 'jetradar.co.th/searches/new/',
                 4 => '',
                 5 => '',
                 6 => '',
