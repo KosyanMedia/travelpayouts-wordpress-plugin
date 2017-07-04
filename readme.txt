@@ -176,6 +176,12 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 
 == Changelog == 
 
+= 0.7.3 = 
+Release Date: July 5th, 2017
+* fixed: jetradar link from tables
+* fixed: calendar widget jetradar link
+* fixed: tutu subid fixed
+
 = 0.7.2 = 
 Release Date: June 29th, 2017
 * added: 2 hotel tables: selections and selections by dates. Note that selections by dates are displayed if these data are present in the cache. Otherwise, nothing will be displayed
