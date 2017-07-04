@@ -8,6 +8,7 @@
 namespace app\includes\views\site\widgets;
 
 use \app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPHostURL;
 use app\includes\common\TPOption;
 use \app\includes\TPPlugin;
 
@@ -87,6 +88,12 @@ class TPWidgetsView {
         return rawurlencode($marker);
     }
 
+    public function serializeWhiteLabel($whiteLabel){
+	    $whiteLabel = preg_replace("(^https?://)", "", $whiteLabel );
+	    $whiteLabel = preg_replace("#/$#", "", $whiteLabel);
+    	return $whiteLabel;
+    }
+
     /**
      * @param bool $widgetType
      * @return string
@@ -94,8 +101,7 @@ class TPWidgetsView {
     public function getWhiteLabel($widgetType = false){
         $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
-            $white_label = preg_replace("(^https?://)", "", $white_label );
-            $white_label = preg_replace("#/$#", "", $white_label);
+	        $white_label = $this->serializeWhiteLabel($white_label);
         }
         //3,6,8
         switch($widgetType){
@@ -115,9 +121,12 @@ class TPWidgetsView {
                 break;
             case 3:
                 if( ! $white_label || empty( $white_label ) ){
-                    //$white_label = \app\includes\common\TPHostURL::getHostWidget(3);
+                    $white_label = \app\includes\common\TPHostURL::getHostWidget(3);
+	                $white_label = $this->serializeWhiteLabel($white_label);
                     //error_log($white_label);
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    //$white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+	                error_log($white_label);
+
                 }else{
                     $white_label .= '/flights';
                 }
