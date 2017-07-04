@@ -330,7 +330,7 @@ class TPRailwayShortcodeView {
                     case 'dates':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
-                                .$this->getDates($row, $shortcode)
+                                .$this->getDates($row, $shortcode, $subid)
                             .'</td>';
                         break;
                     //Откуда / From
@@ -723,7 +723,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDates($row = array(), $typeShortcode){
+	public function getDates($row = array(), $typeShortcode, $subid){
 		$dates = '';
 		$btnTxt = "";
 		if (isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
@@ -738,7 +738,7 @@ class TPRailwayShortcodeView {
         }
 
 		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
-            .' data-href="'.$this->getURL($row).'" data-target="'.$targetURL.'">'
+            .' data-href="'.$this->getURL($row, $subid).'" data-target="'.$targetURL.'">'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
@@ -747,7 +747,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-	public function getURL($row = array()){
+	public function getURL($row = array(), $subid){
         $URL = '';
         $marker = '';
         $promo_id = '';
@@ -765,6 +765,9 @@ class TPRailwayShortcodeView {
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '?shmarker='.$marker;
         $marker .= TPOption::getExtraMarker();
+        if (!empty($subid)){
+        	$marker .= '_'.$subid;
+        }
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';
