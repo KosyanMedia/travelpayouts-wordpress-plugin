@@ -28,8 +28,17 @@ jQuery(function($) {
             }
         });
 
-        $('.TPButtonTableDates').each(function(index, element) {
-            $(element).pikaday({
+        $('.TPButtonTableDates').click(function (e) {
+            e.preventDefault();
+            var link, picker, linkUrl, target, dateUrl, linkOpen;
+
+            link = $(this);
+            link.unbind('click');
+            target = parseInt(link.data('target'));
+            linkUrl = link.data('href');
+
+
+            picker = link.pikaday({
                 firstDay: 1,
                 i18n: {
                     previousMonth : 'Предыдущий месяц',
@@ -42,55 +51,64 @@ jQuery(function($) {
                 maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
                 //yearRange: [2000,2020],
                 onSelect: function(date) {
-                    var dateFormat, tutuURL, target;
+                    console.log('onSelect')
+                    var dateFormat;
                     dateFormat = new Date(date);
-                    target = parseInt($(element).data('target'));
-                    tutuURL = $(element).data('href')+dateFormat.format('yyyy-mm-d');
-                    openInNewTab(tutuURL, target);
+                    dateUrl = dateFormat.format('yyyy-mm-d');
+                    linkUrl += dateFormat.format('yyyy-mm-d');
+                    //link.attr('href', linkUrl);
+                    //link.bind('click');
+                    openInNewTab(picker, linkUrl, target);
+                },
+                onClose: function() {
+                    console.log('onClose')
 
-                }
+                    console.log(linkUrl);
+                    console.log(dateUrl);
+                    //
+
+                },
+
             });
-        });
+            console.log(linkUrl);
+            console.log(dateUrl);
+            //picker.eq(0).pikaday('show');
 
-        function openInNewTab(url, target) {
-            console.log(url);
-            console.log(target);
+
+            picker.pikaday('show');
+
+            //return false;
+        })
+
+
+
+
+
+        function openInNewTab(picker, url, target) {
+            //element.pikaday('show');
+            console.log('openInNewTab');
+            //console.log(pikaday);
+            //pikaday.eq(0).pikaday('destroy');
+
+            //pikaday.pikaday('close');
+            //pikaday.pikaday('destroy');
+
+           // console.log(url);
+            //console.log(target);
+            console.log($(document).find('.pika-table'));
+            console.log($(document).find('.pika-single'));
+            picker.pikaday('destroy');
+            $(document).find('.pika-single').detach();
             if (target == 1){
+                //window.location = url;
+                //window.open('http://google.com')
                 window.open(url, '_blank');
+                //setInterval(window.open(url), 10000);
             } else {
                 document.location.href = url;
             }
             return false;
         }
-
-        /* var datepicker = $('.TPButtonTableDates').pikaday({
-         firstDay: 1,
-         i18n: {
-         previousMonth : 'Предыдущий месяц',
-         nextMonth     : 'Следующий месяц',
-         months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-         weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-         weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-         },
-         minDate: new Date(),
-         maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-         //yearRange: [2000,2020],
-         onSelect: function(date) {
-         // var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-         // console.log(this.getMoment().format().substring(0, 10));
-         var dateFormat = new Date(date);
-         console.log(dateFormat.getFullYear())
-         console.log(dateFormat.getMonth())
-         console.log(dateFormat.getDate())
-         console.log(dateFormat.format('yyyy-mm-d'))
-         console.log($(this))
-         console.log(datepicker.data('href'))
-         //console.log($(this).fieldValue())
-         }
-         });*/
-
-
-
 
 
 

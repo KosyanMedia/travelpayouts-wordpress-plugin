@@ -733,11 +733,13 @@ class TPRailwayShortcodeView {
 		}
 
         $targetURL = 0;
+        $target = '';
         if (isset(TPPlugin::$options['config']['target_url'])) {
             $targetURL = 1;
+            $target = ' target="_blank" ';
         }
 
-		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
+		$dates = '<a href="#" class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
             .' data-href="'.$this->getURL($row, $subid).'" data-target="'.$targetURL.'">'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
