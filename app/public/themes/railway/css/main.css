@@ -787,7 +787,8 @@ abbr, tla, acronym{
     padding-right: 10px;
   }
   .marshrut {
-    display: none;
+  	display: block;
+    white-space: normal;
   }
   .TPtrainTd span{
   	display: block;
