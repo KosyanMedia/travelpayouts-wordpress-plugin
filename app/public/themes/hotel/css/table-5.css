@@ -118,7 +118,6 @@
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover {
   border: 2px solid #ff6055;
   box-sizing: border-box;
-  cursor: pointer;
 }
 
 .TPHotelTable .TP-Plugin-Tables_box tbody tr:hover td {
