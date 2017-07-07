@@ -56,7 +56,7 @@ jQuery(function($) {
             console.log(url);
             console.log(target);
             if (target == 1){
-                window.open(url, '_blank');
+                javascript:void(window.open(url, '_blank'));
             } else {
                 document.location.href = url;
             }
