@@ -100,11 +100,9 @@ jQuery(function($) {
             picker.pikaday('destroy');
             $(document).find('.pika-single').detach();
             if (target == 1){
-<<<<<<< HEAD
-            	//window.open(url, '_blank');
-=======
 
->>>>>>> 359a8986dbd4a90488264b8b00bd2ed367fe6221
+            	//window.open(url, '_blank');
+
                 javascript:void(window.open(url, '_blank'));
 
                 //window.location = url;
