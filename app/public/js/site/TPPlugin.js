@@ -100,10 +100,14 @@ jQuery(function($) {
             picker.pikaday('destroy');
             $(document).find('.pika-single').detach();
             if (target == 1){
+
+                javascript:void(window.open(url, '_blank'));
+
                 //window.location = url;
                 //window.open('http://google.com')
-                window.open(url, '_blank');
+                //window.open(url, '_blank');
                 //setInterval(window.open(url), 10000);
+
             } else {
                 document.location.href = url;
             }
