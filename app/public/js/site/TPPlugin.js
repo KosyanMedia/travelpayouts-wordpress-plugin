@@ -58,7 +58,7 @@ jQuery(function($) {
                     linkUrl += dateFormat.format('yyyy-mm-d');
                     //link.attr('href', linkUrl);
                     //link.bind('click');
-                    openInNewTab(picker, linkUrl, target);
+                    openInNewTab(link, picker, linkUrl, target);
                 },
                 onClose: function() {
                     console.log('onClose')
@@ -84,7 +84,7 @@ jQuery(function($) {
 
 
 
-        function openInNewTab(picker, url, target) {
+        function openInNewTab(link, picker, url, target) {
             //element.pikaday('show');
             console.log('openInNewTab');
             //console.log(pikaday);
@@ -101,8 +101,8 @@ jQuery(function($) {
             $(document).find('.pika-single').detach();
             if (target == 1){
 
-                $('.TPButtonTableDates').click(function(){window.open(url, '_blank');});
-                $('.TPButtonTableDates').click();
+                link.click(function(){window.open(url, '_blank');});
+                link.click();
                 //window.location = url;
                 //window.open('http://google.com')
                 //window.open(url, '_blank');
