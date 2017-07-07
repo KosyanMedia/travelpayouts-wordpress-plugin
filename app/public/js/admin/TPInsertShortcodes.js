@@ -1178,13 +1178,13 @@ jQuery(function($) {
                                     }
                                     break;
                                 case '3':
-                                    if (origin == "") {
-                                        doc.find('#origin_widget').addClass('constructorShortcodesError');
-                                    }
+                                    //if (origin == "") {
+                                        //doc.find('#origin_widget').addClass('constructorShortcodesError');
+                                    //}
                                     if (destination == "") {
                                         doc.find('#destination_widget').addClass('constructorShortcodesError');
                                     }
-                                    if (origin != "" && destination != ""){
+                                    if (destination != ""){
                                         if(doc.find('#direct_widget').is(":checked")){
                                             direct = "direct=true";
                                         }else{
@@ -1201,7 +1201,7 @@ jQuery(function($) {
                                             responsive = "width="+doc.find('#responsive_width').val();
                                         }
 
-                                        setShortcodes("[tp_calendar_widget origin="+origin+" destination="+destination+" "
+                                        setShortcodes("[tp_calendar_widget origin=\""+origin+"\" destination=\""+destination+"\" "
                                             +direct+" "+one_way+" "+responsive+" subid=\""+tp_subid+"\"" +
                                             " period_day_from=\""+calendar_period_from+"\" " +
                                             " period_day_to=\""+calendar_period_to+"\"" +

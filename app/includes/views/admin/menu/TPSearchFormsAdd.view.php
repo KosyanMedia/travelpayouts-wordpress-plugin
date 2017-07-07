@@ -5,24 +5,25 @@
             '(Search forms)', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div class="TP-TopImportantInfo TP-shortDescription">
-        <?php
-        global $locale;
-        $link_help = '';
-        switch($locale){
-            case "ru_RU":
-                $link_help = 'https://support.travelpayouts.com/hc/ru/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru#11';
-                break;
-            case "en_US":
-                $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
-                break;
-            default:
-                $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
-                break;
-        } ?>
+	    <?php
+	    global $locale;
+	    $linkHere = '';
+	    switch($locale) {
+		    case "ru_RU":
+			    $linkHere = 'https://support.travelpayouts.com/hc/ru/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru';
+			    break;
+		    case "en_US":
+			    $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
+			    break;
+		    default:
+			    $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
+			    break;
+	    }
+	    ?>
         <p>
             <?php _ex('tp_admin_page_add_search_forms_paragraph_2',
                 '(Check our step-by-step manual )', TPOPlUGIN_TEXTDOMAIN); ?>
-            <a href="<?php echo $link_help; ?>" target="_blank">
+            <a href="<?php echo $linkHere; ?>" target="_blank">
                 <?php _ex('tp_admin_page_add_search_forms_paragraph_2_link',
                     '(here)', TPOPlUGIN_TEXTDOMAIN); ?>
             </a>
