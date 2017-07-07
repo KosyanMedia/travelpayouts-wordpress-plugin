@@ -556,7 +556,7 @@ span.ellipsis {
 
 .TP-train-text_right {
     text-align: right;
-    display: block;
+    display: inline-block;
     float: right;
     width: 60px;
 }
