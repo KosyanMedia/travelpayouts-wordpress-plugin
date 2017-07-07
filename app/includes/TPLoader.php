@@ -36,7 +36,7 @@ class TPLoader extends \core\TPOLoader{
         new TPRailwayController();
         new controllers\admin\menu\TPWidgetsController();
         new controllers\admin\menu\TPSearchFormsController();
-        new controllers\admin\menu\TPStatisticController();
+        //new controllers\admin\menu\TPStatisticController();
         new controllers\admin\menu\TPSettingsController();
         new controllers\admin\menu\TPWizardController();
         new controllers\admin\menu\TPWhatNewsController();

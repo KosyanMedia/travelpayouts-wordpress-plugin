@@ -25,7 +25,8 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'check_in' => 1,
             'check_out' => 12,
             'type' => 0,
-            'subid' => ''
+            'subid' => '',
+            'return_url' => false
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $name_method = "***************".__METHOD__."***************";
@@ -48,7 +49,8 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'check_in' => $check_in,
             'check_out' => $check_out,
             'type' => $type,
-            'subid' => $subid
+            'subid' => $subid,
+            'return_url' => $return_url
         );
     }
 }

@@ -11,6 +11,7 @@ namespace app\includes\views\site\shortcodes;
 
 use app\includes\common\TPFieldsLabelTable;
 use app\includes\common\TPLang;
+use app\includes\common\TPOption;
 use app\includes\TPPlugin;
 
 class TPRailwayShortcodeView {
@@ -41,17 +42,20 @@ class TPRailwayShortcodeView {
 		if ($shortcode == false) return false;
 		if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
 
-		$html .= '<div class="TPTrainTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
-		         .$this->renderTitleTable($off_title, $title, $shortcode, $origin_title, $destination_title)
-		         .'<div class="dataTables_wrapper no-footer">'
-		            .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table no-footer dataTable" '
-		                .'data-paginate="'.$paginate.'" '
-		                .'data-paginate_limit="' .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate'].'" '
-		                .'data-sort_column="'.$this->getSortColumn($shortcode).'">'
-		                .$this->renderHeadTable($shortcode)
-		                .$this->renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency)
-		            .'</table>'
-		         .'</div>';
+		$html .= '<div class="TPTrainTable">
+                     <div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
+                     .$this->renderTitleTable($off_title, $title, $shortcode, $origin_title, $destination_title)
+                     .'<div class="dataTables_wrapper no-footer">'
+                        .'<table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table no-footer dataTable" '
+                            .'data-paginate="'.$paginate.'" '
+                            .'data-paginate_limit="' .TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate'].'" '
+                            .'data-sort_column="'.$this->getSortColumn($shortcode).'">'
+                            .$this->renderHeadTable($shortcode)
+                            .$this->renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency)
+                        .'</table>'
+                        .'</div>'
+		            .'</div>'
+				.'</div>';
 
 		return $html;
 		//return var_dump("<pre>", $args, "</pre>");
@@ -326,7 +330,7 @@ class TPRailwayShortcodeView {
                     case 'dates':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
-                                .$this->getDates($row, $shortcode)
+                                .$this->getDates($row, $shortcode, $subid)
                             .'</td>';
                         break;
                     //Откуда / From
@@ -417,7 +421,7 @@ class TPRailwayShortcodeView {
 				if (array_key_exists('firm', $row)) {
 					if ($row['firm'] == true){
 						$train .= '<span class="train-color t-gray">"'
-						        ._x('brand', 'railway shortcode view train', TPOPlUGIN_TEXTDOMAIN)
+						        ._x('фирм', 'railway shortcode view train', TPOPlUGIN_TEXTDOMAIN)
 						        .'"</span>';
 					}
 				}
@@ -719,7 +723,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDates($row = array(), $typeShortcode){
+	public function getDates($row = array(), $typeShortcode, $subid){
 		$dates = '';
 		$btnTxt = "";
 		if (isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
@@ -729,12 +733,14 @@ class TPRailwayShortcodeView {
 		}
 
         $targetURL = 0;
+        $target = '';
         if (isset(TPPlugin::$options['config']['target_url'])) {
             $targetURL = 1;
+            $target = ' target="_blank" ';
         }
 
-		$dates = '<a class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
-            .' data-href="'.$this->getURL($row).'" data-target="'.$targetURL.'">'
+		$dates = '<a href="#" class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
+            .' data-href="'.$this->getURL($row, $subid).'" data-target="'.$targetURL.'">'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
@@ -743,7 +749,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-	public function getURL($row = array()){
+	public function getURL($row = array(), $subid){
         $URL = '';
         $marker = '';
         $promo_id = '';
@@ -760,6 +766,10 @@ class TPRailwayShortcodeView {
         $URL = 'https://c45.travelpayouts.com/click';
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '?shmarker='.$marker;
+        $marker .= TPOption::getExtraMarker();
+        if (!empty($subid)){
+        	$marker .= '_'.$subid;
+        }
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';

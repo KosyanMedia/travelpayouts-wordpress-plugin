@@ -12,6 +12,7 @@ namespace app\includes\models\site\shortcodes\hotels;
 use \app\includes\models\site\TPHotelShortcodeModel;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
+use app\includes\TPPlugin;
 
 class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
 {

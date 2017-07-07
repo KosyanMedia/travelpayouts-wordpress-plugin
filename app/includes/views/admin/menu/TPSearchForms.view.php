@@ -45,7 +45,22 @@
         <p>
             <?php _ex('tp_admin_page_search_forms_paragraph_3',
                 '(Check our step-by-step manual )', TPOPlUGIN_TEXTDOMAIN); ?>
-            <a href="<?php echo $link_help; ?>" target="_blank">
+            <?php
+                global $locale;
+                $linkHere = '';
+                switch($locale) {
+                    case "ru_RU":
+                        $linkHere = 'https://support.travelpayouts.com/hc/ru/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru';
+                        break;
+                    case "en_US":
+                        $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
+                        break;
+                    default:
+                        $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
+                        break;
+                }
+            ?>
+            <a href="<?php echo $linkHere; ?>" target="_blank">
                 <?php _ex('tp_admin_page_search_forms_paragraph_3_link',
                     '(here )', TPOPlUGIN_TEXTDOMAIN); ?>
             </a>
