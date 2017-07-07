@@ -101,15 +101,13 @@ jQuery(function($) {
             $(document).find('.pika-single').detach();
             if (target == 1){
 
-            	//window.open(url, '_blank');
-
-                javascript:void(window.open(url, '_blank'));
-
+                $('.TPButtonTableDates').click(function(){window.open(url, '_blank');});
+                $('.TPButtonTableDates').click();
                 //window.location = url;
                 //window.open('http://google.com')
                 //window.open(url, '_blank');
                 //setInterval(window.open(url), 10000);
-
+            	return false;
             } else {
                 document.location.href = url;
             }
