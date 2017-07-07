@@ -100,6 +100,7 @@ jQuery(function($) {
             picker.pikaday('destroy');
             $(document).find('.pika-single').detach();
             if (target == 1){
+
                 $('.TPButtonTableDates').click(function(){window.open(url, '_blank');});
                 $('.TPButtonTableDates').click();
                 //window.location = url;
