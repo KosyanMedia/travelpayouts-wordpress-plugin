@@ -28,124 +28,78 @@ jQuery(function($) {
             }
         });
 
-        $('.TPButtonTableDates').click(function (e) {
-            e.preventDefault();
-            var link, picker, linkUrl, target, dateUrl, linkOpen;
-
-            link = $(this);
-            link.unbind('click');
-            target = parseInt(link.data('target'));
-            linkUrl = link.data('href');
-
-
-            picker = link.pikaday({
-                firstDay: 1,
-                i18n: {
-                    previousMonth : 'Предыдущий месяц',
-                    nextMonth     : 'Следующий месяц',
-                    months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                    weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
-                    weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
-                },
-                minDate: new Date(),
-                maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
-                //yearRange: [2000,2020],
-                onSelect: function(date) {
-                    console.log('onSelect')
-                    var dateFormat;
-                    dateFormat = new Date(date);
-                    dateUrl = dateFormat.format('yyyy-mm-d');
-                    linkUrl += dateFormat.format('yyyy-mm-d');
-                    //link.attr('href', linkUrl);
-                    //link.bind('click');
-                    openInNewTab(link, picker, linkUrl, target);
-                },
-                onClose: function() {
-                    console.log('onClose')
-
-                    console.log(linkUrl);
-                    console.log(dateUrl);
-                    //
-
-                },
-
-            });
-            console.log(linkUrl);
-            console.log(dateUrl);
-            //picker.eq(0).pikaday('show');
-
-
-            picker.pikaday('show');
-
-            //return false;
-        })
-
-
-
-
-
-        function openInNewTab(link, picker, url, target) {
-            //element.pikaday('show');
-            console.log('openInNewTab');
-            //console.log(pikaday);
-            //pikaday.eq(0).pikaday('destroy');
-
-            //pikaday.pikaday('close');
-            //pikaday.pikaday('destroy');
-
-           // console.log(url);
-            //console.log(target);
-            console.log($(document).find('.pika-table'));
-            console.log($(document).find('.pika-single'));
-            picker.pikaday('destroy');
-            $(document).find('.pika-single').detach();
-            if (target == 1){
-
-                link.click(function(){window.open(url, '_blank');});
-                link.click();
-                //window.location = url;
-                //window.open('http://google.com')
-                //window.open(url, '_blank');
-                //setInterval(window.open(url), 10000);
-            	return false;
-            } else {
-                document.location.href = url;
-            }
-            return false;
-        }
-
-
-
-
-        /*$(document).find('.TP-Plugin-Tables_box > tbody  > tr').each(function () {
-         if($(this).children("td:last").children('.TPPopUpButtonTable').length > 0 &&
-         $(this).children("td:last").hasClass('TP-hidden')){
-         //$(this).children("td:last").children('.TPPopUpButtonTable').clone();
-         if ( $(".TP-Plugin-Tables_box tbody tr td:last-child").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").hasClass("TP-hidden") ) {
-         if ( $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").hasClass("TP-hidden") ) {
-         ;
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(4)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-3)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(3)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-2)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:nth-last-child(2)").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         console.log("eq(-1)");
-         };
-         }else{
-         $(".TP-Plugin-Tables_box tbody tr td:last-child").append($(this).children("td:last").children('.TPPopUpButtonTable').clone());
-         }
-         }
-         })*/
-
+        $('.TPButtonTableDates').bind( "click", handlerRailwayDatepicker );
 
     });
+
+    var handlerRailwayDatepicker = function () {
+        var link, picker, linkUrl, target, dateUrl, linkOpen;
+
+        link = $(this);
+        link.unbind('click');
+        target = parseInt(link.data('target'));
+        linkUrl = link.data('href');
+
+
+        picker = link.pikaday({
+            firstDay: 1,
+            i18n: {
+                previousMonth : 'Предыдущий месяц',
+                nextMonth     : 'Следующий месяц',
+                months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
+                weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+            },
+            minDate: new Date(),
+            maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
+            //yearRange: [2000,2020],
+            onSelect: function(date) {
+                console.log('onSelect')
+                var dateFormat;
+                dateFormat = new Date(date);
+                dateUrl = dateFormat.format('yyyy-mm-d');
+                linkUrl += dateFormat.format('yyyy-mm-d');
+                //link.attr('href', linkUrl);
+                //link.bind('click');
+                openInNewTab(link, picker, linkUrl, target);
+            },
+            onClose: function() {
+                console.log('onClose')
+
+                console.log(linkUrl);
+                console.log(dateUrl);
+                //
+
+            },
+
+        });
+        console.log(linkUrl);
+        console.log(dateUrl);
+        //picker.eq(0).pikaday('show');
+
+
+        picker.pikaday('show');
+    };
+    var handlerRailwayClickLink = function (url) {
+        window.open(url, '_blank');
+    }
+
+    function openInNewTab(link, picker, url, target) {
+        picker.pikaday('destroy');
+        $(document).find('.pika-single').detach();
+        if (target == 1){
+            link.unbind( "click" );
+            link.bind( "click", handlerRailwayClickLink(url) );
+            link.click();
+            link.unbind("click");
+            link.bind( "click", handlerRailwayDatepicker );
+            return false;
+        } else {
+            document.location.href = url;
+        }
+        return false;
+    }
+
     var conteiner = '.TP-Plugin-Tables_wrapper';
     var table = ' .TP-Plugin-Tables_box';
 
