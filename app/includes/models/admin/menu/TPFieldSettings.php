@@ -674,7 +674,7 @@ class TPFieldSettings {
                         </span>
                             </a>
                         </li>
-                        <li>
+                        <li class="tabs-local-field-item-railway">
                             <a href="#tabs-local_field_railway" class="TPMainMenuA">
                             <span>
                             <?php _ex('Railway tables',

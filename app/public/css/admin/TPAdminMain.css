@@ -3211,3 +3211,7 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .tp-railway-layout-hidden{
   display: none;
 }
+
+.tabs-local-field-item-railway{
+  display: none;
+}
