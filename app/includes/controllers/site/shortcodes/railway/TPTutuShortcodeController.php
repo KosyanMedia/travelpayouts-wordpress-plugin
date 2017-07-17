@@ -21,6 +21,7 @@ class TPTutuShortcodeController extends TPShortcodesController {
 		parent::__construct();
 		$this->model = new TPTutuShortcodeModel();
 		$this->view = new TPRailwayShortcodeView();
+
 	}
 	public function initShortcode() {
 		// TODO: Implement initShortcode() method.
@@ -37,5 +38,7 @@ class TPTutuShortcodeController extends TPShortcodesController {
 		}
 		return $this->view->renderTable($data);
 	}
+
+
 
 }

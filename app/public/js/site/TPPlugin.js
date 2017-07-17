@@ -27,20 +27,54 @@ jQuery(function($) {
 
             }
         });
-
-        $('.TPButtonTableDates').bind( "click", handlerRailwayDatepicker );
+        $('.TPButtonTableDates').bind( "click", handlerRailwayDatepickerTest );
 
     });
 
+    var handlerRailwayDatepickerTest = function (e) {
+        e.preventDefault()
+        var link, picker, linkUrl, target, dateUrl, linkOpen;
+        link = $(this);
+        //link.unbind('click');
+        target = parseInt(link.data('target'));
+        linkUrl = link.data('href');
+        picker = link.pikaday({
+            firstDay: 1,
+            i18n: {
+                previousMonth : 'Предыдущий месяц',
+                nextMonth     : 'Следующий месяц',
+                months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Aвгуст','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятницу','Суббота','Воскресенье'],
+                weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+            },
+            minDate: new Date(),
+            maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
+            linkURL: linkUrl,
+            linkTarget: target,
+            onSelect: function(date) {
+                console.log('onSelect')
+                var dateFormat;
+                dateFormat = new Date(date);
+                dateUrl = dateFormat.format('yyyy-mm-d');
+                linkUrl += dateFormat.format('yyyy-mm-d');
+                console.log(linkUrl)
+                console.log(dateUrl)
+            },
+            onClose: function() {
+                console.log('onClose')
+                console.log(linkUrl);
+                console.log(dateUrl);
+            },
+        });
+        picker.pikaday('show');
+    }
+
     var handlerRailwayDatepicker = function () {
         var link, picker, linkUrl, target, dateUrl, linkOpen;
-
         link = $(this);
         link.unbind('click');
         target = parseInt(link.data('target'));
         linkUrl = link.data('href');
-
-
         picker = link.pikaday({
             firstDay: 1,
             i18n: {
@@ -53,6 +87,13 @@ jQuery(function($) {
             minDate: new Date(),
             maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
             //yearRange: [2000,2020],
+            onOpen: function () {
+                console.log('onOpen')
+            },
+            onDraw: function () {
+                console.log('onDraw')
+                //console.log($(document).find('.pika-button'))
+            },
             onSelect: function(date) {
                 console.log('onSelect')
                 var dateFormat;
@@ -65,35 +106,81 @@ jQuery(function($) {
             },
             onClose: function() {
                 console.log('onClose')
-
                 console.log(linkUrl);
                 console.log(dateUrl);
-                //
-
             },
 
         });
         console.log(linkUrl);
         console.log(dateUrl);
         //picker.eq(0).pikaday('show');
-
-
         picker.pikaday('show');
     };
     var handlerRailwayClickLink = function (url) {
-        window.open(url, '_blank');
+        window.open(url);
+        //window.open(url, '_blank');
+    }
+
+    function openLink(strUrl, picker) {
+        console.log( $(document).find( ":focus" ))
+        $(document).find( "body" ).focus();
+        picker.pikaday('destroy');
+        $(document).find('.pika-single').detach();
+        var evLink = document.createElement('a');
+        evLink.href = strUrl;
+        evLink.target = '_blank';
+        document.body.appendChild(evLink);
+        evLink.click();
+// Now delete it
+        evLink.parentNode.removeChild(evLink);
     }
 
     function openInNewTab(link, picker, url, target) {
         picker.pikaday('destroy');
         $(document).find('.pika-single').detach();
         if (target == 1){
-            link.unbind( "click" );
-            link.bind( "click", handlerRailwayClickLink(url) );
-            link.click();
+            //openLink(url)
+            gBrowser.selectedTab = gBrowser.addTab("http://example.com");
+            /*var frm = $('<form   method="get" action="' + url + '" target="_blank"></form>')
+            $(document).find("body").append(frm);
+            frm.submit().remove();
+            var data = {url: url};
+            console.log(ajaxurl)
+            console.log(ajaxurl+'?action=railway_open_link')
+            $.ajax({
+                url: ajaxurl + '?action=railway_open_link',
+                type: "POST", // Делаем POST запрос
+                data: data,
+                success: function (data) {
+                    console.log(data.substring(0, data.length - 1));
+                    console.log('success');
+                    //document.location.href = '';
+                }
+            });
+
+            /*
+
+             */
+            //link.bind( "click", handlerRailwayDatepicker );
+            /*link.removeAttr("href");
+            link.attr("href", url);
+            link.attr("target", "_blank");
+            fakeClick(link);
+            //$('body').append('<a id="openLinkNewTab" href="' + url + '" target="_blank"><span></span></a>').find('#openLinkNewTab span').click().remove();
+          /*  link.unbind( "click" );
+            link.removeAttr("href");
+            link.attr("href", url);
+            link.attr("target", "_blank");
+
+            link[0].click();
+            //link.attr("onclick", "openLink('"+url+"'); return false;");
+            //link[0].onclick;
+            //link
+            //link.bind( "click", handlerRailwayClickLink(url) );
+            //link.click();
             link.unbind("click");
             link.bind( "click", handlerRailwayDatepicker );
-            return false;
+            return false;*/
         } else {
             document.location.href = url;
         }

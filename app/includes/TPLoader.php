@@ -2,6 +2,7 @@
 namespace app\includes;
 
 use app\includes\common\TPLang;
+use app\includes\common\TPSiteAjaxListener;
 use app\includes\controllers\admin\media_buttons\TPHotelsButtonsController;
 use app\includes\controllers\admin\media_buttons\TPRailwayButtonsController;
 use app\includes\controllers\admin\menu\TPHotelsController;
@@ -118,6 +119,7 @@ class TPLoader extends \core\TPOLoader{
         // TODO: Implement all() method.
 
         new \app\includes\TPLoaderScripts();
+        new TPSiteAjaxListener();
         //new controllers\admin\menu\TPAdminBarMenuController();
         //Загрузка спецпредложения
         //\app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel::modelHooks();

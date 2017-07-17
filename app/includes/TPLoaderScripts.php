@@ -1103,6 +1103,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             array(
                 'jquery',
                 'jquery-ui-tabs',
+	            //'jquery-ui-datepicker',
                 TPOPlUGIN_SLUG.'-dataTables',
                 TPOPlUGIN_SLUG. '-pikaday-jquery',
                 ), //$deps

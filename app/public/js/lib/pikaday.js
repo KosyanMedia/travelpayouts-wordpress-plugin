@@ -287,7 +287,9 @@
             onDraw: null,
 
             // Enable keyboard input
-            keyboardInput: true
+            keyboardInput: true,
+            linkURL: '',
+            linkTarget: 0
         },
 
 
@@ -305,8 +307,17 @@
 
         renderDay = function(opts)
         {
+
+            console.log('renderDay');
+            console.log('renderDay linkURL = '+opts.linkURL);
+            console.log('renderDay linkTarget = '+opts.linkTarget);
             var arr = [];
             var ariaSelected = 'false';
+            var target = '';
+            if (opts.linkTarget == 1){
+                target = 'target="_blank"';
+            }
+
             if (opts.isEmpty) {
                 if (opts.showDaysInNextAndPreviousMonths) {
                     arr.push('is-outside-current-month');
@@ -341,11 +352,15 @@
             if (opts.isEndRange) {
                 arr.push('is-endrange');
             }
-            return '<td data-day="' + opts.day + '" class="' + arr.join(' ') + '" aria-selected="' + ariaSelected + '">' +
-                '<button class="pika-button pika-day" type="button" ' +
-                'data-pika-year="' + opts.year + '" data-pika-month="' + opts.month + '" data-pika-day="' + opts.day + '">' +
+
+            return '<td data-day="' + opts.day + '" class="' + arr.join(' ') + '" aria-selected="' + ariaSelected + '">'
+                +'<a href="'+opts.linkURL+'" '+target+'>'
+                +'<button class="pika-button pika-day" type="button" ' +
+                'data-pika-year="' + opts.year + '" data-pika-month="' + opts.month + '" ' +
+                'data-pika-day="' + opts.day + '">' +
                 opts.day +
                 '</button>' +
+                '</a>' +
                 '</td>';
         },
 
@@ -454,6 +469,12 @@
 
             self._onMouseDown = function(e)
             {
+                console.log(self)
+                console.log(e)
+                console.log('_onMouseDown');
+
+
+                return true;
                 if (!self._v) {
                     return;
                 }
@@ -497,6 +518,7 @@
 
             self._onChange = function(e)
             {
+                console.log('_onChange');
                 e = e || window.event;
                 var target = e.target || e.srcElement;
                 if (!target) {
@@ -512,6 +534,7 @@
 
             self._onKeyChange = function(e)
             {
+                console.log('_onKeyChange');
                 e = e || window.event;
 
                 if (self.isVisible()) {
@@ -542,6 +565,7 @@
 
             self._onInputChange = function(e)
             {
+                console.log('_onInputChange');
                 var date;
 
                 if (e.firedBy === self) {
@@ -566,16 +590,19 @@
 
             self._onInputFocus = function()
             {
+                console.log('_onInputFocus');
                 self.show();
             };
 
             self._onInputClick = function()
             {
+                console.log('_onInputClick');
                 self.show();
             };
 
             self._onInputBlur = function()
             {
+                console.log('_onInputBlur');
                 // IE allows pika div to gain focus; catch blur the input field
                 var pEl = document.activeElement;
                 do {
@@ -595,6 +622,7 @@
 
             self._onClick = function(e)
             {
+                console.log('_onClick');
                 e = e || window.event;
                 var target = e.target || e.srcElement,
                     pEl = target;
@@ -621,8 +649,8 @@
             self.el = document.createElement('div');
             self.el.className = 'pika-single' + (opts.isRTL ? ' is-rtl' : '') + (opts.theme ? ' ' + opts.theme : '');
 
-            addEvent(self.el, 'mousedown', self._onMouseDown, true);
-            addEvent(self.el, 'touchend', self._onMouseDown, true);
+            //addEvent(self.el, 'mousedown', self._onMouseDown, true);
+            //addEvent(self.el, 'touchend', self._onMouseDown, true);
             addEvent(self.el, 'change', self._onChange);
 
             if (opts.keyboardInput) {
@@ -666,7 +694,7 @@
                 self.el.className += ' is-bound';
                 addEvent(opts.trigger, 'click', self._onInputClick);
                 addEvent(opts.trigger, 'focus', self._onInputFocus);
-                addEvent(opts.trigger, 'blur', self._onInputBlur);
+                //addEvent(opts.trigger, 'blur', self._onInputBlur);
             } else {
                 this.show();
             }
@@ -1086,12 +1114,22 @@
          */
         render: function(year, month, randId)
         {
+            console.log('render randId = '+randId)
+            console.log(this._o)
+
             var opts   = this._o,
                 now    = new Date(),
                 days   = getDaysInMonth(year, month),
                 before = new Date(year, month, 1).getDay(),
                 data   = [],
-                row    = [];
+                row    = [],
+                linkURL = this._o.linkURL,
+                linkTarget = this._o.linkTarget;
+
+            console.log('render linkURL = '+linkURL)
+            console.log('render linkTarget = '+linkTarget)
+            console.log(opts)
+
             setToStartOfDay(now);
             if (opts.firstDay > 0) {
                 before -= opts.firstDay;
@@ -1154,7 +1192,9 @@
                     isEndRange: isEndRange,
                     isInRange: isInRange,
                     showDaysInNextAndPreviousMonths: opts.showDaysInNextAndPreviousMonths,
-                    enableSelectionDaysInNextAndPreviousMonths: opts.enableSelectionDaysInNextAndPreviousMonths
+                    enableSelectionDaysInNextAndPreviousMonths: opts.enableSelectionDaysInNextAndPreviousMonths,
+                    linkURL: linkURL,
+                    linkTarget: linkTarget
                 };
 
                 if (opts.pickWholeWeek && isSelected) {
@@ -1188,7 +1228,7 @@
                 this.draw();
                 removeClass(this.el, 'is-hidden');
                 if (this._o.bound) {
-                    addEvent(document, 'click', this._onClick);
+                    //addEvent(document, 'click', this._onClick);
                     this.adjustPosition();
                 }
                 if (typeof this._o.onOpen === 'function') {
