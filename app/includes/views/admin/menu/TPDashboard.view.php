@@ -100,8 +100,7 @@
                     '( (Local time) )', TPOPlUGIN_TEXTDOMAIN ); ?>
             </span><br/>
             <?php printf(_x('tp_admin_page_dashboard_paragraph_4_3','(Go to %s section to get a detailed report)', TPOPlUGIN_TEXTDOMAIN ),
-                '<a href="admin.php?page=tp_control_stats">'
-                ._x('tp_admin_page_dashboard_paragraph_4_4','Statistics', TPOPlUGIN_TEXTDOMAIN ).'</a>'); ?>
+                _x('tp_admin_page_dashboard_paragraph_4_4','Statistics', TPOPlUGIN_TEXTDOMAIN )); ?>
         </p>
 
         <div class="TP-NewsSection">
