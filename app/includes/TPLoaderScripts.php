@@ -1188,6 +1188,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             tpLocale = '<?php echo \app\includes\common\TPLang::getLang();?>';
         </script>
         <style type="text/css">
+            .tp-pika-link{
+                display: block;
+            }
             .TPHotelStar{
                 color: #fdb931;
             }

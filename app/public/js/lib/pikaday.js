@@ -308,9 +308,9 @@
         renderDay = function(opts)
         {
 
-            console.log('renderDay');
-            console.log('renderDay linkURL = '+opts.linkURL);
-            console.log('renderDay linkTarget = '+opts.linkTarget);
+            //console.log('renderDay');
+            //console.log('renderDay linkURL = '+opts.linkURL);
+            //console.log('renderDay linkTarget = '+opts.linkTarget);
             var arr = [];
             var ariaSelected = 'false';
             var target = '';
@@ -353,8 +353,13 @@
                 arr.push('is-endrange');
             }
 
+            var dateFormat, dateUrl, linkURL;
+            dateFormat = new Date(opts.year, opts.month, opts.day);
+            dateUrl = dateFormat.format('yyyy-mm-d');
+            linkURL = opts.linkURL + dateUrl;
+
             return '<td data-day="' + opts.day + '" class="' + arr.join(' ') + '" aria-selected="' + ariaSelected + '">'
-                +'<a href="'+opts.linkURL+'" '+target+'>'
+                +'<a href="'+linkURL+'" '+target+' class="tp-pika-link">'
                 +'<button class="pika-button pika-day" type="button" ' +
                 'data-pika-year="' + opts.year + '" data-pika-month="' + opts.month + '" ' +
                 'data-pika-day="' + opts.day + '">' +
@@ -473,19 +478,23 @@
                 console.log(e)
                 console.log('_onMouseDown');
 
-
-                return true;
                 if (!self._v) {
                     return;
                 }
                 e = e || window.event;
                 var target = e.target || e.srcElement;
+
+                console.log(target);
+                console.log(target.parentNode);
+                console.log(target.parentNode.parentNode);
+
                 if (!target) {
                     return;
                 }
 
                 if (!hasClass(target, 'is-disabled')) {
-                    if (hasClass(target, 'pika-button') && !hasClass(target, 'is-empty') && !hasClass(target.parentNode, 'is-disabled')) {
+
+                    /*if (hasClass(target, 'pika-button') && !hasClass(target, 'is-empty') && !hasClass(target.parentNode, 'is-disabled')) {
                         self.setDate(new Date(target.getAttribute('data-pika-year'), target.getAttribute('data-pika-month'), target.getAttribute('data-pika-day')));
                         if (opts.bound) {
                             sto(function() {
@@ -495,6 +504,17 @@
                                 }
                             }, 100);
                         }
+                    }*/
+                    console.log(hasClass(target, 'tp-pika-link'))
+                    console.log(!hasClass(target, 'is-empty'))
+                    console.log(!hasClass(target.parentNode, 'is-disabled'))
+                    if (hasClass(target.parentNode, 'tp-pika-link')
+                        && !hasClass(target.parentNode.parentNode, 'is-empty')
+                        && !hasClass(target.parentNode.parentNode, 'is-disabled')){
+                        //console.log('tp-pika-link');
+                        //target.parentNode.click();
+                        self._c = true;
+                        //self.destroy();
                     }
                     else if (hasClass(target, 'pika-prev')) {
                         self.prevMonth();
@@ -649,8 +669,8 @@
             self.el = document.createElement('div');
             self.el.className = 'pika-single' + (opts.isRTL ? ' is-rtl' : '') + (opts.theme ? ' ' + opts.theme : '');
 
-            //addEvent(self.el, 'mousedown', self._onMouseDown, true);
-            //addEvent(self.el, 'touchend', self._onMouseDown, true);
+            addEvent(self.el, 'mousedown', self._onMouseDown, true);
+            addEvent(self.el, 'touchend', self._onMouseDown, true);
             addEvent(self.el, 'change', self._onChange);
 
             if (opts.keyboardInput) {
@@ -694,7 +714,7 @@
                 self.el.className += ' is-bound';
                 addEvent(opts.trigger, 'click', self._onInputClick);
                 addEvent(opts.trigger, 'focus', self._onInputFocus);
-                //addEvent(opts.trigger, 'blur', self._onInputBlur);
+                addEvent(opts.trigger, 'blur', self._onInputBlur);
             } else {
                 this.show();
             }
@@ -1114,8 +1134,8 @@
          */
         render: function(year, month, randId)
         {
-            console.log('render randId = '+randId)
-            console.log(this._o)
+            //console.log('render randId = '+randId)
+            //console.log(this._o)
 
             var opts   = this._o,
                 now    = new Date(),
@@ -1126,9 +1146,9 @@
                 linkURL = this._o.linkURL,
                 linkTarget = this._o.linkTarget;
 
-            console.log('render linkURL = '+linkURL)
-            console.log('render linkTarget = '+linkTarget)
-            console.log(opts)
+            //console.log('render linkURL = '+linkURL)
+            //console.log('render linkTarget = '+linkTarget)
+            //console.log(opts)
 
             setToStartOfDay(now);
             if (opts.firstDay > 0) {
@@ -1228,7 +1248,7 @@
                 this.draw();
                 removeClass(this.el, 'is-hidden');
                 if (this._o.bound) {
-                    //addEvent(document, 'click', this._onClick);
+                    addEvent(document, 'click', this._onClick);
                     this.adjustPosition();
                 }
                 if (typeof this._o.onOpen === 'function') {

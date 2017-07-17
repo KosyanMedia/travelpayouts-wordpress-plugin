@@ -27,6 +27,7 @@ jQuery(function($) {
 
             }
         });
+
         $('.TPButtonTableDates').bind( "click", handlerRailwayDatepickerTest );
 
     });
@@ -51,6 +52,19 @@ jQuery(function($) {
             maxDate: new Date(new Date().setDate(new Date().getDate() + 90)),
             linkURL: linkUrl,
             linkTarget: target,
+            onDraw: function () {
+                $(document).find('.tp-pika-link').click(function (e) {
+                    picker.pikaday('hide');
+                    picker.pikaday('destroy');
+                });
+            },
+            onOpen: function () {
+                console.log('onOpen')
+                $(document).find('.tp-pika-link').click(function (e) {
+                    picker.pikaday('hide');
+                    picker.pikaday('destroy');
+                });
+            },
             onSelect: function(date) {
                 console.log('onSelect')
                 var dateFormat;
@@ -65,11 +79,12 @@ jQuery(function($) {
                 console.log(linkUrl);
                 console.log(dateUrl);
             },
+
         });
         picker.pikaday('show');
     }
 
-    var handlerRailwayDatepicker = function () {
+    /*var handlerRailwayDatepicker = function () {
         var link, picker, linkUrl, target, dateUrl, linkOpen;
         link = $(this);
         link.unbind('click');
@@ -180,12 +195,12 @@ jQuery(function($) {
             //link.click();
             link.unbind("click");
             link.bind( "click", handlerRailwayDatepicker );
-            return false;*/
+            return false;*
         } else {
             document.location.href = url;
         }
         return false;
-    }
+    }*/
 
     var conteiner = '.TP-Plugin-Tables_wrapper';
     var table = ' .TP-Plugin-Tables_box';
