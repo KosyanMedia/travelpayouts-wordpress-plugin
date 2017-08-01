@@ -40,7 +40,8 @@ if (!version_compare(PHP_VERSION, '5.3.0', '>=')) {
 }else{
     require_once dirname(__FILE__) . '/core/TPOAutoload.php';
     require_once dirname(__FILE__).'/app/includes/TPPlugin.php';
-    add_action('widgets_init', create_function('', 'return register_widget("app\includes\TPPluginWidget");'));
+    //add_action('widgets_init', create_function('', 'return register_widget("app\includes\TPPluginWidget");'));
+
     register_activation_hook( __FILE__, array('app\includes\TPPlugin' ,  'activation' ) );
     register_deactivation_hook( __FILE__, array('app\includes\TPPlugin' ,  'deactivation' ) );
     register_uninstall_hook( __FILE__, array('app\includes\TPPlugin' ,  'uninstall' ) );

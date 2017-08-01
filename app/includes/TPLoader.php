@@ -21,13 +21,11 @@ use app\includes\models\admin\TPHotelsTypeModel;
 class TPLoader extends \core\TPOLoader{
     public function __construct(){
         parent::__construct();
-
+	    add_action('widgets_init', array(&$this, 'registerWidget'));
     }
 
     protected function admin()
     {
-
-
         // TODO: Implement admin() method.
         // Admin menu
         new controllers\admin\menu\TPDashboardController();
@@ -63,8 +61,6 @@ class TPLoader extends \core\TPOLoader{
 
 
     }
-
-
     protected function site()
     {
         // TODO: Implement site() method.
@@ -123,7 +119,13 @@ class TPLoader extends \core\TPOLoader{
         //new controllers\admin\menu\TPAdminBarMenuController();
         //Загрузка спецпредложения
         //\app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel::modelHooks();
+    }
 
+    public function registerWidget(){
+	    register_widget( 'app\includes\widgets\TPFlightsTablesWidget' );
+	    register_widget( 'app\includes\widgets\TPHotelsTablesWidget' );
+	    register_widget( 'app\includes\widgets\TPSearchFormWidget' );
+	    register_widget( 'app\includes\widgets\TPWidgetsWidget' );
     }
 
     public function pluginsLoaded()
