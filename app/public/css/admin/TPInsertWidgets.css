@@ -5,6 +5,27 @@
 .TP-StopsWidget,
 .TP-LimitWidget,
 .TP-OneWayWidget,
-.TP-Off_TitleWidget{
+.TP-Off_TitleWidget,
+.tp-flights-tables-widget-title,
+.tp-flights-tables-widget-origin,
+.tp-flights-tables-widget-destination,
+.tp-flights-tables-widget-airline,
+.tp-flights-tables-widget-subid,
+.tp-flights-tables-widget-filter-airline,
+.tp-flights-tables-widget-filter-flight-number,
+.tp-flights-tables-widget-limit,
+.tp-flights-tables-widget-currency,
+.tp-flights-tables-widget-paginate,
+.tp-flights-tables-widget-one-way,
+.tp-flights-tables-widget-off-title,
+.tp-flights-tables-widget-transplant
+{
     display: none;
+}
+
+.tp-flights-tables-widget-select-shortcode{
+    max-width: 400px;
+}
+.tp-flights-tables-widget-limit input{
+    max-width: 50px;
 }
