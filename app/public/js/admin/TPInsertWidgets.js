@@ -6,9 +6,9 @@ jQuery(function($) {
     doc.ready(function () {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
+        console.log( doc.find('.tp-flights-tables-widget-select-shortcode'))
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
-            console.log($(this).data('select_table'))
-            constructorFlightTableWidget($(this).data('select_table'))
+            constructorFlightTableWidget($(this).data('select_table').toString())
         });
 
         doc.find('.tp-flights-tables-widget-select-label')
@@ -28,6 +28,7 @@ jQuery(function($) {
     });
 
     function constructorFlightTableWidget(select) {
+        console.log('constructorFlightTableWidget = '+select);
         doc.find('.tp-flights-tables-widget-title, '
             +'.tp-flights-tables-widget-origin, '
             +'.tp-flights-tables-widget-destination, '

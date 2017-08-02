@@ -43,6 +43,177 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_flight_number = isset( $instance['filter_flight_number'] ) ? esc_attr( $instance['filter_flight_number'] ) : '';
 		$limit = isset( $instance['limit'] ) ? esc_attr( $instance['limit'] ) : 100;
 		$one_way = isset( $instance['one_way'] ) ? $instance['one_way']  : true;
+
+		$originCode = '';
+		if(isset($origin)){
+			preg_match('/\[(.+)\]/', $origin, $originCode);
+		}
+		$destinationCode = '';
+		if(isset($destination)){
+			preg_match('/\[(.+)\]/', $destination, $destinationCode);
+		}
+		$airlineCode = '';
+		if(isset($airline)){
+			preg_match('/\[(.+)\]/', $airline, $airlineCode);
+		}
+		$filterAirlineCode = '';
+		if(isset($filter_airline)){
+			preg_match('/\[(.+)\]/', $filter_airline, $filterAirlineCode);
+		}
+		$originAttr = 'origin="'.$originCode[1].'"';
+		$destinationAttr = 'destination="'.$destinationCode[1].'"';
+		$airlineAttr = 'airline="'.$airlineCode[1].'"';
+		$subidAttr = 'subid="'.$subid.'"';
+		$currencyAttr = 'currency="'.$currency.'"';
+		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
+		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
+		$oneWayAttr = (isset($one_way))? 'one_way=true':'one_way=false';
+		$transplantAttr = 'stops='.$transplant;
+		$filterAirlineAttr = 'filter_airline="'.$filter_airline[1].'"';
+		$filterFlightNumberAttr = 'filter_flight_number="'.$filter_flight_number.'"';
+		$limitAttr = 'limit='.$limit.'';
+		$titleAttr = 'title='.$title.'';
+		$shortcode = '';
+		switch ($select){
+			case 0:
+				$shortcode = '[tp_price_calendar_month_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$transplantAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 1:
+				$shortcode = '[tp_price_calendar_week_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 2:
+				$shortcode = '[tp_cheapest_flights_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$filterAirlineAttr.' '
+				             .$filterFlightNumberAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 3:
+				$shortcode = '[tp_cheapest_ticket_each_day_month_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$transplantAttr.' '
+				             .$filterAirlineAttr.' '
+				             .$filterFlightNumberAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 4:
+				$shortcode = '[tp_cheapest_tickets_each_month_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$filterAirlineAttr.' '
+				             .$filterFlightNumberAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 5:
+				$shortcode = '[tp_direct_flights_route_shortcodes '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$filterAirlineAttr.' '
+				             .$filterFlightNumberAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 6:
+				$shortcode = '[tp_direct_flights_shortcodes '
+				             .$originAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$filterAirlineAttr.' '
+				             .$filterFlightNumberAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.' '
+				             .$limitAttr.' '
+				             .$currencyAttr.']';
+				break;
+			case 7:
+				$shortcode = '[tp_popular_routes_from_city_shortcodes '
+				             .$originAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$subidAttr.']';
+				break;
+			case 8:
+				$shortcode = '[tp_popular_destinations_airlines_shortcodes '
+				             .$airlineAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$limitAttr.' '
+				             .$subidAttr.']';
+				break;
+			case 9:
+				$shortcode = '[tp_our_site_search_shortcodes '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$limitAttr.' '
+				             .$oneWayAttr.' '
+				             .$currencyAttr.' '
+				             .$transplantAttr.' '
+				             .$subidAttr.']';
+				break;
+			case 10:
+				$shortcode = '[tp_from_our_city_fly_shortcodes '
+				             .$originAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$limitAttr.' '
+				             .$oneWayAttr.' '
+				             .$currencyAttr.' '
+				             .$transplantAttr.' '
+				             .$subidAttr.']';
+				break;
+			case 11:
+				$shortcode = '[tp_in_our_city_fly_shortcodes '
+				             .$destinationAttr.' '
+				             .$titleAttr.' '
+				             .$paginateAttr.' '
+				             .$offTitleAttr.' '
+				             .$limitAttr.' '
+				             .$oneWayAttr.' '
+				             .$currencyAttr.' '
+				             .$transplantAttr.' '
+				             .$subidAttr.']';
+				break;
+		}
+
+		echo do_shortcode($shortcode);
+
+
 	}
 
 	/**
@@ -124,7 +295,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 								continue;
 							}
 							?>
-							<option value="<?php echo $key; ?>" <?php selected( $select, $item ); ?>>
+							<option value="<?php echo $key; ?>" <?php selected( $select, $key ); ?>>
 								<?php echo $item; ?>. <?php echo  $shortcodeLabel; ?>
 							</option>
 							<?php $item++; ?>
