@@ -126,6 +126,10 @@ class TPLoader extends \core\TPOLoader{
 	    register_widget( 'app\includes\widgets\TPHotelsTablesWidget' );
 	    register_widget( 'app\includes\widgets\TPSearchFormWidget' );
 	    register_widget( 'app\includes\widgets\TPWidgetsWidget' );
+	    if (TPLang::getLang() == TPLang::getLangRU()){
+		    register_widget( 'app\includes\widgets\TPRailwayTablesWidget' );
+	    }
+
     }
 
     public function pluginsLoaded()

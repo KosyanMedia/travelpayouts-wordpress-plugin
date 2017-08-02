@@ -38,6 +38,21 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
+		$instance['select'] = (!empty( $new_instance['select'])) ? $new_instance['select'] : $old_instance['select'];
+		$instance['title'] = (!empty( $new_instance['title'] )) ? $new_instance['title'] : $old_instance['title'];
+		$instance['origin'] = (!empty( $new_instance['origin'])) ? $new_instance['origin'] : $old_instance['origin'];
+		$instance['destination'] = (!empty( $new_instance['destination'] ) ) ? $new_instance['destination'] : $old_instance['destination'];
+		$instance['airline'] = (!empty( $new_instance['airline'])) ? $new_instance['airline'] : $old_instance['airline'];
+		$instance['subid'] = (!empty( $new_instance['subid'])) ? $new_instance['subid'] : $old_instance['subid'];
+		$instance['currency'] = (!empty( $new_instance['currency'])) ? $new_instance['currency'] : $old_instance['currency'];
+		$instance['paginate'] = (isset($new_instance['paginate']))? true : false;
+		$instance['off_title'] = (isset($new_instance['off_title']))? true : false;
+		$instance['transplant'] = (!empty( $new_instance['transplant'])) ? $new_instance['transplant'] : $old_instance['transplant'];
+		$instance['filter_airline'] = (!empty( $new_instance['filter_airline'])) ? $new_instance['filter_airline'] : $old_instance['filter_airline'];
+		$instance['filter_flight_number'] = (!empty( $new_instance['filter_flight_number'])) ? $new_instance['filter_flight_number'] : $old_instance['filter_flight_number'];
+		$instance['limit'] = (!empty( $new_instance['limit'])) ? $new_instance['limit'] : $old_instance['limit'];
+		$instance['one_way'] = (isset($new_instance['one_way']))? true : false;
+		return $instance;
 	}
 
 	/**
@@ -69,6 +84,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 					       value="<?php echo $title; ?>" />
 				</label>
 			</p>
+			<p class="TP-SelectWidget"></p>
+
 		</div>
 		<?php
 	}
