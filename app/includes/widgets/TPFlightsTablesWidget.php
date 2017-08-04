@@ -244,7 +244,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function form( $instance ) {
-		$select = isset( $instance['select'] ) ? esc_attr( $instance['select'] ) : 0;
+		$select = isset( $instance['select'] ) ? esc_attr( $instance['select'] ) : 'null';
 		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$origin = isset( $instance['origin'] ) ? esc_attr( $instance['origin'] ) : '';
 		$destination = isset( $instance['destination'] ) ? esc_attr( $instance['destination'] ) : '';
@@ -284,7 +284,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 					        id="<?php echo $this->get_field_id('select'); ?>"
 					        name="<?php echo $this->get_field_name('select'); ?>"
 					        data-select_table="<?php echo $select; ?>">
-						<option value="null">
+						<option value="select">
 							<?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>
 						</option>
 						<?php $item = 1; ?>

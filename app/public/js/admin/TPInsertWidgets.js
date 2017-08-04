@@ -6,29 +6,44 @@ jQuery(function($) {
     doc.ready(function () {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
-        console.log( doc.find('.tp-flights-tables-widget-select-shortcode'))
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
-            constructorFlightTableWidget($(this).data('select_table').toString())
+            var select = $(this).data('select_table');
+            if (select != null){
+                constructorFlightTableWidget(select.toString())
+            }
+
         });
 
         doc.find('.tp-flights-tables-widget-select-label')
             .on('change', '.tp-flights-tables-widget-select-shortcode', function(e) {
                 e.preventDefault();
-                constructorFlightTableWidget($(this).val())
+                var select = $(this).val();
+                if (select != null) {
+                    constructorFlightTableWidget($(this).val())
+                }
             });
     });
     jQuery(document).ajaxSuccess(function(e, xhr, settings) {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
+        doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
+            var select = $(this).data('select_table');
+            if (select != null){
+                constructorFlightTableWidget(select.toString())
+            }
+
+        });
         doc.find('.tp-flights-tables-widget-select-label')
             .on('change', '.tp-flights-tables-widget-select-shortcode', function(e) {
-            e.preventDefault();
-            constructorFlightTableWidget($(this).val())
-        });
+                e.preventDefault();
+                var select = $(this).val();
+                if (select != null) {
+                    constructorFlightTableWidget($(this).val())
+                }
+            });
     });
 
     function constructorFlightTableWidget(select) {
-        console.log('constructorFlightTableWidget = '+select);
         doc.find('.tp-flights-tables-widget-title, '
             +'.tp-flights-tables-widget-origin, '
             +'.tp-flights-tables-widget-destination, '
