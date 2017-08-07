@@ -289,7 +289,8 @@ function TPCityAutocomplete(){
 
                                     })
                                 )
-                            } else if($(selector).hasClass('HotelCityAutocomplete')) {
+                            } else if($(selector).hasClass('HotelCityAutocomplete') ||
+                                $(selector).hasClass('HotelWidgetCityAutocomplete')) {
                                 var records =[];
 
                                 $.map(data.cities, function(city, key_city){
@@ -449,6 +450,27 @@ function TPCityAutocomplete(){
                                 $.map(data, function(item){
                                     if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
                                         $('#select_hotels_selections_type')
+                                            .append($("<option></option>")
+                                                .attr("value",item)
+                                                .attr("data-selections-title", hotelsSelectionsType[tpLocale][item]['title'])
+                                                .attr("data-selections-title-ru",hotelsSelectionsType['ru'][item]['title'])
+                                                .attr("data-selections-title-en",hotelsSelectionsType['en'][item]['title'])
+                                                .text(hotelsSelectionsType[tpLocale][item]['label']));
+                                    }
+
+                                });
+
+
+                            })
+                        }
+                        if($(selector).hasClass('HotelWidgetCityAutocomplete')){
+                            input.attr('data-city', ui.item.city);
+                            $('.tp-hotels-tables-widget-selections-type-select').find("option:gt(0)").remove();
+                            $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
+                                data.sort();
+                                $.map(data, function(item){
+                                    if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
+                                        $('.tp-hotels-tables-widget-selections-type-select')
                                             .append($("<option></option>")
                                                 .attr("value",item)
                                                 .attr("data-selections-title", hotelsSelectionsType[tpLocale][item]['title'])
@@ -724,6 +746,35 @@ function TPCityAutocomplete(){
         });
     }
 
+    this.TPGetHotelsSelections = function(city, selectionsType, selectionsTypeVal){
+        jQuery(function($) {
+            var doc, win;
+            doc = $(document);
+            win = $(window);
+
+            selectionsType.find("option:gt(0)").remove();
+            $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + city, function(data) {
+                data.sort();
+                $.map(data, function(item){
+                    if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
+                        var selected = '';
+                        if (selectionsTypeVal == item){
+                            selected = 'selected="selected"';
+                        }
+                        selectionsType
+                            .append($("<option "+selected+"></option>")
+                                .attr("value",item)
+                                .attr("data-selections-title", hotelsSelectionsType[tpLocale][item]['title'])
+                                .attr("data-selections-title-ru",hotelsSelectionsType['ru'][item]['title'])
+                                .attr("data-selections-title-en",hotelsSelectionsType['en'][item]['title'])
+                                .text(hotelsSelectionsType[tpLocale][item]['label']));
+                    }
+                });
+                //
+            })
+        });
+
+    }
     /**
      *
      * @param selector

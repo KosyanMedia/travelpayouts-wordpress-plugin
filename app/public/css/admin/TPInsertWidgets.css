@@ -21,3 +21,101 @@
 .tp-flights-tables-widget-limit input{
     max-width: 50px;
 }
+
+
+.ui-datepicker {
+    width: 300px;
+    height: auto;
+    background: #fff;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #dcdfdf;
+    padding: 15px;
+    display: none;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+}
+.ui-datepicker-calendar th {
+    height: 20px;
+    border-bottom: 1px solid #00abfd;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300;
+    color: #b5b5b9;
+    line-height: 11px;
+}
+.ui-datepicker-calendar td {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+.ui-datepicker-calendar td a {
+    font-size: 13px;
+    color: #23282d;
+    font-weight: 300;
+    display: block;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    line-height: 26px;
+    border: 2px solid transparent;
+    text-decoration: none;
+}
+.ui-datepicker-calendar td a:hover {
+    border: 2px solid #00abfd;
+    text-decoration: none;
+}
+.ui-datepicker-calendar td a.ui-state-highlight {
+    background: #00abfd;
+    color: #fff;
+    border-color: #00abfd;
+    text-align: center;
+
+}
+
+.ui-datepicker-header {
+    height: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 31px;
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZTRlNGU2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMSIgdmlld0JveD0iMCAwIDMwIDMxIj48cGF0aCBkPSJNMTUgLjQxN2MtOC4yODQgMC0xNSA2LjcxNi0xNSAxNXM2LjcxNiAxNSAxNSAxNSAxNS02LjcxNiAxNS0xNS02LjcxNi0xNS0xNS0xNXptMCAyOGMtNy4xNjggMC0xMy01LjgzMi0xMy0xM3M1LjgzMi0xMyAxMy0xMyAxMyA1LjgzMiAxMyAxMy01LjgzMiAxMy0xMyAxM3pNMjMgMTVjMCAuNTUzLS40NDcgMS0xIDFIMTAuNDE0bDUuMjkzIDUuNWMuMzkuMzkyLjM5IDEuMTI4IDAgMS41Mi0uMTk1LjE5NC0uNDUuMzQ0LS43MDcuMzQ0cy0uNTEyLS4wNy0uNzA3LS4yNjdsLTctNi45ODdjLS4zOS0uMzktLjM5LTEuMDE3IDAtMS40MDdsNy02Ljk5N2MuMzktLjM5IDEuMDIzLS4zOSAxLjQxNC4wMDJzLjM5LjgxNSAwIDEuMjA2TDEwLjQxNCAxNEgyMmMuNTUzIDAgMSAuNDQ3IDEgMXoiLz48L3N2Zz4=");
+}
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDBhYmZkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMSIgdmlld0JveD0iMCAwIDMwIDMxIj48cGF0aCBkPSJNMTUgLjQxN2MtOC4yODQgMC0xNSA2LjcxNi0xNSAxNXM2LjcxNiAxNSAxNSAxNSAxNS02LjcxNiAxNS0xNS02LjcxNi0xNS0xNS0xNXptMCAyOGMtNy4xNjggMC0xMy01LjgzMi0xMy0xM3M1LjgzMi0xMyAxMy0xMyAxMyA1LjgzMiAxMyAxMy01LjgzMiAxMy0xMyAxM3pNMjMgMTVjMCAuNTUzLS40NDcgMS0xIDFIMTAuNDE0bDUuMjkzIDUuNWMuMzkuMzkyLjM5IDEuMTI4IDAgMS41Mi0uMTk1LjE5NC0uNDUuMzQ0LS43MDcuMzQ0cy0uNTEyLS4wNy0uNzA3LS4yNjdsLTctNi45ODdjLS4zOS0uMzktLjM5LTEuMDE3IDAtMS40MDdsNy02Ljk5N2MuMzktLjM5IDEuMDIzLS4zOSAxLjQxNC4wMDJzLjM5LjgxNSAwIDEuMjA2TDEwLjQxNCAxNEgyMmMuNTUzIDAgMSAuNDQ3IDEgMXoiLz48L3N2Zz4=");
+}
+
+.ui-datepicker-prev {
+    left: 0;
+}
+
+.ui-datepicker-next {
+    right: 0;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    color: #b5b5b9;
+}

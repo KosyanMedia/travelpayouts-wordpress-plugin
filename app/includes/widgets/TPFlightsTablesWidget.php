@@ -29,20 +29,20 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function widget( $args, $instance ) {
-		$select = isset( $instance['select'] ) ? esc_attr( $instance['select'] ) : 0;
-		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-		$origin = isset( $instance['origin'] ) ? esc_attr( $instance['origin'] ) : '';
-		$destination = isset( $instance['destination'] ) ? esc_attr( $instance['destination'] ) : '';
-		$airline = isset( $instance['airline'] ) ? esc_attr( $instance['airline'] ) : '';
-		$subid = isset( $instance['subid'] ) ? esc_attr( $instance['subid'] ) : '';
-		$currency = isset( $instance['currency'] ) ? esc_attr( $instance['currency'] ) : TPPlugin::$options['local']['currency'];
-		$paginate = isset( $instance['paginate'] ) ? $instance['paginate']  : true;
-		$off_title = isset( $instance['off_title'] ) ? $instance['off_title']  : false;
-		$transplant = isset( $instance['transplant'] ) ? esc_attr( $instance['transplant'] ) : 0;
-		$filter_airline = isset( $instance['filter_airline'] ) ? esc_attr( $instance['filter_airline'] ) : '';
-		$filter_flight_number = isset( $instance['filter_flight_number'] ) ? esc_attr( $instance['filter_flight_number'] ) : '';
-		$limit = isset( $instance['limit'] ) ? esc_attr( $instance['limit'] ) : 100;
-		$one_way = isset( $instance['one_way'] ) ? $instance['one_way']  : true;
+		$select = isset( $instance['flight_select'] ) ? esc_attr( $instance['flight_select'] ) : 'select';
+		$title = isset( $instance['flight_title'] ) ? esc_attr( $instance['flight_title'] ) : '';
+		$origin = isset( $instance['flight_origin'] ) ? esc_attr( $instance['flight_origin'] ) : '';
+		$destination = isset( $instance['flight_destination'] ) ? esc_attr( $instance['flight_destination'] ) : '';
+		$airline = isset( $instance['flight_airline'] ) ? esc_attr( $instance['flight_airline'] ) : '';
+		$subid = isset( $instance['flight_subid'] ) ? esc_attr( $instance['flight_subid'] ) : '';
+		$currency = isset( $instance['flight_currency'] ) ? esc_attr( $instance['flight_currency'] ) : TPPlugin::$options['local']['currency'];
+		$paginate = isset( $instance['flight_paginate'] ) ? $instance['flight_paginate']  : true;
+		$off_title = isset( $instance['flight_off_title'] ) ? $instance['flight_off_title']  : false;
+		$transplant = isset( $instance['flight_transplant'] ) ? esc_attr( $instance['flight_transplant'] ) : 0;
+		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
+		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
+		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
+		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
 
 		$originCode = '';
 		if(isset($origin)){
@@ -223,41 +223,41 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		$instance['select'] = (!empty( $new_instance['select'])) ? $new_instance['select'] : $old_instance['select'];
-		$instance['title'] = (!empty( $new_instance['title'] )) ? $new_instance['title'] : $old_instance['title'];
-		$instance['origin'] = (!empty( $new_instance['origin'])) ? $new_instance['origin'] : $old_instance['origin'];
-		$instance['destination'] = (!empty( $new_instance['destination'] ) ) ? $new_instance['destination'] : $old_instance['destination'];
-		$instance['airline'] = (!empty( $new_instance['airline'])) ? $new_instance['airline'] : $old_instance['airline'];
-		$instance['subid'] = (!empty( $new_instance['subid'])) ? $new_instance['subid'] : $old_instance['subid'];
-		$instance['currency'] = (!empty( $new_instance['currency'])) ? $new_instance['currency'] : $old_instance['currency'];
-		$instance['paginate'] = (isset($new_instance['paginate']))? true : false;
-		$instance['off_title'] = (isset($new_instance['off_title']))? true : false;
-		$instance['transplant'] = (!empty( $new_instance['transplant'])) ? $new_instance['transplant'] : $old_instance['transplant'];
-		$instance['filter_airline'] = (!empty( $new_instance['filter_airline'])) ? $new_instance['filter_airline'] : $old_instance['filter_airline'];
-		$instance['filter_flight_number'] = (!empty( $new_instance['filter_flight_number'])) ? $new_instance['filter_flight_number'] : $old_instance['filter_flight_number'];
-		$instance['limit'] = (!empty( $new_instance['limit'])) ? $new_instance['limit'] : $old_instance['limit'];
-		$instance['one_way'] = (isset($new_instance['one_way']))? true : false;
-		return $instance;
+		//$new_instance['flight_select'] = (!empty( $new_instance['flight_select'])) ? $new_instance['flight_select'] : $old_instance['flight_select'];
+		$new_instance['flight_title'] = (!empty( $new_instance['flight_title'] )) ? $new_instance['flight_title'] : $old_instance['flight_title'];
+		$new_instance['flight_origin'] = (!empty( $new_instance['flight_origin'])) ? $new_instance['flight_origin'] : $old_instance['flight_origin'];
+		$new_instance['flight_destination'] = (!empty( $new_instance['flight_destination'] ) ) ? $new_instance['flight_destination'] : $old_instance['flight_destination'];
+		$new_instance['flight_airline'] = (!empty( $new_instance['flight_airline'])) ? $new_instance['flight_airline'] : $old_instance['flight_airline'];
+		$new_instance['flight_subid'] = (!empty( $new_instance['flight_subid'])) ? $new_instance['flight_subid'] : $old_instance['flight_subid'];
+		$new_instance['flight_currency'] = (!empty( $new_instance['flight_currency'])) ? $new_instance['flight_currency'] : $old_instance['flight_currency'];
+		$new_instance['flight_paginate'] = (isset($new_instance['flight_paginate']))? true : false;
+		$new_instance['flight_off_title'] = (isset($new_instance['flight_off_title']))? true : false;
+		$new_instance['flight_transplant'] = (!empty( $new_instance['flight_transplant'])) ? $new_instance['flight_transplant'] : $old_instance['flight_transplant'];
+		$new_instance['flight_filter_airline'] = (!empty( $new_instance['flight_filter_airline'])) ? $new_instance['flight_filter_airline'] : $old_instance['flight_filter_airline'];
+		$new_instance['flight_filter_flight_number'] = (!empty( $new_instance['flight_filter_flight_number'])) ? $new_instance['flight_filter_flight_number'] : $old_instance['flight_filter_flight_number'];
+		$new_instance['flight_limit'] = (!empty( $new_instance['flight_limit'])) ? $new_instance['flight_limit'] : $old_instance['flight_limit'];
+		$new_instance['flight_one_way'] = (isset($new_instance['flight_one_way']))? true : false;
+		return $new_instance;
 	}
 
 	/**
 	 * @param $instance
 	 */
 	public function form( $instance ) {
-		$select = isset( $instance['select'] ) ? esc_attr( $instance['select'] ) : 'null';
-		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-		$origin = isset( $instance['origin'] ) ? esc_attr( $instance['origin'] ) : '';
-		$destination = isset( $instance['destination'] ) ? esc_attr( $instance['destination'] ) : '';
-		$airline = isset( $instance['airline'] ) ? esc_attr( $instance['airline'] ) : '';
-		$subid = isset( $instance['subid'] ) ? esc_attr( $instance['subid'] ) : '';
-		$limit = isset( $instance['limit'] ) ? esc_attr( $instance['limit'] ) : 100;
-		$currency = isset( $instance['currency'] ) ? esc_attr( $instance['currency'] ) : TPPlugin::$options['local']['currency'];
-		$paginate = isset( $instance['paginate'] ) ? $instance['paginate']  : true;
-		$one_way = isset( $instance['one_way'] ) ? $instance['one_way']  : true;
-		$off_title = isset( $instance['off_title'] ) ? $instance['off_title']  : false;
-		$transplant = isset( $instance['transplant'] ) ? esc_attr( $instance['transplant'] ) : 0;
-		$filter_airline = isset( $instance['filter_airline'] ) ? esc_attr( $instance['filter_airline'] ) : '';
-		$filter_flight_number = isset( $instance['filter_flight_number'] ) ? esc_attr( $instance['filter_flight_number'] ) : '';
+		$select = isset( $instance['flight_select'] ) ? esc_attr( $instance['flight_select'] ) : 'select';
+		$title = isset( $instance['flight_title'] ) ? esc_attr( $instance['flight_title'] ) : '';
+		$origin = isset( $instance['flight_origin'] ) ? esc_attr( $instance['flight_origin'] ) : '';
+		$destination = isset( $instance['flight_destination'] ) ? esc_attr( $instance['flight_destination'] ) : '';
+		$airline = isset( $instance['flight_airline'] ) ? esc_attr( $instance['flight_airline'] ) : '';
+		$subid = isset( $instance['flight_subid'] ) ? esc_attr( $instance['flight_subid'] ) : '';
+		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
+		$currency = isset( $instance['flight_currency'] ) ? esc_attr( $instance['flight_currency'] ) : TPPlugin::$options['local']['currency'];
+		$paginate = isset( $instance['flight_paginate'] ) ? $instance['flight_paginate']  : true;
+		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
+		$off_title = isset( $instance['flight_off_title'] ) ? $instance['flight_off_title']  : false;
+		$transplant = isset( $instance['flight_transplant'] ) ? esc_attr( $instance['flight_transplant'] ) : 0;
+		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
+		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 
 		$shortcodeLabels = array(
 			__('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN),
@@ -278,13 +278,14 @@ class TPFlightsTablesWidget extends WP_Widget{
 
 		<div class="tp-flights-tables-widget">
 			<p class="tp-flights-tables-widget-select">
-				<label for="<?php echo $this->get_field_id('select'); ?>" class="tp-flights-tables-widget-select-label">
+				<label for="<?php echo $this->get_field_id('flight_select'); ?>"
+                       class="tp-flights-tables-widget-select-label">
 					<?php _e('Select the table:', TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-flights-tables-widget-select-shortcode widefat"
-					        id="<?php echo $this->get_field_id('select'); ?>"
-					        name="<?php echo $this->get_field_name('select'); ?>"
+					        id="<?php echo $this->get_field_id('flight_select'); ?>"
+					        name="<?php echo $this->get_field_name('flight_select'); ?>"
 					        data-select_table="<?php echo $select; ?>">
-						<option value="select">
+						<option value="select" <?php selected( $select, 'select' ); ?>>
 							<?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>
 						</option>
 						<?php $item = 1; ?>
@@ -304,51 +305,51 @@ class TPFlightsTablesWidget extends WP_Widget{
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-title">
-				<label for="<?php echo $this->get_field_id('title'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_title'); ?>">
 					<?php _e('Alternate title:', TPOPlUGIN_TEXTDOMAIN);?>
-					<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-					       name="<?php echo $this->get_field_name('title'); ?>" type="text"
+					<input class="widefat" id="<?php echo $this->get_field_id('flight_title'); ?>"
+					       name="<?php echo $this->get_field_name('flight_title'); ?>" type="text"
 					       value="<?php echo $title; ?>" />
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-origin">
-				<label for="<?php echo $this->get_field_id('origin'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_origin'); ?>">
 					<?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $origin; ?>" type="text"
-					       id="<?php echo $this->get_field_id('origin'); ?>"
-					       name="<?php echo $this->get_field_name('origin'); ?>"
+					       id="<?php echo $this->get_field_id('flight_origin'); ?>"
+					       name="<?php echo $this->get_field_name('flight_origin'); ?>"
 					       class="constructorCityWidgetsAutocomplete widefat"/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-destination">
-				<label for="<?php echo $this->get_field_id('destination'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_destination'); ?>">
 					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $destination; ?>" type="text"
-					       id="<?php echo $this->get_field_id('destination'); ?>"
-					       name="<?php echo $this->get_field_name('destination'); ?>"
+					       id="<?php echo $this->get_field_id('flight_destination'); ?>"
+					       name="<?php echo $this->get_field_name('flight_destination'); ?>"
 					       class="constructorCityWidgetsAutocomplete widefat"/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-airline">
-				<label for="<?php echo $this->get_field_id('airline'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_airline'); ?>">
 					<?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $airline; ?>" type="text"
-					       id="<?php echo $this->get_field_id('airline'); ?>"
-					       name="<?php echo $this->get_field_name('airline'); ?>"
+					       id="<?php echo $this->get_field_id('flight_airline'); ?>"
+					       name="<?php echo $this->get_field_name('flight_airline'); ?>"
 					       class="constructorAirlineWidgetsAutocomplete widefat"/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-subid">
-				<label for="<?php echo $this->get_field_id('subid'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_subid'); ?>">
 					<?php _e('Subid:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $subid; ?>" type="text"
-					       id="<?php echo $this->get_field_id('subid'); ?>"
-					       name="<?php echo $this->get_field_name('subid'); ?>"
+					       id="<?php echo $this->get_field_id('flight_subid'); ?>"
+					       name="<?php echo $this->get_field_name('flight_subid'); ?>"
 					       class="widefat"/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-filter-airline">
-				<label for="<?php echo $this->get_field_id('filter_airline'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_filter_airline'); ?>">
 					<?php _e('Filter by airline:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $filter_airline; ?>" type="text"
 					       id="<?php echo $this->get_field_id('filter_airline'); ?>"
@@ -372,19 +373,19 @@ class TPFlightsTablesWidget extends WP_Widget{
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-limit">
-				<label for="<?php echo $this->get_field_id('limit'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_limit'); ?>">
 					<?php _e('Limit:', TPOPlUGIN_TEXTDOMAIN);?>
 					<input value="<?php echo $limit; ?>" type="number"
-					       id="<?php echo $this->get_field_id('limit'); ?>"
-					       name="<?php echo $this->get_field_name('limit'); ?>"
+					       id="<?php echo $this->get_field_id('flight_limit'); ?>"
+					       name="<?php echo $this->get_field_name('flight_limit'); ?>"
 					       class=""/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-currency">
-				<label for="<?php echo $this->get_field_id('currency'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_currency'); ?>">
 					<?php _e('Currency:', TPOPlUGIN_TEXTDOMAIN);?>
-					<select id="<?php echo $this->get_field_id('currency'); ?>"
-					        name="<?php echo $this->get_field_name('currency'); ?>">
+					<select id="<?php echo $this->get_field_id('flight_currency'); ?>"
+					        name="<?php echo $this->get_field_name('flight_currency'); ?>">
 						<?php foreach(TPCurrencyUtils::getCurrencyAll() as $currency_item){ ?>
 							<option
 								<?php selected($currency, $currency_item); ?>
@@ -397,34 +398,34 @@ class TPFlightsTablesWidget extends WP_Widget{
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-paginate">
-				<label for="<?php echo $this->get_field_id('paginate'); ?>">
-					<input type="checkbox" id="<?php echo $this->get_field_id('paginate'); ?>"
-					       name="<?php echo $this->get_field_name('paginate'); ?>"
+				<label for="<?php echo $this->get_field_id('flight_paginate'); ?>">
+					<input type="checkbox" id="<?php echo $this->get_field_id('flight_paginate'); ?>"
+					       name="<?php echo $this->get_field_name('flight_paginate'); ?>"
 					       value="1" <?php checked($paginate, true)?>>
 					<?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-one-way">
-				<label for="<?php echo $this->get_field_id('one_way'); ?>">
-					<input type="checkbox" id="<?php echo $this->get_field_id('one_way'); ?>"
-					       name="<?php echo $this->get_field_name('one_way'); ?>"
+				<label for="<?php echo $this->get_field_id('flight_one_way'); ?>">
+					<input type="checkbox" id="<?php echo $this->get_field_id('flight_one_way'); ?>"
+					       name="<?php echo $this->get_field_name('flight_one_way'); ?>"
 					       value="1" <?php checked($one_way, true)?>>
 					<?php _e('One Way', TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-off-title">
-				<label for="<?php echo $this->get_field_id('off_title'); ?>">
-					<input type="checkbox" id="<?php echo $this->get_field_id('off_title'); ?>"
-					       name="<?php echo $this->get_field_name('off_title'); ?>"
+				<label for="<?php echo $this->get_field_id('flight_off_title'); ?>">
+					<input type="checkbox" id="<?php echo $this->get_field_id('flight_off_title'); ?>"
+					       name="<?php echo $this->get_field_name('flight_off_title'); ?>"
 					       value="1" <?php checked($off_title, true)?>>
 					<?php _e('No title', TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-transplant">
-				<label for="<?php echo $this->get_field_id('transplant'); ?>">
+				<label for="<?php echo $this->get_field_id('flight_transplant'); ?>">
 					<?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>:
-					<select id="<?php echo $this->get_field_id('transplant'); ?>"
-					        name="<?php echo $this->get_field_name('transplant'); ?>">
+					<select id="<?php echo $this->get_field_id('flight_transplant'); ?>"
+					        name="<?php echo $this->get_field_name('flight_transplant'); ?>">
 						<option value="0" <?php selected( $transplant, 0 ); ?>>
 							<?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
 						<option value="1" <?php selected( $transplant, 1 ); ?>>

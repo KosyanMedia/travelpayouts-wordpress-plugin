@@ -103,7 +103,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-AutocompleteScript', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/TPAdminAutocomplete.js', //$src
-            array('jquery', 'jquery-ui-autocomplete'), //$deps
+            array(
+                'jquery',
+                'jquery-ui-autocomplete'
+            ), //$deps
             $version, //$ver
             true //$$in_footer
         );
@@ -111,7 +114,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-HotelsSelectionsType', //$handle
             TPOPlUGIN_URL.'app/public/js/lib/TPHotelsSelectionsType.js', //$src
-            array('jquery', 'jquery-ui-autocomplete'), //$deps
+            array(
+                'jquery',
+                'jquery-ui-autocomplete'
+            ), //$deps
             $version, //$ver
             true //$$in_footer
         );
@@ -194,10 +200,14 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 'jquery-ui-button',
                 'jquery-form',
                 'jquery-ui-tabs',
-                TPOPlUGIN_SLUG.'-fileDownload', TPOPlUGIN_SLUG.'-jqColorPicker',
-                TPOPlUGIN_SLUG.'-excellentexport', TPOPlUGIN_SLUG.'-dataTables',
-                TPOPlUGIN_SLUG.'-jquery-cookie', TPOPlUGIN_SLUG. '-FileSaver',
-                'jquery-ui-progressbar', TPOPlUGIN_SLUG. '-jquery-csv'
+                TPOPlUGIN_SLUG.'-fileDownload',
+                TPOPlUGIN_SLUG.'-jqColorPicker',
+                TPOPlUGIN_SLUG.'-excellentexport',
+                TPOPlUGIN_SLUG.'-dataTables',
+                TPOPlUGIN_SLUG.'-jquery-cookie',
+                TPOPlUGIN_SLUG. '-FileSaver',
+                'jquery-ui-progressbar',
+                TPOPlUGIN_SLUG. '-jquery-csv'
             ), //$deps
             $version, //$ver
             true //$$in_footer
@@ -235,11 +245,16 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPAdminMain', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminMain.js', //$src
-            array(TPOPlUGIN_SLUG.'-velocity',
-                TPOPlUGIN_SLUG.'-bellows', TPOPlUGIN_SLUG.'-zelect',
+            array(
+                TPOPlUGIN_SLUG.'-velocity',
+                TPOPlUGIN_SLUG.'-bellows',
+                TPOPlUGIN_SLUG.'-zelect',
                 TPOPlUGIN_SLUG.'-jquery-spinner',
-                'jquery', 'jquery-ui-core', 'jquery-ui-tooltip',
-                'jquery-ui-datepicker'), //$deps
+                'jquery',
+                'jquery-ui-core',
+                'jquery-ui-tooltip',
+                'jquery-ui-datepicker'
+            ), //$deps
             $version, //$ver
             true //$$in_footer
         );
@@ -253,7 +268,13 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-InsertWidgets', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPInsertWidgets.js', //$src
-            array('jquery', 'jquery-ui-autocomplete', 'jquery-ui-core'), //$deps
+            array(
+                'jquery',
+                'jquery-ui-autocomplete',
+                'jquery-ui-core',
+	            'jquery-ui-datepicker',
+	            TPOPlUGIN_SLUG.'-HotelsSelectionsType', //$handle
+            ), //$deps
             $version, //$ver
             true //$$in_footer
         );
@@ -262,8 +283,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPAdminEditPage', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/TPAdminEditPage.js', //$src
-            array('jquery', 'jquery-ui-core', 'jquery-ui-progressbar',
-                'jquery-ui-dialog'), //$deps
+            array(
+                'jquery',
+                'jquery-ui-core',
+                'jquery-ui-progressbar',
+                'jquery-ui-dialog'
+            ), //$deps
             $version, //$ver
             true //$$in_footer
         );
@@ -292,7 +317,10 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
         wp_register_script(
             TPOPlUGIN_SLUG.'-TPPost', //$handle
             TPOPlUGIN_URL.'app/public/js/admin/post/TPPost.js', //$src
-            array('jquery', 'jquery-ui-core','jquery-form'), //$deps
+            array(
+                'jquery',
+                'jquery-ui-core',
+                'jquery-form'), //$deps
             $version, //$ver
             true //$$in_footer
         );
