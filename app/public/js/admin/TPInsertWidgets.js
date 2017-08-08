@@ -6,6 +6,10 @@ jQuery(function($) {
     doc.ready(function () {
         tpInitWidget();
     });
+    //
+    jQuery(document).on('widget-added', function(e, widget){
+        tpInitWidget();
+    });
     jQuery(document).on('widget-updated', function(e, widget){
         tpInitWidget();
     });
@@ -16,6 +20,9 @@ jQuery(function($) {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete");
+        tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete");
+        tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
+        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete");
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
             constructorFlightTableWidget(select)
@@ -38,6 +45,17 @@ jQuery(function($) {
             });
         hotelWidgetDatepicker();
         hotelWidgeSelectionsType();
+        doc.find('.tp-widgets-widget-select-shortcode').each(function () {
+            var select = $(this).data('select_table');
+            constructorWidgetsTableWidget(select, $(this));
+        });
+        doc.find('.tp-widgets-widget-select-label')
+            .on('change', '.tp-widgets-widget-select-shortcode', function(e) {
+                e.preventDefault();
+                var select = $(this).val();
+                constructorWidgetsTableWidget(select, $(this))
+            });
+
     }
 
     function constructorFlightTableWidget(select) {
@@ -276,6 +294,60 @@ jQuery(function($) {
 
             }
         });
+    }
+
+    function constructorWidgetsTableWidget(select, element) {
+        var widget, hotelIdElement;
+        widget = element.parent('label').parent('p').parent('.tp-widgets-widget');
+        hotelIdElement = widget.children('.tp-widgets-widget-hotel-id').children('label').children('input');
+        doc.find('.tp-widgets-widget-subid, '
+            +'.tp-widgets-widget-origin, '
+            +'.tp-widgets-widget-hotel-id, '
+            +'.tp-widgets-widget-size, '
+            +'.tp-widgets-widget-zoom, '
+            +'.tp-widgets-widget-direct').hide();
+        hotelIdElement.removeClass('TPCoordinatesAutocomplete');
+        hotelIdElement.removeClass('TPAutocompleteID');
+        hotelIdElement.attr("placeholder", TPOriginTitle);
+        if (select != 'select') {
+            select = select.toString();
+            switch(select) {
+                case '0':
+                    //Map Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-origin, '
+                        +'.tp-widgets-widget-size, '
+                        +'.tp-widgets-widget-direct').show();
+                    break;
+                case '1':
+                    //Hotels Map Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-hotel-id, '
+                        +'.tp-widgets-widget-size, '
+                        +'.tp-widgets-widget-zoom').show();
+                    hotelIdElement.addClass('TPCoordinatesAutocomplete');
+                    hotelIdElement.attr("placeholder", TPLocationTitlt);
+                    break;
+                case '2':
+                    //Calendar Widget
+                    break;
+                case '3':
+                    //Subscription Widget
+                    break;
+                case '4':
+                    //Hotel Widget
+                    break;
+                case '5':
+                    //Popular Destinations Widget
+                    break;
+                case '6':
+                    //Hotels Selections Widget
+                    break;
+                case '7':
+                    //Best deals widget
+                    break;
+            }
+        }
     }
 
 });

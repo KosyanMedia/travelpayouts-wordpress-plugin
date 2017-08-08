@@ -10,9 +10,29 @@
 .tp-flights-tables-widget-paginate,
 .tp-flights-tables-widget-one-way,
 .tp-flights-tables-widget-off-title,
-.tp-flights-tables-widget-transplant
+.tp-flights-tables-widget-transplant,
+.tp-hotels-tables-widget-title,
+.tp-hotels-tables-widget-city,
+.tp-hotels-tables-widget-subid,
+.tp-hotels-tables-widget-selections-type,
+.tp-hotels-tables-widget-check_in,
+.tp-hotels-tables-widget-check_out,
+.tp-hotels-tables-widget-limit,
+.tp-hotels-tables-widget-paginate,
+.tp-hotels-tables-widget-off_title,
+.tp-hotels-tables-widget-link_without_dates,
+.tp-widgets-widget-subid,
+.tp-widgets-widget-origin,
+.tp-widgets-widget-hotel-id,
+.tp-widgets-widget-size,
+.tp-widgets-widget-direct,
+.tp-widgets-widget-zoom
 {
     display: none;
+}
+
+.tp-widgets-widget-zoom{
+    width: 11%;
 }
 
 .tp-flights-tables-widget-select-shortcode{
