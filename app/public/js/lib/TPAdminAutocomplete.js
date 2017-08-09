@@ -439,7 +439,6 @@ function TPCityAutocomplete(){
                         }
                         if ($(selector).hasClass('TPAutocompleteIDWidget')){
                             //Hotels Selections Widget
-                            console.log(self)
                             self.TPGetHotelsWidgetCat(ui.item.val, $(selector))
                         }
                         if($(selector).hasClass('HotelCityAutocomplete')){
@@ -751,7 +750,7 @@ function TPCityAutocomplete(){
         });
     }
     /**
-     *
+     * Hotels Selections Widget
      * @param city
      * @param selector
      * @constructor
@@ -793,15 +792,15 @@ function TPCityAutocomplete(){
                 cat2.append(select_option);
                 cat3.append(select_option);
                 cats.show();
-                if(cat1Val != '0'){
+                if(cat1Val != '0' && cat1Val != ''){
                     cat1.find('option[value='+cat1Val+']')
                         .attr('selected','selected')
                 }
-                if(cat2Val != '0'){
+                if(cat2Val != '0'  && cat2Val != ''){
                     cat2.find('option[value='+cat2Val+']')
                         .attr('selected','selected')
                 }
-                if(cat3Val != '0'){
+                if(cat3Val != '0' && cat3Val != ''){
                     cat1.find('option[value='+cat3Val+']')
                         .attr('selected','selected')
                 }

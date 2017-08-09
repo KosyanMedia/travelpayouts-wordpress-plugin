@@ -38,7 +38,7 @@ class TPWidgetsWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-        //error_log(print_r($new_instance, true));
+        error_log(print_r($new_instance, true));
         return $new_instance;
 	}
 
@@ -72,7 +72,17 @@ class TPWidgetsWidget extends WP_Widget{
 		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options["widgets"][7]['cat1'];
 		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options["widgets"][7]['cat2'];
 		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options["widgets"][7]['cat3'];
-
+		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options["widgets"][8]['type'];
+		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options["widgets"][8]['filter'];
+		$origin7 = isset( $instance['widgets_origin_7'] ) ? $instance['widgets_origin_7']  : '';
+		$destination7 = isset( $instance['widgets_destination_7'] ) ? $instance['widgets_destination_7']  : '';
+		//$airline7 = isset( $instance['widgets_airline_7'] ) ? $instance['widgets_airline_7']  : '';
+		$airline7Count = isset( $instance['widgets_airline_7_count'] ) ? $instance['widgets_airline_7_count']  : 1;
+		$airline7 = array();
+		for($i = 0; $i < $airline7Count; $i++){
+			$key = 'widgets_airline_7_item_'.$i;
+			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
+		}
 		$shortcodeLabels = array(
 			__('Map Widget', TPOPlUGIN_TEXTDOMAIN),
 			__('Hotels Map Widget', TPOPlUGIN_TEXTDOMAIN),
@@ -247,7 +257,7 @@ class TPWidgetsWidget extends WP_Widget{
             </p>
             <p class="tp-widgets-widget-limit-6">
                 <label for="<?php echo $this->get_field_id('widgets_widget_limit_6'); ?>">
-		            <?php _e('View widget', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _e('Limit', TPOPlUGIN_TEXTDOMAIN);?>
                     <select id="<?php echo $this->get_field_id('widgets_widget_limit_6'); ?>"
                             name="<?php echo $this->get_field_name('widgets_widget_limit_6'); ?>"
                             data-select_type="<?php echo $limit6; ?>">
@@ -281,6 +291,79 @@ class TPWidgetsWidget extends WP_Widget{
                             data-select_cat="<?php echo $cat3; ?>" class="widefat">
                     </select>
                 </label>
+            </p>
+
+            <p class="tp-widgets-widget-type-7">
+                <label for="<?php echo $this->get_field_id('widgets_widget_type_7'); ?>">
+					<?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN);?>
+                    <select class="widefat"
+                            id="<?php echo $this->get_field_id('widgets_widget_type_7'); ?>"
+                            name="<?php echo $this->get_field_name('widgets_widget_type_7'); ?>"
+                            data-select_type="<?php echo $widgetType7; ?>">
+                        <option <?php selected( $widgetType7, 'brickwork' ); ?>
+                                value="brickwork"><?php _e('Tile', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                        <option <?php selected( $widgetType7, 'slider' ); ?>
+                                value="slider"><?php _e('Slider', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                    </select>
+                </label>
+            </p>
+            <p class="tp-widgets-widget-filter">
+                <label for="<?php echo $this->get_field_id('widgets_widget_filter_0'); ?>">
+                    <input type="radio" name="<?php echo $this->get_field_name('widgets_widget_filter'); ?>"
+                           value="0" <?php checked($widgetFilter, 0) ?>
+                           id="<?php echo $this->get_field_id('widgets_widget_filter_0'); ?>">
+	                <?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?>
+                </label>
+                <label for="<?php echo $this->get_field_id('widgets_widget_filter_1'); ?>">
+                    <input type="radio" name="<?php echo $this->get_field_name('widgets_widget_filter'); ?>"
+                           value="1" <?php checked($widgetFilter, 1) ?>
+                           id="<?php echo $this->get_field_id('widgets_widget_filter_1'); ?>">
+		            <?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?>
+                </label>
+            </p>
+            <p class="tp-widgets-widget-origin-7">
+                <label for="<?php echo $this->get_field_id('widgets_origin_7'); ?>">
+		            <?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
+                    <input placeholder="<?php echo $origin7; ?>" type="text"
+                           id="<?php echo $this->get_field_id('widgets_origin_7'); ?>"
+                           name="<?php echo $this->get_field_name('widgets_origin_7'); ?>"
+                           class="constructorCityShortcodesAutocomplete widefat"/>
+                </label>
+            </p>
+            <p class="tp-widgets-widget-destination-7">
+                <label for="<?php echo $this->get_field_id('widgets_destination_7'); ?>">
+					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+                    <input placeholder="<?php echo $destination7; ?>" type="text"
+                           id="<?php echo $this->get_field_id('widgets_destination_7'); ?>"
+                           name="<?php echo $this->get_field_name('widgets_destination_7'); ?>"
+                           class="constructorCityShortcodesAutocomplete widefat"/>
+                </label>
+            </p>
+            <p class="tp-widgets-widget-airline-7"
+               data-field_name="<?php echo $this->get_field_name('widgets_airline_7_item_'); ?>"
+               data-field_id="<?php echo $this->get_field_id('widgets_airline_7_item_'); ?>"
+               data-field_class="constructorAirlineWidgetsAutocomplete widefat"
+               data-field_label="<?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>">
+
+	            <?php for($i = 0; $i < $airline7Count; $i++): ?>
+                    <label for="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
+                           class="tp-widgets-widget-popular-routes-label-<?php echo $i; ?>">
+			            <?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>
+                        <input placeholder="<?php echo $airline7[$i]; ?>" type="text"
+                               id="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
+                               name="<?php echo $this->get_field_name('widgets_airline_7_item_'.$i); ?>"
+                               class="constructorAirlineWidgetsAutocomplete widefat"/>
+
+                    </label>
+	            <?php endfor; ?>
+
+                <a href="#" class="TPBtnAdd">
+                    <i></i>
+		            <?php _e('Add', TPOPlUGIN_TEXTDOMAIN); ?>
+                </a>
+                <input type="hidden" class="tp-widgets-widget-airline-7-count"
+                       value="<?php echo $airline7Count; ?>"
+                       name="<?php echo $this->get_field_name('widgets_airline_7_count'); ?>">
             </p>
 
 			<p class="tp-widgets-widget-responsive">
