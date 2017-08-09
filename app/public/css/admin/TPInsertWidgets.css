@@ -23,10 +23,19 @@
 .tp-hotels-tables-widget-link_without_dates,
 .tp-widgets-widget-subid,
 .tp-widgets-widget-origin,
+.tp-widgets-widget-destination,
 .tp-widgets-widget-hotel-id,
 .tp-widgets-widget-size,
 .tp-widgets-widget-direct,
-.tp-widgets-widget-zoom
+.tp-widgets-widget-one-way,
+.tp-widgets-widget-zoom,
+.tp-widgets-widget-calendar-period,
+.tp-widgets-widget-calendar-period-range,
+.tp-widgets-widget-responsive,
+.tp-widgets-widget-popular-routes-count,
+.tp-widgets-widget-popular-routes,
+.tp-widgets-widget-type-6,
+.tp-widgets-widget-cat
 {
     display: none;
 }
@@ -34,12 +43,19 @@
 .tp-widgets-widget-zoom{
     width: 11%;
 }
+.tp-widgets-widget-calendar-period-select{
+    width: 45%;
+}
 
 .tp-flights-tables-widget-select-shortcode{
     max-width: 400px;
 }
 .tp-flights-tables-widget-limit input{
     max-width: 50px;
+}
+.tp-widgets-widget-cat-1 select,
+.tp-widgets-widget-cat-2 select{
+    margin-bottom: 13px;
 }
 
 

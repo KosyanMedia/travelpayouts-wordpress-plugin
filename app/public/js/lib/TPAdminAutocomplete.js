@@ -188,6 +188,7 @@ function TPCityAutocomplete(){
      */
     this.TPHotelAutocompleteInit = function(selector, AppendTo){
         if (typeof(AppendTo)==='undefined') AppendTo = null;
+        var self = this;
         jQuery(function($) {
             var doc, win;
             doc = $(document);
@@ -277,7 +278,7 @@ function TPCityAutocomplete(){
                                         }
                                     })
                                 )
-                            } else if($(selector).hasClass('TPAutocompleteID')){
+                            } else if($(selector).hasClass('TPAutocompleteID') || $(selector).hasClass('TPAutocompleteIDWidget')){
                                 response(
                                     $.map(data.cities, function(item){
                                         // console.log(item)
@@ -435,6 +436,11 @@ function TPCityAutocomplete(){
 
 
                             })
+                        }
+                        if ($(selector).hasClass('TPAutocompleteIDWidget')){
+                            //Hotels Selections Widget
+                            console.log(self)
+                            self.TPGetHotelsWidgetCat(ui.item.val, $(selector))
                         }
                         if($(selector).hasClass('HotelCityAutocomplete')){
                             //console.log(ui.item);
@@ -691,7 +697,6 @@ function TPCityAutocomplete(){
             });
         });
     }
-
     /**
      * Railway
      * @param selector
@@ -745,7 +750,73 @@ function TPCityAutocomplete(){
             });
         });
     }
+    /**
+     *
+     * @param city
+     * @param selector
+     * @constructor
+     */
+    this.TPGetHotelsWidgetCat = function (city, selector) {
+        jQuery(function ($) {
+            var doc, win, widget, cats, cat1, cat2, cat3, cat1Val, cat2Val, cat3Val;
+            doc = $(document);
+            win = $(window);
+            widget = selector.parent('label').parent('p').parent('.tp-widgets-widget');
+            cats = widget.children('.tp-widgets-widget-cat');
+            cat1 = cats.children('.tp-widgets-widget-cat-1').children('select');
+            cat2 = cats.children('.tp-widgets-widget-cat-2').children('select');
+            cat3 = cats.children('.tp-widgets-widget-cat-3').children('select');
+            cat1Val = cat1.data('select_cat');
+            cat2Val = cat2.data('select_cat');
+            cat3Val = cat3.data('select_cat');
+            $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + city, function(data) {
+                var select_option = '';
+                data.sort();
+                switch (tpLocale){
+                    case "ru":
+                        select_option += '<option value="">Выберите подборку</option>';
+                        break;
+                    case "en":
+                        select_option += '<option value="">Select selection</option>';
+                        break;
+                }
+                $.map(data, function(item){
+                    if (typeof catHotelSelec[tpLocale][item] != "undefined"){
+                        select_option += '<option value="'+item+'">'
+                            +catHotelSelec[tpLocale][item]+'</option>';
+                    }
+                })
+                cat1.find("option").remove();
+                cat2.find("option").remove();
+                cat3.find("option").remove();
+                cat1.append(select_option);
+                cat2.append(select_option);
+                cat3.append(select_option);
+                cats.show();
+                if(cat1Val != '0'){
+                    cat1.find('option[value='+cat1Val+']')
+                        .attr('selected','selected')
+                }
+                if(cat2Val != '0'){
+                    cat2.find('option[value='+cat2Val+']')
+                        .attr('selected','selected')
+                }
+                if(cat3Val != '0'){
+                    cat1.find('option[value='+cat3Val+']')
+                        .attr('selected','selected')
+                }
 
+
+            })
+        })
+    }
+    /**
+     *
+     * @param city
+     * @param selectionsType
+     * @param selectionsTypeVal
+     * @constructor
+     */
     this.TPGetHotelsSelections = function(city, selectionsType, selectionsTypeVal){
         jQuery(function($) {
             var doc, win;

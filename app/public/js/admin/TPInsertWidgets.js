@@ -47,13 +47,13 @@ jQuery(function($) {
         hotelWidgeSelectionsType();
         doc.find('.tp-widgets-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
-            constructorWidgetsTableWidget(select, $(this));
+            constructorWidgetsTableWidget(select, $(this), false);
         });
         doc.find('.tp-widgets-widget-select-label')
             .on('change', '.tp-widgets-widget-select-shortcode', function(e) {
                 e.preventDefault();
                 var select = $(this).val();
-                constructorWidgetsTableWidget(select, $(this))
+                constructorWidgetsTableWidget(select, $(this), true)
             });
 
     }
@@ -296,19 +296,45 @@ jQuery(function($) {
         });
     }
 
-    function constructorWidgetsTableWidget(select, element) {
+    function constructorWidgetsTableWidget(select, element, change) {
         var widget, hotelIdElement;
         widget = element.parent('label').parent('p').parent('.tp-widgets-widget');
         hotelIdElement = widget.children('.tp-widgets-widget-hotel-id').children('label').children('input');
         doc.find('.tp-widgets-widget-subid, '
             +'.tp-widgets-widget-origin, '
+            +'.tp-widgets-widget-destination, '
             +'.tp-widgets-widget-hotel-id, '
             +'.tp-widgets-widget-size, '
             +'.tp-widgets-widget-zoom, '
+            +'.tp-widgets-widget-calendar-period, '
+            +'.tp-widgets-widget-calendar-period-range, '
+            +'.tp-widgets-widget-one-way, '
+            +'.tp-widgets-widget-responsive, '
+            +'.tp-widgets-widget-popular-routes-count, '
+            +'.tp-widgets-widget-popular-routes, '
+            +'.tp-widgets-widget-type-6, '
+            +'.tp-widgets-widget-cat, '
             +'.tp-widgets-widget-direct').hide();
-        hotelIdElement.removeClass('TPCoordinatesAutocomplete');
-        hotelIdElement.removeClass('TPAutocompleteID');
-        hotelIdElement.attr("placeholder", TPOriginTitle);
+        if (change == true){
+            hotelIdElement.removeClass('TPCoordinatesAutocomplete');
+            hotelIdElement.removeClass('TPAutocompleteIDWidget');
+            hotelIdElement.attr("placeholder", TPOriginTitle);
+        }
+
+
+        doc.find('.tp-widgets-widget-responsive-label')
+            .on('change', '.tp-widgets-widget-responsive-label-input', function(e) {
+            if($(this).is(":checked")) {
+                doc.find('.tp-widgets-widget-responsive-label-width').hide();
+            }else{
+                doc.find('.tp-widgets-widget-responsive-label-width').show();
+            }
+        });
+        if (doc.find('.tp-widgets-widget-responsive-label-input').is(":checked")){
+            doc.find('.tp-widgets-widget-responsive-label-width').hide();
+        }else{
+            doc.find('.tp-widgets-widget-responsive-label-width').show();
+        }
         if (select != 'select') {
             select = select.toString();
             switch(select) {
@@ -326,22 +352,129 @@ jQuery(function($) {
                         +'.tp-widgets-widget-size, '
                         +'.tp-widgets-widget-zoom').show();
                     hotelIdElement.addClass('TPCoordinatesAutocomplete');
-                    hotelIdElement.attr("placeholder", TPLocationTitlt);
+                    if (change == true){
+                        hotelIdElement.attr("placeholder", TPLocationTitlt);
+                    }
+
                     break;
                 case '2':
                     //Calendar Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-origin, '
+                        +'.tp-widgets-widget-destination, '
+                        +'.tp-widgets-widget-calendar-period, '
+                        +'.tp-widgets-widget-calendar-period-range, '
+                        +'.tp-widgets-widget-direct, '
+                        +'.tp-widgets-widget-one-way, '
+                        +'.tp-widgets-widget-responsive').show();
                     break;
                 case '3':
                     //Subscription Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-origin, '
+                        +'.tp-widgets-widget-destination, '
+                        +'.tp-widgets-widget-responsive').show();
                     break;
                 case '4':
                     //Hotel Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-hotel-id, '
+                        +'.tp-widgets-widget-responsive').show();
+
+                    if (change == true){
+                        hotelIdElement.attr("placeholder", TPHotelWidgetLabel);
+                    }
+
                     break;
                 case '5':
                     //Popular Destinations Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-popular-routes-count, '
+                        +'.tp-widgets-widget-popular-routes').show();
+                    if(doc.find('.tp-widgets-widget-popular-routes-count-input').val() > 1){
+                        doc.find('.tp-widgets-widget-responsive').hide();
+                    }else {
+                        doc.find('.tp-widgets-widget-responsive').show();
+                    }
+                    doc.find('.tp-widgets-widget-popular-routes-count-label')
+                        .on('change', '.tp-widgets-widget-popular-routes-count-input', function(e) {
+                            var widget, popularRoutes, fieldName, fieldId, fieldClass, fieldLabel, fieldData;
+                            fieldData = [];
+                            widget = $(this).parent('.tp-widgets-widget-popular-routes-count-label')
+                                .parent('.tp-widgets-widget-popular-routes-count')
+                                .parent('.tp-widgets-widget');
+                            popularRoutes = widget.children('.tp-widgets-widget-popular-routes');
+                            fieldName = popularRoutes.data('field_name');
+                            fieldId = popularRoutes.data('field_id');
+                            fieldClass = popularRoutes.data('field_class');
+                            fieldLabel = popularRoutes.data('field_label');
+                            fieldName = fieldName.substring(0, fieldName.length - 1);
+                            popularRoutes.children('label').each(function () {
+                                var value;
+                                if ($(this).children('input').attr('placeholder') == ''){
+                                    value = $(this).children('input').val();
+                                } else {
+                                    value = $(this).children('input').attr('placeholder');
+                                }
+                                fieldData.push(value);
+                            });
+                            popularRoutes.children('label').remove();
+                            for(var i = 0; i < $(this).val(); i++){
+                                var placeholder = '';
+                                if(typeof fieldData[i] !== 'undefined') {
+                                    placeholder = fieldData[i];
+                                }
+                                var name = '';
+                                name += fieldName;
+                                name += i+']';
+                                var id = '';
+                                id += fieldId;
+                                id += i;
+                                popularRoutes.append('<label for="'+id+'">'
+                                    +fieldLabel
+                                    +'<input type="text" class="'+fieldClass+'" '
+                                    +'id="'+id+'" name="'+name+'" ' +
+                                    ' placeholder="'+placeholder+'" '
+                                    +' value="'+placeholder+'">'
+                                    +'</label>')
+                            }
+                            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
+                            if($(this).val() > 1){
+                                doc.find('.tp-widgets-widget-responsive').hide();
+                            }else{
+                                doc.find('.tp-widgets-widget-responsive').show();
+                                /*doc.find('#responsive_width').val(doc.find('#select_widgets').data('widgets-size-width-6'));
+                                switch ($(this).data('widgets-responsive-6')){
+                                    case 0:
+                                        doc.find('#responsive_widget').attr('checked', false);
+                                        break;
+                                    case 1:
+                                        doc.find('#responsive_widget').attr('checked', true);
+                                        break;
+                                }*/
+                            }
+
+
+                    });
                     break;
                 case '6':
                     //Hotels Selections Widget
+                    doc.find('.tp-widgets-widget-subid, '
+                        +'.tp-widgets-widget-hotel-id, '
+                        +'.tp-widgets-widget-type-6').show();
+                    hotelIdElement.addClass('TPAutocompleteIDWidget');
+                    var city, cityIata;
+                    city = hotelIdElement.attr("placeholder");
+                    cityIata = city.substring(city.indexOf('[')+1,city.indexOf(']'));
+                    if (cityIata != ''){
+                        tpCityAutocomplete.TPGetHotelsWidgetCat(cityIata, hotelIdElement);
+                    }
+
+                    //TPGetHotelsWidgetCat
+                    if (change == true){
+                        hotelIdElement.attr("placeholder", TPPHCity);
+                    }
+
                     break;
                 case '7':
                     //Best deals widget
