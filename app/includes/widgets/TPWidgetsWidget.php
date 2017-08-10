@@ -28,7 +28,89 @@ class TPWidgetsWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function widget( $args, $instance ) {
+		$select = isset( $instance['widgets_select'] ) ? esc_attr( $instance['widgets_select'] ) : 'select';
+		$subid = isset( $instance['widgets_subid'] ) ? esc_attr( $instance['widgets_subid'] ) : '';
+		$origin = isset( $instance['widgets_origin'] ) ? esc_attr( $instance['widgets_origin'] ) : '';
+		$destination = isset( $instance['widgets_destination'] ) ? esc_attr( $instance['widgets_destination'] ) : '';
+		$hotelId = isset( $instance['widgets_hotel_id'] ) ? esc_attr( $instance['widgets_hotel_id'] ) : '';
+		$sizeWidth = isset( $instance['widgets_size_width'] ) ? esc_attr( $instance['widgets_size_width'] ) : 500;
+		$sizeHeight = isset( $instance['widgets_size_height'] ) ? esc_attr( $instance['widgets_size_height'] ) : 500;
+		$direct = isset( $instance['widgets_direct'] ) ? $instance['widgets_direct']  : false;
+		$oneWay = isset( $instance['widgets_one_way'] ) ? $instance['widgets_one_way']  : false;
+		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : TPPlugin::$options['widgets']['2']['zoom'];
+		$calendarPeriod = isset( $instance['widgets_calendar_period'] ) ? $instance['widgets_calendar_period']  : TPPlugin::$options['widgets']['3']['period'];
+		$calendarPeriodRangeFrom = isset( $instance['widgets_calendar_period_range_from'] ) ? $instance['widgets_calendar_period_range_from']  : TPPlugin::$options['widgets']['3']['period_day']['from'];
+		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
+		$responsive = isset( $instance['widgets_responsive'] ) ? $instance['widgets_responsive']  : true;
+		$responsiveWidth = isset( $instance['widgets_responsive_width'] ) ? $instance['widgets_responsive_width']  : 500;
+		$popularRoutesCount = isset( $instance['widgets_popular_routes_count'] ) ? $instance['widgets_popular_routes_count']  : TPPlugin::$options['widgets']['6']['count'];
+		$popularRoutes = array();
+		for($i = 0; $i < $popularRoutesCount; $i++){
+			$key = 'widgets_popular_routes_'.$i;
+			$popularRoutes[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
+		}
+		$widgetType6 = isset( $instance['widgets_widget_type_6'] ) ? $instance['widgets_widget_type_6']  : TPPlugin::$options["widgets"][7]['type'];
+		$limit6 = isset( $instance['widgets_widget_limit_6'] ) ? $instance['widgets_widget_limit_6']  : TPPlugin::$options["widgets"][7]['limit'];
+		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options["widgets"][7]['cat1'];
+		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options["widgets"][7]['cat2'];
+		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options["widgets"][7]['cat3'];
+		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options["widgets"][8]['type'];
+		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options["widgets"][8]['filter'];
+		$origin7 = isset( $instance['widgets_origin_7'] ) ? $instance['widgets_origin_7']  : '';
+		$destination7 = isset( $instance['widgets_destination_7'] ) ? $instance['widgets_destination_7']  : '';
+		$airline7Count = isset( $instance['widgets_airline_7_count'] ) ? $instance['widgets_airline_7_count']  : 1;
+		$airline7 = array();
+		for($i = 0; $i < $airline7Count; $i++){
+			$key = 'widgets_airline_7_item_'.$i;
+			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
+		}
+		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
 
+
+		$originCode = '';
+		if(isset($origin)){
+			preg_match('/\[(.+)\]/', $origin, $originCode);
+		}
+		$subidAttr = 'subid="'.$subid.'"';
+		$originAttr = 'origin="'.$originCode[1].'"';
+		$sizeWidthAttr = 'width="'.$sizeWidth.'"';
+		$sizeHeightAttr = 'height="'.$sizeHeight.'"';
+		$directAttr = '';
+		if($direct == true){
+		    $directAttr = 'direct=true';
+        }
+
+		$shortcode = '';
+
+		switch ($select) {
+			case 0:
+				$shortcode = '[tp_map_widget '
+                                .$originAttr.' '
+                                .$subidAttr.' '
+                                .$sizeWidthAttr.' '
+                                .$sizeHeightAttr.' '
+                                .$directAttr.' '
+                                .']';
+				break;
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+		}
+
+
+
+        echo do_shortcode($shortcode);
 	}
 
 	/**
@@ -38,7 +120,79 @@ class TPWidgetsWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-        error_log(print_r($new_instance, true));
+        if (empty( $new_instance['widgets_subid'] )){
+	        $new_instance['widgets_subid'] = $old_instance['widgets_subid'];
+        }
+		if (empty( $new_instance['widgets_origin'] )){
+			$new_instance['widgets_origin'] = $old_instance['widgets_origin'];
+		}
+		if (empty( $new_instance['widgets_destination'] )){
+			$new_instance['widgets_destination'] = $old_instance['widgets_destination'];
+		}
+		if (empty( $new_instance['widgets_hotel_id'] )){
+			$new_instance['widgets_hotel_id'] = $old_instance['widgets_hotel_id'];
+		}
+		if (empty( $new_instance['widgets_size_width'] )){
+			$new_instance['widgets_size_width'] = $old_instance['widgets_size_width'];
+		}
+		if (empty( $new_instance['widgets_size_height'] )){
+			$new_instance['widgets_size_height'] = $old_instance['widgets_size_height'];
+		}
+		$new_instance['widgets_direct'] = (isset($new_instance['widgets_direct']))? true : false;
+		$new_instance['widgets_one_way'] = (isset($new_instance['widgets_one_way']))? true : false;
+		if (empty( $new_instance['widgets_zoom'] )){
+			$new_instance['widgets_zoom'] = $old_instance['widgets_zoom'];
+		}
+		if (empty( $new_instance['widgets_calendar_period'] )){
+			$new_instance['widgets_calendar_period'] = $old_instance['widgets_calendar_period'];
+		}
+		if (empty( $new_instance['widgets_calendar_period_range_from'] )){
+			$new_instance['widgets_calendar_period_range_from'] = $old_instance['widgets_calendar_period_range_from'];
+		}
+		if (empty( $new_instance['widgets_calendar_period_range_to'] )){
+			$new_instance['widgets_calendar_period_range_to'] = $old_instance['widgets_calendar_period_range_to'];
+		}
+		$new_instance['widgets_responsive'] = (isset($new_instance['widgets_responsive']))? true : false;
+		if (empty( $new_instance['widgets_responsive_width'] )){
+			$new_instance['widgets_responsive_width'] = $old_instance['widgets_responsive_width'];
+		}
+		if (empty( $new_instance['widgets_popular_routes_count'] )){
+			$new_instance['widgets_popular_routes_count'] = $old_instance['widgets_popular_routes_count'];
+		}
+		if (empty( $new_instance['widgets_widget_type_6'] )){
+			$new_instance['widgets_widget_type_6'] = $old_instance['widgets_widget_type_6'];
+		}
+		if (empty( $new_instance['widgets_widget_limit_6'] )){
+			$new_instance['widgets_widget_limit_6'] = $old_instance['widgets_widget_limit_6'];
+		}
+		if (empty( $new_instance['widgets_widget_cat_1'] )){
+			$new_instance['widgets_widget_cat_1'] = $old_instance['widgets_widget_cat_1'];
+		}
+		if (empty( $new_instance['widgets_widget_cat_2'] )){
+			$new_instance['widgets_widget_cat_2'] = $old_instance['widgets_widget_cat_2'];
+		}
+		if (empty( $new_instance['widgets_widget_cat_3'] )){
+			$new_instance['widgets_widget_cat_3'] = $old_instance['widgets_widget_cat_3'];
+		}
+		if (empty( $new_instance['widgets_widget_type_7'] )){
+			$new_instance['widgets_widget_type_7'] = $old_instance['widgets_widget_type_7'];
+		}
+		if (empty( $new_instance['widgets_widget_filter'] )){
+			$new_instance['widgets_widget_filter'] = $old_instance['widgets_widget_filter'];
+		}
+		if (empty( $new_instance['widgets_origin_7'] )){
+			$new_instance['widgets_origin_7'] = $old_instance['widgets_origin_7'];
+		}
+		if (empty( $new_instance['widgets_destination_7'] )){
+			$new_instance['widgets_destination_7'] = $old_instance['widgets_destination_7'];
+		}
+		if (empty( $new_instance['widgets_airline_7_count'] )){
+			$new_instance['widgets_airline_7_count'] = $old_instance['widgets_airline_7_count'];
+		}
+		if (empty( $new_instance['widgets_widget_limit_7'] )){
+			$new_instance['widgets_widget_limit_7'] = $old_instance['widgets_widget_limit_7'];
+		}
+		//error_log(print_r($new_instance, true));
         return $new_instance;
 	}
 
@@ -55,7 +209,7 @@ class TPWidgetsWidget extends WP_Widget{
 		$sizeHeight = isset( $instance['widgets_size_height'] ) ? esc_attr( $instance['widgets_size_height'] ) : 500;
 		$direct = isset( $instance['widgets_direct'] ) ? $instance['widgets_direct']  : false;
 		$oneWay = isset( $instance['widgets_one_way'] ) ? $instance['widgets_one_way']  : false;
-		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : 12;
+		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : TPPlugin::$options['widgets']['2']['zoom'];
 		$calendarPeriod = isset( $instance['widgets_calendar_period'] ) ? $instance['widgets_calendar_period']  : TPPlugin::$options['widgets']['3']['period'];
 		$calendarPeriodRangeFrom = isset( $instance['widgets_calendar_period_range_from'] ) ? $instance['widgets_calendar_period_range_from']  : TPPlugin::$options['widgets']['3']['period_day']['from'];
 		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
@@ -76,14 +230,13 @@ class TPWidgetsWidget extends WP_Widget{
 		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options["widgets"][8]['filter'];
 		$origin7 = isset( $instance['widgets_origin_7'] ) ? $instance['widgets_origin_7']  : '';
 		$destination7 = isset( $instance['widgets_destination_7'] ) ? $instance['widgets_destination_7']  : '';
-		//$airline7 = isset( $instance['widgets_airline_7'] ) ? $instance['widgets_airline_7']  : '';
 		$airline7Count = isset( $instance['widgets_airline_7_count'] ) ? $instance['widgets_airline_7_count']  : 1;
 		$airline7 = array();
 		for($i = 0; $i < $airline7Count; $i++){
 			$key = 'widgets_airline_7_item_'.$i;
 			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
-		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];;
+		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
 		$shortcodeLabels = array(
 			__('Map Widget', TPOPlUGIN_TEXTDOMAIN),
 			__('Hotels Map Widget', TPOPlUGIN_TEXTDOMAIN),
