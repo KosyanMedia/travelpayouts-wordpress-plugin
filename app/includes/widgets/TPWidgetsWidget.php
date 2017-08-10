@@ -66,25 +66,47 @@ class TPWidgetsWidget extends WP_Widget{
 		}
 		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
 
-
 		$originCode = '';
 		if(isset($origin)){
 			preg_match('/\[(.+)\]/', $origin, $originCode);
 		}
-		$subidAttr = 'subid="'.$subid.'"';
 		$originAttr = 'origin="'.$originCode[1].'"';
+		$destinationCode = '';
+		if(isset($destination)){
+			preg_match('/\[(.+)\]/', $destination, $destinationCode);
+		}
+		$destinationAttr = 'origin="'.$destinationCode[1].'"';
+		$subidAttr = 'subid="'.$subid.'"';
 		$sizeWidthAttr = 'width="'.$sizeWidth.'"';
 		$sizeHeightAttr = 'height="'.$sizeHeight.'"';
 		$directAttr = '';
 		if($direct == true){
 		    $directAttr = 'direct=true';
         }
+
+		$oneWayAttr = '';
+		if($oneWay == true){
+			$oneWayAttr = 'one_way=true';
+		}
+
         $zoomAttr = 'zoom="'.$zoom.'"';
 		$coordinates = '';
 		if(isset($hotelId)){
 			preg_match('/\{(.+)\}/', $hotelId, $coordinates);
 		}
 		$coordinatesAttr = 'coordinates="'.$coordinates[1].'"';
+
+		$responsiveAttr = '';
+		$responsiveWidthAttr = '';
+		if ($responsive == true){
+			$responsiveAttr = 'responsive=true';
+        } else {
+			$responsiveWidthAttr = 'width="'.$responsiveWidth.'"';
+        }
+
+		$calendarPeriodAttr = 'period="'.$calendarPeriod.'"';
+		$calendarPeriodRangeFromAttr = 'period_day_from="'.$calendarPeriodRangeFrom.'"';
+		$calendarPeriodRangeToAttr = 'period_day_to="'.$calendarPeriodRangeTo.'"';
 
 
 		$shortcode = '';
@@ -109,6 +131,18 @@ class TPWidgetsWidget extends WP_Widget{
 				             .']';
 				break;
 			case 2:
+				$shortcode = '[tp_calendar_widget '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$subidAttr.' '
+				             .$directAttr.' '
+				             .$oneWayAttr.' '
+				             .$responsiveAttr.' '
+				             .$responsiveWidthAttr.' '
+				             .$calendarPeriodAttr.' '
+				             .$calendarPeriodRangeFromAttr.' '
+				             .$calendarPeriodRangeToAttr.' '
+				             .']';
 				break;
 			case 3:
 				break;
