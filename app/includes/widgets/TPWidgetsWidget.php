@@ -83,6 +83,7 @@ class TPWidgetsWidget extends WP_Widget{
 			$key = 'widgets_airline_7_item_'.$i;
 			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
+		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];;
 		$shortcodeLabels = array(
 			__('Map Widget', TPOPlUGIN_TEXTDOMAIN),
 			__('Hotels Map Widget', TPOPlUGIN_TEXTDOMAIN),
@@ -94,8 +95,58 @@ class TPWidgetsWidget extends WP_Widget{
 			__('Best deals widget', TPOPlUGIN_TEXTDOMAIN),
 		);
 
+		$fieldSizeWidth1 = TPPlugin::$options['widgets']['1']['width'];
+		$fieldSizeHeight1 = TPPlugin::$options['widgets']['1']['height'];
+		$fieldSizeWidth2 = TPPlugin::$options['widgets']['2']['width'];
+		$fieldSizeHeight2 = TPPlugin::$options['widgets']['2']['height'];
+		$fieldDirect1 = (isset(TPPlugin::$options['widgets']['1']['direct']))? 1 : 0;
+		$fieldDirect3 = (isset(TPPlugin::$options['widgets']['3']['direct']))? 1 : 0;
+		$fieldOneWay3 = (isset(TPPlugin::$options['widgets']['3']['one_way']))? 1 : 0;
+		$fieldWidth3 = TPPlugin::$options['widgets']['3']['width'];
+		$fieldResponsive3 = (isset(TPPlugin::$options['widgets']['3']['responsive']))? 1 : 0;
+		$fieldWidth4 = TPPlugin::$options['widgets']['4']['width'];
+		$fieldResponsive4 = (isset(TPPlugin::$options['widgets']['4']['responsive']))? 1 : 0;
+		$fieldWidth5 = TPPlugin::$options['widgets']['5']['width'];
+		$fieldResponsive5 = (isset(TPPlugin::$options['widgets']['5']['responsive']))? 1 : 0;
+		$fieldWidth6 = TPPlugin::$options['widgets']['6']['width'];
+		$fieldResponsive6 = (isset(TPPlugin::$options['widgets']['6']['responsive']))? 1 : 0;
+		$fieldWidth7 = TPPlugin::$options['widgets']['7']['width'];
+		$fieldResponsive7 = (isset(TPPlugin::$options['widgets']['7']['responsive']))? 1 : 0;
+		$fieldLimit7 = TPPlugin::$options['widgets']['7']['limit'];
+		$fieldType7 = TPPlugin::$options['widgets']['7']['type'];
+		$fieldWidth8 = TPPlugin::$options['widgets']['8']['width'];
+		$fieldResponsive8 = (isset(TPPlugin::$options['widgets']['8']['responsive']))? 1 : 0;
+		$fieldType8 = TPPlugin::$options['widgets']['8']['type'];
+		$fieldFilter8 = TPPlugin::$options['widgets']['8']['filter'];
+		$fieldLimit8 = TPPlugin::$options['widgets']['8']['limit'];
+
 		?>
-		<div class="tp-widgets-widget">
+		<div class="tp-widgets-widget"
+             data-field_size_width_1="<?php echo $fieldSizeWidth1; ?>"
+             data-field_size_height_1="<?php echo $fieldSizeHeight1; ?>"
+             data-field_size_width_2="<?php echo $fieldSizeWidth2; ?>"
+             data-field_size_height_2="<?php echo $fieldSizeHeight2; ?>"
+             data-field_direct_1="<?php echo $fieldDirect1; ?>"
+             data-field_direct_3="<?php echo $fieldDirect3; ?>"
+             data-field_one_way_3="<?php echo $fieldOneWay3; ?>"
+             data-field_width_3="<?php echo $fieldWidth3; ?>"
+             data-field_responsive_3="<?php echo $fieldResponsive3; ?>"
+             data-field_width_4="<?php echo $fieldWidth4; ?>"
+             data-field_responsive_4="<?php echo $fieldResponsive4; ?>"
+             data-field_width_5="<?php echo $fieldWidth5; ?>"
+             data-field_responsive_5="<?php echo $fieldResponsive5; ?>"
+             data-field_width_6="<?php echo $fieldWidth6; ?>"
+             data-field_responsive_6="<?php echo $fieldResponsive6; ?>"
+             data-field_width_7="<?php echo $fieldWidth7; ?>"
+             data-field_responsive_7="<?php echo $fieldResponsive7; ?>"
+             data-field_limit_7="<?php echo $fieldLimit7; ?>"
+             data-field_type_7="<?php echo $fieldType7; ?>"
+             data-field_width_8="<?php echo $fieldWidth8; ?>"
+             data-field_responsive_8="<?php echo $fieldResponsive8; ?>"
+             data-field_type_8="<?php echo $fieldType8; ?>"
+             data-field_filter_8="<?php echo $fieldFilter8; ?>"
+             data-field_limit_8="<?php echo $fieldLimit8; ?>"
+            >
 			<p class="tp-widgets-widget-select">
 				<label for="<?php echo $this->get_field_id('widgets_select'); ?>"
 				       class="tp-widgets-widget-select-label">
@@ -347,12 +398,18 @@ class TPWidgetsWidget extends WP_Widget{
 
 	            <?php for($i = 0; $i < $airline7Count; $i++): ?>
                     <label for="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
-                           class="tp-widgets-widget-popular-routes-label-<?php echo $i; ?>">
+                           class="tp-widgets-widget-airline-7-label-<?php echo $i; ?> tp-widgets-widget-airline-7-label">
 			            <?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>
                         <input placeholder="<?php echo $airline7[$i]; ?>" type="text"
                                id="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
                                name="<?php echo $this->get_field_name('widgets_airline_7_item_'.$i); ?>"
                                class="constructorAirlineWidgetsAutocomplete widefat"/>
+                        <?php if ($i > 0): ?>
+                            <a href="#" class="TPBtnDelete">
+                                <i></i>
+                                <?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>
+                            </a>
+                        <?php endif;?>
 
                     </label>
 	            <?php endfor; ?>
@@ -364,6 +421,20 @@ class TPWidgetsWidget extends WP_Widget{
                 <input type="hidden" class="tp-widgets-widget-airline-7-count"
                        value="<?php echo $airline7Count; ?>"
                        name="<?php echo $this->get_field_name('widgets_airline_7_count'); ?>">
+            </p>
+
+            <p class="tp-widgets-widget-limit-7">
+                <label for="<?php echo $this->get_field_id('widgets_widget_limit_7'); ?>">
+					<?php _e('Limit', TPOPlUGIN_TEXTDOMAIN);?>
+                    <select id="<?php echo $this->get_field_id('widgets_widget_limit_7'); ?>"
+                            name="<?php echo $this->get_field_name('widgets_widget_limit_7'); ?>"
+                            data-select_type="<?php echo $limit7; ?>">
+						<?php for($i = 1; $i < 22; $i++): ?>
+                            <option <?php selected( $limit7, $i ); ?>
+                                    value="<?php echo $i; ?>"><?php echo $i; ?></option>
+						<?php endfor; ?>
+                    </select>
+                </label>
             </p>
 
 			<p class="tp-widgets-widget-responsive">

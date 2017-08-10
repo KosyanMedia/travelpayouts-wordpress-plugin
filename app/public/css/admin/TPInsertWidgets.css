@@ -41,6 +41,7 @@
 .tp-widgets-widget-origin-7,
 .tp-widgets-widget-destination-7,
 .tp-widgets-widget-airline-7,
+.tp-widgets-widget-limit-7,
 .tp-widgets-widget-cat
 {
     display: none;
@@ -186,10 +187,17 @@
     -ms-transition: all ease 0.3s;
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
+    outline: none;
 }
-.TPBtnDelete:hover {
+.TPBtnDelete:hover,
+.TPBtnDelete:active,
+.TPBtnDelete:link,
+.TPBtnDelete:visited
+{
     background: #f20000;
     color: #FFFFFF;
+    outline: none;
+    border: none;
 }
 
 .TPBtnAdd {
@@ -210,10 +218,18 @@
     -ms-transition: all ease 0.3s;
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
+    outline: none;
 }
-.TPBtnAdd:hover {
+
+.TPBtnAdd:hover,
+.TPBtnAdd:active,
+.TPBtnAdd:link,
+.TPBtnAdd:visited
+{
     background: #00abfd;
     color: #FFFFFF;
+    outline: none;
+    border: none;
 }
 .TPBtnAdd i {
     background: url("../../images/plus.png") no-repeat;
@@ -223,4 +239,7 @@
     margin-right: 10px;
     background-position: center;
     float: left;
+}
+.tp-widgets-widget-airline-7-label{
+    display: block;
 }
