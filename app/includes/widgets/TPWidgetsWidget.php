@@ -79,6 +79,13 @@ class TPWidgetsWidget extends WP_Widget{
 		if($direct == true){
 		    $directAttr = 'direct=true';
         }
+        $zoomAttr = 'zoom="'.$zoom.'"';
+		$coordinates = '';
+		if(isset($hotelId)){
+			preg_match('/\{(.+)\}/', $hotelId, $coordinates);
+		}
+		$coordinatesAttr = 'coordinates="'.$coordinates[1].'"';
+
 
 		$shortcode = '';
 
@@ -93,6 +100,13 @@ class TPWidgetsWidget extends WP_Widget{
                                 .']';
 				break;
 			case 1:
+				$shortcode = '[tp_hotelmap_widget '
+				             .$coordinatesAttr.' '
+				             .$subidAttr.' '
+				             .$sizeWidthAttr.' '
+				             .$sizeHeightAttr.' '
+				             .$zoomAttr.' '
+				             .']';
 				break;
 			case 2:
 				break;
