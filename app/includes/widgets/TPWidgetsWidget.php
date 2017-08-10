@@ -96,6 +96,12 @@ class TPWidgetsWidget extends WP_Widget{
 		}
 		$coordinatesAttr = 'coordinates="'.$coordinates[1].'"';
 
+		$hotelIdCode = '';
+		if(isset($hotelId)){
+			preg_match('/\[(.+)\]/', $hotelId, $hotelIdCode);
+		}
+		$hotelIdAttr = 'hotel_id="'.$hotelIdCode[1].'"';
+
 		$responsiveAttr = '';
 		$responsiveWidthAttr = '';
 		if ($responsive == true){
@@ -113,6 +119,7 @@ class TPWidgetsWidget extends WP_Widget{
 
 		switch ($select) {
 			case 0:
+			    //Map Widget
 				$shortcode = '[tp_map_widget '
                                 .$originAttr.' '
                                 .$subidAttr.' '
@@ -122,6 +129,7 @@ class TPWidgetsWidget extends WP_Widget{
                                 .']';
 				break;
 			case 1:
+			    //Hotels Map Widget
 				$shortcode = '[tp_hotelmap_widget '
 				             .$coordinatesAttr.' '
 				             .$subidAttr.' '
@@ -131,6 +139,7 @@ class TPWidgetsWidget extends WP_Widget{
 				             .']';
 				break;
 			case 2:
+			    //Calendar Widget
 				$shortcode = '[tp_calendar_widget '
 				             .$originAttr.' '
 				             .$destinationAttr.' '
@@ -145,14 +154,32 @@ class TPWidgetsWidget extends WP_Widget{
 				             .']';
 				break;
 			case 3:
+			    //Subscription Widget
+				$shortcode = '[tp_subscriptions_widget '
+				             .$originAttr.' '
+				             .$destinationAttr.' '
+				             .$subidAttr.' '
+				             .$responsiveAttr.' '
+				             .$responsiveWidthAttr.' '
+				             .']';
 				break;
 			case 4:
+			    //Hotel Widget
+				$shortcode = '[tp_hotel_widget '
+				             .$hotelIdAttr.' '
+				             .$subidAttr.' '
+				             .$responsiveAttr.' '
+				             .$responsiveWidthAttr.' '
+				             .']';
 				break;
 			case 5:
+			    //Popular Destinations Widget
 				break;
 			case 6:
+			    //Hotels Selections Widget
 				break;
 			case 7:
+			    //Best deals widget
 				break;
 		}
 
