@@ -102,6 +102,12 @@ class TPWidgetsWidget extends WP_Widget{
 		}
 		$hotelIdAttr = 'hotel_id="'.$hotelIdCode[1].'"';
 
+		$cityIdCode = '';
+		if(isset($hotelId)){
+			preg_match('/\[(.+)\]/', $hotelId, $cityIdCode);
+		}
+		$cityIdAttr = 'id="'.$cityIdCode[1].'"';
+
 		$responsiveAttr = '';
 		$responsiveWidthAttr = '';
 		if ($responsive == true){
@@ -114,6 +120,11 @@ class TPWidgetsWidget extends WP_Widget{
 		$calendarPeriodRangeFromAttr = 'period_day_from="'.$calendarPeriodRangeFrom.'"';
 		$calendarPeriodRangeToAttr = 'period_day_to="'.$calendarPeriodRangeTo.'"';
 
+		$cat1Attr = 'cat1="'.$cat1.'"';
+		$cat2Attr = 'cat2="'.$cat2.'"';
+		$cat3Attr = 'cat3="'.$cat3.'"';
+		$widgetType6Attr = 'type="'.$widgetType6.'"';
+		$limit6Attr = 'limit="'.$limit6.'"';
 
 		$shortcode = '';
 
@@ -212,6 +223,15 @@ class TPWidgetsWidget extends WP_Widget{
 				break;
 			case 6:
 			    //Hotels Selections Widget
+				$shortcode = '[tp_hotel_selections_widget '
+                             .$cityIdAttr.' '
+				             .$subidAttr.' '
+				             .$cat1Attr.' '
+				             .$cat2Attr.' '
+				             .$cat3Attr.' '
+				             .$widgetType6Attr.' '
+				             .$limit6Attr.' '
+				             .']';
 				break;
 			case 7:
 			    //Best deals widget
