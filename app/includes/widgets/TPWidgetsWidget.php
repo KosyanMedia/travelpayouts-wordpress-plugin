@@ -126,6 +126,10 @@ class TPWidgetsWidget extends WP_Widget{
 		$widgetType6Attr = 'type="'.$widgetType6.'"';
 		$limit6Attr = 'limit="'.$limit6.'"';
 
+		$limit7Attr = 'limit="'.$limit7.'"';
+		$widgetType7Attr = 'type="'.$widgetType7.'"';
+		$widgetFilterAttr = 'filter="'.$widgetFilter.'"';
+
 		$shortcode = '';
 
 		switch ($select) {
@@ -235,6 +239,40 @@ class TPWidgetsWidget extends WP_Widget{
 				break;
 			case 7:
 			    //Best deals widget
+                $dataAttr = '';
+                if ($widgetFilter == 0){
+	                $dataAttr .= 'airline="';
+	                for($i = 0; $i < $airline7Count; $i++){
+		                $airline7Code = '';
+                        if(isset($airline7[$i])){
+	                        preg_match('/\[(.+)\]/', $airline7[$i], $airline7Code);
+                        }
+	                    $dataAttr .= $airline7Code[1].',';
+	                }
+	                $dataAttr .= '"';
+                } else if ($widgetFilter == 1) {
+	                $dataAttr = '';
+	                $origin7Code = '';
+	                if(isset($origin7)){
+		                preg_match('/\[(.+)\]/', $origin7, $origin7Code);
+	                }
+	                $dataAttr .= 'origin="'.$origin7Code[1].'" ';
+	                $destination7Code = '';
+	                if(isset($destination7)){
+		                preg_match('/\[(.+)\]/', $destination7, $destination7Code);
+	                }
+	                $dataAttr .= 'destination="'.$destination7Code[1].'" ';
+                }
+				$shortcode = '[tp_ducklett_widget '
+				             .$dataAttr.' '
+				             .$widgetType7Attr.' '
+				             .$widgetFilterAttr.' '
+				             .$limit7Attr.' '
+				             .$subidAttr.' '
+				             .$responsiveAttr.' '
+				             .$responsiveWidthAttr.' '
+				             .']';
+                //error_log($shortcode);
 				break;
 		}
 
@@ -307,9 +345,7 @@ class TPWidgetsWidget extends WP_Widget{
 		if (empty( $new_instance['widgets_widget_type_7'] )){
 			$new_instance['widgets_widget_type_7'] = $old_instance['widgets_widget_type_7'];
 		}
-		if (empty( $new_instance['widgets_widget_filter'] )){
-			$new_instance['widgets_widget_filter'] = $old_instance['widgets_widget_filter'];
-		}
+
 		if (empty( $new_instance['widgets_origin_7'] )){
 			$new_instance['widgets_origin_7'] = $old_instance['widgets_origin_7'];
 		}
