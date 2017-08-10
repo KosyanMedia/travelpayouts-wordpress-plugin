@@ -75,7 +75,7 @@ class TPWidgetsWidget extends WP_Widget{
 		if(isset($destination)){
 			preg_match('/\[(.+)\]/', $destination, $destinationCode);
 		}
-		$destinationAttr = 'origin="'.$destinationCode[1].'"';
+		$destinationAttr = 'destination="'.$destinationCode[1].'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$sizeWidthAttr = 'width="'.$sizeWidth.'"';
 		$sizeHeightAttr = 'height="'.$sizeHeight.'"';
@@ -174,6 +174,41 @@ class TPWidgetsWidget extends WP_Widget{
 				break;
 			case 5:
 			    //Popular Destinations Widget
+				//$popularRoutes;
+                if ($popularRoutesCount > 1){
+			        $shortcode .= '<div class="TP-PopularRoutesWidgets">';
+	                for($i = 0; $i < $popularRoutesCount; $i++){
+	                    $destinationPopularRoutesAttr = '';
+		                $destinationPopularRoutesCode = '';
+		                if(isset($popularRoutes[$i])){
+			                preg_match('/\[(.+)\]/', $popularRoutes[$i], $destinationPopularRoutesCode);
+		                }
+		                $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode[1].'"';
+
+		                $shortcode .= '<div class="TP-PopularRoutesWidget">';
+		                $shortcode .= '[tp_popular_routes_widget '
+		                             .$destinationPopularRoutesAttr.' '
+		                             .$subidAttr.' '
+		                             .'responsive=true '
+		                             .']';
+		                $shortcode .= '</div>';
+	                }
+	                $shortcode .= '</div>';
+                } else {
+	                $destinationPopularRoutesAttr = '';
+	                $destinationPopularRoutesCode = '';
+	                if(isset($popularRoutes[0])){
+		                preg_match('/\[(.+)\]/', $popularRoutes[0], $destinationPopularRoutesCode);
+	                }
+	                $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode[1].'"';
+	                $shortcode = '[tp_popular_routes_widget '
+	                             .$destinationPopularRoutesAttr.' '
+	                             .$subidAttr.' '
+	                             .$responsiveAttr.' '
+	                             .$responsiveWidthAttr.' '
+	                             .']';
+                }
+
 				break;
 			case 6:
 			    //Hotels Selections Widget
