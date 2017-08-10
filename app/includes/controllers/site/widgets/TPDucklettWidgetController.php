@@ -73,6 +73,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             .'&currency='.mb_strtolower($currency).'&host='.$white_label.'&marker='
             .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8" data-wpfc-render="false">
         </script>';
+
         return $output;
     }
 }
