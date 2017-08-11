@@ -23,6 +23,8 @@ jQuery(function($) {
         tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete");
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete");
+        tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityWidgetsAutocomplete');
+
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
             constructorFlightTableWidget(select)

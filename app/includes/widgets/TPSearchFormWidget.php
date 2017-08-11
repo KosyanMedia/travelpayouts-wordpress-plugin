@@ -50,6 +50,10 @@ class TPSearchFormWidget extends WP_Widget{
 		$select = isset( $instance['search_form_select'] ) ? esc_attr( $instance['search_form_select'] ) : '';
 		$typeForm = isset( $instance['search_form_type_form'] ) ? esc_attr( $instance['search_form_type_form'] ) : '';
 		$slug = isset( $instance['search_form_slug'] ) ? esc_attr( $instance['search_form_slug'] ) : '';
+		$subid = isset( $instance['search_form_subid'] ) ? esc_attr( $instance['search_form_subid'] ) : '';
+		$origin = isset( $instance['search_form_origin'] ) ? esc_attr( $instance['search_form_origin'] ) : '';
+		$destination = isset( $instance['search_form_destination'] ) ? esc_attr( $instance['search_form_destination'] ) : '';
+		$cityHotel = isset( $instance['search_form_city_hotel'] ) ? esc_attr( $instance['search_form_city_hotel'] ) : '';
 		?>
 		<div class="tp-search-form-widget">
 			<?php if (!empty($searchForms)): ?>
@@ -95,10 +99,50 @@ class TPSearchFormWidget extends WP_Widget{
 					       name="<?php echo $this->get_field_name('search_form_slug'); ?>"
 					       value="<?php echo $slug?>">
 				</p>
-				<p class="tp-search-form-widget-origin"></p>
-				<p class="tp-search-form-widget-destination"></p>
-				<p class="tp-search-form-widget-hotel-city"></p>
-				<p class="tp-search-form-widget-subid"></p>
+				<p class="tp-search-form-widget-origin">
+					<label for="<?php echo $this->get_field_id('search_form_origin'); ?>">
+						<?php _ex('City of departure default:',
+							'Travelpayouts – Search Form',
+							TPOPlUGIN_TEXTDOMAIN);?>
+						<input placeholder="<?php echo $origin; ?>" type="text"
+						       id="<?php echo $this->get_field_id('search_form_origin'); ?>"
+						       name="<?php echo $this->get_field_name('search_form_origin'); ?>"
+						       class="constructorCityWidgetsAutocomplete widefat"/>
+					</label>
+				</p>
+				<p class="tp-search-form-widget-destination">
+					<label for="<?php echo $this->get_field_id('search_form_destination'); ?>">
+						<?php _ex('City Arrival default:',
+							'Travelpayouts – Search Form',
+							TPOPlUGIN_TEXTDOMAIN);?>
+						<input placeholder="<?php echo $destination; ?>" type="text"
+						       id="<?php echo $this->get_field_id('search_form_destination'); ?>"
+						       name="<?php echo $this->get_field_name('search_form_destination'); ?>"
+						       class="constructorCityWidgetsAutocomplete widefat"/>
+					</label>
+				</p>
+				<p class="tp-search-form-widget-hotel-city">
+					<label for="<?php echo $this->get_field_id('search_form_city_hotel'); ?>">
+						<?php _ex('Default City/Hotel:',
+							'Travelpayouts – Search Form',
+							TPOPlUGIN_TEXTDOMAIN);?>
+						<input placeholder="<?php echo $cityHotel; ?>" type="text"
+						       id="<?php echo $this->get_field_id('search_form_city_hotel'); ?>"
+						       name="<?php echo $this->get_field_name('search_form_city_hotel'); ?>"
+						       class="searchHotelCityWidgetsAutocomplete TPHotelCityAutocomplete widefat"/>
+					</label>
+				</p>
+				<p class="tp-search-form-widget-subid">
+					<label for="<?php echo $this->get_field_id('search_form_subid'); ?>">
+						<?php _ex('Subid:',
+							'Travelpayouts – Search Form',
+							TPOPlUGIN_TEXTDOMAIN);?>
+						<input placeholder="<?php echo $subid; ?>" type="text"
+						       id="<?php echo $this->get_field_id('search_form_subid'); ?>"
+						       name="<?php echo $this->get_field_name('search_form_subid'); ?>"
+						       class="widefat"/>
+					</label>
+				</p>
 
 			<?php else: ?>
 				<?php
