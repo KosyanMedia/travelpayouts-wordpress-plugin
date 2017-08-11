@@ -8,9 +8,11 @@
  */
 namespace app\includes\widgets;
 
+use app\includes\models\admin\menu\TPSearchFormsModel;
 use WP_Widget;
 
 class TPSearchFormWidget extends WP_Widget{
+	private $model;
 	public function __construct()
 	{
 		parent::__construct(
@@ -20,6 +22,7 @@ class TPSearchFormWidget extends WP_Widget{
 				'description' => __('Travelpayouts – Search Form', TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
+		$this->model = new TPSearchFormsModel();
 	}
 
 	/**
@@ -43,6 +46,74 @@ class TPSearchFormWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function form( $instance ) {
+		$searchForms = $this->model->get_data();
+		$select = isset( $instance['search_form_select'] ) ? esc_attr( $instance['search_form_select'] ) : '';
+		$typeForm = isset( $instance['search_form_type_form'] ) ? esc_attr( $instance['search_form_type_form'] ) : '';
+		$slug = isset( $instance['search_form_slug'] ) ? esc_attr( $instance['search_form_slug'] ) : '';
+		?>
+		<div class="tp-search-form-widget">
+			<?php if (!empty($searchForms)): ?>
+				<p class="tp-search-form-widget-select">
+					<label for="<?php echo $this->get_field_id('search_form_select'); ?>"
+					       class="tp-search-form-widget-select-label">
+						<?php if (count($searchForms) > 1): ?>
+							<?php _ex('Select the search form:',
+								'Travelpayouts – Search Form',
+								TPOPlUGIN_TEXTDOMAIN);?>
+							<select class="tp-search-form-widget-select-shortcode widefat"
+							        id="<?php echo $this->get_field_id('search_form_select'); ?>"
+							        name="<?php echo $this->get_field_name('search_form_select'); ?>"
+							        data-select_table="<?php echo $select; ?>">
+								<?php foreach ($searchForms as $key => $record): ?>
+									<option value="<?php echo $record['id'];?>"
+										<?php selected($select, $record['id']); ?>
+										    data-type_form="<?php echo $record['type_form'];?>"
+										    data-slug="<?php echo $record['slug'];?>">
+										<?php echo $record['title'];?>
+									</option>
+								<?php endforeach; ?>
+							</select>
+						<?php else: ?>
+							<?php foreach ($searchForms as $key => $record): ?>
+								<b><?php echo $record['title'] ?></b>
+								<input type="hidden" id="<?php echo $this->get_field_id('search_form_select'); ?>"
+								       name="<?php echo $this->get_field_name('search_form_select'); ?>"
+								       value="<?php echo $record['id']; ?>">
+								<?php
+									$typeForm = $record['type_form'];
+									$slug = $record['slug'];
+								?>
+							<?php endforeach; ?>
+						<?php endif; ?>
+					</label>
+					<input type="hidden" class="tp-search-form-widget-select-type-form"
+					       id="<?php echo $this->get_field_id('search_form_type_form'); ?>"
+					       name="<?php echo $this->get_field_name('search_form_type_form'); ?>"
+						   value="<?php echo $typeForm?>">
+					<input type="hidden" class="tp-search-form-widget-select-slug"
+					       id="<?php echo $this->get_field_id('search_form_slug'); ?>"
+					       name="<?php echo $this->get_field_name('search_form_slug'); ?>"
+					       value="<?php echo $slug?>">
+				</p>
+				<p class="tp-search-form-widget-origin"></p>
+				<p class="tp-search-form-widget-destination"></p>
+				<p class="tp-search-form-widget-hotel-city"></p>
+				<p class="tp-search-form-widget-subid"></p>
 
+			<?php else: ?>
+				<?php
+				_ex(
+					'No customized search form.',
+					'Travelpayouts – Search Form',
+						TPOPlUGIN_TEXTDOMAIN);
+				?>
+				<a href="admin.php?page=tp_control_search_shortcodes">
+				<?php _ex('Go to setting.',
+					'Travelpayouts – Search Form',
+					TPOPlUGIN_TEXTDOMAIN); ?>
+				</a>
+			<?php endif; ?>
+		</div>
+		<?php
 	}
 }
