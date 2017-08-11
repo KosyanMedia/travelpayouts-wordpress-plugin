@@ -30,7 +30,13 @@ class TPSearchFormWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function widget( $args, $instance ) {
-
+		$select = isset( $instance['search_form_select'] ) ? esc_attr( $instance['search_form_select'] ) : '';
+		$typeForm = isset( $instance['search_form_type_form'] ) ? esc_attr( $instance['search_form_type_form'] ) : '';
+		$slug = isset( $instance['search_form_slug'] ) ? esc_attr( $instance['search_form_slug'] ) : '';
+		$subid = isset( $instance['search_form_subid'] ) ? esc_attr( $instance['search_form_subid'] ) : '';
+		$origin = isset( $instance['search_form_origin'] ) ? esc_attr( $instance['search_form_origin'] ) : '';
+		$destination = isset( $instance['search_form_destination'] ) ? esc_attr( $instance['search_form_destination'] ) : '';
+		$cityHotel = isset( $instance['search_form_city_hotel'] ) ? esc_attr( $instance['search_form_city_hotel'] ) : '';
 	}
 
 	/**
@@ -40,6 +46,25 @@ class TPSearchFormWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
+		if (!empty( $new_instance['search_form_type_form'] )){
+			$new_instance['search_form_type_form'] = $old_instance['search_form_type_form'];
+		}
+		if (!empty( $new_instance['search_form_slug'] )){
+			$new_instance['search_form_slug'] = $old_instance['search_form_slug'];
+		}
+		if (!empty( $new_instance['search_form_subid'] )){
+			$new_instance['search_form_subid'] = $old_instance['search_form_subid'];
+		}
+		if (!empty( $new_instance['search_form_origin'] )){
+			$new_instance['search_form_origin'] = $old_instance['search_form_origin'];
+		}
+		if (!empty( $new_instance['search_form_destination'] )){
+			$new_instance['search_form_destination'] = $old_instance['search_form_destination'];
+		}
+		if (!empty( $new_instance['search_form_city_hotel'] )){
+			$new_instance['search_form_city_hotel'] = $old_instance['search_form_city_hotel'];
+		}
+		return $new_instance;
 	}
 
 	/**
