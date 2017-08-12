@@ -37,6 +37,57 @@ class TPSearchFormWidget extends WP_Widget{
 		$origin = isset( $instance['search_form_origin'] ) ? esc_attr( $instance['search_form_origin'] ) : '';
 		$destination = isset( $instance['search_form_destination'] ) ? esc_attr( $instance['search_form_destination'] ) : '';
 		$cityHotel = isset( $instance['search_form_city_hotel'] ) ? esc_attr( $instance['search_form_city_hotel'] ) : '';
+
+		$slugAttr = '';
+		if (!empty($slug)){
+			$slugAttr = 'slug="'.$slug.'"';
+		} else {
+			$slugAttr = 'id="'.$select.'"';
+		}
+		$typeFormAttr = '';
+		$typeFormAttr = 'type="'.$typeForm.'"';
+		$subidAttr = '';
+		$subidAttr = 'subid="'.$subid.'"';
+
+		$originCode = '';
+		if(!empty($origin)){
+			preg_match('/\[(.+)\]/', $origin, $originCode);
+		}
+		$originAttr = 'origin="'.$originCode[1].'"';
+
+		$destinationCode = '';
+		if(!empty($destination)){
+			preg_match('/\[(.+)\]/', $destination, $destinationCode);
+		}
+		$destinationAttr = 'destination="'.$destinationCode[1].'"';
+
+		$cityHotelCode = '';
+		if(!empty($cityHotel)){
+			preg_match('/\{(.+)\}/', $cityHotel, $cityHotelCode);
+		}
+		$cityHotelAttr = 'hotel_city="'.$cityHotelCode[1].'"';
+
+		$shortcodeAttr = '';
+		switch ($typeForm){
+			case "avia":
+				$shortcodeAttr = $originAttr.' '.$destinationAttr;
+				break;
+			case "hotel":
+				$shortcodeAttr = $cityHotelAttr;
+				break;
+			case "avia_hotel":
+				$shortcodeAttr = $originAttr.' '.$destinationAttr.' '.$cityHotelAttr;
+				break;
+		}
+
+		$shortcode = '';
+		$shortcode .= '[tp_search_shortcodes ';
+		$shortcode .= $shortcodeAttr.' ';
+		$shortcode .= $slugAttr.' ';
+		$shortcode .= $typeFormAttr.' ';
+		$shortcode .= $subidAttr.' ';
+		$shortcode .= ']';
+		echo do_shortcode($shortcode);
 	}
 
 	/**
@@ -46,22 +97,22 @@ class TPSearchFormWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (!empty( $new_instance['search_form_type_form'] )){
+		if (empty( $new_instance['search_form_type_form'] )){
 			$new_instance['search_form_type_form'] = $old_instance['search_form_type_form'];
 		}
-		if (!empty( $new_instance['search_form_slug'] )){
+		if (empty( $new_instance['search_form_slug'] )){
 			$new_instance['search_form_slug'] = $old_instance['search_form_slug'];
 		}
-		if (!empty( $new_instance['search_form_subid'] )){
+		if (empty( $new_instance['search_form_subid'] )){
 			$new_instance['search_form_subid'] = $old_instance['search_form_subid'];
 		}
-		if (!empty( $new_instance['search_form_origin'] )){
+		if (empty( $new_instance['search_form_origin'] )){
 			$new_instance['search_form_origin'] = $old_instance['search_form_origin'];
 		}
-		if (!empty( $new_instance['search_form_destination'] )){
+		if (empty( $new_instance['search_form_destination'] )){
 			$new_instance['search_form_destination'] = $old_instance['search_form_destination'];
 		}
-		if (!empty( $new_instance['search_form_city_hotel'] )){
+		if (empty( $new_instance['search_form_city_hotel'] )){
 			$new_instance['search_form_city_hotel'] = $old_instance['search_form_city_hotel'];
 		}
 		return $new_instance;
@@ -92,7 +143,10 @@ class TPSearchFormWidget extends WP_Widget{
 							<select class="tp-search-form-widget-select-shortcode widefat"
 							        id="<?php echo $this->get_field_id('search_form_select'); ?>"
 							        name="<?php echo $this->get_field_name('search_form_select'); ?>"
-							        data-select_table="<?php echo $select; ?>">
+							        data-select_table="<?php echo $select; ?>"
+							        data-type_form="<?php echo $typeForm; ?>"
+							        data-slug="<?php echo $slug; ?>"
+								>
 								<?php foreach ($searchForms as $key => $record): ?>
 									<option value="<?php echo $record['id'];?>"
 										<?php selected($select, $record['id']); ?>
@@ -107,7 +161,10 @@ class TPSearchFormWidget extends WP_Widget{
 								<b><?php echo $record['title'] ?></b>
 								<input type="hidden" id="<?php echo $this->get_field_id('search_form_select'); ?>"
 								       name="<?php echo $this->get_field_name('search_form_select'); ?>"
-								       value="<?php echo $record['id']; ?>">
+								       value="<?php echo $record['id']; ?>"
+								       data-type_form="<?php echo $typeForm; ?>"
+								       data-slug="<?php echo $slug; ?>"
+								       class="tp-search-form-widget-select-shortcode" >
 								<?php
 									$typeForm = $record['type_form'];
 									$slug = $record['slug'];

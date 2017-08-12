@@ -42,7 +42,10 @@
 .tp-widgets-widget-destination-7,
 .tp-widgets-widget-airline-7,
 .tp-widgets-widget-limit-7,
-.tp-widgets-widget-cat
+.tp-widgets-widget-cat,
+.tp-search-form-widget-origin,
+.tp-search-form-widget-destination,
+.tp-search-form-widget-hotel-city
 {
     display: none;
 }

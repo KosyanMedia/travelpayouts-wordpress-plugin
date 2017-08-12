@@ -58,6 +58,29 @@ jQuery(function($) {
                 constructorWidgetsTableWidget(select, $(this), true)
             });
 
+        doc.find('.tp-search-form-widget-select-shortcode').each(function () {
+            var select, typeForm, slug;
+            select = $(this).data('select_table');
+            typeForm = $(this).data('type_form');
+            slug = $(this).data('slug');
+            if (typeForm == ''){
+                var fieldSelect;
+                fieldSelect = $(this).find('option:first-child');
+                typeForm = fieldSelect.data('type_form');
+                slug = fieldSelect.data('slug');
+            }
+            constructorSearchFormWidget(select, typeForm, slug, $(this), false);
+        });
+        doc.find('.tp-search-form-widget-select-label')
+            .on('change', '.tp-search-form-widget-select-shortcode', function(e) {
+                e.preventDefault();
+                var select, typeForm, slug;
+                select = $(this).data('select_table');
+                typeForm =  $(this).find(':selected').data('type_form');
+                slug =  $(this).find(':selected').data('slug');
+                constructorSearchFormWidget(select, typeForm, slug, $(this), true);
+            });
+
     }
 
     function constructorFlightTableWidget(select) {
@@ -297,7 +320,6 @@ jQuery(function($) {
             }
         });
     }
-
     function constructorWidgetsTableWidget(select, element, change) {
         var widget, hotelIdElement, fieldSizeWidth1, fieldSizeHeight1, fieldSizeWidth2, fieldSizeHeight2,
             fieldDirect1, fieldDirect3, fieldOneWay3, fieldWidth3, fieldResponsive3, fieldWidth4, fieldResponsive4,
@@ -668,7 +690,6 @@ jQuery(function($) {
             }
         }
     }
-
     /**
      *
      */
@@ -715,6 +736,31 @@ jQuery(function($) {
             fieldCount.val(count);
             field.remove();
         });
+    }
+    function constructorSearchFormWidget(select, typeForm, slug, element, change) {
+        var widget, fieldSelect;
+        fieldSelect = element.parent('label').parent('.tp-search-form-widget-select');
+        widget = fieldSelect.parent('.tp-search-form-widget');
+
+        widget.find('.tp-search-form-widget-origin, '
+            +'.tp-search-form-widget-destination, '
+            +'.tp-search-form-widget-hotel-city').hide();
+        fieldSelect.find('.tp-search-form-widget-select-type-form').val(typeForm);
+        fieldSelect.find('.tp-search-form-widget-select-slug').val(slug);
+        switch (typeForm){
+            case "avia":
+                widget.find('.tp-search-form-widget-origin, '
+                    +'.tp-search-form-widget-destination').show();
+                break;
+            case "hotel":
+                widget.find('.tp-search-form-widget-hotel-city').show();
+                break;
+            case "avia_hotel":
+                widget.find('.tp-search-form-widget-origin, '
+                    +'.tp-search-form-widget-destination, '
+                    +'.tp-search-form-widget-hotel-city').show();
+                break;
+        }
     }
 
 });
