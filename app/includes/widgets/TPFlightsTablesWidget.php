@@ -17,9 +17,13 @@ class TPFlightsTablesWidget extends WP_Widget{
 	{
 		parent::__construct(
 			'travelpayouts_flights_tables', // Base ID
-			__('Travelpayouts – Flights Tables', TPOPlUGIN_TEXTDOMAIN), // Name
+			_x('Travelpayouts – Flights Tables',
+                'Travelpayouts – Flights Tables Widget',
+                TPOPlUGIN_TEXTDOMAIN), // Name
 			array(
-				'description' => __('Travelpayouts – Flights Tables', TPOPlUGIN_TEXTDOMAIN)
+				'description' => _x('Travelpayouts – Flights Tables',
+					'Travelpayouts – Flights Tables Widget',
+					TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
 	}
@@ -260,18 +264,30 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 
 		$shortcodeLabels = array(
-			__('Flights from origin to destination, One Way (next month)', TPOPlUGIN_TEXTDOMAIN),
-			__('Flights from Origin to Destination (next few days)', TPOPlUGIN_TEXTDOMAIN),
-			__('Cheapest Flights from origin to destination, Round-trip', TPOPlUGIN_TEXTDOMAIN),
-			__('Cheapest Flights from origin to destination (next month)', TPOPlUGIN_TEXTDOMAIN),
-			__('Cheapest Flights from origin to destination (next year)', TPOPlUGIN_TEXTDOMAIN),
-			__('Direct Flights from origin to destination', TPOPlUGIN_TEXTDOMAIN),
-			__('Direct Flights from origin', TPOPlUGIN_TEXTDOMAIN),
-			__('Popular Destinations from origin', TPOPlUGIN_TEXTDOMAIN),
-			__('Most popular flights within this Airlines', TPOPlUGIN_TEXTDOMAIN),
-			__('Searched on our website', TPOPlUGIN_TEXTDOMAIN),
-			__('Cheap Flights from origin', TPOPlUGIN_TEXTDOMAIN),
-			__('Cheap Flights to destination', TPOPlUGIN_TEXTDOMAIN),
+			_x('Flights from origin to destination, One Way (next month)',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Flights from Origin to Destination (next few days)',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Cheapest Flights from origin to destination, Round-trip',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Cheapest Flights from origin to destination (next month)',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Cheapest Flights from origin to destination (next year)',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Direct Flights from origin to destination',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Direct Flights from origin',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Popular Destinations from origin',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Most popular flights within this Airlines',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Searched on our website',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Cheap Flights from origin',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Cheap Flights to destination',
+                'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 		)
 
 		?>
@@ -280,13 +296,15 @@ class TPFlightsTablesWidget extends WP_Widget{
 			<p class="tp-flights-tables-widget-select">
 				<label for="<?php echo $this->get_field_id('flight_select'); ?>"
                        class="tp-flights-tables-widget-select-label">
-					<?php _e('Select the table:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Select the table:',
+                        'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-flights-tables-widget-select-shortcode widefat"
 					        id="<?php echo $this->get_field_id('flight_select'); ?>"
 					        name="<?php echo $this->get_field_name('flight_select'); ?>"
 					        data-select_table="<?php echo $select; ?>">
 						<option value="select" <?php selected( $select, 'select' ); ?>>
-							<?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>
+							<?php _ex('Select the table', 'Travelpayouts – Flights Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN); ?>
 						</option>
 						<?php $item = 1; ?>
 						<?php foreach ($shortcodeLabels as $key => $shortcodeLabel): ?>
@@ -306,7 +324,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-title">
 				<label for="<?php echo $this->get_field_id('flight_title'); ?>">
-					<?php _e('Alternate title:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Alternate title:',
+                        'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat" id="<?php echo $this->get_field_id('flight_title'); ?>"
 					       name="<?php echo $this->get_field_name('flight_title'); ?>" type="text"
 					       value="<?php echo $title; ?>" />
@@ -314,7 +333,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-origin">
 				<label for="<?php echo $this->get_field_id('flight_origin'); ?>">
-					<?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Origin:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $origin; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_origin'); ?>"
 					       name="<?php echo $this->get_field_name('flight_origin'); ?>"
@@ -323,7 +343,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-destination">
 				<label for="<?php echo $this->get_field_id('flight_destination'); ?>">
-					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Destination:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $destination; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_destination'); ?>"
 					       name="<?php echo $this->get_field_name('flight_destination'); ?>"
@@ -332,7 +353,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-airline">
 				<label for="<?php echo $this->get_field_id('flight_airline'); ?>">
-					<?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Airline:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $airline; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_airline'); ?>"
 					       name="<?php echo $this->get_field_name('flight_airline'); ?>"
@@ -341,7 +363,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-subid">
 				<label for="<?php echo $this->get_field_id('flight_subid'); ?>">
-					<?php _e('Subid:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Subid:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $subid; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_subid'); ?>"
 					       name="<?php echo $this->get_field_name('flight_subid'); ?>"
@@ -350,31 +373,36 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-filter-airline">
 				<label for="<?php echo $this->get_field_id('flight_filter_airline'); ?>">
-					<?php _e('Filter by airline:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Filter by airline:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $filter_airline; ?>" type="text"
 					       id="<?php echo $this->get_field_id('filter_airline'); ?>"
 					       name="<?php echo $this->get_field_name('filter_airline'); ?>"
 					       class="constructorAirlineShortcodesAutocomplete widefat"
 					       title="<?php _ex('Type aircompany name and chose the one you need. Only its flights will be shown.',
+						       'Travelpayouts – Flights Tables Widget',
 						       TPOPlUGIN_TEXTDOMAIN); ?>"
 					/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-filter-flight-number">
 				<label for="<?php echo $this->get_field_id('filter_flight_number'); ?>">
-					<?php _e('Filter by flight # (enter manually):', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Filter by flight # (enter manually):',
+                        'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $filter_flight_number; ?>" type="text"
 					       id="<?php echo $this->get_field_id('filter_flight_number'); ?>"
 					       name="<?php echo $this->get_field_name('filter_flight_number'); ?>"
 					       class="widefat"
 					       title="<?php _ex('Use this filter only if you absolutely accurately know the route number',
+						       'Travelpayouts – Flights Tables Widget',
 						       TPOPlUGIN_TEXTDOMAIN); ?>"
 					/>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-limit">
 				<label for="<?php echo $this->get_field_id('flight_limit'); ?>">
-					<?php _e('Limit:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Limit:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input value="<?php echo $limit; ?>" type="number"
 					       id="<?php echo $this->get_field_id('flight_limit'); ?>"
 					       name="<?php echo $this->get_field_name('flight_limit'); ?>"
@@ -383,7 +411,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-flights-tables-widget-currency">
 				<label for="<?php echo $this->get_field_id('flight_currency'); ?>">
-					<?php _e('Currency:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Currency:', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<select id="<?php echo $this->get_field_id('flight_currency'); ?>"
 					        name="<?php echo $this->get_field_name('flight_currency'); ?>">
 						<?php foreach(TPCurrencyUtils::getCurrencyAll() as $currency_item){ ?>
@@ -402,7 +431,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('flight_paginate'); ?>"
 					       name="<?php echo $this->get_field_name('flight_paginate'); ?>"
 					       value="1" <?php checked($paginate, true)?>>
-					<?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Paginate', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-one-way">
@@ -410,7 +440,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('flight_one_way'); ?>"
 					       name="<?php echo $this->get_field_name('flight_one_way'); ?>"
 					       value="1" <?php checked($one_way, true)?>>
-					<?php _e('One Way', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('One Way', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-off-title">
@@ -418,20 +449,25 @@ class TPFlightsTablesWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('flight_off_title'); ?>"
 					       name="<?php echo $this->get_field_name('flight_off_title'); ?>"
 					       value="1" <?php checked($off_title, true)?>>
-					<?php _e('No title', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('No title', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-flights-tables-widget-transplant">
 				<label for="<?php echo $this->get_field_id('flight_transplant'); ?>">
-					<?php _e('Number of stops', TPOPlUGIN_TEXTDOMAIN); ?>:
+					<?php _ex('Number of stops', 'Travelpayouts – Flights Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>:
 					<select id="<?php echo $this->get_field_id('flight_transplant'); ?>"
 					        name="<?php echo $this->get_field_name('flight_transplant'); ?>">
 						<option value="0" <?php selected( $transplant, 0 ); ?>>
-							<?php _e('All', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+							<?php _ex('All', 'Travelpayouts – Flights Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN ); ?></option>
 						<option value="1" <?php selected( $transplant, 1 ); ?>>
-							<?php _e('No more than one stop', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+							<?php _ex('No more than one stop', 'Travelpayouts – Flights Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN ); ?></option>
 						<option value="2" <?php selected( $transplant, 2 ); ?>>
-							<?php  _e('Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+							<?php  _ex('Direct', 'Travelpayouts – Flights Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN ); ?></option>
 					</select>
 				</label>
 			</p>

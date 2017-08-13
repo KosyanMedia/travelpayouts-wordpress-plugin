@@ -17,9 +17,9 @@ class TPSearchFormWidget extends WP_Widget{
 	{
 		parent::__construct(
 			'travelpayouts_search_form', // Base ID
-			__('Travelpayouts – Search Form', TPOPlUGIN_TEXTDOMAIN), // Name
+			_x('Travelpayouts – Search Form', 'Travelpayouts – Search Form Widget', TPOPlUGIN_TEXTDOMAIN), // Name
 			array(
-				'description' => __('Travelpayouts – Search Form', TPOPlUGIN_TEXTDOMAIN)
+				'description' => _x('Travelpayouts – Search Form', 'Travelpayouts – Search Form Widget', TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
 		$this->model = new TPSearchFormsModel();
@@ -138,7 +138,7 @@ class TPSearchFormWidget extends WP_Widget{
 					       class="tp-search-form-widget-select-label">
 						<?php if (count($searchForms) > 1): ?>
 							<?php _ex('Select the search form:',
-								'Travelpayouts – Search Form',
+								'Travelpayouts – Search Form Widget',
 								TPOPlUGIN_TEXTDOMAIN);?>
 							<select class="tp-search-form-widget-select-shortcode widefat"
 							        id="<?php echo $this->get_field_id('search_form_select'); ?>"
@@ -184,7 +184,7 @@ class TPSearchFormWidget extends WP_Widget{
 				<p class="tp-search-form-widget-origin">
 					<label for="<?php echo $this->get_field_id('search_form_origin'); ?>">
 						<?php _ex('City of departure default:',
-							'Travelpayouts – Search Form',
+							'Travelpayouts – Search Form Widget',
 							TPOPlUGIN_TEXTDOMAIN);?>
 						<input placeholder="<?php echo $origin; ?>" type="text"
 						       id="<?php echo $this->get_field_id('search_form_origin'); ?>"
@@ -195,7 +195,7 @@ class TPSearchFormWidget extends WP_Widget{
 				<p class="tp-search-form-widget-destination">
 					<label for="<?php echo $this->get_field_id('search_form_destination'); ?>">
 						<?php _ex('City Arrival default:',
-							'Travelpayouts – Search Form',
+							'Travelpayouts – Search Form Widget',
 							TPOPlUGIN_TEXTDOMAIN);?>
 						<input placeholder="<?php echo $destination; ?>" type="text"
 						       id="<?php echo $this->get_field_id('search_form_destination'); ?>"
@@ -206,7 +206,7 @@ class TPSearchFormWidget extends WP_Widget{
 				<p class="tp-search-form-widget-hotel-city">
 					<label for="<?php echo $this->get_field_id('search_form_city_hotel'); ?>">
 						<?php _ex('Default City/Hotel:',
-							'Travelpayouts – Search Form',
+							'Travelpayouts – Search Form Widget',
 							TPOPlUGIN_TEXTDOMAIN);?>
 						<input placeholder="<?php echo $cityHotel; ?>" type="text"
 						       id="<?php echo $this->get_field_id('search_form_city_hotel'); ?>"
@@ -217,7 +217,7 @@ class TPSearchFormWidget extends WP_Widget{
 				<p class="tp-search-form-widget-subid">
 					<label for="<?php echo $this->get_field_id('search_form_subid'); ?>">
 						<?php _ex('Subid:',
-							'Travelpayouts – Search Form',
+							'Travelpayouts – Search Form Widget',
 							TPOPlUGIN_TEXTDOMAIN);?>
 						<input placeholder="<?php echo $subid; ?>" type="text"
 						       id="<?php echo $this->get_field_id('search_form_subid'); ?>"
@@ -230,12 +230,12 @@ class TPSearchFormWidget extends WP_Widget{
 				<?php
 				_ex(
 					'No customized search form.',
-					'Travelpayouts – Search Form',
+					'Travelpayouts – Search Form Widget',
 						TPOPlUGIN_TEXTDOMAIN);
 				?>
 				<a href="admin.php?page=tp_control_search_shortcodes">
 				<?php _ex('Go to setting.',
-					'Travelpayouts – Search Form',
+					'Travelpayouts – Search Form Widget',
 					TPOPlUGIN_TEXTDOMAIN); ?>
 				</a>
 			<?php endif; ?>

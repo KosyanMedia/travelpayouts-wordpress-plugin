@@ -15,9 +15,9 @@ class TPHotelsTablesWidget extends WP_Widget{
 	{
 		parent::__construct(
 			'travelpayouts_hotels_tables', // Base ID
-			__('Travelpayouts – Hotel Tables', TPOPlUGIN_TEXTDOMAIN), // Name
+			_x('Travelpayouts – Hotel Tables', 'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN), // Name
 			array(
-				'description' => __('Travelpayouts – Hotel Tables', TPOPlUGIN_TEXTDOMAIN)
+				'description' => _x('Travelpayouts – Hotel Tables', 'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
 	}
@@ -126,21 +126,23 @@ class TPHotelsTablesWidget extends WP_Widget{
 		$offTitle = isset( $instance['hotel_off_title'] ) ? $instance['hotel_off_title']  : false;
 		$linkWithoutDates = isset( $instance['hotel_link_without_dates'] ) ? $instance['hotel_link_without_dates']  : false;
 		$shortcodeLabels = array(
-			__('Hotels collection - Discounts', TPOPlUGIN_TEXTDOMAIN),
-			__('Hotels collections for dates', TPOPlUGIN_TEXTDOMAIN),
+			_x('Hotels collection - Discounts',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 		);
 		?>
 		<div class="tp-hotels-tables-widget">
 			<p class="tp-hotels-tables-widget-select">
 				<label for="<?php echo $this->get_field_id('hotel_select'); ?>"
 				       class="tp-hotels-tables-widget-select-label">
-					<?php _e('Select the table:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Select the table:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-hotels-tables-widget-select-shortcode widefat"
 					        id="<?php echo $this->get_field_id('hotel_select'); ?>"
 					        name="<?php echo $this->get_field_name('hotel_select'); ?>"
 					        data-select_table="<?php echo $select; ?>">
 						<option value="select" <?php selected( $select, 'select' ); ?>>
-							<?php _e('Select the table', TPOPlUGIN_TEXTDOMAIN); ?>
+							<?php _ex('Select the table',  'Travelpayouts – Hotel Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN); ?>
 						</option>
 						<?php $item = 1; ?>
 						<?php foreach ($shortcodeLabels as $key => $shortcodeLabel): ?>
@@ -154,7 +156,8 @@ class TPHotelsTablesWidget extends WP_Widget{
 			</p>
             <p class="tp-hotels-tables-widget-title">
                 <label for="<?php echo $this->get_field_id('hotel_title'); ?>">
-					<?php _e('Alternate title:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Alternate title:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input class="widefat" id="<?php echo $this->get_field_id('hotel_title'); ?>"
                            name="<?php echo $this->get_field_name('hotel_title'); ?>" type="text"
                            value="<?php echo $title; ?>" />
@@ -162,7 +165,8 @@ class TPHotelsTablesWidget extends WP_Widget{
             </p>
             <p class="tp-hotels-tables-widget-city">
                 <label for="<?php echo $this->get_field_id('hotel_city'); ?>">
-		            <?php _e('City:', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _ex('City:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input placeholder="<?php echo $city; ?>" type="text"
                            id="<?php echo $this->get_field_id('hotel_city'); ?>"
                            name="<?php echo $this->get_field_name('hotel_city'); ?>"
@@ -172,7 +176,8 @@ class TPHotelsTablesWidget extends WP_Widget{
             </p>
             <p class="tp-hotels-tables-widget-subid">
                 <label for="<?php echo $this->get_field_id('hotel_subid'); ?>">
-		            <?php _e('Subid:', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _ex('Subid:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input placeholder="<?php echo $subid; ?>" type="text"
                            id="<?php echo $this->get_field_id('hotel_subid'); ?>"
                            name="<?php echo $this->get_field_name('hotel_subid'); ?>"
@@ -182,20 +187,23 @@ class TPHotelsTablesWidget extends WP_Widget{
             <p class="tp-hotels-tables-widget-selections-type">
                 <label for="<?php echo $this->get_field_id('hotel_selections_type'); ?>"
                        class="tp-hotels-tables-widget-selections-type-label">
-		            <?php _e('Select the table:', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _ex('Select the table:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <select class="tp-hotels-tables-widget-selections-type-select widefat"
                             id="<?php echo $this->get_field_id('hotel_selections_type'); ?>"
                             name="<?php echo $this->get_field_name('hotel_selections_type'); ?>"
                             data-selections_type="<?php echo $selectionsType; ?>">
                         <option selected="selected" value="all">
-		                    <?php _e('Hotel type', TPOPlUGIN_TEXTDOMAIN); ?>
+		                    <?php _ex('Hotel type',  'Travelpayouts – Hotel Tables Widget',
+                                TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                     </select>
                 </label>
             </p>
             <p class="tp-hotels-tables-widget-check_in">
                 <label for="<?php echo $this->get_field_id('hotel_check_in'); ?>">
-	                <?php _e('Check-in date:', TPOPlUGIN_TEXTDOMAIN); ?>
+	                <?php _ex('Check-in date:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>
                     <input type="text" id="<?php echo $this->get_field_id('hotel_check_in'); ?>"
                            name="<?php echo $this->get_field_name('hotel_check_in'); ?>"
                            value="<?php echo $checkIn ?>" class="constructorDateShortcodes">
@@ -203,7 +211,8 @@ class TPHotelsTablesWidget extends WP_Widget{
             </p>
             <p class="tp-hotels-tables-widget-check_out">
                 <label for="<?php echo $this->get_field_id('hotel_check_out'); ?>">
-	                <?php _e('Check-out date:', TPOPlUGIN_TEXTDOMAIN); ?>
+	                <?php _ex('Check-out date:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>
                     <input type="text" id="<?php echo $this->get_field_id('hotel_check_out'); ?>"
                            name="<?php echo $this->get_field_name('hotel_check_out'); ?>"
                            value="<?php echo $checkOut ?>" class="constructorDateShortcodes">
@@ -211,7 +220,8 @@ class TPHotelsTablesWidget extends WP_Widget{
             </p>
             <p class="tp-hotels-tables-widget-limit">
                 <label for="<?php echo $this->get_field_id('hotel_limit'); ?>">
-	                <?php _e('Number of results:', TPOPlUGIN_TEXTDOMAIN);?>
+	                <?php _ex('Number of results:',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input value="<?php echo $limit; ?>" type="number"
                            id="<?php echo $this->get_field_id('hotel_limit'); ?>"
                            name="<?php echo $this->get_field_name('hotel_limit'); ?>"
@@ -223,7 +233,8 @@ class TPHotelsTablesWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('hotel_paginate'); ?>"
                            name="<?php echo $this->get_field_name('hotel_paginate'); ?>"
                            value="1" <?php checked($paginate, true)?>>
-	                <?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN);?>
+	                <?php _ex('Paginate',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                 </label>
             </p>
             <p class="tp-hotels-tables-widget-off_title">
@@ -231,7 +242,8 @@ class TPHotelsTablesWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('hotel_off_title'); ?>"
                            name="<?php echo $this->get_field_name('hotel_off_title'); ?>"
                            value="1" <?php checked($offTitle, true)?>>
-	                <?php _e('No title', TPOPlUGIN_TEXTDOMAIN);?>
+	                <?php _ex('No title',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                 </label>
             </p>
             <p class="tp-hotels-tables-widget-link_without_dates">
@@ -239,7 +251,8 @@ class TPHotelsTablesWidget extends WP_Widget{
                     <input type="checkbox" id="<?php echo $this->get_field_id('hotel_link_without_dates'); ?>"
                            name="<?php echo $this->get_field_name('hotel_link_without_dates'); ?>"
                            value="1" <?php checked($linkWithoutDates, true)?>>
-	                <?php _e('Land without dates', TPOPlUGIN_TEXTDOMAIN);?>
+	                <?php _ex('Land without dates',  'Travelpayouts – Hotel Tables Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                 </label>
             </p>
 		</div>

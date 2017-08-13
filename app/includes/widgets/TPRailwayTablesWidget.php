@@ -15,9 +15,12 @@ class TPRailwayTablesWidget extends WP_Widget{
 	{
 		parent::__construct(
 			'travelpayouts_railway_tables', // Base ID
-			__('Travelpayouts – Railways schedule', TPOPlUGIN_TEXTDOMAIN), // Name
+			_x('Travelpayouts – Railways schedule',
+                'Travelpayouts – Railways schedule Widget',
+                TPOPlUGIN_TEXTDOMAIN), // Name
 			array(
-				'description' => __('Travelpayouts – Railways schedule', TPOPlUGIN_TEXTDOMAIN)
+				'description' => __('Travelpayouts – Railways schedule',
+                    'Travelpayouts – Railways schedule Widget', TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
 	}
@@ -93,7 +96,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 		<div class="tp-railway-tables-widget">
 			<p class="tp-railway-tables-widget-title">
 				<label for="<?php echo $this->get_field_id('railway_title'); ?>">
-					<?php _e('Alternate title:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Alternate title:', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat" id="<?php echo $this->get_field_id('railway_title'); ?>"
 					       name="<?php echo $this->get_field_name('railway_title'); ?>" type="text"
 					       value="<?php echo $title; ?>" />
@@ -101,7 +105,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-railway-tables-widget-origin">
 				<label for="<?php echo $this->get_field_id('railway_origin'); ?>">
-					<?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Origin:', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_origin'); ?>"
 					       name="<?php echo $this->get_field_name('railway_origin'); ?>" type="text"
 					       value="<?php echo $origin; ?>" />
@@ -109,7 +114,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-railway-tables-widget-destination">
 				<label for="<?php echo $this->get_field_id('railway_destination'); ?>">
-					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Destination:', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_destination'); ?>"
 					       name="<?php echo $this->get_field_name('railway_destination'); ?>" type="text"
 					       value="<?php echo $destination; ?>" />
@@ -117,7 +123,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 			</p>
 			<p class="tp-railway-tables-widget-subid">
 				<label for="<?php echo $this->get_field_id('railway_subid'); ?>">
-					<?php _e('Subid:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Subid:', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat" id="<?php echo $this->get_field_id('railway_subid'); ?>"
 					       name="<?php echo $this->get_field_name('railway_subid'); ?>" type="text"
 					       value="<?php echo $subid; ?>" />
@@ -128,7 +135,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('railway_paginate'); ?>"
 					       name="<?php echo $this->get_field_name('railway_paginate'); ?>"
 					       value="1" <?php checked($paginate, true)?>>
-					<?php _e('Paginate', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Paginate', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-railway-tables-widget-off-title">
@@ -136,7 +144,8 @@ class TPRailwayTablesWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('railway_off_title'); ?>"
 					       name="<?php echo $this->get_field_name('railway_off_title'); ?>"
 					       value="1" <?php checked($off_title, true)?>>
-					<?php _e('No title', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('No title', 'Travelpayouts – Railways schedule Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 		</div>

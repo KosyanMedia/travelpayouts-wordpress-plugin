@@ -16,9 +16,13 @@ class TPWidgetsWidget extends WP_Widget{
 	{
 		parent::__construct(
 			'travelpayouts_widget', // Base ID
-			__('Travelpayouts – Widgets', TPOPlUGIN_TEXTDOMAIN), // Name
+			_x('Travelpayouts – Widgets',
+                'Travelpayouts – Widgets Widget',
+                TPOPlUGIN_TEXTDOMAIN), // Name
 			array(
-				'description' => __('Travelpayouts – Widgets', TPOPlUGIN_TEXTDOMAIN)
+				'description' => _x('Travelpayouts – Widgets',
+                    'Travelpayouts – Widgets Widget',
+                    TPOPlUGIN_TEXTDOMAIN)
 			) // Args
 		);
 	}
@@ -404,14 +408,14 @@ class TPWidgetsWidget extends WP_Widget{
 		}
 		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
 		$shortcodeLabels = array(
-			__('Map Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Hotels Map Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Calendar Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Subscription Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Hotel Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Popular Destinations Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Hotels Selections Widget', TPOPlUGIN_TEXTDOMAIN),
-			__('Best deals widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Map Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Hotels Map Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Calendar Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Subscription Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Hotel Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Popular Destinations Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Hotels Selections Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
+			_x('Best deals widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
 		);
 
 		$fieldSizeWidth1 = TPPlugin::$options['widgets']['1']['width'];
@@ -469,13 +473,15 @@ class TPWidgetsWidget extends WP_Widget{
 			<p class="tp-widgets-widget-select">
 				<label for="<?php echo $this->get_field_id('widgets_select'); ?>"
 				       class="tp-widgets-widget-select-label">
-					<?php _e('Select widget:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Select widget:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-widgets-widget-select-shortcode widefat"
 					        id="<?php echo $this->get_field_id('widgets_select'); ?>"
 					        name="<?php echo $this->get_field_name('widgets_select'); ?>"
 					        data-select_table="<?php echo $select; ?>">
 						<option value="select" <?php selected( $select, 'select' ); ?>>
-							<?php _e('Select widget', TPOPlUGIN_TEXTDOMAIN); ?>
+							<?php _ex('Select widget', 'Travelpayouts – Widgets Widget',
+                                TPOPlUGIN_TEXTDOMAIN); ?>
 						</option>
 						<?php $item = 1; ?>
 						<?php foreach ($shortcodeLabels as $key => $shortcodeLabel): ?>
@@ -489,7 +495,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-subid">
 				<label for="<?php echo $this->get_field_id('widgets_subid'); ?>">
-					<?php _e('Subid:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Subid:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $subid; ?>" type="text"
 					       id="<?php echo $this->get_field_id('widgets_subid'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_subid'); ?>"
@@ -498,7 +505,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-origin">
 				<label for="<?php echo $this->get_field_id('widgets_origin'); ?>">
-					<?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Origin:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $origin; ?>" type="text"
 					       id="<?php echo $this->get_field_id('widgets_origin'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_origin'); ?>"
@@ -507,7 +515,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-destination">
 				<label for="<?php echo $this->get_field_id('widgets_destination'); ?>">
-					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Destination:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $destination; ?>" type="text"
 					       id="<?php echo $this->get_field_id('widgets_destination'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_destination'); ?>"
@@ -516,7 +525,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-hotel-id">
 				<label for="<?php echo $this->get_field_id('widgets_hotel_id'); ?>">
-					<?php _e('Hotel:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Hotel:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<input placeholder="<?php echo $hotelId; ?>" type="text"
 					       id="<?php echo $this->get_field_id('widgets_hotel_id'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_hotel_id'); ?>"
@@ -525,7 +535,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-size">
 				<label for="<?php echo $this->get_field_id('widgets_size_width'); ?>">
-					<?php _e('Size:', TPOPlUGIN_TEXTDOMAIN) ?>
+					<?php _ex('Size:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN) ?>
 					<input placeholder="<?php echo $sizeWidth; ?>" type="number"
 					       id="<?php echo $this->get_field_id('widgets_size_width'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_size_width'); ?>"
@@ -541,7 +552,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-calendar-period">
 				<label for="<?php echo $this->get_field_id('widgets_calendar_period'); ?>">
-					<?php _e('Period:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Period:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-widgets-widget-calendar-period-select widefat"
 					        id="<?php echo $this->get_field_id('widgets_calendar_period'); ?>"
 					        name="<?php echo $this->get_field_name('widgets_calendar_period'); ?>"
@@ -552,7 +564,8 @@ class TPWidgetsWidget extends WP_Widget{
 			</p>
 			<p class="tp-widgets-widget-calendar-period-range">
 				<label for="<?php echo $this->get_field_id('widgets_calendar_period_range_from'); ?>">
-					<?php _e('Range, days:', TPOPlUGIN_TEXTDOMAIN) ?>
+					<?php _ex('Range, days:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN) ?>
 					<input placeholder="<?php echo $calendarPeriodRangeFrom; ?>" type="number"
 					       id="<?php echo $this->get_field_id('widgets_calendar_period_range_from'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_calendar_period_range_from'); ?>"
@@ -571,7 +584,8 @@ class TPWidgetsWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('widgets_direct'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_direct'); ?>"
 					       value="1" <?php checked($direct, true)?>>
-					<?php _e('Direct Flights Only', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Direct Flights Only', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 			<p class="tp-widgets-widget-one-way">
@@ -579,14 +593,16 @@ class TPWidgetsWidget extends WP_Widget{
 					<input type="checkbox" id="<?php echo $this->get_field_id('widgets_one_way'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_one_way'); ?>"
 					       value="1" <?php checked($oneWay, true)?>>
-					<?php _e('One way', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('One way', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 
             <p class="tp-widgets-widget-popular-routes-count">
                 <label for="<?php echo $this->get_field_id('widgets_popular_routes_count'); ?>"
                        class="tp-widgets-widget-popular-routes-count-label">
-					<?php _e('Count:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Count:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input value="<?php echo $popularRoutesCount; ?>" type="number" min="1"
                            id="<?php echo $this->get_field_id('widgets_popular_routes_count'); ?>"
                            name="<?php echo $this->get_field_name('widgets_popular_routes_count'); ?>"
@@ -597,11 +613,13 @@ class TPWidgetsWidget extends WP_Widget{
                data-field_name="<?php echo $this->get_field_name('widgets_popular_routes_'); ?>"
                data-field_id="<?php echo $this->get_field_id('widgets_popular_routes_'); ?>"
                data-field_class="constructorCityShortcodesAutocomplete widefat"
-               data-field_label="<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>">
+               data-field_label="<?php _ex('Destination:', 'Travelpayouts – Widgets Widget',
+                   TPOPlUGIN_TEXTDOMAIN);?>">
 				<?php for($i = 0; $i < $popularRoutesCount; $i++): ?>
                     <label for="<?php echo $this->get_field_id('widgets_popular_routes_'.$i); ?>"
                            class="tp-widgets-widget-popular-routes-label-<?php echo $i; ?>">
-						<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+						<?php _ex('Destination:', 'Travelpayouts – Widgets Widget',
+                            TPOPlUGIN_TEXTDOMAIN);?>
                         <input placeholder="<?php echo $popularRoutes[$i]; ?>" type="text"
                                id="<?php echo $this->get_field_id('widgets_popular_routes_'.$i); ?>"
                                name="<?php echo $this->get_field_name('widgets_popular_routes_'.$i); ?>"
@@ -613,21 +631,29 @@ class TPWidgetsWidget extends WP_Widget{
 
             <p class="tp-widgets-widget-type-6">
                 <label for="<?php echo $this->get_field_id('widgets_widget_type_6'); ?>">
-					<?php _e('View widget', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('View widget', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <select class="widefat"
                             id="<?php echo $this->get_field_id('widgets_widget_type_6'); ?>"
                             name="<?php echo $this->get_field_name('widgets_widget_type_6'); ?>"
                             data-select_type="<?php echo $widgetType6; ?>">
                         <option <?php selected( $widgetType6, 'full' ); ?>
-                                value="full"><?php _e('Full', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                                value="full">
+                            <?php _ex('Full', 'Travelpayouts – Widgets Widget',
+                                TPOPlUGIN_TEXTDOMAIN) ?>
+                        </option>
                         <option <?php selected( $widgetType6, 'compact' ); ?>
-                                value="compact"><?php _e('Compact', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                                value="compact">
+                            <?php _ex('Compact', 'Travelpayouts – Widgets Widget',
+                                TPOPlUGIN_TEXTDOMAIN) ?>
+                        </option>
                     </select>
                 </label>
             </p>
             <p class="tp-widgets-widget-limit-6">
                 <label for="<?php echo $this->get_field_id('widgets_widget_limit_6'); ?>">
-		            <?php _e('Limit', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _ex('Limit', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <select id="<?php echo $this->get_field_id('widgets_widget_limit_6'); ?>"
                             name="<?php echo $this->get_field_name('widgets_widget_limit_6'); ?>"
                             data-select_type="<?php echo $limit6; ?>">
@@ -665,15 +691,22 @@ class TPWidgetsWidget extends WP_Widget{
 
             <p class="tp-widgets-widget-type-7">
                 <label for="<?php echo $this->get_field_id('widgets_widget_type_7'); ?>">
-					<?php _e('Widget type', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Widget type', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <select class="widefat"
                             id="<?php echo $this->get_field_id('widgets_widget_type_7'); ?>"
                             name="<?php echo $this->get_field_name('widgets_widget_type_7'); ?>"
                             data-select_type="<?php echo $widgetType7; ?>">
                         <option <?php selected( $widgetType7, 'brickwork' ); ?>
-                                value="brickwork"><?php _e('Tile', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                                value="brickwork">
+                            <?php _ex('Tile', 'Travelpayouts – Widgets Widget',
+                                TPOPlUGIN_TEXTDOMAIN) ?>
+                        </option>
                         <option <?php selected( $widgetType7, 'slider' ); ?>
-                                value="slider"><?php _e('Slider', TPOPlUGIN_TEXTDOMAIN) ?></option>
+                                value="slider">
+                            <?php _ex('Slider', 'Travelpayouts – Widgets Widget',
+                                TPOPlUGIN_TEXTDOMAIN) ?>
+                        </option>
                     </select>
                 </label>
             </p>
@@ -682,18 +715,21 @@ class TPWidgetsWidget extends WP_Widget{
                     <input type="radio" name="<?php echo $this->get_field_name('widgets_widget_filter'); ?>"
                            value="0" <?php checked($widgetFilter, 0) ?>
                            id="<?php echo $this->get_field_id('widgets_widget_filter_0'); ?>">
-	                <?php _e('Filter by airlines', TPOPlUGIN_TEXTDOMAIN); ?>
+	                <?php _ex('Filter by airlines', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
                 <label for="<?php echo $this->get_field_id('widgets_widget_filter_1'); ?>">
                     <input type="radio" name="<?php echo $this->get_field_name('widgets_widget_filter'); ?>"
                            value="1" <?php checked($widgetFilter, 1) ?>
                            id="<?php echo $this->get_field_id('widgets_widget_filter_1'); ?>">
-		            <?php _e('Filter by routes', TPOPlUGIN_TEXTDOMAIN); ?>
+		            <?php _ex('Filter by routes', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
             </p>
             <p class="tp-widgets-widget-origin-7">
                 <label for="<?php echo $this->get_field_id('widgets_origin_7'); ?>">
-		            <?php _e('Origin:', TPOPlUGIN_TEXTDOMAIN);?>
+		            <?php _ex('Origin:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input placeholder="<?php echo $origin7; ?>" type="text"
                            id="<?php echo $this->get_field_id('widgets_origin_7'); ?>"
                            name="<?php echo $this->get_field_name('widgets_origin_7'); ?>"
@@ -702,7 +738,8 @@ class TPWidgetsWidget extends WP_Widget{
             </p>
             <p class="tp-widgets-widget-destination-7">
                 <label for="<?php echo $this->get_field_id('widgets_destination_7'); ?>">
-					<?php _e('Destination:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Destination:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <input placeholder="<?php echo $destination7; ?>" type="text"
                            id="<?php echo $this->get_field_id('widgets_destination_7'); ?>"
                            name="<?php echo $this->get_field_name('widgets_destination_7'); ?>"
@@ -713,12 +750,14 @@ class TPWidgetsWidget extends WP_Widget{
                data-field_name="<?php echo $this->get_field_name('widgets_airline_7_item_'); ?>"
                data-field_id="<?php echo $this->get_field_id('widgets_airline_7_item_'); ?>"
                data-field_class="constructorAirlineWidgetsAutocomplete widefat"
-               data-field_label="<?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>">
+               data-field_label="<?php _ex('Airline:', 'Travelpayouts – Widgets Widget',
+                   TPOPlUGIN_TEXTDOMAIN);?>">
 
 	            <?php for($i = 0; $i < $airline7Count; $i++): ?>
                     <label for="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
                            class="tp-widgets-widget-airline-7-label-<?php echo $i; ?> tp-widgets-widget-airline-7-label">
-			            <?php _e('Airline:', TPOPlUGIN_TEXTDOMAIN);?>
+			            <?php _ex('Airline:', 'Travelpayouts – Widgets Widget',
+                            TPOPlUGIN_TEXTDOMAIN);?>
                         <input placeholder="<?php echo $airline7[$i]; ?>" type="text"
                                id="<?php echo $this->get_field_id('widgets_airline_7_item_'.$i); ?>"
                                name="<?php echo $this->get_field_name('widgets_airline_7_item_'.$i); ?>"
@@ -726,7 +765,8 @@ class TPWidgetsWidget extends WP_Widget{
                         <?php if ($i > 0): ?>
                             <a href="#" class="TPBtnDelete">
                                 <i></i>
-                                <?php _e('Delete', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Delete', 'Travelpayouts – Widgets Widget',
+                                    TPOPlUGIN_TEXTDOMAIN); ?>
                             </a>
                         <?php endif;?>
 
@@ -735,7 +775,8 @@ class TPWidgetsWidget extends WP_Widget{
 
                 <a href="#" class="TPBtnAdd">
                     <i></i>
-		            <?php _e('Add', TPOPlUGIN_TEXTDOMAIN); ?>
+		            <?php _ex('Add', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
                 <input type="hidden" class="tp-widgets-widget-airline-7-count"
                        value="<?php echo $airline7Count; ?>"
@@ -744,7 +785,8 @@ class TPWidgetsWidget extends WP_Widget{
 
             <p class="tp-widgets-widget-limit-7">
                 <label for="<?php echo $this->get_field_id('widgets_widget_limit_7'); ?>">
-					<?php _e('Limit', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Limit', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
                     <select id="<?php echo $this->get_field_id('widgets_widget_limit_7'); ?>"
                             name="<?php echo $this->get_field_name('widgets_widget_limit_7'); ?>"
                             data-select_type="<?php echo $limit7; ?>">
@@ -763,14 +805,16 @@ class TPWidgetsWidget extends WP_Widget{
 					       name="<?php echo $this->get_field_name('widgets_responsive'); ?>"
 					       value="1" <?php checked($responsive, true)?>
 					       class="tp-widgets-widget-responsive-label-input">
-					<?php _e('Responsive', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Responsive', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 				<label for="<?php echo $this->get_field_id('widgets_responsive_width'); ?>"
 					class="tp-widgets-widget-responsive-label-width">
 					<input type="width" id="<?php echo $this->get_field_id('widgets_responsive_width'); ?>"
 					       name="<?php echo $this->get_field_name('widgets_responsive_width'); ?>"
 					       placeholder="<?php echo $responsiveWidth; ?>" min="1" class="small-text">
-					<?php _e('Width', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Width', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 				</label>
 			</p>
 
@@ -778,7 +822,8 @@ class TPWidgetsWidget extends WP_Widget{
 
 			<p class="tp-widgets-widget-zoom">
 				<label for="<?php echo $this->get_field_id('widgets_zoom'); ?>">
-					<?php _e('Zoom:', TPOPlUGIN_TEXTDOMAIN);?>
+					<?php _ex('Zoom:', 'Travelpayouts – Widgets Widget',
+                        TPOPlUGIN_TEXTDOMAIN);?>
 					<select class="tp-widgets-widget-zoom-select widefat"
 					        id="<?php echo $this->get_field_id('widgets_zoom'); ?>"
 					        name="<?php echo $this->get_field_name('widgets_zoom'); ?>"
@@ -803,10 +848,10 @@ class TPWidgetsWidget extends WP_Widget{
 		$monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
 		$output_month .= '<option value="year" '
 		                 .selected( $calendarPeriod, 'year' , false).'>'
-		                 .__('Year', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+		                 ._x('Year', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN ).'</option>';
 		$output_month .= '<option value="current_month" '
 		                 .selected( $calendarPeriod, 'current_month' , false).'>'
-		                 .__('Current month', TPOPlUGIN_TEXTDOMAIN ).'</option>';
+		                 ._x('Current month', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN ).'</option>';
 		$current_date = getdate();
 		$m = false;
 		$out_c = '';
