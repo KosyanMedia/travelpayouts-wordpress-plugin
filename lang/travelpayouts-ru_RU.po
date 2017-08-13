@@ -6149,193 +6149,193 @@ msgstr "Перейти к настройке."
 #: app/includes/widgets/TPWidgetsWidget.php:19 app/includes/widgets/TPWidgetsWidget.php:23
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Travelpayouts – Widgets"
-msgstr ""
+msgstr "Travelpayouts – Widgets"
 
 #: app/includes/widgets/TPWidgetsWidget.php:411
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Map Widget"
-msgstr ""
+msgstr "Виджет карты"
 
 #: app/includes/widgets/TPWidgetsWidget.php:412
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotels Map Widget"
-msgstr ""
+msgstr "Отельная карта"
 
 #: app/includes/widgets/TPWidgetsWidget.php:413
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Calendar Widget"
-msgstr ""
+msgstr "Виджет календаря"
 
 #: app/includes/widgets/TPWidgetsWidget.php:414
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Subscription Widget"
-msgstr ""
+msgstr "Виджет подписок"
 
 #: app/includes/widgets/TPWidgetsWidget.php:415
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotel Widget"
-msgstr ""
+msgstr "Виджет отеля"
 
 #: app/includes/widgets/TPWidgetsWidget.php:416
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Popular Destinations Widget"
-msgstr ""
+msgstr "Виджет популярных направлений"
 
 #: app/includes/widgets/TPWidgetsWidget.php:417
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotels Selections Widget"
-msgstr ""
+msgstr "Виджет отельных подборок"
 
 #: app/includes/widgets/TPWidgetsWidget.php:418
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Best deals widget"
-msgstr ""
+msgstr "Виджет спецпредложений"
 
 #: app/includes/widgets/TPWidgetsWidget.php:476
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Select widget:"
-msgstr ""
+msgstr "Выберите виджет:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:483
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Select widget"
-msgstr ""
+msgstr "Выберите виджет"
 
 #: app/includes/widgets/TPWidgetsWidget.php:498
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Subid:"
-msgstr ""
+msgstr "Дополнительный маркер:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:508 app/includes/widgets/TPWidgetsWidget.php:731
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Origin:"
-msgstr ""
+msgstr "Откуда:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:518 app/includes/widgets/TPWidgetsWidget.php:616
 #: app/includes/widgets/TPWidgetsWidget.php:621 app/includes/widgets/TPWidgetsWidget.php:741
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Destination:"
-msgstr ""
+msgstr "Куда:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:528
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotel:"
-msgstr ""
+msgstr "Название отеля:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:538
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Size:"
-msgstr ""
+msgstr "Размер:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:555
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Period:"
-msgstr ""
+msgstr "Период:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:567
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Range, days:"
-msgstr ""
+msgstr "Период, дни:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:587
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Direct Flights Only"
-msgstr ""
+msgstr "Только прямые рейсы"
 
 #: app/includes/widgets/TPWidgetsWidget.php:596
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "One way"
-msgstr ""
+msgstr "В одну сторону"
 
 #: app/includes/widgets/TPWidgetsWidget.php:604
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Count:"
-msgstr ""
+msgstr "Количество:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:634
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "View widget"
-msgstr ""
+msgstr "Вид виджета"
 
 #: app/includes/widgets/TPWidgetsWidget.php:642
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Full"
-msgstr ""
+msgstr "Расширенный"
 
 #: app/includes/widgets/TPWidgetsWidget.php:647
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Compact"
-msgstr ""
+msgstr "Компактный"
 
 #: app/includes/widgets/TPWidgetsWidget.php:655 app/includes/widgets/TPWidgetsWidget.php:788
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Limit"
-msgstr ""
+msgstr "Лимит"
 
 #: app/includes/widgets/TPWidgetsWidget.php:694
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Widget type"
-msgstr ""
+msgstr "Вид виджета"
 
 #: app/includes/widgets/TPWidgetsWidget.php:702
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Tile"
-msgstr ""
+msgstr "Плитка"
 
 #: app/includes/widgets/TPWidgetsWidget.php:707
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Slider"
-msgstr ""
+msgstr "Слайдер"
 
 #: app/includes/widgets/TPWidgetsWidget.php:718
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Filter by airlines"
-msgstr ""
+msgstr "Фильтр по авиакомпаниям "
 
 #: app/includes/widgets/TPWidgetsWidget.php:725
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Filter by routes"
-msgstr ""
+msgstr "Фильтр по направлениям"
 
 #: app/includes/widgets/TPWidgetsWidget.php:753 app/includes/widgets/TPWidgetsWidget.php:759
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Airline:"
-msgstr ""
+msgstr "Авиакомпания:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:768
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: app/includes/widgets/TPWidgetsWidget.php:778
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: app/includes/widgets/TPWidgetsWidget.php:808
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Responsive"
-msgstr ""
+msgstr "Резиновая"
 
 #: app/includes/widgets/TPWidgetsWidget.php:816
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #: app/includes/widgets/TPWidgetsWidget.php:825
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Zoom:"
-msgstr ""
+msgstr "Zoom:"
 
 #: app/includes/widgets/TPWidgetsWidget.php:851
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Year"
-msgstr ""
+msgstr "Год"
 
 #: app/includes/widgets/TPWidgetsWidget.php:854
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Current month"
-msgstr ""
+msgstr "Текущий месяц"
 
 #: core/controllers/TPOAdminMenuController.php:24
 msgctxt "(Please, don't delete the information below. It makes helping you easier)"
