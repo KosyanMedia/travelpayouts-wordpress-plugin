@@ -6070,41 +6070,41 @@ msgstr "Не подставлять даты при переходе"
 #: app/includes/widgets/TPRailwayTablesWidget.php:18
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Travelpayouts – Railways schedule"
-msgstr ""
+msgstr "Travelpayouts – Railways schedule"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:22
 msgid "Travelpayouts – Railways schedule"
-msgstr ""
+msgstr "Travelpayouts – Railways schedule"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:99
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Alternate title:"
-msgstr ""
+msgstr "Альтернативный заголов:"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:108
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Origin:"
-msgstr ""
+msgstr "Откуда:"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:117
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Destination:"
-msgstr ""
+msgstr "Куда:"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:126
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Subid:"
-msgstr ""
+msgstr "Дополнительный маркер:"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:138
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Paginate"
-msgstr ""
+msgstr "Пагинация"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:147
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "No title"
-msgstr ""
+msgstr "Убрать заголовок"
 
 #: app/includes/widgets/TPSearchFormWidget.php:20 app/includes/widgets/TPSearchFormWidget.php:22
 msgctxt "Travelpayouts – Search Form Widget"
