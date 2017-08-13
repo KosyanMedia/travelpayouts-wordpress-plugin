@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-08-14 00:18+0300\n"
+"POT-Creation-Date: 2017-08-14 00:58+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5990,78 +5990,82 @@ msgstr "Без пересадок"
 #: app/includes/widgets/TPHotelsTablesWidget.php:20
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Travelpayouts – Hotel Tables"
-msgstr ""
+msgstr "Travelpayouts – Hotel Tables"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:129
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collection - Discounts"
-msgstr ""
+msgstr "Подборка отелей - Скидки"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:130
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collections for dates"
-msgstr ""
+msgstr "Подборки отелей на даты"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:137
-#: app/includes/widgets/TPHotelsTablesWidget.php:190
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table:"
-msgstr ""
+msgstr "Выберите таблицу:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:144
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table"
-msgstr ""
+msgstr "Выберите таблицу"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:159
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Alternate title:"
-msgstr ""
+msgstr "Альтернативный заголовок:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:168
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "City:"
-msgstr ""
+msgstr "Город:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:179
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Subid:"
-msgstr ""
+msgstr "Дополнительный маркер:"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:190
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Selection type:"
+msgstr "Тип подборки:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:197
 msgctxt "Travelpayouts – Hotel Tables Widget"
-msgid "Hotel type"
-msgstr ""
+msgid "Selection type"
+msgstr "Тип подборки"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:205
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-in date:"
-msgstr ""
+msgstr "Дата заезда:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:214
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-out date:"
-msgstr ""
+msgstr "Дата выезда:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:223
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Number of results:"
-msgstr ""
+msgstr "Количество результатов:"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:236
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Paginate"
-msgstr ""
+msgstr "Пагинация"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:245
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "No title"
-msgstr ""
+msgstr "Убрать заголовок"
 
 #: app/includes/widgets/TPHotelsTablesWidget.php:254
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Land without dates"
-msgstr ""
+msgstr "Не подставлять даты при переходе"
 
 #: app/includes/widgets/TPRailwayTablesWidget.php:18
 msgctxt "Travelpayouts – Railways schedule Widget"

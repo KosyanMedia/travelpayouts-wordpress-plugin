@@ -187,14 +187,14 @@ class TPHotelsTablesWidget extends WP_Widget{
             <p class="tp-hotels-tables-widget-selections-type">
                 <label for="<?php echo $this->get_field_id('hotel_selections_type'); ?>"
                        class="tp-hotels-tables-widget-selections-type-label">
-		            <?php _ex('Select the table:',  'Travelpayouts – Hotel Tables Widget',
+		            <?php _ex('Selection type:',  'Travelpayouts – Hotel Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
                     <select class="tp-hotels-tables-widget-selections-type-select widefat"
                             id="<?php echo $this->get_field_id('hotel_selections_type'); ?>"
                             name="<?php echo $this->get_field_name('hotel_selections_type'); ?>"
                             data-selections_type="<?php echo $selectionsType; ?>">
                         <option selected="selected" value="all">
-		                    <?php _ex('Hotel type',  'Travelpayouts – Hotel Tables Widget',
+		                    <?php _ex('Selection type',  'Travelpayouts – Hotel Tables Widget',
                                 TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                     </select>
