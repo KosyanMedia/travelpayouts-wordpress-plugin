@@ -6109,42 +6109,42 @@ msgstr "Убрать заголовок"
 #: app/includes/widgets/TPSearchFormWidget.php:20 app/includes/widgets/TPSearchFormWidget.php:22
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Travelpayouts – Search Form"
-msgstr ""
+msgstr "Travelpayouts – Search Form"
 
 #: app/includes/widgets/TPSearchFormWidget.php:140
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Select the search form:"
-msgstr ""
+msgstr "Выберите поисковую форму:"
 
 #: app/includes/widgets/TPSearchFormWidget.php:186
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "City of departure default:"
-msgstr ""
+msgstr "Город вылета по-умолчанию:"
 
 #: app/includes/widgets/TPSearchFormWidget.php:197
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "City Arrival default:"
-msgstr ""
+msgstr "Город прилета по-умолчанию:"
 
 #: app/includes/widgets/TPSearchFormWidget.php:208
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Default City/Hotel:"
-msgstr ""
+msgstr "Город/Отель по умолчанию:"
 
 #: app/includes/widgets/TPSearchFormWidget.php:219
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Subid:"
-msgstr ""
+msgstr "Дополнительный маркер:"
 
 #: app/includes/widgets/TPSearchFormWidget.php:232
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "No customized search form."
-msgstr ""
+msgstr "Нет настроенных Поисковых форм."
 
 #: app/includes/widgets/TPSearchFormWidget.php:237
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Go to setting."
-msgstr ""
+msgstr "Перейти к настройке."
 
 #: app/includes/widgets/TPWidgetsWidget.php:19 app/includes/widgets/TPWidgetsWidget.php:23
 msgctxt "Travelpayouts – Widgets Widget"
