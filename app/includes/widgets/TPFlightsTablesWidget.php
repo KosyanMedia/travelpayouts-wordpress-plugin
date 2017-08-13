@@ -47,6 +47,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
 		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
+        if ($select == 'select') return;
 
 		$originCode = '';
 		if(isset($origin)){
@@ -475,5 +476,13 @@ class TPFlightsTablesWidget extends WP_Widget{
 		</div>
 		<?php
 	}
+
+	public function getCode($data){
+	    if (empty($data)) return '';
+		$dataCode = '';
+		if(isset($origin)){
+			preg_match('/\[(.+)\]/', $origin, $originCode);
+		}
+    }
 
 }
