@@ -81,17 +81,10 @@ class TPWidgetsWidget extends WP_Widget{
 			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
 		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
-
-		$originCode = '';
-		if(isset($origin)){
-			preg_match('/\[(.+)\]/', $origin, $originCode);
-		}
-		$originAttr = 'origin="'.$originCode[1].'"';
-		$destinationCode = '';
-		if(isset($destination)){
-			preg_match('/\[(.+)\]/', $destination, $destinationCode);
-		}
-		$destinationAttr = 'destination="'.$destinationCode[1].'"';
+		$originCode = $this->getCode($origin);
+		$originAttr = 'origin="'.$originCode.'"';
+		$destinationCode = $this->getCode($destination);
+		$destinationAttr = 'destination="'.$destinationCode.'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$sizeWidthAttr = 'width="'.$sizeWidth.'"';
 		$sizeHeightAttr = 'height="'.$sizeHeight.'"';
@@ -99,31 +92,17 @@ class TPWidgetsWidget extends WP_Widget{
 		if($direct == true){
 		    $directAttr = 'direct=true';
         }
-
 		$oneWayAttr = '';
 		if($oneWay == true){
 			$oneWayAttr = 'one_way=true';
 		}
-
         $zoomAttr = 'zoom="'.$zoom.'"';
-		$coordinates = '';
-		if(isset($hotelId)){
-			preg_match('/\{(.+)\}/', $hotelId, $coordinates);
-		}
-		$coordinatesAttr = 'coordinates="'.$coordinates[1].'"';
-
-		$hotelIdCode = '';
-		if(isset($hotelId)){
-			preg_match('/\[(.+)\]/', $hotelId, $hotelIdCode);
-		}
-		$hotelIdAttr = 'hotel_id="'.$hotelIdCode[1].'"';
-
-		$cityIdCode = '';
-		if(isset($hotelId)){
-			preg_match('/\[(.+)\]/', $hotelId, $cityIdCode);
-		}
-		$cityIdAttr = 'id="'.$cityIdCode[1].'"';
-
+		$coordinates = $this->getHotelData($hotelId);
+		$coordinatesAttr = 'coordinates="'.$coordinates.'"';
+		$hotelIdCode = $this->getCode($hotelId);
+		$hotelIdAttr = 'hotel_id="'.$hotelIdCode.'"';
+		$cityIdCode = $this->getCode($hotelId);
+		$cityIdAttr = 'id="'.$cityIdCode.'"';
 		$responsiveAttr = '';
 		$responsiveWidthAttr = '';
 		if ($responsive == true){
@@ -131,167 +110,154 @@ class TPWidgetsWidget extends WP_Widget{
         } else {
 			$responsiveWidthAttr = 'width="'.$responsiveWidth.'"';
         }
-
 		$calendarPeriodAttr = 'period="'.$calendarPeriod.'"';
 		$calendarPeriodRangeFromAttr = 'period_day_from="'.$calendarPeriodRangeFrom.'"';
 		$calendarPeriodRangeToAttr = 'period_day_to="'.$calendarPeriodRangeTo.'"';
-
 		$cat1Attr = 'cat1="'.$cat1.'"';
 		$cat2Attr = 'cat2="'.$cat2.'"';
 		$cat3Attr = 'cat3="'.$cat3.'"';
 		$widgetType6Attr = 'type="'.$widgetType6.'"';
 		$limit6Attr = 'limit="'.$limit6.'"';
-
 		$limit7Attr = 'limit="'.$limit7.'"';
 		$widgetType7Attr = 'type="'.$widgetType7.'"';
 		$widgetFilterAttr = 'filter="'.$widgetFilter.'"';
-
 		$shortcode = '';
+        if ($select == 0){
+	        //Map Widget
+	        if (empty($originCode)){
+		        return;
+	        }
+	        $shortcode = '[tp_map_widget '
+	                     .$originAttr.' '
+	                     .$subidAttr.' '
+	                     .$sizeWidthAttr.' '
+	                     .$sizeHeightAttr.' '
+	                     .$directAttr.' '
+	                     .']';
+        } elseif ($select == 1) {
+	        //Hotels Map Widget
+	        if (empty($coordinates)){
+		        return;
+	        }
+	        $shortcode = '[tp_hotelmap_widget '
+	                     .$coordinatesAttr.' '
+	                     .$subidAttr.' '
+	                     .$sizeWidthAttr.' '
+	                     .$sizeHeightAttr.' '
+	                     .$zoomAttr.' '
+	                     .']';
+        } elseif ($select == 2){
+	        //Calendar Widget
+	        if (empty($originCode) || empty($destinationCode)){
+		        return;
+	        }
+	        $shortcode = '[tp_calendar_widget '
+	                     .$originAttr.' '
+	                     .$destinationAttr.' '
+	                     .$subidAttr.' '
+	                     .$directAttr.' '
+	                     .$oneWayAttr.' '
+	                     .$responsiveAttr.' '
+	                     .$responsiveWidthAttr.' '
+	                     .$calendarPeriodAttr.' '
+	                     .$calendarPeriodRangeFromAttr.' '
+	                     .$calendarPeriodRangeToAttr.' '
+	                     .']';
+        } elseif ($select == 3){
+	        //Subscription Widget
+	        if (empty($originCode) || empty($destinationCode)){
+		        return;
+	        }
+	        $shortcode = '[tp_subscriptions_widget '
+	                     .$originAttr.' '
+	                     .$destinationAttr.' '
+	                     .$subidAttr.' '
+	                     .$responsiveAttr.' '
+	                     .$responsiveWidthAttr.' '
+	                     .']';
+        } elseif ($select == 4){
+	        //Hotel Widget
+	        if (empty($hotelIdCode)){
+		        return;
+	        }
+	        $shortcode = '[tp_hotel_widget '
+	                     .$hotelIdAttr.' '
+	                     .$subidAttr.' '
+	                     .$responsiveAttr.' '
+	                     .$responsiveWidthAttr.' '
+	                     .']';
+        } elseif ($select == 5){
+	        //Popular Destinations Widget
+	        //$popularRoutes;
+	        if ($popularRoutesCount > 1){
+		        $shortcode .= '<div class="TP-PopularRoutesWidgets">';
+		        for($i = 0; $i < $popularRoutesCount; $i++){
+			        $destinationPopularRoutesAttr = '';
+			        $destinationPopularRoutesCode = $this->getCode($popularRoutes[$i]);
+			        $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode.'"';
+			        $shortcode .= '<div class="TP-PopularRoutesWidget">';
+			        $shortcode .= '[tp_popular_routes_widget '
+			                      .$destinationPopularRoutesAttr.' '
+			                      .$subidAttr.' '
+			                      .'responsive=true '
+			                      .']';
+			        $shortcode .= '</div>';
+		        }
+		        $shortcode .= '</div>';
+	        } else {
+		        $destinationPopularRoutesAttr = '';
+		        $destinationPopularRoutesCode = $this->getCode($popularRoutes[0]);
+		        $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode.'"';
+		        $shortcode = '[tp_popular_routes_widget '
+		                     .$destinationPopularRoutesAttr.' '
+		                     .$subidAttr.' '
+		                     .$responsiveAttr.' '
+		                     .$responsiveWidthAttr.' '
+		                     .']';
+	        }
+        } elseif ($select == 6){
+	        //Hotels Selections Widget
+            if (empty($cityIdCode)){
+                return;
+            }
+	        $shortcode = '[tp_hotel_selections_widget '
+	                     .$cityIdAttr.' '
+	                     .$subidAttr.' '
+	                     .$cat1Attr.' '
+	                     .$cat2Attr.' '
+	                     .$cat3Attr.' '
+	                     .$widgetType6Attr.' '
+	                     .$limit6Attr.' '
+	                     .']';
+        }  elseif ($select == 7){
+            //Best deals widget
+	        $dataAttr = '';
+	        if ($widgetFilter == 0){
+		        $dataAttr .= 'airline="';
+		        for($i = 0; $i < $airline7Count; $i++){
+			        $airline7Code = $this->getCode($airline7[$i]);
+			        $dataAttr .= $airline7Code.',';
+		        }
+		        $dataAttr .= '"';
+	        } else if ($widgetFilter == 1) {
+		        $dataAttr = '';
+		        $origin7Code = $this->getCode($origin7);
+		        $dataAttr .= 'origin="'.$origin7Code.'" ';
+		        $destination7Code = $this->getCode($destination7);
+		        $dataAttr .= 'destination="'.$destination7Code.'" ';
+	        }
+	        $shortcode = '[tp_ducklett_widget '
+	                     .$dataAttr.' '
+	                     .$widgetType7Attr.' '
+	                     .$widgetFilterAttr.' '
+	                     .$limit7Attr.' '
+	                     .$subidAttr.' '
+	                     .$responsiveAttr.' '
+	                     .$responsiveWidthAttr.' '
+	                     .']';
+        }
 
-		switch ($select) {
-			case 0:
-			    //Map Widget
-				$shortcode = '[tp_map_widget '
-                                .$originAttr.' '
-                                .$subidAttr.' '
-                                .$sizeWidthAttr.' '
-                                .$sizeHeightAttr.' '
-                                .$directAttr.' '
-                                .']';
-				break;
-			case 1:
-			    //Hotels Map Widget
-				$shortcode = '[tp_hotelmap_widget '
-				             .$coordinatesAttr.' '
-				             .$subidAttr.' '
-				             .$sizeWidthAttr.' '
-				             .$sizeHeightAttr.' '
-				             .$zoomAttr.' '
-				             .']';
-				break;
-			case 2:
-			    //Calendar Widget
-				$shortcode = '[tp_calendar_widget '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$subidAttr.' '
-				             .$directAttr.' '
-				             .$oneWayAttr.' '
-				             .$responsiveAttr.' '
-				             .$responsiveWidthAttr.' '
-				             .$calendarPeriodAttr.' '
-				             .$calendarPeriodRangeFromAttr.' '
-				             .$calendarPeriodRangeToAttr.' '
-				             .']';
-				break;
-			case 3:
-			    //Subscription Widget
-				$shortcode = '[tp_subscriptions_widget '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$subidAttr.' '
-				             .$responsiveAttr.' '
-				             .$responsiveWidthAttr.' '
-				             .']';
-				break;
-			case 4:
-			    //Hotel Widget
-				$shortcode = '[tp_hotel_widget '
-				             .$hotelIdAttr.' '
-				             .$subidAttr.' '
-				             .$responsiveAttr.' '
-				             .$responsiveWidthAttr.' '
-				             .']';
-				break;
-			case 5:
-			    //Popular Destinations Widget
-				//$popularRoutes;
-                if ($popularRoutesCount > 1){
-			        $shortcode .= '<div class="TP-PopularRoutesWidgets">';
-	                for($i = 0; $i < $popularRoutesCount; $i++){
-	                    $destinationPopularRoutesAttr = '';
-		                $destinationPopularRoutesCode = '';
-		                if(isset($popularRoutes[$i])){
-			                preg_match('/\[(.+)\]/', $popularRoutes[$i], $destinationPopularRoutesCode);
-		                }
-		                $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode[1].'"';
-
-		                $shortcode .= '<div class="TP-PopularRoutesWidget">';
-		                $shortcode .= '[tp_popular_routes_widget '
-		                             .$destinationPopularRoutesAttr.' '
-		                             .$subidAttr.' '
-		                             .'responsive=true '
-		                             .']';
-		                $shortcode .= '</div>';
-	                }
-	                $shortcode .= '</div>';
-                } else {
-	                $destinationPopularRoutesAttr = '';
-	                $destinationPopularRoutesCode = '';
-	                if(isset($popularRoutes[0])){
-		                preg_match('/\[(.+)\]/', $popularRoutes[0], $destinationPopularRoutesCode);
-	                }
-	                $destinationPopularRoutesAttr = 'destination="'.$destinationPopularRoutesCode[1].'"';
-	                $shortcode = '[tp_popular_routes_widget '
-	                             .$destinationPopularRoutesAttr.' '
-	                             .$subidAttr.' '
-	                             .$responsiveAttr.' '
-	                             .$responsiveWidthAttr.' '
-	                             .']';
-                }
-
-				break;
-			case 6:
-			    //Hotels Selections Widget
-				$shortcode = '[tp_hotel_selections_widget '
-                             .$cityIdAttr.' '
-				             .$subidAttr.' '
-				             .$cat1Attr.' '
-				             .$cat2Attr.' '
-				             .$cat3Attr.' '
-				             .$widgetType6Attr.' '
-				             .$limit6Attr.' '
-				             .']';
-				break;
-			case 7:
-			    //Best deals widget
-                $dataAttr = '';
-                if ($widgetFilter == 0){
-	                $dataAttr .= 'airline="';
-	                for($i = 0; $i < $airline7Count; $i++){
-		                $airline7Code = '';
-                        if(isset($airline7[$i])){
-	                        preg_match('/\[(.+)\]/', $airline7[$i], $airline7Code);
-                        }
-	                    $dataAttr .= $airline7Code[1].',';
-	                }
-	                $dataAttr .= '"';
-                } else if ($widgetFilter == 1) {
-	                $dataAttr = '';
-	                $origin7Code = '';
-	                if(isset($origin7)){
-		                preg_match('/\[(.+)\]/', $origin7, $origin7Code);
-	                }
-	                $dataAttr .= 'origin="'.$origin7Code[1].'" ';
-	                $destination7Code = '';
-	                if(isset($destination7)){
-		                preg_match('/\[(.+)\]/', $destination7, $destination7Code);
-	                }
-	                $dataAttr .= 'destination="'.$destination7Code[1].'" ';
-                }
-				$shortcode = '[tp_ducklett_widget '
-				             .$dataAttr.' '
-				             .$widgetType7Attr.' '
-				             .$widgetFilterAttr.' '
-				             .$limit7Attr.' '
-				             .$subidAttr.' '
-				             .$responsiveAttr.' '
-				             .$responsiveWidthAttr.' '
-				             .']';
-                //error_log($shortcode);
-				break;
-		}
-
+		//error_log($shortcode);
         echo do_shortcode($shortcode);
 	}
 
@@ -916,5 +882,37 @@ class TPWidgetsWidget extends WP_Widget{
 			$instance = $oldInstance[$key];
 		}
 		return $instance;
+	}
+
+	/**
+	 * @param $data
+	 *
+	 * @return string
+	 */
+	public function getCode($data){
+		if (empty($data)) return '';
+		$dataCode = array();
+		preg_match('/\[(.+)\]/', $data, $dataCode);
+		$code = '';
+		if (array_key_exists(1, $dataCode)){
+			$code = $dataCode[1];
+		}
+		return $code;
+	}
+
+	/**
+	 * @param $hotelCity
+	 *
+	 * @return mixed|string
+	 */
+	public function getHotelData($hotelCity){
+		if (empty($hotelCity)) return '';
+		$hotelCityCode = array();
+		preg_match('/\{(.+)\}/', $hotelCity, $hotelCityCode);
+		$code = '';
+		if (array_key_exists(1, $hotelCityCode)){
+			$code = $hotelCityCode[1];
+		}
+		return $code;
 	}
 }
