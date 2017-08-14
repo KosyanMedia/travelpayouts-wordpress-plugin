@@ -49,23 +49,12 @@ class TPSearchFormWidget extends WP_Widget{
 		$subidAttr = '';
 		$subidAttr = 'subid="'.$subid.'"';
 
-		$originCode = '';
-		if(!empty($origin)){
-			preg_match('/\[(.+)\]/', $origin, $originCode);
-		}
-		$originAttr = 'origin="'.$originCode[1].'"';
-
-		$destinationCode = '';
-		if(!empty($destination)){
-			preg_match('/\[(.+)\]/', $destination, $destinationCode);
-		}
-		$destinationAttr = 'destination="'.$destinationCode[1].'"';
-
-		$cityHotelCode = '';
-		if(!empty($cityHotel)){
-			preg_match('/\{(.+)\}/', $cityHotel, $cityHotelCode);
-		}
-		$cityHotelAttr = 'hotel_city="'.$cityHotelCode[1].'"';
+		$originCode = $this->getCode($origin);
+		$originAttr = 'origin="'.$originCode.'"';
+		$destinationCode = $this->getCode($destination);
+		$destinationAttr = 'destination="'.$destinationCode.'"';
+		$cityHotelCode = $this->getHotelCity($cityHotel);
+		$cityHotelAttr = 'hotel_city="'.$cityHotelCode.'"';
 
 		$shortcodeAttr = '';
 		switch ($typeForm){
@@ -97,23 +86,30 @@ class TPSearchFormWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (empty( $new_instance['search_form_type_form'] )){
-			$new_instance['search_form_type_form'] = $old_instance['search_form_type_form'];
+		if (array_key_exists('search_form_type_form', $new_instance)){
+			if (empty( $new_instance['search_form_type_form'] )){
+				$new_instance['search_form_type_form'] = $this->getOldInstance($old_instance, 'search_form_type_form');
+			}
 		}
-		if (empty( $new_instance['search_form_slug'] )){
-			$new_instance['search_form_slug'] = $old_instance['search_form_slug'];
+		if (array_key_exists('search_form_slug', $new_instance)){
+			if (empty( $new_instance['search_form_slug'] )){
+				$new_instance['search_form_slug'] = $this->getOldInstance($old_instance, 'search_form_slug');
+			}
 		}
-		if (empty( $new_instance['search_form_subid'] )){
-			$new_instance['search_form_subid'] = $old_instance['search_form_subid'];
+		if (array_key_exists('search_form_origin', $new_instance)){
+			if (empty( $new_instance['search_form_origin'] )){
+				$new_instance['search_form_origin'] = $this->getOldInstance($old_instance, 'search_form_origin');
+			}
 		}
-		if (empty( $new_instance['search_form_origin'] )){
-			$new_instance['search_form_origin'] = $old_instance['search_form_origin'];
+		if (array_key_exists('search_form_destination', $new_instance)){
+			if (empty( $new_instance['search_form_destination'] )){
+				$new_instance['search_form_destination'] = $this->getOldInstance($old_instance, 'search_form_destination');
+			}
 		}
-		if (empty( $new_instance['search_form_destination'] )){
-			$new_instance['search_form_destination'] = $old_instance['search_form_destination'];
-		}
-		if (empty( $new_instance['search_form_city_hotel'] )){
-			$new_instance['search_form_city_hotel'] = $old_instance['search_form_city_hotel'];
+		if (array_key_exists('search_form_city_hotel', $new_instance)){
+			if (empty( $new_instance['search_form_city_hotel'] )){
+				$new_instance['search_form_city_hotel'] = $this->getOldInstance($old_instance, 'search_form_city_hotel');
+			}
 		}
 		return $new_instance;
 	}
@@ -241,5 +237,51 @@ class TPSearchFormWidget extends WP_Widget{
 			<?php endif; ?>
 		</div>
 		<?php
+	}
+
+	/**
+	 * @param $data
+	 *
+	 * @return string
+	 */
+	public function getCode($data){
+		if (empty($data)) return '';
+		$dataCode = array();
+		preg_match('/\[(.+)\]/', $data, $dataCode);
+		$code = '';
+		if (array_key_exists(1, $dataCode)){
+			$code = $dataCode[1];
+		}
+		return $code;
+	}
+
+	/**
+	 * @param $hotelCity
+	 *
+	 * @return mixed|string
+	 */
+	public function getHotelCity($hotelCity){
+		if (empty($hotelCity)) return '';
+		$hotelCityCode = array();
+		preg_match('/\{(.+)\}/', $hotelCity, $hotelCityCode);
+		$code = '';
+		if (array_key_exists(1, $hotelCityCode)){
+			$code = $hotelCityCode[1];
+		}
+		return $code;
+    }
+
+	/**
+	 * @param $oldInstance
+	 * @param $key
+	 *
+	 * @return string
+	 */
+	public function getOldInstance($oldInstance, $key){
+		$instance = '';
+		if (array_key_exists($key, $oldInstance)){
+			$instance = $oldInstance[$key];
+		}
+		return $instance;
 	}
 }

@@ -270,7 +270,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				$new_instance['flight_airline'] = $this->getOldInstance($old_instance, 'flight_airline');
 			}
 		}
-		if (array_key_exists('flight_subid', $new_instance)){
+		/*if (array_key_exists('flight_subid', $new_instance)){
 			if (empty( $new_instance['flight_subid'] )){
 				$new_instance['flight_subid'] = $this->getOldInstance($old_instance, 'flight_subid');
 			}
@@ -279,7 +279,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			if (empty( $new_instance['flight_currency'] )){
 				$new_instance['flight_currency'] = $this->getOldInstance($old_instance, 'flight_currency');
 			}
-		}
+		}*/
 		if (array_key_exists('flight_filter_airline', $new_instance)){
 			if (empty( $new_instance['flight_filter_airline'] )){
 				$new_instance['flight_filter_airline'] = $this->getOldInstance($old_instance, 'flight_filter_airline');

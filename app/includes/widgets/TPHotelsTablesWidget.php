@@ -125,11 +125,11 @@ class TPHotelsTablesWidget extends WP_Widget{
 				$new_instance['hotel_selections_type_label'] = $this->getOldInstance($old_instance, 'hotel_selections_type_label');
 			}
 		}
-		if (array_key_exists('hotel_subid', $new_instance)){
+		/*if (array_key_exists('hotel_subid', $new_instance)){
 			if (empty( $new_instance['hotel_subid'] )){
 				$new_instance['hotel_subid'] = $this->getOldInstance($old_instance, 'hotel_subid');
 			}
-		}
+		}*/
 		if (array_key_exists('hotel_limit', $new_instance)){
 			if (empty( $new_instance['hotel_limit'] )){
 				$new_instance['hotel_limit'] = $this->getOldInstance($old_instance, 'hotel_limit');

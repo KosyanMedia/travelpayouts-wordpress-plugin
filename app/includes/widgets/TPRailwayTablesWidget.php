@@ -84,11 +84,11 @@ class TPRailwayTablesWidget extends WP_Widget{
 				$new_instance['railway_destination'] = $this->getOldInstance($old_instance, 'railway_destination');
 			}
 		}
-		if (array_key_exists('railway_subid', $new_instance)){
+		/*if (array_key_exists('railway_subid', $new_instance)){
 			if (empty( $new_instance['railway_subid'] )){
 				$new_instance['railway_subid'] = $this->getOldInstance($old_instance, 'railway_subid');
 			}
-		}
+		}*/
 		return $new_instance;
 	}
 

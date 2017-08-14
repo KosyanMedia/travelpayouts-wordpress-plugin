@@ -280,8 +280,6 @@ class TPWidgetsWidget extends WP_Widget{
 				break;
 		}
 
-
-
         echo do_shortcode($shortcode);
 	}
 
@@ -292,9 +290,11 @@ class TPWidgetsWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-        if (empty( $new_instance['widgets_subid'] )){
-	        $new_instance['widgets_subid'] = $old_instance['widgets_subid'];
-        }
+		if (array_key_exists('widgets_origin', $new_instance)){
+			if (empty( $new_instance['widgets_origin'] )){
+				$new_instance['widgets_origin'] = $this->getOldInstance($old_instance, 'widgets_origin');
+			}
+		}
 		if (empty( $new_instance['widgets_origin'] )){
 			$new_instance['widgets_origin'] = $old_instance['widgets_origin'];
 		}
@@ -842,6 +842,11 @@ class TPWidgetsWidget extends WP_Widget{
 		<?php
 	}
 
+	/**
+	 * @param $calendarPeriod
+	 *
+	 * @return string
+	 */
 	public function getFieldCalendarPeriod($calendarPeriod){
 		global $wp_locale;
 		$output_month = '';
@@ -874,5 +879,19 @@ class TPWidgetsWidget extends WP_Widget{
 		}
 		$output_month .= $out_c.$out_n;
 		return $output_month;
+	}
+
+	/**
+	 * @param $oldInstance
+	 * @param $key
+	 *
+	 * @return string
+	 */
+	public function getOldInstance($oldInstance, $key){
+		$instance = '';
+		if (array_key_exists($key, $oldInstance)){
+			$instance = $oldInstance[$key];
+		}
+		return $instance;
 	}
 }
