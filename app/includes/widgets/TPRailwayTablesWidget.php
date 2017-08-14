@@ -45,21 +45,17 @@ class TPRailwayTablesWidget extends WP_Widget{
 			$off_title = false;
 		}
 
-		$originCode = '';
-		if(isset($origin)){
-			preg_match('/\[(.+)\]/', $origin, $originCode);
-		}
-		$destinationCode = '';
-		if(isset($destination)){
-			preg_match('/\[(.+)\]/', $destination, $destinationCode);
-		}
+		$originCode = $this->getCode($origin);
+		if (empty($originCode)) return;
+		$destinationCode = $this->getCode($destination);
+		if (empty($destinationCode)) return;
 
 		$titleAttr = 'title='.$title.'';
-		$originAttr = 'origin="'.$originCode[1].'"';
-		$destinationAttr = 'destination="'.$destinationCode[1].'"';
+		$originAttr = 'origin="'.$originCode.'"';
+		$destinationAttr = 'destination="'.$destinationCode.'"';
 		$subidAttr = 'subid="'.$subid.'"';
-		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
-		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
+		$paginateAttr = ($paginate == true) ? 'paginate=true' : 'paginate=false';
+		$offTitleAttr = ($off_title == true) ? 'off_title=true' : '';
 
 		$shortcode = '';
 		$shortcode .= '[tp_tutu ';
@@ -70,7 +66,7 @@ class TPRailwayTablesWidget extends WP_Widget{
 		$shortcode .= $paginateAttr.' ';
 		$shortcode .= $offTitleAttr.' ';
 		$shortcode .= ']';
-		error_log($shortcode);
+		//error_log($shortcode);
 		echo do_shortcode($shortcode);
 	}
 
@@ -134,7 +130,7 @@ class TPRailwayTablesWidget extends WP_Widget{
                         TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_origin'); ?>"
 					       name="<?php echo $this->get_field_name('railway_origin'); ?>" type="text"
-					       value="<?php echo $origin; ?>" />
+                           placeholder="<?php echo $origin; ?>" />
 				</label>
 			</p>
 			<p class="tp-railway-tables-widget-destination">
@@ -143,7 +139,7 @@ class TPRailwayTablesWidget extends WP_Widget{
                         TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_destination'); ?>"
 					       name="<?php echo $this->get_field_name('railway_destination'); ?>" type="text"
-					       value="<?php echo $destination; ?>" />
+                           placeholder="<?php echo $destination; ?>" />
 				</label>
 			</p>
 			<p class="tp-railway-tables-widget-subid">
