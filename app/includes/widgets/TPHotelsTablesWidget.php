@@ -288,6 +288,22 @@ class TPHotelsTablesWidget extends WP_Widget{
 	}
 
 	/**
+	 * @param $data
+	 *
+	 * @return string
+	 */
+	public function getCode($data){
+		if (empty($data)) return '';
+		$dataCode = array();
+		preg_match('/\[(.+)\]/', $data, $dataCode);
+		$code = '';
+		if (array_key_exists(1, $dataCode)){
+			$code = $dataCode[1];
+		}
+		return $code;
+	}
+
+	/**
 	 * @param $oldInstance
 	 * @param $key
 	 *
