@@ -155,22 +155,23 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
 			             .$currencyAttr.']';
+        } elseif ($select == 6){
+			if (empty($originCode)){
+			    return;
+			}
+			$shortcode = '[tp_direct_flights_shortcodes '
+			             .$originAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$filterAirlineAttr.' '
+			             .$filterFlightNumberAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.' '
+			             .$limitAttr.' '
+			             .$currencyAttr.']';
         }
 		/*switch ($select){
 
-
-			case 6:
-				$shortcode = '[tp_direct_flights_shortcodes '
-				             .$originAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$filterAirlineAttr.' '
-				             .$filterFlightNumberAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.' '
-				             .$limitAttr.' '
-				             .$currencyAttr.']';
-				break;
 			case 7:
 				$shortcode = '[tp_popular_routes_from_city_shortcodes '
 				             .$originAttr.' '
