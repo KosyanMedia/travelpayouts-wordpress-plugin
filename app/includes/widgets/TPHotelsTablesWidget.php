@@ -30,8 +30,10 @@ class TPHotelsTablesWidget extends WP_Widget{
 		$select = isset( $instance['hotel_select'] ) ? esc_attr( $instance['hotel_select'] ) : 'select';
 		$title = isset( $instance['hotel_title'] ) ? esc_attr( $instance['hotel_title'] ) : '';
 		$city = isset( $instance['hotel_city'] ) ? esc_attr( $instance['hotel_city'] ) : '';
+		$cityLabel = isset( $instance['hotel_city_label'] ) ? esc_attr( $instance['hotel_city_label'] ) : '';
 		$subid = isset( $instance['hotel_subid'] ) ? esc_attr( $instance['hotel_subid'] ) : '';
 		$selectionsType = isset( $instance['hotel_selections_type'] ) ? esc_attr( $instance['hotel_selections_type'] ) : 'all';
+		$selectionsTypeLabel = isset( $instance['hotel_selections_type_label'] ) ? esc_attr( $instance['hotel_selections_type_label'] ) : '';
 		$checkIn = isset( $instance['hotel_check_in'] ) ? esc_attr( $instance['hotel_check_in'] ) :  date('d-m-Y');
 		$checkOut = isset( $instance['hotel_check_out'] ) ? esc_attr( $instance['hotel_check_out'] ) :  date('d-m-Y', time()+DAY_IN_SECONDS);
 		$limit = isset( $instance['hotel_limit'] ) ? esc_attr( $instance['hotel_limit'] ) : 20;
@@ -50,23 +52,22 @@ class TPHotelsTablesWidget extends WP_Widget{
 		} else {
 			$linkWithoutDates = false;
 		}
-
-		$cityCode = '';
-		if(isset($city)){
-			preg_match('/\[(.+)\]/', $city, $cityCode);
-		}
-		$cityAttr = 'city="'.$cityCode[1].'"';
-		$cityLabelAttr = 'city_label=""';
-		$titleAttr = 'title='.$title.'';
+		if ($select == 'select') return;
+		$cityCode = $this->getCode($city);
+		if (empty($cityCode)) return;
+		if ($selectionsType == 'all') return;
+		$cityAttr = 'city="'.$cityCode.'"';
+		$cityLabelAttr = 'city_label="'.$cityLabel.'"';
+		$titleAttr = 'title="'.$title.'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$selectionsTypeAttr = 'type_selections="'.$selectionsType.'"';
-		$selectionsTypeLabelAttr = 'type_selections_label=""';
+		$selectionsTypeLabelAttr = 'type_selections_label="'.$selectionsTypeLabel.'"';
 		$checkInAttr = 'check_in="'.$checkIn.'"';
 		$checkOutAttr = 'check_out="'.$checkOut.'"';
         $limitAttr = 'number_results="'.$limit.'"';
-		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
-		$offTitleAttr = (isset($offTitle))? 'off_title=true':'';
-		$linkWithoutDatesAttr = (isset($linkWithoutDates))? 'link_without_dates=true':'link_without_dates=false';
+		$paginateAttr = ($paginate == true) ? 'paginate=true' : 'paginate=false';
+		$offTitleAttr = ($offTitle == true) ? 'off_title=true' : '';
+		$linkWithoutDatesAttr = ($linkWithoutDates == true) ? 'link_without_dates=true' : 'link_without_dates=false';
 		$shortcode = '';
 		switch ($select){
 			case 0:
@@ -98,6 +99,7 @@ class TPHotelsTablesWidget extends WP_Widget{
 				             .$linkWithoutDatesAttr.']';
 				break;
         }
+		error_log($shortcode);
 		echo do_shortcode($shortcode);
 	}
 
@@ -111,6 +113,16 @@ class TPHotelsTablesWidget extends WP_Widget{
 		if (array_key_exists('hotel_city', $new_instance)){
 			if (empty( $new_instance['hotel_city'] )){
 				$new_instance['hotel_city'] = $this->getOldInstance($old_instance, 'hotel_city');
+			}
+		}
+		if (array_key_exists('hotel_city_label', $new_instance)){
+			if (empty( $new_instance['hotel_city_label'] )){
+				$new_instance['hotel_city_label'] = $this->getOldInstance($old_instance, 'hotel_city_label');
+			}
+		}
+		if (array_key_exists('hotel_selections_type_label', $new_instance)){
+			if (empty( $new_instance['hotel_selections_type_label'] )){
+				$new_instance['hotel_selections_type_label'] = $this->getOldInstance($old_instance, 'hotel_selections_type_label');
 			}
 		}
 		if (array_key_exists('hotel_subid', $new_instance)){
@@ -133,8 +145,10 @@ class TPHotelsTablesWidget extends WP_Widget{
 		$select = isset( $instance['hotel_select'] ) ? esc_attr( $instance['hotel_select'] ) : 'select';
 		$title = isset( $instance['hotel_title'] ) ? esc_attr( $instance['hotel_title'] ) : '';
 		$city = isset( $instance['hotel_city'] ) ? esc_attr( $instance['hotel_city'] ) : '';
+		$cityLabel = isset( $instance['hotel_city_label'] ) ? esc_attr( $instance['hotel_city_label'] ) : '';
 		$subid = isset( $instance['hotel_subid'] ) ? esc_attr( $instance['hotel_subid'] ) : '';
 		$selectionsType = isset( $instance['hotel_selections_type'] ) ? esc_attr( $instance['hotel_selections_type'] ) : 'all';
+		$selectionsTypeLabel = isset( $instance['hotel_selections_type_label'] ) ? esc_attr( $instance['hotel_selections_type_label'] ) : '';
 		$checkIn = isset( $instance['hotel_check_in'] ) ? esc_attr( $instance['hotel_check_in'] ) :  date('d-m-Y');
 		$checkOut = isset( $instance['hotel_check_out'] ) ? esc_attr( $instance['hotel_check_out'] ) :  date('d-m-Y', time()+DAY_IN_SECONDS);
 		$limit = isset( $instance['hotel_limit'] ) ? esc_attr( $instance['hotel_limit'] ) : 20;
@@ -227,6 +241,16 @@ class TPHotelsTablesWidget extends WP_Widget{
                         </option>
                     </select>
                 </label>
+                <input id="<?php echo $this->get_field_id('hotel_city_label'); ?>"
+                       name="<?php echo $this->get_field_name('hotel_city_label'); ?>"
+                       type="hidden"
+                       class="tp-hotels-tables-widget-selections-type-city-label"
+                       value="<?php echo $cityLabel; ?>">
+                <input id="<?php echo $this->get_field_id('hotel_selections_type_label'); ?>"
+                       name="<?php echo $this->get_field_name('hotel_selections_type_label'); ?>"
+                       type="hidden"
+                       class="tp-hotels-tables-widget-selections-type-label-field"
+                       value="<?php echo $selectionsTypeLabel; ?>">
             </p>
             <p class="tp-hotels-tables-widget-check_in">
                 <label for="<?php echo $this->get_field_id('hotel_check_in'); ?>">
