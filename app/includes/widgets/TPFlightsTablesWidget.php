@@ -169,17 +169,19 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$subidAttr.' '
 			             .$limitAttr.' '
 			             .$currencyAttr.']';
+        } elseif ($select == 7){
+			if (empty($originCode)){
+				return;
+			}
+			$shortcode = '[tp_popular_routes_from_city_shortcodes '
+			             .$originAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.']';
         }
 		/*switch ($select){
 
-			case 7:
-				$shortcode = '[tp_popular_routes_from_city_shortcodes '
-				             .$originAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.']';
-				break;
 			case 8:
 				$shortcode = '[tp_popular_destinations_airlines_shortcodes '
 				             .$airlineAttr.' '
