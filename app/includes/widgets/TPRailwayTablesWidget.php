@@ -62,6 +62,7 @@ class TPRailwayTablesWidget extends WP_Widget{
 		$shortcode .= $paginateAttr.' ';
 		$shortcode .= $offTitleAttr.' ';
 		$shortcode .= ']';
+		error_log($shortcode);
 		echo do_shortcode($shortcode);
 	}
 
@@ -72,7 +73,11 @@ class TPRailwayTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		$new_instance['railway_title'] = (!empty( $new_instance['railway_title'] )) ? $new_instance['railway_title'] : $old_instance['railway_title'];
+		if (array_key_exists('railway_origin', $new_instance)){
+			if (empty( $new_instance['railway_origin'] )){
+				$new_instance['railway_origin'] = $this->getOldInstance($old_instance, 'railway_origin');
+			}
+		}
 		$new_instance['railway_origin'] = (!empty( $new_instance['railway_origin'] )) ? $new_instance['railway_origin'] : $old_instance['railway_origin'];
 		$new_instance['railway_destination'] = (!empty( $new_instance['railway_destination'] )) ? $new_instance['railway_destination'] : $old_instance['railway_destination'];
 		$new_instance['railway_subid'] = (!empty( $new_instance['railway_subid'] )) ? $new_instance['railway_subid'] : $old_instance['railway_subid'];
@@ -150,5 +155,19 @@ class TPRailwayTablesWidget extends WP_Widget{
 			</p>
 		</div>
 		<?php
+	}
+
+	/**
+	 * @param $oldInstance
+	 * @param $key
+	 *
+	 * @return string
+	 */
+	public function getOldInstance($oldInstance, $key){
+		$instance = '';
+		if (array_key_exists($key, $oldInstance)){
+			$instance = $oldInstance[$key];
+		}
+		return $instance;
 	}
 }
