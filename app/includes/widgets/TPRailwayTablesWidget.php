@@ -34,8 +34,16 @@ class TPRailwayTablesWidget extends WP_Widget{
 		$origin = isset( $instance['railway_origin'] ) ? esc_attr( $instance['railway_origin'] ) : '';
 		$destination = isset( $instance['railway_destination'] ) ? esc_attr( $instance['railway_destination'] ) : '';
 		$subid = isset( $instance['railway_subid'] ) ? esc_attr( $instance['railway_subid'] ) : '';
-		$paginate = isset( $instance['railway_paginate'] ) ? $instance['railway_paginate']  : true;
-		$off_title = isset( $instance['railway_off_title'] ) ? $instance['railway_off_title']  : false;
+		if (array_key_exists('railway_paginate', $instance)){
+			$paginate = true;
+		} else {
+			$paginate = false;
+		}
+		if (array_key_exists('railway_off_title', $instance)){
+			$off_title = true;
+		} else {
+			$off_title = false;
+		}
 
 		$originCode = '';
 		if(isset($origin)){
@@ -99,9 +107,16 @@ class TPRailwayTablesWidget extends WP_Widget{
 		$origin = isset( $instance['railway_origin'] ) ? esc_attr( $instance['railway_origin'] ) : '';
 		$destination = isset( $instance['railway_destination'] ) ? esc_attr( $instance['railway_destination'] ) : '';
 		$subid = isset( $instance['railway_subid'] ) ? esc_attr( $instance['railway_subid'] ) : '';
-		$paginate = isset( $instance['railway_paginate'] ) ? $instance['railway_paginate']  : true;
-		$off_title = isset( $instance['railway_off_title'] ) ? $instance['railway_off_title']  : false;
-
+		if (array_key_exists('railway_paginate', $instance)){
+			$paginate = true;
+		} else {
+			$paginate = false;
+		}
+		if (array_key_exists('railway_off_title', $instance)){
+			$off_title = true;
+		} else {
+			$off_title = false;
+		}
 		?>
 		<div class="tp-railway-tables-widget">
 			<p class="tp-railway-tables-widget-title">
