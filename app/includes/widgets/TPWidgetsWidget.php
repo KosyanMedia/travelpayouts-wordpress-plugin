@@ -295,73 +295,72 @@ class TPWidgetsWidget extends WP_Widget{
 				$new_instance['widgets_origin'] = $this->getOldInstance($old_instance, 'widgets_origin');
 			}
 		}
-		if (empty( $new_instance['widgets_origin'] )){
-			$new_instance['widgets_origin'] = $old_instance['widgets_origin'];
+		if (array_key_exists('widgets_destination', $new_instance)){
+			if (empty( $new_instance['widgets_destination'] )){
+				$new_instance['widgets_destination'] = $this->getOldInstance($old_instance, 'widgets_destination');
+			}
 		}
-		if (empty( $new_instance['widgets_destination'] )){
-			$new_instance['widgets_destination'] = $old_instance['widgets_destination'];
+		if (array_key_exists('widgets_hotel_id', $new_instance)){
+			if (empty( $new_instance['widgets_hotel_id'] )){
+				$new_instance['widgets_hotel_id'] = $this->getOldInstance($old_instance, 'widgets_hotel_id');
+			}
 		}
-		if (empty( $new_instance['widgets_hotel_id'] )){
-			$new_instance['widgets_hotel_id'] = $old_instance['widgets_hotel_id'];
+		if (array_key_exists('widgets_size_width', $new_instance)){
+			if (empty( $new_instance['widgets_size_width'] )){
+				$new_instance['widgets_size_width'] = $this->getOldInstance($old_instance, 'widgets_size_width');
+			}
 		}
-		if (empty( $new_instance['widgets_size_width'] )){
-			$new_instance['widgets_size_width'] = $old_instance['widgets_size_width'];
+		if (array_key_exists('widgets_size_height', $new_instance)){
+			if (empty( $new_instance['widgets_size_height'] )){
+				$new_instance['widgets_size_height'] = $this->getOldInstance($old_instance, 'widgets_size_height');
+			}
 		}
-		if (empty( $new_instance['widgets_size_height'] )){
-			$new_instance['widgets_size_height'] = $old_instance['widgets_size_height'];
+		if (array_key_exists('widgets_calendar_period_range_from', $new_instance)){
+			if (empty( $new_instance['widgets_calendar_period_range_from'] )){
+				$new_instance['widgets_calendar_period_range_from'] = $this->getOldInstance($old_instance, 'widgets_calendar_period_range_from');
+			}
 		}
-		$new_instance['widgets_direct'] = (isset($new_instance['widgets_direct']))? true : false;
-		$new_instance['widgets_one_way'] = (isset($new_instance['widgets_one_way']))? true : false;
-		if (empty( $new_instance['widgets_zoom'] )){
-			$new_instance['widgets_zoom'] = $old_instance['widgets_zoom'];
+		if (array_key_exists('widgets_calendar_period_range_to', $new_instance)){
+			if (empty( $new_instance['widgets_calendar_period_range_to'] )){
+				$new_instance['widgets_calendar_period_range_to'] = $this->getOldInstance($old_instance, 'widgets_calendar_period_range_to');
+			}
 		}
-		if (empty( $new_instance['widgets_calendar_period'] )){
-			$new_instance['widgets_calendar_period'] = $old_instance['widgets_calendar_period'];
+		if (array_key_exists('widgets_responsive_width', $new_instance)){
+			if (empty( $new_instance['widgets_responsive_width'] )){
+				$new_instance['widgets_responsive_width'] = $this->getOldInstance($old_instance, 'widgets_responsive_width');
+			}
 		}
-		if (empty( $new_instance['widgets_calendar_period_range_from'] )){
-			$new_instance['widgets_calendar_period_range_from'] = $old_instance['widgets_calendar_period_range_from'];
+		if (array_key_exists('widgets_popular_routes_count', $new_instance)){
+			if (empty( $new_instance['widgets_popular_routes_count'] )){
+				$new_instance['widgets_popular_routes_count'] = $this->getOldInstance($old_instance, 'widgets_popular_routes_count');
+			}
 		}
-		if (empty( $new_instance['widgets_calendar_period_range_to'] )){
-			$new_instance['widgets_calendar_period_range_to'] = $old_instance['widgets_calendar_period_range_to'];
+		if (array_key_exists('widgets_widget_limit_6', $new_instance)){
+			if (empty( $new_instance['widgets_widget_limit_6'] )){
+				$new_instance['widgets_widget_limit_6'] = $this->getOldInstance($old_instance, 'widgets_widget_limit_6');
+			}
 		}
-		$new_instance['widgets_responsive'] = (isset($new_instance['widgets_responsive']))? true : false;
-		if (empty( $new_instance['widgets_responsive_width'] )){
-			$new_instance['widgets_responsive_width'] = $old_instance['widgets_responsive_width'];
+		if (array_key_exists('widgets_origin_7', $new_instance)){
+			if (empty( $new_instance['widgets_origin_7'] )){
+				$new_instance['widgets_origin_7'] = $this->getOldInstance($old_instance, 'widgets_origin_7');
+			}
 		}
-		if (empty( $new_instance['widgets_popular_routes_count'] )){
-			$new_instance['widgets_popular_routes_count'] = $old_instance['widgets_popular_routes_count'];
+		if (array_key_exists('widgets_destination_7', $new_instance)){
+			if (empty( $new_instance['widgets_destination_7'] )){
+				$new_instance['widgets_destination_7'] = $this->getOldInstance($old_instance, 'widgets_destination_7');
+			}
 		}
-		if (empty( $new_instance['widgets_widget_type_6'] )){
-			$new_instance['widgets_widget_type_6'] = $old_instance['widgets_widget_type_6'];
+		if (array_key_exists('widgets_airline_7_count', $new_instance)){
+			if (empty( $new_instance['widgets_airline_7_count'] )){
+				$new_instance['widgets_airline_7_count'] = $this->getOldInstance($old_instance, 'widgets_airline_7_count');
+			}
 		}
-		if (empty( $new_instance['widgets_widget_limit_6'] )){
-			$new_instance['widgets_widget_limit_6'] = $old_instance['widgets_widget_limit_6'];
-		}
-		if (empty( $new_instance['widgets_widget_cat_1'] )){
-			$new_instance['widgets_widget_cat_1'] = $old_instance['widgets_widget_cat_1'];
-		}
-		if (empty( $new_instance['widgets_widget_cat_2'] )){
-			$new_instance['widgets_widget_cat_2'] = $old_instance['widgets_widget_cat_2'];
-		}
-		if (empty( $new_instance['widgets_widget_cat_3'] )){
-			$new_instance['widgets_widget_cat_3'] = $old_instance['widgets_widget_cat_3'];
-		}
-		if (empty( $new_instance['widgets_widget_type_7'] )){
-			$new_instance['widgets_widget_type_7'] = $old_instance['widgets_widget_type_7'];
+		if (array_key_exists('widgets_widget_limit_7', $new_instance)){
+			if (empty( $new_instance['widgets_widget_limit_7'] )){
+				$new_instance['widgets_widget_limit_7'] = $this->getOldInstance($old_instance, 'widgets_widget_limit_7');
+			}
 		}
 
-		if (empty( $new_instance['widgets_origin_7'] )){
-			$new_instance['widgets_origin_7'] = $old_instance['widgets_origin_7'];
-		}
-		if (empty( $new_instance['widgets_destination_7'] )){
-			$new_instance['widgets_destination_7'] = $old_instance['widgets_destination_7'];
-		}
-		if (empty( $new_instance['widgets_airline_7_count'] )){
-			$new_instance['widgets_airline_7_count'] = $old_instance['widgets_airline_7_count'];
-		}
-		if (empty( $new_instance['widgets_widget_limit_7'] )){
-			$new_instance['widgets_widget_limit_7'] = $old_instance['widgets_widget_limit_7'];
-		}
 		//error_log(print_r($new_instance, true));
         return $new_instance;
 	}
@@ -377,8 +376,17 @@ class TPWidgetsWidget extends WP_Widget{
 		$hotelId = isset( $instance['widgets_hotel_id'] ) ? esc_attr( $instance['widgets_hotel_id'] ) : '';
 		$sizeWidth = isset( $instance['widgets_size_width'] ) ? esc_attr( $instance['widgets_size_width'] ) : 500;
 		$sizeHeight = isset( $instance['widgets_size_height'] ) ? esc_attr( $instance['widgets_size_height'] ) : 500;
-		$direct = isset( $instance['widgets_direct'] ) ? $instance['widgets_direct']  : false;
-		$oneWay = isset( $instance['widgets_one_way'] ) ? $instance['widgets_one_way']  : false;
+		if (array_key_exists('widgets_direct', $instance)){
+			$direct = true;
+		} else {
+			$direct = false;
+		}
+		if (array_key_exists('widgets_one_way', $instance)){
+			$oneWay = true;
+		} else {
+			$oneWay = false;
+		}
+
 		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : TPPlugin::$options['widgets']['2']['zoom'];
 		$calendarPeriod = isset( $instance['widgets_calendar_period'] ) ? $instance['widgets_calendar_period']  : TPPlugin::$options['widgets']['3']['period'];
 		$calendarPeriodRangeFrom = isset( $instance['widgets_calendar_period_range_from'] ) ? $instance['widgets_calendar_period_range_from']  : TPPlugin::$options['widgets']['3']['period_day']['from'];
