@@ -258,4 +258,18 @@ class TPHotelsTablesWidget extends WP_Widget{
 		</div>
 		<?php
 	}
+
+	/**
+	 * @param $oldInstance
+	 * @param $key
+	 *
+	 * @return string
+	 */
+	public function getOldInstance($oldInstance, $key){
+		$instance = '';
+		if (array_key_exists($key, $oldInstance)){
+			$instance = $oldInstance[$key];
+		}
+		return $instance;
+	}
 }
