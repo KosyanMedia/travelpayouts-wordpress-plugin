@@ -61,7 +61,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
 		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
 		$oneWayAttr = (isset($one_way))? 'one_way=true':'one_way=false';
-		$transplantAttr = 'stops='.$transplant;
+		$transplantAttr = 'stops="'.$transplant.'"';
 		$filterAirlineAttr = '';
 		if (!empty($filterAirlineCode)){
 			$filterAirlineAttr = 'filter_airline="'.$filterAirlineCode.'"';
@@ -70,8 +70,8 @@ class TPFlightsTablesWidget extends WP_Widget{
 		if (!empty($filter_flight_number)){
 			$filterFlightNumberAttr = 'filter_flight_number="'.$filter_flight_number.'"';
 		}
-		$limitAttr = 'limit='.$limit.'';
-		$titleAttr = 'title='.$title.'';
+		$limitAttr = 'limit="'.$limit.'"';
+		$titleAttr = 'title="'.$title.'"';
 		$shortcode = '';
 		if ($select == 0){
 		    if (empty($originCode) || empty($destinationCode)){
@@ -230,7 +230,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$subidAttr.']';
         }
 
-
+        error_log($shortcode);
 		echo do_shortcode($shortcode);
 
 
@@ -243,34 +243,30 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (array_key_exists('flight_title', $new_instance)){
-		    if (empty( $new_instance['flight_title'] )){
-			    $new_instance['flight_title'] = $old_instance['flight_title'];
-            }
-		}
+
 		if (array_key_exists('flight_origin', $new_instance)){
 			if (empty( $new_instance['flight_origin'] )){
-				$new_instance['flight_origin'] = $old_instance['flight_origin'];
+				$new_instance['flight_origin'] = $this->getOldInstance($old_instance, 'flight_origin');
 			}
 		}
 		if (array_key_exists('flight_destination', $new_instance)){
 			if (empty( $new_instance['flight_destination'] )){
-				$new_instance['flight_destination'] = $old_instance['flight_destination'];
+				$new_instance['flight_destination'] =  $this->getOldInstance($old_instance, 'flight_destination');
 			}
 		}
 		if (array_key_exists('flight_airline', $new_instance)){
 			if (empty( $new_instance['flight_airline'] )){
-				$new_instance['flight_airline'] = $old_instance['flight_airline'];
+				$new_instance['flight_airline'] = $this->getOldInstance($old_instance, 'flight_airline');
 			}
 		}
 		if (array_key_exists('flight_subid', $new_instance)){
 			if (empty( $new_instance['flight_subid'] )){
-				$new_instance['flight_subid'] = $old_instance['flight_subid'];
+				$new_instance['flight_subid'] = $this->getOldInstance($old_instance, 'flight_subid');
 			}
 		}
 		if (array_key_exists('flight_currency', $new_instance)){
 			if (empty( $new_instance['flight_currency'] )){
-				$new_instance['flight_currency'] = $old_instance['flight_currency'];
+				$new_instance['flight_currency'] = $this->getOldInstance($old_instance, 'flight_currency');
 			}
 		}
 		if (array_key_exists('flight_paginate', $new_instance)){
@@ -281,22 +277,22 @@ class TPFlightsTablesWidget extends WP_Widget{
 		}
 		if (array_key_exists('flight_transplant', $new_instance)){
 			if (empty( $new_instance['flight_transplant'] )){
-				$new_instance['flight_transplant'] = $old_instance['flight_transplant'];
+				$new_instance['flight_transplant'] = $this->getOldInstance($old_instance, 'flight_transplant');
 			}
 		}
 		if (array_key_exists('flight_filter_airline', $new_instance)){
 			if (empty( $new_instance['flight_filter_airline'] )){
-				$new_instance['flight_filter_airline'] = $old_instance['flight_filter_airline'];
+				$new_instance['flight_filter_airline'] = $this->getOldInstance($old_instance, 'flight_filter_airline');
 			}
 		}
 		if (array_key_exists('flight_filter_flight_number', $new_instance)){
 			if (empty( $new_instance['flight_filter_flight_number'] )){
-				$new_instance['flight_filter_flight_number'] = $old_instance['flight_filter_flight_number'];
+				$new_instance['flight_filter_flight_number'] = $this->getOldInstance($old_instance, 'flight_filter_flight_number');
 			}
 		}
 		if (array_key_exists('flight_limit', $new_instance)){
 			if (empty( $new_instance['flight_limit'] )){
-				$new_instance['flight_limit'] = $old_instance['flight_limit'];
+				$new_instance['flight_limit'] =  $this->getOldInstance($old_instance, 'flight_limit');
 			}
 		}
 		if (array_key_exists('flight_one_way', $new_instance)){
@@ -551,6 +547,20 @@ class TPFlightsTablesWidget extends WP_Widget{
 		    $code = $dataCode[1];
         }
 		return $code;
+    }
+
+	/**
+	 * @param $oldInstance
+	 * @param $key
+	 *
+	 * @return string
+	 */
+    public function getOldInstance($oldInstance, $key){
+	    $instance = '';
+	    if (array_key_exists($key, $oldInstance)){
+		    $instance = $oldInstance[$key];
+	    }
+	    return $instance;
     }
 
 }
