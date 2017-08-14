@@ -179,18 +179,21 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$paginateAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.']';
+        } elseif ($select == 8){
+			if (empty($airlineCode)){
+				return;
+			}
+			$shortcode = '[tp_popular_destinations_airlines_shortcodes '
+			             .$airlineAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$offTitleAttr.' '
+			             .$limitAttr.' '
+			             .$subidAttr.']';
         }
 		/*switch ($select){
 
-			case 8:
-				$shortcode = '[tp_popular_destinations_airlines_shortcodes '
-				             .$airlineAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$offTitleAttr.' '
-				             .$limitAttr.' '
-				             .$subidAttr.']';
-				break;
+
 			case 9:
 				$shortcode = '[tp_our_site_search_shortcodes '
 				             .$titleAttr.' '
