@@ -112,21 +112,26 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
 			             .$currencyAttr.']';
-        }
+        } elseif ($select == 3) {
+			if (empty($originCode) || empty($destinationCode)){
+				return;
+			}
+			$shortcode = '[tp_cheapest_ticket_each_day_month_shortcodes '
+			             .$originAttr.' '
+			             .$destinationAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$transplantAttr.' '
+			             .$filterAirlineAttr.' '
+			             .$filterFlightNumberAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.' '
+			             .$currencyAttr.']';
+		}
 		/*switch ($select){
 
 			case 3:
-				$shortcode = '[tp_cheapest_ticket_each_day_month_shortcodes '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$transplantAttr.' '
-				             .$filterAirlineAttr.' '
-				             .$filterFlightNumberAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.' '
-				             .$currencyAttr.']';
+
 				break;
 			case 4:
 				$shortcode = '[tp_cheapest_tickets_each_month_shortcodes '
