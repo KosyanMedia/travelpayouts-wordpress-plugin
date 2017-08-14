@@ -243,20 +243,65 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		//$new_instance['flight_select'] = (!empty( $new_instance['flight_select'])) ? $new_instance['flight_select'] : $old_instance['flight_select'];
-		$new_instance['flight_title'] = (!empty( $new_instance['flight_title'] )) ? $new_instance['flight_title'] : $old_instance['flight_title'];
-		$new_instance['flight_origin'] = (!empty( $new_instance['flight_origin'])) ? $new_instance['flight_origin'] : $old_instance['flight_origin'];
-		$new_instance['flight_destination'] = (!empty( $new_instance['flight_destination'] ) ) ? $new_instance['flight_destination'] : $old_instance['flight_destination'];
-		$new_instance['flight_airline'] = (!empty( $new_instance['flight_airline'])) ? $new_instance['flight_airline'] : $old_instance['flight_airline'];
-		$new_instance['flight_subid'] = (!empty( $new_instance['flight_subid'])) ? $new_instance['flight_subid'] : $old_instance['flight_subid'];
-		$new_instance['flight_currency'] = (!empty( $new_instance['flight_currency'])) ? $new_instance['flight_currency'] : $old_instance['flight_currency'];
-		$new_instance['flight_paginate'] = (isset($new_instance['flight_paginate']))? true : false;
-		$new_instance['flight_off_title'] = (isset($new_instance['flight_off_title']))? true : false;
-		$new_instance['flight_transplant'] = (!empty( $new_instance['flight_transplant'])) ? $new_instance['flight_transplant'] : $old_instance['flight_transplant'];
-		$new_instance['flight_filter_airline'] = (!empty( $new_instance['flight_filter_airline'])) ? $new_instance['flight_filter_airline'] : $old_instance['flight_filter_airline'];
-		$new_instance['flight_filter_flight_number'] = (!empty( $new_instance['flight_filter_flight_number'])) ? $new_instance['flight_filter_flight_number'] : $old_instance['flight_filter_flight_number'];
-		$new_instance['flight_limit'] = (!empty( $new_instance['flight_limit'])) ? $new_instance['flight_limit'] : $old_instance['flight_limit'];
-		$new_instance['flight_one_way'] = (isset($new_instance['flight_one_way']))? true : false;
+		if (array_key_exists('flight_title', $new_instance)){
+		    if (empty( $new_instance['flight_title'] )){
+			    $new_instance['flight_title'] = $old_instance['flight_title'];
+            }
+		}
+		if (array_key_exists('flight_origin', $new_instance)){
+			if (empty( $new_instance['flight_origin'] )){
+				$new_instance['flight_origin'] = $old_instance['flight_origin'];
+			}
+		}
+		if (array_key_exists('flight_destination', $new_instance)){
+			if (empty( $new_instance['flight_destination'] )){
+				$new_instance['flight_destination'] = $old_instance['flight_destination'];
+			}
+		}
+		if (array_key_exists('flight_airline', $new_instance)){
+			if (empty( $new_instance['flight_airline'] )){
+				$new_instance['flight_airline'] = $old_instance['flight_airline'];
+			}
+		}
+		if (array_key_exists('flight_subid', $new_instance)){
+			if (empty( $new_instance['flight_subid'] )){
+				$new_instance['flight_subid'] = $old_instance['flight_subid'];
+			}
+		}
+		if (array_key_exists('flight_currency', $new_instance)){
+			if (empty( $new_instance['flight_currency'] )){
+				$new_instance['flight_currency'] = $old_instance['flight_currency'];
+			}
+		}
+		if (array_key_exists('flight_paginate', $new_instance)){
+			$new_instance['flight_paginate'] = (isset($new_instance['flight_paginate'])) ? true : false;
+		}
+		if (array_key_exists('flight_off_title', $new_instance)){
+			$new_instance['flight_off_title'] = (isset($new_instance['flight_off_title'])) ? true : false;
+		}
+		if (array_key_exists('flight_transplant', $new_instance)){
+			if (empty( $new_instance['flight_transplant'] )){
+				$new_instance['flight_transplant'] = $old_instance['flight_transplant'];
+			}
+		}
+		if (array_key_exists('flight_filter_airline', $new_instance)){
+			if (empty( $new_instance['flight_filter_airline'] )){
+				$new_instance['flight_filter_airline'] = $old_instance['flight_filter_airline'];
+			}
+		}
+		if (array_key_exists('flight_filter_flight_number', $new_instance)){
+			if (empty( $new_instance['flight_filter_flight_number'] )){
+				$new_instance['flight_filter_flight_number'] = $old_instance['flight_filter_flight_number'];
+			}
+		}
+		if (array_key_exists('flight_limit', $new_instance)){
+			if (empty( $new_instance['flight_limit'] )){
+				$new_instance['flight_limit'] = $old_instance['flight_limit'];
+			}
+		}
+		if (array_key_exists('flight_one_way', $new_instance)){
+			$new_instance['flight_one_way'] = (isset($new_instance['flight_one_way'])) ? true : false;
+		}
 		return $new_instance;
 	}
 
