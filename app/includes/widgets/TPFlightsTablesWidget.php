@@ -33,6 +33,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 * @param $instance
 	 */
 	public function widget( $args, $instance ) {
+	    //error_log(print_r($instance, true));
 		$select = isset( $instance['flight_select'] ) ? esc_attr( $instance['flight_select'] ) : 'select';
 		$title = isset( $instance['flight_title'] ) ? esc_attr( $instance['flight_title'] ) : '';
 		$origin = isset( $instance['flight_origin'] ) ? esc_attr( $instance['flight_origin'] ) : '';
@@ -40,14 +41,25 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$airline = isset( $instance['flight_airline'] ) ? esc_attr( $instance['flight_airline'] ) : '';
 		$subid = isset( $instance['flight_subid'] ) ? esc_attr( $instance['flight_subid'] ) : '';
 		$currency = isset( $instance['flight_currency'] ) ? esc_attr( $instance['flight_currency'] ) : TPPlugin::$options['local']['currency'];
-		$paginate = isset( $instance['flight_paginate'] ) ? $instance['flight_paginate']  : true;
-		$off_title = isset( $instance['flight_off_title'] ) ? $instance['flight_off_title']  : false;
+		if (array_key_exists('flight_paginate', $instance)){
+			$paginate = true;
+		} else {
+			$paginate = false;
+		}
+		if (array_key_exists('flight_off_title', $instance)){
+			$off_title = true;
+		} else {
+			$off_title = false;
+		}
+		if (array_key_exists('flight_one_way', $instance)){
+			$one_way = true;
+		} else {
+			$one_way = false;
+		}
 		$transplant = isset( $instance['flight_transplant'] ) ? esc_attr( $instance['flight_transplant'] ) : 0;
 		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
-		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
-
         if ($select == 'select') return;
 		$originCode = $this->getCode($origin);
 		$destinationCode = $this->getCode($destination);
@@ -58,9 +70,9 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$airlineAttr = 'airline="'.$airlineCode.'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$currencyAttr = 'currency="'.$currency.'"';
-		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
-		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
-		$oneWayAttr = (isset($one_way))? 'one_way=true':'one_way=false';
+		$paginateAttr = ($paginate == true)? 'paginate=true':'paginate=false';
+		$offTitleAttr = ($off_title == true)? 'off_title=true':'';
+		$oneWayAttr = ($one_way == true)? 'one_way=true':'one_way=false';
 		$transplantAttr = 'stops="'.$transplant.'"';
 		$filterAirlineAttr = '';
 		if (!empty($filterAirlineCode)){
@@ -230,7 +242,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$subidAttr.']';
         }
 
-        error_log($shortcode);
+        //error_log($shortcode);
 		echo do_shortcode($shortcode);
 
 
@@ -243,7 +255,6 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-
 		if (array_key_exists('flight_origin', $new_instance)){
 			if (empty( $new_instance['flight_origin'] )){
 				$new_instance['flight_origin'] = $this->getOldInstance($old_instance, 'flight_origin');
@@ -269,17 +280,6 @@ class TPFlightsTablesWidget extends WP_Widget{
 				$new_instance['flight_currency'] = $this->getOldInstance($old_instance, 'flight_currency');
 			}
 		}
-		if (array_key_exists('flight_paginate', $new_instance)){
-			$new_instance['flight_paginate'] = (isset($new_instance['flight_paginate'])) ? true : false;
-		}
-		if (array_key_exists('flight_off_title', $new_instance)){
-			$new_instance['flight_off_title'] = (isset($new_instance['flight_off_title'])) ? true : false;
-		}
-		if (array_key_exists('flight_transplant', $new_instance)){
-			if (empty( $new_instance['flight_transplant'] )){
-				$new_instance['flight_transplant'] = $this->getOldInstance($old_instance, 'flight_transplant');
-			}
-		}
 		if (array_key_exists('flight_filter_airline', $new_instance)){
 			if (empty( $new_instance['flight_filter_airline'] )){
 				$new_instance['flight_filter_airline'] = $this->getOldInstance($old_instance, 'flight_filter_airline');
@@ -294,9 +294,6 @@ class TPFlightsTablesWidget extends WP_Widget{
 			if (empty( $new_instance['flight_limit'] )){
 				$new_instance['flight_limit'] =  $this->getOldInstance($old_instance, 'flight_limit');
 			}
-		}
-		if (array_key_exists('flight_one_way', $new_instance)){
-			$new_instance['flight_one_way'] = (isset($new_instance['flight_one_way'])) ? true : false;
 		}
 		return $new_instance;
 	}
@@ -313,9 +310,21 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$subid = isset( $instance['flight_subid'] ) ? esc_attr( $instance['flight_subid'] ) : '';
 		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
 		$currency = isset( $instance['flight_currency'] ) ? esc_attr( $instance['flight_currency'] ) : TPPlugin::$options['local']['currency'];
-		$paginate = isset( $instance['flight_paginate'] ) ? $instance['flight_paginate']  : true;
-		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
-		$off_title = isset( $instance['flight_off_title'] ) ? $instance['flight_off_title']  : false;
+		if (array_key_exists('flight_paginate', $instance)){
+			$paginate = true;
+		} else {
+		    $paginate = false;
+        }
+		if (array_key_exists('flight_off_title', $instance)){
+			$off_title = true;
+		} else {
+			$off_title = false;
+		}
+		if (array_key_exists('flight_one_way', $instance)){
+			$one_way = true;
+		} else {
+			$one_way = false;
+		}
 		$transplant = isset( $instance['flight_transplant'] ) ? esc_attr( $instance['flight_transplant'] ) : 0;
 		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
