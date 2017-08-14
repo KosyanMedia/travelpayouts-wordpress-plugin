@@ -190,32 +190,35 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$offTitleAttr.' '
 			             .$limitAttr.' '
 			             .$subidAttr.']';
-        }
+        }  elseif ($select == 9){
+			$shortcode = '[tp_our_site_search_shortcodes '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$offTitleAttr.' '
+			             .$limitAttr.' '
+			             .$oneWayAttr.' '
+			             .$currencyAttr.' '
+			             .$transplantAttr.' '
+			             .$subidAttr.']';
+		}  elseif ($select == 10){
+			if (empty($originCode)){
+				return;
+			}
+			$shortcode = '[tp_from_our_city_fly_shortcodes '
+			             .$originAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$offTitleAttr.' '
+			             .$limitAttr.' '
+			             .$oneWayAttr.' '
+			             .$currencyAttr.' '
+			             .$transplantAttr.' '
+			             .$subidAttr.']';
+		}
 		/*switch ($select){
 
-
-			case 9:
-				$shortcode = '[tp_our_site_search_shortcodes '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$offTitleAttr.' '
-				             .$limitAttr.' '
-				             .$oneWayAttr.' '
-				             .$currencyAttr.' '
-				             .$transplantAttr.' '
-				             .$subidAttr.']';
-				break;
 			case 10:
-				$shortcode = '[tp_from_our_city_fly_shortcodes '
-				             .$originAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$offTitleAttr.' '
-				             .$limitAttr.' '
-				             .$oneWayAttr.' '
-				             .$currencyAttr.' '
-				             .$transplantAttr.' '
-				             .$subidAttr.']';
+
 				break;
 			case 11:
 				$shortcode = '[tp_in_our_city_fly_shortcodes '
