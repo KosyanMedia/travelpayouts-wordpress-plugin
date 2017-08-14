@@ -47,13 +47,12 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
 		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
-        if ($select == 'select') return;
 
+        if ($select == 'select') return;
 		$originCode = $this->getCode($origin);
 		$destinationCode = $this->getCode($destination);
 		$airlineCode = $this->getCode($airline);
 		$filterAirlineCode = $this->getCode($filter_airline);
-
 		$originAttr = 'origin="'.$originCode.'"';
 		$destinationAttr = 'destination="'.$destinationCode.'"';
 		$airlineAttr = 'airline="'.$airlineCode.'"';
@@ -63,8 +62,14 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
 		$oneWayAttr = (isset($one_way))? 'one_way=true':'one_way=false';
 		$transplantAttr = 'stops='.$transplant;
-		$filterAirlineAttr = 'filter_airline="'.$filterAirlineCode.'"';
-		$filterFlightNumberAttr = 'filter_flight_number="'.$filter_flight_number.'"';
+		$filterAirlineAttr = '';
+		if (!empty($filterAirlineCode)){
+			$filterAirlineAttr = 'filter_airline="'.$filterAirlineCode.'"';
+        }
+		$filterFlightNumberAttr = '';
+		if (!empty($filter_flight_number)){
+			$filterFlightNumberAttr = 'filter_flight_number="'.$filter_flight_number.'"';
+		}
 		$limitAttr = 'limit='.$limit.'';
 		$titleAttr = 'title='.$title.'';
 		$shortcode = '';
@@ -93,24 +98,23 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
 			             .$currencyAttr.']';
+        } elseif ($select == 2) {
+			if (empty($originCode) || empty($destinationCode)){
+				return;
+			}
+			$shortcode = '[tp_cheapest_flights_shortcodes '
+			             .$originAttr.' '
+			             .$destinationAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$filterAirlineAttr.' '
+			             .$filterFlightNumberAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.' '
+			             .$currencyAttr.']';
         }
 		/*switch ($select){
 
-			case 1:
-
-				break;
-			case 2:
-				$shortcode = '[tp_cheapest_flights_shortcodes '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$filterAirlineAttr.' '
-				             .$filterFlightNumberAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.' '
-				             .$currencyAttr.']';
-				break;
 			case 3:
 				$shortcode = '[tp_cheapest_ticket_each_day_month_shortcodes '
 				             .$originAttr.' '
