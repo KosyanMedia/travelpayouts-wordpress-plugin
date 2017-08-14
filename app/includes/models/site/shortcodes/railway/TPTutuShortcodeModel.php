@@ -72,7 +72,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	}
 
 	public function setStation($rows){
-		if(count($rows) < 1 || $rows == false) return $rows;
+		if(count($rows) < 1 || $rows == false) return array();
 		foreach ($rows as $key => $row){
 			if (array_key_exists('departureStation', $row)) {
                 $row['departureStationCode'] = $row['departureStation'];

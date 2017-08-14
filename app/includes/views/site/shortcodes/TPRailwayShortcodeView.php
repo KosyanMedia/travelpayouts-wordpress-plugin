@@ -40,7 +40,8 @@ class TPRailwayShortcodeView {
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		$html = '';
 		if ($shortcode == false) return false;
-		if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
+
+		if (count($rows) < 1 || $rows == false || !is_array($rows)) return $this->renderViewIfEmptyTable();
 
 		$html .= '<div class="TPTrainTable">
                      <div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
@@ -62,6 +63,7 @@ class TPRailwayShortcodeView {
 	}
 
 	public function renderViewIfEmptyTable(){
+		//error_log('renderViewIfEmptyTable');
 		return '';
 	}
 
