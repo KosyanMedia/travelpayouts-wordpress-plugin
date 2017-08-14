@@ -44,19 +44,16 @@ class TPRailwayTablesWidget extends WP_Widget{
 		} else {
 			$off_title = false;
 		}
-
 		$originCode = $this->getCode($origin);
 		if (empty($originCode)) return;
 		$destinationCode = $this->getCode($destination);
 		if (empty($destinationCode)) return;
-
 		$titleAttr = 'title='.$title.'';
 		$originAttr = 'origin="'.$originCode.'"';
 		$destinationAttr = 'destination="'.$destinationCode.'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$paginateAttr = ($paginate == true) ? 'paginate=true' : 'paginate=false';
 		$offTitleAttr = ($off_title == true) ? 'off_title=true' : '';
-
 		$shortcode = '';
 		$shortcode .= '[tp_tutu ';
 		$shortcode .= $titleAttr.' ';
