@@ -49,57 +49,55 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$one_way = isset( $instance['flight_one_way'] ) ? $instance['flight_one_way']  : true;
         if ($select == 'select') return;
 
-		$originCode = '';
-		if(isset($origin)){
-			preg_match('/\[(.+)\]/', $origin, $originCode);
-		}
-		$destinationCode = '';
-		if(isset($destination)){
-			preg_match('/\[(.+)\]/', $destination, $destinationCode);
-		}
-		$airlineCode = '';
-		if(isset($airline)){
-			preg_match('/\[(.+)\]/', $airline, $airlineCode);
-		}
-		$filterAirlineCode = '';
-		if(isset($filter_airline)){
-			preg_match('/\[(.+)\]/', $filter_airline, $filterAirlineCode);
-		}
-		$originAttr = 'origin="'.$originCode[1].'"';
-		$destinationAttr = 'destination="'.$destinationCode[1].'"';
-		$airlineAttr = 'airline="'.$airlineCode[1].'"';
+		$originCode = $this->getCode($origin);
+		$destinationCode = $this->getCode($destination);
+		$airlineCode = $this->getCode($airline);
+		$filterAirlineCode = $this->getCode($filter_airline);
+
+		$originAttr = 'origin="'.$originCode.'"';
+		$destinationAttr = 'destination="'.$destinationCode.'"';
+		$airlineAttr = 'airline="'.$airlineCode.'"';
 		$subidAttr = 'subid="'.$subid.'"';
 		$currencyAttr = 'currency="'.$currency.'"';
 		$paginateAttr = (isset($paginate))? 'paginate=true':'paginate=false';
 		$offTitleAttr = (isset($off_title))? 'off_title=true':'';
 		$oneWayAttr = (isset($one_way))? 'one_way=true':'one_way=false';
 		$transplantAttr = 'stops='.$transplant;
-		$filterAirlineAttr = 'filter_airline="'.$filter_airline[1].'"';
+		$filterAirlineAttr = 'filter_airline="'.$filterAirlineCode.'"';
 		$filterFlightNumberAttr = 'filter_flight_number="'.$filter_flight_number.'"';
 		$limitAttr = 'limit='.$limit.'';
 		$titleAttr = 'title='.$title.'';
 		$shortcode = '';
-		switch ($select){
-			case 0:
-				$shortcode = '[tp_price_calendar_month_shortcodes '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$transplantAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.' '
-				             .$currencyAttr.']';
-				break;
+		if ($select == 0){
+		    if (empty($originCode) || empty($destinationCode)){
+		        return;
+            }
+			$shortcode = '[tp_price_calendar_month_shortcodes '
+			             .$originAttr.' '
+			             .$destinationAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$transplantAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.' '
+			             .$currencyAttr.']';
+        } elseif ($select == 1) {
+			if (empty($originCode) || empty($destinationCode)){
+				return;
+			}
+			$shortcode = '[tp_price_calendar_week_shortcodes '
+			             .$originAttr.' '
+			             .$destinationAttr.' '
+			             .$titleAttr.' '
+			             .$paginateAttr.' '
+			             .$offTitleAttr.' '
+			             .$subidAttr.' '
+			             .$currencyAttr.']';
+        }
+		/*switch ($select){
+
 			case 1:
-				$shortcode = '[tp_price_calendar_week_shortcodes '
-				             .$originAttr.' '
-				             .$destinationAttr.' '
-				             .$titleAttr.' '
-				             .$paginateAttr.' '
-				             .$offTitleAttr.' '
-				             .$subidAttr.' '
-				             .$currencyAttr.']';
+
 				break;
 			case 2:
 				$shortcode = '[tp_cheapest_flights_shortcodes '
@@ -214,7 +212,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				             .$transplantAttr.' '
 				             .$subidAttr.']';
 				break;
-		}
+		}*/
 
 		echo do_shortcode($shortcode);
 
@@ -477,12 +475,20 @@ class TPFlightsTablesWidget extends WP_Widget{
 		<?php
 	}
 
+	/**
+	 * @param $data
+	 *
+	 * @return string
+	 */
 	public function getCode($data){
 	    if (empty($data)) return '';
-		$dataCode = '';
-		if(isset($origin)){
-			preg_match('/\[(.+)\]/', $origin, $originCode);
-		}
+		$dataCode = array();
+		preg_match('/\[(.+)\]/', $data, $dataCode);
+		$code = '';
+		if (array_key_exists(1, $dataCode)){
+		    $code = $dataCode[1];
+        }
+		return $code;
     }
 
 }
