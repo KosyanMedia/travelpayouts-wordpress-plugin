@@ -78,11 +78,16 @@ class TPRailwayTablesWidget extends WP_Widget{
 				$new_instance['railway_origin'] = $this->getOldInstance($old_instance, 'railway_origin');
 			}
 		}
-		$new_instance['railway_origin'] = (!empty( $new_instance['railway_origin'] )) ? $new_instance['railway_origin'] : $old_instance['railway_origin'];
-		$new_instance['railway_destination'] = (!empty( $new_instance['railway_destination'] )) ? $new_instance['railway_destination'] : $old_instance['railway_destination'];
-		$new_instance['railway_subid'] = (!empty( $new_instance['railway_subid'] )) ? $new_instance['railway_subid'] : $old_instance['railway_subid'];
-		$new_instance['railway_paginate'] = (isset($new_instance['railway_paginate']))? true : false;
-		$new_instance['railway_off_title'] = (isset($new_instance['railway_off_title']))? true : false;
+		if (array_key_exists('railway_destination', $new_instance)){
+			if (empty( $new_instance['railway_destination'] )){
+				$new_instance['railway_destination'] = $this->getOldInstance($old_instance, 'railway_destination');
+			}
+		}
+		if (array_key_exists('railway_subid', $new_instance)){
+			if (empty( $new_instance['railway_subid'] )){
+				$new_instance['railway_subid'] = $this->getOldInstance($old_instance, 'railway_subid');
+			}
+		}
 		return $new_instance;
 	}
 
