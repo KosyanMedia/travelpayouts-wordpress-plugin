@@ -96,17 +96,21 @@ class TPHotelsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		//$new_instance['hotel_select'] = (!empty( $new_instance['hotel_select'])) ? $new_instance['hotel_select'] : $old_instance['hotel_select'];
-		$new_instance['hotel_title'] = (!empty( $new_instance['hotel_title'])) ? $new_instance['hotel_title'] : $old_instance['hotel_title'];
-		$new_instance['hotel_city'] = (!empty( $new_instance['hotel_city'])) ? $new_instance['hotel_city'] : $old_instance['hotel_city'];
-		$new_instance['hotel_subid'] = (!empty( $new_instance['hotel_subid'])) ? $new_instance['hotel_subid'] : $old_instance['hotel_subid'];
-		$new_instance['hotel_selections_type'] = (!empty( $new_instance['hotel_selections_type'])) ? $new_instance['hotel_selections_type'] : $old_instance['hotel_selections_type'];
-		$new_instance['hotel_check_in'] = (!empty( $new_instance['hotel_check_in'])) ? $new_instance['hotel_check_in'] : $old_instance['hotel_check_in'];
-		$new_instance['hotel_check_out'] = (!empty( $new_instance['hotel_check_out'])) ? $new_instance['hotel_check_out'] : $old_instance['hotel_check_out'];
-		$new_instance['hotel_limit'] = (!empty( $new_instance['hotel_limit'])) ? $new_instance['hotel_limit'] : $old_instance['hotel_limit'];
-		$new_instance['hotel_paginate'] = (!empty( $new_instance['hotel_paginate'])) ? $new_instance['hotel_paginate'] : $old_instance['hotel_paginate'];
-		$new_instance['hotel_off_title'] = (!empty( $new_instance['hotel_off_title'])) ? $new_instance['hotel_off_title'] : $old_instance['hotel_off_title'];
-		$new_instance['hotel_link_without_dates'] = (!empty( $new_instance['hotel_link_without_dates'])) ? $new_instance['hotel_link_without_dates'] : $old_instance['hotel_link_without_dates'];
+		if (array_key_exists('hotel_city', $new_instance)){
+			if (empty( $new_instance['hotel_city'] )){
+				$new_instance['hotel_city'] = $this->getOldInstance($old_instance, 'hotel_city');
+			}
+		}
+		if (array_key_exists('hotel_subid', $new_instance)){
+			if (empty( $new_instance['hotel_subid'] )){
+				$new_instance['hotel_subid'] = $this->getOldInstance($old_instance, 'hotel_subid');
+			}
+		}
+		if (array_key_exists('hotel_limit', $new_instance)){
+			if (empty( $new_instance['hotel_limit'] )){
+				$new_instance['hotel_limit'] = $this->getOldInstance($old_instance, 'hotel_limit');
+			}
+		}
 		return $new_instance;
 	}
 
@@ -122,9 +126,21 @@ class TPHotelsTablesWidget extends WP_Widget{
 		$checkIn = isset( $instance['hotel_check_in'] ) ? esc_attr( $instance['hotel_check_in'] ) :  date('d-m-Y');
 		$checkOut = isset( $instance['hotel_check_out'] ) ? esc_attr( $instance['hotel_check_out'] ) :  date('d-m-Y', time()+DAY_IN_SECONDS);
 		$limit = isset( $instance['hotel_limit'] ) ? esc_attr( $instance['hotel_limit'] ) : 20;
-		$paginate = isset( $instance['hotel_paginate'] ) ? $instance['hotel_paginate']  : true;
-		$offTitle = isset( $instance['hotel_off_title'] ) ? $instance['hotel_off_title']  : false;
-		$linkWithoutDates = isset( $instance['hotel_link_without_dates'] ) ? $instance['hotel_link_without_dates']  : false;
+		if (array_key_exists('hotel_paginate', $instance)){
+			$paginate = true;
+		} else {
+			$paginate = false;
+		}
+		if (array_key_exists('hotel_off_title', $instance)){
+			$offTitle = true;
+		} else {
+			$offTitle = false;
+		}
+		if (array_key_exists('hotel_link_without_dates', $instance)){
+			$linkWithoutDates = true;
+		} else {
+			$linkWithoutDates = false;
+		}
 		$shortcodeLabels = array(
 			_x('Hotels collection - Discounts',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
