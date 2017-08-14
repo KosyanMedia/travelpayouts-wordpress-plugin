@@ -35,9 +35,21 @@ class TPHotelsTablesWidget extends WP_Widget{
 		$checkIn = isset( $instance['hotel_check_in'] ) ? esc_attr( $instance['hotel_check_in'] ) :  date('d-m-Y');
 		$checkOut = isset( $instance['hotel_check_out'] ) ? esc_attr( $instance['hotel_check_out'] ) :  date('d-m-Y', time()+DAY_IN_SECONDS);
 		$limit = isset( $instance['hotel_limit'] ) ? esc_attr( $instance['hotel_limit'] ) : 20;
-		$paginate = isset( $instance['hotel_paginate'] ) ? $instance['hotel_paginate']  : true;
-		$offTitle = isset( $instance['hotel_off_title'] ) ? $instance['hotel_off_title']  : false;
-		$linkWithoutDates = isset( $instance['hotel_link_without_dates'] ) ? $instance['hotel_link_without_dates']  : false;
+		if (array_key_exists('hotel_paginate', $instance)){
+			$paginate = true;
+		} else {
+			$paginate = false;
+		}
+		if (array_key_exists('hotel_off_title', $instance)){
+			$offTitle = true;
+		} else {
+			$offTitle = false;
+		}
+		if (array_key_exists('hotel_link_without_dates', $instance)){
+			$linkWithoutDates = true;
+		} else {
+			$linkWithoutDates = false;
+		}
 
 		$cityCode = '';
 		if(isset($city)){
