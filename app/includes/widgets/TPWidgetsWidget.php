@@ -39,13 +39,25 @@ class TPWidgetsWidget extends WP_Widget{
 		$hotelId = isset( $instance['widgets_hotel_id'] ) ? esc_attr( $instance['widgets_hotel_id'] ) : '';
 		$sizeWidth = isset( $instance['widgets_size_width'] ) ? esc_attr( $instance['widgets_size_width'] ) : 500;
 		$sizeHeight = isset( $instance['widgets_size_height'] ) ? esc_attr( $instance['widgets_size_height'] ) : 500;
-		$direct = isset( $instance['widgets_direct'] ) ? $instance['widgets_direct']  : false;
-		$oneWay = isset( $instance['widgets_one_way'] ) ? $instance['widgets_one_way']  : false;
+		if (array_key_exists('widgets_direct', $instance)){
+			$direct = true;
+		} else {
+			$direct = false;
+		}
+		if (array_key_exists('widgets_one_way', $instance)){
+			$oneWay = true;
+		} else {
+			$oneWay = false;
+		}
+		if (array_key_exists('widgets_responsive', $instance)){
+			$responsive = true;
+		} else {
+			$responsive = false;
+		}
 		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : TPPlugin::$options['widgets']['2']['zoom'];
 		$calendarPeriod = isset( $instance['widgets_calendar_period'] ) ? $instance['widgets_calendar_period']  : TPPlugin::$options['widgets']['3']['period'];
 		$calendarPeriodRangeFrom = isset( $instance['widgets_calendar_period_range_from'] ) ? $instance['widgets_calendar_period_range_from']  : TPPlugin::$options['widgets']['3']['period_day']['from'];
 		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
-		$responsive = isset( $instance['widgets_responsive'] ) ? $instance['widgets_responsive']  : true;
 		$responsiveWidth = isset( $instance['widgets_responsive_width'] ) ? $instance['widgets_responsive_width']  : 500;
 		$popularRoutesCount = isset( $instance['widgets_popular_routes_count'] ) ? $instance['widgets_popular_routes_count']  : TPPlugin::$options['widgets']['6']['count'];
 		$popularRoutes = array();
@@ -386,12 +398,15 @@ class TPWidgetsWidget extends WP_Widget{
 		} else {
 			$oneWay = false;
 		}
-
+		if (array_key_exists('widgets_responsive', $instance)){
+			$responsive = true;
+		} else {
+			$responsive = false;
+		}
 		$zoom = isset( $instance['widgets_zoom'] ) ? $instance['widgets_zoom']  : TPPlugin::$options['widgets']['2']['zoom'];
 		$calendarPeriod = isset( $instance['widgets_calendar_period'] ) ? $instance['widgets_calendar_period']  : TPPlugin::$options['widgets']['3']['period'];
 		$calendarPeriodRangeFrom = isset( $instance['widgets_calendar_period_range_from'] ) ? $instance['widgets_calendar_period_range_from']  : TPPlugin::$options['widgets']['3']['period_day']['from'];
 		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
-		$responsive = isset( $instance['widgets_responsive'] ) ? $instance['widgets_responsive']  : true;
 		$responsiveWidth = isset( $instance['widgets_responsive_width'] ) ? $instance['widgets_responsive_width']  : 500;
 		$popularRoutesCount = isset( $instance['widgets_popular_routes_count'] ) ? $instance['widgets_popular_routes_count']  : TPPlugin::$options['widgets']['6']['count'];
 		$popularRoutes = array();
