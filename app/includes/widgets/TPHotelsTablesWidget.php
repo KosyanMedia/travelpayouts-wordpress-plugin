@@ -99,7 +99,7 @@ class TPHotelsTablesWidget extends WP_Widget{
 				             .$linkWithoutDatesAttr.']';
 				break;
         }
-		error_log($shortcode);
+		//error_log($shortcode);
 		echo do_shortcode($shortcode);
 	}
 

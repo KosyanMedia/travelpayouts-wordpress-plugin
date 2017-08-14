@@ -27,23 +27,23 @@ jQuery(function($) {
 
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
-            constructorFlightTableWidget(select)
+            constructorFlightTableWidget(select, $(this), false)
         });
         doc.find('.tp-flights-tables-widget-select-label')
             .on('change', '.tp-flights-tables-widget-select-shortcode', function(e) {
                 e.preventDefault();
                 var select = $(this).val();
-                constructorFlightTableWidget(select);
+                constructorFlightTableWidget(select, $(this), true);
             });
         doc.find('.tp-hotels-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
-            constructorHotelTableWidget(select);
+            constructorHotelTableWidget(select, $(this), false);
         });
         doc.find('.tp-hotels-tables-widget-select-label')
             .on('change', '.tp-hotels-tables-widget-select-shortcode', function(e) {
                 e.preventDefault();
                 var select = $(this).val();
-                constructorHotelTableWidget(select)
+                constructorHotelTableWidget(select, $(this), true)
             });
         hotelWidgetDatepicker();
         hotelWidgeSelectionsType();
@@ -83,8 +83,16 @@ jQuery(function($) {
 
     }
 
-    function constructorFlightTableWidget(select) {
-        doc.find('.tp-flights-tables-widget-title, '
+    /**
+     *
+     * @param select
+     * @param element
+     * @param change
+     */
+    function constructorFlightTableWidget(select, element, change) {
+        var widget;
+        widget = element.parent('label').parent('p').parent('.tp-flights-tables-widget');
+        widget.find('.tp-flights-tables-widget-title, '
             +'.tp-flights-tables-widget-origin, '
             +'.tp-flights-tables-widget-destination, '
             +'.tp-flights-tables-widget-airline, '
@@ -102,7 +110,7 @@ jQuery(function($) {
             switch(select) {
                 case '0':
                     //Flights from origin to destination, One Way (next month)
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -113,7 +121,7 @@ jQuery(function($) {
                     break;
                 case '1':
                     //Flights from Origin to Destination (next few days)
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -123,7 +131,7 @@ jQuery(function($) {
                     break;
                 case '2':
                     //Cheapest Flights from origin to destination, Round-trip
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -135,7 +143,7 @@ jQuery(function($) {
                     break;
                 case '3':
                     //Cheapest Flights from origin to destination (next month)
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -147,7 +155,7 @@ jQuery(function($) {
                     break;
                 case '4':
                     //Cheapest Flights from origin to destination (next year)
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -159,7 +167,7 @@ jQuery(function($) {
                     break;
                 case '5':
                     //Direct Flights from origin to destination
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
@@ -171,7 +179,7 @@ jQuery(function($) {
                     break;
                 case '6':
                     //Direct Flights from origin
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-filter-airline, '
@@ -183,7 +191,7 @@ jQuery(function($) {
                     break;
                 case '7':
                     //Popular Destinations from origin
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-paginate, '
@@ -191,7 +199,7 @@ jQuery(function($) {
                     break;
                 case '8':
                     //Most popular flights within this Airlines
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-airline, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-limit, '
@@ -200,7 +208,7 @@ jQuery(function($) {
                     break;
                 case '9':
                     //Searched on our website
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-limit, '
                         +'.tp-flights-tables-widget-currency, '
@@ -211,7 +219,7 @@ jQuery(function($) {
                     break;
                 case '10':
                     //Cheap Flights from origin
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-origin, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-limit, '
@@ -222,7 +230,7 @@ jQuery(function($) {
                         +'.tp-flights-tables-widget-transplant').show();
                     break;
                 case '11':
-                    doc.find('.tp-flights-tables-widget-title, '
+                    widget.find('.tp-flights-tables-widget-title, '
                         +'.tp-flights-tables-widget-destination, '
                         +'.tp-flights-tables-widget-subid, '
                         +'.tp-flights-tables-widget-limit, '
@@ -237,8 +245,17 @@ jQuery(function($) {
         }
 
     }
-    function constructorHotelTableWidget(select) {
-        doc.find('.tp-hotels-tables-widget-title, '
+
+    /**
+     *
+     * @param select
+     * @param element
+     * @param change
+     */
+    function constructorHotelTableWidget(select, element, change) {
+        var widget;
+        widget = element.parent('label').parent('p').parent('.tp-hotels-tables-widget');
+        widget.find('.tp-hotels-tables-widget-title, '
             +'.tp-hotels-tables-widget-city, '
             +'.tp-hotels-tables-widget-subid, '
             +'.tp-hotels-tables-widget-selections-type, '
@@ -248,12 +265,19 @@ jQuery(function($) {
             +'.tp-hotels-tables-widget-paginate, '
             +'.tp-hotels-tables-widget-off_title, '
             +'.tp-hotels-tables-widget-link_without_dates').hide();
+        widget.find('.tp-hotels-tables-widget-selections-type-label')
+            .on('change', '.tp-hotels-tables-widget-selections-type-select', function(e) {
+                e.preventDefault();
+                var selectionsTitle;
+                selectionsTitle =  $(this).find(':selected').data('selections-title');
+                widget.find('.tp-hotels-tables-widget-selections-type-label-field').val(selectionsTitle);
+            });
         if (select != 'select'){
             select = select.toString();
             switch(select) {
                 case '0':
                     //Hotels collection - Discounts
-                    doc.find('.tp-hotels-tables-widget-title, '
+                    widget.find('.tp-hotels-tables-widget-title, '
                         +'.tp-hotels-tables-widget-city, '
                         +'.tp-hotels-tables-widget-subid, '
                         +'.tp-hotels-tables-widget-selections-type, '
@@ -264,7 +288,7 @@ jQuery(function($) {
                     break;
                 case '1':
                     //Hotels collections for dates
-                    doc.find('.tp-hotels-tables-widget-title, '
+                    widget.find('.tp-hotels-tables-widget-title, '
                         +'.tp-hotels-tables-widget-city, '
                         +'.tp-hotels-tables-widget-subid, '
                         +'.tp-hotels-tables-widget-selections-type, '

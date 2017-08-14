@@ -469,13 +469,21 @@ function TPCityAutocomplete(){
                             })
                         }
                         if($(selector).hasClass('HotelWidgetCityAutocomplete')){
+                            var widget, selectionsType, selectionsTypeSelect;
+                            widget = $(this).parent('label').parent('p').parent('.tp-hotels-tables-widget');
+                            selectionsType = widget.find('.tp-hotels-tables-widget-selections-type');
+                            selectionsTypeSelect = widget.find('.tp-hotels-tables-widget-selections-type-select');
+
+                            selectionsType.children('.tp-hotels-tables-widget-selections-type-city-label').val(ui.item.city);
+
                             input.attr('data-city', ui.item.city);
-                            $('.tp-hotels-tables-widget-selections-type-select').find("option:gt(0)").remove();
+                            selectionsTypeSelect.find("option:gt(0)").remove();
+
                             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + ui.item.val, function(data) {
                                 data.sort();
                                 $.map(data, function(item){
                                     if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
-                                        $('.tp-hotels-tables-widget-selections-type-select')
+                                        selectionsTypeSelect
                                             .append($("<option></option>")
                                                 .attr("value",item)
                                                 .attr("data-selections-title", hotelsSelectionsType[tpLocale][item]['title'])
