@@ -16,7 +16,6 @@ jQuery(function($) {
         if (tpWidget.length > 0){
             tpSaveWidget(tpWidget);
         }
-
     });
     jQuery(document).ajaxSuccess(function(e, xhr, settings) {
 
@@ -26,7 +25,6 @@ jQuery(function($) {
      * @param widget
      */
     function tpSaveWidget(widget) {
-        console.log(widget);
         if (widget.hasClass('tp-flights-tables-widget')){
             tpSaveFlightsTablesWidget(widget);
         }
@@ -40,18 +38,18 @@ jQuery(function($) {
         var selectField, originField, destinationField;
         selectField = widget.find('.tp-flights-tables-widget-select')
             .children('.tp-flights-tables-widget-select-label')
-            .children('.tp-flights-tables-widget-select-shortcode')
-        originField = widget.find('.tp-flights-tables-widget-select').children('label').children('input');
-        destinationField = widget.find('.tp-flights-tables-widget-select').children('label').children('input');
+            .children('.tp-flights-tables-widget-select-shortcode');
+        originField = widget.find('.tp-flights-tables-widget-origin').children('label').children('input');
+        destinationField = widget.find('.tp-flights-tables-widget-destination').children('label').children('input');
         if (selectField.val() == 'select'){
             selectField.addClass('tp-widget-error');
         }
-        console.log(selectField.val());
-        /*
-         doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').focus(function() {
-         $(this).removeClass('constructorShortcodesError');
-         });
-         */
+        if (originField.val() == ''){
+            originField.addClass('tp-widget-error');
+        }
+        if (destinationField.val() == ''){
+            destinationField.addClass('tp-widget-error');
+        }
 
     }
 
@@ -132,8 +130,15 @@ jQuery(function($) {
      * @param change
      */
     function constructorFlightTableWidget(select, element, change) {
-        var widget;
+        var widget, selectField, originField, destinationField;
         widget = element.parent('label').parent('p').parent('.tp-flights-tables-widget');
+        selectField = widget.find('.tp-flights-tables-widget-select')
+            .children('.tp-flights-tables-widget-select-label')
+            .children('.tp-flights-tables-widget-select-shortcode');
+        originField = widget.find('.tp-flights-tables-widget-origin')
+            .children('label').children('input');
+        destinationField = widget.find('.tp-flights-tables-widget-destination')
+            .children('label').children('input');
         widget.find('.tp-flights-tables-widget-title, '
             +'.tp-flights-tables-widget-origin, '
             +'.tp-flights-tables-widget-destination, '
@@ -147,6 +152,20 @@ jQuery(function($) {
             +'.tp-flights-tables-widget-one-way, '
             +'.tp-flights-tables-widget-off-title, '
             +'.tp-flights-tables-widget-transplant').hide();
+        if (change == true){
+            selectField.removeClass('tp-widget-error');
+            originField.removeClass('tp-widget-error');
+            destinationField.removeClass('tp-widget-error');
+        }
+        selectField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        originField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
         if (select != 'select') {
             select = select.toString();
             switch(select) {
