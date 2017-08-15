@@ -11,11 +11,53 @@ jQuery(function($) {
         tpInitWidget();
     });
     jQuery(document).on('widget-updated', function(e, widget){
+        var tpWidget = widget.children('.widget-inside').children('form').children('.widget-content').children('.tp-widget');
         tpInitWidget();
+        if (tpWidget.length > 0){
+            tpSaveWidget(tpWidget);
+        }
+
     });
     jQuery(document).ajaxSuccess(function(e, xhr, settings) {
 
     });
+    /**
+     *
+     * @param widget
+     */
+    function tpSaveWidget(widget) {
+        console.log(widget);
+        if (widget.hasClass('tp-flights-tables-widget')){
+            tpSaveFlightsTablesWidget(widget);
+        }
+    }
+
+    /**
+     *
+     * @param widget
+     */
+    function tpSaveFlightsTablesWidget(widget) {
+        var selectField, originField, destinationField;
+        selectField = widget.find('.tp-flights-tables-widget-select')
+            .children('.tp-flights-tables-widget-select-label')
+            .children('.tp-flights-tables-widget-select-shortcode')
+        originField = widget.find('.tp-flights-tables-widget-select').children('label').children('input');
+        destinationField = widget.find('.tp-flights-tables-widget-select').children('label').children('input');
+        if (selectField.val() == 'select'){
+            selectField.addClass('tp-widget-error');
+        }
+        console.log(selectField.val());
+        /*
+         doc.find('#select_hotels_shortcodes, #hotels_city, #select_hotels_selections_type').focus(function() {
+         $(this).removeClass('constructorShortcodesError');
+         });
+         */
+
+    }
+
+    /**
+     *
+     */
     function tpInitWidget() {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
         tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");

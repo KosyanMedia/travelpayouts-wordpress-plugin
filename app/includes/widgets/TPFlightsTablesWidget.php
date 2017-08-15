@@ -358,7 +358,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 
 		?>
 
-		<div class="tp-flights-tables-widget">
+		<div class="tp-flights-tables-widget tp-widget">
 			<p class="tp-flights-tables-widget-select">
 				<label for="<?php echo $this->get_field_id('flight_select'); ?>"
                        class="tp-flights-tables-widget-select-label">

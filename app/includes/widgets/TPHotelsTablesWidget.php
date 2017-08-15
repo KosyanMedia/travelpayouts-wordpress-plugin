@@ -172,7 +172,7 @@ class TPHotelsTablesWidget extends WP_Widget{
 			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 		);
 		?>
-		<div class="tp-hotels-tables-widget">
+		<div class="tp-hotels-tables-widget tp-widget">
 			<p class="tp-hotels-tables-widget-select">
 				<label for="<?php echo $this->get_field_id('hotel_select'); ?>"
 				       class="tp-hotels-tables-widget-select-label">

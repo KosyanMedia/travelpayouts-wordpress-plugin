@@ -127,7 +127,7 @@ class TPSearchFormWidget extends WP_Widget{
 		$destination = isset( $instance['search_form_destination'] ) ? esc_attr( $instance['search_form_destination'] ) : '';
 		$cityHotel = isset( $instance['search_form_city_hotel'] ) ? esc_attr( $instance['search_form_city_hotel'] ) : '';
 		?>
-		<div class="tp-search-form-widget">
+		<div class="tp-search-form-widget tp-widget">
 			<?php if (!empty($searchForms)): ?>
 				<p class="tp-search-form-widget-select">
 					<label for="<?php echo $this->get_field_id('search_form_select'); ?>"

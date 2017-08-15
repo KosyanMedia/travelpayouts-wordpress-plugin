@@ -111,7 +111,7 @@ class TPRailwayTablesWidget extends WP_Widget{
 			$off_title = false;
 		}
 		?>
-		<div class="tp-railway-tables-widget">
+		<div class="tp-railway-tables-widget tp-widget">
 			<p class="tp-railway-tables-widget-title">
 				<label for="<?php echo $this->get_field_id('railway_title'); ?>">
 					<?php _ex('Alternate title:', 'Travelpayouts – Railways schedule Widget',

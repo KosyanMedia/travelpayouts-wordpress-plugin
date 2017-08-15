@@ -433,7 +433,7 @@ class TPWidgetsWidget extends WP_Widget{
 		$fieldLimit8 = TPPlugin::$options['widgets']['8']['limit'];
 
 		?>
-		<div class="tp-widgets-widget"
+		<div class="tp-widgets-widget tp-widget"
              data-field_size_width_1="<?php echo $fieldSizeWidth1; ?>"
              data-field_size_height_1="<?php echo $fieldSizeHeight1; ?>"
              data-field_size_width_2="<?php echo $fieldSizeWidth2; ?>"

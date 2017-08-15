@@ -246,3 +246,7 @@
 .tp-widgets-widget-airline-7-label{
     display: block;
 }
+
+.tp-widget-error{
+    border: 1px solid #dd3d36 !important;
+}
