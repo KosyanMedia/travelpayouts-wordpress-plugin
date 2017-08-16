@@ -27,6 +27,10 @@ jQuery(function($) {
     function tpSaveWidget(widget) {
         if (widget.hasClass('tp-flights-tables-widget')){
             tpSaveFlightsTablesWidget(widget);
+        } else if (widget.hasClass('tp-hotels-tables-widget')){
+            tpSaveHotesTablesWidget(widget);
+        } else if (widget.hasClass('tp-railway-tables-widget')){
+            tpSaveRailwayTablesWidget(widget);
         }
     }
 
@@ -44,15 +48,57 @@ jQuery(function($) {
         if (selectField.val() == 'select'){
             selectField.addClass('tp-widget-error');
         }
-        if (originField.val() == ''){
+        if (originField.attr('placeholder') == ''){
             originField.addClass('tp-widget-error');
         }
-        if (destinationField.val() == ''){
+        if (destinationField.attr('placeholder') == ''){
             destinationField.addClass('tp-widget-error');
         }
-
     }
 
+    /**
+     *
+     * @param widget
+     */
+    function tpSaveHotesTablesWidget(widget) {
+        var selectField, cityField, selectionsTypeField;
+        selectField = widget.find('.tp-hotels-tables-widget-select')
+            .children('.tp-hotels-tables-widget-select-label')
+            .children('.tp-hotels-tables-widget-select-shortcode');
+        cityField = widget.find('.tp-hotels-tables-widget-city')
+            .children('label').children('input');
+        selectionsTypeField  = widget.find('.tp-hotels-tables-widget-selections-type')
+            .children('.tp-hotels-tables-widget-selections-type-label')
+            .children('.tp-hotels-tables-widget-selections-type-select');
+        if (selectField.val() == 'select'){
+            selectField.addClass('tp-widget-error');
+        }
+        if (cityField.attr('placeholder') == ''){
+            cityField.addClass('tp-widget-error');
+        }
+        if (selectionsTypeField.data('selections_type') == 'all'){
+            selectionsTypeField.addClass('tp-widget-error');
+        }
+    }
+
+    /**
+     *
+     * @param widget
+     */
+    function tpSaveRailwayTablesWidget(widget) {
+        var originField, destinationField;
+        originField = widget.find('.tp-railway-tables-widget-origin')
+            .children('label').children('input');
+        destinationField = widget.find('.tp-railway-tables-widget-destination')
+            .children('label').children('input');
+        //console.log('tpSaveRailwayTablesWidget');
+        if (originField.attr('placeholder') == ''){
+            originField.addClass('tp-widget-error');
+        }
+        if (destinationField.attr('placeholder') == ''){
+            destinationField.addClass('tp-widget-error');
+        }
+    }
     /**
      *
      */
@@ -64,7 +110,7 @@ jQuery(function($) {
         tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
         tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete");
         tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityWidgetsAutocomplete');
-
+        //Flight
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
             constructorFlightTableWidget(select, $(this), false)
@@ -75,6 +121,7 @@ jQuery(function($) {
                 var select = $(this).val();
                 constructorFlightTableWidget(select, $(this), true);
             });
+        //Hotel
         doc.find('.tp-hotels-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
             constructorHotelTableWidget(select, $(this), false);
@@ -87,6 +134,11 @@ jQuery(function($) {
             });
         hotelWidgetDatepicker();
         hotelWidgeSelectionsType();
+        //Railway
+        doc.find('.tp-railway-tables-widget').each(function () {
+            constructorRailwayTablesWidget($(this));
+        });
+        //Widget
         doc.find('.tp-widgets-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
             constructorWidgetsTableWidget(select, $(this), false);
@@ -97,7 +149,7 @@ jQuery(function($) {
                 var select = $(this).val();
                 constructorWidgetsTableWidget(select, $(this), true)
             });
-
+        //SearchForm
         doc.find('.tp-search-form-widget-select-shortcode').each(function () {
             var select, typeForm, slug;
             select = $(this).data('select_table');
@@ -130,14 +182,14 @@ jQuery(function($) {
      * @param change
      */
     function constructorFlightTableWidget(select, element, change) {
-        var widget, selectField, originField, destinationField;
+        var widget, selectFlightField, originFlightField, destinationFlightField;
         widget = element.parent('label').parent('p').parent('.tp-flights-tables-widget');
-        selectField = widget.find('.tp-flights-tables-widget-select')
+        selectFlightField = widget.find('.tp-flights-tables-widget-select')
             .children('.tp-flights-tables-widget-select-label')
             .children('.tp-flights-tables-widget-select-shortcode');
-        originField = widget.find('.tp-flights-tables-widget-origin')
+        originFlightField = widget.find('.tp-flights-tables-widget-origin')
             .children('label').children('input');
-        destinationField = widget.find('.tp-flights-tables-widget-destination')
+        destinationFlightField = widget.find('.tp-flights-tables-widget-destination')
             .children('label').children('input');
         widget.find('.tp-flights-tables-widget-title, '
             +'.tp-flights-tables-widget-origin, '
@@ -153,17 +205,17 @@ jQuery(function($) {
             +'.tp-flights-tables-widget-off-title, '
             +'.tp-flights-tables-widget-transplant').hide();
         if (change == true){
-            selectField.removeClass('tp-widget-error');
-            originField.removeClass('tp-widget-error');
-            destinationField.removeClass('tp-widget-error');
+            selectFlightField.removeClass('tp-widget-error');
+            originFlightField.removeClass('tp-widget-error');
+            destinationFlightField.removeClass('tp-widget-error');
         }
-        selectField.focus(function() {
+        selectFlightField.focus(function() {
             $(this).removeClass('tp-widget-error');
         });
-        originField.focus(function() {
+        originFlightField.focus(function() {
             $(this).removeClass('tp-widget-error');
         });
-        destinationField.focus(function() {
+        destinationFlightField.focus(function() {
             $(this).removeClass('tp-widget-error');
         });
         if (select != 'select') {
@@ -314,8 +366,16 @@ jQuery(function($) {
      * @param change
      */
     function constructorHotelTableWidget(select, element, change) {
-        var widget;
+        var widget, selectField, cityField, selectionsTypeField;
         widget = element.parent('label').parent('p').parent('.tp-hotels-tables-widget');
+        selectField = widget.find('.tp-hotels-tables-widget-select')
+            .children('.tp-hotels-tables-widget-select-label')
+            .children('.tp-hotels-tables-widget-select-shortcode');
+        cityField = widget.find('.tp-hotels-tables-widget-city')
+            .children('label').children('input');
+        selectionsTypeField  = widget.find('.tp-hotels-tables-widget-selections-type')
+            .children('.tp-hotels-tables-widget-selections-type-label')
+            .children('.tp-hotels-tables-widget-selections-type-select');
         widget.find('.tp-hotels-tables-widget-title, '
             +'.tp-hotels-tables-widget-city, '
             +'.tp-hotels-tables-widget-subid, '
@@ -333,6 +393,21 @@ jQuery(function($) {
                 selectionsTitle =  $(this).find(':selected').data('selections-title');
                 widget.find('.tp-hotels-tables-widget-selections-type-label-field').val(selectionsTitle);
             });
+        if (change == true){
+            selectField.removeClass('tp-widget-error');
+            cityField.removeClass('tp-widget-error');
+            selectionsTypeField.removeClass('tp-widget-error');
+        }
+        selectField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        cityField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        selectionsTypeField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+
         if (select != 'select'){
             select = select.toString();
             switch(select) {
@@ -396,15 +471,37 @@ jQuery(function($) {
                 .children('.tp-hotels-tables-widget-selections-type-label')
                 .children('.tp-hotels-tables-widget-selections-type-select');
             city = $(this).attr('placeholder');
+
             if (city != ''){
                 city = city.substring(city.indexOf('[')+1,city.indexOf(']'));
                 selectionsType.find("option:gt(0)").remove();
                 var selectionsTypeVal = selectionsType.data('selections_type');
+                //console.log(city)
+                //console.log(selectionsTypeVal)
                 tpCityAutocomplete.TPGetHotelsSelections(city, selectionsType, selectionsTypeVal);
 
             }
         });
     }
+
+    /**
+     *
+     * @param widget
+     */
+    function constructorRailwayTablesWidget(widget) {
+        var originField, destinationField;
+        originField = widget.find('.tp-railway-tables-widget-origin')
+            .children('label').children('input');
+        destinationField = widget.find('.tp-railway-tables-widget-destination')
+            .children('label').children('input');
+        originField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+    }
+
     function constructorWidgetsTableWidget(select, element, change) {
         var widget, hotelIdElement, fieldSizeWidth1, fieldSizeHeight1, fieldSizeWidth2, fieldSizeHeight2,
             fieldDirect1, fieldDirect3, fieldOneWay3, fieldWidth3, fieldResponsive3, fieldWidth4, fieldResponsive4,

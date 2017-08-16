@@ -831,9 +831,11 @@ function TPCityAutocomplete(){
             win = $(window);
 
             selectionsType.find("option:gt(0)").remove();
+            console.log("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + city)
             $.get("https://yasen.hotellook.com/tp/v1/available_selections.json?id=" + city, function(data) {
                 data.sort();
                 $.map(data, function(item){
+                    //console.log(item)
                     if (typeof hotelsSelectionsType[tpLocale][item] != "undefined"){
                         var selected = '';
                         if (selectionsTypeVal == item){
