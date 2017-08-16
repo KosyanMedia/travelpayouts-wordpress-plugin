@@ -31,6 +31,8 @@ jQuery(function($) {
             tpSaveHotesTablesWidget(widget);
         } else if (widget.hasClass('tp-railway-tables-widget')){
             tpSaveRailwayTablesWidget(widget);
+        } else if (widget.hasClass('tp-widgets-widget')){
+            tpSaveWidgetsWidget(widget);
         }
     }
 
@@ -98,6 +100,69 @@ jQuery(function($) {
         if (destinationField.attr('placeholder') == ''){
             destinationField.addClass('tp-widget-error');
         }
+    }
+
+    /**
+     *
+     * @param widget
+     */
+    function tpSaveWidgetsWidget(widget) {
+        var selectField, originField, destinationField, hotelIdField, popularRoutesDestinationField, originField7,
+            destinationField7, airlineField7;
+        selectField = widget.find('.tp-widgets-widget-select')
+            .children('.tp-widgets-widget-select-label')
+            .children('.tp-widgets-widget-select-shortcode');
+        if (selectField.val() == 'select'){
+            selectField.addClass('tp-widget-error');
+        }
+        originField = widget.find('.tp-widgets-widget-origin')
+            .children('label').children('input');
+        if (originField.val() == ''){
+            originField.addClass('tp-widget-error');
+        }
+        destinationField = widget.find('.tp-widgets-widget-destination')
+            .children('label').children('input');
+        if (destinationField.val() == ''){
+            destinationField.addClass('tp-widget-error');
+        }
+        hotelIdField = widget.find('.tp-widgets-widget-hotel-id')
+            .children('label').children('input');
+        if (hotelIdField.val()== ''){
+            hotelIdField.addClass('tp-widget-error');
+        }
+        popularRoutesDestinationField =  widget.find('.tp-widgets-widget-popular-routes')
+        popularRoutesDestinationField.find('label').each(function () {
+            var popularRoutesDestinationFieldInput = $(this).children('input');
+            if (popularRoutesDestinationFieldInput.val() == ''){
+                popularRoutesDestinationFieldInput.addClass('tp-widget-error');
+            }
+            console.log(popularRoutesDestinationFieldInput.val())
+        });
+        originField7 = widget.find('.tp-widgets-widget-origin-7')
+            .children('label').children('input');
+        if (originField7.val() == ''){
+            originField7.addClass('tp-widget-error');
+        }
+        destinationField7 = widget.find('.tp-widgets-widget-destination-7')
+            .children('label').children('input');
+        if (destinationField7.val() == ''){
+            destinationField7.addClass('tp-widget-error');
+        }
+        airlineField7 =  widget.find('.tp-widgets-widget-airline-7')
+        airlineField7.find('label').each(function () {
+            var airlineField7Input = $(this).children('input');
+            if (airlineField7Input.val() == ''){
+                airlineField7Input.addClass('tp-widget-error');
+            }
+            console.log(airlineField7Input.val())
+        });
+
+        console.log(selectField.val());
+        console.log(originField.val());
+        console.log(destinationField.val());
+        console.log(hotelIdField.val());
+        console.log(originField7.val());
+        console.log(destinationField7.val());
     }
     /**
      *
@@ -502,6 +567,12 @@ jQuery(function($) {
         });
     }
 
+    /**
+     *
+     * @param select
+     * @param element
+     * @param change
+     */
     function constructorWidgetsTableWidget(select, element, change) {
         var widget, hotelIdElement, fieldSizeWidth1, fieldSizeHeight1, fieldSizeWidth2, fieldSizeHeight2,
             fieldDirect1, fieldDirect3, fieldOneWay3, fieldWidth3, fieldResponsive3, fieldWidth4, fieldResponsive4,
@@ -556,6 +627,7 @@ jQuery(function($) {
             +'.tp-widgets-widget-airline-7, '
             +'.tp-widgets-widget-limit-7, '
             +'.tp-widgets-widget-direct').hide();
+        constructorWidgetsTableWidgetReset(widget, change);
         if (change == true){
             hotelIdElement.removeClass('TPCoordinatesAutocomplete');
             hotelIdElement.removeClass('TPAutocompleteIDWidget');
@@ -769,11 +841,14 @@ jQuery(function($) {
                         +'.tp-widgets-widget-limit-6').show();
                     hotelIdElement.addClass('TPAutocompleteIDWidget');
                     var city, cityIata;
-                    city = hotelIdElement.attr("placeholder");
-                    cityIata = city.substring(city.indexOf('[')+1,city.indexOf(']'));
-                    if (cityIata != ''){
-                        tpCityAutocomplete.TPGetHotelsWidgetCat(cityIata, hotelIdElement);
+                    city = hotelIdElement.val();
+                    if (city != ''){
+                        cityIata = city.substring(city.indexOf('[')+1,city.indexOf(']'));
+                        if (cityIata != ''){
+                            tpCityAutocomplete.TPGetHotelsWidgetCat(cityIata, hotelIdElement);
+                        }
                     }
+
                     if (change == true){
                         hotelIdElement.attr("placeholder", TPPHCity);
                         if (fieldResponsive7 == 1){
@@ -871,6 +946,73 @@ jQuery(function($) {
                     break;
             }
         }
+    }
+
+    /**
+     *
+     * @param widget
+     * @param change
+     */
+    function constructorWidgetsTableWidgetReset(widget, change) {
+        var selectField, originField, destinationField, hotelIdField, popularRoutesDestinationField, originField7,
+            destinationField7, airlineField7;
+        selectField = widget.find('.tp-widgets-widget-select')
+            .children('.tp-widgets-widget-select-label')
+            .children('.tp-widgets-widget-select-shortcode');
+        originField = widget.find('.tp-widgets-widget-origin')
+            .children('label').children('input');
+        destinationField = widget.find('.tp-widgets-widget-destination')
+            .children('label').children('input');
+        hotelIdField = widget.find('.tp-widgets-widget-hotel-id')
+            .children('label').children('input');
+        popularRoutesDestinationField =  widget.find('.tp-widgets-widget-popular-routes')
+            .children('label').children('input');
+        originField7 = widget.find('.tp-widgets-widget-origin-7')
+            .children('label').children('input');
+        destinationField7 = widget.find('.tp-widgets-widget-destination-7')
+            .children('label').children('input');
+        airlineField7 =  widget.find('.tp-widgets-widget-airline-7')
+            .children('label').children('input');
+        if (change == true){
+            selectField.removeClass('tp-widget-error');
+            originField.removeClass('tp-widget-error');
+            destinationField.removeClass('tp-widget-error');
+            hotelIdField.removeClass('tp-widget-error');
+            popularRoutesDestinationField.removeClass('tp-widget-error');
+            originField7.removeClass('tp-widget-error');
+            destinationField7.removeClass('tp-widget-error');
+            airlineField7.removeClass('tp-widget-error');
+            //selectionsTypeField.removeClass('tp-widget-error');
+        }
+        selectField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        originField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        hotelIdField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        popularRoutesDestinationField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        originField7.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationField7.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        airlineField7.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        widget.find(".tp-widgets-widget-filter input:radio").change(function () {
+            originField7.removeClass('tp-widget-error');
+            destinationField7.removeClass('tp-widget-error');
+            airlineField7.removeClass('tp-widget-error');
+        });
     }
     /**
      *
