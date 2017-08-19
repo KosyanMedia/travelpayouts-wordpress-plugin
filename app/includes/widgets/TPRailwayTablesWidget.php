@@ -74,7 +74,7 @@ class TPRailwayTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (array_key_exists('railway_origin', $new_instance)){
+		/*if (array_key_exists('railway_origin', $new_instance)){
 			if (empty( $new_instance['railway_origin'] )){
 				$new_instance['railway_origin'] = $this->getOldInstance($old_instance, 'railway_origin');
 			}
@@ -127,7 +127,7 @@ class TPRailwayTablesWidget extends WP_Widget{
                         TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_origin'); ?>"
 					       name="<?php echo $this->get_field_name('railway_origin'); ?>" type="text"
-                           placeholder="<?php echo $origin; ?>" />
+                           value="<?php echo $origin; ?>" />
 				</label>
 			</p>
 			<p class="tp-railway-tables-widget-destination">
@@ -136,7 +136,7 @@ class TPRailwayTablesWidget extends WP_Widget{
                         TPOPlUGIN_TEXTDOMAIN);?>
 					<input class="widefat tpCityRailwayAutocomplete" id="<?php echo $this->get_field_id('railway_destination'); ?>"
 					       name="<?php echo $this->get_field_name('railway_destination'); ?>" type="text"
-                           placeholder="<?php echo $destination; ?>" />
+                           value="<?php echo $destination; ?>" />
 				</label>
 			</p>
 			<p class="tp-railway-tables-widget-subid">

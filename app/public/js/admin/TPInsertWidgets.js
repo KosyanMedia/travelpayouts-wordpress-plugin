@@ -37,9 +37,9 @@ jQuery(function($) {
         if (widget.hasClass('tp-flights-tables-widget')){
             tpResetFieldFlightsTablesWidget(widget);
         }else if (widget.hasClass('tp-hotels-tables-widget')){
-            //tpSaveHotesTablesWidget(widget);
+            tpResetFieldHotesTablesWidget(widget);
         } else if (widget.hasClass('tp-railway-tables-widget')){
-            //tpSaveRailwayTablesWidget(widget);
+            tpResetFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
             //tpSaveWidgetsWidget(widget);
         }
@@ -53,9 +53,9 @@ jQuery(function($) {
         if (widget.hasClass('tp-flights-tables-widget')){
             tpCheckFieldFlightsTablesWidget(widget);
         }else if (widget.hasClass('tp-hotels-tables-widget')){
-            //tpSaveHotesTablesWidget(widget);
+            tpCheckFieldHotesTablesWidget(widget);
         } else if (widget.hasClass('tp-railway-tables-widget')){
-            //tpSaveRailwayTablesWidget(widget);
+            tpCheckFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
             //tpSaveWidgetsWidget(widget);
         }
@@ -68,9 +68,9 @@ jQuery(function($) {
         if (widget.hasClass('tp-flights-tables-widget')){
             tpCheckFieldFlightsTablesWidget(widget);
         } else if (widget.hasClass('tp-hotels-tables-widget')){
-            tpSaveHotesTablesWidget(widget);
+            tpCheckFieldHotesTablesWidget(widget);
         } else if (widget.hasClass('tp-railway-tables-widget')){
-            tpSaveRailwayTablesWidget(widget);
+            tpCheckFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
             tpSaveWidgetsWidget(widget);
         }
@@ -141,10 +141,41 @@ jQuery(function($) {
     }
 
     /**
-     *
+     * Check Hotel
      * @param widget
      */
-    function tpSaveHotesTablesWidget(widget) {
+    function tpCheckFieldHotesTablesWidget(widget) {
+        var selectField, cityField, cityFieldVal, selectionsTypeField;
+        selectField = widget.find('.tp-hotels-tables-widget-select')
+            .children('.tp-hotels-tables-widget-select-label')
+            .children('.tp-hotels-tables-widget-select-shortcode');
+        cityField = widget.find('.tp-hotels-tables-widget-city')
+            .children('label').children('input');
+        selectionsTypeField  = widget.find('.tp-hotels-tables-widget-selections-type')
+            .children('.tp-hotels-tables-widget-selections-type-label')
+            .children('.tp-hotels-tables-widget-selections-type-select');
+        cityFieldVal = cityField.val();
+        if (selectField.val() == 'select'){
+            selectField.addClass('tp-widget-error');
+        }
+        if (cityFieldVal == ''){
+            cityField.addClass('tp-widget-error');
+        } else {
+            cityFieldVal = cityFieldVal.substring(cityFieldVal.indexOf('[')+1,cityFieldVal.indexOf(']'));
+            if (cityFieldVal == ''){
+                cityField.addClass('tp-widget-error');
+            }
+        }
+        if (selectionsTypeField.data('selections_type') == 'all'){
+            selectionsTypeField.addClass('tp-widget-error');
+        }
+    }
+
+    /**
+     * Reset Hotel
+     * @param widget
+     */
+    function tpResetFieldHotesTablesWidget(widget) {
         var selectField, cityField, selectionsTypeField;
         selectField = widget.find('.tp-hotels-tables-widget-select')
             .children('.tp-hotels-tables-widget-select-label')
@@ -154,34 +185,71 @@ jQuery(function($) {
         selectionsTypeField  = widget.find('.tp-hotels-tables-widget-selections-type')
             .children('.tp-hotels-tables-widget-selections-type-label')
             .children('.tp-hotels-tables-widget-selections-type-select');
-        if (selectField.val() == 'select'){
-            selectField.addClass('tp-widget-error');
+
+        selectField.removeClass('tp-widget-error');
+        cityField.removeClass('tp-widget-error');
+        selectionsTypeField.removeClass('tp-widget-error');
+
+        selectField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        cityField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        selectionsTypeField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+    }
+
+    /**
+     * Check Railway
+     * @param widget
+     */
+    function tpCheckFieldRailwayTablesWidget(widget) {
+        var originField, destinationField, originFieldVal, destinationFieldVal;
+        originField = widget.find('.tp-railway-tables-widget-origin')
+            .children('label').children('input');
+        destinationField = widget.find('.tp-railway-tables-widget-destination')
+            .children('label').children('input');
+        originFieldVal = originField.val();
+        destinationFieldVal = destinationField.val();
+        //console.log('tpSaveRailwayTablesWidget');
+        if (originFieldVal == ''){
+            originField.addClass('tp-widget-error');
+        } else {
+            originFieldVal = originFieldVal.substring(originFieldVal.indexOf('[')+1,originFieldVal.indexOf(']'));
+            if (originFieldVal == ''){
+                originField.addClass('tp-widget-error');
+            }
         }
-        if (cityField.attr('placeholder') == ''){
-            cityField.addClass('tp-widget-error');
-        }
-        if (selectionsTypeField.data('selections_type') == 'all'){
-            selectionsTypeField.addClass('tp-widget-error');
+        if (destinationFieldVal == ''){
+            destinationField.addClass('tp-widget-error');
+        } else {
+            destinationFieldVal = destinationFieldVal.substring(destinationFieldVal.indexOf('[')+1,destinationFieldVal.indexOf(']'));
+            if (destinationFieldVal == ''){
+                destinationField.addClass('tp-widget-error');
+            }
         }
     }
 
     /**
-     *
+     * Reset Railway
      * @param widget
      */
-    function tpSaveRailwayTablesWidget(widget) {
+    function tpResetFieldRailwayTablesWidget(widget) {
         var originField, destinationField;
         originField = widget.find('.tp-railway-tables-widget-origin')
             .children('label').children('input');
         destinationField = widget.find('.tp-railway-tables-widget-destination')
             .children('label').children('input');
-        //console.log('tpSaveRailwayTablesWidget');
-        if (originField.attr('placeholder') == ''){
-            originField.addClass('tp-widget-error');
-        }
-        if (destinationField.attr('placeholder') == ''){
-            destinationField.addClass('tp-widget-error');
-        }
+        originField.removeClass('tp-widget-error');
+        destinationField.removeClass('tp-widget-error');
+        originField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
     }
 
     /**
@@ -246,6 +314,7 @@ jQuery(function($) {
         console.log(originField7.val());
         console.log(destinationField7.val());
     }
+
     /**
      *
      */
@@ -617,7 +686,8 @@ jQuery(function($) {
             selectionsType = widget.children('.tp-hotels-tables-widget-selections-type')
                 .children('.tp-hotels-tables-widget-selections-type-label')
                 .children('.tp-hotels-tables-widget-selections-type-select');
-            city = $(this).attr('placeholder');
+            city = $(this).val();
+            console.log(city)
 
             if (city != ''){
                 city = city.substring(city.indexOf('[')+1,city.indexOf(']'));

@@ -110,7 +110,7 @@ class TPHotelsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (array_key_exists('hotel_city', $new_instance)){
+		/*if (array_key_exists('hotel_city', $new_instance)){
 			if (empty( $new_instance['hotel_city'] )){
 				$new_instance['hotel_city'] = $this->getOldInstance($old_instance, 'hotel_city');
 			}
@@ -209,7 +209,7 @@ class TPHotelsTablesWidget extends WP_Widget{
                 <label for="<?php echo $this->get_field_id('hotel_city'); ?>">
 		            <?php _ex('City:',  'Travelpayouts – Hotel Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-                    <input placeholder="<?php echo $city; ?>" type="text"
+                    <input value="<?php echo $city; ?>" type="text"
                            id="<?php echo $this->get_field_id('hotel_city'); ?>"
                            name="<?php echo $this->get_field_name('hotel_city'); ?>"
                            class="constructorHotelShortcodesAutocomplete HotelWidgetCityAutocomplete
