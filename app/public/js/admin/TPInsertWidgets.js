@@ -56,6 +56,9 @@ jQuery(function($) {
         if (destinationField.attr('placeholder') == ''){
             destinationField.addClass('tp-widget-error');
         }
+        console.log(selectField.val());
+        console.log(originField.val());
+        console.log(destinationField.val());
     }
 
     /**

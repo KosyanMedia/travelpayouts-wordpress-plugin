@@ -255,7 +255,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
-		if (array_key_exists('flight_origin', $new_instance)){
+		/*if (array_key_exists('flight_origin', $new_instance)){
 			if (empty( $new_instance['flight_origin'] )){
 				$new_instance['flight_origin'] = $this->getOldInstance($old_instance, 'flight_origin');
 			}
@@ -270,7 +270,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				$new_instance['flight_airline'] = $this->getOldInstance($old_instance, 'flight_airline');
 			}
 		}
-		/*if (array_key_exists('flight_subid', $new_instance)){
+		if (array_key_exists('flight_subid', $new_instance)){
 			if (empty( $new_instance['flight_subid'] )){
 				$new_instance['flight_subid'] = $this->getOldInstance($old_instance, 'flight_subid');
 			}
@@ -279,7 +279,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			if (empty( $new_instance['flight_currency'] )){
 				$new_instance['flight_currency'] = $this->getOldInstance($old_instance, 'flight_currency');
 			}
-		}*/
+		}
 		if (array_key_exists('flight_filter_airline', $new_instance)){
 			if (empty( $new_instance['flight_filter_airline'] )){
 				$new_instance['flight_filter_airline'] = $this->getOldInstance($old_instance, 'flight_filter_airline');
@@ -289,7 +289,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			if (empty( $new_instance['flight_filter_flight_number'] )){
 				$new_instance['flight_filter_flight_number'] = $this->getOldInstance($old_instance, 'flight_filter_flight_number');
 			}
-		}
+		}*/
 		if (array_key_exists('flight_limit', $new_instance)){
 			if (empty( $new_instance['flight_limit'] )){
 				$new_instance['flight_limit'] =  $this->getOldInstance($old_instance, 'flight_limit');
@@ -401,7 +401,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('flight_origin'); ?>">
 					<?php _ex('Origin:', 'Travelpayouts – Flights Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $origin; ?>" type="text"
+					<input value="<?php echo $origin; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_origin'); ?>"
 					       name="<?php echo $this->get_field_name('flight_origin'); ?>"
 					       class="constructorCityWidgetsAutocomplete widefat"/>
@@ -411,7 +411,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('flight_destination'); ?>">
 					<?php _ex('Destination:', 'Travelpayouts – Flights Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $destination; ?>" type="text"
+					<input value="<?php echo $destination; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_destination'); ?>"
 					       name="<?php echo $this->get_field_name('flight_destination'); ?>"
 					       class="constructorCityWidgetsAutocomplete widefat"/>
@@ -421,7 +421,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('flight_airline'); ?>">
 					<?php _ex('Airline:', 'Travelpayouts – Flights Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $airline; ?>" type="text"
+					<input value="<?php echo $airline; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_airline'); ?>"
 					       name="<?php echo $this->get_field_name('flight_airline'); ?>"
 					       class="constructorAirlineWidgetsAutocomplete widefat"/>
@@ -431,7 +431,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('flight_subid'); ?>">
 					<?php _ex('Subid:', 'Travelpayouts – Flights Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $subid; ?>" type="text"
+					<input value="<?php echo $subid; ?>" type="text"
 					       id="<?php echo $this->get_field_id('flight_subid'); ?>"
 					       name="<?php echo $this->get_field_name('flight_subid'); ?>"
 					       class="widefat"/>
@@ -441,7 +441,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('flight_filter_airline'); ?>">
 					<?php _ex('Filter by airline:', 'Travelpayouts – Flights Tables Widget',
                         TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $filter_airline; ?>" type="text"
+					<input value="<?php echo $filter_airline; ?>" type="text"
 					       id="<?php echo $this->get_field_id('filter_airline'); ?>"
 					       name="<?php echo $this->get_field_name('filter_airline'); ?>"
 					       class="constructorAirlineShortcodesAutocomplete widefat"
@@ -455,7 +455,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 				<label for="<?php echo $this->get_field_id('filter_flight_number'); ?>">
 					<?php _ex('Filter by flight # (enter manually):',
                         'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN);?>
-					<input placeholder="<?php echo $filter_flight_number; ?>" type="text"
+					<input value="<?php echo $filter_flight_number; ?>" type="text"
 					       id="<?php echo $this->get_field_id('filter_flight_number'); ?>"
 					       name="<?php echo $this->get_field_name('filter_flight_number'); ?>"
 					       class="widefat"
