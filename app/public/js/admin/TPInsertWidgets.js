@@ -41,7 +41,7 @@ jQuery(function($) {
         } else if (widget.hasClass('tp-railway-tables-widget')){
             tpResetFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
-            //tpSaveWidgetsWidget(widget);
+            tpResetFieldWidgetsWidget(widget);
         }
     }
     /**
@@ -57,7 +57,7 @@ jQuery(function($) {
         } else if (widget.hasClass('tp-railway-tables-widget')){
             tpCheckFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
-            //tpSaveWidgetsWidget(widget);
+            tpCheckFieldWidgetsWidget(widget);
         }
     }
     /**
@@ -72,7 +72,7 @@ jQuery(function($) {
         } else if (widget.hasClass('tp-railway-tables-widget')){
             tpCheckFieldRailwayTablesWidget(widget);
         } else if (widget.hasClass('tp-widgets-widget')){
-            tpSaveWidgetsWidget(widget);
+            tpCheckFieldWidgetsWidget(widget);
         }
     }
 
@@ -253,10 +253,10 @@ jQuery(function($) {
     }
 
     /**
-     *
+     * Check Widgets
      * @param widget
      */
-    function tpSaveWidgetsWidget(widget) {
+    function tpCheckFieldWidgetsWidget(widget) {
         var selectField, originField, destinationField, hotelIdField, popularRoutesDestinationField, originField7,
             destinationField7, airlineField7;
         selectField = widget.find('.tp-widgets-widget-select')
@@ -314,6 +314,50 @@ jQuery(function($) {
         console.log(originField7.val());
         console.log(destinationField7.val());
     }
+
+    /**
+     * Reset Widgets
+     * @param widget
+     */
+    function tpResetFieldWidgetsWidget(widget) {
+        var selectField, originField, destinationField, hotelIdField, popularRoutesDestinationField, originField7,
+            destinationField7, airlineField7;
+        selectField = widget.find('.tp-widgets-widget-select')
+            .children('.tp-widgets-widget-select-label')
+            .children('.tp-widgets-widget-select-shortcode');
+        selectField.removeClass('tp-widget-error');
+        originField = widget.find('.tp-widgets-widget-origin')
+            .children('label').children('input');
+        originField.removeClass('tp-widget-error');
+        destinationField = widget.find('.tp-widgets-widget-destination')
+            .children('label').children('input');
+        destinationField.removeClass('tp-widget-error');
+        hotelIdField = widget.find('.tp-widgets-widget-hotel-id')
+            .children('label').children('input');
+        hotelIdField.removeClass('tp-widget-error');
+        popularRoutesDestinationField =  widget.find('.tp-widgets-widget-popular-routes')
+        popularRoutesDestinationField.find('label').each(function () {
+            var popularRoutesDestinationFieldInput = $(this).children('input');
+            popularRoutesDestinationFieldInput.removeClass('tp-widget-error');
+        });
+        originField7 = widget.find('.tp-widgets-widget-origin-7')
+            .children('label').children('input');
+        if (originField7.val() == ''){
+            originField7.addClass('tp-widget-error');
+        }
+        destinationField7 = widget.find('.tp-widgets-widget-destination-7')
+            .children('label').children('input');
+        destinationField7.removeClass('tp-widget-error');
+        airlineField7 =  widget.find('.tp-widgets-widget-airline-7')
+        airlineField7.find('label').each(function () {
+            var airlineField7Input = $(this).children('input');
+            airlineField7Input.removeClass('tp-widget-error');
+            console.log(airlineField7Input.val())
+        });
+
+
+    }
+
 
     /**
      *
