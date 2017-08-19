@@ -5,11 +5,19 @@ jQuery(function($) {
     tpCityAutocomplete = new TPCityAutocomplete();
     doc.ready(function () {
         tpInitWidget();
+        doc.find('.tp-widget').each(function () {
+            tpLoadWidget($(this));
+        });
     });
-    //
+    //Widget added
     jQuery(document).on('widget-added', function(e, widget){
+        var tpWidget = widget.children('.widget-inside').children('form').children('.widget-content').children('.tp-widget');
         tpInitWidget();
+        if (tpWidget.length > 0){
+            tpResetWidget(tpWidget);
+        }
     });
+    //Widget updated
     jQuery(document).on('widget-updated', function(e, widget){
         var tpWidget = widget.children('.widget-inside').children('form').children('.widget-content').children('.tp-widget');
         tpInitWidget();
@@ -20,13 +28,45 @@ jQuery(function($) {
     jQuery(document).ajaxSuccess(function(e, xhr, settings) {
 
     });
+
     /**
-     *
+     * Reset Widget
+     * @param widget
+     */
+    function tpResetWidget(widget) {
+        if (widget.hasClass('tp-flights-tables-widget')){
+            tpResetFieldFlightsTablesWidget(widget);
+        }else if (widget.hasClass('tp-hotels-tables-widget')){
+            //tpSaveHotesTablesWidget(widget);
+        } else if (widget.hasClass('tp-railway-tables-widget')){
+            //tpSaveRailwayTablesWidget(widget);
+        } else if (widget.hasClass('tp-widgets-widget')){
+            //tpSaveWidgetsWidget(widget);
+        }
+    }
+    /**
+     * Load Widget
+     * @param widget
+     */
+    function tpLoadWidget(widget) {
+        //console.log(widget);
+        if (widget.hasClass('tp-flights-tables-widget')){
+            tpCheckFieldFlightsTablesWidget(widget);
+        }else if (widget.hasClass('tp-hotels-tables-widget')){
+            //tpSaveHotesTablesWidget(widget);
+        } else if (widget.hasClass('tp-railway-tables-widget')){
+            //tpSaveRailwayTablesWidget(widget);
+        } else if (widget.hasClass('tp-widgets-widget')){
+            //tpSaveWidgetsWidget(widget);
+        }
+    }
+    /**
+     * Save Widget
      * @param widget
      */
     function tpSaveWidget(widget) {
         if (widget.hasClass('tp-flights-tables-widget')){
-            tpSaveFlightsTablesWidget(widget);
+            tpCheckFieldFlightsTablesWidget(widget);
         } else if (widget.hasClass('tp-hotels-tables-widget')){
             tpSaveHotesTablesWidget(widget);
         } else if (widget.hasClass('tp-railway-tables-widget')){
@@ -37,28 +77,67 @@ jQuery(function($) {
     }
 
     /**
-     *
+     * Check Flight
      * @param widget
      */
-    function tpSaveFlightsTablesWidget(widget) {
-        var selectField, originField, destinationField;
+    function tpCheckFieldFlightsTablesWidget(widget) {
+        var selectField, originField, originFieldVal, destinationField, destinationFieldVal;
         selectField = widget.find('.tp-flights-tables-widget-select')
             .children('.tp-flights-tables-widget-select-label')
             .children('.tp-flights-tables-widget-select-shortcode');
         originField = widget.find('.tp-flights-tables-widget-origin').children('label').children('input');
+        originFieldVal = originField.val();
         destinationField = widget.find('.tp-flights-tables-widget-destination').children('label').children('input');
+        destinationFieldVal = destinationField.val();
         if (selectField.val() == 'select'){
             selectField.addClass('tp-widget-error');
         }
-        if (originField.attr('placeholder') == ''){
+        if (originFieldVal == ''){
             originField.addClass('tp-widget-error');
+        } else {
+            originFieldVal = originFieldVal.substring(originFieldVal.indexOf('[')+1,originFieldVal.indexOf(']'));
+            if (originFieldVal == ''){
+                originField.addClass('tp-widget-error');
+            }
         }
-        if (destinationField.attr('placeholder') == ''){
+        if (destinationFieldVal == ''){
             destinationField.addClass('tp-widget-error');
+        } else {
+            destinationFieldVal = destinationFieldVal.substring(destinationFieldVal.indexOf('[')+1,destinationFieldVal.indexOf(']'));
+            if (destinationFieldVal == ''){
+                destinationField.addClass('tp-widget-error');
+            }
         }
         console.log(selectField.val());
-        console.log(originField.val());
-        console.log(destinationField.val());
+        console.log(originFieldVal);
+        console.log(destinationFieldVal);
+    }
+
+    /**
+     * Reset Flight
+     * @param widget
+     */
+    function tpResetFieldFlightsTablesWidget(widget) {
+        var selectFlightField, originFlightField, destinationFlightField;
+        selectFlightField = widget.find('.tp-flights-tables-widget-select')
+            .children('.tp-flights-tables-widget-select-label')
+            .children('.tp-flights-tables-widget-select-shortcode');
+        originFlightField = widget.find('.tp-flights-tables-widget-origin')
+            .children('label').children('input');
+        destinationFlightField = widget.find('.tp-flights-tables-widget-destination')
+            .children('label').children('input');
+        selectFlightField.removeClass('tp-widget-error');
+        originFlightField.removeClass('tp-widget-error');
+        destinationFlightField.removeClass('tp-widget-error');
+        selectFlightField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        originFlightField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
+        destinationFlightField.focus(function() {
+            $(this).removeClass('tp-widget-error');
+        });
     }
 
     /**
