@@ -8,6 +8,8 @@ jQuery(function($) {
         doc.find('.tp-widget').each(function () {
             tpLoadWidget($(this));
         });
+        //console.log('isCustomize')
+        //console.log(isCustomize());
     });
     //Widget added
     jQuery(document).on('widget-added', function(e, widget){
@@ -28,6 +30,14 @@ jQuery(function($) {
     jQuery(document).ajaxSuccess(function(e, xhr, settings) {
 
     });
+    
+    function isCustomize() {
+        var customizeControls = doc.find('#customize-controls');
+        if (customizeControls.length > 0){
+            return true;
+        }
+        return false;
+    }
 
     /**
      * Reset Widget
@@ -108,9 +118,9 @@ jQuery(function($) {
                 destinationField.addClass('tp-widget-error');
             }
         }
-        console.log(selectField.val());
+        /*console.log(selectField.val());
         console.log(originFieldVal);
-        console.log(destinationFieldVal);
+        console.log(destinationFieldVal);*/
     }
 
     /**
@@ -286,7 +296,7 @@ jQuery(function($) {
             if (popularRoutesDestinationFieldInput.val() == ''){
                 popularRoutesDestinationFieldInput.addClass('tp-widget-error');
             }
-            console.log(popularRoutesDestinationFieldInput.val())
+            //console.log(popularRoutesDestinationFieldInput.val())
         });
         originField7 = widget.find('.tp-widgets-widget-origin-7')
             .children('label').children('input');
@@ -304,15 +314,15 @@ jQuery(function($) {
             if (airlineField7Input.val() == ''){
                 airlineField7Input.addClass('tp-widget-error');
             }
-            console.log(airlineField7Input.val())
+            //console.log(airlineField7Input.val())
         });
 
-        console.log(selectField.val());
+        /*console.log(selectField.val());
         console.log(originField.val());
         console.log(destinationField.val());
         console.log(hotelIdField.val());
         console.log(originField7.val());
-        console.log(destinationField7.val());
+        console.log(destinationField7.val());*/
     }
 
     /**
@@ -352,7 +362,7 @@ jQuery(function($) {
         airlineField7.find('label').each(function () {
             var airlineField7Input = $(this).children('input');
             airlineField7Input.removeClass('tp-widget-error');
-            console.log(airlineField7Input.val())
+            //console.log(airlineField7Input.val())
         });
 
 
@@ -363,13 +373,24 @@ jQuery(function($) {
      *
      */
     function tpInitWidget() {
-        tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
-        tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
-        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete");
-        tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete");
-        tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
-        tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete");
-        tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityWidgetsAutocomplete');
+        if (isCustomize() == true){
+            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete", "#customize-controls");
+            tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityWidgetsAutocomplete', "#customize-controls");
+        } else {
+            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityWidgetsAutocomplete");
+            tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
+            tpCityAutocomplete.TPHotelAutocompleteInit(".constructorHotelShortcodesAutocomplete");
+            tpCityAutocomplete.TPRailwayAutocompleteInit(".tpCityRailwayAutocomplete");
+            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
+            tpCityAutocomplete.TPHotelAutocompleteInit(".constructorWidgetHotelShortcodesAutocomplete");
+            tpCityAutocomplete.TPHotelAutocompleteInit('.searchHotelCityWidgetsAutocomplete');
+        }
+
         //Flight
         doc.find('.tp-flights-tables-widget-select-shortcode').each(function () {
             var select = $(this).data('select_table');
@@ -731,7 +752,7 @@ jQuery(function($) {
                 .children('.tp-hotels-tables-widget-selections-type-label')
                 .children('.tp-hotels-tables-widget-selections-type-select');
             city = $(this).val();
-            console.log(city)
+            //console.log(city)
 
             if (city != ''){
                 city = city.substring(city.indexOf('[')+1,city.indexOf(']'));
@@ -1008,7 +1029,12 @@ jQuery(function($) {
                                     +' value="'+placeholder+'">'
                                     +'</label>')
                             }
-                            tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
+                            if (isCustomize() == true) {
+                                tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete", "#customize-controls");
+                            } else {
+                                tpCityAutocomplete.TPCityAutocompleteInit(".constructorCityShortcodesAutocomplete");
+                            }
+
                             if($(this).val() > 1){
                                 widget.find('.tp-widgets-widget-responsive').hide();
                             }else{
@@ -1236,7 +1262,12 @@ jQuery(function($) {
             +'<a href="#" class="TPBtnDelete"><i></i>'
             +LabelDeleteWidget_8+'</a>'
             +'</label>');
-        tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
+        if (isCustomize() == true) {
+            tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete", "#customize-controls");
+        } else {
+            tpCityAutocomplete.TPAirlineAutocompleteInit(".constructorAirlineWidgetsAutocomplete");
+        }
+
         airlineCount++;
         airlineFieldCount.val(airlineCount);
         deleteFieldAirline();

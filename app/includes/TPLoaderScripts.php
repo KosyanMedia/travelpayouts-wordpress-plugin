@@ -39,6 +39,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
     public function loadScriptAdmin($hook)
     {
         // TODO: Implement loadScriptAdmin() method.
+        //error_log('loadScriptAdmin');
         /** Register styles */
         //$version = TPOPlUGIN_VERSION;
         $version = null;
@@ -378,6 +379,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
 
     public function headScriptAdmin()
     {
+        //error_log('headScriptAdmin');
         // TODO: Implement headScriptAdmin() method.
         $blogName = get_bloginfo('name');
         $blogName = preg_replace ("/[^a-zA-ZА-Яа-я0-9]/i","", $blogName);
