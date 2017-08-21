@@ -255,6 +255,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// Save widget options
+        //error_log(print_r($new_instance, true));
 		/*if (array_key_exists('flight_origin', $new_instance)){
 			if (empty( $new_instance['flight_origin'] )){
 				$new_instance['flight_origin'] = $this->getOldInstance($old_instance, 'flight_origin');
