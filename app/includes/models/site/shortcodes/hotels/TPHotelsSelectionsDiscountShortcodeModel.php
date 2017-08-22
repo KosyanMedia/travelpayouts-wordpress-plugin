@@ -135,6 +135,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type_selections_label' => '',
             'subid' => '',
             'link_without_dates' => $linkWithoutDates,
+            'widget' => 0
         );
 
 
