@@ -110,7 +110,8 @@ class TPInOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
             'trip_class' => $trip_class,
             'limit' => $limit,
             'one_way' => $one_way,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'widget' => $widget
         ));
         //if( ! $rows )
          //   return false;
