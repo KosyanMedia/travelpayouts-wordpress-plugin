@@ -31,7 +31,7 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('2'.$currency,
-                    $origin.$destination)))) {
+                    $origin.$destination, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = $this->sort_dates(self::$TPRequestApi->get_price_week_calendar($attr));
@@ -51,7 +51,7 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache secund = ".$cacheSecund);
 
                 set_transient( $this->cacheKey('2'.$currency,
-                    $origin.$destination) , $return, $cacheSecund);
+                    $origin.$destination, $widget) , $return, $cacheSecund);
             }
         }else{
             $return = self::$TPRequestApi->get_price_week_calendar($attr);
