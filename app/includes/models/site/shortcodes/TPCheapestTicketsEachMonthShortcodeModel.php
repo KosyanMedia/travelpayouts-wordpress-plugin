@@ -32,7 +32,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends TPFlightShortcodeModel{
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('6'.$currency,
-                    $origin.$destination)))) {
+                    $origin.$destination, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
                 $return = $this->iataAutocomplete((array) self::$TPRequestApi->get_cheapest_tickets_each_month($attr), 6);
@@ -48,7 +48,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends TPFlightShortcodeModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
                 set_transient( $this->cacheKey('6'.$currency,
-                    $origin.$destination) , $return, $this->cacheSecund());
+                    $origin.$destination, $widget) , $return, $this->cacheSecund());
             }
         }else{
 
