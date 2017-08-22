@@ -57,7 +57,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
         //error_log($cacheKey);
 
         if($this->cacheSecund() && $return_url == false){
-            if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
+            if ( false === ($rows = get_transient($this->cacheKey($cacheKey, '', $widget)))) {
                 $return = self::$TPRequestApi->getHotelSelection($attr);
                 $rows = array();
                 $cacheSecund = 0;
@@ -69,7 +69,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
                     $rows = array_shift($rows);
                     $cacheSecund = $this->cacheSecund('hotel');
                 }
-                set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey($cacheKey, '', $widget) , $rows, $cacheSecund);
             }
 
         } else {
