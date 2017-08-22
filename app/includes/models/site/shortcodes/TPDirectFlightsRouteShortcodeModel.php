@@ -219,7 +219,8 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'widget' => $widget,
         ));
         //error_log(print_r($return, true));
         //if( ! $return )
