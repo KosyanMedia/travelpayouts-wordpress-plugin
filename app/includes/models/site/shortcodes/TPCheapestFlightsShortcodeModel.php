@@ -110,7 +110,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
             'departure_at' => $departure_at,
             'return_at' => $return_at,
             'return_url' => $return_url,
-            'widget' => $widget,
+            'widget' => $widget
         ));
         //if( ! $return )
         //    return false;
