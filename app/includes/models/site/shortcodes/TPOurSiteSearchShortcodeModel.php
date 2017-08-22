@@ -35,7 +35,7 @@ class TPOurSiteSearchShortcodeModel extends TPFlightShortcodeModel{
         if($this->cacheSecund()  && $return_url == false){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
-            if ( false === ($rows = get_transient($this->cacheKey('12'.$one_way.$currency)))) {
+            if ( false === ($rows = get_transient($this->cacheKey('12'.$one_way.$currency, '', $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = self::$TPRequestApi->get_latest($attr);
@@ -56,7 +56,7 @@ class TPOurSiteSearchShortcodeModel extends TPFlightShortcodeModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('12'.$one_way.$currency) , $rows, $this->cacheSecund());
+                set_transient( $this->cacheKey('12'.$one_way.$currency, '', $widget) , $rows, $this->cacheSecund());
 
                 //$this->cacheSecund()
             }
