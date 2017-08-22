@@ -43,7 +43,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('10',
-                    $airline)))) {
+                    $airline, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = self::$TPRequestApi->get_popular($attr);
@@ -64,7 +64,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
                     error_log("{$method} cache secund = ".$cacheSecund);
 
                 set_transient( $this->cacheKey('10',
-                    $airline) , $return, $cacheSecund);
+                    $airline, $widget) , $return, $cacheSecund);
             }
         }else{
             $return = self::$TPRequestApi->get_popular($attr);
