@@ -105,7 +105,8 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'widget' => $widget,
         ));
         //if( ! $rows )
         //    return false;
