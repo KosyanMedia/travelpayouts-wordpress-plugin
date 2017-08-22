@@ -113,7 +113,8 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'subid' => '',
 			'currency' => TPCurrencyUtils::getDefaultCurrency(),
 			'return_url' => false,
-			'language' => TPLang::getLang()
+			'language' => TPLang::getLang(),
+            'widget' => 0
 		);
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		if ($return_url == 1){
