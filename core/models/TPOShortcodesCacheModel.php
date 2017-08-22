@@ -9,6 +9,7 @@ namespace core\models;
 abstract class TPOShortcodesCacheModel {
     public function __construct(){
         add_action( 'save_post', array( &$this, 'deleteCache') );
+        add_filter( 'widget_update_callback', array( &$this, 'deleteCacheWidget'), 10, 4 );
     }
     abstract public function get_data($args = array());
 
@@ -41,8 +42,8 @@ abstract class TPOShortcodesCacheModel {
             }
         }
 
-        error_log('Widget = '.$widget);
-        error_log($cacheKey);
+        //error_log('Widget = '.$widget);
+        //error_log($cacheKey);
 
         return $cacheKey;
     }
@@ -50,11 +51,30 @@ abstract class TPOShortcodesCacheModel {
      * @param $post_id
      */
     public function deleteCache($post_id){
-        error_log('deleteCache');
+        //error_log('deleteCache');
         global $wpdb;
         $cacheKey = '';
         $cacheKey = strtolower("_".TPOPlUGIN_NAME."_".get_post_type()."_".$post_id);
         $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
+    }
+
+    /**
+     * @param $instance
+     * @param $new_instance
+     * @param $old_instance
+     * @param $widget
+     * @return mixed
+     */
+    public function deleteCacheWidget($instance, $new_instance, $old_instance, $widget){
+        if(strpos($widget->id_base, 'travelpayouts_') !== false){
+            //error_log('deleteCacheWidget');
+            //error_log(print_r($widget->id_base, true));
+            global $wpdb;
+            $cacheKey = '';
+            $cacheKey = strtolower("_".TPOPlUGIN_NAME."_widget");
+            $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
+        }
+        return $instance;
     }
 
 }
