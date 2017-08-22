@@ -17,7 +17,7 @@ abstract class TPOShortcodesCacheModel {
      * @param string $direction
      * @return string
      */
-    public function cacheKey($key = '', $direction = ''){
+    public function cacheKey($key = '', $direction = '', $widget = 0){
         $cacheKey = '';
         global $post;
         if(!empty($direction))
