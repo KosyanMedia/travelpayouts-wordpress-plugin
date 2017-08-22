@@ -101,7 +101,8 @@ class TPDirectFlightsShortcodeModel extends TPFlightShortcodeModel{
             'subid' => '',
             'filter_flight_number' => false,
             'filter_airline' => false,
-            'return_url' => false
+            'return_url' => false,
+            'widget' => 0
             );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if ($return_url == 1){
