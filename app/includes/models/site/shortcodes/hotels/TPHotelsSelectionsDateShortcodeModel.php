@@ -64,7 +64,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
         $cacheKey = "hotel_1_selections_date_{$currency}_{$language}_{$limit}_{$type}_{$id}";
 
         if($this->cacheSecund() && $return_url == false){
-            if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
+            if ( false === ($rows = get_transient($this->cacheKey($cacheKey, '', $widget)))) {
                 $return = self::$TPRequestApi->getHotelSelection($attr);
                 $rows = array();
                 $cacheSecund = 0;
@@ -76,7 +76,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
                     $rows = array_shift($rows);
                     $cacheSecund = $this->cacheSecund('hotel');
                 }
-                set_transient( $this->cacheKey($cacheKey) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey($cacheKey, '', $widget) , $rows, $cacheSecund);
             }
 
         } else {
