@@ -127,6 +127,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'return_url' => $return_url,
 			'language' => $language,
 			'shortcode' => 1,
+            'widget' => $widget
 		));
 		$originTitle = '';
 		$destinationTitle = '';
