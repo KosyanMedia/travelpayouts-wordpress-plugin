@@ -142,6 +142,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'check_in' => date('d-m-Y'),
             'check_out' => date('d-m-Y', time()+DAY_IN_SECONDS),
             'link_without_dates' => $linkWithoutDates,
+            'widget' => 0
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
