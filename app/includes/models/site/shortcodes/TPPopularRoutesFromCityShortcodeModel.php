@@ -52,7 +52,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($return = get_transient($this->cacheKey('9',
-                    $origin)))) {
+                    $origin, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false");
                 $return = self::$TPRequestApi->get_popular_routes_from_city($attr);
@@ -70,7 +70,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
                 set_transient($this->cacheKey('9',
-                    $origin), $return, $cacheSecund);
+                    $origin, $widget), $return, $cacheSecund);
             }
         } else {
             $return = self::$TPRequestApi->get_popular_routes_from_city($attr);
