@@ -34,7 +34,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
             if (false === ($rows = get_transient($this->cacheKey('5'.$currency,
-                    $origin.$destination)))) {
+                    $origin.$destination, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache -> false");
                 $return = (array) self::$TPRequestApi->get_calendar($attr);
@@ -58,7 +58,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache secund = ".$cacheSecund);
 
                 set_transient( $this->cacheKey('5'.$currency,
-                    $origin.$destination) , $rows, $cacheSecund);
+                    $origin.$destination, $widget) , $rows, $cacheSecund);
             }
         }else{
             $return = (array) self::$TPRequestApi->get_calendar($attr);
