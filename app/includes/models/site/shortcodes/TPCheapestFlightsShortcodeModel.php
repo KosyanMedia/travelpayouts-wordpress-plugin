@@ -38,7 +38,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
         if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} -> cache");
-            if (false === ($rows = get_transient($this->cacheKey('4'.$currency, $origin . $destination)))) {
+            if (false === ($rows = get_transient($this->cacheKey('4'.$currency, $origin . $destination, $widget)))) {
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} -> cache false");
                 $return = self::$TPRequestApi->get_cheapest($attr);
@@ -56,7 +56,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache secund = ".$cacheSecund);
 
-                set_transient( $this->cacheKey('4'.$currency, $origin.$destination) , $rows, $cacheSecund);
+                set_transient( $this->cacheKey('4'.$currency, $origin.$destination, $widget) , $rows, $cacheSecund);
             }
         }else{
             $return = self::$TPRequestApi->get_cheapest($attr);
