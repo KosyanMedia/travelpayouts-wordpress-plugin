@@ -157,7 +157,8 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'language' => $language,
             'limit' => $number_results,
             'type' => $type_selections,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'widget' => $widget
         ));
 
 
