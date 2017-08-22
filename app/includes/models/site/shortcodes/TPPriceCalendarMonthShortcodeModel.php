@@ -30,6 +30,7 @@ class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
             ." 1. Цены на месяц по направлению, в одну сторону  ";
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
+
         if($this->cacheSecund() && $return_url == false) {
             if(TPOPlUGIN_ERROR_LOG)
                 error_log("{$method} cache");
@@ -82,8 +83,10 @@ class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
             'paginate' => true,
             'off_title' => '',
             'subid' => '',
-            'return_url' => false
+            'return_url' => false,
+            'widget' => 0
         );
+        //error_log(print_r($args, true));
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if ($return_url == 1){
             $return_url = true;

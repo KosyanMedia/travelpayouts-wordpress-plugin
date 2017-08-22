@@ -84,7 +84,9 @@ class TPFlightsTablesWidget extends WP_Widget{
 		}
 		$limitAttr = 'limit="'.$limit.'"';
 		$titleAttr = 'title="'.$title.'"';
+		$isWidgetAttr = 'widget="1"';
 		$shortcode = '';
+
 		if ($select == 0){
 		    if (empty($originCode) || empty($destinationCode)){
 		        return;
@@ -97,6 +99,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$transplantAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 1) {
 			if (empty($originCode) || empty($destinationCode)){
@@ -109,6 +112,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$paginateAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 2) {
 			if (empty($originCode) || empty($destinationCode)){
@@ -123,6 +127,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$filterFlightNumberAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 3) {
 			if (empty($originCode) || empty($destinationCode)){
@@ -138,6 +143,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$filterFlightNumberAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
 		} elseif ($select == 4){
 			if (empty($originCode) || empty($destinationCode)){
@@ -152,6 +158,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$filterFlightNumberAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 5){
 			if (empty($originCode) || empty($destinationCode)){
@@ -166,6 +173,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$filterFlightNumberAttr.' '
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 6){
 			if (empty($originCode)){
@@ -180,6 +188,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$offTitleAttr.' '
 			             .$subidAttr.' '
 			             .$limitAttr.' '
+			             .$isWidgetAttr.' '
 			             .$currencyAttr.']';
         } elseif ($select == 7){
 			if (empty($originCode)){
@@ -190,6 +199,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$titleAttr.' '
 			             .$paginateAttr.' '
 			             .$offTitleAttr.' '
+			             .$isWidgetAttr.' '
 			             .$subidAttr.']';
         } elseif ($select == 8){
 			if (empty($airlineCode)){
@@ -201,6 +211,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$paginateAttr.' '
 			             .$offTitleAttr.' '
 			             .$limitAttr.' '
+			             .$isWidgetAttr.' '
 			             .$subidAttr.']';
         }  elseif ($select == 9){
 			$shortcode = '[tp_our_site_search_shortcodes '
@@ -211,6 +222,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$oneWayAttr.' '
 			             .$currencyAttr.' '
 			             .$transplantAttr.' '
+			             .$isWidgetAttr.' '
 			             .$subidAttr.']';
 		}  elseif ($select == 10){
 			if (empty($originCode)){
@@ -225,6 +237,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$oneWayAttr.' '
 			             .$currencyAttr.' '
 			             .$transplantAttr.' '
+			             .$isWidgetAttr.' '
 			             .$subidAttr.']';
 		} elseif ($select == 11) {
 			if (empty($destinationCode)){
@@ -239,6 +252,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 			             .$oneWayAttr.' '
 			             .$currencyAttr.' '
 			             .$transplantAttr.' '
+			             .$isWidgetAttr.' '
 			             .$subidAttr.']';
         }
 
