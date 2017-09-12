@@ -126,7 +126,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'distance_from' => 0,
             'distance_to' => 3,
             'number_results' => 20,
-            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'currency' => TPCurrencyUtils::getCurrency(),
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',
@@ -146,6 +146,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             $return_url = true;
         }
 
+        error_log($currency);
         //$check_in = date('Y-m-d');
         //$check_out = $this->getCheckOut($day);
 

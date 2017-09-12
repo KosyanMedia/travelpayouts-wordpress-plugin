@@ -131,7 +131,7 @@ class TPHotelsSelectionsDateShortcodeModel  extends TPHotelShortcodeModel
             'distance_from' => 0,
             'distance_to' => 3,
             'number_results' => 20,
-            'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'currency' => TPCurrencyUtils::getCurrency(),
             'return_url' => false,
             'language' => TPLang::getLang(),
             'type_selections' => 'popularity',

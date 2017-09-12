@@ -174,6 +174,20 @@ class TPCurrencyUtils
         return $currency;
     }
 
+    /**
+     * @return string
+     */
+    public static function getCurrency(){
+        $currency = '';
+
+        if (!empty(TPPlugin::$options['local']['currency'])){
+            $currency = TPPlugin::$options['local']['currency'];
+        } else {
+            $currency = self::getDefaultCurrency();
+        }
+        return $currency;
+    }
+
 
     public static function currencyValid(){
         if ( ! TPPlugin::$options['local']['currency'] ||
