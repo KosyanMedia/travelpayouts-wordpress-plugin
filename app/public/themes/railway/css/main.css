@@ -600,7 +600,7 @@ span.ellipsis {
 .calendar.left, .calendar.right {
   float: left;
 }
-+
+
 .marshrut {
     min-width: 146px;
     display: inline-block;
@@ -611,7 +611,7 @@ span.ellipsis {
     padding: 0;
 }
 
-abbr, tla, acronym{
+abbr, acronym{
 	text-decoration: none !important;
 }
 
@@ -837,6 +837,14 @@ abbr, tla, acronym{
   }
   td.TPdepartureTd:before {
     content: attr(data-th) ": ";
+  }
+  .TPHotelTable .TP-rwd-table tbody tr td:last-child .TP-tdContent .TP-Plugin-Tables_link {
+    top: 0 !important;
+  }
+  .TPHotelTable .TP-rwd-table tbody tr td:last-child .TP-tdContent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

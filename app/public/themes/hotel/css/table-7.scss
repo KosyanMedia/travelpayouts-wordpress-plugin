@@ -663,6 +663,18 @@ span.ellipsis {
   .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
     background-color: #fff !important;
   }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr {
+    height: 200px;
+  }
+  .TPHotelTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd:last-child {
+    min-height: 60px;
+  }
+  .TPHotelTable .TP-rwd-table tbody tr td:before {
+    height: 100%;
+  }
+  .TP-rwd-table tbody tr td {
+    min-height: 100%
+  }
 }
 
 
