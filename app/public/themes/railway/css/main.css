@@ -538,7 +538,7 @@ span.ellipsis {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 15px;
+    /*height: 15px;*/
 }
 
 .departure_time {
