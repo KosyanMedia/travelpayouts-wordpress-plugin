@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/travelpayouts.iml" filepath="$PROJECT_DIR$/.idea/travelpayouts.iml" />
+      <module fileurl="file://E:\HTML+CSS\EXSY-work\github\travelpayouts-wordpress-plugin\.idea\travelpayouts.iml" filepath="E:\HTML+CSS\EXSY-work\github\travelpayouts-wordpress-plugin\.idea\travelpayouts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/travelpayouts-wordpress-plugin.iml" filepath="$PROJECT_DIR$/.idea/travelpayouts-wordpress-plugin.iml" />
     </modules>
   </component>
 </project>

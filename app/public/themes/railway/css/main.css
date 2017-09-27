@@ -883,5 +883,7 @@ abbr, acronym{
     min-width: 148px;
   }
 }
-
+.dataTables_wrapper {
+  overflow-x: auto;
+}
 /*# sourceMappingURL=main.css.map */
