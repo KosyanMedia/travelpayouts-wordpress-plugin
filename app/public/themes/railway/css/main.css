@@ -513,7 +513,7 @@ span.ellipsis {
 
 .TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
   border-bottom: 1px solid #ce6408 !important;
-  background: #FEB20E !important;
+  background: #FEB20E;
   color: #FFFFFF !important;
   font-weight: bold !important;
   font-style: normal !important;
@@ -666,6 +666,9 @@ abbr, acronym{
   }
   .TPTrainTable .TP-Plugin-Tables_box tbody tr td.TPbuttonTd {
     background-color: #fff !important;
+  }
+  .TP-Plugin-Tables_box tbody tr td p.data-price {
+    padding-top: 4px;
   }
   .TP-tdContent {
     position: absolute;

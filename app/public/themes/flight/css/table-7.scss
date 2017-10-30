@@ -560,6 +560,9 @@ a.paginate_button:hover {
   .TP-Plugin-Tables_box tbody tr:nth-child(even) {
     background-color: #fff;
   }
+  .TP-Plugin-Tables_box tbody tr td p.data-price {
+    padding-top: 4px;
+  }
 }
 
 @media (min-width: 480px) {
