@@ -562,6 +562,10 @@ a.paginate_button:hover {
   }
   .TP-Plugin-Tables_box tbody tr td p.data-price {
     padding-top: 4px;
+    display: inline-block;
+  }
+  .TP-Plugin-Tables_box tbody tr {
+    height: inherit;
   }
 }
 

@@ -669,6 +669,7 @@ abbr, acronym{
   }
   .TP-Plugin-Tables_box tbody tr td p.data-price {
     padding-top: 4px;
+    display: inline-block;
   }
   .TP-tdContent {
     position: absolute;
