@@ -1329,7 +1329,7 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['color']; ?> !important;
                 }
                 .TP-Plugin-Tables_box tbody tr:nth-child(even) {
-                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>;
+                    background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?> !important;
                 }
                 .TP-Plugin-Tables_box tbody tr:nth-child(even) td p:after {
                     background: transparent linear-gradient(to right, rgba(242, 242, 242, 0), <?php echo \app\includes\TPPlugin::$options['style_table']['table']['background_color']; ?>) repeat scroll 0% 0%;
@@ -1341,14 +1341,23 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 .TP-Plugin-Tables_box thead tr td{
                     background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
                 }
+                @media (max-width: 480px){
+                    .TP-rwd-table-avio tbody tr td:before {
+                        background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
+                        color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+                    }
+                }
                 .TP-Plugin-Tables_box thead tr td.TP-active {
                     background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
                    /* box-shadow: 0 0 44px rgba(0,0,0,0.3) inset;  */
                 }
 
+
                 .TP-Plugin-Tables_box thead tr td {
                     color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
                 }
+
+
 
                 a.paginate_button.current {
                     border-color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
