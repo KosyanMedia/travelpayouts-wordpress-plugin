@@ -1346,6 +1346,9 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                         background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
                         color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
                     }
+                    .TP-Plugin-Tables_box tbody tr td {
+                        background-color: #FFF;
+                    }
                 }
                 .TP-Plugin-Tables_box thead tr td.TP-active {
                     background: <?php echo $this->ak_convert_hex2rgba(\app\includes\TPPlugin::$options['style_table']['table']['head_color'], 1); ?>;
