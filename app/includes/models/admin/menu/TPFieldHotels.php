@@ -416,9 +416,9 @@ class TPFieldHotels
 
         </div>
         <div class="TP-HeadTable">
-            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][paginate_switch]"
+            <input id="chek-p-<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1">
+            <label for="chek-p-<?php echo $shortcode; ?>">
                 <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label',
                     '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
