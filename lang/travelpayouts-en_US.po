@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-07-04 15:09+0300\n"
+"POT-Creation-Date: 2017-11-10 19:01+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -461,70 +461,70 @@ msgstr "Расписание поездов {origin} — {destination}"
 
 #: app/includes/TPDefault.php:1073
 msgctxt "local en table shortcodes railway 1 title_button text"
-msgid "Select dates"
-msgstr "Select dates"
+msgid "Select date"
+msgstr "Select date"
 
 #: app/includes/TPDefault.php:1075
 msgctxt "local ru table shortcodes railway 1 title_button text"
-msgid "Select dates"
-msgstr "Выбрать даты"
+msgid "Select date"
+msgstr "Выбрать дату"
 
-#: app/includes/TPLoader.php:142
+#: app/includes/TPLoader.php:150
 msgctxt "(Set details and enable plugin features)"
 msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
 msgstr "Set details and enable plugin features"
 
-#: app/includes/TPLoader.php:147
+#: app/includes/TPLoader.php:155
 msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_1"
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
-#: app/includes/TPLoader.php:148
+#: app/includes/TPLoader.php:156
 msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
 msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
 
-#: app/includes/TPLoaderScripts.php:366
+#: app/includes/TPLoaderScripts.php:396
 msgctxt "(Hotel Name)"
 msgid "tp_head_script_admin_var_hotel_widget_label"
 msgstr "Hotel Name"
 
-#: app/includes/TPLoaderScripts.php:367
+#: app/includes/TPLoaderScripts.php:397
 msgctxt "(Destination)"
 msgid "tp_head_script_admin_var_destination_title_label"
 msgstr "Destination"
 
-#: app/includes/TPLoaderScripts.php:368
+#: app/includes/TPLoaderScripts.php:398
 msgctxt "Origin"
 msgid "tp_head_script_admin_var_origin_title_label"
 msgstr "Origin"
 
-#: app/includes/TPLoaderScripts.php:369
+#: app/includes/TPLoaderScripts.php:399
 msgctxt "(Location)"
 msgid "tp_head_script_admin_var_location_title_label"
 msgstr "Location"
 
-#: app/includes/TPLoaderScripts.php:374
+#: app/includes/TPLoaderScripts.php:404
 msgctxt "(Settings saved.)"
 msgid "tp_head_script_admin_var_mesg_update_settings_label"
 msgstr "Settings saved."
 
-#: app/includes/TPLoaderScripts.php:375
+#: app/includes/TPLoaderScripts.php:405
 msgctxt "(hotels)"
 msgid "tp_head_script_admin_var_hotels_autocomplete_label"
 msgstr "hotels"
 
-#: app/includes/TPLoaderScripts.php:376
+#: app/includes/TPLoaderScripts.php:406
 msgctxt "(City)"
 msgid "tp_head_script_admin_var_city_label"
 msgstr "City"
 
-#: app/includes/TPLoaderScripts.php:380
+#: app/includes/TPLoaderScripts.php:410
 msgctxt "(Complete!)"
 msgid "tp_head_script_admin_var_label_progress_bar_label"
 msgstr "Complete!"
 
-#: app/includes/TPLoaderScripts.php:381
+#: app/includes/TPLoaderScripts.php:411
 msgctxt ""
 "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?)"
@@ -533,77 +533,77 @@ msgstr ""
 "You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?"
 
-#: app/includes/TPLoaderScripts.php:382
+#: app/includes/TPLoaderScripts.php:412
 msgctxt "(Auto-links are applied)"
 msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
 msgstr "Auto-links are applied"
 
-#: app/includes/TPLoaderScripts.php:383
+#: app/includes/TPLoaderScripts.php:413
 msgctxt "(Airline)"
 msgid "tp_head_script_admin_var_airline_widget_8_label"
 msgstr "Airline"
 
-#: app/includes/TPLoaderScripts.php:384
+#: app/includes/TPLoaderScripts.php:414
 msgctxt "(Delete)"
 msgid "tp_head_script_admin_var_delete_widget_8_label"
 msgstr "Delete"
 
-#: app/includes/TPLoaderScripts.php:385
+#: app/includes/TPLoaderScripts.php:415
 msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Error invalid file"
 
-#: app/includes/TPLoaderScripts.php:403
+#: app/includes/TPLoaderScripts.php:433
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:404
+#: app/includes/TPLoaderScripts.php:434
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:408
+#: app/includes/TPLoaderScripts.php:438
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:409
+#: app/includes/TPLoaderScripts.php:439
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "No data, enter API token and marker"
 
-#: app/includes/TPLoaderScripts.php:413
+#: app/includes/TPLoaderScripts.php:443
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "No data"
 
-#: app/includes/TPLoaderScripts.php:414
+#: app/includes/TPLoaderScripts.php:444
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "There are no payments yet"
 
-#: app/includes/TPLoaderScripts.php:418
+#: app/includes/TPLoaderScripts.php:448
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "No search form."
 
-#: app/includes/TPLoaderScripts.php:419
+#: app/includes/TPLoaderScripts.php:449
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "No anchors."
 
-#: app/includes/TPLoaderScripts.php:420
+#: app/includes/TPLoaderScripts.php:450
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Grand total this month"
 
-#: app/includes/TPLoaderScripts.php:423
+#: app/includes/TPLoaderScripts.php:453
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Create"
 
-#: app/includes/TPLoaderScripts.php:424
+#: app/includes/TPLoaderScripts.php:454
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Cancel"
@@ -4687,19 +4687,19 @@ msgctxt "(Go to %s section to get a detailed report)"
 msgid "tp_admin_page_dashboard_paragraph_4_3"
 msgstr "Go to %s section to get a detailed report"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:104
+#: app/includes/views/admin/menu/TPDashboard.view.php:103
 msgctxt "Statistics"
 msgid "tp_admin_page_dashboard_paragraph_4_4"
 msgstr "Statistics"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:113
-#: app/includes/views/admin/menu/TPDashboard.view.php:124
+#: app/includes/views/admin/menu/TPDashboard.view.php:112
+#: app/includes/views/admin/menu/TPDashboard.view.php:123
 msgctxt "(Travelpayouts News)"
 msgid "tp_admin_page_dashboard_paragraph_5_1"
 msgstr "Travelpayouts News"
 
-#: app/includes/views/admin/menu/TPDashboard.view.php:115
-#: app/includes/views/admin/menu/TPDashboard.view.php:126
+#: app/includes/views/admin/menu/TPDashboard.view.php:114
+#: app/includes/views/admin/menu/TPDashboard.view.php:125
 msgctxt "(All news)"
 msgid "tp_admin_page_dashboard_paragraph_5_2"
 msgstr "All news"
@@ -5807,9 +5807,619 @@ msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Enter settings "
 
-#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:424
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:426
 msgctxt "railway shortcode view train"
 msgid "фирм"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:20
+#: app/includes/widgets/TPFlightsTablesWidget.php:24
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Travelpayouts – Flights Tables"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:348
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Flights from origin to destination, One Way (next month)"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:350
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Flights from Origin to Destination (next few days)"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:352
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Cheapest Flights from origin to destination, Round-trip"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:354
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Cheapest Flights from origin to destination (next month)"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:356
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Cheapest Flights from origin to destination (next year)"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:358
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Direct Flights from origin to destination"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:360
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Direct Flights from origin"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:362
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Popular Destinations from origin"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:364
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Most popular flights within this Airlines"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:366
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Searched on our website"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:368
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Cheap Flights from origin"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:370
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Cheap Flights to destination"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:380
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Select the table:"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:387
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Select the table"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:408
+#, fuzzy
+#| msgctxt "modal railway сonstructor title label"
+#| msgid "Alternate title"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Alternate title:"
+msgstr "Alternate title"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:417
+#, fuzzy
+#| msgctxt "modal railway сonstructor origin label"
+#| msgid "Origin"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Origin:"
+msgstr "Origin"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:427
+#, fuzzy
+#| msgctxt "modal railway сonstructor destination label"
+#| msgid "Destination"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Destination:"
+msgstr "Destination"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:437
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Airline:"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:447
+#, fuzzy
+#| msgctxt "modal railway сonstructor subid label"
+#| msgid "Subid"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Subid:"
+msgstr "Subid"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:457
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Filter by airline:"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:463
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Type aircompany name and chose the one you need. Only its flights will be shown."
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:471
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Filter by flight # (enter manually):"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:477
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Use this filter only if you absolutely accurately know the route number"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:485
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Limit:"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:495
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Currency:"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:515
+#, fuzzy
+#| msgctxt "admin page railway tab tables content paginate"
+#| msgid "Paginate"
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Paginate"
+msgstr "Paginate"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:524
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "One Way"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:533
+#, fuzzy
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "No title"
+msgstr "Insert link"
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:539
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Number of stops"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:544
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "All"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:547
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "No more than one stop"
+msgstr ""
+
+#: app/includes/widgets/TPFlightsTablesWidget.php:550
+msgctxt "Travelpayouts – Flights Tables Widget"
+msgid "Direct"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:18
+#: app/includes/widgets/TPHotelsTablesWidget.php:20
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Travelpayouts – Hotel Tables"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:171
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Hotels collection - Discounts"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:172
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Hotels collections for dates"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:179
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Select the table:"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:186
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Select the table"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:201
+#, fuzzy
+#| msgctxt "modal railway сonstructor title label"
+#| msgid "Alternate title"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Alternate title:"
+msgstr "Alternate title"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:210
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "City:"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:221
+#, fuzzy
+#| msgctxt "modal railway сonstructor subid label"
+#| msgid "Subid"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Subid:"
+msgstr "Subid"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:232
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Selection type:"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:239
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Selection type"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:257
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Check-in date:"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:266
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Check-out date:"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:275
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Number of results:"
+msgstr ""
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:288
+#, fuzzy
+#| msgctxt "admin page railway tab tables content paginate"
+#| msgid "Paginate"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Paginate"
+msgstr "Paginate"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:297
+#, fuzzy
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "No title"
+msgstr "Insert link"
+
+#: app/includes/widgets/TPHotelsTablesWidget.php:306
+#, fuzzy
+#| msgctxt "tp admin page settings сonstructor hotels tables field hotels_link_without_dates label"
+#| msgid "Land without dates"
+msgctxt "Travelpayouts – Hotel Tables Widget"
+msgid "Land without dates"
+msgstr "Land without dates"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:18
+#, fuzzy
+#| msgctxt "admin menu page title railway"
+#| msgid "Railways schedule"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Travelpayouts – Railways schedule"
+msgstr "Railways schedule"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:22
+#, fuzzy
+#| msgctxt "admin menu page title railway"
+#| msgid "Railways schedule"
+msgid "Travelpayouts – Railways schedule"
+msgstr "Railways schedule"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:117
+#, fuzzy
+#| msgctxt "modal railway сonstructor title label"
+#| msgid "Alternate title"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Alternate title:"
+msgstr "Alternate title"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:126
+#, fuzzy
+#| msgctxt "modal railway сonstructor origin label"
+#| msgid "Origin"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Origin:"
+msgstr "Origin"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:135
+#, fuzzy
+#| msgctxt "modal railway сonstructor destination label"
+#| msgid "Destination"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Destination:"
+msgstr "Destination"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:144
+#, fuzzy
+#| msgctxt "modal railway сonstructor subid label"
+#| msgid "Subid"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Subid:"
+msgstr "Subid"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:156
+#, fuzzy
+#| msgctxt "admin page railway tab tables content paginate"
+#| msgid "Paginate"
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "Paginate"
+msgstr "Paginate"
+
+#: app/includes/widgets/TPRailwayTablesWidget.php:165
+#, fuzzy
+msgctxt "Travelpayouts – Railways schedule Widget"
+msgid "No title"
+msgstr "Insert link"
+
+#: app/includes/widgets/TPSearchFormWidget.php:20 app/includes/widgets/TPSearchFormWidget.php:22
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "Travelpayouts – Search Form"
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:136
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "Select the search form:"
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:182
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "City of departure default:"
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:193
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "City Arrival default:"
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:204
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "Default City/Hotel:"
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:215
+#, fuzzy
+#| msgctxt "modal railway сonstructor subid label"
+#| msgid "Subid"
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "Subid:"
+msgstr "Subid"
+
+#: app/includes/widgets/TPSearchFormWidget.php:228
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "No customized search form."
+msgstr ""
+
+#: app/includes/widgets/TPSearchFormWidget.php:233
+msgctxt "Travelpayouts – Search Form Widget"
+msgid "Go to setting."
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:19 app/includes/widgets/TPWidgetsWidget.php:23
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Travelpayouts – Widgets"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:400
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Map Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:401
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Hotels Map Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:402
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Calendar Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:403
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Subscription Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:404
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Hotel Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:405
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Popular Destinations Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:406
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Hotels Selections Widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:407
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Best deals widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:465
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Select widget:"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPWidgetsWidget.php:472
+#, fuzzy
+#| msgctxt "local en table shortcodes railway 1 title_button text"
+#| msgid "Select dates"
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Select widget"
+msgstr "Select dates"
+
+#: app/includes/widgets/TPWidgetsWidget.php:487
+#, fuzzy
+#| msgctxt "modal railway сonstructor subid label"
+#| msgid "Subid"
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Subid:"
+msgstr "Subid"
+
+#: app/includes/widgets/TPWidgetsWidget.php:497 app/includes/widgets/TPWidgetsWidget.php:720
+#, fuzzy
+#| msgctxt "modal railway сonstructor origin label"
+#| msgid "Origin"
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Origin:"
+msgstr "Origin"
+
+#: app/includes/widgets/TPWidgetsWidget.php:507 app/includes/widgets/TPWidgetsWidget.php:605
+#: app/includes/widgets/TPWidgetsWidget.php:610 app/includes/widgets/TPWidgetsWidget.php:730
+#, fuzzy
+#| msgctxt "modal railway сonstructor destination label"
+#| msgid "Destination"
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Destination:"
+msgstr "Destination"
+
+#: app/includes/widgets/TPWidgetsWidget.php:517
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Hotel:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:527
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Size:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:544
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Period:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:556
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Range, days:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:576
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Direct Flights Only"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:585
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "One way"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:593
+#, fuzzy
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Count:"
+msgstr "Get your API Token and Partner Marker by following "
+
+#: app/includes/widgets/TPWidgetsWidget.php:623
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "View widget"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:631
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Full"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:636
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Compact"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:644 app/includes/widgets/TPWidgetsWidget.php:777
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Limit"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:683
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Widget type"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:691
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Tile"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:696
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Slider"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:707
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Filter by airlines"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:714
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Filter by routes"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:742 app/includes/widgets/TPWidgetsWidget.php:748
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Airline:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:757
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Delete"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:767
+#, fuzzy
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Add"
+msgstr "Add link"
+
+#: app/includes/widgets/TPWidgetsWidget.php:797
+#, fuzzy
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Responsive"
+msgstr ""
+"The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e."
+"g. you have a responsible WP theme) - tables won\\'t affect your design, but will have a "
+"horizontal scroll."
+
+#: app/includes/widgets/TPWidgetsWidget.php:805
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Width"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:814
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Zoom:"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:845
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Year"
+msgstr ""
+
+#: app/includes/widgets/TPWidgetsWidget.php:848
+msgctxt "Travelpayouts – Widgets Widget"
+msgid "Current month"
 msgstr ""
 
 #: core/controllers/TPOAdminMenuController.php:24
@@ -6291,10 +6901,6 @@ msgstr "View %s not found"
 #~ msgstr "Insert link"
 
 #, fuzzy
-#~ msgid "No title"
-#~ msgstr "Insert link"
-
-#, fuzzy
 #~ msgid "Auto-links"
 #~ msgstr "Auto-links"
 
@@ -6311,21 +6917,6 @@ msgstr "View %s not found"
 #~ msgctxt "search_form_modal"
 #~ msgid "Flights"
 #~ msgstr "Arial"
-
-#, fuzzy
-#~ msgid "Add"
-#~ msgstr "Add link"
-
-#, fuzzy
-#~ msgid "Responsive"
-#~ msgstr ""
-#~ "The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone "
-#~ "(e.g. you have a responsible WP theme) - tables won\\'t affect your design, but will have a "
-#~ "horizontal scroll."
-
-#, fuzzy
-#~ msgid "Account"
-#~ msgstr "Get your API Token and Partner Marker by following "
 
 #, fuzzy
 #~ msgid "Settings"

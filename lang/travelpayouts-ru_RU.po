@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-08-14 00:58+0300\n"
+"POT-Creation-Date: 2017-11-10 19:00+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -461,13 +461,13 @@ msgstr "Расписание поездов {origin} — {destination}"
 
 #: app/includes/TPDefault.php:1073
 msgctxt "local en table shortcodes railway 1 title_button text"
-msgid "Select dates"
-msgstr "Select dates"
+msgid "Select date"
+msgstr "Select date"
 
 #: app/includes/TPDefault.php:1075
 msgctxt "local ru table shortcodes railway 1 title_button text"
-msgid "Select dates"
-msgstr "Выбрать даты"
+msgid "Select date"
+msgstr "Выбрать дату"
 
 #: app/includes/TPLoader.php:150
 msgctxt "(Set details and enable plugin features)"
@@ -486,124 +486,124 @@ msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
 "услуг. "
 
-#: app/includes/TPLoaderScripts.php:394
+#: app/includes/TPLoaderScripts.php:396
 msgctxt "(Hotel Name)"
 msgid "tp_head_script_admin_var_hotel_widget_label"
 msgstr "Название отеля"
 
-#: app/includes/TPLoaderScripts.php:395
+#: app/includes/TPLoaderScripts.php:397
 msgctxt "(Destination)"
 msgid "tp_head_script_admin_var_destination_title_label"
 msgstr "Куда"
 
-#: app/includes/TPLoaderScripts.php:396
+#: app/includes/TPLoaderScripts.php:398
 msgctxt "Origin"
 msgid "tp_head_script_admin_var_origin_title_label"
 msgstr "Откуда"
 
-#: app/includes/TPLoaderScripts.php:397
+#: app/includes/TPLoaderScripts.php:399
 msgctxt "(Location)"
 msgid "tp_head_script_admin_var_location_title_label"
 msgstr "Местоположение"
 
-#: app/includes/TPLoaderScripts.php:402
+#: app/includes/TPLoaderScripts.php:404
 msgctxt "(Settings saved.)"
 msgid "tp_head_script_admin_var_mesg_update_settings_label"
 msgstr "Настройки сохранены."
 
-#: app/includes/TPLoaderScripts.php:403
+#: app/includes/TPLoaderScripts.php:405
 msgctxt "(hotels)"
 msgid "tp_head_script_admin_var_hotels_autocomplete_label"
 msgstr "отелей"
 
-#: app/includes/TPLoaderScripts.php:404
+#: app/includes/TPLoaderScripts.php:406
 msgctxt "(City)"
 msgid "tp_head_script_admin_var_city_label"
 msgstr "Город"
 
-#: app/includes/TPLoaderScripts.php:408
+#: app/includes/TPLoaderScripts.php:410
 msgctxt "(Complete!)"
 msgid "tp_head_script_admin_var_label_progress_bar_label"
 msgstr "Готово!"
 
-#: app/includes/TPLoaderScripts.php:409
+#: app/includes/TPLoaderScripts.php:411
 msgctxt ""
 "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?)"
 msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
 msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
 
-#: app/includes/TPLoaderScripts.php:410
+#: app/includes/TPLoaderScripts.php:412
 msgctxt "(Auto-links are applied)"
 msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
 msgstr "Подстановка ссылок завершена"
 
-#: app/includes/TPLoaderScripts.php:411
+#: app/includes/TPLoaderScripts.php:413
 msgctxt "(Airline)"
 msgid "tp_head_script_admin_var_airline_widget_8_label"
 msgstr "Авиакомпания"
 
-#: app/includes/TPLoaderScripts.php:412
+#: app/includes/TPLoaderScripts.php:414
 msgctxt "(Delete)"
 msgid "tp_head_script_admin_var_delete_widget_8_label"
 msgstr "Удалить"
 
-#: app/includes/TPLoaderScripts.php:413
+#: app/includes/TPLoaderScripts.php:415
 msgctxt "(Error invalid file)"
 msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
 msgstr "Ошибка невалидный файл"
 
-#: app/includes/TPLoaderScripts.php:431
+#: app/includes/TPLoaderScripts.php:433
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:432
+#: app/includes/TPLoaderScripts.php:434
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:436
+#: app/includes/TPLoaderScripts.php:438
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_report_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:437
+#: app/includes/TPLoaderScripts.php:439
 msgctxt "(No data, enter API token and marker)"
 msgid "tp_head_script_admin_var_table_empty_balance_token_label"
 msgstr "Нет данных, введите API токен и маркер"
 
-#: app/includes/TPLoaderScripts.php:441
+#: app/includes/TPLoaderScripts.php:443
 msgctxt "(No data)"
 msgid "tp_head_script_admin_var_table_empty_report_label"
 msgstr "Нет данных"
 
-#: app/includes/TPLoaderScripts.php:442
+#: app/includes/TPLoaderScripts.php:444
 msgctxt "(There are no payments yet)"
 msgid "tp_head_script_admin_var_table_empty_balance_label"
 msgstr "Нет выплат"
 
-#: app/includes/TPLoaderScripts.php:446
+#: app/includes/TPLoaderScripts.php:448
 msgctxt "(No search form.)"
 msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
 msgstr "Нет поисковых форм."
 
-#: app/includes/TPLoaderScripts.php:447
+#: app/includes/TPLoaderScripts.php:449
 msgctxt "(No anchors.)"
 msgid "tp_head_script_admin_var_table_empty_anchors_label"
 msgstr "Нет анкоров"
 
-#: app/includes/TPLoaderScripts.php:448
+#: app/includes/TPLoaderScripts.php:450
 msgctxt "(Grand total this month)"
 msgid "tp_head_script_admin_var_stats_total_txt_label"
 msgstr "Общий итог за месяц"
 
-#: app/includes/TPLoaderScripts.php:451
+#: app/includes/TPLoaderScripts.php:453
 msgctxt "(Create)"
 msgid "tp_head_script_admin_var_btn_ok_label"
 msgstr "Создать"
 
-#: app/includes/TPLoaderScripts.php:452
+#: app/includes/TPLoaderScripts.php:454
 msgctxt "(Cancel)"
 msgid "tp_head_script_admin_var_btn_cancel_label"
 msgstr "Отмена"
@@ -5815,7 +5815,7 @@ msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Внести настройки"
 
-#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:424
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:426
 msgctxt "railway shortcode view train"
 msgid "фирм"
 msgstr ""
@@ -5826,162 +5826,162 @@ msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Travelpayouts – Flights Tables"
 msgstr "Travelpayouts – Flights Tables"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:267
+#: app/includes/widgets/TPFlightsTablesWidget.php:348
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Flights from origin to destination, One Way (next month)"
 msgstr "Цены на месяц по направлению, в одну сторону"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:269
+#: app/includes/widgets/TPFlightsTablesWidget.php:350
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Flights from Origin to Destination (next few days)"
 msgstr "Билеты по направлению на ближайшие дни"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:271
+#: app/includes/widgets/TPFlightsTablesWidget.php:352
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr "Самые дешевые билеты по направлению"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:273
+#: app/includes/widgets/TPFlightsTablesWidget.php:354
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Cheapest Flights from origin to destination (next month)"
 msgstr "Самые дешевые билеты по направлению в этом месяце"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:275
+#: app/includes/widgets/TPFlightsTablesWidget.php:356
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Cheapest Flights from origin to destination (next year)"
 msgstr "Цены на билеты по месяцам"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:277
+#: app/includes/widgets/TPFlightsTablesWidget.php:358
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Direct Flights from origin to destination"
 msgstr "Билеты без пересадок по направлению"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:279
+#: app/includes/widgets/TPFlightsTablesWidget.php:360
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Direct Flights from origin"
 msgstr "Билеты без пересадок ИЗ"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:281
+#: app/includes/widgets/TPFlightsTablesWidget.php:362
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Popular Destinations from origin"
 msgstr "Популярные направления из города"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:283
+#: app/includes/widgets/TPFlightsTablesWidget.php:364
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Most popular flights within this Airlines"
 msgstr "Популярные направления авиакомпании"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:285
+#: app/includes/widgets/TPFlightsTablesWidget.php:366
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Searched on our website"
 msgstr "На нашем сайте искали"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:287
+#: app/includes/widgets/TPFlightsTablesWidget.php:368
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Cheap Flights from origin"
 msgstr "Дешевые перелеты из города"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:289
+#: app/includes/widgets/TPFlightsTablesWidget.php:370
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Cheap Flights to destination"
 msgstr "Дешевые перелеты в город"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:299
+#: app/includes/widgets/TPFlightsTablesWidget.php:380
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Select the table:"
 msgstr "Выберите таблицу:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:306
+#: app/includes/widgets/TPFlightsTablesWidget.php:387
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Select the table"
 msgstr "Выберите таблицу"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:327
+#: app/includes/widgets/TPFlightsTablesWidget.php:408
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Alternate title:"
 msgstr "Альтернативный заголовок:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:336
+#: app/includes/widgets/TPFlightsTablesWidget.php:417
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Origin:"
 msgstr "Откуда:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:346
+#: app/includes/widgets/TPFlightsTablesWidget.php:427
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Destination:"
 msgstr "Куда:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:356
+#: app/includes/widgets/TPFlightsTablesWidget.php:437
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Airline:"
 msgstr "Авиакомпания:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:366
+#: app/includes/widgets/TPFlightsTablesWidget.php:447
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:376
+#: app/includes/widgets/TPFlightsTablesWidget.php:457
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Filter by airline:"
 msgstr "Только по авиакомпании:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:382
+#: app/includes/widgets/TPFlightsTablesWidget.php:463
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Type aircompany name and chose the one you need. Only its flights will be shown."
 msgstr "Начните вводить название авиакомпании и выберите нужную. Будут показаны ТОЛЬКО ее рейсы."
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:390
+#: app/includes/widgets/TPFlightsTablesWidget.php:471
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Filter by flight # (enter manually):"
 msgstr "Только рейс №:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:396
+#: app/includes/widgets/TPFlightsTablesWidget.php:477
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Use this filter only if you absolutely accurately know the route number"
 msgstr "Используйте этот фильтр, только если абсолютно точно знаете номер маршрута"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:404
+#: app/includes/widgets/TPFlightsTablesWidget.php:485
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Limit:"
 msgstr "Лимит:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:414
+#: app/includes/widgets/TPFlightsTablesWidget.php:495
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Currency:"
 msgstr "Валюта:"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:434
+#: app/includes/widgets/TPFlightsTablesWidget.php:515
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Paginate"
 msgstr "Пагинация"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:443
+#: app/includes/widgets/TPFlightsTablesWidget.php:524
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "One Way"
 msgstr "В одну сторону"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:452
+#: app/includes/widgets/TPFlightsTablesWidget.php:533
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "No title"
 msgstr "Убрать заголовок"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:458
+#: app/includes/widgets/TPFlightsTablesWidget.php:539
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Number of stops"
 msgstr "Пересадки"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:463
+#: app/includes/widgets/TPFlightsTablesWidget.php:544
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "All"
 msgstr "Все"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:466
+#: app/includes/widgets/TPFlightsTablesWidget.php:547
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "No more than one stop"
 msgstr "Не более 1 пересадки"
 
-#: app/includes/widgets/TPFlightsTablesWidget.php:469
+#: app/includes/widgets/TPFlightsTablesWidget.php:550
 msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Direct"
 msgstr "Без пересадок"
@@ -5992,77 +5992,77 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Travelpayouts – Hotel Tables"
 msgstr "Travelpayouts – Hotel Tables"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:129
+#: app/includes/widgets/TPHotelsTablesWidget.php:171
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collection - Discounts"
 msgstr "Подборка отелей - Скидки"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:130
+#: app/includes/widgets/TPHotelsTablesWidget.php:172
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collections for dates"
 msgstr "Подборки отелей на даты"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:137
+#: app/includes/widgets/TPHotelsTablesWidget.php:179
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table:"
 msgstr "Выберите таблицу:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:144
+#: app/includes/widgets/TPHotelsTablesWidget.php:186
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table"
 msgstr "Выберите таблицу"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:159
+#: app/includes/widgets/TPHotelsTablesWidget.php:201
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Alternate title:"
 msgstr "Альтернативный заголовок:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:168
+#: app/includes/widgets/TPHotelsTablesWidget.php:210
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "City:"
 msgstr "Город:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:179
+#: app/includes/widgets/TPHotelsTablesWidget.php:221
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:190
+#: app/includes/widgets/TPHotelsTablesWidget.php:232
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type:"
 msgstr "Тип подборки:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:197
+#: app/includes/widgets/TPHotelsTablesWidget.php:239
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type"
 msgstr "Тип подборки"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:205
+#: app/includes/widgets/TPHotelsTablesWidget.php:257
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-in date:"
 msgstr "Дата заезда:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:214
+#: app/includes/widgets/TPHotelsTablesWidget.php:266
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-out date:"
 msgstr "Дата выезда:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:223
+#: app/includes/widgets/TPHotelsTablesWidget.php:275
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Number of results:"
 msgstr "Количество результатов:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:236
+#: app/includes/widgets/TPHotelsTablesWidget.php:288
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Paginate"
 msgstr "Пагинация"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:245
+#: app/includes/widgets/TPHotelsTablesWidget.php:297
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "No title"
 msgstr "Убрать заголовок"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:254
+#: app/includes/widgets/TPHotelsTablesWidget.php:306
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Land without dates"
 msgstr "Не подставлять даты при переходе"
@@ -6076,32 +6076,32 @@ msgstr "Travelpayouts – Railways schedule"
 msgid "Travelpayouts – Railways schedule"
 msgstr "Travelpayouts – Railways schedule"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:99
+#: app/includes/widgets/TPRailwayTablesWidget.php:117
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Alternate title:"
 msgstr "Альтернативный заголов:"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:108
+#: app/includes/widgets/TPRailwayTablesWidget.php:126
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Origin:"
 msgstr "Откуда:"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:117
+#: app/includes/widgets/TPRailwayTablesWidget.php:135
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Destination:"
 msgstr "Куда:"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:126
+#: app/includes/widgets/TPRailwayTablesWidget.php:144
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:138
+#: app/includes/widgets/TPRailwayTablesWidget.php:156
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "Paginate"
 msgstr "Пагинация"
 
-#: app/includes/widgets/TPRailwayTablesWidget.php:147
+#: app/includes/widgets/TPRailwayTablesWidget.php:165
 msgctxt "Travelpayouts – Railways schedule Widget"
 msgid "No title"
 msgstr "Убрать заголовок"
@@ -6111,37 +6111,37 @@ msgctxt "Travelpayouts – Search Form Widget"
 msgid "Travelpayouts – Search Form"
 msgstr "Travelpayouts – Search Form"
 
-#: app/includes/widgets/TPSearchFormWidget.php:140
+#: app/includes/widgets/TPSearchFormWidget.php:136
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Select the search form:"
 msgstr "Выберите поисковую форму:"
 
-#: app/includes/widgets/TPSearchFormWidget.php:186
+#: app/includes/widgets/TPSearchFormWidget.php:182
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "City of departure default:"
 msgstr "Город вылета по-умолчанию:"
 
-#: app/includes/widgets/TPSearchFormWidget.php:197
+#: app/includes/widgets/TPSearchFormWidget.php:193
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "City Arrival default:"
 msgstr "Город прилета по-умолчанию:"
 
-#: app/includes/widgets/TPSearchFormWidget.php:208
+#: app/includes/widgets/TPSearchFormWidget.php:204
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Default City/Hotel:"
 msgstr "Город/Отель по умолчанию:"
 
-#: app/includes/widgets/TPSearchFormWidget.php:219
+#: app/includes/widgets/TPSearchFormWidget.php:215
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPSearchFormWidget.php:232
+#: app/includes/widgets/TPSearchFormWidget.php:228
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "No customized search form."
 msgstr "Нет настроенных Поисковых форм."
 
-#: app/includes/widgets/TPSearchFormWidget.php:237
+#: app/includes/widgets/TPSearchFormWidget.php:233
 msgctxt "Travelpayouts – Search Form Widget"
 msgid "Go to setting."
 msgstr "Перейти к настройке."
@@ -6151,188 +6151,188 @@ msgctxt "Travelpayouts – Widgets Widget"
 msgid "Travelpayouts – Widgets"
 msgstr "Travelpayouts – Widgets"
 
-#: app/includes/widgets/TPWidgetsWidget.php:411
+#: app/includes/widgets/TPWidgetsWidget.php:400
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Map Widget"
 msgstr "Виджет карты"
 
-#: app/includes/widgets/TPWidgetsWidget.php:412
+#: app/includes/widgets/TPWidgetsWidget.php:401
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotels Map Widget"
 msgstr "Отельная карта"
 
-#: app/includes/widgets/TPWidgetsWidget.php:413
+#: app/includes/widgets/TPWidgetsWidget.php:402
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Calendar Widget"
 msgstr "Виджет календаря"
 
-#: app/includes/widgets/TPWidgetsWidget.php:414
+#: app/includes/widgets/TPWidgetsWidget.php:403
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Subscription Widget"
 msgstr "Виджет подписок"
 
-#: app/includes/widgets/TPWidgetsWidget.php:415
+#: app/includes/widgets/TPWidgetsWidget.php:404
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotel Widget"
 msgstr "Виджет отеля"
 
-#: app/includes/widgets/TPWidgetsWidget.php:416
+#: app/includes/widgets/TPWidgetsWidget.php:405
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Popular Destinations Widget"
 msgstr "Виджет популярных направлений"
 
-#: app/includes/widgets/TPWidgetsWidget.php:417
+#: app/includes/widgets/TPWidgetsWidget.php:406
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotels Selections Widget"
 msgstr "Виджет отельных подборок"
 
-#: app/includes/widgets/TPWidgetsWidget.php:418
+#: app/includes/widgets/TPWidgetsWidget.php:407
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Best deals widget"
 msgstr "Виджет спецпредложений"
 
-#: app/includes/widgets/TPWidgetsWidget.php:476
+#: app/includes/widgets/TPWidgetsWidget.php:465
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Select widget:"
 msgstr "Выберите виджет:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:483
+#: app/includes/widgets/TPWidgetsWidget.php:472
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Select widget"
 msgstr "Выберите виджет"
 
-#: app/includes/widgets/TPWidgetsWidget.php:498
+#: app/includes/widgets/TPWidgetsWidget.php:487
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:508 app/includes/widgets/TPWidgetsWidget.php:731
+#: app/includes/widgets/TPWidgetsWidget.php:497 app/includes/widgets/TPWidgetsWidget.php:720
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Origin:"
 msgstr "Откуда:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:518 app/includes/widgets/TPWidgetsWidget.php:616
-#: app/includes/widgets/TPWidgetsWidget.php:621 app/includes/widgets/TPWidgetsWidget.php:741
+#: app/includes/widgets/TPWidgetsWidget.php:507 app/includes/widgets/TPWidgetsWidget.php:605
+#: app/includes/widgets/TPWidgetsWidget.php:610 app/includes/widgets/TPWidgetsWidget.php:730
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Destination:"
 msgstr "Куда:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:528
+#: app/includes/widgets/TPWidgetsWidget.php:517
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Hotel:"
 msgstr "Название отеля:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:538
+#: app/includes/widgets/TPWidgetsWidget.php:527
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Size:"
 msgstr "Размер:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:555
+#: app/includes/widgets/TPWidgetsWidget.php:544
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Period:"
 msgstr "Период:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:567
+#: app/includes/widgets/TPWidgetsWidget.php:556
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Range, days:"
 msgstr "Период, дни:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:587
+#: app/includes/widgets/TPWidgetsWidget.php:576
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
-#: app/includes/widgets/TPWidgetsWidget.php:596
+#: app/includes/widgets/TPWidgetsWidget.php:585
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "One way"
 msgstr "В одну сторону"
 
-#: app/includes/widgets/TPWidgetsWidget.php:604
+#: app/includes/widgets/TPWidgetsWidget.php:593
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Count:"
 msgstr "Количество:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:634
+#: app/includes/widgets/TPWidgetsWidget.php:623
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "View widget"
 msgstr "Вид виджета"
 
-#: app/includes/widgets/TPWidgetsWidget.php:642
+#: app/includes/widgets/TPWidgetsWidget.php:631
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Full"
 msgstr "Расширенный"
 
-#: app/includes/widgets/TPWidgetsWidget.php:647
+#: app/includes/widgets/TPWidgetsWidget.php:636
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Compact"
 msgstr "Компактный"
 
-#: app/includes/widgets/TPWidgetsWidget.php:655 app/includes/widgets/TPWidgetsWidget.php:788
+#: app/includes/widgets/TPWidgetsWidget.php:644 app/includes/widgets/TPWidgetsWidget.php:777
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Limit"
 msgstr "Лимит"
 
-#: app/includes/widgets/TPWidgetsWidget.php:694
+#: app/includes/widgets/TPWidgetsWidget.php:683
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Widget type"
 msgstr "Вид виджета"
 
-#: app/includes/widgets/TPWidgetsWidget.php:702
+#: app/includes/widgets/TPWidgetsWidget.php:691
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Tile"
 msgstr "Плитка"
 
-#: app/includes/widgets/TPWidgetsWidget.php:707
+#: app/includes/widgets/TPWidgetsWidget.php:696
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Slider"
 msgstr "Слайдер"
 
-#: app/includes/widgets/TPWidgetsWidget.php:718
+#: app/includes/widgets/TPWidgetsWidget.php:707
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Filter by airlines"
 msgstr "Фильтр по авиакомпаниям "
 
-#: app/includes/widgets/TPWidgetsWidget.php:725
+#: app/includes/widgets/TPWidgetsWidget.php:714
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Filter by routes"
 msgstr "Фильтр по направлениям"
 
-#: app/includes/widgets/TPWidgetsWidget.php:753 app/includes/widgets/TPWidgetsWidget.php:759
+#: app/includes/widgets/TPWidgetsWidget.php:742 app/includes/widgets/TPWidgetsWidget.php:748
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Airline:"
 msgstr "Авиакомпания:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:768
+#: app/includes/widgets/TPWidgetsWidget.php:757
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Delete"
 msgstr "Удалить"
 
-#: app/includes/widgets/TPWidgetsWidget.php:778
+#: app/includes/widgets/TPWidgetsWidget.php:767
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Add"
 msgstr "Добавить"
 
-#: app/includes/widgets/TPWidgetsWidget.php:808
+#: app/includes/widgets/TPWidgetsWidget.php:797
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Responsive"
 msgstr "Резиновая"
 
-#: app/includes/widgets/TPWidgetsWidget.php:816
+#: app/includes/widgets/TPWidgetsWidget.php:805
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Width"
 msgstr "Ширина"
 
-#: app/includes/widgets/TPWidgetsWidget.php:825
+#: app/includes/widgets/TPWidgetsWidget.php:814
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Zoom:"
 msgstr "Zoom:"
 
-#: app/includes/widgets/TPWidgetsWidget.php:851
+#: app/includes/widgets/TPWidgetsWidget.php:845
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Year"
 msgstr "Год"
 
-#: app/includes/widgets/TPWidgetsWidget.php:854
+#: app/includes/widgets/TPWidgetsWidget.php:848
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Current month"
 msgstr "Текущий месяц"

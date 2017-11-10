@@ -1070,9 +1070,9 @@ class TPDefault implements  \core\TPODefault{
 			        'paginate' => 10,
 	        		'paginate_switch' => true,
 			        'title_button' => array(
-				        'en' => _x('Select dates',
+				        'en' => _x('Select date',
 					        'local en table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
-				        'ru' => _x('Select dates',
+				        'ru' => _x('Select date',
 					        'local ru table shortcodes railway 1 title_button text', TPOPlUGIN_TEXTDOMAIN),
 			        ),
 			        'sort_column' => 0,

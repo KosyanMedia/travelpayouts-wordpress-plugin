@@ -1342,12 +1342,12 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                     background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
                 }
                 @media (max-width: 480px){
-                    .TP-rwd-table-avio tbody tr td:before {
-                        background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?>;
-                        color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?>;
+                    .TP-Plugin-Tables_box tbody tr td:before {
+                        background: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_color']; ?> !important;
+                        color: <?php echo \app\includes\TPPlugin::$options['style_table']['table']['head_text_color']; ?> !important;
                     }
                     .TP-Plugin-Tables_box tbody tr td {
-                        background-color: #FFF;
+                        background-color: #FFF !important;
                     }
                 }
                 .TP-Plugin-Tables_box thead tr td.TP-active {

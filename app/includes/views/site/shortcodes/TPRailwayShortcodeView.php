@@ -741,8 +741,11 @@ class TPRailwayShortcodeView {
             $target = ' target="_blank" ';
         }
 
-		$dates = '<a href="#" class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
+		/*$dates = '<a href="#" class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
             .' data-href="'.$this->getURL($row, $subid).'" data-target="'.$targetURL.'">'
+            .$btnTxt.'</a>';*/
+        $dates = '<a href="'.$this->getURL($row, $subid).'" class="TP-Plugin-Tables_link TPButtonTable" '
+            .' '.$target.'>'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
 	}
