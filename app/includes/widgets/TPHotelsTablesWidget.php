@@ -8,7 +8,9 @@
  */
 namespace app\includes\widgets;
 
+use app\includes\TPPlugin;
 use WP_Widget;
+
 
 class TPHotelsTablesWidget extends WP_Widget{
 	public function __construct()
@@ -171,6 +173,11 @@ class TPHotelsTablesWidget extends WP_Widget{
 			_x('Hotels collection - Discounts',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 		);
+
+		//error_log(TPPlugin::$options['shortcodes_hotels']['1']['paginate_switch']);
+		//error_log(TPPlugin::$options['shortcodes_hotels']['2']['paginate_switch']);
+		//error_log(TPPlugin::$options['shortcodes_hotels']['1']['paginate']);
+		//error_log(TPPlugin::$options['shortcodes_hotels']['2']['paginate']);
 		?>
 		<div class="tp-hotels-tables-widget tp-widget">
 			<p class="tp-hotels-tables-widget-select">
