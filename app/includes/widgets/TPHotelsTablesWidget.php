@@ -173,6 +173,14 @@ class TPHotelsTablesWidget extends WP_Widget{
 			_x('Hotels collection - Discounts',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 		);
+        $hotel_1_paginate_switch = '0';
+		if (isset(TPPlugin::$options['shortcodes_hotels']['1']['paginate_switch'])){
+		    $hotel_1_paginate_switch = '1';
+        }
+        $hotel_2_paginate_switch = '0';
+        if (isset(TPPlugin::$options['shortcodes_hotels']['2']['paginate_switch'])){
+            $hotel_2_paginate_switch = '1';
+        }
 
 		//error_log(TPPlugin::$options['shortcodes_hotels']['1']['paginate_switch']);
 		//error_log(TPPlugin::$options['shortcodes_hotels']['2']['paginate_switch']);
@@ -188,6 +196,8 @@ class TPHotelsTablesWidget extends WP_Widget{
 					<select class="tp-hotels-tables-widget-select-shortcode widefat"
 					        id="<?php echo $this->get_field_id('hotel_select'); ?>"
 					        name="<?php echo $this->get_field_name('hotel_select'); ?>"
+                            data-hotel-0-paginate_switch="<?php echo $hotel_1_paginate_switch; ?>"
+                            data-hotel-1-paginate_switch="<?php echo $hotel_2_paginate_switch; ?>"
 					        data-select_table="<?php echo $select; ?>">
 						<option value="select" <?php selected( $select, 'select' ); ?>>
 							<?php _ex('Select the table',  'Travelpayouts – Hotel Tables Widget',

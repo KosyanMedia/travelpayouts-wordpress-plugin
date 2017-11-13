@@ -16,6 +16,7 @@ jQuery(function($) {
         var tpWidget = widget.children('.widget-inside').children('form').children('.widget-content').children('.tp-widget');
         tpInitWidget();
         if (tpWidget.length > 0){
+            console.log('add hotels');
             tpResetWidget(tpWidget);
         }
     });
@@ -186,7 +187,7 @@ jQuery(function($) {
      * @param widget
      */
     function tpResetFieldHotesTablesWidget(widget) {
-        var selectField, cityField, selectionsTypeField;
+        var selectField, cityField, selectionsTypeField, paginateField;
         selectField = widget.find('.tp-hotels-tables-widget-select')
             .children('.tp-hotels-tables-widget-select-label')
             .children('.tp-hotels-tables-widget-select-shortcode');
@@ -196,9 +197,24 @@ jQuery(function($) {
             .children('.tp-hotels-tables-widget-selections-type-label')
             .children('.tp-hotels-tables-widget-selections-type-select');
 
+        paginateField = widget.find('.tp-hotels-tables-widget-paginate')
+            .children('label').children('input');
+
         selectField.removeClass('tp-widget-error');
         cityField.removeClass('tp-widget-error');
         selectionsTypeField.removeClass('tp-widget-error');
+
+        selectField.change(function() {
+            //console.log('selectField.change');
+            var paginate_switch;
+            paginate_switch = parseInt($(this).data('hotel-'+selectField.val()+'-paginate_switch'));
+            if (paginate_switch == 1){
+                paginateField.prop('checked', true);
+            } else {
+                paginateField.prop('checked', false);
+            }
+            //console.log(paginate_switch);
+        });
 
         selectField.focus(function() {
             $(this).removeClass('tp-widget-error');
@@ -404,6 +420,7 @@ jQuery(function($) {
             });
         //Hotel
         doc.find('.tp-hotels-tables-widget-select-shortcode').each(function () {
+
             var select = $(this).data('select_table');
             constructorHotelTableWidget(select, $(this), false);
         });
