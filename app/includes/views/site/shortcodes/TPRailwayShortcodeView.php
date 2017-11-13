@@ -261,6 +261,7 @@ class TPRailwayShortcodeView {
 
 
 	public function renderBodyTable($shortcode, $origin, $destination, $rows, $subid, $language, $currency){
+
 		$subid = $this->getSubid($subid);
 		$bodyTable = '';
 		$bodyTable .= '<tbody>';
@@ -332,7 +333,7 @@ class TPRailwayShortcodeView {
                     case 'dates':
                         $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
                                 class="TP'.$selected_field.'Td '.$this->tdClassHidden($shortcode, $selected_field).'">'
-                                .$this->getDates($row, $shortcode, $subid)
+                                .$this->getDates($row, $shortcode, $subid, $origin, $destination)
                             .'</td>';
                         break;
                     //Откуда / From
@@ -725,7 +726,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDates($row = array(), $typeShortcode, $subid){
+	public function getDates($row = array(), $typeShortcode, $subid, $origin, $destination){
 		$dates = '';
 		$btnTxt = "";
 		if (isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
@@ -744,7 +745,7 @@ class TPRailwayShortcodeView {
 		/*$dates = '<a href="#" class="TP-Plugin-Tables_link TPButtonTable TPButtonTableDates" '
             .' data-href="'.$this->getURL($row, $subid).'" data-target="'.$targetURL.'">'
             .$btnTxt.'</a>';*/
-        $dates = '<a href="'.$this->getURL($row, $subid).'" class="TP-Plugin-Tables_link TPButtonTable" '
+        $dates = '<a href="'.$this->getURL($row, $subid, $origin, $destination).'" class="TP-Plugin-Tables_link TPButtonTable" '
             .' '.$target.'>'
             .$btnTxt.'</a>';
 		return '<p class="TP-tdContent">'.$dates.'</p>';
@@ -754,7 +755,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-	public function getURL($row = array(), $subid){
+	public function getURL($row = array(), $subid, $origin, $destination){
         $URL = '';
         $marker = '';
         $promo_id = '';
@@ -779,14 +780,14 @@ class TPRailwayShortcodeView {
         $source_type = '&source_type=customlink';
         $type = '&type=click';
         $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/order/');
-        $departureStation = '?dep_st=';
-        if (array_key_exists('departureStationCode', $row)) {
+        $departureStation = '?dep_st=' .$origin;
+        /*if (array_key_exists('departureStationCode', $row)) {
             $departureStation .= $row['departureStationCode'];
-        }
-        $arrivalStation = '&arr_st=';
-        if (array_key_exists('arrivalStationCode', $row)) {
+        }*/
+        $arrivalStation = '&arr_st='.$destination;
+        /*if (array_key_exists('arrivalStationCode', $row)) {
             $arrivalStation .= $row['arrivalStationCode'];
-        }
+        }*/
         $numberForUrl = '&tn=';
         if (array_key_exists('numberForUrl', $row)) {
             $numberForUrl .= $row['numberForUrl'];
