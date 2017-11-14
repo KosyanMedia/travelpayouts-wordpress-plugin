@@ -16,9 +16,9 @@ class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('tp_admin_menu_page_widgets_title',  'admin menu page title widgets',
+            _x('Widgets',  'admin menu page title widgets',
                 TPOPlUGIN_TEXTDOMAIN ),
-            _x('tp_admin_menu_page_widgets_title',  'admin menu page title widgets',
+            _x('Widgets',  'admin menu menu title widgets',
                 TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_widgets',
