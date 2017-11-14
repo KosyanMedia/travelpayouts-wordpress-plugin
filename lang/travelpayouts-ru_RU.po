@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 12:34+0200\n"
+"POT-Creation-Date: 2017-11-14 12:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2244,9 +2244,13 @@ msgid "tp_admin_menu_page_search_forms_title"
 msgstr "Поисковые формы"
 
 #: app/includes/controllers/admin/menu/TPSettingsController.php:18
-#: app/includes/controllers/admin/menu/TPSettingsController.php:19
 msgctxt "admin menu page title settings"
-msgid "tp_admin_menu_page_settings_title"
+msgid "Settings"
+msgstr "Настройки"
+
+#: app/includes/controllers/admin/menu/TPSettingsController.php:19
+msgctxt "admin menu menu title settings"
+msgid "Settings"
 msgstr "Настройки"
 
 #: app/includes/controllers/admin/menu/TPStatisticController.php:21
@@ -6423,6 +6427,10 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin menu page title settings"
+#~ msgid "tp_admin_menu_page_settings_title"
+#~ msgstr "Настройки"
+
 #~ msgctxt "admin menu page title statistics"
 #~ msgid "tp_admin_menu_page_statistics_title"
 #~ msgstr "Статистика"
@@ -7443,9 +7451,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Account"
 #~ msgstr "Аккаунт"
-
-#~ msgid "Settings"
-#~ msgstr "Настройки"
 
 #~ msgid "Localization"
 #~ msgstr "Локализация"

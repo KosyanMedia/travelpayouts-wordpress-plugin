@@ -15,8 +15,8 @@ class TPSettingsController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('tp_admin_menu_page_settings_title',  'admin menu page title settings', TPOPlUGIN_TEXTDOMAIN ),
-            _x('tp_admin_menu_page_settings_title',  'admin menu page title settings', TPOPlUGIN_TEXTDOMAIN ),
+            _x('Settings',  'admin menu page title settings', TPOPlUGIN_TEXTDOMAIN ),
+            _x('Settings',  'admin menu menu title settings', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_settings',
             array(&$this, 'render'));
