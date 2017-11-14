@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 14:43+0200\n"
+"POT-Creation-Date: 2017-11-14 15:17+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2173,44 +2173,48 @@ msgid "tp_admin_bar_menu_settings_title"
 msgstr "Настройки"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_btn_auto_links"
+msgctxt "admin page edit post btn auto links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:134
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_table_post_link_auto_links"
+msgctxt "admin page edit post table post link auto links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:491
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
 msgctxt "admin menu page title auto links"
-msgid "tp_admin_menu_page_auto_links_title"
+msgid "Auto-links"
+msgstr "Подстановка ссылок"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
+msgctxt "admin menu menu title auto links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:547
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_meta_box_auto_links"
+msgctxt "admin page edit post meta box auto links"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:590
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links"
+msgctxt "admin page edit post meta box field"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:597
-msgctxt "(Enable)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_enable"
+msgctxt "admin page edit post meta box field"
+msgid "Enable"
 msgstr "Включена"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:604
-msgctxt "(Disable)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_disable"
+msgctxt "admin page edit post meta box field"
+msgid "Disable"
 msgstr "Выключена"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:723
-msgctxt "(Placing links)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
+msgctxt "admin page edit post meta box field auto links progressbar label"
+msgid "Placing links"
 msgstr "Простановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPDashboardController.php:21
@@ -6443,6 +6447,38 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Placing links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
+#~ msgstr "Простановка ссылок"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "(Enable)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_enable"
+#~ msgstr "Включена"
+
+#~ msgctxt "(Disable)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_disable"
+#~ msgstr "Выключена"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_auto_links"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "admin menu page title auto links"
+#~ msgid "tp_admin_menu_page_auto_links_title"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_table_post_link_auto_links"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_btn_auto_links"
+#~ msgstr "Подстановка ссылок"
+
 #~ msgctxt "admin menu page title dashboard"
 #~ msgid "tp_admin_menu_page_dashboard_title"
 #~ msgstr "Travelpayouts"
@@ -6990,21 +7026,9 @@ msgstr "Вид %s не найден"
 #~ msgid "Unknown error."
 #~ msgstr "Произошла неизвестная ошибка."
 
-#~ msgid "Auto-links"
-#~ msgstr "Подстановка ссылок"
-
 #~ msgctxt "meta_box_post"
 #~ msgid "Auto-links"
 #~ msgstr "Подстановка ссылок"
-
-#~ msgid "Enable"
-#~ msgstr "Включена"
-
-#~ msgid "Disable"
-#~ msgstr "Выключена"
-
-#~ msgid "Placing links"
-#~ msgstr "Простановка ссылок"
 
 #~ msgid "Limit replacements"
 #~ msgstr "Количество замен "

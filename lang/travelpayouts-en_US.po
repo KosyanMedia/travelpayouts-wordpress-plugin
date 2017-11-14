@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 14:43+0200\n"
+"POT-Creation-Date: 2017-11-14 15:18+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2171,44 +2171,48 @@ msgid "tp_admin_bar_menu_settings_title"
 msgstr "Settings"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_btn_auto_links"
+msgctxt "admin page edit post btn auto links"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:134
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_table_post_link_auto_links"
+msgctxt "admin page edit post table post link auto links"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:491
-#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
 msgctxt "admin menu page title auto links"
-msgid "tp_admin_menu_page_auto_links_title"
+msgid "Auto-links"
+msgstr "Auto-links"
+
+#: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:493
+msgctxt "admin menu menu title auto links"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:547
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_meta_box_auto_links"
+msgctxt "admin page edit post meta box auto links"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:590
-msgctxt "(Auto-links)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links"
+msgctxt "admin page edit post meta box field"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:597
-msgctxt "(Enable)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_enable"
+msgctxt "admin page edit post meta box field"
+msgid "Enable"
 msgstr "Enable"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:604
-msgctxt "(Disable)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_disable"
+msgctxt "admin page edit post meta box field"
+msgid "Disable"
 msgstr "Disable"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:723
-msgctxt "(Placing links)"
-msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
+msgctxt "admin page edit post meta box field auto links progressbar label"
+msgid "Placing links"
 msgstr "Placing links"
 
 #: app/includes/controllers/admin/menu/TPDashboardController.php:21
@@ -6528,6 +6532,38 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "(Placing links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
+#~ msgstr "Placing links"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links"
+#~ msgstr "Auto-links"
+
+#~ msgctxt "(Enable)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_enable"
+#~ msgstr "Enable"
+
+#~ msgctxt "(Disable)"
+#~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_disable"
+#~ msgstr "Disable"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_meta_box_auto_links"
+#~ msgstr "Auto-links"
+
+#~ msgctxt "admin menu page title auto links"
+#~ msgid "tp_admin_menu_page_auto_links_title"
+#~ msgstr "Auto-links"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_table_post_link_auto_links"
+#~ msgstr "Auto-links"
+
+#~ msgctxt "(Auto-links)"
+#~ msgid "tp_admin_page_edit_post_btn_auto_links"
+#~ msgstr "Auto-links"
+
 #~ msgctxt "admin menu page title dashboard"
 #~ msgid "tp_admin_menu_page_dashboard_title"
 #~ msgstr "Travelpayouts"
@@ -6971,10 +7007,6 @@ msgstr "View %s not found"
 #, fuzzy
 #~ msgid "Title:"
 #~ msgstr "Insert link"
-
-#, fuzzy
-#~ msgid "Auto-links"
-#~ msgstr "Auto-links"
 
 #, fuzzy
 #~ msgctxt "meta_box_post"

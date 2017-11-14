@@ -112,7 +112,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
                    //     .text('1').appendTo('select[name="action"]');
                 });
                 jQuery('<a href="#" class="button action TPAutoReplaceLinkPostBtn">'
-                    +'<?php _ex('tp_admin_page_edit_post_btn_auto_links', '(Auto-links)', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
+                    +'<?php _ex('Auto-links', 'admin page edit post btn auto links', TPOPlUGIN_TEXTDOMAIN ); ?></a>')
                     .appendTo('.bulkactions');
             </script>
             <?php
@@ -131,7 +131,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         //error_log(print_r($tag, true));
         $actions['tp-auto-replace-link-action-class'] = '<a href="#" data-post_id="'.$tag->ID .'"
              class="TPAutoReplaceLinkPostById">'
-            ._x('tp_admin_page_edit_post_table_post_link_auto_links','(Auto-links)', TPOPlUGIN_TEXTDOMAIN ).'</a>';
+            ._x('Auto-links', 'admin page edit post table post link auto links', TPOPlUGIN_TEXTDOMAIN ).'</a>';
         return $actions;
     }
 
@@ -488,9 +488,9 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( TPOPlUGIN_TEXTDOMAIN,
-            _x('tp_admin_menu_page_auto_links_title',  'admin menu page title auto links', TPOPlUGIN_TEXTDOMAIN )
+            _x('Auto-links',  'admin menu page title auto links', TPOPlUGIN_TEXTDOMAIN )
             .' (beta)',
-            _x('tp_admin_menu_page_auto_links_title',  'admin menu page title auto links', TPOPlUGIN_TEXTDOMAIN )
+            _x('Auto-links',  'admin menu menu title auto links', TPOPlUGIN_TEXTDOMAIN )
             .'<span class="update-plugins"><span class="plugin-count">beta</span></span>',
             'manage_options',
             'tp_control_substitution_links',
@@ -544,8 +544,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         foreach ( $screens as $screen ){
             add_meta_box(
                 'tp_sectionid',
-                _x('tp_admin_page_edit_post_meta_box_auto_links',
-                    '(Auto-links)',  TPOPlUGIN_TEXTDOMAIN ),
+                _x('Auto-links',
+                    'admin page edit post meta box auto links',  TPOPlUGIN_TEXTDOMAIN ),
                 array( &$this, 'tp_add_custom_box_callback'),
                 $screen,
                 'side',
@@ -587,22 +587,22 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         ?>
         <fieldset>
             <legend class="screen-reader-text">
-                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links',
-                    '(Auto-links)',  TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('Auto-links',
+                    'admin page edit post meta box field',  TPOPlUGIN_TEXTDOMAIN ); ?>
             </legend>
             <input type="radio" name="tp_auto_replac_link" <?php echo $disabled; ?>
                    class="tp-auto-replac-link" id="tp-auto-replac-link-0" value="1"
                     <?php checked( $tp_auto_replac_link, 1 ); ?> >
             <label for="tp-auto-replac-link-0" class="tp-auto-replac-link-icon">
-                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_enable',
-                    '(Enable)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('Enable',
+                    'admin page edit post meta box field', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
             <br><input type="radio" name="tp_auto_replac_link"
                        class="tp-auto-replac-link" id="tp-auto-replac-link-1" value="2"
                         <?php checked( $tp_auto_replac_link, 2 ); ?>>
             <label for="tp-auto-replac-link-1" class="tp-auto-replac-link-icon">
-                <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_disable',
-                    '(Disable)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('Disable',
+                    'admin page edit post meta box field', TPOPlUGIN_TEXTDOMAIN ); ?>
             </label>
         </fieldset>
         <?php
@@ -720,8 +720,8 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         <div id="TPProgressbarDialog">
             <div id="TPProgressbar">
                 <div class="TPProgressbar-label">
-                    <?php _ex('tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label',
-                        '(Placing links)', TPOPlUGIN_TEXTDOMAIN ); ?>...
+                    <?php _ex('Placing links',
+                        'admin page edit post meta box field auto links progressbar label', TPOPlUGIN_TEXTDOMAIN ); ?>...
                 </div>
             </div>
         </div>
