@@ -20,9 +20,9 @@ class TPWhatNewsController extends \core\controllers\TPOAdminMenuController
     {
         // TODO: Implement action() method.
         $plugin_page = add_submenu_page( null,
-            _x('tp_admin_menu_page_what_news_title',  'admin menu page title what news',
+            _x('What news',  'admin menu page title what news',
                 TPOPlUGIN_TEXTDOMAIN ),
-            _x('tp_admin_menu_page_what_news_title',  'admin menu page title what news',
+            _x('What news',  'admin menu menu title what news',
                 TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_what_news',

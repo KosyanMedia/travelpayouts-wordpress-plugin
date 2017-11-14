@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 12:26+0200\n"
+"POT-Creation-Date: 2017-11-14 12:30+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2254,9 +2254,13 @@ msgid "tp_admin_menu_page_statistics_title"
 msgstr "Statistics"
 
 #: app/includes/controllers/admin/menu/TPWhatNewsController.php:23
-#: app/includes/controllers/admin/menu/TPWhatNewsController.php:25
 msgctxt "admin menu page title what news"
-msgid "tp_admin_menu_page_what_news_title"
+msgid "What news"
+msgstr "What news"
+
+#: app/includes/controllers/admin/menu/TPWhatNewsController.php:25
+msgctxt "admin menu menu title what news"
+msgid "What news"
 msgstr "What news"
 
 #: app/includes/controllers/admin/menu/TPWidgetsController.php:19
@@ -6499,6 +6503,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin menu page title what news"
+#~ msgid "tp_admin_menu_page_what_news_title"
+#~ msgstr "What news"
 
 #~ msgctxt "admin menu page title widgets"
 #~ msgid "tp_admin_menu_page_widgets_title"

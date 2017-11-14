@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 12:27+0200\n"
+"POT-Creation-Date: 2017-11-14 12:31+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2256,9 +2256,13 @@ msgid "tp_admin_menu_page_statistics_title"
 msgstr "Статистика"
 
 #: app/includes/controllers/admin/menu/TPWhatNewsController.php:23
-#: app/includes/controllers/admin/menu/TPWhatNewsController.php:25
 msgctxt "admin menu page title what news"
-msgid "tp_admin_menu_page_what_news_title"
+msgid "What news"
+msgstr "Что нового"
+
+#: app/includes/controllers/admin/menu/TPWhatNewsController.php:25
+msgctxt "admin menu menu title what news"
+msgid "What news"
 msgstr "Что нового"
 
 #: app/includes/controllers/admin/menu/TPWidgetsController.php:19
@@ -6414,6 +6418,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin menu page title what news"
+#~ msgid "tp_admin_menu_page_what_news_title"
+#~ msgstr "Что нового"
 
 #~ msgctxt "admin menu page title widgets"
 #~ msgid "tp_admin_menu_page_widgets_title"
