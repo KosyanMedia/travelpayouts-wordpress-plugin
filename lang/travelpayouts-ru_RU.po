@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 12:43+0200\n"
+"POT-Creation-Date: 2017-11-14 14:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2238,9 +2238,13 @@ msgid "Railways schedule"
 msgstr "ЖД расписание"
 
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:21
-#: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
 msgctxt "admin menu page title search forms"
-msgid "tp_admin_menu_page_search_forms_title"
+msgid "Search Forms"
+msgstr "Поисковые формы"
+
+#: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
+msgctxt "admin menu menu title search forms"
+msgid "Search Forms"
 msgstr "Поисковые формы"
 
 #: app/includes/controllers/admin/menu/TPSettingsController.php:18
@@ -6427,6 +6431,10 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin menu page title search forms"
+#~ msgid "tp_admin_menu_page_search_forms_title"
+#~ msgstr "Поисковые формы"
+
 #~ msgctxt "admin menu page title settings"
 #~ msgid "tp_admin_menu_page_settings_title"
 #~ msgstr "Настройки"
@@ -8084,9 +8092,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Insert link"
 #~ msgstr "Вставить ссылку"
-
-#~ msgid "Search Forms"
-#~ msgstr "Поисковые формы"
 
 #~ msgctxt "add_menu_page page title"
 #~ msgid "Widgets"

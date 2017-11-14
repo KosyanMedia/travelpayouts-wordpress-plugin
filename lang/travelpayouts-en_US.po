@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 12:42+0200\n"
+"POT-Creation-Date: 2017-11-14 14:22+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2236,9 +2236,13 @@ msgid "Railways schedule"
 msgstr "Railways schedule"
 
 #: app/includes/controllers/admin/menu/TPSearchFormsController.php:21
-#: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
 msgctxt "admin menu page title search forms"
-msgid "tp_admin_menu_page_search_forms_title"
+msgid "Search Forms"
+msgstr "Search Forms"
+
+#: app/includes/controllers/admin/menu/TPSearchFormsController.php:22
+msgctxt "admin menu menu title search forms"
+msgid "Search Forms"
 msgstr "Search Forms"
 
 #: app/includes/controllers/admin/menu/TPSettingsController.php:18
@@ -6512,6 +6516,10 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "admin menu page title search forms"
+#~ msgid "tp_admin_menu_page_search_forms_title"
+#~ msgstr "Search Forms"
+
 #~ msgctxt "admin menu page title settings"
 #~ msgid "tp_admin_menu_page_settings_title"
 #~ msgstr "Settings"
@@ -6957,10 +6965,6 @@ msgstr "View %s not found"
 #~ msgctxt "search_form_modal"
 #~ msgid "Flights"
 #~ msgstr "Arial"
-
-#, fuzzy
-#~ msgid "Search"
-#~ msgstr "Insert search form"
 
 #, fuzzy
 #~ msgid "Title "
