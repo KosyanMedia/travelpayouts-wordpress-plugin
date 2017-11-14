@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 14:23+0200\n"
+"POT-Creation-Date: 2017-11-14 14:33+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2226,9 +2226,13 @@ msgid "tp_admin_menu_page_flight_tickets_title"
 msgstr "Авиабилеты"
 
 #: app/includes/controllers/admin/menu/TPHotelsController.php:27
-#: app/includes/controllers/admin/menu/TPHotelsController.php:28
 msgctxt "admin menu page title hotels"
-msgid "tp_admin_menu_page_hotels_title"
+msgid "Hotels"
+msgstr "Отели"
+
+#: app/includes/controllers/admin/menu/TPHotelsController.php:28
+msgctxt "admin menu menu title hotels"
+msgid "Hotels"
 msgstr "Отели"
 
 #: app/includes/controllers/admin/menu/TPRailwayController.php:26
@@ -6431,6 +6435,10 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin menu page title hotels"
+#~ msgid "tp_admin_menu_page_hotels_title"
+#~ msgstr "Отели"
+
 #~ msgctxt "admin menu page title search forms"
 #~ msgid "tp_admin_menu_page_search_forms_title"
 #~ msgstr "Поисковые формы"
@@ -6980,9 +6988,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Flights"
 #~ msgstr "Поиск авиабилетов"
-
-#~ msgid "Hotels"
-#~ msgstr "Отели"
 
 #~ msgid "Total"
 #~ msgstr "Итого"
