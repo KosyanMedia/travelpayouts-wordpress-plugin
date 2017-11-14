@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-10 19:00+0200\n"
+"POT-Creation-Date: 2017-11-14 12:22+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2268,9 +2268,13 @@ msgid "tp_admin_menu_page_widgets_title"
 msgstr "Виджеты"
 
 #: app/includes/controllers/admin/menu/TPWizardController.php:22
-#: app/includes/controllers/admin/menu/TPWizardController.php:23
 msgctxt "admin menu page title wizard"
-msgid "tp_admin_menu_page_wizard_title"
+msgid "Wizard"
+msgstr "Визард"
+
+#: app/includes/controllers/admin/menu/TPWizardController.php:23
+msgctxt "admin menu menu title wizard"
+msgid "Wizard"
 msgstr "Визард"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
@@ -5815,7 +5819,7 @@ msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Внести настройки"
 
-#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:426
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:427
 msgctxt "railway shortcode view train"
 msgid "фирм"
 msgstr ""
@@ -5986,83 +5990,83 @@ msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Direct"
 msgstr "Без пересадок"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:18
 #: app/includes/widgets/TPHotelsTablesWidget.php:20
+#: app/includes/widgets/TPHotelsTablesWidget.php:22
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Travelpayouts – Hotel Tables"
 msgstr "Travelpayouts – Hotel Tables"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:171
+#: app/includes/widgets/TPHotelsTablesWidget.php:173
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collection - Discounts"
 msgstr "Подборка отелей - Скидки"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:172
+#: app/includes/widgets/TPHotelsTablesWidget.php:174
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collections for dates"
 msgstr "Подборки отелей на даты"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:179
+#: app/includes/widgets/TPHotelsTablesWidget.php:194
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table:"
 msgstr "Выберите таблицу:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:186
+#: app/includes/widgets/TPHotelsTablesWidget.php:203
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table"
 msgstr "Выберите таблицу"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:201
+#: app/includes/widgets/TPHotelsTablesWidget.php:218
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Alternate title:"
 msgstr "Альтернативный заголовок:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:210
+#: app/includes/widgets/TPHotelsTablesWidget.php:227
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "City:"
 msgstr "Город:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:221
+#: app/includes/widgets/TPHotelsTablesWidget.php:238
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Subid:"
 msgstr "Дополнительный маркер:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:232
+#: app/includes/widgets/TPHotelsTablesWidget.php:249
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type:"
 msgstr "Тип подборки:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:239
+#: app/includes/widgets/TPHotelsTablesWidget.php:256
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type"
 msgstr "Тип подборки"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:257
+#: app/includes/widgets/TPHotelsTablesWidget.php:274
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-in date:"
 msgstr "Дата заезда:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:266
+#: app/includes/widgets/TPHotelsTablesWidget.php:283
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-out date:"
 msgstr "Дата выезда:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:275
+#: app/includes/widgets/TPHotelsTablesWidget.php:292
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Number of results:"
 msgstr "Количество результатов:"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:288
+#: app/includes/widgets/TPHotelsTablesWidget.php:305
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Paginate"
 msgstr "Пагинация"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:297
+#: app/includes/widgets/TPHotelsTablesWidget.php:314
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "No title"
 msgstr "Убрать заголовок"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:306
+#: app/includes/widgets/TPHotelsTablesWidget.php:323
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Land without dates"
 msgstr "Не подставлять даты при переходе"
@@ -6406,6 +6410,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin menu page title wizard"
+#~ msgid "tp_admin_menu_page_wizard_title"
+#~ msgstr "Визард"
 
 #~ msgctxt "(Extra marker)"
 #~ msgid "tp_admin_page_settings_tab_account_field_extra_marker_label"
@@ -8066,10 +8074,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Substitution links"
 #~ msgstr "Подстановка ссылок"
-
-#~ msgctxt "add_menu_page page title"
-#~ msgid "Wizard"
-#~ msgstr "Визард"
 
 #~ msgctxt "add_menu_page page title"
 #~ msgid "Statistics"

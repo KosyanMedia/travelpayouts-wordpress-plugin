@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-10 19:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:21+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2266,9 +2266,13 @@ msgid "tp_admin_menu_page_widgets_title"
 msgstr "Widgets"
 
 #: app/includes/controllers/admin/menu/TPWizardController.php:22
-#: app/includes/controllers/admin/menu/TPWizardController.php:23
 msgctxt "admin menu page title wizard"
-msgid "tp_admin_menu_page_wizard_title"
+msgid "Wizard"
+msgstr "Wizard"
+
+#: app/includes/controllers/admin/menu/TPWizardController.php:23
+msgctxt "admin menu menu title wizard"
+msgid "Wizard"
 msgstr "Wizard"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
@@ -5807,7 +5811,7 @@ msgctxt "admin page wizard tab menu registration link enter settings"
 msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
 msgstr "2. Enter settings "
 
-#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:426
+#: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:427
 msgctxt "railway shortcode view train"
 msgid "фирм"
 msgstr ""
@@ -6000,23 +6004,23 @@ msgctxt "Travelpayouts – Flights Tables Widget"
 msgid "Direct"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:18
 #: app/includes/widgets/TPHotelsTablesWidget.php:20
+#: app/includes/widgets/TPHotelsTablesWidget.php:22
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Travelpayouts – Hotel Tables"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:171
+#: app/includes/widgets/TPHotelsTablesWidget.php:173
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collection - Discounts"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:172
+#: app/includes/widgets/TPHotelsTablesWidget.php:174
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Hotels collections for dates"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:179
+#: app/includes/widgets/TPHotelsTablesWidget.php:194
 #, fuzzy
 #| msgctxt "local en table shortcodes railway 1 title_button text"
 #| msgid "Select dates"
@@ -6024,7 +6028,7 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table:"
 msgstr "Select dates"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:186
+#: app/includes/widgets/TPHotelsTablesWidget.php:203
 #, fuzzy
 #| msgctxt "local en table shortcodes railway 1 title_button text"
 #| msgid "Select dates"
@@ -6032,7 +6036,7 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Select the table"
 msgstr "Select dates"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:201
+#: app/includes/widgets/TPHotelsTablesWidget.php:218
 #, fuzzy
 #| msgctxt "modal railway сonstructor title label"
 #| msgid "Alternate title"
@@ -6040,12 +6044,12 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Alternate title:"
 msgstr "Alternate title"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:210
+#: app/includes/widgets/TPHotelsTablesWidget.php:227
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "City:"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:221
+#: app/includes/widgets/TPHotelsTablesWidget.php:238
 #, fuzzy
 #| msgctxt "modal railway сonstructor subid label"
 #| msgid "Subid"
@@ -6053,7 +6057,7 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Subid:"
 msgstr "Subid"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:232
+#: app/includes/widgets/TPHotelsTablesWidget.php:249
 #, fuzzy
 #| msgctxt "local en table shortcodes railway 1 title_button text"
 #| msgid "Select dates"
@@ -6061,7 +6065,7 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type:"
 msgstr "Select dates"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:239
+#: app/includes/widgets/TPHotelsTablesWidget.php:256
 #, fuzzy
 #| msgctxt "local en table shortcodes railway 1 title_button text"
 #| msgid "Select dates"
@@ -6069,22 +6073,22 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Selection type"
 msgstr "Select dates"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:257
+#: app/includes/widgets/TPHotelsTablesWidget.php:274
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-in date:"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:266
+#: app/includes/widgets/TPHotelsTablesWidget.php:283
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Check-out date:"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:275
+#: app/includes/widgets/TPHotelsTablesWidget.php:292
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Number of results:"
 msgstr ""
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:288
+#: app/includes/widgets/TPHotelsTablesWidget.php:305
 #, fuzzy
 #| msgctxt "admin page railway tab tables content paginate"
 #| msgid "Paginate"
@@ -6092,13 +6096,13 @@ msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "Paginate"
 msgstr "Paginate"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:297
+#: app/includes/widgets/TPHotelsTablesWidget.php:314
 #, fuzzy
 msgctxt "Travelpayouts – Hotel Tables Widget"
 msgid "No title"
 msgstr "Insert link"
 
-#: app/includes/widgets/TPHotelsTablesWidget.php:306
+#: app/includes/widgets/TPHotelsTablesWidget.php:323
 #, fuzzy
 #| msgctxt "tp admin page settings сonstructor hotels tables field hotels_link_without_dates label"
 #| msgid "Land without dates"
@@ -6491,6 +6495,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin menu page title wizard"
+#~ msgid "tp_admin_menu_page_wizard_title"
+#~ msgstr "Wizard"
 
 #~ msgctxt "(Extra marker)"
 #~ msgid "tp_admin_page_settings_tab_account_field_extra_marker_label"
