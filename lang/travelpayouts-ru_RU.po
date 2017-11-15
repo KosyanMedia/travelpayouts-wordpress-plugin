@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 22:49+0200\n"
+"POT-Creation-Date: 2017-11-15 23:15+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2004,53 +2004,53 @@ msgid "Unknown error."
 msgstr "Произошла неизвестная ошибка."
 
 #: app/includes/common/TPThemes.php:18
-msgctxt "(Default Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
+msgctxt "tp admin menu page flight tickets tab themes theme name default_theme"
+msgid "Default Theme"
 msgstr "Стандартная тема"
 
 #: app/includes/common/TPThemes.php:24
-msgctxt "(Red Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name red_button_table"
+msgid "Red Button Light Theme"
 msgstr "Светлая тема с красной кнопкой"
 
 #: app/includes/common/TPThemes.php:30
-msgctxt "(Blue Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name blue_table"
+msgid "Blue Button Light Theme"
 msgstr "Светлая тема с синей кнопкой"
 
 #: app/includes/common/TPThemes.php:36
-msgctxt "(Salad Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name grey_salad_table"
+msgid "Salad Button Light Theme"
 msgstr "Светлая тема с салатовой кнопкой"
 
 #: app/includes/common/TPThemes.php:42
-msgctxt "(Purple Header Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name purple_table"
+msgid "Purple Header Light Theme"
 msgstr "Светлая тема с фиолетовой кнопкой"
 
 #: app/includes/common/TPThemes.php:48
-msgctxt "(Yellow Button Dark Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name black_and_yellow_table"
+msgid "Yellow Button Dark Theme"
 msgstr "Темная тема с желтой кнопкой"
 
 #: app/includes/common/TPThemes.php:54
-msgctxt "(Coral Button Dark Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
+msgctxt "tp admin menu page flight tickets tab themes theme name dark_and_rainbow"
+msgid "Coral Button Dark Theme"
 msgstr "Темная тема с кораловой кнопкой"
 
 #: app/includes/common/TPThemes.php:60
-msgctxt "(Light Theme with Plum Search Column)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name light_and_plum_table"
+msgid "Light Theme with Plum Search Column"
 msgstr "Светлая тема со сливовой колонкой поиска"
 
 #: app/includes/common/TPThemes.php:66
-msgctxt "(Light Theme with Dark Search Column)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
+msgctxt "tp admin menu page flight tickets tab themes theme name light_yellow_and_darkgray"
+msgid "Light Theme with Dark Search Column"
 msgstr "Светлая тема с темной колонкой поиска"
 
 #: app/includes/common/TPThemes.php:72
-msgctxt "(Mint Button Light Theme)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
+msgctxt "tp admin menu page flight tickets tab themes theme name mint_table"
+msgid "Mint Button Light Theme"
 msgstr "Светлая тема с мятной кнопкой"
 
 #: app/includes/common/TPTinyMCE.php:51
@@ -6447,6 +6447,46 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Default Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_default_theme"
+#~ msgstr "Стандартная тема"
+
+#~ msgctxt "(Red Button Light Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_red_button_table"
+#~ msgstr "Светлая тема с красной кнопкой"
+
+#~ msgctxt "(Blue Button Light Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_blue_table"
+#~ msgstr "Светлая тема с синей кнопкой"
+
+#~ msgctxt "(Salad Button Light Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_grey_salad_table"
+#~ msgstr "Светлая тема с салатовой кнопкой"
+
+#~ msgctxt "(Purple Header Light Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_purple_table"
+#~ msgstr "Светлая тема с фиолетовой кнопкой"
+
+#~ msgctxt "(Yellow Button Dark Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_black_and_yellow_table"
+#~ msgstr "Темная тема с желтой кнопкой"
+
+#~ msgctxt "(Coral Button Dark Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_dark_and_rainbow"
+#~ msgstr "Темная тема с кораловой кнопкой"
+
+#~ msgctxt "(Light Theme with Plum Search Column)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_and_plum_table"
+#~ msgstr "Светлая тема со сливовой колонкой поиска"
+
+#~ msgctxt "(Light Theme with Dark Search Column)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_light_yellow_and_darkgray"
+#~ msgstr "Светлая тема с темной колонкой поиска"
+
+#~ msgctxt "(Mint Button Light Theme)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_theme_name_mint_table"
+#~ msgstr "Светлая тема с мятной кнопкой"
+
 #~ msgctxt "(The variable $origin parameters not set or incorrectly.)"
 #~ msgid "tp_request_api_error_msg_origin"
 #~ msgstr "Переменная $origin не задана или задана не верно."
@@ -7608,10 +7648,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Buttons in the editor"
 #~ msgstr "Кнопки в редакторе"
-
-#~ msgctxt "config_media_btn_option"
-#~ msgid "Default"
-#~ msgstr "По умолчанию"
 
 #~ msgctxt "config_media_btn_option"
 #~ msgid "Compact"
