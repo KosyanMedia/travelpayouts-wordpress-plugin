@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:35+0200\n"
+"POT-Creation-Date: 2017-11-15 08:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2089,12 +2089,12 @@ msgstr "Отели"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
-msgid "tp_admin_media_button_link_title"
+msgid "Insert link"
 msgstr "Вставить ссылку"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:20
 msgctxt "admin media button link short title"
-msgid "tp_admin_media_button_link_short_title"
+msgid "Link"
 msgstr "Ссылка"
 
 #: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:19
@@ -6447,6 +6447,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin media button link title"
+#~ msgid "tp_admin_media_button_link_title"
+#~ msgstr "Вставить ссылку"
+
+#~ msgctxt "admin media button link short title"
+#~ msgid "tp_admin_media_button_link_short_title"
+#~ msgstr "Ссылка"
+
 #~ msgctxt "admin media button insert hotels title"
 #~ msgid "tp_admin_media_button_insert_hotels_title"
 #~ msgstr "Вставить таблицу отелей"
@@ -7926,9 +7934,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Anchor"
 #~ msgstr "Анкор"
 
-#~ msgid "Link"
-#~ msgstr "Ссылка"
-
 #~ msgid "Affix link for all existing posts"
 #~ msgstr "Проставить ссылки по всех существующих постах"
 
@@ -8146,9 +8151,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Form"
 #~ msgstr "Форма"
-
-#~ msgid "Insert link"
-#~ msgstr "Вставить ссылку"
 
 #~ msgctxt "add_menu_page page title"
 #~ msgid "Widgets"

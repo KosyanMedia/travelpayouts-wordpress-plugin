@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:33+0200\n"
+"POT-Creation-Date: 2017-11-15 08:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2087,12 +2087,12 @@ msgstr "Hotels"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
 msgctxt "admin media button link title"
-msgid "tp_admin_media_button_link_title"
+msgid "Insert link"
 msgstr "Insert link"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:20
 msgctxt "admin media button link short title"
-msgid "tp_admin_media_button_link_short_title"
+msgid "Link"
 msgstr "Link"
 
 #: app/includes/controllers/admin/media_buttons/TPRailwayButtonsController.php:19
@@ -6532,6 +6532,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "admin media button link title"
+#~ msgid "tp_admin_media_button_link_title"
+#~ msgstr "Insert link"
+
+#~ msgctxt "admin media button link short title"
+#~ msgid "tp_admin_media_button_link_short_title"
+#~ msgstr "Link"
+
 #~ msgctxt "admin media button insert hotels title"
 #~ msgid "tp_admin_media_button_insert_hotels_title"
 #~ msgstr "Insert Hotels Table"
@@ -7041,10 +7049,6 @@ msgstr "View %s not found"
 #, fuzzy
 #~ msgid "Link "
 #~ msgstr "Add link"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "1. Sign up"
 
 #, fuzzy
 #~ msgid "this link."

@@ -16,8 +16,8 @@ class TPLinkButtonsController extends TPAdminMediaButtonsController
     {
         // TODO: Implement action() method.
         $text = $this->getTextBtn(
-            _x( 'tp_admin_media_button_link_title',  'admin media button link title', TPOPlUGIN_TEXTDOMAIN  ),
-            _x( 'tp_admin_media_button_link_short_title',  'admin media button link short title', TPOPlUGIN_TEXTDOMAIN  )
+            _x( 'Insert link',  'admin media button link title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'Link',  'admin media button link short title', TPOPlUGIN_TEXTDOMAIN  )
         );
         $args = wp_parse_args( $args, array(
             'target'    => 'content',
