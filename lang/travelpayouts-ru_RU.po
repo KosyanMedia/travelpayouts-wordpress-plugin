@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 15:17+0200\n"
+"POT-Creation-Date: 2017-11-15 08:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2079,12 +2079,12 @@ msgstr "Найти билеты {origin} {destination}"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
 msgctxt "admin media button insert hotels title"
-msgid "tp_admin_media_button_insert_hotels_title"
+msgid "Insert Hotels Table"
 msgstr "Вставить таблицу отелей"
 
-#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
+#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:20
 msgctxt "admin media button hotels title"
-msgid "tp_admin_media_button_hotels_short_title"
+msgid "Hotels"
 msgstr "Отели"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
@@ -6447,6 +6447,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin media button insert hotels title"
+#~ msgid "tp_admin_media_button_insert_hotels_title"
+#~ msgstr "Вставить таблицу отелей"
+
+#~ msgctxt "admin media button hotels title"
+#~ msgid "tp_admin_media_button_hotels_short_title"
+#~ msgstr "Отели"
+
 #~ msgctxt "(Placing links)"
 #~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
 #~ msgstr "Простановка ссылок"
@@ -8129,9 +8137,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Widget"
 #~ msgstr "Виджет"
-
-#~ msgid "Insert table"
-#~ msgstr "Вставить таблицу"
 
 #~ msgid "Table"
 #~ msgstr "Таблица"

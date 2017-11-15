@@ -16,10 +16,8 @@ class TPHotelsButtonsController extends TPAdminMediaButtonsController
     {
         // TODO: Implement action() method.
         $text = $this->getTextBtn(
-            _x( 'tp_admin_media_button_insert_hotels_title',
-                'admin media button insert hotels title', TPOPlUGIN_TEXTDOMAIN  ),
-            _x( 'tp_admin_media_button_hotels_short_title',
-                'admin media button hotels title', TPOPlUGIN_TEXTDOMAIN  )
+            _x( 'Insert Hotels Table', 'admin media button insert hotels title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'Hotels', 'admin media button hotels title', TPOPlUGIN_TEXTDOMAIN  )
         );
 
         $args = wp_parse_args( $args, array(

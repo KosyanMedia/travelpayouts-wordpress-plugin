@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-14 15:18+0200\n"
+"POT-Creation-Date: 2017-11-15 08:33+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2077,12 +2077,12 @@ msgstr "Find tickets {origin} {destination}"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
 msgctxt "admin media button insert hotels title"
-msgid "tp_admin_media_button_insert_hotels_title"
+msgid "Insert Hotels Table"
 msgstr "Insert Hotels Table"
 
-#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:21
+#: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:20
 msgctxt "admin media button hotels title"
-msgid "tp_admin_media_button_hotels_short_title"
+msgid "Hotels"
 msgstr "Hotels"
 
 #: app/includes/controllers/admin/media_buttons/TPLinkButtonsController.php:19
@@ -6531,6 +6531,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin media button insert hotels title"
+#~ msgid "tp_admin_media_button_insert_hotels_title"
+#~ msgstr "Insert Hotels Table"
+
+#~ msgctxt "admin media button hotels title"
+#~ msgid "tp_admin_media_button_hotels_short_title"
+#~ msgstr "Hotels"
 
 #~ msgctxt "(Placing links)"
 #~ msgid "tp_admin_page_edit_post_meta_box_field_auto_links_progressbar_label"
