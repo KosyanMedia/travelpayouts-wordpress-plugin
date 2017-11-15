@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 16:14+0200\n"
+"POT-Creation-Date: 2017-11-15 22:50+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1964,43 +1964,43 @@ msgid "дней"
 msgstr "дней"
 
 #: app/includes/common/TPRequestApi.php:189
-msgctxt "(The variable $origin parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_origin"
+msgctxt "tp request api error msg origin"
+msgid "The variable $origin parameters not set or incorrectly."
 msgstr "The variable $origin parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:191
-msgctxt "(The variable $destination parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_destination"
+msgctxt "tp request api error msg destination"
+msgid "The variable $destination parameters not set or incorrectly."
 msgstr "The variable $destination parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:193
-msgctxt "(The variable $currency parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_currency"
+msgctxt "tp request api error msg currency"
+msgid "The variable $currency parameters not set or incorrectly."
 msgstr "The variable $currency parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:195
-msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_departure_at"
+msgctxt "tp request api error msg departure_at"
+msgid "The variable $departure_at parameters not set or incorrectly."
 msgstr "The variable $departure_at parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:197
-msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_calendar_type"
+msgctxt "tp request api error msg calendar_type"
+msgid "The variable $calendar_type parameters not set or incorrectly."
 msgstr "The variable $calendar_type parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:199
-msgctxt "(The variable $return_at parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_return_at"
+msgctxt "tp request api error msg return_at"
+msgid "The variable $return_at parameters not set or incorrectly."
 msgstr "The variable $return_at parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:201
-msgctxt "(The variable $airline parameters not set or incorrectly.)"
-msgid "tp_request_api_error_msg_airline"
+msgctxt "tp request api error msg airline"
+msgid "The variable $airline parameters not set or incorrectly."
 msgstr "The variable $airline parameters not set or incorrectly."
 
 #: app/includes/common/TPRequestApi.php:206
-msgctxt "(Unknown error.)"
-msgid "tp_request_api_error_msg_unknown_error"
+msgctxt "tp request api error msg unknown error"
+msgid "Unknown error."
 msgstr "Unknown error."
 
 #: app/includes/common/TPThemes.php:18
@@ -6531,6 +6531,38 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(The variable $origin parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_origin"
+#~ msgstr "The variable $origin parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $destination parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_destination"
+#~ msgstr "The variable $destination parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $currency parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_currency"
+#~ msgstr "The variable $currency parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $departure_at parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_departure_at"
+#~ msgstr "The variable $departure_at parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $calendar_type parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_calendar_type"
+#~ msgstr "The variable $calendar_type parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $return_at parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_return_at"
+#~ msgstr "The variable $return_at parameters not set or incorrectly."
+
+#~ msgctxt "(The variable $airline parameters not set or incorrectly.)"
+#~ msgid "tp_request_api_error_msg_airline"
+#~ msgstr "The variable $airline parameters not set or incorrectly."
+
+#~ msgctxt "(Unknown error.)"
+#~ msgid "tp_request_api_error_msg_unknown_error"
+#~ msgstr "Unknown error."
 
 #~ msgctxt "(Economy)"
 #~ msgid "tp_plugin_local_en_trip_class_economy"
