@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:43+0200\n"
+"POT-Creation-Date: 2017-11-15 08:51+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2107,12 +2107,12 @@ msgstr "Railway Schedule"
 
 #: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
 msgctxt "admin media button insert search form title"
-msgid "tp_admin_media_button_insert_search_form_title"
+msgid "Insert search form"
 msgstr "Insert search form"
 
 #: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:23
 msgctxt "admin media button form short title"
-msgid "tp_admin_media_button_form_short_title"
+msgid "Form"
 msgstr "Form"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:15
@@ -6531,6 +6531,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin media button insert search form title"
+#~ msgid "tp_admin_media_button_insert_search_form_title"
+#~ msgstr "Insert search form"
+
+#~ msgctxt "admin media button form short title"
+#~ msgid "tp_admin_media_button_form_short_title"
+#~ msgstr "Form"
 
 #~ msgctxt "admin media button link title"
 #~ msgid "tp_admin_media_button_link_title"

@@ -19,8 +19,8 @@ class TPSearchFormButtonsController extends TPAdminMediaButtonsController{
         // TODO: Implement action() method.
 
         $text = $this->getTextBtn(
-            _x( 'tp_admin_media_button_insert_search_form_title',  'admin media button insert search form title', TPOPlUGIN_TEXTDOMAIN  ),
-            _x( 'tp_admin_media_button_form_short_title',  'admin media button form short title', TPOPlUGIN_TEXTDOMAIN  )
+            _x( 'Insert search form',  'admin media button insert search form title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'Form',  'admin media button form short title', TPOPlUGIN_TEXTDOMAIN  )
         );
         $args = wp_parse_args( $args, array(
             'target'    => 'content',

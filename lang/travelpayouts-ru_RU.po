@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:43+0200\n"
+"POT-Creation-Date: 2017-11-15 08:52+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2109,12 +2109,12 @@ msgstr "ЖД расписание"
 
 #: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:22
 msgctxt "admin media button insert search form title"
-msgid "tp_admin_media_button_insert_search_form_title"
+msgid "Insert search form"
 msgstr "Вставить поисковую форму"
 
 #: app/includes/controllers/admin/media_buttons/TPSearchFormButtonsController.php:23
 msgctxt "admin media button form short title"
-msgid "tp_admin_media_button_form_short_title"
+msgid "Form"
 msgstr "Форма"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:15
@@ -6447,6 +6447,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin media button insert search form title"
+#~ msgid "tp_admin_media_button_insert_search_form_title"
+#~ msgstr "Вставить поисковую форму"
+
+#~ msgctxt "admin media button form short title"
+#~ msgid "tp_admin_media_button_form_short_title"
+#~ msgstr "Форма"
+
 #~ msgctxt "admin media button link title"
 #~ msgid "tp_admin_media_button_link_title"
 #~ msgstr "Вставить ссылку"
@@ -8145,12 +8153,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Table"
 #~ msgstr "Таблица"
-
-#~ msgid "Insert search form"
-#~ msgstr "Вставить поисковую форму"
-
-#~ msgid "Form"
-#~ msgstr "Форма"
 
 #~ msgctxt "add_menu_page page title"
 #~ msgid "Widgets"
