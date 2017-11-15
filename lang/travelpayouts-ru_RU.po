@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:56+0200\n"
+"POT-Creation-Date: 2017-11-15 09:02+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2129,12 +2129,12 @@ msgstr "Авиа"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
 msgctxt "admin media button insert widget title"
-msgid "tp_admin_media_button_insert_widget_title"
+msgid "Insert widget"
 msgstr "Вставить виджет"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:16
 msgctxt "admin media button widget title"
-msgid "tp_admin_media_button_widget_short_title"
+msgid "Widget"
 msgstr "Виджет"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:15
@@ -6447,6 +6447,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin media button insert widget title"
+#~ msgid "tp_admin_media_button_insert_widget_title"
+#~ msgstr "Вставить виджет"
+
+#~ msgctxt "admin media button widget title"
+#~ msgid "tp_admin_media_button_widget_short_title"
+#~ msgstr "Виджет"
+
 #~ msgctxt "admin media button insert table title"
 #~ msgid "tp_admin_media_button_insert_table_title"
 #~ msgstr "Вставить авиа таблицу"
@@ -8149,12 +8157,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Earn by selling tourist services"
 #~ msgstr "Зарабатывайте на продаже туристических услуг"
-
-#~ msgid "Insert widget"
-#~ msgstr "Вставить виджет"
-
-#~ msgid "Widget"
-#~ msgstr "Виджет"
 
 #~ msgid "Table"
 #~ msgstr "Таблица"

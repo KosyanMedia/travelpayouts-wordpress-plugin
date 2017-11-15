@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:55+0200\n"
+"POT-Creation-Date: 2017-11-15 09:02+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2127,12 +2127,12 @@ msgstr "Flights"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
 msgctxt "admin media button insert widget title"
-msgid "tp_admin_media_button_insert_widget_title"
+msgid "Insert widget"
 msgstr "Insert widget"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:16
 msgctxt "admin media button widget title"
-msgid "tp_admin_media_button_widget_short_title"
+msgid "Widget"
 msgstr "Widget"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:15
@@ -6531,6 +6531,14 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin media button insert widget title"
+#~ msgid "tp_admin_media_button_insert_widget_title"
+#~ msgstr "Insert widget"
+
+#~ msgctxt "admin media button widget title"
+#~ msgid "tp_admin_media_button_widget_short_title"
+#~ msgstr "Widget"
 
 #~ msgctxt "admin media button insert table title"
 #~ msgid "tp_admin_media_button_insert_table_title"

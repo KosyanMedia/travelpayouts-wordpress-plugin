@@ -12,8 +12,8 @@ class TPWidgetButtonsController extends TPAdminMediaButtonsController{
     {
         // TODO: Implement action() method.
         $text = $this->getTextBtn(
-            _x( 'tp_admin_media_button_insert_widget_title',  'admin media button insert widget title', TPOPlUGIN_TEXTDOMAIN  ),
-            _x( 'tp_admin_media_button_widget_short_title',  'admin media button widget title', TPOPlUGIN_TEXTDOMAIN  )
+            _x( 'Insert widget',  'admin media button insert widget title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'Widget',  'admin media button widget title', TPOPlUGIN_TEXTDOMAIN  )
             );
 
         $args = wp_parse_args( $args, array(
