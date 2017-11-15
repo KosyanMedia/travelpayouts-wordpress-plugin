@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 14:46+0200\n"
+"POT-Creation-Date: 2017-11-15 16:02+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -1879,33 +1879,33 @@ msgid "tp_plugin_local_ru_distance_label_m"
 msgstr "м"
 
 #: app/includes/common/TPFieldsLabelTable.php:638
-msgctxt "(Direct)"
-msgid "tp_plugin_local_en_number_changes_label_direct"
+msgctxt "tp plugin local en number changes label direct"
+msgid "Direct"
 msgstr "Direct"
 
 #: app/includes/common/TPFieldsLabelTable.php:639
-msgctxt "(Прямой)"
-msgid "tp_plugin_local_ru_number_changes_label_direct"
+msgctxt "tp plugin local ru number changes label direct"
+msgid "Direct"
 msgstr "Прямой"
 
 #: app/includes/common/TPFieldsLabelTable.php:642
-msgctxt "(stop)"
-msgid "tp_plugin_local_en_number_changes_label_stop"
+msgctxt "tp plugin local en number changes label stop"
+msgid "stop"
 msgstr "stop"
 
 #: app/includes/common/TPFieldsLabelTable.php:643
-msgctxt "(пересадка)"
-msgid "tp_plugin_local_ru_number_changes_label_stop"
+msgctxt "tp plugin local ru number changes label stop"
+msgid "stop"
 msgstr "пересадка"
 
 #: app/includes/common/TPFieldsLabelTable.php:646
-msgctxt "(stops)"
-msgid "tp_plugin_local_en_number_changes_label_stops"
+msgctxt "tp plugin local en number changes label stops"
+msgid "stops"
 msgstr "stops"
 
 #: app/includes/common/TPFieldsLabelTable.php:647
-msgctxt "(пересадки)"
-msgid "tp_plugin_local_ru_number_changes_label_stops"
+msgctxt "tp plugin local ru number changes label stops"
+msgid "stops"
 msgstr "пересадки"
 
 #: app/includes/common/TPFieldsLabelTable.php:670
@@ -6531,6 +6531,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Direct)"
+#~ msgid "tp_plugin_local_en_number_changes_label_direct"
+#~ msgstr "Direct"
+
+#~ msgctxt "(Прямой)"
+#~ msgid "tp_plugin_local_ru_number_changes_label_direct"
+#~ msgstr "Прямой"
+
+#~ msgctxt "(stop)"
+#~ msgid "tp_plugin_local_en_number_changes_label_stop"
+#~ msgstr "stop"
+
+#~ msgctxt "(пересадка)"
+#~ msgid "tp_plugin_local_ru_number_changes_label_stop"
+#~ msgstr "пересадка"
+
+#~ msgctxt "(stops)"
+#~ msgid "tp_plugin_local_en_number_changes_label_stops"
+#~ msgstr "stops"
+
+#~ msgctxt "(пересадки)"
+#~ msgid "tp_plugin_local_ru_number_changes_label_stops"
+#~ msgstr "пересадки"
 
 #~ msgctxt "(Отель)"
 #~ msgid "tp_plugin_local_ru_hotels_fields_table_label_default_name"

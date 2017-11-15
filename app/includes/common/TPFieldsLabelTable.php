@@ -635,16 +635,16 @@ class TPFieldsLabelTable
         $numberChangesLabel = "";
         $numberChangesLabelData = array(
             0 => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_direct', '(Direct)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_direct', '(Прямой)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('Direct', 'tp plugin local en number changes label direct', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('Direct', 'tp plugin local ru number changes label direct', TPOPlUGIN_TEXTDOMAIN),
             ),
             1 => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_stop', '(stop)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_stop', '(пересадка)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('stop', 'tp plugin local en number changes label stop', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('stop', 'tp plugin local ru number changes label stop', TPOPlUGIN_TEXTDOMAIN),
             ),
             2 => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_number_changes_label_stops', '(stops)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_number_changes_label_stops', '(пересадки)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('stops', 'tp plugin local en number changes label stops', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('stops', 'tp plugin local ru number changes label stops', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
 
