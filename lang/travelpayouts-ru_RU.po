@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 08:52+0200\n"
+"POT-Creation-Date: 2017-11-15 08:56+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2119,12 +2119,12 @@ msgstr "Форма"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:15
 msgctxt "admin media button insert table title"
-msgid "tp_admin_media_button_insert_table_title"
+msgid "Insert Flights Tabel"
 msgstr "Вставить авиа таблицу"
 
 #: app/includes/controllers/admin/media_buttons/TPShortcodeButtonsController.php:16
 msgctxt "admin media button table title"
-msgid "tp_admin_media_button_table_short_title"
+msgid "Flights"
 msgstr "Авиа"
 
 #: app/includes/controllers/admin/media_buttons/TPWidgetButtonsController.php:15
@@ -6447,6 +6447,14 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "admin media button insert table title"
+#~ msgid "tp_admin_media_button_insert_table_title"
+#~ msgstr "Вставить авиа таблицу"
+
+#~ msgctxt "admin media button table title"
+#~ msgid "tp_admin_media_button_table_short_title"
+#~ msgstr "Авиа"
+
 #~ msgctxt "admin media button insert search form title"
 #~ msgid "tp_admin_media_button_insert_search_form_title"
 #~ msgstr "Вставить поисковую форму"
@@ -7056,9 +7064,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Limit replacements"
 #~ msgstr "Количество замен "
-
-#~ msgid "Flights"
-#~ msgstr "Поиск авиабилетов"
 
 #~ msgid "Total"
 #~ msgstr "Итого"

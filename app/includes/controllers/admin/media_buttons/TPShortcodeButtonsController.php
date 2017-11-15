@@ -12,8 +12,8 @@ class TPShortcodeButtonsController extends TPAdminMediaButtonsController{
     {
         // TODO: Implement action() method.
         $text = $this->getTextBtn(
-            _x( 'tp_admin_media_button_insert_table_title',  'admin media button insert table title', TPOPlUGIN_TEXTDOMAIN  ),
-            _x( 'tp_admin_media_button_table_short_title',  'admin media button table title', TPOPlUGIN_TEXTDOMAIN  )
+            _x( 'Insert Flights Tabel',  'admin media button insert table title', TPOPlUGIN_TEXTDOMAIN  ),
+            _x( 'Flights',  'admin media button table title', TPOPlUGIN_TEXTDOMAIN  )
         );
 
         $args = wp_parse_args( $args, array(
