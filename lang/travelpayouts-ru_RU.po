@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 16:03+0200\n"
+"POT-Creation-Date: 2017-11-15 16:07+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1859,23 +1859,23 @@ msgid "tp_plugin_local_ru_trip_class_first"
 msgstr "Первый"
 
 #: app/includes/common/TPFieldsLabelTable.php:613
-msgctxt "(km)"
-msgid "tp_plugin_local_en_distance_label_km"
+msgctxt "tp plugin local en distance label km"
+msgid "km"
 msgstr "km"
 
 #: app/includes/common/TPFieldsLabelTable.php:614
-msgctxt "(км)"
-msgid "tp_plugin_local_ru_distance_label_km"
+msgctxt "tp plugin local ru distance label km"
+msgid "km"
 msgstr "км"
 
 #: app/includes/common/TPFieldsLabelTable.php:617
-msgctxt "(m)"
-msgid "tp_plugin_local_en_distance_label_m"
+msgctxt "tp plugin local en distance label m"
+msgid "m"
 msgstr "m"
 
 #: app/includes/common/TPFieldsLabelTable.php:618
-msgctxt "(м)"
-msgid "tp_plugin_local_ru_distance_label_m"
+msgctxt "tp plugin local ru distance label m"
+msgid "m"
 msgstr "м"
 
 #: app/includes/common/TPFieldsLabelTable.php:638
@@ -6447,6 +6447,22 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(km)"
+#~ msgid "tp_plugin_local_en_distance_label_km"
+#~ msgstr "km"
+
+#~ msgctxt "(км)"
+#~ msgid "tp_plugin_local_ru_distance_label_km"
+#~ msgstr "км"
+
+#~ msgctxt "(m)"
+#~ msgid "tp_plugin_local_en_distance_label_m"
+#~ msgstr "m"
+
+#~ msgctxt "(м)"
+#~ msgid "tp_plugin_local_ru_distance_label_m"
+#~ msgstr "м"
+
 #~ msgctxt "(Direct)"
 #~ msgid "tp_plugin_local_en_number_changes_label_direct"
 #~ msgstr "Direct"
@@ -7560,9 +7576,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Distance Units"
 #~ msgstr "Единица измерения расстояния"
-
-#~ msgid "km"
-#~ msgstr "км"
 
 #~ msgid "miles"
 #~ msgstr "мили"

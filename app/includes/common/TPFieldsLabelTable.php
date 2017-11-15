@@ -610,12 +610,12 @@ class TPFieldsLabelTable
         $distanceLabel = "";
         $distanceLabelData = array(
             1 => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_distance_label_km', '(km)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_distance_label_km', '(км)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('km', 'tp plugin local en distance label km', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('km', 'tp plugin local ru distance label km', TPOPlUGIN_TEXTDOMAIN),
             ),
             2 => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_distance_label_m', '(m)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_distance_label_m', '(м)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('m', 'tp plugin local en distance label m', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('m', 'tp plugin local ru distance label m', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
         if(isset($distanceLabelData[$distanceType][TPLang::getLang()])){
