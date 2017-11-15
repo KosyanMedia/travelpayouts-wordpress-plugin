@@ -580,16 +580,16 @@ class TPFieldsLabelTable
         $tripClassLabel = "";
         $tripClassLabelData = array(
             "0" => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_economy', '(Economy)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_economy', '(Эконом)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('Economy', 'tp plugin local en trip class economy', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('Economy', 'tp plugin local ru trip class economy', TPOPlUGIN_TEXTDOMAIN),
             ),
             "1" => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_business', '(Business)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_business', '(Бизнес)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('Business', 'tp plugin local en trip class business', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('Business', 'tp plugin local ru trip class business', TPOPlUGIN_TEXTDOMAIN),
             ),
             "2" => array(
-                TPLang::getLangEN() => _x('tp_plugin_local_en_trip_class_first', '(First)', TPOPlUGIN_TEXTDOMAIN),
-                TPLang::getLangRU() => _x('tp_plugin_local_ru_trip_class_first', '(Первый)', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangEN() => _x('First', 'tp plugin local en trip class first', TPOPlUGIN_TEXTDOMAIN),
+                TPLang::getLangRU() => _x('First', 'tp plugin local ru trip class first', TPOPlUGIN_TEXTDOMAIN),
             ),
         );
 

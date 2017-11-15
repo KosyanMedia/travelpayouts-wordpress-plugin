@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-15 16:07+0200\n"
+"POT-Creation-Date: 2017-11-15 16:13+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -1829,33 +1829,33 @@ msgid "tp_plugin_local_th_fields_table_label_origin_destination"
 msgstr "ต้นทาง - ปลายทาง"
 
 #: app/includes/common/TPFieldsLabelTable.php:583
-msgctxt "(Economy)"
-msgid "tp_plugin_local_en_trip_class_economy"
+msgctxt "tp plugin local en trip class economy"
+msgid "Economy"
 msgstr "Economy"
 
 #: app/includes/common/TPFieldsLabelTable.php:584
-msgctxt "(Эконом)"
-msgid "tp_plugin_local_ru_trip_class_economy"
+msgctxt "tp plugin local ru trip class economy"
+msgid "Economy"
 msgstr "Эконом"
 
 #: app/includes/common/TPFieldsLabelTable.php:587
-msgctxt "(Business)"
-msgid "tp_plugin_local_en_trip_class_business"
+msgctxt "tp plugin local en trip class business"
+msgid "Business"
 msgstr "Business"
 
 #: app/includes/common/TPFieldsLabelTable.php:588
-msgctxt "(Бизнес)"
-msgid "tp_plugin_local_ru_trip_class_business"
+msgctxt "tp plugin local ru trip class business"
+msgid "Business"
 msgstr "Бизнес"
 
 #: app/includes/common/TPFieldsLabelTable.php:591
-msgctxt "(First)"
-msgid "tp_plugin_local_en_trip_class_first"
+msgctxt "tp plugin local en trip class first"
+msgid "First"
 msgstr "First"
 
 #: app/includes/common/TPFieldsLabelTable.php:592
-msgctxt "(Первый)"
-msgid "tp_plugin_local_ru_trip_class_first"
+msgctxt "tp plugin local ru trip class first"
+msgid "First"
 msgstr "Первый"
 
 #: app/includes/common/TPFieldsLabelTable.php:613
@@ -6447,6 +6447,30 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Economy)"
+#~ msgid "tp_plugin_local_en_trip_class_economy"
+#~ msgstr "Economy"
+
+#~ msgctxt "(Эконом)"
+#~ msgid "tp_plugin_local_ru_trip_class_economy"
+#~ msgstr "Эконом"
+
+#~ msgctxt "(Business)"
+#~ msgid "tp_plugin_local_en_trip_class_business"
+#~ msgstr "Business"
+
+#~ msgctxt "(Бизнес)"
+#~ msgid "tp_plugin_local_ru_trip_class_business"
+#~ msgstr "Бизнес"
+
+#~ msgctxt "(First)"
+#~ msgid "tp_plugin_local_en_trip_class_first"
+#~ msgstr "First"
+
+#~ msgctxt "(Первый)"
+#~ msgid "tp_plugin_local_ru_trip_class_first"
+#~ msgstr "Первый"
+
 #~ msgctxt "(km)"
 #~ msgid "tp_plugin_local_en_distance_label_km"
 #~ msgstr "km"
@@ -7524,15 +7548,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Country"
 #~ msgstr "Страна"
-
-#~ msgid "Economy"
-#~ msgstr "Эконом"
-
-#~ msgid "Business"
-#~ msgstr "Бизнес"
-
-#~ msgid "First"
-#~ msgstr "Первый"
 
 #~ msgid "Tables and Widgets Language"
 #~ msgstr "Язык таблиц и виджетов"
