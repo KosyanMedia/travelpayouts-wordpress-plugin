@@ -48,17 +48,17 @@ class TPTinyMCE
             var linkShortcode, linkShortcodeBtnLabel, linkShortcodeAttrTitleValue, buttonShortcode, buttonShortcodeBtnLabel,
                 buttonShortcodeAttrTitleValue ;
 
-            linkShortcodeBtnLabel = '<?php _ex('tp_tinymce_link_shortcode_label',
-                '(Press to insert a link into the notification)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            linkShortcodeAttrTitleValue = '<?php _ex('tp_tinymce_link_shortcode_attr_title_value',
-                '(Go to tickets search {origin} {destination})', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            linkShortcodeBtnLabel = '<?php _ex('Press to insert a link into the notification',
+                'tp tinymce link shortcode label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            linkShortcodeAttrTitleValue = '<?php _ex('Go to tickets search {origin} {destination}',
+                'tp tinymce link shortcode attr title value', TPOPlUGIN_TEXTDOMAIN ); ?>';
             linkShortcode = '[link title="'+linkShortcodeAttrTitleValue+'"]';
 
-            buttonShortcodeBtnLabel = '<?php _ex('tp_tinymce_button_shortcode_label',
-                '(Press to insert a button link into the notification. It will have the same look as search button in the table theme chosen)'
+            buttonShortcodeBtnLabel = '<?php _ex('Press to insert a button link into the notification. It will have the same look as search button in the table theme chosen',
+                'tp tinymce button shortcode label'
                 , TPOPlUGIN_TEXTDOMAIN ); ?>';
-            buttonShortcodeAttrTitleValue = '<?php _ex('tp_tinymce_button_shortcode_attr_title_value',
-                '(Find tickets {origin} {destination})', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            buttonShortcodeAttrTitleValue = '<?php _ex('Find tickets {origin} {destination}',
+                'tp tinymce button shortcode attr title value', TPOPlUGIN_TEXTDOMAIN ); ?>';
             buttonShortcode = '[button title="'+buttonShortcodeAttrTitleValue+'"]';
 
         </script>

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-17 13:09+0200\n"
+"POT-Creation-Date: 2017-11-17 13:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2054,27 +2054,27 @@ msgid "Mint Button Light Theme"
 msgstr "Светлая тема с мятной кнопкой"
 
 #: app/includes/common/TPTinyMCE.php:51
-msgctxt "(Press to insert a link into the notification)"
-msgid "tp_tinymce_link_shortcode_label"
+msgctxt "tp tinymce link shortcode label"
+msgid "Press to insert a link into the notification"
 msgstr "Нажмите, чтобы вставить в предупреждение ссылку"
 
 #: app/includes/common/TPTinyMCE.php:53
-msgctxt "(Go to tickets search {origin} {destination})"
-msgid "tp_tinymce_link_shortcode_attr_title_value"
+msgctxt "tp tinymce link shortcode attr title value"
+msgid "Go to tickets search {origin} {destination}"
 msgstr "К поиску билетов {origin} {destination}"
 
 #: app/includes/common/TPTinyMCE.php:57
-msgctxt ""
-"(Press to insert a button link into the notification. It will have the same look as search "
-"button in the table theme chosen)"
-msgid "tp_tinymce_button_shortcode_label"
+msgctxt "tp tinymce button shortcode label"
+msgid ""
+"Press to insert a button link into the notification. It will have the same look as search button "
+"in the table theme chosen"
 msgstr ""
 "Вставка кнопки в предупреждение. Кнопка будет иметь те же стили, что и кнопка поиска в выбранной "
 "теме таблиц."
 
 #: app/includes/common/TPTinyMCE.php:60
-msgctxt "(Find tickets {origin} {destination})"
-msgid "tp_tinymce_button_shortcode_attr_title_value"
+msgctxt "tp tinymce button shortcode attr title value"
+msgid "Find tickets {origin} {destination}"
 msgstr "Найти билеты {origin} {destination}"
 
 #: app/includes/controllers/admin/media_buttons/TPHotelsButtonsController.php:19
@@ -6446,6 +6446,26 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Press to insert a link into the notification)"
+#~ msgid "tp_tinymce_link_shortcode_label"
+#~ msgstr "Нажмите, чтобы вставить в предупреждение ссылку"
+
+#~ msgctxt "(Go to tickets search {origin} {destination})"
+#~ msgid "tp_tinymce_link_shortcode_attr_title_value"
+#~ msgstr "К поиску билетов {origin} {destination}"
+
+#~ msgctxt ""
+#~ "(Press to insert a button link into the notification. It will have the same look as search "
+#~ "button in the table theme chosen)"
+#~ msgid "tp_tinymce_button_shortcode_label"
+#~ msgstr ""
+#~ "Вставка кнопки в предупреждение. Кнопка будет иметь те же стили, что и кнопка поиска в "
+#~ "выбранной теме таблиц."
+
+#~ msgctxt "(Find tickets {origin} {destination})"
+#~ msgid "tp_tinymce_button_shortcode_attr_title_value"
+#~ msgstr "Найти билеты {origin} {destination}"
 
 #~ msgctxt "(Номер рейса)"
 #~ msgid "tp_plugin_local_ru_fields_table_label_default_flight_number"
