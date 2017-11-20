@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 11:51+0200\n"
+"POT-Creation-Date: 2017-11-20 12:14+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4749,99 +4749,99 @@ msgid "All news"
 msgstr "Все новости"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:22
-msgctxt "(Your income)"
-msgid "tp_admin_page_dashboard_paragraph_2"
+msgctxt "tp_admin_page_dashboard_paragraph_2"
+msgid "Your income"
 msgstr "Ваш доход"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:28
-msgctxt "(today)"
-msgid "tp_admin_page_dashboard_paragraph_2_today"
+msgctxt "tp_admin_page_dashboard_paragraph_2_today"
+msgid "today"
 msgstr "за сегодня"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:33
-msgctxt "(yesterday)"
-msgid "tp_admin_page_dashboard_paragraph_2_yesterday"
+msgctxt "tp_admin_page_dashboard_paragraph_2_yesterday"
+msgid "yesterday"
 msgstr "за вчера"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:38
-msgctxt "(this month)"
-msgid "tp_admin_page_dashboard_paragraph_2_this_month"
+msgctxt "tp_admin_page_dashboard_paragraph_2_this_month"
+msgid "this month"
 msgstr "за этот месяц"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:43
-msgctxt "(last month)"
-msgid "tp_admin_page_dashboard_paragraph_2_last_month"
+msgctxt "tp_admin_page_dashboard_paragraph_2_last_month"
+msgid "last month"
 msgstr "за прошлый месяц"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:48
-msgctxt "(unpaid earnings)"
-msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+msgctxt "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+msgid "unpaid earnings"
 msgstr "невыплаченные доходы"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:180
 #: app/includes/views/admin/menu/TPDashboardView.php:287
-msgctxt "(Visit.)"
-msgid "tp_admin_page_dashboard_table_td_1_label"
+msgctxt "tp_admin_page_dashboard_table_td_1_label"
+msgid "Visit."
 msgstr "Посет."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:181
 #: app/includes/views/admin/menu/TPDashboardView.php:288
-msgctxt "(Search)"
-msgid "tp_admin_page_dashboard_table_td_2_label"
+msgctxt "tp_admin_page_dashboard_table_td_2_label"
+msgid "Search"
 msgstr "Поиски"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:182
 #: app/includes/views/admin/menu/TPDashboardView.php:289
-msgctxt "(Clicks)"
-msgid "tp_admin_page_dashboard_table_td_3_label"
+msgctxt "tp_admin_page_dashboard_table_td_3_label"
+msgid "Clicks"
 msgstr "Клики"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:184
 #: app/includes/views/admin/menu/TPDashboardView.php:291
-msgctxt "(Clicks income)"
-msgid "tp_admin_page_dashboard_table_td_4_label"
+msgctxt "tp_admin_page_dashboard_table_td_4_label"
+msgid "Clicks income"
 msgstr "Доход c кликов"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:185
 #: app/includes/views/admin/menu/TPDashboardView.php:292
-msgctxt "(Bookings)"
-msgid "tp_admin_page_dashboard_table_td_5_label"
-msgstr "Брон"
+msgctxt "tp_admin_page_dashboard_table_td_5_label"
+msgid "Bookings"
+msgstr "Брон."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:186
 #: app/includes/views/admin/menu/TPDashboardView.php:293
-msgctxt "(Paid booking)"
-msgid "tp_admin_page_dashboard_table_td_6_label"
+msgctxt "tp_admin_page_dashboard_table_td_6_label"
+msgid "Paid booking"
 msgstr "Опл. брон."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:187
 #: app/includes/views/admin/menu/TPDashboardView.php:294
-msgctxt "(Booking income)"
-msgid "tp_admin_page_dashboard_table_td_7_label"
+msgctxt "tp_admin_page_dashboard_table_td_7_label"
+msgid "Booking income"
 msgstr "Доход c брон."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:188
 #: app/includes/views/admin/menu/TPDashboardView.php:295
-msgctxt "(Possible. income)"
-msgid "tp_admin_page_dashboard_table_td_8_label"
+msgctxt "tp_admin_page_dashboard_table_td_8_label"
+msgid "Possible. income"
 msgstr "Возмож. доход"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:310
-msgctxt "(Flights)"
-msgid "tp_admin_page_dashboard_table_td_flights"
+msgctxt "tp_admin_page_dashboard_table_td_flights"
+msgid "Flights"
 msgstr "Поиск авиабилетов"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:207
 #: app/includes/views/admin/menu/TPDashboardView.php:314
-msgctxt "(Hotels)"
-msgid "tp_admin_page_dashboard_table_td_hotels"
+msgctxt "tp_admin_page_dashboard_table_td_hotels"
+msgid "Hotels"
 msgstr "Отели"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:231
 #: app/includes/views/admin/menu/TPDashboardView.php:338
-msgctxt "(Total)"
-msgid "tp_admin_page_dashboard_table_td_total"
+msgctxt "tp_admin_page_dashboard_table_td_total"
+msgid "Total"
 msgstr "Итого"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:3
@@ -6448,6 +6448,74 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Your income)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2"
+#~ msgstr "Ваш доход"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_today"
+#~ msgstr "за сегодня"
+
+#~ msgctxt "(yesterday)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_yesterday"
+#~ msgstr "за вчера"
+
+#~ msgctxt "(this month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_this_month"
+#~ msgstr "за этот месяц"
+
+#~ msgctxt "(last month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_last_month"
+#~ msgstr "за прошлый месяц"
+
+#~ msgctxt "(unpaid earnings)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+#~ msgstr "невыплаченные доходы"
+
+#~ msgctxt "(Visit.)"
+#~ msgid "tp_admin_page_dashboard_table_td_1_label"
+#~ msgstr "Посет."
+
+#~ msgctxt "(Search)"
+#~ msgid "tp_admin_page_dashboard_table_td_2_label"
+#~ msgstr "Поиски"
+
+#~ msgctxt "(Clicks)"
+#~ msgid "tp_admin_page_dashboard_table_td_3_label"
+#~ msgstr "Клики"
+
+#~ msgctxt "(Clicks income)"
+#~ msgid "tp_admin_page_dashboard_table_td_4_label"
+#~ msgstr "Доход c кликов"
+
+#~ msgctxt "(Bookings)"
+#~ msgid "tp_admin_page_dashboard_table_td_5_label"
+#~ msgstr "Брон"
+
+#~ msgctxt "(Paid booking)"
+#~ msgid "tp_admin_page_dashboard_table_td_6_label"
+#~ msgstr "Опл. брон."
+
+#~ msgctxt "(Booking income)"
+#~ msgid "tp_admin_page_dashboard_table_td_7_label"
+#~ msgstr "Доход c брон."
+
+#~ msgctxt "(Possible. income)"
+#~ msgid "tp_admin_page_dashboard_table_td_8_label"
+#~ msgstr "Возмож. доход"
+
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_dashboard_table_td_flights"
+#~ msgstr "Поиск авиабилетов"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_dashboard_table_td_hotels"
+#~ msgstr "Отели"
+
+#~ msgctxt "(Total)"
+#~ msgid "tp_admin_page_dashboard_table_td_total"
+#~ msgstr "Итого"
+
 #~ msgctxt "(Go to )"
 #~ msgid "tp_admin_page_dashboard_paragraph_1"
 #~ msgstr "Перейти на"
@@ -8034,9 +8102,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Limit replacements"
 #~ msgstr "Количество замен "
 
-#~ msgid "Total"
-#~ msgstr "Итого"
-
 #~ msgid "Your API token"
 #~ msgstr "Ваш API token"
 
@@ -8492,26 +8557,14 @@ msgstr "Вид %s не найден"
 #~ msgid "Visitors"
 #~ msgstr "Посетители"
 
-#~ msgid "Search"
-#~ msgstr "Поиски"
-
-#~ msgid "Clicks"
-#~ msgstr "Клики"
-
 #~ msgid "Income clicks"
 #~ msgstr "Доход c кликов"
 
 #~ msgid "Booking"
 #~ msgstr "Брон."
 
-#~ msgid "Paid booking"
-#~ msgstr "Опл. брон."
-
 #~ msgid "Income booking"
 #~ msgstr "Доход c брон."
-
-#~ msgid "Possible. income"
-#~ msgstr "Возмож. доход"
 
 #~ msgid "Amount"
 #~ msgstr "Сумма"
@@ -8810,36 +8863,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Affix link for all existing posts"
 #~ msgstr "Проставить ссылки по всех существующих постах"
-
-#~ msgid "Visit."
-#~ msgstr "Посет."
-
-#~ msgid "Clicks income"
-#~ msgstr "Доход c кликов"
-
-#~ msgid "Bookings"
-#~ msgstr "Брон."
-
-#~ msgid "Booking income"
-#~ msgstr "Доход c брон."
-
-#~ msgid "today"
-#~ msgstr "за сегодня"
-
-#~ msgid "yesterday"
-#~ msgstr "за вчера"
-
-#~ msgid "this month"
-#~ msgstr "за этот месяц"
-
-#~ msgid "last month"
-#~ msgstr "за прошлый месяц"
-
-#~ msgid "unpaid earnings"
-#~ msgstr "невыплаченные доходы"
-
-#~ msgid "Your income"
-#~ msgstr "Ваш доход"
 
 #~ msgid ""
 #~ "We wish success to all your endeavors! Do the things you love and we will take care of the "

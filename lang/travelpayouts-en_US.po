@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 11:53+0200\n"
+"POT-Creation-Date: 2017-11-20 12:11+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4748,99 +4748,99 @@ msgid "All news"
 msgstr "All news"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:22
-msgctxt "(Your income)"
-msgid "tp_admin_page_dashboard_paragraph_2"
+msgctxt "tp_admin_page_dashboard_paragraph_2"
+msgid "Your income"
 msgstr "Your income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:28
-msgctxt "(today)"
-msgid "tp_admin_page_dashboard_paragraph_2_today"
+msgctxt "tp_admin_page_dashboard_paragraph_2_today"
+msgid "today"
 msgstr "today"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:33
-msgctxt "(yesterday)"
-msgid "tp_admin_page_dashboard_paragraph_2_yesterday"
+msgctxt "tp_admin_page_dashboard_paragraph_2_yesterday"
+msgid "yesterday"
 msgstr "yesterday"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:38
-msgctxt "(this month)"
-msgid "tp_admin_page_dashboard_paragraph_2_this_month"
+msgctxt "tp_admin_page_dashboard_paragraph_2_this_month"
+msgid "this month"
 msgstr "this month"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:43
-msgctxt "(last month)"
-msgid "tp_admin_page_dashboard_paragraph_2_last_month"
+msgctxt "tp_admin_page_dashboard_paragraph_2_last_month"
+msgid "last month"
 msgstr "last month"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:48
-msgctxt "(unpaid earnings)"
-msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+msgctxt "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+msgid "unpaid earnings"
 msgstr "unpaid earnings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:180
 #: app/includes/views/admin/menu/TPDashboardView.php:287
-msgctxt "(Visit.)"
-msgid "tp_admin_page_dashboard_table_td_1_label"
+msgctxt "tp_admin_page_dashboard_table_td_1_label"
+msgid "Visit."
 msgstr "Visit."
 
 #: app/includes/views/admin/menu/TPDashboardView.php:181
 #: app/includes/views/admin/menu/TPDashboardView.php:288
-msgctxt "(Search)"
-msgid "tp_admin_page_dashboard_table_td_2_label"
+msgctxt "tp_admin_page_dashboard_table_td_2_label"
+msgid "Search"
 msgstr "Search"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:182
 #: app/includes/views/admin/menu/TPDashboardView.php:289
-msgctxt "(Clicks)"
-msgid "tp_admin_page_dashboard_table_td_3_label"
+msgctxt "tp_admin_page_dashboard_table_td_3_label"
+msgid "Clicks"
 msgstr "Clicks"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:184
 #: app/includes/views/admin/menu/TPDashboardView.php:291
-msgctxt "(Clicks income)"
-msgid "tp_admin_page_dashboard_table_td_4_label"
+msgctxt "tp_admin_page_dashboard_table_td_4_label"
+msgid "Clicks income"
 msgstr "Clicks income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:185
 #: app/includes/views/admin/menu/TPDashboardView.php:292
-msgctxt "(Bookings)"
-msgid "tp_admin_page_dashboard_table_td_5_label"
+msgctxt "tp_admin_page_dashboard_table_td_5_label"
+msgid "Bookings"
 msgstr "Bookings"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:186
 #: app/includes/views/admin/menu/TPDashboardView.php:293
-msgctxt "(Paid booking)"
-msgid "tp_admin_page_dashboard_table_td_6_label"
+msgctxt "tp_admin_page_dashboard_table_td_6_label"
+msgid "Paid booking"
 msgstr "Paid booking"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:187
 #: app/includes/views/admin/menu/TPDashboardView.php:294
-msgctxt "(Booking income)"
-msgid "tp_admin_page_dashboard_table_td_7_label"
+msgctxt "tp_admin_page_dashboard_table_td_7_label"
+msgid "Booking income"
 msgstr "Booking income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:188
 #: app/includes/views/admin/menu/TPDashboardView.php:295
-msgctxt "(Possible. income)"
-msgid "tp_admin_page_dashboard_table_td_8_label"
+msgctxt "tp_admin_page_dashboard_table_td_8_label"
+msgid "Possible. income"
 msgstr "Possible. income"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:203
 #: app/includes/views/admin/menu/TPDashboardView.php:310
-msgctxt "(Flights)"
-msgid "tp_admin_page_dashboard_table_td_flights"
+msgctxt "tp_admin_page_dashboard_table_td_flights"
+msgid "Flights"
 msgstr "Flights"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:207
 #: app/includes/views/admin/menu/TPDashboardView.php:314
-msgctxt "(Hotels)"
-msgid "tp_admin_page_dashboard_table_td_hotels"
+msgctxt "tp_admin_page_dashboard_table_td_hotels"
+msgid "Hotels"
 msgstr "Hotels"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:231
 #: app/includes/views/admin/menu/TPDashboardView.php:338
-msgctxt "(Total)"
-msgid "tp_admin_page_dashboard_table_td_total"
+msgctxt "tp_admin_page_dashboard_table_td_total"
+msgid "Total"
 msgstr "Total"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:3
@@ -6323,12 +6323,9 @@ msgid "Subid:"
 msgstr "Subid"
 
 #: app/includes/widgets/TPWidgetsWidget.php:497 app/includes/widgets/TPWidgetsWidget.php:720
-#, fuzzy
-#| msgctxt "modal railway сonstructor origin label"
-#| msgid "Origin"
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Origin:"
-msgstr "Origin"
+msgstr "Origin - Destination"
 
 #: app/includes/widgets/TPWidgetsWidget.php:507 app/includes/widgets/TPWidgetsWidget.php:605
 #: app/includes/widgets/TPWidgetsWidget.php:610 app/includes/widgets/TPWidgetsWidget.php:730
@@ -6534,6 +6531,74 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Your income)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2"
+#~ msgstr "Your income"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_today"
+#~ msgstr "today"
+
+#~ msgctxt "(yesterday)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_yesterday"
+#~ msgstr "yesterday"
+
+#~ msgctxt "(this month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_this_month"
+#~ msgstr "this month"
+
+#~ msgctxt "(last month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_last_month"
+#~ msgstr "last month"
+
+#~ msgctxt "(unpaid earnings)"
+#~ msgid "tp_admin_page_dashboard_paragraph_2_unpaid_earnings"
+#~ msgstr "unpaid earnings"
+
+#~ msgctxt "(Visit.)"
+#~ msgid "tp_admin_page_dashboard_table_td_1_label"
+#~ msgstr "Visit."
+
+#~ msgctxt "(Search)"
+#~ msgid "tp_admin_page_dashboard_table_td_2_label"
+#~ msgstr "Search"
+
+#~ msgctxt "(Clicks)"
+#~ msgid "tp_admin_page_dashboard_table_td_3_label"
+#~ msgstr "Clicks"
+
+#~ msgctxt "(Clicks income)"
+#~ msgid "tp_admin_page_dashboard_table_td_4_label"
+#~ msgstr "Clicks income"
+
+#~ msgctxt "(Bookings)"
+#~ msgid "tp_admin_page_dashboard_table_td_5_label"
+#~ msgstr "Bookings"
+
+#~ msgctxt "(Paid booking)"
+#~ msgid "tp_admin_page_dashboard_table_td_6_label"
+#~ msgstr "Paid booking"
+
+#~ msgctxt "(Booking income)"
+#~ msgid "tp_admin_page_dashboard_table_td_7_label"
+#~ msgstr "Booking income"
+
+#~ msgctxt "(Possible. income)"
+#~ msgid "tp_admin_page_dashboard_table_td_8_label"
+#~ msgstr "Possible. income"
+
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_dashboard_table_td_flights"
+#~ msgstr "Flights"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_dashboard_table_td_hotels"
+#~ msgstr "Hotels"
+
+#~ msgctxt "(Total)"
+#~ msgid "tp_admin_page_dashboard_table_td_total"
+#~ msgstr "Total"
 
 #~ msgctxt "(Go to )"
 #~ msgid "tp_admin_page_dashboard_paragraph_1"
