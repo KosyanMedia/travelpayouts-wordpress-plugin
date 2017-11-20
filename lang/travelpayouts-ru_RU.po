@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 11:19+0200\n"
+"POT-Creation-Date: 2017-11-20 11:37+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4613,81 +4613,81 @@ msgid "save changes"
 msgstr "сохранить изменения"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:4
-msgctxt "(Auto-links )"
-msgid "tp_admin_page_auto_links_edit_paragraph_1"
-msgstr "Подстановка ссылок "
+msgctxt "tp admin page auto links edit paragraph_1"
+msgid "Auto-links"
+msgstr "Подстановка ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
-msgctxt ""
-"(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
-"Anchors are case-sensitive.)"
-msgid "tp_admin_page_auto_links_edit_paragraph_2"
+msgctxt "tp admin page auto links edit paragraph_2"
+msgid ""
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 msgstr ""
 "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
 "фразы.  Анкор чувствителен к регистру символов."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:15
-msgctxt "(Adding links)"
-msgid "tp_admin_page_auto_links_edit_paragraph_3"
+msgctxt "tp admin page auto links edit paragraph_3"
+msgid "Adding links"
 msgstr "Добавление ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:24
-msgctxt "(Link)"
-msgid "tp_admin_page_auto_links_edit_input_arl_url_label"
+msgctxt "tp admin page auto links edit input arl url label"
+msgid "Link"
 msgstr "Ссылка"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:33
-msgctxt "(Anchor phrase)"
-msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label"
+msgctxt "tp admin page auto links edit textarea arl anchor label"
+msgid "Anchor phrase"
 msgstr "Якорные фразы"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:37
-msgctxt "(You may add several anchors, use comma as separator)"
-msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label_help"
+msgctxt "tp admin page auto links edit textarea arl anchor label help"
+msgid "You may add several anchors, use comma as separator"
 msgstr "Вы можете добавить несколько якорных фраз, разделив их запятой"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:51
-msgctxt "(Events onclick)"
-msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label"
+msgctxt "tp admin page auto links edit textarea arl event label"
+msgid "Events onclick"
 msgstr "Событие onclick"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
-msgctxt ""
-"(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
-"click on a link)"
-msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
+msgctxt "tp admin page auto links edit textarea arl event label help"
+msgid ""
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
+"on a link"
 msgstr ""
 "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике "
 "на ссылку"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:74
-msgctxt "(Add \"nofollow\" attribute)"
-msgid "tp_admin_page_auto_links_edit_input_arl_nofollow_label"
-msgstr "Добавлять атрибут nofollow "
+msgctxt "tp admin page auto links edit input arl nofollow label"
+msgid "Add \"nofollow\" attribute"
+msgstr "Добавлять атрибут nofollow"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:80
-msgctxt "(Replace existing links)"
-msgid "tp_admin_page_auto_links_edit_input_arl_replace_label"
+msgctxt "tp admin page auto links edit input arl replace label"
+msgid "Replace existing links"
 msgstr "Заменять существующие ссылки"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:84
-msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
-msgid "tp_admin_page_auto_links_edit_input_arl_replace_label_help"
+msgctxt "tp admin page auto links edit input arl replace label help"
+msgid "In case you already have such active links — they'll be replaced to the new one"
 msgstr "Будет производится замена существующих ссылок с таким анкором"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:97
-msgctxt "(Open in a new tab)"
-msgid "tp_admin_page_auto_links_edit_input_arl_target_blank_label"
-msgstr "Открывать в новом окне "
+msgctxt "tp admin page auto links edit input arl target blank label"
+msgid "Open in a new tab"
+msgstr "Открывать в новом окне"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:105
-msgctxt "(cancel)"
-msgid "tp_admin_page_auto_links_edit_btn_cancel_label"
+msgctxt "tp admin page auto links edit btn cancel label"
+msgid "cancel"
 msgstr "отменить"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:109
-msgctxt "(save changes)"
-msgid "tp_admin_page_auto_links_edit_btn_save_changes_label"
+msgctxt "tp admin page auto links edit btn save changes label"
+msgid "save changes"
 msgstr "сохранить изменения"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:35
@@ -6446,6 +6446,70 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Auto-links )"
+#~ msgid "tp_admin_page_auto_links_edit_paragraph_1"
+#~ msgstr "Подстановка ссылок "
+
+#~ msgctxt ""
+#~ "(Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+#~ "Anchors are case-sensitive.)"
+#~ msgid "tp_admin_page_auto_links_edit_paragraph_2"
+#~ msgstr ""
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы.  Анкор чувствителен к регистру символов."
+
+#~ msgctxt "(Adding links)"
+#~ msgid "tp_admin_page_auto_links_edit_paragraph_3"
+#~ msgstr "Добавление ссылки"
+
+#~ msgctxt "(Link)"
+#~ msgid "tp_admin_page_auto_links_edit_input_arl_url_label"
+#~ msgstr "Ссылка"
+
+#~ msgctxt "(Anchor phrase)"
+#~ msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label"
+#~ msgstr "Якорные фразы"
+
+#~ msgctxt "(You may add several anchors, use comma as separator)"
+#~ msgid "tp_admin_page_auto_links_edit_textarea_arl_anchor_label_help"
+#~ msgstr "Вы можете добавить несколько якорных фраз, разделив их запятой"
+
+#~ msgctxt "(Events onclick)"
+#~ msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label"
+#~ msgstr "Событие onclick"
+
+#~ msgctxt ""
+#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link)"
+#~ msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
+#~ msgstr ""
+#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при "
+#~ "клике на ссылку"
+
+#~ msgctxt "(Add \"nofollow\" attribute)"
+#~ msgid "tp_admin_page_auto_links_edit_input_arl_nofollow_label"
+#~ msgstr "Добавлять атрибут nofollow "
+
+#~ msgctxt "(Replace existing links)"
+#~ msgid "tp_admin_page_auto_links_edit_input_arl_replace_label"
+#~ msgstr "Заменять существующие ссылки"
+
+#~ msgctxt "(In case you already have such active links — they'll be replaced to the new one)"
+#~ msgid "tp_admin_page_auto_links_edit_input_arl_replace_label_help"
+#~ msgstr "Будет производится замена существующих ссылок с таким анкором"
+
+#~ msgctxt "(Open in a new tab)"
+#~ msgid "tp_admin_page_auto_links_edit_input_arl_target_blank_label"
+#~ msgstr "Открывать в новом окне "
+
+#~ msgctxt "(cancel)"
+#~ msgid "tp_admin_page_auto_links_edit_btn_cancel_label"
+#~ msgstr "отменить"
+
+#~ msgctxt "(save changes)"
+#~ msgid "tp_admin_page_auto_links_edit_btn_save_changes_label"
+#~ msgstr "сохранить изменения"
 
 #~ msgctxt "(Auto-links )"
 #~ msgid "tp_admin_page_auto_links_add_paragraph_1"
