@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-17 13:35+0200\n"
+"POT-Creation-Date: 2017-11-20 10:38+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -3750,8 +3750,8 @@ msgid "tp_admin_page_wizard_field_currency_label"
 msgstr "Currency"
 
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
-msgctxt "(Settings saved.)"
-msgid "tp_admin_page_admin_notice_modal_label"
+msgctxt "tp admin page admin notice modal label"
+msgid "Settings saved."
 msgstr "Settings saved."
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:2
@@ -6533,6 +6533,10 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Settings saved.)"
+#~ msgid "tp_admin_page_admin_notice_modal_label"
+#~ msgstr "Settings saved."
 
 #~ msgctxt "(Press to insert a link into the notification)"
 #~ msgid "tp_tinymce_link_shortcode_label"
