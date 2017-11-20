@@ -1,34 +1,34 @@
 <div class="TPWrapper TPWrapper-long">
 
     <p class="TPMainTitle TPMainTitleSF">
-        <?php _ex('tp_admin_page_auto_links_paragraph_1',
-            '(Auto-links )', TPOPlUGIN_TEXTDOMAIN); ?>
+        <?php _ex('Auto-links',
+            'tp admin page auto links paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
 
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _ex('tp_admin_page_auto_links_paragraph_2',
-                '(Here you can setup auto-links. Define anchor and your referral link for that anchor.)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('Here you can setup auto-links. Define anchor and your referral link for that anchor.',
+                'tp admin page auto links paragraph_2', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
 
     <div class="TPmainContent TP-BalanceContent TP-SettingContent TPAutoLink">
         <p class="TP-SettingTitle">
-            <?php _ex('tp_admin_page_auto_links_paragraph_3',
-                '(List of links)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('List of links',
+                'tp admin page auto links paragraph_3', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
 
         <div class="TP-navsShort">
             <div class="TP-lincksNavShortCust">
                 <a href="admin.php?page=tp_control_substitution_links&action=add_link" class="TP-addShortLincks">
                     <i></i>
-                    <?php _ex('tp_admin_page_auto_links_btn_add_link',
-                        '(Add link)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Add link',
+                        'tp admin page auto links btn add link', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
                 <div class="input_button_style TP-ImportLink">
                     <div class="input_font_style">
-                        <?php _ex('tp_admin_page_auto_links_btn_import_links',
-                            '(Import links)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Import links',
+                            'tp admin page auto links btn import links', TPOPlUGIN_TEXTDOMAIN); ?>
                     </div>
                     <input type="file" accept=".csv" name="select_file"
                            id="importFileCSV" size="1" class="input_input_style"
@@ -36,15 +36,14 @@
                 </div>
                 <a href="#" class="TPExportLink TPBtn">
                     <i></i>
-                    <?php _ex('tp_admin_page_auto_links_btn_export_links',
-                        '(Export links)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Export links',
+                        'tp admin page auto links btn export links', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
                 <a href="#"
                    class="TP-deleteShortLincks deleteChecked"
                    data-type="arl_link">
                     <i></i>
-                    <?php _ex('tp_admin_page_auto_links_btn_remove',
-                        '(Remove)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Remove','tp admin page auto links btn remove', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
             </div>
             <a class="TP-AllLincksShort"></a>
@@ -58,12 +57,10 @@
                     <label for="chekTableS-all"></label>
                 </td>
                 <td class="TPTableHead">
-                    <?php _ex('tp_admin_page_auto_links_table_td_1_label',
-                        '(Anchor)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Anchor','tp admin page auto links table td_1 label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </td>
                 <td class="TPTableHead">
-                    <?php _ex('tp_admin_page_auto_links_table_td_2_label',
-                        '(Link)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Link','tp admin page auto links table td_2 label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </td>
             </tr>
             </thead>
@@ -77,8 +74,8 @@
                         </td>
                         <td>
                             <a href="admin.php?page=tp_control_substitution_links&action=edit_link&id=<?php echo $record['id'];?>"
-                               class="row-title" title="<?php _ex('tp_admin_page_auto_links_btn_edit',
-                                '(Edit)', TPOPlUGIN_TEXTDOMAIN); ?> «<?php echo $record['arl_anchor'];?>»">
+                               class="row-title" title="<?php _ex('Edit',
+                                'tp admin page auto links btn edit', TPOPlUGIN_TEXTDOMAIN); ?> «<?php echo $record['arl_anchor'];?>»">
                                 <?php echo $record['arl_anchor'];?></a>
                         </td>
                         <td>
@@ -95,13 +92,13 @@
                  <?php do_settings_fields('tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id'); ?>
                 <div class="TP-navsPan">
                 <input type="submit" name="submit" class="TP-BtnTab"
-                       value="<?php _ex('tp_admin_page_auto_links_btn_save_changes',
-                           '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       value="<?php _ex('Save changes',
+                           'tp admin page auto links btn save changes', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </div>
             <a href="#" id="TPBtnIsertLink" class="TP-BtnTab">
-                <?php _ex('tp_admin_page_auto_links_btn_auto_links',
-                    '(Place auto-links in all existing posts)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Place auto-links in all existing posts',
+                    'tp admin page auto links btn auto links', TPOPlUGIN_TEXTDOMAIN); ?>
             </a>
 
         </form>

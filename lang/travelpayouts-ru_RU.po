@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 10:38+0200\n"
+"POT-Creation-Date: 2017-11-20 10:58+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4475,63 +4475,63 @@ msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
 msgstr "Zoom"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
-msgctxt "(Auto-links )"
-msgid "tp_admin_page_auto_links_paragraph_1"
+msgctxt "tp admin page auto links paragraph_1"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:10
-msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
-msgid "tp_admin_page_auto_links_paragraph_2"
+msgctxt "tp admin page auto links paragraph_2"
+msgid "Here you can setup auto-links. Define anchor and your referral link for that anchor."
 msgstr "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех постах"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
-msgctxt "(List of links)"
-msgid "tp_admin_page_auto_links_paragraph_3"
+msgctxt "tp admin page auto links paragraph_3"
+msgid "List of links"
 msgstr "Список ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
-msgctxt "(Add link)"
-msgid "tp_admin_page_auto_links_btn_add_link"
+msgctxt "tp admin page auto links btn add link"
+msgid "Add link"
 msgstr "Добавить ссылку"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:30
-msgctxt "(Import links)"
-msgid "tp_admin_page_auto_links_btn_import_links"
+msgctxt "tp admin page auto links btn import links"
+msgid "Import links"
 msgstr "Импорт ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:39
-msgctxt "(Export links)"
-msgid "tp_admin_page_auto_links_btn_export_links"
-msgstr "Экспорт ссылок"
+msgctxt "tp admin page auto links btn export links"
+msgid "Export links"
+msgstr "Експорт ссылок"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:46
-msgctxt "(Remove)"
-msgid "tp_admin_page_auto_links_btn_remove"
+msgctxt "tp admin page auto links btn remove"
+msgid "Remove"
 msgstr "Удалить отмеченные"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:61
-msgctxt "(Anchor)"
-msgid "tp_admin_page_auto_links_table_td_1_label"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:60
+msgctxt "tp admin page auto links table td_1 label"
+msgid "Anchor"
 msgstr "Анкор"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:65
-msgctxt "(Link)"
-msgid "tp_admin_page_auto_links_table_td_2_label"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:63
+msgctxt "tp admin page auto links table td_2 label"
+msgid "Link"
 msgstr "Ссылка"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:80
-msgctxt "(Edit)"
-msgid "tp_admin_page_auto_links_btn_edit"
-msgstr "Редактировать"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:77
+msgctxt "tp admin page auto links btn edit"
+msgid "Edit"
+msgstr "Редактировать "
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:98
-msgctxt "(Save changes)"
-msgid "tp_admin_page_auto_links_btn_save_changes"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:95
+msgctxt "tp admin page auto links btn save changes"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:103
-msgctxt "(Place auto-links in all existing posts)"
-msgid "tp_admin_page_auto_links_btn_auto_links"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:100
+msgctxt "tp admin page auto links btn auto links"
+msgid "Place auto-links in all existing posts"
 msgstr "Проставить ссылки во всех существующих постах"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
@@ -6446,6 +6446,54 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Auto-links )"
+#~ msgid "tp_admin_page_auto_links_paragraph_1"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
+#~ msgid "tp_admin_page_auto_links_paragraph_2"
+#~ msgstr "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех постах"
+
+#~ msgctxt "(List of links)"
+#~ msgid "tp_admin_page_auto_links_paragraph_3"
+#~ msgstr "Список ссылок"
+
+#~ msgctxt "(Add link)"
+#~ msgid "tp_admin_page_auto_links_btn_add_link"
+#~ msgstr "Добавить ссылку"
+
+#~ msgctxt "(Import links)"
+#~ msgid "tp_admin_page_auto_links_btn_import_links"
+#~ msgstr "Импорт ссылок"
+
+#~ msgctxt "(Export links)"
+#~ msgid "tp_admin_page_auto_links_btn_export_links"
+#~ msgstr "Экспорт ссылок"
+
+#~ msgctxt "(Remove)"
+#~ msgid "tp_admin_page_auto_links_btn_remove"
+#~ msgstr "Удалить отмеченные"
+
+#~ msgctxt "(Anchor)"
+#~ msgid "tp_admin_page_auto_links_table_td_1_label"
+#~ msgstr "Анкор"
+
+#~ msgctxt "(Link)"
+#~ msgid "tp_admin_page_auto_links_table_td_2_label"
+#~ msgstr "Ссылка"
+
+#~ msgctxt "(Edit)"
+#~ msgid "tp_admin_page_auto_links_btn_edit"
+#~ msgstr "Редактировать"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_auto_links_btn_save_changes"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Place auto-links in all existing posts)"
+#~ msgid "tp_admin_page_auto_links_btn_auto_links"
+#~ msgstr "Проставить ссылки во всех существующих постах"
 
 #~ msgctxt "(Settings saved.)"
 #~ msgid "tp_admin_page_admin_notice_modal_label"
@@ -8391,14 +8439,8 @@ msgstr "Вид %s не найден"
 #~ msgid "Add a shortcode"
 #~ msgstr "Добавить шорткод"
 
-#~ msgid "Remove"
-#~ msgstr "Удалить отмеченные"
-
 #~ msgid "Add Date"
 #~ msgstr "Дата добавления"
-
-#~ msgid "Edit"
-#~ msgstr "Редактировать "
 
 #~ msgid "Please, don't delete the information below. It makes helping you easier"
 #~ msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
@@ -8640,29 +8682,8 @@ msgstr "Вид %s не найден"
 #~ msgid "Do not add links to all titles"
 #~ msgstr "Не вставлять ссылки во все заголовки"
 
-#~ msgid "List of links"
-#~ msgstr "Список ссылок"
-
-#~ msgid "Add link"
-#~ msgstr "Добавить ссылку"
-
-#~ msgid "Import links"
-#~ msgstr "Импорт ссылок"
-
-#~ msgid "Export links"
-#~ msgstr "Експорт ссылок"
-
-#~ msgid "Anchor"
-#~ msgstr "Анкор"
-
 #~ msgid "Affix link for all existing posts"
 #~ msgstr "Проставить ссылки по всех существующих постах"
-
-#~ msgid "Place auto-links in all existing posts"
-#~ msgstr "Проставить ссылки во всех существующих постах"
-
-#~ msgid "Here you can setup auto-links. Define anchor and your referral link for that anchor."
-#~ msgstr "Здесь вы можете автоматически проставить ссылки по заданным фразам во всех постах"
 
 #~ msgid "Last updated at "
 #~ msgstr "Данные обновлены в "

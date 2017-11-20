@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 10:38+0200\n"
+"POT-Creation-Date: 2017-11-20 10:56+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4474,63 +4474,63 @@ msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
 msgstr "Zoom"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
-msgctxt "(Auto-links )"
-msgid "tp_admin_page_auto_links_paragraph_1"
+msgctxt "tp admin page auto links paragraph_1"
+msgid "Auto-links"
 msgstr "Auto-links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:10
-msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
-msgid "tp_admin_page_auto_links_paragraph_2"
+msgctxt "tp admin page auto links paragraph_2"
+msgid "Here you can setup auto-links. Define anchor and your referral link for that anchor."
 msgstr "Here you can setup auto-links. Define anchor and your referral link for that anchor."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:17
-msgctxt "(List of links)"
-msgid "tp_admin_page_auto_links_paragraph_3"
+msgctxt "tp admin page auto links paragraph_3"
+msgid "List of links"
 msgstr "List of links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:25
-msgctxt "(Add link)"
-msgid "tp_admin_page_auto_links_btn_add_link"
+msgctxt "tp admin page auto links btn add link"
+msgid "Add link"
 msgstr "Add link"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:30
-msgctxt "(Import links)"
-msgid "tp_admin_page_auto_links_btn_import_links"
+msgctxt "tp admin page auto links btn import links"
+msgid "Import links"
 msgstr "Import links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:39
-msgctxt "(Export links)"
-msgid "tp_admin_page_auto_links_btn_export_links"
+msgctxt "tp admin page auto links btn export links"
+msgid "Export links"
 msgstr "Export links"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:46
-msgctxt "(Remove)"
-msgid "tp_admin_page_auto_links_btn_remove"
+msgctxt "tp admin page auto links btn remove"
+msgid "Remove"
 msgstr "Remove"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:61
-msgctxt "(Anchor)"
-msgid "tp_admin_page_auto_links_table_td_1_label"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:60
+msgctxt "tp admin page auto links table td_1 label"
+msgid "Anchor"
 msgstr "Anchor"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:65
-msgctxt "(Link)"
-msgid "tp_admin_page_auto_links_table_td_2_label"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:63
+msgctxt "tp admin page auto links table td_2 label"
+msgid "Link"
 msgstr "Link"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:80
-msgctxt "(Edit)"
-msgid "tp_admin_page_auto_links_btn_edit"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:77
+msgctxt "tp admin page auto links btn edit"
+msgid "Edit"
 msgstr "Edit"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:98
-msgctxt "(Save changes)"
-msgid "tp_admin_page_auto_links_btn_save_changes"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:95
+msgctxt "tp admin page auto links btn save changes"
+msgid "Save changes"
 msgstr "Save changes"
 
-#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:103
-msgctxt "(Place auto-links in all existing posts)"
-msgid "tp_admin_page_auto_links_btn_auto_links"
+#: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:100
+msgctxt "tp admin page auto links btn auto links"
+msgid "Place auto-links in all existing posts"
 msgstr "Place auto-links in all existing posts"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:4
@@ -6534,6 +6534,54 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "(Auto-links )"
+#~ msgid "tp_admin_page_auto_links_paragraph_1"
+#~ msgstr "Auto-links"
+
+#~ msgctxt "(Here you can setup auto-links. Define anchor and your referral link for that anchor.)"
+#~ msgid "tp_admin_page_auto_links_paragraph_2"
+#~ msgstr "Here you can setup auto-links. Define anchor and your referral link for that anchor."
+
+#~ msgctxt "(List of links)"
+#~ msgid "tp_admin_page_auto_links_paragraph_3"
+#~ msgstr "List of links"
+
+#~ msgctxt "(Add link)"
+#~ msgid "tp_admin_page_auto_links_btn_add_link"
+#~ msgstr "Add link"
+
+#~ msgctxt "(Import links)"
+#~ msgid "tp_admin_page_auto_links_btn_import_links"
+#~ msgstr "Import links"
+
+#~ msgctxt "(Export links)"
+#~ msgid "tp_admin_page_auto_links_btn_export_links"
+#~ msgstr "Export links"
+
+#~ msgctxt "(Remove)"
+#~ msgid "tp_admin_page_auto_links_btn_remove"
+#~ msgstr "Remove"
+
+#~ msgctxt "(Anchor)"
+#~ msgid "tp_admin_page_auto_links_table_td_1_label"
+#~ msgstr "Anchor"
+
+#~ msgctxt "(Link)"
+#~ msgid "tp_admin_page_auto_links_table_td_2_label"
+#~ msgstr "Link"
+
+#~ msgctxt "(Edit)"
+#~ msgid "tp_admin_page_auto_links_btn_edit"
+#~ msgstr "Edit"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_auto_links_btn_save_changes"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Place auto-links in all existing posts)"
+#~ msgid "tp_admin_page_auto_links_btn_auto_links"
+#~ msgstr "Place auto-links in all existing posts"
+
 #~ msgctxt "(Settings saved.)"
 #~ msgid "tp_admin_page_admin_notice_modal_label"
 #~ msgstr "Settings saved."
@@ -7834,17 +7882,9 @@ msgstr "View %s not found"
 #~ msgstr "Insert link"
 
 #, fuzzy
-#~ msgid "Edit"
-#~ msgstr "Link"
-
-#, fuzzy
 #~ msgid "Title"
 #~ msgstr "Insert link"
 
 #, fuzzy
 #~ msgid "Link "
 #~ msgstr "Add link"
-
-#, fuzzy
-#~ msgid "this link."
-#~ msgstr "2. Enter settings "
