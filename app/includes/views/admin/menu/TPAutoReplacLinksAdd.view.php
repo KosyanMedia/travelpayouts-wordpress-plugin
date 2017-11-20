@@ -1,19 +1,19 @@
 <div class="TPWrapper TPWrapper-long">
 
     <p class="TPMainTitle  TPMainTitleSF">
-        <?php _ex('tp_admin_page_auto_links_add_paragraph_1',
-            '(Auto-links )', TPOPlUGIN_TEXTDOMAIN); ?>
+        <?php _ex('Auto-links',
+            'tp admin page auto links add paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div class="TP-TopImportantInfo TP-shortDescription">
         <p>
-            <?php _ex('tp_admin_page_auto_links_add_paragraph_2',
-                '(Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors are case-sensitive.)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors are case-sensitive.',
+                'tp admin page auto links add paragraph_2', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
     </div>
     <div class="TPmainContent TP-BalanceContent TP-SettingContent">
         <p class="TP-SettingTitle">
-            <?php _ex('tp_admin_page_auto_links_add_paragraph_3',
-                '(Adding links)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('Adding links',
+                'tp admin page auto links add paragraph_3', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
 
         <form method="post" action="admin.php?page=tp_control_substitution_links&action=save_link"
@@ -21,8 +21,8 @@
             <div class="TP-LocalHead TP-shortLocal TP-LocalHeadARL">
                 <label  id="TPArlUrl">
                     <span>
-                        <?php _ex('tp_admin_page_auto_links_add_input_arl_url_label',
-                            '(Link)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Link',
+                            'tp admin page auto links add input arl url label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <input type="text" name="arl_url" required/>
                 </label>
@@ -30,12 +30,12 @@
             <div  class="TP-LocalHead TP-LocalHeadARL">
                 <label class="TP-inputTextShortCust">
                         <span>
-                            <?php _ex('tp_admin_page_auto_links_add_textarea_arl_anchor_label',
-                                '(Anchor phrase)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Anchor phrase',
+                                'tp admin page auto links add textarea arl anchor label', TPOPlUGIN_TEXTDOMAIN); ?>
                             <a href="#" class="tooltip-settings TPARLHelp">
                                 <span>
-                                    <?php _ex('tp_admin_page_auto_links_add_textarea_arl_anchor_label_help',
-                                        '(You may add several anchors, use comma as separator)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    <?php _ex('You may add several anchors, use comma as separator',
+                                        'tp admin page auto links add textarea arl anchor label help', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </span>
                                 <div class="svg-img-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -48,12 +48,12 @@
                 </label>
                 <label class="TP-LabelEvent">
                    <span>
-                       <?php _ex('tp_admin_page_auto_links_add_textarea_arl_event_label',
-                           '(Events onclick)', TPOPlUGIN_TEXTDOMAIN); ?>
+                       <?php _ex('Events onclick',
+                           'tp admin page auto links add textarea arl event label', TPOPlUGIN_TEXTDOMAIN); ?>
                        <a href="#" class="tooltip-settings TPARLHelp">
                            <span>
-                               <?php _ex('tp_admin_page_auto_links_add_textarea_arl_event_label_help',
-                                   '(You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a link)', TPOPlUGIN_TEXTDOMAIN); ?>
+                               <?php _ex('You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a link',
+                                   'tp admin page auto links add textarea arl event label help', TPOPlUGIN_TEXTDOMAIN); ?>
                            </span>
                            <div class="svg-img-3">
                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -71,18 +71,18 @@
                     <input id="chekarla1" type="checkbox" name="arl_nofollow"
                            value="1" hidden checked="checked"/>
                     <label for="chekarla1">
-                        <?php _ex('tp_admin_page_auto_links_add_input_arl_nofollow_label',
-                            '(Add "nofollow" attribute)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Add "nofollow" attribute',
+                            'tp admin page auto links add input arl nofollow label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </label>
                     <input id="chekarla2" type="checkbox" name="arl_replace"
                            value="1" hidden />
                     <label for="chekarla2">
-                        <?php _ex('tp_admin_page_auto_links_add_input_arl_replace_label',
-                            '(Replace existing links)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Replace existing links',
+                            'tp admin page auto links add input arl replace label', TPOPlUGIN_TEXTDOMAIN); ?>
                         <a href="#" class="tooltip-settings TPARLHelp">
                             <span>
-                                <?php _ex('tp_admin_page_auto_links_add_input_arl_replace_label_help',
-                                    '(In case you already have such active links — they\'ll be replaced to the new one)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('In case you already have such active links — they\'ll be replaced to the new one',
+                                    'tp admin page auto links add input arl replace label help', TPOPlUGIN_TEXTDOMAIN); ?>
                             </span>
                             <div class="svg-img-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -94,20 +94,20 @@
                     <input id="chekarla3" type="checkbox" name="arl_target_blank"
                            value="1" hidden checked="checked"/>
                     <label for="chekarla3">
-                        <?php _ex('tp_admin_page_auto_links_add_input_arl_target_blank_label',
-                            '(Open in a new tab)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Open in a new tab',
+                            'tp admin page auto links add input arl target blank label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </label>
                 </label>
             </div>
             <div class="TP-navsUserShort">
                 <a href="admin.php?page=tp_control_substitution_links" class="TP-deleteShortLincks TP-deleteShortLincks--cust">
                     <i></i>
-                    <?php _ex('tp_admin_page_auto_links_add_btn_cancel_label',
-                        '(cancel)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('cancel',
+                        'tp admin page auto links add btn cancel label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
                 <button class="TP-BtnTab">
-                    <?php _ex('tp_admin_page_auto_links_add_btn_save changes_label',
-                        '(save changes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('save changes',
+                        'tp admin page auto links add btn save changes label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </button>
             </div>
         </form>
