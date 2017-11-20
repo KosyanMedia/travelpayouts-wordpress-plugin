@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 12:11+0200\n"
+"POT-Creation-Date: 2017-11-20 13:34+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4884,124 +4884,124 @@ msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
 msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:8
-msgctxt "(Flights from origin to destination, One Way (next month))"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
+msgid "Flights from origin to destination, One Way (next month)"
 msgstr "Flights from origin to destination, One Way (next month)"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:17
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_1_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:25
-msgctxt "(Flights from Origin to Destination (next few days))"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_2_label"
+msgid "Flights from Origin to Destination (next few days)"
 msgstr "Flights from Origin to Destination (next few days)"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:34
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_2_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:42
-msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_4_label"
+msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr "Cheapest Flights from origin to destination, Round-trip"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:51
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_4_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:59
-msgctxt "(Cheapest Flights from origin to destination (next month))"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_5_label"
+msgid "Cheapest Flights from origin to destination (next month)"
 msgstr "Cheapest Flights from origin to destination (next month)"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:68
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_5_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:76
-msgctxt "(Cheapest Flights from origin to destination (next year))"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_6_label"
+msgid "Cheapest Flights from origin to destination (next year)"
 msgstr "Cheapest Flights from origin to destination (next year)"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:85
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_6_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:93
-msgctxt "(Direct Flights from origin to destination)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_7_label"
+msgid "Direct Flights from origin to destination"
 msgstr "Direct Flights from origin to destination"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:102
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_7_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:110
-msgctxt "(Direct Flights from origin)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_8_label"
+msgid "Direct Flights from origin"
 msgstr "Direct Flights from origin"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:119
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_btn_save_label"
-msgstr "Save change"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_8_btn_save_label"
+msgid "Save changes"
+msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:128
-msgctxt "(Popular Destinations from origin)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_9_label"
+msgid "Popular Destinations from origin"
 msgstr "Popular Destinations from origin"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:137
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_9_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:146
-msgctxt "(Most popular flights within this Airline)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_10_label"
+msgid "Most popular flights within this Airline"
 msgstr "Most popular flights within this Airline"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:155
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_10_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:163
-msgctxt "(Searched on our website)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_12_label"
+msgid "Searched on our website"
 msgstr "Searched on our website"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:172
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_btn_save_label"
-msgstr "Save changes "
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_12_btn_save_label"
+msgid "Save changes"
+msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:180
-msgctxt "(Cheap Flights from origin)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_13_label"
+msgid "Cheap Flights from origin"
 msgstr "Cheap Flights from origin"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:189
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_btn_save_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_13_btn_save_label"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:197
-msgctxt "(Cheap Flights to destination)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_label"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_14_label"
+msgid "Cheap Flights to destination"
 msgstr "Cheap Flights to destination"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:206
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
-msgstr "Save changes"
+msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
+msgid "Save changes"
+msgstr "save changes"
 
 #: app/includes/views/admin/menu/TPHotels.view.php:3
 msgctxt "(Hotels)"
@@ -6531,6 +6531,102 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Flights from origin to destination, One Way (next month))"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
+#~ msgstr "Flights from origin to destination, One Way (next month)"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Flights from Origin to Destination (next few days))"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_label"
+#~ msgstr "Flights from Origin to Destination (next few days)"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_2_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_label"
+#~ msgstr "Cheapest Flights from origin to destination, Round-trip"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_4_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next month))"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_label"
+#~ msgstr "Cheapest Flights from origin to destination (next month)"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_5_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next year))"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_label"
+#~ msgstr "Cheapest Flights from origin to destination (next year)"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_6_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Direct Flights from origin to destination)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_label"
+#~ msgstr "Direct Flights from origin to destination"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_7_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Direct Flights from origin)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_label"
+#~ msgstr "Direct Flights from origin"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_8_btn_save_label"
+#~ msgstr "Save change"
+
+#~ msgctxt "(Popular Destinations from origin)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_label"
+#~ msgstr "Popular Destinations from origin"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_9_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Most popular flights within this Airline)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_label"
+#~ msgstr "Most popular flights within this Airline"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_10_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Searched on our website)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_label"
+#~ msgstr "Searched on our website"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_12_btn_save_label"
+#~ msgstr "Save changes "
+
+#~ msgctxt "(Cheap Flights from origin)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_label"
+#~ msgstr "Cheap Flights from origin"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Cheap Flights to destination)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_label"
+#~ msgstr "Cheap Flights to destination"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_14_btn_save_label"
+#~ msgstr "Save changes"
 
 #~ msgctxt "(Your income)"
 #~ msgid "tp_admin_page_dashboard_paragraph_2"
