@@ -1,7 +1,7 @@
 <div class="TPWrapper TPWrapperFlights">
     <p class="TPMainTitle">
-        <?php _ex('tp_admin_page_flights_paragraph_1',
-            '(Flights)', TPOPlUGIN_TEXTDOMAIN); ?>
+        <?php _ex('Flights',
+            'tp_admin_page_flights_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div id="tabs-flights">
         <nav class="TPNavigation">
@@ -10,8 +10,8 @@
                     <a href="#tabs-tickets_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_config',
-                                '(Tables Content)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Tables Content',
+                                'tp_admin_page_flights_tab_menu_tickets_config', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>
@@ -19,8 +19,8 @@
                     <a href="#tabs-tickets_style" class="TPMainMenuA">
                         <i class="icoItemNav ico-glass"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_style',
-                                '(Layout)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Layout',
+                                'tp_admin_page_flights_tab_menu_tickets_style', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>
@@ -28,8 +28,8 @@
                     <a href="#tabs-tickets_themes" class="TPMainMenuA">
                         <i class="icoItemNav ico-glass"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_themes',
-                                '(Themes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Themes',
+                                'tp_admin_page_flights_tab_menu_tickets_themes', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>
@@ -37,8 +37,8 @@
                     <a href="#tabs-other_settings" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_other_settings',
-                                '(Other settings)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Other settings',
+                                'tp_admin_page_flights_tab_menu_other_settings', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>
@@ -60,8 +60,8 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <input type="submit" name="submit" id="TPSaveSettingsStyle" class="TP-BtnTab"
-                           value="<?php _ex('tp_admin_page_flights_tab_tickets_style_btn_save_changes',
-                               '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                           value="<?php _ex('Save changes',
+                               'tp_admin_page_flights_tab_tickets_style_btn_save_changes', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </form>
         </div>
@@ -87,12 +87,12 @@
                                 <div class="TPThemeActions">
                                     <input type="submit" name="submit"
                                            class="button button-secondary activate TPThemeBtnActivate "
-                                           value="<?php _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
-                                               '(Activate)', TPOPlUGIN_TEXTDOMAIN );?>">
+                                           value="<?php _ex('Activate',
+                                               'tp_admin_menu_page_flight_tickets_tab_themes_btn_active', TPOPlUGIN_TEXTDOMAIN );?>">
                                     <!--<a class="button button-secondary activate TPThemeBtnActivate ">
                                         <?php
-                                            _ex('tp_admin_menu_page_flight_tickets_tab_themes_btn_active',
-                                                '(Activate)', TPOPlUGIN_TEXTDOMAIN );
+                                            _ex('Activate',
+                                                'tp_admin_menu_page_flight_tickets_tab_themes_btn_active', TPOPlUGIN_TEXTDOMAIN );
                                         ?>
                                     </a>-->
                                 </div>
@@ -111,8 +111,8 @@
             <form action="options.php" class="formSettings TPFormNotReload TPOtherSettingTPFormNotReload" method="POST">
                 <div class="TPmainContent TPmainContentThemes TPOtherSettingContent">
                     <p class="TP-SettingTitle">
-                        <?php _ex('tp_admin_page_flights_tab_menu_other_settings',
-                            '(Other settings)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Other settings',
+                            'tp_admin_page_flights_tab_menu_other_settings', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <?php settings_fields('TPFlightTickets'); ?>
                     <?php do_settings_fields('tp_settings_other_settings', 'tp_settings_other_settings_id'); ?>
@@ -121,8 +121,8 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <input type="submit" name="submit" id="TPSaveSettingsStyle" class="TP-BtnTab"
-                           value="<?php _ex('tp_admin_page_flights_tab_tickets_style_btn_save_changes',
-                               '(Save changes)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                           value="<?php _ex('Save changes',
+                               'tp_admin_page_flights_tab_tickets_style_btn_save_changes', TPOPlUGIN_TEXTDOMAIN); ?>">
                 </div>
             </form>
         </div>

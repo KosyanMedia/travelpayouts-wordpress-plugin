@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 13:35+0200\n"
+"POT-Creation-Date: 2017-11-20 13:45+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4845,43 +4845,41 @@ msgid "Total"
 msgstr "Итого"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:3
-msgctxt "(Flights)"
-msgid "tp_admin_page_flights_paragraph_1"
+msgctxt "tp_admin_page_flights_paragraph_1"
+msgid "Flights"
 msgstr "Авиабилеты"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:13
-#: app/includes/views/admin/menu/TPHotels.view.php:13
-msgctxt "(Tables Content)"
-msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_config"
+msgid "Tables Content"
 msgstr "Содержание таблиц"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:22
-msgctxt "(Layout)"
-msgid "tp_admin_page_flights_tab_menu_tickets_style"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_style"
+msgid "Layout"
 msgstr "Внешний вид таблиц"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:31
-#: app/includes/views/admin/menu/TPHotels.view.php:23
-msgctxt "(Themes)"
-msgid "tp_admin_page_flights_tab_menu_tickets_themes"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_themes"
+msgid "Themes"
 msgstr "Темы"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:40
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:114
-msgctxt "(Other settings)"
-msgid "tp_admin_page_flights_tab_menu_other_settings"
+msgctxt "tp_admin_page_flights_tab_menu_other_settings"
+msgid "Other settings"
 msgstr "Другие настройки"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:63
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:124
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+msgctxt "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:90
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:94
-msgctxt "(Activate)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+msgctxt "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+msgid "Activate"
 msgstr "Активировать"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:8
@@ -5008,6 +5006,16 @@ msgstr "Сохранить изменения"
 msgctxt "(Hotels)"
 msgid "tp_admin_page_hotels_paragraph_1"
 msgstr "Отели"
+
+#: app/includes/views/admin/menu/TPHotels.view.php:13
+msgctxt "(Tables Content)"
+msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgstr "Содержание таблиц"
+
+#: app/includes/views/admin/menu/TPHotels.view.php:23
+msgctxt "(Themes)"
+msgid "tp_admin_page_flights_tab_menu_tickets_themes"
+msgstr "Темы"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
@@ -6448,6 +6456,26 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_flights_paragraph_1"
+#~ msgstr "Авиабилеты"
+
+#~ msgctxt "(Layout)"
+#~ msgid "tp_admin_page_flights_tab_menu_tickets_style"
+#~ msgstr "Внешний вид таблиц"
+
+#~ msgctxt "(Other settings)"
+#~ msgid "tp_admin_page_flights_tab_menu_other_settings"
+#~ msgstr "Другие настройки"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Activate)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+#~ msgstr "Активировать"
+
 #~ msgctxt "(Flights from origin to destination, One Way (next month))"
 #~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
 #~ msgstr "Цены на месяц по направлению, в одну сторону "
@@ -7743,10 +7771,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Tables Content"
 #~ msgstr "Содержание таблиц"
 
-#~ msgctxt "admin page railway tab menu railway themes"
-#~ msgid "Themes"
-#~ msgstr "Темы"
-
 #~ msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
 #~ msgid "Show currency code"
 #~ msgstr "Показывать кодом"
@@ -8824,9 +8848,6 @@ msgstr "Вид %s не найден"
 #~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_13_label"
 #~ msgstr "Граница кнопки"
 
-#~ msgid "Layout"
-#~ msgstr "Внешний вид таблиц"
-
 #~ msgid "Header style"
 #~ msgstr "Стили заголовка"
 
@@ -8880,9 +8901,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Reset to Default styles"
 #~ msgstr "Стили по умолчанию"
-
-#~ msgid "Tables Content"
-#~ msgstr "Содержание таблиц "
 
 #~ msgid ""
 #~ "Here you can add referral links that you want to be defined to the specified anchor phrase. "
@@ -9022,10 +9040,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Get your API Token and Partner Marker by following "
 #~ msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации"
-
-#, fuzzy
-#~ msgid "2. Enter settings "
-#~ msgstr "2. Внести настройки"
 
 #~ msgid "1. Sign up "
 #~ msgstr "1. Зарегистрироваться "

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 13:34+0200\n"
+"POT-Creation-Date: 2017-11-20 13:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4844,43 +4844,41 @@ msgid "Total"
 msgstr "Total"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:3
-msgctxt "(Flights)"
-msgid "tp_admin_page_flights_paragraph_1"
+msgctxt "tp_admin_page_flights_paragraph_1"
+msgid "Flights"
 msgstr "Flights"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:13
-#: app/includes/views/admin/menu/TPHotels.view.php:13
-msgctxt "(Tables Content)"
-msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_config"
+msgid "Tables Content"
 msgstr "Tables Content"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:22
-msgctxt "(Layout)"
-msgid "tp_admin_page_flights_tab_menu_tickets_style"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_style"
+msgid "Layout"
 msgstr "Layout"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:31
-#: app/includes/views/admin/menu/TPHotels.view.php:23
-msgctxt "(Themes)"
-msgid "tp_admin_page_flights_tab_menu_tickets_themes"
+msgctxt "tp_admin_page_flights_tab_menu_tickets_themes"
+msgid "Themes"
 msgstr "Themes"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:40
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:114
-msgctxt "(Other settings)"
-msgid "tp_admin_page_flights_tab_menu_other_settings"
+msgctxt "tp_admin_page_flights_tab_menu_other_settings"
+msgid "Other settings"
 msgstr "Other settings"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:63
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:124
-msgctxt "(Save changes)"
-msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+msgctxt "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:90
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:94
-msgctxt "(Activate)"
-msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+msgctxt "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+msgid "Activate"
 msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPFlightsTablesContent.view.php:8
@@ -5007,6 +5005,16 @@ msgstr "save changes"
 msgctxt "(Hotels)"
 msgid "tp_admin_page_hotels_paragraph_1"
 msgstr "Hotels"
+
+#: app/includes/views/admin/menu/TPHotels.view.php:13
+msgctxt "(Tables Content)"
+msgid "tp_admin_page_flights_tab_menu_tickets_config"
+msgstr "Tables Content"
+
+#: app/includes/views/admin/menu/TPHotels.view.php:23
+msgctxt "(Themes)"
+msgid "tp_admin_page_flights_tab_menu_tickets_themes"
+msgstr "Themes"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
@@ -6532,6 +6540,26 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_flights_paragraph_1"
+#~ msgstr "Flights"
+
+#~ msgctxt "(Layout)"
+#~ msgid "tp_admin_page_flights_tab_menu_tickets_style"
+#~ msgstr "Layout"
+
+#~ msgctxt "(Other settings)"
+#~ msgid "tp_admin_page_flights_tab_menu_other_settings"
+#~ msgstr "Other settings"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_flights_tab_tickets_style_btn_save_changes"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Activate)"
+#~ msgid "tp_admin_menu_page_flight_tickets_tab_themes_btn_active"
+#~ msgstr "Activate"
+
 #~ msgctxt "(Flights from origin to destination, One Way (next month))"
 #~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_1_label"
 #~ msgstr "Flights from origin to destination, One Way (next month)"
@@ -7813,14 +7841,6 @@ msgstr "View %s not found"
 #~ msgctxt "admin page menu railway"
 #~ msgid "Railway tables"
 #~ msgstr "Railway tables"
-
-#~ msgctxt "admin page railway tab menu railway config"
-#~ msgid "Tables Content"
-#~ msgstr "Tables Content"
-
-#~ msgctxt "admin page railway tab menu railway themes"
-#~ msgid "Themes"
-#~ msgstr "Themes"
 
 #~ msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
 #~ msgid "Show currency code"
