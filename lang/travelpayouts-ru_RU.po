@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 11:37+0200\n"
+"POT-Creation-Date: 2017-11-20 11:51+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4691,60 +4691,61 @@ msgid "save changes"
 msgstr "сохранить изменения"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:35
-msgctxt "(Go to )"
-msgid "tp_admin_page_dashboard_paragraph_1"
+msgctxt "tp_admin_page_dashboard_paragraph_1"
+msgid "Go to"
 msgstr "Перейти на"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:62
-msgctxt "(Today)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_1"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_1"
+msgid "Today"
 msgstr "Сегодня"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:67
-msgctxt "(Yesterday)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_2"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_2"
+msgid "Yesterday"
 msgstr "Вчера"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:72
-msgctxt "(This month)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_3"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_3"
+msgid "This month"
 msgstr "Этот месяц"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:77
-msgctxt "(Last month)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_4"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_4"
+msgid "Last month"
 msgstr "Прошлый месяц"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:94
-msgctxt "(Last updated at )"
-msgid "tp_admin_page_dashboard_paragraph_4_1"
+msgctxt "tp_admin_page_dashboard_paragraph_4_1"
+msgid "Last updated at"
 msgstr "Данные обновлены в "
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:99
-msgctxt "( (Local time) )"
-msgid "tp_admin_page_dashboard_paragraph_4_2"
-msgstr "по местному времени."
+msgctxt "tp_admin_page_dashboard_paragraph_4_2"
+msgid "(Local time)"
+msgstr " по местному времени."
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:102
-msgctxt "(Go to %s section to get a detailed report)"
-msgid "tp_admin_page_dashboard_paragraph_4_3"
+#, php-format
+msgctxt "tp_admin_page_dashboard_paragraph_4_3"
+msgid "Go to %s section to get a detailed report"
 msgstr "Подробный отчет о выплатах можно посмотреть в разделе %s"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:103
-msgctxt "Statistics"
-msgid "tp_admin_page_dashboard_paragraph_4_4"
+msgctxt "tp_admin_page_dashboard_paragraph_4_4"
+msgid "Statistics"
 msgstr "Статистика"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:112
 #: app/includes/views/admin/menu/TPDashboard.view.php:123
-msgctxt "(Travelpayouts News)"
-msgid "tp_admin_page_dashboard_paragraph_5_1"
+msgctxt "tp_admin_page_dashboard_paragraph_5_1"
+msgid "Travelpayouts News"
 msgstr "Новости Travelpayouts"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:114
 #: app/includes/views/admin/menu/TPDashboard.view.php:125
-msgctxt "(All news)"
-msgid "tp_admin_page_dashboard_paragraph_5_2"
+msgctxt "tp_admin_page_dashboard_paragraph_5_2"
+msgid "All news"
 msgstr "Все новости"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:22
@@ -6446,6 +6447,50 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Go to )"
+#~ msgid "tp_admin_page_dashboard_paragraph_1"
+#~ msgstr "Перейти на"
+
+#~ msgctxt "(Today)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_1"
+#~ msgstr "Сегодня"
+
+#~ msgctxt "(Yesterday)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_2"
+#~ msgstr "Вчера"
+
+#~ msgctxt "(This month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_3"
+#~ msgstr "Этот месяц"
+
+#~ msgctxt "(Last month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_4"
+#~ msgstr "Прошлый месяц"
+
+#~ msgctxt "(Last updated at )"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_1"
+#~ msgstr "Данные обновлены в "
+
+#~ msgctxt "( (Local time) )"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_2"
+#~ msgstr "по местному времени."
+
+#~ msgctxt "(Go to %s section to get a detailed report)"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_3"
+#~ msgstr "Подробный отчет о выплатах можно посмотреть в разделе %s"
+
+#~ msgctxt "Statistics"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_4"
+#~ msgstr "Статистика"
+
+#~ msgctxt "(Travelpayouts News)"
+#~ msgid "tp_admin_page_dashboard_paragraph_5_1"
+#~ msgstr "Новости Travelpayouts"
+
+#~ msgctxt "(All news)"
+#~ msgid "tp_admin_page_dashboard_paragraph_5_2"
+#~ msgstr "Все новости"
 
 #~ msgctxt "(Auto-links )"
 #~ msgid "tp_admin_page_auto_links_edit_paragraph_1"
@@ -8766,33 +8811,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Affix link for all existing posts"
 #~ msgstr "Проставить ссылки по всех существующих постах"
 
-#~ msgid "Last updated at "
-#~ msgstr "Данные обновлены в "
-
-#~ msgid " (Local time)"
-#~ msgstr " по местному времени."
-
-#~ msgid "Go to %s section to get a detailed report"
-#~ msgstr "Подробный отчет о выплатах можно посмотреть в разделе %s"
-
-#~ msgid "Travelpayouts News"
-#~ msgstr "Новости Travelpayouts"
-
-#~ msgid "All news"
-#~ msgstr "Все новости"
-
-#~ msgid "Today"
-#~ msgstr "Сегодня"
-
-#~ msgid "Yesterday"
-#~ msgstr "Вчера"
-
-#~ msgid "This month"
-#~ msgstr "Этот месяц"
-
-#~ msgid "Last month"
-#~ msgstr "Прошлый месяц"
-
 #~ msgid "Visit."
 #~ msgstr "Посет."
 
@@ -8822,9 +8840,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Your income"
 #~ msgstr "Ваш доход"
-
-#~ msgid "Go to "
-#~ msgstr "Перейти на"
 
 #~ msgid ""
 #~ "We wish success to all your endeavors! Do the things you love and we will take care of the "

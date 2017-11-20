@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 11:35+0200\n"
+"POT-Creation-Date: 2017-11-20 11:53+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4690,60 +4690,61 @@ msgid "save changes"
 msgstr "save changes"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:35
-msgctxt "(Go to )"
-msgid "tp_admin_page_dashboard_paragraph_1"
-msgstr "Go to "
+msgctxt "tp_admin_page_dashboard_paragraph_1"
+msgid "Go to"
+msgstr "Go to"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:62
-msgctxt "(Today)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_1"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_1"
+msgid "Today"
 msgstr "Today"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:67
-msgctxt "(Yesterday)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_2"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_2"
+msgid "Yesterday"
 msgstr "Yesterday"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:72
-msgctxt "(This month)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_3"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_3"
+msgid "This month"
 msgstr "This month"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:77
-msgctxt "(Last month)"
-msgid "tp_admin_page_dashboard_paragraph_3_list_li_4"
+msgctxt "tp_admin_page_dashboard_paragraph_3_list_li_4"
+msgid "Last month"
 msgstr "Last month"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:94
-msgctxt "(Last updated at )"
-msgid "tp_admin_page_dashboard_paragraph_4_1"
-msgstr "Last updated at "
+msgctxt "tp_admin_page_dashboard_paragraph_4_1"
+msgid "Last updated at"
+msgstr "Last updated at"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:99
-msgctxt "( (Local time) )"
-msgid "tp_admin_page_dashboard_paragraph_4_2"
+msgctxt "tp_admin_page_dashboard_paragraph_4_2"
+msgid "(Local time)"
 msgstr "(Local time)"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:102
-msgctxt "(Go to %s section to get a detailed report)"
-msgid "tp_admin_page_dashboard_paragraph_4_3"
+#, php-format
+msgctxt "tp_admin_page_dashboard_paragraph_4_3"
+msgid "Go to %s section to get a detailed report"
 msgstr "Go to %s section to get a detailed report"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:103
-msgctxt "Statistics"
-msgid "tp_admin_page_dashboard_paragraph_4_4"
+msgctxt "tp_admin_page_dashboard_paragraph_4_4"
+msgid "Statistics"
 msgstr "Statistics"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:112
 #: app/includes/views/admin/menu/TPDashboard.view.php:123
-msgctxt "(Travelpayouts News)"
-msgid "tp_admin_page_dashboard_paragraph_5_1"
+msgctxt "tp_admin_page_dashboard_paragraph_5_1"
+msgid "Travelpayouts News"
 msgstr "Travelpayouts News"
 
 #: app/includes/views/admin/menu/TPDashboard.view.php:114
 #: app/includes/views/admin/menu/TPDashboard.view.php:125
-msgctxt "(All news)"
-msgid "tp_admin_page_dashboard_paragraph_5_2"
+msgctxt "tp_admin_page_dashboard_paragraph_5_2"
+msgid "All news"
 msgstr "All news"
 
 #: app/includes/views/admin/menu/TPDashboardView.php:22
@@ -6533,6 +6534,50 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Go to )"
+#~ msgid "tp_admin_page_dashboard_paragraph_1"
+#~ msgstr "Go to "
+
+#~ msgctxt "(Today)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_1"
+#~ msgstr "Today"
+
+#~ msgctxt "(Yesterday)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_2"
+#~ msgstr "Yesterday"
+
+#~ msgctxt "(This month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_3"
+#~ msgstr "This month"
+
+#~ msgctxt "(Last month)"
+#~ msgid "tp_admin_page_dashboard_paragraph_3_list_li_4"
+#~ msgstr "Last month"
+
+#~ msgctxt "(Last updated at )"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_1"
+#~ msgstr "Last updated at "
+
+#~ msgctxt "( (Local time) )"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_2"
+#~ msgstr "(Local time)"
+
+#~ msgctxt "(Go to %s section to get a detailed report)"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_3"
+#~ msgstr "Go to %s section to get a detailed report"
+
+#~ msgctxt "Statistics"
+#~ msgid "tp_admin_page_dashboard_paragraph_4_4"
+#~ msgstr "Statistics"
+
+#~ msgctxt "(Travelpayouts News)"
+#~ msgid "tp_admin_page_dashboard_paragraph_5_1"
+#~ msgstr "Travelpayouts News"
+
+#~ msgctxt "(All news)"
+#~ msgid "tp_admin_page_dashboard_paragraph_5_2"
+#~ msgstr "All news"
 
 #~ msgctxt "(Auto-links )"
 #~ msgid "tp_admin_page_auto_links_edit_paragraph_1"
