@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 09:35+0200\n"
+"POT-Creation-Date: 2017-11-21 09:53+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5461,118 +5461,118 @@ msgid "DOWNLOAD REPORT (XLS)"
 msgstr "DOWNLOAD REPORT (XLS)"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:29
-msgctxt "(Date)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_1_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_1_label"
+msgid "Date"
 msgstr "Date"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:31
-msgctxt "(Type)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_2_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_2_label"
+msgid "Type"
 msgstr "Type"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:33
-msgctxt "(Marker)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_3_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_3_label"
+msgid "Marker"
 msgstr "Marker"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:35
-msgctxt "(Visitors)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_4_label"
-msgstr "Visitors"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_4_label"
+msgid "Visitors"
+msgstr "Visit."
 
 #: app/includes/views/admin/menu/TPStatisticView.php:37
-msgctxt "(Search)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_5_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_5_label"
+msgid "Search"
 msgstr "Search"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:39
-msgctxt "(Clicks)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_6_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_6_label"
+msgid "Clicks"
 msgstr "Clicks"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:41
-msgctxt "(Income clicks)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_7_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_7_label"
+msgid "Income clicks"
 msgstr "Income clicks"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:43
-msgctxt "(Booking)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_8_label"
-msgstr "Booking"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_8_label"
+msgid "Booking"
+msgstr "Bookings"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:45
-msgctxt "(Paid booking)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_9_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_9_label"
+msgid "Paid booking"
 msgstr "Paid booking"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:47
-msgctxt "(Income booking)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_10_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_10_label"
+msgid "Income booking"
 msgstr "Income booking"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:49
-msgctxt "(Possible. income)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_11_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_11_label"
+msgid "Possible. income"
 msgstr "Possible. income"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:120
-msgctxt "(Total)"
-msgid "tp_admin_page_statistics_tab_report_table_report_td_12_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_td_12_label"
+msgid "Total"
 msgstr "Total"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:161
-msgctxt "(Total)"
-msgid "tp_admin_page_statistics_tab_report_table_report_input_total_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_input_total_label"
+msgid "Total"
 msgstr "Total"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:167
-msgctxt "(Type)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_type_label"
+msgid "Type"
 msgstr "Type"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:170
-msgctxt "(All)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_1"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_type_value_1"
+msgid "All"
 msgstr "All"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:172
-msgctxt "(Flights)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_2"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_type_value_2"
+msgid "Flights"
 msgstr "Flights"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:174
-msgctxt "(Hotels)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_3"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_type_value_3"
+msgid "Hotels"
 msgstr "Hotels"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:179
-msgctxt "(Marker)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_marker_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_marker_label"
+msgid "Marker"
 msgstr "Marker"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:182
-msgctxt "(All)"
-msgid "tp_admin_page_statistics_tab_report_table_report_filter_marker_value_1"
+msgctxt "tp_admin_page_statistics_tab_report_table_report_filter_marker_value_1"
+msgid "All"
 msgstr "All"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:213
-msgctxt "(Date)"
-msgid "tp_admin_page_statistics_tab_report_table_balance_td_1_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_balance_td_1_label"
+msgid "Date"
 msgstr "Date"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:215
-msgctxt "(Amount)"
-msgid "tp_admin_page_statistics_tab_report_table_balance_td_2_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_balance_td_2_label"
+msgid "Amount"
 msgstr "Amount"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:217
-msgctxt "(Status)"
-msgid "tp_admin_page_statistics_tab_report_table_balance_td_3_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_balance_td_3_label"
+msgid "Status"
 msgstr "Status"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:219
-msgctxt "(Comment)"
-msgid "tp_admin_page_statistics_tab_report_table_balance_td_4_label"
+msgctxt "tp_admin_page_statistics_tab_report_table_balance_td_4_label"
+msgid "Comment"
 msgstr "Comment"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:3
@@ -6532,6 +6532,98 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Date)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_1_label"
+#~ msgstr "Date"
+
+#~ msgctxt "(Type)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_2_label"
+#~ msgstr "Type"
+
+#~ msgctxt "(Marker)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_3_label"
+#~ msgstr "Marker"
+
+#~ msgctxt "(Visitors)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_4_label"
+#~ msgstr "Visitors"
+
+#~ msgctxt "(Search)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_5_label"
+#~ msgstr "Search"
+
+#~ msgctxt "(Clicks)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_6_label"
+#~ msgstr "Clicks"
+
+#~ msgctxt "(Income clicks)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_7_label"
+#~ msgstr "Income clicks"
+
+#~ msgctxt "(Booking)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_8_label"
+#~ msgstr "Booking"
+
+#~ msgctxt "(Paid booking)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_9_label"
+#~ msgstr "Paid booking"
+
+#~ msgctxt "(Income booking)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_10_label"
+#~ msgstr "Income booking"
+
+#~ msgctxt "(Possible. income)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_11_label"
+#~ msgstr "Possible. income"
+
+#~ msgctxt "(Total)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_td_12_label"
+#~ msgstr "Total"
+
+#~ msgctxt "(Total)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_input_total_label"
+#~ msgstr "Total"
+
+#~ msgctxt "(Type)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_label"
+#~ msgstr "Type"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_1"
+#~ msgstr "All"
+
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_2"
+#~ msgstr "Flights"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_type_value_3"
+#~ msgstr "Hotels"
+
+#~ msgctxt "(Marker)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_marker_label"
+#~ msgstr "Marker"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_report_filter_marker_value_1"
+#~ msgstr "All"
+
+#~ msgctxt "(Date)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_balance_td_1_label"
+#~ msgstr "Date"
+
+#~ msgctxt "(Amount)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_balance_td_2_label"
+#~ msgstr "Amount"
+
+#~ msgctxt "(Status)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_balance_td_3_label"
+#~ msgstr "Status"
+
+#~ msgctxt "(Comment)"
+#~ msgid "tp_admin_page_statistics_tab_report_table_balance_td_4_label"
+#~ msgstr "Comment"
 
 #~ msgctxt "(Statistics)"
 #~ msgid "tp_admin_page_statistics_paragraph_1"

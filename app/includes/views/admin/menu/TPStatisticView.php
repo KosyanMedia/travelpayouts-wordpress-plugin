@@ -26,27 +26,27 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
                     <thead>
                         <tr>
                             <td class="TPTableHead tp-date-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_1_label', '(Date)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Date', 'tp_admin_page_statistics_tab_report_table_report_td_1_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_2_label','(Type)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Type','tp_admin_page_statistics_tab_report_table_report_td_2_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_3_label','(Marker)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Marker','tp_admin_page_statistics_tab_report_table_report_td_3_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_4_label','(Visitors)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Visitors','tp_admin_page_statistics_tab_report_table_report_td_4_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_5_label','(Search)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Search','tp_admin_page_statistics_tab_report_table_report_td_5_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_6_label','(Clicks)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Clicks','tp_admin_page_statistics_tab_report_table_report_td_6_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_7_label','(Income clicks)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Income clicks','tp_admin_page_statistics_tab_report_table_report_td_7_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_8_label','(Booking)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Booking','tp_admin_page_statistics_tab_report_table_report_td_8_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_9_label','(Paid booking)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Paid booking','tp_admin_page_statistics_tab_report_table_report_td_9_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_10_label','(Income booking)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Income booking','tp_admin_page_statistics_tab_report_table_report_td_10_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-data-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_td_11_label','(Possible. income)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Possible. income','tp_admin_page_statistics_tab_report_table_report_td_11_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                         </tr>
                     </thead>
                     <tbody>';
@@ -117,7 +117,7 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
 
                         $output_table .= '<tr class="TP-rowAllCountMonth TP-Report-total-row" '.$TPTotalRow.'>
                                     <td><p data-total="">'
-                            . _x('tp_admin_page_statistics_tab_report_table_report_td_12_label', '(Total)', TPOPlUGIN_TEXTDOMAIN) . '</p></td>
+                            . _x('Total', 'tp_admin_page_statistics_tab_report_table_report_td_12_label', TPOPlUGIN_TEXTDOMAIN) . '</p></td>
                                     <td>
                                         <i class="TP-icoTable ' . $classType . '"></i>
                                         <span style="display:none">'.$key_res.'</span>
@@ -158,28 +158,28 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
                             <input id="TP-Report-total-chek1" type="checkbox" name="'.TPOPlUGIN_OPTION_NAME.'[admin_settings][total_stats]"
                                        value="1" '.checked(@\app\includes\TPPlugin::$options['admin_settings']['total_stats'], true, false).' hidden />
                             <label for="TP-Report-total-chek1">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_input_total_label', '(Total)', TPOPlUGIN_TEXTDOMAIN )
+            ._x('Total', 'tp_admin_page_statistics_tab_report_table_report_input_total_label', TPOPlUGIN_TEXTDOMAIN )
 
             .'</label>
                         </div>
                         <label>
                             <span>'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_type_label', '(Type)', TPOPlUGIN_TEXTDOMAIN ).'</span>
+            ._x('Type', 'tp_admin_page_statistics_tab_report_table_report_filter_type_label', TPOPlUGIN_TEXTDOMAIN ).'</span>
                             <select id="TP-ListReportType" class="TP-Zelect" >
                                 <option value="none">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_type_value_1','(All)', TPOPlUGIN_TEXTDOMAIN ).'</option>
+            ._x('All','tp_admin_page_statistics_tab_report_table_report_filter_type_value_1', TPOPlUGIN_TEXTDOMAIN ).'</option>
                                 <option value="flights">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_type_value_2','(Flights)', TPOPlUGIN_TEXTDOMAIN ).'</option>
+            ._x('Flights','tp_admin_page_statistics_tab_report_table_report_filter_type_value_2', TPOPlUGIN_TEXTDOMAIN ).'</option>
                                 <option value="hotels">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_type_value_3','(Hotels)', TPOPlUGIN_TEXTDOMAIN ).'</option>
+            ._x('Hotels','tp_admin_page_statistics_tab_report_table_report_filter_type_value_3', TPOPlUGIN_TEXTDOMAIN ).'</option>
                             </select>
                         </label>
                         <label>
                             <span>'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_marker_label', '(Marker)', TPOPlUGIN_TEXTDOMAIN ).'</span>
+            ._x('Marker', 'tp_admin_page_statistics_tab_report_table_report_filter_marker_label', TPOPlUGIN_TEXTDOMAIN ).'</span>
                             <select id="TP-ListReportMarker" class="TP-Zelect" >
                                 <option value="none">'
-            ._x('tp_admin_page_statistics_tab_report_table_report_filter_marker_value_1','(All)', TPOPlUGIN_TEXTDOMAIN ).'</option>
+            ._x('All','tp_admin_page_statistics_tab_report_table_report_filter_marker_value_1', TPOPlUGIN_TEXTDOMAIN ).'</option>
                                 '.$output_marker_option.'
                             </select>
                         </label>
@@ -210,13 +210,13 @@ class TPStatisticView extends \app\includes\views\admin\TPView{
                         <thead>
                         <tr>
                             <td class="TPTableHead tp-date-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_balance_td_1_label', '(Date)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Date', 'tp_admin_page_statistics_tab_report_table_balance_td_1_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="TPTableHead tp-price-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_balance_td_2_label', '(Amount)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Amount', 'tp_admin_page_statistics_tab_report_table_balance_td_2_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_balance_td_3_label', '(Status)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Status', 'tp_admin_page_statistics_tab_report_table_balance_td_3_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                             <td class="tp-notsort-column">'
-            ._x('tp_admin_page_statistics_tab_report_table_balance_td_4_label', '(Comment)', TPOPlUGIN_TEXTDOMAIN ).'</td>
+            ._x('Comment', 'tp_admin_page_statistics_tab_report_table_balance_td_4_label', TPOPlUGIN_TEXTDOMAIN ).'</td>
                         </tr>
                         </thead>
                         <tbody>';
