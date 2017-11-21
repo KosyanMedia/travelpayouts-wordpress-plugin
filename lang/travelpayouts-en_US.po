@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 16:19+0200\n"
+"POT-Creation-Date: 2017-11-21 18:00+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4075,197 +4075,197 @@ msgid "Subid"
 msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:2
-msgctxt "(Constructor tables)"
-msgid "tp_admin_page_settings_сonstructor_tables_title"
+msgctxt "tp_admin_page_settings_сonstructor_tables_title"
+msgid "Constructor tables"
 msgstr "Constructor tables"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:33
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:91
-msgctxt "(Select the table)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_0"
+msgid "Select the table"
 msgstr "Select the table"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:37
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:95
-msgctxt "(Flights from origin to destination, One Way (next month))"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_1"
+msgid "Flights from origin to destination, One Way (next month)"
 msgstr "Flights from origin to destination, One Way (next month)"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:41
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:99
-msgctxt "(Flights from Origin to Destination (next few days))"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_2"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_2"
+msgid "Flights from Origin to Destination (next few days)"
 msgstr "Flights from Origin to Destination (next few days)"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:46
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:104
-msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_3"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_3"
+msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr "Cheapest Flights from origin to destination, Round-trip"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:50
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:108
-msgctxt "(Cheapest Flights from origin to destination (next month))"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_4"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_4"
+msgid "Cheapest Flights from origin to destination (next month)"
 msgstr "Cheapest Flights from origin to destination (next month)"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:54
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:112
-msgctxt "(Cheapest Flights from origin to destination (next year))"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_5"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_5"
+msgid "Cheapest Flights from origin to destination (next year)"
 msgstr "Cheapest Flights from origin to destination (next year)"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:58
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:116
-msgctxt "(Direct Flights from origin to destination)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_6"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_6"
+msgid "Direct Flights from origin to destination"
 msgstr "Direct Flights from origin to destination"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:62
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:120
-msgctxt "(Direct Flights from origin)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_7"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_7"
+msgid "Direct Flights from origin"
 msgstr "Direct Flights from origin"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:66
-msgctxt "(Popular Destinations from origin)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_8"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_8"
+msgid "Popular Destinations from origin"
 msgstr "Popular Destinations from origin"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:70
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:124
-msgctxt "(Most popular flights within this Airlines)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_9"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_9"
+msgid "Most popular flights within this Airlines"
 msgstr "Most popular flights within this Airlines"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:74
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:129
-msgctxt "(Searched on our website)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_11"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_11"
+msgid "Searched on our website"
 msgstr "Searched on our website"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:78
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:133
-msgctxt "(Cheap Flights from origin)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_12"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_12"
+msgid "Cheap Flights from origin"
 msgstr "Cheap Flights from origin"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:82
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:137
-msgctxt "(Cheap Flights to destination)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_13"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_13"
+msgid "Cheap Flights to destination"
 msgstr "Cheap Flights to destination"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:86
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:141
-msgctxt "(Special offers airline)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_14"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_select_table_value_14"
+msgid "Special offers airline"
 msgstr "Special offers airline"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:153
-msgctxt "(Alternate title)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_title_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_title_label"
+msgid "Alternate title"
 msgstr "Alternate title"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:162
-msgctxt "(Origin)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_origin_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_origin_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:170
-msgctxt "(Destination)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_destination_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_destination_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:189
-msgctxt "(Country)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_country_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_country_label"
+msgid "Country"
 msgstr "Country"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:197
-msgctxt "(Airline)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_airline_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_airline_label"
+msgid "Airline"
 msgstr "Airline"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:205
-msgctxt "(Subid)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_subid_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_subid_label"
+msgid "Subid"
 msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:214
-msgctxt "(Filter by airline)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
+msgid "Filter by airline"
 msgstr "Filter by airline"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:216
-msgctxt "(Type aircompany name and chose the one you need. Only its flights will be shown.)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_help"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_filter_airline_help"
+msgid "Type aircompany name and chose the one you need. Only its flights will be shown."
 msgstr "Type aircompany name and chose the one you need. Only its flights will be shown."
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:229
-msgctxt "(Filter by flight # (enter manually) )"
-msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
+msgid "Filter by flight # (enter manually)"
 msgstr "Filter by flight # (enter manually)"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:231
-msgctxt "(Use this filter only if you absolutely accurately know the route number)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help"
+msgid "Use this filter only if you absolutely accurately know the route number"
 msgstr "Use this filter only if you absolutely accurately know the route number"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:256
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:260
-msgctxt "(Limit)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_limit_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_limit_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:268
-msgctxt "(Economy)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_class_value_0"
+msgid "Economy"
 msgstr "Economy"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:272
-msgctxt "(Business)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_class_value_1"
+msgid "Business"
 msgstr "Business"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:276
-msgctxt "(First)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_2"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_class_value_2"
+msgid "First"
 msgstr "First"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:285
-msgctxt "(Paginate)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
+msgid "Paginate"
 msgstr "Paginate"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:292
-msgctxt "(One Way)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_one_way_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_one_way_label"
+msgid "One Way"
 msgstr "One Way"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:299
-msgctxt "(No title)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_off_title_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_off_title_label"
+msgid "No title"
 msgstr "No title"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:306
-msgctxt "(Number of stops)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_label"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_transplant_label"
+msgid "Number of stops"
 msgstr "Number of stops"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:310
-msgctxt "(All)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_transplant_value_0"
+msgid "All"
 msgstr "All"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:313
-msgctxt "(No more than one stop)"
-msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_transplant_value_1"
+msgid "No more than one stop"
 msgstr "No more than one stop"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:316
-msgctxt "Direct"
-msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
+msgctxt "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
+msgid "Direct"
 msgstr "Direct"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:2
@@ -6542,6 +6542,150 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Constructor tables)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_title"
+#~ msgstr "Constructor tables"
+
+#~ msgctxt "(Select the table)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_0"
+#~ msgstr "Select the table"
+
+#~ msgctxt "(Flights from origin to destination, One Way (next month))"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_1"
+#~ msgstr "Flights from origin to destination, One Way (next month)"
+
+#~ msgctxt "(Flights from Origin to Destination (next few days))"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_2"
+#~ msgstr "Flights from Origin to Destination (next few days)"
+
+#~ msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_3"
+#~ msgstr "Cheapest Flights from origin to destination, Round-trip"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next month))"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_4"
+#~ msgstr "Cheapest Flights from origin to destination (next month)"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next year))"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_5"
+#~ msgstr "Cheapest Flights from origin to destination (next year)"
+
+#~ msgctxt "(Direct Flights from origin to destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_6"
+#~ msgstr "Direct Flights from origin to destination"
+
+#~ msgctxt "(Direct Flights from origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_7"
+#~ msgstr "Direct Flights from origin"
+
+#~ msgctxt "(Popular Destinations from origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_8"
+#~ msgstr "Popular Destinations from origin"
+
+#~ msgctxt "(Most popular flights within this Airlines)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_9"
+#~ msgstr "Most popular flights within this Airlines"
+
+#~ msgctxt "(Searched on our website)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_11"
+#~ msgstr "Searched on our website"
+
+#~ msgctxt "(Cheap Flights from origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_12"
+#~ msgstr "Cheap Flights from origin"
+
+#~ msgctxt "(Cheap Flights to destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_13"
+#~ msgstr "Cheap Flights to destination"
+
+#~ msgctxt "(Special offers airline)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_select_table_value_14"
+#~ msgstr "Special offers airline"
+
+#~ msgctxt "(Alternate title)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_title_label"
+#~ msgstr "Alternate title"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_origin_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_destination_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(Country)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_country_label"
+#~ msgstr "Country"
+
+#~ msgctxt "(Airline)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_airline_label"
+#~ msgstr "Airline"
+
+#~ msgctxt "(Subid)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_subid_label"
+#~ msgstr "Subid"
+
+#~ msgctxt "(Filter by airline)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_label"
+#~ msgstr "Filter by airline"
+
+#~ msgctxt "(Type aircompany name and chose the one you need. Only its flights will be shown.)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_airline_help"
+#~ msgstr "Type aircompany name and chose the one you need. Only its flights will be shown."
+
+#~ msgctxt "(Filter by flight # (enter manually) )"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
+#~ msgstr "Filter by flight # (enter manually)"
+
+#~ msgctxt "(Use this filter only if you absolutely accurately know the route number)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help"
+#~ msgstr "Use this filter only if you absolutely accurately know the route number"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_limit_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(Economy)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_0"
+#~ msgstr "Economy"
+
+#~ msgctxt "(Business)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_1"
+#~ msgstr "Business"
+
+#~ msgctxt "(First)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_class_value_2"
+#~ msgstr "First"
+
+#~ msgctxt "(Paginate)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_paginate_label"
+#~ msgstr "Paginate"
+
+#~ msgctxt "(One Way)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_one_way_label"
+#~ msgstr "One Way"
+
+#~ msgctxt "(No title)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_off_title_label"
+#~ msgstr "No title"
+
+#~ msgctxt "(Number of stops)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_label"
+#~ msgstr "Number of stops"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_0"
+#~ msgstr "All"
+
+#~ msgctxt "(No more than one stop)"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_1"
+#~ msgstr "No more than one stop"
+
+#~ msgctxt "Direct"
+#~ msgid "tp_admin_page_settings_сonstructor_tables_field_transplant_value_2"
+#~ msgstr "Direct"
 
 #~ msgctxt "(Constructor search form)"
 #~ msgid "tp_admin_page_settings_сonstructor_search_form_title"

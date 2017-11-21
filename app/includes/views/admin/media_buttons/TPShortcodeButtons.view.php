@@ -1,5 +1,5 @@
 <div id="constructorShortcodesModal"
-     title="<?php _ex('tp_admin_page_settings_сonstructor_tables_title', '(Constructor tables)', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
+     title="<?php _ex('Constructor tables', 'tp_admin_page_settings_сonstructor_tables_title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_shortcodes">
@@ -30,116 +30,116 @@
                     >
                     <?php if(\app\includes\TPPlugin::$options['local']['currency'] == \app\includes\common\TPCurrencyUtils::TP_CURRENCY_RUB ){ ?>
                         <option selected="selected" value="0">
-                            <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_0',
-                                '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Select the table',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_0', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="1">
-                            1. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_1',
-                                '(Flights from origin to destination, One Way (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            1. <?php _ex('Flights from origin to destination, One Way (next month)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="2">
-                            2. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_2',
-                                '(Flights from Origin to Destination (next few days))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            2. <?php _ex('Flights from Origin to Destination (next few days)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
                         <option value="3">
-                            3. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_3',
-                                '(Cheapest Flights from origin to destination, Round-trip)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            3. <?php _ex('Cheapest Flights from origin to destination, Round-trip',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="4">
-                            4. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_4',
-                                '(Cheapest Flights from origin to destination (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            4. <?php  _ex('Cheapest Flights from origin to destination (next month)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="5">
-                            5. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_5',
-                                '(Cheapest Flights from origin to destination (next year))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            5. <?php  _ex('Cheapest Flights from origin to destination (next year)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="6">
-                            6. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_6',
-                                '(Direct Flights from origin to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            6. <?php  _ex('Direct Flights from origin to destination',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_6', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="7">
-                            7. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_7',
-                                '(Direct Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            7. <?php  _ex('Direct Flights from origin',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_7', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="8">
-                            8. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_8',
-                                '(Popular Destinations from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            8. <?php _ex('Popular Destinations from origin',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_8', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="9">
-                            9. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_9',
-                                '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            9. <?php _ex('Most popular flights within this Airlines',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_9', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="11">
-                            10. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_11',
-                                '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            10. <?php _ex('Searched on our website',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_11', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="12" >
-                            11. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_12',
-                                '(Cheap Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            11. <?php _ex('Cheap Flights from origin',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_12', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="13">
-                            12. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_13',
-                                '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            12. <?php _ex('Cheap Flights to destination',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_13', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <!--<option value="14">
-                            13. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_14',
-                                '(Special offers airline)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            13. <?php _ex('Special offers airline',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_14', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>-->
                     <?php } else { ?>
                         <option selected="selected" value="0">
-                            <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_0',
-                                '(Select the table)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Select the table',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_0', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="1">
-                            1. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_1',
-                                '(Flights from origin to destination, One Way (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            1. <?php _ex('Flights from origin to destination, One Way (next month)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="2">
-                            2. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_2',
-                                '(Flights from Origin to Destination (next few days))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            2. <?php _ex('Flights from Origin to Destination (next few days)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <!--<option value="3">3. Дешевые авиабилеты на празничные дни</option>-->
                         <option value="3">
-                            3. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_3',
-                                '(Cheapest Flights from origin to destination, Round-trip)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            3. <?php _ex('Cheapest Flights from origin to destination, Round-trip',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="4">
-                            4. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_4',
-                                '(Cheapest Flights from origin to destination (next month))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            4. <?php  _ex('Cheapest Flights from origin to destination (next month)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="5">
-                            5. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_5',
-                                '(Cheapest Flights from origin to destination (next year))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            5. <?php  _ex('Cheapest Flights from origin to destination (next year)',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="6">
-                            6. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_6',
-                                '(Direct Flights from origin to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            6. <?php  _ex('Direct Flights from origin to destination',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_6', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="7">
-                            7. <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_7',
-                                '(Direct Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            7. <?php  _ex('Direct Flights from origin',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_7', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="9">
-                            8. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_9',
-                                '(Most popular flights within this Airlines)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            8. <?php _ex('Most popular flights within this Airlines',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_9', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
 
                         <option value="11">
-                            9. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_11',
-                                '(Searched on our website)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            9. <?php _ex('Searched on our website',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_11', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="12" >
-                            10.  <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_12',
-                                '(Cheap Flights from origin)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            10.  <?php _ex('Cheap Flights from origin',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_12', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option value="13">
-                            11. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_13',
-                                '(Cheap Flights to destination)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            11. <?php _ex('Cheap Flights to destination',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_13', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <!--<option value="14">
-                            12. <?php _ex('tp_admin_page_settings_сonstructor_tables_field_select_table_value_14',
-                                '(Special offers airline)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            12. <?php _ex('Special offers airline',
+                                'tp_admin_page_settings_сonstructor_tables_field_select_table_value_14', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>-->
                     <?php }?>
 
@@ -150,8 +150,8 @@
             <td>
                 <input type="text" name="tp_title" id="tp_title" value=""
                        class="regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_title_label',
-                           '(Alternate title)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Alternate title',
+                           'tp_admin_page_settings_сonstructor_tables_field_title_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
 
@@ -159,16 +159,16 @@
             <td>
                 <input type="text" name="origin" id="origin" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_origin_label',
-                           '(Origin)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Origin',
+                           'tp_admin_page_settings_сonstructor_tables_field_origin_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
         <tr id="tr_destination">
             <td>
                 <input type="text" name="destination" id="destination" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php  _ex('tp_admin_page_settings_сonstructor_tables_field_destination_label',
-                           '(Destination)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php  _ex('Destination',
+                           'tp_admin_page_settings_сonstructor_tables_field_destination_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
 
@@ -186,24 +186,24 @@
             <td>
                 <input type="text" name="country" id="country" value=""
                        class="constructorCountryShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_country_label',
-                           '(Country)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Country',
+                           'tp_admin_page_settings_сonstructor_tables_field_country_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
         <tr id="tr_airline">
             <td>
                 <input type="text" name="airline" id="airline" value=""
                        class="constructorAirlineShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_airline_label',
-                           '(Airline)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Airline',
+                           'tp_admin_page_settings_сonstructor_tables_field_airline_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
         <tr id="tr_subid">
             <td>
                 <input type="text" name="tp_subid" id="tp_subid" value=""
                        class="regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_subid_label',
-                           '(Subid)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Subid',
+                           'tp_admin_page_settings_сonstructor_tables_field_subid_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
 
@@ -211,10 +211,10 @@
             <td>
                 <input type="text" name="filter_airline" id="filter_airline" value=""
                        class="constructorAirlineShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_airline_label',
-                           '(Filter by airline)', TPOPlUGIN_TEXTDOMAIN); ?>"
-                       title="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_airline_help',
-                           '(Type aircompany name and chose the one you need. Only its flights will be shown.)',
+                       placeholder="<?php _ex('Filter by airline',
+                           'tp_admin_page_settings_сonstructor_tables_field_filter_airline_label', TPOPlUGIN_TEXTDOMAIN); ?>"
+                       title="<?php _ex('Type aircompany name and chose the one you need. Only its flights will be shown.',
+                           'tp_admin_page_settings_сonstructor_tables_field_filter_airline_help',
                            TPOPlUGIN_TEXTDOMAIN); ?>">
                 <!--<p class="description">
 
@@ -226,10 +226,10 @@
             <td>
                 <input type="text" name="filter_flight_number" id="filter_flight_number" value=""
                        class="regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label',
-                           '(Filter by flight # (enter manually) )', TPOPlUGIN_TEXTDOMAIN); ?>"
-                       title="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help',
-                           '(Use this filter only if you absolutely accurately know the route number)',
+                       placeholder="<?php _ex('Filter by flight # (enter manually)',
+                           'tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label', TPOPlUGIN_TEXTDOMAIN); ?>"
+                       title="<?php _ex('Use this filter only if you absolutely accurately know the route number',
+                           'tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_help',
                            TPOPlUGIN_TEXTDOMAIN); ?>">
 
             </td>
@@ -253,28 +253,28 @@
         </tr>
         <tr id="tr_limit">
             <td>
-                <label><?php _ex('tp_admin_page_settings_сonstructor_tables_field_limit_label',
-                        '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                <label><?php _ex('Limit',
+                        'tp_admin_page_settings_сonstructor_tables_field_limit_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                 <input type="number" name="limit" id="limit" value=""
                        class=""
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_tables_field_limit_label',
-                           '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>" min="1">
+                       placeholder="<?php _ex('Limit',
+                           'tp_admin_page_settings_сonstructor_tables_field_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>" min="1">
             </td>
         </tr>
         <tr id="tr_trip_class">
             <td>
                 <select name="select_trip_class" id="select_trip_class">
                     <option value="0" selected="selected">
-                        <?php _ex('tp_admin_page_settings_сonstructor_tables_field_class_value_0',
-                            '(Economy)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Economy',
+                            'tp_admin_page_settings_сonstructor_tables_field_class_value_0', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="1">
-                        <?php _ex('tp_admin_page_settings_сonstructor_tables_field_class_value_1',
-                            '(Business)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Business',
+                            'tp_admin_page_settings_сonstructor_tables_field_class_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option value="2">
-                        <?php _ex('tp_admin_page_settings_сonstructor_tables_field_class_value_2',
-                            '(First)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('First',
+                            'tp_admin_page_settings_сonstructor_tables_field_class_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>
             </td>
@@ -282,39 +282,39 @@
         <tr id="tr_paginate">
             <td>
                 <input type="checkbox" id="paginate" value="1">
-                <?php _ex('tp_admin_page_settings_сonstructor_tables_field_paginate_label',
-                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Paginate',
+                    'tp_admin_page_settings_сonstructor_tables_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
         <tr id="tr_one_way">
             <td>
                 <input type="checkbox" id="one_way" value="1">
-                <?php _ex('tp_admin_page_settings_сonstructor_tables_field_one_way_label',
-                    '(One Way)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('One Way',
+                    'tp_admin_page_settings_сonstructor_tables_field_one_way_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
         <tr id="tr_off_title">
             <td id="td_off_title">
                 <input type="checkbox" id="off_title" value="1">
-                <?php _ex('tp_admin_page_settings_сonstructor_tables_field_off_title_label',
-                    '(No title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('No title',
+                    'tp_admin_page_settings_сonstructor_tables_field_off_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>
         </tr>
         <tr id="tr_transplant">
             <td>
                 <label>
-                    <?php _ex('tp_admin_page_settings_сonstructor_tables_field_transplant_label',
-                        '(Number of stops)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Number of stops',
+                        'tp_admin_page_settings_сonstructor_tables_field_transplant_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     <select id="transplant">
                         <option value="0">
-                            <?php  _ex('tp_admin_page_settings_сonstructor_tables_field_transplant_value_0',
-                                '(All)', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php  _ex('All',
+                                'tp_admin_page_settings_сonstructor_tables_field_transplant_value_0', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="1">
-                            <?php _ex('tp_admin_page_settings_сonstructor_tables_field_transplant_value_1',
-                                '(No more than one stop)', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php _ex('No more than one stop',
+                                'tp_admin_page_settings_сonstructor_tables_field_transplant_value_1', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                         <option value="2">
-                            <?php _ex('tp_admin_page_settings_сonstructor_tables_field_transplant_value_2',
-                                'Direct', TPOPlUGIN_TEXTDOMAIN ); ?></option>
+                            <?php _ex('Direct',
+                                'tp_admin_page_settings_сonstructor_tables_field_transplant_value_2', TPOPlUGIN_TEXTDOMAIN ); ?></option>
                     </select>
                 </label>
             </td>
