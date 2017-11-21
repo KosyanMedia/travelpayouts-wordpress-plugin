@@ -1,5 +1,5 @@
-<div id="constructorSearchFormModal" title="<?php _ex('tp_admin_page_settings_сonstructor_search_form_title',
-    '(Constructor search form)', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
+<div id="constructorSearchFormModal" title="<?php _ex('Constructor search form',
+    'tp_admin_page_settings_сonstructor_search_form_title', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_search_form">
@@ -25,11 +25,11 @@
                         </label>
                     <?php } ?>
                 <?php } else{
-                    _ex('tp_admin_page_settings_сonstructor_search_form_no_search_form_label',
-                        "(No customized search form. )", TPOPlUGIN_TEXTDOMAIN);
+                    _ex('No customized search form.',
+                        "tp_admin_page_settings_сonstructor_search_form_no_search_form_label", TPOPlUGIN_TEXTDOMAIN);
                     ?><a href="admin.php?page=tp_control_search_shortcodes">
-                    <?php _ex('tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title',
-                        "(Go to setting.)", TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Go to setting.',
+                        "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title", TPOPlUGIN_TEXTDOMAIN); ?>
                     </a><?php
                 } ?>
             </td>
@@ -53,32 +53,32 @@
             <td>
                 <input type="text" name="origin_search_form" id="origin_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_origin_label',
-                           '(City of departure default)', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _ex('City of departure default',
+                           'tp_admin_page_settings_сonstructor_search_form_field_origin_label', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_destination_search_form">
             <td>
                 <input type="text" name="destination_search_form" id="destination_search_form" value=""
                        class="constructorCityShortcodesAutocomplete regular-text code"
-                       placeholder="<?php  _ex('tp_admin_page_settings_сonstructor_search_form_field_destination_label',
-                           '(City Arrival default)', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php  _ex('City Arrival default',
+                           'tp_admin_page_settings_сonstructor_search_form_field_destination_label', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_search_shortcode_hotel_city">
             <td>
                 <input type="text" name="search_shortcode_hotel_city" id="search_shortcode_hotel_city" value=""
                        class="searchHotelCityShortcodeAutocomplete TPHotelCityAutocomplete regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label',
-                           '(Default City/Hotel)', TPOPlUGIN_TEXTDOMAIN) ?>">
+                       placeholder="<?php _ex('Default City/Hotel',
+                           'tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label', TPOPlUGIN_TEXTDOMAIN) ?>">
             </td>
         </tr>
         <tr id="tr_subid_sf">
             <td>
                 <input type="text" name="tp_subid" id="tp_subid_sf" value=""
                        class="regular-text code"
-                       placeholder="<?php _ex('tp_admin_page_settings_сonstructor_search_form_field_subid_label',
-                           '(Subid)', TPOPlUGIN_TEXTDOMAIN); ?>">
+                       placeholder="<?php _ex('Subid',
+                           'tp_admin_page_settings_сonstructor_search_form_field_subid_label', TPOPlUGIN_TEXTDOMAIN); ?>">
             </td>
         </tr>
     </table>

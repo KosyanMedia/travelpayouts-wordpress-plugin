@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 15:28+0200\n"
+"POT-Creation-Date: 2017-11-21 16:19+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4040,38 +4040,38 @@ msgid "No title"
 msgstr "No title"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:1
-msgctxt "(Constructor search form)"
-msgid "tp_admin_page_settings_сonstructor_search_form_title"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_title"
+msgid "Constructor search form"
 msgstr "Constructor search form"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:28
-msgctxt "(No customized search form. )"
-msgid "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
+msgid "No customized search form."
 msgstr "No customized search form."
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:31
-msgctxt "(Go to setting.)"
-msgid "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
+msgid "Go to setting."
 msgstr "Go to setting."
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:56
-msgctxt "(City of departure default)"
-msgid "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
+msgid "City of departure default"
 msgstr "City of departure default"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:64
-msgctxt "(City Arrival default)"
-msgid "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
+msgid "City Arrival default"
 msgstr "City Arrival default"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:72
-msgctxt "(Default City/Hotel)"
-msgid "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
+msgid "Default City/Hotel"
 msgstr "Default City/Hotel"
 
 #: app/includes/views/admin/media_buttons/TPSearchFormButtons.view.php:80
-msgctxt "(Subid)"
-msgid "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
+msgctxt "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
+msgid "Subid"
 msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPShortcodeButtons.view.php:2
@@ -6542,6 +6542,34 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Constructor search form)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_title"
+#~ msgstr "Constructor search form"
+
+#~ msgctxt "(No customized search form. )"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_no_search_form_label"
+#~ msgstr "No customized search form."
+
+#~ msgctxt "(Go to setting.)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title"
+#~ msgstr "Go to setting."
+
+#~ msgctxt "(City of departure default)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_field_origin_label"
+#~ msgstr "City of departure default"
+
+#~ msgctxt "(City Arrival default)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_field_destination_label"
+#~ msgstr "City Arrival default"
+
+#~ msgctxt "(Default City/Hotel)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_field_hotel_city_label"
+#~ msgstr "Default City/Hotel"
+
+#~ msgctxt "(Subid)"
+#~ msgid "tp_admin_page_settings_сonstructor_search_form_field_subid_label"
+#~ msgstr "Subid"
 
 #~ msgctxt "(Constructor link)"
 #~ msgid "tp_admin_page_settings_сonstructor_link_title"
