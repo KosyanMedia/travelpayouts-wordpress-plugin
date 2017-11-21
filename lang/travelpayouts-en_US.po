@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 07:28+0200\n"
+"POT-Creation-Date: 2017-11-21 07:33+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5009,6 +5009,7 @@ msgid "Hotels"
 msgstr "Hotels"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
 msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
 msgid "Hotels collection - Discounts"
 msgstr "Hotels collection - Discounts"
@@ -5019,11 +5020,14 @@ msgstr "Hotels collection - Discounts"
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:71
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:89
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:107
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:18
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:36
 msgctxt "tp_admin_page_hotels_tab_tables_content_btn_save_label"
 msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:27
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:27
 msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
 msgid "Hotels collections for dates"
 msgstr "Hotels collections for dates"
@@ -5047,22 +5051,6 @@ msgstr "Stay price in city for X days"
 msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_6_label"
 msgid "Stay price in city for weekend"
 msgstr "Stay price in city for weekend"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
-msgctxt "(Hotels collection - Discounts)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
-msgstr "Hotels collection - Discounts"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:18
-#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:36
-msgctxt "(Save changes)"
-msgid "tp_admin_page_hotels_tab_tables_content_btn_save_label"
-msgstr "Save changes"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:27
-msgctxt "(Hotels collections for dates)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
-msgstr "Hotels collections for dates"
 
 #: app/includes/views/admin/menu/TPHotelsTabThemes.view.php:20
 #: app/includes/views/admin/menu/TPHotelsTabThemes.view.php:24
@@ -6543,6 +6531,18 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Hotels collection - Discounts)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
+#~ msgstr "Hotels collection - Discounts"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_btn_save_label"
+#~ msgstr "Save changes"
+
+#~ msgctxt "(Hotels collections for dates)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
+#~ msgstr "Hotels collections for dates"
 
 #~ msgctxt "(City hotels with price from to)"
 #~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_3_label"
