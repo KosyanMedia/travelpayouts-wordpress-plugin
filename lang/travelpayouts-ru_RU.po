@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 13:47+0200\n"
+"POT-Creation-Date: 2017-11-21 14:05+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5838,33 +5838,33 @@ msgstr ""
 "остальным!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
-msgctxt "admin page wizard tab menu registration paragraph_1"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+msgid "New to Travelpayouts? Please,"
 msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:5
-msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+msgid "Register"
 msgstr "регистрацию."
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:10
-msgctxt "admin page wizard tab menu registration paragraph_2"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+msgid "Registration is totally free and takes less than a minute."
 msgstr "Пройдите быструю и бесплатную регистрацию."
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:14
-msgctxt "admin page wizard tab menu registration paragraph_3"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+msgid "Return to plugin settings to fill out your Profile."
 msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:22
-msgctxt "admin page wizard tab menu registration link sing up"
-msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+msgid "1. Sign up"
 msgstr "1. Зарегистрироваться "
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
-msgctxt "admin page wizard tab menu registration link enter settings"
-msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+msgid "2. Enter settings"
 msgstr "2. Внести настройки"
 
 #: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:427
@@ -6458,6 +6458,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+#~ msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+#~ msgstr "регистрацию."
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+#~ msgstr "Пройдите быструю и бесплатную регистрацию."
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_3"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+#~ msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
+
+#~ msgctxt "admin page wizard tab menu registration link sing up"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+#~ msgstr "1. Зарегистрироваться "
+
+#~ msgctxt "admin page wizard tab menu registration link enter settings"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+#~ msgstr "2. Внести настройки"
 
 #~ msgctxt "admin page wizard tab menu content paragraph_1"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
@@ -9417,21 +9441,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Hotel Widget "
 #~ msgstr "Виджет отеля"
-
-#~ msgid "1. Sign up "
-#~ msgstr "1. Зарегистрироваться "
-
-#~ msgid "Return to plugin settings to fill out your Profile."
-#~ msgstr "Затем вернитесь в плагин для внесения данных вашего профайла."
-
-#~ msgid "Registration is totally free and takes less than a minute."
-#~ msgstr "Пройдите быструю и бесплатную регистрацию."
-
-#~ msgid "Register"
-#~ msgstr "регистрацию."
-
-#~ msgid "New to Travelpayouts? Please, "
-#~ msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
 
 #~ msgid "Table"
 #~ msgstr "Таблица"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 13:46+0200\n"
+"POT-Creation-Date: 2017-11-21 14:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5832,34 +5832,34 @@ msgstr ""
 "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
-msgctxt "admin page wizard tab menu registration paragraph_1"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+msgid "New to Travelpayouts? Please,"
 msgstr "New to Travelpayouts? Please,"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:5
-msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+msgid "Register"
 msgstr "Register"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:10
-msgctxt "admin page wizard tab menu registration paragraph_2"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+msgid "Registration is totally free and takes less than a minute."
 msgstr "Registration is totally free and takes less than a minute."
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:14
-msgctxt "admin page wizard tab menu registration paragraph_3"
-msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+msgid "Return to plugin settings to fill out your Profile."
 msgstr "Return to plugin settings to fill out your Profile."
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:22
-msgctxt "admin page wizard tab menu registration link sing up"
-msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+msgctxt "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+msgid "1. Sign up"
 msgstr "1. Sign up"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:31
-msgctxt "admin page wizard tab menu registration link enter settings"
-msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
-msgstr "2. Enter settings "
+msgctxt "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+msgid "2. Enter settings"
+msgstr "2. Enter settings"
 
 #: app/includes/views/site/shortcodes/TPRailwayShortcodeView.php:427
 msgctxt "railway shortcode view train"
@@ -6542,6 +6542,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
+#~ msgstr "New to Travelpayouts? Please,"
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_1 link registration"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1_link_registration"
+#~ msgstr "Register"
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_2"
+#~ msgstr "Registration is totally free and takes less than a minute."
+
+#~ msgctxt "admin page wizard tab menu registration paragraph_3"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_3"
+#~ msgstr "Return to plugin settings to fill out your Profile."
+
+#~ msgctxt "admin page wizard tab menu registration link sing up"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_link_sing_up"
+#~ msgstr "1. Sign up"
+
+#~ msgctxt "admin page wizard tab menu registration link enter settings"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration_link_enter_settings"
+#~ msgstr "2. Enter settings "
 
 #~ msgctxt "admin page wizard tab menu content paragraph_1"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
