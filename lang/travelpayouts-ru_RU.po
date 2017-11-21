@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 07:11+0200\n"
+"POT-Creation-Date: 2017-11-21 07:25+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5010,10 +5010,9 @@ msgid "Hotels"
 msgstr "Отели"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
-#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
-msgctxt "(Hotels collection - Discounts)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
-msgstr "Подборка отелей - Скидки "
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
+msgid "Hotels collection - Discounts"
+msgstr "Подборка отелей - Скидки"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:18
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:36
@@ -5021,37 +5020,50 @@ msgstr "Подборка отелей - Скидки "
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:71
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:89
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:107
+msgctxt "tp_admin_page_hotels_tab_tables_content_btn_save_label"
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:27
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
+msgid "Hotels collections for dates"
+msgstr "Подборки отелей на даты"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:45
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_3_label"
+msgid "City hotels with price from to"
+msgstr "Отели Города по цене ОТ-ДО"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:62
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_4_label"
+msgid "City hotels by stars"
+msgstr "Отели в городе по звездам"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:80
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_5_label"
+msgid "Stay price in city for X days"
+msgstr "Стоимость проживания В ГОРОДЕ на Х дней"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:98
+msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_6_label"
+msgid "Stay price in city for weekend"
+msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
+
+#: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
+msgctxt "(Hotels collection - Discounts)"
+msgid "tp_admin_page_hotels_tab_tables_content_shortcode_1_label"
+msgstr "Подборка отелей - Скидки "
+
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:18
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:36
 msgctxt "(Save changes)"
 msgid "tp_admin_page_hotels_tab_tables_content_btn_save_label"
 msgstr "Сохранить изменения"
 
-#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:27
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:27
 msgctxt "(Hotels collections for dates)"
 msgid "tp_admin_page_hotels_tab_tables_content_shortcode_2_label"
 msgstr "Подборки отелей на даты"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:45
-msgctxt "(City hotels with price from to)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_3_label"
-msgstr "Отели Города по цене ОТ-ДО"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:62
-msgctxt "(City hotels by stars)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_4_label"
-msgstr "Отели в городе по звездам"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:80
-msgctxt "(Stay price in city for X days)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_5_label"
-msgstr "Стоимость проживания В ГОРОДЕ на Х дней"
-
-#: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:98
-msgctxt "(Stay price in city for weekend)"
-msgid "tp_admin_page_hotels_tab_tables_content_shortcode_6_label"
-msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
 
 #: app/includes/views/admin/menu/TPHotelsTabThemes.view.php:20
 #: app/includes/views/admin/menu/TPHotelsTabThemes.view.php:24
@@ -6447,6 +6459,22 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(City hotels with price from to)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_3_label"
+#~ msgstr "Отели Города по цене ОТ-ДО"
+
+#~ msgctxt "(City hotels by stars)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_4_label"
+#~ msgstr "Отели в городе по звездам"
+
+#~ msgctxt "(Stay price in city for X days)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_5_label"
+#~ msgstr "Стоимость проживания В ГОРОДЕ на Х дней"
+
+#~ msgctxt "(Stay price in city for weekend)"
+#~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_6_label"
+#~ msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
 
 #~ msgctxt "(Hotels)"
 #~ msgid "tp_admin_page_hotels_paragraph_1"
