@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 12:59+0200\n"
+"POT-Creation-Date: 2017-11-21 13:46+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5707,120 +5707,127 @@ msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
-msgctxt "admin page wizard tab menu content paragraph_1"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
+#, php-format
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_1"
+msgid ""
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+"commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
+"ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 msgstr ""
 " – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
 "commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
 "ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
-msgctxt "admin page wizard tab menu content paragraph_2"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_2"
+msgid ""
+"All user purchases made within 30 days after following links in tables or using placed widgets "
+"will be credited to your account."
 msgstr ""
 "All user purchases made within 30 days after following links in tables or using placed widgets "
 "will be credited to your account."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:16
-msgctxt "admin page wizard tab menu content paragraph_3"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3"
+msgid "How it works?"
 msgstr "How it works?"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:22
-msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
+msgid ""
+"<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your "
+"posts and help visitors to book favorable flights, hotels and other services."
 msgstr ""
 "<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your "
 "posts and help visitors to book favorable flights, hotels and other services."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
-msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
+msgid ""
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
+"gets to have an unforgettable journey, while we pay you a reward."
 msgstr ""
 "<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
 "gets to have an unforgettable journey, while we pay you a reward."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
-msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
+msgid ""
+"<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
+"Dashboard and in your plugin. We make scheduled, automated, monthly payouts."
 msgstr ""
 "<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
-"Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
+"Dashboard and in your plugin. We make scheduled, automated, monthly payouts."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
-msgctxt "admin page wizard tab menu content paragraph_4"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_4"
+msgid "What features does a plugin have?"
 msgstr "What features does a plugin have?"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:41
-msgctxt "admin page wizard tab menu content paragraph_5"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5"
+msgid "Plugin allows to get the following tools added to your Wordpress posts:"
 msgstr "Plugin allows to get the following tools added to your Wordpress posts:"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:47
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable tables with flight "
-"information;)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
-msgstr "12 customizable tables with flight information; "
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
+msgid "12 customizable tables with flight information;"
+msgstr "12 customizable tables with flight information;"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:51
-msgctxt "admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
+msgid "Search Forms;"
 msgstr "Search Forms;"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:55
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
+msgid "Low cost flights and hotels Map"
 msgstr "Low cost flights and hotels Map"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:59
-msgctxt "admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
+msgid "Low prices Calendar"
 msgstr "Low prices Calendar"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:63
-msgctxt "admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
-msgstr "Hotel Widget "
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
+msgid "Hotel Widget"
+msgstr "Hotel Widget"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:67
-msgctxt ""
-"admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight destinations Widget)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
+msgid "Popular flight destinations Widget"
 msgstr "Popular flight destinations Widget"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:74
-msgctxt "(How can I earn more?)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_6"
-msgstr "How can I earn more? "
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_6"
+msgid "How can I earn more?"
+msgstr "How can I earn more?"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:79
-msgctxt "(We recommend that you get acquainted to the )"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_7"
+msgid "We recommend that you get acquainted to the"
 msgstr "We recommend that you get acquainted to the"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:82
-msgctxt "(detailed information)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_link"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_7_link"
+msgid "detailed information"
 msgstr "detailed information"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:85
-msgctxt "(on Travelpayouts WP plugin features. )"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
+msgid "on Travelpayouts WP plugin features."
 msgstr "on Travelpayouts WP plugin features."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:87
-msgctxt "(Dozens of useful articles in Travelpayouts Knowledge Base, always available at )"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
+msgid "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 msgstr "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
-msgctxt ""
-"(We wish success to all your endeavors! Do the things you love and we will take care of the "
-"rest!)"
-msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
+msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_8"
+msgid ""
+"We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 msgstr ""
 "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 
@@ -6535,6 +6542,106 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin page wizard tab menu content paragraph_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
+#~ msgstr ""
+#~ " – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+#~ "commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold "
+#~ "air ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. "
+#~ "400$)."
+
+#~ msgctxt "admin page wizard tab menu content paragraph_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
+#~ msgstr ""
+#~ "All user purchases made within 30 days after following links in tables or using placed "
+#~ "widgets will be credited to your account."
+
+#~ msgctxt "admin page wizard tab menu content paragraph_3"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3"
+#~ msgstr "How it works?"
+
+#~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_1"
+#~ msgstr ""
+#~ "<strong>Install our Affiliate tools.</strong>  You place our widgets and tables right in your "
+#~ "posts and help visitors to book favorable flights, hotels and other services."
+
+#~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
+#~ msgstr ""
+#~ "<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
+#~ "gets to have an unforgettable journey, while we pay you a reward."
+
+#~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
+#~ msgstr ""
+#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
+#~ "Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
+
+#~ msgctxt "admin page wizard tab menu content paragraph_4"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
+#~ msgstr "What features does a plugin have?"
+
+#~ msgctxt "admin page wizard tab menu content paragraph_5"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5"
+#~ msgstr "Plugin allows to get the following tools added to your Wordpress posts:"
+
+#~ msgctxt ""
+#~ "admin page wizard tab menu content paragraph_5_list_li_1 (12 customizable tables with flight "
+#~ "information;)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_1"
+#~ msgstr "12 customizable tables with flight information; "
+
+#~ msgctxt "admin page wizard tab menu content paragraph_5_list_li_2 (Search Forms;)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
+#~ msgstr "Search Forms;"
+
+#~ msgctxt ""
+#~ "admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
+#~ msgstr "Low cost flights and hotels Map"
+
+#~ msgctxt "admin page wizard tab menu content paragraph_5_list_li_4 (Low prices Calendar)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_4"
+#~ msgstr "Low prices Calendar"
+
+#~ msgctxt "admin page wizard tab menu content paragraph_5_list_li_5 (Hotel Widget )"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_5"
+#~ msgstr "Hotel Widget "
+
+#~ msgctxt ""
+#~ "admin page wizard tab menu content paragraph_5_list_li_6 (Popular flight destinations Widget)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_6"
+#~ msgstr "Popular flight destinations Widget"
+
+#~ msgctxt "(How can I earn more?)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_6"
+#~ msgstr "How can I earn more? "
+
+#~ msgctxt "(We recommend that you get acquainted to the )"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7"
+#~ msgstr "We recommend that you get acquainted to the"
+
+#~ msgctxt "(detailed information)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_link"
+#~ msgstr "detailed information"
+
+#~ msgctxt "(on Travelpayouts WP plugin features. )"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_1"
+#~ msgstr "on Travelpayouts WP plugin features."
+
+#~ msgctxt "(Dozens of useful articles in Travelpayouts Knowledge Base, always available at )"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_7_2"
+#~ msgstr "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
+
+#~ msgctxt ""
+#~ "(We wish success to all your endeavors! Do the things you love and we will take care of the "
+#~ "rest!)"
+#~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
+#~ msgstr ""
+#~ "We wish success to all your endeavors! Do the things you love and we will take care of the "
+#~ "rest!"
 
 #~ msgctxt "admin page wizard tab menu account paragraph_1"
 #~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
