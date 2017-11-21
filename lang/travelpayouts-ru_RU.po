@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 08:20+0200\n"
+"POT-Creation-Date: 2017-11-21 08:31+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5345,55 +5345,56 @@ msgid "save changes"
 msgstr "сохранить изменения"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:26
-msgctxt ""
-"(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
-"account. Check your Marker and Token at - %s  White Label - %s)"
-msgid "tp_admin_page_settings_paragraph_1"
+#, php-format
+msgctxt "tp_admin_page_settings_paragraph_1"
+msgid ""
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts - "
 "вам сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White "
 "Label - тут %s"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:45
-msgctxt "(Account)"
-msgid "tp_admin_page_settings_tab_menu_account"
+msgctxt "tp_admin_page_settings_tab_menu_account"
+msgid "Account"
 msgstr "Аккаунт"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:51
-msgctxt "(Settings)"
-msgid "tp_admin_page_settings_tab_menu_config"
+msgctxt "tp_admin_page_settings_tab_menu_config"
+msgid "Settings"
 msgstr "Настройки"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:57
-msgctxt "(Localization)"
-msgid "tp_admin_page_settings_tab_menu_localization"
+msgctxt "tp_admin_page_settings_tab_menu_localization"
+msgid "Localization"
 msgstr "Локализация"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:69
-msgctxt "(Account)"
-msgid "tp_admin_page_settings_tab_account"
+msgctxt "tp_admin_page_settings_tab_account"
+msgid "Account"
 msgstr "Аккаунт"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:78
-msgctxt "(Settings)"
-msgid "tp_admin_page_settings_tab_config"
+msgctxt "tp_admin_page_settings_tab_config"
+msgid "Settings"
 msgstr "Настройки"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:87
-msgctxt "(Localization)"
-msgid "tp_admin_page_settings_tab_localization"
+msgctxt "tp_admin_page_settings_tab_localization"
+msgid "Localization"
 msgstr "Локализация"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:98
-msgctxt ""
+msgctxt "tp_admin_page_settings_paragraph_2"
+msgid ""
 "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
-msgid "tp_admin_page_settings_paragraph_2"
 msgstr ""
 "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:103
-msgctxt "Save changes"
-msgid "tp_admin_page_settings_btn_save"
+msgctxt "tp_admin_page_settings_btn_save"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:4
@@ -6447,6 +6448,51 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt ""
+#~ "(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+#~ "account. Check your Marker and Token at - %s  White Label - %s)"
+#~ msgid "tp_admin_page_settings_paragraph_1"
+#~ msgstr ""
+#~ "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts "
+#~ "- вам сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  "
+#~ "White Label - тут %s"
+
+#~ msgctxt "(Account)"
+#~ msgid "tp_admin_page_settings_tab_menu_account"
+#~ msgstr "Аккаунт"
+
+#~ msgctxt "(Settings)"
+#~ msgid "tp_admin_page_settings_tab_menu_config"
+#~ msgstr "Настройки"
+
+#~ msgctxt "(Localization)"
+#~ msgid "tp_admin_page_settings_tab_menu_localization"
+#~ msgstr "Локализация"
+
+#~ msgctxt "(Account)"
+#~ msgid "tp_admin_page_settings_tab_account"
+#~ msgstr "Аккаунт"
+
+#~ msgctxt "(Settings)"
+#~ msgid "tp_admin_page_settings_tab_config"
+#~ msgstr "Настройки"
+
+#~ msgctxt "(Localization)"
+#~ msgid "tp_admin_page_settings_tab_localization"
+#~ msgstr "Локализация"
+
+#~ msgctxt ""
+#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
+#~ "Travelpayouts."
+#~ msgid "tp_admin_page_settings_paragraph_2"
+#~ msgstr ""
+#~ "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в "
+#~ "Travelpayouts"
+
+#~ msgctxt "Save changes"
+#~ msgid "tp_admin_page_settings_btn_save"
+#~ msgstr "Сохранить изменения"
 
 #~ msgctxt "(Search forms)"
 #~ msgid "tp_admin_page_edit_search_forms_paragraph_1"
@@ -8843,24 +8889,6 @@ msgstr "Вид %s не найден"
 #~ msgid "White Label"
 #~ msgstr "White Label"
 
-#~ msgid ""
-#~ "Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
-#~ "account. Check your Marker and Token at - %s  White Label - %s"
-#~ msgstr ""
-#~ "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts "
-#~ "- вам сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  "
-#~ "White Label - тут %s"
-
-#~ msgid "Localization"
-#~ msgstr "Локализация"
-
-#~ msgid ""
-#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
-#~ "Travelpayouts."
-#~ msgstr ""
-#~ "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в "
-#~ "Travelpayouts"
-
 #~ msgid "Date"
 #~ msgstr "Дата"
 
@@ -8878,9 +8906,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Income booking"
 #~ msgstr "Доход c брон."
-
-#~ msgid "Amount"
-#~ msgstr "Сумма"
 
 #~ msgid "Status"
 #~ msgstr "Статус"

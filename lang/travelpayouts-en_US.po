@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 08:18+0200\n"
+"POT-Creation-Date: 2017-11-21 08:27+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5344,54 +5344,55 @@ msgid "save changes"
 msgstr "save changes"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:26
-msgctxt ""
-"(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
-"account. Check your Marker and Token at - %s  White Label - %s)"
-msgid "tp_admin_page_settings_paragraph_1"
+#, php-format
+msgctxt "tp_admin_page_settings_paragraph_1"
+msgid ""
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 "Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
 "account. Check your Marker and Token at - %s  White Label - %s"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:45
-msgctxt "(Account)"
-msgid "tp_admin_page_settings_tab_menu_account"
+msgctxt "tp_admin_page_settings_tab_menu_account"
+msgid "Account"
 msgstr "Account"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:51
-msgctxt "(Settings)"
-msgid "tp_admin_page_settings_tab_menu_config"
+msgctxt "tp_admin_page_settings_tab_menu_config"
+msgid "Settings"
 msgstr "Settings"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:57
-msgctxt "(Localization)"
-msgid "tp_admin_page_settings_tab_menu_localization"
+msgctxt "tp_admin_page_settings_tab_menu_localization"
+msgid "Localization"
 msgstr "Localization"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:69
-msgctxt "(Account)"
-msgid "tp_admin_page_settings_tab_account"
+msgctxt "tp_admin_page_settings_tab_account"
+msgid "Account"
 msgstr "Account"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:78
-msgctxt "(Settings)"
-msgid "tp_admin_page_settings_tab_config"
+msgctxt "tp_admin_page_settings_tab_config"
+msgid "Settings"
 msgstr "Settings"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:87
-msgctxt "(Localization)"
-msgid "tp_admin_page_settings_tab_localization"
+msgctxt "tp_admin_page_settings_tab_localization"
+msgid "Localization"
 msgstr "Localization"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:98
-msgctxt ""
+msgctxt "tp_admin_page_settings_paragraph_2"
+msgid ""
 "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
-msgid "tp_admin_page_settings_paragraph_2"
 msgstr ""
-"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+"By pressing the button «Save» you agree to send the plugin’s activation data to Travelpayouts."
 
 #: app/includes/views/admin/menu/TPSettings.view.php:103
-msgctxt "Save changes"
-msgid "tp_admin_page_settings_btn_save"
+msgctxt "tp_admin_page_settings_btn_save"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:4
@@ -6531,6 +6532,50 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt ""
+#~ "(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+#~ "account. Check your Marker and Token at - %s  White Label - %s)"
+#~ msgid "tp_admin_page_settings_paragraph_1"
+#~ msgstr ""
+#~ "Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+#~ "account. Check your Marker and Token at - %s  White Label - %s"
+
+#~ msgctxt "(Account)"
+#~ msgid "tp_admin_page_settings_tab_menu_account"
+#~ msgstr "Account"
+
+#~ msgctxt "(Settings)"
+#~ msgid "tp_admin_page_settings_tab_menu_config"
+#~ msgstr "Settings"
+
+#~ msgctxt "(Localization)"
+#~ msgid "tp_admin_page_settings_tab_menu_localization"
+#~ msgstr "Localization"
+
+#~ msgctxt "(Account)"
+#~ msgid "tp_admin_page_settings_tab_account"
+#~ msgstr "Account"
+
+#~ msgctxt "(Settings)"
+#~ msgid "tp_admin_page_settings_tab_config"
+#~ msgstr "Settings"
+
+#~ msgctxt "(Localization)"
+#~ msgid "tp_admin_page_settings_tab_localization"
+#~ msgstr "Localization"
+
+#~ msgctxt ""
+#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
+#~ "Travelpayouts."
+#~ msgid "tp_admin_page_settings_paragraph_2"
+#~ msgstr ""
+#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
+#~ "Travelpayouts."
+
+#~ msgctxt "Save changes"
+#~ msgid "tp_admin_page_settings_btn_save"
+#~ msgstr "Save changes"
 
 #~ msgctxt "(Search forms)"
 #~ msgid "tp_admin_page_edit_search_forms_paragraph_1"
