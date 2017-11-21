@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 15:05+0200\n"
+"POT-Creation-Date: 2017-11-21 15:28+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -3915,93 +3915,93 @@ msgid "If we don't have prices in our cache for these dates – no table will be
 msgstr "If we don’t have prices in our cache for these dates – no table will be shown"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:1
-msgctxt "(Constructor link)"
-msgid "tp_admin_page_settings_сonstructor_link_title"
+msgctxt "tp_admin_page_settings_сonstructor_link_title"
+msgid "Constructor link"
 msgstr "Constructor link"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:9
-msgctxt "(Text link)"
-msgid "tp_admin_page_settings_сonstructor_link_field_text_link_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_text_link_label"
+msgid "Text link"
 msgstr "Text link"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:17
-msgctxt "(Select the link)"
-msgid "tp_admin_page_settings_сonstructor_link_field_type_link_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_type_link_label"
+msgid "Select the link"
 msgstr "Select the link"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:21
-msgctxt "(Search for flights)"
-msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_1_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_type_link_value_1_label"
+msgid "Search for flights"
 msgstr "Search for flights"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:25
-msgctxt "(Search for hotels)"
-msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_2_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_type_link_value_2_label"
+msgid "Search for hotels"
 msgstr "Search for hotels"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:35
-msgctxt "(Origin)"
-msgid "tp_admin_page_settings_сonstructor_link_field_origin_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_origin_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:43
-msgctxt "(Destination)"
-msgid "tp_admin_page_settings_сonstructor_link_field_destination_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_destination_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:51
-msgctxt "(City)"
-msgid "tp_admin_page_settings_сonstructor_link_field_city_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_city_label"
+msgid "City"
 msgstr "City"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:59
-msgctxt "(Subid)"
-msgid "tp_admin_page_settings_сonstructor_link_field_subid_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_subid_label"
+msgid "Subid"
 msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:66
-msgctxt "(Departure date)"
-msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_departure_date_label"
+msgid "Departure date"
 msgstr "Departure date"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:69
-msgctxt "(today)"
-msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_btn_today_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_departure_date_btn_today_label"
+msgid "today"
 msgstr "today"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:78
-msgctxt "(Return date)"
-msgid "tp_admin_page_settings_сonstructor_link_field_return_date_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_return_date_label"
+msgid "Return date"
 msgstr "Return date"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:81
-msgctxt "(today)"
-msgid "tp_admin_page_settings_сonstructor_link_field_return_date_btn_today_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_return_date_btn_today_label"
+msgid "today"
 msgstr "today"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:91
-msgctxt "(One way)"
-msgid "tp_admin_page_settings_сonstructor_link_field_one_way_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_one_way_label"
+msgid "One way"
 msgstr "One way"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:100
-msgctxt "(Check in)"
-msgid "tp_admin_page_settings_сonstructor_link_field_check_in_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_check_in_label"
+msgid "Check in"
 msgstr "Check in"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:103
-msgctxt "(today)"
-msgid "tp_admin_page_settings_сonstructor_link_field_check_in_date_btn_today_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_check_in_date_btn_today_label"
+msgid "today"
 msgstr "today"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:112
-msgctxt "(Check out)"
-msgid "tp_admin_page_settings_сonstructor_link_field_check_out_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_check_out_label"
+msgid "Check out"
 msgstr "Check out"
 
 #: app/includes/views/admin/media_buttons/TPLinkButtons.view.php:115
-msgctxt "(today)"
-msgid "tp_admin_page_settings_сonstructor_link_field_check_out_date_btn_today_label"
+msgctxt "tp_admin_page_settings_сonstructor_link_field_check_out_date_btn_today_label"
+msgid "today"
 msgstr "today"
 
 #: app/includes/views/admin/media_buttons/TPRailwayButtons.view.php:2
@@ -6542,6 +6542,78 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Constructor link)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_title"
+#~ msgstr "Constructor link"
+
+#~ msgctxt "(Text link)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_text_link_label"
+#~ msgstr "Text link"
+
+#~ msgctxt "(Select the link)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_type_link_label"
+#~ msgstr "Select the link"
+
+#~ msgctxt "(Search for flights)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_1_label"
+#~ msgstr "Search for flights"
+
+#~ msgctxt "(Search for hotels)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_type_link_value_2_label"
+#~ msgstr "Search for hotels"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_origin_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_destination_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(City)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_city_label"
+#~ msgstr "City"
+
+#~ msgctxt "(Subid)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_subid_label"
+#~ msgstr "Subid"
+
+#~ msgctxt "(Departure date)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_label"
+#~ msgstr "Departure date"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_departure_date_btn_today_label"
+#~ msgstr "today"
+
+#~ msgctxt "(Return date)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_return_date_label"
+#~ msgstr "Return date"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_return_date_btn_today_label"
+#~ msgstr "today"
+
+#~ msgctxt "(One way)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_one_way_label"
+#~ msgstr "One way"
+
+#~ msgctxt "(Check in)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_check_in_label"
+#~ msgstr "Check in"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_check_in_date_btn_today_label"
+#~ msgstr "today"
+
+#~ msgctxt "(Check out)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_check_out_label"
+#~ msgstr "Check out"
+
+#~ msgctxt "(today)"
+#~ msgid "tp_admin_page_settings_сonstructor_link_field_check_out_date_btn_today_label"
+#~ msgstr "today"
 
 #~ msgctxt "(Constructor hotels)"
 #~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
