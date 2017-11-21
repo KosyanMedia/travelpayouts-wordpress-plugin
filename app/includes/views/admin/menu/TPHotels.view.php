@@ -1,7 +1,7 @@
 <div class="TPWrapper TPWrapperFlights">
     <p class="TPMainTitle">
-        <?php _ex('tp_admin_page_hotels_paragraph_1',
-            '(Hotels)', TPOPlUGIN_TEXTDOMAIN); ?>
+        <?php _ex('Hotels',
+            'tp_admin_page_hotels_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div id="tabs-hotels">
         <nav class="TPNavigation">
@@ -10,8 +10,8 @@
                     <a href="#tabs-hotels_config" class="TPMainMenuA">
                         <i class="icoItemNav ico-table"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_config',
-                                '(Tables Content)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Tables Content',
+                                'tp_admin_page_flights_tab_menu_tickets_config', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>
@@ -20,8 +20,8 @@
                     <a href="#tabs-hotels_themes" class="TPMainMenuA">
                         <i class="icoItemNav ico-glass"></i>
                         <span>
-                            <?php _ex('tp_admin_page_flights_tab_menu_tickets_themes',
-                                '(Themes)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Themes',
+                                'tp_admin_page_flights_tab_menu_tickets_themes', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                     </a>
                 </li>

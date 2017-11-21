@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-20 13:45+0200\n"
+"POT-Creation-Date: 2017-11-21 07:11+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -4850,6 +4850,7 @@ msgid "Flights"
 msgstr "Авиабилеты"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:13
+#: app/includes/views/admin/menu/TPHotels.view.php:13
 msgctxt "tp_admin_page_flights_tab_menu_tickets_config"
 msgid "Tables Content"
 msgstr "Содержание таблиц"
@@ -4860,6 +4861,7 @@ msgid "Layout"
 msgstr "Внешний вид таблиц"
 
 #: app/includes/views/admin/menu/TPFlightTickets.view.php:31
+#: app/includes/views/admin/menu/TPHotels.view.php:23
 msgctxt "tp_admin_page_flights_tab_menu_tickets_themes"
 msgid "Themes"
 msgstr "Темы"
@@ -5003,19 +5005,9 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPHotels.view.php:3
-msgctxt "(Hotels)"
-msgid "tp_admin_page_hotels_paragraph_1"
+msgctxt "tp_admin_page_hotels_paragraph_1"
+msgid "Hotels"
 msgstr "Отели"
-
-#: app/includes/views/admin/menu/TPHotels.view.php:13
-msgctxt "(Tables Content)"
-msgid "tp_admin_page_flights_tab_menu_tickets_config"
-msgstr "Содержание таблиц"
-
-#: app/includes/views/admin/menu/TPHotels.view.php:23
-msgctxt "(Themes)"
-msgid "tp_admin_page_flights_tab_menu_tickets_themes"
-msgstr "Темы"
 
 #: app/includes/views/admin/menu/TPHotelsTabConfig.view.php:9
 #: app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php:9
@@ -6455,6 +6447,18 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_hotels_paragraph_1"
+#~ msgstr "Отели"
+
+#~ msgctxt "(Tables Content)"
+#~ msgid "tp_admin_page_flights_tab_menu_tickets_config"
+#~ msgstr "Содержание таблиц"
+
+#~ msgctxt "(Themes)"
+#~ msgid "tp_admin_page_flights_tab_menu_tickets_themes"
+#~ msgstr "Темы"
 
 #~ msgctxt "(Flights)"
 #~ msgid "tp_admin_page_flights_paragraph_1"
