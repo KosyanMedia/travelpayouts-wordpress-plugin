@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 11:11+0200\n"
+"POT-Creation-Date: 2017-11-21 11:37+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5661,25 +5661,27 @@ msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:4
-msgctxt "admin page wizard title"
-msgid "tp_admin_page_wizard_title"
+msgctxt "tp_admin_page_wizard_title"
+msgid "Earn by selling tourist services"
 msgstr "Earn by selling tourist services"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:7
-msgctxt "admin page wizard title description"
-msgid "tp_admin_page_wizard_title_description"
+msgctxt "tp_admin_page_wizard_title_description"
+msgid ""
+"Install our convenient and useful tools to your website and help your visitors to find the "
+"cheapest flights and hotels. Earn on commission for each booking."
 msgstr ""
 "Install our convenient and useful tools to your website and help your visitors to find the "
 "cheapest flights and hotels. Earn on commission for each booking."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
-msgctxt "admin page wizard tab menu account"
-msgid "tp_admin_page_wizard_tab_menu_account"
+msgctxt "tp_admin_page_wizard_tab_menu_account"
+msgid "I have Travelpayouts account"
 msgstr "I have Travelpayouts account"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:22
-msgctxt "admin page wizard tab menu registration"
-msgid "tp_admin_page_wizard_tab_menu_registration"
+msgctxt "tp_admin_page_wizard_tab_menu_registration"
+msgid "New to Travelpayouts?"
 msgstr "New to Travelpayouts?"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
@@ -6532,6 +6534,24 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin page wizard title"
+#~ msgid "tp_admin_page_wizard_title"
+#~ msgstr "Earn by selling tourist services"
+
+#~ msgctxt "admin page wizard title description"
+#~ msgid "tp_admin_page_wizard_title_description"
+#~ msgstr ""
+#~ "Install our convenient and useful tools to your website and help your visitors to find the "
+#~ "cheapest flights and hotels. Earn on commission for each booking."
+
+#~ msgctxt "admin page wizard tab menu account"
+#~ msgid "tp_admin_page_wizard_tab_menu_account"
+#~ msgstr "I have Travelpayouts account"
+
+#~ msgctxt "admin page wizard tab menu registration"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration"
+#~ msgstr "New to Travelpayouts?"
 
 #~ msgctxt "(Widgets)"
 #~ msgid "tp_admin_page_widgets_paragraph_1"

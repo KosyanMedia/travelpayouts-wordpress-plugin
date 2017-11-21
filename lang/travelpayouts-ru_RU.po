@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 11:20+0200\n"
+"POT-Creation-Date: 2017-11-21 11:38+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5663,25 +5663,27 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:4
-msgctxt "admin page wizard title"
-msgid "tp_admin_page_wizard_title"
+msgctxt "tp_admin_page_wizard_title"
+msgid "Earn by selling tourist services"
 msgstr "Зарабатывайте на продаже туристических услуг"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:7
-msgctxt "admin page wizard title description"
-msgid "tp_admin_page_wizard_title_description"
+msgctxt "tp_admin_page_wizard_title_description"
+msgid ""
+"Install our convenient and useful tools to your website and help your visitors to find the "
+"cheapest flights and hotels. Earn on commission for each booking."
 msgstr ""
 "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
 "вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
 
 #: app/includes/views/admin/menu/TPWizard.view.php:15
-msgctxt "admin page wizard tab menu account"
-msgid "tp_admin_page_wizard_tab_menu_account"
+msgctxt "tp_admin_page_wizard_tab_menu_account"
+msgid "I have Travelpayouts account"
 msgstr "Я зарегистрирован в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:22
-msgctxt "admin page wizard tab menu registration"
-msgid "tp_admin_page_wizard_tab_menu_registration"
+msgctxt "tp_admin_page_wizard_tab_menu_registration"
+msgid "New to Travelpayouts?"
 msgstr "У меня нет аккаунта Тravelpayouts"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
@@ -6448,6 +6450,24 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin page wizard title"
+#~ msgid "tp_admin_page_wizard_title"
+#~ msgstr "Зарабатывайте на продаже туристических услуг"
+
+#~ msgctxt "admin page wizard title description"
+#~ msgid "tp_admin_page_wizard_title_description"
+#~ msgstr ""
+#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
+#~ "вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
+
+#~ msgctxt "admin page wizard tab menu account"
+#~ msgid "tp_admin_page_wizard_tab_menu_account"
+#~ msgstr "Я зарегистрирован в Travelpayouts"
+
+#~ msgctxt "admin page wizard tab menu registration"
+#~ msgid "tp_admin_page_wizard_tab_menu_registration"
+#~ msgstr "У меня нет аккаунта Тravelpayouts"
 
 #~ msgctxt "(Widgets)"
 #~ msgid "tp_admin_page_widgets_paragraph_1"
@@ -9377,22 +9397,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "New to Travelpayouts? Please, "
 #~ msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
-
-#~ msgid "New to Travelpayouts?"
-#~ msgstr "У меня нет аккаунта Тravelpayouts"
-
-#~ msgid "I have Travelpayouts account"
-#~ msgstr "Я зарегистрирован в Travelpayouts"
-
-#~ msgid ""
-#~ "Install our convenient and useful tools to your website and help your visitors to find the "
-#~ "cheapest flights and hotels. Earn on commission for each booking."
-#~ msgstr ""
-#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
-#~ "вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
-
-#~ msgid "Earn by selling tourist services"
-#~ msgstr "Зарабатывайте на продаже туристических услуг"
 
 #~ msgid "Table"
 #~ msgstr "Таблица"
