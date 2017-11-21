@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 08:27+0200\n"
+"POT-Creation-Date: 2017-11-21 09:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5396,68 +5396,68 @@ msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:4
-msgctxt "(Statistics)"
-msgid "tp_admin_page_statistics_paragraph_1"
+msgctxt "tp_admin_page_statistics_paragraph_1"
+msgid "Statistics"
 msgstr "Statistics"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:13
-msgctxt "(Earnings Report)"
-msgid "tp_admin_page_statistics_tab_menu_report"
+msgctxt "tp_admin_page_statistics_tab_menu_report"
+msgid "Earnings Report"
 msgstr "Earnings Report"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:22
-msgctxt "(Balance and Payouts)"
-msgid "tp_admin_page_statistics_tab_menu_balance"
+msgctxt "tp_admin_page_statistics_tab_menu_balance"
+msgid "Balance and Payouts"
 msgstr "Balance and Payouts"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:32
-msgctxt "(Earnings Report)"
-msgid "tp_admin_page_statistics_tab_report_paragraph_1"
+msgctxt "tp_admin_page_statistics_tab_report_paragraph_1"
+msgid "Earnings Report"
 msgstr "Earnings Report"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:36
-msgctxt "(Your Earnings Report for )"
-msgid "tp_admin_page_statistics_tab_report_paragraph_2"
-msgstr "Your Earnings Report for "
+msgctxt "tp_admin_page_statistics_tab_report_paragraph_2"
+msgid "Your Earnings Report for"
+msgstr "Your Earnings Report for"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:44
-msgctxt "(Select month )"
-msgid "tp_admin_page_statistics_tab_report_select_month"
+msgctxt "tp_admin_page_statistics_tab_report_select_month"
+msgid "Select month"
 msgstr "Select month"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:65
-msgctxt "(show)"
-msgid "tp_admin_page_statistics_tab_report_btn_show"
+msgctxt "tp_admin_page_statistics_tab_report_btn_show"
+msgid "show"
 msgstr "show"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:71
-msgctxt "(Report on income)"
-msgid "tp_admin_page_statistics_tab_report_title_xls"
+msgctxt "tp_admin_page_statistics_tab_report_title_xls"
+msgid "Report on income"
 msgstr "Report on income"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:73
-msgctxt "(DOWNLOAD REPORT (XLS))"
-msgid "tp_admin_page_statistics_tab_report_btn_download_xls"
+msgctxt "tp_admin_page_statistics_tab_report_btn_download_xls"
+msgid "DOWNLOAD REPORT (XLS)"
 msgstr "DOWNLOAD REPORT (XLS)"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:81
-msgctxt "(Balance and Payouts)"
-msgid "tp_admin_page_statistics_tab_balance_paragraph_1"
+msgctxt "tp_admin_page_statistics_tab_balance_paragraph_1"
+msgid "Balance and Payouts"
 msgstr "Balance and Payouts"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:85
-msgctxt "(Balance)"
-msgid "tp_admin_page_statistics_tab_balance_paragraph_2"
+msgctxt "tp_admin_page_statistics_tab_balance_paragraph_2"
+msgid "Balance"
 msgstr "Balance"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:91
-msgctxt "(Balance and payments)"
-msgid "tp_admin_page_statistics_tab_balance_title_xls"
-msgstr "Balance and Payouts"
+msgctxt "tp_admin_page_statistics_tab_balance_title_xls"
+msgid "Balance and payments"
+msgstr "Balance and payments"
 
 #: app/includes/views/admin/menu/TPStatistic.view.php:93
-msgctxt "(DOWNLOAD REPORT (XLS))"
-msgid "tp_admin_page_statistics_tab_balance_btn_download_xls"
+msgctxt "tp_admin_page_statistics_tab_balance_btn_download_xls"
+msgid "DOWNLOAD REPORT (XLS)"
 msgstr "DOWNLOAD REPORT (XLS)"
 
 #: app/includes/views/admin/menu/TPStatisticView.php:29
@@ -6532,6 +6532,58 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Statistics)"
+#~ msgid "tp_admin_page_statistics_paragraph_1"
+#~ msgstr "Statistics"
+
+#~ msgctxt "(Earnings Report)"
+#~ msgid "tp_admin_page_statistics_tab_menu_report"
+#~ msgstr "Earnings Report"
+
+#~ msgctxt "(Balance and Payouts)"
+#~ msgid "tp_admin_page_statistics_tab_menu_balance"
+#~ msgstr "Balance and Payouts"
+
+#~ msgctxt "(Earnings Report)"
+#~ msgid "tp_admin_page_statistics_tab_report_paragraph_1"
+#~ msgstr "Earnings Report"
+
+#~ msgctxt "(Your Earnings Report for )"
+#~ msgid "tp_admin_page_statistics_tab_report_paragraph_2"
+#~ msgstr "Your Earnings Report for "
+
+#~ msgctxt "(Select month )"
+#~ msgid "tp_admin_page_statistics_tab_report_select_month"
+#~ msgstr "Select month"
+
+#~ msgctxt "(show)"
+#~ msgid "tp_admin_page_statistics_tab_report_btn_show"
+#~ msgstr "show"
+
+#~ msgctxt "(Report on income)"
+#~ msgid "tp_admin_page_statistics_tab_report_title_xls"
+#~ msgstr "Report on income"
+
+#~ msgctxt "(DOWNLOAD REPORT (XLS))"
+#~ msgid "tp_admin_page_statistics_tab_report_btn_download_xls"
+#~ msgstr "DOWNLOAD REPORT (XLS)"
+
+#~ msgctxt "(Balance and Payouts)"
+#~ msgid "tp_admin_page_statistics_tab_balance_paragraph_1"
+#~ msgstr "Balance and Payouts"
+
+#~ msgctxt "(Balance)"
+#~ msgid "tp_admin_page_statistics_tab_balance_paragraph_2"
+#~ msgstr "Balance"
+
+#~ msgctxt "(Balance and payments)"
+#~ msgid "tp_admin_page_statistics_tab_balance_title_xls"
+#~ msgstr "Balance and Payouts"
+
+#~ msgctxt "(DOWNLOAD REPORT (XLS))"
+#~ msgid "tp_admin_page_statistics_tab_balance_btn_download_xls"
+#~ msgstr "DOWNLOAD REPORT (XLS)"
 
 #~ msgctxt ""
 #~ "(Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
