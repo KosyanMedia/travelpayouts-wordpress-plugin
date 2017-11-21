@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 11:37+0200\n"
+"POT-Creation-Date: 2017-11-21 12:59+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5685,24 +5685,25 @@ msgid "New to Travelpayouts?"
 msgstr "New to Travelpayouts?"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
-msgctxt "admin page wizard tab menu account paragraph_1"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
-msgstr "Get your API Token and Partner Marker by following "
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_1"
+msgid "Get your API Token and Partner Marker by following"
+msgstr "Get your API Token and Partner Marker by following"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:8
-msgctxt "admin page wizard tab menu account paragraph_1 link tp"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+msgid "this link."
 msgstr "this link."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
-msgctxt "admin page wizard tab menu account paragraph_2"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
-msgctxt "admin page wizard tab menu account btn_save"
-msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgctxt "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgid "Save changes"
 msgstr "Save changes"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
@@ -6534,6 +6535,24 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "admin page wizard tab menu account paragraph_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
+#~ msgstr "Get your API Token and Partner Marker by following "
+
+#~ msgctxt "admin page wizard tab menu account paragraph_1 link tp"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+#~ msgstr "this link."
+
+#~ msgctxt "admin page wizard tab menu account paragraph_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+#~ msgstr ""
+#~ "By pressing the button \"Save\" you agree to send the plugin's activation data to "
+#~ "Travelpayouts."
+
+#~ msgctxt "admin page wizard tab menu account btn_save"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+#~ msgstr "Save changes"
 
 #~ msgctxt "admin page wizard title"
 #~ msgid "tp_admin_page_wizard_title"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 11:38+0200\n"
+"POT-Creation-Date: 2017-11-21 13:00+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5687,24 +5687,25 @@ msgid "New to Travelpayouts?"
 msgstr "У меня нет аккаунта Тravelpayouts"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:5
-msgctxt "admin page wizard tab menu account paragraph_1"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
-msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации "
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_1"
+msgid "Get your API Token and Partner Marker by following"
+msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:8
-msgctxt "admin page wizard tab menu account paragraph_1 link tp"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+msgid "this link."
 msgstr "на этой странице."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
-msgctxt "admin page wizard tab menu account paragraph_2"
-msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:21
-msgctxt "admin page wizard tab menu account btn_save"
-msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgctxt "tp_admin_page_wizard_tab_menu_account_btn_save"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:7
@@ -6450,6 +6451,24 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "admin page wizard tab menu account paragraph_1"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1"
+#~ msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации "
+
+#~ msgctxt "admin page wizard tab menu account paragraph_1 link tp"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_1_link_tp"
+#~ msgstr "на этой странице."
+
+#~ msgctxt "admin page wizard tab menu account paragraph_2"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_paragraph_2"
+#~ msgstr ""
+#~ "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в "
+#~ "Travelpayouts"
+
+#~ msgctxt "admin page wizard tab menu account btn_save"
+#~ msgid "tp_admin_page_wizard_tab_menu_account_btn_save"
+#~ msgstr "Сохранить изменения"
 
 #~ msgctxt "admin page wizard title"
 #~ msgid "tp_admin_page_wizard_title"
@@ -9376,12 +9395,6 @@ msgstr "Вид %s не найден"
 #~ "- партнерская сеть для заработка на туристическом трафике.  Вы заработаете до 70% с комиссии "
 #~ "рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного "
 #~ "авиабилета и 20$ с брони гостиницы (при сумме брони около $400)."
-
-#~ msgid "this link."
-#~ msgstr "на этой странице."
-
-#~ msgid "Get your API Token and Partner Marker by following "
-#~ msgstr "Токен и маркер доступны для всех аккаунтов Travelpayouts сразу после регистрации"
 
 #~ msgid "1. Sign up "
 #~ msgstr "1. Зарегистрироваться "
