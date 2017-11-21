@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 07:37+0200\n"
+"POT-Creation-Date: 2017-11-21 07:52+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5100,13 +5100,13 @@ msgid "Activate"
 msgstr "Активировать"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:4
-msgctxt "(Search forms)"
-msgid "tp_admin_page_search_forms_paragraph_1"
+msgctxt "tp_admin_page_search_forms_paragraph_1"
+msgid "Search forms"
 msgstr "Поисковые формы"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:10
-msgctxt "(Here you can add shortcodes for each search form added to your Travelpayouts account)"
-msgid "tp_admin_page_search_forms_paragraph_2"
+msgctxt "tp_admin_page_search_forms_paragraph_2"
+msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
 msgstr ""
 "В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в админке аккаунта "
 "Travelpayouts"
@@ -5114,59 +5114,59 @@ msgstr ""
 #: app/includes/views/admin/menu/TPSearchForms.view.php:20
 #: app/includes/views/admin/menu/TPSearchForms.view.php:29
 #: app/includes/views/admin/menu/TPSearchForms.view.php:38
-msgctxt "(https://www.travelpayouts.com/tools/forms)"
-msgid "tp_admin_page_search_forms_paragraph_2_link"
+msgctxt "tp_admin_page_search_forms_paragraph_2_link"
+msgid "https://www.travelpayouts.com/tools/forms"
 msgstr "https://www.travelpayouts.com/tools/forms"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:46
-msgctxt "(Check our step-by-step manual )"
-msgid "tp_admin_page_search_forms_paragraph_3"
+msgctxt "tp_admin_page_search_forms_paragraph_3"
+msgid "Check our step-by-step manual"
 msgstr "Подробная инструкция доступна "
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:64
-msgctxt "(here )"
-msgid "tp_admin_page_search_forms_paragraph_3_link"
+msgctxt "tp_admin_page_search_forms_paragraph_3_link"
+msgid "here"
 msgstr "тут"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:72
-msgctxt "(Search Form Shortcodes)"
-msgid "tp_admin_page_search_forms_paragraph_4"
+msgctxt "tp_admin_page_search_forms_paragraph_4"
+msgid "Search Form Shortcodes"
 msgstr "Шорткоды для форм"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:80
-msgctxt "(Add a shortcode)"
-msgid "tp_admin_page_search_forms_btn_add_shortcode"
+msgctxt "tp_admin_page_search_forms_btn_add_shortcode"
+msgid "Add a shortcode"
 msgstr "Добавить шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:86
-msgctxt "(Remove)"
-msgid "tp_admin_page_search_forms_btn_remove"
+msgctxt "tp_admin_page_search_forms_btn_remove"
+msgid "Remove"
 msgstr "Удалить отмеченные"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:91
-msgctxt "(All)"
-msgid "tp_admin_page_search_forms_btn_all"
+msgctxt "tp_admin_page_search_forms_btn_all"
+msgid "All"
 msgstr "Все"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:105
-msgctxt "(Title )"
-msgid "tp_admin_page_search_forms_table_td_1"
-msgstr "Название"
+msgctxt "tp_admin_page_search_forms_table_td_1"
+msgid "Title"
+msgstr "Заголовок"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:109
-msgctxt "(Add Date )"
-msgid "tp_admin_page_search_forms_table_td_2"
+msgctxt "tp_admin_page_search_forms_table_td_2"
+msgid "Add Date"
 msgstr "Дата добавления"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:113
-msgctxt "(Shortcode )"
-msgid "tp_admin_page_search_forms_table_td_3"
+msgctxt "tp_admin_page_search_forms_table_td_3"
+msgid "Shortcode"
 msgstr "Шорткод"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:130
-msgctxt "(Edit)"
-msgid "tp_admin_page_search_forms_table_edit_link"
-msgstr "Редактировать"
+msgctxt "tp_admin_page_search_forms_table_edit_link"
+msgid "Edit"
+msgstr "Редактировать "
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:4
 msgctxt "(Search forms)"
@@ -6447,6 +6447,60 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Search forms)"
+#~ msgid "tp_admin_page_search_forms_paragraph_1"
+#~ msgstr "Поисковые формы"
+
+#~ msgctxt "(Here you can add shortcodes for each search form added to your Travelpayouts account)"
+#~ msgid "tp_admin_page_search_forms_paragraph_2"
+#~ msgstr ""
+#~ "В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в админке "
+#~ "аккаунта Travelpayouts"
+
+#~ msgctxt "(https://www.travelpayouts.com/tools/forms)"
+#~ msgid "tp_admin_page_search_forms_paragraph_2_link"
+#~ msgstr "https://www.travelpayouts.com/tools/forms"
+
+#~ msgctxt "(Check our step-by-step manual )"
+#~ msgid "tp_admin_page_search_forms_paragraph_3"
+#~ msgstr "Подробная инструкция доступна "
+
+#~ msgctxt "(here )"
+#~ msgid "tp_admin_page_search_forms_paragraph_3_link"
+#~ msgstr "тут"
+
+#~ msgctxt "(Search Form Shortcodes)"
+#~ msgid "tp_admin_page_search_forms_paragraph_4"
+#~ msgstr "Шорткоды для форм"
+
+#~ msgctxt "(Add a shortcode)"
+#~ msgid "tp_admin_page_search_forms_btn_add_shortcode"
+#~ msgstr "Добавить шорткод"
+
+#~ msgctxt "(Remove)"
+#~ msgid "tp_admin_page_search_forms_btn_remove"
+#~ msgstr "Удалить отмеченные"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_search_forms_btn_all"
+#~ msgstr "Все"
+
+#~ msgctxt "(Title )"
+#~ msgid "tp_admin_page_search_forms_table_td_1"
+#~ msgstr "Название"
+
+#~ msgctxt "(Add Date )"
+#~ msgid "tp_admin_page_search_forms_table_td_2"
+#~ msgstr "Дата добавления"
+
+#~ msgctxt "(Shortcode )"
+#~ msgid "tp_admin_page_search_forms_table_td_3"
+#~ msgstr "Шорткод"
+
+#~ msgctxt "(Edit)"
+#~ msgid "tp_admin_page_search_forms_table_edit_link"
+#~ msgstr "Редактировать"
 
 #~ msgctxt "(Activate)"
 #~ msgid "tp_admin_page_hotels_tab_themes_btn_active"
@@ -8212,9 +8266,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Number of stops"
 #~ msgstr "Пересадки"
 
-#~ msgid "All"
-#~ msgstr "Все"
-
 #~ msgid "No more than one stop"
 #~ msgstr "Не более 1 пересадки"
 
@@ -8725,15 +8776,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Balance and payments"
 #~ msgstr "Баланс и выплаты"
 
-#~ msgid "Search forms"
-#~ msgstr "Поисковые формы"
-
-#~ msgid "Check our step-by-step manual "
-#~ msgstr "Подробная инструкция доступна "
-
-#~ msgid "here"
-#~ msgstr "тут"
-
 #~ msgid "Adding shortcode"
 #~ msgstr "Добавление шорткода"
 
@@ -8763,27 +8805,10 @@ msgstr "Вид %s не найден"
 #~ msgid "Default City of Arrival"
 #~ msgstr "Город прилета по-умолчанию"
 
-#~ msgid "Shortcode"
-#~ msgstr "Шорткод"
-
 #~ msgid ""
 #~ "Shortcode will be automatically generated after you press the Save Changes button. It can "
 #~ "also be placed into your posts right away"
 #~ msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
-
-#~ msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
-#~ msgstr ""
-#~ "В этом разделе вы можете добавлять шорткоды для поисковых форм, настроенных в админке "
-#~ "аккаунта Travelpayouts"
-
-#~ msgid "Search Form Shortcodes"
-#~ msgstr "Шорткоды для форм"
-
-#~ msgid "Add a shortcode"
-#~ msgstr "Добавить шорткод"
-
-#~ msgid "Add Date"
-#~ msgstr "Дата добавления"
 
 #~ msgid "Please, don't delete the information below. It makes helping you easier"
 #~ msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
@@ -8868,9 +8893,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Title tag"
 #~ msgstr "Тег заголовка"
-
-#~ msgid "Title"
-#~ msgstr "Заголовок"
 
 #~ msgid "Use \"airline\" variable to add the Airlines automatically"
 #~ msgstr "Используйте переменные \"airline\"  для автоматической подстановки авиакомпании"
@@ -8990,9 +9012,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 #~ msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
-
-#~ msgid "https://support.travelpayouts.com"
-#~ msgstr "https://support.travelpayouts.com/hc/ru"
 
 #~ msgid "We recommend that you get acquainted to the "
 #~ msgstr "Рекомендуем ознакомиться с "

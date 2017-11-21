@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 07:37+0200\n"
+"POT-Creation-Date: 2017-11-21 07:54+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -5099,70 +5099,70 @@ msgid "Activate"
 msgstr "Activate"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:4
-msgctxt "(Search forms)"
-msgid "tp_admin_page_search_forms_paragraph_1"
+msgctxt "tp_admin_page_search_forms_paragraph_1"
+msgid "Search forms"
 msgstr "Search forms"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:10
-msgctxt "(Here you can add shortcodes for each search form added to your Travelpayouts account)"
-msgid "tp_admin_page_search_forms_paragraph_2"
+msgctxt "tp_admin_page_search_forms_paragraph_2"
+msgid "Here you can add shortcodes for each search form added to your Travelpayouts account"
 msgstr "Here you can add shortcodes for each search form added to your Travelpayouts account"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:20
 #: app/includes/views/admin/menu/TPSearchForms.view.php:29
 #: app/includes/views/admin/menu/TPSearchForms.view.php:38
-msgctxt "(https://www.travelpayouts.com/tools/forms)"
-msgid "tp_admin_page_search_forms_paragraph_2_link"
+msgctxt "tp_admin_page_search_forms_paragraph_2_link"
+msgid "https://www.travelpayouts.com/tools/forms"
 msgstr "https://www.travelpayouts.com/tools/forms"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:46
-msgctxt "(Check our step-by-step manual )"
-msgid "tp_admin_page_search_forms_paragraph_3"
-msgstr "Check our step-by-step manual "
+msgctxt "tp_admin_page_search_forms_paragraph_3"
+msgid "Check our step-by-step manual"
+msgstr "Check our step-by-step manual"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:64
-msgctxt "(here )"
-msgid "tp_admin_page_search_forms_paragraph_3_link"
+msgctxt "tp_admin_page_search_forms_paragraph_3_link"
+msgid "here"
 msgstr "here"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:72
-msgctxt "(Search Form Shortcodes)"
-msgid "tp_admin_page_search_forms_paragraph_4"
+msgctxt "tp_admin_page_search_forms_paragraph_4"
+msgid "Search Form Shortcodes"
 msgstr "Search Form Shortcodes"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:80
-msgctxt "(Add a shortcode)"
-msgid "tp_admin_page_search_forms_btn_add_shortcode"
+msgctxt "tp_admin_page_search_forms_btn_add_shortcode"
+msgid "Add a shortcode"
 msgstr "Add a shortcode"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:86
-msgctxt "(Remove)"
-msgid "tp_admin_page_search_forms_btn_remove"
+msgctxt "tp_admin_page_search_forms_btn_remove"
+msgid "Remove"
 msgstr "Remove"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:91
-msgctxt "(All)"
-msgid "tp_admin_page_search_forms_btn_all"
+msgctxt "tp_admin_page_search_forms_btn_all"
+msgid "All"
 msgstr "All"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:105
-msgctxt "(Title )"
-msgid "tp_admin_page_search_forms_table_td_1"
+msgctxt "tp_admin_page_search_forms_table_td_1"
+msgid "Title"
 msgstr "Title"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:109
-msgctxt "(Add Date )"
-msgid "tp_admin_page_search_forms_table_td_2"
+msgctxt "tp_admin_page_search_forms_table_td_2"
+msgid "Add Date"
 msgstr "Add Date"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:113
-msgctxt "(Shortcode )"
-msgid "tp_admin_page_search_forms_table_td_3"
+msgctxt "tp_admin_page_search_forms_table_td_3"
+msgid "Shortcode"
 msgstr "Shortcode"
 
 #: app/includes/views/admin/menu/TPSearchForms.view.php:130
-msgctxt "(Edit)"
-msgid "tp_admin_page_search_forms_table_edit_link"
+msgctxt "tp_admin_page_search_forms_table_edit_link"
+msgid "Edit"
 msgstr "Edit"
 
 #: app/includes/views/admin/menu/TPSearchFormsAdd.view.php:4
@@ -6531,6 +6531,58 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Search forms)"
+#~ msgid "tp_admin_page_search_forms_paragraph_1"
+#~ msgstr "Search forms"
+
+#~ msgctxt "(Here you can add shortcodes for each search form added to your Travelpayouts account)"
+#~ msgid "tp_admin_page_search_forms_paragraph_2"
+#~ msgstr "Here you can add shortcodes for each search form added to your Travelpayouts account"
+
+#~ msgctxt "(https://www.travelpayouts.com/tools/forms)"
+#~ msgid "tp_admin_page_search_forms_paragraph_2_link"
+#~ msgstr "https://www.travelpayouts.com/tools/forms"
+
+#~ msgctxt "(Check our step-by-step manual )"
+#~ msgid "tp_admin_page_search_forms_paragraph_3"
+#~ msgstr "Check our step-by-step manual "
+
+#~ msgctxt "(here )"
+#~ msgid "tp_admin_page_search_forms_paragraph_3_link"
+#~ msgstr "here"
+
+#~ msgctxt "(Search Form Shortcodes)"
+#~ msgid "tp_admin_page_search_forms_paragraph_4"
+#~ msgstr "Search Form Shortcodes"
+
+#~ msgctxt "(Add a shortcode)"
+#~ msgid "tp_admin_page_search_forms_btn_add_shortcode"
+#~ msgstr "Add a shortcode"
+
+#~ msgctxt "(Remove)"
+#~ msgid "tp_admin_page_search_forms_btn_remove"
+#~ msgstr "Remove"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_search_forms_btn_all"
+#~ msgstr "All"
+
+#~ msgctxt "(Title )"
+#~ msgid "tp_admin_page_search_forms_table_td_1"
+#~ msgstr "Title"
+
+#~ msgctxt "(Add Date )"
+#~ msgid "tp_admin_page_search_forms_table_td_2"
+#~ msgstr "Add Date"
+
+#~ msgctxt "(Shortcode )"
+#~ msgid "tp_admin_page_search_forms_table_td_3"
+#~ msgstr "Shortcode"
+
+#~ msgctxt "(Edit)"
+#~ msgid "tp_admin_page_search_forms_table_edit_link"
+#~ msgstr "Edit"
 
 #~ msgctxt "(Activate)"
 #~ msgid "tp_admin_page_hotels_tab_themes_btn_active"
@@ -8269,10 +8321,6 @@ msgstr "View %s not found"
 
 #, fuzzy
 #~ msgid "Title "
-#~ msgstr "Insert link"
-
-#, fuzzy
-#~ msgid "Title"
 #~ msgstr "Insert link"
 
 #, fuzzy
