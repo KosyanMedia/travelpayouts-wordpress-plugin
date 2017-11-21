@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 18:00+0200\n"
+"POT-Creation-Date: 2017-11-21 18:34+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -4269,208 +4269,208 @@ msgid "Direct"
 msgstr "Direct"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:2
-msgctxt "(Constructor widgets)"
-msgid "tp_admin_page_settings_сonstructor_widgets_title"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_title"
+msgid "Constructor widgets"
 msgstr "Constructor widgets"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
-msgctxt "(Select widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_0"
+msgid "Select widget"
 msgstr "Select widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
-msgctxt "(Map Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_1"
+msgid "Map Widget"
 msgstr "Map Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:41
-msgctxt "(Hotels Map Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_2"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_2"
+msgid "Hotels Map Widget"
 msgstr "Hotels Map Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:45
-msgctxt "(Calendar Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3"
+msgid "Calendar Widget"
 msgstr "Calendar Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
-msgctxt "(Subscription Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4"
+msgid "Subscription Widget"
 msgstr "Subscription Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
-msgctxt "(Hotel Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_5"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_5"
+msgid "Hotel Widget"
 msgstr "Hotel Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:59
-msgctxt "(Popular Destinations Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_6"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_6"
+msgid "Popular Destinations Widget"
 msgstr "Popular Destinations Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:63
-msgctxt "(Hotels Selections Widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_7"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_7"
+msgid "Hotels Selections Widget"
 msgstr "Hotels Selections Widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
-msgctxt "(Best deals widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_8"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_8"
+msgid "Best deals widget"
 msgstr "Best deals widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:76
-msgctxt "(Subid)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_subid_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_subid_label"
+msgid "Subid"
 msgstr "Subid"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:83
-msgctxt "(Widget type)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_label"
+msgid "Widget type"
 msgstr "Widget type"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:89
-msgctxt "(Tile)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_0"
+msgid "Tile"
 msgstr "Tile"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:94
-msgctxt "(Slider)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_1"
+msgid "Slider"
 msgstr "Slider"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:105
-msgctxt "(Filter by airlines)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_0_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_0_label"
+msgid "Filter by airlines"
 msgstr "Filter by airlines"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:112
-msgctxt "(Filter by routes)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_1_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_1_label"
+msgid "Filter by routes"
 msgstr "Filter by routes"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:125
-msgctxt "(Airline)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_label"
+msgid "Airline"
 msgstr "Airline"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:129
-msgctxt "(Delete)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_btn_delete_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_btn_delete_label"
+msgid "Delete"
 msgstr "Delete"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:140
-msgctxt "(Add)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_widget_8_btn_add_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_widget_8_btn_add_label"
+msgid "Add"
 msgstr "Add"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:152
-msgctxt "(Origin)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_widget_8_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_origin_widget_8_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:160
-msgctxt "(Destination)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_8_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_8_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:170
-msgctxt "(Limit)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_8_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_8_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:186
-msgctxt "(Origin)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_origin_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:194
-msgctxt "(Destination)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:207
-msgctxt "(Year)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_year"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_year"
+msgid "Year"
 msgstr "Year"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:211
-msgctxt "(Current month)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
+msgid "Current month"
 msgstr "Current month"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:242
-msgctxt "(Range, days)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
+msgid "Range, days"
 msgstr "Range, days"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
-msgctxt "(Hotel)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
+msgid "Hotel"
 msgstr "Hotel"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:261
-msgctxt "(Size)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_size_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_size_label"
+msgid "Size"
 msgstr "Size"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:272
-msgctxt "(Direct Flights Only)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
+msgid "Direct Flights Only"
 msgstr "Direct Flights Only"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:281
-msgctxt "(One way)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
+msgid "One way"
 msgstr "One way"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:290
-msgctxt "(Width)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:299
-msgctxt "(Count)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
+msgid "Count"
 msgstr "Count"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:311
-msgctxt "(Destination)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:321
-msgctxt "(Responsive)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:326
-msgctxt "(Width)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_width_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:337
-msgctxt "(View widget)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
+msgid "View widget"
 msgstr "View widget"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:343
-msgctxt "(Full)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
+msgid "Full"
 msgstr "Full"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:348
-msgctxt "(Compact)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
+msgid "Compact"
 msgstr "Compact"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:358
-msgctxt "(Limit)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:389
-msgctxt "(Zoom)"
-msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
+msgid "Zoom"
 msgstr "Zoom"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinks.view.php:4
@@ -6542,6 +6542,170 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Constructor widgets)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_title"
+#~ msgstr "Constructor widgets"
+
+#~ msgctxt "(Select widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_0"
+#~ msgstr "Select widget"
+
+#~ msgctxt "(Map Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_1"
+#~ msgstr "Map Widget"
+
+#~ msgctxt "(Hotels Map Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_2"
+#~ msgstr "Hotels Map Widget"
+
+#~ msgctxt "(Calendar Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3"
+#~ msgstr "Calendar Widget"
+
+#~ msgctxt "(Subscription Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4"
+#~ msgstr "Subscription Widget"
+
+#~ msgctxt "(Hotel Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_5"
+#~ msgstr "Hotel Widget"
+
+#~ msgctxt "(Popular Destinations Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_6"
+#~ msgstr "Popular Destinations Widget"
+
+#~ msgctxt "(Hotels Selections Widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_7"
+#~ msgstr "Hotels Selections Widget"
+
+#~ msgctxt "(Best deals widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_8"
+#~ msgstr "Best deals widget"
+
+#~ msgctxt "(Subid)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_subid_label"
+#~ msgstr "Subid"
+
+#~ msgctxt "(Widget type)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_label"
+#~ msgstr "Widget type"
+
+#~ msgctxt "(Tile)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_0"
+#~ msgstr "Tile"
+
+#~ msgctxt "(Slider)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_1"
+#~ msgstr "Slider"
+
+#~ msgctxt "(Filter by airlines)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_0_label"
+#~ msgstr "Filter by airlines"
+
+#~ msgctxt "(Filter by routes)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_1_label"
+#~ msgstr "Filter by routes"
+
+#~ msgctxt "(Airline)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_label"
+#~ msgstr "Airline"
+
+#~ msgctxt "(Delete)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_btn_delete_label"
+#~ msgstr "Delete"
+
+#~ msgctxt "(Add)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_widget_8_btn_add_label"
+#~ msgstr "Add"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_widget_8_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_8_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_8_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_origin_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(Year)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_year"
+#~ msgstr "Year"
+
+#~ msgctxt "(Current month)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
+#~ msgstr "Current month"
+
+#~ msgctxt "(Range, days)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
+#~ msgstr "Range, days"
+
+#~ msgctxt "(Hotel)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
+#~ msgstr "Hotel"
+
+#~ msgctxt "(Size)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_size_label"
+#~ msgstr "Size"
+
+#~ msgctxt "(Direct Flights Only)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
+#~ msgstr "Direct Flights Only"
+
+#~ msgctxt "(One way)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
+#~ msgstr "One way"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Count)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
+#~ msgstr "Count"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(View widget)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
+#~ msgstr "View widget"
+
+#~ msgctxt "(Full)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
+#~ msgstr "Full"
+
+#~ msgctxt "(Compact)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
+#~ msgstr "Compact"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(Zoom)"
+#~ msgid "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
+#~ msgstr "Zoom"
 
 #~ msgctxt "(Constructor tables)"
 #~ msgid "tp_admin_page_settings_сonstructor_tables_title"
