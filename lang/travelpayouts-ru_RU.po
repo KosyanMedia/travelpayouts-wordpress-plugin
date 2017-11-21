@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 09:51+0200\n"
+"POT-Creation-Date: 2017-11-21 11:20+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -5578,88 +5578,88 @@ msgid "Comment"
 msgstr "Комментарий"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:3
-msgctxt "(Widgets)"
-msgid "tp_admin_page_widgets_paragraph_1"
+msgctxt "tp_admin_page_widgets_paragraph_1"
+msgid "Widgets"
 msgstr "Виджеты"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:14
-msgctxt "(Map Widget)"
-msgid "tp_admin_page_widgets_shortcode_1_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_label"
+msgid "Map Widget"
 msgstr "Виджет карты"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:23
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_1_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:32
-msgctxt "(Hotels Map Widget)"
-msgid "tp_admin_page_widgets_shortcode_2_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_label"
+msgid "Hotels Map Widget"
 msgstr "Отельная карта"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:41
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_2_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:50
-msgctxt "(Calendar Widget)"
-msgid "tp_admin_page_widgets_shortcode_3_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_label"
+msgid "Calendar Widget"
 msgstr "Виджет календаря"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:59
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_3_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:68
-msgctxt "(Subscription Widget)"
-msgid "tp_admin_page_widgets_shortcode_4_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_label"
+msgid "Subscription Widget"
 msgstr "Виджет подписок"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:77
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_4_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:86
-msgctxt "(Hotel Widget)"
-msgid "tp_admin_page_widgets_shortcode_5_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_label"
+msgid "Hotel Widget"
 msgstr "Виджет отеля"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:95
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_5_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:103
-msgctxt "(Popular Destinations Widget)"
-msgid "tp_admin_page_widgets_shortcode_6_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_label"
+msgid "Popular Destinations Widget"
 msgstr "Виджет популярных направлений"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:112
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_6_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:121
-msgctxt "(Hotels Selections Widget)"
-msgid "tp_admin_page_widgets_shortcode_7_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_label"
+msgid "Hotels Selections Widget"
 msgstr "Виджет отельных подборок"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:130
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_7_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:139
-msgctxt "(Best deals widget)"
-msgid "tp_admin_page_widgets_shortcode_8_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_label"
+msgid "Best deals widget"
 msgstr "Виджет спецпредложений"
 
 #: app/includes/views/admin/menu/TPWidgets.view.php:148
-msgctxt "(Save changes)"
-msgid "tp_admin_page_widgets_shortcode_8_btn_save_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_btn_save_label"
+msgid "Save changes"
 msgstr "Сохранить изменения"
 
 #: app/includes/views/admin/menu/TPWizard.view.php:4
@@ -6448,6 +6448,74 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Widgets)"
+#~ msgid "tp_admin_page_widgets_paragraph_1"
+#~ msgstr "Виджеты"
+
+#~ msgctxt "(Map Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_label"
+#~ msgstr "Виджет карты"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Hotels Map Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_label"
+#~ msgstr "Отельная карта"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Calendar Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_label"
+#~ msgstr "Виджет календаря"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Subscription Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_label"
+#~ msgstr "Виджет подписок"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Hotel Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_label"
+#~ msgstr "Виджет отеля"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Popular Destinations Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_label"
+#~ msgstr "Виджет популярных направлений"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Hotels Selections Widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_label"
+#~ msgstr "Виджет отельных подборок"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_btn_save_label"
+#~ msgstr "Сохранить изменения"
+
+#~ msgctxt "(Best deals widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_label"
+#~ msgstr "Виджет спецпредложений"
+
+#~ msgctxt "(Save changes)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_btn_save_label"
+#~ msgstr "Сохранить изменения"
 
 #~ msgctxt "(Date)"
 #~ msgid "tp_admin_page_statistics_tab_report_table_report_td_1_label"
@@ -8756,30 +8824,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Select widget"
 #~ msgstr "Выберите виджет"
-
-#~ msgid "Map Widget"
-#~ msgstr "Виджет карты"
-
-#~ msgid "Hotels Map Widget"
-#~ msgstr "Отельная карта"
-
-#~ msgid "Calendar Widget"
-#~ msgstr "Виджет календаря"
-
-#~ msgid "Subscription Widget"
-#~ msgstr "Виджет подписок"
-
-#~ msgid "Hotel Widget"
-#~ msgstr "Виджет отеля"
-
-#~ msgid "Popular Destinations Widget"
-#~ msgstr "Виджет популярных направлений"
-
-#~ msgid "Hotels Selections Widget"
-#~ msgstr "Виджет отельных подборок"
-
-#~ msgid "Best deals widget"
-#~ msgstr "Виджет спецпредложений"
 
 #~ msgid "Widget type"
 #~ msgstr "Вид виджета"
