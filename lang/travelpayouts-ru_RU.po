@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 14:05+0200\n"
+"POT-Creation-Date: 2017-11-21 15:07+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -3756,158 +3756,158 @@ msgid "Settings saved."
 msgstr "Настройки сохранены."
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:2
-msgctxt "(Constructor hotels)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_title"
+msgid "Constructor hotels"
 msgstr "Конструктор отелей"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:16
-msgctxt "(Select the table)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0"
+msgid "Select the table"
 msgstr "Выберите таблицу"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:20
-msgctxt "(Hotels collection - Discounts)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1"
+msgid "Hotels collection - Discounts"
 msgstr "Подборка отелей - Скидки"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:24
-msgctxt "(Hotels collections for dates)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2"
+msgid "Hotels collections for dates"
 msgstr "Подборки отелей на даты"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:28
-msgctxt "(City hotels with price from to)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3"
+msgid "City hotels with price from to"
 msgstr "Отели Города по цене ОТ-ДО"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:32
-msgctxt "(City hotels by stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4"
+msgid "City hotels by stars"
 msgstr "Отели в городе по звездам"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:36
-msgctxt "(Stay price in city for X days)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
-msgstr "Стоимость проживания В ГОРОДЕ на Х дней "
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
+msgid "Stay price in city for X days"
+msgstr "Стоимость проживания В ГОРОДЕ на Х дней"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:40
-msgctxt "(Stay price in city for weekend)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6"
+msgid "Stay price in city for weekend"
 msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:50
-msgctxt "(Alternate title)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
+msgid "Alternate title"
 msgstr "Альтернативный заголовок"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:59
-msgctxt "(City)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
+msgid "City"
 msgstr "Город"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:67
-msgctxt "(Subid)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_subid_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_subid_label"
+msgid "Subid"
 msgstr "Дополнительный маркер"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:75
-msgctxt "(Hotel type)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
+msgid "Hotel type"
 msgstr "Тип отеля"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:91
-msgctxt "(Selection type)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label"
+msgid "Selection type"
 msgstr "Тип подборки"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:101
-msgctxt "(Check-in date)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label"
+msgid "Check-in date"
 msgstr "Дата заезда"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:108
-msgctxt "(Check-out date)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label"
+msgid "Check-out date"
 msgstr "Дата выезда"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:116
-msgctxt "(Stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
+msgid "Stars"
 msgstr "Звезды"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:120
-msgctxt "(No stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
+msgid "No stars"
 msgstr "Без звезд"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:124
-msgctxt "(1 star)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
+msgid "1 star"
 msgstr "1 звезда"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:128
-msgctxt "(2 stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
+msgid "2 stars"
 msgstr "2 звезды"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:132
-msgctxt "(3 stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
+msgid "3 stars"
 msgstr "3 звезды"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:136
-msgctxt "(4 stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
+msgid "4 stars"
 msgstr "4 звезды"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:140
-msgctxt "(5 stars)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
+msgid "5 stars"
 msgstr "5 звёзд"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:144
-msgctxt "(All)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
+msgid "All"
 msgstr "Все"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:153
-msgctxt "(User rating from)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
-msgstr "Рейтинг от "
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
+msgid "User rating from"
+msgstr "Рейтинг от"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:156
-msgctxt "(to)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
+msgid "to"
 msgstr "до"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:164
-msgctxt "(Distance to center from )"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
-msgstr "Расстояние до центра от "
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
+msgid "Distance to center from"
+msgstr "Расстояние до центра от"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:167
-msgctxt "(to)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
+msgid "to"
 msgstr "до"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:170
-msgctxt "(km)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
+msgid "km"
 msgstr "км"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:177
-msgctxt "(Number of results)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
+msgid "Number of results"
 msgstr "Количество результатов"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:187
-msgctxt "(Paginate)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
+msgid "Paginate"
 msgstr "Пагинация"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:194
-msgctxt "(No title)"
-msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
+msgctxt "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
+msgid "No title"
 msgstr "Убрать заголовок"
 
 #: app/includes/views/admin/media_buttons/TPHotelsButtons.view.php:208
@@ -6459,6 +6459,130 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Constructor hotels)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_title"
+#~ msgstr "Конструктор отелей"
+
+#~ msgctxt "(Select the table)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_0"
+#~ msgstr "Выберите таблицу"
+
+#~ msgctxt "(Hotels collection - Discounts)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_1"
+#~ msgstr "Подборка отелей - Скидки"
+
+#~ msgctxt "(Hotels collections for dates)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_2"
+#~ msgstr "Подборки отелей на даты"
+
+#~ msgctxt "(City hotels with price from to)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_3"
+#~ msgstr "Отели Города по цене ОТ-ДО"
+
+#~ msgctxt "(City hotels by stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_4"
+#~ msgstr "Отели в городе по звездам"
+
+#~ msgctxt "(Stay price in city for X days)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_5"
+#~ msgstr "Стоимость проживания В ГОРОДЕ на Х дней "
+
+#~ msgctxt "(Stay price in city for weekend)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_select_table_value_6"
+#~ msgstr "Стоимость проживания В ГОРОДЕ на уикенд"
+
+#~ msgctxt "(Alternate title)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_title_label"
+#~ msgstr "Альтернативный заголовок"
+
+#~ msgctxt "(City)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_city_label"
+#~ msgstr "Город"
+
+#~ msgctxt "(Subid)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_subid_label"
+#~ msgstr "Дополнительный маркер"
+
+#~ msgctxt "(Hotel type)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_type_label"
+#~ msgstr "Тип отеля"
+
+#~ msgctxt "(Selection type)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotels_selections_type_label"
+#~ msgstr "Тип подборки"
+
+#~ msgctxt "(Check-in date)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_in_label"
+#~ msgstr "Дата заезда"
+
+#~ msgctxt "(Check-out date)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_check_out_label"
+#~ msgstr "Дата выезда"
+
+#~ msgctxt "(Stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label"
+#~ msgstr "Звезды"
+
+#~ msgctxt "(No stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_no_stars"
+#~ msgstr "Без звезд"
+
+#~ msgctxt "(1 star)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_1"
+#~ msgstr "1 звезда"
+
+#~ msgctxt "(2 stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_2"
+#~ msgstr "2 звезды"
+
+#~ msgctxt "(3 stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_3"
+#~ msgstr "3 звезды"
+
+#~ msgctxt "(4 stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_4"
+#~ msgstr "4 звезды"
+
+#~ msgctxt "(5 stars)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_5"
+#~ msgstr "5 звёзд"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_hotel_star_label_all"
+#~ msgstr "Все"
+
+#~ msgctxt "(User rating from)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_from"
+#~ msgstr "Рейтинг от "
+
+#~ msgctxt "(to)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_rating_label_to"
+#~ msgstr "до"
+
+#~ msgctxt "(Distance to center from )"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_from"
+#~ msgstr "Расстояние до центра от "
+
+#~ msgctxt "(to)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_to"
+#~ msgstr "до"
+
+#~ msgctxt "(km)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_distance_label_km"
+#~ msgstr "км"
+
+#~ msgctxt "(Number of results)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_number_results_label"
+#~ msgstr "Количество результатов"
+
+#~ msgctxt "(Paginate)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_paginate_label"
+#~ msgstr "Пагинация"
+
+#~ msgctxt "(No title)"
+#~ msgid "tp_admin_page_settings_сonstructor_hotels_tables_field_off_title_label"
+#~ msgstr "Убрать заголовок"
+
 #~ msgctxt "admin page wizard tab menu registration paragraph_1"
 #~ msgid "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
 #~ msgstr "Если вы не зарегистрированы в Travelpayouts  -  пройдите быструю и бесплатную"
@@ -8817,23 +8941,14 @@ msgstr "Вид %s не найден"
 #~ msgid "Title:"
 #~ msgstr "Заголовок:"
 
-#~ msgid "Select the table"
-#~ msgstr "Выберите таблицу"
-
 #~ msgid "Most popular flights within this Airlines"
 #~ msgstr "Популярные направления авиакомпании"
 
 #~ msgid "Limit"
 #~ msgstr "Лимит"
 
-#~ msgid "Paginate"
-#~ msgstr "Пейджинация"
-
 #~ msgid "One Way"
 #~ msgstr "В одну сторону "
-
-#~ msgid "No title"
-#~ msgstr "Убрать заголовок"
 
 #~ msgid "Number of stops"
 #~ msgstr "Пересадки"
@@ -8879,12 +8994,6 @@ msgstr "Вид %s не найден"
 #~ msgstr ""
 #~ "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже "
 #~ "туристических услуг. "
-
-#~ msgid "City"
-#~ msgstr "Город"
-
-#~ msgid "Hotel Name"
-#~ msgstr "Название отеля"
 
 #~ msgid "Location"
 #~ msgstr "Местоположение"
@@ -8947,9 +9056,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Search for hotels"
 #~ msgstr "Поиск отелей"
-
-#~ msgid "Subid"
-#~ msgstr "Дополнительный маркер"
 
 #~ msgctxt "insert link date"
 #~ msgid "today"
@@ -9052,14 +9158,8 @@ msgstr "Вид %s не найден"
 #~ msgid "Zoom"
 #~ msgstr "Увеличение при прокрутке"
 
-#~ msgid "Constructor tables"
-#~ msgstr "Конструктор таблиц"
-
 #~ msgid "Special offers airline"
 #~ msgstr "Спецпредложения авиакомпаний"
-
-#~ msgid "Alternate title"
-#~ msgstr "Альтернативный заголовок"
 
 #~ msgid "Country"
 #~ msgstr "Страна"
