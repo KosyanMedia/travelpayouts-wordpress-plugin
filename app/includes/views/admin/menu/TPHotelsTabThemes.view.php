@@ -17,12 +17,12 @@
                 <div class="TPThemeActions">
                     <input type="submit" name="submit"
                            class="button button-secondary activate TPThemeBtnActivate "
-                           value="<?php _ex('tp_admin_page_hotels_tab_themes_btn_active',
-                               '(Activate)', TPOPlUGIN_TEXTDOMAIN );?>">
+                           value="<?php _ex('Activate',
+                               'tp_admin_page_hotels_tab_themes_btn_active', TPOPlUGIN_TEXTDOMAIN );?>">
                     <!--<a class="button button-secondary activate TPThemeBtnActivate ">
                                         <?php
-                    _ex('tp_admin_page_hotels_tab_themes_btn_active',
-                        '(Activate)', TPOPlUGIN_TEXTDOMAIN );
+                    _ex('Activate',
+                        'tp_admin_page_hotels_tab_themes_btn_active', TPOPlUGIN_TEXTDOMAIN );
                     ?>
                                     </a>-->
                 </div>
