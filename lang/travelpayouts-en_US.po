@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 18:34+0200\n"
+"POT-Creation-Date: 2017-11-22 10:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -485,127 +485,127 @@ msgid "tp_plugin_loaded_admin_notice_paragraph_2"
 msgstr "Enter your Travelpayouts authorization details and start earning now."
 
 #: app/includes/TPLoaderScripts.php:396
-msgctxt "(Hotel Name)"
-msgid "tp_head_script_admin_var_hotel_widget_label"
+msgctxt "tp_head_script_admin_var_hotel_widget_label"
+msgid "Hotel Name"
 msgstr "Hotel Name"
 
 #: app/includes/TPLoaderScripts.php:397
-msgctxt "(Destination)"
-msgid "tp_head_script_admin_var_destination_title_label"
+msgctxt "tp_head_script_admin_var_destination_title_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/TPLoaderScripts.php:398
-msgctxt "Origin"
-msgid "tp_head_script_admin_var_origin_title_label"
+msgctxt "tp_head_script_admin_var_origin_title_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/TPLoaderScripts.php:399
-msgctxt "(Location)"
-msgid "tp_head_script_admin_var_location_title_label"
+msgctxt "tp_head_script_admin_var_location_title_label"
+msgid "Location"
 msgstr "Location"
 
 #: app/includes/TPLoaderScripts.php:404
-msgctxt "(Settings saved.)"
-msgid "tp_head_script_admin_var_mesg_update_settings_label"
+msgctxt "tp_head_script_admin_var_mesg_update_settings_label"
+msgid "Settings saved."
 msgstr "Settings saved."
 
 #: app/includes/TPLoaderScripts.php:405
-msgctxt "(hotels)"
-msgid "tp_head_script_admin_var_hotels_autocomplete_label"
+msgctxt "tp_head_script_admin_var_hotels_autocomplete_label"
+msgid "hotels"
 msgstr "hotels"
 
 #: app/includes/TPLoaderScripts.php:406
-msgctxt "(City)"
-msgid "tp_head_script_admin_var_city_label"
+msgctxt "tp_head_script_admin_var_city_label"
+msgid "City"
 msgstr "City"
 
 #: app/includes/TPLoaderScripts.php:410
-msgctxt "(Complete!)"
-msgid "tp_head_script_admin_var_label_progress_bar_label"
+msgctxt "tp_head_script_admin_var_label_progress_bar_label"
+msgid "Complete!"
 msgstr "Complete!"
 
 #: app/includes/TPLoaderScripts.php:411
-msgctxt ""
-"(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
-"continue?)"
-msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+msgctxt "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+msgid ""
+"You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
+"continue?"
 msgstr ""
 "You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
 "continue?"
 
 #: app/includes/TPLoaderScripts.php:412
-msgctxt "(Auto-links are applied)"
-msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
+msgctxt "tp_head_script_admin_var_insert_link_notice_txt_label"
+msgid "Auto-links are applied"
 msgstr "Auto-links are applied"
 
 #: app/includes/TPLoaderScripts.php:413
-msgctxt "(Airline)"
-msgid "tp_head_script_admin_var_airline_widget_8_label"
+msgctxt "tp_head_script_admin_var_airline_widget_8_label"
+msgid "Airline"
 msgstr "Airline"
 
 #: app/includes/TPLoaderScripts.php:414
-msgctxt "(Delete)"
-msgid "tp_head_script_admin_var_delete_widget_8_label"
+msgctxt "tp_head_script_admin_var_delete_widget_8_label"
+msgid "Delete"
 msgstr "Delete"
 
 #: app/includes/TPLoaderScripts.php:415
-msgctxt "(Error invalid file)"
-msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+msgctxt "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+msgid "Error invalid file"
 msgstr "Error invalid file"
 
 #: app/includes/TPLoaderScripts.php:433
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_report_marker_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_marker_label"
+msgid "No data, enter API token and marker"
 msgstr "No data, enter API token and marker"
 
 #: app/includes/TPLoaderScripts.php:434
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_marker_label"
+msgid "No data, enter API token and marker"
 msgstr "No data, enter API token and marker"
 
 #: app/includes/TPLoaderScripts.php:438
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_report_token_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_token_label"
+msgid "No data, enter API token and marker"
 msgstr "No data, enter API token and marker"
 
 #: app/includes/TPLoaderScripts.php:439
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_balance_token_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_token_label"
+msgid "No data, enter API token and marker"
 msgstr "No data, enter API token and marker"
 
 #: app/includes/TPLoaderScripts.php:443
-msgctxt "(No data)"
-msgid "tp_head_script_admin_var_table_empty_report_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_label"
+msgid "No data"
 msgstr "No data"
 
 #: app/includes/TPLoaderScripts.php:444
-msgctxt "(There are no payments yet)"
-msgid "tp_head_script_admin_var_table_empty_balance_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_label"
+msgid "There are no payments yet"
 msgstr "There are no payments yet"
 
 #: app/includes/TPLoaderScripts.php:448
-msgctxt "(No search form.)"
-msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
+msgctxt "tp_head_script_admin_var_table_empty_search_shortcode_label"
+msgid "No search form."
 msgstr "No search form."
 
 #: app/includes/TPLoaderScripts.php:449
-msgctxt "(No anchors.)"
-msgid "tp_head_script_admin_var_table_empty_anchors_label"
+msgctxt "tp_head_script_admin_var_table_empty_anchors_label"
+msgid "No anchors."
 msgstr "No anchors."
 
 #: app/includes/TPLoaderScripts.php:450
-msgctxt "(Grand total this month)"
-msgid "tp_head_script_admin_var_stats_total_txt_label"
+msgctxt "tp_head_script_admin_var_stats_total_txt_label"
+msgid "Grand total this month"
 msgstr "Grand total this month"
 
 #: app/includes/TPLoaderScripts.php:453
-msgctxt "(Create)"
-msgid "tp_head_script_admin_var_btn_ok_label"
+msgctxt "tp_head_script_admin_var_btn_ok_label"
+msgid "Create"
 msgstr "Create"
 
 #: app/includes/TPLoaderScripts.php:454
-msgctxt "(Cancel)"
-msgid "tp_head_script_admin_var_btn_cancel_label"
+msgctxt "tp_head_script_admin_var_btn_cancel_label"
+msgid "Cancel"
 msgstr "Cancel"
 
 #: app/includes/TPPluginWidget.php:163
@@ -6542,6 +6542,106 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Hotel Name)"
+#~ msgid "tp_head_script_admin_var_hotel_widget_label"
+#~ msgstr "Hotel Name"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_head_script_admin_var_destination_title_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "Origin"
+#~ msgid "tp_head_script_admin_var_origin_title_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Location)"
+#~ msgid "tp_head_script_admin_var_location_title_label"
+#~ msgstr "Location"
+
+#~ msgctxt "(Settings saved.)"
+#~ msgid "tp_head_script_admin_var_mesg_update_settings_label"
+#~ msgstr "Settings saved."
+
+#~ msgctxt "(hotels)"
+#~ msgid "tp_head_script_admin_var_hotels_autocomplete_label"
+#~ msgstr "hotels"
+
+#~ msgctxt "(City)"
+#~ msgid "tp_head_script_admin_var_city_label"
+#~ msgstr "City"
+
+#~ msgctxt "(Complete!)"
+#~ msgid "tp_head_script_admin_var_label_progress_bar_label"
+#~ msgstr "Complete!"
+
+#~ msgctxt ""
+#~ "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want "
+#~ "to continue?)"
+#~ msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+#~ msgstr ""
+#~ "You can't undo this action. Be sure to have a backup of your database. Are you sure you want "
+#~ "to continue?"
+
+#~ msgctxt "(Auto-links are applied)"
+#~ msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
+#~ msgstr "Auto-links are applied"
+
+#~ msgctxt "(Airline)"
+#~ msgid "tp_head_script_admin_var_airline_widget_8_label"
+#~ msgstr "Airline"
+
+#~ msgctxt "(Delete)"
+#~ msgid "tp_head_script_admin_var_delete_widget_8_label"
+#~ msgstr "Delete"
+
+#~ msgctxt "(Error invalid file)"
+#~ msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+#~ msgstr "Error invalid file"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_marker_label"
+#~ msgstr "No data, enter API token and marker"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
+#~ msgstr "No data, enter API token and marker"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_token_label"
+#~ msgstr "No data, enter API token and marker"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_token_label"
+#~ msgstr "No data, enter API token and marker"
+
+#~ msgctxt "(No data)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_label"
+#~ msgstr "No data"
+
+#~ msgctxt "(There are no payments yet)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_label"
+#~ msgstr "There are no payments yet"
+
+#~ msgctxt "(No search form.)"
+#~ msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
+#~ msgstr "No search form."
+
+#~ msgctxt "(No anchors.)"
+#~ msgid "tp_head_script_admin_var_table_empty_anchors_label"
+#~ msgstr "No anchors."
+
+#~ msgctxt "(Grand total this month)"
+#~ msgid "tp_head_script_admin_var_stats_total_txt_label"
+#~ msgstr "Grand total this month"
+
+#~ msgctxt "(Create)"
+#~ msgid "tp_head_script_admin_var_btn_ok_label"
+#~ msgstr "Create"
+
+#~ msgctxt "(Cancel)"
+#~ msgid "tp_head_script_admin_var_btn_cancel_label"
+#~ msgstr "Cancel"
 
 #~ msgctxt "(Constructor widgets)"
 #~ msgid "tp_admin_page_settings_сonstructor_widgets_title"

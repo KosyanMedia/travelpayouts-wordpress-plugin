@@ -393,26 +393,26 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
                 TPBtnIsertLinkDialogTxt, TPAdminUrl, TPInsertLinkNoticeTxt, TPFileNameCsvExport, LabelAirlineWidget_8,
                 LabelDeleteWidget_8, TPTableEmptyAnchors, TPImportSettingsErrorNoticeTxt;
             TPAdminUrl = '<?php echo admin_url();?>';
-            TPHotelWidgetLabel = '<?php _ex('tp_head_script_admin_var_hotel_widget_label', '(Hotel Name)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPDestinationTitle = '<?php _ex('tp_head_script_admin_var_destination_title_label', '(Destination)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPOriginTitle = '<?php _ex('tp_head_script_admin_var_origin_title_label', 'Origin', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPLocationTitlt = '<?php _ex('tp_head_script_admin_var_location_title_label', '(Location)', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPHotelWidgetLabel = '<?php _ex('Hotel Name', 'tp_head_script_admin_var_hotel_widget_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPDestinationTitle = '<?php _ex('Destination', 'tp_head_script_admin_var_destination_title_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPOriginTitle = '<?php _ex('Origin', 'tp_head_script_admin_var_origin_title_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPLocationTitlt = '<?php _ex('Location', 'tp_head_script_admin_var_location_title_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPFileNameExport = '<?php echo TPOPlUGIN_NAME."Settings_v"
             .TPOPlUGIN_VERSION."_".$blogName."_".date('Ymd').".txt"; ?>';
             TPFileNameCsvExport = '<?php echo TPOPlUGIN_NAME."Links.csv"; ?>';
             TPPluginName = '<?php echo TPOPlUGIN_NAME; ?>';
-            TPMesgUpdateSettings = '<?php  _ex('tp_head_script_admin_var_mesg_update_settings_label', '(Settings saved.)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPLabelAutocomplete = '<?php _ex('tp_head_script_admin_var_hotels_autocomplete_label', '(hotels)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPPHCity = '<?php _ex('tp_head_script_admin_var_city_label', '(City)', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPMesgUpdateSettings = '<?php  _ex('Settings saved.', 'tp_head_script_admin_var_mesg_update_settings_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPLabelAutocomplete = '<?php _ex('hotels', 'tp_head_script_admin_var_hotels_autocomplete_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPPHCity = '<?php _ex('City', 'tp_head_script_admin_var_city_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
             TPHotelSelectWidgetCat1 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat1']; ?>';
             TPHotelSelectWidgetCat2 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat2']; ?>';
             TPHotelSelectWidgetCat3 = '<?php echo \app\includes\TPPlugin::$options["widgets"][7]['cat3']; ?>';
-            TPLebelProgressBar = '<?php _ex('tp_head_script_admin_var_label_progress_bar_label',  '(Complete!)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            TPBtnIsertLinkDialogTxt = "<?php  _ex('tp_head_script_admin_var_btn_insert_link_dialog_txt_label', '(You can\'t undo this action. Be sure to have a backup of your database. Are you sure you want to continue?)', TPOPlUGIN_TEXTDOMAIN ); ?>";
-            TPInsertLinkNoticeTxt = '<?php  _ex('tp_head_script_admin_var_insert_link_notice_txt_label', '(Auto-links are applied)', TPOPlUGIN_TEXTDOMAIN ); ?>';
-            LabelAirlineWidget_8 = '<?php  _ex('tp_head_script_admin_var_airline_widget_8_label', '(Airline)', TPOPlUGIN_TEXTDOMAIN); ?>';
-            LabelDeleteWidget_8 = '<?php  _ex('tp_head_script_admin_var_delete_widget_8_label','(Delete)', TPOPlUGIN_TEXTDOMAIN); ?>';
-            TPImportSettingsErrorNoticeTxt = '<?php _ex('tp_head_script_admin_var_import_settings_error_notice_txt_label', '(Error invalid file)', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPLebelProgressBar = '<?php _ex('Complete!',  'tp_head_script_admin_var_label_progress_bar_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            TPBtnIsertLinkDialogTxt = "<?php  _ex('You can\'t undo this action. Be sure to have a backup of your database. Are you sure you want to continue?', 'tp_head_script_admin_var_btn_insert_link_dialog_txt_label', TPOPlUGIN_TEXTDOMAIN ); ?>";
+            TPInsertLinkNoticeTxt = '<?php  _ex('Auto-links are applied', 'tp_head_script_admin_var_insert_link_notice_txt_label', TPOPlUGIN_TEXTDOMAIN ); ?>';
+            LabelAirlineWidget_8 = '<?php  _ex('Airline', 'tp_head_script_admin_var_airline_widget_8_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+            LabelDeleteWidget_8 = '<?php  _ex('Delete','tp_head_script_admin_var_delete_widget_8_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPImportSettingsErrorNoticeTxt = '<?php _ex('Error invalid file', 'tp_head_script_admin_var_import_settings_error_notice_txt_label', TPOPlUGIN_TEXTDOMAIN); ?>';
             <?php
                 if(isset(\app\includes\TPPlugin::$options['admin_settings']['total_stats'])){
             ?>
@@ -430,28 +430,28 @@ class TPLoaderScripts extends \core\TPOLoaderScripts{
             <?php
                 if(  ! isset( \app\includes\TPPlugin::$options['account']['marker'] ) || empty( \app\includes\TPPlugin::$options['account']['marker'] )) {
                     ?>
-                        TPTableEmptyReport = '<?php _ex('tp_head_script_admin_var_table_empty_report_marker_label', '(No data, enter API token and marker)', TPOPlUGIN_TEXTDOMAIN); ?>';
-                        TPTableEmptyBalance = '<?php  _ex('tp_head_script_admin_var_table_empty_balance_marker_label', '(No data, enter API token and marker)', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyReport = '<?php _ex('No data, enter API token and marker', 'tp_head_script_admin_var_table_empty_report_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php  _ex('No data, enter API token and marker', 'tp_head_script_admin_var_table_empty_balance_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>';
                     <?php
                 } elseif( ! isset( \app\includes\TPPlugin::$options['account']['token'] ) || empty( \app\includes\TPPlugin::$options['account']['token'] )){
                      ?>
-                        TPTableEmptyReport = '<?php _ex('tp_head_script_admin_var_table_empty_report_token_label', '(No data, enter API token and marker)', TPOPlUGIN_TEXTDOMAIN); ?>';
-                        TPTableEmptyBalance = '<?php _ex('tp_head_script_admin_var_table_empty_balance_token_label', '(No data, enter API token and marker)', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyReport = '<?php _ex('No data, enter API token and marker', 'tp_head_script_admin_var_table_empty_report_token_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php _ex('No data, enter API token and marker', 'tp_head_script_admin_var_table_empty_balance_token_label', TPOPlUGIN_TEXTDOMAIN); ?>';
                      <?php
                 } else {
                       ?>
-                        TPTableEmptyReport = '<?php _ex('tp_head_script_admin_var_table_empty_report_label', '(No data)', TPOPlUGIN_TEXTDOMAIN); ?>';
-                        TPTableEmptyBalance = '<?php _ex('tp_head_script_admin_var_table_empty_balance_label','(There are no payments yet)', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyReport = '<?php _ex('No data', 'tp_head_script_admin_var_table_empty_report_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+                        TPTableEmptyBalance = '<?php _ex('There are no payments yet','tp_head_script_admin_var_table_empty_balance_label', TPOPlUGIN_TEXTDOMAIN); ?>';
                       <?php
                 }
             ?>
-            TPTableEmptySearchShortcode = '<?php _ex('tp_head_script_admin_var_table_empty_search_shortcode_label', '(No search form.)', TPOPlUGIN_TEXTDOMAIN); ?>';
-            TPTableEmptyAnchors = '<?php _ex('tp_head_script_admin_var_table_empty_anchors_label', '(No anchors.)', TPOPlUGIN_TEXTDOMAIN); ?>';
-            TPStatsTotalTrText = '<?php _ex('tp_head_script_admin_var_stats_total_txt_label', '(Grand total this month)', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptySearchShortcode = '<?php _ex('No search form.', 'tp_head_script_admin_var_table_empty_search_shortcode_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPTableEmptyAnchors = '<?php _ex('No anchors.', 'tp_head_script_admin_var_table_empty_anchors_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+            TPStatsTotalTrText = '<?php _ex('Grand total this month', 'tp_head_script_admin_var_stats_total_txt_label', TPOPlUGIN_TEXTDOMAIN); ?>';
             wpLocale = '<?php echo get_locale(); ?>';
             ajaxurl = '<?php echo TPOPlUGIN_AJAX_URL; ?>';
-            button_ok = '<?php  _ex('tp_head_script_admin_var_btn_ok_label', '(Create)', TPOPlUGIN_TEXTDOMAIN); ?>';
-            button_cancel = '<?php _ex('tp_head_script_admin_var_btn_cancel_label', '(Cancel)', TPOPlUGIN_TEXTDOMAIN); ?>';
+            button_ok = '<?php  _ex('Create', 'tp_head_script_admin_var_btn_ok_label', TPOPlUGIN_TEXTDOMAIN); ?>';
+            button_cancel = '<?php _ex('Cancel', 'tp_head_script_admin_var_btn_cancel_label', TPOPlUGIN_TEXTDOMAIN); ?>';
             switch ('<?php echo $locale ?>'){
                 case "ru_RU":
                     tpLocale = 'ru';

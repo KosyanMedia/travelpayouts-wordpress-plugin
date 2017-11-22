@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-21 18:32+0200\n"
+"POT-Creation-Date: 2017-11-22 10:48+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -487,125 +487,125 @@ msgstr ""
 "услуг. "
 
 #: app/includes/TPLoaderScripts.php:396
-msgctxt "(Hotel Name)"
-msgid "tp_head_script_admin_var_hotel_widget_label"
+msgctxt "tp_head_script_admin_var_hotel_widget_label"
+msgid "Hotel Name"
 msgstr "Название отеля"
 
 #: app/includes/TPLoaderScripts.php:397
-msgctxt "(Destination)"
-msgid "tp_head_script_admin_var_destination_title_label"
+msgctxt "tp_head_script_admin_var_destination_title_label"
+msgid "Destination"
 msgstr "Куда"
 
 #: app/includes/TPLoaderScripts.php:398
-msgctxt "Origin"
-msgid "tp_head_script_admin_var_origin_title_label"
+msgctxt "tp_head_script_admin_var_origin_title_label"
+msgid "Origin"
 msgstr "Откуда"
 
 #: app/includes/TPLoaderScripts.php:399
-msgctxt "(Location)"
-msgid "tp_head_script_admin_var_location_title_label"
+msgctxt "tp_head_script_admin_var_location_title_label"
+msgid "Location"
 msgstr "Местоположение"
 
 #: app/includes/TPLoaderScripts.php:404
-msgctxt "(Settings saved.)"
-msgid "tp_head_script_admin_var_mesg_update_settings_label"
+msgctxt "tp_head_script_admin_var_mesg_update_settings_label"
+msgid "Settings saved."
 msgstr "Настройки сохранены."
 
 #: app/includes/TPLoaderScripts.php:405
-msgctxt "(hotels)"
-msgid "tp_head_script_admin_var_hotels_autocomplete_label"
+msgctxt "tp_head_script_admin_var_hotels_autocomplete_label"
+msgid "hotels"
 msgstr "отелей"
 
 #: app/includes/TPLoaderScripts.php:406
-msgctxt "(City)"
-msgid "tp_head_script_admin_var_city_label"
+msgctxt "tp_head_script_admin_var_city_label"
+msgid "City"
 msgstr "Город"
 
 #: app/includes/TPLoaderScripts.php:410
-msgctxt "(Complete!)"
-msgid "tp_head_script_admin_var_label_progress_bar_label"
+msgctxt "tp_head_script_admin_var_label_progress_bar_label"
+msgid "Complete!"
 msgstr "Готово!"
 
 #: app/includes/TPLoaderScripts.php:411
-msgctxt ""
-"(You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
-"continue?)"
-msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+msgctxt "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+msgid ""
+"You can't undo this action. Be sure to have a backup of your database. Are you sure you want to "
+"continue?"
 msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
 
 #: app/includes/TPLoaderScripts.php:412
-msgctxt "(Auto-links are applied)"
-msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
+msgctxt "tp_head_script_admin_var_insert_link_notice_txt_label"
+msgid "Auto-links are applied"
 msgstr "Подстановка ссылок завершена"
 
 #: app/includes/TPLoaderScripts.php:413
-msgctxt "(Airline)"
-msgid "tp_head_script_admin_var_airline_widget_8_label"
+msgctxt "tp_head_script_admin_var_airline_widget_8_label"
+msgid "Airline"
 msgstr "Авиакомпания"
 
 #: app/includes/TPLoaderScripts.php:414
-msgctxt "(Delete)"
-msgid "tp_head_script_admin_var_delete_widget_8_label"
+msgctxt "tp_head_script_admin_var_delete_widget_8_label"
+msgid "Delete"
 msgstr "Удалить"
 
 #: app/includes/TPLoaderScripts.php:415
-msgctxt "(Error invalid file)"
-msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+msgctxt "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+msgid "Error invalid file"
 msgstr "Ошибка невалидный файл"
 
 #: app/includes/TPLoaderScripts.php:433
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_report_marker_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_marker_label"
+msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
 #: app/includes/TPLoaderScripts.php:434
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_marker_label"
+msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
 #: app/includes/TPLoaderScripts.php:438
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_report_token_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_token_label"
+msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
 #: app/includes/TPLoaderScripts.php:439
-msgctxt "(No data, enter API token and marker)"
-msgid "tp_head_script_admin_var_table_empty_balance_token_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_token_label"
+msgid "No data, enter API token and marker"
 msgstr "Нет данных, введите API токен и маркер"
 
 #: app/includes/TPLoaderScripts.php:443
-msgctxt "(No data)"
-msgid "tp_head_script_admin_var_table_empty_report_label"
+msgctxt "tp_head_script_admin_var_table_empty_report_label"
+msgid "No data"
 msgstr "Нет данных"
 
 #: app/includes/TPLoaderScripts.php:444
-msgctxt "(There are no payments yet)"
-msgid "tp_head_script_admin_var_table_empty_balance_label"
+msgctxt "tp_head_script_admin_var_table_empty_balance_label"
+msgid "There are no payments yet"
 msgstr "Нет выплат"
 
 #: app/includes/TPLoaderScripts.php:448
-msgctxt "(No search form.)"
-msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
+msgctxt "tp_head_script_admin_var_table_empty_search_shortcode_label"
+msgid "No search form."
 msgstr "Нет поисковых форм."
 
 #: app/includes/TPLoaderScripts.php:449
-msgctxt "(No anchors.)"
-msgid "tp_head_script_admin_var_table_empty_anchors_label"
+msgctxt "tp_head_script_admin_var_table_empty_anchors_label"
+msgid "No anchors."
 msgstr "Нет анкоров"
 
 #: app/includes/TPLoaderScripts.php:450
-msgctxt "(Grand total this month)"
-msgid "tp_head_script_admin_var_stats_total_txt_label"
+msgctxt "tp_head_script_admin_var_stats_total_txt_label"
+msgid "Grand total this month"
 msgstr "Общий итог за месяц"
 
 #: app/includes/TPLoaderScripts.php:453
-msgctxt "(Create)"
-msgid "tp_head_script_admin_var_btn_ok_label"
+msgctxt "tp_head_script_admin_var_btn_ok_label"
+msgid "Create"
 msgstr "Создать"
 
 #: app/includes/TPLoaderScripts.php:454
-msgctxt "(Cancel)"
-msgid "tp_head_script_admin_var_btn_cancel_label"
+msgctxt "tp_head_script_admin_var_btn_cancel_label"
+msgid "Cancel"
 msgstr "Отмена"
 
 #: app/includes/TPPluginWidget.php:163
@@ -6459,6 +6459,104 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Hotel Name)"
+#~ msgid "tp_head_script_admin_var_hotel_widget_label"
+#~ msgstr "Название отеля"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_head_script_admin_var_destination_title_label"
+#~ msgstr "Куда"
+
+#~ msgctxt "Origin"
+#~ msgid "tp_head_script_admin_var_origin_title_label"
+#~ msgstr "Откуда"
+
+#~ msgctxt "(Location)"
+#~ msgid "tp_head_script_admin_var_location_title_label"
+#~ msgstr "Местоположение"
+
+#~ msgctxt "(Settings saved.)"
+#~ msgid "tp_head_script_admin_var_mesg_update_settings_label"
+#~ msgstr "Настройки сохранены."
+
+#~ msgctxt "(hotels)"
+#~ msgid "tp_head_script_admin_var_hotels_autocomplete_label"
+#~ msgstr "отелей"
+
+#~ msgctxt "(City)"
+#~ msgid "tp_head_script_admin_var_city_label"
+#~ msgstr "Город"
+
+#~ msgctxt "(Complete!)"
+#~ msgid "tp_head_script_admin_var_label_progress_bar_label"
+#~ msgstr "Готово!"
+
+#~ msgctxt ""
+#~ "(You can't undo this action. Be sure to have a backup of your database. Are you sure you want "
+#~ "to continue?)"
+#~ msgid "tp_head_script_admin_var_btn_insert_link_dialog_txt_label"
+#~ msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
+
+#~ msgctxt "(Auto-links are applied)"
+#~ msgid "tp_head_script_admin_var_insert_link_notice_txt_label"
+#~ msgstr "Подстановка ссылок завершена"
+
+#~ msgctxt "(Airline)"
+#~ msgid "tp_head_script_admin_var_airline_widget_8_label"
+#~ msgstr "Авиакомпания"
+
+#~ msgctxt "(Delete)"
+#~ msgid "tp_head_script_admin_var_delete_widget_8_label"
+#~ msgstr "Удалить"
+
+#~ msgctxt "(Error invalid file)"
+#~ msgid "tp_head_script_admin_var_import_settings_error_notice_txt_label"
+#~ msgstr "Ошибка невалидный файл"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_marker_label"
+#~ msgstr "Нет данных, введите API токен и маркер"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_marker_label"
+#~ msgstr "Нет данных, введите API токен и маркер"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_token_label"
+#~ msgstr "Нет данных, введите API токен и маркер"
+
+#~ msgctxt "(No data, enter API token and marker)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_token_label"
+#~ msgstr "Нет данных, введите API токен и маркер"
+
+#~ msgctxt "(No data)"
+#~ msgid "tp_head_script_admin_var_table_empty_report_label"
+#~ msgstr "Нет данных"
+
+#~ msgctxt "(There are no payments yet)"
+#~ msgid "tp_head_script_admin_var_table_empty_balance_label"
+#~ msgstr "Нет выплат"
+
+#~ msgctxt "(No search form.)"
+#~ msgid "tp_head_script_admin_var_table_empty_search_shortcode_label"
+#~ msgstr "Нет поисковых форм."
+
+#~ msgctxt "(No anchors.)"
+#~ msgid "tp_head_script_admin_var_table_empty_anchors_label"
+#~ msgstr "Нет анкоров"
+
+#~ msgctxt "(Grand total this month)"
+#~ msgid "tp_head_script_admin_var_stats_total_txt_label"
+#~ msgstr "Общий итог за месяц"
+
+#~ msgctxt "(Create)"
+#~ msgid "tp_head_script_admin_var_btn_ok_label"
+#~ msgstr "Создать"
+
+#~ msgctxt "(Cancel)"
+#~ msgid "tp_head_script_admin_var_btn_cancel_label"
+#~ msgstr "Отмена"
+
 #~ msgctxt "(Constructor widgets)"
 #~ msgid "tp_admin_page_settings_сonstructor_widgets_title"
 #~ msgstr "Конструктор виджетов"
@@ -9388,50 +9486,6 @@ msgstr "Вид %s не найден"
 #~ msgstr ""
 #~ "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже "
 #~ "туристических услуг. "
-
-#~ msgid "Location"
-#~ msgstr "Местоположение"
-
-#~ msgid "hotels"
-#~ msgstr "отелей"
-
-#~ msgid "Complete!"
-#~ msgstr "Готово!"
-
-#~ msgid ""
-#~ "You can't undo this action. Be sure to have a backup of your database. Are you sure you want "
-#~ "to continue?"
-#~ msgstr "Действие невозможно отменить. Обязательно сделайте backup вашей базы. Продолжить?"
-
-#~ msgid "Auto-links are applied"
-#~ msgstr "Подстановка ссылок завершена"
-
-#~ msgid "Error invalid file"
-#~ msgstr "Ошибка невалидный файл"
-
-#~ msgid "No data, enter API token and marker"
-#~ msgstr "Нет данных, введите API токен и маркер"
-
-#~ msgid "No data"
-#~ msgstr "Нет данных"
-
-#~ msgid "There are no payments yet"
-#~ msgstr "Нет выплат"
-
-#~ msgid "No search form."
-#~ msgstr "Нет поисковых форм."
-
-#~ msgid "No anchors."
-#~ msgstr "Нет анкоров"
-
-#~ msgid "Grand total this month"
-#~ msgstr "Общий итог за месяц"
-
-#~ msgid "Create"
-#~ msgstr "Создать"
-
-#~ msgid "Cancel"
-#~ msgstr "Отмена"
 
 #~ msgctxt "insert link date"
 #~ msgid "today"
