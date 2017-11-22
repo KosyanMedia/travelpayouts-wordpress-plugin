@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-22 10:58+0200\n"
+"POT-Creation-Date: 2017-11-22 11:18+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -609,133 +609,133 @@ msgid "Cancel"
 msgstr "Cancel"
 
 #: app/includes/TPPluginWidget.php:163
-msgctxt "(Title:)"
-msgid "tp_plugin_widget_form_field_title_label"
+msgctxt "tp_plugin_widget_form_field_title_label"
+msgid "Title:"
 msgstr "Title:"
 
 #: app/includes/TPPluginWidget.php:172
-msgctxt "(Select the table)"
-msgid "tp_plugin_widget_form_field_select_table_label"
+msgctxt "tp_plugin_widget_form_field_select_table_label"
+msgid "Select the table"
 msgstr "Select the table"
 
 #: app/includes/TPPluginWidget.php:180 app/includes/TPPluginWidget.php:235
-msgctxt "(Select the table)"
-msgid "tp_plugin_widget_form_field_select_table_value_0_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_0_label"
+msgid "Select the table"
 msgstr "Select the table"
 
 #: app/includes/TPPluginWidget.php:184 app/includes/TPPluginWidget.php:239
-msgctxt "(Flights from origin to destination, One Way (next month))"
-msgid "tp_plugin_widget_form_field_select_table_value_1_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_1_label"
+msgid "Flights from origin to destination, One Way (next month)"
 msgstr "Flights from origin to destination, One Way (next month)"
 
 #: app/includes/TPPluginWidget.php:188 app/includes/TPPluginWidget.php:243
-msgctxt "(Flights from Origin to Destination (next few days))"
-msgid "tp_plugin_widget_form_field_select_table_value_2_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_2_label"
+msgid "Flights from Origin to Destination (next few days)"
 msgstr "Flights from Origin to Destination (next few days)"
 
 #: app/includes/TPPluginWidget.php:193 app/includes/TPPluginWidget.php:248
-msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
-msgid "tp_plugin_widget_form_field_select_table_value_3_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_3_label"
+msgid "Cheapest Flights from origin to destination, Round-trip"
 msgstr "Cheapest Flights from origin to destination, Round-trip"
 
 #: app/includes/TPPluginWidget.php:197 app/includes/TPPluginWidget.php:252
-msgctxt "(Cheapest Flights from origin to destination (next month))"
-msgid "tp_plugin_widget_form_field_select_table_value_4_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_4_label"
+msgid "Cheapest Flights from origin to destination (next month)"
 msgstr "Cheapest Flights from origin to destination (next month)"
 
 #: app/includes/TPPluginWidget.php:201 app/includes/TPPluginWidget.php:256
-msgctxt "(Cheapest Flights from origin to destination (next year))"
-msgid "tp_plugin_widget_form_field_select_table_value_5_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_5_label"
+msgid "Cheapest Flights from origin to destination (next year)"
 msgstr "Cheapest Flights from origin to destination (next year)"
 
 #: app/includes/TPPluginWidget.php:205 app/includes/TPPluginWidget.php:260
-msgctxt "(Direct Flights from origin to destination)"
-msgid "tp_plugin_widget_form_field_select_table_value_6_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_6_label"
+msgid "Direct Flights from origin to destination"
 msgstr "Direct Flights from origin to destination"
 
 #: app/includes/TPPluginWidget.php:209 app/includes/TPPluginWidget.php:264
-msgctxt "(Direct Flights from origin)"
-msgid "tp_plugin_widget_form_field_select_table_value_7_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_7_label"
+msgid "Direct Flights from origin"
 msgstr "Direct Flights from origin"
 
 #: app/includes/TPPluginWidget.php:213
-msgctxt "(Popular Destinations from origin)"
-msgid "tp_plugin_widget_form_field_select_table_value_8_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_8_label"
+msgid "Popular Destinations from origin"
 msgstr "Popular Destinations from origin"
 
 #: app/includes/TPPluginWidget.php:217 app/includes/TPPluginWidget.php:268
-msgctxt "(Most popular flights within this Airlines)"
-msgid "tp_plugin_widget_form_field_select_table_value_9_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_9_label"
+msgid "Most popular flights within this Airlines"
 msgstr "Most popular flights within this Airlines"
 
 #: app/includes/TPPluginWidget.php:222 app/includes/TPPluginWidget.php:273
-msgctxt "(Searched on our website)"
-msgid "tp_plugin_widget_form_field_select_table_value_11_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_11_label"
+msgid "Searched on our website"
 msgstr "Searched on our website"
 
 #: app/includes/TPPluginWidget.php:226 app/includes/TPPluginWidget.php:277
-msgctxt "(Cheap Flights from origin)"
-msgid "tp_plugin_widget_form_field_select_table_value_12_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_12_label"
+msgid "Cheap Flights from origin"
 msgstr "Cheap Flights from origin"
 
 #: app/includes/TPPluginWidget.php:230 app/includes/TPPluginWidget.php:281
-msgctxt "(Cheap Flights to destination)"
-msgid "tp_plugin_widget_form_field_select_table_value_13_label"
+msgctxt "tp_plugin_widget_form_field_select_table_value_13_label"
+msgid "Cheap Flights to destination"
 msgstr "Cheap Flights to destination"
 
 #: app/includes/TPPluginWidget.php:291
-msgctxt "(Origin)"
-msgid "tp_plugin_widget_form_field_origin_label"
+msgctxt "tp_plugin_widget_form_field_origin_label"
+msgid "Origin"
 msgstr "Origin"
 
 #: app/includes/TPPluginWidget.php:301
-msgctxt "(Destination)"
-msgid "tp_plugin_widget_form_field_destination_label"
+msgctxt "tp_plugin_widget_form_field_destination_label"
+msgid "Destination"
 msgstr "Destination"
 
 #: app/includes/TPPluginWidget.php:311
-msgctxt "(Airline)"
-msgid "tp_plugin_widget_form_field_airline_label"
+msgctxt "tp_plugin_widget_form_field_airline_label"
+msgid "Airline"
 msgstr "Airline"
 
 #: app/includes/TPPluginWidget.php:321
-msgctxt "(Limit)"
-msgid "tp_plugin_widget_form_field_limit_label"
+msgctxt "tp_plugin_widget_form_field_limit_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/TPPluginWidget.php:334
-msgctxt "(Paginate)"
-msgid "tp_plugin_widget_form_field_paginate_label"
+msgctxt "tp_plugin_widget_form_field_paginate_label"
+msgid "Paginate"
 msgstr "Paginate"
 
 #: app/includes/TPPluginWidget.php:343
-msgctxt "(One Way)"
-msgid "tp_plugin_widget_form_field_one_way_label"
+msgctxt "tp_plugin_widget_form_field_one_way_label"
+msgid "One Way"
 msgstr "One Way"
 
 #: app/includes/TPPluginWidget.php:352
-msgctxt "(No title)"
-msgid "tp_plugin_widget_form_field_off_title_label"
+msgctxt "tp_plugin_widget_form_field_off_title_label"
+msgid "No title"
 msgstr "No title"
 
 #: app/includes/TPPluginWidget.php:359
-msgctxt "(Number of stops)"
-msgid "tp_plugin_widget_form_field_stops_label"
+msgctxt "tp_plugin_widget_form_field_stops_label"
+msgid "Number of stops"
 msgstr "Number of stops"
 
 #: app/includes/TPPluginWidget.php:364
-msgctxt "(All)"
-msgid "tp_plugin_widget_form_field_stops_value_0_label"
+msgctxt "tp_plugin_widget_form_field_stops_value_0_label"
+msgid "All"
 msgstr "All"
 
 #: app/includes/TPPluginWidget.php:366
-msgctxt "(No more than one stop)"
-msgid "tp_plugin_widget_form_field_stops_value_1_label"
+msgctxt "tp_plugin_widget_form_field_stops_value_1_label"
+msgid "No more than one stop"
 msgstr "No more than one stop"
 
 #: app/includes/TPPluginWidget.php:368
-msgctxt "(Direct)"
-msgid "tp_plugin_widget_form_field_stops_value_2_label"
+msgctxt "tp_plugin_widget_form_field_stops_value_2_label"
+msgid "Direct"
 msgstr "Direct"
 
 #: app/includes/common/TPFieldsLabelTable.php:32
@@ -6543,6 +6543,110 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "(Title:)"
+#~ msgid "tp_plugin_widget_form_field_title_label"
+#~ msgstr "Title:"
+
+#~ msgctxt "(Select the table)"
+#~ msgid "tp_plugin_widget_form_field_select_table_label"
+#~ msgstr "Select the table"
+
+#~ msgctxt "(Select the table)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_0_label"
+#~ msgstr "Select the table"
+
+#~ msgctxt "(Flights from origin to destination, One Way (next month))"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_1_label"
+#~ msgstr "Flights from origin to destination, One Way (next month)"
+
+#~ msgctxt "(Flights from Origin to Destination (next few days))"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_2_label"
+#~ msgstr "Flights from Origin to Destination (next few days)"
+
+#~ msgctxt "(Cheapest Flights from origin to destination, Round-trip)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_3_label"
+#~ msgstr "Cheapest Flights from origin to destination, Round-trip"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next month))"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_4_label"
+#~ msgstr "Cheapest Flights from origin to destination (next month)"
+
+#~ msgctxt "(Cheapest Flights from origin to destination (next year))"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_5_label"
+#~ msgstr "Cheapest Flights from origin to destination (next year)"
+
+#~ msgctxt "(Direct Flights from origin to destination)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_6_label"
+#~ msgstr "Direct Flights from origin to destination"
+
+#~ msgctxt "(Direct Flights from origin)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_7_label"
+#~ msgstr "Direct Flights from origin"
+
+#~ msgctxt "(Popular Destinations from origin)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_8_label"
+#~ msgstr "Popular Destinations from origin"
+
+#~ msgctxt "(Most popular flights within this Airlines)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_9_label"
+#~ msgstr "Most popular flights within this Airlines"
+
+#~ msgctxt "(Searched on our website)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_11_label"
+#~ msgstr "Searched on our website"
+
+#~ msgctxt "(Cheap Flights from origin)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_12_label"
+#~ msgstr "Cheap Flights from origin"
+
+#~ msgctxt "(Cheap Flights to destination)"
+#~ msgid "tp_plugin_widget_form_field_select_table_value_13_label"
+#~ msgstr "Cheap Flights to destination"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_plugin_widget_form_field_origin_label"
+#~ msgstr "Origin"
+
+#~ msgctxt "(Destination)"
+#~ msgid "tp_plugin_widget_form_field_destination_label"
+#~ msgstr "Destination"
+
+#~ msgctxt "(Airline)"
+#~ msgid "tp_plugin_widget_form_field_airline_label"
+#~ msgstr "Airline"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_plugin_widget_form_field_limit_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(Paginate)"
+#~ msgid "tp_plugin_widget_form_field_paginate_label"
+#~ msgstr "Paginate"
+
+#~ msgctxt "(One Way)"
+#~ msgid "tp_plugin_widget_form_field_one_way_label"
+#~ msgstr "One Way"
+
+#~ msgctxt "(No title)"
+#~ msgid "tp_plugin_widget_form_field_off_title_label"
+#~ msgstr "No title"
+
+#~ msgctxt "(Number of stops)"
+#~ msgid "tp_plugin_widget_form_field_stops_label"
+#~ msgstr "Number of stops"
+
+#~ msgctxt "(All)"
+#~ msgid "tp_plugin_widget_form_field_stops_value_0_label"
+#~ msgstr "All"
+
+#~ msgctxt "(No more than one stop)"
+#~ msgid "tp_plugin_widget_form_field_stops_value_1_label"
+#~ msgstr "No more than one stop"
+
+#~ msgctxt "(Direct)"
+#~ msgid "tp_plugin_widget_form_field_stops_value_2_label"
+#~ msgstr "Direct"
+
 #~ msgctxt "(Set details and enable plugin features)"
 #~ msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
 #~ msgstr "Set details and enable plugin features"
@@ -9524,10 +9628,6 @@ msgstr "View %s not found"
 #~ msgctxt "(Only route №)"
 #~ msgid "tp_admin_page_settings_сonstructor_tables_field_filter_flight_number_label"
 #~ msgstr "Only route №"
-
-#, fuzzy
-#~ msgid "Title:"
-#~ msgstr "Insert link"
 
 #, fuzzy
 #~ msgctxt "meta_box_post"
