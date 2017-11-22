@@ -147,13 +147,13 @@ class TPLoader extends \core\TPOLoader{
                         <div class="TP-Activate_button_container">
                             <div class="TP-Activate_button_border">
                                 <div class="TP-Activate_button">
-                                    <a href="admin.php?page=tp_control_wizard">'._x('tp_plugin_loaded_admin_notice_btn_wizard_label', '(Set details and enable plugin features)', TPOPlUGIN_TEXTDOMAIN).'</a>
+                                    <a href="admin.php?page=tp_control_wizard">'._x('Set details and enable plugin features', 'tp_plugin_loaded_admin_notice_btn_wizard_label', TPOPlUGIN_TEXTDOMAIN).'</a>
                                 </div>
                             </div>
                         </div>
                         <div class="TP-Activate_description">
-                            '._x('tp_plugin_loaded_admin_notice_paragraph_1', '(Welcome! Travelpayouts plugin is almost ready.)', TPOPlUGIN_TEXTDOMAIN).'<br/>'
-                            ._x('tp_plugin_loaded_admin_notice_paragraph_2', '(Enter your Travelpayouts authorization details and start earning now.)', TPOPlUGIN_TEXTDOMAIN)
+                            '._x('Welcome! Travelpayouts plugin is almost ready.', 'tp_plugin_loaded_admin_notice_paragraph_1', TPOPlUGIN_TEXTDOMAIN).'<br/>'
+                            ._x('Enter your Travelpayouts authorization details and start earning now.', 'tp_plugin_loaded_admin_notice_paragraph_2', TPOPlUGIN_TEXTDOMAIN)
                             .'</div>
                     </div>'
                 );

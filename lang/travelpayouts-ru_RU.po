@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-22 10:48+0200\n"
+"POT-Creation-Date: 2017-11-22 10:57+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -470,18 +470,18 @@ msgid "Select date"
 msgstr "Выбрать дату"
 
 #: app/includes/TPLoader.php:150
-msgctxt "(Set details and enable plugin features)"
-msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
+msgctxt "tp_plugin_loaded_admin_notice_btn_wizard_label"
+msgid "Set details and enable plugin features"
 msgstr "Настроить плагин для начала работы"
 
 #: app/includes/TPLoader.php:155
-msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
-msgid "tp_plugin_loaded_admin_notice_paragraph_1"
+msgctxt "tp_plugin_loaded_admin_notice_paragraph_1"
+msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Привет! Плагин Travelpayouts почти готов к работе."
 
 #: app/includes/TPLoader.php:156
-msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
-msgid "tp_plugin_loaded_admin_notice_paragraph_2"
+msgctxt "tp_plugin_loaded_admin_notice_paragraph_2"
+msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
 "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
 "услуг. "
@@ -6459,6 +6459,20 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Set details and enable plugin features)"
+#~ msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
+#~ msgstr "Настроить плагин для начала работы"
+
+#~ msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
+#~ msgid "tp_plugin_loaded_admin_notice_paragraph_1"
+#~ msgstr "Привет! Плагин Travelpayouts почти готов к работе."
+
+#~ msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
+#~ msgid "tp_plugin_loaded_admin_notice_paragraph_2"
+#~ msgstr ""
+#~ "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже "
+#~ "туристических услуг. "
+
 #~ msgctxt "(Hotel Name)"
 #~ msgid "tp_head_script_admin_var_hotel_widget_label"
 #~ msgstr "Название отеля"
@@ -9475,17 +9489,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Currency"
 #~ msgstr "Валюта"
-
-#~ msgid "Set details and enable plugin features"
-#~ msgstr "Настроить плагин для начала работы"
-
-#~ msgid "Welcome! Travelpayouts plugin is almost ready."
-#~ msgstr "Привет! Плагин Travelpayouts почти готов к работе."
-
-#~ msgid "Enter your Travelpayouts authorization details and start earning now."
-#~ msgstr ""
-#~ "Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже "
-#~ "туристических услуг. "
 
 #~ msgctxt "insert link date"
 #~ msgid "today"

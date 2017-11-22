@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-22 10:44+0200\n"
+"POT-Creation-Date: 2017-11-22 10:58+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -470,18 +470,18 @@ msgid "Select date"
 msgstr "Выбрать дату"
 
 #: app/includes/TPLoader.php:150
-msgctxt "(Set details and enable plugin features)"
-msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
+msgctxt "tp_plugin_loaded_admin_notice_btn_wizard_label"
+msgid "Set details and enable plugin features"
 msgstr "Set details and enable plugin features"
 
 #: app/includes/TPLoader.php:155
-msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
-msgid "tp_plugin_loaded_admin_notice_paragraph_1"
+msgctxt "tp_plugin_loaded_admin_notice_paragraph_1"
+msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
 #: app/includes/TPLoader.php:156
-msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
-msgid "tp_plugin_loaded_admin_notice_paragraph_2"
+msgctxt "tp_plugin_loaded_admin_notice_paragraph_2"
+msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr "Enter your Travelpayouts authorization details and start earning now."
 
 #: app/includes/TPLoaderScripts.php:396
@@ -6542,6 +6542,18 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Set details and enable plugin features)"
+#~ msgid "tp_plugin_loaded_admin_notice_btn_wizard_label"
+#~ msgstr "Set details and enable plugin features"
+
+#~ msgctxt "(Welcome! Travelpayouts plugin is almost ready.)"
+#~ msgid "tp_plugin_loaded_admin_notice_paragraph_1"
+#~ msgstr "Welcome! Travelpayouts plugin is almost ready."
+
+#~ msgctxt "(Enter your Travelpayouts authorization details and start earning now.)"
+#~ msgid "tp_plugin_loaded_admin_notice_paragraph_2"
+#~ msgstr "Enter your Travelpayouts authorization details and start earning now."
 
 #~ msgctxt "(Hotel Name)"
 #~ msgid "tp_head_script_admin_var_hotel_widget_label"
