@@ -141,8 +141,8 @@ class TPFieldHotels
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label',
-                    '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title',
+                    'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
 
@@ -171,8 +171,8 @@ class TPFieldHotels
                 case 2:
                     ?>
                     <p>
-                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1',
-                            '(Use {location} variable for city autoset)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Use {location} variable for city autoset',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_1', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <?php
                     break;
@@ -180,8 +180,8 @@ class TPFieldHotels
                     ?>
                     <p>
                         <?php
-                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2',
-                            '(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)',
+                        _ex('Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2',
                             TPOPlUGIN_TEXTDOMAIN);
                         ?>
                     </p>
@@ -191,8 +191,8 @@ class TPFieldHotels
                     ?>
                     <p>
                         <?php
-                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3',
-                            '(Use {location} variable for city autoset, {stars} - number of stars)',
+                        _ex('Use {location} variable for city autoset, {stars} - number of stars',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3',
                             TPOPlUGIN_TEXTDOMAIN);
                         ?>
                     </p>
@@ -202,8 +202,8 @@ class TPFieldHotels
                     ?>
                     <p>
                         <?php
-                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4',
-                            '(Use {location} variable for city autoset, {number} - number of days)',
+                        _ex('Use {location} variable for city autoset, {number} - number of days',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_4',
                             TPOPlUGIN_TEXTDOMAIN);
                         ?>
                     </p>
@@ -213,8 +213,8 @@ class TPFieldHotels
                     ?>
                     <p>
                         <?php
-                        _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5',
-                            '(Use {location} variable for city autoset)',
+                        _ex('Use {location} variable for city autoset',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_5',
                             TPOPlUGIN_TEXTDOMAIN);
                         ?>
                     </p>
@@ -233,35 +233,35 @@ class TPFieldHotels
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label',
-                    '(Title tag)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title tag',
+                    'tp_admin_page_hotels_tab_tables_content_shortcode_select_title_tag_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
                 <option <?php selected(TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
                     value="div">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1',
-                        '(DIV)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('DIV',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
                     value="h1">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2',
-                        '(H1)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H1',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
                     value="h2">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3',
-                        '(H2)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H2',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
                     value="h3">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4',
-                        '(H3)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H3',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
                     value="h4">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5',
-                        '(H4)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H4',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
             </select>
 
@@ -312,14 +312,14 @@ class TPFieldHotels
 
         <div class="TP-SortableSection">
             <p class="titleSortable">
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label',
-                    '(Table Columns)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Table Columns',
+                    'tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
             <div class="TP-ContainerSorTable">
                 <div data-force="30" class="layer TP-blockSortable" >
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
-                            '(Not selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Not selected',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_not_select', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
                         <?php echo $settingsShortcodeSortable; ?>
@@ -328,8 +328,8 @@ class TPFieldHotels
 
                 <div data-force="18" class="layer TP-blockSortable">
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select',
-                            '(Selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Selected',
+                            'tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_table_label_select', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
                         <?php echo $settingsShortcodeSortableSelected; ?>
@@ -376,8 +376,8 @@ class TPFieldHotels
                 <span>
                     <!-- Extra marker -->
                     <!-- Дополнительный маркер -->
-                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label',
-                        '(Extra marker)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('SubId',
+                        'tp_admin_page_hotels_tab_tables_content_shortcode_field_extra_table_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][extra_table_marker]"
                        value="<?php echo esc_attr(TPPlugin::$options['shortcodes_hotels'][$shortcode]['extra_table_marker']) ?>"
@@ -397,8 +397,8 @@ class TPFieldHotels
         ?>
         <div class="ItemSub">
             <span>
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label',
-                    '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Rows per page',
+                    'tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
@@ -419,8 +419,8 @@ class TPFieldHotels
             <input id="chek-p-<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['paginate_switch']), 1) ?> hidden />
             <label for="chek-p-<?php echo $shortcode; ?>">
-                <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label',
-                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Paginate',
+                    'tp_admin_page_hotels_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
             <label></label>
 
@@ -454,8 +454,8 @@ class TPFieldHotels
         <div class="TP-HeadTable">
             <label>
                 <span>
-                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label',
-                        '(Button Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Button Title',
+                        'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <?php
 
@@ -480,8 +480,8 @@ class TPFieldHotels
 
                 ?>
                 <p>
-                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help',
-                        '("price" variable can be used)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('"price" variable can be used',
+                        'tp_admin_page_hotels_tab_tables_content_shortcode_input_title_btn_title_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
                 </p>
             </label>
             <label></label>
@@ -495,8 +495,8 @@ class TPFieldHotels
         <div class="TP-HeadTable TPSortFieldSelect">
             <label class="TPSortFieldLabel">
                 <span>
-                    <?php _ex('tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label',
-                        '(Sort by column)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Sort by column',
+                        'tp_admin_page_hotels_tab_tables_content_shortcode_field_sort_column_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
                     <?php
