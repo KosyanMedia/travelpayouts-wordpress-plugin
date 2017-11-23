@@ -23,39 +23,39 @@ class TPFieldFlightTickets {
             $classNotShowOption = 'TPNotShowOption';
 
         $font_family_attr = array(
-            _x('tp_admin_page_flights_tab_tickets_style_font_arial',
-                'Arial', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_font_arial_black',
-                'Arial Black', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_font_comic_sans_MS',
-                'Comic Sans MS', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_font_courier_new',
-                'Courier New', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_font_georgia',
-                'Georgia', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_font_impact',
-                'Impact', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_times_new_roman',
-                'Times New Roman', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_trebuchet_MS',
-                'Trebuchet MS', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_verdana',
-                'Verdana', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_roboto',
-                'Roboto', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_roboto_slab',
-                'Roboto Slab', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_ubuntu',
-                'Ubuntu', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_intro',
-                'Intro', TPOPlUGIN_TEXTDOMAIN),
-            _x('tp_admin_page_flights_tab_tickets_style_open_sans',
-                'Open Sans', TPOPlUGIN_TEXTDOMAIN),
+            _x('Arial',
+                'tp_admin_page_flights_tab_tickets_style_font_arial', TPOPlUGIN_TEXTDOMAIN),
+            _x('Arial Black',
+                'tp_admin_page_flights_tab_tickets_style_font_arial_black', TPOPlUGIN_TEXTDOMAIN),
+            _x('Comic Sans MS',
+                'tp_admin_page_flights_tab_tickets_style_font_comic_sans_MS', TPOPlUGIN_TEXTDOMAIN),
+            _x('Courier New',
+                'tp_admin_page_flights_tab_tickets_style_font_courier_new', TPOPlUGIN_TEXTDOMAIN),
+            _x('Georgia',
+                'tp_admin_page_flights_tab_tickets_style_font_georgia', TPOPlUGIN_TEXTDOMAIN),
+            _x('Impact',
+                'tp_admin_page_flights_tab_tickets_style_font_impact', TPOPlUGIN_TEXTDOMAIN),
+            _x('Times New Roman',
+                'tp_admin_page_flights_tab_tickets_style_times_new_roman', TPOPlUGIN_TEXTDOMAIN),
+            _x('Trebuchet MS',
+                'tp_admin_page_flights_tab_tickets_style_trebuchet_MS', TPOPlUGIN_TEXTDOMAIN),
+            _x('Verdana',
+                'tp_admin_page_flights_tab_tickets_style_verdana', TPOPlUGIN_TEXTDOMAIN),
+            _x('Roboto',
+                'tp_admin_page_flights_tab_tickets_style_roboto', TPOPlUGIN_TEXTDOMAIN),
+            _x('Roboto Slab',
+                'tp_admin_page_flights_tab_tickets_style_roboto_slab', TPOPlUGIN_TEXTDOMAIN),
+            _x('Ubuntu',
+                'tp_admin_page_flights_tab_tickets_style_ubuntu', TPOPlUGIN_TEXTDOMAIN),
+            _x('Intro',
+                'tp_admin_page_flights_tab_tickets_style_intro', TPOPlUGIN_TEXTDOMAIN),
+            _x('Open Sans',
+                'tp_admin_page_flights_tab_tickets_style_open_sans', TPOPlUGIN_TEXTDOMAIN),
         );
         ?>
         <p class="TP-SettingTitle">
-            <?php _ex('tp_admin_page_flights_tab_tickets_style_paragraph_1',
-                '(Layout)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('Layout',
+                'tp_admin_page_flights_tab_tickets_style_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
 
         <div class="TP-StyleTable">
@@ -63,8 +63,8 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem">
                 <div class="TP-MainStyleTable">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_title_style_label',
-                            '(Header style)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Header style',
+                            'tp_admin_page_flights_tab_tickets_style_title_style_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-fontInput">
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_family]">
@@ -123,8 +123,8 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem  <?php echo $classNotShowOption; ?>">
                 <div class="TP-MainStyleTable">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_style_label',
-                            '(Content)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Content',
+                            'tp_admin_page_flights_tab_tickets_style_table_style_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-fontInput">
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_family]">
@@ -183,22 +183,22 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem  <?php echo $classNotShowOption; ?>">
                 <div class="TP-MainStyleTable">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label',
-                            '(Borders)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Borders',
+                            'tp_admin_page_flights_tab_tickets_style_table_border_style_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-lb-1" id="TPLineType" >
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_type]">
                             <option value="solid" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "solid" ) ?>>
-                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid',
-                                    '(solid)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('solid',
+                                    'tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="dotted" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dotted" ) ?>>
-                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted',
-                                    '(dotted)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('dotted',
+                                    'tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                             <option value="dashed" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dashed" ) ?>>
-                                <?php _ex('tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed',
-                                    '(dashed)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('dashed',
+                                    'tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
                         </select>
                     </label>
@@ -227,8 +227,8 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem <?php echo $classNotShowOption; ?>">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_background_color_label',
-                            '(Background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Background',
+                            'tp_admin_page_flights_tab_tickets_style_table_background_color_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -240,8 +240,8 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_head_color_label',
-                            '(Table header background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Table header background',
+                            'tp_admin_page_flights_tab_tickets_style_table_head_color_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -252,8 +252,8 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_table_head_text_color_label',
-                            '(Table header font)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Table header font',
+                            'tp_admin_page_flights_tab_tickets_style_table_head_text_color_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -268,8 +268,8 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem <?php echo $classNotShowOption; ?>">
                 <div class="TP-ColorStyle TP-ColorStyle--cus">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_background_label',
-                            '(Button background)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Button background',
+                            'tp_admin_page_flights_tab_tickets_style_button_background_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -281,8 +281,8 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_border_label',
-                            '(Button border)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Button border',
+                            'tp_admin_page_flights_tab_tickets_style_button_border_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -293,8 +293,8 @@ class TPFieldFlightTickets {
                 </div>
                 <div class="TP-ColorStyle TP-ColorStyle--cus TP-ColorStyleHead">
                     <span>
-                        <?php _ex('tp_admin_page_flights_tab_tickets_style_button_font_label',
-                            '(Button font)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Button font',
+                            'tp_admin_page_flights_tab_tickets_style_button_font_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </span>
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
@@ -332,22 +332,22 @@ class TPFieldFlightTickets {
                 <input id="chek677" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][hyperlink]"
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />
                 <label for="chek677">
-                    <?php _ex('tp_admin_page_flights_tab_tickets_style_input_hyperlink_label',
-                        '(Show data as hyperlinks)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Show data as hyperlinks',
+                        'tp_admin_page_flights_tab_tickets_style_input_hyperlink_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
             </div>
             <div class="TP-StyleItem">
                 <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
                        value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
                 <label for="chek66">
-                    <?php _ex('tp_admin_page_flights_tab_tickets_style_input_responsive_label',
-                        '(Enable Horizontal Scroll)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Enable Horizontal Scroll',
+                        'tp_admin_page_flights_tab_tickets_style_input_responsive_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </label>
                 <div class="svg-img-1 svg-img-style-table">
                     <a href="#" class="tooltip-settings">
                         <span>
-                             <?php _ex('tp_admin_page_flights_tab_tickets_style_input_responsive_label_help',
-                                 '(The tables\' width won\'t be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won\'t affect your design, but will have a horizontal scroll.)', TPOPlUGIN_TEXTDOMAIN); ?>
+                             <?php _ex('The tables\' width won\'t be 100% of your content zone. When you resize your content zone (e.g. you have a responsible WP theme) - tables won\'t affect your design, but will have a horizontal scroll.',
+                                 'tp_admin_page_flights_tab_tickets_style_input_responsive_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#00B0DD">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16"><g fill="#00B0DD">
@@ -359,8 +359,8 @@ class TPFieldFlightTickets {
             <div class="TP-StyleItem">
                 <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust TP-BtnDefaultStyle">
                     <i></i>
-                    <?php _ex('tp_admin_page_flights_tab_tickets_style_btn_default_style',
-                        '(Reset to Default styles)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Reset to Default styles',
+                        'tp_admin_page_flights_tab_tickets_style_btn_default_style', TPOPlUGIN_TEXTDOMAIN); ?>
                 </a>
             </div>
 
@@ -376,8 +376,8 @@ class TPFieldFlightTickets {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label',
-                    '(Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_input_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
 
@@ -402,15 +402,15 @@ class TPFieldFlightTickets {
             switch($shortcode){
                 case 10:
                     ?><p>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1',
-                    '(Use "airline" variable to add the Airlines automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Use "airline" variable to add the Airlines automatically',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_1', TPOPlUGIN_TEXTDOMAIN); ?>
 
                     </p><?php
                     break;
                 default:
                     ?><p>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2',
-                    '(Use "origin" and "destination" variables to add the city automatically)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Use "origin" and "destination" variables to add the city automatically',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_input_title_label_help_2', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <?php
                     break;
@@ -427,35 +427,35 @@ class TPFieldFlightTickets {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label',
-                    '(Title tag)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Title tag',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
                     value="div">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1',
-                        '(DIV)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('DIV',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
                     value="h1">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2',
-                        '(H1)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H1',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
                     value="h2">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3',
-                        '(H2)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H2',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
                     value="h3">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4',
-                        '(H3)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H3',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
                     value="h4">
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5',
-                        '(H4)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('H4',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
             </select>
 
@@ -469,8 +469,8 @@ class TPFieldFlightTickets {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label',
-                    '(Button Title)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Button Title',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <?php
 
@@ -495,8 +495,8 @@ class TPFieldFlightTickets {
 
             ?>
             <p>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help',
-                    '("price" variable can be used)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('"price" variable can be used',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_input_title_btn_title_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
         </label>
     <?php
@@ -526,8 +526,8 @@ class TPFieldFlightTickets {
     public function TPFieldSortPrice($shortcode){
         ?>
         <span>
-            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label',
-                '(Order by price)', TPOPlUGIN_TEXTDOMAIN); ?>
+            <?php _ex('Order by price',
+                'tp_admin_page_flights_tab_tables_content_shortcode_field_order_price_label', TPOPlUGIN_TEXTDOMAIN); ?>
         </span>
         <div class="TP-FormItem">
             <div class="ItemSub">
@@ -536,24 +536,24 @@ class TPFieldFlightTickets {
                         <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 2) ?> hidden value="2" />
                         <label for="rchek2">
-                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending',
-                                '(Ascending)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Ascending',
+                                'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                     <li>
                         <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 1) ?> hidden value="1" />
                         <label for="rchek1">
-                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending',
-                                '(Descending)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Descending',
+                                'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                     <li>
                         <input id="rchek0" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
                             <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 0) ?> hidden value="1" />
                         <label for="rchek0">
-                            <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort',
-                                '(Do not sort)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Do not sort',
+                                'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                 </ul>
@@ -605,14 +605,14 @@ class TPFieldFlightTickets {
 
         <div class="TP-SortableSection">
             <p class="titleSortable">
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label',
-                    '(Table Columns)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Table Columns',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </p>
             <div class="TP-ContainerSorTable">
                 <div data-force="30" class="layer TP-blockSortable" >
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select',
-                            '(Not selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Not selected',
+                            'tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_not_select', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_words connectedSortable settingsShortcodeSortable">
                         <?php echo $settingsShortcodeSortable; ?>
@@ -621,8 +621,8 @@ class TPFieldFlightTickets {
 
                 <div data-force="18" class="layer TP-blockSortable">
                     <p class="TP-titleBlockSortable">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select',
-                            '(Selected)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Selected',
+                            'tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_table_label_select', TPOPlUGIN_TEXTDOMAIN); ?>
                     </p>
                     <ul class="block__list block__list_tags connectedSortable settingsShortcodeSortableSelected">
                         <?php echo $settingsShortcodeSortableSelected; ?>
@@ -641,8 +641,8 @@ class TPFieldFlightTickets {
         ?>
         <div class="ItemSub">
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label',
-                    '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Rows per page',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
@@ -663,8 +663,8 @@ class TPFieldFlightTickets {
             <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
             <label for="chek-p1">
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label',
-                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Paginate',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
             <label></label>
 
@@ -680,8 +680,8 @@ class TPFieldFlightTickets {
         ?>
         <div class="ItemSub">
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label',
-                    '(Limit)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Limit',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
@@ -706,8 +706,8 @@ class TPFieldFlightTickets {
         ?>
         <div class="ItemSub">
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label',
-                    '(Departure date)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Departure date',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_departure_date_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
@@ -725,8 +725,8 @@ class TPFieldFlightTickets {
         </div>
         <div class="ItemSub">
             <span>
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label',
-                    '(Return date)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Return date',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_return_date_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <div class="TP-childF">
                 <div class="spinnerW clearfix" data-trigger="spinner">
@@ -749,24 +749,24 @@ class TPFieldFlightTickets {
         <div class="TP-HeadTable">
             <label>
                 <span>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label',
-                        '(Number of stops)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Number of stops',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][transplant]" class="TP-Zelect">
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
                         value="0">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1',
-                            '(All)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('All',
+                            'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
                         value="1">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2',
-                            '(No more than one stop)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('No more than one stop',
+                            'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
                         value="2">
-                        <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3',
-                            '(Direct)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Direct',
+                            'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>
             </label>
@@ -793,8 +793,8 @@ class TPFieldFlightTickets {
         <div class="TP-HeadTable TPSortFieldSelect">
             <label class="TPSortFieldLabel">
                 <span>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label',
-                        '(Sort by column)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Sort by column',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_field_sort_column_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
                      <?php
@@ -826,8 +826,8 @@ class TPFieldFlightTickets {
                 <span>
                     <!-- Extra marker -->
                     <!-- Дополнительный маркер -->
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label',
-                        '(Extra marker)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('SubId',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
                        value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
@@ -873,8 +873,8 @@ class TPFieldFlightTickets {
             <?php //$this->TPFieldPaginate($shortcode); ?>
             <div class="ItemSub">
                 <span>
-                    <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label',
-                        '(Rows per page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                    <?php _ex('Rows per page',
+                        'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <div class="TP-childF">
                     <div class="spinnerW clearfix" data-trigger="spinner">
@@ -897,8 +897,8 @@ class TPFieldFlightTickets {
             <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
             <label for="chek-p1">
-                <?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label',
-                    '(Paginate)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Paginate',
+                    'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
             <label></label>
 
@@ -1194,15 +1194,17 @@ class TPFieldFlightTickets {
           <div class="TPTab-check">
             <div class="TPTab-check__inner">
             <span class="title">
-                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table',
-                    '(If empty answer received)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('If empty answer received',
+                    'tp_admin_page_flights_tab_other_settings_field_label_empty_table', TPOPlUGIN_TEXTDOMAIN); ?>
                 <div class="svg-img-1">
                     <a href="#" class="tooltip-settings">
                                 <span>
-                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_help',
-                                        '(Sometimes it happens our cash doesn\'t contain relevant '
-                                        .'data to the request you have set. Here you can set what '
-                                        .'users will see in such cases)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                    <?php
+                                    _ex('Sometimes it happens our cash doesn\'t contain relevant data to the request you have set. Here you can set what users will see in such cases',
+                                        'tp_admin_page_flights_tab_other_settings_field_label_empty_table_help',
+                                        TPOPlUGIN_TEXTDOMAIN);
+                                    ?>
+                                </span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -1217,8 +1219,8 @@ class TPFieldFlightTickets {
                                value="3" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 3) ?>
                                hidden="">
                         <label for="chekar-tabs-4" id="cheker-label-4">
-                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label',
-                                '(Don\'t show a table)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Don\'t show a table',
+                                'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                     <li>
@@ -1227,8 +1229,8 @@ class TPFieldFlightTickets {
                                value="0" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?>
                                hidden="">
                         <label for="chekar-tabs-1" id="cheker-label-1">
-                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
-                                '(Show notification (link))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Show notification (link)',
+                                'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                     <li>
@@ -1237,8 +1239,8 @@ class TPFieldFlightTickets {
                                value="2" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 2) ?>
                                hidden="">
                         <label for="chekar-tabs-3" id="cheker-label-3">
-                            <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_2_label',
-                                '(Show notification (button))', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Show notification (button)',
+                                'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </label>
                     </li>
                     <?php if ($searchForms != false): ?>
@@ -1248,8 +1250,8 @@ class TPFieldFlightTickets {
                                    value="1" <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?>
                                    hidden="">
                             <label for="chekar-tabs-2" id="cheker-label-2">
-                                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label',
-                                    '(Show search form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Show search form',
+                                    'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     <?php endif; ?>
@@ -1318,16 +1320,14 @@ class TPFieldFlightTickets {
         ?>
         <div class="TP-HeadTable">
             <label>
-                <h3 class="TPFieldEmptyResultH3"><?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table',
-                    '(If empty answer received)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <h3 class="TPFieldEmptyResultH3"><?php _ex('If empty answer received',
+                    'tp_admin_page_flights_tab_other_settings_field_label_empty_table', TPOPlUGIN_TEXTDOMAIN); ?>
 
                     <div class="svg-img-1">
                         <a href="#" class="tooltip-settings">
                                     <span>
-                                        <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_help',
-                                            '(Sometimes it happens our cash doesn\'t contain relevant '
-                                            .'data to the request you have set. Here you can set what '
-                                            .'users will see in such cases)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                        <?php _ex('Sometimes it happens our cash doesn\'t contain relevant data to the request you have set. Here you can set what users will see in such cases',
+                                            'tp_admin_page_flights_tab_other_settings_field_label_empty_table_help', TPOPlUGIN_TEXTDOMAIN); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                             <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -1353,8 +1353,8 @@ class TPFieldFlightTickets {
                                        name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
                                     <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 0) ?> hidden value="0" />
                                 <label for="shortcoderchek1">
-                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label',
-                                        '(Show notification)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    <?php _ex('Show notification',
+                                        'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
 
@@ -1364,8 +1364,8 @@ class TPFieldFlightTickets {
                                        name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][type]"
                                     <?php checked(TPPlugin::$options['shortcodes_settings']['empty']['type'], 1) ?> hidden value="1" />
                                 <label for="shortcoderchek2">
-                                    <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label',
-                                        '(Show search form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                    <?php _ex('Show search form',
+                                        'tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </label>
                             </li>
                         </ul>
@@ -1464,8 +1464,8 @@ class TPFieldFlightTickets {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form',
-                    '(Choose form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Choose form',
+                    'tp_admin_page_flights_tab_other_settings_field_label_empty_table_search_form', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_settings][empty][value][1]" class="TP-Zelect">
