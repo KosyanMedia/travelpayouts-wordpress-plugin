@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-22 12:39+0200\n"
+"POT-Creation-Date: 2017-11-23 10:42+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2314,33 +2314,33 @@ msgid "Wizard"
 msgstr "Визард"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
-msgctxt "(Don't add links to all titles)"
-msgid "tp_admin_page_auto_links_input_not_title_label"
+msgctxt "tp_admin_page_auto_links_input_not_title_label"
+msgid "Don't add links to all titles"
 msgstr "Не вставлять ссылки во все заголовки"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:83
-msgctxt "(No change in case anchor is inside &lt;h&gt; tags)"
-msgid "tp_admin_page_auto_links_input_not_title_label_help"
+msgctxt "tp_admin_page_auto_links_input_not_title_label_help"
+msgid "No change in case anchor is inside &lt;h&gt; tags"
 msgstr "Если анкор встречается внутри  &lt;h&gt; -тегов — замены не будет"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:98
-msgctxt "(Enable auto-links for new posts)"
-msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+msgctxt "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+msgid "Enable auto-links for new posts"
 msgstr "Включить подстановку для новых постов"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:102
-msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
-msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+msgctxt "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+msgid "After you press \"Publish\" all you anchors will be auto-replaced by links"
 msgstr "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:122
-msgctxt "(Anchor replacements limit)"
-msgid "tp_admin_page_auto_links_input_limit_label"
+msgctxt "tp_admin_page_auto_links_input_limit_label"
+msgid "Anchor replacements limit"
 msgstr "Количество замен анкора"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:126
-msgctxt "(The maximum number of anchor changes in one post)"
-msgid "tp_admin_page_auto_links_input_limit_label_help"
+msgctxt "tp_admin_page_auto_links_input_limit_label_help"
+msgid "The maximum number of anchor changes in one post"
 msgstr "Максимальное количество замен каждого анкора в одном посте"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
@@ -6459,6 +6459,30 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Don't add links to all titles)"
+#~ msgid "tp_admin_page_auto_links_input_not_title_label"
+#~ msgstr "Не вставлять ссылки во все заголовки"
+
+#~ msgctxt "(No change in case anchor is inside &lt;h&gt; tags)"
+#~ msgid "tp_admin_page_auto_links_input_not_title_label_help"
+#~ msgstr "Если анкор встречается внутри  &lt;h&gt; -тегов — замены не будет"
+
+#~ msgctxt "(Enable auto-links for new posts)"
+#~ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+#~ msgstr "Включить подстановку для новых постов"
+
+#~ msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
+#~ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+#~ msgstr "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
+
+#~ msgctxt "(Anchor replacements limit)"
+#~ msgid "tp_admin_page_auto_links_input_limit_label"
+#~ msgstr "Количество замен анкора"
+
+#~ msgctxt "(The maximum number of anchor changes in one post)"
+#~ msgid "tp_admin_page_auto_links_input_limit_label_help"
+#~ msgstr "Максимальное количество замен каждого анкора в одном посте"
+
 #~ msgctxt "(Something went wrong, please try to update a page)"
 #~ msgid "tp_plugin_request_api_error_msg_message_error_en"
 #~ msgstr "Something went wrong, please try to update a page"
@@ -10298,24 +10322,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Link "
 #~ msgstr "Ссылка"
-
-#~ msgid "Don't add links to all titles"
-#~ msgstr "Не вставлять ссылки во все заголовки"
-
-#~ msgid "No change in case anchor is inside &lt;h&gt; tags"
-#~ msgstr "Если анкор встречается внутри  &lt;h&gt; -тегов — замены не будет"
-
-#~ msgid "Enable auto-links for new posts"
-#~ msgstr "Включить подстановку для новых постов"
-
-#~ msgid "After you press \"Publish\" all you anchors will be auto-replaced by links"
-#~ msgstr "После нажатия \"Опубликовать\" ко всем анкорам в посте будут добавлены ссылки"
-
-#~ msgid "Anchor replacements limit"
-#~ msgstr "Количество замен анкора"
-
-#~ msgid "The maximum number of anchor changes in one post"
-#~ msgstr "Максимальное количество замен каждого анкора в одном посте"
 
 #~ msgid "Activate inactive links"
 #~ msgstr "Активировать неактивные ссылки"

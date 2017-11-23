@@ -76,12 +76,12 @@ class TPFieldAutoReplLink
                             <input id="chekarl4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][not_title]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
                             <label for="chekarl4">
-                                <?php _ex('tp_admin_page_auto_links_input_not_title_label',
-                                    '(Don\'t add links to all titles)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Don\'t add links to all titles',
+                                    'tp_admin_page_auto_links_input_not_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 <a href="#" class="tooltip-settings TPARLHelp">
                                     <span>
-                                        <?php _ex('tp_admin_page_auto_links_input_not_title_label_help',
-                                            '(No change in case anchor is inside &lt;h&gt; tags)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                        <?php _ex('No change in case anchor is inside &lt;h&gt; tags',
+                                            'tp_admin_page_auto_links_input_not_title_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
                                     </span>
                                     <div class="svg-img-3 ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -95,12 +95,12 @@ class TPFieldAutoReplLink
                             <input id="chekarl5" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][tp_auto_replac_link]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link']), 1) ?> hidden />
                             <label for="chekarl5">
-                                <?php _ex('tp_admin_page_auto_links_input_tp_auto_replac_link_label',
-                                    '(Enable auto-links for new posts)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Enable auto-links for new posts',
+                                    'tp_admin_page_auto_links_input_tp_auto_replac_link_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 <a href="#" class="tooltip-settings TPARLHelp">
                                     <span>
-                                        <?php _ex('tp_admin_page_auto_links_input_tp_auto_replac_link_label_help',
-                                            '(After you press "Publish" all you anchors will be auto-replaced by links)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                        <?php _ex('After you press "Publish" all you anchors will be auto-replaced by links',
+                                            'tp_admin_page_auto_links_input_tp_auto_replac_link_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
                                     </span>
                                     <div class="svg-img-3 ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
@@ -119,12 +119,12 @@ class TPFieldAutoReplLink
             <div class="TP-FormItem">
                 <div class="ItemSub">
                     <span>
-                        <?php _ex('tp_admin_page_auto_links_input_limit_label',
-                            '(Anchor replacements limit)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Anchor replacements limit',
+                            'tp_admin_page_auto_links_input_limit_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         <a href="#" class="tooltip-settings TPARLHelp">
                             <span>
-                                <?php _ex('tp_admin_page_auto_links_input_limit_label_help',
-                                    '(The maximum number of anchor changes in one post)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('The maximum number of anchor changes in one post',
+                                    'tp_admin_page_auto_links_input_limit_label_help', TPOPlUGIN_TEXTDOMAIN); ?>
                             <div class="svg-img-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>

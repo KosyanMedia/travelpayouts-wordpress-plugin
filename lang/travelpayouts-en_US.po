@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-22 12:37+0200\n"
+"POT-Creation-Date: 2017-11-23 10:42+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2314,33 +2314,33 @@ msgid "Wizard"
 msgstr "Wizard"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:79
-msgctxt "(Don't add links to all titles)"
-msgid "tp_admin_page_auto_links_input_not_title_label"
+msgctxt "tp_admin_page_auto_links_input_not_title_label"
+msgid "Don't add links to all titles"
 msgstr "Don't add links to all titles"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:83
-msgctxt "(No change in case anchor is inside &lt;h&gt; tags)"
-msgid "tp_admin_page_auto_links_input_not_title_label_help"
+msgctxt "tp_admin_page_auto_links_input_not_title_label_help"
+msgid "No change in case anchor is inside &lt;h&gt; tags"
 msgstr "No change in case anchor is inside &lt;h&gt; tags"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:98
-msgctxt "(Enable auto-links for new posts)"
-msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+msgctxt "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+msgid "Enable auto-links for new posts"
 msgstr "Enable auto-links for new posts"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:102
-msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
-msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+msgctxt "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+msgid "After you press \"Publish\" all you anchors will be auto-replaced by links"
 msgstr "After you press \"Publish\" all you anchors will be auto-replaced by links"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:122
-msgctxt "(Anchor replacements limit)"
-msgid "tp_admin_page_auto_links_input_limit_label"
+msgctxt "tp_admin_page_auto_links_input_limit_label"
+msgid "Anchor replacements limit"
 msgstr "Anchor replacements limit"
 
 #: app/includes/models/admin/menu/TPFieldAutoReplLink.php:126
-msgctxt "(The maximum number of anchor changes in one post)"
-msgid "tp_admin_page_auto_links_input_limit_label_help"
+msgctxt "tp_admin_page_auto_links_input_limit_label_help"
+msgid "The maximum number of anchor changes in one post"
 msgstr "The maximum number of anchor changes in one post"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:26
@@ -6542,6 +6542,30 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
+
+#~ msgctxt "(Don't add links to all titles)"
+#~ msgid "tp_admin_page_auto_links_input_not_title_label"
+#~ msgstr "Don't add links to all titles"
+
+#~ msgctxt "(No change in case anchor is inside &lt;h&gt; tags)"
+#~ msgid "tp_admin_page_auto_links_input_not_title_label_help"
+#~ msgstr "No change in case anchor is inside &lt;h&gt; tags"
+
+#~ msgctxt "(Enable auto-links for new posts)"
+#~ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label"
+#~ msgstr "Enable auto-links for new posts"
+
+#~ msgctxt "(After you press \"Publish\" all you anchors will be auto-replaced by links)"
+#~ msgid "tp_admin_page_auto_links_input_tp_auto_replac_link_label_help"
+#~ msgstr "After you press \"Publish\" all you anchors will be auto-replaced by links"
+
+#~ msgctxt "(Anchor replacements limit)"
+#~ msgid "tp_admin_page_auto_links_input_limit_label"
+#~ msgstr "Anchor replacements limit"
+
+#~ msgctxt "(The maximum number of anchor changes in one post)"
+#~ msgid "tp_admin_page_auto_links_input_limit_label_help"
+#~ msgstr "The maximum number of anchor changes in one post"
 
 #~ msgctxt "(Something went wrong, please try to update a page)"
 #~ msgid "tp_plugin_request_api_error_msg_message_error_en"
