@@ -28,8 +28,8 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_token_label',
-                            '(Token)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _ex('Token',
+                            'tp_admin_page_settings_tab_account_field_token_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][token]"
                                value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['token']) ?>"/>
@@ -46,7 +46,7 @@ class TPFieldSettings {
 
                 <div class="ItemSub">
                     <span><?php _ex('White Label (Flights)',
-                            'admin settings', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                            'tp_admin_page_settings_tab_account_field_white_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label]"
                                value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label']) ?>"/>
@@ -57,16 +57,16 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_marker_label',
-                            '(Marker)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Marker',
+                            'tp_admin_page_settings_tab_account_field_marker_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][marker]"
                                value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['marker']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_account_field_white_label_hotel_label',
-                            'White Label (Hotels)', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+                    <span><?php _ex('White Label (Hotels)',
+                            'tp_admin_page_settings_tab_account_field_white_label_hotel_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label_hotel]"
                                value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label_hotel']) ?>"/>
@@ -87,8 +87,8 @@ class TPFieldSettings {
         <div class="TP-colForm">
             <div class="TP-FormItem">
                 <div class="ItemSub">
-                    <span><?php  _ex('tp_admin_page_settings_tab_config_field_message_error_label',
-                            '(Error Message)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php  _ex('Error Message',
+                            'tp_admin_page_settings_tab_config_field_message_error_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <?php
 
@@ -117,67 +117,67 @@ class TPFieldSettings {
                     </label>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_config_field_after_url_label',
-                            'Action after click (Flights)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Action after click (Flights)',
+                            'tp_admin_page_settings_tab_config_field_after_url_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
                             <label for="rchek1">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_0_label',
-                                    '(Show Search Form)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Show Search Form',
+                                    'tp_admin_page_settings_tab_config_field_after_url_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
                             <label for="rchek2">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_after_url_value_1_label',
-                                    '(Show Search Results)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Show Search Results',
+                                    'tp_admin_page_settings_tab_config_field_after_url_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     </ul>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_label',
-                            ' Action after click (Hotels)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Action after click (Hotels)',
+                            'tp_admin_page_settings_tab_config_field_hotel_after_url_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek11" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 0) ?> hidden value="0" />
                             <label for="rchek11">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label',
-                                    '(Show city page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Show city page',
+                                    'tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
                             <input id="rchek22" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 1) ?> hidden value="1" />
                             <label for="rchek22">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label',
-                                    '(Show hotel page)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Show hotel page',
+                                    'tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     </ul>
                 </div>
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_config_field_distance_label',
-                            '(Distance Units)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Distance Units',
+                            'tp_admin_page_settings_tab_config_field_distance_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][distance]" class="TP-Zelect">
                         <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_distance_value_1_label',
-                                '(km)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('km',
+                                'tp_admin_page_settings_tab_config_field_distance_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 2 ); ?>  value="2">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_distance_value_2_label',
-                                'miles', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('miles',
+                                'tp_admin_page_settings_tab_config_field_distance_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                     </select>
                 </div>
                 <div class="TP-ListSub ListSub--cust list--db">
                     <span class="TP-titleSub--custom">
-                        <?php _ex('tp_admin_page_settings_tab_config_field_airline_logo_size_label',
-                            '(Airlines logo size)', TPOPlUGIN_TEXTDOMAIN); ?> (px)</span>
+                        <?php _ex('Airlines logo size',
+                            'tp_admin_page_settings_tab_config_field_airline_logo_size_label', TPOPlUGIN_TEXTDOMAIN); ?> (px)</span>
                     <div class="ItemSub">
                         <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
                             <label>
@@ -208,24 +208,24 @@ class TPFieldSettings {
 
                 </div>
                 <div class="ItemSub TPItemSubCompactButtons">
-                    <span><?php _ex('tp_admin_page_settings_tab_config_field_media_button_label',
-                            '(Buttons in the editor)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Buttons in the editor',
+                            'tp_admin_page_settings_tab_config_field_media_button_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][media_button][view]"
                             class="TP-Zelect">
                         <option
                             <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 0 ); ?> value="0">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_media_button_value_1_label',
-                                'Default' , TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Default',
+                                'tp_admin_page_settings_tab_config_field_media_button_value_1_label' , TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option
                             <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 1 ); ?> value="1">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_media_button_value_1_label',
-                                'Compact', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Compact',
+                                'tp_admin_page_settings_tab_config_field_media_button_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option
                             <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 2 ); ?> value="2">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_media_button_value_2_label',
-                                'Hide', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Hide',
+                                'tp_admin_page_settings_tab_config_field_media_button_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
 
                     </select>
@@ -243,13 +243,13 @@ class TPFieldSettings {
                             <input id="chek1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][redirect]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['redirect']), 1) ?> hidden />
                             <label for="chek1">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_redirect_label',
-                                    'Redirect', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                <?php _ex('Redirect',
+                                    'tp_admin_page_settings_tab_config_field_redirect_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
                                     <span>
-                                        <?php _ex('tp_admin_page_settings_tab_config_field_redirect_help',
-                                            '(In this case the 301 Redirect, which is more preferable for search engines, will be activated. We recommend that you don’t change this option.)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                        <?php _ex('In this case the 301 Redirect, which is more preferable for search engines, will be activated. We recommend that you don’t change this option.',
+                                            'tp_admin_page_settings_tab_config_field_redirect_help', TPOPlUGIN_TEXTDOMAIN); ?></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                             <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -260,20 +260,20 @@ class TPFieldSettings {
                             <input id="chek2" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][target_url]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['target_url']), 1) ?> hidden />
                             <label for="chek2">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_target_url_label',
-                                    '(Open in a New Window)', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                <?php _ex('Open in a New Window',
+                                    'tp_admin_page_settings_tab_config_field_target_url_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chek3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][nofollow]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
                             <label for="chek3">
-                                <?php  _ex('tp_admin_page_settings_tab_config_field_nofollow_label',
-                                    '(Add Nofollow Attribute)', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                <?php  _ex('Add Nofollow Attribute',
+                                    'tp_admin_page_settings_tab_config_field_nofollow_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                             <div class="svg-img-1">
                                 <a href="#" class="tooltip-settings">
                                     <span>
-                                        <?php _ex('tp_admin_page_settings_tab_config_field_nofollow_help',
-                                            '(This attribute avoids getting undesirable search results into the search engines index. We recommend that you don’t change this option.)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                        <?php _ex('This attribute avoids getting undesirable search results into the search engines index. We recommend that you don’t change this option.',
+                                            'tp_admin_page_settings_tab_config_field_nofollow_help', TPOPlUGIN_TEXTDOMAIN); ?></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                     <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -284,7 +284,7 @@ class TPFieldSettings {
                             <input id="chek34" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][statistics]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['statistics']), 1) ?> hidden />
                             <label for="chek34">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_statistics_label', '(Turn off statistics and blog updates)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Turn off statistics and blog updates', 'tp_admin_page_settings_tab_config_field_statistics_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
 
                         </li>
@@ -292,7 +292,7 @@ class TPFieldSettings {
                             <input id="chek35" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][limit_script]"
                                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['limit_script']), 1) ?> hidden />
                             <label for="chek35">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_limit_script_label', '(Use plugin\'s scripts on all pages)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Use plugin\'s scripts on all pages', 'tp_admin_page_settings_tab_config_field_limit_script_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
 
                         </li>
@@ -305,8 +305,8 @@ class TPFieldSettings {
             <div class="TP-FormItem mb--cus">
                 <div class="ItemSub">
                     <span>
-                        <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label',
-                            '(Cache Timeout)', TPOPlUGIN_TEXTDOMAIN);?>
+                        <?php _ex('Cache Timeout',
+                            'tp_admin_page_settings_tab_config_field_cache_value_label', TPOPlUGIN_TEXTDOMAIN);?>
                     </span>
 
                     <div class="TP-childF">
@@ -314,8 +314,8 @@ class TPFieldSettings {
 
                         <div class="TP-colCacheFlight">
                             <span>
-                            <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_flights',
-                                '(Flights)', TPOPlUGIN_TEXTDOMAIN);?>
+                            <?php _ex('Flights',
+                                'tp_admin_page_settings_tab_config_field_cache_value_label_flights', TPOPlUGIN_TEXTDOMAIN);?>
                             </span>
 
                             <div class="spinnerW clearfix" data-trigger="spinner">
@@ -333,8 +333,8 @@ class TPFieldSettings {
 
                         <div class="TP-colCacheHotel">
                              <span>
-                            <?php _ex('tp_admin_page_settings_tab_config_field_cache_value_label_hotels',
-                                '(Hotels)', TPOPlUGIN_TEXTDOMAIN);?>
+                            <?php _ex('Hotels',
+                                'tp_admin_page_settings_tab_config_field_cache_value_label_hotels', TPOPlUGIN_TEXTDOMAIN);?>
                             </span>
 
                             <div class="spinnerW clearfix" data-trigger="spinner">
@@ -392,13 +392,13 @@ class TPFieldSettings {
                 <div class="ItemSub">
                     <span class="clearfix">
                         <div class="box-span-1">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_script_label',
-                                '(Script Include)', TPOPlUGIN_TEXTDOMAIN);?>
+                            <?php _ex('Script Include',
+                                'tp_admin_page_settings_tab_config_field_script_label', TPOPlUGIN_TEXTDOMAIN);?>
                         </div>
                         <div class="svg-img-1">
                             <a href="#" class="tooltip-settings"><span>
-                                    <?php  _ex('tp_admin_page_settings_tab_config_field_script_help',
-                                        '(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching to &lt;footer&gt;)', TPOPlUGIN_TEXTDOMAIN);?>
+                                    <?php  _ex('Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching to &lt;footer&gt;',
+                                        'tp_admin_page_settings_tab_config_field_script_help', TPOPlUGIN_TEXTDOMAIN);?>
                                 </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
                                         <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
@@ -407,15 +407,15 @@ class TPFieldSettings {
                             <input id="rchek5" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
                             <label for="rchek5">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_script_value_0_label',
-                                    '(Inside &lt;head&gt; tag )', TPOPlUGIN_TEXTDOMAIN);?></label>
+                                <?php _ex('Inside &lt;head&gt; tag',
+                                    'tp_admin_page_settings_tab_config_field_script_value_0_label', TPOPlUGIN_TEXTDOMAIN);?></label>
                         </li>
                         <li>
                             <input id="rchek6" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][script]"
                                 <?php checked(\app\includes\TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
                             <label for="rchek6">
-                                <?php _ex('tp_admin_page_settings_tab_config_field_script_value_1_label',
-                                    '(Inside &lt;footer&gt; tag )', TPOPlUGIN_TEXTDOMAIN); ?></label>
+                                <?php _ex('Inside &lt;footer&gt; tag',
+                                    'tp_admin_page_settings_tab_config_field_script_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -423,31 +423,31 @@ class TPFieldSettings {
 
                      <span>
                          <div class="box-span">
-                             <?php _ex('tp_admin_page_settings_tab_config_field_format_date_label',
-                                 '(Date Format)', TPOPlUGIN_TEXTDOMAIN); ?>
+                             <?php _ex('Date Format',
+                                 'tp_admin_page_settings_tab_config_field_format_date_label', TPOPlUGIN_TEXTDOMAIN); ?>
                          </div>
                          <div class="svg-img-1"><a href="#" class="tooltip-settings">
                                  <span>
                                      <ul>
                                          <li>
-                                             <?php  _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_1',
-                                                 '(Use variables to set the date:)', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>d - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_2',
-                                                 '(day)', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>f - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_3',
-                                                 '(month name (small letters))', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>F - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_4',
-                                                 '(month name (capital letters))', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>m - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_5',
-                                                 '(month number)', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>M - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_6',
-                                                 '(month (3 letters))', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>mm - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_7',
-                                                 '(month (3 small letters))', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>y - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_8',
-                                                 '(last 2 digits of the year)', TPOPlUGIN_TEXTDOMAIN); ?></li>
-                                         <li>Y - <?php _ex('tp_admin_page_settings_tab_config_field_format_date_help_li_9',
-                                                 '(year)', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                             <?php  _ex('Use variables to set the date:',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_1', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>d - <?php _ex('day',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_2', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>f - <?php _ex('month name (small letters)',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_3', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>F - <?php _ex('month name (capital letters)',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_4', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>m - <?php _ex('month number',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_5', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>M - <?php _ex('month (3 letters)',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_6', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>mm - <?php _ex('month (3 small letters)',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_7', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>y - <?php _ex('last 2 digits of the year',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_8', TPOPlUGIN_TEXTDOMAIN); ?></li>
+                                         <li>Y - <?php _ex('year',
+                                                 'tp_admin_page_settings_tab_config_field_format_date_help_li_9', TPOPlUGIN_TEXTDOMAIN); ?></li>
                                      </ul>
 
                                  </span>
@@ -460,22 +460,21 @@ class TPFieldSettings {
                                class=""/>
                     </label>
                     <span class="TPSpanFormatDate">
-                        <?php _ex('tp_admin_page_settings_tab_config_field_current_format_date_label',
-                            '(Current format)', TPOPlUGIN_TEXTDOMAIN); ?>:
+                        <?php _ex('Current format',
+                            'tp_admin_page_settings_tab_config_field_current_format_date_label', TPOPlUGIN_TEXTDOMAIN); ?>:
                         <?php  echo $this->tpDate(); ?>
                     </span>
                 </div>
                 <div class="ItemSub ItemSub-YM-GA ItemSub-YM-GA-cust ItemSub-Table-YM-GA">
                     <span>
                         <div class="box-span">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_code_ga_ym_label',
-                                '(Event tracking. "Find" button)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Event tracking. "Find" button',
+                                'tp_admin_page_settings_tab_config_field_code_ga_ym_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </div>
                         <div class="svg-img-1">
                             <a href="#" class="tooltip-settings">
-                            <span><?php _ex('tp_admin_page_settings_tab_config_field_code_ga_ym_help',
-                                     '(Set a goal in Yandex Metrica or Google Analytics and paste in this field the'
-                                    .' code you need to track the event (reaching the goal). In example, "yaCounterXXXXXX.reachGoal(\'TARGET_NAME\');" or "ga(\'send\', \'event\', \'category\', \'action\');")', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                            <span><?php _ex('Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to track the event (reaching the goal). In example, "yaCounterXXXXXX.reachGoal(\'TARGET_NAME\');" or "ga(\'send\', \'event\', \'category\', \'action\');"',
+                                     'tp_admin_page_settings_tab_config_field_code_ga_ym_help', TPOPlUGIN_TEXTDOMAIN); ?></span>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                                 <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -492,13 +491,13 @@ class TPFieldSettings {
                 <div class="ItemSub ItemSub-YM-GA ItemSub-YM-GA-cust ItemSub-Table-YM-GA">
                     <span>
                         <div class="box-span">
-                            <?php _ex('tp_admin_page_settings_tab_config_field_code_table_ga_ym_label',
-                                '(Event tracking. Table is loaded)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Event tracking. Table is loaded',
+                                'tp_admin_page_settings_tab_config_field_code_table_ga_ym_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </div>
                         <div class="svg-img-1">
                             <a href="#" class="tooltip-settings">
-                            <span><?php _ex('tp_admin_page_settings_tab_config_field_code_table_ga_ym_help',
-                                    '(Google Analytics event that will be fired every time a table loads.)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                            <span><?php _ex('Google Analytics event that will be fired every time a table loads.',
+                                    'tp_admin_page_settings_tab_config_field_code_table_ga_ym_help', TPOPlUGIN_TEXTDOMAIN); ?></span>
 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 15 15"><g fill="#00B0DD">
                                         <path d="M7.3 11.6c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.5s.5-.2.5-.5v-.4c.1-.2-.2-.5-.5-.5z"/>
@@ -517,25 +516,25 @@ class TPFieldSettings {
             <div class="TP-FormItem">
 
                 <div class="ItemSub">
-                    <span><?php _ex('tp_admin_page_settings_tab_config_btn_import_settings',
-                            '(Import settings)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                    <span><?php _ex('Import settings',
+                            'tp_admin_page_settings_tab_config_btn_import_settings', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <div class="TP-listNavsSetting">
                         <div class="TP-NavRow">
                             <div class="input_button_style">
-                                <div class="input_font_style"><?php  _ex('tp_admin_page_settings_tab_config_btn_browse',
-                                        '(Browse)', TPOPlUGIN_TEXTDOMAIN); ?></div>
+                                <div class="input_font_style"><?php  _ex('Browse',
+                                        'tp_admin_page_settings_tab_config_btn_browse', TPOPlUGIN_TEXTDOMAIN); ?></div>
                                 <input type="file" accept=".txt" name="select_file" id="importFile" size="1" class="input_input_style" multiple="">
                             </div>
                             <a class="TP-BtnTab disable importnBtn">
-                                <?php _ex('tp_admin_page_settings_tab_config_btn_import',
-                                    '(Import)', TPOPlUGIN_TEXTDOMAIN); ?></a>
-                            <span class="infoFile"><?php _ex('tp_admin_page_settings_tab_config_btn_import_msg_error',
-                                    '(The file is not selected)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                                <?php _ex('Import',
+                                    'tp_admin_page_settings_tab_config_btn_import', TPOPlUGIN_TEXTDOMAIN); ?></a>
+                            <span class="infoFile"><?php _ex('The file is not selected',
+                                    'tp_admin_page_settings_tab_config_btn_import_msg_error', TPOPlUGIN_TEXTDOMAIN); ?></span>
                         </div>
                         <div class="TP-NavRow">
                             <a class="TP-BtnTab exportBtn" id="exportSettings">
-                                <?php _ex('tp_admin_page_settings_tab_config_btn_export_settings',
-                                    '(Export)', TPOPlUGIN_TEXTDOMAIN); ?>
+                                <?php _ex('Export',
+                                    'tp_admin_page_settings_tab_config_btn_export_settings', TPOPlUGIN_TEXTDOMAIN); ?>
                             </a>
 
 
@@ -544,8 +543,8 @@ class TPFieldSettings {
                 </div>
                 <div class="TP-FormItem TPDefaultSettingsItem">
                     <a href="#" class="TP-deleteShortLincks TP-deleteShortLincks--cust" id="TPDefaultSettings">
-                        <i></i><?php _ex('tp_admin_page_settings_tab_config_btn_default',
-                            '(Default settings)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <i></i><?php _ex('Default settings',
+                            'tp_admin_page_settings_tab_config_btn_default', TPOPlUGIN_TEXTDOMAIN); ?>
                     </a>
                 </div>
             </div>
@@ -561,20 +560,20 @@ class TPFieldSettings {
         ?>
         <div class="TP-LocalHead">
             <label>
-                <span><?php _ex('tp_admin_page_settings_tab_localization_field_localization_label',
-                        '(Tables and Widgets Language)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                <span><?php _ex('Tables and Widgets Language',
+                        'tp_admin_page_settings_tab_localization_field_localization_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][localization]" class="TP-Zelect TPFieldLocalization">
                     <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
-                        <?php _ex('tp_admin_page_settings_tab_localization_field_localization_value_1_label',
-                            '(Russian)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Russian',
+                            'tp_admin_page_settings_tab_localization_field_localization_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
-                        <?php _ex('tp_admin_page_settings_tab_localization_field_localization_value_2_label',
-                            '(English)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('English',
+                            'tp_admin_page_settings_tab_localization_field_localization_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                     <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
-                        <?php _ex('tp_admin_page_settings_tab_localization_field_localization_value_3_label',
-                            '(Thai)', TPOPlUGIN_TEXTDOMAIN); ?>
+                        <?php _ex('Thai',
+                            'tp_admin_page_settings_tab_localization_field_localization_value_3_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
                 </select>
             </label>
@@ -585,8 +584,8 @@ class TPFieldSettings {
         </div>
         <div class="TP-LocalHead">
             <label>
-                 <span><?php _ex('tp_admin_page_settings_tab_localization_field_currency_label',
-                         '(Currency)', TPOPlUGIN_TEXTDOMAIN); ?></span>
+                 <span><?php _ex('Currency',
+                         'tp_admin_page_settings_tab_localization_field_currency_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
                     <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
                         <option
@@ -652,16 +651,16 @@ class TPFieldSettings {
             <?php $this->TPFieldTitleCase(); ?>
         </div>
         <div class="TP-listColum">
-            <span><?php _ex('tp_admin_page_settings_tab_localization_field_table_td_label',
-                    '(Fields (you can edit values on your own, e.g. for your own language))', TPOPlUGIN_TEXTDOMAIN); ?></span>
+            <span><?php _ex('Fields (you can edit values on your own, e.g. for your own language)',
+                    'tp_admin_page_settings_tab_localization_field_table_td_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
             <div id="tabs-local_field">
                 <nav class="TPNavigation TPNavigationLocal">
                     <ul class="TPMainMenu TPMainMenuLocal">
                         <li>
                             <a href="#tabs-local_field_flight" class="TPMainMenuA">
                             <span>
-                            <?php _ex('tp_admin_page_settings_tab_menu_local_tab_field_local_flight',
-                                '(Flight Tickets)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Flight Tickets',
+                                'tp_admin_page_settings_tab_menu_local_tab_field_local_flight', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                             </a>
                         </li>
@@ -669,8 +668,8 @@ class TPFieldSettings {
                         <li>
                             <a href="#tabs-local_field_hotel" class="TPMainMenuA">
                             <span>
-                            <?php _ex('tp_admin_page_settings_tab_menu_local_tab_field_local_hotel',
-                                '(Hotels)', TPOPlUGIN_TEXTDOMAIN); ?>
+                            <?php _ex('Hotels',
+                                'tp_admin_page_settings_tab_menu_local_tab_field_local_hotel', TPOPlUGIN_TEXTDOMAIN); ?>
                         </span>
                             </a>
                         </li>
@@ -798,8 +797,8 @@ class TPFieldSettings {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_settings_tab_localization_field_host_hotel_label',
-                    '(Host(Hotels))', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Host(Hotels)',
+                    'tp_admin_page_settings_tab_localization_field_host_hotel_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host_hotel]"
                     class="TP-Zelect TPFieldHostHotel">
@@ -835,8 +834,8 @@ class TPFieldSettings {
         ?>
         <label class="TPFieldHostLabel">
             <span>
-                <?php _ex('tp_admin_page_settings_tab_localization_field_host_label',
-                    '(Host(Flights))', TPOPlUGIN_TEXTDOMAIN); ?>
+                <?php _ex('Host(Flights)',
+                    'tp_admin_page_settings_tab_localization_field_host_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][host]"
                     class="TP-Zelect TPFieldHost"
@@ -861,61 +860,61 @@ class TPFieldSettings {
         ?>
         <label>
             <span>
-                <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_label',
-                    '(Origin)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                <?php _ex('Origin',
+                    'tp_admin_page_settings_tab_localization_title_case_origin_label', TPOPlUGIN_TEXTDOMAIN ); ?>
             </span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][title_case][origin]" class="TP-Zelect">
                 <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "name" ); ?> value="name">
                     <?php //_e('Default', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "ro" ); ?> value="ro">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label',
-                        '(Genitive)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Genitive',
+                        'tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "da" ); ?> value="da">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_value_da_label',
-                        '(Dative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Dative',
+                        'tp_admin_page_settings_tab_localization_title_case_origin_value_da_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "vi" ); ?> value="vi">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label',
-                        '(Accusative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Accusative',
+                        'tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "tv" ); ?> value="tv">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label',
-                        '(Ablative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Ablative',
+                        'tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "pr" ); ?> value="pr">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label',
-                        '(Prepositional)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Prepositional',
+                        'tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
             </select>
         </label>
         <label>
-            <span><?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_label',
-                    'Destination', TPOPlUGIN_TEXTDOMAIN ); ?></span>
+            <span><?php _ex('Destination',
+                    'tp_admin_page_settings_tab_localization_title_case_destination_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][title_case][destination]" class="TP-Zelect">
                 <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "name" ); ?> value="name">
                     <?php //_e('Default', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "ro" ); ?> value="ro">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label',
-                        '(Genitive)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Genitive',
+                        'tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "da" ); ?> value="da">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_value_da_label',
-                        '(Dative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Dative',
+                        'tp_admin_page_settings_tab_localization_title_case_destination_value_da_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "vi" ); ?> value="vi">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label',
-                        '(Accusative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Accusative',
+                        'tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "tv" ); ?> value="tv">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label',
-                        '(Ablative)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Ablative',
+                        'tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "pr" ); ?> value="pr">
-                    <?php _ex('tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label',
-                        '(Prepositional)', TPOPlUGIN_TEXTDOMAIN ); ?>
+                    <?php _ex('Prepositional',
+                        'tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
             </select>
         </label>

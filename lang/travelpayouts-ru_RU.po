@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-23 12:17+0200\n"
+"POT-Creation-Date: 2017-11-23 13:29+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -483,7 +483,8 @@ msgstr "Привет! Плагин Travelpayouts почти готов к раб
 msgctxt "tp_plugin_loaded_admin_notice_paragraph_2"
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr ""
-"Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических услуг. "
+"Введите данные вашего аккаунта в Travelpayouts и начните зарабатывать на продаже туристических "
+"услуг. "
 
 #: app/includes/TPLoaderScripts.php:396
 msgctxt "tp_head_script_admin_var_hotel_widget_label"
@@ -2068,8 +2069,8 @@ msgid ""
 "Press to insert a button link into the notification. It will have the same look as search button in "
 "the table theme chosen"
 msgstr ""
-"Вставка кнопки в предупреждение. Кнопка будет иметь те же стили, что и кнопка поиска в выбранной теме "
-"таблиц."
+"Вставка кнопки в предупреждение. Кнопка будет иметь те же стили, что и кнопка поиска в выбранной "
+"теме таблиц."
 
 #: app/includes/common/TPTinyMCE.php:60
 msgctxt "tp tinymce button shortcode attr title value"
@@ -2494,9 +2495,9 @@ msgid ""
 "The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you "
 "have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll."
 msgstr ""
-"Таблицы не растягиваются на всю ширину контент зоны (max-width не равно 100%). При уменьшении ширины "
-"контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - таблица \"впишется"
-"\" в новый размер, но с появлением горизонтального скролла."
+"Таблицы не растягиваются на всю ширину контент зоны (max-width не равно 100%). При уменьшении "
+"ширины контент зоны (например, на мобильных устройствах, если ваша WP тема адаптивна), - таблица "
+"\"впишется\" в новый размер, но с появлением горизонтального скролла."
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:362
 msgctxt "tp_admin_page_flights_tab_tickets_style_btn_default_style"
@@ -2665,11 +2666,11 @@ msgstr "При получении пустого ответа"
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1329
 msgctxt "tp_admin_page_flights_tab_other_settings_field_label_empty_table_help"
 msgid ""
-"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you can "
-"set what users will see in such cases"
+"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
+"can set what users will see in such cases"
 msgstr ""
-"Возможна ситуация, когда по вашему запросу в кеше не будет релевантных данных. Здесь можно настроить "
-"поведение таблиц в таком случае"
+"Возможна ситуация, когда по вашему запросу в кеше не будет релевантных данных. Здесь можно "
+"настроить поведение таблиц в таком случае"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1222
 msgctxt "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label"
@@ -2866,436 +2867,436 @@ msgid "Selected"
 msgstr "Выбранные"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:31
-msgctxt "(Token)"
-msgid "tp_admin_page_settings_tab_account_field_token_label"
+msgctxt "tp_admin_page_settings_tab_account_field_token_label"
+msgid "Token"
 msgstr "Токен"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:48
-msgctxt "admin settings"
+msgctxt "tp_admin_page_settings_tab_account_field_white_label"
 msgid "White Label (Flights)"
 msgstr "White Label (Авиа)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:60
-msgctxt "(Marker)"
-msgid "tp_admin_page_settings_tab_account_field_marker_label"
+msgctxt "tp_admin_page_settings_tab_account_field_marker_label"
+msgid "Marker"
 msgstr "Маркер"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:68
-msgctxt "White Label (Hotels)"
-msgid "tp_admin_page_settings_tab_account_field_white_label_hotel_label"
-msgstr "White Label (Отели)"
+msgctxt "tp_admin_page_settings_tab_account_field_white_label_hotel_label"
+msgid "White Label (Hotels)"
+msgstr "White Label (Авиа)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:90
-msgctxt "(Error Message)"
-msgid "tp_admin_page_settings_tab_config_field_message_error_label"
+msgctxt "tp_admin_page_settings_tab_config_field_message_error_label"
+msgid "Error Message"
 msgstr "При ошибке в API вместо таблиц выводить"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:120
-msgctxt "Action after click (Flights)"
-msgid "tp_admin_page_settings_tab_config_field_after_url_label"
-msgstr "После клика по кнопке Найти (Авиа)"
+msgctxt "tp_admin_page_settings_tab_config_field_after_url_label"
+msgid "Action after click (Flights)"
+msgstr "После клика по кнопке Найти"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:127
-msgctxt "(Show Search Form)"
-msgid "tp_admin_page_settings_tab_config_field_after_url_value_0_label"
+msgctxt "tp_admin_page_settings_tab_config_field_after_url_value_0_label"
+msgid "Show Search Form"
 msgstr "Переходить на заполненные формы"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:135
-msgctxt "(Show Search Results)"
-msgid "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
+msgid "Show Search Results"
 msgstr "Инициировать новый поиск"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:142
-msgctxt " Action after click (Hotels)"
-msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_label"
-msgstr "После клика по кнопке Найти (Отели)"
+msgctxt "tp_admin_page_settings_tab_config_field_hotel_after_url_label"
+msgid "Action after click (Hotels)"
+msgstr "После клика по кнопке Найти"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:149
-msgctxt "(Show city page)"
-msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label"
+msgctxt "tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label"
+msgid "Show city page"
 msgstr "Переход на страницу города"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:157
-msgctxt "(Show hotel page)"
-msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label"
+msgid "Show hotel page"
 msgstr "Переход на страницу отеля"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:164
-msgctxt "(Distance Units)"
-msgid "tp_admin_page_settings_tab_config_field_distance_label"
+msgctxt "tp_admin_page_settings_tab_config_field_distance_label"
+msgid "Distance Units"
 msgstr "Единица измерения расстояния"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:168
-msgctxt "(km)"
-msgid "tp_admin_page_settings_tab_config_field_distance_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_distance_value_1_label"
+msgid "km"
 msgstr "км"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:172
-msgctxt "miles"
-msgid "tp_admin_page_settings_tab_config_field_distance_value_2_label"
+msgctxt "tp_admin_page_settings_tab_config_field_distance_value_2_label"
+msgid "miles"
 msgstr "мили"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:179
-msgctxt "(Airlines logo size)"
-msgid "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
+msgctxt "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
+msgid "Airlines logo size"
 msgstr "Размер лого Авиакомпании"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:211
-msgctxt "(Buttons in the editor)"
-msgid "tp_admin_page_settings_tab_config_field_media_button_label"
+msgctxt "tp_admin_page_settings_tab_config_field_media_button_label"
+msgid "Buttons in the editor"
 msgstr "Кнопки в редакторе"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:217
-msgctxt "Default"
-msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+msgid "Default"
 msgstr "По умолчанию"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:222
-msgctxt "Compact"
-msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+msgid "Compact"
 msgstr "Компактный"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:227
-msgctxt "Hide"
-msgid "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
+msgctxt "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
+msgid "Hide"
 msgstr "Скрыть"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:246
-msgctxt "Redirect"
-msgid "tp_admin_page_settings_tab_config_field_redirect_label"
+msgctxt "tp_admin_page_settings_tab_config_field_redirect_label"
+msgid "Redirect"
 msgstr "Переходить на результаты через редирект"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:251
-msgctxt ""
-"(In this case the 301 Redirect, which is more preferable for search engines, will be activated. We "
-"recommend that you don’t change this option.)"
-msgid "tp_admin_page_settings_tab_config_field_redirect_help"
+msgctxt "tp_admin_page_settings_tab_config_field_redirect_help"
+msgid ""
+"In this case the 301 Redirect, which is more preferable for search engines, will be activated. We "
+"recommend that you don’t change this option."
 msgstr ""
 "При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять этот "
 "параметр."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:263
-msgctxt "(Open in a New Window)"
-msgid "tp_admin_page_settings_tab_config_field_target_url_label"
+msgctxt "tp_admin_page_settings_tab_config_field_target_url_label"
+msgid "Open in a New Window"
 msgstr "Открывать результаты в новом окне"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:270
-msgctxt "(Add Nofollow Attribute)"
-msgid "tp_admin_page_settings_tab_config_field_nofollow_label"
+msgctxt "tp_admin_page_settings_tab_config_field_nofollow_label"
+msgid "Add Nofollow Attribute"
 msgstr "Добавлять для ссылок атрибут nofollow"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:275
-msgctxt ""
-"(This attribute avoids getting undesirable search results into the search engines index. We recommend "
-"that you don’t change this option.)"
-msgid "tp_admin_page_settings_tab_config_field_nofollow_help"
+msgctxt "tp_admin_page_settings_tab_config_field_nofollow_help"
+msgid ""
+"This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option."
 msgstr ""
-"Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять этот "
-"параметр."
+"Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
+"этот параметр."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:287
-msgctxt "(Turn off statistics and blog updates)"
-msgid "tp_admin_page_settings_tab_config_field_statistics_label"
+msgctxt "tp_admin_page_settings_tab_config_field_statistics_label"
+msgid "Turn off statistics and blog updates"
 msgstr "Отключить обновление статистики и новостей"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:295
-msgctxt "(Use plugin's scripts on all pages)"
-msgid "tp_admin_page_settings_tab_config_field_limit_script_label"
+msgctxt "tp_admin_page_settings_tab_config_field_limit_script_label"
+msgid "Use plugin's scripts on all pages"
 msgstr "Вызывать скрипты на всех страницах"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:308
-msgctxt "(Cache Timeout)"
-msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
+msgctxt "tp_admin_page_settings_tab_config_field_cache_value_label"
+msgid "Cache Timeout"
 msgstr "Частота обновления данных для таблиц (часы)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:317
-msgctxt "(Flights)"
-msgid "tp_admin_page_settings_tab_config_field_cache_value_label_flights"
+msgctxt "tp_admin_page_settings_tab_config_field_cache_value_label_flights"
+msgid "Flights"
 msgstr "Авиа"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:336
-msgctxt "(Hotels)"
-msgid "tp_admin_page_settings_tab_config_field_cache_value_label_hotels"
+msgctxt "tp_admin_page_settings_tab_config_field_cache_value_label_hotels"
+msgid "Hotels"
 msgstr "Отели"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:395
-msgctxt "(Script Include)"
-msgid "tp_admin_page_settings_tab_config_field_script_label"
+msgctxt "tp_admin_page_settings_tab_config_field_script_label"
+msgid "Script Include"
 msgstr "Размещать скрипты плагина"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:400
-msgctxt ""
-"(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
-"to &lt;footer&gt;)"
-msgid "tp_admin_page_settings_tab_config_field_script_help"
+msgctxt "tp_admin_page_settings_tab_config_field_script_help"
+msgid ""
+"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
+"to &lt;footer&gt;"
 msgstr ""
 "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
-"попробуйте переставить в &lt;footer&gt;      "
+"попробуйте переставить в &lt;footer&gt; "
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:410
-msgctxt "(Inside &lt;head&gt; tag )"
-msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
+msgctxt "tp_admin_page_settings_tab_config_field_script_value_0_label"
+msgid "Inside &lt;head&gt; tag"
 msgstr "Внутри тега &lt;head&gt;"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:417
-msgctxt "(Inside &lt;footer&gt; tag )"
-msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
+msgctxt "tp_admin_page_settings_tab_config_field_script_value_1_label"
+msgid "Inside &lt;footer&gt; tag"
 msgstr "Внутри тега &lt;footer&gt;"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:426
-msgctxt "(Date Format)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_label"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_label"
+msgid "Date Format"
 msgstr "Формат даты"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:433
-msgctxt "(Use variables to set the date:)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
+msgid "Use variables to set the date:"
 msgstr "Используйте переменные для настройки даты:"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:435
-msgctxt "(day)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
+msgid "day"
 msgstr "день месяца"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:437
-msgctxt "(month name (small letters))"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
+msgid "month name (small letters)"
 msgstr "название месяца с маленькой буквы"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:439
-msgctxt "(month name (capital letters))"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
+msgid "month name (capital letters)"
 msgstr "название месяца с большой буквы"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:441
-msgctxt "(month number)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
+msgid "month number"
 msgstr "месяц цифрой"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:443
-msgctxt "(month (3 letters))"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
+msgid "month (3 letters)"
 msgstr "месяц 3 буквами"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:445
-msgctxt "(month (3 small letters))"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
+msgid "month (3 small letters)"
 msgstr "месяц 3 буквами (с маленькой буквы)"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:447
-msgctxt "(last 2 digits of the year)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
+msgid "last 2 digits of the year"
 msgstr "2 последние цифры года"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:449
-msgctxt "(year)"
-msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
+msgctxt "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
+msgid "year"
 msgstr "год полностью"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:463
-msgctxt "(Current format)"
-msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
+msgctxt "tp_admin_page_settings_tab_config_field_current_format_date_label"
+msgid "Current format"
 msgstr "Текущий формат"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:471
-msgctxt "(Event tracking. \"Find\" button)"
-msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
+msgctxt "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
+msgid "Event tracking. \"Find\" button"
 msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:476
-msgctxt ""
-"(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to track "
-"the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
-"\"ga('send', 'event', 'category', 'action');\")"
-msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
+msgctxt "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
+msgid ""
+"Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to "
+"track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
+"\"ga('send', 'event', 'category', 'action');\""
 msgstr ""
 "Определите цель в Яндекс Метрике или Google Analytics, вставте в данное поле необходимый метод для "
 "отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
 "\"ga('send', 'event', 'category', 'action');\""
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:495
-msgctxt "(Event tracking. Table is loaded)"
-msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:494
+msgctxt "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
+msgid "Event tracking. Table is loaded"
 msgstr "Отслеживание события. Загрузка таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:500
-msgctxt "(Google Analytics event that will be fired every time a table loads.)"
-msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
+#: app/includes/models/admin/menu/TPFieldSettings.php:499
+msgctxt "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
+msgid "Google Analytics event that will be fired every time a table loads."
 msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:520
-msgctxt "(Import settings)"
-msgid "tp_admin_page_settings_tab_config_btn_import_settings"
+#: app/includes/models/admin/menu/TPFieldSettings.php:519
+msgctxt "tp_admin_page_settings_tab_config_btn_import_settings"
+msgid "Import settings"
 msgstr "Импорт настроек"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:525
-msgctxt "(Browse)"
-msgid "tp_admin_page_settings_tab_config_btn_browse"
+#: app/includes/models/admin/menu/TPFieldSettings.php:524
+msgctxt "tp_admin_page_settings_tab_config_btn_browse"
+msgid "Browse"
 msgstr "Обзор"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:530
-msgctxt "(Import)"
-msgid "tp_admin_page_settings_tab_config_btn_import"
+#: app/includes/models/admin/menu/TPFieldSettings.php:529
+msgctxt "tp_admin_page_settings_tab_config_btn_import"
+msgid "Import"
 msgstr "Импорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:532
-msgctxt "(The file is not selected)"
-msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
+#: app/includes/models/admin/menu/TPFieldSettings.php:531
+msgctxt "tp_admin_page_settings_tab_config_btn_import_msg_error"
+msgid "The file is not selected"
 msgstr "Файл не выбран"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:537
-msgctxt "(Export)"
-msgid "tp_admin_page_settings_tab_config_btn_export_settings"
+#: app/includes/models/admin/menu/TPFieldSettings.php:536
+msgctxt "tp_admin_page_settings_tab_config_btn_export_settings"
+msgid "Export"
 msgstr "Экспорт"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:547
-msgctxt "(Default settings)"
-msgid "tp_admin_page_settings_tab_config_btn_default"
+#: app/includes/models/admin/menu/TPFieldSettings.php:546
+msgctxt "tp_admin_page_settings_tab_config_btn_default"
+msgid "Default settings"
 msgstr "Настройки по умолчанию"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:564
-msgctxt "(Tables and Widgets Language)"
-msgid "tp_admin_page_settings_tab_localization_field_localization_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:563
+msgctxt "tp_admin_page_settings_tab_localization_field_localization_label"
+msgid "Tables and Widgets Language"
 msgstr "Язык таблиц и виджетов"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:568
-msgctxt "(Russian)"
-msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:567
+msgctxt "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
+msgid "Russian"
 msgstr "Русский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:572
-msgctxt "(English)"
-msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:571
+msgctxt "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
+msgid "English"
 msgstr "Английский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:576
-msgctxt "(Thai)"
-msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:575
+msgctxt "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
+msgid "Thai"
 msgstr "Тайский"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:588
-msgctxt "(Currency)"
-msgid "tp_admin_page_settings_tab_localization_field_currency_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:587
+msgctxt "tp_admin_page_settings_tab_localization_field_currency_label"
+msgid "Currency"
 msgstr "Валюта"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:604
+#: app/includes/models/admin/menu/TPFieldSettings.php:603
 msgctxt "Admin page settings tab localization field currency_symbol_display label"
 msgid "Show the currency"
 msgstr "Отображать валюту"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:610
+#: app/includes/models/admin/menu/TPFieldSettings.php:609
 msgctxt "Admin page settings tab localization field currency_symbol_display option 0 label"
 msgid "After the price"
 msgstr "После цены"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:617
+#: app/includes/models/admin/menu/TPFieldSettings.php:616
 msgctxt "Admin page settings tab localization field currency_symbol_display option 1 label"
 msgid "Before the price"
 msgstr "До цены"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:624
+#: app/includes/models/admin/menu/TPFieldSettings.php:623
 msgctxt "Admin page settings tab localization field currency_symbol_display option 2 label"
 msgid "Hide"
 msgstr "Скрыть"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:631
+#: app/includes/models/admin/menu/TPFieldSettings.php:630
 msgctxt "Admin page settings tab localization field currency_symbol_display option 3 label"
 msgid "Сurrency code (after the price)"
 msgstr "Кодом (после цены)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:638
+#: app/includes/models/admin/menu/TPFieldSettings.php:637
 msgctxt "Admin page settings tab localization field currency_symbol_display option 4 label"
 msgid "Currency code (before the price)"
 msgstr "Кодом (до цены)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:655
-msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
-msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:654
+msgctxt "tp_admin_page_settings_tab_localization_field_table_td_label"
+msgid "Fields (you can edit values on your own, e.g. for your own language)"
 msgstr "Названия ячеек (можете менять название по своему усмотрению)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:663
-msgctxt "(Flight Tickets)"
-msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_flight"
+#: app/includes/models/admin/menu/TPFieldSettings.php:662
+msgctxt "tp_admin_page_settings_tab_menu_local_tab_field_local_flight"
+msgid "Flight Tickets"
 msgstr "Авиабилеты"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:672
-msgctxt "(Hotels)"
-msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
+#: app/includes/models/admin/menu/TPFieldSettings.php:671
+msgctxt "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
+msgid "Hotels"
 msgstr "Отели"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:680
+#: app/includes/models/admin/menu/TPFieldSettings.php:679
 msgctxt "admin page settings tab menu local tab field local railway"
 msgid "Railway tables"
 msgstr "ЖД таблицы"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:801
-msgctxt "(Host(Hotels))"
-msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:800
+msgctxt "tp_admin_page_settings_tab_localization_field_host_hotel_label"
+msgid "Host(Hotels)"
 msgstr "Хост(Отели)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:838
-msgctxt "(Host(Flights))"
-msgid "tp_admin_page_settings_tab_localization_field_host_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:837
+msgctxt "tp_admin_page_settings_tab_localization_field_host_label"
+msgid "Host(Flights)"
 msgstr "Хост(Авиа)"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:864
-msgctxt "(Origin)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:863
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_label"
+msgid "Origin"
 msgstr "Откуда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:872
-msgctxt "(Genitive)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:871
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
+msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:876
-msgctxt "(Dative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:875
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
+msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:880
-msgctxt "(Accusative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:879
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
+msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:884
-msgctxt "(Ablative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:883
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
+msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:888
-msgctxt "(Prepositional)"
-msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:887
+msgctxt "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
+msgid "Prepositional"
 msgstr "Предложный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:894
-msgctxt "Destination"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:893
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_label"
+msgid "Destination"
 msgstr "Куда"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:901
-msgctxt "(Genitive)"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:900
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
+msgid "Genitive"
 msgstr "Родительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:905
-msgctxt "(Dative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:904
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
+msgid "Dative"
 msgstr "Дательный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:909
-msgctxt "(Accusative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:908
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
+msgid "Accusative"
 msgstr "Винительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:913
-msgctxt "(Ablative)"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:912
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
+msgid "Ablative"
 msgstr "Творительный"
 
-#: app/includes/models/admin/menu/TPFieldSettings.php:917
-msgctxt "(Prepositional)"
-msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
+#: app/includes/models/admin/menu/TPFieldSettings.php:916
+msgctxt "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
+msgid "Prepositional"
 msgstr "Предложный"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
@@ -4560,8 +4561,8 @@ msgstr "Подстановка ссылок"
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:9
 msgctxt "tp admin page auto links add paragraph_2"
 msgid ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 msgstr ""
 "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы.  "
 "Анкор чувствителен к регистру символов."
@@ -4594,8 +4595,8 @@ msgstr "Событие onclick"
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
 msgctxt "tp admin page auto links add textarea arl event label help"
 msgid ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 msgstr ""
 "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике на "
 "ссылку"
@@ -4638,8 +4639,8 @@ msgstr "Подстановка ссылок"
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
 msgctxt "tp admin page auto links edit paragraph_2"
 msgid ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 msgstr ""
 "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы.  "
 "Анкор чувствителен к регистру символов."
@@ -4672,8 +4673,8 @@ msgstr "Событие onclick"
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
 msgctxt "tp admin page auto links edit textarea arl event label help"
 msgid ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 msgstr ""
 "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике на "
 "ссылку"
@@ -5364,12 +5365,12 @@ msgstr "сохранить изменения"
 #, php-format
 msgctxt "tp_admin_page_settings_paragraph_1"
 msgid ""
-"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. "
-"Check your Marker and Token at - %s  White Label - %s"
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
 "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts - вам "
-"сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White Label - тут "
-"%s"
+"сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White Label - "
+"тут %s"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:45
 msgctxt "tp_admin_page_settings_tab_menu_account"
@@ -5403,7 +5404,8 @@ msgstr "Локализация"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:98
 msgctxt "tp_admin_page_settings_paragraph_2"
-msgid "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
@@ -5713,7 +5715,8 @@ msgstr "на этой странице."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
 msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_2"
-msgid "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 "Нажимая кнопку \"Сохранить\", я соглашаюсь с отправкой данных о активации плагина в Travelpayouts"
 
@@ -5726,9 +5729,9 @@ msgstr "Сохранить изменения"
 #, php-format
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgid ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the commission "
-"advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air ticket and 20$ "
-"from each sold hotel booking (with booking amount that equals to approx. 400$)."
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+"commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
+"ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 msgstr ""
 "- партнерская сеть для заработка на туристическом трафике.  Вы заработаете до 70% с комиссии "
 "рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного авиабилета и "
@@ -5760,8 +5763,8 @@ msgstr ""
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets to "
-"have an unforgettable journey, while we pay you a reward."
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets "
+"to have an unforgettable journey, while we pay you a reward."
 msgstr ""
 "<strong> Посетитель оплачивает услугу.</strong>  Посетители переходят с вашего ресурса и оплачивают "
 "услугу. Мы выплачиваем вам комиссию."
@@ -5773,7 +5776,8 @@ msgid ""
 "and in your plugin. We make scheduled, automated, monthly payouts."
 msgstr ""
 "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в вашем личном кабинете "
-"Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, строго по расписанию."
+"Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, строго по "
+"расписанию."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:36
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_4"
@@ -5844,9 +5848,11 @@ msgstr "Десятки полезных статей из нашей базы з
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_8"
-msgid "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
+msgid ""
+"We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 msgstr ""
-"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с остальным!"
+"Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с "
+"остальным!"
 
 #: app/includes/views/admin/menu/TPWizardTabReg.view.php:2
 msgctxt "tp_admin_page_wizard_tab_menu_registration_paragraph_1"
@@ -6468,6 +6474,324 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
 
+#~ msgctxt "(Token)"
+#~ msgid "tp_admin_page_settings_tab_account_field_token_label"
+#~ msgstr "Токен"
+
+#~ msgctxt "(Marker)"
+#~ msgid "tp_admin_page_settings_tab_account_field_marker_label"
+#~ msgstr "Маркер"
+
+#~ msgctxt "White Label (Hotels)"
+#~ msgid "tp_admin_page_settings_tab_account_field_white_label_hotel_label"
+#~ msgstr "White Label (Отели)"
+
+#~ msgctxt "(Error Message)"
+#~ msgid "tp_admin_page_settings_tab_config_field_message_error_label"
+#~ msgstr "При ошибке в API вместо таблиц выводить"
+
+#~ msgctxt "Action after click (Flights)"
+#~ msgid "tp_admin_page_settings_tab_config_field_after_url_label"
+#~ msgstr "После клика по кнопке Найти (Авиа)"
+
+#~ msgctxt "(Show Search Form)"
+#~ msgid "tp_admin_page_settings_tab_config_field_after_url_value_0_label"
+#~ msgstr "Переходить на заполненные формы"
+
+#~ msgctxt "(Show Search Results)"
+#~ msgid "tp_admin_page_settings_tab_config_field_after_url_value_1_label"
+#~ msgstr "Инициировать новый поиск"
+
+#~ msgctxt " Action after click (Hotels)"
+#~ msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_label"
+#~ msgstr "После клика по кнопке Найти (Отели)"
+
+#~ msgctxt "(Show city page)"
+#~ msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label"
+#~ msgstr "Переход на страницу города"
+
+#~ msgctxt "(Show hotel page)"
+#~ msgid "tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label"
+#~ msgstr "Переход на страницу отеля"
+
+#~ msgctxt "(Distance Units)"
+#~ msgid "tp_admin_page_settings_tab_config_field_distance_label"
+#~ msgstr "Единица измерения расстояния"
+
+#~ msgctxt "(km)"
+#~ msgid "tp_admin_page_settings_tab_config_field_distance_value_1_label"
+#~ msgstr "км"
+
+#~ msgctxt "miles"
+#~ msgid "tp_admin_page_settings_tab_config_field_distance_value_2_label"
+#~ msgstr "мили"
+
+#~ msgctxt "(Airlines logo size)"
+#~ msgid "tp_admin_page_settings_tab_config_field_airline_logo_size_label"
+#~ msgstr "Размер лого Авиакомпании"
+
+#~ msgctxt "(Buttons in the editor)"
+#~ msgid "tp_admin_page_settings_tab_config_field_media_button_label"
+#~ msgstr "Кнопки в редакторе"
+
+#~ msgctxt "Default"
+#~ msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+#~ msgstr "По умолчанию"
+
+#~ msgctxt "Compact"
+#~ msgid "tp_admin_page_settings_tab_config_field_media_button_value_1_label"
+#~ msgstr "Компактный"
+
+#~ msgctxt "Hide"
+#~ msgid "tp_admin_page_settings_tab_config_field_media_button_value_2_label"
+#~ msgstr "Скрыть"
+
+#~ msgctxt "Redirect"
+#~ msgid "tp_admin_page_settings_tab_config_field_redirect_label"
+#~ msgstr "Переходить на результаты через редирект"
+
+#~ msgctxt ""
+#~ "(In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+#~ "We recommend that you don’t change this option.)"
+#~ msgid "tp_admin_page_settings_tab_config_field_redirect_help"
+#~ msgstr ""
+#~ "При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять "
+#~ "этот параметр."
+
+#~ msgctxt "(Open in a New Window)"
+#~ msgid "tp_admin_page_settings_tab_config_field_target_url_label"
+#~ msgstr "Открывать результаты в новом окне"
+
+#~ msgctxt "(Add Nofollow Attribute)"
+#~ msgid "tp_admin_page_settings_tab_config_field_nofollow_label"
+#~ msgstr "Добавлять для ссылок атрибут nofollow"
+
+#~ msgctxt ""
+#~ "(This attribute avoids getting undesirable search results into the search engines index. We "
+#~ "recommend that you don’t change this option.)"
+#~ msgid "tp_admin_page_settings_tab_config_field_nofollow_help"
+#~ msgstr ""
+#~ "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
+#~ "этот параметр."
+
+#~ msgctxt "(Turn off statistics and blog updates)"
+#~ msgid "tp_admin_page_settings_tab_config_field_statistics_label"
+#~ msgstr "Отключить обновление статистики и новостей"
+
+#~ msgctxt "(Use plugin's scripts on all pages)"
+#~ msgid "tp_admin_page_settings_tab_config_field_limit_script_label"
+#~ msgstr "Вызывать скрипты на всех страницах"
+
+#~ msgctxt "(Cache Timeout)"
+#~ msgid "tp_admin_page_settings_tab_config_field_cache_value_label"
+#~ msgstr "Частота обновления данных для таблиц (часы)"
+
+#~ msgctxt "(Flights)"
+#~ msgid "tp_admin_page_settings_tab_config_field_cache_value_label_flights"
+#~ msgstr "Авиа"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_settings_tab_config_field_cache_value_label_hotels"
+#~ msgstr "Отели"
+
+#~ msgctxt "(Script Include)"
+#~ msgid "tp_admin_page_settings_tab_config_field_script_label"
+#~ msgstr "Размещать скрипты плагина"
+
+#~ msgctxt ""
+#~ "(Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+#~ "switching to &lt;footer&gt;)"
+#~ msgid "tp_admin_page_settings_tab_config_field_script_help"
+#~ msgstr ""
+#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
+#~ "попробуйте переставить в &lt;footer&gt;      "
+
+#~ msgctxt "(Inside &lt;head&gt; tag )"
+#~ msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
+#~ msgstr "Внутри тега &lt;head&gt;"
+
+#~ msgctxt "(Inside &lt;footer&gt; tag )"
+#~ msgid "tp_admin_page_settings_tab_config_field_script_value_1_label"
+#~ msgstr "Внутри тега &lt;footer&gt;"
+
+#~ msgctxt "(Date Format)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_label"
+#~ msgstr "Формат даты"
+
+#~ msgctxt "(Use variables to set the date:)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_1"
+#~ msgstr "Используйте переменные для настройки даты:"
+
+#~ msgctxt "(day)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_2"
+#~ msgstr "день месяца"
+
+#~ msgctxt "(month name (small letters))"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_3"
+#~ msgstr "название месяца с маленькой буквы"
+
+#~ msgctxt "(month name (capital letters))"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_4"
+#~ msgstr "название месяца с большой буквы"
+
+#~ msgctxt "(month number)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_5"
+#~ msgstr "месяц цифрой"
+
+#~ msgctxt "(month (3 letters))"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_6"
+#~ msgstr "месяц 3 буквами"
+
+#~ msgctxt "(month (3 small letters))"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_7"
+#~ msgstr "месяц 3 буквами (с маленькой буквы)"
+
+#~ msgctxt "(last 2 digits of the year)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_8"
+#~ msgstr "2 последние цифры года"
+
+#~ msgctxt "(year)"
+#~ msgid "tp_admin_page_settings_tab_config_field_format_date_help_li_9"
+#~ msgstr "год полностью"
+
+#~ msgctxt "(Current format)"
+#~ msgid "tp_admin_page_settings_tab_config_field_current_format_date_label"
+#~ msgstr "Текущий формат"
+
+#~ msgctxt "(Event tracking. \"Find\" button)"
+#~ msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_label"
+#~ msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
+
+#~ msgctxt ""
+#~ "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
+#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
+#~ "or \"ga('send', 'event', 'category', 'action');\")"
+#~ msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
+#~ msgstr ""
+#~ "Определите цель в Яндекс Метрике или Google Analytics, вставте в данное поле необходимый метод "
+#~ "для отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
+#~ "\"ga('send', 'event', 'category', 'action');\""
+
+#~ msgctxt "(Event tracking. Table is loaded)"
+#~ msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
+#~ msgstr "Отслеживание события. Загрузка таблицы"
+
+#~ msgctxt "(Google Analytics event that will be fired every time a table loads.)"
+#~ msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_help"
+#~ msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
+
+#~ msgctxt "(Import settings)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_import_settings"
+#~ msgstr "Импорт настроек"
+
+#~ msgctxt "(Browse)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_browse"
+#~ msgstr "Обзор"
+
+#~ msgctxt "(Import)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_import"
+#~ msgstr "Импорт"
+
+#~ msgctxt "(The file is not selected)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_import_msg_error"
+#~ msgstr "Файл не выбран"
+
+#~ msgctxt "(Export)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_export_settings"
+#~ msgstr "Экспорт"
+
+#~ msgctxt "(Default settings)"
+#~ msgid "tp_admin_page_settings_tab_config_btn_default"
+#~ msgstr "Настройки по умолчанию"
+
+#~ msgctxt "(Tables and Widgets Language)"
+#~ msgid "tp_admin_page_settings_tab_localization_field_localization_label"
+#~ msgstr "Язык таблиц и виджетов"
+
+#~ msgctxt "(Russian)"
+#~ msgid "tp_admin_page_settings_tab_localization_field_localization_value_1_label"
+#~ msgstr "Русский"
+
+#~ msgctxt "(English)"
+#~ msgid "tp_admin_page_settings_tab_localization_field_localization_value_2_label"
+#~ msgstr "Английский"
+
+#~ msgctxt "(Thai)"
+#~ msgid "tp_admin_page_settings_tab_localization_field_localization_value_3_label"
+#~ msgstr "Тайский"
+
+#~ msgctxt "(Currency)"
+#~ msgid "tp_admin_page_settings_tab_localization_field_currency_label"
+#~ msgstr "Валюта"
+
+#~ msgctxt "(Fields (you can edit values on your own, e.g. for your own language))"
+#~ msgid "tp_admin_page_settings_tab_localization_field_table_td_label"
+#~ msgstr "Названия ячеек (можете менять название по своему усмотрению)"
+
+#~ msgctxt "(Flight Tickets)"
+#~ msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_flight"
+#~ msgstr "Авиабилеты"
+
+#~ msgctxt "(Hotels)"
+#~ msgid "tp_admin_page_settings_tab_menu_local_tab_field_local_hotel"
+#~ msgstr "Отели"
+
+#~ msgctxt "(Host(Hotels))"
+#~ msgid "tp_admin_page_settings_tab_localization_field_host_hotel_label"
+#~ msgstr "Хост(Отели)"
+
+#~ msgctxt "(Host(Flights))"
+#~ msgid "tp_admin_page_settings_tab_localization_field_host_label"
+#~ msgstr "Хост(Авиа)"
+
+#~ msgctxt "(Origin)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_label"
+#~ msgstr "Откуда"
+
+#~ msgctxt "(Genitive)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label"
+#~ msgstr "Родительный"
+
+#~ msgctxt "(Dative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_da_label"
+#~ msgstr "Дательный"
+
+#~ msgctxt "(Accusative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label"
+#~ msgstr "Винительный"
+
+#~ msgctxt "(Ablative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label"
+#~ msgstr "Творительный"
+
+#~ msgctxt "(Prepositional)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label"
+#~ msgstr "Предложный"
+
+#~ msgctxt "Destination"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_label"
+#~ msgstr "Куда"
+
+#~ msgctxt "(Genitive)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label"
+#~ msgstr "Родительный"
+
+#~ msgctxt "(Dative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_da_label"
+#~ msgstr "Дательный"
+
+#~ msgctxt "(Accusative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label"
+#~ msgstr "Винительный"
+
+#~ msgctxt "(Ablative)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label"
+#~ msgstr "Творительный"
+
+#~ msgctxt "(Prepositional)"
+#~ msgid "tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label"
+#~ msgstr "Предложный"
+
 #~ msgctxt "(Title)"
 #~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label"
 #~ msgstr "Заголовок"
@@ -6480,8 +6804,8 @@ msgstr "Вид %s не найден"
 #~ "(Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to)"
 #~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
 #~ msgstr ""
-#~ "Используйте переменную {location} для подстановки города, {priceAvgMin} - цена от, {priceAvgMax} - "
-#~ "цена до"
+#~ "Используйте переменную {location} для подстановки города, {priceAvgMin} - цена от, {priceAvgMax} "
+#~ "- цена до"
 
 #~ msgctxt "(Use {location} variable for city autoset, {stars} - number of stars)"
 #~ msgid "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3"
@@ -6656,8 +6980,9 @@ msgstr "Вид %s не найден"
 #~ msgstr "Разрешить горизонтальный скролл"
 
 #~ msgctxt ""
-#~ "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you "
-#~ "have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.)"
+#~ "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
+#~ "you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
+#~ "scroll.)"
 #~ msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label_help"
 #~ msgstr ""
 #~ "Таблицы не растягиваются на всю ширину контент зоны (max-width не равно 100%). При уменьшении "
@@ -6765,8 +7090,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Дополнительный маркер"
 
 #~ msgctxt ""
-#~ "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
-#~ "can set what users will see in such cases)"
+#~ "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
+#~ "you can set what users will see in such cases)"
 #~ msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_help"
 #~ msgstr ""
 #~ "Возможна ситуация, когда по вашему запросу в кеше не будет релевантных данных. Здесь можно "
@@ -7053,20 +7378,20 @@ msgstr "Вид %s не найден"
 #~ "поиску билетов из {origin} {destination}\"]"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets from {origin} to {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets from {origin} to {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets from {origin} to {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets from {origin} to {destination}\"]"
 
 #~ msgctxt ""
 #~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 #~ "\"Найти билеты {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title=\"Найти "
-#~ "билеты из {origin} - {destination}\"]"
+#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
+#~ "\"Найти билеты из {origin} - {destination}\"]"
 
 #~ msgctxt "(Hotels {location}: {selection_name})"
 #~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
@@ -7940,8 +8265,8 @@ msgstr "Вид %s не найден"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 #~ msgstr ""
 #~ " - партнерская сеть для заработка на туристическом трафике.  Вы заработаете до 70% с комиссии "
-#~ "рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного авиабилета и "
-#~ "20$ с брони гостиницы (при сумме брони около $400)."
+#~ "рекламодателя за каждую продажу.  В среднем доход партнера составляет 7$ с купленного авиабилета "
+#~ "и 20$ с брони гостиницы (при сумме брони около $400)."
 
 #~ msgctxt "admin page wizard tab menu content paragraph_2"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_2"
@@ -7962,15 +8287,15 @@ msgstr "Вид %s не найден"
 #~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 #~ msgstr ""
-#~ "<strong>Посетитель оплачивает услугу.</strong> Посетители переходят с вашего ресурса и оплачивают "
-#~ "услугу. Мы выплачиваем вам комиссию."
+#~ "<strong>Посетитель оплачивает услугу.</strong> Посетители переходят с вашего ресурса и "
+#~ "оплачивают услугу. Мы выплачиваем вам комиссию."
 
 #~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 #~ msgstr ""
-#~ "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в вашем личном кабинете "
-#~ "Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, строго по "
-#~ "расписанию."
+#~ "<strong> Получите вашу прибыль. </strong> Информация о доходе отображается в вашем личном "
+#~ "кабинете Travelpayouts и в плагине. Выплата прибыли происходит автоматически раз в месяц, строго "
+#~ "по расписанию."
 
 #~ msgctxt "admin page wizard tab menu content paragraph_4"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
@@ -7992,7 +8317,8 @@ msgstr "Вид %s не найден"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
 #~ msgstr "Поисковые формы;"
 
-#~ msgctxt "admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
+#~ msgctxt ""
+#~ "admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 #~ msgstr "Карту дешевых авиаперелетов, отельную карту"
 
@@ -8030,7 +8356,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Десятки полезных статей из нашей базы знаний доступны тут"
 
 #~ msgctxt ""
-#~ "(We wish success to all your endeavors! Do the things you love and we will take care of the rest!)"
+#~ "(We wish success to all your endeavors! Do the things you love and we will take care of the "
+#~ "rest!)"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 #~ msgstr ""
 #~ "Наша команда желает успехов вашим начинаниям! Занимайтесь любимым делом, а мы поможем вам с "
@@ -8060,8 +8387,8 @@ msgstr "Вид %s не найден"
 #~ msgctxt "admin page wizard title description"
 #~ msgid "tp_admin_page_wizard_title_description"
 #~ msgstr ""
-#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут вашим "
-#~ "посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
+#~ "Данный плагин позволяет добавить на ваш сайт удобные и полезные инструменты, которые помогут "
+#~ "вашим посетителям найти самые дешевые билеты и отели, а вам – заработать на этом."
 
 #~ msgctxt "admin page wizard tab menu account"
 #~ msgid "tp_admin_page_wizard_tab_menu_account"
@@ -8288,9 +8615,9 @@ msgstr "Вид %s не найден"
 #~ "account. Check your Marker and Token at - %s  White Label - %s)"
 #~ msgid "tp_admin_page_settings_paragraph_1"
 #~ msgstr ""
-#~ "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts - вам "
-#~ "сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White Label - "
-#~ "тут %s"
+#~ "Введите ниже данные из вашего кабинета на сайте %s . Если у вас нет аккаунта в Travelpayouts - "
+#~ "вам сперва необходимо зарегистрироваться. Маркер и токен можно посмотреть здесь  - %s  White "
+#~ "Label - тут %s"
 
 #~ msgctxt "(Account)"
 #~ msgid "tp_admin_page_settings_tab_menu_account"
@@ -8364,7 +8691,8 @@ msgstr "Вид %s не найден"
 
 #~ msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
 #~ msgid "tp_admin_page_edit_search_forms_field_code_form_help"
-#~ msgstr "Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код для вставки\""
+#~ msgstr ""
+#~ "Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код для вставки\""
 
 #~ msgctxt "(Default City of Departure)"
 #~ msgid "tp_admin_page_edit_search_forms_field_from_label"
@@ -8383,8 +8711,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Шорткод"
 
 #~ msgctxt ""
-#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away )"
+#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away )"
 #~ msgid "tp_admin_page_edit_search_forms_paragraph_4"
 #~ msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
 
@@ -8434,7 +8762,8 @@ msgstr "Вид %s не найден"
 
 #~ msgctxt "(Make sure you have unchecked the \"Short Code\" and \"Iframe Code\" boxes)"
 #~ msgid "tp_admin_page_add_search_forms_field_code_form_help"
-#~ msgstr "Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код для вставки\""
+#~ msgstr ""
+#~ "Убедитесь, что вы сняли галочки \"Компактный код для вставки\" и \"Iframe код для вставки\""
 
 #~ msgctxt "(Default City of Departure)"
 #~ msgid "tp_admin_page_add_search_forms_field_from_label"
@@ -8453,8 +8782,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Шорткод"
 
 #~ msgctxt ""
-#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away )"
+#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away )"
 #~ msgid "tp_admin_page_add_search_forms_paragraph_4"
 #~ msgstr "Шорткод генерируется автоматически при сохранении и доступен для вставки в записях"
 
@@ -8801,8 +9130,8 @@ msgstr "Вид %s не найден"
 #~ "Anchors are case-sensitive.)"
 #~ msgid "tp_admin_page_auto_links_edit_paragraph_2"
 #~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы.  "
-#~ "Анкор чувствителен к регистру символов."
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы.  Анкор чувствителен к регистру символов."
 
 #~ msgctxt "(Adding links)"
 #~ msgid "tp_admin_page_auto_links_edit_paragraph_3"
@@ -8825,12 +9154,12 @@ msgstr "Вид %s не найден"
 #~ msgstr "Событие onclick"
 
 #~ msgctxt ""
-#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
-#~ "on a link)"
+#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link)"
 #~ msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
 #~ msgstr ""
-#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике на "
-#~ "ссылку"
+#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике "
+#~ "на ссылку"
 
 #~ msgctxt "(Add \"nofollow\" attribute)"
 #~ msgid "tp_admin_page_auto_links_edit_input_arl_nofollow_label"
@@ -8865,8 +9194,8 @@ msgstr "Вид %s не найден"
 #~ "Anchors are case-sensitive.)"
 #~ msgid "tp_admin_page_auto_links_add_paragraph_2"
 #~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы.  "
-#~ "Анкор чувствителен к регистру символов."
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы.  Анкор чувствителен к регистру символов."
 
 #~ msgctxt "(Adding links)"
 #~ msgid "tp_admin_page_auto_links_add_paragraph_3"
@@ -8889,12 +9218,12 @@ msgstr "Вид %s не найден"
 #~ msgstr "Событие onclick"
 
 #~ msgctxt ""
-#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
-#~ "on a link)"
+#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link)"
 #~ msgid "tp_admin_page_auto_links_add_textarea_arl_event_label_help"
 #~ msgstr ""
-#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике на "
-#~ "ссылку"
+#~ "Можете добавить события Google Analytics или Yandex Metrika, которые будут вызываться при клике "
+#~ "на ссылку"
 
 #~ msgctxt "(Add \"nofollow\" attribute)"
 #~ msgid "tp_admin_page_auto_links_add_input_arl_nofollow_label"
@@ -8981,8 +9310,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "К поиску билетов {origin} {destination}"
 
 #~ msgctxt ""
-#~ "(Press to insert a button link into the notification. It will have the same look as search button "
-#~ "in the table theme chosen)"
+#~ "(Press to insert a button link into the notification. It will have the same look as search "
+#~ "button in the table theme chosen)"
 #~ msgid "tp_tinymce_button_shortcode_label"
 #~ msgstr ""
 #~ "Вставка кнопки в предупреждение. Кнопка будет иметь те же стили, что и кнопка поиска в выбранной "
@@ -10204,12 +10533,12 @@ msgstr "Вид %s не найден"
 #~ msgstr "Используйте переменные \"origin\", \"destination\" для автоматической подстановки города"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"]"
 
 #~ msgctxt ""
 #~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
@@ -10236,12 +10565,12 @@ msgstr "Вид %s не найден"
 #~ "\"Найти билеты {origin} - {destination}\"]"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"]"
 
 #~ msgctxt ""
 #~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
@@ -10278,15 +10607,6 @@ msgstr "Вид %s не найден"
 #~ msgid "Widget and Tables Language"
 #~ msgstr "Язык таблиц и виджетов"
 
-#~ msgid "Russian"
-#~ msgstr "Русский"
-
-#~ msgid "English"
-#~ msgstr "Английский"
-
-#~ msgid "Currency"
-#~ msgstr "Валюта"
-
 #~ msgctxt "insert link date"
 #~ msgid "today"
 #~ msgstr "сегодня"
@@ -10306,51 +10626,9 @@ msgstr "Вид %s не найден"
 #~ msgid "Flights + Hotels"
 #~ msgstr "Авиа + Отельная"
 
-#~ msgid "Tables and Widgets Language"
-#~ msgstr "Язык таблиц и виджетов"
-
-#~ msgid "Thai"
-#~ msgstr "Тайский"
-
-#~ msgid "Fields (you can edit values on your own, e.g. for your own language)"
-#~ msgstr "Названия ячеек (можете менять название по своему усмотрению)"
-
 #~ msgctxt "page_settings tab local"
 #~ msgid "Host"
 #~ msgstr "Хост"
-
-#~ msgid "Genitive"
-#~ msgstr "Родительный"
-
-#~ msgid "Dative"
-#~ msgstr "Дательный"
-
-#~ msgid "Accusative"
-#~ msgstr "Винительный"
-
-#~ msgid "Ablative"
-#~ msgstr "Творительный"
-
-#~ msgid "Prepositional"
-#~ msgstr "Предложный"
-
-#~ msgid "Error Message"
-#~ msgstr "При ошибке в API вместо таблиц выводить"
-
-#~ msgid "Action after click"
-#~ msgstr "После клика по кнопке Найти"
-
-#~ msgid "Show Search Results"
-#~ msgstr "Инициировать новый поиск"
-
-#~ msgid "miles"
-#~ msgstr "мили"
-
-#~ msgid "Airlines logo size"
-#~ msgstr "Размер лого Авиакомпании"
-
-#~ msgid "Buttons in the editor"
-#~ msgstr "Кнопки в редакторе"
 
 #~ msgctxt "config_media_btn_option"
 #~ msgid "Compact"
@@ -10360,123 +10638,11 @@ msgstr "Вид %s не найден"
 #~ msgid "Hide"
 #~ msgstr "Скрыть"
 
-#~ msgctxt "settings"
-#~ msgid "Redirect"
-#~ msgstr "Переходить на результаты через редирект"
-
-#~ msgid ""
-#~ "In this case the 301 Redirect, which is more preferable for search engines, will be activated. We "
-#~ "recommend that you don’t change this option."
-#~ msgstr ""
-#~ "При переходе отдается код 301, что хорошо воспринимается поисковиками. Рекомендуем не менять этот "
-#~ "параметр."
-
-#~ msgid "Open in a New Window"
-#~ msgstr "Открывать результаты в новом окне"
-
-#~ msgid " Add Nofollow Attribute"
-#~ msgstr "Добавлять для ссылок атрибут nofollow"
-
-#~ msgid ""
-#~ "This attribute avoids getting undesirable search results into the search engines index. We "
-#~ "recommend that you don’t change this option."
-#~ msgstr ""
-#~ "Атрибут помогает избежать нежелательных результатов в индексе поисковиков. Рекомендуем не менять "
-#~ "этот параметр."
-
-#~ msgid " Turn off statistics and blog updates"
-#~ msgstr "Отключить обновление статистики и новостей"
-
-#~ msgid "Default settings"
-#~ msgstr "Настройки по умолчанию"
-
-#~ msgid "Cache Timeout"
-#~ msgstr "Частота обновления данных для таблиц"
-
 #~ msgid "Day"
 #~ msgstr "День"
 
 #~ msgid "Hour"
 #~ msgstr "Час"
-
-#~ msgid "Script Include"
-#~ msgstr "Размещать скрипты плагина"
-
-#~ msgid ""
-#~ "Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
-#~ "to &lt;footer&gt;"
-#~ msgstr ""
-#~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
-#~ "попробуйте переставить в &lt;footer&gt;                                "
-
-#~ msgid "Inside &lt;head&gt; tag "
-#~ msgstr "Внутри тега &lt;head&gt;"
-
-#~ msgid "Inside &lt;footer&gt; tag "
-#~ msgstr "Внутри тега &lt;footer&gt;"
-
-#~ msgid "Date Format"
-#~ msgstr "Формат даты"
-
-#~ msgid "Use variables to set the date:"
-#~ msgstr "Используйте переменные для настройки даты:"
-
-#~ msgid "month name (small letters)"
-#~ msgstr "название месяца с маленькой буквы"
-
-#~ msgid "month name (capital letters)"
-#~ msgstr "название месяца с большой буквы"
-
-#~ msgid "month (3 letters)"
-#~ msgstr "месяц 3 буквами"
-
-#~ msgid "month (3 small letters)"
-#~ msgstr "месяц 3 буквами (с маленькой буквы)"
-
-#~ msgid "last 2 digits of the year"
-#~ msgstr "2 последние цифры года"
-
-#~ msgid "year"
-#~ msgstr "год полностью"
-
-#~ msgid "Current format"
-#~ msgstr "Текущий формат"
-
-#~ msgid "Event tracking. \"Find\" button"
-#~ msgstr "Отслеживание события. Нажатия кнопки \"Найти\""
-
-#~ msgid ""
-#~ "Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
-#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
-#~ "\"ga('send', 'event', 'category', 'action');\""
-#~ msgstr ""
-#~ "Определите цель в Яндекс Метрике или Google Analytics, вставте в данное поле необходимый метод для "
-#~ "отслеживания достижения цели. Например, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" или "
-#~ "\"ga('send', 'event', 'category', 'action');\""
-
-#~ msgid "Event tracking. Table is loaded"
-#~ msgstr "Отслеживание события. Загрузка таблицы"
-
-#~ msgid "Google Analytics event that will be fired every time a table loads."
-#~ msgstr "Цель Я.Метрики или Google Analytics, которая будет вызываться при каждой загрузке таблицы."
-
-#~ msgid "Import settings"
-#~ msgstr "Импорт настроек"
-
-#~ msgid "Browse"
-#~ msgstr "Обзор"
-
-#~ msgid "Import"
-#~ msgstr "Импорт"
-
-#~ msgid "The file is not selected"
-#~ msgstr "Файл не выбран"
-
-#~ msgid "Export"
-#~ msgstr "Экспорт"
-
-#~ msgid "Token"
-#~ msgstr "Токен"
 
 #~ msgid "Extra marker"
 #~ msgstr "Дополнительный маркер"
@@ -10544,8 +10710,8 @@ msgstr "Вид %s не найден"
 #~ "Here you can add referral links that you want to be defined to the specified anchor phrase. "
 #~ "Anchors are case-sensitive."
 #~ msgstr ""
-#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные фразы. "
-#~ "Анкор чувствителен к регистру символов."
+#~ "Здесь вы можете добавить реферальные ссылки, которые нужно подставлять на заданные якорные "
+#~ "фразы. Анкор чувствителен к регистру символов."
 
 #~ msgid "Link "
 #~ msgstr "Ссылка"
@@ -10713,7 +10879,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Настроить плагин для начала работы"
 
 #~ msgid "Enter your account details in the %s and start earning money by selling tourism services."
-#~ msgstr "Введите данные вашего аккаунта в  %s  и начните зарабатывать на продаже туристических услуг."
+#~ msgstr ""
+#~ "Введите данные вашего аккаунта в  %s  и начните зарабатывать на продаже туристических услуг."
 
 #, fuzzy
 #~ msgid " White Label - "
@@ -10741,8 +10908,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Введите ниже данные из вашего кабинета на сайте"
 
 #~ msgid ""
-#~ "If you do not have an account in Travelpayouts - you first need to register. Marker and the token "
-#~ "can be seen here - "
+#~ "If you do not have an account in Travelpayouts - you first need to register. Marker and the "
+#~ "token can be seen here - "
 #~ msgstr ""
 #~ " Если у вас нет аккаунта в Travelpayouts - вам сперва необходимо зарегистрироваться.  Маркер и "
 #~ "токен можно посмотреть здесь -"
@@ -10772,8 +10939,8 @@ msgstr "Вид %s не найден"
 #~ msgstr "Частота обновления данных для таблиц"
 
 #~ msgid ""
-#~ "For faster injection test page, select &lt;head&gt;. If pages are loading slowly, try to rearrange "
-#~ "the &lt;footer&gt;"
+#~ "For faster injection test page, select &lt;head&gt;. If pages are loading slowly, try to "
+#~ "rearrange the &lt;footer&gt;"
 #~ msgstr ""
 #~ "Для более быстрой прогрузки страницы выбирайте &lt;head&gt;. Если страницы загружаются медленно, "
 #~ "попробуйте переставить в &lt;footer&gt;"
