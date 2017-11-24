@@ -99,28 +99,28 @@ class TPFieldRailway {
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
                 <option <?php selected(TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
                         value="div">
-					<?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1',
-						'(DIV)', TPOPlUGIN_TEXTDOMAIN); ?>
+					<?php _ex('DIV',
+						'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
                         value="h1">
-					<?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2',
-						'(H1)', TPOPlUGIN_TEXTDOMAIN); ?>
+					<?php _ex('H1',
+						'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
                         value="h2">
-					<?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3',
-						'(H2)', TPOPlUGIN_TEXTDOMAIN); ?>
+					<?php _ex('H2',
+						'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
                         value="h3">
-					<?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4',
-						'(H3)', TPOPlUGIN_TEXTDOMAIN); ?>
+					<?php _ex('H3',
+						'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
                 <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
                         value="h4">
-					<?php _ex('tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5',
-						'(H4)', TPOPlUGIN_TEXTDOMAIN); ?>
+					<?php _ex('H4',
+						'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
             </select>
 

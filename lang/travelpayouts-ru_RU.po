@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-24 16:31+0200\n"
+"POT-Creation-Date: 2017-11-24 17:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -2138,38 +2138,38 @@ msgid "Widget"
 msgstr "Виджет"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:15
-msgctxt "admin bar menu title travelpayouts"
-msgid "tp_admin_bar_menu_travelpayouts_title"
+msgctxt "tp_admin_bar_menu_travelpayouts_title"
+msgid "Travelpayouts"
 msgstr "Travelpayouts"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:20
-msgctxt "admin bar menu title auto links"
-msgid "tp_admin_bar_menu_auto_links_title"
+msgctxt "tp_admin_bar_menu_auto_links_title"
+msgid "Auto-links"
 msgstr "Подстановка ссылок"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:26
-msgctxt "admin bar menu title flight tickets"
-msgid "tp_admin_bar_menu_flight_tickets_title"
+msgctxt "tp_admin_bar_menu_flight_tickets_title"
+msgid "Flight Tickets"
 msgstr "Авиабилеты"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:31
-msgctxt "admin bar menu title widgets"
-msgid "tp_admin_bar_menu_widgets_title"
+msgctxt "tp_admin_bar_menu_widgets_title"
+msgid "Widgets"
 msgstr "Виджеты"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:36
-msgctxt "admin bar menu title search forms"
-msgid "tp_admin_bar_menu_search_forms_title"
+msgctxt "tp_admin_bar_menu_search_forms_title"
+msgid "Search Forms"
 msgstr "Поисковые формы"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:42
-msgctxt "admin bar menu title statistics"
-msgid "tp_admin_bar_menu_statistics_title"
+msgctxt "tp_admin_bar_menu_statistics_title"
+msgid "Statistics"
 msgstr "Статистика"
 
 #: app/includes/controllers/admin/menu/TPAdminBarMenuController.php:48
-msgctxt "admin bar menu title settings"
-msgid "tp_admin_bar_menu_settings_title"
+msgctxt "tp_admin_bar_menu_settings_title"
+msgid "Settings"
 msgstr "Настройки"
 
 #: app/includes/controllers/admin/menu/TPAutoReplacLinksController.php:115
@@ -2526,30 +2526,35 @@ msgstr "Тег заголовка"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
 #: app/includes/models/admin/menu/TPFieldHotels.php:243
+#: app/includes/models/admin/menu/TPFieldRailway.php:102
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgid "DIV"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
 #: app/includes/models/admin/menu/TPFieldHotels.php:248
+#: app/includes/models/admin/menu/TPFieldRailway.php:107
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgid "H1"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 #: app/includes/models/admin/menu/TPFieldHotels.php:253
+#: app/includes/models/admin/menu/TPFieldRailway.php:112
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgid "H2"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
 #: app/includes/models/admin/menu/TPFieldHotels.php:258
+#: app/includes/models/admin/menu/TPFieldRailway.php:117
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgid "H3"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
 #: app/includes/models/admin/menu/TPFieldHotels.php:263
+#: app/includes/models/admin/menu/TPFieldRailway.php:122
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgid "H4"
 msgstr "H4"
@@ -2805,31 +2810,6 @@ msgstr "Используйте переменные {origin}, {destination} дл
 msgctxt "admin page railway tab tables content title tag"
 msgid "Title tag"
 msgstr "Тег заголовка"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:102
-msgctxt "(DIV)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
-msgstr "DIV"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:107
-msgctxt "(H1)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
-msgstr "H1"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:112
-msgctxt "(H2)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
-msgstr "H2"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:117
-msgctxt "(H3)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
-msgstr "H3"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:122
-msgctxt "(H4)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
-msgstr "H4"
 
 #: app/includes/models/admin/menu/TPFieldRailway.php:138
 msgctxt "admin page railway tab tables content paginate limit"
@@ -3730,43 +3710,43 @@ msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
-msgctxt "(Your API token)"
-msgid "tp_admin_page_wizard_field_token_label"
+msgctxt "tp_admin_page_wizard_field_token_label"
+msgid "Your API token"
 msgstr "Ваш API token"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:30
-msgctxt "(Your partner marker)"
-msgid "tp_admin_page_wizard_field_marker_label"
+msgctxt "tp_admin_page_wizard_field_marker_label"
+msgid "Your partner marker"
 msgstr "Ваш партнерский маркер"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:40
-msgctxt "(Select Tools Language and Currency)"
-msgid "tp_admin_page_wizard_field_localization_currency_label"
+msgctxt "tp_admin_page_wizard_field_localization_currency_label"
+msgid "Select Tools Language and Currency"
 msgstr "Выберите язык и валюту инструментов"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:48
-msgctxt "(Widget and Tables Language)"
-msgid "tp_admin_page_wizard_field_localization_label"
+msgctxt "tp_admin_page_wizard_field_localization_label"
+msgid "Widget and Tables Language"
 msgstr "Язык таблиц и виджетов"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:54
-msgctxt "(Russian)"
-msgid "tp_admin_page_wizard_field_localization_value_1_label"
+msgctxt "tp_admin_page_wizard_field_localization_value_1_label"
+msgid "Russian"
 msgstr "Русский"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:58
-msgctxt "(English)"
-msgid "tp_admin_page_wizard_field_localization_value_2_label"
+msgctxt "tp_admin_page_wizard_field_localization_value_2_label"
+msgid "English"
 msgstr "Английский"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:62
-msgctxt "(Thai)"
-msgid "tp_admin_page_wizard_field_localization_value_3_label"
+msgctxt "tp_admin_page_wizard_field_localization_value_3_label"
+msgid "Thai"
 msgstr "Тайский"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:73
-msgctxt "(Currency)"
-msgid "tp_admin_page_wizard_field_currency_label"
+msgctxt "tp_admin_page_wizard_field_currency_label"
+msgid "Currency"
 msgstr "Валюта"
 
 #: app/includes/views/admin/TPModalAdminNotice.view.php:4
@@ -6473,6 +6453,86 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(DIV)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
+#~ msgstr "DIV"
+
+#~ msgctxt "(H1)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
+#~ msgstr "H1"
+
+#~ msgctxt "(H2)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
+#~ msgstr "H2"
+
+#~ msgctxt "(H3)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
+#~ msgstr "H3"
+
+#~ msgctxt "(H4)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
+#~ msgstr "H4"
+
+#~ msgctxt "admin bar menu title travelpayouts"
+#~ msgid "tp_admin_bar_menu_travelpayouts_title"
+#~ msgstr "Travelpayouts"
+
+#~ msgctxt "admin bar menu title auto links"
+#~ msgid "tp_admin_bar_menu_auto_links_title"
+#~ msgstr "Подстановка ссылок"
+
+#~ msgctxt "admin bar menu title flight tickets"
+#~ msgid "tp_admin_bar_menu_flight_tickets_title"
+#~ msgstr "Авиабилеты"
+
+#~ msgctxt "admin bar menu title widgets"
+#~ msgid "tp_admin_bar_menu_widgets_title"
+#~ msgstr "Виджеты"
+
+#~ msgctxt "admin bar menu title search forms"
+#~ msgid "tp_admin_bar_menu_search_forms_title"
+#~ msgstr "Поисковые формы"
+
+#~ msgctxt "admin bar menu title statistics"
+#~ msgid "tp_admin_bar_menu_statistics_title"
+#~ msgstr "Статистика"
+
+#~ msgctxt "admin bar menu title settings"
+#~ msgid "tp_admin_bar_menu_settings_title"
+#~ msgstr "Настройки"
+
+#~ msgctxt "(Your API token)"
+#~ msgid "tp_admin_page_wizard_field_token_label"
+#~ msgstr "Ваш API token"
+
+#~ msgctxt "(Your partner marker)"
+#~ msgid "tp_admin_page_wizard_field_marker_label"
+#~ msgstr "Ваш партнерский маркер"
+
+#~ msgctxt "(Select Tools Language and Currency)"
+#~ msgid "tp_admin_page_wizard_field_localization_currency_label"
+#~ msgstr "Выберите язык и валюту инструментов"
+
+#~ msgctxt "(Widget and Tables Language)"
+#~ msgid "tp_admin_page_wizard_field_localization_label"
+#~ msgstr "Язык таблиц и виджетов"
+
+#~ msgctxt "(Russian)"
+#~ msgid "tp_admin_page_wizard_field_localization_value_1_label"
+#~ msgstr "Русский"
+
+#~ msgctxt "(English)"
+#~ msgid "tp_admin_page_wizard_field_localization_value_2_label"
+#~ msgstr "Английский"
+
+#~ msgctxt "(Thai)"
+#~ msgid "tp_admin_page_wizard_field_localization_value_3_label"
+#~ msgstr "Тайский"
+
+#~ msgctxt "(Currency)"
+#~ msgid "tp_admin_page_wizard_field_currency_label"
+#~ msgstr "Валюта"
 
 #~ msgctxt "(Widget Example)"
 #~ msgid "tp_admin_page_widgets_shortcode_1_link_example"
@@ -10938,18 +10998,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "Limit replacements"
 #~ msgstr "Количество замен "
-
-#~ msgid "Your API token"
-#~ msgstr "Ваш API token"
-
-#~ msgid "Your partner marker"
-#~ msgstr "Ваш партнерский маркер"
-
-#~ msgid "Select Tools Language and Currency"
-#~ msgstr "Выберите язык и валюту инструментов"
-
-#~ msgid "Widget and Tables Language"
-#~ msgstr "Язык таблиц и виджетов"
 
 #~ msgctxt "insert link date"
 #~ msgid "today"
