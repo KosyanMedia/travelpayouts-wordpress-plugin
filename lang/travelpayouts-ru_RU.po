@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-23 13:29+0200\n"
+"POT-Creation-Date: 2017-11-24 16:31+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -3300,433 +3300,433 @@ msgid "Prepositional"
 msgstr "Предложный"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_1_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_1_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:48
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_1_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_1_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:56
-msgctxt "(Direct Flights Only)"
-msgid "tp_admin_page_widgets_shortcode_1_field_direct_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_direct_label"
+msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:62
-msgctxt "(Hide Logo)"
-msgid "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+msgid "Hide Logo"
 msgstr "Скрыть логотип"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:70
-msgctxt "(Size)"
-msgid "tp_admin_page_widgets_shortcode_1_field_size_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_size_label"
+msgid "Size"
 msgstr "Размер"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:97
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_2_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_2_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:106
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_2_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_2_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:117
-msgctxt "(Draggable)"
-msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+msgid "Not draggable"
 msgstr "Запретить перетаскивать"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:124
-msgctxt "(Disable zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+msgid "Disable zoom"
 msgstr "Отключить зуммирование"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:130
-msgctxt "(Scroll Wheel Zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+msgid "Scroll Wheel Zoom"
 msgstr "Увеличение при прокрутке"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:139
-msgctxt "(Pin Size)"
-msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+msgid "Pin Size"
 msgstr "Размер маркера"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:150
-msgctxt "(Zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+msgid "Zoom"
 msgstr "Zoom"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:170
-msgctxt "(Map Style)"
-msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+msgid "Map Style"
 msgstr "Раскрасить карту"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:180
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_color_label"
+msgid "select color"
 msgstr "выбрать цвет"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:191
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+msgid "select color"
 msgstr "выбрать цвет"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:203
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+msgid "select color"
 msgstr "выбрать цвет"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:213
-msgctxt "(Size)"
-msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_size_label"
+msgid "Size"
 msgstr "Размер"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:240
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_3_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_3_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:249
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_3_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_3_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:257
-msgctxt "(City of Departure)"
-msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_origin_label"
+msgid "City of Departure"
 msgstr "Город вылета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:270
-msgctxt "(City of Arrival)"
-msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_destination_label"
+msgid "City of Arrival"
 msgstr "Город прилета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:282
-msgctxt "(Range, days)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+msgid "Range, days"
 msgstr "Период, дни"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:305
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:312
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:330
-msgctxt "(Year)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+msgid "Year"
 msgstr "Год"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:334
-msgctxt "(Current month)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+msgid "Current month"
 msgstr "Текущий месяц"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:373
-msgctxt "(Period)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_label"
+msgid "Period"
 msgstr "Период"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:386
-msgctxt "(Direct Flights Only)"
-msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+msgid "Direct Flights Only"
 msgstr "Только прямые рейсы"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:392
-msgctxt "(One way)"
-msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+msgid "One way"
 msgstr "В одну сторону"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:407
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_4_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_4_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:416
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_4_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_4_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:424
-msgctxt "(City of Departure)"
-msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_origin_label"
+msgid "City of Departure"
 msgstr "Город вылета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:437
-msgctxt "(City of Arrival)"
-msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_destination_label"
+msgid "City of Arrival"
 msgstr "Город прилета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:454
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_color_label"
+msgid "select color"
 msgstr "выбрать цвет"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:464
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:471
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:489
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_5_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_5_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:498
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_5_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_5_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:505
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:512
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:531
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_6_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_6_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:540
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_6_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_6_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:547
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:554
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:567
-msgctxt "(Number of Widgets)"
-msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_count_label"
+msgid "Number of Widgets"
 msgstr "Количество виджетов при вставке в запись"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:591
-msgctxt "1 звезда"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+msgid "1 star"
 msgstr "1 звезда"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:594
-msgctxt "2 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+msgid "2 stars"
 msgstr "2 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:596
-msgctxt "3 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+msgid "3 stars"
 msgstr "3 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:598
-msgctxt "4 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+msgid "4 stars"
 msgstr "4 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:600
-msgctxt "5 звёзд"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+msgid "5 stars"
 msgstr "5 звёзд"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:602
-msgctxt "Дешёвые"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+msgid "Cheap"
 msgstr "Дешёвые"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:604
-msgctxt "Близко к центру"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+msgid "Close to city center"
 msgstr "Близко к центру"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:606
-msgctxt "Отели в центре"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+msgid "Hotels in the center"
 msgstr "Отели в центре"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:608
-msgctxt "Рейтинг"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+msgid "Rating"
 msgstr "Рейтинг"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:610
-msgctxt "Популярные"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+msgid "Popular"
 msgstr "Популярные"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:612
-msgctxt "Дорогие"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+msgid "Expensive"
 msgstr "Дорогие"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:618
-msgctxt "1 star"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+msgid "1 star"
 msgstr "1 star"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:621
-msgctxt "2 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+msgid "2 stars"
 msgstr "2 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:623
-msgctxt "3 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+msgid "3 stars"
 msgstr "3 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:625
-msgctxt "4 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+msgid "4 stars"
 msgstr "4 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:627
-msgctxt "5 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+msgid "5 stars"
 msgstr "5 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:629
-msgctxt "Cheap"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+msgid "Cheap"
 msgstr "Cheap"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:631
-msgctxt "Close to city center"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+msgid "Close to city center"
 msgstr "Close to city center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:633
-msgctxt "Hotels in the center"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+msgid "Hotels in the center"
 msgstr "Hotels in the center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:635
-msgctxt "Rating"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+msgid "Rating"
 msgstr "Rating"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:637
-msgctxt "Popular"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+msgid "Popular"
 msgstr "Popular"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:639
-msgctxt "Expensive"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+msgid "Expensive"
 msgstr "Expensive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:659
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_7_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_7_link_example"
+msgid "Widget Example"
 msgstr "Пример виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:668
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_7_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_7_link_help"
+msgid "Travepayouts Help"
 msgstr "Справка Travelpayouts"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:675
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+msgid "Select selection"
 msgstr "Выберите подборку"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:690
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+msgid "Select selection"
 msgstr "Выберите подборку"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:705
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+msgid "Select selection"
 msgstr "Выберите подборку"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:722
-msgctxt "(Limit)"
-msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_limit_label"
+msgid "Limit"
 msgstr "Лимит"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:740
-msgctxt "(View widget)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_label"
+msgid "View widget"
 msgstr "Вид виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:746
-msgctxt "(Full)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+msgid "Full"
 msgstr "Расширенный"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:751
-msgctxt "(Compact)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+msgid "Compact"
 msgstr "Компактный"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:764
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:771
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:790
-msgctxt "(Widget type)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_label"
+msgid "Widget type"
 msgstr "Вид виджета"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:796
-msgctxt "(Tile)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+msgid "Tile"
 msgstr "Плитка"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:801
-msgctxt "(Slider)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+msgid "Slider"
 msgstr "Слайдер"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:818
-msgctxt "(Filter by airlines)"
-msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
-msgstr "Фильтр по авиакомпаниям"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
+msgid "Filter by airlines"
+msgstr "Фильтр по авиакомпаниям "
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:826
-msgctxt "(Filter by routes)"
-msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+msgid "Filter by routes"
 msgstr "Фильтр по направлениям"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:839
-msgctxt "(Limit)"
-msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_limit_label"
+msgid "Limit"
 msgstr "Лимит"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:858
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+msgid "Responsive"
 msgstr "Резиновая"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:865
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_width_label"
+msgid "Width"
 msgstr "Ширина"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
@@ -6473,6 +6473,350 @@ msgstr "wpplugin@travelpayouts.com"
 msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(Direct Flights Only)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_direct_label"
+#~ msgstr "Только прямые рейсы"
+
+#~ msgctxt "(Hide Logo)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+#~ msgstr "Скрыть логотип"
+
+#~ msgctxt "(Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_size_label"
+#~ msgstr "Размер"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(Draggable)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+#~ msgstr "Запретить перетаскивать"
+
+#~ msgctxt "(Disable zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+#~ msgstr "Отключить зуммирование"
+
+#~ msgctxt "(Scroll Wheel Zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+#~ msgstr "Увеличение при прокрутке"
+
+#~ msgctxt "(Pin Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+#~ msgstr "Размер маркера"
+
+#~ msgctxt "(Zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+#~ msgstr "Zoom"
+
+#~ msgctxt "(Map Style)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+#~ msgstr "Раскрасить карту"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
+#~ msgstr "выбрать цвет"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+#~ msgstr "выбрать цвет"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+#~ msgstr "выбрать цвет"
+
+#~ msgctxt "(Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
+#~ msgstr "Размер"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(City of Departure)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
+#~ msgstr "Город вылета"
+
+#~ msgctxt "(City of Arrival)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
+#~ msgstr "Город прилета"
+
+#~ msgctxt "(Range, days)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+#~ msgstr "Период, дни"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
+#~ msgstr "Ширина"
+
+#~ msgctxt "(Year)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+#~ msgstr "Год"
+
+#~ msgctxt "(Current month)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+#~ msgstr "Текущий месяц"
+
+#~ msgctxt "(Period)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
+#~ msgstr "Период"
+
+#~ msgctxt "(Direct Flights Only)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+#~ msgstr "Только прямые рейсы"
+
+#~ msgctxt "(One way)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+#~ msgstr "В одну сторону"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(City of Departure)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
+#~ msgstr "Город вылета"
+
+#~ msgctxt "(City of Arrival)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
+#~ msgstr "Город прилета"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
+#~ msgstr "выбрать цвет"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
+#~ msgstr "Ширина"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
+#~ msgstr "Ширина"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
+#~ msgstr "Ширина"
+
+#~ msgctxt "(Number of Widgets)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
+#~ msgstr "Количество виджетов при вставке в запись"
+
+#~ msgctxt "1 звезда"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+#~ msgstr "1 звезда"
+
+#~ msgctxt "2 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+#~ msgstr "2 звезды"
+
+#~ msgctxt "3 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+#~ msgstr "3 звезды"
+
+#~ msgctxt "4 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+#~ msgstr "4 звезды"
+
+#~ msgctxt "5 звёзд"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+#~ msgstr "5 звёзд"
+
+#~ msgctxt "Дешёвые"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+#~ msgstr "Дешёвые"
+
+#~ msgctxt "Близко к центру"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+#~ msgstr "Близко к центру"
+
+#~ msgctxt "Отели в центре"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+#~ msgstr "Отели в центре"
+
+#~ msgctxt "Рейтинг"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+#~ msgstr "Рейтинг"
+
+#~ msgctxt "Популярные"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+#~ msgstr "Популярные"
+
+#~ msgctxt "Дорогие"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+#~ msgstr "Дорогие"
+
+#~ msgctxt "1 star"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+#~ msgstr "1 star"
+
+#~ msgctxt "2 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+#~ msgstr "2 stars"
+
+#~ msgctxt "3 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+#~ msgstr "3 stars"
+
+#~ msgctxt "4 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+#~ msgstr "4 stars"
+
+#~ msgctxt "5 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+#~ msgstr "5 stars"
+
+#~ msgctxt "Cheap"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+#~ msgstr "Cheap"
+
+#~ msgctxt "Close to city center"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+#~ msgstr "Close to city center"
+
+#~ msgctxt "Hotels in the center"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+#~ msgstr "Hotels in the center"
+
+#~ msgctxt "Rating"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+#~ msgstr "Rating"
+
+#~ msgctxt "Popular"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+#~ msgstr "Popular"
+
+#~ msgctxt "Expensive"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+#~ msgstr "Expensive"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_link_example"
+#~ msgstr "Пример виджета"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_link_help"
+#~ msgstr "Справка Travelpayouts"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+#~ msgstr "Выберите подборку"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+#~ msgstr "Выберите подборку"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+#~ msgstr "Выберите подборку"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
+#~ msgstr "Лимит"
+
+#~ msgctxt "(View widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
+#~ msgstr "Вид виджета"
+
+#~ msgctxt "(Full)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+#~ msgstr "Расширенный"
+
+#~ msgctxt "(Compact)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+#~ msgstr "Компактный"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
+#~ msgstr "Ширина"
+
+#~ msgctxt "(Widget type)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
+#~ msgstr "Вид виджета"
+
+#~ msgctxt "(Tile)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+#~ msgstr "Плитка"
+
+#~ msgctxt "(Slider)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+#~ msgstr "Слайдер"
+
+#~ msgctxt "(Filter by airlines)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
+#~ msgstr "Фильтр по авиакомпаниям"
+
+#~ msgctxt "(Filter by routes)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+#~ msgstr "Фильтр по направлениям"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
+#~ msgstr "Лимит"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+#~ msgstr "Резиновая"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
+#~ msgstr "Ширина"
 
 #~ msgctxt "(Token)"
 #~ msgid "tp_admin_page_settings_tab_account_field_token_label"
@@ -10658,48 +11002,6 @@ msgstr "Вид %s не найден"
 
 #~ msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 #~ msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
-
-#~ msgid "City of Departure"
-#~ msgstr "Город вылета"
-
-#~ msgid "City of Arrival"
-#~ msgstr "Город прилета"
-
-#~ msgid "select color"
-#~ msgstr "выбрать цвет"
-
-#~ msgid "Number of Widgets"
-#~ msgstr "Количество виджетов при вставке в запись"
-
-#~ msgid "Select selection"
-#~ msgstr "Выберите подборку"
-
-#~ msgid "Period"
-#~ msgstr "Период"
-
-#~ msgid "Draggable"
-#~ msgstr "Возможность перетаскивать"
-
-#~ msgid "Disable zoom"
-#~ msgstr "Отключить зуммирование"
-
-#~ msgid "Scroll Wheel Zoom"
-#~ msgstr "Увеличение при прокрутке"
-
-#~ msgid "Pin Size"
-#~ msgstr "Размер маркера"
-
-#~ msgid "Map Style"
-#~ msgstr "Раскрасить карту"
-
-#~ msgid "Hide Logo"
-#~ msgstr "Скрыть логотип"
-
-#~ msgid "Widget Example"
-#~ msgstr "Пример виджета"
-
-#~ msgid "Travepayouts Help"
-#~ msgstr "Справка Travelpayouts"
 
 #, fuzzy
 #~ msgctxt "(Cheap Flights to destination)"

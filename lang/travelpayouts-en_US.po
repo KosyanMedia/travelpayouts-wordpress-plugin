@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-23 13:29+0200\n"
+"POT-Creation-Date: 2017-11-24 16:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2665,11 +2665,11 @@ msgstr "If empty answer received"
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1329
 msgctxt "tp_admin_page_flights_tab_other_settings_field_label_empty_table_help"
 msgid ""
-"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you can "
-"set what users will see in such cases"
+"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
+"can set what users will see in such cases"
 msgstr ""
-"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you can "
-"set what users will see in such cases"
+"Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
+"can set what users will see in such cases"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:1222
 msgctxt "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label"
@@ -2715,7 +2715,8 @@ msgstr "Use {location} variable for city autoset"
 #: app/includes/models/admin/menu/TPFieldHotels.php:183
 msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_2"
 msgid "Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
-msgstr "Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
+msgstr ""
+"Use {location} variable for city autoset, {priceAvgMin} - price from, {priceAvgMax} - price to"
 
 #: app/includes/models/admin/menu/TPFieldHotels.php:194
 msgctxt "tp_admin_page_hotels_tab_tables_content_shortcode_input_title_label_help_3"
@@ -2985,11 +2986,11 @@ msgstr "Add Nofollow Attribute"
 #: app/includes/models/admin/menu/TPFieldSettings.php:275
 msgctxt "tp_admin_page_settings_tab_config_field_nofollow_help"
 msgid ""
-"This attribute avoids getting undesirable search results into the search engines index. We recommend "
-"that you don’t change this option."
+"This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option."
 msgstr ""
-"This attribute avoids getting undesirable search results into the search engines index. We recommend "
-"that you don’t change this option."
+"This attribute avoids getting undesirable search results into the search engines index. We "
+"recommend that you don’t change this option."
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:287
 msgctxt "tp_admin_page_settings_tab_config_field_statistics_label"
@@ -3024,11 +3025,11 @@ msgstr "Script Include"
 #: app/includes/models/admin/menu/TPFieldSettings.php:400
 msgctxt "tp_admin_page_settings_tab_config_field_script_help"
 msgid ""
-"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching to "
-"&lt;footer&gt;"
+"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
+"to &lt;footer&gt;"
 msgstr ""
-"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching to "
-"&lt;footer&gt;"
+"Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
+"to &lt;footer&gt;"
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:410
 msgctxt "tp_admin_page_settings_tab_config_field_script_value_0_label"
@@ -3103,12 +3104,12 @@ msgstr "Event tracking. \"Find\" button"
 #: app/includes/models/admin/menu/TPFieldSettings.php:476
 msgctxt "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
 msgid ""
-"Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to track "
-"the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
+"Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to "
+"track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
 "\"ga('send', 'event', 'category', 'action');\""
 msgstr ""
-"Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to track "
-"the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
+"Set a goal in Yandex Metrica or Google Analytics and paste in this field the  code you need to "
+"track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
 "\"ga('send', 'event', 'category', 'action');\""
 
 #: app/includes/models/admin/menu/TPFieldSettings.php:494
@@ -3297,433 +3298,433 @@ msgid "Prepositional"
 msgstr "Prepositional"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:39
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_1_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_1_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:48
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_1_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_1_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:56
-msgctxt "(Direct Flights Only)"
-msgid "tp_admin_page_widgets_shortcode_1_field_direct_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_direct_label"
+msgid "Direct Flights Only"
 msgstr "Direct Flights Only"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:62
-msgctxt "(Hide Logo)"
-msgid "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+msgid "Hide Logo"
 msgstr "Hide Logo"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:70
-msgctxt "(Size)"
-msgid "tp_admin_page_widgets_shortcode_1_field_size_label"
+msgctxt "tp_admin_page_widgets_shortcode_1_field_size_label"
+msgid "Size"
 msgstr "Size"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:97
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_2_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_2_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:106
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_2_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_2_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:117
-msgctxt "(Draggable)"
-msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+msgid "Not draggable"
 msgstr "Not draggable"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:124
-msgctxt "(Disable zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+msgid "Disable zoom"
 msgstr "Disable zoom"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:130
-msgctxt "(Scroll Wheel Zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+msgid "Scroll Wheel Zoom"
 msgstr "Scroll Wheel Zoom"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:139
-msgctxt "(Pin Size)"
-msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+msgid "Pin Size"
 msgstr "Pin Size"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:150
-msgctxt "(Zoom)"
-msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+msgid "Zoom"
 msgstr "Zoom"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:170
-msgctxt "(Map Style)"
-msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+msgid "Map Style"
 msgstr "Map Style"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:180
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_color_label"
+msgid "select color"
 msgstr "select color"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:191
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+msgid "select color"
 msgstr "select color"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:203
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+msgid "select color"
 msgstr "select color"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:213
-msgctxt "(Size)"
-msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
+msgctxt "tp_admin_page_widgets_shortcode_2_field_size_label"
+msgid "Size"
 msgstr "Size"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:240
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_3_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_3_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:249
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_3_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_3_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:257
-msgctxt "(City of Departure)"
-msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_origin_label"
+msgid "City of Departure"
 msgstr "City of Departure"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:270
-msgctxt "(City of Arrival)"
-msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_destination_label"
+msgid "City of Arrival"
 msgstr "City of Arrival"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:282
-msgctxt "(Range, days)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+msgid "Range, days"
 msgstr "Range, days"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:305
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:312
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:330
-msgctxt "(Year)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+msgid "Year"
 msgstr "Year"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:334
-msgctxt "(Current month)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+msgid "Current month"
 msgstr "Current month"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:373
-msgctxt "(Period)"
-msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_period_label"
+msgid "Period"
 msgstr "Period"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:386
-msgctxt "(Direct Flights Only)"
-msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+msgid "Direct Flights Only"
 msgstr "Direct Flights Only"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:392
-msgctxt "(One way)"
-msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+msgctxt "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+msgid "One way"
 msgstr "One way"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:407
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_4_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_4_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:416
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_4_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_4_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:424
-msgctxt "(City of Departure)"
-msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_origin_label"
+msgid "City of Departure"
 msgstr "City of Departure"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:437
-msgctxt "(City of Arrival)"
-msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_destination_label"
+msgid "City of Arrival"
 msgstr "City of Arrival"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:454
-msgctxt "(select color)"
-msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_color_label"
+msgid "select color"
 msgstr "select color"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:464
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:471
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_4_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:489
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_5_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_5_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:498
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_5_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_5_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:505
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:512
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_5_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:531
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_6_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_6_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:540
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_6_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_6_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:547
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:554
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:567
-msgctxt "(Number of Widgets)"
-msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
+msgctxt "tp_admin_page_widgets_shortcode_6_field_count_label"
+msgid "Number of Widgets"
 msgstr "Number of Widgets"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:591
-msgctxt "1 звезда"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+msgid "1 star"
 msgstr "1 звезда"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:594
-msgctxt "2 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+msgid "2 stars"
 msgstr "2 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:596
-msgctxt "3 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+msgid "3 stars"
 msgstr "3 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:598
-msgctxt "4 звезды"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+msgid "4 stars"
 msgstr "4 звезды"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:600
-msgctxt "5 звёзд"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+msgid "5 stars"
 msgstr "5 звёзд"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:602
-msgctxt "Дешёвые"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+msgid "Cheap"
 msgstr "Дешёвые"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:604
-msgctxt "Близко к центру"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+msgid "Close to city center"
 msgstr "Близко к центру"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:606
-msgctxt "Отели в центре"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+msgid "Hotels in the center"
 msgstr "Отели в центре"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:608
-msgctxt "Рейтинг"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+msgid "Rating"
 msgstr "Рейтинг"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:610
-msgctxt "Популярные"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+msgid "Popular"
 msgstr "Популярные"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:612
-msgctxt "Дорогие"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+msgid "Expensive"
 msgstr "Дорогие"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:618
-msgctxt "1 star"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+msgid "1 star"
 msgstr "1 star"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:621
-msgctxt "2 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+msgid "2 stars"
 msgstr "2 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:623
-msgctxt "3 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+msgid "3 stars"
 msgstr "3 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:625
-msgctxt "4 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+msgid "4 stars"
 msgstr "4 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:627
-msgctxt "5 stars"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+msgid "5 stars"
 msgstr "5 stars"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:629
-msgctxt "Cheap"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+msgid "Cheap"
 msgstr "Cheap"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:631
-msgctxt "Close to city center"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+msgid "Close to city center"
 msgstr "Close to city center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:633
-msgctxt "Hotels in the center"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+msgid "Hotels in the center"
 msgstr "Hotels in the center"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:635
-msgctxt "Rating"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+msgid "Rating"
 msgstr "Rating"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:637
-msgctxt "Popular"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+msgid "Popular"
 msgstr "Popular"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:639
-msgctxt "Expensive"
-msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+msgid "Expensive"
 msgstr "Expensive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:659
-msgctxt "(Widget Example)"
-msgid "tp_admin_page_widgets_shortcode_7_link_example"
+msgctxt "tp_admin_page_widgets_shortcode_7_link_example"
+msgid "Widget Example"
 msgstr "Widget Example"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:668
-msgctxt "(Travepayouts Help)"
-msgid "tp_admin_page_widgets_shortcode_7_link_help"
+msgctxt "tp_admin_page_widgets_shortcode_7_link_help"
+msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:675
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+msgid "Select selection"
 msgstr "Select selection"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:690
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+msgid "Select selection"
 msgstr "Select selection"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:705
-msgctxt "(Select selection)"
-msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+msgid "Select selection"
 msgstr "Select selection"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:722
-msgctxt "(Limit)"
-msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_limit_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:740
-msgctxt "(View widget)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_label"
+msgid "View widget"
 msgstr "View widget"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:746
-msgctxt "(Full)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+msgid "Full"
 msgstr "Full"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:751
-msgctxt "(Compact)"
-msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+msgid "Compact"
 msgstr "Compact"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:764
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:771
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_7_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:790
-msgctxt "(Widget type)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_label"
+msgid "Widget type"
 msgstr "Widget type"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:796
-msgctxt "(Tile)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+msgid "Tile"
 msgstr "Tile"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:801
-msgctxt "(Slider)"
-msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+msgid "Slider"
 msgstr "Slider"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:818
-msgctxt "(Filter by airlines)"
-msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
+msgid "Filter by airlines"
 msgstr "Filter by airlines"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:826
-msgctxt "(Filter by routes)"
-msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+msgid "Filter by routes"
 msgstr "Filter by routes"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:839
-msgctxt "(Limit)"
-msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_limit_label"
+msgid "Limit"
 msgstr "Limit"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:858
-msgctxt "(Responsive)"
-msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+msgid "Responsive"
 msgstr "Responsive"
 
 #: app/includes/models/admin/menu/TPFieldWidgets.php:865
-msgctxt "(Width)"
-msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
+msgctxt "tp_admin_page_widgets_shortcode_8_field_width_label"
+msgid "Width"
 msgstr "Width"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
@@ -4558,11 +4559,11 @@ msgstr "Auto-links"
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:9
 msgctxt "tp admin page auto links add paragraph_2"
 msgid ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 msgstr ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:15
 msgctxt "tp admin page auto links add paragraph_3"
@@ -4592,11 +4593,11 @@ msgstr "Events onclick"
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:55
 msgctxt "tp admin page auto links add textarea arl event label help"
 msgid ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 msgstr ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksAdd.view.php:74
 msgctxt "tp admin page auto links add input arl nofollow label"
@@ -4636,11 +4637,11 @@ msgstr "Auto-links"
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:9
 msgctxt "tp admin page auto links edit paragraph_2"
 msgid ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 msgstr ""
-"Here you can add referral links that you want to be defined to the specified anchor phrase.  Anchors "
-"are case-sensitive."
+"Here you can add referral links that you want to be defined to the specified anchor phrase.  "
+"Anchors are case-sensitive."
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:15
 msgctxt "tp admin page auto links edit paragraph_3"
@@ -4670,11 +4671,11 @@ msgstr "Events onclick"
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:55
 msgctxt "tp admin page auto links edit textarea arl event label help"
 msgid ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 msgstr ""
-"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on a "
-"link"
+"You can add here custom events (e.g. Google Analytics events) that will be fired after the click on "
+"a link"
 
 #: app/includes/views/admin/menu/TPAutoReplacLinksEdit.view.php:74
 msgctxt "tp admin page auto links edit input arl nofollow label"
@@ -5364,11 +5365,11 @@ msgstr "save changes"
 #, php-format
 msgctxt "tp_admin_page_settings_paragraph_1"
 msgid ""
-"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. "
-"Check your Marker and Token at - %s  White Label - %s"
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 msgstr ""
-"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts account. "
-"Check your Marker and Token at - %s  White Label - %s"
+"Please, enter your %s account data below. Please, register if you don’t have a Travelpayouts "
+"account. Check your Marker and Token at - %s  White Label - %s"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:45
 msgctxt "tp_admin_page_settings_tab_menu_account"
@@ -5402,8 +5403,10 @@ msgstr "Localization"
 
 #: app/includes/views/admin/menu/TPSettings.view.php:98
 msgctxt "tp_admin_page_settings_paragraph_2"
-msgid "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
-msgstr "By pressing the button «Save» you agree to send the plugin’s activation data to Travelpayouts."
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+msgstr ""
+"By pressing the button «Save» you agree to send the plugin’s activation data to Travelpayouts."
 
 #: app/includes/views/admin/menu/TPSettings.view.php:103
 msgctxt "tp_admin_page_settings_btn_save"
@@ -5711,7 +5714,8 @@ msgstr "this link."
 
 #: app/includes/views/admin/menu/TPWizardTabAccount.view.php:16
 msgctxt "tp_admin_page_wizard_tab_menu_account_paragraph_2"
-msgid "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
+msgid ""
+"By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 msgstr ""
 "By pressing the button \"Save\" you agree to send the plugin's activation data to Travelpayouts."
 
@@ -5724,13 +5728,13 @@ msgstr "Save changes"
 #, php-format
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_1"
 msgid ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the commission "
-"advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air ticket and 20$ "
-"from each sold hotel booking (with booking amount that equals to approx. 400$)."
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+"commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
+"ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 msgstr ""
-" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the commission "
-"advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air ticket and 20$ "
-"from each sold hotel booking (with booking amount that equals to approx. 400$)."
+" – Affiliate Network that monetizes your Travel Traffic. You will earn up to 70% from the "
+"commission advertiser gets for each sale. On average, our Affiliate earns 7$ from each sold air "
+"ticket and 20$ from each sold hotel booking (with booking amount that equals to approx. 400$)."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:11
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_2"
@@ -5758,11 +5762,11 @@ msgstr ""
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:26
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 msgid ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets to "
-"have an unforgettable journey, while we pay you a reward."
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets "
+"to have an unforgettable journey, while we pay you a reward."
 msgstr ""
-"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets to "
-"have an unforgettable journey, while we pay you a reward."
+"<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets "
+"to have an unforgettable journey, while we pay you a reward."
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:30
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
@@ -5840,7 +5844,8 @@ msgstr "Dozens of useful articles in Travelpayouts Knowledge Base, always availa
 
 #: app/includes/views/admin/menu/TPWizardTabContent.view.php:96
 msgctxt "tp_admin_page_wizard_tab_menu_content_paragraph_8"
-msgid "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
+msgid ""
+"We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 msgstr ""
 "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
 
@@ -6460,8 +6465,9 @@ msgstr "Add link"
 msgctxt "Travelpayouts – Widgets Widget"
 msgid "Responsive"
 msgstr ""
-"The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e.g. you "
-"have a responsible WP theme) - tables won\\'t affect your design, but will have a horizontal scroll."
+"The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e.g. "
+"you have a responsible WP theme) - tables won\\'t affect your design, but will have a horizontal "
+"scroll."
 
 #: app/includes/widgets/TPWidgetsWidget.php:805
 msgctxt "Travelpayouts – Widgets Widget"
@@ -6553,6 +6559,350 @@ msgctxt "(View %s not found)"
 msgid "tp_base_controler_load_view_error_msg"
 msgstr "View %s not found"
 
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(Direct Flights Only)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_direct_label"
+#~ msgstr "Direct Flights Only"
+
+#~ msgctxt "(Hide Logo)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_hide_logo_label"
+#~ msgstr "Hide Logo"
+
+#~ msgctxt "(Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_1_field_size_label"
+#~ msgstr "Size"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(Draggable)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_draggable_label"
+#~ msgstr "Not draggable"
+
+#~ msgctxt "(Disable zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_disable_zoom_label"
+#~ msgstr "Disable zoom"
+
+#~ msgctxt "(Scroll Wheel Zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_scrollwheel_label"
+#~ msgstr "Scroll Wheel Zoom"
+
+#~ msgctxt "(Pin Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_base_diameter_label"
+#~ msgstr "Pin Size"
+
+#~ msgctxt "(Zoom)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_zoom_label"
+#~ msgstr "Zoom"
+
+#~ msgctxt "(Map Style)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_map_style_label"
+#~ msgstr "Map Style"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_color_label"
+#~ msgstr "select color"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_map_color_label"
+#~ msgstr "select color"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_contrast_color_label"
+#~ msgstr "select color"
+
+#~ msgctxt "(Size)"
+#~ msgid "tp_admin_page_widgets_shortcode_2_field_size_label"
+#~ msgstr "Size"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(City of Departure)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_origin_label"
+#~ msgstr "City of Departure"
+
+#~ msgctxt "(City of Arrival)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_destination_label"
+#~ msgstr "City of Arrival"
+
+#~ msgctxt "(Range, days)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_day_label"
+#~ msgstr "Range, days"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Year)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_value_year"
+#~ msgstr "Year"
+
+#~ msgctxt "(Current month)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
+#~ msgstr "Current month"
+
+#~ msgctxt "(Period)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_period_label"
+#~ msgstr "Period"
+
+#~ msgctxt "(Direct Flights Only)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
+#~ msgstr "Direct Flights Only"
+
+#~ msgctxt "(One way)"
+#~ msgid "tp_admin_page_widgets_shortcode_3_field_one_way_label"
+#~ msgstr "One way"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(City of Departure)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_origin_label"
+#~ msgstr "City of Departure"
+
+#~ msgctxt "(City of Arrival)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_destination_label"
+#~ msgstr "City of Arrival"
+
+#~ msgctxt "(select color)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_color_label"
+#~ msgstr "select color"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_4_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_5_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Number of Widgets)"
+#~ msgid "tp_admin_page_widgets_shortcode_6_field_count_label"
+#~ msgstr "Number of Widgets"
+
+#~ msgctxt "1 звезда"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
+#~ msgstr "1 звезда"
+
+#~ msgctxt "2 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
+#~ msgstr "2 звезды"
+
+#~ msgctxt "3 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
+#~ msgstr "3 звезды"
+
+#~ msgctxt "4 звезды"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
+#~ msgstr "4 звезды"
+
+#~ msgctxt "5 звёзд"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
+#~ msgstr "5 звёзд"
+
+#~ msgctxt "Дешёвые"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
+#~ msgstr "Дешёвые"
+
+#~ msgctxt "Близко к центру"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
+#~ msgstr "Близко к центру"
+
+#~ msgctxt "Отели в центре"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
+#~ msgstr "Отели в центре"
+
+#~ msgctxt "Рейтинг"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
+#~ msgstr "Рейтинг"
+
+#~ msgctxt "Популярные"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
+#~ msgstr "Популярные"
+
+#~ msgctxt "Дорогие"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
+#~ msgstr "Дорогие"
+
+#~ msgctxt "1 star"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
+#~ msgstr "1 star"
+
+#~ msgctxt "2 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
+#~ msgstr "2 stars"
+
+#~ msgctxt "3 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
+#~ msgstr "3 stars"
+
+#~ msgctxt "4 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
+#~ msgstr "4 stars"
+
+#~ msgctxt "5 stars"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
+#~ msgstr "5 stars"
+
+#~ msgctxt "Cheap"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
+#~ msgstr "Cheap"
+
+#~ msgctxt "Close to city center"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
+#~ msgstr "Close to city center"
+
+#~ msgctxt "Hotels in the center"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
+#~ msgstr "Hotels in the center"
+
+#~ msgctxt "Rating"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
+#~ msgstr "Rating"
+
+#~ msgctxt "Popular"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
+#~ msgstr "Popular"
+
+#~ msgctxt "Expensive"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
+#~ msgstr "Expensive"
+
+#~ msgctxt "(Widget Example)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_link_example"
+#~ msgstr "Widget Example"
+
+#~ msgctxt "(Travepayouts Help)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_link_help"
+#~ msgstr "Travepayouts Help"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat1_label"
+#~ msgstr "Select selection"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat2_label"
+#~ msgstr "Select selection"
+
+#~ msgctxt "(Select selection)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_cat3_label"
+#~ msgstr "Select selection"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_limit_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(View widget)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_label"
+#~ msgstr "View widget"
+
+#~ msgctxt "(Full)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_value_full"
+#~ msgstr "Full"
+
+#~ msgctxt "(Compact)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
+#~ msgstr "Compact"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_7_field_width_label"
+#~ msgstr "Width"
+
+#~ msgctxt "(Widget type)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_label"
+#~ msgstr "Widget type"
+
+#~ msgctxt "(Tile)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
+#~ msgstr "Tile"
+
+#~ msgctxt "(Slider)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
+#~ msgstr "Slider"
+
+#~ msgctxt "(Filter by airlines)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
+#~ msgstr "Filter by airlines"
+
+#~ msgctxt "(Filter by routes)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
+#~ msgstr "Filter by routes"
+
+#~ msgctxt "(Limit)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_limit_label"
+#~ msgstr "Limit"
+
+#~ msgctxt "(Responsive)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_responsive_label"
+#~ msgstr "Responsive"
+
+#~ msgctxt "(Width)"
+#~ msgid "tp_admin_page_widgets_shortcode_8_field_width_label"
+#~ msgstr "Width"
+
 #~ msgctxt "(Token)"
 #~ msgid "tp_admin_page_settings_tab_account_field_token_label"
 #~ msgstr "Token"
@@ -6630,12 +6980,12 @@ msgstr "View %s not found"
 #~ msgstr "Redirect"
 
 #~ msgctxt ""
-#~ "(In this case the 301 Redirect, which is more preferable for search engines, will be activated. We "
-#~ "recommend that you don’t change this option.)"
+#~ "(In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+#~ "We recommend that you don’t change this option.)"
 #~ msgid "tp_admin_page_settings_tab_config_field_redirect_help"
 #~ msgstr ""
-#~ "In this case the 301 Redirect, which is more preferable for search engines, will be activated. We "
-#~ "recommend that you don’t change this option."
+#~ "In this case the 301 Redirect, which is more preferable for search engines, will be activated. "
+#~ "We recommend that you don’t change this option."
 
 #~ msgctxt "(Open in a New Window)"
 #~ msgid "tp_admin_page_settings_tab_config_field_target_url_label"
@@ -6682,8 +7032,8 @@ msgstr "View %s not found"
 #~ "switching to &lt;footer&gt;)"
 #~ msgid "tp_admin_page_settings_tab_config_field_script_help"
 #~ msgstr ""
-#~ "Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try switching "
-#~ "to &lt;footer&gt;"
+#~ "Select &lt;head&gt; option to speed up the page loading. In case it still goes slow, try "
+#~ "switching to &lt;footer&gt;"
 
 #~ msgctxt "(Inside &lt;head&gt; tag )"
 #~ msgid "tp_admin_page_settings_tab_config_field_script_value_0_label"
@@ -6743,13 +7093,13 @@ msgstr "View %s not found"
 
 #~ msgctxt ""
 #~ "(Set a goal in Yandex Metrica or Google Analytics and paste in this field the code you need to "
-#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" or "
-#~ "\"ga('send', 'event', 'category', 'action');\")"
+#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal('TARGET_NAME');\" "
+#~ "or \"ga('send', 'event', 'category', 'action');\")"
 #~ msgid "tp_admin_page_settings_tab_config_field_code_ga_ym_help"
 #~ msgstr ""
 #~ "Set a goal in Yandex Metrica or Google Analytics and paste in this field the'code you need to "
-#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal(\\'TARGET_NAME\\');\" "
-#~ "or \"ga(\\'send\\', \\'event\\', \\'category\\', \\'action\\');\""
+#~ "track the event (reaching the goal). In example, \"yaCounterXXXXXX.reachGoal(\\'TARGET_NAME\\');"
+#~ "\" or \"ga(\\'send\\', \\'event\\', \\'category\\', \\'action\\');\""
 
 #~ msgctxt "(Event tracking. Table is loaded)"
 #~ msgid "tp_admin_page_settings_tab_config_field_code_table_ga_ym_label"
@@ -7058,13 +7408,14 @@ msgstr "View %s not found"
 #~ msgstr "Enable Horizontal Scroll"
 
 #~ msgctxt ""
-#~ "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. you "
-#~ "have a responsible WP theme) - tables won't affect your design, but will have a horizontal scroll.)"
+#~ "(The tables' width won't be 100% of your content zone. When you resize your content zone (e.g. "
+#~ "you have a responsible WP theme) - tables won't affect your design, but will have a horizontal "
+#~ "scroll.)"
 #~ msgid "tp_admin_page_flights_tab_tickets_style_input_responsive_label_help"
 #~ msgstr ""
-#~ "The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e.g. "
-#~ "you have a responsible WP theme) - tables won\\'t affect your design, but will have a horizontal "
-#~ "scroll."
+#~ "The tables\\' width won\\'t be 100% of your content zone. When you resize your content zone (e."
+#~ "g. you have a responsible WP theme) - tables won\\'t affect your design, but will have a "
+#~ "horizontal scroll."
 
 #~ msgctxt "(Reset to Default styles)"
 #~ msgid "tp_admin_page_flights_tab_tickets_style_btn_default_style"
@@ -7167,12 +7518,12 @@ msgstr "View %s not found"
 #~ msgstr "SubId"
 
 #~ msgctxt ""
-#~ "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
-#~ "can set what users will see in such cases)"
+#~ "(Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
+#~ "you can set what users will see in such cases)"
 #~ msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_help"
 #~ msgstr ""
-#~ "Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here you "
-#~ "can set what users will see in such cases"
+#~ "Sometimes it happens our cash doesn't contain relevant data to the request you have set. Here "
+#~ "you can set what users will see in such cases"
 
 #~ msgctxt "(Don't show a table)"
 #~ msgid "tp_admin_page_flights_tab_other_settings_field_label_empty_table_type_value_4_label"
@@ -7455,20 +7806,20 @@ msgstr "View %s not found"
 #~ "поиску билетов из {origin} {destination}\"]"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets from {origin} to {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets from {origin} to {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets from {origin} to {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets from {origin} to {destination}\"]"
 
 #~ msgctxt ""
 #~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
 #~ "\"Найти билеты {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_ru_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title=\"Найти "
-#~ "билеты из {origin} - {destination}\"]"
+#~ "К сожалению, сейчас у нас нет данных по перелетам из {origin} {destination}. [button title="
+#~ "\"Найти билеты из {origin} - {destination}\"]"
 
 #~ msgctxt "(Hotels {location}: {selection_name})"
 #~ msgid "tp_plugin_local_en_table_shortcodes_hotels_1_title"
@@ -8364,14 +8715,14 @@ msgstr "View %s not found"
 #~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_2"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_2"
 #~ msgstr ""
-#~ "<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and gets "
-#~ "to have an unforgettable journey, while we pay you a reward."
+#~ "<strong>Visitor pays for the service.</strong>  The client is happy to grab a great deal and "
+#~ "gets to have an unforgettable journey, while we pay you a reward."
 
 #~ msgctxt "admin page wizard tab menu content paragraph_3_list_li_3"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_3_list_li_3"
 #~ msgstr ""
-#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts Dashboard "
-#~ "and in your plugin. We make scheduled, automated, monthly payouts. "
+#~ "<strong>You get profits.</strong>  Your earnings will be displayed in your Travelpayouts "
+#~ "Dashboard and in your plugin. We make scheduled, automated, monthly payouts. "
 
 #~ msgctxt "admin page wizard tab menu content paragraph_4"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_4"
@@ -8391,7 +8742,8 @@ msgstr "View %s not found"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_2"
 #~ msgstr "Search Forms;"
 
-#~ msgctxt "admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
+#~ msgctxt ""
+#~ "admin page wizard tab menu content paragraph_5_list_li_3 (Low cost flights and hotels Map)"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_5_list_li_3"
 #~ msgstr "Low cost flights and hotels Map"
 
@@ -8429,7 +8781,8 @@ msgstr "View %s not found"
 #~ msgstr "Dozens of useful articles in Travelpayouts Knowledge Base, always available at"
 
 #~ msgctxt ""
-#~ "(We wish success to all your endeavors! Do the things you love and we will take care of the rest!)"
+#~ "(We wish success to all your endeavors! Do the things you love and we will take care of the "
+#~ "rest!)"
 #~ msgid "tp_admin_page_wizard_tab_menu_content_paragraph_8"
 #~ msgstr ""
 #~ "We wish success to all your endeavors! Do the things you love and we will take care of the rest!"
@@ -8780,12 +9133,12 @@ msgstr "View %s not found"
 #~ msgstr "Shortcode"
 
 #~ msgctxt ""
-#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away )"
+#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away )"
 #~ msgid "tp_admin_page_edit_search_forms_paragraph_4"
 #~ msgstr ""
-#~ "Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away"
+#~ "Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away"
 
 #~ msgctxt "(cancel)"
 #~ msgid "tp_admin_page_edit_search_forms_btn_cancel"
@@ -8852,12 +9205,12 @@ msgstr "View %s not found"
 #~ msgstr "Shortcode"
 
 #~ msgctxt ""
-#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away )"
+#~ "(Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away )"
 #~ msgid "tp_admin_page_add_search_forms_paragraph_4"
 #~ msgstr ""
-#~ "Shortcode will be automatically generated after you press the Save Changes button. It can also be "
-#~ "placed into your posts right away"
+#~ "Shortcode will be automatically generated after you press the Save Changes button. It can also "
+#~ "be placed into your posts right away"
 
 #~ msgctxt "(cancel)"
 #~ msgid "tp_admin_page_add_search_forms_btn_cancel"
@@ -9224,8 +9577,8 @@ msgstr "View %s not found"
 #~ msgstr "Events onclick"
 
 #~ msgctxt ""
-#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
-#~ "on a link)"
+#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link)"
 #~ msgid "tp_admin_page_auto_links_edit_textarea_arl_event_label_help"
 #~ msgstr ""
 #~ "You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
@@ -9288,8 +9641,8 @@ msgstr "View %s not found"
 #~ msgstr "Events onclick"
 
 #~ msgctxt ""
-#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
-#~ "on a link)"
+#~ "(You can add here custom events (e.g. Google Analytics events) that will be fired after the "
+#~ "click on a link)"
 #~ msgid "tp_admin_page_auto_links_add_textarea_arl_event_label_help"
 #~ msgstr ""
 #~ "You can add here custom events (e.g. Google Analytics events) that will be fired after the click "
@@ -9380,8 +9733,8 @@ msgstr "View %s not found"
 #~ msgstr "Go to tickets search {origin} {destination}"
 
 #~ msgctxt ""
-#~ "(Press to insert a button link into the notification. It will have the same look as search button "
-#~ "in the table theme chosen)"
+#~ "(Press to insert a button link into the notification. It will have the same look as search "
+#~ "button in the table theme chosen)"
 #~ msgid "tp_tinymce_button_shortcode_label"
 #~ msgstr "tp_tinymce_button_shortcode_label"
 
@@ -10590,12 +10943,12 @@ msgstr "View %s not found"
 #~ msgstr "Use \"origin\" and \"destination\" variables to add the city automatically"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_button_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"]"
 
 #~ msgctxt ""
 #~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [link title="
@@ -10622,12 +10975,12 @@ msgstr "View %s not found"
 #~ "\"Найти билеты {origin} - {destination}\"]"
 
 #~ msgctxt ""
-#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"])"
+#~ "(Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"])"
 #~ msgid "tp_plugin_local_en_table_shortcodes_settings_msg"
 #~ msgstr ""
-#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button title="
-#~ "\"Find tickets {origin} - {destination}\"]"
+#~ "Unfortunately we don't have actual data for flights from {origin} to {destination}. [button "
+#~ "title=\"Find tickets {origin} - {destination}\"]"
 
 #~ msgctxt ""
 #~ "(К сожалению, сейчас у нас нет данных по перелетам из {origin} в {destination}. [button title="
