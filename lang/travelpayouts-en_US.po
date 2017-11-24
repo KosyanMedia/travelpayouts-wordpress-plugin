@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-24 17:12+0200\n"
+"POT-Creation-Date: 2017-11-24 17:31+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -2525,30 +2525,35 @@ msgstr "Title tag"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:437
 #: app/includes/models/admin/menu/TPFieldHotels.php:243
+#: app/includes/models/admin/menu/TPFieldRailway.php:102
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
 msgid "DIV"
 msgstr "DIV"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:442
 #: app/includes/models/admin/menu/TPFieldHotels.php:248
+#: app/includes/models/admin/menu/TPFieldRailway.php:107
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
 msgid "H1"
 msgstr "H1"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:447
 #: app/includes/models/admin/menu/TPFieldHotels.php:253
+#: app/includes/models/admin/menu/TPFieldRailway.php:112
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
 msgid "H2"
 msgstr "H2"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:452
 #: app/includes/models/admin/menu/TPFieldHotels.php:258
+#: app/includes/models/admin/menu/TPFieldRailway.php:117
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
 msgid "H3"
 msgstr "H3"
 
 #: app/includes/models/admin/menu/TPFieldFlightTickets.php:457
 #: app/includes/models/admin/menu/TPFieldHotels.php:263
+#: app/includes/models/admin/menu/TPFieldRailway.php:122
 msgctxt "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
 msgid "H4"
 msgstr "H4"
@@ -2803,31 +2808,6 @@ msgstr "Use {origin} and {destination} variables to add the city automatically"
 msgctxt "admin page railway tab tables content title tag"
 msgid "Title tag"
 msgstr "Title tag"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:102
-msgctxt "(DIV)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
-msgstr "DIV"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:107
-msgctxt "(H1)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
-msgstr "H1"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:112
-msgctxt "(H2)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
-msgstr "H2"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:117
-msgctxt "(H3)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
-msgstr "H3"
-
-#: app/includes/models/admin/menu/TPFieldRailway.php:122
-msgctxt "(H4)"
-msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
-msgstr "H4"
 
 #: app/includes/models/admin/menu/TPFieldRailway.php:138
 msgctxt "admin page railway tab tables content paginate limit"
@@ -6490,74 +6470,151 @@ msgid "Current month"
 msgstr ""
 
 #: core/controllers/TPOAdminMenuController.php:24
-msgctxt "(Please, don't delete the information below. It makes helping you easier)"
-msgid "tp_admin_page_link_help_msg_text_1"
+msgctxt "tp_admin_page_link_help_msg_text_1"
+msgid "Please, don't delete the information below. It makes helping you easier"
 msgstr "Please, don't delete the information below. It makes helping you easier"
 
 #: core/controllers/TPOAdminMenuController.php:27
-msgctxt "(domain: )"
-msgid "tp_admin_page_link_help__msg_text_2"
+msgctxt " tp_admin_page_link_help__msg_text_2"
+msgid "domain:"
 msgstr "domain:"
 
 #: core/controllers/TPOAdminMenuController.php:29
-msgctxt "(marker: )"
-msgid "tp_admin_page_link_help__msg_text_3"
+msgctxt "tp_admin_page_link_help__msg_text_3"
+msgid "marker:"
 msgstr "marker:"
 
 #: core/controllers/TPOAdminMenuController.php:31
-msgctxt "(whitelabel: )"
-msgid "tp_admin_page_link_help__msg_text_4"
+msgctxt "tp_admin_page_link_help__msg_text_4"
+msgid "whitelabel:"
 msgstr "whitelabel:"
 
 #: core/controllers/TPOAdminMenuController.php:33
-msgctxt "(WP theme: )"
-msgid "tp_admin_page_link_help__msg_text_5"
+msgctxt "tp_admin_page_link_help__msg_text_5"
+msgid "WP theme:"
 msgstr "WP theme:"
 
 #: core/controllers/TPOAdminMenuController.php:35
-msgctxt "(WP theme URI: )"
-msgid "tp_admin_page_link_help__msg_text_6"
+msgctxt "tp_admin_page_link_help__msg_text_6"
+msgid "WP theme URI:"
 msgstr "WP theme URI:"
 
 #: core/controllers/TPOAdminMenuController.php:37
-msgctxt "(WP theme version: )"
-msgid "tp_admin_page_link_help__msg_text_7"
+msgctxt "tp_admin_page_link_help__msg_text_7"
+msgid "WP theme version:"
 msgstr "WP theme version:"
 
 #: core/controllers/TPOAdminMenuController.php:39
-msgctxt "(WP version: )"
-msgid "tp_admin_page_link_help__msg_text_8"
+msgctxt "tp_admin_page_link_help__msg_text_8"
+msgid "WP version:"
 msgstr "WP version:"
 
 #: core/controllers/TPOAdminMenuController.php:41
-msgctxt "(PHP version:  )"
-msgid "tp_admin_page_link_help__msg_text_9"
+msgctxt "tp_admin_page_link_help__msg_text_9"
+msgid "PHP version:"
 msgstr "PHP version:"
 
 #: core/controllers/TPOAdminMenuController.php:43
-msgctxt "(Plugin version: )"
-msgid "tp_admin_page_link_help__msg_text_10"
+msgctxt "tp_admin_page_link_help__msg_text_10"
+msgid "Plugin version:"
 msgstr "Plugin version:"
 
 #: core/controllers/TPOAdminMenuController.php:45
-msgctxt "( - Travelpayouts WP Plugin Support Request - )"
-msgid "tp_admin_page_link_help__msg_text_11"
-msgstr " - Travelpayouts WP Plugin Support Request - "
+msgctxt "tp_admin_page_link_help__msg_text_11"
+msgid "- Travelpayouts WP Plugin Support Request -"
+msgstr "- Travelpayouts WP Plugin Support Request -"
 
 #: core/controllers/TPOAdminMenuController.php:50
-msgctxt "(A problem with the plugin? Have some suggestions or ideas? Contact us at)"
-msgid "tp_admin_page_link_help_link_text"
+msgctxt "tp_admin_page_link_help_link_text"
+msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 msgstr "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 
 #: core/controllers/TPOAdminMenuController.php:53
-msgctxt "(wpplugin@travelpayouts.com)"
-msgid "tp_admin_page_link_help_link_label"
+msgctxt "tp_admin_page_link_help_link_label"
+msgid "wpplugin@travelpayouts.com"
 msgstr "wpplugin@travelpayouts.com"
 
 #: core/controllers/TPOBaseController.php:25
-msgctxt "(View %s not found)"
-msgid "tp_base_controler_load_view_error_msg"
+#, php-format
+msgctxt "tp_base_controler_load_view_error_msg"
+msgid "View %s not found"
 msgstr "View %s not found"
+
+#~ msgctxt "(View %s not found)"
+#~ msgid "tp_base_controler_load_view_error_msg"
+#~ msgstr "View %s not found"
+
+#~ msgctxt "(Please, don't delete the information below. It makes helping you easier)"
+#~ msgid "tp_admin_page_link_help_msg_text_1"
+#~ msgstr "Please, don't delete the information below. It makes helping you easier"
+
+#~ msgctxt "(domain: )"
+#~ msgid "tp_admin_page_link_help__msg_text_2"
+#~ msgstr "domain:"
+
+#~ msgctxt "(marker: )"
+#~ msgid "tp_admin_page_link_help__msg_text_3"
+#~ msgstr "marker:"
+
+#~ msgctxt "(whitelabel: )"
+#~ msgid "tp_admin_page_link_help__msg_text_4"
+#~ msgstr "whitelabel:"
+
+#~ msgctxt "(WP theme: )"
+#~ msgid "tp_admin_page_link_help__msg_text_5"
+#~ msgstr "WP theme:"
+
+#~ msgctxt "(WP theme URI: )"
+#~ msgid "tp_admin_page_link_help__msg_text_6"
+#~ msgstr "WP theme URI:"
+
+#~ msgctxt "(WP theme version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_7"
+#~ msgstr "WP theme version:"
+
+#~ msgctxt "(WP version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_8"
+#~ msgstr "WP version:"
+
+#~ msgctxt "(PHP version:  )"
+#~ msgid "tp_admin_page_link_help__msg_text_9"
+#~ msgstr "PHP version:"
+
+#~ msgctxt "(Plugin version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_10"
+#~ msgstr "Plugin version:"
+
+#~ msgctxt "( - Travelpayouts WP Plugin Support Request - )"
+#~ msgid "tp_admin_page_link_help__msg_text_11"
+#~ msgstr " - Travelpayouts WP Plugin Support Request - "
+
+#~ msgctxt "(A problem with the plugin? Have some suggestions or ideas? Contact us at)"
+#~ msgid "tp_admin_page_link_help_link_text"
+#~ msgstr "A problem with the plugin? Have some suggestions or ideas? Contact us at"
+
+#~ msgctxt "(wpplugin@travelpayouts.com)"
+#~ msgid "tp_admin_page_link_help_link_label"
+#~ msgstr "wpplugin@travelpayouts.com"
+
+#~ msgctxt "(DIV)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
+#~ msgstr "DIV"
+
+#~ msgctxt "(H1)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2"
+#~ msgstr "H1"
+
+#~ msgctxt "(H2)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3"
+#~ msgstr "H2"
+
+#~ msgctxt "(H3)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4"
+#~ msgstr "H3"
+
+#~ msgctxt "(H4)"
+#~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5"
+#~ msgstr "H4"
 
 #~ msgctxt "admin bar menu title travelpayouts"
 #~ msgid "tp_admin_bar_menu_travelpayouts_title"

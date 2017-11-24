@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Travelpayouts v0.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-24 17:16+0200\n"
+"POT-Creation-Date: 2017-11-24 17:30+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: KPD <solomashenko.roman.1991@gmail.com>\n"
@@ -6385,74 +6385,131 @@ msgid "Current month"
 msgstr "Текущий месяц"
 
 #: core/controllers/TPOAdminMenuController.php:24
-msgctxt "(Please, don't delete the information below. It makes helping you easier)"
-msgid "tp_admin_page_link_help_msg_text_1"
+msgctxt "tp_admin_page_link_help_msg_text_1"
+msgid "Please, don't delete the information below. It makes helping you easier"
 msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
 
 #: core/controllers/TPOAdminMenuController.php:27
-msgctxt "(domain: )"
-msgid "tp_admin_page_link_help__msg_text_2"
-msgstr "domain: "
+msgctxt " tp_admin_page_link_help__msg_text_2"
+msgid "domain:"
+msgstr "domain:"
 
 #: core/controllers/TPOAdminMenuController.php:29
-msgctxt "(marker: )"
-msgid "tp_admin_page_link_help__msg_text_3"
-msgstr "marker: "
+msgctxt "tp_admin_page_link_help__msg_text_3"
+msgid "marker:"
+msgstr "marker:"
 
 #: core/controllers/TPOAdminMenuController.php:31
-msgctxt "(whitelabel: )"
-msgid "tp_admin_page_link_help__msg_text_4"
-msgstr "whitelabel: "
+msgctxt "tp_admin_page_link_help__msg_text_4"
+msgid "whitelabel:"
+msgstr "whitelabel:"
 
 #: core/controllers/TPOAdminMenuController.php:33
-msgctxt "(WP theme: )"
-msgid "tp_admin_page_link_help__msg_text_5"
-msgstr "WP theme: "
+msgctxt "tp_admin_page_link_help__msg_text_5"
+msgid "WP theme:"
+msgstr "WP theme:"
 
 #: core/controllers/TPOAdminMenuController.php:35
-msgctxt "(WP theme URI: )"
-msgid "tp_admin_page_link_help__msg_text_6"
-msgstr "WP theme URI: "
+msgctxt "tp_admin_page_link_help__msg_text_6"
+msgid "WP theme URI:"
+msgstr "WP theme URI:"
 
 #: core/controllers/TPOAdminMenuController.php:37
-msgctxt "(WP theme version: )"
-msgid "tp_admin_page_link_help__msg_text_7"
-msgstr "WP theme version: "
+msgctxt "tp_admin_page_link_help__msg_text_7"
+msgid "WP theme version:"
+msgstr "WP theme version:"
 
 #: core/controllers/TPOAdminMenuController.php:39
-msgctxt "(WP version: )"
-msgid "tp_admin_page_link_help__msg_text_8"
-msgstr "WP version: "
+msgctxt "tp_admin_page_link_help__msg_text_8"
+msgid "WP version:"
+msgstr "WP version:"
 
 #: core/controllers/TPOAdminMenuController.php:41
-msgctxt "(PHP version:  )"
-msgid "tp_admin_page_link_help__msg_text_9"
-msgstr "PHP version: "
+msgctxt "tp_admin_page_link_help__msg_text_9"
+msgid "PHP version:"
+msgstr "PHP version:"
 
 #: core/controllers/TPOAdminMenuController.php:43
-msgctxt "(Plugin version: )"
-msgid "tp_admin_page_link_help__msg_text_10"
-msgstr "Plugin version: "
+msgctxt "tp_admin_page_link_help__msg_text_10"
+msgid "Plugin version:"
+msgstr "Plugin version:"
 
 #: core/controllers/TPOAdminMenuController.php:45
-msgctxt "( - Travelpayouts WP Plugin Support Request - )"
-msgid "tp_admin_page_link_help__msg_text_11"
-msgstr "- Travelpayouts WP Plugin Support Request -  "
+msgctxt "tp_admin_page_link_help__msg_text_11"
+msgid "- Travelpayouts WP Plugin Support Request -"
+msgstr "- Travelpayouts WP Plugin Support Request -"
 
 #: core/controllers/TPOAdminMenuController.php:50
-msgctxt "(A problem with the plugin? Have some suggestions or ideas? Contact us at)"
-msgid "tp_admin_page_link_help_link_text"
+msgctxt "tp_admin_page_link_help_link_text"
+msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
 msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #: core/controllers/TPOAdminMenuController.php:53
-msgctxt "(wpplugin@travelpayouts.com)"
-msgid "tp_admin_page_link_help_link_label"
+msgctxt "tp_admin_page_link_help_link_label"
+msgid "wpplugin@travelpayouts.com"
 msgstr "wpplugin@travelpayouts.com"
 
 #: core/controllers/TPOBaseController.php:25
-msgctxt "(View %s not found)"
-msgid "tp_base_controler_load_view_error_msg"
+#, php-format
+msgctxt "tp_base_controler_load_view_error_msg"
+msgid "View %s not found"
 msgstr "Вид %s не найден"
+
+#~ msgctxt "(View %s not found)"
+#~ msgid "tp_base_controler_load_view_error_msg"
+#~ msgstr "Вид %s не найден"
+
+#~ msgctxt "(Please, don't delete the information below. It makes helping you easier)"
+#~ msgid "tp_admin_page_link_help_msg_text_1"
+#~ msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
+
+#~ msgctxt "(domain: )"
+#~ msgid "tp_admin_page_link_help__msg_text_2"
+#~ msgstr "domain: "
+
+#~ msgctxt "(marker: )"
+#~ msgid "tp_admin_page_link_help__msg_text_3"
+#~ msgstr "marker: "
+
+#~ msgctxt "(whitelabel: )"
+#~ msgid "tp_admin_page_link_help__msg_text_4"
+#~ msgstr "whitelabel: "
+
+#~ msgctxt "(WP theme: )"
+#~ msgid "tp_admin_page_link_help__msg_text_5"
+#~ msgstr "WP theme: "
+
+#~ msgctxt "(WP theme URI: )"
+#~ msgid "tp_admin_page_link_help__msg_text_6"
+#~ msgstr "WP theme URI: "
+
+#~ msgctxt "(WP theme version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_7"
+#~ msgstr "WP theme version: "
+
+#~ msgctxt "(WP version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_8"
+#~ msgstr "WP version: "
+
+#~ msgctxt "(PHP version:  )"
+#~ msgid "tp_admin_page_link_help__msg_text_9"
+#~ msgstr "PHP version: "
+
+#~ msgctxt "(Plugin version: )"
+#~ msgid "tp_admin_page_link_help__msg_text_10"
+#~ msgstr "Plugin version: "
+
+#~ msgctxt "( - Travelpayouts WP Plugin Support Request - )"
+#~ msgid "tp_admin_page_link_help__msg_text_11"
+#~ msgstr "- Travelpayouts WP Plugin Support Request -  "
+
+#~ msgctxt "(A problem with the plugin? Have some suggestions or ideas? Contact us at)"
+#~ msgid "tp_admin_page_link_help_link_text"
+#~ msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
+
+#~ msgctxt "(wpplugin@travelpayouts.com)"
+#~ msgid "tp_admin_page_link_help_link_label"
+#~ msgstr "wpplugin@travelpayouts.com"
 
 #~ msgctxt "(DIV)"
 #~ msgid "tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1"
@@ -11039,17 +11096,8 @@ msgstr "Вид %s не найден"
 #~ msgid "Extra marker"
 #~ msgstr "Дополнительный маркер"
 
-#~ msgid "White Label"
-#~ msgstr "White Label"
-
 #~ msgid "Title "
 #~ msgstr "Название"
-
-#~ msgid "Please, don't delete the information below. It makes helping you easier"
-#~ msgstr "Пожалуйста, не удаляйте данные ниже. Они помогут нам быстрее помочь вам"
-
-#~ msgid "A problem with the plugin? Have some suggestions or ideas? Contact us at"
-#~ msgstr "Проблема с плагином? Есть пожелания или идеи? Пишите нам на"
 
 #, fuzzy
 #~ msgctxt "(Cheap Flights to destination)"
