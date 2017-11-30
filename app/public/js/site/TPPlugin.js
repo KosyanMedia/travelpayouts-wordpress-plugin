@@ -256,38 +256,44 @@ jQuery(function($) {
      tpCityAutocomplete.TPCityStandTitle("[data-title-case-destination-iata]", "title-case-destination-iata", title_case_destination);
      tpCityAutocomplete.TPAirlineStandTable("[data-airline-iata]", "airline-iata");*/
 
+    /*console.log(jQuery.fn);
+    console.log($.fn.dataTableExt );
+    console.log($.fn.dataTableExt.oSort );
+    console.log(jQuery.fn.dataTableExt);
+    console.log(jQuery.fn.dataTableExt.oSort);*/
+
     /** **/
-    jQuery.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-date-asc']  = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
         //console.log(y);
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-    jQuery.fn.dataTableExt.oSort['tp-date-desc'] = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-date-desc'] = function(a,b) {
         var x = $(a).data("tptime");
         var y = $(b).data("tptime");
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
     /** **/
-    jQuery.fn.dataTableExt.oSort['tp-found-asc']  = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-found-asc']  = function(a,b) {
         var x = ($(a).data("tpctime") - $(a).data("tptime"));
         var y = ($(b).data("tpctime") - $(b).data("tptime"));
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-    jQuery.fn.dataTableExt.oSort['tp-found-desc'] = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-found-desc'] = function(a,b) {
         var x = ($(a).data("tpctime") - $(a).data("tptime"));
         var y = ($(b).data("tpctime") - $(b).data("tptime"));
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
     /** **/
-    jQuery.fn.rowCount = function() {
+    $.fn.rowCount = function() {
         return $('tr', $(this).find('tbody')).length;
     };
 
     /** **/
-    jQuery.fn.getPaginateTP = function() {
+    $.fn.getPaginateTP = function() {
         if($(this).data("paginate") == true){
             if($(this).rowCount() > $(this).data("paginate_limit") ){
                 return true;
@@ -298,24 +304,24 @@ jQuery(function($) {
     };
 
     /** **/
-    jQuery.fn.dataTableExt.oSort['tp-price-asc']  = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-price-asc']  = function(a,b) {
         var x = $(a).data("price");
         var y = $(b).data("price");
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-    jQuery.fn.dataTableExt.oSort['tp-price-desc'] = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-price-desc'] = function(a,b) {
         var x = $(a).data("price");
         var y = $(b).data("price");
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
     };
 
-    jQuery.fn.dataTableExt.oSort['tp-airline_logo-asc']  = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-airline_logo-asc']  = function(a,b) {
 
         var x = ($(a).data("tpairline"));
         var y = ($(b).data("tpairline"));
         return ((x < y) ? -1 : ((x > y) ?  1 : 0));
     };
-    jQuery.fn.dataTableExt.oSort['tp-airline_logo-desc'] = function(a,b) {
+    $.fn.dataTableExt.oSort['tp-airline_logo-desc'] = function(a,b) {
         var x = ($(a).data("tpairline"));
         var y = ($(b).data("tpairline"));
         return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
