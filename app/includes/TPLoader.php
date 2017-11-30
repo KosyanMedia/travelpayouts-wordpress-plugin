@@ -32,7 +32,9 @@ class TPLoader extends \core\TPOLoader{
         new controllers\admin\menu\TPAutoReplacLinksController();
         new controllers\admin\menu\TPFlightTicketsController();
         new TPHotelsController();
-        new TPRailwayController();
+        if (TPLang::getLang() == TPLang::getLangRU()){
+            new TPRailwayController();
+        }
         new controllers\admin\menu\TPWidgetsController();
         new controllers\admin\menu\TPSearchFormsController();
         //new controllers\admin\menu\TPStatisticController();
