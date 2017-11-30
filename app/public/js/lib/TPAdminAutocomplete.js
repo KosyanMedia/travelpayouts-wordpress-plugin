@@ -5,7 +5,7 @@
 function TPCityAutocomplete(){
     var catHotelSelec = {
         "ru":{
-            tophotels: "Популярные",
+            tophotels: "Топ отели",
             price: "Дешёвые",
             distance: "Близко к центру",
             rating: "Рейтинг",
@@ -30,7 +30,7 @@ function TPCityAutocomplete(){
             popularity: "Популярные"
         },
         "en":{
-            tophotels: "Popular",
+            tophotels: "Top hotels",
             price: "Cheap",
             distance: "Close to city center",
             rating: "Rating",
