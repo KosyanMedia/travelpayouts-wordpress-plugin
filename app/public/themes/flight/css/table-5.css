@@ -573,9 +573,7 @@ a.paginate_button:hover {
     position: relative;
     left: -2px;
   }
-  .TP-AirlineLogo {
-    top: 0 !important;
-  }
+
   .TPPopUpButtonTable {
     display: none !important;
   }

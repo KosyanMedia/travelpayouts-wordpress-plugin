@@ -673,10 +673,7 @@ abbr, acronym{
   }
   .TP-tdContent {
     position: absolute;
-    top: 26%;
-  }
-  .TP-AirlineLogo {
-    top: 0 !important;
+    top: 23%;
   }
   .TPPopUpButtonTable {
     display: none !important;
@@ -701,9 +698,7 @@ abbr, acronym{
     top: 2px;
     margin-right: 2px;
   }
-  .TP-rwd-table tbody tr td:first-of-type {
-    background-color: #f2f2f2;
-  }
+ 
   .TP-rwd-table tbody tr td {
     text-align: left;
     overflow: hidden;
@@ -713,7 +708,7 @@ abbr, acronym{
     max-height: 35px;
     vertical-align: middle;
     display: inline-block;
-    width: auto;
+    width: 100%;
   }
   .TPTrainTable .TP-Plugin-Tables_box tbody tr td p {
     vertical-align: middle;

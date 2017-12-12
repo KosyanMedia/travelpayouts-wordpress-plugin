@@ -657,6 +657,9 @@ a.paginate_button:hover {
     text-align: left !important;
     color: #fff;
   }
+  .TP-Plugin-Tables_box tbody tr:nth-child(odd)>.TPairline_logoTd {
+    background-color: #DCDDF0;
+  }
 }
 
 .TPEmptyTableButton {

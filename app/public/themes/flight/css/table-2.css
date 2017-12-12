@@ -177,6 +177,12 @@
   background-color: #DCDDF0 ;
 }
 
+@media (max-width: 480px) {
+  .TP-Plugin-Tables_box tbody tr:nth-child(odd) > .TPairline_logoTd {
+    background-color: #DCDDF0;
+  }
+}
+
 .TP-autoWidth-plugin {
   width: 100%; }
 
