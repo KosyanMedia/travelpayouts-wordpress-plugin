@@ -572,6 +572,16 @@ span.ellipsis {
     width: 40px;
 }
 
+@media (max-width: 1390px) {
+  .TP-train-text_left {
+    width: 30px;
+    
+  }
+  .TP-train-text_right {
+    white-space: nowrap;
+  }
+}
+
 /* data picker */
 
 .dropdown-menu {
