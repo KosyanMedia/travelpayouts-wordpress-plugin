@@ -640,6 +640,58 @@ abbr, acronym{
 	display: block;
   }
 }
+@media (max-width: 1340px) {
+  .entry-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .entry-content {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .entry-content {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .TPTrainTable .TP-Plugin-Tables_box thead tr td {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .TPTrainTable .TP-Plugin-Tables_box thead tr td, 
+  .TPTrainTable .TP-Plugin-Tables_box tbody tr td, 
+  .TPTrainTable .TP-Plugin-Tables_box tbody tr td a span, 
+  .TPTrainTable .TP-Plugin-Tables_box tbody tr td p {
+    font-size: 11px !important;
+  }
+  .TPTrainTable .TP-Plugin-Tables_box tbody tr td .TP-Plugin-Tables_link {
+    min-width: auto;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .departure_time,
+  .comming_time {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1060px) {
+  .TP-Plugin-Tables_box_thead {
+    -ms-word-break: break-word;
+    word-break: break-word;
+  }
+} 
+@media (max-width: 768px) {
+ 
+  .dataTables_wrapper {
+    overflow-x: auto;
+  }
+}
+
 
 @media (max-width: 480px) {
   .TPpriceTd {
@@ -882,7 +934,5 @@ abbr, acronym{
     min-width: 148px;
   }
 }
-.dataTables_wrapper {
-  overflow-x: auto;
-}
+
 /*# sourceMappingURL=main.css.map */
