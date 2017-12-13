@@ -770,7 +770,10 @@ abbr, acronym{
     max-height: 35px;
     vertical-align: middle;
     display: inline-block;
-    width: 100%;
+    width: 56%;
+  }
+  .TP-AirlineLogo {
+    top: 23% !important;
   }
   .TPTrainTable .TP-Plugin-Tables_box tbody tr td p {
     vertical-align: middle;
