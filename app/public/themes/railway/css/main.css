@@ -770,7 +770,7 @@ abbr, acronym{
     max-height: 35px;
     vertical-align: middle;
     display: inline-block;
-    width: 56%;
+    width: 50%;
   }
   .TP-AirlineLogo {
     top: 23% !important;
