@@ -779,7 +779,8 @@ class TPRailwayShortcodeView {
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';
-        $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/order/');
+        $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/');
+        //$custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/order/');
         $departureStation = '?dep_st=' .$origin;
         /*if (array_key_exists('departureStationCode', $row)) {
             $departureStation .= $row['departureStationCode'];
@@ -801,7 +802,8 @@ class TPRailwayShortcodeView {
         if (array_key_exists('runArrivalStationCode', $row)) {
             $runArrivalStation .= $row['runArrivalStationCode'];
         }*/
-        $date = '&date=';
+
+        //$date = '&date=';
 
         $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation
                 .$numberForUrl.$from.$runDepartureStation.$runArrivalStation.$date);
