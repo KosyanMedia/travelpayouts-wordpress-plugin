@@ -769,6 +769,8 @@ class TPRailwayShortcodeView {
         $numberForUrl = '';
         $from = '';
         $date = '';
+        $nnst1 = '';
+        $nnst2 = '';
         $URL = 'https://c45.travelpayouts.com/click';
         $marker = TPPlugin::$options['account']['marker'];
         $marker = '?shmarker='.$marker;
@@ -779,21 +781,25 @@ class TPRailwayShortcodeView {
         $promo_id = '&promo_id=1294';
         $source_type = '&source_type=customlink';
         $type = '&type=click';
-        $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/');
+        $custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/rasp_d.php');
+        $nnst1 = '?nnst1='.$origin;
+        $nnst2 = '&nnst2='.$destination;
         //$custom_url = '&custom_url='.urlencode('https://www.tutu.ru/poezda/order/');
-        $departureStation = '?dep_st=' .$origin;
+        //$departureStation = '?dep_st=' .$origin;
         /*if (array_key_exists('departureStationCode', $row)) {
             $departureStation .= $row['departureStationCode'];
         }*/
-        $arrivalStation = '&arr_st='.$destination;
+        //$arrivalStation = '&arr_st='.$destination;
         /*if (array_key_exists('arrivalStationCode', $row)) {
             $arrivalStation .= $row['arrivalStationCode'];
         }*/
-        $numberForUrl = '&tn=';
+
+        /*$numberForUrl = '&tn=';
         if (array_key_exists('numberForUrl', $row)) {
             $numberForUrl .= $row['numberForUrl'];
         }
-        $from = '&from=calendar';
+        $from = '&from=calendar';*/
+
         /*$runDepartureStation = '&departure_st=';
         if (array_key_exists('runDepartureStationCode', $row)) {
             $runDepartureStation .= $row['runDepartureStationCode'];
@@ -805,8 +811,10 @@ class TPRailwayShortcodeView {
 
         //$date = '&date=';
 
-        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation
-                .$numberForUrl.$from.$runDepartureStation.$runArrivalStation.$date);
+        /*$URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($departureStation.$arrivalStation
+                .$numberForUrl.$from.$runDepartureStation.$runArrivalStation.$date);*/
+
+        $URL .= $marker.$promo_id.$source_type.$type.$custom_url.urlencode($nnst1.$nnst2);
         return $URL;
     }
 
