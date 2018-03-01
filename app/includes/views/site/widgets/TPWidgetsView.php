@@ -137,6 +137,7 @@ class TPWidgetsView {
                 }
                 break;
             case 5:
+                $white_label = TPPlugin::$options['account']['white_label_hotel'];
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
