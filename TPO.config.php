@@ -1,10 +1,12 @@
 <?php
+
 define("TPOPlUGIN_DIR", dirname(__FILE__));
 define("TPOPlUGIN_URL", plugin_dir_url( __FILE__ ));
 define("TPOPlUGIN_SLUG", preg_replace( '/[^\da-zA-Z]/i', '_',  basename(TPOPlUGIN_DIR)));
 define("TPOPlUGIN_TEXTDOMAIN", str_replace( '_', '-', TPOPlUGIN_SLUG ));
 define("TPOPlUGIN_OPTION_VERSION", TPOPlUGIN_SLUG.'_version');
 define("TPOPlUGIN_OPTION_NAME", TPOPlUGIN_SLUG.'_options');
+define("TPOPlUGIN_OPTION_STATISTICS_KEEN", TPOPlUGIN_SLUG.'_option_statistics_keen');
 define("TPOPlUGIN_AJAX_URL", admin_url('admin-ajax.php'));
 define("TPOPlUGIN_DIR_LOCALIZATION", plugin_basename(TPOPlUGIN_DIR.'/lang/'));
 define("TPOPlUGIN_ABSPATH_DIR_LOCALIZATION", TPOPlUGIN_DIR.'/lang/');

@@ -30,6 +30,46 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
             error_log($method." -> End");
         add_action('plugins_loaded', array(&$this, 'setDefaultOptions'), 100);
         add_action('plugins_loaded', array(&$this, 'checkPluginUpdate'), 100);
+        add_action( 'upgrader_process_complete', array(&$this, 'upgraderProcessComplete'), 10, 2);
+        if( ! get_option(TPOPlUGIN_OPTION_STATISTICS_KEEN) ) {
+            add_action('admin_footer', array(&$this, 'sendStatisticsKeen'), 500);
+        }
+    }
+
+    /**
+     * @param $upgrader_object
+     * @param $options
+     */
+    public function upgraderProcessComplete($upgrader_object, $options){
+        //
+        if ($options['action'] == 'update' && $options['type'] == 'plugin' ){
+            foreach($options['plugins'] as $each_plugin){
+                if ($each_plugin == TPOPlUGIN_BASENAME){
+                    delete_option( TPOPlUGIN_OPTION_STATISTICS_KEEN);
+                }
+            }
+        }
+    }
+
+    /**
+     *
+     */
+    public function sendStatisticsKeen(){
+        update_option(TPOPlUGIN_OPTION_STATISTICS_KEEN, 'sendStatisticsKeen');
+        $statistics = array(
+            'marker' => self::$options['account']['marker'],
+            'domain' => preg_replace("(^https?://)", "", get_option('home')),
+            'php' => PHP_VERSION,
+        );
+        $statistics = json_encode($statistics);
+        $statistics = base64_encode($statistics);
+        $keen = 'https://api.keen.io/3.0/projects/';
+        $keen_project_id = '5a97f593c9e77c00010a8ef1';
+        $keen_write_key = '587E43D1198FD5D0B215514CB785AF25AC0E10D175C1F7844F1BFD35B684518B0F3C8A6CAD424ECF5E8F5A6BCD4F'
+            .'7DA140D7D8D56B524FCAA568D6FFDD51C1125845D447EA5F920C14B7D323228E064FF5B0BC6F05A262C0B120706ABE19C512';
+        $output = '<img src="'.$keen.$keen_project_id.'/events/email_opened?api_key='.$keen_write_key
+            .'&data='.$statistics.'"></img>';
+        echo $output;
     }
 
     public function setDefaultOptions(){
@@ -40,6 +80,10 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         if( ! get_option(TPOPlUGIN_OPTION_VERSION) )
             update_option(TPOPlUGIN_OPTION_VERSION, TPOPlUGIN_VERSION);
     }
+
+    /**
+     *
+     */
     public function checkPluginUpdate() {
         if(TPOPlUGIN_ERROR_LOG)
             error_log("checkPluginUpdate");
@@ -87,6 +131,10 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         models\site\shortcodes\hotels\TPHotelListModel::createTable();
 
     }
+
+    /**
+     *
+     */
     static public function activation()
     {
         // TODO: Implement activation() method.
@@ -131,6 +179,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         self::deleteCacheAll();
         //delete_option( TPOPlUGIN_OPTION_NAME);
         delete_option( TPOPlUGIN_OPTION_VERSION);
+        delete_option( TPOPlUGIN_OPTION_STATISTICS_KEEN);
         //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
         //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
         //delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
@@ -151,6 +200,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface{
         delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
         delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
         delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
+        delete_option( TPOPlUGIN_OPTION_STATISTICS_KEEN);
     }
 
 }
