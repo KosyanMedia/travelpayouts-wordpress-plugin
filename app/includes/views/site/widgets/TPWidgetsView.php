@@ -160,6 +160,7 @@ class TPWidgetsView {
                 }
                 break;
             case 7:
+                $white_label = TPPlugin::$options['account']['white_label_hotel'];
                 if( ! $white_label || empty( $white_label ) ){
                     $white_label = 'search.hotellook.com';
                 }else{
