@@ -24,7 +24,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
             'destination' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'subid' => '',
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";

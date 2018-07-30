@@ -32,7 +32,7 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
             'responsive' => \app\includes\TPPlugin::$options['widgets'][$widgets]['responsive'],
             'limit' => \app\includes\TPPlugin::$options['widgets'][$widgets]['limit'],
             'subid' => '',
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 

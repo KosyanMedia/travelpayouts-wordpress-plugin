@@ -30,7 +30,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'origin' => false,
             'destination' => false,
             'airline' => false,
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD,
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
             'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );

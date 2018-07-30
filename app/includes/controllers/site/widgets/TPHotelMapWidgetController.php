@@ -28,7 +28,7 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
             'subid' => '',
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $coordinates = explode(',', $coordinates);

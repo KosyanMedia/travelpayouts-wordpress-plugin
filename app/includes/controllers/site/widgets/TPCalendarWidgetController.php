@@ -40,7 +40,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'period_day_from' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
             'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
             'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period'],
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD,
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 

@@ -24,7 +24,7 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
             'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
             'direct' => 'false',
             'subid' => '',
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
 
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );

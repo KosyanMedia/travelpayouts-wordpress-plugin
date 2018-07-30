@@ -23,7 +23,7 @@ class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsSho
             'hotel_id' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'subid' => '',
-            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
