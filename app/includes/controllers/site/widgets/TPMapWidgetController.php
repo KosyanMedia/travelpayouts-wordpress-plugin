@@ -6,6 +6,7 @@
  * Time: 12:59
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
 class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
@@ -22,7 +23,9 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
             'direct' => 'false',
-            'subid' => ''
+            'subid' => '',
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
+
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $hide_logo = false;
@@ -31,8 +34,8 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
         $white_label = $this->view->getWhiteLabel($widgets);
         //error_log($white_label);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
             <div class="TPWidget TPMapWidget">

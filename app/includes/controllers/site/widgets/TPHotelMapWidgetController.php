@@ -6,6 +6,8 @@
  * Time: 13:16
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
+
 class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController {
 
     public function initShortcode()
@@ -25,7 +27,8 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
             'lon' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
-            'subid' => ''
+            'subid' => '',
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $coordinates = explode(',', $coordinates);
@@ -50,8 +53,8 @@ class TPHotelMapWidgetController extends \app\includes\controllers\site\TPWigets
         $output = '';
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         $output = '
         <div class="TPWidget TPHotelMapWidget">
         <iframe src="//maps.avs.io/hotels?color='.$color.'&locale='.\app\includes\common\TPLang::getLang().'&marker='.$this->view->getMarker($widgets, $subid)

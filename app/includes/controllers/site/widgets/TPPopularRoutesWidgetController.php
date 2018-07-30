@@ -6,6 +6,7 @@
  * Time: 13:38
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
 class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
@@ -22,15 +23,16 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
         $defaults = array(
             'destination' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'subid' => ''
+            'subid' => '',
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
         //error_log('render = '.$white_label);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
             <div class="TPWidget TPPopularRoutesWidget">

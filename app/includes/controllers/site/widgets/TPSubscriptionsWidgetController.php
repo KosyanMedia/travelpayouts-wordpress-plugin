@@ -6,6 +6,8 @@
  * Time: 13:31
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
+
 class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
@@ -32,7 +34,8 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
             'origin' => $origin_i,
             'destination' => $destination_i,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'subid' => ''
+            'subid' => '',
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['color']);
@@ -40,8 +43,8 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         //error_log($width);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
         <div class="TPWidget TPSubscriptionsWidget">

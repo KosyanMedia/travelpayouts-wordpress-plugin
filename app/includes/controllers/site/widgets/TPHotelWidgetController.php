@@ -6,6 +6,8 @@
  * Time: 13:34
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
+
 class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
@@ -20,14 +22,15 @@ class TPHotelWidgetController extends \app\includes\controllers\site\TPWigetsSho
         $defaults = array(
             'hotel_id' => false,
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'subid' => ''
+            'subid' => '',
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         $output = '';
         $output = '
             <div class="TPWidget TPHotelWidget">

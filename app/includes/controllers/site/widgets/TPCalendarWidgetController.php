@@ -6,6 +6,8 @@
  * Time: 13:27
  */
 namespace app\includes\controllers\site\widgets;
+use app\includes\common\TPCurrencyUtils;
+
 class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWigetsShortcodesController{
 
     public function initShortcode()
@@ -37,15 +39,16 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'subid' => '',
             'period_day_from' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
             'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
-            'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period']
+            'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period'],
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD,
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         //error_log($period_day_from);
         //error_log($origin);
         //error_log($destination);

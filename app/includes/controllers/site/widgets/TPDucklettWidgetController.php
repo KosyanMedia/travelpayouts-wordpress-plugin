@@ -7,7 +7,7 @@
  */
 
 namespace app\includes\controllers\site\widgets;
-
+use app\includes\common\TPCurrencyUtils;
 
 class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController
 {
@@ -30,7 +30,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'origin' => false,
             'destination' => false,
             'airline' => false,
-            'currency' => 'USD' ,
+            'currency' => TPCurrencyUtils::TP_CURRENCY_USD,
             'subid' => ''
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
@@ -64,8 +64,8 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
        // error_log($url);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()
-        $currency = '';
-        $currency = $this->view->getCurrency($widgets, $white_label);
+        //$currency = '';
+        //$currency = $this->view->getCurrency($widgets, $white_label);
         //error_log($currency);
         //error_log($white_label);
         $output = '';
