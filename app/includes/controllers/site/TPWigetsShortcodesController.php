@@ -18,4 +18,21 @@ abstract class TPWigetsShortcodesController extends \core\controllers\TPOShortco
         // TODO: Implement action() method.
         return $this->render($args);
     }
+
+    public function boolval($val){
+        return ($val == 'true' || $val === true) ? true : false;
+    }
+
+    /**
+     * @param $atts
+     * @param $shortcode
+     *
+     * @return mixed
+     */
+    public function filter_shortcode_atts($atts, $shortcode){
+        if (array_key_exists('paginate', $atts) && !is_bool($atts['paginate'])){
+            $atts['powered_by'] = $this->boolval($atts['powered_by']);
+        }
+        return $atts;
+    }
 }

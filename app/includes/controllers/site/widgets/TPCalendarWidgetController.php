@@ -41,7 +41,9 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
             'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period'],
             'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
         );
+
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
         $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
@@ -60,6 +62,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
             .'&only_direct='.$direct.'&locale='.\app\includes\common\TPLang::getLang()
             .'&period='.$period
+            .'&powered_by='.$powered_by
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"
              data-wpfc-render="false" async></script></div>';
         //error_log($output);
