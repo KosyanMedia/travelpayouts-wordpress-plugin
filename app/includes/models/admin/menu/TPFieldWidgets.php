@@ -815,9 +815,20 @@ class TPFieldWidgets {
                 </label>
             </div>
         </div>
+
+        <div class="TP-HeadTable TPCheckBoxWidget">
+            <?php
+            $this->field_powered_by($widgets);
+            ?>
+
+        </div>
         <?php
     }
 
+
+    /**
+     * Best deals widget
+     */
     public function TPFieldWidget_8(){
         $widgets = 8;
         ?>
@@ -908,6 +919,13 @@ class TPFieldWidgets {
                            value="<?php echo esc_attr(\app\includes\TPPlugin::$options['widgets'][$widgets]['width']) ?>">
                 </label>
             </div>
+        </div>
+
+        <div class="TP-HeadTable TPCheckBoxWidget">
+            <?php
+            $this->field_powered_by($widgets);
+            ?>
+
         </div>
         <?php
     }
