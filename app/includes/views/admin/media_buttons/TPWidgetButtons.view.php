@@ -27,6 +27,11 @@
                             data-widgets-type-7 = "<?php echo \app\includes\TPPlugin::$options['widgets']['7']['type'] ?>"
                             data-widgets-size-width-8 = "<?php echo \app\includes\TPPlugin::$options['widgets']['8']['width'] ?>"
                             data-widgets-responsive-8 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['8']['responsive']))? 1 : 0;?>"
+                            data-widgets-powered_by-3 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['3']['powered_by']))? 1 : 0;?>"
+                            data-widgets-powered_by-5 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['5']['powered_by']))? 1 : 0;?>"
+                            data-widgets-powered_by-6 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['6']['powered_by']))? 1 : 0;?>"
+                            data-widgets-powered_by-7 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['7']['powered_by']))? 1 : 0;?>"
+                            data-widgets-powered_by-8 = "<?php echo (isset(\app\includes\TPPlugin::$options['widgets']['8']['powered_by']))? 1 : 0;?>"
 
                     >
                         <option selected="selected" value="0">
@@ -367,6 +372,33 @@
                     </label>
                 </td>
             </tr>
+
+            <tr id="tr_powered_by_widget">
+                <td>
+                    <label>
+                        <input type="checkbox" id="powered_by_widget" value="1">
+                        <?php  _ex('Add my referral link',
+                            'tp_admin_page_settings_сonstructor_widgets_field_powered_by_label', TPOPlUGIN_TEXTDOMAIN ); ?>
+                        <?php
+                            global $locale;
+                            $tp_url = '';
+                            switch($locale){
+                                case "ru_RU":
+                                    $tp_url = 'https://support.travelpayouts.com/hc/ru/articles/203955623';
+                                    break;
+                                case "en_US":
+                                    $tp_url = 'https://support.travelpayouts.com/hc/en-us/articles/203955623';
+                                    break;
+                                default:
+                                    $tp_url = 'https://support.travelpayouts.com/hc/en-us/articles/203955623';
+                                    break;
+                            }
+                        ?>
+                        <a href="<?php echo $tp_url; ?>" target="_blank" class="tp-field-powered_by-help-link">?</a>
+                    </label>
+                </td>
+            </tr>
+
             <tr id="tr_cat_widget-1">
                 <td id="td_cat_widget-1">
                     <select id="cat_widget-1"></select>
