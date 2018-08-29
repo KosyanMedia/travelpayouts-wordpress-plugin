@@ -25,6 +25,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
             'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
             'subid' => '',
             'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
@@ -39,7 +40,7 @@ class TPPopularRoutesWidgetController extends \app\includes\controllers\site\TPW
             <script data-cfasync="false" async src="//www.travelpayouts.com/weedle/widget.js'.$width
             .'&marker='.$this->view->getMarker($widgets, $subid).'&host='.$white_label
             .'&locale='.\app\includes\common\TPLang::getLang().'&currency='.mb_strtolower($currency)
-            .'&destination='.$destination.'" charset="UTF-8" data-wpfc-render="false">
+            .'&destination='.$destination.'&powered_by='.$powered_by.'" charset="UTF-8" data-wpfc-render="false">
                    </script></div>';
         return $output;
     }
