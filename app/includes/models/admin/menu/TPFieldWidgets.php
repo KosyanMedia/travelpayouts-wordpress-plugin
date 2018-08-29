@@ -404,6 +404,10 @@ class TPFieldWidgets {
 
     <?php
     }
+
+    /**
+     *
+     */
     public function TPFieldWidget_4(){
         $widgets = 4;
         ?>
@@ -487,6 +491,10 @@ class TPFieldWidgets {
         </div>
     <?php
     }
+
+    /**
+     * Hotel widget
+     */
     public function TPFieldWidget_5(){
         $widgets = 5;
         ?>
@@ -527,8 +535,19 @@ class TPFieldWidgets {
             </div>
         </div>
 
+        <div class="TP-HeadTable TPCheckBoxWidget">
+            <?php
+            $this->field_powered_by($widgets);
+            ?>
+
+        </div>
+
     <?php
     }
+
+    /**
+     * Popular Destination
+     */
     public function TPFieldWidget_6(){
         $widgets = 6;
         ?>
