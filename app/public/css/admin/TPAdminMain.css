@@ -3215,3 +3215,9 @@ input[type="radio"] + label, input[type="checkbox"] + label,
 .tabs-local-field-item-railway{
   display: none;
 }
+
+.tp-field-powered_by-help-link{
+  color: #00abfd;
+  margin-left: 5px;
+  text-decoration: underline;
+}

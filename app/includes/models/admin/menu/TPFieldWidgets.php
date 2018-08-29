@@ -231,6 +231,10 @@ class TPFieldWidgets {
         </div>
     <?php
     }
+
+    /**
+     *
+     */
     public function TPFieldWidget_3(){
         $widgets = 3;
         ?>
@@ -392,6 +396,9 @@ class TPFieldWidgets {
                 <?php _ex('One way',
                     'tp_admin_page_widgets_shortcode_3_field_one_way_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
+            <?php
+                $this->field_powered_by($widgets);
+            ?>
 
         </div>
 
@@ -872,6 +879,34 @@ class TPFieldWidgets {
                 </label>
             </div>
         </div>
+        <?php
+    }
+
+    /**
+     * @param $widgets
+     */
+    private function field_powered_by($widgets){
+        global $locale;
+        $tp_url = '';
+        switch($locale){
+            case "ru_RU":
+                $tp_url = 'https://support.travelpayouts.com/hc/ru/articles/203955623';
+                break;
+            case "en_US":
+                $tp_url = 'https://support.travelpayouts.com/hc/en-us/articles/203955623';
+                break;
+            default:
+                $tp_url = 'https://support.travelpayouts.com/hc/en-us/articles/203955623';
+                break;
+        }
+        ?>
+        <input id="chek83<?php echo $widgets; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][powered_by]"
+               value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']), 1) ?> hidden />
+        <label for="chek83<?php echo $widgets; ?>">
+            <?php _ex('Add my referral link',
+                'tp_admin_page_widgets_shortcode_field_powered_by_label', TPOPlUGIN_TEXTDOMAIN); ?>
+            <a href="<?php echo $tp_url; ?>" target="_blank" class="tp-field-powered_by-help-link">?</a>
+        </label>
         <?php
     }
 }
