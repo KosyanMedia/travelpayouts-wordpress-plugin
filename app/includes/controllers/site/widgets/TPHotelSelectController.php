@@ -33,6 +33,7 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
             'limit' => \app\includes\TPPlugin::$options['widgets'][$widgets]['limit'],
             'subid' => '',
             'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
@@ -60,6 +61,7 @@ class TPHotelSelectController extends \app\includes\controllers\site\TPWigetsSho
         .$width.'&host='.$white_label
         .'&marker='.$this->view->getMarker($widgets, $subid).'.&limit='
         .$limit
+        .'&powered_by='.$powered_by
         .'" charset="UTF-8" data-wpfc-render="false"></script></div>';
         return $output;
     }
