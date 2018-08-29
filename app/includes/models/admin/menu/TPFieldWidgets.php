@@ -606,8 +606,19 @@ class TPFieldWidgets {
 
             </label>
         </div>
+
+        <div class="TP-HeadTable TPCheckBoxWidget">
+            <?php
+            $this->field_powered_by($widgets);
+            ?>
+
+        </div>
     <?php
     }
+
+    /**
+     * Hotel Selections
+     */
     public function TPFieldWidget_7(){
         $widgets = 7;
         $cat = array(
