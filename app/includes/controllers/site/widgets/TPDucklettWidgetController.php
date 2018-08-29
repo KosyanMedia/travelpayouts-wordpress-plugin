@@ -31,7 +31,8 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
             'destination' => false,
             'airline' => false,
             'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
-            'subid' => ''
+            'subid' => '',
+            'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
         );
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $url_params = '';
@@ -71,7 +72,7 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
         $output = '';
         $output = '<script data-cfasync="false" async src="'.$url.'?widget_type='.$type
             .'&currency='.mb_strtolower($currency).'&host='.$white_label.'&marker='
-            .$this->view->getMarker($widgets, $subid).'.'.$url_params.'" charset="UTF-8" data-wpfc-render="false">
+            .$this->view->getMarker($widgets, $subid).'.'.$url_params.'&powered_by='.$powered_by.'" charset="UTF-8" data-wpfc-render="false">
         </script>';
 
         return $output;
