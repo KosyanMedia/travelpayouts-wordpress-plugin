@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-11-24 17:31+0200\n"
+"POT-Creation-Date: 2018-08-30 01:21+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Solomashenko Roman <solomashenko.roman.1991@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/includes/TPDefault.php:87
@@ -469,17 +469,17 @@ msgctxt "local ru table shortcodes railway 1 title_button text"
 msgid "Select date"
 msgstr "Выбрать дату"
 
-#: app/includes/TPLoader.php:150
+#: app/includes/TPLoader.php:152
 msgctxt "tp_plugin_loaded_admin_notice_btn_wizard_label"
 msgid "Set details and enable plugin features"
 msgstr "Set details and enable plugin features"
 
-#: app/includes/TPLoader.php:155
+#: app/includes/TPLoader.php:157
 msgctxt "tp_plugin_loaded_admin_notice_paragraph_1"
 msgid "Welcome! Travelpayouts plugin is almost ready."
 msgstr "Welcome! Travelpayouts plugin is almost ready."
 
-#: app/includes/TPLoader.php:156
+#: app/includes/TPLoader.php:158
 msgctxt "tp_plugin_loaded_admin_notice_paragraph_2"
 msgid "Enter your Travelpayouts authorization details and start earning now."
 msgstr "Enter your Travelpayouts authorization details and start earning now."
@@ -3362,350 +3362,355 @@ msgctxt "tp_admin_page_widgets_shortcode_2_field_size_label"
 msgid "Size"
 msgstr "Size"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:240
+#: app/includes/models/admin/menu/TPFieldWidgets.php:244
 msgctxt "tp_admin_page_widgets_shortcode_3_link_example"
 msgid "Widget Example"
 msgstr "Widget Example"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:249
+#: app/includes/models/admin/menu/TPFieldWidgets.php:253
 msgctxt "tp_admin_page_widgets_shortcode_3_link_help"
 msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:257
+#: app/includes/models/admin/menu/TPFieldWidgets.php:261
 msgctxt "tp_admin_page_widgets_shortcode_3_field_origin_label"
 msgid "City of Departure"
 msgstr "City of Departure"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:270
+#: app/includes/models/admin/menu/TPFieldWidgets.php:274
 msgctxt "tp_admin_page_widgets_shortcode_3_field_destination_label"
 msgid "City of Arrival"
 msgstr "City of Arrival"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:282
+#: app/includes/models/admin/menu/TPFieldWidgets.php:286
 msgctxt "tp_admin_page_widgets_shortcode_3_field_period_day_label"
 msgid "Range, days"
 msgstr "Range, days"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:305
+#: app/includes/models/admin/menu/TPFieldWidgets.php:309
 msgctxt "tp_admin_page_widgets_shortcode_3_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:312
+#: app/includes/models/admin/menu/TPFieldWidgets.php:316
 msgctxt "tp_admin_page_widgets_shortcode_3_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:330
+#: app/includes/models/admin/menu/TPFieldWidgets.php:334
 msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_year"
 msgid "Year"
 msgstr "Year"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:334
+#: app/includes/models/admin/menu/TPFieldWidgets.php:338
 msgctxt "tp_admin_page_widgets_shortcode_3_field_period_value_current_month"
 msgid "Current month"
 msgstr "Current month"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:373
+#: app/includes/models/admin/menu/TPFieldWidgets.php:377
 msgctxt "tp_admin_page_widgets_shortcode_3_field_period_label"
 msgid "Period"
 msgstr "Period"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:386
+#: app/includes/models/admin/menu/TPFieldWidgets.php:390
 msgctxt "tp_admin_page_widgets_shortcode_3_field_only_direct_label"
 msgid "Direct Flights Only"
 msgstr "Direct Flights Only"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:392
+#: app/includes/models/admin/menu/TPFieldWidgets.php:396
 msgctxt "tp_admin_page_widgets_shortcode_3_field_one_way_label"
 msgid "One way"
 msgstr "One way"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:407
+#: app/includes/models/admin/menu/TPFieldWidgets.php:418
 msgctxt "tp_admin_page_widgets_shortcode_4_link_example"
 msgid "Widget Example"
 msgstr "Widget Example"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:416
+#: app/includes/models/admin/menu/TPFieldWidgets.php:427
 msgctxt "tp_admin_page_widgets_shortcode_4_link_help"
 msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:424
+#: app/includes/models/admin/menu/TPFieldWidgets.php:435
 msgctxt "tp_admin_page_widgets_shortcode_4_field_origin_label"
 msgid "City of Departure"
 msgstr "City of Departure"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:437
+#: app/includes/models/admin/menu/TPFieldWidgets.php:448
 msgctxt "tp_admin_page_widgets_shortcode_4_field_destination_label"
 msgid "City of Arrival"
 msgstr "City of Arrival"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:454
+#: app/includes/models/admin/menu/TPFieldWidgets.php:465
 msgctxt "tp_admin_page_widgets_shortcode_4_field_color_label"
 msgid "select color"
 msgstr "select color"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:464
+#: app/includes/models/admin/menu/TPFieldWidgets.php:475
 msgctxt "tp_admin_page_widgets_shortcode_4_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:471
+#: app/includes/models/admin/menu/TPFieldWidgets.php:482
 msgctxt "tp_admin_page_widgets_shortcode_4_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:489
+#: app/includes/models/admin/menu/TPFieldWidgets.php:504
 msgctxt "tp_admin_page_widgets_shortcode_5_link_example"
 msgid "Widget Example"
 msgstr "Widget Example"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:498
+#: app/includes/models/admin/menu/TPFieldWidgets.php:513
 msgctxt "tp_admin_page_widgets_shortcode_5_link_help"
 msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:505
+#: app/includes/models/admin/menu/TPFieldWidgets.php:520
 msgctxt "tp_admin_page_widgets_shortcode_5_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:512
+#: app/includes/models/admin/menu/TPFieldWidgets.php:527
 msgctxt "tp_admin_page_widgets_shortcode_5_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:531
+#: app/includes/models/admin/menu/TPFieldWidgets.php:557
 msgctxt "tp_admin_page_widgets_shortcode_6_link_example"
 msgid "Widget Example"
 msgstr "Widget Example"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:540
+#: app/includes/models/admin/menu/TPFieldWidgets.php:566
 msgctxt "tp_admin_page_widgets_shortcode_6_link_help"
 msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:547
+#: app/includes/models/admin/menu/TPFieldWidgets.php:573
 msgctxt "tp_admin_page_widgets_shortcode_6_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:554
+#: app/includes/models/admin/menu/TPFieldWidgets.php:580
 msgctxt "tp_admin_page_widgets_shortcode_6_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:567
+#: app/includes/models/admin/menu/TPFieldWidgets.php:593
 msgctxt "tp_admin_page_widgets_shortcode_6_field_count_label"
 msgid "Number of Widgets"
 msgstr "Number of Widgets"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:591
+#: app/includes/models/admin/menu/TPFieldWidgets.php:628
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_ru"
 msgid "1 star"
 msgstr "1 звезда"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:594
+#: app/includes/models/admin/menu/TPFieldWidgets.php:631
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_ru"
 msgid "2 stars"
 msgstr "2 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:596
+#: app/includes/models/admin/menu/TPFieldWidgets.php:633
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_ru"
 msgid "3 stars"
 msgstr "3 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:598
+#: app/includes/models/admin/menu/TPFieldWidgets.php:635
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_ru"
 msgid "4 stars"
 msgstr "4 звезды"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:600
+#: app/includes/models/admin/menu/TPFieldWidgets.php:637
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_ru"
 msgid "5 stars"
 msgstr "5 звёзд"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:602
+#: app/includes/models/admin/menu/TPFieldWidgets.php:639
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_ru"
 msgid "Cheap"
 msgstr "Дешёвые"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:604
+#: app/includes/models/admin/menu/TPFieldWidgets.php:641
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_ru"
 msgid "Close to city center"
 msgstr "Близко к центру"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:606
+#: app/includes/models/admin/menu/TPFieldWidgets.php:643
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_ru"
 msgid "Hotels in the center"
 msgstr "Отели в центре"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:608
+#: app/includes/models/admin/menu/TPFieldWidgets.php:645
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_ru"
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:610
+#: app/includes/models/admin/menu/TPFieldWidgets.php:647
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_ru"
 msgid "Popular"
 msgstr "Популярные"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:612
+#: app/includes/models/admin/menu/TPFieldWidgets.php:649
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_ru"
 msgid "Expensive"
 msgstr "Дорогие"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:618
+#: app/includes/models/admin/menu/TPFieldWidgets.php:655
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_1_en"
 msgid "1 star"
 msgstr "1 star"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:621
+#: app/includes/models/admin/menu/TPFieldWidgets.php:658
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_2_en"
 msgid "2 stars"
 msgstr "2 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:623
+#: app/includes/models/admin/menu/TPFieldWidgets.php:660
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_3_en"
 msgid "3 stars"
 msgstr "3 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:625
+#: app/includes/models/admin/menu/TPFieldWidgets.php:662
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_4_en"
 msgid "4 stars"
 msgstr "4 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:627
+#: app/includes/models/admin/menu/TPFieldWidgets.php:664
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_5_en"
 msgid "5 stars"
 msgstr "5 stars"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:629
+#: app/includes/models/admin/menu/TPFieldWidgets.php:666
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_6_en"
 msgid "Cheap"
 msgstr "Cheap"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:631
+#: app/includes/models/admin/menu/TPFieldWidgets.php:668
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_7_en"
 msgid "Close to city center"
 msgstr "Close to city center"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:633
+#: app/includes/models/admin/menu/TPFieldWidgets.php:670
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_8_en"
 msgid "Hotels in the center"
 msgstr "Hotels in the center"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:635
+#: app/includes/models/admin/menu/TPFieldWidgets.php:672
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_9_en"
 msgid "Rating"
 msgstr "Rating"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:637
+#: app/includes/models/admin/menu/TPFieldWidgets.php:674
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_10_en"
 msgid "Popular"
 msgstr "Popular"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:639
+#: app/includes/models/admin/menu/TPFieldWidgets.php:676
 msgctxt "tp_admin_page_widgets_shortcode_7_field_select_selection_value_11_en"
 msgid "Expensive"
 msgstr "Expensive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:659
+#: app/includes/models/admin/menu/TPFieldWidgets.php:696
 msgctxt "tp_admin_page_widgets_shortcode_7_link_example"
 msgid "Widget Example"
 msgstr "Widget Example"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:668
+#: app/includes/models/admin/menu/TPFieldWidgets.php:705
 msgctxt "tp_admin_page_widgets_shortcode_7_link_help"
 msgid "Travepayouts Help"
 msgstr "Travepayouts Help"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:675
+#: app/includes/models/admin/menu/TPFieldWidgets.php:712
 msgctxt "tp_admin_page_widgets_shortcode_7_field_cat1_label"
 msgid "Select selection"
 msgstr "Select selection"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:690
+#: app/includes/models/admin/menu/TPFieldWidgets.php:727
 msgctxt "tp_admin_page_widgets_shortcode_7_field_cat2_label"
 msgid "Select selection"
 msgstr "Select selection"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:705
+#: app/includes/models/admin/menu/TPFieldWidgets.php:742
 msgctxt "tp_admin_page_widgets_shortcode_7_field_cat3_label"
 msgid "Select selection"
 msgstr "Select selection"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:722
+#: app/includes/models/admin/menu/TPFieldWidgets.php:759
 msgctxt "tp_admin_page_widgets_shortcode_7_field_limit_label"
 msgid "Limit"
 msgstr "Limit"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:740
+#: app/includes/models/admin/menu/TPFieldWidgets.php:777
 msgctxt "tp_admin_page_widgets_shortcode_7_field_type_label"
 msgid "View widget"
 msgstr "View widget"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:746
+#: app/includes/models/admin/menu/TPFieldWidgets.php:783
 msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_full"
 msgid "Full"
 msgstr "Full"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:751
+#: app/includes/models/admin/menu/TPFieldWidgets.php:788
 msgctxt "tp_admin_page_widgets_shortcode_7_field_type_value_compact"
 msgid "Compact"
 msgstr "Compact"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:764
+#: app/includes/models/admin/menu/TPFieldWidgets.php:801
 msgctxt "tp_admin_page_widgets_shortcode_7_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:771
+#: app/includes/models/admin/menu/TPFieldWidgets.php:808
 msgctxt "tp_admin_page_widgets_shortcode_7_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:790
+#: app/includes/models/admin/menu/TPFieldWidgets.php:838
 msgctxt "tp_admin_page_widgets_shortcode_8_field_type_label"
 msgid "Widget type"
 msgstr "Widget type"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:796
+#: app/includes/models/admin/menu/TPFieldWidgets.php:844
 msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_tile"
 msgid "Tile"
 msgstr "Tile"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:801
+#: app/includes/models/admin/menu/TPFieldWidgets.php:849
 msgctxt "tp_admin_page_widgets_shortcode_8_field_type_value_slider"
 msgid "Slider"
 msgstr "Slider"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:818
+#: app/includes/models/admin/menu/TPFieldWidgets.php:866
 msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_airlines_label"
 msgid "Filter by airlines"
 msgstr "Filter by airlines"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:826
+#: app/includes/models/admin/menu/TPFieldWidgets.php:874
 msgctxt "tp_admin_page_widgets_shortcode_8_field_filter_routes_label"
 msgid "Filter by routes"
 msgstr "Filter by routes"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:839
+#: app/includes/models/admin/menu/TPFieldWidgets.php:887
 msgctxt "tp_admin_page_widgets_shortcode_8_field_limit_label"
 msgid "Limit"
 msgstr "Limit"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:858
+#: app/includes/models/admin/menu/TPFieldWidgets.php:906
 msgctxt "tp_admin_page_widgets_shortcode_8_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/models/admin/menu/TPFieldWidgets.php:865
+#: app/includes/models/admin/menu/TPFieldWidgets.php:913
 msgctxt "tp_admin_page_widgets_shortcode_8_field_width_label"
 msgid "Width"
 msgstr "Width"
+
+#: app/includes/models/admin/menu/TPFieldWidgets.php:954
+msgctxt "tp_admin_page_widgets_shortcode_field_powered_by_label"
+msgid "Add my referral link"
+msgstr "Add my referral link"
 
 #: app/includes/models/admin/menu/TPFieldWizard.php:19
 msgctxt "tp_admin_page_wizard_field_token_label"
@@ -4271,202 +4276,207 @@ msgctxt "tp_admin_page_settings_сonstructor_widgets_title"
 msgid "Constructor widgets"
 msgstr "Constructor widgets"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:33
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:38
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_0"
 msgid "Select widget"
 msgstr "Select widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:37
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:42
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_1"
 msgid "Map Widget"
 msgstr "Map Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:41
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:46
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_2"
 msgid "Hotels Map Widget"
 msgstr "Hotels Map Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:45
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_3"
 msgid "Calendar Widget"
 msgstr "Calendar Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:50
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_4"
 msgid "Subscription Widget"
 msgstr "Subscription Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:55
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:60
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_5"
 msgid "Hotel Widget"
 msgstr "Hotel Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:59
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:64
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_6"
 msgid "Popular Destinations Widget"
 msgstr "Popular Destinations Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:63
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:68
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_7"
 msgid "Hotels Selections Widget"
 msgstr "Hotels Selections Widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:67
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:72
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_select_widget_value_8"
 msgid "Best deals widget"
 msgstr "Best deals widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:76
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:81
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_subid_label"
 msgid "Subid"
 msgstr "Subid"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:83
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:88
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_label"
 msgid "Widget type"
 msgstr "Widget type"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:89
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:94
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_0"
 msgid "Tile"
 msgstr "Tile"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:94
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:99
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_8_value_1"
 msgid "Slider"
 msgstr "Slider"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:105
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:110
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_0_label"
 msgid "Filter by airlines"
 msgstr "Filter by airlines"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:112
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:117
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_filter_widget_8_value_1_label"
 msgid "Filter by routes"
 msgstr "Filter by routes"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:125
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:130
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_label"
 msgid "Airline"
 msgstr "Airline"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:129
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:134
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_airline_widget_8_btn_delete_label"
 msgid "Delete"
 msgstr "Delete"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:140
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:145
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_widget_8_btn_add_label"
 msgid "Add"
 msgstr "Add"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:152
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:157
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_origin_widget_8_label"
 msgid "Origin"
 msgstr "Origin"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:160
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:165
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_8_label"
 msgid "Destination"
 msgstr "Destination"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:170
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:175
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_8_label"
 msgid "Limit"
 msgstr "Limit"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:186
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:191
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_origin_label"
 msgid "Origin"
 msgstr "Origin"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:194
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:199
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_label"
 msgid "Destination"
 msgstr "Destination"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:207
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:212
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_year"
 msgid "Year"
 msgstr "Year"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:211
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:216
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_calendar_period_value_current_month"
 msgid "Current month"
 msgstr "Current month"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:242
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:247
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_period_day_label"
 msgid "Range, days"
 msgstr "Range, days"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:255
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:260
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_hotel_id_label"
 msgid "Hotel"
 msgstr "Hotel"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:261
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:266
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_size_label"
 msgid "Size"
 msgstr "Size"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:272
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:277
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_direct_label"
 msgid "Direct Flights Only"
 msgstr "Direct Flights Only"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:281
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:286
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_one_way_label"
 msgid "One way"
 msgstr "One way"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:290
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:295
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_hotel_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:299
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:304
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_count_widget_6_label"
 msgid "Count"
 msgstr "Count"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:311
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:316
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_destination_widget_6_label"
 msgid "Destination"
 msgstr "Destination"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:321
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:326
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_responsive_label"
 msgid "Responsive"
 msgstr "Responsive"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:326
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:331
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_width_label"
 msgid "Width"
 msgstr "Width"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:337
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:342
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_label"
 msgid "View widget"
 msgstr "View widget"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:343
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:348
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_full"
 msgid "Full"
 msgstr "Full"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:348
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:353
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_type_widget_7_value_compact"
 msgid "Compact"
 msgstr "Compact"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:358
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:363
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_limit_widget_7_label"
 msgid "Limit"
 msgstr "Limit"
 
-#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:389
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:380
+msgctxt "tp_admin_page_settings_сonstructor_widgets_field_powered_by_label"
+msgid "Add my referral link"
+msgstr ""
+
+#: app/includes/views/admin/media_buttons/TPWidgetButtons.view.php:421
 msgctxt "tp_admin_page_settings_сonstructor_widgets_field_zoom_widget_2_label"
 msgid "Zoom"
 msgstr "Zoom"
