@@ -725,7 +725,7 @@ class TPDefault implements  \core\TPODefault{
                     'color' => '#00b1dd',
                     'map_color' => '#00b1dd',
                     'contrast_color' => '#ffffff',
-                    'zoom' => 12
+                    'zoom' => 12,
                 ),
                 '3' => array(
                     'extra_widget_marker' => '',
@@ -738,6 +738,7 @@ class TPDefault implements  \core\TPODefault{
                         'to' => 14,
                     ),
                     'responsive' => 1,
+                    'powered_by' => 1
                 ),
                 '4' => array(
                     'extra_widget_marker' => '',
@@ -751,12 +752,14 @@ class TPDefault implements  \core\TPODefault{
                     'extra_widget_marker' => '',
                     'width' => '500',
                     'responsive' => 1,
+                    'powered_by' => 1
                 ),
                 '6' => array(
                     'extra_widget_marker' => '',
                     'width' => '260',
                     'responsive' => 1,
                     'count' => 3,
+                    'powered_by' => 1
                 ),
                 '7' => array(
                     'limit' => 10,
@@ -765,7 +768,8 @@ class TPDefault implements  \core\TPODefault{
                     'responsive' => 1,
                     'cat1' => '3stars',
                     'cat2' => 'popularity', //distance
-                    'cat3' => 'distance' //tophotels
+                    'cat3' => 'distance', //tophotels
+                    'powered_by' => 1
 
                 ),
                 '8' => array(
@@ -774,7 +778,7 @@ class TPDefault implements  \core\TPODefault{
                     'type' => 'brickwork',
                     'limit' => 9,
                     'filter' => 0,
-
+                    'powered_by' => 1
                 )
 
             ),
