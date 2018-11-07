@@ -28,7 +28,8 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             'filter_flight_number' => false,
             'filter_airline' => false,
             'return_url' => false,
-            'widget' => 0
+            'widget' => 0,
+            'host' => ''
         );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if ($return_url == 1){
@@ -97,7 +98,8 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => $off_title,
             'subid' => $subid,
             'currency' => $this->typeCurrency(),
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'host' => $host
         );
 
     }

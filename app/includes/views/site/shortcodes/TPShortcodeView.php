@@ -41,7 +41,8 @@ class TPShortcodeView {
             'one_way' => 'false',
             'off_title' => '',
             'subid' => '',
-            'currency' => \app\includes\TPPlugin::$options['local']['currency']
+            'currency' => \app\includes\TPPlugin::$options['local']['currency'],
+            'host' => ''
         );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //error_log('currency = '.$currency);
@@ -68,7 +69,7 @@ class TPShortcodeView {
                         data-paginate_limit="'.\app\includes\TPPlugin::$options['shortcodes'][$type]['paginate'].'"
                         data-sort_column="'.$sort_column.'">
                         '.$this->renderHeadTable($type, $one_way).'
-                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency).'
+                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host).'
                     </table>
                 </div>';
         return $html;
@@ -225,7 +226,7 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency){
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host){
         //error_log("renderBodyTable subid = ".$subid);
         if(!empty($subid)){
             $subid = trim($subid);
@@ -258,7 +259,8 @@ class TPShortcodeView {
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ) );
                         break;
                     case 2:
@@ -270,7 +272,8 @@ class TPShortcodeView {
                             'price' => number_format($row["value"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ));
                         break;
                     case 8:
@@ -283,7 +286,8 @@ class TPShortcodeView {
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ) );
                         break;
                     case 9:
@@ -295,7 +299,8 @@ class TPShortcodeView {
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ));
                         break;
                     case 10:
@@ -307,7 +312,8 @@ class TPShortcodeView {
                             'price' => '',//[tp_popular_destinations_airlines_shortcodes airline=SU title="" limit=6]
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ));
                         break;
                     case 12:
@@ -322,7 +328,8 @@ class TPShortcodeView {
                             'type' => $type,
                             'one_way' =>  '&one_way='.$one_way,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ));
                         break;
                     default:
@@ -334,7 +341,8 @@ class TPShortcodeView {
                             'price' => number_format($row["price"], 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
-                            'currency' => $currency
+                            'currency' => $currency,
+                            'host' => $host
                         ));
                 }
                 // get Price
@@ -727,21 +735,32 @@ class TPShortcodeView {
             'one_way' => '',
             'subid' => '',
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
+            'host' => ''
             );
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         //error_log("getUrlTable subid = ".$subid);
         $isWhiteLabel = false;
-        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
-        if(!empty($white_label)){
+        if (!empty($host)) {
+            // shortcode param host
+            $white_label = $host;
             if(strpos($white_label, 'http') === false){
                 $white_label = 'http://'.$white_label;
             }
-            $isWhiteLabel = true;
+        } else {
+            // host or white label
+            $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
+            if(!empty($white_label)){
+                if(strpos($white_label, 'http') === false){
+                    $white_label = 'http://'.$white_label;
+                }
+                $isWhiteLabel = true;
+            }
+            if( ! $white_label || empty( $white_label ) ){
+                $white_label = \app\includes\common\TPHostURL::getHostTable();
+                $isWhiteLabel = false;
+            }
         }
-        if( ! $white_label || empty( $white_label ) ){
-            $white_label = \app\includes\common\TPHostURL::getHostTable();
-            $isWhiteLabel = false;
-        }
+
         $marker = \app\includes\TPPlugin::$options['account']['marker'];
         $marker = '&marker='.$marker;
         $marker .= TPOption::getExtraMarker();
@@ -762,8 +781,13 @@ class TPShortcodeView {
         $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : "";
         $currency = '&currency='.$currency;
 
-        $url = 'new'.$origin.$destination.$departure_at.$return_at.$currency.$marker;
+        $url = $origin.$destination.$departure_at.$return_at.$currency.$marker;
 
+        if(strpos($white_label, 'aviasales.kz') === false){
+            $url = 'new'.$url;
+        }
+
+        //aviasales.kz
         /*if ($isWhiteLabel == true){
             if (\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangEN()){
                 //$url .= '&locale=en';
@@ -783,21 +807,27 @@ class TPShortcodeView {
                 break;
         }
 
+        if ($isWhiteLabel == true) {
+            $url = '/flights/'.$url;
+        } else {
+            if(strpos($white_label, 'aviasales.kz') === false){
+                $url = '/searches/'.$url;
+            } else {
+                $url = '/search/'.$url;
+            }
+
+        }
+
+        $url = $white_label.$url;
+
         if($redirect){
             $home = '';
             $home = get_option('home');
             //$url = substr($url, 10);
-            return $home.'/?searches='.rawurlencode($url);
-        }else{
-            if ($isWhiteLabel == true) {
-                $url = '/flights/'.$url;
-            } else {
-                $url = '/searches/'.$url;
-
-            }
-
-            return $white_label.$url;
+            $url = $home.'/?searches='.rawurlencode($url);
         }
+
+        return $url;
     }
 
     /**
@@ -1173,7 +1203,9 @@ class TPShortcodeView {
             if(isset($_GET['searches'])){
                 //error_log('redirect_plugins');
                 //error_log(print_r($_GET['searches'], true));
-                $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
+
+
+                /*$white_label = \app\includes\TPPlugin::$options['account']['white_label'];
                 if(!empty($white_label)){
                     if(strpos($white_label, 'http') === false){
                         $white_label = 'http://'.$white_label;
@@ -1185,12 +1217,12 @@ class TPShortcodeView {
                     //error_log('0 = '.$white_label);
                     $white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
 
-                }
+                }*/
 
                 //error_log('1 = '.$_GET['searches']);
                 //error_log('1 = '.urldecode($_GET['searches']));
 
-
+                $white_label = urldecode($_GET['searches']);
 
                 //header("Location: {$white_label}", true, 302);
                 header("Location: {$white_label}", true, 302);

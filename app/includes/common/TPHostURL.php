@@ -42,6 +42,19 @@ class TPHostURL
                 8 => 'jetradar.com/new_searches/'
             )
         ),
+        'aviasales.kz' => array(
+            'table' => 'aviasales.kz',
+            'widget' => array(
+                1 => '',
+                2 => '',
+                3 => 'www.aviasales.kz/search/',
+                4 => '',
+                5 => '',
+                6 => 'www.aviasales.kz/search/',
+                7 => '',
+                8 => ''
+            )
+        ),
         'jetradar.com.br' => array(
             'table' => 'jetradar.com.br',
             'widget' => array(

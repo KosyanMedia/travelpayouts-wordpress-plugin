@@ -126,7 +126,7 @@ class TPWidgetsView {
 	                $white_label = $this->serializeWhiteLabel($white_label);
                     //error_log($white_label);
                     //$white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
-	                error_log($white_label);
+	                //error_log($white_label);
 
                 }else{
                     $white_label .= '/flights';
@@ -149,7 +149,12 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
 
                     //$white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel(6);
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    $white_label = \app\includes\common\TPHostURL::getHostWidget($widgetType);
+                    $white_label = $this->serializeWhiteLabel($white_label);
+                    if(strpos($white_label, 'aviasales.kz') === false){
+                        $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    }
+
                     //$white_label = str_replace("http://", "", $white_label);
                     //
                     //error_log($white_label);

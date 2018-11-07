@@ -102,7 +102,8 @@ class TPDirectFlightsShortcodeModel extends TPFlightShortcodeModel{
             'filter_flight_number' => false,
             'filter_airline' => false,
             'return_url' => false,
-            'widget' => 0
+            'widget' => 0,
+            'host' => ''
             );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if ($return_url == 1){
@@ -132,7 +133,8 @@ class TPDirectFlightsShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => $off_title,
             'subid' => $subid,
             'currency' => $currency,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'host' => $host
         );
 
 

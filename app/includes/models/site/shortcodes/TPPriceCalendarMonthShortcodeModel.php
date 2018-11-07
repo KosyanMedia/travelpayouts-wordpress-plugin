@@ -84,7 +84,8 @@ class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => '',
             'subid' => '',
             'return_url' => false,
-            'widget' => 0
+            'widget' => 0,
+            'host' => ''
         );
         //error_log(print_r($args, true));
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
@@ -116,7 +117,8 @@ class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => $off_title,
             'subid' => $subid,
             'currency' => $currency,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'host' => $host
             );
 
 

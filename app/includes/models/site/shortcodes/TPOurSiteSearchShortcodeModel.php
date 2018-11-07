@@ -98,7 +98,8 @@ class TPOurSiteSearchShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => '',
             'subid' => '',
             'return_url' => false,
-            'widget' => 0
+            'widget' => 0,
+            'host' => ''
         );
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if ($return_url == 1){
@@ -128,7 +129,8 @@ class TPOurSiteSearchShortcodeModel extends TPFlightShortcodeModel{
             'off_title' => $off_title,
             'subid' => $subid,
             'currency' => $currency,
-            'return_url' => $return_url
+            'return_url' => $return_url,
+            'host' => $host
         );
 
 
