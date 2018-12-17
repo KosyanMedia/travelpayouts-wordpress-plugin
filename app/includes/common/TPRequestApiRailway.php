@@ -13,6 +13,7 @@ class TPRequestApiRailway extends TPRequestApi{
 
 	private static $instance = null;
 	const TP_API_URL = 'https://www.tutu.ru/poezda/api';
+	const TP_API_URL_ALTERNATIVE = 'https://suggest.travelpayouts.com';
 
 	public static function getInstance()
 	{
@@ -24,36 +25,43 @@ class TPRequestApiRailway extends TPRequestApi{
 	}
 
 	public static function getApiUrl(){
-		return self::TP_API_URL;
+		return self::TP_API_URL_ALTERNATIVE;
 	}
 
 	/**
-	 * https://www.tutu.ru/poezda/api/travelpayouts/?departureStation=2000000&arrivalStation=2004000
+     * https://suggest.travelpayouts.com/search?service=tutu_trains&term=2060150&term2=2000000
 	 * @param array $args
+     * @return string|array
 	 */
-	public function getTutu($args = array()){
-		$defaults = array(
-			'origin' => false,
-			'destination' => false,
-			'return_url' => false
-		);
-		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-		if (!$origin || empty($origin)){
-			echo $this->get_error('origin');
-			return false;
-		}elseif (!$destination || empty($destination)){
-			echo $this->get_error('destination');
-			return false;
-		} else {
-			$origin = "departureStation={$origin}";
-			$destination = "arrivalStation={$destination}";
-		}
-		$requestURL = self::getApiUrl()."/travelpayouts/?{$origin}&{$destination}";
-		if ($return_url == true){
-			return $requestURL;
-		}
-		return $this->request($requestURL);
-	}
+    public function getTutu($args = array())
+    {
+        $defaults = array(
+            'origin' => false,
+            'destination' => false,
+            'return_url' => false
+        );
+
+        $attributes = array_merge($defaults, wp_parse_args($args, $defaults));
+        if (!isset($attributes['origin']) && $attributes['origin']) {
+            echo $this->get_error('origin');
+            return false;
+        }
+        if (!isset($attributes['destination']) && $attributes['destination']) {
+            echo $this->get_error('destination');
+            return false;
+        }
+        $requestParams = [
+            'service' => 'tutu_trains',
+            'term' => $attributes['origin'],
+            'term2' => $attributes['destination'],
+        ];
+        $requestQuery = http_build_query($requestParams);
+        $requestURL = self::getApiUrl() . '/search?' . $requestQuery;
+        if (isset($attributes['return_url']) && $attributes['return_url'] == true) {
+            return $requestURL;
+        }
+        return $this->request($requestURL);
+    }
 
 	/**
 	 * @param $string
@@ -64,6 +72,7 @@ class TPRequestApiRailway extends TPRequestApi{
 	{
 		$response = wp_remote_get( $string, array('headers' => array(
 			'Accept-Encoding' => 'gzip, deflate',
+            'Accept-Language'=> '*'
 		)) );
 		$body = wp_remote_retrieve_body($response);
 		$json = json_decode( $body );
