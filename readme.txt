@@ -2,7 +2,7 @@
 Contributors: travelpayouts
 Tags: flights, hotels, search, air tickets, airfare, agency, booking, affiliate, travel, travel widget, travel tools
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9.8
 Stable tag: trunk
 Author URI: https://www.travelpayouts.com/?utm_source=wp_org&utm_medium=description
 License: GPLv2 or later
@@ -175,6 +175,29 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 11. Hotels Selections Widget
 
 == Changelog == 
+
+= 0.7.7 = 
+Release Date: December 18th, 2018
+* new: aviasales.kz host is added globally for flights widgets (except a map) and tables
+* new: widgets' shortcodes now support currency= parameter, so you can define currency for each widget individually. E.g. currency=UAH 
+* new: flights tables now support host= parameter so you can define a host for each table individually. E.g. host=aviasales.kz
+* added: "Powered by" control in the shortcodes. 
+* updated: now all widgets support all currencies, the same as at Travelpayouts.com
+* fixed: tutu's (railway tickets in Russia) tables moved to the new API endpoint. Should work better
+
+= 0.7.6 = 
+Release Date: Mar 2nd, 2018
+* fixed: hotels white label domain wasn't work for widgets
+
+= 0.7.5 = 
+Release Date: Jan 29th, 2018
+* fixed: tutu link from tables
+
+= 0.7.4 = 
+Release Date: July 5th, 2017
+* fixed: jetradar link from tables
+* fixed: calendar widget jetradar link
+* fixed: tutu subid fixed
 
 = 0.7.3 = 
 Release Date: July 5th, 2017
