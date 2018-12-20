@@ -2,7 +2,7 @@
 Contributors: travelpayouts
 Tags: flights, hotels, search, air tickets, airfare, agency, booking, affiliate, travel, travel widget, travel tools
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9.8
 Stable tag: trunk
 Author URI: https://www.travelpayouts.com/?utm_source=wp_org&utm_medium=description
 License: GPLv2 or later
@@ -47,7 +47,7 @@ Plugin allows to get the following tools added to your Wordpress posts:
 * Low prices Calendar
 * Hotel Widget
 * Popular flight destinations Widget
-* Send your visitor to your own [flight or hotel White Label](www.travelpayouts.com/promo/whitelabel/en/?utm_source=wp_org&utm_medium=description&utm_campaign=en) or to our domains in different languages (45 to choose from). 
+* Send your visitor to your own [flight or hotel White Label](https://www.travelpayouts.com/promo/whitelabel/en/?utm_source=wp_org&utm_medium=description&utm_campaign=en) or to our domains in different languages (45 to choose from). 
 
 Languages supported:
 
@@ -176,14 +176,43 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 
 == Changelog == 
 
+= 0.7.7 = 
+Release Date: December 18th, 2018
+
+* new: aviasales.kz host is added globally for flights widgets (except a map) and tables
+* new: widgets' shortcodes now support currency= parameter, so you can define currency for each widget individually. E.g. currency=UAH 
+* new: flights tables now support host= parameter so you can define a host for each table individually. E.g. host=aviasales.kz
+* added: "Powered by" control in the shortcodes. 
+* updated: now all widgets support all currencies, the same as at Travelpayouts.com
+* fixed: tutu's (railway tickets in Russia) tables moved to the new API endpoint. Should work better
+
+= 0.7.6 = 
+Release Date: Mar 2nd, 2018
+
+* fixed: hotels white label domain wasn't work for widgets
+
+= 0.7.5 = 
+Release Date: Jan 29th, 2018
+
+* fixed: tutu link from tables
+
+= 0.7.4 = 
+Release Date: July 5th, 2017
+
+* fixed: jetradar link from tables
+* fixed: calendar widget jetradar link
+* fixed: tutu subid fixed
+
 = 0.7.3 = 
 Release Date: July 5th, 2017
+
 * fixed: jetradar link from tables
 * fixed: calendar widget jetradar link
 * fixed: tutu subid fixed
 
 = 0.7.2 = 
 Release Date: June 29th, 2017
+
 * added: 2 hotel tables: selections and selections by dates. Note that selections by dates are displayed if these data are present in the cache. Otherwise, nothing will be displayed
 * improved: Optimized statistics query
 * added: New currencies, now we have 63 of them in tables. We added an option for displaying currency symbol in the price. Now you can hide, or show up to a numerical value, after or just show the currency code instead of the symbol
