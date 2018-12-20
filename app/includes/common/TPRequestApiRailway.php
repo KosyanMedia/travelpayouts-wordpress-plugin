@@ -50,11 +50,12 @@ class TPRequestApiRailway extends TPRequestApi{
             echo $this->get_error('destination');
             return false;
         }
-        $requestParams = [
+        $requestParams = array(
             'service' => 'tutu_trains',
             'term' => $attributes['origin'],
             'term2' => $attributes['destination'],
-        ];
+        );
+
         $requestQuery = http_build_query($requestParams);
         $requestURL = self::getApiUrl() . '/search?' . $requestQuery;
         if (isset($attributes['return_url']) && $attributes['return_url'] == true) {
