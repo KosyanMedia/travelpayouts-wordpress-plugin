@@ -41,7 +41,7 @@ class TPRailwayShortcodeView {
 		$html = '';
 		if ($shortcode == false) return false;
 
-		if (count($rows) < 1 || $rows == false || !is_array($rows)) return $this->renderViewIfEmptyTable();
+        if (!is_array($rows) || count($rows) < 1) return $this->renderViewIfEmptyTable();
 
 		$html .= '<div class="TPTrainTable">
                      <div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
