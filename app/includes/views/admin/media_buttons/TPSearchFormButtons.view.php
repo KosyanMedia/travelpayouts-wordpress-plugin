@@ -4,7 +4,7 @@
         <tr>
             <td id="td_select_search_form">
                 <?php if(!empty($this->data)){ ?>
-                    <?php if(count($this->data)>1){ ?>
+                    <?php if(\app\includes\common\TpPluginHelper::count($this->data)>1){ ?>
                         <select name="select_search_form" id="select_search_form">
                             <?php foreach($this->data as $key => $record): ?>
 

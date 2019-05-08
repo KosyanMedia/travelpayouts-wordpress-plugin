@@ -8,6 +8,7 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
+use \app\includes\common\TpPluginHelper;
 
 class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
 {
@@ -58,7 +59,7 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -99,7 +100,7 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
             $wpdb->prepare('SELECT * FROM '.$tableName
                 .' WHERE location_id = %d', $parameter),
             ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 

@@ -8,6 +8,7 @@
 
 namespace app\includes\models\admin\menu;
 
+use \app\includes\common\TpPluginHelper;
 
 class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
 {
@@ -135,7 +136,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results("SELECT * FROM ".$tableName." WHERE id IN ({$arrayId})", ARRAY_A);
-        if(count($data) > 0) {
+        if(TpPluginHelper::count($data) > 0) {
             $dataResult = $this->getDataAutoReplacLinks($data);
             return $dataResult;
         }
@@ -190,7 +191,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
     public function get_data()
@@ -199,7 +200,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -229,7 +230,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE id= ". $id, ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
     /**

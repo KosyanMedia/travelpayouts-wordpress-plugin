@@ -8,7 +8,11 @@
 namespace app\includes\models\site\shortcodes;
 use \app\includes\models\site\TPFlightShortcodeModel;
 class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel{
-
+    /**
+     * @param array $args
+     * @return array|bool
+     * @var $NUMBER 10
+     */
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.

@@ -15,6 +15,7 @@ use \app\includes\common\TPLang;
 use \app\includes\common\TPAutocompleteReplace;
 use \app\includes\common\TPHostURL;
 use \app\includes\common\TPFieldsLabelTable;
+use \app\includes\common\TpPluginHelper;
 
 class TPHotelShortcodeView //extends TPShortcodeView
 {
@@ -101,7 +102,7 @@ class TPHotelShortcodeView //extends TPShortcodeView
         $html = '';
         if ($shortcode == false) return false;
 
-        if (count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
+        if (TpPluginHelper::count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable();
         if ($this->isEmptyPrice($rows) == true) return $this->renderViewIfEmptyTable();
 
         $html .= '<div class="TPHotelTable TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'

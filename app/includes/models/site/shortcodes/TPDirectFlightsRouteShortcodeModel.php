@@ -6,9 +6,16 @@
  * Time: 11:21
  */
 namespace app\includes\models\site\shortcodes;
-use \app\includes\models\site\TPFlightShortcodeModel;
-class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
 
+use \app\includes\models\site\TPFlightShortcodeModel;
+use \app\includes\common\TpPluginHelper;
+
+class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
+    /**
+     * @param array $args
+     * @return array|bool|mixed
+     * @var $NUMBER 7
+     */
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
@@ -261,7 +268,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-        if(count($data) < 1) return $dataAll;
+        if(TpPluginHelper::count($data) < 1) return $dataAll;
         return $data;
     }
 

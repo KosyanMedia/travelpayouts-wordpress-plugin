@@ -17,6 +17,7 @@ use \app\includes\common\TPLang;
 use \app\includes\common\TPHostURL;
 use \app\includes\common\TPAutocompleteReplace;
 use \app\includes\common\TPFieldsLabelTable;
+use \app\includes\common\TpPluginHelper;
 
 class TPShortcodeView {
     public function __construct()
@@ -52,14 +53,14 @@ class TPShortcodeView {
         $html = '';
 
         //error_log(count($rows).' type = '.$type);
-        if(count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
+        if(TpPluginHelper::count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
             $origin, $destination, $limit, $subid, $currency);
 
         if($one_way === 'false'){
             $sort_column = TPPlugin::$options['shortcodes'][$type]['sort_column'];
         }else{
             $sort_column = TPPlugin::$options['shortcodes'][$type]['sort_column'];
-            if($sort_column == count($this->getSelectField($type)) - 1){
+            if($sort_column == TpPluginHelper::count($this->getSelectField($type)) - 1){
                 --$sort_column;
             }
         }

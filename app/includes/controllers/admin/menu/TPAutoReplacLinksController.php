@@ -7,7 +7,7 @@
  */
 
 namespace app\includes\controllers\admin\menu;
-
+use \app\includes\common\TpPluginHelper;
 
 class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuController
 {
@@ -228,7 +228,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
      * @return array
      */
     public function getReplaceLimitRecursive($limit, $count_anchor, $limit_array = array()){
-        if(count($limit_array) == 0) $limit_array = array_pad(array(),$count_anchor,0);
+        if(TpPluginHelper::count($limit_array) === 0) $limit_array = array_pad(array(),$count_anchor,0);
         for($i = 0; $i < $count_anchor; $i++){
             if($limit == 0) break;
             $limit_array[$i] = $limit_array[$i]+1;
@@ -481,7 +481,7 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         return  stripslashes($matches);
     }
 
-    
+
 
 
     public function action()

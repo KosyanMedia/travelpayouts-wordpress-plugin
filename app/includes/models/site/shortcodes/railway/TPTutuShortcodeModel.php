@@ -13,6 +13,7 @@ use app\includes\models\site\TPRailwayShortcodeModel;
 use \app\includes\common\TPCurrencyUtils;
 use \app\includes\common\TPLang;
 use app\includes\TPPlugin;
+use \app\includes\common\TpPluginHelper;
 
 class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
@@ -72,7 +73,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	}
 
 	public function setStation($rows){
-        if (!is_array($rows) || count($rows) < 1) return array();
+        if (!is_array($rows) || TpPluginHelper::count($rows) < 1) return array();
 
 		foreach ($rows as $key => $row){
 			if (array_key_exists('departureStation', $row)) {

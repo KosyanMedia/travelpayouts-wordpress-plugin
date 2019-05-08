@@ -12,6 +12,7 @@ class TPPriceCalendarMonthShortcodeModel extends TPFlightShortcodeModel{
     /**
      * @param array $args
      * @return array|bool
+     * @var $NUMBER 1
      */
     public function get_data($args = array())
     {

@@ -8,6 +8,7 @@
 namespace app\includes\models\site;
 
 use \app\includes\TPPlugin;
+use \app\includes\common\TpPluginHelper;
 
 abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheModel{
     public function __construct(){
@@ -126,7 +127,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
      * @return bool
      */
     public function single_flight( $flights ) {
-        $count = count( $flights );
+        $count = TpPluginHelper::count( $flights );
         if( $count < 1 )
             return false;
         $price = INF;

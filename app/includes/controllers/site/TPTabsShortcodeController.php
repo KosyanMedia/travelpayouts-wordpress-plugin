@@ -8,6 +8,7 @@
 
 namespace app\includes\controllers\site;
 
+use \app\includes\common\TpPluginHelper;
 
 class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigetsShortcodesController
 {
@@ -38,7 +39,7 @@ class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigets
         $tab_content_out = '';
         $tab_menu_out = '';
 
-        if(count($tabs) > 0) {
+        if(TpPluginHelper::count($tabs) > 0) {
             $output .= '<div class="TPTabs">';
             foreach($tabs as $key=>$tab){
                // error_log($tab);

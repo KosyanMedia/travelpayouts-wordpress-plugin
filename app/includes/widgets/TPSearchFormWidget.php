@@ -10,6 +10,7 @@ namespace app\includes\widgets;
 
 use app\includes\models\admin\menu\TPSearchFormsModel;
 use WP_Widget;
+use \app\includes\common\TpPluginHelper;
 
 class TPSearchFormWidget extends WP_Widget{
 	private $model;
@@ -132,7 +133,7 @@ class TPSearchFormWidget extends WP_Widget{
 				<p class="tp-search-form-widget-select">
 					<label for="<?php echo $this->get_field_id('search_form_select'); ?>"
 					       class="tp-search-form-widget-select-label">
-						<?php if (count($searchForms) > 1): ?>
+						<?php if (TpPluginHelper::count($searchForms) > 1): ?>
 							<?php _ex('Select the search form:',
 								'Travelpayouts – Search Form Widget',
 								TPOPlUGIN_TEXTDOMAIN);?>

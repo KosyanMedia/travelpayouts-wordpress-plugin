@@ -22,9 +22,9 @@ class TPFromOurCityFlyShortcodeController extends \app\includes\controllers\site
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode('tp_from_our_city_fly_shortcodes', [&$this, 'actionTable']);
-        add_shortcode('tp_from_our_city_fly_shortcodes_max_price', [&$this, 'actionMaxPrice']);
-        add_shortcode('tp_from_our_city_fly_shortcodes_min_price', [&$this, 'actionMinPrice']);
+        add_shortcode('tp_from_our_city_fly_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode('tp_from_our_city_fly_shortcodes_max_price', array(&$this, 'actionMaxPrice'));
+        add_shortcode('tp_from_our_city_fly_shortcodes_min_price', array(&$this, 'actionMinPrice'));
     }
 
     public function actionTable($args = [])

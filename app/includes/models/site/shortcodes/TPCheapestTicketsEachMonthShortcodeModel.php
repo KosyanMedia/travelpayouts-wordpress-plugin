@@ -7,10 +7,17 @@
  * 5. Цены на билеты по месяцам
  */
 namespace app\includes\models\site\shortcodes;
+
 use \app\includes\models\site\TPFlightShortcodeModel;
+use \app\includes\common\TpPluginHelper;
 
 class TPCheapestTicketsEachMonthShortcodeModel extends TPFlightShortcodeModel{
 
+    /**
+     * @param array $args
+     * @return array|bool|mixed|string
+     * @var $NUMBER 6
+     */
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
@@ -144,7 +151,7 @@ class TPCheapestTicketsEachMonthShortcodeModel extends TPFlightShortcodeModel{
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-        if(count($data) < 1) return $dataAll;
+        if(TpPluginHelper::count($data) < 1) return $dataAll;
         return $data;
     }
 

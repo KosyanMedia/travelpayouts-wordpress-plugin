@@ -6,6 +6,9 @@
  * Time: 18:27
  */
 namespace app\includes\controllers\site\shortcodes;
+
+use \app\includes\common\TpPluginHelper;
+
 class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesController{
     public $model;
     public function __construct(){
@@ -143,7 +146,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
             if(!empty($hotel_city)){
                 $params = explode(", ", $hotel_city);
 
-                if(count($params) == 6){
+                if(TpPluginHelper::count($params) == 6){
                     //error_log(print_r($params, true));
                    // error_log($params[4]);
                     $hotel_city_text = "";

@@ -5,7 +5,10 @@
  * Date: 12.08.15
  * Time: 18:39
  */
+
 namespace app\includes\models\site\shortcodes;
+use \app\includes\common\TpPluginHelper;
+
 class TPSearchFormShortcodeModel {
     public static $tableName = "tp_search_shortcodes";
     public function get_dataId($id)
@@ -14,7 +17,7 @@ class TPSearchFormShortcodeModel {
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_row("SELECT * FROM ".$tableName ." WHERE id= ".(int)$id, ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -24,7 +27,7 @@ class TPSearchFormShortcodeModel {
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_row("SELECT * FROM ".$tableName ." WHERE slug='{$slug}'", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 

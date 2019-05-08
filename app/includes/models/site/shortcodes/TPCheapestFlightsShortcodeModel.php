@@ -9,12 +9,14 @@
 namespace app\includes\models\site\shortcodes;
 
 use \app\includes\models\site\TPFlightShortcodeModel;
+use \app\includes\common\TpPluginHelper;
 
 class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
 
     /**
      * @param array $args
      * @return array|bool
+     * @var $NUMBER  4
      */
     public function get_data($args = array())
     {
@@ -151,7 +153,7 @@ class TPCheapestFlightsShortcodeModel extends TPFlightShortcodeModel{
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-        if(count($data) < 1) return $dataAll;
+        if(TpPluginHelper::count($data) < 1) return $dataAll;
         return $data;
     }
 

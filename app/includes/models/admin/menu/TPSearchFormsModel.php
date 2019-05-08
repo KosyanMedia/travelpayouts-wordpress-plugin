@@ -6,6 +6,9 @@
  * Time: 22:57
  */
 namespace app\includes\models\admin\menu;
+
+use \app\includes\common\TpPluginHelper;
+
 class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel{
     public static $tableName = "tp_search_shortcodes";
     public function __construct()
@@ -63,7 +66,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             preg_match('/\{(.+)\}/',  $hotel_city, $hotel_iata);
             if(!empty($hotel_iata[1])){
                 $params = explode(', ',  $hotel_iata[1]);
-                if(count($params) == 6) {
+                if(TpPluginHelper::count($params) == 6) {
                     //error_log($params[4]);
                     $hotel_city_text = "";
                     switch ($params[4]) {
@@ -175,7 +178,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
     public static function importSearchForm($searchForms){
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
-        if(count($searchForms) < 1 || $searchForms == false) return;
+        if(TpPluginHelper::count($searchForms) < 1 || $searchForms == false) return;
         foreach ($searchForms as $searchForm){
             $wpdb->insert($tableName, $searchForm);
         }
@@ -251,7 +254,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -263,7 +266,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE id= ". $id, ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
     public static function getData()
@@ -272,7 +275,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
         global $wpdb;
         $tableName = $wpdb->prefix .self::$tableName;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -283,7 +286,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             $wpdb->prepare('SELECT * FROM '.$tableName.' WHERE type_shortcode = %d ORDER BY date_add DESC', 0),
             ARRAY_A);
 
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 
@@ -294,7 +297,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
             $wpdb->prepare('SELECT * FROM '.$tableName.' WHERE id = %d ', $id),
             ARRAY_A);
 
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
 

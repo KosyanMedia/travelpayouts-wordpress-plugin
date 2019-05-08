@@ -13,6 +13,7 @@ use app\includes\common\TPFieldsLabelTable;
 use app\includes\common\TPLang;
 use app\includes\common\TPOption;
 use app\includes\TPPlugin;
+use \app\includes\common\TpPluginHelper;
 
 class TPRailwayShortcodeView {
 
@@ -41,7 +42,7 @@ class TPRailwayShortcodeView {
 		$html = '';
 		if ($shortcode == false) return false;
 
-        if (!is_array($rows) || count($rows) < 1) return $this->renderViewIfEmptyTable();
+        if (!is_array($rows) || TpPluginHelper::count($rows) < 1) return $this->renderViewIfEmptyTable();
 
 		$html .= '<div class="TPTrainTable">
                      <div class="TP-Plugin-Tables_wrapper clearfix TP-HotelsTableWrapper">'
@@ -642,7 +643,7 @@ class TPRailwayShortcodeView {
 	    if (array_key_exists('categories', $row)) {
 		    $categories = $row['categories'];
 	    }
-	    if (count($categories) < 1 || $categories == false) return $prices;
+	    if (TpPluginHelper::count($categories) < 1 || $categories == false) return $prices;
         $priceData = array();
 		foreach ($categories as $category){
 			$type = '';
@@ -665,7 +666,7 @@ class TPRailwayShortcodeView {
 			           .'</div>';
 		}
 		$priceMin = 0;
-        if (count($priceData) > 0){
+        if (TpPluginHelper::count($priceData) > 0){
             $priceMin = min($priceData);
         }
     	return '<p class="TP-tdContent" data-price="'.$priceMin.'">'.$prices.'</p>';
@@ -680,11 +681,11 @@ class TPRailwayShortcodeView {
         if (array_key_exists('categories', $row)) {
             $categories = $row['categories'];
         }
-        if (count($categories)  == 1) {
+        if (TpPluginHelper::count($categories)  == 1) {
             $tdPriceClass = 'TPTd_1';
-        } elseif (count($categories)  == 2) {
+        } elseif (TpPluginHelper::count($categories)  == 2) {
             $tdPriceClass = 'TPTd_2';
-        } elseif (count($categories)  == 3) {
+        } elseif (TpPluginHelper::count($categories)  == 3) {
             $tdPriceClass = 'TPTd_3';
         }
 

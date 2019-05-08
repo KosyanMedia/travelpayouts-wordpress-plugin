@@ -8,6 +8,7 @@
 
 namespace app\includes\models\site\shortcodes;
 
+use \app\includes\common\TpPluginHelper;
 
 class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
 {
@@ -75,7 +76,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         global $wpdb;
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableNameOffer, ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
     public static function deleteTableSpecialOffer()
@@ -137,7 +138,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         global $wpdb;
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
         $data = $wpdb->get_results( "SELECT * FROM ".$tableNameRoute." ORDER BY date_add DESC", ARRAY_A);
-        if(count($data) > 0) return $data;
+        if(TpPluginHelper::count($data) > 0) return $data;
         return false;
     }
     public static function deleteTableSpecialRoute()
@@ -274,7 +275,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
 
     public static function getSpecialOfferApi(){
         $data = self::getSpecialOffer();
-        if(count($data) > 0) {
+        if(TpPluginHelper::count($data) > 0) {
             if($data->offer) {
                 self::truncateTable();
                 $time = time();

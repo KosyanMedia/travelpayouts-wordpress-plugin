@@ -7,10 +7,17 @@
  * 8. Популярные направления из города
  */
 namespace app\includes\models\site\shortcodes;
+
 use app\includes\common\TPCurrencyUtils;
 use \app\includes\models\site\TPFlightShortcodeModel;
-class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
+use \app\includes\common\TpPluginHelper;
 
+class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
+    /**
+     * @param array $args
+     * @return array|bool
+     * @var $NUMBER 9
+     */
     public function get_data($args = array())
     {
         // TODO: Implement get_data() method.
@@ -116,7 +123,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
                 return (strpos($value['airline_iata'], $filter_airline) !== false);
             });
         }
-        if(count($data) < 1) return $dataAll;
+        if(TpPluginHelper::count($data) < 1) return $dataAll;
 
         return $data;
     }
