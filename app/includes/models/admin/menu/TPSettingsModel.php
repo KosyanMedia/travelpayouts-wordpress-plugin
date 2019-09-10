@@ -9,6 +9,7 @@
 namespace app\includes\models\admin\menu;
 
 use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPUpdateOptions;
 
 class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
 {
@@ -95,7 +96,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
                 TPSearchFormsModel::importSearchForm($searchForms);
             }
 
-            $this->updateOptionsSafe($import_options);
+            TPUpdateOptions::updateOptionsSafe($import_options);
             \app\includes\TPPlugin::deleteCacheAll();
         }
 
@@ -107,57 +108,14 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
         update_option(TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
     }
 
-
-    /**
-     * Replacing non safe symbols
-     * @param $input
-     * @return mixed
-     */
-    public function replaceNonSafeSymbols($input)
-    {
-        $dictionary = [
-            '<script',
-            '</script>',
-            'base64',
-            'document',
-            'eval',
-            'fromCharCode',
-        ];
-
-        return str_ireplace($dictionary, array_fill(0, count($dictionary), ''), $input) === $input
-            ? $input
-            : '';
-    }
-
     public function saveOptions()
     {
         if (!$this->checkAccess()) {
             return false;
         }
         if (isset($_POST['travelpayouts_options'])) {
-            $this->updateOptionsSafe($_POST['travelpayouts_options']);
+            TPUpdateOptions::updateOptionsSafe($_POST['travelpayouts_options']);
         }
-    }
-
-
-    protected function updateOptionsSafe($options)
-    {
-        $safeOptions = $this->array_map_recursive(function ($value) {
-            return $this->replaceNonSafeSymbols($value);
-        }, $options);
-
-        $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $safeOptions);
-        update_option(TPOPlUGIN_OPTION_NAME, $settings);
-    }
-
-
-    protected function array_map_recursive($callback, $array)
-    {
-        $fn = static function ($item) use (&$fn, &$callback) {
-            return is_array($item) ? array_map($fn, $item) : $callback($item);
-        };
-
-        return array_map($fn, $array);
     }
 
     public function checkAccess($rights = 'manage_options')
