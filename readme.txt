@@ -2,7 +2,7 @@
 Contributors: travelpayouts
 Tags: flights, hotels, search, air tickets, airfare, agency, booking, affiliate, travel, travel widget, travel tools
 Requires at least: 4.0
-Tested up to: 4.9.8
+Tested up to: 5.0.3
 Stable tag: trunk
 Author URI: https://www.travelpayouts.com/?utm_source=wp_org&utm_medium=description
 License: GPLv2 or later
@@ -11,6 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Earn money and make your visitors happy! Offer them useful travel tools to find cheap flights and hotels. Earn on commission for each booking.
 
 == Description == 
+
+**FOR WORDPRESS 5.x please install [Classic Editor Plugin](https://wordpress.org/plugins/classic-editor/)**
+That will give you an option to add new shortcodes to the editor.
 
 Install our wordpress travel plugin to your website and help your visitors to find the cheapest flights and hotels. Widgets, tables, forms — all of these can be installed in just a few clicks, making your users happy and bringing you steady income. 
 Note: It has nothing to do with advertising. We offer in-demand and useful services!
@@ -175,6 +178,15 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 11. Hotels Selections Widget
 
 == Changelog == 
+
+= 0.7.10 = 
+Fixed errors occurring when using the count function in php 7.3
+
+= 0.7.9 = 
+Add compability with PHP 7.x
+
+= 0.7.8 = 
+Small bagfixes
 
 = 0.7.7 = 
 Release Date: December 18th, 2018
