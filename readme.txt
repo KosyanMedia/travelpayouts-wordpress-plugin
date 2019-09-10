@@ -2,7 +2,7 @@
 Contributors: travelpayouts
 Tags: flights, hotels, search, air tickets, airfare, agency, booking, affiliate, travel, travel widget, travel tools
 Requires at least: 4.0
-Tested up to: 5.0.3
+Tested up to: 5.0.6
 Stable tag: trunk
 Author URI: https://www.travelpayouts.com/?utm_source=wp_org&utm_medium=description
 License: GPLv2 or later
@@ -178,6 +178,9 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 11. Hotels Selections Widget
 
 == Changelog == 
+
+= 0.7.11 = 
+**SECURITY UPDATE** please update ASAP
 
 = 0.7.10 = 
 Fixed errors occurring when using the count function in php 7.3
