@@ -12,12 +12,14 @@ use app\includes\common\TPCurrencyUtils;
 
 class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
 {
+
     public function __construct()
     {
         parent::__construct();
         add_action('wp_ajax_export_settings', [&$this, 'exportSettings']);
         add_action('wp_ajax_import_settings', [&$this, 'importSettings']);
         add_action('wp_ajax_default_settings', [&$this, 'defaultSettings']);
+        add_action('wp_ajax_tp_save_options', [&$this, 'saveOptions']);
     }
 
     public function create_option()
@@ -93,11 +95,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
                 TPSearchFormsModel::importSearchForm($searchForms);
             }
 
-            //error_log(print_r($import_options, true));
-            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
-            if (TPOPlUGIN_ERROR_LOG)
-                error_log(print_r($settings['local']['currency'], true));
-            update_option(TPOPlUGIN_OPTION_NAME, $settings);
+            $this->updateOptionsSafe($import_options);
             \app\includes\TPPlugin::deleteCacheAll();
         }
 
@@ -109,6 +107,58 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
         update_option(TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
     }
 
+
+    /**
+     * Replacing non safe symbols
+     * @param $input
+     * @return mixed
+     */
+    public function replaceNonSafeSymbols($input)
+    {
+        $dictionary = [
+            '<script',
+            '</script>',
+            'base64',
+            'document',
+            'eval',
+            'fromCharCode',
+        ];
+
+        return str_ireplace($dictionary, array_fill(0, count($dictionary), ''), $input) === $input
+            ? $input
+            : '';
+    }
+
+    public function saveOptions()
+    {
+        if (!$this->checkAccess()) {
+            return false;
+        }
+        if (isset($_POST['travelpayouts_options'])) {
+            $this->updateOptionsSafe($_POST['travelpayouts_options']);
+        }
+    }
+
+
+    protected function updateOptionsSafe($options)
+    {
+        $safeOptions = $this->array_map_recursive(function ($value) {
+            return $this->replaceNonSafeSymbols($value);
+        }, $options);
+
+        $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $safeOptions);
+        update_option(TPOPlUGIN_OPTION_NAME, $settings);
+    }
+
+
+    protected function array_map_recursive($callback, $array)
+    {
+        $fn = static function ($item) use (&$fn, &$callback) {
+            return is_array($item) ? array_map($fn, $item) : $callback($item);
+        };
+
+        return array_map($fn, $array);
+    }
 
     public function checkAccess($rights = 'manage_options')
     {

@@ -61,8 +61,7 @@
             </ul>
         </nav>
         <div class="TP-SettingContent">
-            <form action="options.php" class="formSettings TPFormNotReload" method="POST">
-                <?php settings_fields('TPSettings'); ?>
+            <form action="admin-ajax.php?action=tp_save_options" class="formSettings TPFormNotReload" method="POST">
                 <div class="TPmainContent TP-SettingContent">
                     <div id="tabs-account">
                         <p class="TP-SettingTitle">
