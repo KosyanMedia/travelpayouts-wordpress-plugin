@@ -39,17 +39,17 @@ class TPAutoReplacLinksController extends \core\controllers\TPOAdminMenuControll
         add_filter('post_row_actions', array( &$this, 'renderLinkPost' ) ,10,2);
         add_filter('page_row_actions', array( &$this, 'renderLinkPost' ) ,10,2);
         add_action('wp_ajax_auto_replace_link_post_by_id',      array( &$this, 'TPAutoReplaceLinkPostById'));
-        add_action('wp_ajax_nopriv_auto_replace_link_post_by_id',array( &$this, 'TPAutoReplaceLinkPostById'));
+        //add_action('wp_ajax_nopriv_auto_replace_link_post_by_id',array( &$this, 'TPAutoReplaceLinkPostById'));
         add_action('wp_ajax_auto_replace_link_post_check_by_id',      array( &$this, 'TPAutoReplaceLinkPostCheckById'));
-        add_action('wp_ajax_nopriv_auto_replace_link_post_check_by_id',array( &$this, 'TPAutoReplaceLinkPostCheckById'));
+        //add_action('wp_ajax_nopriv_auto_replace_link_post_check_by_id',array( &$this, 'TPAutoReplaceLinkPostCheckById'));
         add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
-        add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
+        //add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
 
         add_action('wp_ajax_replace_insert_post',      array( &$this, 'replaceInsertPost'));
-        add_action('wp_ajax_nopriv_replace_insert_post',array( &$this, 'replaceInsertPost'));
+        //add_action('wp_ajax_nopriv_replace_insert_post',array( &$this, 'replaceInsertPost'));
 
         add_action('wp_ajax_tp_export_links',      array( &$this, 'tpExportLinks'));
-        add_action('wp_ajax_nopriv_tp_export_links',array( &$this, 'tpExportLinks'));
+        //add_action('wp_ajax_nopriv_tp_export_links',array( &$this, 'tpExportLinks'));
 
 
 

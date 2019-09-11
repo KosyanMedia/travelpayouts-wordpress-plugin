@@ -4,7 +4,7 @@ class TPFlightTicketsModel extends TPBaseShortcodeOptionModel {
     public function __construct(){
         parent::__construct();
         add_action('wp_ajax_tp_default_style', array( &$this, 'tpDefaultTableStyle'));
-        add_action('wp_ajax_nopriv_tp_default_style', array( &$this, 'tpDefaultTableStyle'));
+        //add_action('wp_ajax_nopriv_tp_default_style', array( &$this, 'tpDefaultTableStyle'));
     }
     public function create_option()
     {

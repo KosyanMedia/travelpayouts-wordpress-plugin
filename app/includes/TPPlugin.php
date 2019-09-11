@@ -68,10 +68,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
      */
     private function updatePluginAction()
     {
-        if (
-            version_compare(TPOPlUGIN_VERSION, '0.7.12', '=') &&
-            get_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '0') == '0'
-        ) {
+        if (get_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '0') == '0') {
             TPUpdateOptions::updateOptionsSafe(self::$options);
             update_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '1');
         }
