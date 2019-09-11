@@ -86,6 +86,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
         $statistics = [
             'marker' => self::$options['account']['marker'],
             'domain' => preg_replace("(^https?://)", "", get_option('home')),
+            'plugin_version' => TPOPlUGIN_VERSION,
             'php' => PHP_VERSION,
         ];
         $statistics = json_encode($statistics);
