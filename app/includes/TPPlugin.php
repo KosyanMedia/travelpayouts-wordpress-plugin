@@ -38,6 +38,8 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
         if (!get_option(TPOPlUGIN_OPTION_STATISTICS_KEEN)) {
             add_action('admin_footer', [&$this, 'sendStatisticsKeen'], 500);
         }
+
+        $this->updatePluginAction();
     }
 
     /**
@@ -50,9 +52,28 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
             foreach ($options['plugins'] as $each_plugin) {
                 if ($each_plugin == TPOPlUGIN_BASENAME) {
                     delete_option(TPOPlUGIN_OPTION_STATISTICS_KEEN);
+
+                    update_option(TPOPlUGIN_SLUG . '_version_on_update', TPOPlUGIN_VERSION);
                 }
             }
+        }
+    }
+
+    /**
+     *
+     * TPOPlUGIN_SLUG _version_on_update option хранит значение старой версии до обновления
+     * version_compare сравнивает версии например с текущей
+     * если отличаются можно выполнить код и перезаписать версию на текущую что бы код не выполнялся повторно
+     *
+     */
+    private function updatePluginAction()
+    {
+        if (
+            version_compare(TPOPlUGIN_VERSION, '0.7.12', '=') &&
+            get_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '0') == '0'
+        ) {
             TPUpdateOptions::updateOptionsSafe(self::$options);
+            update_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '1');
         }
     }
 

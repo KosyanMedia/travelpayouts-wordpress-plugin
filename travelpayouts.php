@@ -3,7 +3,7 @@
 Plugin Name: Travelpayouts
 Plugin URI: https://wordpress.org/plugins/travelpayouts/
 Description: Earn money and make your visitors happy! Offer them useful tools to find cheap flights and hotels. Earn on commission for each booking.
-Version: 0.7.11
+Version: 0.7.12
 Author: travelpayouts
 Author URI: http://www.travelpayouts.com/?locale=en
 Text Domain: travelpayouts

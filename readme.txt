@@ -179,6 +179,9 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 
 == Changelog == 
 
+= 0.7.12 =
+**SECURITY UPDATE** please update ASAP
+
 = 0.7.11 = 
 **SECURITY UPDATE** please update ASAP
 
