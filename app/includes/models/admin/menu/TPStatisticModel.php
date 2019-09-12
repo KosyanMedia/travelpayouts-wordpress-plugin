@@ -22,9 +22,9 @@ class TPStatisticModel extends TPDashboardModel{
 
 	    }
         add_action('wp_ajax_tp_get_detailed_sales',      array( &$this, 'tpGetDetailedSalesAjax'));
-        add_action('wp_ajax_nopriv_tp_get_detailed_sales', array( &$this, 'tpGetDetailedSalesAjax'));
+        //add_action('wp_ajax_nopriv_tp_get_detailed_sales', array( &$this, 'tpGetDetailedSalesAjax'));
         add_action('wp_ajax_tp_save_stats_total',      array( &$this, 'tpSaveStatsTotal'));
-        add_action('wp_ajax_nopriv_tp_save_stats_total',array( &$this, 'tpSaveStatsTotal'));
+        //add_action('wp_ajax_nopriv_tp_save_stats_total',array( &$this, 'tpSaveStatsTotal'));
     }
     public function setData(){
         $this->balance = $this->tpGetBalance();

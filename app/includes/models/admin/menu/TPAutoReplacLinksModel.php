@@ -16,13 +16,13 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     public function __construct()
     {
         add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
-        add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
+        //add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
 
         //add_action('wp_ajax_replace_all',      array( &$this, 'replaceAll'));
         //add_action('wp_ajax_nopriv_replace_all',array( &$this, 'replaceAll'));
 
         add_action('wp_ajax_import_csv',      array( &$this, 'importCsv'));
-        add_action('wp_ajax_nopriv_import_csv',array( &$this, 'importCsv'));
+        //add_action('wp_ajax_nopriv_import_csv',array( &$this, 'importCsv'));
     }
     public static function createTable()
     {

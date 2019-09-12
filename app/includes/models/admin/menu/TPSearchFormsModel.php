@@ -14,7 +14,7 @@ class TPSearchFormsModel extends \core\models\TPOWPTableModel implements \core\m
     public function __construct()
     {
         add_action('wp_ajax_delete_all',      array( &$this, 'deleteAll'));
-        add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
+        //add_action('wp_ajax_nopriv_delete_all',array( &$this, 'deleteAll'));
     }
 
     /**
