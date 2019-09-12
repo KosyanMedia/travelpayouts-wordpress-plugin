@@ -20,7 +20,6 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
         add_action('wp_ajax_export_settings', [&$this, 'exportSettings']);
         add_action('wp_ajax_import_settings', [&$this, 'importSettings']);
         add_action('wp_ajax_default_settings', [&$this, 'defaultSettings']);
-        add_action('wp_ajax_tp_save_options', [&$this, 'saveOptions']);
     }
 
     public function create_option()
@@ -106,16 +105,6 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
     {
         if (!$this->checkAccess()) return false;
         update_option(TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
-    }
-
-    public function saveOptions()
-    {
-        if (!$this->checkAccess()) {
-            return false;
-        }
-        if (isset($_POST['travelpayouts_options'])) {
-            TPUpdateOptions::updateOptionsSafe($_POST['travelpayouts_options']);
-        }
     }
 
     public function checkAccess($rights = 'manage_options')
