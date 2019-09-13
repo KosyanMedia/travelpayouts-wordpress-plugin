@@ -42,7 +42,7 @@ class TPUpdateOptions
      * @param $input
      * @return mixed
      */
-    protected static function replaceNonSafeSymbols($input)
+    public static function replaceNonSafeSymbols($input)
     {
         $dictionary = [
             '<script',

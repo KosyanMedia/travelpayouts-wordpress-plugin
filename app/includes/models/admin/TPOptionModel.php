@@ -6,6 +6,8 @@
  * Time: 15:17
  */
 namespace app\includes\models\admin;
+use app\includes\common\TPUpdateOptions;
+
 abstract class TPOptionModel extends \core\models\TPOOptionModel{
     private static $instance;
     private static $result;
@@ -37,6 +39,18 @@ abstract class TPOptionModel extends \core\models\TPOOptionModel{
             \app\includes\TPPlugin::deleteCacheAll();
 
         }
-        return self::$result;
+
+        $result = self::$result;
+
+        //TODO refactor replacement
+        if(isset($result['config']['code_ga_ym']) && !empty($result['config']['code_ga_ym'])) {
+            $result['config']['code_ga_ym'] = TPUpdateOptions::replaceNonSafeSymbols($result['config']['code_ga_ym']);
+        }
+
+        if(isset($result['config']['code_table_ga_ym']) && !empty($result['config']['code_table_ga_ym'])) {
+            $result['config']['code_table_ga_ym'] = TPUpdateOptions::replaceNonSafeSymbols($result['config']['code_table_ga_ym']);
+        }
+
+        return $result;
     }
 }
