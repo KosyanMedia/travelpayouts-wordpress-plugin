@@ -61,41 +61,47 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
         echo $export;
     }
 
-    public function importSettings()
-    {
-        if (!$this->checkAccess()) return false;
-        if (is_array($_POST['value'])) {
-            if (TPOPlUGIN_ERROR_LOG)
+    public function importSettings(){
+        if(is_array($_POST['value'])){
+            if(TPOPlUGIN_ERROR_LOG)
                 error_log(print_r($_POST['value'], true));
             $import_options = $_POST['value'];
             //error_log(print_r($import_options, true));
-            if (!array_key_exists('plugin_version', $import_options)) {
-                if (TPOPlUGIN_ERROR_LOG)
+            if (!array_key_exists('plugin_version', $import_options)){
+                if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists false plugin_version < 0.5.2');
                 $import_options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
             } else {
-                if (TPOPlUGIN_ERROR_LOG)
+                if(TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists true plugin_version');
                 //error_log($import_options['plugin_version']);
                 if (version_compare($import_options['plugin_version'], '0.7.0', '<')) {
                     //error_log($import_options['plugin_version'].'Test');
-                    $import_options['config']['cache_value'] = [
+                    $import_options['config']['cache_value'] = array(
                         'hotel' => 24,
                         'flight' => 3
-                    ];
+                    );
                 }
 
             }
 
-            $searchForms = [];
-            if (array_key_exists('search_forms', $import_options)) {
+            $searchForms = array();
+            if (array_key_exists('search_forms', $import_options)){
                 $searchForms = $import_options['search_forms'];
                 unset($import_options['search_forms']);
                 //error_log(print_r($searchForms, true));
                 TPSearchFormsModel::importSearchForm($searchForms);
             }
 
-            TPUpdateOptions::updateOptionsSafe($import_options);
+            //error_log(print_r($import_options, true));
+            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
+
+
+            $settings = TPUpdateOptions::sanitizeSettings($settings);
+
+            if(TPOPlUGIN_ERROR_LOG)
+                error_log(print_r($settings['local']['currency'], true));
+            update_option( TPOPlUGIN_OPTION_NAME, $settings);
             \app\includes\TPPlugin::deleteCacheAll();
         }
 
