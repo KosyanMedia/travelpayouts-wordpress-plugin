@@ -62,6 +62,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
     }
 
     public function importSettings(){
+        if (!$this->checkAccess()) return false;
         if(is_array($_POST['value'])){
             if(TPOPlUGIN_ERROR_LOG)
                 error_log(print_r($_POST['value'], true));

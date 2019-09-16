@@ -4,6 +4,7 @@ namespace app\includes;
 
 use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPUpdateOptions;
+use app\includes\common\TpStatistics;
 
 class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
 {
@@ -36,7 +37,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
         add_action('plugins_loaded', [&$this, 'checkPluginUpdate'], 100);
         add_action('upgrader_process_complete', [&$this, 'upgraderProcessComplete'], 10, 2);
         if (!get_option(TPOPlUGIN_OPTION_STATISTICS_KEEN)) {
-            add_action('admin_footer', [&$this, 'sendStatisticsKeen'], 500);
+            TpStatistics::write();
         }
 
         $this->updatePluginAction();
@@ -60,11 +61,9 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
     }
 
     /**
-     *
      * TPOPlUGIN_SLUG _version_on_update option хранит значение старой версии до обновления
      * version_compare сравнивает версии например с текущей
      * если отличаются можно выполнить код и перезаписать версию на текущую что бы код не выполнялся повторно
-     *
      */
     private function updatePluginAction()
     {
@@ -72,29 +71,6 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
             TPUpdateOptions::updateOptionsSafe(self::$options);
             update_option(TPOPlUGIN_SLUG . '_update_options_safe_flag', '1');
         }
-    }
-
-    /**
-     *
-     */
-    public function sendStatisticsKeen()
-    {
-        update_option(TPOPlUGIN_OPTION_STATISTICS_KEEN, 'sendStatisticsKeen');
-        $statistics = [
-            'marker' => self::$options['account']['marker'],
-            'domain' => preg_replace("(^https?://)", "", get_option('home')),
-            'plugin_version' => TPOPlUGIN_VERSION,
-            'php' => PHP_VERSION,
-        ];
-        $statistics = json_encode($statistics);
-        $statistics = base64_encode($statistics);
-        $keen = 'https://api.keen.io/3.0/projects/';
-        $keen_project_id = '5a97f593c9e77c00010a8ef1';
-        $keen_write_key = '587E43D1198FD5D0B215514CB785AF25AC0E10D175C1F7844F1BFD35B684518B0F3C8A6CAD424ECF5E8F5A6BCD4F'
-            . '7DA140D7D8D56B524FCAA568D6FFDD51C1125845D447EA5F920C14B7D323228E064FF5B0BC6F05A262C0B120706ABE19C512';
-        $output = '<img src="' . $keen . $keen_project_id . '/events/plugin_activation?api_key=' . $keen_write_key
-            . '&data=' . $statistics . '"></img>';
-        echo $output;
     }
 
     public function setDefaultOptions()
