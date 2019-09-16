@@ -94,9 +94,9 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
                 TPSearchFormsModel::importSearchForm($searchForms);
             }
 
-            //error_log(print_r($import_options, true));
-            $settings = array_replace_recursive(\app\includes\TPPlugin::$options, $import_options);
 
+            //error_log(print_r($import_options, true));
+            $settings = array_intersect_key($import_options, \app\includes\TPPlugin::$options);
 
             $settings = TPUpdateOptions::sanitizeSettings($settings);
 
