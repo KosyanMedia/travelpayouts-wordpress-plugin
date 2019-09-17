@@ -64,6 +64,15 @@ class TPUpdateOptions
         return $settings;
     }
 
+    public static function sanitizeLinks($links)
+    {
+        if (isset($links['arl_event']) && !empty($links['arl_event'])) {
+            $links['arl_event'] = self::replaceNonSafeSymbols($links['arl_event']);
+        }
+
+        return $links;
+    }
+
 
     public static function unescapeOptions($options)
     {
