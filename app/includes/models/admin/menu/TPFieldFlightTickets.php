@@ -660,9 +660,9 @@ class TPFieldFlightTickets {
 
         </div>
         <div class="TP-HeadTable">
-            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
+            <input id="chek-p<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1">
+            <label for="chek-p<?php echo $shortcode; ?>">
                 <?php _ex('Paginate',
                     'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
@@ -894,9 +894,9 @@ class TPFieldFlightTickets {
         </div>
 
         <div class="TP-HeadTable">
-            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
+            <input id="chek-p<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1">
+            <label for="chek-p<?php echo $shortcode; ?>">
                 <?php _ex('Paginate',
                     'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
