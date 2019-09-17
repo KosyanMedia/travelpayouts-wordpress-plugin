@@ -53,14 +53,22 @@ class TPUpdateOptions
     public static function sanitizeSettings($settings)
     {
         //TODO refactor replacement
-        if(isset($settings['config']['code_ga_ym']) && !empty($settings['config']['code_ga_ym'])) {
+        if (isset($settings['config']['code_ga_ym']) && !empty($settings['config']['code_ga_ym'])) {
             $settings['config']['code_ga_ym'] = self::replaceNonSafeSymbols($settings['config']['code_ga_ym']);
         }
 
-        if(isset($settings['config']['code_table_ga_ym']) && !empty($settings['config']['code_table_ga_ym'])) {
+        if (isset($settings['config']['code_table_ga_ym']) && !empty($settings['config']['code_table_ga_ym'])) {
             $settings['config']['code_table_ga_ym'] = self::replaceNonSafeSymbols($settings['config']['code_table_ga_ym']);
         }
 
         return $settings;
+    }
+
+
+    public static function unescapeOptions($options)
+    {
+        return self::array_map_recursive(static function ($value) {
+            return preg_replace('/(\\\\+)/m', '', $value);
+        }, $options);
     }
 }
