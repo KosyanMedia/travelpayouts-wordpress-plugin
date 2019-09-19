@@ -154,9 +154,9 @@ class TPFieldRailway {
 
         </div>
         <div class="TP-HeadTable">
-            <input id="chek-p1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][paginate_switch]"
+            <input id="chek-p<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_railway][<?php echo $shortcode; ?>][paginate_switch]"
                    value="1" <?php checked(isset(TPPlugin::$options['shortcodes_railway'][$shortcode]['paginate_switch']), 1) ?> hidden />
-            <label for="chek-p1">
+            <label for="chek-p<?php echo $shortcode; ?>">
 				<?php _ex('Paginate',
 					'admin page railway tab tables content paginate', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>

@@ -10,6 +10,7 @@ namespace app\includes\models\admin\menu;
 
 use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPUpdateOptions;
+use app\includes\TPPlugin;
 
 class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
 {
@@ -44,31 +45,25 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
 
     public function exportSettings()
     {
-        /*$export = json_encode(TPPlugin::$options);
-        $fileName = TPOPlUGIN_NAME."Settings.txt";
-        $file = fopen($fileName , "w");
-        chmod(TPOPlUGIN_DIR."/".TPOPlUGIN_NAME."Settings.txt", 0777);
-        fwrite($file, $export);
-        fclose($file);
-
-        echo  TPOPlUGIN_URL.TPOPlUGIN_NAME."Settings.txt";*/
         if (!$this->checkAccess()) return false;
-        $options = \app\includes\TPPlugin::$options;
-        $options['plugin_version'] = TPOPlUGIN_VERSION;
-        $options['search_forms'] = TPSearchFormsModel::getAllSearchForms();
-        //error_log(print_r($options['search_forms'], true));
-        $export = json_encode($options);
-        echo $export;
+
+        $options = array_merge(TPPlugin::$options, [
+            'plugin_version' => TPOPlUGIN_VERSION,
+            'search_forms' => TPSearchFormsModel::getAllSearchForms(),
+        ]);
+
+        $escapedOptions = TPUpdateOptions::unescapeOptions($options);
+        echo json_encode($escapedOptions);
     }
+
 
     public function importSettings()
     {
         if (!$this->checkAccess()) return false;
-        if (is_array($_POST['value'])) {
-            if (TPOPlUGIN_ERROR_LOG)
-                error_log(print_r($_POST['value'], true));
+        if (isset($_POST['value']) && is_array($_POST['value'])) {
             $import_options = $_POST['value'];
-            //error_log(print_r($import_options, true));
+            if (TPOPlUGIN_ERROR_LOG)
+                error_log(print_r($import_options, true));
             if (!array_key_exists('plugin_version', $import_options)) {
                 if (TPOPlUGIN_ERROR_LOG)
                     error_log('array_key_exists false plugin_version < 0.5.2');
@@ -86,17 +81,21 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
                 }
 
             }
-
-            $searchForms = [];
             if (array_key_exists('search_forms', $import_options)) {
                 $searchForms = $import_options['search_forms'];
                 unset($import_options['search_forms']);
-                //error_log(print_r($searchForms, true));
                 TPSearchFormsModel::importSearchForm($searchForms);
             }
 
-            TPUpdateOptions::updateOptionsSafe($import_options);
-            \app\includes\TPPlugin::deleteCacheAll();
+            //error_log(print_r($import_options, true));
+            $settings = array_intersect_key($import_options, TPPlugin::$options);
+            $settings = TPUpdateOptions::sanitizeSettings($settings);
+            $settings = TPUpdateOptions::unescapeOptions($settings);
+            if (TPOPlUGIN_ERROR_LOG)
+                error_log(print_r($settings['local']['currency'], true));
+
+            update_option(TPOPlUGIN_OPTION_NAME, $settings);
+            TPPlugin::deleteCacheAll();
         }
 
     }

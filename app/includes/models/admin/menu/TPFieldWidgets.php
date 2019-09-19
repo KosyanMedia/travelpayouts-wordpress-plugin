@@ -303,9 +303,9 @@ class TPFieldWidgets {
             </div>
         </div>
         <div class="TP-HeadTable  TPCheckBoxWidget">
-            <input id="chek73" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
+            <input id="chek73-responsive" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[widgets][<?php echo $widgets;?>][responsive]"
                    value="1" <?php checked(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['responsive']), 1) ?> hidden />
-            <label for="chek73">
+            <label for="chek73-responsive">
                 <?php _ex('Responsive',
                     'tp_admin_page_widgets_shortcode_3_field_responsive_label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>

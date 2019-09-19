@@ -40,16 +40,7 @@ abstract class TPOptionModel extends \core\models\TPOOptionModel{
 
         }
 
-        $result = self::$result;
-
-        //TODO refactor replacement
-        if(isset($result['config']['code_ga_ym']) && !empty($result['config']['code_ga_ym'])) {
-            $result['config']['code_ga_ym'] = TPUpdateOptions::replaceNonSafeSymbols($result['config']['code_ga_ym']);
-        }
-
-        if(isset($result['config']['code_table_ga_ym']) && !empty($result['config']['code_table_ga_ym'])) {
-            $result['config']['code_table_ga_ym'] = TPUpdateOptions::replaceNonSafeSymbols($result['config']['code_table_ga_ym']);
-        }
+        $result = TPUpdateOptions::sanitizeSettings(self::$result);
 
         return $result;
     }

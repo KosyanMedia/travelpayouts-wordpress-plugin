@@ -436,9 +436,9 @@ class TPFieldHotels
     public function getFieldLinkWithoutDates($shortcode) {
         ?>
         <div class="TP-HeadTable">
-            <input id="chek-p12" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][link_without_dates]"
+            <input id="chek-p12-<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes_hotels][<?php echo $shortcode; ?>][link_without_dates]"
                    value="1" <?php checked(isset(TPPlugin::$options['shortcodes_hotels'][$shortcode]['link_without_dates']), 1) ?> hidden />
-            <label for="chek-p12">
+            <label for="chek-p12-<?php echo $shortcode; ?>">
                 <?php _ex('Land without dates',
                     'tp admin page settings сonstructor hotels tables field hotels_link_without_dates label', TPOPlUGIN_TEXTDOMAIN); ?>
             </label>
