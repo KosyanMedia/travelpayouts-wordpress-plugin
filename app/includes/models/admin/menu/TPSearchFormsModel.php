@@ -275,7 +275,6 @@ class TPSearchFormsModel extends TPOWPTableModel implements TPOWPTableInterfaceM
         // TODO: Implement deleteId() method.
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        die();
         $wpdb->query('DELETE FROM ' . $tableName . " WHERE id = '" . $id . "'");
     }
 
