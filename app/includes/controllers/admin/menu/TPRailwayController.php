@@ -10,7 +10,7 @@ namespace app\includes\controllers\admin\menu;
 
 use app\includes\common\TPThemes;
 use app\includes\models\admin\menu\TPRailwayModel;
-use \core\controllers\TPOAdminMenuController;
+use core\controllers\TPOAdminMenuController;
 
 class TPRailwayController extends TPOAdminMenuController{
 
@@ -27,16 +27,16 @@ class TPRailwayController extends TPOAdminMenuController{
 			_x('Railways schedule',  'admin menu page title railway', TPOPlUGIN_TEXTDOMAIN ),
 			'manage_options',
 			'tp_control_railway',
-			array(&$this, 'render'));
-		add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+			[&$this, 'render']);
+		add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
 	}
 
 	public function render() {
 		// TODO: Implement render() method.
-		$pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailway.view.php";
-		$data = array(
+		$pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPRailway.view.php';
+		$data = [
 			'themes' => TPThemes::getThemesTables()
-		);
+        ];
 
 		parent::loadView($pathView, 0, $data);
 	}

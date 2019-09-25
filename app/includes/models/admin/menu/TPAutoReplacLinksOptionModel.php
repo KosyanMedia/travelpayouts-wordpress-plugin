@@ -9,7 +9,9 @@
 namespace app\includes\models\admin\menu;
 
 
-class TPAutoReplacLinksOptionModel extends \app\includes\models\admin\TPOptionModel
+use app\includes\models\admin\TPOptionModel;
+
+class TPAutoReplacLinksOptionModel extends TPOptionModel
 {
     public function __construct()
     {
@@ -21,11 +23,11 @@ class TPAutoReplacLinksOptionModel extends \app\includes\models\admin\TPOptionMo
         register_setting(
             'TPAutoReplLink',
             TPOPlUGIN_OPTION_NAME,
-            array(&$this,'save_option')
+            [&$this,'save_option']
         );
         $field = new TPFieldAutoReplLink();
         add_settings_section( 'tp_settings_auto_repl_link_id', '', '', 'tp_settings_auto_repl_link' );
-        add_settings_field('tp_auto_repl_link_td', '', array(&$field ,'TPFieldARL'),
+        add_settings_field('tp_auto_repl_link_td', '', [&$field ,'TPFieldARL'],
             'tp_settings_auto_repl_link', 'tp_settings_auto_repl_link_id' );
 
     }

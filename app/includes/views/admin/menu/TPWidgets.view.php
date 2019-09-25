@@ -1,6 +1,8 @@
 <div class="TPWrapper">
     <p class="TPMainTitle">
-        <?php _ex('Widgets',
+        <?php use app\includes\common\TPLang;
+
+        _ex('Widgets',
             'tp_admin_page_widgets_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div class="TPmainContent clearfix">
@@ -61,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <?php if(\app\includes\common\TPLang::getLang() == \app\includes\common\TPLang::getLangRU()){ ?>
+                <?php if(TPLang::getLang() == TPLang::getLangRU()){ ?>
                     <div class="bellows__item">
                         <div class="bellows__header">
                             <h3>

@@ -9,8 +9,8 @@
 
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-//use \app\includes\models\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+//use app\includes\models\site\shortcodes\hotels\TPHotelsCityPriceFromToShortcodeModel;
 
 class TPHotelsCityStarFilterShortcodeController extends TPShortcodesController
 {
@@ -26,10 +26,10 @@ class TPHotelsCityStarFilterShortcodeController extends TPShortcodesController
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_hotels_city_star_filter_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_hotels_city_star_filter_shortcodes', [&$this, 'actionTable']);
     }
 
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
         //$data = $this->model->getDataTable($args);
 

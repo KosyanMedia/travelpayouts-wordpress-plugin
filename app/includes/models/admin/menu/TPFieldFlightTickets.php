@@ -2,8 +2,8 @@
 namespace app\includes\models\admin\menu;
 
 use app\includes\models\admin\menu\TPSearchFormsModel;
-use \app\includes\TPPlugin;
-use \app\includes\common\TPLang;
+use app\includes\TPPlugin;
+use app\includes\common\TPLang;
 
 class TPFieldFlightTickets {
 
@@ -14,15 +14,15 @@ class TPFieldFlightTickets {
         ?>
         <input class="TPThemesNameHidden" type="hidden"
                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[themes_table][name]"
-               value="<?php echo \app\includes\TPPlugin::$options['themes_table']['name']?>"/>
+               value="<?php echo TPPlugin::$options['themes_table']['name']?>"/>
         <?php
     }
     public function TPFieldStyleTable(){
         $classNotShowOption = '';
-        if(\app\includes\TPPlugin::$options['themes_table']['name'] != 'default-theme')
+        if(TPPlugin::$options['themes_table']['name'] !== 'default-theme')
             $classNotShowOption = 'TPNotShowOption';
 
-        $font_family_attr = array(
+        $font_family_attr = [
             _x('Arial',
                 'tp_admin_page_flights_tab_tickets_style_font_arial', TPOPlUGIN_TEXTDOMAIN),
             _x('Arial Black',
@@ -51,7 +51,7 @@ class TPFieldFlightTickets {
                 'tp_admin_page_flights_tab_tickets_style_intro', TPOPlUGIN_TEXTDOMAIN),
             _x('Open Sans',
                 'tp_admin_page_flights_tab_tickets_style_open_sans', TPOPlUGIN_TEXTDOMAIN),
-        );
+        ];
         ?>
         <p class="TP-SettingTitle">
             <?php _ex('Layout',
@@ -70,7 +70,7 @@ class TPFieldFlightTickets {
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_family]">
                             <?php
                             foreach($font_family_attr as $attr){
-                                echo '<option '.selected( \app\includes\TPPlugin::$options['style_table']['title_style']['font_family'], $attr )
+                                echo '<option '.selected( TPPlugin::$options['style_table']['title_style']['font_family'], $attr )
                                     .' value="'.$attr.'">'.$attr.'</option>';
                             }
                             ?>
@@ -80,32 +80,32 @@ class TPFieldFlightTickets {
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_size]">
                             <?php
                             for($i = 10; $i < 31; $i++){
-                                echo '<option '.selected( \app\includes\TPPlugin::$options['style_table']['title_style']['font_size'], $i )
+                                echo '<option '.selected( TPPlugin::$options['style_table']['title_style']['font_size'], $i )
                                     .' value="'.$i.'">'.$i.'</option>';
                             }
                             ?>
                         </select>
                     </label>
                     <div class="TP-tracingFont">
-                        <a class="BoldTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="BoldTracing <?php echo isset(TPPlugin::$options['style_table']['title_style']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio1"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_style][bold]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['bold']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['title_style']['font_style']['bold']), 1) ?>>
                             B
                         </a>
-                        <a class="ItalicTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="ItalicTracing <?php echo isset(TPPlugin::$options['style_table']['title_style']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio2"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_style][italic]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['italic']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['title_style']['font_style']['italic']), 1) ?>>
                             B
                         </a>
-                        <a class="UnderlineTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="UnderlineTracing <?php echo isset(TPPlugin::$options['style_table']['title_style']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio3"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][font_style][underline]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['title_style']['font_style']['underline']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['title_style']['font_style']['underline']), 1) ?>>
                             B
                         </a>
                     </div>
@@ -114,7 +114,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['title_style']['color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['title_style']['color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
@@ -130,7 +130,7 @@ class TPFieldFlightTickets {
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_family]">
                             <?php
                             foreach($font_family_attr as $attr){
-                                echo '<option '.selected( \app\includes\TPPlugin::$options['style_table']['table']['font_family'], $attr )
+                                echo '<option '.selected( TPPlugin::$options['style_table']['table']['font_family'], $attr )
                                     .' value="'.$attr.'">'.$attr.'</option>';
                             }
                             ?>
@@ -140,32 +140,32 @@ class TPFieldFlightTickets {
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_size]">
                             <?php
                             for($i = 10; $i < 31; $i++){
-                                echo '<option '.selected( \app\includes\TPPlugin::$options['style_table']['table']['font_size'], $i )
+                                echo '<option '.selected( TPPlugin::$options['style_table']['table']['font_size'], $i )
                                     .' value="'.$i.'">'.$i.'</option>';
                             }
                             ?>
                         </select>
                     </label>
                     <div class="TP-tracingFont">
-                        <a class="BoldTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="BoldTracing <?php echo isset(TPPlugin::$options['style_table']['table']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio1"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_style][bold]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['bold']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['table']['font_style']['bold']), 1) ?>>
                             B
                         </a>
-                        <a class="ItalicTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="ItalicTracing <?php echo isset(TPPlugin::$options['style_table']['table']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio2"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_style][italic]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['italic']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['table']['font_style']['italic']), 1) ?>>
                             B
                         </a>
-                        <a class="UnderlineTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
+                        <a class="UnderlineTracing <?php echo isset(TPPlugin::$options['style_table']['table']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
                             <input type="checkbox" id="font-style-radio3"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][font_style][underline]"
                                    value="1"
-                                <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['font_style']['underline']), 1) ?>>
+                                <?php checked(isset(TPPlugin::$options['style_table']['table']['font_style']['underline']), 1) ?>>
                             B
                         </a>
                     </div>
@@ -174,7 +174,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['table']['color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                     </label>
                 </div>
@@ -188,15 +188,15 @@ class TPFieldFlightTickets {
                     </span>
                     <label class="TP-lb-1" id="TPLineType" >
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_type]">
-                            <option value="solid" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "solid" ) ?>>
+                            <option value="solid" <?php selected( TPPlugin::$options['style_table']['table']['line_type'], 'solid') ?>>
                                 <?php _ex('solid',
                                     'tp_admin_page_flights_tab_tickets_style_table_border_style_label_solid', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
-                            <option value="dotted" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dotted" ) ?>>
+                            <option value="dotted" <?php selected( TPPlugin::$options['style_table']['table']['line_type'], 'dotted') ?>>
                                 <?php _ex('dotted',
                                     'tp_admin_page_flights_tab_tickets_style_table_border_style_label_dotted', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
-                            <option value="dashed" <?php selected( \app\includes\TPPlugin::$options['style_table']['table']['line_type'], "dashed" ) ?>>
+                            <option value="dashed" <?php selected( TPPlugin::$options['style_table']['table']['line_type'], 'dashed') ?>>
                                 <?php _ex('dashed',
                                     'tp_admin_page_flights_tab_tickets_style_table_border_style_label_dashed', TPOPlUGIN_TEXTDOMAIN); ?>
                             </option>
@@ -206,7 +206,7 @@ class TPFieldFlightTickets {
                         <select class="TP-Zelect" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_size]">
                             <?php
                             for($i = 1; $i < 11; $i++){
-                                echo '<option '.selected( \app\includes\TPPlugin::$options['style_table']['table']['line_size'], $i )
+                                echo '<option '.selected( TPPlugin::$options['style_table']['table']['line_size'], $i )
                                     .' value="'.$i.'">'.$i.' px</option>';
                             }
                             ?>
@@ -216,7 +216,7 @@ class TPFieldFlightTickets {
                         <label>
                             <input class="TP-ColorStyleInput color no-alpha" type="text"
                                    name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][line_color]"
-                                   value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['line_color']) ?>"/>
+                                   value="<?php echo strtoupper(TPPlugin::$options['style_table']['table']['line_color']) ?>"/>
                             <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
                         </label>
                     </div>
@@ -233,7 +233,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][background_color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['background_color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['table']['background_color']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
 
                     </label>
@@ -246,7 +246,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['head_color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['table']['head_color']) ?>"/>
 
                     </label>
                 </div>
@@ -258,7 +258,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][head_text_color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['table']['head_text_color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['table']['head_text_color']) ?>"/>
 
                     </label>
                 </div>
@@ -274,7 +274,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][background]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['background']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['button']['background']) ?>"/>
                         <!--<a class="btnColor"><?php //_e('select color', TPOPlUGIN_TEXTDOMAIN ); ?></a>-->
 
                     </label>
@@ -287,7 +287,7 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][border]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['border']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['button']['border']) ?>"/>
 
                     </label>
                 </div>
@@ -299,30 +299,30 @@ class TPFieldFlightTickets {
                     <label class="TP-BackgroundTables">
                         <input class="TP-ColorStyleInput color no-alpha" type="text"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][color]"
-                               value="<?php echo strtoupper(\app\includes\TPPlugin::$options['style_table']['button']['color']) ?>"/>
+                               value="<?php echo strtoupper(TPPlugin::$options['style_table']['button']['color']) ?>"/>
 
                     </label>
                 </div>
                 <div class="TP-tracingFont TP-tracingFontBtn">
-                    <a class="BoldTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
+                    <a class="BoldTracing <?php echo isset(TPPlugin::$options['style_table']['button']['font_style']['bold']) ? 'activeTracing' : ''; ?>" href="#">
                         <input type="checkbox" id="btn-font-style-radio1"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][font_style][bold]"
                                value="1"
-                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['bold']), 1) ?>>
+                            <?php checked(isset(TPPlugin::$options['style_table']['button']['font_style']['bold']), 1) ?>>
                         B
                     </a>
-                    <a class="ItalicTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
+                    <a class="ItalicTracing <?php echo isset(TPPlugin::$options['style_table']['button']['font_style']['italic']) ? 'activeTracing' : ''; ?>" href="#">
                         <input type="checkbox" id="btn-font-style-radio2"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][button][font_style][italic]"
                                value="1"
-                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['italic']), 1) ?>>
+                            <?php checked(isset(TPPlugin::$options['style_table']['button']['font_style']['italic']), 1) ?>>
                         B
                     </a>
-                    <a class="UnderlineTracing <?php echo isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
+                    <a class="UnderlineTracing <?php echo isset(TPPlugin::$options['style_table']['button']['font_style']['underline']) ? 'activeTracing' : ''; ?>" href="#">
                         <input type="checkbox" id="btn-font-style-radio3"
                                name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][title_style][button][underline]"
                                value="1"
-                            <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['button']['font_style']['underline']), 1) ?>>
+                            <?php checked(isset(TPPlugin::$options['style_table']['button']['font_style']['underline']), 1) ?>>
                         B
                     </a>
                 </div>
@@ -330,7 +330,7 @@ class TPFieldFlightTickets {
             </div>
             <div class="TP-StyleItem">
                 <input id="chek677" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][hyperlink]"
-                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?> hidden />
+                       value="1" <?php checked(isset(TPPlugin::$options['style_table']['table']['hyperlink']), 1) ?>hidden />
                 <label for="chek677">
                     <?php _ex('Show data as hyperlinks',
                         'tp_admin_page_flights_tab_tickets_style_input_hyperlink_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -338,7 +338,7 @@ class TPFieldFlightTickets {
             </div>
             <div class="TP-StyleItem">
                 <input id="chek66" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[style_table][table][responsive]"
-                       value="1" <?php checked(isset(\app\includes\TPPlugin::$options['style_table']['table']['responsive']), 1) ?> hidden />
+                       value="1" <?php checked(isset(TPPlugin::$options['style_table']['table']['responsive']), 1) ?>hidden />
                 <label for="chek66">
                     <?php _ex('Enable Horizontal Scroll',
                         'tp_admin_page_flights_tab_tickets_style_input_responsive_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -381,20 +381,20 @@ class TPFieldFlightTickets {
             </span>
             <?php
 
-            if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options[$type][$shortcode]['title'])){
-                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+            if (!array_key_exists(TPLang::getLang(), TPPlugin::$options[$type][$shortcode]['title'])){
+                foreach(TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
                     ?>
                     <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                           value="<?php echo esc_attr(TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
                     <?php
                 }
             } else {
-                foreach(\app\includes\TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                foreach(TPPlugin::$options[$type][$shortcode]['title'] as $key_local => $title){
+                    $typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
                     ?>
                     <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][title][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
+                           value="<?php echo esc_attr(TPPlugin::$options[$type][$shortcode]['title'][$key_local]) ?>"/>
                     <?php
                 }
             }
@@ -432,27 +432,27 @@ class TPFieldFlightTickets {
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'div'); ?>
                     value="div">
                     <?php _ex('DIV',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h1'); ?>
                     value="h1">
                     <?php _ex('H1',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h2'); ?>
                     value="h2">
                     <?php _ex('H2',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h3'); ?>
                     value="h3">
                     <?php _ex('H3',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h4'); ?>
                     value="h4">
                     <?php _ex('H4',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -474,20 +474,20 @@ class TPFieldFlightTickets {
             </span>
             <?php
 
-            if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title'])){
-                foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+            if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['shortcodes'][$shortcode]['title'])){
+                foreach(TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
+                    $typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
                     ?>
                     <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
                     <?php
                 }
             } else {
-                foreach(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
-                    $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                foreach(TPPlugin::$options['shortcodes'][$shortcode]['title_button'] as $key_local => $title){
+                    $typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
                     ?>
                     <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][title_button][<?php echo $key_local; ?>]"
-                           value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
+                           value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['title_button'][$key_local]) ?>"/>
                     <?php
                 }
             }
@@ -517,7 +517,7 @@ class TPFieldFlightTickets {
                 value="season">season</option>
         </select> -->
         <input type="hidden" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode;?>][period_type]"
-               value="<?php echo \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['period_type'];?>">
+               value="<?php echo TPPlugin::$options['shortcodes'][$shortcode]['period_type'];?>">
     <?php
     }
     /**
@@ -534,7 +534,7 @@ class TPFieldFlightTickets {
                 <ul class="TP-listSet TP-listSet--cust">
                     <li>
                         <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
-                            <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 2) ?> hidden value="2" />
+                            <?php checked(TPPlugin::$options['shortcodes'][$shortcode]['sort'], 2) ?> hidden value="2" />
                         <label for="rchek2">
                             <?php _ex('Ascending',
                                 'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_ascending', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -542,7 +542,7 @@ class TPFieldFlightTickets {
                     </li>
                     <li>
                         <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
-                            <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 1) ?> hidden value="1" />
+                            <?php checked(TPPlugin::$options['shortcodes'][$shortcode]['sort'], 1) ?> hidden value="1" />
                         <label for="rchek1">
                             <?php _ex('Descending',
                                 'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_descending', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -550,7 +550,7 @@ class TPFieldFlightTickets {
                     </li>
                     <li>
                         <input id="rchek0" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort]"
-                            <?php checked(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort'], 0) ?> hidden value="1" />
+                            <?php checked(TPPlugin::$options['shortcodes'][$shortcode]['sort'], 0) ?> hidden value="1" />
                         <label for="rchek0">
                             <?php _ex('Do not sort',
                                 'tp_admin_page_flights_tab_tables_content_shortcode_input_order_price_do_not_sort', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -568,11 +568,11 @@ class TPFieldFlightTickets {
         $settingsShortcodeSortable = '';
         $settingsShortcodeSortableSelected = '';
         $fieldsInput = '';
-        if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])){
+        if(!empty(TPPlugin::$options['shortcodes'][$shortcode]['selected'])){
             //$selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
-            $selected = array_unique(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected']);
-            $fields = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['fields'];
-            $arraySort = array();
+            $selected = array_unique(TPPlugin::$options['shortcodes'][$shortcode]['selected']);
+            $fields = TPPlugin::$options['shortcodes'][$shortcode]['fields'];
+            $arraySort = [];
             foreach($selected as $key_s => $selec){
                 if (($key = array_search($selec, $fields)) !== false) {
                     $arraySort[] = $selec;
@@ -649,7 +649,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate]"
                                type="text" data-rule="quantity"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate']) ?>">
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['paginate']) ?>">
                     </label>
                     <div class="navSpinner">
                         <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -661,7 +661,7 @@ class TPFieldFlightTickets {
         </div>
         <div class="TP-HeadTable">
             <input id="chek-p<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
-                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
+                   value="1" <?php checked(isset(TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?>hidden />
             <label for="chek-p<?php echo $shortcode; ?>">
                 <?php _ex('Paginate',
                     'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -688,7 +688,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][limit]"
                                type="text" data-rule="quantity"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['limit']) ?>">
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['limit']) ?>">
                     </label>
                     <div class="navSpinner">
                         <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -714,7 +714,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][plus_depart_date]"
                                type="text" data-rule="quantity"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['plus_depart_date']) ?>">
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['plus_depart_date']) ?>">
                     </label>
                     <div class="navSpinner">
                         <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -733,7 +733,7 @@ class TPFieldFlightTickets {
                     <label>
                         <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][plus_return_date]"
                                type="text" data-rule="quantity"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['plus_return_date']) ?>">
+                               value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['plus_return_date']) ?>">
                     </label>
                     <div class="navSpinner">
                         <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -753,17 +753,17 @@ class TPFieldFlightTickets {
                         'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][transplant]" class="TP-Zelect">
-                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
+                    <option <?php selected( TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 0 ); ?>
                         value="0">
                         <?php _ex('All',
                             'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
+                    <option <?php selected( TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 1 ); ?>
                         value="1">
                         <?php _ex('No more than one stop',
                             'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
+                    <option <?php selected( TPPlugin::$options['shortcodes'][$shortcode]['transplant'], 2 ); ?>
                         value="2">
                         <?php _ex('Direct',
                             'tp_admin_page_flights_tab_tables_content_shortcode_field_number_stops_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -778,11 +778,11 @@ class TPFieldFlightTickets {
     }
 
     public function getFieldSortTDLabel($fieldKey){
-        $fieldLabel = "";
-        if(isset(\app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getLang()]['label_default'][$fieldKey])){
-            $fieldLabel = \app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getLang()]['label_default'][$fieldKey];
+        $fieldLabel = '';
+        if(isset(TPPlugin::$options['local']['fields'][TPLang::getLang()]['label_default'][$fieldKey])){
+            $fieldLabel = TPPlugin::$options['local']['fields'][TPLang::getLang()]['label_default'][$fieldKey];
         }else{
-            $fieldLabel = \app\includes\TPPlugin::$options['local']['fields'][\app\includes\common\TPLang::getDefaultLang()]['label_default'][$fieldKey];
+            $fieldLabel = TPPlugin::$options['local']['fields'][TPLang::getDefaultLang()]['label_default'][$fieldKey];
         }
         return $fieldLabel;
     }
@@ -798,11 +798,11 @@ class TPFieldFlightTickets {
                 </span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][sort_column]" class="TP-Zelect TPSortField">
                      <?php
-                         if(!empty(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'])) {
-                             $selected = \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['selected'];
+                         if(!empty(TPPlugin::$options['shortcodes'][$shortcode]['selected'])) {
+                             $selected = TPPlugin::$options['shortcodes'][$shortcode]['selected'];
                              foreach($selected as $key => $sel){
                                  ?>
-                                 <option value="<?php echo $key;?>" <?php selected( \app\includes\TPPlugin::$options['shortcodes'][$shortcode]['sort_column'], $key ); ?>>
+                                 <option value="<?php echo $key;?>" <?php selected( TPPlugin::$options['shortcodes'][$shortcode]['sort_column'], $key ); ?>>
                                      <?php echo $this->getFieldSortTDLabel($sel);?>
                                  </option>
                                  <?php
@@ -830,7 +830,7 @@ class TPFieldFlightTickets {
                         'tp_admin_page_flights_tab_tables_content_shortcode_field_extra_table_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>
                 </span>
                 <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][extra_table_marker]"
-                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
+                       value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['extra_table_marker']) ?>"
                        class="TPFieldInputText"/>
             </label>
             <label>
@@ -881,7 +881,7 @@ class TPFieldFlightTickets {
                         <label>
                             <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate]"
                                    type="text" data-rule="quantity"
-                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate']) ?>">
+                                   value="<?php echo esc_attr(TPPlugin::$options['shortcodes'][$shortcode]['paginate']) ?>">
                         </label>
                         <div class="navSpinner">
                             <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -895,7 +895,7 @@ class TPFieldFlightTickets {
 
         <div class="TP-HeadTable">
             <input id="chek-p<?php echo $shortcode; ?>" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[shortcodes][<?php echo $shortcode; ?>][paginate_switch]"
-                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?> hidden />
+                   value="1" <?php checked(isset(TPPlugin::$options['shortcodes'][$shortcode]['paginate_switch']), 1) ?>hidden />
             <label for="chek-p<?php echo $shortcode; ?>">
                 <?php _ex('Paginate',
                     'tp_admin_page_flights_tab_tables_content_shortcode_field_paginate_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -1392,7 +1392,7 @@ class TPFieldFlightTickets {
     }
 
     public function TPFieldOtherSettingsTableValueMsg($show = false, $type = 0){
-        $parameters = "";
+        $parameters = '';
         if($show == false) $parameters = 'id="TPEmptyTableShowNotification"';
 
 
@@ -1407,7 +1407,7 @@ class TPFieldFlightTickets {
                     <?php
                 else:
 
-                    $TPEditorEmptyTableValueMsg = array(
+                    $TPEditorEmptyTableValueMsg = [
                         'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value]['.$type.']['.$key_local.']',
                         'media_buttons' => false,
                         'textarea_rows' => 10,
@@ -1415,7 +1415,7 @@ class TPFieldFlightTickets {
                         'wpautop' => 0,
                         'editor_class' => 'TPEditorEmptyTableValueMsg',
                         'tinymce' => true
-                    );
+                    ];
 
                     wp_editor(
                         TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local],
@@ -1437,7 +1437,7 @@ class TPFieldFlightTickets {
                     <?php
                 else:
 
-                    $TPEditorEmptyTableValueMsg = array(
+                    $TPEditorEmptyTableValueMsg = [
                         'textarea_name' => TPOPlUGIN_OPTION_NAME.'[shortcodes_settings][empty][value]['.$type.']['.$key_local.']',
                         'media_buttons' => false,
                         'textarea_rows' => 10,
@@ -1445,7 +1445,7 @@ class TPFieldFlightTickets {
                         'wpautop' => 0,
                         'editor_class' => 'TPEditorEmptyTableValueMsg',
                         'tinymce' => true
-                    );
+                    ];
 
                     wp_editor(
                         TPPlugin::$options['shortcodes_settings']['empty']['value'][$type][$key_local],

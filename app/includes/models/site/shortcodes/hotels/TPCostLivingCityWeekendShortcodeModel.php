@@ -8,17 +8,17 @@
  */
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\models\site\TPHotelShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
-use \app\includes\common\TpPluginHelper;
+use app\includes\models\site\TPHotelShortcodeModel;
+use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TpPluginHelper;
 
 class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
 {
 
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'location' => false,
             'check_in' => false,
             'check_out' => false,
@@ -31,9 +31,9 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'limit' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'location' => $location,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -46,7 +46,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'limit' => $limit,
             'currency' => $currency,
             'return_url' => $return_url
-        );
+        ];
 
         $cacheKey = "hotel_1_{$location}{$currency}";
 
@@ -92,7 +92,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
         //error_log(print_r($hotelListId, true));
         //$strcasecmp = array_uintersect_assoc($hotelId, $hotelList['hotels'], array(&$this, 'strcasecmp'));
         tpErrorLog('$hotelCache count == '.TpPluginHelper::count($hotelCache), __CLASS__, __METHOD__,__LINE__);
-        $hotelData = array();
+        $hotelData = [];
         $count = 0;
        /* foreach ($hotelId as $id){
             foreach ($hotelList['hotels'] as $hotel){
@@ -130,10 +130,10 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
                 tpErrorLog('set hotel cache', __CLASS__, __METHOD__,__LINE__);
                 $return = self::$TPRequestApi->getCache($attr);
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     //$cacheSecund = $this->cacheEmptySecund();
                     $cacheSecund = 1;
                 } else {
@@ -156,8 +156,8 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
      * @param array $args
      * @return array
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'city' => false,
             'title' => '',
             'paginate' => true,
@@ -173,17 +173,17 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false,
             'subid' => '',
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){
             $return_url = true;
         }
 
-        $check_in = date('Y-m-d', strtotime("next Saturday + 1 week"));
-        $check_out = date('Y-m-d', strtotime("next Sunday + 1 week"));
+        $check_in = date('Y-m-d', strtotime('next Saturday + 1 week'));
+        $check_out = date('Y-m-d', strtotime('next Sunday + 1 week'));
 
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             //'rows' => $return,
             'title' => $title,
             'city' => $city,
@@ -199,12 +199,12 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'limit' => $number_results,
             'currency' => $currency,
             'return_url' => $return_url,
-        ));
+        ]);
 
 
 
 
-        return array(
+        return [
             'rows' => $return,
             'title' => $title,
             'city' => $city,
@@ -221,7 +221,7 @@ class TPCostLivingCityWeekendShortcodeModel extends TPHotelShortcodeModel
             'currency' => $currency,
             'return_url' => $return_url,
             'subid' => $subid,
-        );
+        ];
 
 
     }

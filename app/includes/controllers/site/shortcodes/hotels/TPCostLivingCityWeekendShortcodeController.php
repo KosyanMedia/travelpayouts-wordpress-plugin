@@ -9,8 +9,8 @@
  */
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-use \app\includes\models\site\shortcodes\hotels\TPCostLivingCityWeekendShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\hotels\TPCostLivingCityWeekendShortcodeModel;
 
 class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
 {
@@ -26,10 +26,10 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
     {
         // TODO: Implement initShortcode() method.
         //Таблица "Стоимость проживания В ГОРОДЕ на уикенд"
-        add_shortcode( 'tp_cost_living_city_weekend_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_cost_living_city_weekend_shortcodes', [&$this, 'actionTable']);
     }
 
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
 
         $data = $this->model->getDataTable($args);
@@ -40,7 +40,7 @@ class TPCostLivingCityWeekendShortcodeController  extends TPShortcodesController
         echo date('Y-m-d', strtotime("next Saturday")).'<br>';
         echo date('Y-m-d', strtotime("next Sunday")).'<br>';
         //return date('w', time());*/
-        return var_dump("<pre>", $data, "</pre>");
+        return var_dump('<pre>', $data, '</pre>');
 
     }
 }

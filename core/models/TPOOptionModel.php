@@ -8,7 +8,7 @@
 namespace core\models;
 abstract class TPOOptionModel {
     public function __construct(){
-        add_action( 'admin_init', array( &$this, 'create_option' ) );
+        add_action( 'admin_init', [&$this, 'create_option']);
     }
     abstract public function create_option();
 

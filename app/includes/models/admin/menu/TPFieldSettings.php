@@ -6,6 +6,7 @@
  * Time: 11:04
  */
 namespace app\includes\models\admin\menu;
+use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPHostURL;
 use app\includes\common\TPLang;
 use app\includes\TPPlugin;
@@ -32,7 +33,7 @@ class TPFieldSettings {
                             'tp_admin_page_settings_tab_account_field_token_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][token]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['token']) ?>"/>
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['token']) ?>"/>
                     </label>
                 </div>
                 <!--<div class="ItemSub">
@@ -49,7 +50,7 @@ class TPFieldSettings {
                             'tp_admin_page_settings_tab_account_field_white_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label']) ?>"/>
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['white_label']) ?>"/>
                     </label>
                 </div>
             </div>
@@ -61,7 +62,7 @@ class TPFieldSettings {
                             'tp_admin_page_settings_tab_account_field_marker_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][marker]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['marker']) ?>"/>
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['marker']) ?>"/>
                     </label>
                 </div>
                 <div class="ItemSub">
@@ -69,7 +70,7 @@ class TPFieldSettings {
                             'tp_admin_page_settings_tab_account_field_white_label_hotel_label', TPOPlUGIN_TEXTDOMAIN ); ?></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][white_label_hotel]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['white_label_hotel']) ?>"/>
+                               value="<?php echo esc_attr(TPPlugin::$options['account']['white_label_hotel']) ?>"/>
                     </label>
                 </div>
 
@@ -93,20 +94,20 @@ class TPFieldSettings {
                         <?php
 
 
-                        if (!array_key_exists(\app\includes\common\TPLang::getLang(), \app\includes\TPPlugin::$options['config']['message_error'])){
-                            foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
-                                $typeFields = (\app\includes\common\TPLang::getDefaultLang() != $key_local)?'hidden':'text';
+                        if (!array_key_exists(TPLang::getLang(), TPPlugin::$options['config']['message_error'])){
+                            foreach(TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = (TPLang::getDefaultLang() != $key_local)?'hidden':'text';
                                 ?>
                                 <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
-                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
                                 <?php
                             }
                         } else {
-                            foreach(\app\includes\TPPlugin::$options['config']['message_error'] as $key_local => $title){
-                                $typeFields = (\app\includes\common\TPLang::getLang() != $key_local)?'hidden':'text';
+                            foreach(TPPlugin::$options['config']['message_error'] as $key_local => $title){
+                                $typeFields = (TPLang::getLang() != $key_local)?'hidden':'text';
                                 ?>
                                 <input type="<?php echo $typeFields; ?>" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][message_error][<?php echo $key_local; ?>]"
-                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['message_error'][$key_local]) ?>"/>
                                 <?php
                             }
                         }
@@ -122,7 +123,7 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek1" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
+                                <?php checked(TPPlugin::$options['config']['after_url'], 0) ?> hidden value="0" />
                             <label for="rchek1">
                                 <?php _ex('Show Search Form',
                                     'tp_admin_page_settings_tab_config_field_after_url_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -130,7 +131,7 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="rchek2" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][after_url]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
+                                <?php checked(TPPlugin::$options['config']['after_url'], 1) ?> hidden value="1" />
                             <label for="rchek2">
                                 <?php _ex('Show Search Results',
                                     'tp_admin_page_settings_tab_config_field_after_url_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -144,7 +145,7 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek11" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 0) ?> hidden value="0" />
+                                <?php checked(TPPlugin::$options['config']['hotel_after_url'], 0) ?> hidden value="0" />
                             <label for="rchek11">
                                 <?php _ex('Show city page',
                                     'tp_admin_page_settings_tab_config_field_hotel_after_url_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -152,7 +153,7 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="rchek22" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][hotel_after_url]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['hotel_after_url'], 1) ?> hidden value="1" />
+                                <?php checked(TPPlugin::$options['config']['hotel_after_url'], 1) ?> hidden value="1" />
                             <label for="rchek22">
                                 <?php _ex('Show hotel page',
                                     'tp_admin_page_settings_tab_config_field_hotel_after_url_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -164,11 +165,11 @@ class TPFieldSettings {
                     <span><?php _ex('Distance Units',
                             'tp_admin_page_settings_tab_config_field_distance_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                     <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][distance]" class="TP-Zelect">
-                        <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
+                        <option <?php selected( TPPlugin::$options['config']['distance'], 1 ); ?> value="1">
                             <?php _ex('km',
                                 'tp_admin_page_settings_tab_config_field_distance_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
-                        <option <?php selected( \app\includes\TPPlugin::$options['config']['distance'], 2 ); ?>  value="2">
+                        <option <?php selected( TPPlugin::$options['config']['distance'], 2 ); ?> value="2">
                             <?php _ex('miles',
                                 'tp_admin_page_settings_tab_config_field_distance_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
@@ -183,7 +184,7 @@ class TPFieldSettings {
                             <label>
                                 <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][airline_logo_size][width]"
                                        type="text"
-                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['width']) ?>">
                             </label>
                             <div class="navSpinner">
                                 <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -197,7 +198,7 @@ class TPFieldSettings {
                             <label>
                                 <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][airline_logo_size][height]"
                                        type="text"
-                                       value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
+                                       value="<?php echo esc_attr(TPPlugin::$options['config']['airline_logo_size']['height']) ?>">
                             </label>
                             <div class="navSpinner">
                                 <a class="navDown" href="javascript:void(0);" data-spin="down"></a>
@@ -213,17 +214,17 @@ class TPFieldSettings {
                     <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][media_button][view]"
                             class="TP-Zelect">
                         <option
-                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 0 ); ?> value="0">
+                            <?php selected( TPPlugin::$options['config']['media_button']['view'], 0 ); ?> value="0">
                             <?php _ex('Default',
                                 'tp_admin_page_settings_tab_config_field_media_button_value_1_label' , TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option
-                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 1 ); ?> value="1">
+                            <?php selected( TPPlugin::$options['config']['media_button']['view'], 1 ); ?> value="1">
                             <?php _ex('Compact',
                                 'tp_admin_page_settings_tab_config_field_media_button_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
                         <option
-                            <?php selected( \app\includes\TPPlugin::$options['config']['media_button']['view'], 2 ); ?> value="2">
+                            <?php selected( TPPlugin::$options['config']['media_button']['view'], 2 ); ?> value="2">
                             <?php _ex('Hide',
                                 'tp_admin_page_settings_tab_config_field_media_button_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                         </option>
@@ -241,7 +242,7 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="chek1" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][redirect]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['redirect']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['config']['redirect']), 1) ?> hidden />
                             <label for="chek1">
                                 <?php _ex('Redirect',
                                     'tp_admin_page_settings_tab_config_field_redirect_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
@@ -258,14 +259,14 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="chek2" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][target_url]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['target_url']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['config']['target_url']), 1) ?>hidden />
                             <label for="chek2">
                                 <?php _ex('Open in a New Window',
                                     'tp_admin_page_settings_tab_config_field_target_url_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input id="chek3" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][nofollow]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['config']['nofollow']), 1) ?> hidden />
                             <label for="chek3">
                                 <?php  _ex('Add Nofollow Attribute',
                                     'tp_admin_page_settings_tab_config_field_nofollow_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
@@ -282,7 +283,7 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="chek34" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][statistics]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['statistics']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['config']['statistics']), 1) ?>hidden />
                             <label for="chek34">
                                 <?php _ex('Turn off statistics and blog updates', 'tp_admin_page_settings_tab_config_field_statistics_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
@@ -290,7 +291,7 @@ class TPFieldSettings {
                         </li>
                         <li>
                             <input id="chek35" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][limit_script]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['config']['limit_script']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['config']['limit_script']), 1) ?>hidden />
                             <label for="chek35">
                                 <?php _ex('Use plugin\'s scripts on all pages', 'tp_admin_page_settings_tab_config_field_limit_script_label', TPOPlUGIN_TEXTDOMAIN); ?>
                             </label>
@@ -321,7 +322,7 @@ class TPFieldSettings {
                             <div class="spinnerW clearfix" data-trigger="spinner">
                                 <label>
                                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][flight]"
-                                           type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['flight']; ?>"
+                                           type="text" value="<?php echo TPPlugin::$options['config']['cache_value']['flight']; ?>"
                                            data-rule="cache_value">
                                 </label>
                                 <div class="navSpinner">
@@ -340,7 +341,7 @@ class TPFieldSettings {
                             <div class="spinnerW clearfix" data-trigger="spinner">
                                 <label>
                                     <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][cache_value][hotel]"
-                                           type="text" value="<?php echo \app\includes\TPPlugin::$options['config']['cache_value']['hotel']; ?>"
+                                           type="text" value="<?php echo TPPlugin::$options['config']['cache_value']['hotel']; ?>"
                                            data-rule="cache_hotel">
                                 </label>
                                 <div class="navSpinner">
@@ -405,14 +406,14 @@ class TPFieldSettings {
                     <ul class="TP-listSet">
                         <li>
                             <input id="rchek5" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][script]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
+                                <?php checked(TPPlugin::$options['config']['script'], 0) ?> value="0" hidden />
                             <label for="rchek5">
                                 <?php _ex('Inside &lt;head&gt; tag',
                                     'tp_admin_page_settings_tab_config_field_script_value_0_label', TPOPlUGIN_TEXTDOMAIN);?></label>
                         </li>
                         <li>
                             <input id="rchek6" type="radio" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][script]"
-                                <?php checked(\app\includes\TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
+                                <?php checked(TPPlugin::$options['config']['script'], 1) ?> value="1" hidden />
                             <label for="rchek6">
                                 <?php _ex('Inside &lt;footer&gt; tag',
                                     'tp_admin_page_settings_tab_config_field_script_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?></label>
@@ -456,7 +457,7 @@ class TPFieldSettings {
                                          <path d="M7.5 16c4.1 0 7.5-3.4 7.5-7.5S11.6 1 7.5 1 0 4.4 0 8.5 3.4 16 7.5 16zm0-13.9c3.5 0 6.4 2.9 6.4 6.4s-2.9 6.4-6.4 6.4S1.1 12 1.1 8.5 4 2.1 7.5 2.1z"/><path d="M5.2 7.2c.3 0 .5-.2.5-.5 0 0 0-.4.2-.9.3-.6.8-.8 1.5-.8.6 0 1.1.2 1.4.5.2.3.3.7.2 1.1-.1.5-.6 1-1 1.4-.6.6-1.2 1.2-1.2 1.9 0 .3.2.5.5.5s.5-.2.5-.5.4-.7.8-1.1c.6-.5 1.2-1.1 1.4-1.9.2-.7.1-1.5-.4-2-.3-.4-1-1-2.3-1-1.3 0-2 .8-2.3 1.4s-.4 1.3-.4 1.3c0 .3.3.6.6.6z"/></g></svg></a></div></span>
                     <label>
                         <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][format_date]"
-                               value="<?php echo esc_attr(\app\includes\TPPlugin::$options['config']['format_date']) ?>"
+                               value="<?php echo esc_attr(TPPlugin::$options['config']['format_date']) ?>"
                                class=""/>
                     </label>
                     <span class="TPSpanFormatDate">
@@ -485,7 +486,7 @@ class TPFieldSettings {
 
                     <label>
                         <textarea  rows="4" cols="20"
-                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_ga_ym]"><?php echo esc_attr(\app\includes\TPPlugin::$options['config']['code_ga_ym']) ?></textarea>
+                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_ga_ym]"><?php echo esc_attr(TPPlugin::$options['config']['code_ga_ym']) ?></textarea>
                     </label>
                 </div>
                 <div class="ItemSub ItemSub-YM-GA ItemSub-YM-GA-cust ItemSub-Table-YM-GA">
@@ -508,7 +509,7 @@ class TPFieldSettings {
 
                     <label>
                         <textarea  rows="4" cols="20"
-                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_table_ga_ym]"><?php echo esc_attr(\app\includes\TPPlugin::$options['config']['code_table_ga_ym']) ?></textarea>
+                                   name="<?php echo TPOPlUGIN_OPTION_NAME;?>[config][code_table_ga_ym]"><?php echo esc_attr(TPPlugin::$options['config']['code_table_ga_ym']) ?></textarea>
                     </label>
                 </div>
 
@@ -563,15 +564,15 @@ class TPFieldSettings {
                 <span><?php _ex('Tables and Widgets Language',
                         'tp_admin_page_settings_tab_localization_field_localization_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][localization]" class="TP-Zelect TPFieldLocalization">
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
+                    <option <?php selected( TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
                         <?php _ex('Russian',
                             'tp_admin_page_settings_tab_localization_field_localization_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
+                    <option <?php selected( TPPlugin::$options['local']['localization'], 2 ); ?> value="2">
                         <?php _ex('English',
                             'tp_admin_page_settings_tab_localization_field_localization_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
-                    <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
+                    <option <?php selected( TPPlugin::$options['local']['localization'], 3 ); ?> value="3">
                         <?php _ex('Thai',
                             'tp_admin_page_settings_tab_localization_field_localization_value_3_label', TPOPlUGIN_TEXTDOMAIN); ?>
                     </option>
@@ -587,9 +588,9 @@ class TPFieldSettings {
                  <span><?php _ex('Currency',
                          'tp_admin_page_settings_tab_localization_field_currency_label', TPOPlUGIN_TEXTDOMAIN); ?></span>
                 <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
-                    <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
+                    <?php foreach(TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
                         <option
-                            <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
+                            <?php selected( TPPlugin::$options['local']['currency'], $currency ); ?>
                                 value="<?php echo $currency ?>">
                             <?php echo $currency; ?>
                         </option>
@@ -707,10 +708,10 @@ class TPFieldSettings {
 
     public function tabLocalFieldFlight(){
         $local_table_fields = '<ul class="titleHeadTable">
-               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+               <li class="TPLangFieldsLi">'. TPLang::getLang().'</li>
           </ul>';
-        foreach(\app\includes\TPPlugin::$options['local']['fields'] as $key_local => $fields){
-            $showFields = (\app\includes\common\TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
+        foreach(TPPlugin::$options['local']['fields'] as $key_local => $fields){
+            $showFields = (TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
             $local_table_fields .= '<div class="'.$showFields.' TPFields_'.$key_local.'" >';
             $i = 0;
 
@@ -738,7 +739,7 @@ class TPFieldSettings {
     public function tabLocalFieldHotel(){
         $localFields = '';
         $localFields = '<ul class="titleHeadTable">
-               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+               <li class="TPLangFieldsLi">'. TPLang::getLang().'</li>
           </ul>';
         foreach(TPPlugin::$options['local']['hotels_fields'] as $key_local => $fields){
             $showFields = (TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
@@ -766,7 +767,7 @@ class TPFieldSettings {
 	public function tabLocalFieldRailway(){
 		$localFields = '';
 		$localFields = '<ul class="titleHeadTable">
-               <li class="TPLangFieldsLi">'.\app\includes\common\TPLang::getLang().'</li>
+               <li class="TPLangFieldsLi">'. TPLang::getLang().'</li>
           </ul>';
 		foreach(TPPlugin::$options['local']['railway_fields'] as $key_local => $fields){
 			$showFields = (TPLang::getLang() != $key_local)?'TP-ListRowColumNot':'';
@@ -793,7 +794,7 @@ class TPFieldSettings {
 
     public function tpFieldHostHotel(){
         $hosts = TPHostURL::getHostsHotel();
-        $host_option = \app\includes\TPPlugin::$options['local']['host_hotel'];
+        $host_option = TPPlugin::$options['local']['host_hotel'];
         ?>
         <label>
             <span>
@@ -814,20 +815,20 @@ class TPFieldSettings {
     }
 
     public function TPFieldHost(){
-        $hosts = \app\includes\common\TPHostURL::getHost();
-        $host_option = \app\includes\TPPlugin::$options['local']['host'];
-        $default_host_option = \app\includes\TPPlugin::$options['local']['host'];
+        $hosts = TPHostURL::getHost();
+        $host_option = TPPlugin::$options['local']['host'];
+        $default_host_option = TPPlugin::$options['local']['host'];
         $default_host_ru = 'aviasales.ru';
         $default_host_en = 'jetradar.com';
         $default_host_th = 'jetradar.co.th';
-        switch(\app\includes\common\TPLang::getLang()){
-            case \app\includes\common\TPLang::getLangRU():
+        switch(TPLang::getLang()){
+            case TPLang::getLangRU():
                 if(empty($host_option)) $host_option = $default_host_ru;
                 break;
-            case \app\includes\common\TPLang::getLangEN():
+            case TPLang::getLangEN():
                 if(empty($host_option)) $host_option = $default_host_en;
                 break;
-            case \app\includes\common\TPLang::getLangTH():
+            case TPLang::getLangTH():
                 if(empty($host_option)) $host_option = $default_host_th;
                 break;
         }
@@ -867,23 +868,23 @@ class TPFieldSettings {
                 <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "name" ); ?> value="name">
                     <?php //_e('Default', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "ro" ); ?> value="ro">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], 'ro'); ?> value="ro">
                     <?php _ex('Genitive',
                         'tp_admin_page_settings_tab_localization_title_case_origin_value_ro_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "da" ); ?> value="da">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], 'da'); ?> value="da">
                     <?php _ex('Dative',
                         'tp_admin_page_settings_tab_localization_title_case_origin_value_da_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "vi" ); ?> value="vi">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], 'vi'); ?> value="vi">
                     <?php _ex('Accusative',
                         'tp_admin_page_settings_tab_localization_title_case_origin_value_vi_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "tv" ); ?> value="tv">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], 'tv'); ?> value="tv">
                     <?php _ex('Ablative',
                         'tp_admin_page_settings_tab_localization_title_case_origin_value_tv_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['origin'], "pr" ); ?> value="pr">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['origin'], 'pr'); ?> value="pr">
                     <?php _ex('Prepositional',
                         'tp_admin_page_settings_tab_localization_title_case_origin_value_pr_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
@@ -896,23 +897,23 @@ class TPFieldSettings {
                 <!--<option <?php //selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "name" ); ?> value="name">
                     <?php //_e('Default', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>-->
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "ro" ); ?> value="ro">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], 'ro'); ?> value="ro">
                     <?php _ex('Genitive',
                         'tp_admin_page_settings_tab_localization_title_case_destination_value_ro_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "da" ); ?> value="da">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], 'da'); ?> value="da">
                     <?php _ex('Dative',
                         'tp_admin_page_settings_tab_localization_title_case_destination_value_da_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "vi" ); ?> value="vi">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], 'vi'); ?> value="vi">
                     <?php _ex('Accusative',
                         'tp_admin_page_settings_tab_localization_title_case_destination_value_vi_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "tv" ); ?> value="tv">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], 'tv'); ?> value="tv">
                     <?php _ex('Ablative',
                         'tp_admin_page_settings_tab_localization_title_case_destination_value_tv_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options['local']['title_case']['destination'], "pr" ); ?> value="pr">
+                <option <?php selected( TPPlugin::$options['local']['title_case']['destination'], 'pr'); ?> value="pr">
                     <?php _ex('Prepositional',
                         'tp_admin_page_settings_tab_localization_title_case_destination_value_pr_label', TPOPlUGIN_TEXTDOMAIN ); ?>
                 </option>
@@ -924,65 +925,65 @@ class TPFieldSettings {
      * @param string $time
      * @return bool|string
      */
-    public function tpDate($time = "") {
-        $format = (!empty(\app\includes\TPPlugin::$options['config']['format_date'])) ? \app\includes\TPPlugin::$options['config']['format_date'] : "d.m.Y";
-        $translate = array(
-            "am" => "дп",
-            "pm" => "пп",
-            "AM" => "ДП",
-            "PM" => "ПП",
-            "Monday" => "Понедельник",
-            "Mon" => "Пн",
-            "Tuesday" => "Вторник",
-            "Tue" => "Вт",
-            "Wednesday" => "Среда",
-            "Wed" => "Ср",
-            "Thursday" => "Четверг",
-            "Thu" => "Чт",
-            "Friday" => "Пятница",
-            "Fri" => "Пт",
-            "Saturday" => "Суббота",
-            "Sat" => "Сб",
-            "Sunday" => "Воскресенье",
-            "Sun" => "Вс",
-            "January" => "Января",
-            "Jan" => "Янв",
-            "February" => "Февраля",
-            "Feb" => "Фев",
-            "March" => "Марта",
-            "Mar" => "Мар",
-            "April" => "Апреля",
-            "Apr" => "Апр",
-            "May" => "Мая",
-            "May" => "Мая",
-            "June" => "Июня",
-            "Jun" => "Июн",
-            "July" => "Июля",
-            "Jul" => "Июл",
-            "August" => "Августа",
-            "Aug" => "Авг",
-            "September" => "Сентября",
-            "Sep" => "Сен",
-            "October" => "Октября",
-            "Oct" => "Окт",
-            "November" => "Ноября",
-            "Nov" => "Ноя",
-            "December" => "Декабря",
-            "Dec" => "Дек",
-            "st" => "ое",
-            "nd" => "ое",
-            "rd" => "е",
-            "th" => "ое"
-        );
-        switch(\app\includes\TPPlugin::$options['local']['localization']) {
+    public function tpDate($time = '') {
+        $format = (!empty(TPPlugin::$options['config']['format_date'])) ? TPPlugin::$options['config']['format_date'] : 'd.m.Y';
+        $translate = [
+            'am' => 'дп',
+            'pm' => 'пп',
+            'AM' => 'ДП',
+            'PM' => 'ПП',
+            'Monday' => 'Понедельник',
+            'Mon' => 'Пн',
+            'Tuesday' => 'Вторник',
+            'Tue' => 'Вт',
+            'Wednesday' => 'Среда',
+            'Wed' => 'Ср',
+            'Thursday' => 'Четверг',
+            'Thu' => 'Чт',
+            'Friday' => 'Пятница',
+            'Fri' => 'Пт',
+            'Saturday' => 'Суббота',
+            'Sat' => 'Сб',
+            'Sunday' => 'Воскресенье',
+            'Sun' => 'Вс',
+            'January' => 'Января',
+            'Jan' => 'Янв',
+            'February' => 'Февраля',
+            'Feb' => 'Фев',
+            'March' => 'Марта',
+            'Mar' => 'Мар',
+            'April' => 'Апреля',
+            'Apr' => 'Апр',
+            'May' => 'Мая',
+            'May' => 'Мая',
+            'June' => 'Июня',
+            'Jun' => 'Июн',
+            'July' => 'Июля',
+            'Jul' => 'Июл',
+            'August' => 'Августа',
+            'Aug' => 'Авг',
+            'September' => 'Сентября',
+            'Sep' => 'Сен',
+            'October' => 'Октября',
+            'Oct' => 'Окт',
+            'November' => 'Ноября',
+            'Nov' => 'Ноя',
+            'December' => 'Декабря',
+            'Dec' => 'Дек',
+            'st' => 'ое',
+            'nd' => 'ое',
+            'rd' => 'е',
+            'th' => 'ое'
+        ];
+        switch(TPPlugin::$options['local']['localization']) {
             case 1:
 
                 if (!empty($time)) {
                     if(strpos($format, 'f') !== false){
-                        $format = str_replace("f", "F", $format);
+                        $format = str_replace('f', 'F', $format);
                         return  mb_strtolower(strtr(date($format, $time), $translate));
                     }elseif(strpos($format, 'mm') !== false){
-                        $format = str_replace("mm", "M", $format);
+                        $format = str_replace('mm', 'M', $format);
                         return  mb_strtolower(strtr(date($format, $time), $translate));
                     }else{
                         return strtr(date($format, $time), $translate);
@@ -990,10 +991,10 @@ class TPFieldSettings {
 
                 } else {
                     if(strpos($format, 'f') !== false){
-                        $format = str_replace("f", "F", $format);
+                        $format = str_replace('f', 'F', $format);
                         return  mb_strtolower(strtr(date($format), $translate));
                     }elseif(strpos($format, 'mm') !== false){
-                        $format = str_replace("mm", "M", $format);
+                        $format = str_replace('mm', 'M', $format);
                         return  mb_strtolower(strtr(date($format), $translate));
                     }else{
                         return strtr(date($format), $translate);

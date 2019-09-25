@@ -8,9 +8,10 @@
 namespace app\includes\controllers\admin\menu;
 
 use app\includes\common\TPThemes;
-use \app\includes\models\admin\menu\TPFlightTicketsModel;
+use app\includes\models\admin\menu\TPFlightTicketsModel;
+use core\controllers\TPOAdminMenuController;
 
-class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController{
+class TPFlightTicketsController extends TPOAdminMenuController{
     public $model;
     public function __construct(){
         parent::__construct();
@@ -25,17 +26,17 @@ class TPFlightTicketsController extends \core\controllers\TPOAdminMenuController
             _x('Flight Tickets',  'admin menu menu title flight tickets', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_tickets',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
     }
 
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightTickets.view.php";
-        $data = array(
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPFlightTickets.view.php';
+        $data = [
             'themes' => TPThemes::getThemesTables()
-        );
+        ];
         parent::loadView($pathView, 0, $data);
     }
 }

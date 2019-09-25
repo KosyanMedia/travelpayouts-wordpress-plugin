@@ -9,9 +9,9 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\models\site\TPHotelShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
-use \app\includes\common\TPLang;
+use app\includes\models\site\TPHotelShortcodeModel;
+use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPLang;
 use app\includes\TPPlugin;
 
 class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
@@ -28,10 +28,10 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
      *  id — id города (из запроса Города).
      * @param array $args
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'id' => false,
             'check_in' => false,
             'check_out' => false,
@@ -40,9 +40,9 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'limit' => 5,
             'type' => 'popularity',
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'id' => $id,
             'check_in' => false,
             'check_out' => false,
@@ -51,7 +51,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'limit' => $limit,
             'type' => $type,
             'return_url' => $return_url
-        );
+        ];
 
         $cacheKey = "hotel_1_selections_discount_{$currency}_{$language}_{$limit}_{$type}_{$id}";
         //error_log($cacheKey);
@@ -59,10 +59,10 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
         if($this->cacheSecund() && $return_url == false){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey, '', $widget)))) {
                 $return = self::$TPRequestApi->getHotelSelection($attr);
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $return;
@@ -78,7 +78,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
                 return false;
             }
             if ($return_url == false){
-                $rows = array();
+                $rows = [];
                 $rows = array_shift($rows);
             }
 
@@ -110,9 +110,9 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
      * @param array $args
      * @return array
      */
-    public function getDataTable($args = array()){
+    public function getDataTable($args = []){
 	    $linkWithoutDates = isset(TPPlugin::$options['shortcodes_hotels'][1]['link_without_dates']) ? 'true' : 'false';
-        $defaults = array(
+        $defaults = [
             'city' => false,
             'city_label' => false,
             'title' => '',
@@ -136,7 +136,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'subid' => '',
             'link_without_dates' => $linkWithoutDates,
             'widget' => 0
-        );
+        ];
 
 
 
@@ -150,7 +150,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
         //$check_in = date('Y-m-d');
         //$check_out = $this->getCheckOut($day);
 
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'id' => $city,
             'check_in' => false,
             'check_out' => false,
@@ -160,11 +160,11 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'type' => $type_selections,
             'return_url' => $return_url,
             'widget' => $widget
-        ));
+        ]);
 
 
 
-        return array(
+        return [
             'rows' => $return,
             'title' => $title,
             'city' => $city,
@@ -190,7 +190,7 @@ class TPHotelsSelectionsDiscountShortcodeModel extends TPHotelShortcodeModel
             'paginate' => $paginate,
             'link_without_dates' => $link_without_dates,
 
-        );
+        ];
 
 
     }

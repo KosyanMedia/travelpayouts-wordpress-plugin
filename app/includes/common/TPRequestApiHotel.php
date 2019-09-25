@@ -8,7 +8,7 @@
 
 namespace app\includes\common;
 
-use \app\includes\common\TPLang;
+use app\includes\common\TPLang;
 
 class TPRequestApiHotel extends TPRequestApi
 {
@@ -40,11 +40,11 @@ class TPRequestApiHotel extends TPRequestApi
      * @param array $args
      * @return array|bool
      */
-    public function getHotelList($args = array()){
-        $defaults = array(
+    public function getHotelList($args = []){
+        $defaults = [
             'location_id' => false,
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if (!$location_id || empty($location_id)){
             echo $this->get_error('location');
@@ -70,14 +70,14 @@ class TPRequestApiHotel extends TPRequestApi
      * locationId — id локации, обязательный параметр.
      * token — ваш партнерский токен.
      */
-    public function getHotels($args = array()){
-        $defaults = array(
+    public function getHotels($args = []){
+        $defaults = [
             'location_id' => false,
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if (!$location_id || empty($location_id)){
-            $location_id = "";
+            $location_id = '';
         } else {
             $location_id = "locationId={$location_id}";
         }
@@ -114,8 +114,8 @@ class TPRequestApiHotel extends TPRequestApi
      * customerIp — параметр используется для указания ip пользователя, если запрос отправляется не напрямую,
      * а через какое-либо серверное проксирование.
      */
-    public function getCache($args = array()){
-        $defaults = array(
+    public function getCache($args = []){
+        $defaults = [
             'location' => false,
             'check_in' => false,
             'check_out' => false,
@@ -128,25 +128,25 @@ class TPRequestApiHotel extends TPRequestApi
             'limit' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if (!$location || empty($location)){
             //echo $this->get_error('location');
-            $location = "";
+            $location = '';
             //return false;
         } else {
             $location = "location={$location}";
         }
         if (!$check_in || empty($check_in)){
             echo $this->get_error('check_in');
-            $check_in = "";
+            $check_in = '';
             return false;
         } else {
             $check_in = "checkIn={$check_in}";
         }
         if (!$check_out || empty($check_out)){
             echo $this->get_error('check_out');
-            $check_out = "";
+            $check_out = '';
             return false;
         } else {
             $check_out = "checkOut={$check_out}";
@@ -159,37 +159,37 @@ class TPRequestApiHotel extends TPRequestApi
             $location_id = "locationId={$location_id}";
         }
         if (!$hotel_id || empty($hotel_id)){
-            $hotel_id = "";
+            $hotel_id = '';
         } else {
             $hotel_id = "hotelId={$hotel_id}";
         }
         if (!$hotel || empty($hotel)){
-            $hotel = "";
+            $hotel = '';
         } else {
             $hotel = "hotel={$hotel}";
         }
         if (!$adults || empty($adults)){
-            $adults = "";
+            $adults = '';
         } else {
             $adults = "adults={$adults}";
         }
         if (!$children || empty($children)){
-            $children = "";
+            $children = '';
         } else {
             $children = "children={$children}";
         }
         if (!$infants || empty($infants)){
-            $infants = "";
+            $infants = '';
         } else {
             $infants = "infants={$infants}";
         }
         if (!$limit || empty($limit)){
-            $limit = "";
+            $limit = '';
         } else {
             $limit = "limit={$limit}";
         }
         if (!$currency || empty($currency)){
-            $currency = "";
+            $currency = '';
         } else {
             $currency = "currency={$currency}";
         }
@@ -215,10 +215,10 @@ class TPRequestApiHotel extends TPRequestApi
      * https://engine.hotellook.com/api/v2/static/hotelTypes.json?language=en&token=УкажитеВашТокен
      */
     public function getHotelsType(){
-        return array(
+        return [
             'ru' => $this->getHotelsTypeRu(),
             'en' => $this->getHotelsTypeEn(),
-        );
+        ];
     }
 
     /**
@@ -253,8 +253,8 @@ class TPRequestApiHotel extends TPRequestApi
      * type — типы отелей из запроса /tp/public/available_selections.json (см. ниже); type=popularity
      * id — id города
      */
-    public function getHotelSelection($args = array()){
-        $defaults = array(
+    public function getHotelSelection($args = []){
+        $defaults = [
             'id' => false,
             'check_in' => false,
             'check_out' => false,
@@ -263,46 +263,46 @@ class TPRequestApiHotel extends TPRequestApi
             'limit' => false,
             'type' => 'all',
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if (!$id || empty($id)){
             echo $this->get_error('id');
-            $id = "";
+            $id = '';
             return false;
         } else {
             $id = "&id={$id}";
         }
         if (!$check_in || empty($check_in)){
             //echo $this->get_error('check_in');
-            $check_in = "";
+            $check_in = '';
             //return false;
         } else {
             $check_in = "&check_in={$check_in}";
         }
         if (!$check_out || empty($check_out)){
             //echo $this->get_error('check_out');
-            $check_out = "";
+            $check_out = '';
             //return false;
         } else {
             $check_out = "&check_out={$check_out}";
         }
         if (!$currency || empty($currency)){
-            $currency = "";
+            $currency = '';
         } else {
             $currency = "currency={$currency}";
         }
         if (!$language || empty($language)){
-            $language = "";
+            $language = '';
         } else {
             $language = "&language={$language}";
         }
         if (!$limit || empty($limit)){
-            $limit = "";
+            $limit = '';
         } else {
             $limit = "&limit={$limit}";
         }
         if (!$type || empty($type)){
-            $type = "";
+            $type = '';
         } else {
             $type = "&type={$type}";
         }
@@ -322,9 +322,9 @@ class TPRequestApiHotel extends TPRequestApi
     public function request($string)
     {
         //$string = htmlspecialchars($string);
-        $response = wp_remote_get( $string, array('headers' => array(
+        $response = wp_remote_get( $string, ['headers' => [
             'Accept-Encoding' => 'gzip, deflate',
-        )) );
+        ]]);
         /*if( is_wp_error( $response ) ){
             $json = $response;
         } else {
@@ -338,9 +338,9 @@ class TPRequestApiHotel extends TPRequestApi
     public function requestJson($string)
     {
         //$string = htmlspecialchars($string);
-        $response = wp_remote_get( $string, array('headers' => array(
+        $response = wp_remote_get( $string, ['headers' => [
             'Accept-Encoding' => 'gzip, deflate',
-        )) );
+        ]]);
         if( is_wp_error( $response ) ){
             $json = $response;
         } else {

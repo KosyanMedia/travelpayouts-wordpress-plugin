@@ -3,6 +3,7 @@ namespace app\includes;
 
 use app\includes\common\TPLang;
 use app\includes\common\TPSiteAjaxListener;
+use app\includes\common\TPTinyMCE;
 use app\includes\controllers\admin\media_buttons\TPHotelsButtonsController;
 use app\includes\controllers\admin\media_buttons\TPRailwayButtonsController;
 use app\includes\controllers\admin\menu\TPHotelsController;
@@ -16,12 +17,38 @@ use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDateShortc
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeController;
 use app\includes\controllers\site\shortcodes\hotels\TPHotelsSelectionsShortcodeController;
 use app\includes\controllers\site\shortcodes\railway\TPTutuShortcodeController;
+use app\includes\controllers\site\shortcodes\TPCaseCityShortcodeController;
+use app\includes\controllers\site\shortcodes\TPCheapestFlightsShortcodeController;
+use app\includes\controllers\site\shortcodes\TPCheapestTicketEachDayMonthShortcodeController;
+use app\includes\controllers\site\shortcodes\TPCheapestTicketsEachMonthShortcodeController;
+use app\includes\controllers\site\shortcodes\TPDirectFlightsRouteShortcodeController;
+use app\includes\controllers\site\shortcodes\TPDirectFlightsShortcodeController;
+use app\includes\controllers\site\shortcodes\TPFromOurCityFlyShortcodeController;
+use app\includes\controllers\site\shortcodes\TPInOurCityFlyShortcodeController;
+use app\includes\controllers\site\shortcodes\TPLinkShortcodeController;
+use app\includes\controllers\site\shortcodes\TPOurSiteSearchShortcodeController;
+use app\includes\controllers\site\shortcodes\TPPopularDestinationsAirlinesShortcodeController;
+use app\includes\controllers\site\shortcodes\TPPopularRoutesFromCityShortcodeController;
+use app\includes\controllers\site\shortcodes\TPPriceCalendarMonthShortcodeController;
+use app\includes\controllers\site\shortcodes\TPPriceCalendarWeekShortcodeController;
+use app\includes\controllers\site\shortcodes\TPSearchFormShortcodeController;
+use app\includes\controllers\site\shortcodes\TPSpecialOfferShortcodeController;
+use app\includes\controllers\site\TPTabsShortcodeController;
+use app\includes\controllers\site\widgets\TPCalendarWidgetController;
+use app\includes\controllers\site\widgets\TPDucklettWidgetController;
+use app\includes\controllers\site\widgets\TPHotelMapWidgetController;
+use app\includes\controllers\site\widgets\TPHotelSelectController;
+use app\includes\controllers\site\widgets\TPHotelWidgetController;
+use app\includes\controllers\site\widgets\TPMapWidgetController;
+use app\includes\controllers\site\widgets\TPPopularRoutesWidgetController;
+use app\includes\controllers\site\widgets\TPSubscriptionsWidgetController;
 use app\includes\models\admin\TPHotelsTypeModel;
+use core\TPOLoader;
 
-class TPLoader extends \core\TPOLoader{
+class TPLoader extends TPOLoader{
     public function __construct(){
         parent::__construct();
-	    add_action('widgets_init', array(&$this, 'registerWidget'));
+	    add_action('widgets_init', [&$this, 'registerWidget']);
     }
 
     protected function admin()
@@ -57,7 +84,7 @@ class TPLoader extends \core\TPOLoader{
             new controllers\admin\media_buttons\TPLinkButtonsController();
         }
 
-        new \app\includes\common\TPTinyMCE();
+        new TPTinyMCE();
         new TPHotelsTypeModel();
 
 
@@ -67,22 +94,22 @@ class TPLoader extends \core\TPOLoader{
     {
         // TODO: Implement site() method.
         //Shortcodes Flight
-        new \app\includes\controllers\site\shortcodes\TPSearchFormShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPCheapestFlightsShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPDirectFlightsRouteShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPDirectFlightsShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPPopularDestinationsAirlinesShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPPriceCalendarMonthShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPPriceCalendarWeekShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPCheapestTicketsEachMonthShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPCheapestTicketEachDayMonthShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPPopularRoutesFromCityShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPOurSiteSearchShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPFromOurCityFlyShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPInOurCityFlyShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPLinkShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPSpecialOfferShortcodeController();
-        new \app\includes\controllers\site\shortcodes\TPCaseCityShortcodeController();
+        new TPSearchFormShortcodeController();
+        new TPCheapestFlightsShortcodeController();
+        new TPDirectFlightsRouteShortcodeController();
+        new TPDirectFlightsShortcodeController();
+        new TPPopularDestinationsAirlinesShortcodeController();
+        new TPPriceCalendarMonthShortcodeController();
+        new TPPriceCalendarWeekShortcodeController();
+        new TPCheapestTicketsEachMonthShortcodeController();
+        new TPCheapestTicketEachDayMonthShortcodeController();
+        new TPPopularRoutesFromCityShortcodeController();
+        new TPOurSiteSearchShortcodeController();
+        new TPFromOurCityFlyShortcodeController();
+        new TPInOurCityFlyShortcodeController();
+        new TPLinkShortcodeController();
+        new TPSpecialOfferShortcodeController();
+        new TPCaseCityShortcodeController();
 
         //hotel
         new TPCostLivingCityWeekendShortcodeController();
@@ -97,17 +124,17 @@ class TPLoader extends \core\TPOLoader{
 	    new TPTutuShortcodeController();
 
         //Widgets
-        new \app\includes\controllers\site\widgets\TPMapWidgetController();
-        new \app\includes\controllers\site\widgets\TPHotelMapWidgetController();
-        new \app\includes\controllers\site\widgets\TPCalendarWidgetController();
-        new \app\includes\controllers\site\widgets\TPSubscriptionsWidgetController();
-        new \app\includes\controllers\site\widgets\TPHotelWidgetController();
-        new \app\includes\controllers\site\widgets\TPPopularRoutesWidgetController();
-        new \app\includes\controllers\site\widgets\TPHotelSelectController();
-        new \app\includes\controllers\site\widgets\TPDucklettWidgetController();
+        new TPMapWidgetController();
+        new TPHotelMapWidgetController();
+        new TPCalendarWidgetController();
+        new TPSubscriptionsWidgetController();
+        new TPHotelWidgetController();
+        new TPPopularRoutesWidgetController();
+        new TPHotelSelectController();
+        new TPDucklettWidgetController();
 
         //Tabs
-        new \app\includes\controllers\site\TPTabsShortcodeController();
+        new TPTabsShortcodeController();
 
 
     }
@@ -116,7 +143,7 @@ class TPLoader extends \core\TPOLoader{
     {
         // TODO: Implement all() method.
 
-        new \app\includes\TPLoaderScripts();
+        new TPLoaderScripts();
         new TPSiteAjaxListener();
         //new controllers\admin\menu\TPAdminBarMenuController();
         //Загрузка спецпредложения

@@ -14,16 +14,16 @@ abstract class TPView {
      */
     public function getCurrencyView($currency){
         switch($currency){
-            case "RUB":
-            case "rub":
+            case 'RUB':
+            case 'rub':
                 $currency = '<i class="TPCurrencyIco" >i</i>';
                 break;
-            case "USD":
-            case "usd":
+            case 'USD':
+            case 'usd':
                 $currency = '<i class="TPCurrencyIco">$</i>';
                 break;
-            case "EUR":
-            case "eur":
+            case 'EUR':
+            case 'eur':
                 $currency = '<i class="TPCurrencyIco">€</i>';//&#8364;
                 break;
         }

@@ -9,8 +9,9 @@
 namespace app\includes\models\site\shortcodes;
 
 use app\includes\common\TPCurrencyUtils;
-use \app\includes\models\site\TPFlightShortcodeModel;
-use \app\includes\common\TpPluginHelper;
+use app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\common\TpPluginHelper;
+use app\includes\TPPlugin;
 
 class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
     /**
@@ -18,11 +19,11 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
      * @return array|bool
      * @var $NUMBER 9
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        if(\app\includes\TPPlugin::$options['local']['currency'] != TPCurrencyUtils::TP_CURRENCY_RUB) return false;
-        $defaults = array(
+        if(TPPlugin::$options['local']['currency'] != TPCurrencyUtils::TP_CURRENCY_RUB) return false;
+        $defaults = [
             'origin' => false,
             'departure_at' => false,
             'return_at' => false,
@@ -37,23 +38,23 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-        );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if ($return_url == 1){
             $return_url = true;
         }
-        $attr = array(
+        $attr = [
             'origin' => $origin,
             'departure_at' => $departure_at,
             'return_at' => $return_at,
             'currency' => $this->typeCurrency(),
             'return_url' => $return_url
-        );
-        $name_method = "***************".__METHOD__."***************";
+        ];
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 8. Популярные направления из города ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 8. Популярные направления из города ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if ($this->cacheSecund() && $return_url == false) {
@@ -70,7 +71,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
                 //    return false;
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $return = array();
+                    $return = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $cacheSecund = $this->cacheSecund();
@@ -95,7 +96,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
         }
 
-        return array(
+        return [
             'rows' => $return,
             'origin' => $this->iataAutocomplete($origin, 0),
             'type' => 9,
@@ -107,7 +108,7 @@ class TPPopularRoutesFromCityShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $this->typeCurrency(),
             'return_url' => $return_url,
             'host' => $host
-        );
+        ];
 
     }
     public function getDataFilter($filter_flight_number, $filter_airline, $data){

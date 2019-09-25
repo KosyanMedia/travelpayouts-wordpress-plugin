@@ -8,7 +8,7 @@
 namespace core\controllers;
 abstract class TPOAdminBarMenuController {
     public function __construct(){
-        add_action('wp_before_admin_bar_render', array(&$this, 'admin_bar_menu') );
+        add_action('wp_before_admin_bar_render', [&$this, 'admin_bar_menu']);
     }
     abstract public function admin_bar_menu();
 
@@ -21,23 +21,23 @@ abstract class TPOAdminBarMenuController {
         global $wp_admin_bar;
         if ( !is_super_admin() || !is_admin_bar_showing() )
             return;
-        $wp_admin_bar->add_menu( array(
+        $wp_admin_bar->add_menu( [
             'id'   => $id,
-            'meta' => array(),
+            'meta' => [],
             'title' => $name,
-            'href' => admin_url().$href ) );
+            'href' => admin_url().$href]);
     }
     public function admin_bar_add_sub_menu($name, $link, $root_menu, $id, $meta = false) {
         global $wp_admin_bar;
         if ( ! is_super_admin() || ! is_admin_bar_showing() )
             return;
 
-        $wp_admin_bar->add_menu( array(
+        $wp_admin_bar->add_menu( [
             'parent' => $root_menu,
             'id' => $id,
             'title' => $name,
             'href' => admin_url().$link,
             'meta' => $meta
-        ) );
+        ]);
     }
 }

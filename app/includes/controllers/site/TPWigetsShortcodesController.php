@@ -6,21 +6,24 @@
  * Time: 13:05
  */
 namespace app\includes\controllers\site;
-abstract class TPWigetsShortcodesController extends \core\controllers\TPOShortcodesController{
+use app\includes\views\site\widgets\TPWidgetsView;
+use core\controllers\TPOShortcodesController;
+
+abstract class TPWigetsShortcodesController extends TPOShortcodesController{
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->view = new \app\includes\views\site\widgets\TPWidgetsView();
+        $this->view = new TPWidgetsView();
     }
 
-    public function action($args = array())
+    public function action($args = [])
     {
         // TODO: Implement action() method.
         return $this->render($args);
     }
 
     public function boolval($val){
-        return ($val == 'true' || $val === true) ? true : false;
+        return ($val === 'true' || $val === true) ? true : false;
     }
 
     /**

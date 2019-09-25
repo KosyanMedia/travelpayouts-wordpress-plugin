@@ -6,10 +6,13 @@
  * Time: 16:34
  */
 namespace app\includes\controllers\admin\menu;
-class TPSettingsController extends \core\controllers\TPOAdminMenuController{
+use app\includes\models\admin\menu\TPSettingsModel;
+use core\controllers\TPOAdminMenuController;
+
+class TPSettingsController extends TPOAdminMenuController{
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\admin\menu\TPSettingsModel();
+        $this->model = new TPSettingsModel();
     }
     public function action()
     {
@@ -19,8 +22,8 @@ class TPSettingsController extends \core\controllers\TPOAdminMenuController{
             _x('Settings',  'admin menu menu title settings', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_settings',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
 
         /*TPPlugin::$adminNotice->adminNoticePush(get_class($this), array(
             'class_notice' => 'updated',
@@ -33,7 +36,7 @@ class TPSettingsController extends \core\controllers\TPOAdminMenuController{
     {
         // TODO: Implement render() method.
 
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPSettings.view.php";
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPSettings.view.php';
         parent::loadView($pathView);
     }
 

@@ -9,10 +9,10 @@
 	    global $locale;
 	    $linkHere = '';
 	    switch($locale) {
-		    case "ru_RU":
+		    case 'ru_RU':
 			    $linkHere = 'https://support.travelpayouts.com/hc/ru/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru';
 			    break;
-		    case "en_US":
+		    case 'en_US':
 			    $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
 			    break;
 		    default:

@@ -7,13 +7,15 @@
  */
 namespace app\includes\controllers\site\widgets;
 use app\includes\common\TPCurrencyUtils;
+use app\includes\controllers\site\TPWigetsShortcodesController;
+use app\includes\TPPlugin;
 
-class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
+class TPSubscriptionsWidgetController extends TPWigetsShortcodesController{
 
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_subscriptions_widget', array(&$this, 'action'));
+        add_shortcode( 'tp_subscriptions_widget', [&$this, 'action']);
     }
 
     public function render($data)
@@ -22,24 +24,24 @@ class TPSubscriptionsWidgetController extends \app\includes\controllers\site\TPW
         $widgets = 4;
         $origin_i = '';
         $destination_i = '';
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
+        if(!empty(TPPlugin::$options['widgets'][$widgets]['origin'])){
+            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
             $origin_i = $origin_iata[1];
         }
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
+        if(!empty(TPPlugin::$options['widgets'][$widgets]['destination'])){
+            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
             $destination_i = $destination_iata[1];
         }
-        $defaults = array(
+        $defaults = [
             'origin' => $origin_i,
             'destination' => $destination_i,
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'width' => TPPlugin::$options['widgets'][$widgets]['width'],
             'subid' => '',
-            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
-        );
+            'currency' => TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+        ];
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
-        $color = rawurlencode(\app\includes\TPPlugin::$options['widgets'][$widgets]['color']);
-        $width = (isset($responsive) && $responsive == 'true')? "?" : "?width={$width}px&";
+        $color = rawurlencode(TPPlugin::$options['widgets'][$widgets]['color']);
+        $width = (isset($responsive) && $responsive === 'true')? '?' : "?width={$width}px&";
         //error_log($width);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()

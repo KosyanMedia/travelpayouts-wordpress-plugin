@@ -6,13 +6,16 @@
  * Time: 16:59
  */
 namespace app\includes\controllers\admin\menu;
-class TPWizardController extends \core\controllers\TPOAdminMenuController{
+use app\includes\models\admin\menu\TPWizardModel;
+use core\controllers\TPOAdminMenuController;
+
+class TPWizardController extends TPOAdminMenuController{
     public $local;
     public $local_url;
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\admin\menu\TPWizardModel();
+        $this->model = new TPWizardModel();
     }
     public function action()
     {
@@ -23,8 +26,8 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
             _x('Wizard',  'admin menu menu title wizard', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_wizard',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
         //global $submenu;
 
     }
@@ -34,11 +37,11 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
 
         global $locale;
         switch($locale){
-            case "ru_RU":
+            case 'ru_RU':
                 $this->local = 'ru';
                 $this->local_url = 'ru';
                 break;
-            case "en_US":
+            case 'en_US':
                 $this->local = 'en';
                 $this->local_url = 'en-us';
                 break;
@@ -48,7 +51,7 @@ class TPWizardController extends \core\controllers\TPOAdminMenuController{
                 break;
         }
         // TODO: Implement render() method.
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWizard.view.php";
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPWizard.view.php';
         parent::loadView($pathView);
     }
 }

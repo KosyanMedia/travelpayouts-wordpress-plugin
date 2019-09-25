@@ -13,7 +13,7 @@ use app\includes\common\TPFieldsLabelTable;
 use app\includes\common\TPLang;
 use app\includes\common\TPOption;
 use app\includes\TPPlugin;
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
 
 class TPRailwayShortcodeView {
 
@@ -22,9 +22,9 @@ class TPRailwayShortcodeView {
 
 	}
 
-	public function renderTable($args = array()) {
-		$defaults = array(
-			'rows' => array(),
+	public function renderTable($args = []) {
+		$defaults = [
+			'rows' => [],
 			'origin' => '',
 			'destination' => '',
 			'origin_title' => '',
@@ -37,7 +37,7 @@ class TPRailwayShortcodeView {
 			'return_url' => false,
 			'language' => TPLang::getLang(),
 			'shortcode' => false
-		);
+        ];
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		$html = '';
 		if ($shortcode == false) return false;
@@ -221,8 +221,8 @@ class TPRailwayShortcodeView {
 	 * @return string
 	 */
 	public function tdClassHidden($shortcode, $field){
-		$fields = array(
-			'1' => array(
+		$fields = [
+			'1' => [
 				//Маршрут, Route
 				'route',
 				//В пути, Duration
@@ -239,8 +239,8 @@ class TPRailwayShortcodeView {
 				'route_first_station',
 				//Конечная станция маршрута / Route's Last Station
 				'route_last_station'
-			),
-		);
+            ],
+        ];
 		if(in_array($field, $fields[$shortcode])) return 'TP-unessential';
 		return '';
 	}
@@ -251,7 +251,7 @@ class TPRailwayShortcodeView {
 	 */
 	public function getTableTheadTDFieldLabel($fieldKey)
 	{
-		$fieldLabel = "";
+		$fieldLabel = '';
 		if(isset(TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label'][$fieldKey])){
 			$fieldLabel = TPPlugin::$options['local']['railway_fields'][TPLang::getLang()]['label'][$fieldKey];
 		}else{
@@ -410,7 +410,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getTrain($row = array()){
+	public function getTrain($row = []){
 		$train = '';
 		if (array_key_exists('trainNumber', $row)) {
 			$train .= $row['trainNumber'].' ';
@@ -440,7 +440,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-	public function getRoute($row = array()){
+	public function getRoute($row = []){
         $route = '';
         $departureStation = '';
         $arrivalStation = '';
@@ -504,7 +504,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-    public function getDeparture($row = array()){
+    public function getDeparture($row = []){
         $departure = '';
         $departureTime = '';
         $departureStation = '';
@@ -535,7 +535,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-    public function getArrival($row = array()){
+    public function getArrival($row = []){
         $arrival = '';
         $arrivalTime = '';
         $arrivalStation = '';
@@ -566,7 +566,7 @@ class TPRailwayShortcodeView {
 
     }
 
-    public function getDurationDay($row = array()){
+    public function getDurationDay($row = []){
         $durationDay = '';
         $travelTimeInSeconds = 0;
         if (array_key_exists('travelTimeInSeconds', $row)) {
@@ -588,7 +588,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-    public function getDuration($row = array()){
+    public function getDuration($row = []){
         $duration = '';
         $travelTimeInSeconds = '';
         if (array_key_exists('travelTimeInSeconds', $row)) {
@@ -637,14 +637,14 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-    public function getPrices($row = array()){
+    public function getPrices($row = []){
     	$prices = '';
-	    $categories = array();
+	    $categories = [];
 	    if (array_key_exists('categories', $row)) {
 		    $categories = $row['categories'];
 	    }
 	    if (TpPluginHelper::count($categories) < 1 || $categories == false) return $prices;
-        $priceData = array();
+        $priceData = [];
 		foreach ($categories as $category){
 			$type = '';
 			$price = '';
@@ -676,8 +676,8 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-    public function getTDPriceClass($row = array()){
-        $tdPriceClass = "";
+    public function getTDPriceClass($row = []){
+        $tdPriceClass = '';
         if (array_key_exists('categories', $row)) {
             $categories = $row['categories'];
         }
@@ -727,9 +727,9 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDates($row = array(), $typeShortcode, $subid, $origin, $destination){
+	public function getDates($row = [], $typeShortcode, $subid, $origin, $destination){
 		$dates = '';
-		$btnTxt = "";
+		$btnTxt = '';
 		if (isset(TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()])){
 			$btnTxt = TPPlugin::$options['shortcodes_railway'][$typeShortcode]['title_button'][TPLang::getLang()];
 		}else{
@@ -756,7 +756,7 @@ class TPRailwayShortcodeView {
      * @param array $row
      * @return string
      */
-	public function getURL($row = array(), $subid, $origin, $destination){
+	public function getURL($row = [], $subid, $origin, $destination){
         $URL = '';
         $marker = '';
         $promo_id = '';
@@ -825,7 +825,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getOrigin($row = array()){
+	public function getOrigin($row = []){
 		$origin = '';
 		if (array_key_exists('departureStation', $row)) {
 			$origin = $row['departureStation'];
@@ -839,7 +839,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDestination($row = array()){
+	public function getDestination($row = []){
 		$destination = '';
 		if (array_key_exists('arrivalStation', $row)) {
 			$destination = $row['arrivalStation'];
@@ -853,7 +853,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getDepartureTime($row = array()){
+	public function getDepartureTime($row = []){
 		$departureTime = '';
         $departureTimeSecond = 0;
 		if (array_key_exists('departureTime', $row)) {
@@ -869,7 +869,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return string
 	 */
-	public function getArrivalTime($row = array()){
+	public function getArrivalTime($row = []){
 		$arrivalTime = '';
 		$arrivalTimeSecond = 0;
 		if (array_key_exists('arrivalTime', $row)) {
@@ -885,7 +885,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return mixed|string
 	 */
-	public function getRouteFirstStation($row = array()){
+	public function getRouteFirstStation($row = []){
 		$routeFirstStation = '';
 		if (array_key_exists('runDepartureStation', $row)) {
 			$routeFirstStation = $row['runDepartureStation'];
@@ -899,7 +899,7 @@ class TPRailwayShortcodeView {
 	 *
 	 * @return mixed|string
 	 */
-	public function getRouteLastStation($row = array()){
+	public function getRouteLastStation($row = []){
 		$routeLastStation = '';
 		if (array_key_exists('runArrivalStation', $row)) {
 			$routeLastStation = $row['runArrivalStation'];

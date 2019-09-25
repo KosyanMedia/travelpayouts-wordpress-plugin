@@ -6,6 +6,10 @@
 namespace app\includes\common;
 
 
+use Countable;
+use ResourceBundle;
+use SimpleXMLElement;
+
 class TpPluginHelper
 {
     public static function count($data)
@@ -18,8 +22,8 @@ class TpPluginHelper
     protected static function is_countable($var)
     {
         return is_array($var)
-            || $var instanceof \Countable
-            || $var instanceof \SimpleXMLElement
-            || $var instanceof \ResourceBundle;
+            || $var instanceof Countable
+            || $var instanceof SimpleXMLElement
+            || $var instanceof ResourceBundle;
     }
 }

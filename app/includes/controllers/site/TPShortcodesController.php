@@ -6,8 +6,10 @@
  * Time: 11:32
  */
 namespace app\includes\controllers\site;
-abstract class TPShortcodesController extends \core\controllers\TPOShortcodesController{
-    public function action($args = array())
+use core\controllers\TPOShortcodesController;
+
+abstract class TPShortcodesController extends TPOShortcodesController{
+    public function action($args = [])
     {
         // TODO: Implement action() method.
         $data = $this->model->get_data($args);

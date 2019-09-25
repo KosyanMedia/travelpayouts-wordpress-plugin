@@ -8,32 +8,35 @@
 
 namespace app\includes\controllers\site\widgets;
 use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPHostURL;
+use app\includes\controllers\site\TPWigetsShortcodesController;
+use app\includes\TPPlugin;
 
-class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController
+class TPDucklettWidgetController extends TPWigetsShortcodesController
 {
 
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_ducklett_widget', array(&$this, 'action'));
+        add_shortcode( 'tp_ducklett_widget', [&$this, 'action']);
     }
 
     public function render($data)
     {
         // TODO: Implement render() method.
         $widgets = 8;
-        $defaults = array(
-            'limit' => \app\includes\TPPlugin::$options['widgets'][$widgets]['limit'],
-            'type' => \app\includes\TPPlugin::$options['widgets'][$widgets]['type'],
-            'filter' => \app\includes\TPPlugin::$options['widgets'][$widgets]['filter'],
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+        $defaults = [
+            'limit' => TPPlugin::$options['widgets'][$widgets]['limit'],
+            'type' => TPPlugin::$options['widgets'][$widgets]['type'],
+            'filter' => TPPlugin::$options['widgets'][$widgets]['filter'],
+            'width' => TPPlugin::$options['widgets'][$widgets]['width'],
             'origin' => false,
             'destination' => false,
             'airline' => false,
-            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'currency' => TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
             'subid' => '',
             //'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
-        );
+        ];
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $url_params = '';
         $url_params .= '&limit='.$limit;
@@ -59,9 +62,9 @@ class TPDucklettWidgetController extends \app\includes\controllers\site\TPWigets
                     $url_params .= '&destination_iatas='.$destination;
                 break;
         }
-        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px";
+        $width = (isset($responsive) && $responsive === 'true')? '' : "&width={$width}px";
         $url_params .= $width;
-        $url = \app\includes\common\TPHostURL::getDucklettWidgetUrlScript();
+        $url = TPHostURL::getDucklettWidgetUrlScript();
        // error_log($url);
         $white_label = $this->view->getWhiteLabel($widgets);
         //$this->view->TypeCurrency()

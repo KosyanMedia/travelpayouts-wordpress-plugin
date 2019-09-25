@@ -22,7 +22,7 @@ class TPPluginWidget extends WP_Widget{
         parent::__construct(
             'travelpayouts', // Base ID
             'Travelpayouts', // Name
-            array( 'description' => 'Travelpayouts', ) // Args
+            ['description' => 'Travelpayouts',] // Args
         );
     }
 
@@ -175,7 +175,7 @@ class TPPluginWidget extends WP_Widget{
                             id="<?php echo $this->get_field_id('select'); ?>"
                             name="<?php echo $this->get_field_name('select'); ?>"
                             style="max-width:400px;" data-select_table="<?php echo $select; ?>">
-                        <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 'RUB'){ ?>
+                        <?php if(TPPlugin::$options['local']['currency'] === 'RUB'){ ?>
                             <option value="0">
                                 <?php _ex('Select the table',
                                     'tp_plugin_widget_form_field_select_table_value_0_label', TPOPlUGIN_TEXTDOMAIN); ?>

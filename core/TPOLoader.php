@@ -7,7 +7,7 @@ abstract class TPOLoader {
     protected function __construct(){
         if ( is_admin() ) :
             $this->admin();
-            add_action('plugins_loaded', array(&$this, 'pluginsLoaded'));
+            add_action('plugins_loaded', [&$this, 'pluginsLoaded']);
         else:
             $this->site();
             endif;

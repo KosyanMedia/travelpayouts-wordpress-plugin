@@ -9,8 +9,8 @@
 
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-use \app\includes\models\site\shortcodes\hotels\TPCostLivingCityDaysShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\hotels\TPCostLivingCityDaysShortcodeModel;
 
 class TPCostLivingCityDaysShortcodeController extends TPShortcodesController
 {
@@ -26,13 +26,13 @@ class TPCostLivingCityDaysShortcodeController extends TPShortcodesController
     {
         // TODO: Implement initShortcode() method.
         //Таблица "Стоимость проживания В ГОРОДЕ на неделю"
-        add_shortcode( 'tp_cost_living_city_days_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_cost_living_city_days_shortcodes', [&$this, 'actionTable']);
     }
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
 
         $data = $this->model->getDataTable($args);
 
-        return var_dump("<pre>", $data, "</pre>");
+        return var_dump('<pre>', $data, '</pre>');
     }
 }

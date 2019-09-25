@@ -33,13 +33,13 @@ class TPRequestApiRailway extends TPRequestApi{
 	 * @param array $args
      * @return string|array
 	 */
-    public function getTutu($args = array())
+    public function getTutu($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'return_url' => false
-        );
+        ];
 
         $attributes = array_merge($defaults, wp_parse_args($args, $defaults));
         if (!isset($attributes['origin']) && $attributes['origin']) {
@@ -50,11 +50,11 @@ class TPRequestApiRailway extends TPRequestApi{
             echo $this->get_error('destination');
             return false;
         }
-        $requestParams = array(
+        $requestParams = [
             'service' => 'tutu_trains',
             'term' => $attributes['origin'],
             'term2' => $attributes['destination'],
-        );
+        ];
 
         $requestQuery = http_build_query($requestParams);
         $requestURL = self::getApiUrl() . '/search?' . $requestQuery;
@@ -71,10 +71,10 @@ class TPRequestApiRailway extends TPRequestApi{
 	 */
 	public function request($string)
 	{
-		$response = wp_remote_get( $string, array('headers' => array(
+		$response = wp_remote_get( $string, ['headers' => [
 			'Accept-Encoding' => 'gzip, deflate',
             'Accept-Language'=> '*'
-		)) );
+        ]]);
 		$body = wp_remote_retrieve_body($response);
 		$json = json_decode( $body );
 		if( ! is_wp_error( $json ))

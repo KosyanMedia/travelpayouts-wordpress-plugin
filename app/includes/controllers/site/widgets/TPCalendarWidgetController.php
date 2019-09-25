@@ -7,13 +7,16 @@
  */
 namespace app\includes\controllers\site\widgets;
 use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPLang;
+use app\includes\controllers\site\TPWigetsShortcodesController;
+use app\includes\TPPlugin;
 
-class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWigetsShortcodesController{
+class TPCalendarWidgetController  extends TPWigetsShortcodesController{
 
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_calendar_widget', array(&$this, 'action'));
+        add_shortcode( 'tp_calendar_widget', [&$this, 'action']);
     }
 
     public function render($data)
@@ -22,31 +25,31 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
         $widgets = 3;
         $origin_i = '';
         $destination_i = '';
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['origin'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
+        if(!empty(TPPlugin::$options['widgets'][$widgets]['origin'])){
+            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['origin'], $origin_iata);
             $origin_i = $origin_iata[1];
         }
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgets]['destination'])){
-            preg_match('/\[(.+)\]/',  \app\includes\TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
+        if(!empty(TPPlugin::$options['widgets'][$widgets]['destination'])){
+            preg_match('/\[(.+)\]/',  TPPlugin::$options['widgets'][$widgets]['destination'], $destination_iata);
             $destination_i = $destination_iata[1];
         }
-        $defaults = array(
+        $defaults = [
             'origin' => $origin_i,
             'destination' => $destination_i,
             'direct' => 'false',
             'one_way' => 'false',
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
+            'width' => TPPlugin::$options['widgets'][$widgets]['width'],
             'subid' => '',
-            'period_day_from' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
-            'period_day_to' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
-            'period' => \app\includes\TPPlugin::$options['widgets'][$widgets]['period'],
-            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'period_day_from' => TPPlugin::$options['widgets'][$widgets]['period_day']['from'],
+            'period_day_to' => TPPlugin::$options['widgets'][$widgets]['period_day']['to'],
+            'period' => TPPlugin::$options['widgets'][$widgets]['period'],
+            'currency' => TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
             //'powered_by' => (isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['powered_by']))? "true" : "false"
-        );
+        ];
 
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
 
-        $width = (isset($responsive) && $responsive == 'true')? "" : "&width={$width}px&";
+        $width = (isset($responsive) && $responsive === 'true')? '' : "&width={$width}px&";
         $white_label = $this->view->getWhiteLabel($widgets);
 
 
@@ -67,7 +70,7 @@ class TPCalendarWidgetController  extends \app\includes\controllers\site\TPWiget
             <script data-cfasync="false" src="//www.travelpayouts.com/calendar_widget/iframe.js?marker='.$this->view->getMarker($widgets, $subid)
             .'&origin='.$origin.'&destination='.$destination.'&currency='.$currency
             .$width.'&searchUrl='.$white_label.'&one_way='.$one_way
-            .'&only_direct='.$direct.'&locale='.\app\includes\common\TPLang::getLang()
+            .'&only_direct='.$direct.'&locale='. TPLang::getLang()
             .'&period='.$period
             .$powered_by
             .'&range='.$period_day_from.'%2C'.$period_day_to.'"

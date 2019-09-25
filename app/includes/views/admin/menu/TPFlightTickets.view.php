@@ -1,6 +1,8 @@
 <div class="TPWrapper TPWrapperFlights">
     <p class="TPMainTitle">
-        <?php _ex('Flights',
+        <?php use app\includes\TPPlugin;
+
+        _ex('Flights',
             'tp_admin_page_flights_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
     <div id="tabs-flights">
@@ -46,7 +48,7 @@
         </nav>
         <div id="tabs-tickets_config">
             <?php
-                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPFlightsTablesContent.view.php";
+                $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPFlightsTablesContent.view.php';
                 $this->loadView($pathView);
             ?>
         </div>
@@ -73,7 +75,7 @@
                         <?php $numberTheme = 1; ?>
                         <?php foreach($data['themes'] as $theme): ?>
                             <?php
-                            $TPThemeActive = ($theme['name'] ==  \app\includes\TPPlugin::$options['themes_table']['name'])?'TPThemeActive':'';
+                            $TPThemeActive = ($theme['name'] ==  TPPlugin::$options['themes_table']['name'])?'TPThemeActive':'';
 
                             ?>
                             <div class="TPTheme <?php echo $TPThemeActive; ?>" data-theme_name="<?php echo $theme['name']; ?>">

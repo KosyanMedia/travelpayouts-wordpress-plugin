@@ -7,10 +7,12 @@
  */
 namespace app\includes\models\site;
 
-use \app\includes\TPPlugin;
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TPAutocompleteReplace;
+use app\includes\TPPlugin;
+use app\includes\common\TpPluginHelper;
+use core\models\TPOShortcodesCacheModel;
 
-abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheModel{
+abstract class TPShortcodesChacheModel extends TPOShortcodesCacheModel{
     public function __construct(){
         parent::__construct();
         add_filter( 'category_description',  'do_shortcode' );
@@ -104,7 +106,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
                 $currency = 'EUR';
                 break;
         }*/
-        return \app\includes\TPPlugin::$options['local']['currency'];
+        return TPPlugin::$options['local']['currency'];
     }
 
     /**
@@ -112,7 +114,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
      * @return array
      */
     public function tpSortCheapestFlightsShortcodes($data){
-        $rows = array();
+        $rows = [];
         foreach($data as $city => $flights){
             foreach( $flights as $key => $flight ){
                 if($key < 3)
@@ -133,8 +135,8 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         $price = INF;
         $cheapest;
         foreach( $flights as $key => $flight ){
-            if( $flight["price"] < $price ){
-                $price = $flight["price"];
+            if( $flight['price'] < $price ){
+                $price = $flight['price'];
                 $cheapest = $flight;
             }
         }
@@ -150,7 +152,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
         foreach($data as $key=>$value){
             if(substr($key,0,7) != $mounth)
                 unset($data[$key]);
-            if(strtotime($value["departure_at"]) < time())
+            if(strtotime($value['departure_at']) < time())
                 unset($data[$key]);
         }
         return $data;
@@ -187,14 +189,14 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
      */
     public function tpSortOurCityFly($data, $type){
         switch($type){
-            case "0":
+            case '0':
                 $data = $data;
                 break;
-            case "1":
-                usort($data, array(&$this, "cmpSortDescending"));
+            case '1':
+                usort($data, [&$this, 'cmpSortDescending']);
                 break;
-            case "2":
-                usort($data, array(&$this, "cmpSortAscending"));
+            case '2':
+                usort($data, [&$this, 'cmpSortAscending']);
                 break;
         }
         return $data;
@@ -219,7 +221,7 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
     public function sort_dates( $return ) {
         if (!$return)
             return false;
-        usort($return, array(&$this, "cmpSort"));
+        usort($return, [&$this, 'cmpSort']);
         $date = '';
         foreach($return as $key=>$item){
             $departure_at = substr($item['depart_date'],0,10);
@@ -232,14 +234,14 @@ abstract class TPShortcodesChacheModel extends \core\models\TPOShortcodesCacheMo
     }
 
     public function iataAutocomplete($data, $type, $title = 'origin'){
-        $data = \app\includes\common\TPAutocompleteReplace::iataAutocomplete($data, $type, $title);
+        $data = TPAutocompleteReplace::iataAutocomplete($data, $type, $title);
 
         return $data;
 
     }
 
     public function sortTransfers($type, $rows, $stops){
-        $rows_sort = array();
+        $rows_sort = [];
         switch ($type){
             case 1:
 

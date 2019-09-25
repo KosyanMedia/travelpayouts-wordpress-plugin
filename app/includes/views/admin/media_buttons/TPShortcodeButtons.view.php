@@ -1,34 +1,37 @@
 <div id="constructorShortcodesModal"
-     title="<?php _ex('Constructor tables', 'tp_admin_page_settings_сonstructor_tables_title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
+     title="<?php use app\includes\common\TPCurrencyUtils;
+     use app\includes\TPPlugin;
+
+     _ex('Constructor tables', 'tp_admin_page_settings_сonstructor_tables_title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_shortcodes">
                 <select name="select_shortcodes" id="select_shortcodes"
-                        data-limit-7="<?php echo \app\includes\TPPlugin::$options['shortcodes']['8']['limit']?>"
-                        data-limit-11="<?php echo \app\includes\TPPlugin::$options['shortcodes']['12']['limit']?>"
-                        data-limit-12="<?php echo \app\includes\TPPlugin::$options['shortcodes']['13']['limit']?>"
-                        data-limit-13="<?php echo \app\includes\TPPlugin::$options['shortcodes']['14']['limit']?>"
-                        data-limit-9="<?php echo \app\includes\TPPlugin::$options['shortcodes']['10']['limit']?>"
-                        data-transplant-1 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['1']['transplant']?>"
-                        data-transplant-5 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['5']['transplant']?>"
-                        data-transplant-12 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['12']['transplant']?>"
-                        data-transplant-13 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['13']['transplant']?>"
-                        data-transplant-14 = "<?php echo \app\includes\TPPlugin::$options['shortcodes']['14']['transplant']?>"
+                        data-limit-7="<?php echo TPPlugin::$options['shortcodes']['8']['limit']?>"
+                        data-limit-11="<?php echo TPPlugin::$options['shortcodes']['12']['limit']?>"
+                        data-limit-12="<?php echo TPPlugin::$options['shortcodes']['13']['limit']?>"
+                        data-limit-13="<?php echo TPPlugin::$options['shortcodes']['14']['limit']?>"
+                        data-limit-9="<?php echo TPPlugin::$options['shortcodes']['10']['limit']?>"
+                        data-transplant-1 = "<?php echo TPPlugin::$options['shortcodes']['1']['transplant']?>"
+                        data-transplant-5 = "<?php echo TPPlugin::$options['shortcodes']['5']['transplant']?>"
+                        data-transplant-12 = "<?php echo TPPlugin::$options['shortcodes']['12']['transplant']?>"
+                        data-transplant-13 = "<?php echo TPPlugin::$options['shortcodes']['13']['transplant']?>"
+                        data-transplant-14 = "<?php echo TPPlugin::$options['shortcodes']['14']['transplant']?>"
 
-                        data-paginate-1="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['1']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-2="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['2']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-4="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['4']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-5="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['5']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-6="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['6']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-7="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['7']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-8="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['8']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-9="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['9']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-10="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['10']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-12="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['12']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-13="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['13']['paginate_switch']))? 1 : 0;?>"
-                        data-paginate-14="<?php echo (isset(\app\includes\TPPlugin::$options['shortcodes']['14']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-1="<?php echo (isset(TPPlugin::$options['shortcodes']['1']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-2="<?php echo (isset(TPPlugin::$options['shortcodes']['2']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-4="<?php echo (isset(TPPlugin::$options['shortcodes']['4']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-5="<?php echo (isset(TPPlugin::$options['shortcodes']['5']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-6="<?php echo (isset(TPPlugin::$options['shortcodes']['6']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-7="<?php echo (isset(TPPlugin::$options['shortcodes']['7']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-8="<?php echo (isset(TPPlugin::$options['shortcodes']['8']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-9="<?php echo (isset(TPPlugin::$options['shortcodes']['9']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-10="<?php echo (isset(TPPlugin::$options['shortcodes']['10']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-12="<?php echo (isset(TPPlugin::$options['shortcodes']['12']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-13="<?php echo (isset(TPPlugin::$options['shortcodes']['13']['paginate_switch']))? 1 : 0;?>"
+                        data-paginate-14="<?php echo (isset(TPPlugin::$options['shortcodes']['14']['paginate_switch']))? 1 : 0;?>"
                     >
-                    <?php if(\app\includes\TPPlugin::$options['local']['currency'] == \app\includes\common\TPCurrencyUtils::TP_CURRENCY_RUB ){ ?>
+                    <?php if(TPPlugin::$options['local']['currency'] == TPCurrencyUtils::TP_CURRENCY_RUB ){ ?>
                         <option selected="selected" value="0">
                             <?php _ex('Select the table',
                                 'tp_admin_page_settings_сonstructor_tables_field_select_table_value_0', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -240,9 +243,9 @@
         <tr id="tr_currency">
             <td>
                 <select name="currency" id="currency" class="TP-Zelect">
-                    <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
+                    <?php foreach(TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
                         <option
-                            <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
+                            <?php selected( TPPlugin::$options['local']['currency'], $currency ); ?>
                             value="<?php echo $currency ?>">
                             <?php echo $currency; ?>
                         </option>

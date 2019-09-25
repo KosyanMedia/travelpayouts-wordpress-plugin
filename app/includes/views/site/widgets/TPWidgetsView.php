@@ -7,10 +7,10 @@
  */
 namespace app\includes\views\site\widgets;
 
-use \app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPHostURL;
 use app\includes\common\TPOption;
-use \app\includes\TPPlugin;
+use app\includes\TPPlugin;
 
 class TPWidgetsView {
 
@@ -22,10 +22,10 @@ class TPWidgetsView {
      * @return string
      */
     public function getMarker($widgetType = false, $subid = ''){
-        $marker = \app\includes\TPPlugin::$options['account']['marker'];
+        $marker = TPPlugin::$options['account']['marker'];
         $marker .= TPOption::getExtraMarker();
-        if(!empty(\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
-            $marker = $marker.'_'.\app\includes\TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
+        if(!empty(TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'])){
+            $marker = $marker.'_'. TPPlugin::$options['widgets'][$widgetType]['extra_widget_marker'];
         }
         if(!empty($subid)){
             $subid = trim($subid);
@@ -89,8 +89,8 @@ class TPWidgetsView {
     }
 
     public function serializeWhiteLabel($whiteLabel){
-	    $whiteLabel = preg_replace("(^https?://)", "", $whiteLabel );
-	    $whiteLabel = preg_replace("#/$#", "", $whiteLabel);
+	    $whiteLabel = preg_replace('(^https?://)', '', $whiteLabel );
+	    $whiteLabel = preg_replace('#/$#', '', $whiteLabel);
     	return $whiteLabel;
     }
 
@@ -99,7 +99,7 @@ class TPWidgetsView {
      * @return string
      */
     public function getWhiteLabel($widgetType = false){
-        $white_label = \app\includes\TPPlugin::$options['account']['white_label'];
+        $white_label = TPPlugin::$options['account']['white_label'];
         if(!empty($white_label)){
 	        $white_label = $this->serializeWhiteLabel($white_label);
         }
@@ -107,7 +107,7 @@ class TPWidgetsView {
         switch($widgetType){
             case 1:
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    $white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/map';
                 }
@@ -115,14 +115,14 @@ class TPWidgetsView {
             case 2:
                 $white_label = TPPlugin::$options['account']['white_label_hotel'];
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    $white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/hotels';
                 }
                 break;
             case 3:
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidget(3);
+                    $white_label = TPHostURL::getHostWidget(3);
 	                $white_label = $this->serializeWhiteLabel($white_label);
                     //error_log($white_label);
                     //$white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
@@ -140,7 +140,7 @@ class TPWidgetsView {
             case 5:
                 $white_label = TPPlugin::$options['account']['white_label_hotel'];
                 if( ! $white_label || empty( $white_label ) ){
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    $white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                 }else{
                     $white_label .= '/hotels';
                 }
@@ -149,10 +149,10 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
 
                     //$white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel(6);
-                    $white_label = \app\includes\common\TPHostURL::getHostWidget($widgetType);
+                    $white_label = TPHostURL::getHostWidget($widgetType);
                     $white_label = $this->serializeWhiteLabel($white_label);
                     if(strpos($white_label, 'aviasales.kz') === false){
-                        $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                        $white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                     }
 
                     //$white_label = str_replace("http://", "", $white_label);
@@ -176,7 +176,7 @@ class TPWidgetsView {
                 if( ! $white_label || empty( $white_label ) ){
                     //$white_label = \app\includes\common\TPHostURL::getHostWidget(6);
                     //error_log($white_label);
-                    $white_label = \app\includes\common\TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
+                    $white_label = TPHostURL::getHostWidgetWhenEmptyWhiteLabel($widgetType);
                     //$white_label = 'hydra.aviasales.ru';
                 }else{
                     $white_label .= '/flights';
@@ -190,11 +190,11 @@ class TPWidgetsView {
 
 
     public function getCurrencyValid($currency_option){
-        $currency_default = array(
+        $currency_default = [
             TPCurrencyUtils::TP_CURRENCY_USD,
             TPCurrencyUtils::TP_CURRENCY_RUB,
             TPCurrencyUtils::TP_CURRENCY_EUR
-        );
+        ];
         $currency = '';
         if (in_array($currency_option, $currency_default)) {
             //error_log("true");
@@ -207,7 +207,7 @@ class TPWidgetsView {
     }
 
     public function getCurrencyMaintained($widgetType, $currencySelected){
-        $currencyNewNotMaintained = array(
+        $currencyNewNotMaintained = [
             TPCurrencyUtils::TP_CURRENCY_ARS,
             TPCurrencyUtils::TP_CURRENCY_COP,
             TPCurrencyUtils::TP_CURRENCY_PEN,
@@ -228,29 +228,29 @@ class TPWidgetsView {
             TPCurrencyUtils::TP_CURRENCY_BDT,
             TPCurrencyUtils::TP_CURRENCY_KRW,
             TPCurrencyUtils::TP_CURRENCY_RSD
-        );
+        ];
 
-        $currencyNotMaintained = array(
+        $currencyNotMaintained = [
             3 => array_merge(
-                array(
+                [
                     TPCurrencyUtils::TP_CURRENCY_TRY,
                     TPCurrencyUtils::TP_CURRENCY_ILS
-                ), $currencyNewNotMaintained
+                ], $currencyNewNotMaintained
             ),
             6 => array_merge(
-                array(
+                [
                     TPCurrencyUtils::TP_CURRENCY_PLN,
                     TPCurrencyUtils::TP_CURRENCY_TRY,
                     TPCurrencyUtils::TP_CURRENCY_ILS
-                ), $currencyNewNotMaintained),
+                ], $currencyNewNotMaintained),
             7 => array_merge(
-                array(
+                [
                     TPCurrencyUtils::TP_CURRENCY_PLN,
                     TPCurrencyUtils::TP_CURRENCY_TRY,
                     TPCurrencyUtils::TP_CURRENCY_ILS
-                ), $currencyNewNotMaintained),
+                ], $currencyNewNotMaintained),
             8 => array_merge(
-                array(
+                [
                     TPCurrencyUtils::TP_CURRENCY_CAD,
                     TPCurrencyUtils::TP_CURRENCY_CHF,
                     TPCurrencyUtils::TP_CURRENCY_GBP,
@@ -263,8 +263,8 @@ class TPWidgetsView {
                     TPCurrencyUtils::TP_CURRENCY_SGD,
                     TPCurrencyUtils::TP_CURRENCY_TRY,
                     TPCurrencyUtils::TP_CURRENCY_ILS
-                ), $currencyNewNotMaintained)
-        );
+                ], $currencyNewNotMaintained)
+        ];
 
 
         //error_log(print_r($currencyNotMaintained[$widgetType], true));
@@ -281,7 +281,7 @@ class TPWidgetsView {
 
     public function getCurrency($widgetType = false, $white_label = ''){
         $currency = '';
-        $currency_option = \app\includes\TPPlugin::$options['local']['currency'];
+        $currency_option = TPPlugin::$options['local']['currency'];
         /*$currency_default = array(
             TPCurrencyUtils::TP_CURRENCY_USD,
             TPCurrencyUtils::TP_CURRENCY_RUB,

@@ -7,28 +7,28 @@
  * 2. Билеты по направлению на ближайшие дни
  */
 namespace app\includes\models\site\shortcodes;
-use \app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\models\site\TPFlightShortcodeModel;
 class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
     /**
      * @param array $args
      * @return array|bool|mixed|string
      * @var $NUMBER 2
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
         extract($args, EXTR_SKIP);
-        $attr = array(
+        $attr = [
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'return_url' => $return_url
-        );
-        $name_method = "***************".__METHOD__."***************";
+        ];
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 2. Билеты по направлению на ближайшие дни  ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 2. Билеты по направлению на ближайшие дни  ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if($this->cacheSecund() && $return_url == false) {
@@ -45,7 +45,7 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
                 //    return false;
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $return = array();
+                    $return = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $return = $this->iataAutocomplete($return, 2);
@@ -79,8 +79,8 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
      * @param array $args
      * @return array|bool
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
@@ -91,21 +91,21 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-            );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if ($return_url == 1){
             $return_url = true;
         }
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'return_url' => $return_url,
             'widget' => $widget
-        ));
+        ]);
         //if( ! $return )
         //    return false;
-        return array(
+        return [
             'rows' => $return,
             'type' => 2,
             'origin' => $this->iataAutocomplete($origin, 0),
@@ -119,44 +119,44 @@ class TPPriceCalendarWeekShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $currency,
             'return_url' => $return_url,
             'host' => $host
-        );
+        ];
 
 
     }
-    public function getMaxPrice($args = array())
+    public function getMaxPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency()
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'value');
-        return array('price' => max($rows), 'currency' => $currency);
+        return ['price' => max($rows), 'currency' => $currency];
     }
-    public function getMinPrice($args = array())
+    public function getMinPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency()
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'value');
-        return array('price' => min($rows), 'currency' => $currency);
+        return ['price' => min($rows), 'currency' => $currency];
     }
 }

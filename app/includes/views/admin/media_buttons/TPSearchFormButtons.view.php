@@ -1,10 +1,12 @@
-<div id="constructorSearchFormModal" title="<?php _ex('Constructor search form',
+<div id="constructorSearchFormModal" title="<?php use app\includes\common\TpPluginHelper;
+
+_ex('Constructor search form',
     'tp_admin_page_settings_сonstructor_search_form_title', TPOPlUGIN_TEXTDOMAIN ); ?>" style="display: none;">
     <table>
         <tr>
             <td id="td_select_search_form">
                 <?php if(!empty($this->data)){ ?>
-                    <?php if(\app\includes\common\TpPluginHelper::count($this->data)>1){ ?>
+                    <?php if(TpPluginHelper::count($this->data)>1){ ?>
                         <select name="select_search_form" id="select_search_form">
                             <?php foreach($this->data as $key => $record): ?>
 
@@ -26,10 +28,10 @@
                     <?php } ?>
                 <?php } else{
                     _ex('No customized search form.',
-                        "tp_admin_page_settings_сonstructor_search_form_no_search_form_label", TPOPlUGIN_TEXTDOMAIN);
+                        'tp_admin_page_settings_сonstructor_search_form_no_search_form_label', TPOPlUGIN_TEXTDOMAIN);
                     ?><a href="admin.php?page=tp_control_search_shortcodes">
                     <?php _ex('Go to setting.',
-                        "tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title", TPOPlUGIN_TEXTDOMAIN); ?>
+                        'tp_admin_page_settings_сonstructor_search_form_link_page_search_form_title', TPOPlUGIN_TEXTDOMAIN); ?>
                     </a><?php
                 } ?>
             </td>

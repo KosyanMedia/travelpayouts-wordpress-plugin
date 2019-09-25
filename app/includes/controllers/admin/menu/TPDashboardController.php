@@ -3,14 +3,18 @@
  * Class TPDashboardController
  */
 namespace app\includes\controllers\admin\menu;
-class TPDashboardController extends \core\controllers\TPOAdminMenuController{
+use app\includes\models\admin\menu\TPDashboardModel;
+use app\includes\views\admin\menu\TPDashboardView;
+use core\controllers\TPOAdminMenuController;
+
+class TPDashboardController extends TPOAdminMenuController{
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
 
-        $this->model = new \app\includes\models\admin\menu\TPDashboardModel();
-        $this->view = new \app\includes\views\admin\menu\TPDashboardView($this->model);
+        $this->model = new TPDashboardModel();
+        $this->view = new TPDashboardView($this->model);
 
 
     }
@@ -22,16 +26,16 @@ class TPDashboardController extends \core\controllers\TPOAdminMenuController{
             _x('Travelpayouts',  'admin menu menu title dashboard' , TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             TPOPlUGIN_TEXTDOMAIN,
-            array(&$this,'render'),
+            [&$this,'render'],
             TPOPlUGIN_URL .'app/public/images/tp.png'
         );
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
     }
 
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPDashboard.view.php";
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPDashboard.view.php';
         parent::loadView($pathView);
     }
 }

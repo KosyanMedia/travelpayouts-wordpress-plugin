@@ -9,8 +9,8 @@
 
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-use \app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsShortcodeModel;
 
 class TPHotelsSelectionsShortcodeController extends TPShortcodesController
 {
@@ -26,29 +26,29 @@ class TPHotelsSelectionsShortcodeController extends TPShortcodesController
     {
         // TODO: Implement initShortcode() method.
         // Подборка отелей - Скидки
-        add_shortcode( 'tp_hotels_selections_discount_shortcodes', array(&$this, 'actionTableDiscount'));
+        add_shortcode( 'tp_hotels_selections_discount_shortcodes', [&$this, 'actionTableDiscount']);
         // Подборки отелей на даты
-        add_shortcode( 'tp_hotels_selections_date_shortcodes', array(&$this, 'actionTableDate'));
+        add_shortcode( 'tp_hotels_selections_date_shortcodes', [&$this, 'actionTableDate']);
     }
 
     /**
      * Подборка отелей - Скидки
      * @param array $args
      */
-    public function actionTableDiscount($args = array())
+    public function actionTableDiscount($args = [])
     {
         $data = $this->model->getDataTable($args);
-        return var_dump("<pre>", $data, "</pre>");
+        return var_dump('<pre>', $data, '</pre>');
     }
 
     /**
      * Подборки отелей на даты
      * @param array $args
      */
-    public function actionTableDate($args = array())
+    public function actionTableDate($args = [])
     {
         $data = $this->model->getDataTable($args);
-        return var_dump("<pre>", $data, "</pre>");
+        return var_dump('<pre>', $data, '</pre>');
     }
 
 }

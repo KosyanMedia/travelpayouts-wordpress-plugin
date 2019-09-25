@@ -26,15 +26,15 @@ class TPTutuShortcodeController extends TPShortcodesController {
 	public function initShortcode() {
 		// TODO: Implement initShortcode() method.
 		//Таблица "ЖД"
-		add_shortcode( 'tp_tutu', array(&$this, 'actionTable'));
+		add_shortcode( 'tp_tutu', [&$this, 'actionTable']);
 	}
 
-	public function actionTable($args = array())
+	public function actionTable($args = [])
 	{
 
 		$data = $this->model->getDataTable($args);
 		if ($data['return_url'] == true){
-			return var_dump("<pre>", $data, "</pre>");
+			return var_dump('<pre>', $data, '</pre>');
 		}
 		return $this->view->renderTable($data);
 	}

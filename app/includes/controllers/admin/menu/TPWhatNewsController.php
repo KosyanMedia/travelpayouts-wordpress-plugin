@@ -9,7 +9,9 @@
 namespace app\includes\controllers\admin\menu;
 
 
-class TPWhatNewsController extends \core\controllers\TPOAdminMenuController
+use core\controllers\TPOAdminMenuController;
+
+class TPWhatNewsController extends TPOAdminMenuController
 {
 
     public function __construct()
@@ -26,20 +28,20 @@ class TPWhatNewsController extends \core\controllers\TPOAdminMenuController
                 TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_what_news',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
     }
 
     public function render()
     {
         // TODO: Implement render() method.
-        $localUrl = "en";
+        $localUrl = 'en';
         global $locale;
         switch($locale){
-            case "ru_RU":
+            case 'ru_RU':
                 $localUrl = 'ru';
                 break;
-            case "en_US":
+            case 'en_US':
                 $localUrl = 'en';
                 break;
             default:

@@ -9,13 +9,13 @@ namespace core;
 abstract class TPOLoaderScripts{
     public function __construct(){
         if ( is_admin() ) :
-            add_action('admin_enqueue_scripts', array(&$this, 'loadScriptAdmin' ) );
-            add_action('admin_head', array(&$this, 'headScriptAdmin'));
-            add_action('customize_controls_print_scripts', array(&$this, 'headScriptAdmin'));
+            add_action('admin_enqueue_scripts', [&$this, 'loadScriptAdmin']);
+            add_action('admin_head', [&$this, 'headScriptAdmin']);
+            add_action('customize_controls_print_scripts', [&$this, 'headScriptAdmin']);
         else:
-            add_action( 'wp_enqueue_scripts', array(&$this, 'loadScriptSite' ) );
-            add_action('wp_head', array(&$this, 'headScriptSite'));
-            add_action( 'wp_footer', array(&$this, 'footerScriptSite'));
+            add_action( 'wp_enqueue_scripts', [&$this, 'loadScriptSite']);
+            add_action('wp_head', [&$this, 'headScriptSite']);
+            add_action( 'wp_footer', [&$this, 'footerScriptSite']);
         endif;
     }
     abstract public function loadScriptAdmin($hook);

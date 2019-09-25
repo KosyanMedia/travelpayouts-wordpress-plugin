@@ -7,7 +7,7 @@
  */
 namespace core\controllers;
 class TPOBaseController {
-    protected function loadView($view, $type = 0, $data = array()){
+    protected function loadView($view, $type = 0, $data = []){
         if (file_exists($view)) {
             switch($type){
                 case 0:

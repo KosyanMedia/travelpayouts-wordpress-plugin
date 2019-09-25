@@ -1,9 +1,11 @@
 <div class="TPThemes">
     <form action="options.php" class="formSettings TPFormNotReload" method="POST">
-	    <?php $numberTheme = 1; ?>
+	    <?php use app\includes\TPPlugin;
+
+        $numberTheme = 1; ?>
         <?php foreach($data['themes'] as $theme): ?>
             <?php
-            $TPThemeActive = ($theme['name'] ==  \app\includes\TPPlugin::$options['themes_table_hotels']['name'])?'TPThemeActive':'';
+            $TPThemeActive = ($theme['name'] ==  TPPlugin::$options['themes_table_hotels']['name'])?'TPThemeActive':'';
 
             ?>
             <div class="TPTheme <?php echo $TPThemeActive; ?>" data-theme_name="<?php echo $theme['name']; ?>">

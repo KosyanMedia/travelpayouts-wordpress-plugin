@@ -9,8 +9,9 @@
  */
 namespace app\includes\models\site\shortcodes;
 
-use \app\includes\models\site\TPFlightShortcodeModel;
-use \app\includes\common\TpPluginHelper;
+use app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\common\TpPluginHelper;
+use app\includes\TPPlugin;
 
 class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
     /**
@@ -18,21 +19,21 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
      * @return array|bool|mixed
      * @var $NUMBER 5
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
         extract($args, EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'return_url' => $return_url
-        );
-        $name_method = "***************".__METHOD__."***************";
+        ];
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 4. Самые дешевые билеты по направлению в этом месяце ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 4. Самые дешевые билеты по направлению в этом месяце ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if($this->cacheSecund() && $return_url == false) {
@@ -51,10 +52,10 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache false ".print_r($return, true));
                 if( ! $return )
                     return false;
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
@@ -72,7 +73,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
                 return false;
 
             if ($return_url == false){
-                $rows = array();
+                $rows = [];
                 $rows = $this->iataAutocomplete($this->tpSortCheapestTicketEachDayMonth($return, date('Y-m')), 5);
             } else {
                 $rows = $return;
@@ -86,14 +87,14 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
      * @param array $args
      * @return array|bool
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
             'title' =>'' ,
             'paginate' => true,
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['5']['transplant'],
+            'stops' => TPPlugin::$options['shortcodes']['5']['transplant'],
             'off_title' => '',
             'subid' => '',
             'filter_flight_number' => false,
@@ -101,20 +102,20 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-            );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){
             $return_url = true;
         }
 
-        $rows = $this->get_data(array(
+        $rows = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'return_url' => $return_url,
             'widget' => $widget
-        ));
+        ]);
         //if( ! $rows )
         //    return false;
 
@@ -125,7 +126,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
             $rows = $this->getDataFilter($filter_flight_number, $filter_airline, $rows);
         }
 
-        return array(
+        return [
             'rows' => $rows,
             'origin' => $this->iataAutocomplete($origin, 0),
             'destination' => $this->iataAutocomplete($destination, 0, 'destination'),
@@ -139,7 +140,7 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $currency,
             'return_url' => $return_url,
             'host' => $host
-            );
+        ];
 
 
     }
@@ -160,40 +161,40 @@ class TPCheapestTicketEachDayMonthShortcodeModel extends TPFlightShortcodeModel{
         if(TpPluginHelper::count($data) < 1) return $dataAll;
         return $data;
     }
-    public function getMaxPrice($args = array())
+    public function getMaxPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'price');
-        return array('price' => max($rows), 'currency' => $currency);
+        return ['price' => max($rows), 'currency' => $currency];
     }
-    public function getMinPrice($args = array())
+    public function getMinPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'price');
-        return array('price' => min($rows), 'currency' => $currency);
+        return ['price' => min($rows), 'currency' => $currency];
     }
 }
