@@ -2,11 +2,10 @@
     <div id="tabs-settings">
         <div class="TP-TopImportantInfo">
             <?php
-            global
+            global $locale;
 
             use app\includes\TPPlugin;
 
-            $locale;
             $tp_url = $tp_dev_url = $tp_wh_url = '';
             switch($locale){
                 case 'ru_RU':
