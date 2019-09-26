@@ -124,7 +124,7 @@ class TPAutoReplacLinksModel extends TPOWPTableModel implements TPOWPTableInterf
             $inputData = [
                 'arl_url' => TPRequest::post('arl_url'),
                 'arl_anchor' => TPRequest::post('arl_anchor'),
-                'arl_event' => wp_unslash(TPRequest::post('arl_event', '')),
+                'arl_event' => TPRequest::post('arl_event', ''),
                 'arl_nofollow' => TPRequest::post('arl_nofollow') ? 1 : 0,
                 'arl_replace' => TPRequest::post('arl_replace') ? 1 : 0,
                 'arl_target_blank' => TPRequest::post('arl_target_blank') ? 1 : 0,
