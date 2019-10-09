@@ -8,10 +8,10 @@
 namespace core\models;
 abstract class TPOShortcodesCacheModel {
     public function __construct(){
-        add_action( 'save_post', array( &$this, 'deleteCache') );
-        add_filter( 'widget_update_callback', array( &$this, 'deleteCacheWidget'), 10, 4 );
+        add_action( 'save_post', [&$this, 'deleteCache']);
+        add_filter( 'widget_update_callback', [&$this, 'deleteCacheWidget'], 10, 4 );
     }
-    abstract public function get_data($args = array());
+    abstract public function get_data($args = []);
 
     /**
      * @param string $key
@@ -24,21 +24,21 @@ abstract class TPOShortcodesCacheModel {
         if ($widget == 0) {
             global $post;
             if (!empty($direction)){
-                $cacheKey = strtolower($key."_".$direction."_".TPOPlUGIN_NAME."_".get_post_type()."_".$post->ID);
+                $cacheKey = strtolower($key. '_' .$direction. '_' .TPOPlUGIN_NAME. '_' .get_post_type(). '_' .$post->ID);
             } else {
-                $cacheKey = strtolower($key."_".TPOPlUGIN_NAME."_".get_post_type()."_".$post->ID);
+                $cacheKey = strtolower($key. '_' .TPOPlUGIN_NAME. '_' .get_post_type(). '_' .$post->ID);
             }
         } elseif ($widget == 1) {
             if (!empty($direction)){
-                $cacheKey = strtolower($key."_".$direction."_".TPOPlUGIN_NAME."_widget");
+                $cacheKey = strtolower($key. '_' .$direction. '_' .TPOPlUGIN_NAME. '_widget');
             } else {
-                $cacheKey = strtolower($key."_".TPOPlUGIN_NAME."_widget");
+                $cacheKey = strtolower($key. '_' .TPOPlUGIN_NAME. '_widget');
             }
         } else {
             if (!empty($direction)){
-                $cacheKey = strtolower($key."_".$direction."_".TPOPlUGIN_NAME."_");
+                $cacheKey = strtolower($key. '_' .$direction. '_' .TPOPlUGIN_NAME. '_');
             } else {
-                $cacheKey = strtolower($key."_".TPOPlUGIN_NAME."_");
+                $cacheKey = strtolower($key. '_' .TPOPlUGIN_NAME. '_');
             }
         }
 
@@ -54,7 +54,7 @@ abstract class TPOShortcodesCacheModel {
         //error_log('deleteCache');
         global $wpdb;
         $cacheKey = '';
-        $cacheKey = strtolower("_".TPOPlUGIN_NAME."_".get_post_type()."_".$post_id);
+        $cacheKey = strtolower('_' .TPOPlUGIN_NAME. '_' .get_post_type(). '_' .$post_id);
         $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
     }
 
@@ -71,7 +71,7 @@ abstract class TPOShortcodesCacheModel {
             //error_log(print_r($widget->id_base, true));
             global $wpdb;
             $cacheKey = '';
-            $cacheKey = strtolower("_".TPOPlUGIN_NAME."_widget");
+            $cacheKey = strtolower('_' .TPOPlUGIN_NAME. '_widget');
             $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
         }
         return $instance;

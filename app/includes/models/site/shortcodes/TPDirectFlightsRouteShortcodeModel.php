@@ -7,8 +7,8 @@
  */
 namespace app\includes\models\site\shortcodes;
 
-use \app\includes\models\site\TPFlightShortcodeModel;
-use \app\includes\common\TpPluginHelper;
+use app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\common\TpPluginHelper;
 
 class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
     /**
@@ -16,50 +16,50 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
      * @return array|bool|mixed
      * @var $NUMBER 7
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 6. Билеты без пересадок по направлению ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 6. Билеты без пересадок по направлению ';
         extract($args, EXTR_SKIP );
-        $current_day = date("d",time());
-        $current_month = date("m");
+        $current_day = date('d',time());
+        $current_month = date('m');
 
-        $attr =  array(
+        $attr =  [
             'origin' => $origin,
             'destination' => $destination,
             'departure_at' => date('Y-m'),
             'return_at' => date('Y-m'),
             'currency' => $currency,
             'return_url' => $return_url
-        );
+        ];
 
-        $attr_one =  array(
+        $attr_one =  [
             'origin' => $origin,
             'destination' => $destination,
-            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
-            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date("Y"))),
+            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date('Y'))),
+            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 1, 1, date('Y'))),
             'currency' => $currency,
             'return_url' => $return_url
-        );
+        ];
 
-        $attr_two =  array(
+        $attr_two =  [
             'origin' => $origin, 'destination' => $destination,
-            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
-            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date("Y"))),
+            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date('Y'))),
+            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 2, 1, date('Y'))),
             'currency' => $currency,
             'return_url' => $return_url
-        );
-        $attr_three =  array(
+        ];
+        $attr_three =  [
             'origin' => $origin, 'destination' => $destination,
-            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
-            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date("Y"))),
+            'departure_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date('Y'))),
+            'return_at' => date('Y-m', mktime(0, 0, 0, $current_month + 3, 1, date('Y'))),
             'currency' => $currency,
             'return_url' => $return_url
-        );
+        ];
 
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
@@ -72,7 +72,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache false");
                 if(TPOPlUGIN_ERROR_LOG)
                     error_log("{$method} cache false {$current_day}");
-                $return = array();
+                $return = [];
 
                 if($current_day < 20){
 
@@ -106,7 +106,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache false ".print_r($return, true));
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $return = array();
+                    $return = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $return = $this->iataAutocomplete($return, 7);
@@ -119,7 +119,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
                     $origin.$destination, $widget) , $return, $cacheSecund);
             }
         }else{
-            $return = array();
+            $return = [];
             if($current_day < 20){
                 $return_null = self::$TPRequestApi->get_direct($attr);
                 if($return_null){
@@ -202,8 +202,8 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
      * @param array $args
      * @return array|bool
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'departure_at' => false,
@@ -218,25 +218,25 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if ($return_url == 1){
             $return_url = true;
         }
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
             'return_url' => $return_url,
             'widget' => $widget
-        ));
+        ]);
         //error_log(print_r($return, true));
         //if( ! $return )
          //   return false;
         if ($return_url == false) {
             $return = $this->getDataFilter($filter_flight_number, $filter_airline, $return);
         }
-        return array(
+        return [
             'rows' => $return,
             'type' => 7,
             'origin' => $this->iataAutocomplete($origin, 0),
@@ -250,7 +250,7 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $currency,
             'return_url' => $return_url,
             'host' => $host
-        );
+        ];
 
 
     }
@@ -272,40 +272,40 @@ class TPDirectFlightsRouteShortcodeModel extends TPFlightShortcodeModel{
         return $data;
     }
 
-    public function getMaxPrice($args = array())
+    public function getMaxPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency,
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'price');
-        return array('price' => max($rows), 'currency' => $currency);
+        return ['price' => max($rows), 'currency' => $currency];
     }
-    public function getMinPrice($args = array())
+    public function getMinPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => $this->typeCurrency(),
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'origin' => $origin,
             'destination' => $destination,
             'currency' => $currency
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'price');
-        return array('price' => min($rows), 'currency' => $currency);
+        return ['price' => min($rows), 'currency' => $currency];
     }
 }

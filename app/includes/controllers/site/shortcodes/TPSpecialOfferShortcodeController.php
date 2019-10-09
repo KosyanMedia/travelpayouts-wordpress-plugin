@@ -9,23 +9,27 @@
 namespace app\includes\controllers\site\shortcodes;
 
 
-class TPSpecialOfferShortcodeController extends \app\includes\controllers\site\TPShortcodesController
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel;
+use app\includes\views\site\shortcodes\TPShortcodeView;
+
+class TPSpecialOfferShortcodeController extends TPShortcodesController
 {
     public $model;
     public $view;
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\site\shortcodes\TPSpecialOfferShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+        $this->model = new TPSpecialOfferShortcodeModel();
+        $this->view = new TPShortcodeView();
 
     }
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_special_offer_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_special_offer_shortcodes', [&$this, 'actionTable']);
     }
 
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
         /*
         return $this->view->renderTable($data);*/

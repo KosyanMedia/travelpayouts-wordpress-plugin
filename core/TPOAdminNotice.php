@@ -7,8 +7,8 @@
  */
 namespace core;
 class TPOAdminNotice {
-    protected $adminNotice = array();
-    protected $adminNoticeCustom = array();
+    protected $adminNotice = [];
+    protected $adminNoticeCustom = [];
     public function __construct(){
         /**
          * admin_notices
@@ -34,8 +34,8 @@ class TPOAdminNotice {
          *   к любому из вышеперечисленных и в конце сообщения появится крестик,
          *   чтобы удалить (убрать из вида) блок сообщения. С версии 4.2.
          */
-        add_action( 'admin_notices', array( &$this, 'adminNotice'));
-        add_action( 'admin_notices', array( &$this, 'adminNoticeCustom'));
+        add_action( 'admin_notices', [&$this, 'adminNotice']);
+        add_action( 'admin_notices', [&$this, 'adminNoticeCustom']);
     }
 
     /**

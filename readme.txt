@@ -179,6 +179,9 @@ Sure. Our Help Desk is always available at [support.travelpayouts.com](https://s
 
 == Changelog == 
 
+= 0.7.14 =
+**SECURITY UPDATE** sanitized unsafe data, please update ASAP
+
 = 0.7.13 =
 **SECURITY UPDATE** removed wp_ajax_nopriv_ actions, please update ASAP
 

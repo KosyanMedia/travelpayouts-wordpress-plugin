@@ -34,6 +34,6 @@
 </div>
 
 <?php
-    $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabContent.view.php";
+    $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPWizardTabContent.view.php';
     $this->loadView($pathView, 1);
 ?>

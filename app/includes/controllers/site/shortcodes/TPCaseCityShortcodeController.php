@@ -8,9 +8,10 @@
 
 namespace app\includes\controllers\site\shortcodes;
 
+use app\includes\controllers\site\TPShortcodesController;
 use app\includes\models\site\shortcodes\TPCaseCityShortcodeModel;
 
-class TPCaseCityShortcodeController extends \app\includes\controllers\site\TPShortcodesController
+class TPCaseCityShortcodeController extends TPShortcodesController
 {
     public $model;
 
@@ -23,7 +24,7 @@ class TPCaseCityShortcodeController extends \app\includes\controllers\site\TPSho
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_case', array(&$this, 'action'));
+        add_shortcode( 'tp_case', [&$this, 'action']);
     }
 
 

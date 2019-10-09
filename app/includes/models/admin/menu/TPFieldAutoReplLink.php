@@ -9,6 +9,8 @@
 namespace app\includes\models\admin\menu;
 
 
+use app\includes\TPPlugin;
+
 class TPFieldAutoReplLink
 {
     public function __construct(){
@@ -74,7 +76,7 @@ class TPFieldAutoReplLink
                         </li>-->
                         <li>
                             <input id="chekarl4" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][not_title]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['not_title']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['auto_repl_link']['not_title']), 1) ?>hidden />
                             <label for="chekarl4">
                                 <?php _ex('Don\'t add links to all titles',
                                     'tp_admin_page_auto_links_input_not_title_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -93,7 +95,7 @@ class TPFieldAutoReplLink
                         </li>
                         <li>
                             <input id="chekarl5" type="checkbox" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][tp_auto_replac_link]"
-                                   value="1" <?php checked(isset(\app\includes\TPPlugin::$options['auto_repl_link']['tp_auto_replac_link']), 1) ?> hidden />
+                                   value="1" <?php checked(isset(TPPlugin::$options['auto_repl_link']['tp_auto_replac_link']), 1) ?>hidden />
                             <label for="chekarl5">
                                 <?php _ex('Enable auto-links for new posts',
                                     'tp_admin_page_auto_links_input_tp_auto_replac_link_label', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -135,7 +137,7 @@ class TPFieldAutoReplLink
                     <div class="spinnerW TP-SpinnerWSize clearfix" data-trigger="spinner">
                         <label>
                             <input name="<?php echo TPOPlUGIN_OPTION_NAME;?>[auto_repl_link][limit]" type="text"
-                                   value="<?php echo \app\includes\TPPlugin::$options['auto_repl_link']['limit']; ?>">
+                                   value="<?php echo TPPlugin::$options['auto_repl_link']['limit']; ?>">
                         </label>
                         <div class="navSpinner">
                             <a class="navDown" href="javascript:void(0);" data-spin="down" rollapp-href="javascript:void(0);"></a>

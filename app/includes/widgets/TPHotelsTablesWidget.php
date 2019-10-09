@@ -18,9 +18,9 @@ class TPHotelsTablesWidget extends WP_Widget{
 		parent::__construct(
 			'travelpayouts_hotels_tables', // Base ID
 			_x('Travelpayouts – Hotel Tables', 'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN), // Name
-			array(
+			[
 				'description' => _x('Travelpayouts – Hotel Tables', 'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN)
-			) // Args
+            ] // Args
 		);
 	}
 
@@ -54,10 +54,10 @@ class TPHotelsTablesWidget extends WP_Widget{
 		} else {
 			$linkWithoutDates = false;
 		}
-		if ($select == 'select') return;
+		if ($select === 'select') return;
 		$cityCode = $this->getCode($city);
 		if (empty($cityCode)) return;
-		if ($selectionsType == 'all') return;
+		if ($selectionsType === 'all') return;
 		$cityAttr = 'city="'.$cityCode.'"';
 		$cityLabelAttr = 'city_label="'.$cityLabel.'"';
 		$titleAttr = 'title="'.$title.'"';
@@ -169,10 +169,10 @@ class TPHotelsTablesWidget extends WP_Widget{
 		} else {
 			$linkWithoutDates = false;
 		}
-		$shortcodeLabels = array(
+		$shortcodeLabels = [
 			_x('Hotels collection - Discounts',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels collections for dates',  'Travelpayouts – Hotel Tables Widget', TPOPlUGIN_TEXTDOMAIN),
-		);
+        ];
         $hotel_1_paginate_switch = '0';
 		if (isset(TPPlugin::$options['shortcodes_hotels']['1']['paginate_switch'])){
 		    $hotel_1_paginate_switch = '1';
@@ -335,7 +335,7 @@ class TPHotelsTablesWidget extends WP_Widget{
 	 */
 	public function getCode($data){
 		if (empty($data)) return '';
-		$dataCode = array();
+		$dataCode = [];
 		preg_match('/\[(.+)\]/', $data, $dataCode);
 		$code = '';
 		if (array_key_exists(1, $dataCode)){

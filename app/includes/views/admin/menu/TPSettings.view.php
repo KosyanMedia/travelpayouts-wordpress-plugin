@@ -3,14 +3,17 @@
         <div class="TP-TopImportantInfo">
             <?php
             global $locale;
+
+            use app\includes\TPPlugin;
+
             $tp_url = $tp_dev_url = $tp_wh_url = '';
             switch($locale){
-                case "ru_RU":
+                case 'ru_RU':
                     $tp_url = 'https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=settings&utm_campaign=ru&utm_content=link';
                     $tp_dev_url = 'https://www.travelpayouts.com/developers/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=ru&utm_content=link_api';
                     $tp_wh_url = 'https://www.travelpayouts.com/combined_white_labels?utm_source=wp_plugin&utm_medium=settings&utm_campaign=ru&utm_content=link_wl';
                     break;
-                case "en_US":
+                case 'en_US':
                     $tp_url = 'https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link';
                     $tp_dev_url = 'https://www.travelpayouts.com/developers/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link_api';
                     $tp_wh_url = 'https://www.travelpayouts.com/white_labels?utm_source=wp_plugin&utm_medium=settings&utm_campaign=en&utm_content=link_wl';
@@ -93,10 +96,10 @@
                 <div class="TP-navsPan">
                     <!--Кнопка может быть не активной: добавляйте класс disable для достижение такого состояние-->
                     <!--<button class="TP-BtnTab">сохранить изменения</button>-->
-                    <?php if(empty(\app\includes\TPPlugin::$options['account']['marker'])){ ?>
+                    <?php if(empty(TPPlugin::$options['account']['marker'])){ ?>
                     <span class="TP-msgSend">
                         <?php _ex('By pressing the button "Save" you agree to send the plugin\'s activation data to Travelpayouts.',
-                            "tp_admin_page_settings_paragraph_2", TPOPlUGIN_TEXTDOMAIN)?>
+                            'tp_admin_page_settings_paragraph_2', TPOPlUGIN_TEXTDOMAIN)?>
                     </span>
                     <?php } ?>
                     <input type="submit" name="submit" id="TPSaveSettings" class="TP-BtnTab"

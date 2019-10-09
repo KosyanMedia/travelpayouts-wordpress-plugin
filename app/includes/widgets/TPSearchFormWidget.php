@@ -10,7 +10,7 @@ namespace app\includes\widgets;
 
 use app\includes\models\admin\menu\TPSearchFormsModel;
 use WP_Widget;
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
 
 class TPSearchFormWidget extends WP_Widget{
 	private $model;
@@ -19,9 +19,9 @@ class TPSearchFormWidget extends WP_Widget{
 		parent::__construct(
 			'travelpayouts_search_form', // Base ID
 			_x('Travelpayouts – Search Form', 'Travelpayouts – Search Form Widget', TPOPlUGIN_TEXTDOMAIN), // Name
-			array(
+			[
 				'description' => _x('Travelpayouts – Search Form', 'Travelpayouts – Search Form Widget', TPOPlUGIN_TEXTDOMAIN)
-			) // Args
+            ] // Args
 		);
 		$this->model = new TPSearchFormsModel();
 	}
@@ -59,13 +59,13 @@ class TPSearchFormWidget extends WP_Widget{
 
 		$shortcodeAttr = '';
 		switch ($typeForm){
-			case "avia":
+			case 'avia':
 				$shortcodeAttr = $originAttr.' '.$destinationAttr;
 				break;
-			case "hotel":
+			case 'hotel':
 				$shortcodeAttr = $cityHotelAttr;
 				break;
-			case "avia_hotel":
+			case 'avia_hotel':
 				$shortcodeAttr = $originAttr.' '.$destinationAttr.' '.$cityHotelAttr;
 				break;
 		}
@@ -247,7 +247,7 @@ class TPSearchFormWidget extends WP_Widget{
 	 */
 	public function getCode($data){
 		if (empty($data)) return '';
-		$dataCode = array();
+		$dataCode = [];
 		preg_match('/\[(.+)\]/', $data, $dataCode);
 		$code = '';
 		if (array_key_exists(1, $dataCode)){
@@ -263,7 +263,7 @@ class TPSearchFormWidget extends WP_Widget{
 	 */
 	public function getHotelCity($hotelCity){
 		if (empty($hotelCity)) return '';
-		$hotelCityCode = array();
+		$hotelCityCode = [];
 		preg_match('/\{(.+)\}/', $hotelCity, $hotelCityCode);
 		$code = '';
 		if (array_key_exists(1, $hotelCityCode)){

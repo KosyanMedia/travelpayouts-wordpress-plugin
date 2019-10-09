@@ -6,19 +6,21 @@
  * Time: 12:47
  */
 namespace app\includes\models\site\shortcodes;
-use \app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\TPPlugin;
+
 class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
     /**
      * @param array $args
      * @return array|bool|mixed|string
      * @var $NUMBER 13
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
 
         extract($args, EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'currency' => $currency,
             'origin' => $origin,
             'period_type' => $period_type,
@@ -26,16 +28,16 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
             'limit' => $limit,
             'one_way' => $one_way,
             'return_url' => $return_url
-        );
-        $name_method = "***************".__METHOD__."***************";
+        ];
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 10. Дешевые перелеты из города ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 10. Дешевые перелеты из города ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(TPOPlUGIN_ERROR_LOG)
-            error_log($method." cacheKey = ".$one_way);
+            error_log($method. ' cacheKey = ' .$one_way);
 
         if($this->cacheSecund() && $return_url == false){
             if(TPOPlUGIN_ERROR_LOG)
@@ -48,10 +50,10 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
                     error_log("{$method} cache false ".print_r($return, true));
                 //if( ! $return )
                 //    return false;
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $return;
@@ -68,7 +70,7 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
             if( ! $return )
                 return false;
             if ($return_url == false) {
-                $rows = array();
+                $rows = [];
                 $rows = $return;
                 $rows = $this->iataAutocomplete($rows, 13);
             } else {
@@ -88,30 +90,30 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
      * @param array $args
      * @return array|bool
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'currency' => $this->typeCurrency(),
             'destination' => false,
-            'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'],
+            'period_type' => TPPlugin::$options['shortcodes']['13']['period_type'],
             'one_way' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'],
+            'limit' => TPPlugin::$options['shortcodes']['13']['limit'],
             'trip_class' => 0,
             'title' => '',
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] ,
+            'stops' => TPPlugin::$options['shortcodes']['13']['transplant'] ,
             'paginate' => true,
             'off_title' => '',
             'subid' => '',
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-        );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
 
         if ($return_url == 1){
             $return_url = true;
         }
 
-        $rows = $this->get_data(array(
+        $rows = $this->get_data([
             'currency' => $currency,
             'origin' => $origin,
             'period_type' => $period_type,
@@ -120,7 +122,7 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
             'one_way' => $one_way,
             'return_url' => $return_url,
             'widget' => $widget
-        ));
+        ]);
         //if( ! $rows )
          //   return false;
         if ($return_url == false) {
@@ -128,7 +130,7 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
         }
 
 
-        return array(
+        return [
             'rows' => $rows,
             'origin' => $this->iataAutocomplete($origin, 0),
             'type' => 13,
@@ -140,66 +142,66 @@ class TPFromOurCityFlyShortcodeModel extends TPFlightShortcodeModel{
             'currency' => $currency,
             'return_url' => $return_url,
             'host' => $host
-        );
+        ];
 
 
     }
-    public function getMaxPrice($args = array())
+    public function getMaxPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'currency' => $this->typeCurrency(),
             'destination' => false,
-            'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'],
+            'period_type' => TPPlugin::$options['shortcodes']['13']['period_type'],
             'one_way' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'],
+            'limit' => TPPlugin::$options['shortcodes']['13']['limit'],
             'trip_class' => 0,
             'title' => '',
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] ,
+            'stops' => TPPlugin::$options['shortcodes']['13']['transplant'] ,
             'paginate' => true,
             'off_title' => '',
             'subid' => ''
-        );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'currency' => $currency,
             'origin' => $origin,
             'period_type' => $period_type,
             'trip_class' => $trip_class,
             'limit' => $limit,
             'one_way' => $one_way
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'value');
-        return array('price' => max($rows), 'currency' => $currency);
+        return ['price' => max($rows), 'currency' => $currency];
     }
-    public function getMinPrice($args = array())
+    public function getMinPrice($args = [])
     {
-        $defaults = array(
+        $defaults = [
             'currency' => $this->typeCurrency(),
             'destination' => false,
-            'period_type' => \app\includes\TPPlugin::$options['shortcodes']['13']['period_type'],
+            'period_type' => TPPlugin::$options['shortcodes']['13']['period_type'],
             'one_way' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['13']['limit'],
+            'limit' => TPPlugin::$options['shortcodes']['13']['limit'],
             'trip_class' => 0,
             'title' => '',
-            'stops' => \app\includes\TPPlugin::$options['shortcodes']['13']['transplant'] ,
+            'stops' => TPPlugin::$options['shortcodes']['13']['transplant'] ,
             'paginate' => true,
             'off_title' => '',
             'subid' => ''
-        );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'currency' => $currency,
             'origin' => $origin,
             'period_type' => $period_type,
             'trip_class' => $trip_class,
             'limit' => $limit,
             'one_way' => $one_way
-        ));
+        ]);
         if( ! $return )
             return false;
         $rows = array_column($return, 'value');
-        return array('price' => min($rows), 'currency' => $currency);
+        return ['price' => min($rows), 'currency' => $currency];
     }
 }

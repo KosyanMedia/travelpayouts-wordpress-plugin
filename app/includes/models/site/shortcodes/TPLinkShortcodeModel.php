@@ -9,12 +9,14 @@
 namespace app\includes\models\site\shortcodes;
 
 
-class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheModel{
+use app\includes\models\site\TPShortcodesChacheModel;
 
-    public function get_data($args = array())
+class TPLinkShortcodeModel extends TPShortcodesChacheModel{
+
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'text_link' => '',
@@ -28,18 +30,18 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'subid' => '',
             'return_url' => false,
             'widget' => 0
-            );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." Link ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' Link ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        return  array(
+        return  [
             'origin' => $origin,
             'destination' => $destination,
             'text_link' => $text_link,
@@ -52,6 +54,6 @@ class TPLinkShortcodeModel extends \app\includes\models\site\TPShortcodesChacheM
             'type' => $type,
             'subid' => $subid,
             'return_url' => $return_url
-        );
+        ];
     }
 }

@@ -6,19 +6,21 @@
  * Time: 11:52
  */
 namespace app\includes\models\site\shortcodes;
-use \app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\models\site\TPFlightShortcodeModel;
+use app\includes\TPPlugin;
+
 class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel{
     /**
      * @param array $args
      * @return array|bool
      * @var $NUMBER 10
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'airline' => false,
-            'limit' => \app\includes\TPPlugin::$options['shortcodes']['10']['limit'],
+            'limit' => TPPlugin::$options['shortcodes']['10']['limit'],
             'title' => '',
             'paginate' => true,
             'off_title' => '',
@@ -26,22 +28,22 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
             'return_url' => false,
             'widget' => 0,
             'host' => ''
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if ($return_url == 1){
             $return_url = true;
         }
-        $attr =  array(
+        $attr =  [
             'airline' => $airline,
             'limit' => $limit,
             'return_url' => $return_url
-        );
+        ];
         //8. Популярные направления авиакомпании
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__
-            ." 8. Популярные направления авиакомпании ";
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__
+            . ' 8. Популярные направления авиакомпании ';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if($this->cacheSecund() && $return_url == false) {
@@ -59,7 +61,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
                 //$rows = array();
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $return = array();
+                    $return = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $return = $this->iataAutocomplete($return, 10);
@@ -83,7 +85,7 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
             error_log("{$method} rows = ".print_r($return, true));
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        return array(
+        return [
             'rows' => $return,
             'type' => 10,
             'airline' => $this->iataAutocomplete($airline, 0 , 'airline'),
@@ -93,6 +95,6 @@ class TPPopularDestinationsAirlinesShortcodeModel extends TPFlightShortcodeModel
             'subid' => $subid,
             'return_url' => $return_url,
             'host' => $host
-        );
+        ];
     }
 }

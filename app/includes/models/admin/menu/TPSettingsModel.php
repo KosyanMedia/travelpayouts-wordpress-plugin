@@ -10,9 +10,12 @@ namespace app\includes\models\admin\menu;
 
 use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPUpdateOptions;
+use app\includes\models\admin\TPOptionModel;
+use app\includes\TPDefault;
 use app\includes\TPPlugin;
+use core\TPRequest;
 
-class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
+class TPSettingsModel extends TPOptionModel
 {
 
     public function __construct()
@@ -60,8 +63,8 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
     public function importSettings()
     {
         if (!$this->checkAccess()) return false;
-        if (isset($_POST['value']) && is_array($_POST['value'])) {
-            $import_options = $_POST['value'];
+        if (TpRequest::post('value')) {
+            $import_options = TpRequest::post('value');
             if (TPOPlUGIN_ERROR_LOG)
                 error_log(print_r($import_options, true));
             if (!array_key_exists('plugin_version', $import_options)) {
@@ -103,7 +106,7 @@ class TPSettingsModel extends \app\includes\models\admin\TPOptionModel
     public function defaultSettings()
     {
         if (!$this->checkAccess()) return false;
-        update_option(TPOPlUGIN_OPTION_NAME, \app\includes\TPDefault::defaultOptions());
+        update_option(TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions());
     }
 
     public function checkAccess($rights = 'manage_options')

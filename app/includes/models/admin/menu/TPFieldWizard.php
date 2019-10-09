@@ -6,6 +6,9 @@
  * Time: 0:27
  */
 namespace app\includes\models\admin\menu;
+use app\includes\common\TPCurrencyUtils;
+use app\includes\TPPlugin;
+
 class TPFieldWizard {
     public function __construct(){
 
@@ -19,7 +22,7 @@ class TPFieldWizard {
                         <span><?php _ex('Your API token', 'tp_admin_page_wizard_field_token_label', TPOPlUGIN_TEXTDOMAIN); ?>:*</span>
                         <label>
                             <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][token]"
-                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['token']) ?>"/>
+                                   value="<?php echo esc_attr(TPPlugin::$options['account']['token']) ?>"/>
                         </label>
                     </div>
                 </div>
@@ -30,7 +33,7 @@ class TPFieldWizard {
                         <span><?php _ex('Your partner marker','tp_admin_page_wizard_field_marker_label', TPOPlUGIN_TEXTDOMAIN); ?>:*</span>
                         <label>
                             <input type="text" name="<?php echo TPOPlUGIN_OPTION_NAME;?>[account][marker]"
-                                   value="<?php echo esc_attr(\app\includes\TPPlugin::$options['account']['marker']) ?>"/>
+                                   value="<?php echo esc_attr(TPPlugin::$options['account']['marker']) ?>"/>
                         </label>
                     </div>
                 </div>
@@ -50,15 +53,15 @@ class TPFieldWizard {
                         </span>
                         <label>
                             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][localization]" class="TP-Zelect TPFieldLocalization">
-                                <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
+                                <option <?php selected( TPPlugin::$options['local']['localization'], 1 ); ?> value="1">
                                     <?php _ex('Russian',
                                         'tp_admin_page_wizard_field_localization_value_1_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </option>
-                                <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
+                                <option <?php selected( TPPlugin::$options['local']['localization'], 2 ); ?>  value="2">
                                     <?php _ex('English',
                                         'tp_admin_page_wizard_field_localization_value_2_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </option>
-                                <option <?php selected( \app\includes\TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
+                                <option <?php selected( TPPlugin::$options['local']['localization'], 3 ); ?>  value="3">
                                     <?php _ex('Thai',
                                         'tp_admin_page_wizard_field_localization_value_3_label', TPOPlUGIN_TEXTDOMAIN); ?>
                                 </option>
@@ -74,9 +77,9 @@ class TPFieldWizard {
                                 'tp_admin_page_wizard_field_currency_label', TPOPlUGIN_TEXTDOMAIN); ?>:</span>
                         <label>
                             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[local][currency]" class="TP-Zelect">
-                                <?php foreach(\app\includes\common\TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
+                                <?php foreach(TPCurrencyUtils::getCurrencyAll() as $currency){ ?>
                                     <option
-                                        <?php selected( \app\includes\TPPlugin::$options['local']['currency'], $currency ); ?>
+                                        <?php selected( TPPlugin::$options['local']['currency'], $currency ); ?>
                                         value="<?php echo $currency ?>">
                                         <?php echo $currency; ?>
                                     </option>

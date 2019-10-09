@@ -5,8 +5,10 @@ namespace app\includes;
 use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPUpdateOptions;
 use app\includes\common\TpStatistics;
+use core\TPOPlugin;
+use core\TPOPluginInterface;
 
-class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
+class TPPlugin extends TPOPlugin implements TPOPluginInterface
 {
 
     private static $instance = null;
@@ -24,14 +26,14 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
 
     protected function __construct()
     {
-        $method = __CLASS__ . " -> " . __METHOD__ . " -> " . __LINE__;
+        $method = __CLASS__ . ' -> ' . __METHOD__ . ' -> ' . __LINE__;
         if (TPOPlUGIN_ERROR_LOG)
-            error_log($method . " -> Start");
+            error_log($method . ' -> Start');
         parent::__construct();
         new TPLoader();
         //self::check_plugin_update();
         if (TPOPlUGIN_ERROR_LOG)
-            error_log($method . " -> End");
+            error_log($method . ' -> End');
 
         add_action('plugins_loaded', [&$this, 'setDefaultOptions'], 100);
         add_action('plugins_loaded', [&$this, 'checkPluginUpdate'], 100);
@@ -49,7 +51,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
      */
     public function upgraderProcessComplete($upgrader_object, $options)
     {
-        if ($options['action'] == 'update' && $options['type'] == 'plugin') {
+        if ($options['action'] === 'update' && $options['type'] === 'plugin') {
             foreach ($options['plugins'] as $each_plugin) {
                 if ($each_plugin == TPOPlUGIN_BASENAME) {
                     delete_option(TPOPlUGIN_OPTION_STATISTICS_KEEN);
@@ -76,7 +78,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
     public function setDefaultOptions()
     {
         if (TPOPlUGIN_ERROR_LOG)
-            error_log("setDefaultOptions");
+            error_log('setDefaultOptions');
         if (!get_option(TPOPlUGIN_OPTION_NAME))
             update_option(TPOPlUGIN_OPTION_NAME, TPDefault::defaultOptions());
         if (!get_option(TPOPlUGIN_OPTION_VERSION))
@@ -89,7 +91,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
     public function checkPluginUpdate()
     {
         if (TPOPlUGIN_ERROR_LOG)
-            error_log("checkPluginUpdate");
+            error_log('checkPluginUpdate');
         if (!is_plugin_active('travelpayouts/travelpayouts.php')) return;
         if (!get_option(TPOPlUGIN_OPTION_VERSION) || get_option(TPOPlUGIN_OPTION_VERSION) != TPOPlUGIN_VERSION) {
             self::deleteCacheAll();
@@ -102,7 +104,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
             }
             if (version_compare(get_option(TPOPlUGIN_OPTION_VERSION), '0.5.2', '<')) {
                 if (TPOPlUGIN_ERROR_LOG)
-                    error_log("currency default version = " . get_option(TPOPlUGIN_OPTION_VERSION));
+                    error_log('currency default version = ' . get_option(TPOPlUGIN_OPTION_VERSION));
                 $options = get_option(TPOPlUGIN_OPTION_NAME);
                 $options['local']['currency'] = TPCurrencyUtils::getDefaultCurrency();
                 update_option(TPOPlUGIN_OPTION_NAME, $options);
@@ -119,7 +121,7 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
 
             if (!empty(self::$options['account']['marker'])) {
                 $request = 'http://metrics.aviasales.ru/?goal=tp_wp_plugin_activation&data={"merker":'
-                    . self::$options['account']['marker'] . ',"domain":"' . preg_replace("(^https?://)", "", get_option('home')) . '"}';
+                    . self::$options['account']['marker'] . ',"domain":"' . preg_replace('(^https?://)', '', get_option('home')) . '"}';
                 $string = htmlspecialchars($request);
                 $response = wp_remote_get($string, ['headers' => [
                     'Accept-Encoding' => 'gzip, deflate',
@@ -138,25 +140,25 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
     /**
      *
      */
-    static public function activation()
+    public static function activation()
     {
         // TODO: Implement activation() method.
-        if (!version_compare(PHP_VERSION, '5.3.0', '>=')) {
+        if (!version_compare(PHP_VERSION, '5.4.0', '>=')) {
             global $locale;
             $error_msg = '';
             switch ($locale) {
-                case "ru_RU":
-                    $error_msg = '<p>К сожалению, плагин Travelpayouts не работает с версиями PHP ниже чем 5.3.х.
+                case 'ru_RU':
+                    $error_msg = '<p>К сожалению, плагин Travelpayouts не работает с версиями PHP ниже чем 5.4.х.
                 Ознакомьтесь с информацией о том, <a href="https://support.travelpayouts.com/hc/ru/articles/207794617#02?utm_source=wpplugin&utm_medium=php_error&utm_campaign=ru">
                 как вы можете обновиться</a>.</p>';
                     break;
-                case "en_US":
-                    $error_msg = '<p>Unfortunately, Travelpayouts plugin can not run on PHP versions that are older than 5.3.х.
+                case 'en_US':
+                    $error_msg = '<p>Unfortunately, Travelpayouts plugin can not run on PHP versions that are older than 5.4.х.
                 Read more information about <a href="https://support.travelpayouts.com/hc/en-us/articles/207794617#02?utm_source=wpplugin&utm_medium=php_error&utm_campaign=en">
                 how you can update</a>.</p>';
                     break;
                 default:
-                    $error_msg = '<p>Unfortunately, Travelpayouts plugin can not run on PHP versions that are older than 5.3.х.
+                    $error_msg = '<p>Unfortunately, Travelpayouts plugin can not run on PHP versions that are older than 5.4.х.
                 Read more information about <a href="https://support.travelpayouts.com/hc/en-us/articles/207794617#02?utm_source=wpplugin&utm_medium=php_error&utm_campaign=en">
                 how you can update</a>.</p>';
                     break;
@@ -172,24 +174,16 @@ class TPPlugin extends \core\TPOPlugin implements \core\TPOPluginInterface
         }
     }
 
-    static public function deactivation()
+    public static function deactivation()
     {
         // TODO: Implement deactivation() method.
 
-        //models\admin\menu\TPAutoReplacLinksModel::deleteTable();
-        //models\admin\menu\TPSearchFormsModel::deleteTable();
-        //models\site\shortcodes\TPSpecialOfferShortcodeModel::deleteTable();
         self::deleteCacheAll();
-        //delete_option( TPOPlUGIN_OPTION_NAME);
         delete_option(TPOPlUGIN_OPTION_VERSION);
         delete_option(TPOPlUGIN_OPTION_STATISTICS_KEEN);
-        //delete_option( TPOPlUGIN_TABLE_SF_VERSION);
-        //delete_option( TPOPlUGIN_TABLE_ARL_VERSION);
-        //delete_option( TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
-        //delete_option( TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
     }
 
-    static public function uninstall()
+    public static function uninstall()
     {
         // TODO: Implement uninstall() method.
         models\admin\menu\TPSearchFormsModel::deleteTable();

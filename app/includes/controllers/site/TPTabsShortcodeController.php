@@ -8,18 +8,18 @@
 
 namespace app\includes\controllers\site;
 
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
 
-class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigetsShortcodesController
+class TPTabsShortcodeController  extends TPWigetsShortcodesController
 {
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_tabs', array(&$this, 'actionTabs'));
-        add_shortcode( 'tp_tab', array(&$this, 'actionTab'));
+        add_shortcode( 'tp_tabs', [&$this, 'actionTabs']);
+        add_shortcode( 'tp_tab', [&$this, 'actionTab']);
     }
 
-    public function actionTabs($args = array(), $content = null)
+    public function actionTabs($args = [], $content = null)
     {
         // TODO: Implement action() method.
         $pattern = '
@@ -34,7 +34,7 @@ class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigets
         /x
         ';
         $output = '';
-        $tabs = array();
+        $tabs = [];
         $tabs = explode(',', $content);
         $tab_content_out = '';
         $tab_menu_out = '';
@@ -62,12 +62,12 @@ class TPTabsShortcodeController  extends \app\includes\controllers\site\TPWigets
 
         return $output;
     }
-    public function actionTab($args = array(), $content = null)
+    public function actionTab($args = [], $content = null)
     {
         // TODO: Implement action() method.
-        $defaults = array(
+        $defaults = [
             'title' => 'Tabs',
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $output = '';
         $output = do_shortcode($content);

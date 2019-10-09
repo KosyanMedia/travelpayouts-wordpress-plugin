@@ -17,7 +17,7 @@ class TPHotelsTypeModel
     public function __construct()
     {
         self::$TPRequestApi = TPRequestApiHotel::getInstance();
-        add_action( 'wp_loaded', array( &$this, 'setHotelsType') );
+        add_action( 'wp_loaded', [&$this, 'setHotelsType']);
     }
 
     public function setHotelsType(){

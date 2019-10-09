@@ -8,8 +8,8 @@
 
 namespace app\includes\models\admin\menu;
 
-use \app\includes\TPPlugin;
-use \app\includes\common\TPLang;
+use app\includes\TPPlugin;
+use app\includes\common\TPLang;
 
 class TPFieldHotels
 {
@@ -238,27 +238,27 @@ class TPFieldHotels
             </span>
 
             <select name="<?php echo TPOPlUGIN_OPTION_NAME;?>[<?php echo $type; ?>][<?php echo $shortcode; ?>][tag]" class="TP-Zelect">
-                <option <?php selected(TPPlugin::$options[$type][$shortcode]['tag'], "div" ); ?>
+                <option <?php selected(TPPlugin::$options[$type][$shortcode]['tag'], 'div'); ?>
                     value="div">
                     <?php _ex('DIV',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_1', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h1" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h1'); ?>
                     value="h1">
                     <?php _ex('H1',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_2', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h2" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h2'); ?>
                     value="h2">
                     <?php _ex('H2',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_3', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h3" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h3'); ?>
                     value="h3">
                     <?php _ex('H3',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_4', TPOPlUGIN_TEXTDOMAIN); ?>
                 </option>
-                <option <?php selected( \app\includes\TPPlugin::$options[$type][$shortcode]['tag'], "h4" ); ?>
+                <option <?php selected( TPPlugin::$options[$type][$shortcode]['tag'], 'h4'); ?>
                     value="h4">
                     <?php _ex('H4',
                         'tp_admin_page_flights_tab_tables_content_shortcode_select_title_tag_value_5', TPOPlUGIN_TEXTDOMAIN); ?>
@@ -279,7 +279,7 @@ class TPFieldHotels
         if(!empty(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected'])){
             $selected = array_unique(TPPlugin::$options['shortcodes_hotels'][$shortcode]['selected']);
             $fields = TPPlugin::$options['shortcodes_hotels'][$shortcode]['fields'];
-            $arraySort = array();
+            $arraySort = [];
             foreach($selected as $key_s => $selec){
                 if (($key = array_search($selec, $fields)) !== false) {
                     $arraySort[] = $selec;
@@ -346,7 +346,7 @@ class TPFieldHotels
      * @return string
      */
     public function getFieldSortTDLabel($fieldKey){
-        $fieldLabel = "";
+        $fieldLabel = '';
         if(isset(TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label_default'][$fieldKey])){
             $fieldLabel = TPPlugin::$options['local']['hotels_fields'][TPLang::getLang()]['label_default'][$fieldKey];
         }else{

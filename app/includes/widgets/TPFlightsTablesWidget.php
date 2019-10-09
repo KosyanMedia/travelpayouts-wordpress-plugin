@@ -20,11 +20,11 @@ class TPFlightsTablesWidget extends WP_Widget{
 			_x('Travelpayouts – Flights Tables',
                 'Travelpayouts – Flights Tables Widget',
                 TPOPlUGIN_TEXTDOMAIN), // Name
-			array(
+			[
 				'description' => _x('Travelpayouts – Flights Tables',
 					'Travelpayouts – Flights Tables Widget',
 					TPOPlUGIN_TEXTDOMAIN)
-			) // Args
+            ] // Args
 		);
 	}
 
@@ -60,7 +60,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 		$limit = isset( $instance['flight_limit'] ) ? esc_attr( $instance['flight_limit'] ) : 100;
-        if ($select == 'select') return;
+        if ($select === 'select') return;
 		$originCode = $this->getCode($origin);
 		$destinationCode = $this->getCode($destination);
 		$airlineCode = $this->getCode($airline);
@@ -344,7 +344,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 		$filter_airline = isset( $instance['flight_filter_airline'] ) ? esc_attr( $instance['flight_filter_airline'] ) : '';
 		$filter_flight_number = isset( $instance['flight_filter_flight_number'] ) ? esc_attr( $instance['flight_filter_flight_number'] ) : '';
 
-		$shortcodeLabels = array(
+		$shortcodeLabels = [
 			_x('Flights from origin to destination, One Way (next month)',
                 'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Flights from Origin to Destination (next few days)',
@@ -369,7 +369,7 @@ class TPFlightsTablesWidget extends WP_Widget{
                 'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Cheap Flights to destination',
                 'Travelpayouts – Flights Tables Widget', TPOPlUGIN_TEXTDOMAIN),
-		)
+        ]
 
 		?>
 
@@ -564,7 +564,7 @@ class TPFlightsTablesWidget extends WP_Widget{
 	 */
 	public function getCode($data){
 	    if (empty($data)) return '';
-		$dataCode = array();
+		$dataCode = [];
 		preg_match('/\[(.+)\]/', $data, $dataCode);
 		$code = '';
 		if (array_key_exists(1, $dataCode)){

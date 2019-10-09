@@ -8,12 +8,15 @@
 
 namespace app\includes\models\site\shortcodes;
 
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
+use app\includes\models\site\TPAutocomplete;
+use core\models\TPOWPTableInterfaceModel;
+use core\models\TPOWPTableModel;
 
-class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
+class TPSpecialOfferShortcodeModel  extends TPOWPTableModel implements TPOWPTableInterfaceModel
 {
-    public static $tableNameOffer = "tp_special_offer";
-    public static $tableNameRoute = "tp_special_route";
+    public static $tableNameOffer = 'tp_special_offer';
+    public static $tableNameRoute = 'tp_special_route';
     public function __construct()
     {
 
@@ -30,7 +33,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         global $wpdb;
         $versionSpecialOffer = get_option(TPOPlUGIN_TABLE_SPECIAL_OFFER_VERSION);
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
-        $sql = "CREATE TABLE " . $tableNameOffer . "(
+        $sql = 'CREATE TABLE ' . $tableNameOffer . '(
                 id int(11) NOT NULL AUTO_INCREMENT,
                 cat_id int(11) NOT NULL,
                 airline varchar(255) NOT NULL,
@@ -44,7 +47,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                 flight_date_end int(11) NOT NULL,
                 link varchar(255) NOT NULL,
                   PRIMARY KEY (id)
-                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;';
         if($versionSpecialOffer != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             if($wpdb->get_var("show tables like '$tableNameOffer'") != $tableNameOffer) {
@@ -55,8 +58,8 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                 self::deleteTableSpecialOffer();
                 dbDelta($sql);
                 if($data != false) {
-                    $rows = array();
-                    foreach ( $wpdb->get_col( "DESC " . $tableNameOffer, 0 ) as $column_name ) {
+                    $rows = [];
+                    foreach ($wpdb->get_col( 'DESC ' . $tableNameOffer, 0 ) as $column_name ) {
                         foreach($data as $key=>$values) {
                             $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
                         }
@@ -75,9 +78,11 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
-        $data = $wpdb->get_results( "SELECT * FROM ".$tableNameOffer, ARRAY_A);
-        if(TpPluginHelper::count($data) > 0) return $data;
-        return false;
+        $data = $wpdb->get_results( 'SELECT * FROM ' .$tableNameOffer, ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
     public static function deleteTableSpecialOffer()
     {
@@ -90,7 +95,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         global $wpdb;
         $versionSpecialRoute = get_option(TPOPlUGIN_TABLE_SPECIAL_ROUTE_VERSION);
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
-        $sql = "CREATE TABLE " . $tableNameRoute . "(
+        $sql = 'CREATE TABLE ' . $tableNameRoute . '(
                id int(11) NOT NULL AUTO_INCREMENT,
                airline_code varchar(255) NOT NULL,
                cat_id int(11) NOT NULL,
@@ -106,7 +111,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                roundtrip_price varchar(100) NOT NULL,
                sale_date_begin int(11) NOT NULL,
                   PRIMARY KEY (id)
-                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;';
         if($versionSpecialRoute != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             if($wpdb->get_var("show tables like '$tableNameRoute'") != $tableNameRoute) {
@@ -117,8 +122,8 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
                 self::deleteTableSpecialRoute();
                 dbDelta($sql);
                 if($data != false) {
-                    $rows = array();
-                    foreach ( $wpdb->get_col( "DESC " . $tableNameRoute, 0 ) as $column_name ) {
+                    $rows = [];
+                    foreach ($wpdb->get_col( 'DESC ' . $tableNameRoute, 0 ) as $column_name ) {
                         foreach($data as $key=>$values) {
                             $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
                         }
@@ -137,9 +142,11 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
-        $data = $wpdb->get_results( "SELECT * FROM ".$tableNameRoute." ORDER BY date_add DESC", ARRAY_A);
-        if(TpPluginHelper::count($data) > 0) return $data;
-        return false;
+        $data = $wpdb->get_results( 'SELECT * FROM ' .$tableNameRoute. ' ORDER BY date_add DESC', ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
     public static function deleteTableSpecialRoute()
     {
@@ -159,7 +166,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
 
     public static function insertSpecialOffer($cat_id, $airline, $airline_code, $title, $conditions, $href,
                                               $sale_date_begin, $sale_date_end, $flight_date_begin, $flight_date_end, $link){
-        $data =  array(
+        $data =  [
             'cat_id' => $cat_id,
             'airline' =>  $airline,
             'airline_code' => $airline_code,
@@ -171,7 +178,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
             'flight_date_begin' => $flight_date_begin,
             'flight_date_end' => $flight_date_end,
             'link' => $link
-        );
+        ];
         global $wpdb;
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
         $wpdb->insert($tableNameOffer, $data);
@@ -180,7 +187,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
     public static function insertSpecialRoute($airline_code, $cat_id, $countries, $from_iata, $to_iata, $from_name,
                                               $to_name, $class, $oneway_price, $roundtrip_price, $flight_date_begin,
                                               $flight_date_end, $sale_date_begin){
-        $data = array(
+        $data = [
             'airline_code' => $airline_code,
             'cat_id' => $cat_id,
             'countries'=> $countries,
@@ -194,7 +201,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
             'departure_at' => $flight_date_begin,
             'return_at' => $flight_date_end,
             'sale_date_begin' => $sale_date_begin
-        );
+        ];
         global $wpdb;
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
         $wpdb->insert($tableNameRoute, $data);
@@ -232,7 +239,7 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
 
     public static function modelHooks(){
         //error_log("modelHooks");
-        add_action( 'wp_loaded', array( __CLASS__, 'getSpecialOfferApiUpdateDB') );
+        add_action( 'wp_loaded', [__CLASS__, 'getSpecialOfferApiUpdateDB']);
     }
 
     public static function getSpecialOfferApiUpdateDB(){
@@ -251,21 +258,21 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
         global $wpdb;
         $tableNameOffer = $wpdb->prefix .self::$tableNameOffer;
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
-        $wpdb->query("TRUNCATE TABLE `".$tableNameOffer."`");
-        $wpdb->query("TRUNCATE TABLE `".$tableNameRoute."`");
+        $wpdb->query('TRUNCATE TABLE `' .$tableNameOffer. '`');
+        $wpdb->query('TRUNCATE TABLE `' .$tableNameRoute. '`');
     }
 
     public static function getSpecialOffer(){
-        $data = array();
+        $data = [];
         try {
-            $sxml = @simplexml_load_file("http://www.aviasales.ru/latest-offers.xml",
+            $sxml = @simplexml_load_file('http://www.aviasales.ru/latest-offers.xml',
                 'SimpleXMLElement', LIBXML_NOCDATA);
-            $sxml = simplexml_load_file("http://www.aviasales.ru/latest-offers.xml");
+            $sxml = simplexml_load_file('http://www.aviasales.ru/latest-offers.xml');
 
             if ($sxml !== false) {
                 $data = $sxml;
             } else {
-                $data = array();
+                $data = [];
             }
         }   catch (Exception $e) {
 
@@ -314,26 +321,26 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
 
     }
     public static function getCountryCodeFromCityIata($iata){
-        \app\includes\models\site\TPAutocomplete::getInstance();
+        TPAutocomplete::getInstance();
         $iata = trim((string)$iata);
         //error_log(print_r(\app\includes\models\site\TPAutocomplete::$data[$iata], true));
         $countryCode = '';
-        if(isset( \app\includes\models\site\TPAutocomplete::$data[$iata])){
-           $countryCode = \app\includes\models\site\TPAutocomplete::$data[$iata]['country_code'];
+        if(isset( TPAutocomplete::$data[$iata])){
+           $countryCode = TPAutocomplete::$data[$iata]['country_code'];
         }
         //error_log($countryCode);
         return $countryCode;
     }
-    public function getDataTable($args = array())
+    public function getDataTable($args = [])
     {
 
-        $defaults = array(
+        $defaults = [
             'country' => false,
             'airline' => false,
             'limit' => false,
             'title' => '',
             'sort' => 0
-            );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         global $wpdb;
         $tableNameRoute = $wpdb->prefix .self::$tableNameRoute;
@@ -355,15 +362,15 @@ class TPSpecialOfferShortcodeModel  extends \core\models\TPOWPTableModel impleme
             }
             //$resultRoute = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}",NULL),ARRAY_A);
             $resultRoute = $wpdb->get_results("SELECT * FROM {$tableNameRoute} WHERE {$where} {$s}" ,ARRAY_A);
-            $a_id = array();
+            $a_id = [];
             foreach($resultRoute as $key=>$route){
-                $a_id[$key] = $route["cat_id"];
+                $a_id[$key] = $route['cat_id'];
             }
             $cat_id = array_unique($a_id);
 
         } else {
 
-            return "empty";
+            return 'empty';
         }
         return $cat_id;
     }

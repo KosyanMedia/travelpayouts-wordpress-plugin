@@ -7,24 +7,27 @@
  */
 namespace app\includes\controllers\site\shortcodes;
 
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
+use app\includes\models\site\shortcodes\TPSearchFormShortcodeModel;
+use app\includes\TPPlugin;
+use core\controllers\TPOShortcodesController;
 
-class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesController{
+class TPSearchFormShortcodeController extends TPOShortcodesController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\site\shortcodes\TPSearchFormShortcodeModel();
+        $this->model = new TPSearchFormShortcodeModel();
     }
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_search_shortcodes', array(&$this, 'action'));
+        add_shortcode( 'tp_search_shortcodes', [&$this, 'action']);
     }
 
-    public function action($args = array())
+    public function action($args = [])
     {
         // TODO: Implement action() method.
-        $defaults = array(
+        $defaults = [
             'id' => false,
             'slug' => false,
             'type' => 'avia',
@@ -32,7 +35,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
             'destination' => false,
             'hotel_city' => false,
             'subid' => ''
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if ($id == false && $slug == false) return;
         if (empty($slug) || $slug == false){
@@ -42,7 +45,7 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         }
 
         //var_dump($data);
-        $code_form = wp_unslash($data["code_form"]);
+        $code_form = wp_unslash($data['code_form']);
         $typeForm = $this->model->getTypeForm($code_form);
         if (!empty($typeForm)) $type = $typeForm;
         //error_log($type);
@@ -54,18 +57,18 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
         error_log($hotel_city);*/
 
         switch ($type){
-            case "avia":
+            case 'avia':
                 $code_form = $this->replaceOrigin($origin, $code_form, false);
                 $code_form = $this->replaceDestination($destination, $code_form, false);
                 $code_form = $this->replaceHotelCity($hotel_city, $code_form, true);
 
                 break;
-            case "hotel":
+            case 'hotel':
                 $code_form = $this->replaceOrigin($origin, $code_form, true);
                 $code_form = $this->replaceDestination($destination, $code_form, true);
                 $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
                 break;
-            case "avia_hotel":
+            case 'avia_hotel':
                 $code_form = $this->replaceOrigin($origin, $code_form, false);
                 $code_form = $this->replaceDestination($destination, $code_form, false);
                 $code_form = $this->replaceHotelCity($hotel_city, $code_form, false);
@@ -79,11 +82,11 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
 
     }
 
-    public function getSubid($form, $subid = ""){
+    public function getSubid($form, $subid = ''){
         if(!empty($subid)){
             $subid = trim($subid);
             $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
-            $marker = \app\includes\TPPlugin::$options['account']['marker'];
+            $marker = TPPlugin::$options['account']['marker'];
             $marker_txt = '';
             $marker_txt = '"marker": "'.$marker.'.'.$subid.'",';
             $form = preg_replace('/"marker":.*?,/s', $marker_txt, $form);
@@ -144,12 +147,12 @@ class TPSearchFormShortcodeController extends \core\controllers\TPOShortcodesCon
 
         if($delete == false){
             if(!empty($hotel_city)){
-                $params = explode(", ", $hotel_city);
+                $params = explode(', ', $hotel_city);
 
                 if(TpPluginHelper::count($params) == 6){
                     //error_log(print_r($params, true));
                    // error_log($params[4]);
-                    $hotel_city_text = "";
+                    $hotel_city_text = '';
                     switch($params[4]){
                         case 'hotel':
                            // error_log('hotel11111111');

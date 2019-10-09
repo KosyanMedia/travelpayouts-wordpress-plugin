@@ -30,13 +30,13 @@
         </nav>
         <div id="tabs-hotels_config">
             <?php
-                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php";
+                $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPHotelsTabConfigNew.view.php';
                 $this->loadView($pathView, 0, $data);
             ?>
         </div>
         <div id="tabs-hotels_themes">
             <?php
-                $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotelsTabThemes.view.php";
+                $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPHotelsTabThemes.view.php';
                 $this->loadView($pathView, 0, $data);
             ?>
         </div>

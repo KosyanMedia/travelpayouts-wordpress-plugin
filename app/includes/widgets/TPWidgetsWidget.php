@@ -19,11 +19,11 @@ class TPWidgetsWidget extends WP_Widget{
 			_x('Travelpayouts – Widgets',
                 'Travelpayouts – Widgets Widget',
                 TPOPlUGIN_TEXTDOMAIN), // Name
-			array(
+			[
 				'description' => _x('Travelpayouts – Widgets',
                     'Travelpayouts – Widgets Widget',
                     TPOPlUGIN_TEXTDOMAIN)
-			) // Args
+            ] // Args
 		);
 	}
 
@@ -60,27 +60,27 @@ class TPWidgetsWidget extends WP_Widget{
 		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
 		$responsiveWidth = isset( $instance['widgets_responsive_width'] ) ? $instance['widgets_responsive_width']  : 500;
 		$popularRoutesCount = isset( $instance['widgets_popular_routes_count'] ) ? $instance['widgets_popular_routes_count']  : TPPlugin::$options['widgets']['6']['count'];
-		$popularRoutes = array();
+		$popularRoutes = [];
 		for($i = 0; $i < $popularRoutesCount; $i++){
 			$key = 'widgets_popular_routes_'.$i;
 			$popularRoutes[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
-		$widgetType6 = isset( $instance['widgets_widget_type_6'] ) ? $instance['widgets_widget_type_6']  : TPPlugin::$options["widgets"][7]['type'];
-		$limit6 = isset( $instance['widgets_widget_limit_6'] ) ? $instance['widgets_widget_limit_6']  : TPPlugin::$options["widgets"][7]['limit'];
-		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options["widgets"][7]['cat1'];
-		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options["widgets"][7]['cat2'];
-		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options["widgets"][7]['cat3'];
-		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options["widgets"][8]['type'];
-		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options["widgets"][8]['filter'];
+		$widgetType6 = isset( $instance['widgets_widget_type_6'] ) ? $instance['widgets_widget_type_6']  : TPPlugin::$options['widgets'][7]['type'];
+		$limit6 = isset( $instance['widgets_widget_limit_6'] ) ? $instance['widgets_widget_limit_6']  : TPPlugin::$options['widgets'][7]['limit'];
+		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options['widgets'][7]['cat1'];
+		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options['widgets'][7]['cat2'];
+		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options['widgets'][7]['cat3'];
+		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options['widgets'][8]['type'];
+		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options['widgets'][8]['filter'];
 		$origin7 = isset( $instance['widgets_origin_7'] ) ? $instance['widgets_origin_7']  : '';
 		$destination7 = isset( $instance['widgets_destination_7'] ) ? $instance['widgets_destination_7']  : '';
 		$airline7Count = isset( $instance['widgets_airline_7_count'] ) ? $instance['widgets_airline_7_count']  : 1;
-		$airline7 = array();
+		$airline7 = [];
 		for($i = 0; $i < $airline7Count; $i++){
 			$key = 'widgets_airline_7_item_'.$i;
 			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
-		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
+		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options['widgets'][8]['limit'];
 		$originCode = $this->getCode($origin);
 		$originAttr = 'origin="'.$originCode.'"';
 		$destinationCode = $this->getCode($destination);
@@ -375,28 +375,28 @@ class TPWidgetsWidget extends WP_Widget{
 		$calendarPeriodRangeTo = isset( $instance['widgets_calendar_period_range_to'] ) ? $instance['widgets_calendar_period_range_to']  : TPPlugin::$options['widgets']['3']['period_day']['to'];
 		$responsiveWidth = isset( $instance['widgets_responsive_width'] ) ? $instance['widgets_responsive_width']  : 500;
 		$popularRoutesCount = isset( $instance['widgets_popular_routes_count'] ) ? $instance['widgets_popular_routes_count']  : TPPlugin::$options['widgets']['6']['count'];
-		$popularRoutes = array();
+		$popularRoutes = [];
 		for($i = 0; $i < $popularRoutesCount; $i++){
 		    $key = 'widgets_popular_routes_'.$i;
 			$popularRoutes[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
         }
-		$widgetType6 = isset( $instance['widgets_widget_type_6'] ) ? $instance['widgets_widget_type_6']  : TPPlugin::$options["widgets"][7]['type'];
-		$limit6 = isset( $instance['widgets_widget_limit_6'] ) ? $instance['widgets_widget_limit_6']  : TPPlugin::$options["widgets"][7]['limit'];
-		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options["widgets"][7]['cat1'];
-		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options["widgets"][7]['cat2'];
-		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options["widgets"][7]['cat3'];
-		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options["widgets"][8]['type'];
-		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options["widgets"][8]['filter'];
+		$widgetType6 = isset( $instance['widgets_widget_type_6'] ) ? $instance['widgets_widget_type_6']  : TPPlugin::$options['widgets'][7]['type'];
+		$limit6 = isset( $instance['widgets_widget_limit_6'] ) ? $instance['widgets_widget_limit_6']  : TPPlugin::$options['widgets'][7]['limit'];
+		$cat1 = isset( $instance['widgets_widget_cat_1'] ) ? $instance['widgets_widget_cat_1']  : TPPlugin::$options['widgets'][7]['cat1'];
+		$cat2 = isset( $instance['widgets_widget_cat_2'] ) ? $instance['widgets_widget_cat_2']  : TPPlugin::$options['widgets'][7]['cat2'];
+		$cat3 = isset( $instance['widgets_widget_cat_3'] ) ? $instance['widgets_widget_cat_3']  : TPPlugin::$options['widgets'][7]['cat3'];
+		$widgetType7 = isset( $instance['widgets_widget_type_7'] ) ? $instance['widgets_widget_type_7']  : TPPlugin::$options['widgets'][8]['type'];
+		$widgetFilter = isset( $instance['widgets_widget_filter'] ) ? $instance['widgets_widget_filter']  : TPPlugin::$options['widgets'][8]['filter'];
 		$origin7 = isset( $instance['widgets_origin_7'] ) ? $instance['widgets_origin_7']  : '';
 		$destination7 = isset( $instance['widgets_destination_7'] ) ? $instance['widgets_destination_7']  : '';
 		$airline7Count = isset( $instance['widgets_airline_7_count'] ) ? $instance['widgets_airline_7_count']  : 1;
-		$airline7 = array();
+		$airline7 = [];
 		for($i = 0; $i < $airline7Count; $i++){
 			$key = 'widgets_airline_7_item_'.$i;
 			$airline7[$i] = isset( $instance[$key] ) ? $instance[$key]  : '';
 		}
-		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options["widgets"][8]['limit'];
-		$shortcodeLabels = array(
+		$limit7 = isset( $instance['widgets_widget_limit_7'] ) ? $instance['widgets_widget_limit_7']  :  TPPlugin::$options['widgets'][8]['limit'];
+		$shortcodeLabels = [
 			_x('Map Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels Map Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Calendar Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
@@ -405,7 +405,7 @@ class TPWidgetsWidget extends WP_Widget{
 			_x('Popular Destinations Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Hotels Selections Widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
 			_x('Best deals widget', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN),
-		);
+        ];
 
 		$fieldSizeWidth1 = TPPlugin::$options['widgets']['1']['width'];
 		$fieldSizeHeight1 = TPPlugin::$options['widgets']['1']['height'];
@@ -839,7 +839,7 @@ class TPWidgetsWidget extends WP_Widget{
 	public function getFieldCalendarPeriod($calendarPeriod){
 		global $wp_locale;
 		$output_month = '';
-		$monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
+		$monthNames = array_map([&$wp_locale, 'get_month'], range(1, 12));
 		$output_month .= '<option value="year" '
 		                 .selected( $calendarPeriod, 'year' , false).'>'
 		                 ._x('Year', 'Travelpayouts – Widgets Widget', TPOPlUGIN_TEXTDOMAIN ).'</option>';
@@ -891,7 +891,7 @@ class TPWidgetsWidget extends WP_Widget{
 	 */
 	public function getCode($data){
 		if (empty($data)) return '';
-		$dataCode = array();
+		$dataCode = [];
 		preg_match('/\[(.+)\]/', $data, $dataCode);
 		$code = '';
 		if (array_key_exists(1, $dataCode)){
@@ -907,7 +907,7 @@ class TPWidgetsWidget extends WP_Widget{
 	 */
 	public function getHotelData($hotelCity){
 		if (empty($hotelCity)) return '';
-		$hotelCityCode = array();
+		$hotelCityCode = [];
 		preg_match('/\{(.+)\}/', $hotelCity, $hotelCityCode);
 		$code = '';
 		if (array_key_exists(1, $hotelCityCode)){

@@ -6,14 +6,14 @@
                 <?php
                 global $locale;
                 switch($locale){
-                    case "ru_RU":
+                    case 'ru_RU':
                         ?>
                         <a href="https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=ru&utm_content=logo" target="_blank">
                             <img src="<?php echo TPOPlUGIN_URL?>app/public/images/tp-logo.png" alt=""/>
                         </a>
                         <?php
                         break;
-                    case "en_US":
+                    case 'en_US':
                         ?>
                         <a href="https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=en&utm_content=logo" target="_blank">
                             <img src="<?php echo TPOPlUGIN_URL?>app/public/images/tp-logo-eng.png" alt=""/>
@@ -36,10 +36,10 @@
                 'tp_admin_page_dashboard_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
             <?php
             switch($locale) {
-                case "ru_RU":
+                case 'ru_RU':
                     ?><a href="https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=ru&utm_content=link" target="_blank">Travelpayouts.com</a><?php
                     break;
-                case "en_US":
+                case 'en_US':
                     ?><a href="https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=dashboard&utm_campaign=en&utm_content=link" target="_blank">Travelpayouts.com</a><?php
                     break;
                 default:
@@ -79,11 +79,11 @@
                     </li>
                 </ul>
                 <?php
-                    if($this->model->detailed_sales["current_month"]["sales"] != false){
-                        $this->view->tpTabsDay(1, @$this->model->detailed_sales["current_month"]["sales"][date("Y-m-d")]);
-                        $this->view->tpTabsDay(2, @$this->model->detailed_sales["current_month"]["sales"][date("Y-m-d", time() - 86400)]);
-                        $this->view->tpTabsMonth(3, @$this->model->detailed_sales["current_month"]["sales"]);
-                        $this->view->tpTabsMonth(4, @$this->model->detailed_sales["last_month"]["sales"]);
+                    if($this->model->detailed_sales['current_month']['sales'] != false){
+                        $this->view->tpTabsDay(1, @$this->model->detailed_sales['current_month']['sales'][date('Y-m-d')]);
+                        $this->view->tpTabsDay(2, @$this->model->detailed_sales['current_month']['sales'][date('Y-m-d', time() - 86400)]);
+                        $this->view->tpTabsMonth(3, @$this->model->detailed_sales['current_month']['sales']);
+                        $this->view->tpTabsMonth(4, @$this->model->detailed_sales['last_month']['sales']);
                     }
 
                 ?>
@@ -94,7 +94,7 @@
                  <?php _ex('Last updated at',
                      'tp_admin_page_dashboard_paragraph_4_1', TPOPlUGIN_TEXTDOMAIN ); ?>
                 <strong>
-                    <?php echo date('H:i', $this->model->detailed_sales["time"]); ?>
+                    <?php echo date('H:i', $this->model->detailed_sales['time']); ?>
                 </strong>
                 <?php _ex('(Local time)',
                     'tp_admin_page_dashboard_paragraph_4_2', TPOPlUGIN_TEXTDOMAIN ); ?>
@@ -106,7 +106,7 @@
         <div class="TP-NewsSection">
             <?php
             switch($locale) {
-                case "ru_RU":
+                case 'ru_RU':
                     ?>
 
                     <h2 class="TP-titleNews"><?php _ex('Travelpayouts News', 'tp_admin_page_dashboard_paragraph_5_1', TPOPlUGIN_TEXTDOMAIN ); ?></h2>
@@ -117,7 +117,7 @@
 
                     <?php
                     break;
-                case "en_US":
+                case 'en_US':
                     ?>
 
                     <h2 class="TP-titleNews"><?php _ex('Travelpayouts News','tp_admin_page_dashboard_paragraph_5_1', TPOPlUGIN_TEXTDOMAIN ); ?></h2>

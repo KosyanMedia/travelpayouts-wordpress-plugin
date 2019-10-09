@@ -16,7 +16,7 @@ class TPSearchFormEmptyTable
         //type_form
         //code_form
         $searchForm = TPSearchFormsModel::getSearchFormByID($id);
-        $codeForm = wp_unslash($searchForm["code_form"]);
+        $codeForm = wp_unslash($searchForm['code_form']);
         return self::replace($codeForm, $originIata, $destinationIata);
     }
 

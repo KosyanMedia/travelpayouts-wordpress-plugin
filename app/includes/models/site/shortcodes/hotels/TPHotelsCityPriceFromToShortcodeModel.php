@@ -8,34 +8,34 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\models\site\TPHotelShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
+use app\includes\models\site\TPHotelShortcodeModel;
+use app\includes\common\TPCurrencyUtils;
 
 class TPHotelsCityPriceFromToShortcodeModel extends TPHotelShortcodeModel
 {
 
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'location_id' => false,
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'location_id' => $location_id,
             'return_url' => $return_url
-        );
+        ];
 
         $cacheKey = "hotel_2_{$location_id}".(int)$return_url;
         if($this->cacheSecund()){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
 
                 $return = self::$TPRequestApi->getHotels($attr);
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $return;
@@ -49,35 +49,35 @@ class TPHotelsCityPriceFromToShortcodeModel extends TPHotelShortcodeModel
             $return = self::$TPRequestApi->getHotels($attr);
             if( ! $return )
                 return false;
-            $rows = array();
+            $rows = [];
             $rows = $return;
             //$rows = $this->iataAutocomplete($rows, 13);
         }
         return $rows;
     }
 
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'location_id' => false,
             'return_url' => false,
             'subid' => '',
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){
             $return_url = true;
         }
 
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'location_id' => $location_id,
             'return_url' => $return_url
-        ));
+        ]);
 
 
-        return array(
+        return [
             'rows' => $return,
             'subid' => $subid,
-        );
+        ];
 
 
     }

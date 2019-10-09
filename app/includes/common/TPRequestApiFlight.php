@@ -8,7 +8,7 @@
 
 namespace app\includes\common;
 
-use \app\includes\TPPlugin;
+use app\includes\TPPlugin;
 
 class TPRequestApiFlight extends TPRequestApi
 {
@@ -38,25 +38,25 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Функция возвращает самые дешевые авиабилеты
      **/
-    public function get_cheapest( $args = array() ) {
-        $name_method = "***************".__METHOD__."***************";
+    public function get_cheapest( $args = []) {
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
 
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'departure_at' => false,
             'return_at' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if( ! $origin || $origin == '' ) {
@@ -85,26 +85,26 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Функция возвращает билеты без пересадок
      **/
-    public function get_direct( $args = array() ) {
+    public function get_direct( $args = []) {
 
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
 
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'departure_at' => false,
             'return_at' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
@@ -137,22 +137,22 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Функция возвращает популярные направления авиакомпании
      **/
-    public function get_popular( $args = array() ) {
-        $name_method = "***************".__METHOD__."***************";
+    public function get_popular( $args = []) {
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
 
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'airline' => false,
             'limit' => false,
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $airline || empty( $airline ) ) {
             echo $this->get_error('airline');
@@ -174,22 +174,22 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Календарь цен на месяц по маршруту
      **/
-    public function get_price_mounth_calendar($args = array()){
-        $name_method = "***************".__METHOD__."***************";
+    public function get_price_mounth_calendar($args = []){
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
             echo $this->get_error('origin');
@@ -202,10 +202,10 @@ class TPRequestApiFlight extends TPRequestApi
             return false;
         }
         $month = date('Y-m-d');
-        $current_year = date("Y");
-        $current_month = date("m");
-        $current_day = date("d",time());
-        $number_days = date("t", strtotime($current_year . "-" . $current_month . "-01"));
+        $current_year = date('Y');
+        $current_month = date('m');
+        $current_day = date('d',time());
+        $number_days = date('t', strtotime($current_year . '-' . $current_month . '-01'));
         $token = '&token=' .$this->getToken();
         $currency = "currency={$currency}";
         $origin = "&origin={$origin}";
@@ -214,13 +214,13 @@ class TPRequestApiFlight extends TPRequestApi
         $return_two = '';
         if($current_day > ceil($number_days / 2)){
             $type = 1;
-            $month_next = date('Y-m-d', mktime(0, 0, 0, $current_month + $type, 1, date("Y")));
+            $month_next = date('Y-m-d', mktime(0, 0, 0, $current_month + $type, 1, date('Y')));
             $request_string = self::getApiUrl2()."/prices/month-matrix?{$extra}&month={$month_next}{$token}";
             if ($return_url == true){
                 $return_two = '';
                 $return_two = $request_string;
             } else {
-                $return_two = array();
+                $return_two = [];
                 $return_two = $this->objectToArray($this->request($request_string));
             }
 
@@ -232,7 +232,7 @@ class TPRequestApiFlight extends TPRequestApi
         if ($return_url == true){
             return $request_string.' | '.$return_two;
         }
-        $return = array();
+        $return = [];
         $return = $this->objectToArray($this->request($request_string));
         if(is_array($return_two) && is_array($return))
             $return = array_merge($return, $return_two);
@@ -245,25 +245,25 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Функция возвращает Календарь цен на неделю по маршруту
      **/
-    public function get_price_week_calendar($args = array())
+    public function get_price_week_calendar($args = [])
     {
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'depart_date' => date('Y-m-d'),
             'return_date' => date('Y-m-d'),
             'return_url' => false
-        );
+        ];
         extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         if (!$origin || $origin == '') {
             echo $this->get_error('origin');
@@ -275,13 +275,13 @@ class TPRequestApiFlight extends TPRequestApi
             echo $this->get_error('currency');
             return false;
         }
-        $depart_date = "&depart_date=".$depart_date;
-        $return_date = "&return_date=".$return_date;
+        $depart_date = '&depart_date=' .$depart_date;
+        $return_date = '&return_date=' .$return_date;
         if(TPPlugin::$options['shortcodes']['2']['plus_depart_date'] > 0){
-            $depart_date = "&depart_date=".date('Y-m-d', DAY_IN_SECONDS * TPPlugin::$options['shortcodes']['2']['plus_depart_date'] + time());
+            $depart_date = '&depart_date=' .date('Y-m-d', DAY_IN_SECONDS * TPPlugin::$options['shortcodes']['2']['plus_depart_date'] + time());
         }
         if(TPPlugin::$options['shortcodes']['2']['plus_return_date'] > 0){
-            $return_date = "&return_date=".date('Y-m-d', DAY_IN_SECONDS * TPPlugin::$options['shortcodes']['2']['plus_return_date'] + time());
+            $return_date = '&return_date=' .date('Y-m-d', DAY_IN_SECONDS * TPPlugin::$options['shortcodes']['2']['plus_return_date'] + time());
         }
         $token = '&token=' .$this->getToken();
         $currency = "currency={$currency}";
@@ -303,13 +303,13 @@ class TPRequestApiFlight extends TPRequestApi
      * Дешевые авиабилеты на праздничные дни
      * @param array $args
      */
-    public function get_cheap_flights_holidays($args = array()){
+    public function get_cheap_flights_holidays($args = []){
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'return_url' => false
-        );
+        ];
 
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $token = '&token=' .$this->getToken();
@@ -324,22 +324,22 @@ class TPRequestApiFlight extends TPRequestApi
      * Самые дешевый билеты в каждом месяце  Цены на билеты по месяцам
      * @param array $args
      */
-    public function get_cheapest_tickets_each_month($args = array()){
-        $name_method = "***************".__METHOD__."***************";
+    public function get_cheapest_tickets_each_month($args = []){
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
 
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         if( ! $origin || $origin == '' ) {
@@ -358,7 +358,7 @@ class TPRequestApiFlight extends TPRequestApi
         $destination = "&destination={$destination}";
         $extra = $currency.$origin.$destination.$token;
         $request_string = self::getApiUrl()."/prices/monthly?{$extra}";
-        $return = array();
+        $return = [];
         if ($return_url == true){
             return $request_string;
         }
@@ -376,23 +376,23 @@ class TPRequestApiFlight extends TPRequestApi
     /**
      * Функция возвращает Самые дешевый билеты на каждый день месяца
      **/
-    public function get_calendar( $args = array() ) {
-        $name_method = "***************".__METHOD__."***************";
+    public function get_calendar( $args = []) {
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'calendar_type' => 'departure_date',
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if( ! $origin || empty( $origin ) ) {
@@ -404,7 +404,7 @@ class TPRequestApiFlight extends TPRequestApi
         } elseif( !$calendar_type || ! in_array( $calendar_type, $this->calendar_types ) ) {
             echo $this->get_error('calendar_type');
             return false;
-        } elseif( $calendar_type == 'return_date' && ( ! $return_at || empty( $return_at ) ) ) {
+        } elseif( $calendar_type === 'return_date' && ( ! $return_at || empty( $return_at ) ) ) {
             echo $this->get_error('return_at');
             return false;
         }elseif( ! $destination  || $destination  == '' ) {
@@ -433,21 +433,21 @@ class TPRequestApiFlight extends TPRequestApi
      * Популярные направления из города
      * @param array $args
      */
-    public function get_popular_routes_from_city( $args = array() ) {
-        $name_method = "***************".__METHOD__."***************";
+    public function get_popular_routes_from_city( $args = []) {
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'origin' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if( ! $origin || empty( $origin ) ) {
@@ -504,17 +504,17 @@ class TPRequestApiFlight extends TPRequestApi
      * trip_duration
      *      Длительность пребывания в неделях или днях (для period_type=day). false.
      */
-    public function get_latest($args = array()){
-        $name_method = "***************".__METHOD__."***************";
+    public function get_latest($args = []){
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
+        $defaults = [
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'origin' => false,
             'destination' => false,
@@ -527,21 +527,21 @@ class TPRequestApiFlight extends TPRequestApi
             'trip_class' => 0,
             'trip_duration' => false,
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
         $token = '&token=' .$this->getToken();
         $currency  = "currency={$currency}";
-        $origin = ( false !== $origin ) ? "&origin={$origin}" : "";
-        $destination = ( false !== $destination ) ? "&destination={$destination}" : "";
-        $beginning_of_period = ( false !== $beginning_of_period ) ? "&beginning_of_period={$beginning_of_period}" : "";
-        $period_type  = ( false !== $period_type ) ? "&period_type={$period_type}" : "&period_type=year";
-        $one_way  = ( false !== $one_way ) ? "&one_way={$one_way}" : "&one_way=false";
-        $page  = ( false !== $page ) ? "&page={$page}" : "&page=1";
-        $limit  = ( false !== $limit ) ? "&limit={$limit}" : "&limit=100";
-        $sorting  = ( false !== $sorting ) ? "&sorting={$sorting}" : "&sorting=price";
-        $trip_class  = ( false !== $trip_class ) ? "&trip_class={$trip_class}" : "&trip_class=0";
+        $origin = ( false !== $origin ) ? "&origin={$origin}" : '';
+        $destination = ( false !== $destination ) ? "&destination={$destination}" : '';
+        $beginning_of_period = ( false !== $beginning_of_period ) ? "&beginning_of_period={$beginning_of_period}" : '';
+        $period_type  = ( false !== $period_type ) ? "&period_type={$period_type}" : '&period_type=year';
+        $one_way  = ( false !== $one_way ) ? "&one_way={$one_way}" : '&one_way=false';
+        $page  = ( false !== $page ) ? "&page={$page}" : '&page=1';
+        $limit  = ( false !== $limit ) ? "&limit={$limit}" : '&limit=100';
+        $sorting  = ( false !== $sorting ) ? "&sorting={$sorting}" : '&sorting=price';
+        $trip_class  = ( false !== $trip_class ) ? "&trip_class={$trip_class}" : '&trip_class=0';
         $extra = $currency.$origin.$destination.$beginning_of_period.$period_type.$one_way.$page.$limit
-            ."&show_to_affiliates=true".$sorting.$trip_class.$token;
+            . '&show_to_affiliates=true' .$sorting.$trip_class.$token;
         $request_string = self::TP_API_URL_2."/prices/latest?{$extra}";
         //return $request_string;
         //error_log($request_string);

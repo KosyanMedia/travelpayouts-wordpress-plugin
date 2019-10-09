@@ -8,16 +8,16 @@
  */
 namespace app\includes\common;
 
-use \app\includes\TPPlugin;
+use app\includes\TPPlugin;
 
 class TPHostURL
 {
-    const TP_HOST_URL_AIRLINE_LOGO = "https://pics.avs.io/";
-    const TP_HOST_URL_RAILWAY = "";
-    private static $hosts = array(
-        'aviasales.ru' => array(
+    const TP_HOST_URL_AIRLINE_LOGO = 'https://pics.avs.io/';
+    const TP_HOST_URL_RAILWAY = '';
+    private static $hosts = [
+        'aviasales.ru' => [
             'table' => 'hydra.aviasales.ru',//'engine.aviasales.ru',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'hydra.aviasales.ru',
@@ -26,11 +26,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'hydra.aviasales.ru'
-            )
-        ),
-        'jetradar.com' => array(
+            ]
+        ],
+        'jetradar.com' => [
             'table' => 'jetradar.com',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 //3 => 'jetradar.com/new_searches/',
@@ -40,11 +40,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.com/new_searches/'
-            )
-        ),
-        'aviasales.kz' => array(
+            ]
+        ],
+        'aviasales.kz' => [
             'table' => 'aviasales.kz',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'www.aviasales.kz/search/',
@@ -53,11 +53,11 @@ class TPHostURL
                 6 => 'www.aviasales.kz/search/',
                 7 => '',
                 8 => ''
-            )
-        ),
-        'jetradar.com.br' => array(
+            ]
+        ],
+        'jetradar.com.br' => [
             'table' => 'jetradar.com.br',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.com.br/searches/new/',
@@ -66,11 +66,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.com.br/new_searches/'
-            )
-        ),
-        'ca.jetradar.com' => array(
+            ]
+        ],
+        'ca.jetradar.com' => [
             'table' => 'ca.jetradar.com',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'ca.jetradar.com/searches/new/',
@@ -79,11 +79,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'ca.jetradar.com/new_searches/'
-            )
-        ),
-        'jetradar.ch' => array(
+            ]
+        ],
+        'jetradar.ch' => [
             'table' => 'jetradar.ch',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.ch/searches/new/',
@@ -92,11 +92,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.ch/new_searches/'
-            )
-        ),
-        'jetradar.at' => array(
+            ]
+        ],
+        'jetradar.at' => [
             'table' => 'jetradar.at',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.at/searches/new/',
@@ -105,11 +105,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.at/new_searches/'
-            )
-        ),
-        'jetradar.be' => array(
+            ]
+        ],
+        'jetradar.be' => [
             'table' => 'jetradar.be',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.be/searches/new/',
@@ -118,11 +118,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.be/new_searches/'
-            )
-        ),
-        'jetradar.co.nl' => array(
+            ]
+        ],
+        'jetradar.co.nl' => [
             'table' => 'jetradar.co.nl',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.co.nl/searches/new/',
@@ -131,11 +131,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.co.nl/new_searches/'
-            )
-        ),
-        'jetradar.gr' => array(
+            ]
+        ],
+        'jetradar.gr' => [
             'table' => 'jetradar.gr',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.gr/searches/new/',
@@ -144,11 +144,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.gr/new_searches/'
-            )
-        ),
-        'jetradar.com.au' => array(
+            ]
+        ],
+        'jetradar.com.au' => [
             'table' => 'jetradar.com.au',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.com.au/searches/new/',
@@ -157,11 +157,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.com.au/new_searches/'
-            )
-        ),
-        'jetradar.de' => array(
+            ]
+        ],
+        'jetradar.de' => [
             'table' => 'jetradar.de',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.de/searches/new/',
@@ -170,11 +170,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.de/new_searches/'
-            )
-        ),
-        'jetradar.es' => array(
+            ]
+        ],
+        'jetradar.es' => [
             'table' => 'jetradar.es',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.es/searches/new/',
@@ -183,11 +183,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.es/new_searches/'
-            )
-        ),
-        'jetradar.fr' => array(
+            ]
+        ],
+        'jetradar.fr' => [
             'table' => 'jetradar.fr',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.fr/searches/new/',
@@ -196,11 +196,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.fr/new_searches/'
-            )
-        ),
-        'jetradar.it' => array(
+            ]
+        ],
+        'jetradar.it' => [
             'table' => 'jetradar.it',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.it/searches/new/',
@@ -209,11 +209,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.it/new_searches/'
-            )
-        ),
-        'jetradar.pt' => array(
+            ]
+        ],
+        'jetradar.pt' => [
             'table' => 'jetradar.pt',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.pt/searches/new/',
@@ -222,11 +222,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.pt/new_searches/'
-            )
-        ),
-        'ie.jetradar.com' => array(
+            ]
+        ],
+        'ie.jetradar.com' => [
             'table' => 'ie.jetradar.com',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'ie.jetradar.com/searches/new/',
@@ -235,11 +235,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'ie.jetradar.com/new_searches/'
-            )
-        ),
-        'jetradar.co.uk' => array(
+            ]
+        ],
+        'jetradar.co.uk' => [
             'table' => 'jetradar.co.uk',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.co.uk/searches/new/',
@@ -248,11 +248,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.co.uk/new_searches/'
-            )
-        ),
-        'jetradar.hk' => array(
+            ]
+        ],
+        'jetradar.hk' => [
             'table' => 'jetradar.hk',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.hk/searches/new/',
@@ -261,11 +261,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.hk/new_searches/'
-            )
-        ),
-        'jetradar.in' => array(
+            ]
+        ],
+        'jetradar.in' => [
             'table' => 'jetradar.in',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.in/searches/new/',
@@ -274,11 +274,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.in/new_searches/'
-            )
-        ),
-        'jetradar.co.nz' => array(
+            ]
+        ],
+        'jetradar.co.nz' => [
             'table' => 'jetradar.co.nz',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.co.nz/searches/new/',
@@ -287,11 +287,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.co.nz/new_searches/'
-            )
-        ),
-        'jetradar.ph' => array(
+            ]
+        ],
+        'jetradar.ph' => [
             'table' => 'jetradar.ph',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.ph/searches/new/',
@@ -300,11 +300,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.ph/new_searches/'
-            )
-        ),
-        'jetradar.pl' => array(
+            ]
+        ],
+        'jetradar.pl' => [
             'table' => 'jetradar.pl',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.pl/searches/new/',
@@ -313,11 +313,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.pl/new_searches/'
-            )
-        ),
-        'jetradar.sg' => array(
+            ]
+        ],
+        'jetradar.sg' => [
             'table' => 'jetradar.sg',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.sg/searches/new/',
@@ -326,11 +326,11 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.sg/new_searches/'
-            )
-        ),
-        'jetradar.co.th' => array(
+            ]
+        ],
+        'jetradar.co.th' => [
             'table' => 'jetradar.co.th',
-            'widget' => array(
+            'widget' => [
                 1 => '',
                 2 => '',
                 3 => 'jetradar.co.th/searches/new/',
@@ -339,102 +339,102 @@ class TPHostURL
                 6 => '',
                 7 => '',
                 8 => 'jetradar.co.th/new_searches/'
-            )
-        ),
-    );
+            ]
+        ],
+    ];
 
-    private static $hostsHotel = array(
-        'hotellook.ru' => array(
+    private static $hostsHotel = [
+        'hotellook.ru' => [
             'label' => 'hotellook.ru',
             'host' => 'search.hotellook.com',
             'language' => 'ru-RU',
-        ),
-        'hotellook.com&language=en-GB' => array(
+        ],
+        'hotellook.com&language=en-GB' => [
             'label' => 'hotellook.com en-GB',
             'host' => 'search.hotellook.com',
             'language' => 'en-GB',
-        ),
-        'hotellook.com&language=en-US' => array(
+        ],
+        'hotellook.com&language=en-US' => [
             'label' => 'hotellook.com en-US',
             'host' => 'search.hotellook.com',
             'language' => 'en-US',
-        ),
-        'hotellook.com&language=pt-BR' => array(
+        ],
+        'hotellook.com&language=pt-BR' => [
             'label' => 'hotellook.com pt-BR',
             'host' => 'search.hotellook.com',
             'language' => 'pt-BR',
-        ),
-        'hotellook.com&language=pt-PT' => array(
+        ],
+        'hotellook.com&language=pt-PT' => [
             'label' => 'hotellook.com pt-PT',
             'host' => 'search.hotellook.com',
             'language' => 'pt-PT',
-        ),
-        'hotellook.com&language=id-ID' => array(
+        ],
+        'hotellook.com&language=id-ID' => [
             'label' => 'hotellook.com id-ID',
             'host' => 'search.hotellook.com',
             'language' => 'id-ID',
-        ),
-        'hotellook.com&language=fr-FR' => array(
+        ],
+        'hotellook.com&language=fr-FR' => [
             'label' => 'hotellook.com fr-FR',
             'host' => 'search.hotellook.com',
             'language' => 'fr-FR',
-        ),
-        'hotellook.com&language=it-IT' => array(
+        ],
+        'hotellook.com&language=it-IT' => [
             'label' => 'hotellook.com it-IT',
             'host' => 'search.hotellook.com',
             'language' => 'it-IT',
-        ),
-        'hotellook.com&language=de-DE' => array(
+        ],
+        'hotellook.com&language=de-DE' => [
             'label' => 'hotellook.com de-DE',
             'host' => 'search.hotellook.com',
             'language' => 'de-DE',
-        ),
-        'hotellook.com&language=pl-PL' => array(
+        ],
+        'hotellook.com&language=pl-PL' => [
             'label' => 'hotellook.com pl-PL',
             'host' => 'search.hotellook.com',
             'language' => 'pl-PL',
-        ),
-        'hotellook.com&language=es-ES' => array(
+        ],
+        'hotellook.com&language=es-ES' => [
             'label' => 'hotellook.com es-ES',
             'host' => 'search.hotellook.com',
             'language' => 'es-ES',
-        ),
-        'hotellook.com&language=th-TH' => array(
+        ],
+        'hotellook.com&language=th-TH' => [
             'label' => 'hotellook.com th-TH',
             'host' => 'search.hotellook.com',
             'language' => 'th-TH',
-        ),
-        'hotellook.com&language=en-AU' => array(
+        ],
+        'hotellook.com&language=en-AU' => [
             'label' => 'hotellook.com en-AU',
             'host' => 'search.hotellook.com',
             'language' => 'en-AU',
-        ),
-        'hotellook.com&language=en-CA' => array(
+        ],
+        'hotellook.com&language=en-CA' => [
             'label' => 'hotellook.com en-CA',
             'host' => 'search.hotellook.com',
             'language' => 'en-CA',
-        ),
-        'hotellook.com&language=en-IE' => array(
+        ],
+        'hotellook.com&language=en-IE' => [
             'label' => 'hotellook.com en-IE',
             'host' => 'search.hotellook.com',
             'language' => 'en-IE',
-        ),
-    );
+        ],
+    ];
 
     public static function getDefaultHostHotel(){
-        $host = "";
-        $hostData = array(
-            TPLang::getLangRU() => array(
+        $host = '';
+        $hostData = [
+            TPLang::getLangRU() => [
                 'label' => 'hotellook.ru',
                 'host' => 'search.hotellook.com',
                 'language' => 'ru-RU',
-            ),
-            TPLang::getLangEN() =>  array(
+            ],
+            TPLang::getLangEN() =>  [
                 'label' => 'hotellook.com en-GB',
                 'host' => 'search.hotellook.com',
                 'language' => 'en-GB',
-            ),
-        );
+            ],
+        ];
         if (!array_key_exists(TPLang::getLang(), $hostData)){
             $host = $hostData[TPLang::getDefaultLang()];
         } else {
@@ -479,12 +479,12 @@ class TPHostURL
     }
 
     public static function getDefaultHostTable(){
-        $host = "";
-        $hostData = array(
+        $host = '';
+        $hostData = [
             TPLang::getLangRU() => 'https://hydra.aviasales.ru',//'https://engine.aviasales.ru',
             TPLang::getLangEN() => 'https://jetradar.com',
             TPLang::getLangTH() => 'https://jetradar.co.th',
-        );
+        ];
         if (!array_key_exists(TPLang::getLang(), $hostData)){
             $host = $hostData[TPLang::getDefaultLang()];
         } else {
@@ -499,7 +499,7 @@ class TPHostURL
      * @return mixed
      */
     public static function getHostWidget($widget){
-        $host = \app\includes\TPPlugin::$options['local']['host'];
+        $host = TPPlugin::$options['local']['host'];
         if (! $host || empty( $host )){
             $host = self::getDefaultHostTable();
         }
@@ -520,42 +520,42 @@ class TPHostURL
      * @return string
      */
     public static function getHostWidgetWhenEmptyWhiteLabel($widgetType){
-        $host = "";
+        $host = '';
         $hostTable = self::getHostTable();
-        $hostData = array(
-            1 => array(
+        $hostData = [
+            1 => [
                 TPLang::getLangRU() => 'http://map.aviasales.ru',
                 TPLang::getLangEN() => 'http://map.jetradar.com',
-            ),
-            2 => array(
+            ],
+            2 => [
                 TPLang::getLangRU() => 'hotellook.ru',
                 TPLang::getLangEN() => 'hotellook.com',
-            ),
-            3 => array(
+            ],
+            3 => [
                 TPLang::getLangRU() => 'hydra.aviasales.ru',
                 TPLang::getLangEN() => 'hydra.jetradar.com',
-            ),
-            4 => array(
+            ],
+            4 => [
                 TPLang::getLangRU() => 'hydra.aviasales.ru',
                 TPLang::getLangEN() => 'hydra.aviasales.ru',
-            ),
-            5 => array(
+            ],
+            5 => [
                 TPLang::getLangRU() => 'hotellook.ru',
                 TPLang::getLangEN() => 'hotellook.com',
-            ),
-            6 => array(
+            ],
+            6 => [
                 TPLang::getLangRU() => 'hydra.aviasales.ru',
                 TPLang::getLangEN() => 'hydra.aviasales.ru',
-            ),
-            7 => array(
+            ],
+            7 => [
                 TPLang::getLangRU() => 'search.hotellook.com',
                 TPLang::getLangEN() => 'search.hotellook.com',
-            ),
-            8 => array(
+            ],
+            8 => [
                 TPLang::getLangRU() => 'hydra.aviasales.ru',
                 TPLang::getLangEN() => 'www.jetradar.com%2Fsearches%2Fnew',
-            ),
-        );
+            ],
+        ];
 
 
         if ($widgetType === 8 && preg_match('/aviasales.kz$/', $hostTable))
@@ -564,10 +564,10 @@ class TPHostURL
 
         if (!array_key_exists($widgetType, $hostData)) return $host;
 
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData[$widgetType])) {
-            $host = $hostData[$widgetType][\app\includes\common\TPLang::getDefaultLang()];
+        if (!array_key_exists(TPLang::getLang(), $hostData[$widgetType])) {
+            $host = $hostData[$widgetType][TPLang::getDefaultLang()];
         } else {
-            $host = $hostData[$widgetType][\app\includes\common\TPLang::getLang()];
+            $host = $hostData[$widgetType][TPLang::getLang()];
         }
         return $host;
 
@@ -584,24 +584,24 @@ class TPHostURL
      * @return string
      */
     public static function getHostSearchLinkWhenEmptyWhiteLabel($typeLink){
-        $host = "";
-        $hostData = array(
+        $host = '';
+        $hostData = [
             //searches_ticket
-            1 => array(
-                \app\includes\common\TPLang::getLangRU() => "https://hydra.aviasales.ru",
-                \app\includes\common\TPLang::getLangEN() => "https://jetradar.com",
-            ),
+            1 => [
+                TPLang::getLangRU() => 'https://hydra.aviasales.ru',
+                TPLang::getLangEN() => 'https://jetradar.com',
+            ],
             //searches_hotel
-            2 => array(
-                \app\includes\common\TPLang::getLangEN() => "https://search.hotellook.com/",
-            ),
-        );
+            2 => [
+                TPLang::getLangEN() => 'https://search.hotellook.com/',
+            ],
+        ];
         if (!array_key_exists($typeLink, $hostData)) return $host;
 
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $hostData[$typeLink])){
-            $host = $hostData[$typeLink][\app\includes\common\TPLang::getDefaultLang()];
+        if (!array_key_exists(TPLang::getLang(), $hostData[$typeLink])){
+            $host = $hostData[$typeLink][TPLang::getDefaultLang()];
         } else {
-            $host = $hostData[$typeLink][\app\includes\common\TPLang::getLang()];
+            $host = $hostData[$typeLink][TPLang::getLang()];
         }
         return $host;
     }
@@ -610,15 +610,15 @@ class TPHostURL
      * @return mixed|string
      */
     public static function getHostLangParamSearchHotel(){
-        $langParam = "";
-        $langParamData = array(
-            \app\includes\common\TPLang::getLangRU() => "&language=ru-ru",
-            \app\includes\common\TPLang::getLangEN() => "&language=en-us",
-        );
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $langParamData)){
-            $langParam = $langParamData[\app\includes\common\TPLang::getDefaultLang()];
+        $langParam = '';
+        $langParamData = [
+            TPLang::getLangRU() => '&language=ru-ru',
+            TPLang::getLangEN() => '&language=en-us',
+        ];
+        if (!array_key_exists(TPLang::getLang(), $langParamData)){
+            $langParam = $langParamData[TPLang::getDefaultLang()];
         } else {
-            $langParam = $langParamData[\app\includes\common\TPLang::getLang()];
+            $langParam = $langParamData[TPLang::getLang()];
         }
         return $langParam;
     }
@@ -627,32 +627,32 @@ class TPHostURL
      * @return mixed|string
      */
     public static function getDucklettWidgetUrlScript(){
-        $urlDucklett = "";
-        $urlDucklettData = array(
-            \app\includes\common\TPLang::getLangRU() => "//www.travelpayouts.com/ducklett/scripts.js",
-            \app\includes\common\TPLang::getLangEN() => "//www.travelpayouts.com/ducklett/scripts_en.js",
-            \app\includes\common\TPLang::getLangTH() => "//www.travelpayouts.com/ducklett/scripts_th.js",
-        );
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $urlDucklettData)){
-            $urlDucklett = $urlDucklettData[\app\includes\common\TPLang::getDefaultLang()];
+        $urlDucklett = '';
+        $urlDucklettData = [
+            TPLang::getLangRU() => '//www.travelpayouts.com/ducklett/scripts.js',
+            TPLang::getLangEN() => '//www.travelpayouts.com/ducklett/scripts_en.js',
+            TPLang::getLangTH() => '//www.travelpayouts.com/ducklett/scripts_th.js',
+        ];
+        if (!array_key_exists(TPLang::getLang(), $urlDucklettData)){
+            $urlDucklett = $urlDucklettData[TPLang::getDefaultLang()];
         } else {
-            $urlDucklett = $urlDucklettData[\app\includes\common\TPLang::getLang()];
+            $urlDucklett = $urlDucklettData[TPLang::getLang()];
         }
         return $urlDucklett;
 
     }
 
     public static function getHotelSelectWidgetUrlScript(){
-        $urlHotelSelect = "";
-        $urlHotelSelectData = array(
-            \app\includes\common\TPLang::getLangRU() => "//www.travelpayouts.com/blissey/scripts.js",
-            \app\includes\common\TPLang::getLangEN() => "//www.travelpayouts.com/blissey/scripts_en.js",
-            \app\includes\common\TPLang::getLangTH() => "//www.travelpayouts.com/blissey/scripts_th.js",
-        );
-        if (!array_key_exists(\app\includes\common\TPLang::getLang(), $urlHotelSelectData)){
-            $urlHotelSelect = $urlHotelSelectData[\app\includes\common\TPLang::getDefaultLang()];
+        $urlHotelSelect = '';
+        $urlHotelSelectData = [
+            TPLang::getLangRU() => '//www.travelpayouts.com/blissey/scripts.js',
+            TPLang::getLangEN() => '//www.travelpayouts.com/blissey/scripts_en.js',
+            TPLang::getLangTH() => '//www.travelpayouts.com/blissey/scripts_th.js',
+        ];
+        if (!array_key_exists(TPLang::getLang(), $urlHotelSelectData)){
+            $urlHotelSelect = $urlHotelSelectData[TPLang::getDefaultLang()];
         } else {
-            $urlHotelSelect = $urlHotelSelectData[\app\includes\common\TPLang::getLang()];
+            $urlHotelSelect = $urlHotelSelectData[TPLang::getLang()];
         }
         return $urlHotelSelect;
     }

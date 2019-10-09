@@ -1,5 +1,7 @@
 <div id="constructorRailwayShortcodesModal"
-     title="<?php _ex('Railway timetable', 'modal railway сonstructor title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
+     title="<?php use app\includes\TPPlugin;
+
+     _ex('Railway timetable', 'modal railway сonstructor title', TPOPlUGIN_TEXTDOMAIN); ?>" style="display: none;">
     <table>
         <tr id="tr_railway_title">
             <td>
@@ -36,7 +38,7 @@
         <tr id="tr_railway_paginate">
             <td>
                 <input type="checkbox" id="tp_railway_paginate" name="tp_railway_paginate" value="1"
-	                <?php checked(isset(\app\includes\TPPlugin::$options['shortcodes_railway']['1']['paginate_switch']), 1) ?>>
+	                <?php checked(isset(TPPlugin::$options['shortcodes_railway']['1']['paginate_switch']), 1) ?>>
 			    <?php _ex('Paginate',
 				    'modal railway сonstructor paginate label', TPOPlUGIN_TEXTDOMAIN); ?>
             </td>

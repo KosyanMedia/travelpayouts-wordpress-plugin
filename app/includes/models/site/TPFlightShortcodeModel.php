@@ -8,7 +8,7 @@
 
 namespace app\includes\models\site;
 
-use \app\includes\common\TPRequestApiFlight;
+use app\includes\common\TPRequestApiFlight;
 
 abstract class TPFlightShortcodeModel extends TPShortcodesChacheModel
 {

@@ -29,7 +29,7 @@
 
             <div id="tabs-waccount">
                 <?php
-                    $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabAccount.view.php";
+                    $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPWizardTabAccount.view.php';
                     $this->loadView($pathView);
                 ?>
             </div>
@@ -37,7 +37,7 @@
             <div id="tabs-wreg">
                 <div class="TPmainContent TPmainContentWizard">
                 <?php
-                    $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWizardTabReg.view.php";
+                    $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPWizardTabReg.view.php';
                     $this->loadView($pathView);
                 ?>
                 </div>

@@ -8,16 +8,16 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\models\site\TPHotelShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
+use app\includes\models\site\TPHotelShortcodeModel;
+use app\includes\common\TPCurrencyUtils;
 
 class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
 {
 
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'location' => false,
             'check_in' => false,
             'check_out' => false,
@@ -30,9 +30,9 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'limit' => false,
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'location' => $location,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -45,7 +45,7 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'limit' => $limit,
             'currency' => $currency,
             'return_url' => $return_url
-        );
+        ];
 
         /*$cacheKey = "hotel_3_{$location}{$currency}".(int)$return_url;
 
@@ -97,8 +97,8 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
      * @param array $args
      * @return array
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'city' => false,
             'title' => '',
             'paginate' => true,
@@ -114,7 +114,7 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false,
             'subid' => '',
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){
@@ -124,7 +124,7 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
         $check_in = date('Y-m-d');
         $check_out = $this->getCheckOut($day);
 
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'location_id' => $city,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -136,10 +136,10 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'limit' => $number_results,
             'currency' => $currency,
             'return_url' => $return_url,
-        ));
+        ]);
 
 
-        return array(
+        return [
             'rows' => $return,
             'title' => $title,
             'city' => $city,
@@ -157,7 +157,7 @@ class TPCostLivingCityDaysShortcodeModel extends TPHotelShortcodeModel
             'return_url' => $return_url,
             'subid' => $subid,
 
-        );
+        ];
 
 
     }

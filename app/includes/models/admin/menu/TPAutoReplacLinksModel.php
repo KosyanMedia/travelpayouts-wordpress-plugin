@@ -8,12 +8,16 @@
 
 namespace app\includes\models\admin\menu;
 
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
 use app\includes\common\TPUpdateOptions;
+use core\helpers\TPDbHelper;
+use core\models\TPOWPTableInterfaceModel;
+use core\models\TPOWPTableModel;
+use core\TPRequest;
 
-class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
+class TPAutoReplacLinksModel extends TPOWPTableModel implements TPOWPTableInterfaceModel
 {
-    public static $tableName = "tp_auto_replac_links";
+    public static $tableName = 'tp_auto_replac_links';
 
     public function __construct()
     {
@@ -33,7 +37,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         $version = get_option(TPOPlUGIN_TABLE_ARL_VERSION);
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $sql = "CREATE TABLE " . $tableName . "(
+        $sql = 'CREATE TABLE ' . $tableName . '(
                   id int(11) NOT NULL AUTO_INCREMENT,
                   arl_url varchar(255) NOT NULL,
                   arl_anchor text NOT NULL,
@@ -43,7 +47,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
                   arl_target_blank int(11) NOT NULL,
                   date_add int(11) NOT NULL,
                   PRIMARY KEY (id)
-                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;';
         //
         if ($version != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -55,7 +59,7 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
                 dbDelta($sql);
                 if ($data != false) {
                     $rows = [];
-                    foreach ($wpdb->get_col("DESC " . $tableName, 0) as $column_name) {
+                    foreach ($wpdb->get_col('DESC ' . $tableName, 0) as $column_name) {
                         foreach ($data as $key => $values) {
                             $rows[$key][$column_name] = (isset($values[$column_name])) ? $values[$column_name] : '';
                         }
@@ -80,49 +84,57 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
 
     public function insert($data)
     {
-        // TODO: Implement insert() method.
         global $wpdb;
-        $tableName = $wpdb->prefix . self::$tableName;
-        $arl_nofollow = (isset($_POST["arl_nofollow"])) ? 1 : 0;
-        $arl_replace = (isset($_POST["arl_replace"])) ? 1 : 0;
-        $arl_target_blank = (isset($_POST["arl_target_blank"])) ? 1 : 0;
-        $inputData = [
-            'arl_url' => $_POST["arl_url"],
-            'arl_anchor' => $_POST["arl_anchor"],
-            'arl_event' => wp_unslash($_POST["arl_event"]),
-            'arl_nofollow' => $arl_nofollow,
-            'arl_replace' => $arl_replace,
-            'arl_target_blank' => $arl_target_blank,
-            'date_add' => time(),
-        ];
+        $inputData = $this->getInsertOrUpdateData();
 
-        $inputData = TPUpdateOptions::sanitizeLinks($inputData);
-        $inputData = TPUpdateOptions::unescapeOptions($inputData);
-
-        $wpdb->insert($tableName, $inputData);
+        if ($inputData) {
+            $tableName = $wpdb->prefix . self::$tableName;
+            $wpdb->insert($tableName, $inputData);
+        }
     }
 
     public function update($data)
     {
-        // TODO: Implement update() method.
         global $wpdb;
-        $tableName = $wpdb->prefix . self::$tableName;
-        $arl_nofollow = (isset($_POST["arl_nofollow"])) ? 1 : 0;
-        $arl_replace = (isset($_POST["arl_replace"])) ? 1 : 0;
-        $arl_target_blank = (isset($_POST["arl_target_blank"])) ? 1 : 0;
-        $inputData = [
-            'arl_url' => $_POST["arl_url"],
-            'arl_anchor' => $_POST["arl_anchor"],
-            'arl_event' => wp_unslash($_POST["arl_event"]),
-            'arl_nofollow' => $arl_nofollow,
-            'arl_replace' => $arl_replace,
-            'arl_target_blank' => $arl_target_blank,
-            'date_add' => time(),
-        ];
-        $inputData = TPUpdateOptions::sanitizeLinks($inputData);
-        $inputData = TPUpdateOptions::unescapeOptions($inputData);
 
-        $wpdb->update($tableName, $inputData, ['id' => $_POST['link_id']]);
+        $inputData = $this->getInsertOrUpdateData();
+        if ($inputData) {
+            $tableName = $wpdb->prefix . self::$tableName;
+            if ($linkId = TPRequest::post('link_id')) {
+
+                $whereQuery = ['id' => $linkId];
+                $whereFormat = TPDbHelper::getFormat($whereQuery, ['id' => '%d']);
+                $inputDataFormat = TPDbHelper::getFormat($inputData, [
+                    'arl_nofollow' => '%d',
+                    'arl_replace' => '%d',
+                    'arl_target_blank' => '%d',
+                ]);
+                $wpdb->update($tableName, $inputData, $whereQuery, $inputDataFormat, $whereFormat);
+            }
+        }
+
+    }
+
+    protected function getInsertOrUpdateData()
+    {
+        if (
+            TPRequest::post('arl_url') &&
+            TPRequest::post('arl_anchor')
+        ) {
+            $inputData = [
+                'arl_url' => TPRequest::post('arl_url'),
+                'arl_anchor' => TPRequest::post('arl_anchor'),
+                'arl_event' => TPRequest::post('arl_event', ''),
+                'arl_nofollow' => TPRequest::post('arl_nofollow') ? 1 : 0,
+                'arl_replace' => TPRequest::post('arl_replace') ? 1 : 0,
+                'arl_target_blank' => TPRequest::post('arl_target_blank') ? 1 : 0,
+                'date_add' => time(),
+            ];
+            $inputData = TPUpdateOptions::sanitizeLinks($inputData);
+            $inputData = TPUpdateOptions::unescapeOptions($inputData);
+            return $inputData;
+        }
+        return null;
     }
 
     public function deleteAll()
@@ -130,13 +142,10 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         // TODO: Implement deleteAll() method.
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        if (isset($_POST)) {
-            switch ($_POST['type']) {
-                case "arl_link":
-                    foreach ($_POST['id'] as $id) {
-                        $wpdb->query("DELETE FROM " . $tableName . " WHERE id = '" . (int)$id . "'");
-                    }
-                    break;
+        if (TPRequest::post('type') === 'arl_link' && $itemsIdList = TpRequest::post('id')) {
+            foreach ($itemsIdList as $id) {
+                $query = $wpdb->prepare("DELETE FROM {$tableName} WHERE id = %s", [$id]);
+                $wpdb->query($query);
             }
         }
     }
@@ -145,12 +154,14 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $data = $wpdb->get_results("SELECT * FROM " . $tableName . " WHERE id IN ({$arrayId})", ARRAY_A);
-        if (TpPluginHelper::count($data) > 0) {
-            $dataResult = $this->getDataAutoReplacLinks($data);
-            return $dataResult;
-        }
-        return false;
+
+        $query = $wpdb->prepare("SELECT * FROM {$tableName} WHERE id IN (%s)", [$arrayId]);
+        $data = $wpdb->get_results($query, ARRAY_A);
+
+
+        return TpPluginHelper::count($data) > 0
+            ? $this->getDataAutoReplacLinks($data)
+            : false;
     }
 
 
@@ -158,12 +169,14 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        if (isset($_POST) && isset($_POST['value'])) {
+        if ($postValue = TPRequest::post('value')) {
             //error_log(print_r($_POST, true));
             //$csv = array_map('str_getcsv', $_POST['value']);
             //error_log(print_r($csv, true));
-            foreach ($_POST['value'] as $key => $value) {
-                if ($key == 0) continue;
+            foreach ($postValue as $key => $value) {
+                if ($key == 0) {
+                    continue;
+                }
                 $inputData = [
                     'arl_url' => (isset($value[0])) ? $value[0] : '',
                     'arl_anchor' => (isset($value[1])) ? $value[1] : '',
@@ -189,7 +202,9 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         // TODO: Implement deleteId() method.
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $wpdb->query("DELETE FROM " . $tableName . " WHERE id = '" . $id . "'");
+        $query = $wpdb->prepare("DELETE FROM {$tableName} WHERE id = %s", [$id]);
+
+        $wpdb->query($query);
     }
 
     public function query()
@@ -202,9 +217,12 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $data = $wpdb->get_results("SELECT * FROM " . $tableName . " ORDER BY date_add DESC", ARRAY_A);
-        if (TpPluginHelper::count($data) > 0) return $data;
-        return false;
+
+        $data = $wpdb->get_results('SELECT * FROM ' . $tableName . ' ORDER BY date_add DESC', ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
 
     public function get_data()
@@ -212,9 +230,11 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
         // TODO: Implement get_data() method.
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $data = $wpdb->get_results("SELECT * FROM " . $tableName . " ORDER BY date_add DESC", ARRAY_A);
-        if (TpPluginHelper::count($data) > 0) return $data;
-        return false;
+        $data = $wpdb->get_results('SELECT * FROM ' . $tableName . ' ORDER BY date_add DESC', ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
 
     /**
@@ -222,15 +242,19 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
      */
     public function getDataAutoReplacLinks($data = false)
     {
-        if ($data == false) $data = $this->get_data();
-        if ($data == false) return false;
+        if ($data == false) {
+            $data = $this->get_data();
+        }
+        if ($data == false) {
+            return false;
+        }
         $dataResult = [];
         foreach ($data as $item) {
             $dataResult[$item['id']]['data']['url'] = $item['arl_url'];
             $dataResult[$item['id']]['data']['nofollow'] = ($item['arl_nofollow'] == 1) ? 'rel="nofollow"' : '';
             $dataResult[$item['id']]['data']['target'] = ($item['arl_target_blank'] == 1) ? 'target="_blank"' : '';
             $dataResult[$item['id']]['data']['replace'] = $item['arl_replace'];
-            $dataResult[$item['id']]['anchor'] = explode(",", trim(str_replace(["\r\n", "\r", "\n"], '', $item['arl_anchor']), ','));
+            $dataResult[$item['id']]['anchor'] = explode(',', trim(str_replace(["\r\n", "\r", "\n"], '', $item['arl_anchor']), ','));
             $dataResult[$item['id']]['data']['event'] = (!empty($item['arl_event'])) ? 'onclick="' . $item['arl_event'] . '"' : '';
         }
         return $dataResult;
@@ -245,9 +269,11 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $data = $wpdb->get_row("SELECT * FROM " . $tableName . " WHERE id= " . $id, ARRAY_A);
-        if (TpPluginHelper::count($data) > 0) return $data;
-        return false;
+        $data = $wpdb->get_row('SELECT * FROM ' . $tableName . ' WHERE id= ' . $id, ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
 
     /**
@@ -257,17 +283,8 @@ class TPAutoReplacLinksModel extends \core\models\TPOWPTableModel implements \co
     {
         global $wpdb;
         $tableName = $wpdb->prefix . self::$tableName;
-        $next_id = $wpdb->get_var("SELECT MAX(id) FROM " . $tableName);
+        $next_id = $wpdb->get_var('SELECT MAX(id) FROM ' . $tableName);
         $next_id++;
         return $next_id;
     }
 }
-/*if($data != false){
-                    foreach($data as $values){
-                        /*$sql_insert = "INSERT IGNORE INTO ".$tableName
-                                      ." (".implode(", ", array_keys($values)).")"
-                                      ." VALUES ('".implode("', '", array_values($values))."')";
-                        error_log($sql_insert);*
-                        //$wpdb->query($sql_insert);
-                    }
-                }*/

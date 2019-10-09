@@ -10,42 +10,42 @@ namespace app\includes\models\site\shortcodes\railway;
 
 use app\includes\common\TPAutocompleteReplace;
 use app\includes\models\site\TPRailwayShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
-use \app\includes\common\TPLang;
+use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPLang;
 use app\includes\TPPlugin;
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
 
 class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 
-	public function get_data( $args = array() ) {
+	public function get_data( $args = []) {
 		// TODO: Implement get_data() method.
-		$defaults = array(
+		$defaults = [
 			'origin' => false,
 			'destination' => false,
 			'currency' => TPCurrencyUtils::getDefaultCurrency(),
 			'return_url' => false,
 			'language' => TPLang::getLang(),
 			'shortcode' => 1,
-		);
+        ];
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-		$attr = array(
+		$attr = [
 			'origin' => $origin,
 			'destination' => $destination,
 			'currency' => $currency,
 			'return_url' => $return_url,
 			'language' => $language,
 			'shortcode' => $shortcode,
-		);
+        ];
 
 		$cacheKey = "railway_1_tutu_{$origin}_{$destination}_{$shortcode}";
 
 		if($this->cacheSecund() && $return_url == false){
 			if ( false === ($rows = get_transient($this->cacheKey($cacheKey, '', $widget)))) {
 				$return = self::$TPRequestApi->getTutu($attr);
-				$rows = array();
+				$rows = [];
 				$cacheSecund = 0;
 				if( ! $return ) {
-					$rows = array();
+					$rows = [];
 					$cacheSecund = $this->cacheEmptySecund();
 				} else {
 					$rows = $return;
@@ -62,7 +62,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 				return false;
 			}
 			if ($return_url == false){
-				$rows = array();
+				$rows = [];
 				$rows = array_shift($rows);
 				$rows = $this->setStation($rows);
 			}
@@ -73,7 +73,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 	}
 
 	public function setStation($rows){
-        if (!is_array($rows) || TpPluginHelper::count($rows) < 1) return array();
+        if (!is_array($rows) || TpPluginHelper::count($rows) < 1) return [];
 
 		foreach ($rows as $key => $row){
 			if (array_key_exists('departureStation', $row)) {
@@ -97,7 +97,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 		return $rows;
 	}
 
-	public function getDataTable($args = array()){
+	public function getDataTable($args = []){
 		/**
 		 * Откуда
 		 * Куда
@@ -106,7 +106,7 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 		 * Убрать заголовок
 		 * Дополнительный маркер
 		 */
-		$defaults = array(
+		$defaults = [
 			'origin' => false,
 			'destination' => false,
 			'title' => '',
@@ -117,12 +117,12 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'return_url' => false,
 			'language' => TPLang::getLang(),
             'widget' => 0
-		);
+        ];
 		extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 		if ($return_url == 1){
 			$return_url = true;
 		}
-		$return = $this->get_data(array(
+		$return = $this->get_data([
 			'origin' => $origin,
 			'destination' => $destination,
 			'currency' => $currency,
@@ -130,12 +130,12 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'language' => $language,
 			'shortcode' => 1,
             'widget' => $widget
-		));
+        ]);
 		$originTitle = '';
 		$destinationTitle = '';
 		$originTitle = TPAutocompleteReplace::replaceNumberRailway($origin);
 		$destinationTitle = TPAutocompleteReplace::replaceNumberRailway($destination);
-		return array(
+		return [
 			'rows' => $return,
 			'origin' => $origin,
 			'destination' => $destination,
@@ -149,6 +149,6 @@ class TPTutuShortcodeModel extends TPRailwayShortcodeModel {
 			'return_url' => $return_url,
 			'language' => $language,
 			'shortcode' => 1,
-		);
+        ];
 	}
 }

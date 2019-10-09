@@ -7,16 +7,18 @@
  * Time: 11:02
  */
 namespace app\includes\controllers\admin;
-class TPModalAdminNoticeController extends \core\controllers\TPOBaseController
+use core\controllers\TPOBaseController;
+
+class TPModalAdminNoticeController extends TPOBaseController
 {
     public function __construct(){
-        add_action( 'wp_footer',    array( &$this, 'render' ) );
-        add_action( 'admin_footer', array( &$this, 'render' ) );
+        add_action( 'wp_footer',    [&$this, 'render']);
+        add_action( 'admin_footer', [&$this, 'render']);
     }
 
     public function render()
     {
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/TPModalAdminNotice.view.php";
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/TPModalAdminNotice.view.php';
         parent::loadView($pathView);
     }
 }

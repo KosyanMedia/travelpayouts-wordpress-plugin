@@ -18,10 +18,10 @@ class TPRailwayTablesWidget extends WP_Widget{
 			_x('Travelpayouts – Railways schedule',
                 'Travelpayouts – Railways schedule Widget',
                 TPOPlUGIN_TEXTDOMAIN), // Name
-			array(
+			[
 				'description' => __('Travelpayouts – Railways schedule',
                     'Travelpayouts – Railways schedule Widget', TPOPlUGIN_TEXTDOMAIN)
-			) // Args
+            ] // Args
 		);
 	}
 
@@ -191,7 +191,7 @@ class TPRailwayTablesWidget extends WP_Widget{
 	 */
 	public function getCode($data){
 		if (empty($data)) return '';
-		$dataCode = array();
+		$dataCode = [];
 		preg_match('/\[(.+)\]/', $data, $dataCode);
 		$code = '';
 		if (array_key_exists(1, $dataCode)){

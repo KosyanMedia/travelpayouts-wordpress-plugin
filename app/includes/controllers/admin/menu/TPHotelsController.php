@@ -10,7 +10,7 @@ namespace app\includes\controllers\admin\menu;
 
 use app\includes\common\TPThemes;
 use app\includes\models\admin\menu\TPHotelsModel;
-use \core\controllers\TPOAdminMenuController;
+use core\controllers\TPOAdminMenuController;
 
 class TPHotelsController extends TPOAdminMenuController
 {
@@ -28,17 +28,17 @@ class TPHotelsController extends TPOAdminMenuController
             _x('Hotels',  'admin menu menu title hotels', TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_hotels',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
     }
 
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPHotels.view.php";
-        $data = array(
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPHotels.view.php';
+        $data = [
             'themes' => TPThemes::getThemesTables()
-        );
+        ];
 
         parent::loadView($pathView, 0, $data);
     }

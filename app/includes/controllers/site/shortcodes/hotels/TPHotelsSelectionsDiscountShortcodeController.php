@@ -11,8 +11,8 @@
 
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-use \app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsDiscountShortcodeModel;
 use app\includes\views\site\shortcodes\TPHotelShortcodeView;
 
 class TPHotelsSelectionsDiscountShortcodeController extends TPShortcodesController
@@ -30,19 +30,19 @@ class TPHotelsSelectionsDiscountShortcodeController extends TPShortcodesControll
     {
         // TODO: Implement initShortcode() method.
         // Подборка отелей - Скидки
-        add_shortcode( 'tp_hotels_selections_discount_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_hotels_selections_discount_shortcodes', [&$this, 'actionTable']);
     }
 
     /**
      *
      * @param array $args
      */
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
         $data = $this->model->getDataTable($args);
 
         if ($data['return_url'] == true){
-            return var_dump("<pre>", $data, "</pre>");
+            return var_dump('<pre>', $data, '</pre>');
         }
         return $this->view->renderTable($data);
 

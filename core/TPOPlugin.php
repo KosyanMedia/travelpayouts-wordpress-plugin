@@ -11,8 +11,7 @@ abstract class TPOPlugin {
     private function __clone() {}
     public static function deleteCacheAll(){
         global $wpdb;
-        $cacheKey = '';
-        $cacheKey = strtolower ( TPOPlUGIN_NAME."_");
+        $cacheKey = strtolower ( TPOPlUGIN_NAME. '_');
         $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE ('_transient%{$cacheKey}%')");
     }
 

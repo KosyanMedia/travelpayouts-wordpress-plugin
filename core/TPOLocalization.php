@@ -1,14 +1,14 @@
 <?php
 namespace core;
 class TPOLocalization {
-    protected static $isLocalization = array(
+    protected static $isLocalization = [
         'en_US',
         'ru_RU',
         'it_IT'
-    );
+    ];
     const TPO_DEFAULT_LOCALIZATION = 'en_US';
     public function __construct(){
-        add_action('plugins_loaded', array(&$this, 'localization'));
+        add_action('plugins_loaded', [&$this, 'localization']);
         //add_action('init', array(&$this, 'localization'));
 
     }

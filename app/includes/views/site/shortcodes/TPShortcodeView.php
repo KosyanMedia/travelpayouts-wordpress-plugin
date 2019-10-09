@@ -12,17 +12,19 @@ use app\includes\common\TPCurrencyUtils;
 use app\includes\common\TPOption;
 use app\includes\common\TPSearchFormEmptyTable;
 
-use \app\includes\TPPlugin;
-use \app\includes\common\TPLang;
-use \app\includes\common\TPHostURL;
-use \app\includes\common\TPAutocompleteReplace;
-use \app\includes\common\TPFieldsLabelTable;
-use \app\includes\common\TpPluginHelper;
+use app\includes\TPPlugin;
+use app\includes\common\TPLang;
+use app\includes\common\TPHostURL;
+use app\includes\common\TPAutocompleteReplace;
+use app\includes\common\TPFieldsLabelTable;
+use app\includes\common\TpPluginHelper;
+use core\TPRequest;
 
-class TPShortcodeView {
+class TPShortcodeView
+{
     public function __construct()
     {
-        add_action('wp', array(&$this, 'redirect_plugins'));
+        add_action('wp', [&$this, 'redirect_plugins']);
     }
 
 
@@ -30,9 +32,10 @@ class TPShortcodeView {
      * @param array $args
      * @return bool|string
      */
-    public function renderTable($args = array()) {
-        $defaults = array(
-            'rows' => array(),
+    public function renderTable($args = [])
+    {
+        $defaults = [
+            'rows' => [],
             'type' => null,
             'origin' => '',
             'destination' => '',
@@ -47,33 +50,33 @@ class TPShortcodeView {
             'subid' => '',
             'currency' => TPPlugin::$options['local']['currency'],
             'host' => ''
-        );
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        ];
+        extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         //error_log('currency = '.$currency);
         $html = '';
 
         //error_log(count($rows).' type = '.$type);
-        if(TpPluginHelper::count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
+        if (TpPluginHelper::count($rows) < 1 || $rows == false) return $this->renderViewIfEmptyTable($type, $one_way, $rows, $origin_iata, $destination_iata,
             $origin, $destination, $limit, $subid, $currency);
 
-        if($one_way === 'false'){
+        if ($one_way === 'false') {
             $sort_column = TPPlugin::$options['shortcodes'][$type]['sort_column'];
-        }else{
+        } else {
             $sort_column = TPPlugin::$options['shortcodes'][$type]['sort_column'];
-            if($sort_column == TpPluginHelper::count($this->getSelectField($type)) - 1){
+            if ($sort_column == TpPluginHelper::count($this->getSelectField($type)) - 1) {
                 --$sort_column;
             }
         }
         //error_log('$paginate = '.$paginate);
         //error_log('$rows count = '.count($rows));
         $html .= '<div class="TP-Plugin-Tables_wrapper clearfix">
-                    '.$this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline).'
+                    ' . $this->renderTitleTable($off_title, $title, $type, $origin, $destination, $airline) . '
                     <table class="TPTableShortcode TP-Plugin-Tables_box  TP-rwd-table TP-rwd-table-avio"
-                        data-paginate="'.$paginate.'"
-                        data-paginate_limit="'.TPPlugin::$options['shortcodes'][$type]['paginate'].'"
-                        data-sort_column="'.$sort_column.'">
-                        '.$this->renderHeadTable($type, $one_way).'
-                        '.$this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host).'
+                        data-paginate="' . $paginate . '"
+                        data-paginate_limit="' . TPPlugin::$options['shortcodes'][$type]['paginate'] . '"
+                        data-sort_column="' . $sort_column . '">
+                        ' . $this->renderHeadTable($type, $one_way) . '
+                        ' . $this->renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host) . '
                     </table>
                 </div>';
         return $html;
@@ -88,43 +91,44 @@ class TPShortcodeView {
      * @param $airline
      * @return mixed
      */
-    public function renderTitleTable($off_title, $title, $type, $origin, $destination, $airline){
-        if($off_title !== 'true'){
-            if(empty($title)) {
-                if(isset(TPPlugin::$options['shortcodes'][$type]['title'][TPLang::getLang()])){
+    public function renderTitleTable($off_title, $title, $type, $origin, $destination, $airline)
+    {
+        if ($off_title !== 'true') {
+            if (empty($title)) {
+                if (isset(TPPlugin::$options['shortcodes'][$type]['title'][TPLang::getLang()])) {
                     $title = TPPlugin::$options['shortcodes'][$type]['title'][TPLang::getLang()];
-                }else{
+                } else {
                     $title = TPPlugin::$options['shortcodes'][$type]['title'][TPLang::getDefaultLang()];
                 }
                 //$title = TPPlugin::$options['shortcodes'][$type]['title'][$this->local];
-                if(TPPlugin::$options['local']['title_case']['destination'] === 'vi'){
+                if (TPPlugin::$options['local']['title_case']['destination'] === 'vi') {
                     $title = str_replace('в destination', 'destination', $title);
                 }
             }
-            if(!empty($title)){
-                if(empty($airline)){
-                    if (TPLang::getLang() === 'ru'){
-                        if(strpos($title, 'origin') !== false){
-                            $title = str_replace('origin', '<span data-title-case-origin-iata="'.$origin.'">'.$origin.'</span>' , $title);
+            if (!empty($title)) {
+                if (empty($airline)) {
+                    if (TPLang::getLang() === 'ru') {
+                        if (strpos($title, 'origin') !== false) {
+                            $title = str_replace('origin', '<span data-title-case-origin-iata="' . $origin . '">' . $origin . '</span>', $title);
                         }
-                        if(strpos($title, 'destination') !== false){
-                            $title = str_replace('destination', '<span data-title-case-destination-iata="'.$destination.'">'.$destination.'</span>', $title);
+                        if (strpos($title, 'destination') !== false) {
+                            $title = str_replace('destination', '<span data-title-case-destination-iata="' . $destination . '">' . $destination . '</span>', $title);
                         }
                     } else {
-                        if(strpos($title, 'origin') !== false){
-                            $title = str_replace('origin', '<span data-city-iata="'.$origin.'">'.$origin.'</span>' , $title);
+                        if (strpos($title, 'origin') !== false) {
+                            $title = str_replace('origin', '<span data-city-iata="' . $origin . '">' . $origin . '</span>', $title);
                         }
-                        if(strpos($title, 'destination') !== false){
-                            $title = str_replace('destination', '<span data-city-iata="'.$destination.'">'.$destination.'</span>', $title);
+                        if (strpos($title, 'destination') !== false) {
+                            $title = str_replace('destination', '<span data-city-iata="' . $destination . '">' . $destination . '</span>', $title);
                         }
                     }
-                }else{
-                    if(strpos($title, 'airline') !== false){
-                        $title = str_replace('airline', '<span data-airline-iata="'.$airline.'">'.$airline.'</span>' , $title);
+                } else {
+                    if (strpos($title, 'airline') !== false) {
+                        $title = str_replace('airline', '<span data-airline-iata="' . $airline . '">' . $airline . '</span>', $title);
                     }
                 }
             }
-            return '<'.TPPlugin::$options['shortcodes'][$type]['tag'].' class="TP-TitleTables">'.$title.'</'.TPPlugin::$options['shortcodes'][$type]['tag'].'>';
+            return '<' . TPPlugin::$options['shortcodes'][$type]['tag'] . ' class="TP-TitleTables">' . $title . '</' . TPPlugin::$options['shortcodes'][$type]['tag'] . '>';
         }
         return '';
 
@@ -137,86 +141,88 @@ class TPShortcodeView {
     public function getTableTheadTDFieldLabel($fieldKey)
     {
         $fieldLabel = '';
-        if(isset(TPPlugin::$options['local']['fields'][TPLang::getLang()]['label'][$fieldKey])){
+        if (isset(TPPlugin::$options['local']['fields'][TPLang::getLang()]['label'][$fieldKey])) {
             $fieldLabel = TPPlugin::$options['local']['fields'][TPLang::getLang()]['label'][$fieldKey];
-        }else{
+        } else {
             $fieldLabel = TPPlugin::$options['local']['fields'][TPLang::getDefaultLang()]['label'][$fieldKey];
         }
         return $fieldLabel;
     }
+
     /**
      * @param $type
      * @return string
      */
-    public function renderHeadTable($type, $one_way){
+    public function renderHeadTable($type, $one_way)
+    {
 
         $headTable = '';
 
         $headTable .= '<thead class="TP-Plugin-Tables_box_thead"><tr>';
-        foreach($this->getSelectField($type) as $key=>$selected_field){
-            switch($selected_field) {
+        foreach ($this->getSelectField($type) as $key => $selected_field) {
+            switch ($selected_field) {
                 //Дата вылета
                 case 'departure_at':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-date-column">' .
                         //TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 //Дата возвращения
                 case 'return_at':
-                    if($one_way === 'false'){
-                        $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-date-column">' .
+                    if ($one_way === 'false') {
+                        $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-date-column">' .
                             //TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                             $this->getTableTheadTDFieldLabel($selected_field)
-                            .'<i class="TP-sort-chevron fa"></i>'
-                            .' </td>';
+                            . '<i class="TP-sort-chevron fa"></i>'
+                            . ' </td>';
                     }
 
                     break;
                 //Дата поиска
                 case 'found_at':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-found-column">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-found-column">' .
                         //TPPlugin::$options['local']['fields'][$this->local]['label'][$selected_field]
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 case 'price':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-price-column">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 case 'place':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 case 'direction':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 case 'airline_logo':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-airline_logo-column">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-airline_logo-column">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 case 'button':
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead tp-price-column">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead tp-price-column">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
                 default:
-                    $headTable .= '<td class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).' TPTableHead">' .
+                    $headTable .= '<td class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . ' TPTableHead">' .
                         $this->getTableTheadTDFieldLabel($selected_field)
-                        .'<i class="TP-sort-chevron fa"></i>'
-                        .' </td>';
+                        . '<i class="TP-sort-chevron fa"></i>'
+                        . ' </td>';
                     break;
             }
         }
@@ -230,86 +236,87 @@ class TPShortcodeView {
      * @param $rows
      * @return string
      */
-    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host){
+    public function renderBodyTable($type, $one_way, $rows, $origin_iata, $destination_iata, $origin, $destination, $limit, $subid, $currency, $host)
+    {
         //error_log("renderBodyTable subid = ".$subid);
-        if(!empty($subid)){
+        if (!empty($subid)) {
             $subid = trim($subid);
             $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
             //error_log($subid);
         }
         $delimiter = '';
-        if($one_way === 'false'){
+        if ($one_way === 'false') {
             $delimiter = ' &#8596 ';
-        }else {
+        } else {
             $delimiter = ' &#8594 ';
         }
         $bodyTable = '';
         $bodyTable .= '<tbody>';
         $count_row = 0;
-        foreach($rows as $key_row => $row){
+        foreach ($rows as $key_row => $row) {
             $count_row++;
             $bodyTable .= '<tr>';
             $count = 0;
-            foreach($this->getSelectField($type) as $key=>$selected_field){
+            foreach ($this->getSelectField($type) as $key => $selected_field) {
                 $count++;
                 // get Url
-                switch($type){
+                switch ($type) {
                     case 1:
-                        $urlLink = $this->getUrlTable(array(
+                        $urlLink = $this->getUrlTable([
                             'origin' => $origin_iata,
                             'destination' => $destination_iata,
-                            'departure_at' => isset($row['depart_date'])? $row['depart_date'] : '',
+                            'departure_at' => isset($row['depart_date']) ? $row['depart_date'] : '',
                             //'return_at' => (isset($row['return_date'])? $row['return_date'] : ''),
-                            'price' => number_format((isset($row['value'])? $row['value'] : 0), 0, '.', ' '),
+                            'price' => number_format((isset($row['value']) ? $row['value'] : 0), 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ) );
+                        ]);
                         break;
                     case 2:
-                        $urlLink = $this->getUrlTable(array(
+                        $urlLink = $this->getUrlTable([
                             'origin' => $origin_iata,
                             'destination' => $destination_iata,
-                            'departure_at' => isset($row['depart_date'])? $row['depart_date'] : '',
-                            'return_at' => isset($row['return_date'])? $row['return_date'] : '',
-                            'price' => number_format((isset($row['value'])? $row['value'] : 0), 0, '.', ' '),
+                            'departure_at' => isset($row['depart_date']) ? $row['depart_date'] : '',
+                            'return_at' => isset($row['return_date']) ? $row['return_date'] : '',
+                            'price' => number_format((isset($row['value']) ? $row['value'] : 0), 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ));
+                        ]);
                         break;
                     case 8:
-                        $citys = explode( '-', $key_row );
-                        $urlLink = $this->getUrlTable(array(
+                        $citys = explode('-', $key_row);
+                        $urlLink = $this->getUrlTable([
                             'origin' => $origin_iata,
                             'destination' => $key_row,
-                            'departure_at' => isset($row['departure_at'])? $row['departure_at'] : '',
-                            'return_at' => isset($row['return_at'])? $row['return_at'] : '',
-                            'price' => number_format((isset($row['price'])? $row['price'] : 0), 0, '.', ' '),
+                            'departure_at' => isset($row['departure_at']) ? $row['departure_at'] : '',
+                            'return_at' => isset($row['return_at']) ? $row['return_at'] : '',
+                            'price' => number_format((isset($row['price']) ? $row['price'] : 0), 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ) );
+                        ]);
                         break;
                     case 9:
-                        $urlLink = $this->getUrlTable(array(
+                        $urlLink = $this->getUrlTable([
                             'origin' => $origin_iata,
-                            'destination' => isset($row['destination_iata'])? $row['destination_iata'] : '',
-                            'departure_at' => isset($row['departure_at'])? $row['departure_at'] : '',
-                            'return_at' => isset($row['return_at'])? $row['return_at'] : '',
-                            'price' => number_format((isset($row['price'])? $row['price'] : 0), 0, '.', ' '),
+                            'destination' => isset($row['destination_iata']) ? $row['destination_iata'] : '',
+                            'departure_at' => isset($row['departure_at']) ? $row['departure_at'] : '',
+                            'return_at' => isset($row['return_at']) ? $row['return_at'] : '',
+                            'price' => number_format((isset($row['price']) ? $row['price'] : 0), 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ));
+                        ]);
                         break;
                     case 10:
-                        $citys = explode( '-', $key_row );
-                        $urlLink = $this->getUrlTable(array(
+                        $citys = explode('-', $key_row);
+                        $urlLink = $this->getUrlTable([
                             'origin' => $citys[0],
                             'destination' => $citys[1],
                             'departure_at' => date('Y-m-d', time() + DAY_IN_SECONDS),
@@ -318,78 +325,78 @@ class TPShortcodeView {
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ));
+                        ]);
                         break;
                     case 12:
                     case 13:
                     case 14:
-                        $urlLink = $this->getUrlTable(array(
-                            'origin' => isset($row['origin_iata'])? $row['origin_iata'] : '',
-                            'destination' => isset($row['destination_iata'])? $row['destination_iata'] : '',
-                            'departure_at' => isset($row['depart_date'])? $row['depart_date'] : '',
-                            'return_at' => isset($row['return_date'])? $row['return_date'] : '',
-                            'price' => number_format((isset($row['value'])? $row['value'] : 0), 0, '.', ' '),
+                        $urlLink = $this->getUrlTable([
+                            'origin' => isset($row['origin_iata']) ? $row['origin_iata'] : '',
+                            'destination' => isset($row['destination_iata']) ? $row['destination_iata'] : '',
+                            'departure_at' => isset($row['depart_date']) ? $row['depart_date'] : '',
+                            'return_at' => isset($row['return_date']) ? $row['return_date'] : '',
+                            'price' => number_format((isset($row['value']) ? $row['value'] : 0), 0, '.', ' '),
                             'type' => $type,
-                            'one_way' =>  '&one_way='.$one_way,
+                            'one_way' => '&one_way=' . $one_way,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ));
+                        ]);
                         break;
                     default:
-                        $urlLink = $this->getUrlTable(array(
+                        $urlLink = $this->getUrlTable([
                             'origin' => $origin_iata,
                             'destination' => $destination_iata,
-                            'departure_at' => isset($row['departure_at'])? $row['departure_at'] : '',
-                            'return_at' => isset($row['return_at'])? $row['return_at'] : '',
-                            'price' => number_format((isset($row['price'])? $row['price'] : 0), 0, '.', ' '),
+                            'departure_at' => isset($row['departure_at']) ? $row['departure_at'] : '',
+                            'return_at' => isset($row['return_at']) ? $row['return_at'] : '',
+                            'price' => number_format((isset($row['price']) ? $row['price'] : 0), 0, '.', ' '),
                             'type' => $type,
                             'subid' => $subid,
                             'currency' => $currency,
                             'host' => $host
-                        ));
+                        ]);
                 }
                 // get Price
                 $price = '';
-                if($type != 10){
+                if ($type != 10) {
 
-                    switch($type) {
+                    switch ($type) {
                         case 1:
                         case 2:
                         case 12:
                         case 13:
                         case 14:
-                            $price = (isset($row['value'])? $row['value'] : '');
+                            $price = (isset($row['value']) ? $row['value'] : '');
                             break;
                         default:
-                            $price = (isset($row['price'])? $row['price'] : '');
+                            $price = (isset($row['price']) ? $row['price'] : '');
                     }
                 }
 
 
                 //Td
-                switch($selected_field){
+                switch ($selected_field) {
                     //Номер рейса
                     case 'flight_number':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
-                                (isset($row['airline_iata'])? $row['airline_iata'] : '').' '. $row[$selected_field],
-                                $type, $count, $price, 0, $currency).'
+                                (isset($row['airline_iata']) ? $row['airline_iata'] : '') . ' ' . $row[$selected_field],
+                                $type, $count, $price, 0, $currency) . '
                             </p></td>';
                         break;
                     //Рейс
                     case 'flight':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
-                                (isset($row['airline'])? $row['airline'] : '')
-                                .' ('. (isset($row['airline_iata'])? $row['airline_iata'] : '').' '.(isset($row['flight_number'])? $row['flight_number'] : '').')',
-                                $type, $count, $price, 0, $currency).'
+                                (isset($row['airline']) ? $row['airline'] : '')
+                                . ' (' . (isset($row['airline_iata']) ? $row['airline_iata'] : '') . ' ' . (isset($row['flight_number']) ? $row['flight_number'] : '') . ')',
+                                $type, $count, $price, 0, $currency) . '
                             </p>
                             </td>';
                         /*
@@ -403,27 +410,27 @@ class TPShortcodeView {
                         break;
                     //Дата вылета
                     case 'departure_at':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">';
-                        switch($type) {
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">';
+                        switch ($type) {
                             case 1:
                             case 2:
                             case 12:
                             case 13:
                             case 14:
-                                $bodyTable .=  '<p data-tptime="'.strtotime(  (isset($row['depart_date'])? $row['depart_date'] : '')  ).'" class="TP-tdContent">';
+                                $bodyTable .= '<p data-tptime="' . strtotime((isset($row['depart_date']) ? $row['depart_date'] : '')) . '" class="TP-tdContent">';
                                 $bodyTable .= $this->getTextTdTable(
                                     $urlLink,
-                                    $this->tpDate(strtotime(  (isset($row['depart_date'])? $row['depart_date'] : '') )),
+                                    $this->tpDate(strtotime((isset($row['depart_date']) ? $row['depart_date'] : ''))),
                                     $type, $count, $price, 0, $currency);
                                 $bodyTable .= '</p>';
                                 break;
                             default:
-                                $bodyTable .= '<p data-tptime="'.strtotime(  $row[$selected_field] ).'" class="TP-tdContent">';
+                                $bodyTable .= '<p data-tptime="' . strtotime($row[$selected_field]) . '" class="TP-tdContent">';
 
                                 $bodyTable .= $this->getTextTdTable(
                                     $urlLink,
-                                    $this->tpDate(strtotime(  $row[$selected_field] )),
+                                    $this->tpDate(strtotime($row[$selected_field])),
                                     $type, $count, $price, 0, $currency);
                                 $bodyTable .= '</p>';
 
@@ -434,32 +441,32 @@ class TPShortcodeView {
                         break;
                     //Дата возвращения
                     case 'return_at':
-                        switch($type){
+                        switch ($type) {
                             case 1:
                             case 2:
                             case 12:
                             case 13:
                             case 14:
-                                if($one_way === 'false') {
-                                    $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                        class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                                        <p data-tptime="' . strtotime((isset($row['return_date'])? $row['return_date'] : '')) . '" class="TP-tdContent">
-                                            '.$this->getTextTdTable(
+                                if ($one_way === 'false') {
+                                    $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                                        class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                                        <p data-tptime="' . strtotime((isset($row['return_date']) ? $row['return_date'] : '')) . '" class="TP-tdContent">
+                                            ' . $this->getTextTdTable(
                                             $urlLink,
-                                            $this->tpDate(strtotime((isset($row['return_date'])? $row['return_date'] : ''))),
-                                            $type, $count, $price, 0, $currency).'
+                                            $this->tpDate(strtotime((isset($row['return_date']) ? $row['return_date'] : ''))),
+                                            $type, $count, $price, 0, $currency) . '
                                         </p>
                                         </td>';
                                 }
                                 break;
                             default:
-                                $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                                    class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                                $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                                    class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                                     <p data-tptime="' . strtotime($row[$selected_field]) . '" class="TP-tdContent">
-                                        '.$this->getTextTdTable(
+                                        ' . $this->getTextTdTable(
                                         $urlLink,
                                         $this->tpDate(strtotime($row[$selected_field])),
-                                        $type, $count, $price, 0, $currency).'
+                                        $type, $count, $price, 0, $currency) . '
                                     </p>
                                     </td>';
                                 break;
@@ -470,252 +477,252 @@ class TPShortcodeView {
                     //Количество пересадок
                     case 'number_of_changes':
                         $number_of_changes = '';
-                        switch($type){
+                        switch ($type) {
                             case 4:
                                 $number_of_changes = $this->getNumberChangesView(substr($key_row, -1));
                                 break;
                             case 5:
                             case 6:
-                                $number_of_changes = $this->getNumberChangesView((isset($row['transfers'])? $row['transfers'] : ''));
+                                $number_of_changes = $this->getNumberChangesView((isset($row['transfers']) ? $row['transfers'] : ''));
                                 break;
                             default:
                                 $number_of_changes = $this->getNumberChangesView($row[$selected_field]);
                         }
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $number_of_changes,
                                 $type,
                                 $count,
                                 $price,
                                 0,
-                                $currency).'
+                                $currency) . '
                             </p>
                             </td>';
                         break;
                     //Стоимость
                     case 'price':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                                <p data-price="'.$price.'" class="TP-tdContent">
-                                '.$this->getTextTdTable(
-                                    $urlLink,
-                                    $this->renderPrice(number_format($price, 0, '.', ' '), $currency),
-                                    $type,
-                                    $count,
-                                    $price,
-                                    0,
-                                    $currency
-                                ).'
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                                <p data-price="' . $price . '" class="TP-tdContent">
+                                ' . $this->getTextTdTable(
+                                $urlLink,
+                                $this->renderPrice(number_format($price, 0, '.', ' '), $currency),
+                                $type,
+                                $count,
+                                $price,
+                                0,
+                                $currency
+                            ) . '
                                 </p>
                             </td>';
                         break;
                     //Авиакомпания
                     case 'airline':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                                 <p class="TP-tdContent">
-                                '.$this->getTextTdTable(
+                                ' . $this->getTextTdTable(
                                 $urlLink,
-                                '<p data-airline-iata="'.$row[$selected_field].'">' .
-                                $row[$selected_field].'</p>',
-                                $type, $count, $price, 0, $currency).'
+                                '<p data-airline-iata="' . $row[$selected_field] . '">' .
+                                $row[$selected_field] . '</p>',
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Лого авиакомпании
                     case 'airline_logo':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p class="TP-tdContent TP-AirlineLogo" data-tpairline="'.(isset($row['airline'])? $row['airline'] : '').'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                            <p class="TP-tdContent TP-AirlineLogo" data-tpairline="' . (isset($row['airline']) ? $row['airline'] : '') . '">
 
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 '<img src="'
-                                .TPHostURL::getHostUrlAirlineLogo()
-                                .TPPlugin::$options['config']['airline_logo_size']['width']
-                                .'/'.TPPlugin::$options['config']['airline_logo_size']['height'].'/'.(isset($row['airline_img'])? $row['airline_img'] : '').'@2x.png">'
+                                . TPHostURL::getHostUrlAirlineLogo()
+                                . TPPlugin::$options['config']['airline_logo_size']['width']
+                                . '/' . TPPlugin::$options['config']['airline_logo_size']['height'] . '/' . (isset($row['airline_img']) ? $row['airline_img'] : '') . '@2x.png">'
                                 ,
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Откуда
                     case 'origin':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
-                                '<span data-city-iata="'.$row[$selected_field].'">'.
-                                $row[$selected_field].'</span>',
-                                $type, $count, $price, 0, $currency).'
+                                '<span data-city-iata="' . $row[$selected_field] . '">' .
+                                $row[$selected_field] . '</span>',
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Куда
                     case 'destination':
                         $destination_txt = '';
-                        switch($type){
+                        switch ($type) {
                             case 8:
-                                $destination_txt = '<span data-city-iata="'.$key_row.'">'. (isset($row['city'])? $row['city'] : '').'</span>';
+                                $destination_txt = '<span data-city-iata="' . $key_row . '">' . (isset($row['city']) ? $row['city'] : '') . '</span>';
                                 break;
                             case 9:
                             case 12:
                             case 13:
                             case 14:
-                                $destination_txt = '<span data-city-iata="'.$row[$selected_field].'">'.
-                                    $row[$selected_field].'</span>';
+                                $destination_txt = '<span data-city-iata="' . $row[$selected_field] . '">' .
+                                    $row[$selected_field] . '</span>';
                                 break;
                             default:
-                                $destination_txt = '<span data-city-iata="'.$destination.'">'.
-                                    $destination.'</span>';
+                                $destination_txt = '<span data-city-iata="' . $destination . '">' .
+                                    $destination . '</span>';
                         }
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $destination_txt,
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     // ОткудаКуда
                     case 'origin_destination':
                         $origin_destination = '';
-                        switch($type){
+                        switch ($type) {
                             case 8:
-                                $origin_destination .= '<span data-city-iata="'.$origin_iata.'">'
-                                    .TPAutocompleteReplace::getTableIataReplace($origin_iata)
-                                    .'</span>'
-                                    .$delimiter
-                                    .'<span data-city-iata="'.(isset($row['city'])? $row['city'] : '').'">'
-                                    .(isset($row['city'])? $row['city'] : '').'</span>';
+                                $origin_destination .= '<span data-city-iata="' . $origin_iata . '">'
+                                    . TPAutocompleteReplace::getTableIataReplace($origin_iata)
+                                    . '</span>'
+                                    . $delimiter
+                                    . '<span data-city-iata="' . (isset($row['city']) ? $row['city'] : '') . '">'
+                                    . (isset($row['city']) ? $row['city'] : '') . '</span>';
                                 break;
                             case 9:
-                                $origin_destination .= '<span data-city-iata="'.(isset($row['origin'])? $row['origin'] : '').'">'
-                                    .(isset($row['origin'])? $row['origin'] : '')
-                                    .'</span>'
-                                    .$delimiter
-                                    .'<span data-city-iata="'.(isset($row['destination'])? $row['destination'] : '').'">'
-                                    .(isset($row['destination'])? $row['destination'] : '').'</span>';
+                                $origin_destination .= '<span data-city-iata="' . (isset($row['origin']) ? $row['origin'] : '') . '">'
+                                    . (isset($row['origin']) ? $row['origin'] : '')
+                                    . '</span>'
+                                    . $delimiter
+                                    . '<span data-city-iata="' . (isset($row['destination']) ? $row['destination'] : '') . '">'
+                                    . (isset($row['destination']) ? $row['destination'] : '') . '</span>';
                                 break;
                             case 12:
                             case 13:
                             case 14:
-                                $origin_destination .= (isset($row['origin'])? $row['origin'] : '').$delimiter.(isset($row['destination'])? $row['destination'] : '');
+                                $origin_destination .= (isset($row['origin']) ? $row['origin'] : '') . $delimiter . (isset($row['destination']) ? $row['destination'] : '');
                                 break;
                             default:
-                                $origin_destination .=  (isset($row['origin'])? $row['origin'] : '').$delimiter.(isset($row['destination'])? $row['destination'] : '');
+                                $origin_destination .= (isset($row['origin']) ? $row['origin'] : '') . $delimiter . (isset($row['destination']) ? $row['destination'] : '');
 
                         }
 
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $origin_destination,
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Место
                     case 'place':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $count_row,
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Направление
                     case 'direction':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $row,
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Класс перелета
                     case 'trip_class':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $this->getTripClass($row[$selected_field]),
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Расстояние
                     case 'distance':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
                             <p class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                            ' . $this->getTextTdTable(
                                 $urlLink,
                                 $this->tpDistanceView($row[$selected_field]),
-                                $type, $count, $price, 0, $currency).'
+                                $type, $count, $price, 0, $currency) . '
                                 </p>
                             </td>';
                         break;
                     //Цена за километр
                     case 'price_distance':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p data-price="'.(isset($row['value'])? $row['value'] : '')/(isset($row['distance'])? $row['distance'] : '').'" class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                            <p data-price="' . (isset($row['value']) ? $row['value'] : '') / (isset($row['distance']) ? $row['distance'] : '') . '" class="TP-tdContent">
+                            ' . $this->getTextTdTable(
                                 $urlLink,
-                                $this->renderPrice(number_format((isset($row['value'])? $row['value'] : 0)/(isset($row['distance'])? $row['distance'] : ''), 0, '.', ' '), $currency),
+                                $this->renderPrice(number_format((isset($row['value']) ? $row['value'] : 0) / (isset($row['distance']) ? $row['distance'] : ''), 0, '.', ' '), $currency),
                                 $type,
                                 $count,
                                 $price,
                                 0,
                                 $currency
-                            ).'
+                            ) . '
                             </p>
                             </td>';
                         break;
                     //Дата поиска
                     case 'found_at':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p data-tptime="'.strtotime(  $row[$selected_field] ).'"
-                                data-tpctime="'.current_time('timestamp').'"" class="TP-tdContent">
-                            '.$this->getTextTdTable(
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                            <p data-tptime="' . strtotime($row[$selected_field]) . '"
+                                data-tpctime="' . current_time('timestamp') . '"" class="TP-tdContent">
+                            ' . $this->getTextTdTable(
                                 $urlLink,
-                                human_time_diff(strtotime(  $row[$selected_field] ), current_time('timestamp')),
+                                human_time_diff(strtotime($row[$selected_field]), current_time('timestamp')),
                                 $type,
                                 $count,
-                                $price, 0, $currency).'
+                                $price, 0, $currency) . '
                             </p>
                             </td>';
                         break;
                     case 'button':
-                        $bodyTable .= '<td data-th="'.$this->getTableTheadTDFieldLabel($selected_field).'"
-                            class="TP'.$selected_field.'Td '.$this->tdClassHidden($type, $selected_field).'">
-                            <p data-price="'.$price.'">
-                            '.$this->getTextTdTable($urlLink, '', $type, $count, $price, 1, $currency).'
+                        $bodyTable .= '<td data-th="' . $this->getTableTheadTDFieldLabel($selected_field) . '"
+                            class="TP' . $selected_field . 'Td ' . $this->tdClassHidden($type, $selected_field) . '">
+                            <p data-price="' . $price . '">
+                            ' . $this->getTextTdTable($urlLink, '', $type, $count, $price, 1, $currency) . '
                             </p>
                             </td>';
                         break;
                 }
             }
             $bodyTable .= '</tr>';
-            if(!empty($limit)){
-                if($limit == $count_row){
+            if (!empty($limit)) {
+                if ($limit == $count_row) {
                     break;
                 }
             }
@@ -728,8 +735,9 @@ class TPShortcodeView {
      * @param array $args
      * @return string
      */
-    public function getUrlTable($args = array()){
-        $defaults = array(
+    public function getUrlTable($args = [])
+    {
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'departure_at' => false,
@@ -740,55 +748,55 @@ class TPShortcodeView {
             'subid' => '',
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'host' => ''
-            );
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        ];
+        extract(wp_parse_args($args, $defaults), EXTR_SKIP);
         //error_log("getUrlTable subid = ".$subid);
         $isWhiteLabel = false;
         if (!empty($host)) {
             // shortcode param host
             $white_label = $host;
-            if(strpos($white_label, 'http') === false){
-                $white_label = 'http://'.$white_label;
+            if (strpos($white_label, 'http') === false) {
+                $white_label = 'http://' . $white_label;
             }
         } else {
             // host or white label
             $white_label = TPPlugin::$options['account']['white_label'];
-            if(!empty($white_label)){
-                if(strpos($white_label, 'http') === false){
-                    $white_label = 'http://'.$white_label;
+            if (!empty($white_label)) {
+                if (strpos($white_label, 'http') === false) {
+                    $white_label = 'http://' . $white_label;
                 }
                 $isWhiteLabel = true;
             }
-            if( ! $white_label || empty( $white_label ) ){
+            if (!$white_label || empty($white_label)) {
                 $white_label = TPHostURL::getHostTable();
                 $isWhiteLabel = false;
             }
         }
 
         $marker = TPPlugin::$options['account']['marker'];
-        $marker = '&marker='.$marker;
+        $marker = '&marker=' . $marker;
         $marker .= TPOption::getExtraMarker();
-        if(!empty(TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
-            $marker = $marker.'_'.TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
-        if(!empty($subid))
-            $marker = $marker.'_'.$subid;
-        $marker = $marker.'.$69';
-        if( (int) TPPlugin::$options['config']['after_url'] == 1 )
+        if (!empty(TPPlugin::$options['shortcodes'][$type]['extra_table_marker']))
+            $marker = $marker . '_' . TPPlugin::$options['shortcodes'][$type]['extra_table_marker'];
+        if (!empty($subid))
+            $marker = $marker . '_' . $subid;
+        $marker = $marker . '.$69';
+        if ((int)TPPlugin::$options['config']['after_url'] == 1)
             $marker = $marker . '&with_request=true';
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect'])){
+        if (isset(TPPlugin::$options['config']['redirect'])) {
             $redirect = true;
         }
-        $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : '?origin_iata=';
-        $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : '&destination_iata=';
-        $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date='.date('Y-m-d', strtotime( $departure_at ))  : '';
-        $return_at = ( !empty($return_at) && false !== $return_at) ? '&return_date='.date('Y-m-d', strtotime( $return_at ) )  : '';
-        $currency = '&currency='.$currency;
+        $origin = (false !== $origin) ? "?origin_iata={$origin}" : '?origin_iata=';
+        $destination = (false !== $destination) ? "&destination_iata={$destination}" : '&destination_iata=';
+        $departure_at = (!empty($departure_at) && false !== $departure_at) ? '&depart_date=' . date('Y-m-d', strtotime($departure_at)) : '';
+        $return_at = (!empty($return_at) && false !== $return_at) ? '&return_date=' . date('Y-m-d', strtotime($return_at)) : '';
+        $currency = '&currency=' . $currency;
 
-        $url = $origin.$destination.$departure_at.$return_at.$currency.$marker;
+        $url = $origin . $destination . $departure_at . $return_at . $currency . $marker;
 
-        if(strpos($white_label, 'aviasales.kz') === false){
-            $url = 'new'.$url;
+        if (strpos($white_label, 'aviasales.kz') === false) {
+            $url = 'new' . $url;
         }
 
         //aviasales.kz
@@ -799,7 +807,7 @@ class TPShortcodeView {
             }
         }*/
 
-        switch($type){
+        switch ($type) {
             case 1:
             case 10:
                 $url .= '&one_way=true';
@@ -812,23 +820,23 @@ class TPShortcodeView {
         }
 
         if ($isWhiteLabel == true) {
-            $url = '/flights/'.$url;
+            $url = '/flights/' . $url;
         } else {
-            if(strpos($white_label, 'aviasales.kz') === false){
-                $url = '/searches/'.$url;
+            if (strpos($white_label, 'aviasales.kz') === false) {
+                $url = '/searches/' . $url;
             } else {
-                $url = '/search/'.$url;
+                $url = '/search/' . $url;
             }
 
         }
 
-        $url = $white_label.$url;
+        $url = $white_label . $url;
 
-        if($redirect){
+        if ($redirect) {
             $home = '';
             $home = get_option('home');
             //$url = substr($url, 10);
-            $url = $home.'/?searches='.rawurlencode($url);
+            $url = $home . '/?searches=' . rawurlencode($url);
         }
 
         return $url;
@@ -839,16 +847,17 @@ class TPShortcodeView {
      * @param $price
      * @return mixed|string
      */
-    public function getButtonText($typeShortcode, $price, $currency){
+    public function getButtonText($typeShortcode, $price, $currency)
+    {
         $btnTxt = '';
-        if(isset(TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][TPLang::getLang()])){
+        if (isset(TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][TPLang::getLang()])) {
             $btnTxt = TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][TPLang::getLang()];
-        }else{
+        } else {
             $btnTxt = TPPlugin::$options['shortcodes'][$typeShortcode]['title_button'][TPLang::getDefaultLang()];
         }
-        $button_text = '<span>' .$btnTxt. '</span>';
-        if(!empty($button_text)){
-            if(strpos($button_text, 'price') !== false){
+        $button_text = '<span>' . $btnTxt . '</span>';
+        if (!empty($button_text)) {
+            if (strpos($button_text, 'price') !== false) {
                 if (!is_string($price)) {
                     $price = number_format($price, 0, '.', ' ');
                     $price = $this->renderPrice($price, $currency);
@@ -864,31 +873,31 @@ class TPShortcodeView {
     /**
      * @param $price
      * @param $currency
-     *
      * @return string
      */
-    public function renderPrice($price, $currency){
+    public function renderPrice($price, $currency)
+    {
         $currencyView = '';
-        switch (TPPlugin::$options['local']['currency_symbol_display']){
+        switch (TPPlugin::$options['local']['currency_symbol_display']) {
             case 0:
                 $currency = mb_strtolower($currency);
-                $currencyView = $price.'<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
-                                .$currency.'"></i></i>';
+                $currencyView = $price . '<i class="TP-currency-icons tp-currency-after"><i class="tp-plugin-icon-'
+                    . $currency . '"></i></i>';
                 break;
             case 1:
                 $currency = mb_strtolower($currency);
                 $currencyView = '<i class="TP-currency-icons tp-currency-before"><i class="tp-plugin-icon-'
-                                .$currency.'"></i></i>'.$price;
+                    . $currency . '"></i></i>' . $price;
                 break;
             case 2:
                 $currencyView = $price;
                 break;
             case 3:
-                $currencyView = $price.'<span class="tp-currency">'.$currency.'</span>';
+                $currencyView = $price . '<span class="tp-currency">' . $currency . '</span>';
                 break;
-	        case 4:
-		        $currencyView = '<span class="tp-currency">'.$currency.'</span>'.$price;
-		        break;
+            case 4:
+                $currencyView = '<span class="tp-currency">' . $currency . '</span>' . $price;
+                break;
         }
 
         return $currencyView;
@@ -903,37 +912,37 @@ class TPShortcodeView {
      * @param int $type
      * @return string
      */
-    public function getTextTdTable($url, $text, $typeShortcode, $count, $price, $type = 0, $currency){
+    public function getTextTdTable($url, $text, $typeShortcode, $count, $price, $type = 0, $currency)
+    {
 
         $textTd = '';
         $rel = '';
-        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        if (isset(TPPlugin::$options['config']['nofollow'])) $rel = 'rel="nofollow"';
         $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        if (isset(TPPlugin::$options['config']['target_url'])) $target_url = 'target="_blank"';
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect'])){
+        if (isset(TPPlugin::$options['config']['redirect'])) {
             $redirect = true;
         }
 
 
-
-        if(isset(TPPlugin::$options['style_table']['table']['hyperlink'])){
+        if (isset(TPPlugin::$options['style_table']['table']['hyperlink'])) {
             //error_log("hyperlink");
             //hyperlink
-            switch($type){
+            switch ($type) {
                 //link
                 case 0:
-                    $textTd = '<a href="'.$url.'" class="TPLinkTable" '.$target_url.'  '.$rel.'>'.$text.'</a>';
+                    $textTd = '<a href="' . $url . '" class="TPLinkTable" ' . $target_url . '  ' . $rel . '>' . $text . '</a>';
                     break;
                 //button
                 case 1:
-                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable" '.$target_url.' '.$rel.'>'
-                        .$this->getButtonText($typeShortcode, $price, $currency).'</a>';
+                    $textTd = '<a href="' . $url . '" class="TP-Plugin-Tables_link TPButtonTable" ' . $target_url . ' ' . $rel . '>'
+                        . $this->getButtonText($typeShortcode, $price, $currency) . '</a>';
                     break;
             }
-        }else{
+        } else {
 
-            switch($type){
+            switch ($type) {
 
                 case 0:
                     $textTd = $text;
@@ -941,8 +950,8 @@ class TPShortcodeView {
                 //button
                 case 1:
 
-                    $textTd = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable " '.$target_url.' '.$rel.'>'
-                        .$this->getButtonText($typeShortcode, $price, $currency).'</a>';
+                    $textTd = '<a href="' . $url . '" class="TP-Plugin-Tables_link TPButtonTable " ' . $target_url . ' ' . $rel . '>'
+                        . $this->getButtonText($typeShortcode, $price, $currency) . '</a>';
                     break;
             }
             // }
@@ -953,29 +962,29 @@ class TPShortcodeView {
     }
 
 
-
     /**
      * @param int $distance
      * @return int
      */
-    public function tpDistanceView($distance = 0){
-        switch(TPPlugin::$options['config']['distance']){
+    public function tpDistanceView($distance = 0)
+    {
+        switch (TPPlugin::$options['config']['distance']) {
             case 2:
                 $distance = ($distance * 0.62137);
                 break;
         }
-        $distance = number_format($distance, 2, '.', ' '). ' '
-            .TPFieldsLabelTable::getDistanceLabel(TPPlugin::$options['config']['distance']);
+        $distance = number_format($distance, 2, '.', ' ') . ' '
+            . TPFieldsLabelTable::getDistanceLabel(TPPlugin::$options['config']['distance']);
         return $distance;
     }
-
 
 
     /**
      * return Trip Class
      * @param $trip_class
      */
-    public function getTripClass($trip_class){
+    public function getTripClass($trip_class)
+    {
         $class = '';
         $class = TPFieldsLabelTable::getTripClassLabel($trip_class);
 
@@ -986,9 +995,10 @@ class TPShortcodeView {
      * @param $numberChanges
      * @return string
      */
-    public function getNumberChangesView($numberChanges){
+    public function getNumberChangesView($numberChanges)
+    {
         if ($numberChanges > 0)
-            return $numberChanges. ' ' .TPFieldsLabelTable::getNumberChangesLabel($numberChanges);
+            return $numberChanges . ' ' . TPFieldsLabelTable::getNumberChangesLabel($numberChanges);
         else
             return TPFieldsLabelTable::getNumberChangesLabel($numberChanges);
     }
@@ -998,51 +1008,52 @@ class TPShortcodeView {
      * @param $field
      * @return string
      */
-    public function tdClassHidden($type, $field){
-        $fields = array(
-            '1' => array(
+    public function tdClassHidden($type, $field)
+    {
+        $fields = [
+            '1' => [
                 'trip_class',
                 'distance',
                 //'price'
-            ),
-            '2' => array(
+            ],
+            '2' => [
                 'return_at',
                 'trip_class',
                 'distance',
                 //'price'
-            ),
-            '4' => array(
+            ],
+            '4' => [
                 'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
                 //'price'
-            ),
-            '5' => array(
+            ],
+            '5' => [
                 'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
                 //'price'
-            ),
-            '6' => array(
+            ],
+            '6' => [
                 'number_of_changes',
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
                 //'price'
-            ),
-            '7' => array(
+            ],
+            '7' => [
                 'airline_logo',
                 'flight_number',
                 'flight',
                 'airline',
                 //'price'
-            ),
-            '8' => array(
+            ],
+            '8' => [
                 'airline_logo',
                 'return_at',
                 'flight_number',
@@ -1050,8 +1061,8 @@ class TPShortcodeView {
                 'airline',
                 'origin_destination',
                 //'price'
-            ),
-            '9' => array(
+            ],
+            '9' => [
                 'airline_logo',
                 'return_at',
                 'flight_number',
@@ -1059,9 +1070,9 @@ class TPShortcodeView {
                 'airline',
                 'origin_destination',
                 //'price'
-            ),
-            '10' => array(),
-            '12' => array(
+            ],
+            '10' => [],
+            '12' => [
                 'found_at',
                 'number_of_changes',
                 'trip_class',
@@ -1071,8 +1082,8 @@ class TPShortcodeView {
                 //'price',
                 'departure_at',
                 'return_at',
-            ),
-            '13' => array(
+            ],
+            '13' => [
                 'origin',
                 'found_at',
                 'number_of_changes',
@@ -1082,8 +1093,8 @@ class TPShortcodeView {
                 'origin_destination',
                 //'price',
                 'return_at',
-            ),
-            '14' => array(
+            ],
+            '14' => [
                 'destination',
                 'found_at',
                 'number_of_changes',
@@ -1092,10 +1103,10 @@ class TPShortcodeView {
                 'price_distance',
                 'origin_destination',
                 //'price'
-            ),
-        );
+            ],
+        ];
 
-        if(in_array($field, $fields[$type])) return 'TP-unessential';
+        if (in_array($field, $fields[$type])) return 'TP-unessential';
         return '';
     }
 
@@ -1103,9 +1114,10 @@ class TPShortcodeView {
      * @param string $time
      * @return bool|string
      */
-    public function tpDate($time = '') {
+    public function tpDate($time = '')
+    {
         $format = !empty(TPPlugin::$options['config']['format_date']) ? TPPlugin::$options['config']['format_date'] : 'd.m.Y';
-        $translate = array(
+        $translate = [
             'am' => 'дп',
             'pm' => 'пп',
             'AM' => 'ДП',
@@ -1152,29 +1164,29 @@ class TPShortcodeView {
             'nd' => 'ое',
             'rd' => 'е',
             'th' => 'ое'
-        );
-        switch(TPLang::getLang()) {
+        ];
+        switch (TPLang::getLang()) {
             case 'ru':
 
                 if (!empty($time)) {
-                    if(strpos($format, 'f') !== false){
+                    if (strpos($format, 'f') !== false) {
                         $format = str_replace('f', 'F', $format);
-                        return  mb_strtolower(strtr(date($format, $time), $translate));
-                    }elseif(strpos($format, 'mm') !== false){
+                        return mb_strtolower(strtr(date($format, $time), $translate));
+                    } elseif (strpos($format, 'mm') !== false) {
                         $format = str_replace('mm', 'M', $format);
-                        return  mb_strtolower(strtr(date($format, $time), $translate));
-                    }else{
+                        return mb_strtolower(strtr(date($format, $time), $translate));
+                    } else {
                         return strtr(date($format, $time), $translate);
                     }
 
                 } else {
-                    if(strpos($format, 'f') !== false){
+                    if (strpos($format, 'f') !== false) {
                         $format = str_replace('f', 'F', $format);
-                        return  mb_strtolower(strtr(date($format), $translate));
-                    }elseif(strpos($format, 'mm') !== false){
+                        return mb_strtolower(strtr(date($format), $translate));
+                    } elseif (strpos($format, 'mm') !== false) {
                         $format = str_replace('mm', 'M', $format);
-                        return  mb_strtolower(strtr(date($format), $translate));
-                    }else{
+                        return mb_strtolower(strtr(date($format), $translate));
+                    } else {
                         return strtr(date($format), $translate);
                     }
                 }
@@ -1197,61 +1209,35 @@ class TPShortcodeView {
     }
 
     /** **/
-    public function redirect_plugins(){
+    public function redirect_plugins()
+    {
 
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect']))
+        if (isset(TPPlugin::$options['config']['redirect']))
             $redirect = true;
-        if($redirect){
+        if ($redirect) {
+            $searchesQuery = TPRequest::get('searches');
+            $searchesTicketQuery = TPRequest::get('searches_ticket');
+            $searchesHotelQuery = TPRequest::get('searches_hotel');
 
-            if(isset($_GET['searches'])){
-                //error_log('redirect_plugins');
-                //error_log(print_r($_GET['searches'], true));
-
-
-                /*$white_label = TPPlugin::$options['account']['white_label'];
-                if(!empty($white_label)){
-                    if(strpos($white_label, 'http') === false){
-                        $white_label = 'http://'.$white_label;
-                    }
-                    $white_label = "{$white_label}/flights/".urldecode($_GET['searches']);
-                }else{
-
-                    $white_label = TPHostURL::getHostTable();
-                    //error_log('0 = '.$white_label);
-                    $white_label = "{$white_label}/searches/".urldecode($_GET['searches']);
-
-                }*/
-
-                //error_log('1 = '.$_GET['searches']);
-                //error_log('1 = '.urldecode($_GET['searches']));
-
-                $white_label = urldecode($_GET['searches']);
-
-                //header("Location: {$white_label}", true, 302);
-                header("Location: {$white_label}", true, 302);
+            if ($searchesQuery) {
+                $value = urldecode($searchesQuery);
+                header("Location: {$value}", true, 302);
                 die;
-                /*
-                 * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
-                 * problem
-                 * $location = wp_sanitize_redirect($location);
-                 * delete marker special symbol.
-                 */
             }
-            if(isset($_GET['searches_ticket'])){
+            if ($searchesTicketQuery) {
+                $value = urldecode($searchesTicketQuery);
                 $white_label = TPPlugin::$options['account']['white_label'];
-                if(!empty($white_label)){
-                    if(strpos($white_label, 'http') === false){
-                        $white_label = 'http://'.$white_label;
+                if (!empty($white_label)) {
+                    if (strpos($white_label, 'http') === false) {
+                        $white_label = 'http://' . $white_label;
                     }
-                    $white_label = "{$white_label}/flights/".urldecode($_GET['searches_ticket']);
-                }else{
+                    $white_label = "{$white_label}/flights/{$value}";
+                } else {
                     $white_label = TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel(1);
-                    $white_label = "{$white_label}/searches/".urldecode($_GET['searches_ticket']);
-
+                    $white_label = "{$white_label}/searches/{$value}";
                 }
-                //error_log("searches_ticket");
-                //error_log($white_label);
+
 
                 header("Location: {$white_label}", true, 302);
                 die;
@@ -1262,28 +1248,22 @@ class TPShortcodeView {
                  * delete marker special symbol.
                  */
             }
-            if(isset($_GET['searches_hotel'])){
+            if ($searchesHotelQuery) {
+                $value = urldecode($searchesHotelQuery);
+
                 $white_label = TPPlugin::$options['account']['white_label_hotel'];
-                if(!empty($white_label)){
-                    if(strpos($white_label, 'http') === false){
-                        $white_label = 'http://'.$white_label;
-                        $white_label =  rtrim($white_label, '/' ).'/hotels';
+                if (!empty($white_label)) {
+                    if (strpos($white_label, 'http') === false) {
+                        $white_label = 'http://' . $white_label;
+                        $white_label = rtrim($white_label, '/') . '/hotels';
                     }
-                }else{
+                } else {
                     $white_label = TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel(2);
                 }
-                $white_label = "{$white_label}".urldecode($_GET['searches_hotel']);
+                $white_label = "{$white_label}{$value}";
                 header("Location: {$white_label}", true, 302);
                 die;
-                /*
-                 * wp_redirect($white_label.'/searches/'.urldecode($_GET['searches']));
-                 * problem
-                 * $location = wp_sanitize_redirect($location);
-                 * delete marker special symbol.
-                 */
             }
-
-
         }
     }
 
@@ -1291,8 +1271,9 @@ class TPShortcodeView {
      * @param array $args
      * @return string
      */
-    public function returnTpLink($args = array()){
-        $defaults = array(
+    public function returnTpLink($args = [])
+    {
+        $defaults = [
             'origin' => false,
             'destination' => false,
             'text_link' => '',
@@ -1304,11 +1285,11 @@ class TPShortcodeView {
             'check_out' => 12,
             'type' => 0,
             'subid' => ''
-        );
+        ];
 
-        extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
+        extract(wp_parse_args($args, $defaults), EXTR_SKIP);
 
-        switch($type){
+        switch ($type) {
             case 1:
                 $white_label = TPPlugin::$options['account']['white_label'];
                 break;
@@ -1317,90 +1298,90 @@ class TPShortcodeView {
                 break;
         }
 
-        if(!empty($white_label)){
-            if(strpos($white_label, 'http') === false){
-                $white_label = 'http://'.$white_label;
+        if (!empty($white_label)) {
+            if (strpos($white_label, 'http') === false) {
+                $white_label = 'http://' . $white_label;
             }
         }
-        if(!empty($subid)){
+        if (!empty($subid)) {
             $subid = trim($subid);
             $subid = preg_replace('/[^a-zA-Z0-9_]/', '', $subid);
             //error_log($subid);
         }
         $marker = TPPlugin::$options['account']['marker'];
-        $marker = '&marker='.$marker;
+        $marker = '&marker=' . $marker;
         $marker .= TPOption::getExtraMarker();
-        $marker = $marker.'_link';
-        if(!empty($subid))
-            $marker = $marker.'_'.$subid;
-        $marker = $marker.'.$69';
+        $marker = $marker . '_link';
+        if (!empty($subid))
+            $marker = $marker . '_' . $subid;
+        $marker = $marker . '.$69';
 
         $rel = '';
-        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        if (isset(TPPlugin::$options['config']['nofollow'])) $rel = 'rel="nofollow"';
         $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
+        if (isset(TPPlugin::$options['config']['target_url'])) $target_url = 'target="_blank"';
         $redirect = false;
-        if(isset(TPPlugin::$options['config']['redirect'])){
+        if (isset(TPPlugin::$options['config']['redirect'])) {
             $redirect = true;
         }
 
 
         $output = '';
-        switch($type){
+        switch ($type) {
             case 1:
-                if( (int) TPPlugin::$options['config']['after_url'] == 1 )
+                if ((int)TPPlugin::$options['config']['after_url'] == 1)
                     $marker = $marker . '&with_request=true';
-                if( ! $white_label || empty( $white_label ) )
+                if (!$white_label || empty($white_label))
                     $white_label = TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
 
-                $origin = ( false !== $origin ) ? "?origin_iata={$origin}" : '?origin_iata=';
-                $destination = ( false !== $destination ) ? "&destination_iata={$destination}" : '&destination_iata=';
-                $departure_at = (!empty($origin_date) && false !== $origin_date) ? '&depart_date='.date('Y-m-d', time()+(DAY_IN_SECONDS*$origin_date))  : '';
-                $return_at = ( !empty($destination_date) && false !== $destination_date) ? '&return_date='.date('Y-m-d', time()+(DAY_IN_SECONDS*$destination_date)) : '';
+                $origin = (false !== $origin) ? "?origin_iata={$origin}" : '?origin_iata=';
+                $destination = (false !== $destination) ? "&destination_iata={$destination}" : '&destination_iata=';
+                $departure_at = (!empty($origin_date) && false !== $origin_date) ? '&depart_date=' . date('Y-m-d', time() + (DAY_IN_SECONDS * $origin_date)) : '';
+                $return_at = (!empty($destination_date) && false !== $destination_date) ? '&return_date=' . date('Y-m-d', time() + (DAY_IN_SECONDS * $destination_date)) : '';
                 $one_way = "&one_way={$one_way}";
 
 
-                $url = '/searches/new'.$origin.$destination.$departure_at.$return_at.$one_way.$marker;
+                $url = '/searches/new' . $origin . $destination . $departure_at . $return_at . $one_way . $marker;
 
-                if($redirect) {
+                if ($redirect) {
                     $home = '';
                     $home = get_option('home');
                     $url = substr($url, 10);
                     $output = '<a class="TPLink" href="'
-                        .$home.'/?searches_ticket='.rawurlencode($url).'" '
-                        .$target_url.' '
-                        .$rel.'>'
-                        .$text_link.'</a>';
-                }else{
-                    $output  = '<a class="TPLink" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'
-                        .$text_link.'</a>';
+                        . $home . '/?searches_ticket=' . rawurlencode($url) . '" '
+                        . $target_url . ' '
+                        . $rel . '>'
+                        . $text_link . '</a>';
+                } else {
+                    $output = '<a class="TPLink" href="' . $white_label . $url . '" ' . $target_url . ' ' . $rel . '>'
+                        . $text_link . '</a>';
                 }
 
                 break;
             case 2:
 
-                $locationId = ( false !== $hotel_id ) ? "?{$hotel_id}" : '?locationId=';
+                $locationId = (false !== $hotel_id) ? "?{$hotel_id}" : '?locationId=';
 
-                $checkIn = (!empty($check_in) && false !== $check_in) ? '&checkIn='.date('Y-m-d', time()+(DAY_IN_SECONDS*$check_in )) : '';
-                $checkOut = ( !empty($check_out) && false !== $check_out) ? '&checkOut='.date('Y-m-d', time()+(DAY_IN_SECONDS*$check_out )) : '';
+                $checkIn = (!empty($check_in) && false !== $check_in) ? '&checkIn=' . date('Y-m-d', time() + (DAY_IN_SECONDS * $check_in)) : '';
+                $checkOut = (!empty($check_out) && false !== $check_out) ? '&checkOut=' . date('Y-m-d', time() + (DAY_IN_SECONDS * $check_out)) : '';
 
                 $lang = TPHostURL::getHostLangParamSearchHotel();
-                $url = $locationId.$checkIn.$checkOut.'&adults=1'.$lang.$marker;
+                $url = $locationId . $checkIn . $checkOut . '&adults=1' . $lang . $marker;
 
-                if( ! $white_label || empty( $white_label ) )
+                if (!$white_label || empty($white_label))
                     $white_label = TPHostURL::getHostSearchLinkWhenEmptyWhiteLabel($type);
 
-                if($redirect) {
+                if ($redirect) {
                     $home = '';
                     $home = get_option('home');
                     $output = '<a class="TPLink" href="'
-                        .$home.'/?searches_hotel='.rawurlencode($url).'" '
-                        .$target_url.' '
-                        .$rel.'>'
-                        .$text_link.'</a>';
-                }else{
-                    $output  = '<a class="TPLink" href="'.$white_label.$url.'" '.$target_url.' '.$rel.'>'
-                        .$text_link.'</a>';
+                        . $home . '/?searches_hotel=' . rawurlencode($url) . '" '
+                        . $target_url . ' '
+                        . $rel . '>'
+                        . $text_link . '</a>';
+                } else {
+                    $output = '<a class="TPLink" href="' . $white_label . $url . '" ' . $target_url . ' ' . $rel . '>'
+                        . $text_link . '</a>';
                 }
                 break;
 
@@ -1409,7 +1390,8 @@ class TPShortcodeView {
         return $output;
     }
 
-    public function getSelectField($shortcode){
+    public function getSelectField($shortcode)
+    {
         //error_log(print_r(TPPlugin::$options['shortcodes'][$shortcode]['selected'], true));
         return array_unique(TPPlugin::$options['shortcodes'][$shortcode]['selected']);
     }
@@ -1428,12 +1410,13 @@ class TPShortcodeView {
      * @return bool|mixed
      */
     public function renderViewIfEmptyTable($type, $oneWay, $rows, $originIata, $destinationIata, $origin, $destination,
-                                           $limit, $subid, $currency){
+                                           $limit, $subid, $currency)
+    {
 
         //error_log('renderViewIfEmptyTable type = '.$type);
         $typeShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['type'];
         $valueShortcodesSettings = TPPlugin::$options['shortcodes_settings']['empty']['value'][$typeShortcodesSettings];
-        switch ($typeShortcodesSettings){
+        switch ($typeShortcodesSettings) {
             //text
             case 0:
             case 2:
@@ -1467,18 +1450,19 @@ class TPShortcodeView {
      * @return mixed
      */
     public function replaceLinkButtonShortcodeMsgValueEmptyTable($msg, $originIata, $destinationIata, $origin, $destination,
-                                                       $type, $subid, $currency){
+                                                                 $type, $subid, $currency)
+    {
         //[link]
         //[button]
-        $shortcodesMsg = array(
+        $shortcodesMsg = [
             'link',
             'button'
-        );
+        ];
         $rel = '';
-        if(isset(TPPlugin::$options['config']['nofollow'])) $rel ='rel="nofollow"';
+        if (isset(TPPlugin::$options['config']['nofollow'])) $rel = 'rel="nofollow"';
         $target_url = '';
-        if(isset(TPPlugin::$options['config']['target_url'])) $target_url ='target="_blank"';
-        $url = $this->getUrlTable(array(
+        if (isset(TPPlugin::$options['config']['target_url'])) $target_url = 'target="_blank"';
+        $url = $this->getUrlTable([
             'origin' => $originIata,
             'destination' => $destinationIata,
             'departure_at' => date('Y-m-d'),
@@ -1486,18 +1470,18 @@ class TPShortcodeView {
             'type' => $type,
             'subid' => $subid,
             'currency' => $currency,
-        ) );
+        ]);
 
         $msg = preg_replace_callback(
-            '/\['.$shortcodesMsg[0].'(.*?)\]|\['.$shortcodesMsg[1].'(.*?)\]/',//m
-            function($matches) use ($shortcodesMsg, $origin, $destination, $rel, $target_url, $url){
+            '/\[' . $shortcodesMsg[0] . '(.*?)\]|\[' . $shortcodesMsg[1] . '(.*?)\]/',//m
+            function ($matches) use ($shortcodesMsg, $origin, $destination, $rel, $target_url, $url) {
                 $title = TPShortcodeView::getAttrTitleShortcodeEmptyTableMsg($matches[0], $origin, $destination);
                 $replace = '';
-                if(strpos($matches[0], $shortcodesMsg[0]) !== false){
-                    $replace = '<a href="'.$url.'" class="TPLinkTable TPEmptyTableLink" '.$target_url.'  '.$rel.'>'.$title.'</a>';
-                } else if (strpos($matches[0], $shortcodesMsg[1]) !== false){
-                    $replace = '<a href="'.$url.'" class="TP-Plugin-Tables_link TPButtonTable TPEmptyTableButton" '
-                        .$target_url.' '.$rel.'>'.$title.'</a>';
+                if (strpos($matches[0], $shortcodesMsg[0]) !== false) {
+                    $replace = '<a href="' . $url . '" class="TPLinkTable TPEmptyTableLink" ' . $target_url . '  ' . $rel . '>' . $title . '</a>';
+                } elseif (strpos($matches[0], $shortcodesMsg[1]) !== false) {
+                    $replace = '<a href="' . $url . '" class="TP-Plugin-Tables_link TPButtonTable TPEmptyTableButton" '
+                        . $target_url . ' ' . $rel . '>' . $title . '</a>';
                 }
                 return $replace;
             },
@@ -1512,8 +1496,9 @@ class TPShortcodeView {
      * @param $msg
      * @return mixed
      */
-    public function getMsgValueEmptyTableFromLang($msg){
-        if (!array_key_exists(TPLang::getLang(), $msg)){
+    public function getMsgValueEmptyTableFromLang($msg)
+    {
+        if (!array_key_exists(TPLang::getLang(), $msg)) {
             $msg = $msg[TPLang::getDefaultLang()];
         } else {
             $msg = $msg[TPLang::getLang()];
@@ -1527,20 +1512,22 @@ class TPShortcodeView {
      * @param $destination
      * @return mixed
      */
-    public function replaceOriginDestinationShortcodeEmptyTableMsg($msg, $origin, $destination){
-        if(strpos($msg, '{origin}') !== false){
-            $msg = str_replace('{origin}', $origin , $msg);
+    public function replaceOriginDestinationShortcodeEmptyTableMsg($msg, $origin, $destination)
+    {
+        if (strpos($msg, '{origin}') !== false) {
+            $msg = str_replace('{origin}', $origin, $msg);
         }
-        if(strpos($msg, '{destination}') !== false){
-            $msg = str_replace('{destination}', $destination , $msg);
+        if (strpos($msg, '{destination}') !== false) {
+            $msg = str_replace('{destination}', $destination, $msg);
         }
         //error_log($msg);
         return $msg;
     }
 
-    public static function getAttrTitleShortcodeEmptyTableMsg($shortcode, $origin, $destination){
-        preg_match('/title=\"(.*?)\"/',  $shortcode, $titleData);
-        if (array_key_exists(1, $titleData)){
+    public static function getAttrTitleShortcodeEmptyTableMsg($shortcode, $origin, $destination)
+    {
+        preg_match('/title=\"(.*?)\"/', $shortcode, $titleData);
+        if (array_key_exists(1, $titleData)) {
             //{origin} {destination}
             $title = $titleData[1];
             /*if(strpos($title, '{origin}') !== false){
@@ -1553,8 +1540,6 @@ class TPShortcodeView {
         }
         return '';
     }
-
-
 
 
 }

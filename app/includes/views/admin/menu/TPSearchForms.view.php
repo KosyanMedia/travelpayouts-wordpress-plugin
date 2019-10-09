@@ -1,7 +1,9 @@
 <div class="TPWrapper TPWrapper-long">
 
     <p class="TPMainTitle TPMainTitleSF">
-        <?php _ex('Search forms',
+        <?php use app\includes\common\TpPluginHelper;
+
+        _ex('Search forms',
             'tp_admin_page_search_forms_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
     </p>
 
@@ -13,7 +15,7 @@
             global $locale;
             $link_help = '';
             switch ($locale) {
-                case "ru_RU":
+                case 'ru_RU':
                     $link_help = 'https://support.travelpayouts.com/hc/ru/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru#11';
                     ?>
                     <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru"
@@ -23,7 +25,7 @@
                     </a>
                     <?php
                     break;
-                case "en_US":
+                case 'en_US':
                     $link_help = 'https://support.travelpayouts.com/hc/en-us/articles/207794617?utm_source=wpplugin&utm_medium=forms&utm_campaign=en#11';
                     ?>
                     <a href="https://www.travelpayouts.com/tools/forms?utm_source=wpplugin&utm_medium=forms&utm_campaign=en"
@@ -52,10 +54,10 @@
             global $locale;
             $linkHere = '';
             switch ($locale) {
-                case "ru_RU":
+                case 'ru_RU':
                     $linkHere = 'https://support.travelpayouts.com/hc/ru/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=ru';
                     break;
-                case "en_US":
+                case 'en_US':
                     $linkHere = 'https://support.travelpayouts.com/hc/en-us/articles/115000456691?utm_source=wpplugin&utm_medium=forms&utm_campaign=en';
                     break;
                 default:
@@ -95,7 +97,7 @@
             <a class="TP-AllLincksShort" href="javascript:void(0)">
                 <?php _ex('All',
                     'tp_admin_page_search_forms_btn_all', TPOPlUGIN_TEXTDOMAIN); ?>
-                (<span><?php echo \app\includes\common\TpPluginHelper::count($this->data); ?></span>)
+                (<span><?php echo TpPluginHelper::count($this->data); ?></span>)
             </a>
         </div>
 

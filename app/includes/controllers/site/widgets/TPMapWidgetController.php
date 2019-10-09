@@ -7,29 +7,33 @@
  */
 namespace app\includes\controllers\site\widgets;
 use app\includes\common\TPCurrencyUtils;
-class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShortcodesController{
+use app\includes\common\TPLang;
+use app\includes\controllers\site\TPWigetsShortcodesController;
+use app\includes\TPPlugin;
+
+class TPMapWidgetController extends TPWigetsShortcodesController{
 
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_map_widget', array(&$this, 'action'));
+        add_shortcode( 'tp_map_widget', [&$this, 'action']);
     }
     public function render($data)
     {
         // TODO: Implement render() method.
         $widgets = 1;
-        $defaults = array(
+        $defaults = [
             'origin' => false,
-            'width' => \app\includes\TPPlugin::$options['widgets'][$widgets]['width'],
-            'height' => \app\includes\TPPlugin::$options['widgets'][$widgets]['height'],
+            'width' => TPPlugin::$options['widgets'][$widgets]['width'],
+            'height' => TPPlugin::$options['widgets'][$widgets]['height'],
             'direct' => 'false',
             'subid' => '',
-            'currency' => \app\includes\TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
+            'currency' => TPPlugin::$options['local']['currency'], //TPCurrencyUtils::TP_CURRENCY_USD,
 
-        );
+        ];
         extract( wp_parse_args( $data, $defaults ), EXTR_SKIP );
         $hide_logo = false;
-        if(isset(\app\includes\TPPlugin::$options['widgets'][$widgets]['hide_logo']))
+        if(isset(TPPlugin::$options['widgets'][$widgets]['hide_logo']))
             $hide_logo = true;
         $white_label = $this->view->getWhiteLabel($widgets);
         //error_log($white_label);
@@ -42,7 +46,7 @@ class TPMapWidgetController extends \app\includes\controllers\site\TPWigetsShort
             <iframe src="//maps.avs.io/flights/?auto_fit_map=true&hide_sidebar=true&hide_reformal=true
             &disable_googlemaps_ui=true&zoom=3&show_filters_icon=true&redirect_on_click=true&small_spinner=true
             &hide_logo='.$hide_logo.'&direct='.$direct.'&lines_type=TpLines&cluster_manager=TpWidgetClusterManager&marker='
-            .$this->view->getMarker($widgets, $subid).'&show_tutorial=false&locale='.\app\includes\common\TPLang::getLang().'&host='
+            .$this->view->getMarker($widgets, $subid).'&show_tutorial=false&locale='. TPLang::getLang().'&host='
             .$white_label.'&origin_iata='.$origin.'" width="'.$width.'px" height="'.$height.'px"
             scrolling="no" frameborder="0"></iframe></div>';
         return $output;

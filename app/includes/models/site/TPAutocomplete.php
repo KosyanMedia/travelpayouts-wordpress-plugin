@@ -63,7 +63,7 @@ class TPAutocomplete {
 	private function setRailwayAutocomplete(){
 		$railway = file_get_contents(TPOPlUGIN_DIR.'/app/public/autocomplete/railway.json');
 		$railway = json_decode($railway, true);
-		$rows = array();
+		$rows = [];
 		foreach($railway as $value){
 			$rows[$value['number']] = $value;
 		}

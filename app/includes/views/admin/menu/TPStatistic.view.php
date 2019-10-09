@@ -1,7 +1,9 @@
 <div class="TPWrapper TPWrapper-long">
     <div id="tabs-statistic">
         <p class="TPMainTitle">
-            <?php _ex('Statistics',
+            <?php use app\includes\views\admin\menu\TPStatisticView;
+
+            _ex('Statistics',
                 'tp_admin_page_statistics_paragraph_1', TPOPlUGIN_TEXTDOMAIN); ?>
         </p>
         <nav class="TPNavigation">
@@ -46,10 +48,10 @@
                         </span>
                         <?php
                         global $wp_locale;
-                        $monthNames = array_map(array(&$wp_locale, 'get_month'), range(1, 12));
+                        $monthNames = array_map([&$wp_locale, 'get_month'], range(1, 12));
                         foreach($monthNames as $key=>$month){
 
-                            @$output_month .= '<option value="'.$month.'" data-tpdate="'.date('Y').'-'.($key+1).'-'.date("t", strtotime(date('Y').'-'.($key+1).'-01')).'"
+                            @$output_month .= '<option value="'.$month.'" data-tpdate="'.date('Y').'-'.($key+1).'-'.date('t', strtotime(date('Y').'-'.($key+1).'-01')).'"
                                             '.selected( $month, date_i18n( 'F', time() ), false).'>
                                             '.$month.' '.date_i18n( 'Y', time() ).'</option>';
                             if($month == date_i18n( 'F', time() )) break;
@@ -66,7 +68,7 @@
                             'tp_admin_page_statistics_tab_report_btn_show', TPOPlUGIN_TEXTDOMAIN); ?>
                     </button>
                 </div>
-                <?php echo \app\includes\views\admin\menu\TPStatisticView::tableReport($this->model->detailed_sales); ?>
+                <?php echo TPStatisticView::tableReport($this->model->detailed_sales); ?>
                 <a download="TPListReport.xls" href="#"  class="TP-BtnTab exportBtn btnBalance"
                    onclick="return ExcellentExport.excel(this, 'TPListReport', '<?php _ex('Report on income',
                        'tp_admin_page_statistics_tab_report_title_xls', TPOPlUGIN_TEXTDOMAIN); ?>');">

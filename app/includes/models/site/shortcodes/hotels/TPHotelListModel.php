@@ -8,43 +8,47 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\common\TpPluginHelper;
+use app\includes\common\TpPluginHelper;
+use core\helpers\TPDbHelper;
+use core\models\TPOWPTableInterfaceModel;
+use core\models\TPOWPTableModel;
 
-class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\models\TPOWPTableInterfaceModel
+class TPHotelListModel extends TPOWPTableModel implements TPOWPTableInterfaceModel
 {
-    public static $tableName = "tp_hotel_list_shortcode";
+    public static $tableName = 'tp_hotel_list_shortcode';
+
     public static function createTable()
     {
         // TODO: Implement createTable() method.
         $version = get_option(TPOPlUGIN_TABLE_HOTEL_LIST_VERSION);
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
-        $sql = "CREATE TABLE " . $tableName . "(
+        $tableName = $wpdb->prefix . self::$tableName;
+        $sql = 'CREATE TABLE ' . $tableName . '(
                   id int(11) NOT NULL AUTO_INCREMENT,
                   location_id int(11) NOT NULL,
                   date_add int(11) NOT NULL,
                   hotel_list text NOT NULL,
                   PRIMARY KEY (id)
-                ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
-        if($version != TPOPlUGIN_DATABASE) {
+                ) CHARACTER SET utf8 COLLATE utf8_general_ci;';
+        if ($version != TPOPlUGIN_DATABASE) {
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-            if($wpdb->get_var("show tables like '$tableName'") != $tableName) {
+            if ($wpdb->get_var("show tables like '$tableName'") != $tableName) {
                 dbDelta($sql);
-            }else{
+            } else {
                 $data = self::getData();
                 //error_log(print_r($data, true));
                 self::deleteTable();
                 dbDelta($sql);
-                if($data != false) {
-                    $rows = array();
-                    foreach ( $wpdb->get_col( "DESC " . $tableName, 0 ) as $column_name ) {
-                        foreach($data as $key=>$values) {
-                            $rows[$key][$column_name] =  (isset($values[$column_name]))?$values[$column_name]:'';
+                if ($data != false) {
+                    $rows = [];
+                    foreach ($wpdb->get_col('DESC ' . $tableName, 0) as $column_name) {
+                        foreach ($data as $key => $values) {
+                            $rows[$key][$column_name] = (isset($values[$column_name])) ? $values[$column_name] : '';
                         }
 
                     }
                     //error_log('$rows = '.print_r($rows, true));
-                    foreach($rows as $row) {
+                    foreach ($rows as $row) {
                         $wpdb->insert($tableName, $row);
                     }
                 }
@@ -57,10 +61,12 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
     {
         // TODO: Implement get_data() method.
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
-        $data = $wpdb->get_results( "SELECT * FROM ".$tableName." ORDER BY date_add DESC", ARRAY_A);
-        if(TpPluginHelper::count($data) > 0) return $data;
-        return false;
+        $tableName = $wpdb->prefix . self::$tableName;
+        $data = $wpdb->get_results('SELECT * FROM ' . $tableName . ' ORDER BY date_add DESC', ARRAY_A);
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
 
 
@@ -68,7 +74,7 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
     {
         // TODO: Implement deleteTable() method.
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
+        $tableName = $wpdb->prefix . self::$tableName;
         $wpdb->query("DROP TABLE IF EXISTS $tableName");
     }
 
@@ -77,40 +83,44 @@ class TPHotelListModel extends \core\models\TPOWPTableModel implements \core\mod
         // TODO: Implement insert() method.
 
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
+        $tableName = $wpdb->prefix . self::$tableName;
 
-        $inputData = array(
+        $inputData = [
             'location_id' => $locationID,
             'date_add' => time(),
             'hotel_list' => $hotelList,
-        );
-        $wpdb->insert($tableName, $inputData);
+        ];
+        $wpdb->insert($tableName, $inputData, TPDbHelper::getFormat($inputData, []));
 
     }
 
-    public function getHotelListByLocationID($locationID){
+    public function getHotelListByLocationID($locationID)
+    {
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
+        $tableName = $wpdb->prefix . self::$tableName;
 
         //$data = $wpdb->get_row("SELECT * FROM ".$tableName." WHERE location_id= ". $locationID, ARRAY_A);
-        $parameter = array(
+        $parameter = [
             $locationID
-        );
+        ];
         $data = $wpdb->get_results(
-            $wpdb->prepare('SELECT * FROM '.$tableName
-                .' WHERE location_id = %d', $parameter),
+            $wpdb->prepare('SELECT * FROM ' . $tableName
+                . ' WHERE location_id = %d', $parameter),
             ARRAY_A);
-        if(TpPluginHelper::count($data) > 0) return $data;
-        return false;
+
+        return TpPluginHelper::count($data) > 0
+            ? $data
+            : false;
     }
 
-    public function deleteHotelListByLocationID($locationID){
+    public function deleteHotelListByLocationID($locationID)
+    {
         global $wpdb;
-        $tableName = $wpdb->prefix .self::$tableName;
-        $parameter = array(
+        $tableName = $wpdb->prefix . self::$tableName;
+        $parameter = [
             $locationID
-        );
-        $wpdb->query($wpdb->prepare('DELETE FROM '.$tableName .' WHERE location_id = %d', $parameter));
+        ];
+        $wpdb->query($wpdb->prepare('DELETE FROM ' . $tableName . ' WHERE location_id = %d', $parameter));
     }
 
     public function update($data)

@@ -6,15 +6,17 @@
  * Time: 0:41
  */
 namespace app\includes\controllers\admin\menu;
-class TPAdminBarMenuController extends \core\controllers\TPOAdminBarMenuController{
+use core\controllers\TPOAdminBarMenuController;
+
+class TPAdminBarMenuController extends TPOAdminBarMenuController{
 
     public function admin_bar_menu()
     {
         // TODO: Implement admin_bar_menu() method.
         $this->admin_bar_add_root_menu(
             _x('Travelpayouts',  'tp_admin_bar_menu_travelpayouts_title', TPOPlUGIN_TEXTDOMAIN ),
-            "tp_admin_bar_menu",
-            "admin.php?page=".TPOPlUGIN_TEXTDOMAIN
+            'tp_admin_bar_menu',
+            'admin.php?page=' .TPOPlUGIN_TEXTDOMAIN
         );
         $this->admin_bar_add_sub_menu(
             _x('Auto-links',  'tp_admin_bar_menu_auto_links_title', TPOPlUGIN_TEXTDOMAIN )

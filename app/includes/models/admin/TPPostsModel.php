@@ -9,11 +9,13 @@
 namespace app\includes\models\admin;
 
 
-class TPPostsModel extends \core\models\TPOShortcodesCacheModel{
+use core\models\TPOShortcodesCacheModel;
+
+class TPPostsModel extends TPOShortcodesCacheModel{
     public function __construct(){
         parent::__construct();
     }
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
     }

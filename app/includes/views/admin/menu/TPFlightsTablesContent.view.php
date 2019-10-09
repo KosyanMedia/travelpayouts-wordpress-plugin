@@ -1,5 +1,7 @@
 <form action="options.php" class="formSettings TPFormNotReload" method="POST" id="TPTicketsConfig">
-    <?php settings_fields('TPFlightTickets'); ?>
+    <?php use app\includes\TPPlugin;
+
+    settings_fields('TPFlightTickets'); ?>
     <div class="TPmainContent TP-BalanceContent">
         <div class="bellows default">
             <div class="bellows__item">
@@ -121,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <?php if(\app\includes\TPPlugin::$options['local']['currency'] == 'RUB'){ ?>
+            <?php if(TPPlugin::$options['local']['currency'] === 'RUB'){ ?>
                 <div class="bellows__item">
                     <div class="bellows__header">
                         <h3>

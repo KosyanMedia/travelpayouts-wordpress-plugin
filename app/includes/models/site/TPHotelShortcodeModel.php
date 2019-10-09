@@ -8,7 +8,7 @@
 
 namespace app\includes\models\site;
 
-use \app\includes\common\TPRequestApiHotel;
+use app\includes\common\TPRequestApiHotel;
 
 abstract class TPHotelShortcodeModel extends TPShortcodesChacheModel
 {

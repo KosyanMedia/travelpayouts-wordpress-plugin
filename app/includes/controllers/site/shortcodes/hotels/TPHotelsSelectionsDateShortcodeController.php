@@ -11,8 +11,8 @@
 
 namespace app\includes\controllers\site\shortcodes\hotels;
 
-use \app\includes\controllers\site\TPShortcodesController;
-use \app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsDateShortcodeModel;
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\hotels\TPHotelsSelectionsDateShortcodeModel;
 use app\includes\views\site\shortcodes\TPHotelShortcodeView;
 
 class TPHotelsSelectionsDateShortcodeController extends TPShortcodesController
@@ -30,18 +30,18 @@ class TPHotelsSelectionsDateShortcodeController extends TPShortcodesController
     {
         // TODO: Implement initShortcode() method.
         // Подборки отелей на даты
-        add_shortcode( 'tp_hotels_selections_date_shortcodes', array(&$this, 'actionTable'));
+        add_shortcode( 'tp_hotels_selections_date_shortcodes', [&$this, 'actionTable']);
     }
 
     /**
      *
      * @param array $args
      */
-    public function actionTable($args = array())
+    public function actionTable($args = [])
     {
         $data = $this->model->getDataTable($args);
         if ($data['return_url'] == true){
-            return var_dump("<pre>", $data, "</pre>");
+            return var_dump('<pre>', $data, '</pre>');
         }
         //error_log('tp_hotels_selections_date_shortcodes');
         //error_log(print_r($data, true));

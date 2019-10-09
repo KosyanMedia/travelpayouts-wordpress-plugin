@@ -1,6 +1,8 @@
 <div class="TPWrapper TPWrapperFlights">
 	<p class="TPMainTitle">
-		<?php _ex('Railways schedule',
+		<?php use app\includes\TPPlugin;
+
+        _ex('Railways schedule',
 			'admin page menu railway', TPOPlUGIN_TEXTDOMAIN); ?>
 	</p>
     <div id="tabs-railway">
@@ -31,17 +33,17 @@
             </ul>
         </nav>-->
         <div id="tabs-railway-help"
-             class="<?php if(\app\includes\TPPlugin::$options['railway']['active'] == 1) echo 'tp-railway-layout-hidden';?>">
+             class="<?php if(TPPlugin::$options['railway']['active'] == 1) echo 'tp-railway-layout-hidden';?>">
 	        <?php
-	        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabHelp.view.php";
+	        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPRailwayTabHelp.view.php';
 	        $this->loadView($pathView, 0, $data);
 	        ?>
 
         </div>
         <div id="tabs-railway_config"
-             class="<?php if(\app\includes\TPPlugin::$options['railway']['active'] == 0) echo 'tp-railway-layout-hidden';?>">
+             class="<?php if(TPPlugin::$options['railway']['active'] == 0) echo 'tp-railway-layout-hidden';?>">
 	        <?php
-	            $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPRailwayTabConfig.view.php";
+	            $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPRailwayTabConfig.view.php';
 	            $this->loadView($pathView, 0, $data);
 	        ?>
         </div>

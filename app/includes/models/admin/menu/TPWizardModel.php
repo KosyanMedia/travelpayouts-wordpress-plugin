@@ -6,7 +6,9 @@
  * Time: 0:25
  */
 namespace app\includes\models\admin\menu;
-class TPWizardModel extends \app\includes\models\admin\TPOptionModel{
+use app\includes\models\admin\TPOptionModel;
+
+class TPWizardModel extends TPOptionModel{
     public function __construct()
     {
         parent::__construct();
@@ -17,11 +19,11 @@ class TPWizardModel extends \app\includes\models\admin\TPOptionModel{
         register_setting(
             'TPWizard',
             TPOPlUGIN_OPTION_NAME,
-            array(&$this,'save_option')
+            [&$this,'save_option']
         );
         $field = new TPFieldWizard();
         add_settings_section( 'tp_settings_wizard_id', '', '', 'tp_settings_wizard' );
-        add_settings_field('tp_wizard_td', '', array(&$field ,'TPFieldWizard'),
+        add_settings_field('tp_wizard_td', '', [&$field ,'TPFieldWizard'],
             'tp_settings_wizard', 'tp_settings_wizard_id' );
     }
 

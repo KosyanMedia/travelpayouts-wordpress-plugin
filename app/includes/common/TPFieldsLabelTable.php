@@ -26,33 +26,33 @@ class TPFieldsLabelTable
 		common - Общ
 	 * */
 	public static function getRailwayWagonTypeLabel($wagonType){
-		$wagonTypeLabel = "";
-		$wagonTypeLabelData = array(
-			'plazcard' => array(
+		$wagonTypeLabel = '';
+		$wagonTypeLabelData = [
+			'plazcard' => [
 				TPLang::getLangEN() => _x('Plazcard', 'en railway wagon plazcard type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Plazcard', 'ru railway wagon plazcard type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'coupe' => array(
+            ],
+			'coupe' => [
 				TPLang::getLangEN() => _x('Coupe', 'en railway wagon coupe type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Coupe', 'ru railway wagon coupe type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'sedentary' => array(
+            ],
+			'sedentary' => [
 				TPLang::getLangEN() => _x('Sedentary', 'en railway wagon sedentary type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Sedentary', 'ru railway wagon sedentary type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'lux' => array(
+            ],
+			'lux' => [
 				TPLang::getLangEN() => _x('Lux', 'en railway wagon lux type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Lux', 'ru railway wagon lux type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'soft' => array(
+            ],
+			'soft' => [
 				TPLang::getLangEN() => _x('Soft', 'en railway wagon soft type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Soft', 'ru railway wagon soft type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'common' => array(
+            ],
+			'common' => [
 				TPLang::getLangEN() => _x('Common', 'en railway wagon common type label', TPOPlUGIN_TEXTDOMAIN),
 				TPLang::getLangRU() => _x('Common', 'ru railway wagon common type label', TPOPlUGIN_TEXTDOMAIN),
-			),
-		);
+            ],
+        ];
 
 		if(isset($wagonTypeLabelData[$wagonType][TPLang::getLang()])){
 
@@ -83,8 +83,8 @@ class TPFieldsLabelTable
 	 *
 	 */
 	public static function getRailwayFieldsLabelRU(){
-		return  array(
-			'label_default' => array(
+		return  [
+			'label_default' => [
 				'train' => _x('Train', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route' => _x('Route', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'departure' => _x('Departure', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
@@ -98,8 +98,8 @@ class TPFieldsLabelTable
 				'arrival_time' => _x('Arrival Time', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route_first_station' => _x('Route\'s First Station', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route_last_station' => _x('Route\'s Last Station', 'local ru railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'label' => array(
+            ],
+			'label' => [
 				'train' => _x('Train', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route' => _x('Route', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'departure' => _x('Departure', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
@@ -113,12 +113,12 @@ class TPFieldsLabelTable
 				'arrival_time' => _x('Arrival Time', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route_first_station' => _x('Route\'s First Station', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route_last_station' => _x('Route\'s Last Station', 'local ru railway fields table label', TPOPlUGIN_TEXTDOMAIN),
-			),
-		);
+            ],
+        ];
 	}
 	public static function getRailwayFieldsLabelEN(){
-		return  array(
-			'label_default' => array(
+		return  [
+			'label_default' => [
 				'train' => _x('Train', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route' => _x('Route', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'departure' => _x('Departure', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
@@ -132,8 +132,8 @@ class TPFieldsLabelTable
 				'arrival_time' => _x('Arrival Time', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route_first_station' => _x('Route\'s First Station', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
 				'route_last_station' => _x('Route\'s Last Station', 'local en railway fields table label default', TPOPlUGIN_TEXTDOMAIN),
-			),
-			'label' => array(
+            ],
+			'label' => [
 				'train' => _x('Train', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route' => _x('Route', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'departure' => _x('Departure', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
@@ -147,8 +147,8 @@ class TPFieldsLabelTable
 				'arrival_time' => _x('Arrival Time', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route_first_station' => _x('Route\'s First Station', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
 				'route_last_station' => _x('Route\'s Last Station', 'local en railway fields table label', TPOPlUGIN_TEXTDOMAIN),
-			),
-		);
+            ],
+        ];
 	}
 	/** Railway END **/
     /*
@@ -168,8 +168,8 @@ class TPFieldsLabelTable
      */
 
     public static function getHotelsFieldsLabelRU(){
-        return  array(
-            'label_default' => array(
+        return  [
+            'label_default' => [
                 'name' => _x('Hotel',
                     'tp plugin local ru hotels fields table label default name', TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('Stars',
@@ -200,8 +200,8 @@ class TPFieldsLabelTable
                 'price_avg' => _x('tp_plugin_local_ru_hotels_fields_table_label_default_price_avg',
                     '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),*/
 
-            ),
-            'label' => array(
+            ],
+            'label' => [
                 'name' => _x('Hotel',
                     'tp plugin local ru hotels fields table label name',TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('Stars',
@@ -234,12 +234,12 @@ class TPFieldsLabelTable
                 'price_avg' => _x('tp_plugin_local_ru_hotels_fields_table_label_price_avg',
                     '(Средняя цена)', TPOPlUGIN_TEXTDOMAIN),*/
 
-            ),
-        );
+            ],
+        ];
     }
     public static function getHotelsFieldsLabelEN(){
-        return  array(
-            'label_default' => array(
+        return  [
+            'label_default' => [
                 'name' => _x('Hotel',
                     'tp plugin local en hotels fields table label default name', TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('Stars',
@@ -272,9 +272,8 @@ class TPFieldsLabelTable
                     '(Average price)', TPOPlUGIN_TEXTDOMAIN),*/
 
 
-
-            ),
-            'label' => array(
+            ],
+            'label' => [
                 'name' => _x('Hotel',
                     'tp plugin local en hotels fields table label name',TPOPlUGIN_TEXTDOMAIN),
                 'stars' => _x('Stars',
@@ -305,16 +304,16 @@ class TPFieldsLabelTable
                 'price_avg' => _x('tp_plugin_local_en_hotels_fields_table_label_price_avg',
                     '(Average price)', TPOPlUGIN_TEXTDOMAIN),*/
 
-            ),
-        );
+            ],
+        ];
     }
     /**
      * @return array
      */
     public static function getFieldsLabelRU(){
-        return  array(
+        return  [
             //tp plugin local ru fields table label default
-            'label_default' => array(
+            'label_default' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local ru fields table label default flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -353,8 +352,8 @@ class TPFieldsLabelTable
                     'tp plugin local ru fields table label default button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local ru fields table label default origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            'label' => array(
+            ],
+            'label' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local ru fields table label flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -393,16 +392,16 @@ class TPFieldsLabelTable
                     'tp plugin local ru fields table label button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local ru fields table label origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
     }
 
     /**
      * @return array
      */
     public static function getFieldsLabelEN(){
-        return array(
-            'label_default' => array(
+        return [
+            'label_default' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local en fields table label default flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -441,8 +440,8 @@ class TPFieldsLabelTable
                     'tp plugin local en fields table label default button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local en fields table label default origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            'label' => array(
+            ],
+            'label' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local en fields table label flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -481,16 +480,16 @@ class TPFieldsLabelTable
                     'tp plugin local en fields table label button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local en fields table label origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
     }
 
     /**
      * @return array
      */
     public static function getFieldsLabelTH(){
-        return array(
-            'label_default' => array(
+        return [
+            'label_default' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local th fields table label default flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -529,8 +528,8 @@ class TPFieldsLabelTable
                     'tp plugin local th fields table label default button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local th fields table label default origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            'label' => array(
+            ],
+            'label' => [
                 'flight_number' => _x('Flight number',
                     'tp plugin local th fields table label flight number', TPOPlUGIN_TEXTDOMAIN),
                 'flight' => _x('Flight',
@@ -569,8 +568,8 @@ class TPFieldsLabelTable
                     'tp plugin local th fields table label button', TPOPlUGIN_TEXTDOMAIN),
                 'origin_destination' => _x('Origin - Destination',
                     'tp plugin local th fields table label origin_destination', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
     }
 
     /**
@@ -578,21 +577,21 @@ class TPFieldsLabelTable
      * @return string
      */
     public static function getTripClassLabel($tripClass){
-        $tripClassLabel = "";
-        $tripClassLabelData = array(
-            "0" => array(
+        $tripClassLabel = '';
+        $tripClassLabelData = [
+            '0' => [
                 TPLang::getLangEN() => _x('Economy', 'tp plugin local en trip class economy', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('Economy', 'tp plugin local ru trip class economy', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            "1" => array(
+            ],
+            '1' => [
                 TPLang::getLangEN() => _x('Business', 'tp plugin local en trip class business', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('Business', 'tp plugin local ru trip class business', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            "2" => array(
+            ],
+            '2' => [
                 TPLang::getLangEN() => _x('First', 'tp plugin local en trip class first', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('First', 'tp plugin local ru trip class first', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
 
         if(isset($tripClassLabelData[$tripClass][TPLang::getLang()])){
             $tripClassLabel = $tripClassLabelData[$tripClass][TPLang::getLang()];
@@ -608,17 +607,17 @@ class TPFieldsLabelTable
      * @return string
      */
     public static function getDistanceLabel($distanceType){
-        $distanceLabel = "";
-        $distanceLabelData = array(
-            1 => array(
+        $distanceLabel = '';
+        $distanceLabelData = [
+            1 => [
                 TPLang::getLangEN() => _x('km', 'tp plugin local en distance label km', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('km', 'tp plugin local ru distance label km', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            2 => array(
+            ],
+            2 => [
                 TPLang::getLangEN() => _x('m', 'tp plugin local en distance label m', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('m', 'tp plugin local ru distance label m', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
         if(isset($distanceLabelData[$distanceType][TPLang::getLang()])){
             $distanceLabel = $distanceLabelData[$distanceType][TPLang::getLang()];
         }else{
@@ -633,21 +632,21 @@ class TPFieldsLabelTable
      * @return string
      */
     public static function getNumberChangesLabel($numberChangesType){
-        $numberChangesLabel = "";
-        $numberChangesLabelData = array(
-            0 => array(
+        $numberChangesLabel = '';
+        $numberChangesLabelData = [
+            0 => [
                 TPLang::getLangEN() => _x('Direct', 'tp plugin local en number changes label direct', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('Direct', 'tp plugin local ru number changes label direct', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            1 => array(
+            ],
+            1 => [
                 TPLang::getLangEN() => _x('stop', 'tp plugin local en number changes label stop', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('stop', 'tp plugin local ru number changes label stop', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            2 => array(
+            ],
+            2 => [
                 TPLang::getLangEN() => _x('stops', 'tp plugin local en number changes label stops', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('stops', 'tp plugin local ru number changes label stops', TPOPlUGIN_TEXTDOMAIN),
-            ),
-        );
+            ],
+        ];
 
         if(isset($numberChangesLabelData[$numberChangesType][TPLang::getLang()])){
 
@@ -665,21 +664,21 @@ class TPFieldsLabelTable
 	 * @return string
 	 */
     public static function getDateLabel($dateType){
-	    $dateLabel = "";
-    	$dateLabelData = array(
-    	    'day' => array(
+	    $dateLabel = '';
+    	$dateLabelData = [
+    	    'day' => [
                 TPLang::getLangEN() => _x('d', 'local en date label day', TPOPlUGIN_TEXTDOMAIN),
                 TPLang::getLangRU() => _x('д', 'local ru date label day', TPOPlUGIN_TEXTDOMAIN),
-            ),
-    		'hour' => array(
+            ],
+    		'hour' => [
 			    TPLang::getLangEN() => _x('h', 'local en date label hour', TPOPlUGIN_TEXTDOMAIN),
 			    TPLang::getLangRU() => _x('ч', 'local ru date label hour', TPOPlUGIN_TEXTDOMAIN),
-		    ),
-    		'minute' => array(
+            ],
+    		'minute' => [
 			    TPLang::getLangEN() => _x('m', 'local en date label minute', TPOPlUGIN_TEXTDOMAIN),
 			    TPLang::getLangRU() => _x('м', 'local ru date label minute', TPOPlUGIN_TEXTDOMAIN),
-		    ),
-	    );
+            ],
+        ];
 	    if(isset($dateLabelData[$dateType][TPLang::getLang()])){
 		    $dateLabel = $dateLabelData[$dateType][TPLang::getLang()];
 	    }else{
@@ -694,18 +693,18 @@ class TPFieldsLabelTable
      * @return string
      */
     public static function getDurationDayLabel($number){
-        $dayLabel = "";
-        $dayLabelData = array(
-            TPLang::getLangEN() => array(
+        $dayLabel = '';
+        $dayLabelData = [
+            TPLang::getLangEN() => [
                 _x('day', 'local en duration label day', TPOPlUGIN_TEXTDOMAIN),
                 _x('days', 'local en duration label day', TPOPlUGIN_TEXTDOMAIN),
-            ),
-            TPLang::getLangRU() => array(
+            ],
+            TPLang::getLangRU() => [
                 _x('день', 'local ru duration label день', TPOPlUGIN_TEXTDOMAIN),
                 _x('дня', 'local ru duration label дня', TPOPlUGIN_TEXTDOMAIN),
                 _x('дней', 'local ru duration label дней', TPOPlUGIN_TEXTDOMAIN),
-            )
-        );
+            ]
+        ];
 
         if (array_key_exists(TPLang::getLang(), $dayLabelData)) {
             $dayLabel = $dayLabelData[TPLang::getLang()][$number];

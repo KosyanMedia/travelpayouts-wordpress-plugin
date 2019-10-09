@@ -9,13 +9,17 @@
 namespace app\includes\controllers\site\shortcodes;
 
 
-class TPLinkShortcodeController extends \app\includes\controllers\site\TPShortcodesController{
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\TPLinkShortcodeModel;
+use app\includes\views\site\shortcodes\TPShortcodeView;
+
+class TPLinkShortcodeController extends TPShortcodesController{
     public $model;
     public function __construct()
     {
         parent::__construct();
-        $this->model = new \app\includes\models\site\shortcodes\TPLinkShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+        $this->model = new TPLinkShortcodeModel();
+        $this->view = new TPShortcodeView();
     }
 
     /**
@@ -31,6 +35,6 @@ class TPLinkShortcodeController extends \app\includes\controllers\site\TPShortco
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode( 'tp_link', array(&$this, 'action'));
+        add_shortcode( 'tp_link', [&$this, 'action']);
     }
 }

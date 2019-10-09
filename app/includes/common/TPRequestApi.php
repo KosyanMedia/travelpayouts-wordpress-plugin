@@ -9,7 +9,7 @@
 namespace app\includes\common;
 
 use app\includes\common\TPCurrencyUtils;
-use \app\includes\TPPlugin;
+use app\includes\TPPlugin;
 
 abstract class TPRequestApi implements SingletonInterface
 {
@@ -18,10 +18,10 @@ abstract class TPRequestApi implements SingletonInterface
     protected $marker;
     protected $token;
     protected $errorJson;
-    protected $calendar_types = array(
+    protected $calendar_types = [
         'departure_date',
         'return_date'
-    );
+    ];
 
 
     protected function __construct() {
@@ -123,7 +123,7 @@ abstract class TPRequestApi implements SingletonInterface
         }
 
         if (is_array($d)) {
-            return array_map(array(&$this, __FUNCTION__), $d);
+            return array_map([&$this, __FUNCTION__], $d);
         }
         else {
             return $d;
@@ -136,17 +136,17 @@ abstract class TPRequestApi implements SingletonInterface
      * Функция которой передаётся url и которая возвращает body ответа
      **/
     public function request( $string ){
-        $name_method = "***************".__METHOD__."***************";
+        $name_method = '***************' .__METHOD__. '***************';
         if(TPOPlUGIN_ERROR_LOG)
             error_log($name_method);
-        $method = __CLASS__." -> ". __METHOD__." -> ".__LINE__;
+        $method = __CLASS__. ' -> ' . __METHOD__. ' -> ' .__LINE__;
         if(TPOPlUGIN_ERROR_LOG)
             error_log($method);
         $string = htmlspecialchars($string);
         //error_log($string);
-        $response = wp_remote_get( $string, array('headers' => array(
+        $response = wp_remote_get( $string, ['headers' => [
             'Accept-Encoding' => 'gzip, deflate',
-        )) );
+        ]]);
         if( is_wp_error( $response ) ){
             $json = $response;
         } else {
@@ -157,7 +157,7 @@ abstract class TPRequestApi implements SingletonInterface
             return $json->data;
         if( is_wp_error( $json ) ){
             if(TPOPlUGIN_ERROR_LOG)
-                error_log($method." JSON ERROR = ".print_r($this->error_json, true));
+                error_log($method. ' JSON ERROR = ' .print_r($this->error_json, true));
         }
 
         return false;
@@ -167,10 +167,10 @@ abstract class TPRequestApi implements SingletonInterface
      **/
     public function request_two($string){
         $string = htmlspecialchars($string);
-        $response = wp_remote_get( $string, array('headers' => array(
+        $response = wp_remote_get( $string, ['headers' => [
             'Accept-Encoding' => 'gzip, deflate',
             'X-Access-Token' => $this->getToken()
-        )) );
+        ]]);
         if( is_wp_error( $response ) ){
             $json = $response;
         } else {
@@ -185,7 +185,7 @@ abstract class TPRequestApi implements SingletonInterface
      * @return string|void
      */
     public function get_error( $error ) {
-        $errors = array(
+        $errors = [
             'origin'        =>  _x('The variable $origin parameters not set or incorrectly.',
                 'tp request api error msg origin', TPOPlUGIN_TEXTDOMAIN ),
             'destination'   =>  _x('The variable $destination parameters not set or incorrectly.',
@@ -200,7 +200,7 @@ abstract class TPRequestApi implements SingletonInterface
                 'tp request api error msg return_at', TPOPlUGIN_TEXTDOMAIN ),
             'airline'       =>  _x('The variable $airline parameters not set or incorrectly.',
                 'tp request api error msg airline', TPOPlUGIN_TEXTDOMAIN ),
-        );
+        ];
         if( ! empty( $error ) && isset( $errors[$error] ) )
             return $errors[$error];
         return _x('Unknown error.',

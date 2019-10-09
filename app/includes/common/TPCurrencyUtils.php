@@ -8,7 +8,7 @@
 
 namespace app\includes\common;
 
-use \app\includes\TPPlugin;
+use app\includes\TPPlugin;
 
 class TPCurrencyUtils
 {
@@ -83,8 +83,8 @@ class TPCurrencyUtils
      * @return mixed
      */
     public static function getCurrencyAll(){
-        $currency = array();
-        $currency = array(
+        $currency = [];
+        $currency = [
             //self::TP_CURRENCY_RUB,
             //self::TP_CURRENCY_USD,
             //self::TP_CURRENCY_EUR,
@@ -149,7 +149,7 @@ class TPCurrencyUtils
             self::TP_CURRENCY_OMR,
             self::TP_CURRENCY_QAR,
             self::TP_CURRENCY_TJS,
-        );
+        ];
         sort($currency);
         array_unshift($currency, self::TP_CURRENCY_RUB, self::TP_CURRENCY_USD, self::TP_CURRENCY_EUR);
         //error_log(print_r($currency, true));
@@ -161,10 +161,10 @@ class TPCurrencyUtils
         $currency = self::TP_CURRENCY_USD;
         global $locale;
         switch($locale) {
-            case "ru_RU":
+            case 'ru_RU':
                 $currency = self::TP_CURRENCY_RUB;
                 break;
-            case "en_US":
+            case 'en_US':
                 $currency = self::TP_CURRENCY_USD;
                 break;
             default:

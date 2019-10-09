@@ -6,11 +6,14 @@
  * Time: 16:08
  */
 namespace app\includes\controllers\admin\menu;
-class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
+use app\includes\models\admin\menu\TPWidgetsModel;
+use core\controllers\TPOAdminMenuController;
+
+class TPWidgetsController extends TPOAdminMenuController{
     public $model;
     public function __construct(){
         parent::__construct();
-        $this->model = new \app\includes\models\admin\menu\TPWidgetsModel();
+        $this->model = new TPWidgetsModel();
     }
     public function action()
     {
@@ -22,14 +25,14 @@ class TPWidgetsController extends \core\controllers\TPOAdminMenuController{
                 TPOPlUGIN_TEXTDOMAIN ),
             'manage_options',
             'tp_control_widgets',
-            array(&$this, 'render'));
-        add_action( 'admin_footer-'.$plugin_page, array(&$this, 'TPLinkHelp') );
+            [&$this, 'render']);
+        add_action( 'admin_footer-'.$plugin_page, [&$this, 'TPLinkHelp']);
     }
 
     public function render()
     {
         // TODO: Implement render() method.
-        $pathView = TPOPlUGIN_DIR."/app/includes/views/admin/menu/TPWidgets.view.php";
+        $pathView = TPOPlUGIN_DIR. '/app/includes/views/admin/menu/TPWidgets.view.php';
         parent::loadView($pathView);
     }
 }

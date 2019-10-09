@@ -9,7 +9,10 @@
 namespace app\includes\controllers\admin\media_buttons;
 
 
-abstract class TPAdminMediaButtonsController extends \core\controllers\TPOAdminMediaButtonsController
+use app\includes\TPPlugin;
+use core\controllers\TPOAdminMediaButtonsController;
+
+abstract class TPAdminMediaButtonsController extends TPOAdminMediaButtonsController
 {
     /**
      * @param string $txtDefault
@@ -18,7 +21,7 @@ abstract class TPAdminMediaButtonsController extends \core\controllers\TPOAdminM
      */
     public function getTextBtn($txtDefault = '', $txtCompact = ''){
         $txt = '';
-        switch( \app\includes\TPPlugin::$options['config']['media_button']['view'] ){
+        switch( TPPlugin::$options['config']['media_button']['view'] ){
             case 0:
                 $txt = $txtDefault;
                 break;

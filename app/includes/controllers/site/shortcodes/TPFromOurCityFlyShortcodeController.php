@@ -7,7 +7,11 @@
  */
 
 namespace app\includes\controllers\site\shortcodes;
-class TPFromOurCityFlyShortcodeController extends \app\includes\controllers\site\TPShortcodesController
+use app\includes\controllers\site\TPShortcodesController;
+use app\includes\models\site\shortcodes\TPFromOurCityFlyShortcodeModel;
+use app\includes\views\site\shortcodes\TPShortcodeView;
+
+class TPFromOurCityFlyShortcodeController extends TPShortcodesController
 {
     public $model;
     public $view;
@@ -15,16 +19,16 @@ class TPFromOurCityFlyShortcodeController extends \app\includes\controllers\site
     public function __construct()
     {
         parent::__construct();
-        $this->model = new \app\includes\models\site\shortcodes\TPFromOurCityFlyShortcodeModel();
-        $this->view = new \app\includes\views\site\shortcodes\TPShortcodeView();
+        $this->model = new TPFromOurCityFlyShortcodeModel();
+        $this->view = new TPShortcodeView();
     }
 
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
-        add_shortcode('tp_from_our_city_fly_shortcodes', array(&$this, 'actionTable'));
-        add_shortcode('tp_from_our_city_fly_shortcodes_max_price', array(&$this, 'actionMaxPrice'));
-        add_shortcode('tp_from_our_city_fly_shortcodes_min_price', array(&$this, 'actionMinPrice'));
+        add_shortcode('tp_from_our_city_fly_shortcodes', [&$this, 'actionTable']);
+        add_shortcode('tp_from_our_city_fly_shortcodes_max_price', [&$this, 'actionMaxPrice']);
+        add_shortcode('tp_from_our_city_fly_shortcodes_min_price', [&$this, 'actionMinPrice']);
     }
 
     public function actionTable($args = [])

@@ -8,12 +8,12 @@
 namespace core\controllers;
 abstract class TPOAdminMediaButtonsController extends TPOBaseController{
     public function __construct(){
-        add_action('media_buttons', array( &$this, 'action'));
+        add_action('media_buttons', [&$this, 'action']);
 
-        add_action('category_edit_form_fields',  array( &$this, 'action'));
-        add_action('category_add_form_fields',  array( &$this, 'action'));
-        add_action('edit_tag_form_fields', array( &$this, 'action'));
-        add_action('add_tag_form_fields', array( &$this, 'action'));
+        add_action('category_edit_form_fields',  [&$this, 'action']);
+        add_action('category_add_form_fields',  [&$this, 'action']);
+        add_action('edit_tag_form_fields', [&$this, 'action']);
+        add_action('add_tag_form_fields', [&$this, 'action']);
         /*add_action('taxonomy_edit_form_fields',  array( &$this, 'buttonCat'));
         add_action('taxonomy_add_form_fields',  array( &$this, 'buttonCat'));
         add_action('edit_category_form_fields',  array( &$this, 'buttonCat'));
@@ -30,6 +30,6 @@ abstract class TPOAdminMediaButtonsController extends TPOBaseController{
         */
 
     }
-    abstract public function action($args = array());
+    abstract public function action($args = []);
     abstract public function render();
 }

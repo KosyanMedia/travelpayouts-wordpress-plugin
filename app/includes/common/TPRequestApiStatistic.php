@@ -26,27 +26,27 @@ class TPRequestApiStatistic extends TPRequestApi
         return self::$instance;
     }
 
-    public function get_balance($args = array()){
+    public function get_balance($args = []){
         if(!$this->isStatus()){
             return false;
         }
-        $request_string = self::getApiUrl2()."/statistics/balance";
+        $request_string = self::getApiUrl2(). '/statistics/balance';
         return $this->objectToArray($this->request_two($request_string));
     }
-    public function get_detailed_sales($args = array()){
+    public function get_detailed_sales($args = []){
         if(!$this->isStatus()){
             return false;
         }
-        $defaults = array(
-            'date' => date("Y-m-d")
-        );
+        $defaults = [
+            'date' => date('Y-m-d')
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $request_string = self::getApiUrl2()."/statistics/detailed-sales?group_by=date_marker&month="
-            . $date . "&host_filter=null&marker_filter=null";
+        $request_string = self::getApiUrl2(). '/statistics/detailed-sales?group_by=date_marker&month='
+            . $date . '&host_filter=null&marker_filter=null';
         return $this->objectToArray($this->request_two($request_string));
     }
     public function get_payments(){
-        $request_string = self::getApiUrl2()."/statistics/payments";
+        $request_string = self::getApiUrl2(). '/statistics/payments';
         return $this->objectToArray($this->request_two($request_string));
     }
 }

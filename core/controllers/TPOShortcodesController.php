@@ -8,9 +8,9 @@
 namespace core\controllers;
 abstract class TPOShortcodesController {
     public function __construct(){
-        add_action( 'wp_loaded',  array( &$this, 'initShortcode') );
+        add_action( 'wp_loaded',  [&$this, 'initShortcode']);
     }
     abstract public function initShortcode();
-    abstract public function action($args = array());
+    abstract public function action($args = []);
     abstract public function render($data);
 }

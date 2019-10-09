@@ -8,9 +8,9 @@
 
 namespace app\includes\models\site\shortcodes\hotels;
 
-use \app\includes\models\site\TPHotelShortcodeModel;
-use \app\includes\common\TPCurrencyUtils;
-use \app\includes\common\TPLang;
+use app\includes\models\site\TPHotelShortcodeModel;
+use app\includes\common\TPCurrencyUtils;
+use app\includes\common\TPLang;
 
 class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
 {
@@ -26,10 +26,10 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
      *  id — id города (из запроса Города).
      * @param array $args
      */
-    public function get_data($args = array())
+    public function get_data($args = [])
     {
         // TODO: Implement get_data() method.
-        $defaults = array(
+        $defaults = [
             'id' => false,
             'check_in' => false,
             'check_out' => false,
@@ -38,9 +38,9 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
             'limit' => 5,
             'type' => 'popularity',
             'return_url' => false
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
-        $attr = array(
+        $attr = [
             'id' => $id,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -49,17 +49,17 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
             'limit' => $limit,
             'type' => $type,
             'return_url' => $return_url
-        );
+        ];
 
         $cacheKey = "hotel_1_selections_discount_{$id}{$currency}";
 
         if($this->cacheSecund() && $return_url == false){
             if ( false === ($rows = get_transient($this->cacheKey($cacheKey)))) {
                 $return = self::$TPRequestApi->getHotelSelection($attr);
-                $rows = array();
+                $rows = [];
                 $cacheSecund = 0;
                 if( ! $return ) {
-                    $rows = array();
+                    $rows = [];
                     $cacheSecund = $this->cacheEmptySecund();
                 } else {
                     $rows = $return;
@@ -96,8 +96,8 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
      * @param array $args
      * @return array
      */
-    public function getDataTable($args = array()){
-        $defaults = array(
+    public function getDataTable($args = []){
+        $defaults = [
             'city' => false,
             'title' => '',
             'paginate' => true,
@@ -113,7 +113,7 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
             'currency' => TPCurrencyUtils::getDefaultCurrency(),
             'return_url' => false,
             'language' => TPLang::getLang(),
-        );
+        ];
         extract( wp_parse_args( $args, $defaults ), EXTR_SKIP );
 
         if ($return_url == 1){
@@ -123,7 +123,7 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
         $check_in = date('Y-m-d');
         $check_out = $this->getCheckOut($day);
 
-        $return = $this->get_data(array(
+        $return = $this->get_data([
             'id' => $city,
             'check_in' => $check_in,
             'check_out' => $check_out,
@@ -132,10 +132,10 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
             'limit' => $number_results,
             'type' => $type,
             'return_url' => $return_url
-        ));
+        ]);
 
 
-        return array(
+        return [
             'rows' => $return,
             'title' => $title,
             'city' => $city,
@@ -152,7 +152,7 @@ class TPHotelsSelectionsShortcodeModel extends TPHotelShortcodeModel
             'currency' => $currency,
             'return_url' => $return_url,
 
-        );
+        ];
 
 
     }
