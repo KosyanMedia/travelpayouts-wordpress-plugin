@@ -10,18 +10,13 @@
             switch($locale){
                 case 'ru_RU':
                     $tp_url = 'https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=settings&utm_campaign=ru&utm_content=link';
-                    $tp_dev_url = 'https://www.travelpayouts.com/developers/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=ru&utm_content=link_api';
-                    $tp_wh_url = 'https://www.travelpayouts.com/combined_white_labels?utm_source=wp_plugin&utm_medium=settings&utm_campaign=ru&utm_content=link_wl';
-                    break;
-                case 'en_US':
-                    $tp_url = 'https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link';
-                    $tp_dev_url = 'https://www.travelpayouts.com/developers/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link_api';
-                    $tp_wh_url = 'https://www.travelpayouts.com/white_labels?utm_source=wp_plugin&utm_medium=settings&utm_campaign=en&utm_content=link_wl';
+                    $tp_dev_url = 'https://www.travelpayouts.com/programs/100/tools/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=ru&utm_content=link_api';
+                    $tp_wh_url = 'https://www.travelpayouts.com/programs/100/tools/whitelabel?utm_source=wp_plugin&utm_medium=settings&utm_campaign=ru&utm_content=link_wl';
                     break;
                 default:
                     $tp_url = 'https://www.travelpayouts.com/?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link';
-                    $tp_dev_url = 'https://www.travelpayouts.com/developers/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link_api';
-                    $tp_wh_url = 'https://www.travelpayouts.com/combined_white_labels?utm_source=wp_plugin&utm_medium=settings&utm_campaign=en&utm_content=link_wl';
+                    $tp_dev_url = 'https://www.travelpayouts.com/programs/100/tools/api?utm_source=wpplugin&utm_medium=settings&utm_campaign=en&utm_content=link_api';
+                    $tp_wh_url = 'https://www.travelpayouts.com/programs/100/tools/whitelabel?utm_source=wp_plugin&utm_medium=settings&utm_campaign=en&utm_content=link_wl';
                     break;
             } ?>
             <p>
